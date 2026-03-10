@@ -183,13 +183,20 @@ function settingsSelectSeg(groupId, btn) {
     if (!group) return;
     group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    // Apply theme without closing the settings panel
+    // Apply theme with same transition behavior as main toggle, without closing settings
     if (groupId === 'settings-theme-segment') {
         const desired = btn.dataset.val === 'dark' ? 'dark' : 'light';
-        const isDark = desired === 'dark';
+        const wantDark = desired === 'dark';
         const currentlyDark = document.body.classList.contains('dark-theme');
-        if (isDark !== currentlyDark) {
-            if (isDark) {
+        if (wantDark === currentlyDark) {
+            localStorage.setItem('settingsTheme', btn.dataset.val);
+            return;
+        }
+        // Use View Transition API if available, similar to initializeTheme
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!document.startViewTransition || prefersReduced) {
+            // Fallback without animation
+            if (wantDark) {
                 document.body.classList.add('dark-theme');
                 localStorage.setItem('theme', 'dark');
             } else {
@@ -199,11 +206,54 @@ function settingsSelectSeg(groupId, btn) {
             const metaThemeColor = document.querySelector('meta[name="theme-color"]');
             const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
             if (metaThemeColor) {
-                metaThemeColor.setAttribute('content', isDark ? '#292a2d' : '#ffffff');
+                metaThemeColor.setAttribute('content', wantDark ? '#292a2d' : '#ffffff');
             }
             if (metaColorScheme) {
-                metaColorScheme.setAttribute('content', isDark ? 'dark' : 'light');
+                metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
             }
+        } else {
+            const clickedButton = btn;
+            const transition = document.startViewTransition(() => {
+                if (wantDark) {
+                    document.body.classList.add('dark-theme');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.body.classList.remove('dark-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+                const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+                const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+                if (metaThemeColor) {
+                    metaThemeColor.setAttribute('content', wantDark ? '#292a2d' : '#ffffff');
+                }
+                if (metaColorScheme) {
+                    metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
+                }
+            });
+            transition.ready.then(() => {
+                const { top, left, width, height } = clickedButton.getBoundingClientRect();
+                const x = left + width / 2;
+                const y = top + height / 2;
+                const right = window.innerWidth - left;
+                const bottom = window.innerHeight - top;
+                const maxRadius = Math.hypot(
+                    Math.max(left, right),
+                    Math.max(top, bottom)
+                );
+                document.documentElement.animate(
+                    {
+                        clipPath: [
+                            `circle(0px at ${x}px ${y}px)`,
+                            `circle(${maxRadius}px at ${x}px ${y}px)`
+                        ]
+                    },
+                    {
+                        duration: 500,
+                        easing: 'ease-in-out',
+                        pseudoElement: '::view-transition-new(root)'
+                    }
+                );
+            }).catch(() => {});
         }
     }
     // Persist segment state
@@ -230,8 +280,8 @@ function settingsSelectLang(btn) {
     if (typeof updateBookNames === 'function') {
         updateBookNames();
     }
-    // For non-both languages, reload current book/chapter like the sheet does
-    if (selectedLang !== 'both' && typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+    // Reload current book/chapter so language change fully reflects (including 'both')
+    if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
         loadBook(currentBook, currentChapter);
     }
     // Persist language segment value
@@ -251,6 +301,18 @@ function settingsSelectColor(el) {
         updateBookNames();
     }
     localStorage.setItem('settingsEnglishColor', color);
+    // Apply immediately (update rendered verses)
+    if (currentLanguage === 'both') {
+        if (typeof displayChapter === 'function') {
+            displayChapter();
+        }
+        if (typeof applyAllNoteDisplays === 'function') {
+            applyAllNoteDisplays();
+        }
+        if (typeof applyUiSettingsToDocument === 'function') {
+            applyUiSettingsToDocument();
+        }
+    }
 }
 function settingsToggleRow(row, options = {}) {
     const toggle = row.querySelector('.settings-toggle');

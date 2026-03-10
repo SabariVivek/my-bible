@@ -1464,7 +1464,7 @@ body:not(.dark-theme) .moon-icon {
     top: 60px;
     right: 0;
     width: 190px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 55px);
     background-color: #f8f9fa;
     border-left: 1px solid #e0e0e0 !important;
     overflow-y: auto;
@@ -1896,6 +1896,7 @@ body.hide-author-details #author-banner {
 .right-settings-panel .settings-color-panel.visible {
     max-height: 80px;
     opacity: 1;
+    margin-top: 12px;
 }
 
 .right-settings-panel .settings-color-row {
@@ -2117,6 +2118,70 @@ body.dark-theme .right-settings-checkbox {
 
 body.dark-theme .right-settings-checkbox input[type="checkbox"] {
     accent-color: #8ab4f8;
+}
+
+/* Light theme overrides for settings panel (match provided design) */
+body:not(.dark-theme) .right-settings-panel {
+    background: #f2f3f5;
+    color: #1a1b1e;
+}
+body:not(.dark-theme) .right-settings-panel .settings-phone-wrap {
+    background: #f2f3f5;
+}
+body:not(.dark-theme) .right-settings-panel .settings-phone-wrap::before {
+    background: radial-gradient(ellipse, rgba(52,168,83,0.08) 0%, transparent 70%);
+}
+body:not(.dark-theme) .right-settings-panel .settings-theme-preview {
+    background: linear-gradient(90deg, #34a853 0%, #3a7ef5 50%, #34a853 100%);
+}
+body:not(.dark-theme) .right-settings-panel .settings-header-back {
+    background: #ffffff;
+    border-color: rgba(0,0,0,0.07);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+body:not(.dark-theme) .right-settings-panel .settings-header-title {
+    color: #1a1b1e;
+}
+body:not(.dark-theme) .right-settings-panel .settings-header-title span {
+    background: linear-gradient(90deg, #34a853, transparent);
+}
+body:not(.dark-theme) .right-settings-panel .settings-section-label {
+    color: #34a853;
+}
+body:not(.dark-theme) .right-settings-panel .settings-card {
+    background: #ffffff;
+    border-color: rgba(0,0,0,0.07);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+body:not(.dark-theme) .right-settings-panel .settings-segment {
+    background: #e8e9ec;
+}
+body:not(.dark-theme) .right-settings-panel .settings-seg-btn {
+    color: #7a7d8a;
+}
+body:not(.dark-theme) .right-settings-panel .settings-seg-btn.active {
+    background: #34a853;
+    color: #ffffff;
+    box-shadow: 0 2px 12px rgba(52,168,83,0.30);
+}
+body:not(.dark-theme) .right-settings-panel .settings-row-text {
+    color: #1a1b1e;
+}
+body:not(.dark-theme) .right-settings-panel .settings-row:not(:last-child)::after {
+    background: rgba(0,0,0,0.07);
+}
+body:not(.dark-theme) .right-settings-panel .settings-toggle {
+    background: #c8cad0;
+}
+body:not(.dark-theme) .right-settings-panel .settings-toggle::after {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.20);
+}
+body:not(.dark-theme) .right-settings-panel .settings-toggle.on {
+    background: #34a853;
+    box-shadow: 0 0 0 3px rgba(52,168,83,0.15);
+}
+body:not(.dark-theme) .right-settings-panel .settings-toggle.on::after {
+    box-shadow: 0 1px 8px rgba(52,168,83,0.35);
 }
 
 .number-item {
@@ -8852,7 +8917,7 @@ body.dark-theme .bible-reading-title {
         position: fixed;
         top: 55px;
         right: -100%;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 55px);
         width: 70%;
         max-width: 300px;
         z-index: 1000;
