@@ -1115,6 +1115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
     const rightCultOption = document.getElementById('right-cult-option');
     const rightPrayersOption = document.getElementById('right-prayers-option');
+    const rightLogoutOption = document.getElementById('right-logout-option');
     const isMobile = window.innerWidth <= 768;
     let isFadingOut = false; // Flag to prevent re-showing during fade
 
@@ -7917,6 +7918,7 @@ function updateAdminUI() {
     const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
     const rightCultOption = document.getElementById('right-cult-option');
     const rightPrayersOption = document.getElementById('right-prayers-option');
+    const rightLogoutOption = document.getElementById('right-logout-option');
     
     editButtons.forEach(btn => {
         btn.style.display = isAdminMode ? 'flex' : 'none';
@@ -7961,6 +7963,9 @@ function updateAdminUI() {
     
     if (rightPrayersOption) {
         rightPrayersOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    if (rightLogoutOption) {
+        rightLogoutOption.style.display = isAdminMode ? 'flex' : 'none';
     }
     
     // Update admin toggle button state
@@ -9716,6 +9721,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightSermonOption = document.getElementById('right-sermon-option');
     const rightPrayersOption = document.getElementById('right-prayers-option');
     const rightCultOption = document.getElementById('right-cult-option');
+    const rightLogoutOption = document.getElementById('right-logout-option');
     const isGuestUser = localStorage.getItem('currentUserIsGuest') === 'true';
     // Initialize right sidebar (hidden by default)
     if (rightSidebar) {
@@ -9858,6 +9864,19 @@ document.addEventListener('DOMContentLoaded', () => {
         rightCultOption.addEventListener('click', () => {
             closeRightSidebar();
             window.location.href = 'config/secret.html';
+        });
+    }
+    // Logout option - clear user and go back to login
+    if (rightLogoutOption) {
+        rightLogoutOption.addEventListener('click', () => {
+            closeRightSidebar();
+            try {
+                localStorage.removeItem('currentUserId');
+                localStorage.removeItem('currentUserName');
+                localStorage.removeItem('currentUserIsGuest');
+                localStorage.removeItem('isAdmin');
+            } catch (e) {}
+            window.location.href = 'login.html';
         });
     }
     
