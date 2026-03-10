@@ -112,6 +112,157 @@ let uiSettings = (() => {
     }
 })();
 
+// Supabase configuration for user_settings (same project as other Supabase usage)
+const SUPABASE_SETTINGS_CONFIG = {
+    url: 'https://encjogfdbrfcatvytpir.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck'
+};
+
+async function saveUserSettingsToSupabase() {
+    try {
+        const userId = localStorage.getItem('currentUserId');
+        if (!userId || !window.fetch) {
+            return;
+        }
+
+        const themeVal =
+            localStorage.getItem('settingsTheme') ||
+            (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+        const langSegVal =
+            localStorage.getItem('settingsLanguage') ||
+            (currentLanguage === 'both'
+                ? 'both'
+                : currentLanguage === 'english'
+                    ? 'en'
+                    : 'ta');
+        const colorVal =
+            localStorage.getItem('settingsEnglishColor') ||
+            (typeof englishTextColor !== 'undefined' ? englishTextColor : 'default');
+
+        const payload = {
+            user_id: userId,
+            theme: themeVal,
+            language: langSegVal,
+            english_text_color: colorVal,
+            images: !!uiSettings.images,
+            short_summary: !!uiSettings.shortSummary,
+            bible_reading: !!uiSettings.bibleReading,
+            verse_heading: !!uiSettings.verseHeading,
+            author_details: !!uiSettings.authorDetails,
+            memory_verse: !!uiSettings.memoryVerse,
+            bookmark: !!uiSettings.bookmark,
+            notes_feature: !!uiSettings.notesFeature
+        };
+
+        await fetch(`${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings`, {
+            method: 'POST',
+            headers: {
+                'apikey': SUPABASE_SETTINGS_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_SETTINGS_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'resolution=merge-duplicates'
+            },
+            body: JSON.stringify(payload)
+        });
+    } catch (e) {
+        // Fail silently – localStorage still keeps settings
+    }
+}
+
+async function loadUserSettingsFromSupabase() {
+    try {
+        const userId = localStorage.getItem('currentUserId');
+        if (!userId || !window.fetch) {
+            return;
+        }
+
+        const response = await fetch(
+            `${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings?user_id=eq.${encodeURIComponent(
+                userId
+            )}&select=*`,
+            {
+                headers: {
+                    'apikey': SUPABASE_SETTINGS_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_SETTINGS_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
+
+        if (!response.ok) {
+            return;
+        }
+
+        const rows = await response.json();
+        if (!rows || rows.length === 0) {
+            // No row yet for this user – create one from current local settings
+            await saveUserSettingsToSupabase();
+            return;
+        }
+
+        const row = rows[0];
+
+        // Language
+        if (row.language) {
+            const langVal = row.language; // 'ta' | 'en' | 'both'
+            const selectedLang =
+                langVal === 'en' ? 'english' : langVal === 'ta' ? 'tamil' : 'both';
+            currentLanguage = selectedLang;
+            localStorage.setItem('currentLanguage', selectedLang);
+            localStorage.setItem('settingsLanguage', langVal);
+        }
+
+        // Theme
+        if (row.theme === 'dark' || row.theme === 'light') {
+            const wantDark = row.theme === 'dark';
+            if (wantDark) {
+                document.body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light');
+            }
+            localStorage.setItem('settingsTheme', row.theme);
+        }
+
+        // English text color
+        if (row.english_text_color) {
+            englishTextColor = row.english_text_color;
+            localStorage.setItem('englishTextColor', englishTextColor);
+            localStorage.setItem('settingsEnglishColor', englishTextColor);
+        }
+
+        // Boolean display / feature options
+        const mapping = [
+            ['images', 'images'],
+            ['shortSummary', 'short_summary'],
+            ['bibleReading', 'bible_reading'],
+            ['verseHeading', 'verse_heading'],
+            ['authorDetails', 'author_details'],
+            ['memoryVerse', 'memory_verse'],
+            ['bookmark', 'bookmark'],
+            ['notesFeature', 'notes_feature']
+        ];
+
+        mapping.forEach(([key, col]) => {
+            if (Object.prototype.hasOwnProperty.call(row, col)) {
+                uiSettings[key] = !!row[col];
+            }
+        });
+
+        localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
+
+        if (typeof applyUiSettingsToDocument === 'function') {
+            applyUiSettingsToDocument();
+        }
+        if (typeof updateBookNames === 'function') {
+            updateBookNames();
+        }
+    } catch (e) {
+        // Silent failure – app still works with local settings
+    }
+}
+
 function openAdminPasswordModal(onSuccess) {
     // Create password modal (reuse existing admin-password-modal markup/styles)
     const existing = document.getElementById('admin-password-modal');
@@ -349,6 +500,9 @@ function settingsSelectSeg(groupId, btn) {
     }
     // Persist segment state
     localStorage.setItem('settingsTheme', btn.dataset.val);
+    if (typeof saveUserSettingsToSupabase === 'function') {
+        saveUserSettingsToSupabase().catch(() => {});
+    }
 }
 function settingsSelectLang(btn) {
     const group = document.getElementById('settings-lang-segment');
@@ -377,6 +531,9 @@ function settingsSelectLang(btn) {
     }
     // Persist language segment value
     localStorage.setItem('settingsLanguage', btn.dataset.val);
+    if (typeof saveUserSettingsToSupabase === 'function') {
+        saveUserSettingsToSupabase().catch(() => {});
+    }
 }
 function settingsSelectColor(el) {
     const container = el.closest('.settings-color-swatches');
@@ -404,6 +561,9 @@ function settingsSelectColor(el) {
             applyUiSettingsToDocument();
         }
     }
+    if (typeof saveUserSettingsToSupabase === 'function') {
+        saveUserSettingsToSupabase().catch(() => {});
+    }
 }
 function settingsToggleRow(row, options = {}) {
     const toggle = row.querySelector('.settings-toggle');
@@ -419,6 +579,9 @@ function settingsToggleRow(row, options = {}) {
         localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
         if (typeof applyUiSettingsToDocument === 'function') {
             applyUiSettingsToDocument();
+        }
+        if (typeof saveUserSettingsToSupabase === 'function') {
+            saveUserSettingsToSupabase().catch(() => {});
         }
     }
 }
@@ -735,6 +898,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeRightSettingsPanel();
     // Apply persisted UI settings to initial document
     applyUiSettingsToDocument();
+    if (typeof loadUserSettingsFromSupabase === 'function') {
+        loadUserSettingsFromSupabase();
+    }
     loadNotesFromSupabase(); // Load shared notes from Supabase
     // Load memory verses from Supabase
     loadMemoryVersesFromSupabase();
