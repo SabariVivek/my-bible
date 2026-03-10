@@ -43,6 +43,20 @@
 
 <body>
     <script>
+        // Redirect first-time visitors to login page until a user is chosen
+        (function redirectToLoginIfNoUser() {
+            try {
+                const hasUser = !!(localStorage.getItem('currentUserId') || localStorage.getItem('currentUserIsGuest'));
+                const isLoginPage = location.pathname.endsWith('/login.html') || location.pathname.endsWith('login.html');
+                if (!hasUser && !isLoginPage) {
+                    window.location.replace('login.html');
+                }
+            } catch (e) {
+                // If anything goes wrong, continue loading main app
+            }
+        })();
+    </script>
+    <script>
         // Apply dark theme class immediately to body for CSS to work
         const savedThemes = localStorage.getItem('theme');
         const prefersDarks = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -70,6 +84,8 @@
             <h1 class="site-title">My Bible</h1>
         </div>
         <div class="header-controls">
+            <!-- Current User Avatar -->
+            <div id="current-user-avatar" class="current-user-avatar" style="display: none;" title="Current user"></div>
             <!-- Notes icon (hidden by default) -->
             <button id="notes-icon" class="icon-btn notes-icon" aria-label="Notes" style="display: none;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

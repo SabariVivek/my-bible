@@ -2,7 +2,7 @@
 const SUPABASE_URL = 'https://encjogfdbrfcatvytpir.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck';
 
-// Lazy-initialized Supabase client
+// Lazy-initialized Supabase client - shared by all Supabase helpers
 let supabaseClient = null;
 
 function getSupabaseClient() {
@@ -15,6 +15,52 @@ function getSupabaseClient() {
         }
     }
     return supabaseClient;
+}
+
+// ---------- Shared helpers ----------
+
+/**
+ * Fetch list of users for the login page.
+ * Uses a very defensive mapping so it works with different column names.
+ * Returns array of { id, name }.
+ */
+async function fetchUsersForLogin() {
+    try {
+        const client = getSupabaseClient();
+        if (!client) return [];
+
+        // Fetch all columns so we can derive a display name robustly
+        const { data, error } = await client
+            .from('users')
+            .select('*')
+            .order('id', { ascending: true });
+
+        if (error) {
+            console.warn('Failed to fetch users for login:', error.message);
+            return [];
+        }
+
+        if (!Array.isArray(data)) return [];
+
+        return data
+            .map((row) => {
+                const id = row.id ?? row.user_id ?? row.uuid ?? null;
+                const name =
+                    row.display_name ||
+                    row.full_name ||
+                    row.name ||
+                    row.username ||
+                    row.email ||
+                    (typeof row.id === 'string' ? row.id : null);
+
+                if (!name) return null;
+                return { id: id ?? name, name };
+            })
+            .filter(Boolean);
+    } catch (error) {
+        console.warn('Unexpected error while fetching users for login:', error.message);
+        return [];
+    }
 }
 
 // Pin a verse to Supabase

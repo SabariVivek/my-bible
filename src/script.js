@@ -675,6 +675,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // Set current user avatar in the top bar if available
+    try {
+        const avatarEl = document.getElementById('current-user-avatar');
+        if (avatarEl) {
+            const userId = localStorage.getItem('currentUserId');
+            const userName = localStorage.getItem('currentUserName') || '';
+            const isGuest = localStorage.getItem('currentUserIsGuest') === 'true';
+            if (userId || isGuest) {
+                avatarEl.style.display = 'block';
+                if (userName) {
+                    avatarEl.title = userName;
+                }
+            } else {
+                avatarEl.style.display = 'none';
+            }
+        }
+    } catch (e) {
+        // Fail silently if anything goes wrong
+    }
     // Force close any drawers immediately on page load
     const summaryDrawer = document.getElementById('summary-drawer');
     if (summaryDrawer) {

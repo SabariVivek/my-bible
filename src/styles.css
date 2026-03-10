@@ -432,6 +432,23 @@ body.dark-theme .book-loader {
     align-items: center;
 }
 
+.current-user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    background-image: url('resources/profile/users.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+    margin-left: 4px;
+    flex-shrink: 0;
+}
+
+body.dark-theme .current-user-avatar {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
 /* Read Bible button - hidden by default, shown on home page via JS */
 .read-bible-nav-btn {
     display: none !important;

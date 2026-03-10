@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>My Bible – Sign In</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<script>
+// Keep login page theme in sync with main app preference
+(function syncThemeFromMainApp() {
+  try {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  } catch (e) {
+    // Fallback to dark if anything goes wrong
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+[data-theme="dark"] {
+  --bg:           #1a1a1a;
+  --surface:      #242424;
+  --surface2:     #2e2e2e;
+  --border:       rgba(255,255,255,0.08);
+  --text:         #f0ede6;
+  --text2:        #8a8a8a;
+  --text3:        #4a4a4a;
+  --green:        #34a853;
+  --green-glow:   rgba(52,168,83,0.22);
+  --green-soft:   rgba(52,168,83,0.10);
+  --input-bg:     #2a2a2a;
+  --shadow:       0 12px 40px rgba(0,0,0,0.55);
+}
+[data-theme="light"] {
+  --bg:           #f0f2f7;
+  --surface:      #ffffff;
+  --surface2:     #f4f5f8;
+  --border:       rgba(0,0,0,0.08);
+  --text:         #14161d;
+  --text2:        #6b7080;
+  --text3:        #c0c2cc;
+  --green:        #1d9e45;
+  --green-glow:   rgba(29,158,69,0.18);
+  --green-soft:   rgba(29,158,69,0.07);
+  --input-bg:     #f8f9fb;
+  --shadow:       0 8px 32px rgba(0,0,0,0.10);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.shell {
+  width: 100%;
+  max-width: 420px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+/* TOP BAR */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 54px 20px 0;
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand-icon {
+  width: 34px; height: 34px;
+  background: var(--green);
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+}
+.brand-icon svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.brand-name { font-family: 'Cinzel', serif; font-size: 17px; font-weight: 700; letter-spacing: 0.06em; }
+
+.theme-btn {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.theme-btn svg { width: 17px; height: 17px; fill: none; stroke: var(--text2); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 42px 24px 32px;
+  text-align: center;
+  animation: fadeUp 0.5s both 0.05s;
+}
+.emblem {
+  width: 82px; height: 82px;
+  position: relative;
+  margin-bottom: 24px;
+}
+.emblem-r1 {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1px solid var(--green);
+  opacity: 0.15;
+  animation: breathe 2.8s ease-in-out infinite;
+}
+.emblem-r2 {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid var(--green);
+  opacity: 0.22;
+  animation: breathe 2.8s ease-in-out infinite 0.35s;
+}
+.emblem-core {
+  width: 82px; height: 82px;
+  border-radius: 50%;
+  background: var(--green-soft);
+  border: 1.5px solid rgba(52,168,83,0.28);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+}
+.emblem-core svg { width: 38px; height: 38px; stroke: var(--green); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+.hero-title { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 700; letter-spacing: 0.04em; line-height: 1.25; margin-bottom: 10px; }
+.hero-title em { color: var(--green); font-style: normal; }
+.hero-sub { font-size: 13.5px; color: var(--text2); line-height: 1.65; max-width: 270px; }
+
+/* CARD */
+.card {
+  margin: 0 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 28px 22px 24px;
+  box-shadow: var(--shadow);
+  animation: fadeUp 0.5s both 0.14s;
+}
+.card-heading { font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 4px; }
+.card-sub { font-size: 12.5px; color: var(--text2); margin-bottom: 24px; line-height: 1.5; }
+
+.field-label {
+  display: block;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text2);
+  margin-bottom: 8px;
+}
+
+/* Select */
+.sel-wrap { position: relative; margin-bottom: 18px; }
+.sel-ico-left {
+  position: absolute; left: 14px; top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex; align-items: center;
+}
+.sel-ico-left svg { width: 17px; height: 17px; stroke: var(--text2); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.sel-ico-right {
+  position: absolute; right: 14px; top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex; align-items: center;
+}
+.sel-ico-right svg { width: 17px; height: 17px; stroke: var(--text2); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+select {
+  width: 100%;
+  padding: 14px 44px 14px 44px;
+  border-radius: 13px;
+  border: 1.5px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  font-family: 'Lato', sans-serif;
+  font-size: 15px; font-weight: 600;
+  appearance: none; -webkit-appearance: none;
+  outline: none; cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+select:focus { border-color: var(--green); box-shadow: 0 0 0 3px var(--green-glow); }
+select option { background: var(--surface); color: var(--text); }
+
+/* User preview */
+.user-preview {
+  display: none;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 15px;
+  border-radius: 14px;
+  background: var(--green-soft);
+  border: 1.5px solid rgba(52,168,83,0.2);
+  margin-bottom: 20px;
+  animation: popIn 0.28s cubic-bezier(.34,1.56,.64,1) both;
+}
+.user-preview.visible { display: flex; }
+
+.u-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--green);
+  background-image: url('resources/profile/users.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px var(--green-glow);
+}
+.u-info { flex: 1; min-width: 0; }
+.u-name { font-size: 15px; font-weight: 700; color: var(--text); }
+.u-hint { font-size: 11.5px; color: var(--green); margin-top: 2px; font-weight: 600; }
+.u-tick {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--green);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.u-tick svg { width: 14px; height: 14px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Buttons */
+.btn-signin {
+  width: 100%; padding: 15px;
+  border-radius: 13px; border: none;
+  background: linear-gradient(135deg, var(--green), #1a7a36);
+  color: #fff; font-family: 'Lato', sans-serif;
+  font-size: 15px; font-weight: 700; letter-spacing: 0.04em;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  box-shadow: 0 4px 18px var(--green-glow);
+  transition: all 0.2s; margin-bottom: 16px;
+}
+.btn-signin svg { width: 17px; height: 17px; stroke: #fff; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.btn-signin:disabled { opacity: 0.35; cursor: not-allowed; box-shadow: none; }
+.btn-signin:not(:disabled):active { transform: scale(0.97); }
+
+.divider { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.div-line { flex: 1; height: 1px; background: var(--border); }
+.div-txt { font-size: 11px; color: var(--text3); font-weight: 700; letter-spacing: 0.1em; }
+
+.btn-guest {
+  width: 100%; padding: 14px;
+  border-radius: 13px;
+  border: 1.5px solid var(--border);
+  background: var(--surface2);
+  color: var(--text2); font-family: 'Lato', sans-serif;
+  font-size: 14px; font-weight: 700; letter-spacing: 0.03em;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: all 0.18s;
+}
+.btn-guest svg { width: 17px; height: 17px; stroke: var(--text2); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.btn-guest:active { transform: scale(0.97); }
+
+/* VERSE */
+.verse {
+  margin: 20px 16px 0;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: var(--green-soft);
+  border: 1px solid rgba(52,168,83,0.14);
+  text-align: center;
+  animation: fadeUp 0.5s both 0.28s;
+}
+.verse-ref { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+.verse-text { font-size: 13px; color: var(--text2); line-height: 1.75; font-style: italic; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.08); }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      </div>
+      <span class="brand-name">My Bible</span>
+    </div>
+    <button class="theme-btn" onclick="toggleTheme()">
+      <svg id="ico-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg id="ico-sun"  viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
+
+  <div class="hero">
+    <div class="emblem">
+      <div class="emblem-r1"></div>
+      <div class="emblem-r2"></div>
+      <div class="emblem-core">
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      </div>
+    </div>
+    <div class="hero-title">Welcome to <em>My Bible</em></div>
+    <p class="hero-sub">Your daily companion for Scripture reading and spiritual growth</p>
+  </div>
+
+  <div class="card">
+    <div class="card-heading">Sign In</div>
+    <div class="card-sub">Select your name to continue reading</div>
+
+    <label class="field-label">Select User</label>
+    <div class="sel-wrap">
+      <div class="sel-ico-left">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <select id="userSelect" onchange="onUserChange()">
+        <option value="" disabled selected>Loading users…</option>
+      </select>
+      <div class="sel-ico-right">
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+
+    <div class="user-preview" id="userPreview">
+      <div class="u-avatar" id="uAvatar"></div>
+      <div class="u-info">
+        <div class="u-name" id="uName"></div>
+        <div class="u-hint">Ready to continue reading</div>
+      </div>
+      <div class="u-tick">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+    </div>
+
+    <button class="btn-signin" id="signinBtn" disabled onclick="handleSignIn()">
+      <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+      Sign In
+    </button>
+
+    <div class="divider">
+      <div class="div-line"></div>
+      <span class="div-txt">OR</span>
+      <div class="div-line"></div>
+    </div>
+
+    <button class="btn-guest" id="guestBtn" onclick="handleGuest()">
+      <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Continue as Guest
+    </button>
+  </div>
+
+  <div class="verse">
+    <div class="verse-ref">✦ Joshua 1 : 8 ✦</div>
+    <div class="verse-text">"Keep this Book of the Law always on your lips; meditate on it day and night, so that you may be careful to do everything written in it."</div>
+  </div>
+
+</div>
+<script src="src/lib/supabase.js?cb=20260310160629"></script>
+<script src="src/lib/supabase-pinned-verses.js?cb=20260310160629"></script>
+<script>
+  async function populateUsersDropdown() {
+    const select = document.getElementById('userSelect');
+    if (!select) return;
+
+    // Clear any existing options
+    select.innerHTML = '';
+
+    // Default placeholder
+    const placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    placeholder.textContent = 'Choose your name…';
+    select.appendChild(placeholder);
+
+    try {
+      const users = typeof fetchUsersForLogin === 'function'
+        ? await fetchUsersForLogin()
+        : [];
+
+      if (!users.length) {
+        placeholder.textContent = 'No users available';
+        return;
+      }
+
+      users.forEach((u) => {
+        const opt = document.createElement('option');
+        opt.value = u.id;
+        opt.textContent = u.name;
+        opt.dataset.displayName = u.name;
+        select.appendChild(opt);
+      });
+    } catch (e) {
+      console.warn('Failed to populate users dropdown:', e);
+      placeholder.textContent = 'Unable to load users';
+    }
+  }
+
+  function onUserChange() {
+    const select = document.getElementById('userSelect');
+    const selectedOption = select.options[select.selectedIndex];
+    const name = selectedOption ? (selectedOption.dataset.displayName || selectedOption.textContent) : '';
+    const id = selectedOption ? selectedOption.value : '';
+
+    const prev = document.getElementById('userPreview');
+    const btn  = document.getElementById('signinBtn');
+    document.getElementById('uAvatar').textContent = name ? name.trim().charAt(0).toUpperCase() : '';
+    document.getElementById('uName').textContent   = name || '';
+    prev.classList.toggle('visible', !!name);
+    btn.disabled = !id;
+  }
+
+  function rememberUserAndEnterApp(userId, displayName, isGuest) {
+    try {
+      if (isGuest) {
+        localStorage.setItem('currentUserIsGuest', 'true');
+        localStorage.removeItem('currentUserId');
+        localStorage.removeItem('currentUserName');
+      } else {
+        localStorage.setItem('currentUserIsGuest', 'false');
+        localStorage.setItem('currentUserId', String(userId));
+        localStorage.setItem('currentUserName', displayName || '');
+      }
+    } catch (e) {
+      // If localStorage fails, still navigate
+    }
+    window.location.href = 'index.html';
+  }
+
+  function handleSignIn() {
+    const btn  = document.getElementById('signinBtn');
+    const select = document.getElementById('userSelect');
+    const selectedOption = select.options[select.selectedIndex];
+    const name = selectedOption ? (selectedOption.dataset.displayName || selectedOption.textContent) : '';
+    const id = selectedOption ? selectedOption.value : '';
+
+    if (!id) return;
+
+    btn.disabled = true;
+    btn.textContent = 'Signing in…';
+    setTimeout(() => {
+      btn.innerHTML = '✓ Welcome, ' + name + '!';
+      setTimeout(() => {
+        rememberUserAndEnterApp(id, name, false);
+      }, 600);
+    }, 600);
+  }
+
+  function handleGuest() {
+    const btn = document.getElementById('guestBtn');
+    btn.textContent = 'Entering as Guest…';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = '✓ Welcome, Guest!';
+      setTimeout(() => {
+        rememberUserAndEnterApp('guest', 'Guest', true);
+      }, 600);
+    }, 500);
+  }
+
+  function toggleTheme() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    document.getElementById('ico-moon').style.display = isDark ? 'none'  : 'block';
+    document.getElementById('ico-sun').style.display  = isDark ? 'block' : 'none';
+    try {
+      localStorage.setItem('theme', next);
+    } catch (e) {}
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    populateUsersDropdown();
+  });
+</script>
+</body>
+</html>

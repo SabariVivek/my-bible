@@ -11,6 +11,7 @@ const PERSISTENT_API_CACHE = 'my-bible-api-persistent';
 const STATIC_ASSETS = [
   './',
   './index.html',
+  './login.html',
   './src/styles.css',
   './src/script.js',
   './src/bible-reading.html',
