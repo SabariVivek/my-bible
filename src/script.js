@@ -549,6 +549,7 @@ function settingsSelectSeg(groupId, btn) {
                     Math.max(left, right),
                     Math.max(top, bottom)
                 );
+                const isMobile = window.innerWidth <= 768;
                 document.documentElement.animate(
                     {
                         clipPath: [
@@ -557,7 +558,7 @@ function settingsSelectSeg(groupId, btn) {
                         ]
                     },
                     {
-                        duration: 500,
+                        duration: isMobile ? 260 : 500,
                         easing: 'ease-in-out',
                         pseudoElement: '::view-transition-new(root)'
                     }
@@ -3917,6 +3918,7 @@ function initializeTheme() {
             Math.max(top, bottom)
         );
         // Animate the circular reveal
+        const isMobile = window.innerWidth <= 768;
         document.documentElement.animate(
             {
                 clipPath: [
@@ -3925,7 +3927,7 @@ function initializeTheme() {
                 ]
             },
             {
-                duration: 500,
+                duration: isMobile ? 260 : 500,
                 easing: 'ease-in-out',
                 pseudoElement: '::view-transition-new(root)'
             }

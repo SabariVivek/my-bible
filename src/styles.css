@@ -1687,12 +1687,6 @@ body.hide-memory-verse body.dark-theme .verse-line.memory-verse .v-num {
     z-index: 0;
 }
 
-.right-settings-panel .settings-theme-preview {
-    height: 3px;
-    background: linear-gradient(90deg, #c9a84c 0%, #4e8ef7 50%, #6dbc82 100%);
-    opacity: 0.5;
-}
-
 .right-settings-panel .settings-header {
     position: relative;
     z-index: 1;
@@ -2414,9 +2408,6 @@ body:not(.dark-theme) .right-settings-panel .settings-phone-wrap {
 }
 body:not(.dark-theme) .right-settings-panel .settings-phone-wrap::before {
     background: radial-gradient(ellipse, rgba(52,168,83,0.08) 0%, transparent 70%);
-}
-body:not(.dark-theme) .right-settings-panel .settings-theme-preview {
-    background: linear-gradient(90deg, #34a853 0%, #3a7ef5 50%, #34a853 100%);
 }
 body:not(.dark-theme) .right-settings-panel .settings-header-back {
     background: #ffffff;
