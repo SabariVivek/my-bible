@@ -1137,16 +1137,6 @@
                             <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
                         </div>
 
-                        <div class="settings-row" data-setting="bibleReading" onclick="settingsToggleRow(this)">
-                            <div class="settings-row-left">
-                                <div class="settings-row-icon icon-bible">
-                                    <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                                </div>
-                                <span class="settings-row-text">Bible Reading</span>
-                            </div>
-                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
-                        </div>
-
                         <div class="settings-row" data-setting="verseHeading" onclick="settingsToggleRow(this)">
                             <div class="settings-row-left">
                                 <div class="settings-row-icon icon-verse">
@@ -1166,6 +1156,16 @@
                             </div>
                             <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
                         </div>
+
+                        <div class="settings-row" data-setting="memoryVerse" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-memory">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                                </div>
+                                <span class="settings-row-text">Memory Verse</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
                     </div>
                 </div>
 
@@ -1173,12 +1173,12 @@
                 <div class="settings-section">
                     <div class="settings-section-label">Features</div>
                     <div class="settings-card">
-                        <div class="settings-row" data-setting="memoryVerse" onclick="settingsToggleRow(this)">
+                        <div class="settings-row" data-setting="bibleReading" onclick="settingsToggleRow(this)">
                             <div class="settings-row-left">
-                                <div class="settings-row-icon icon-memory">
-                                    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                                <div class="settings-row-icon icon-bible">
+                                    <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                                 </div>
-                                <span class="settings-row-text">Memory Verse</span>
+                                <span class="settings-row-text">Bible Reading</span>
                             </div>
                             <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
                         </div>
