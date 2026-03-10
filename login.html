@@ -428,8 +428,9 @@ select option { background: var(--surface); color: var(--text); }
     const prev = document.getElementById('userPreview');
     const btn  = document.getElementById('signinBtn');
     const avatar = document.getElementById('uAvatar');
-    document.getElementById('uAvatar').textContent = name ? name.trim().charAt(0).toUpperCase() : '';
     if (avatar) {
+      // Only show the profile image, no alphabet overlay
+      avatar.textContent = '';
       if (name) {
         const fileKey = name.trim().toLowerCase();
         avatar.style.backgroundImage = `url('resources/profiles/${fileKey}.png')`;
