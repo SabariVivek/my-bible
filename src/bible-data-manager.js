@@ -66,20 +66,52 @@ class BibleDataManager {
             if (window.location.protocol === 'file:') {
                 return null;
             }
-            
-            await new Promise((resolve, reject) => {
-                const script = document.createElement('script');
-                script.src = `./data/bible/${language}/${bookFile}.js`;
-                script.onload = () => {
-                    resolve();
-                };
-                script.onerror = () => {
-                    reject();
-                };
-                document.head.appendChild(script);
-                // Timeout after 5 seconds
-                setTimeout(() => reject(new Error('Timeout')), 5000);
-            });
+
+            // Support multiple folder layouts:
+            // - ./data/bible/<language>/<bookFile>.js
+            // - ./data/bible/<language>/old-testament/<bookFile>.js
+            // - ./data/bible/<language>/new-testament/<bookFile>.js
+            //
+            // We try in order and stop once the global var is populated.
+            const candidateSrcs = [
+                `./data/bible/${language}/${bookFile}.js`,
+                `./data/bible/${language}/old-testament/${bookFile}.js`,
+                `./data/bible/${language}/new-testament/${bookFile}.js`,
+            ];
+
+            const tryLoadScript = (src) =>
+                new Promise((resolve, reject) => {
+                    const existing = document.querySelector(`script[data-bible-src="${src}"]`);
+                    if (existing) {
+                        // If a previous attempt already injected it, just wait a tick for it to finish.
+                        setTimeout(resolve, 0);
+                        return;
+                    }
+
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.async = true;
+                    script.dataset.bibleSrc = src;
+                    script.onload = () => resolve();
+                    script.onerror = () => reject(new Error(`Failed to load ${src}`));
+                    document.head.appendChild(script);
+                });
+
+            for (const src of candidateSrcs) {
+                try {
+                    // Timeout each attempt after 5 seconds (mobile-safe).
+                    await Promise.race([
+                        tryLoadScript(src),
+                        new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 5000)),
+                    ]);
+                } catch (e) {
+                    // Try next candidate
+                }
+
+                if (window[varName]) {
+                    return window[varName];
+                }
+            }
             // Check if data is now available
             if (window[varName]) {
                 return window[varName];
@@ -130,7 +162,33 @@ class BibleDataManager {
         if (this.bookCache.has(bookCacheKey)) {
             return this.bookCache.get(bookCacheKey);
         }
-        // PRIORITY 1: If online, try Supabase API first
+
+        // PRIORITY 1: Try bundled local JS files first (PWA ships Bible data).
+        const localData = await this.loadFromLocalFile(bookFile, language);
+        if (localData) {
+            this.bookCache.set(bookCacheKey, localData);
+            // Also cache individual chapters
+            Object.keys(localData).forEach(chapter => {
+                const chapterKey = this.getCacheKey(bookFile, parseInt(chapter), language);
+                this.cache.set(chapterKey, localData[chapter]);
+            });
+            return localData;
+        }
+
+        // PRIORITY 2: Try IndexedDB/localStorage cache
+        const cachedBook = await this.loadBookFromLocalStorage(bookCacheKey);
+        if (cachedBook) {
+            // Cache in memory for faster access
+            this.bookCache.set(bookCacheKey, cachedBook);
+            // Also cache individual chapters
+            Object.keys(cachedBook).forEach(chapter => {
+                const chapterKey = this.getCacheKey(bookFile, parseInt(chapter), language);
+                this.cache.set(chapterKey, cachedBook[chapter]);
+            });
+            return cachedBook;
+        }
+
+        // PRIORITY 3: If online, use Supabase as a fallback (optional).
         if (this.supabaseClient && navigator.onLine) {
             try {
                 // Create abort controller for timeout
@@ -173,29 +231,6 @@ class BibleDataManager {
                 } else {
                 }
             }
-        }
-        // PRIORITY 2: Try bundled local JS files (offline fallback)
-        const localData = await this.loadFromLocalFile(bookFile, language);
-        if (localData) {
-            this.bookCache.set(bookCacheKey, localData);
-            // Also cache individual chapters
-            Object.keys(localData).forEach(chapter => {
-                const chapterKey = this.getCacheKey(bookFile, parseInt(chapter), language);
-                this.cache.set(chapterKey, localData[chapter]);
-            });
-            return localData;
-        }
-        // PRIORITY 3: Try IndexedDB/localStorage cache as last resort
-        const cachedBook = await this.loadBookFromLocalStorage(bookCacheKey);
-        if (cachedBook) {
-            // Cache in memory for faster access
-            this.bookCache.set(bookCacheKey, cachedBook);
-            // Also cache individual chapters
-            Object.keys(cachedBook).forEach(chapter => {
-                const chapterKey = this.getCacheKey(bookFile, parseInt(chapter), language);
-                this.cache.set(chapterKey, cachedBook[chapter]);
-            });
-            return cachedBook;
         }
         return null;
     }
