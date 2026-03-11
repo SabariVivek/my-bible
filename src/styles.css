@@ -2076,6 +2076,11 @@ body:not(.dark-theme) .settings-discard-btn.primary {
     gap: 12px;
 }
 
+/* Hide Bible Reading toggle in Settings UI (functionality unchanged) */
+.right-settings-panel .settings-row[data-setting="bibleReading"] {
+    display: none !important;
+}
+
 .right-settings-panel .settings-row:not(:last-child)::after {
     content: '';
     position: absolute;
