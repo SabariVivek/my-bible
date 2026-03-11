@@ -120,10 +120,12 @@ function getCurrentSettingsSnapshot() {
         const themeSegVal = localStorage.getItem('settingsTheme') || (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
         const langSegVal = localStorage.getItem('settingsLanguage') || (currentLanguage === 'both' ? 'both' : currentLanguage === 'english' ? 'en' : 'ta');
         const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
+        const verseHeadingLangVal = localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
         return {
             theme: themeSegVal,
             language: langSegVal,
             englishColor: colorVal,
+            verseHeadingLanguage: verseHeadingLangVal,
             uiSettings: { ...uiSettings },
             isAdmin: typeof isAdmin === 'function' ? isAdmin() : false
         };
@@ -137,6 +139,7 @@ function areSettingsEqual(a, b) {
     if (a.theme !== b.theme) return false;
     if (a.language !== b.language) return false;
     if (a.englishColor !== b.englishColor) return false;
+    if (a.verseHeadingLanguage !== b.verseHeadingLanguage) return false;
     if (!!a.isAdmin !== !!b.isAdmin) return false;
     const keys = Object.keys(DEFAULT_UI_SETTINGS);
     for (const key of keys) {
@@ -334,6 +337,11 @@ async function loadUserSettingsFromSupabase() {
             englishTextColor = row.english_text_color;
             localStorage.setItem('englishTextColor', englishTextColor);
             localStorage.setItem('settingsEnglishColor', englishTextColor);
+        }
+
+        // Verse heading language
+        if (row.verse_heading_language) {
+            localStorage.setItem('settingsVerseHeadingLanguage', row.verse_heading_language);
         }
 
         // Boolean display / feature options
@@ -5239,6 +5247,25 @@ function initializeRightSettingsPanel() {
                 colorPanel.classList.remove('visible');
             }
         }
+        // Sync verse heading language segment
+        const verseHeadingLangVal = localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
+        const verseHeadingLangSegBtns = document.querySelectorAll('#settings-verse-heading-language-segment .settings-seg-btn');
+        verseHeadingLangSegBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.val === verseHeadingLangVal);
+        });
+        // Sync verse heading toggle and show/hide language sub-option
+        const verseHeadingRow = document.querySelector('[data-setting="verseHeading"]');
+        const verseHeadingToggle = verseHeadingRow ? verseHeadingRow.querySelector('.settings-toggle') : null;
+        const verseHeadingLanguageSub = document.getElementById('verse-heading-language-sub');
+        if (verseHeadingToggle && verseHeadingLanguageSub) {
+            if (uiSettings.verseHeading) {
+                verseHeadingToggle.classList.add('on');
+                verseHeadingLanguageSub.classList.remove('hidden');
+            } else {
+                verseHeadingToggle.classList.remove('on');
+                verseHeadingLanguageSub.classList.add('hidden');
+            }
+        }
         // Sync toggle rows from uiSettings
         const rows = settingsPanel.querySelectorAll('.settings-row');
         rows.forEach(row => {
@@ -5363,6 +5390,11 @@ function initializeRightSettingsPanel() {
                             applyAllNoteDisplays();
                         }
                     }
+                }
+
+                // Verse heading language
+                if (snap.verseHeadingLanguage) {
+                    localStorage.setItem('settingsVerseHeadingLanguage', snap.verseHeadingLanguage);
                 }
 
                 // UI toggles
