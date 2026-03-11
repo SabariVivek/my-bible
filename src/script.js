@@ -235,6 +235,8 @@ async function saveUserSettingsToSupabase() {
         const colorVal =
             localStorage.getItem('settingsEnglishColor') ||
             (typeof englishTextColor !== 'undefined' ? englishTextColor : 'default');
+        const verseHeadingLangVal =
+            localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
 
         const payload = {
             user_id: userId,
@@ -245,6 +247,7 @@ async function saveUserSettingsToSupabase() {
             short_summary: !!uiSettings.shortSummary,
             bible_reading: !!uiSettings.bibleReading,
             verse_heading: !!uiSettings.verseHeading,
+            verse_heading_language: verseHeadingLangVal,
             author_details: !!uiSettings.authorDetails,
             memory_verse: !!uiSettings.memoryVerse,
             bookmark: !!uiSettings.bookmark,
@@ -920,6 +923,42 @@ function settingsSelectColor(el) {
             applyUiSettingsToDocument();
         }
     }
+    updateSettingsFooterVisibility();
+}
+function settingsToggleVerseHeading(event, toggleEl) {
+    event.stopPropagation();
+    toggleEl.classList.toggle('on');
+    const row = toggleEl.closest('.settings-row');
+    if (row) {
+        settingsToggleRow(row, { skipToggleClass: true });
+    }
+    // Show/hide language sub-option based on toggle state
+    const subOption = document.getElementById('verse-heading-language-sub');
+    if (subOption) {
+        if (toggleEl.classList.contains('on')) {
+            subOption.classList.remove('hidden');
+        } else {
+            subOption.classList.add('hidden');
+        }
+    }
+}
+function settingsSelectVerseHeadingLanguage(event, btn) {
+    event.stopPropagation();
+    const group = document.getElementById('settings-verse-heading-language-segment');
+    if (!group) return;
+    group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Persist verse heading language value
+    localStorage.setItem('settingsVerseHeadingLanguage', btn.dataset.val);
+    updateSettingsFooterVisibility();
+}
+function settingsSelectHeadingLanguage(btn) {
+    const group = document.getElementById('settings-heading-language-segment');
+    if (!group) return;
+    group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Persist heading language value (locally) and mark panel as dirty
+    localStorage.setItem('settingsHeadingLanguage', btn.dataset.val);
     updateSettingsFooterVisibility();
 }
 function settingsToggleRow(row, options = {}) {

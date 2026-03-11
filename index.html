@@ -1161,7 +1161,18 @@
                                 </div>
                                 <span class="settings-row-text">Verse Heading</span>
                             </div>
-                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                            <button class="settings-toggle on" onclick="settingsToggleVerseHeading(event, this)"></button>
+                        </div>
+
+                        <!-- VERSE HEADING LANGUAGE - Sub-option, shown only when Verse Heading is enabled -->
+                        <div class="settings-row-sub" id="verse-heading-language-sub">
+                            <div class="settings-row-sub-left">
+                                <span class="settings-row-sub-label">Language</span>
+                            </div>
+                            <div class="settings-segment settings-segment-compact" id="settings-verse-heading-language-segment">
+                                <button class="settings-seg-btn active" data-val="ta" onclick="settingsSelectVerseHeadingLanguage(event, this)">தமிழ்</button>
+                                <button class="settings-seg-btn" data-val="en" onclick="settingsSelectVerseHeadingLanguage(event, this)">English</button>
+                            </div>
                         </div>
 
                         <div class="settings-row" data-setting="authorDetails" onclick="settingsToggleRow(this)">
