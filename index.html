@@ -1154,6 +1154,26 @@
                             <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
                         </div>
 
+                        <div class="settings-row" data-setting="authorDetails" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-author">
+                                    <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                </div>
+                                <span class="settings-row-text">Author Details</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
+
+                        <div class="settings-row" data-setting="memoryVerse" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-memory">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                                </div>
+                                <span class="settings-row-text">Memory Verse</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
+
                         <div class="settings-row" data-setting="verseHeading" onclick="settingsToggleRow(this)">
                             <div class="settings-row-left">
                                 <div class="settings-row-icon icon-verse">
@@ -1173,26 +1193,6 @@
                                 <button class="settings-seg-btn active" data-val="ta" onclick="settingsSelectVerseHeadingLanguage(event, this)">தமிழ்</button>
                                 <button class="settings-seg-btn" data-val="en" onclick="settingsSelectVerseHeadingLanguage(event, this)">English</button>
                             </div>
-                        </div>
-
-                        <div class="settings-row" data-setting="authorDetails" onclick="settingsToggleRow(this)">
-                            <div class="settings-row-left">
-                                <div class="settings-row-icon icon-author">
-                                    <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                                </div>
-                                <span class="settings-row-text">Author Details</span>
-                            </div>
-                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
-                        </div>
-
-                        <div class="settings-row" data-setting="memoryVerse" onclick="settingsToggleRow(this)">
-                            <div class="settings-row-left">
-                                <div class="settings-row-icon icon-memory">
-                                    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                                </div>
-                                <span class="settings-row-text">Memory Verse</span>
-                            </div>
-                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
                         </div>
                     </div>
                 </div>
