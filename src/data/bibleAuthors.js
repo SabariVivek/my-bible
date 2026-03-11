@@ -13,8 +13,8 @@ window.bibleAuthors = {
     "1 Samuel": { author: "Samuel, Gad, Nathan", era: "~ 1105 – 970 BC", chapters: 31, verses: 810 },
     "2 Samuel": { author: "Gad, Nathan", era: "~ 1010 – 970 BC", chapters: 24, verses: 695 },
 
-    "1 Kings": { author: "Jeremiah (traditionally)", era: "~ 560 – 540 BC", chapters: 22, verses: 816 },
-    "2 Kings": { author: "Jeremiah (traditionally)", era: "~ 560 – 540 BC", chapters: 25, verses: 719 },
+    "1 Kings": { author: "Jeremiah", era: "~ 560 – 540 BC", chapters: 22, verses: 816 },
+    "2 Kings": { author: "Jeremiah", era: "~ 560 – 540 BC", chapters: 25, verses: 719 },
 
     "1 Chronicles": { author: "Ezra", era: "~ 450 – 430 BC", chapters: 29, verses: 942 },
     "2 Chronicles": { author: "Ezra", era: "~ 450 – 430 BC", chapters: 36, verses: 822 },
@@ -22,7 +22,7 @@ window.bibleAuthors = {
     Ezra: { author: "Ezra", era: "~ 450 – 440 BC", chapters: 10, verses: 280 },
     Nehemiah: { author: "Nehemiah", era: "~ 430 – 420 BC", chapters: 13, verses: 406 },
 
-    Esther: { author: "Unknown (possibly Mordecai)", era: "~ 470 – 460 BC", chapters: 10, verses: 167 },
+    Esther: { author: "Unknown (~ Mordecai)", era: "~ 470 – 460 BC", chapters: 10, verses: 167 },
 
     Job: { author: "Unknown", era: "~ 2000 – 1800 BC", chapters: 42, verses: 1070 },
 
@@ -75,7 +75,7 @@ window.bibleAuthors = {
     Titus: { author: "Paul", era: "~ AD 63 – 65", chapters: 3, verses: 46 },
     Philemon: { author: "Paul", era: "~ AD 60 – 62", chapters: 1, verses: 25 },
 
-    Hebrews: { author: "Unknown (traditionally Paul)", era: "~ AD 60 – 70", chapters: 13, verses: 303 },
+    Hebrews: { author: "Unknown (~ Paul)", era: "~ AD 60 – 70", chapters: 13, verses: 303 },
 
     James: { author: "James", era: "~ AD 45 – 50", chapters: 5, verses: 108 },
     "1 Peter": { author: "Peter", era: "~ AD 62 – 64", chapters: 5, verses: 105 },
