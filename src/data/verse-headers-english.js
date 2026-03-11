@@ -5549,7 +5549,6 @@ const verseHeaders = {
     "Galatians 1:15": ["God’s Calling of Paul", "God called Paul by grace."],
     "Galatians 1:18": ["Paul Visits Jerusalem", "Paul met Peter and James."],
 
-
     // Galatians Chapter 2
     "Galatians 2:1": ["Paul Accepted by Apostles", "Apostles recognized Paul’s ministry."],
     "Galatians 2:4": ["Defense of Gospel Freedom", "False believers tried to impose legalism."],
@@ -5557,7 +5556,6 @@ const verseHeaders = {
     "Galatians 2:11": ["Paul Confronts Peter", "Paul rebuked Peter for hypocrisy."],
     "Galatians 2:15": ["Justified by Faith, Not Law", "People are justified by faith."],
     "Galatians 2:20": ["Christ Lives in Me", "Believers live by faith in Christ."],
-
 
     // Galatians Chapter 3
     "Galatians 3:1": ["Faith, Not Law", "Paul questions their return to legalism."],
@@ -5569,7 +5567,6 @@ const verseHeaders = {
     "Galatians 3:26": ["Children of God Through Faith", "Believers are God’s children."],
     "Galatians 3:28": ["Unity in Christ", "All believers are one in Christ."],
 
-
     // Galatians Chapter 4
     "Galatians 4:1": ["Heirs Through Christ", "Believers are no longer slaves."],
     "Galatians 4:4": ["God Sent His Son", "Jesus came to redeem believers."],
@@ -5577,7 +5574,6 @@ const verseHeaders = {
     "Galatians 4:8": ["Warning Against Returning to Slavery", "Do not return to legalism."],
     "Galatians 4:12": ["Paul’s Appeal to Believers", "Paul urges them to remain faithful."],
     "Galatians 4:21": ["Example of Hagar and Sarah", "Illustration of slavery vs freedom."],
-
 
     // Galatians Chapter 5
     "Galatians 5:1": ["Freedom in Christ", "Stand firm in freedom."],
@@ -5588,7 +5584,6 @@ const verseHeaders = {
     "Galatians 5:19": ["Works of the Flesh", "List of sinful behaviors."],
     "Galatians 5:22": ["Fruit of the Spirit", "Love, joy, peace, and other virtues."],
     "Galatians 5:24": ["Belonging to Christ", "Crucify sinful desires."],
-
 
     // Galatians Chapter 6
     "Galatians 6:1": ["Restore with Gentleness", "Help those caught in sin."],
@@ -5614,7 +5609,6 @@ const verseHeaders = {
     "Ephesians 1:20": ["Christ Exalted Above All", "God raised Christ and placed Him above all."],
     "Ephesians 1:22": ["Christ Head of the Church", "Christ is head over the church."],
 
-
     // Ephesians Chapter 2
     "Ephesians 2:1": ["Made Alive in Christ", "Believers were dead in sin but made alive."],
     "Ephesians 2:4": ["Saved by God’s Mercy", "God saved believers because of His love."],
@@ -5624,7 +5618,6 @@ const verseHeaders = {
     "Ephesians 2:14": ["Christ Brings Peace", "Christ removes division and brings peace."],
     "Ephesians 2:19": ["Members of God’s Household", "Believers belong to God’s family."],
     "Ephesians 2:20": ["Built on Christ the Cornerstone", "Christ is the foundation of the church."],
-
 
     // Ephesians Chapter 3
     "Ephesians 3:1": ["Paul’s Ministry to the Gentiles", "Paul explains his mission to Gentiles."],
@@ -5636,7 +5629,6 @@ const verseHeaders = {
     "Ephesians 3:17": ["Christ Dwells Through Faith", "Christ lives in believers’ hearts."],
     "Ephesians 3:18": ["Knowing Christ’s Love", "Believers can know Christ’s vast love."],
     "Ephesians 3:20": ["God’s Power Beyond Measure", "God can do more than we imagine."],
-
 
     // Ephesians Chapter 4
     "Ephesians 4:1": ["Walk Worthy of Your Calling", "Live worthy of God’s calling."],
@@ -5650,7 +5642,6 @@ const verseHeaders = {
     "Ephesians 4:30": ["Do Not Grieve the Holy Spirit", "Live in ways that honor the Spirit."],
     "Ephesians 4:32": ["Forgive One Another", "Be kind and forgiving."],
 
-
     // Ephesians Chapter 5
     "Ephesians 5:1": ["Imitate God", "Follow God’s example in love."],
     "Ephesians 5:3": ["Avoid Immorality", "Reject sinful behaviors."],
@@ -5660,7 +5651,6 @@ const verseHeaders = {
     "Ephesians 5:22": ["Instructions for Wives", "Wives respect husbands."],
     "Ephesians 5:25": ["Instructions for Husbands", "Husbands love wives like Christ loves church."],
     "Ephesians 5:31": ["Marriage Reflects Christ and Church", "Marriage reflects spiritual truth."],
-
 
     // Ephesians Chapter 6
     "Ephesians 6:1": ["Instructions for Children", "Children obey parents."],
@@ -5687,7 +5677,6 @@ const verseHeaders = {
     "Philippians 1:27": ["Live Worthy of the Gospel", "Stand firm and live worthy of Christ."],
     "Philippians 1:29": ["Privilege of Suffering for Christ", "Believers are given privilege to suffer for Christ."],
 
-
     // Philippians Chapter 2
     "Philippians 2:1": ["Unity and Humility", "Believers should be united and humble."],
     "Philippians 2:5": ["Christ’s Example of Humility", "Jesus humbled Himself and became obedient."],
@@ -5698,7 +5687,6 @@ const verseHeaders = {
     "Philippians 2:19": ["Timothy’s Faithful Service", "Timothy genuinely cares for believers."],
     "Philippians 2:25": ["Epaphroditus’ Service", "Epaphroditus faithfully served despite illness."],
 
-
     // Philippians Chapter 3
     "Philippians 3:1": ["Warning Against False Confidence", "Do not trust human achievements."],
     "Philippians 3:4": ["Paul’s Former Achievements", "Paul lists his past religious status."],
@@ -5708,7 +5696,6 @@ const verseHeaders = {
     "Philippians 3:17": ["Follow Godly Examples", "Imitate faithful believers."],
     "Philippians 3:20": ["Citizenship in Heaven", "Believers belong to heaven."],
     "Philippians 3:21": ["Christ Will Transform Believers", "Christ will give glorified bodies."],
-
 
     // Philippians Chapter 4
     "Philippians 4:1": ["Stand Firm in the Lord", "Remain strong in faith."],
@@ -6288,7 +6275,6 @@ const verseHeaders = {
     "1 John 1:6": ["Walk in the Light", "Walking in light brings fellowship and truth."],
     "1 John 1:8": ["Confession of Sin", "Those who confess sins receive forgiveness."],
 
-
     // 1 John Chapter 2
     "1 John 2:1": ["Christ Our Advocate", "Jesus is our advocate and atoning sacrifice."],
     "1 John 2:3": ["Obedience Shows We Know God", "Knowing God is shown by obedience."],
@@ -6299,7 +6285,6 @@ const verseHeaders = {
     "1 John 2:24": ["Remain in Christ", "Continue in Christ’s teaching."],
     "1 John 2:28": ["Be Ready for Christ’s Return", "Remain in Him with confidence."],
 
-
     // 1 John Chapter 3
     "1 John 3:1": ["Children of God", "Believers are called children of God."],
     "1 John 3:4": ["Sin and Lawlessness", "Sin is rebellion against God."],
@@ -6309,7 +6294,6 @@ const verseHeaders = {
     "1 John 3:19": ["Assurance Before God", "Believers can have confidence before God."],
     "1 John 3:23": ["God’s Command", "Believe in Jesus and love one another."],
 
-
     // 1 John Chapter 4
     "1 John 4:1": ["Test the Spirits", "Test teachings to see if they come from God."],
     "1 John 4:4": ["God Is Greater", "God in believers is greater than the world."],
@@ -6318,7 +6302,6 @@ const verseHeaders = {
     "1 John 4:13": ["Assurance Through the Spirit", "God gives His Spirit as proof."],
     "1 John 4:16": ["Living in God’s Love", "Those who live in love live in God."],
     "1 John 4:18": ["Perfect Love Casts Out Fear", "God’s love removes fear."],
-
 
     // 1 John Chapter 5
     "1 John 5:1": ["Faith in Jesus as the Christ", "Those who believe are born of God."],
@@ -6330,7 +6313,6 @@ const verseHeaders = {
     "1 John 5:20": ["Jesus Is the True God", "Jesus gives understanding and eternal life."],
     "1 John 5:21": ["Final Warning", "Keep away from idols."],
 
-
     // 2 John Chapter 1
     "2 John 1:1": ["Greeting to the Chosen Lady", "John greets the chosen lady and her children."],
     "2 John 1:4": ["Walking in Truth", "John rejoices that believers walk in truth."],
@@ -6340,7 +6322,6 @@ const verseHeaders = {
     "2 John 1:10": ["Do Not Support False Teachers", "Do not welcome false teachers."],
     "2 John 1:12": ["Hope to Visit", "John hopes to speak face to face."],
     "2 John 1:13": ["Final Greetings", "Greetings from fellow believers."],
-
 
     // 3 John Chapter 1
     "3 John 1:1": ["Greeting to Gaius", "John greets beloved Gaius."],

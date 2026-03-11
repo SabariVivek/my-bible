@@ -2952,6 +2952,7 @@ body.dark-theme .mobile-chapter-header {
     font-weight: 500;
     color: #2c5f2d;
     flex-grow: 1;
+    line-height: 2;
 }
 
 .verse-header-subtext {
