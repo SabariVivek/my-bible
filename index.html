@@ -159,6 +159,8 @@
             <span class="ab-name" id="author-name">Paul</span>
         </div>
         <div class="ab-sep"></div>
+        <span class="ab-meta" id="author-verses"></span>
+        <div class="ab-sep"></div>
         <span class="ab-era" id="author-era">~62 AD</span>
     </div>
 
@@ -661,6 +663,21 @@
                 font-size: 11px;
                 color: var(--author-era-color, #9aa0a6);
                 font-family: sans-serif;
+            }
+
+            .author-banner .ab-meta {
+                font-size: 11px;
+                color: #bfa573;
+                font-family: sans-serif;
+                white-space: nowrap;
+            }
+
+            .author-banner .ab-dot-sep {
+                font-size: 11px;
+                color: var(--author-era-color, #9aa0a6);
+                opacity: 0.9;
+                margin: 0 -2px;
+                user-select: none;
             }
 
             /* Light theme overrides */

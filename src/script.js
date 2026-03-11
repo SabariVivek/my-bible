@@ -2529,6 +2529,7 @@ function updateMobileChapterHeader() {
             const authorNameEl = document.getElementById('author-name');
             const authorInitialEl = document.getElementById('author-initial'); // optional
             const authorEraEl = document.getElementById('author-era');
+            const authorVersesEl = document.getElementById('author-verses');
 
             // Normalize book name to match keys in bibleAuthors.js
             let authorKey = book.name;
@@ -2542,6 +2543,7 @@ function updateMobileChapterHeader() {
             if (authorInfo && typeof authorInfo === 'object') {
                 const authorName = authorInfo.author || 'Unknown';
                 const era = authorInfo.era || '';
+                const verses = Number.isFinite(authorInfo.verses) ? authorInfo.verses : null;
 
                 if (authorNameEl) {
                     authorNameEl.textContent = authorName;
@@ -2553,6 +2555,9 @@ function updateMobileChapterHeader() {
                 if (authorEraEl && era) {
                     authorEraEl.textContent = era;
                 }
+                if (authorVersesEl) {
+                    authorVersesEl.textContent = verses ? `${verses} Verses` : '';
+                }
             } else {
                 const fallbackName = typeof authorInfo === 'string' ? authorInfo : 'Unknown';
                 if (authorNameEl) {
@@ -2563,6 +2568,9 @@ function updateMobileChapterHeader() {
                 }
                 if (authorEraEl) {
                     authorEraEl.textContent = '';
+                }
+                if (authorVersesEl) {
+                    authorVersesEl.textContent = '';
                 }
             }
 
