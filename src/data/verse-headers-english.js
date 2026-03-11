@@ -1029,132 +1029,341 @@ const verseHeaders = {
     "Deuteronomy 6:20": ["Teaching Future Generations", "When children ask about the commands, parents must explain how the Lord delivered Israel from Egypt and gave them His laws."],
 
     // Deuteronomy Chapter 7
-    "Deuteronomy 7:1": "Destroy the Nations",
-    "Deuteronomy 7:7": "God's Love for Israel",
-    "Deuteronomy 7:12": "Blessings of Obedience",
+    "Deuteronomy 7:1": ["Drive Out the Nations", "The Lord promises to bring Israel into the land and commands them to drive out the surrounding nations."],
+    "Deuteronomy 7:2": ["Destroy Idolatry Completely", "Israel must not make covenants with the nations or show mercy, but must destroy their idols."],
+    "Deuteronomy 7:3": ["Do Not Intermarry", "The people are warned not to marry the surrounding nations because it would turn their hearts away from God."],
+    "Deuteronomy 7:6": ["A Chosen and Holy People", "Israel is chosen by the Lord to be His treasured possession among all nations."],
+    "Deuteronomy 7:7": ["Chosen by God's Love", "God chose Israel not because they were many but because He loved them."],
+    "Deuteronomy 7:9": ["God Is Faithful to His Covenant", "The Lord keeps His covenant and steadfast love with those who love Him and keep His commandments."],
+    "Deuteronomy 7:12": ["Blessings for Obedience", "If Israel obeys God's commands, He will bless them and multiply them in the land."],
+    "Deuteronomy 7:17": ["Do Not Fear the Nations", "Israel must not fear the stronger nations because the Lord will defeat them."],
+    "Deuteronomy 7:20": ["God Sends Terror and Hornets", "The Lord will drive out the enemies with terror until they are destroyed."],
+    "Deuteronomy 7:22": ["Gradual Conquest of the Land", "God will drive out the nations little by little so the land is not overwhelmed."],
+    "Deuteronomy 7:25": ["Destroy Their Idols", "Israel must burn the idols of the nations and not covet the silver or gold on them."],
+    "Deuteronomy 7:26": ["Avoid Abominable Things", "The people must not bring anything detestable into their homes but completely reject it."],
 
     // Deuteronomy Chapter 8
-    "Deuteronomy 8:1": "Remember the LORD",
-    "Deuteronomy 8:11": "Warning Against Pride",
+    "Deuteronomy 8:1": ["Remember and Obey God's Commands", "Moses urges Israel to carefully obey God's commands so they may live and possess the land the Lord promised."],
+    "Deuteronomy 8:2": ["God Tested Israel in the Wilderness", "The Lord led Israel through the wilderness for forty years to humble and test them."],
+    "Deuteronomy 8:3": ["God Provided Manna", "God fed them with manna to teach that people do not live by bread alone but by every word from the Lord."],
+    "Deuteronomy 8:4": ["God Sustained Them", "Their clothes did not wear out and their feet did not swell during the forty years."],
+    "Deuteronomy 8:5": ["God Disciplines Like a Father", "The Lord disciplines His people just as a father disciplines his child."],
+    "Deuteronomy 8:7": ["The Good Land Promised", "God is bringing Israel into a good land with water, crops, and abundant resources."],
+    "Deuteronomy 8:10": ["Remember to Thank God", "After eating and being satisfied, the people must praise the Lord for the good land."],
+    "Deuteronomy 8:11": ["Warning Not to Forget God", "They are warned not to forget the Lord by failing to keep His commands."],
+    "Deuteronomy 8:12": ["Danger of Pride in Prosperity", "When they become prosperous, they must not let their hearts become proud."],
+    "Deuteronomy 8:17": ["God Gives the Power to Prosper", "The people must not say their own strength produced their wealth, because it is God who gives the ability."],
+    "Deuteronomy 8:19": ["Judgment for Forgetting God", "If they forget the Lord and follow other gods, they will surely perish."],
 
     // Deuteronomy Chapter 9
-    "Deuteronomy 9:1": "Not Because of Israel's Righteousness",
-    "Deuteronomy 9:7": "The Golden Calf Remembered",
-    "Deuteronomy 9:25": "Moses' Intercession",
+    "Deuteronomy 9:1": ["Israel to Cross the Jordan", "Moses tells Israel that they are about to cross the Jordan to dispossess powerful nations greater than themselves."],
+    "Deuteronomy 9:4": ["Not Because of Israel's Righteousness", "Israel must not think they are receiving the land because of their righteousness, but because of the wickedness of the nations."],
+    "Deuteronomy 9:6": ["A Stubborn People", "Moses reminds Israel that they are a stubborn people and do not deserve the land by their own goodness."],
+    "Deuteronomy 9:7": ["Remember the Rebellion", "Israel is told to remember how they repeatedly provoked the Lord in the wilderness."],
+    "Deuteronomy 9:9": ["Moses on Mount Sinai", "Moses recounts how he went up the mountain to receive the tablets of the covenant and fasted forty days and nights."],
+    "Deuteronomy 9:12": ["The Golden Calf Sin", "While Moses was on the mountain, the people quickly turned aside and made a molten calf."],
+    "Deuteronomy 9:15": ["The Broken Tablets", "Moses came down the mountain, saw the people's sin, and threw down the tablets of the covenant."],
+    "Deuteronomy 9:18": ["Moses Intercedes for Israel", "Moses fell before the Lord for forty days and nights praying for the people because of their sin."],
+    "Deuteronomy 9:20": ["Aaron's Sin and Moses' Prayer", "The Lord was angry with Aaron for his part in the sin, but Moses prayed for him."],
+    "Deuteronomy 9:22": ["Israel's Continued Rebellion", "Moses reminds them of other times they angered the Lord at Taberah, Massah, and Kibroth-hattaavah."],
+    "Deuteronomy 9:25": ["Moses Pleads for Mercy", "Moses again interceded before the Lord asking Him not to destroy His people."],
+    "Deuteronomy 9:26": ["Appeal to God's Covenant", "Moses appealed to God's promise to Abraham, Isaac, and Jacob to spare Israel."],
 
     // Deuteronomy Chapter 10
-    "Deuteronomy 10:1": "New Tablets of Stone",
-    "Deuteronomy 10:12": "What Does the LORD Require?",
+    "Deuteronomy 10:1": ["New Tablets of the Covenant", "The Lord tells Moses to carve two new stone tablets and come up the mountain again."],
+    "Deuteronomy 10:3": ["Moses Receives the Law Again", "Moses makes the tablets and goes up the mountain where the Lord writes the commandments again."],
+    "Deuteronomy 10:6": ["Death of Aaron and Priesthood Continued", "Aaron dies and Eleazar his son becomes priest in his place."],
+    "Deuteronomy 10:8": ["The Tribe of Levi Set Apart", "The Lord sets apart the tribe of Levi to carry the ark and serve Him."],
+    "Deuteronomy 10:10": ["The Lord Listens to Moses", "Moses remains on the mountain forty days and nights, and the Lord again chooses not to destroy Israel."],
+    "Deuteronomy 10:12": ["What the Lord Requires", "Moses tells Israel that God requires them to fear Him, walk in His ways, love Him, and serve Him with all their heart."],
+    "Deuteronomy 10:14": ["God Owns Heaven and Earth", "The heavens and the earth belong to the Lord, yet He chose Israel."],
+    "Deuteronomy 10:16": ["Circumcise Your Hearts", "The people are urged to change their hearts and stop being stubborn."],
+    "Deuteronomy 10:17": ["God Is Great and Just", "The Lord is the God of gods who shows no partiality and accepts no bribes."],
+    "Deuteronomy 10:18": ["God Cares for the Vulnerable", "God defends the fatherless and the widow and loves the foreigner."],
+    "Deuteronomy 10:19": ["Love the Foreigner", "Israel is commanded to love foreigners because they were foreigners in Egypt."],
+    "Deuteronomy 10:20": ["Fear and Serve the Lord", "The people are called to fear the Lord, serve Him, and hold fast to Him."],
 
     // Deuteronomy Chapter 11
-    "Deuteronomy 11:1": "Love and Obey the LORD",
-    "Deuteronomy 11:26": "Blessing and Curse",
+    "Deuteronomy 11:1": ["Love and Obey the Lord", "Israel is called to love the Lord and keep His commands, laws, and decrees."],
+    "Deuteronomy 11:2": ["Remember God's Mighty Works", "Moses reminds them of the great acts and discipline of the Lord that they personally witnessed."],
+    "Deuteronomy 11:8": ["Strength Through Obedience", "Keeping God's commands will give Israel strength to enter and possess the land."],
+    "Deuteronomy 11:10": ["The Land God Gives", "The promised land is not like Egypt but a land watered by the rain from heaven."],
+    "Deuteronomy 11:13": ["Blessings for Loving God", "If Israel loves and serves the Lord with all their heart, He will send rain and bless their harvest."],
+    "Deuteronomy 11:16": ["Warning Against Idolatry", "The people are warned not to turn away and worship other gods."],
+    "Deuteronomy 11:18": ["Keep God's Word in Heart and Life", "God's words should be kept in the heart, taught to children, and remembered daily."],
+    "Deuteronomy 11:22": ["Promise of Victory", "If Israel carefully obeys the Lord, He will drive out the nations before them."],
+    "Deuteronomy 11:24": ["Boundaries of the Promised Land", "Every place where Israel sets foot will belong to them, as God promised."],
+    "Deuteronomy 11:26": ["Blessing and Curse Set Before Israel", "Moses presents a choice between blessing for obedience and curse for disobedience."],
+    "Deuteronomy 11:29": ["Mount Gerizim and Mount Ebal", "Blessings are to be proclaimed on Mount Gerizim and curses on Mount Ebal."],
 
     // Deuteronomy Chapter 12
-    "Deuteronomy 12:1": "One Place for Worship",
-    "Deuteronomy 12:29": "Warning Against Idolatry",
+    "Deuteronomy 12:1": ["Destroy Pagan Worship Places", "Israel must completely destroy the places where the nations worship their gods."],
+    "Deuteronomy 12:4": ["Worship Only Where God Chooses", "The people must not worship the Lord in the same way as the nations but at the place He chooses."],
+    "Deuteronomy 12:8": ["Do Not Do What Seems Right to You", "Israel is warned not to follow their own ways but to obey God's commands."],
+    "Deuteronomy 12:10": ["Rest in the Promised Land", "When the Lord gives them rest in the land, they must bring their offerings to the place He chooses."],
+    "Deuteronomy 12:13": ["Offer Sacrifices at the Chosen Place", "Burnt offerings must not be made anywhere but only at the place God appoints."],
+    "Deuteronomy 12:15": ["Freedom to Eat Meat", "The people may eat meat in their towns according to the Lord's blessing, whether clean or unclean."],
+    "Deuteronomy 12:20": ["Expanding the Land", "When the Lord enlarges their territory, they may eat meat as they desire."],
+    "Deuteronomy 12:23": ["Do Not Eat the Blood", "The people must not eat blood because the blood is the life."],
+    "Deuteronomy 12:29": ["Warning Against Idolatry", "After driving out the nations, Israel must not be trapped by their religious practices."],
+    "Deuteronomy 12:32": ["Do Not Add or Subtract", "Israel must carefully obey God's commands without adding to them or taking anything away."],
 
     // Deuteronomy Chapter 13
-    "Deuteronomy 13:1": "Punishment for Idolatry",
+    "Deuteronomy 13:1": ["Warning About False Prophets", "If a prophet or dreamer performs signs but encourages worship of other gods, the people must not listen to him."],
+    "Deuteronomy 13:3": ["Test of Loyalty to God", "The Lord allows such tests to see whether His people truly love Him with all their heart."],
+    "Deuteronomy 13:5": ["Punishment for False Prophets", "A prophet who leads people away from the Lord must be put to death for turning Israel from God."],
+    "Deuteronomy 13:6": ["Do Not Follow Family into Idolatry", "Even if a close family member secretly urges worship of other gods, they must not be followed."],
+    "Deuteronomy 13:9": ["Remove Evil from Among You", "The one who leads others into idolatry must be punished to remove evil from the community."],
+    "Deuteronomy 13:12": ["Cities Led into Idolatry", "If a city turns away to worship other gods, the matter must be carefully investigated."],
+    "Deuteronomy 13:15": ["Judgment on the Corrupt City", "If the report is true, the city must be destroyed because it turned away from the Lord."],
+    "Deuteronomy 13:17": ["God's Mercy After Judgment", "If Israel obeys the Lord and removes evil, God will show compassion and bless them."],
 
     // Deuteronomy Chapter 14
-    "Deuteronomy 14:1": "Clean and Unclean Food",
-    "Deuteronomy 14:22": "Tithes",
+    "Deuteronomy 14:1": ["Israel Is God's Holy People", "Israel is reminded that they are the children of the Lord and must not follow pagan mourning practices."],
+    "Deuteronomy 14:3": ["Clean and Unclean Foods", "The people are commanded not to eat anything that is detestable."],
+    "Deuteronomy 14:4": ["Animals That May Be Eaten", "Certain animals such as cattle, sheep, goats, deer, and similar animals are permitted as food."],
+    "Deuteronomy 14:6": ["Requirements for Clean Animals", "Animals that chew the cud and have divided hooves may be eaten."],
+    "Deuteronomy 14:9": ["Clean and Unclean Water Creatures", "Creatures with fins and scales in the water may be eaten."],
+    "Deuteronomy 14:11": ["Clean Birds Permitted", "Clean birds may be eaten, but specific birds are forbidden."],
+    "Deuteronomy 14:21": ["Israel Set Apart from Nations", "Israel must not eat animals that died naturally but may give them to foreigners."],
+    "Deuteronomy 14:22": ["The Tithe of the Produce", "The people are commanded to set aside a tenth of their produce each year."],
+    "Deuteronomy 14:23": ["Purpose of the Tithe", "The tithe teaches the people to always fear the Lord their God."],
+    "Deuteronomy 14:28": ["Tithe for the Needy", "Every third year the tithe is stored to support the Levites, foreigners, orphans, and widows."],
 
     // Deuteronomy Chapter 15
-    "Deuteronomy 15:1": "The Sabbath Year",
-    "Deuteronomy 15:7": "Generosity to the Poor",
-    "Deuteronomy 15:12": "Release of Hebrew Servants",
-    "Deuteronomy 15:19": "Firstborn Animals",
+    "Deuteronomy 15:1": ["The Year of Canceling Debts", "Every seven years the Israelites must cancel debts among their people."],
+    "Deuteronomy 15:3": ["Foreign Debts May Remain", "Debts owed by foreigners may remain, but debts among Israelites must be forgiven."],
+    "Deuteronomy 15:4": ["No Poor Among You", "If Israel obeys the Lord, there will be no poor among them because God will bless them."],
+    "Deuteronomy 15:7": ["Care for the Poor", "The people must not harden their hearts toward the poor but be generous."],
+    "Deuteronomy 15:10": ["Give Generously", "They should give freely to those in need because the Lord will bless their work."],
+    "Deuteronomy 15:12": ["Release of Hebrew Servants", "A Hebrew servant must be set free after serving six years."],
+    "Deuteronomy 15:13": ["Provide for the Freed Servant", "When releasing a servant, the master must generously provide from his flock and harvest."],
+    "Deuteronomy 15:16": ["Servant Chooses to Stay", "If a servant chooses to remain with his master out of love, his ear is pierced as a sign of permanent service."],
+    "Deuteronomy 15:19": ["Firstborn Animals Belong to God", "The firstborn of livestock must be dedicated to the Lord."],
+    "Deuteronomy 15:21": ["Only Unblemished Offerings", "Animals with defects must not be offered to the Lord but may be eaten."],
 
     // Deuteronomy Chapter 16
-    "Deuteronomy 16:1": "Passover",
-    "Deuteronomy 16:9": "Feast of Weeks",
-    "Deuteronomy 16:13": "Feast of Tabernacles",
-    "Deuteronomy 16:18": "Judges and Officers",
+    "Deuteronomy 16:1": ["The Passover Observance", "Israel must celebrate the Passover to remember how the Lord brought them out of Egypt."],
+    "Deuteronomy 16:9": ["The Feast of Weeks", "Seven weeks after the harvest begins, the people must celebrate the Feast of Weeks with joy before the Lord."],
+    "Deuteronomy 16:13": ["The Feast of Tabernacles", "After the harvest and gathering of produce, Israel must celebrate the Feast of Tabernacles for seven days."],
+    "Deuteronomy 16:16": ["Three Annual Festivals", "All Israelite men must appear before the Lord three times a year at the chosen place."],
+    "Deuteronomy 16:18": ["Appoint Judges and Officials", "The people must appoint judges in every town to judge the people fairly."],
+    "Deuteronomy 16:19": ["Justice Without Corruption", "Judges must not distort justice, show partiality, or accept bribes."],
+    "Deuteronomy 16:21": ["Avoid Idolatrous Practices", "Israel must not set up sacred poles or idols beside the altar of the Lord."],
 
     // Deuteronomy Chapter 17
-    "Deuteronomy 17:1": "Sacrifices Must Be Unblemished",
-    "Deuteronomy 17:2": "Punishment for Idolatry",
-    "Deuteronomy 17:8": "Difficult Cases",
-    "Deuteronomy 17:14": "Instructions About a King",
+    "Deuteronomy 17:1": ["Proper Sacrifices to the Lord", "Animals offered to the Lord must not have defects because such offerings are detestable."],
+    "Deuteronomy 17:2": ["Punishment for Idolatry", "If someone is found worshiping other gods or the sun, moon, or stars, they must be brought to judgment."],
+    "Deuteronomy 17:4": ["Careful Investigation Required", "Before punishment, the matter must be thoroughly investigated."],
+    "Deuteronomy 17:6": ["Two or Three Witnesses", "A person may be put to death only on the testimony of two or three witnesses."],
+    "Deuteronomy 17:8": ["Difficult Cases Brought to the Priests", "Hard legal cases must be taken to the priests and judges at the place the Lord chooses."],
+    "Deuteronomy 17:10": ["Obey the Court's Decision", "The people must follow the judgment given by the priests and judges."],
+    "Deuteronomy 17:12": ["Punishment for Defying Authority", "Anyone who refuses to obey the priest or judge must be punished."],
+    "Deuteronomy 17:14": ["Guidelines for Israel's King", "When Israel appoints a king, he must be chosen by the Lord."],
+    "Deuteronomy 17:16": ["Limits on the King", "The king must not multiply horses, wives, or excessive wealth."],
+    "Deuteronomy 17:18": ["The King Must Study the Law", "The king must write a copy of the law and read it all his life."],
+    "Deuteronomy 17:20": ["Humble Leadership", "The king must remain humble and obey God's law so that his reign will endure."],
 
     // Deuteronomy Chapter 18
-    "Deuteronomy 18:1": "Provision for Priests and Levites",
-    "Deuteronomy 18:9": "Detestable Practices Forbidden",
-    "Deuteronomy 18:15": "A Prophet Like Moses",
+    "Deuteronomy 18:1": ["Provision for the Levites", "The Levites will have no land inheritance but will live from the offerings made to the Lord."],
+    "Deuteronomy 18:6": ["Levites May Serve at the Chosen Place", "Any Levite may come to the place the Lord chooses and serve there."],
+    "Deuteronomy 18:9": ["Forbidden Pagan Practices", "Israel must not imitate the detestable practices of the nations such as divination, sorcery, and witchcraft."],
+    "Deuteronomy 18:13": ["Be Blameless Before the Lord", "The people are commanded to remain blameless and faithful to the Lord their God."],
+    "Deuteronomy 18:15": ["The Prophet Like Moses", "God promises to raise up a prophet like Moses from among the people, and they must listen to him."],
+    "Deuteronomy 18:18": ["God's Words in the Prophet's Mouth", "The Lord will put His words in the prophet's mouth to speak everything He commands."],
+    "Deuteronomy 18:20": ["False Prophets Condemned", "Any prophet who speaks presumptuously or in the name of other gods must be put to death."],
+    "Deuteronomy 18:21": ["How to Recognize a False Prophet", "If what a prophet speaks does not happen, it is not from the Lord."],
 
     // Deuteronomy Chapter 19
-    "Deuteronomy 19:1": "Cities of Refuge",
-    "Deuteronomy 19:14": "Property Boundaries",
-    "Deuteronomy 19:15": "Witnesses",
+    "Deuteronomy 19:1": ["Cities of Refuge Established", "When Israel possesses the land, they must set apart cities where someone who kills unintentionally may flee."],
+    "Deuteronomy 19:4": ["Protection for Accidental Killing", "A person who kills someone unintentionally may escape to a city of refuge to save his life."],
+    "Deuteronomy 19:8": ["Expand the Cities of Refuge", "If the Lord enlarges Israel's territory, more cities of refuge must be added."],
+    "Deuteronomy 19:11": ["Punishment for Murder", "A person who deliberately kills another must be handed over for justice."],
+    "Deuteronomy 19:14": ["Respect Property Boundaries", "The people must not move their neighbor's boundary stones that mark inherited land."],
+    "Deuteronomy 19:15": ["Requirement of Witnesses", "A matter must be established by the testimony of two or three witnesses."],
+    "Deuteronomy 19:16": ["Dealing with False Witnesses", "If someone falsely accuses another, the case must be investigated before the judges."],
+    "Deuteronomy 19:19": ["Justice for False Testimony", "The false witness must receive the punishment they intended for the accused."],
+    "Deuteronomy 19:21": ["Justice Without Pity", "The principle of justice is stated: life for life, eye for eye, tooth for tooth."],
 
     // Deuteronomy Chapter 20
-    "Deuteronomy 20:1": "Laws About Warfare",
+    "Deuteronomy 20:1": ["Trust God in Battle", "When Israel goes to war and sees stronger armies, they must not be afraid because the Lord who brought them from Egypt is with them."],
+    "Deuteronomy 20:2": ["The Priest Encourages the Army", "Before battle, the priest reminds the soldiers to trust in the Lord for victory."],
+    "Deuteronomy 20:5": ["Exemptions from Military Service", "Certain men may return home, including those who built a new house, planted a vineyard, or are newly engaged."],
+    "Deuteronomy 20:8": ["The Fearful Sent Home", "Those who are afraid are allowed to leave so they do not discourage the rest of the army."],
+    "Deuteronomy 20:10": ["Offer Peace to Distant Cities", "When approaching a city far away, Israel must first offer peace."],
+    "Deuteronomy 20:13": ["War Against Resistant Cities", "If a city refuses peace and fights, Israel may defeat it in battle."],
+    "Deuteronomy 20:16": ["Complete Destruction of Canaanite Nations", "The cities of the nations in the promised land must be completely destroyed to remove idolatry."],
+    "Deuteronomy 20:19": ["Preserve Fruit Trees in War", "When besieging a city, Israel must not destroy fruit trees because they provide food."],
 
     // Deuteronomy Chapter 21
-    "Deuteronomy 21:1": "Atonement for Unsolved Murder",
-    "Deuteronomy 21:10": "Marrying a Captive Woman",
-    "Deuteronomy 21:15": "Rights of the Firstborn",
-    "Deuteronomy 21:18": "A Rebellious Son",
-    "Deuteronomy 21:22": "Hanging on a Tree",
+    "Deuteronomy 21:1": ["Atonement for an Unsolved Murder", "If a murdered person is found and the killer is unknown, the nearest town must perform a ceremony to remove guilt from the land."],
+    "Deuteronomy 21:10": ["Marriage to a Captive Woman", "Rules are given for marrying a woman taken captive in war, requiring respectful treatment."],
+    "Deuteronomy 21:15": ["Rights of the Firstborn Son", "The firstborn son must receive his rightful inheritance even if he is from the less loved wife."],
+    "Deuteronomy 21:18": ["A Rebellious Son", "A stubborn and rebellious son who refuses discipline may be brought before the elders for judgment."],
+    "Deuteronomy 21:22": ["A Body Hung on a Tree", "A person executed and hung on a tree must not remain there overnight but be buried the same day."],
 
     // Deuteronomy Chapter 22
-    "Deuteronomy 22:1": "Various Laws",
+    "Deuteronomy 22:1": ["Care for a Neighbor's Property", "If someone sees a neighbor's lost animal, they must return it rather than ignore it."],
+    "Deuteronomy 22:5": ["Maintain Proper Distinctions", "Men and women are instructed not to wear each other's clothing."],
+    "Deuteronomy 22:6": ["Kindness to Birds", "When taking eggs or young birds, the mother bird must be released."],
+    "Deuteronomy 22:8": ["Safety on the Rooftop", "A railing must be built around the roof of a house to prevent accidental death."],
+    "Deuteronomy 22:9": ["Avoid Mixing Different Things", "Israel must not mix seeds, animals, or fabrics in ways that violate God's instructions."],
+    "Deuteronomy 22:12": ["Tassels on Garments", "Tassels must be made on the corners of garments as a reminder of God's commands."],
+    "Deuteronomy 22:13": ["Accusation Against a Wife", "Rules are given for handling accusations about a bride's purity."],
+    "Deuteronomy 22:22": ["Punishment for Adultery", "Both a man and a woman involved in adultery must be punished."],
+    "Deuteronomy 22:25": ["Protection for the Innocent", "If a woman is attacked in the countryside, only the attacker is held responsible."],
+    "Deuteronomy 22:28": ["Marriage After Seduction", "If a man seduces an unmarried woman, he must marry her and provide for her."],
 
     // Deuteronomy Chapter 23
-    "Deuteronomy 23:1": "Exclusion from the Assembly",
-    "Deuteronomy 23:9": "Uncleanness in the Camp",
-    "Deuteronomy 23:15": "Miscellaneous Laws",
+    "Deuteronomy 23:1": ["Exclusion from the Assembly", "Certain individuals with specific conditions are not allowed to enter the assembly of the Lord."],
+    "Deuteronomy 23:3": ["Ammonites and Moabites Excluded", "Ammonites and Moabites are forbidden from entering the assembly because they opposed Israel during the journey from Egypt."],
+    "Deuteronomy 23:7": ["Do Not Hate Edomites or Egyptians", "Israel must not despise Edomites or Egyptians because of their past relationship with them."],
+    "Deuteronomy 23:9": ["Keep the Camp Holy", "The army camp must remain clean and holy because the Lord walks among them."],
+    "Deuteronomy 23:15": ["Protection for Escaped Slaves", "Escaped slaves must not be returned to their masters but allowed to live freely among the people."],
+    "Deuteronomy 23:17": ["Prohibition of Temple Prostitution", "Israel must not allow prostitution connected with pagan worship."],
+    "Deuteronomy 23:19": ["No Interest Among Israelites", "Israelites must not charge interest when lending to fellow Israelites."],
+    "Deuteronomy 23:21": ["Keep Your Vows to the Lord", "Anyone who makes a vow to the Lord must fulfill it without delay."],
+    "Deuteronomy 23:24": ["Respect for a Neighbor's Vineyard", "A person may eat grapes from a neighbor's vineyard but must not take any away."],
+    "Deuteronomy 23:25": ["Respect for a Neighbor's Grain", "A person may pluck grain by hand from a neighbor's field but must not harvest it with a tool."],
 
     // Deuteronomy Chapter 24
-    "Deuteronomy 24:1": "Laws About Marriage and Divorce",
-    "Deuteronomy 24:5": "Miscellaneous Laws",
-    "Deuteronomy 24:14": "Justice for the Oppressed",
+    "Deuteronomy 24:1": ["Law Concerning Divorce", "If a man divorces his wife and she marries another, the first husband cannot take her back after she has been defiled."],
+    "Deuteronomy 24:5": ["Newly Married Man Exempt from War", "A newly married man must stay home for one year to bring happiness to his wife."],
+    "Deuteronomy 24:6": ["Protecting a Person's Livelihood", "A millstone must not be taken as a pledge because it would take away a person's means of living."],
+    "Deuteronomy 24:7": ["Punishment for Kidnapping", "Anyone who kidnaps another Israelite and treats them as a slave must be put to death."],
+    "Deuteronomy 24:8": ["Careful Obedience in Health Laws", "The people must carefully follow the instructions given by the priests concerning skin diseases."],
+    "Deuteronomy 24:10": ["Respect When Collecting a Pledge", "When collecting a pledge for a loan, the lender must not enter the borrower's house."],
+    "Deuteronomy 24:14": ["Fair Treatment of Workers", "Do not oppress hired workers, especially the poor and foreigners."],
+    "Deuteronomy 24:16": ["Individual Responsibility", "Parents must not be put to death for their children, nor children for their parents."],
+    "Deuteronomy 24:17": ["Justice for the Vulnerable", "Do not deny justice to foreigners or orphans, and do not take a widow's garment as a pledge."],
+    "Deuteronomy 24:19": ["Leave Harvest for the Needy", "When harvesting, some produce should be left for the foreigner, the fatherless, and the widow."],
 
     // Deuteronomy Chapter 25
-    "Deuteronomy 25:1": "Fairness in Punishment",
-    "Deuteronomy 25:5": "Levirate Marriage",
-    "Deuteronomy 25:13": "Honest Weights",
-    "Deuteronomy 25:17": "Blot Out Amalek",
+    "Deuteronomy 25:1": ["Justice in the Courts", "Judges must justify the innocent and condemn the guilty when disputes come before them."],
+    "Deuteronomy 25:2": ["Limit on Punishment", "A guilty person may be flogged, but the number of lashes must not exceed forty."],
+    "Deuteronomy 25:4": ["Do Not Muzzle the Ox", "An ox must not be muzzled while it is treading out the grain."],
+    "Deuteronomy 25:5": ["Marriage for a Deceased Brother", "If a man dies without a son, his brother must marry the widow to preserve the family line."],
+    "Deuteronomy 25:7": ["Refusal of the Levirate Duty", "If the brother refuses to marry the widow, a public ceremony removes his responsibility and brings shame."],
+    "Deuteronomy 25:11": ["Improper Conduct in a Fight", "Rules are given concerning improper interference during a fight."],
+    "Deuteronomy 25:13": ["Honest Weights and Measures", "The people must use honest weights and measures in trade."],
+    "Deuteronomy 25:17": ["Remember Amalek", "Israel is commanded to remember how Amalek attacked them during their journey from Egypt."],
+    "Deuteronomy 25:19": ["Blot Out Amalek", "When the Lord gives Israel rest in the land, they must completely remove Amalek's memory."],
 
     // Deuteronomy Chapter 26
-    "Deuteronomy 26:1": "Firstfruits and Tithes",
-    "Deuteronomy 26:16": "You Are God's Treasured Possession",
+    "Deuteronomy 26:1": ["Offering the Firstfruits", "When Israel enters the land, they must bring the firstfruits of their harvest to the place the Lord chooses."],
+    "Deuteronomy 26:5": ["Confession of God's Deliverance", "The worshiper recounts how the Lord brought Israel out of Egypt and gave them the land."],
+    "Deuteronomy 26:10": ["Presentation of the Firstfruits", "The firstfruits are placed before the Lord as an act of worship and thanksgiving."],
+    "Deuteronomy 26:12": ["The Tithe for the Needy", "Every third year the tithe is given to the Levites, foreigners, orphans, and widows."],
+    "Deuteronomy 26:13": ["Declaration of Obedience", "The people declare before the Lord that they have followed His commands regarding the tithe."],
+    "Deuteronomy 26:16": ["Commitment to God's Commands", "Israel is called to carefully obey the Lord's statutes with all their heart and soul."],
+    "Deuteronomy 26:17": ["Israel Declares the Lord as God", "The people affirm that the Lord is their God and that they will walk in His ways."],
+    "Deuteronomy 26:18": ["Israel as God's Treasured People", "The Lord declares Israel to be His treasured possession who must keep His commands."],
+    "Deuteronomy 26:19": ["Exalted Among the Nations", "God promises to set Israel high above other nations in praise, honor, and holiness."],
 
     // Deuteronomy Chapter 27
-    "Deuteronomy 27:1": "The Altar on Mount Ebal",
-    "Deuteronomy 27:11": "Curses from Mount Ebal",
+    "Deuteronomy 27:1": ["Command to Write the Law on Stones", "Moses and the elders command Israel to write the law on large stones after crossing the Jordan."],
+    "Deuteronomy 27:4": ["Altar on Mount Ebal", "Israel must build an altar to the Lord on Mount Ebal and offer sacrifices there."],
+    "Deuteronomy 27:9": ["Israel Declared God's People", "Moses tells the people that they have become the people of the Lord and must obey His voice."],
+    "Deuteronomy 27:11": ["Mounts of Blessing and Curse", "The tribes are assigned to stand on Mount Gerizim for blessings and Mount Ebal for curses."],
+    "Deuteronomy 27:14": ["Curses Pronounced by the Levites", "The Levites proclaim curses for those who break God's commands."],
+    "Deuteronomy 27:15": ["Curse on Idolatry", "A curse is declared on anyone who makes an idol or carved image."],
+    "Deuteronomy 27:16": ["Curse on Dishonoring Parents", "Those who dishonor their father or mother are placed under a curse."],
+    "Deuteronomy 27:17": ["Curse on Moving Boundary Stones", "A curse is declared on anyone who moves their neighbor's boundary marker."],
+    "Deuteronomy 27:18": ["Curse on Misleading the Blind", "Anyone who misleads a blind person on the road is cursed."],
+    "Deuteronomy 27:19": ["Curse on Injustice", "A curse is pronounced on those who deny justice to foreigners, orphans, and widows."],
+    "Deuteronomy 27:26": ["Curse for Disobeying the Law", "Anyone who does not uphold the words of the law by obeying them is under a curse."],
 
     // Deuteronomy Chapter 28
-    "Deuteronomy 28:1": "Blessings for Obedience",
-    "Deuteronomy 28:15": "Curses for Disobedience",
+    "Deuteronomy 28:1": ["Blessings for Obedience", "If Israel fully obeys the Lord, He will set them high above all nations and bless them abundantly."],
+    "Deuteronomy 28:3": ["Blessed in City and Field", "God promises blessings in every place, whether in the city or the countryside."],
+    "Deuteronomy 28:7": ["Victory Over Enemies", "Enemies who rise against Israel will be defeated and flee in many directions."],
+    "Deuteronomy 28:11": ["Prosperity in the Land", "The Lord will bless Israel with abundant crops, livestock, and prosperity."],
+    "Deuteronomy 28:12": ["The Lord's Rich Blessing", "God will open the heavens to send rain and bless the work of their hands."],
+    "Deuteronomy 28:15": ["Curses for Disobedience", "If Israel refuses to obey the Lord, many curses will come upon them."],
+    "Deuteronomy 28:16": ["Cursed in City and Field", "Disobedience will bring hardship in every place, both in the city and the countryside."],
+    "Deuteronomy 28:20": ["Confusion and Trouble", "The Lord will send confusion and frustration in everything they attempt."],
+    "Deuteronomy 28:25": ["Defeat by Enemies", "Israel will be defeated by their enemies and scattered before them."],
+    "Deuteronomy 28:36": ["Exile to Foreign Lands", "The Lord will drive Israel and their king to a foreign nation they have not known."],
+    "Deuteronomy 28:45": ["Curses Pursue the Disobedient", "The curses will pursue and overtake Israel because they did not obey God's commands."],
+    "Deuteronomy 28:64": ["Scattered Among the Nations", "Israel will be scattered among the nations and serve other gods there."],
+    "Deuteronomy 28:68": ["Return to Bondage", "Disobedience will bring Israel back into slavery and suffering."],
 
     // Deuteronomy Chapter 29
-    "Deuteronomy 29:1": "The Covenant in Moab",
-    "Deuteronomy 29:22": "Consequences of Breaking the Covenant",
+    "Deuteronomy 29:1": ["Renewal of the Covenant in Moab", "Moses reminds Israel of the covenant the Lord made with them in the land of Moab."],
+    "Deuteronomy 29:2": ["Remember God's Mighty Works", "Israel is reminded of the signs and wonders God performed in Egypt and during the wilderness journey."],
+    "Deuteronomy 29:5": ["God Sustained Israel in the Wilderness", "For forty years God provided for them so their clothes and sandals did not wear out."],
+    "Deuteronomy 29:10": ["All Israel Stands Before the Lord", "The entire community of Israel stands together before God to renew the covenant."],
+    "Deuteronomy 29:14": ["Covenant for Present and Future Generations", "The covenant is made not only with those present but also with future generations."],
+    "Deuteronomy 29:16": ["Warning Against Idolatry", "Israel is warned not to turn to the idols of the nations they passed through."],
+    "Deuteronomy 29:18": ["Danger of a Rebellious Heart", "Anyone who turns away from the Lord will bring destruction upon themselves."],
+    "Deuteronomy 29:22": ["Future Generations See the Judgment", "Later generations will see the devastation of the land caused by disobedience."],
+    "Deuteronomy 29:24": ["Why Did This Happen", "People will ask why such destruction came upon the land."],
+    "Deuteronomy 29:25": ["Because They Broke the Covenant", "The answer will be that Israel abandoned the covenant of the Lord."],
+    "Deuteronomy 29:29": ["Secret Things Belong to God", "The hidden things belong to the Lord, but what He has revealed belongs to His people so they may obey."],
 
     // Deuteronomy Chapter 30
-    "Deuteronomy 30:1": "Restoration Promised",
-    "Deuteronomy 30:11": "Choose Life",
+    "Deuteronomy 30:1": ["Promise of Restoration", "When Israel remembers God's words in exile and returns to Him, the Lord will restore them."],
+    "Deuteronomy 30:3": ["God Gathers the Scattered", "The Lord will have compassion and gather His people from all the nations where they were scattered."],
+    "Deuteronomy 30:6": ["Circumcision of the Heart", "God will transform the hearts of His people so they can truly love and obey Him."],
+    "Deuteronomy 30:9": ["Renewed Blessing", "When Israel obeys the Lord again, He will bless them and prosper the work of their hands."],
+    "Deuteronomy 30:11": ["God's Command Is Not Far Away", "The commandment of the Lord is not too difficult or distant for the people."],
+    "Deuteronomy 30:15": ["Life and Good, Death and Evil", "Moses sets before the people a choice between life and prosperity or death and destruction."],
+    "Deuteronomy 30:19": ["Choose Life", "He calls heaven and earth as witnesses and urges Israel to choose life by loving and obeying God."],
+    "Deuteronomy 30:20": ["Love and Hold Fast to the Lord", "Life and blessing come through loving the Lord, obeying Him, and remaining faithful."],
 
     // Deuteronomy Chapter 31
-    "Deuteronomy 31:1": "Joshua to Succeed Moses",
-    "Deuteronomy 31:9": "The Reading of the Law",
-    "Deuteronomy 31:14": "Moses and Joshua Commissioned",
-    "Deuteronomy 31:24": "The Law Placed Beside the Ark",
+    "Deuteronomy 31:1": ["Moses Encourages Israel", "Moses tells the people to be strong and courageous because the Lord will go with them."],
+    "Deuteronomy 31:7": ["Joshua Appointed as Leader", "Moses publicly encourages Joshua to lead Israel into the promised land."],
+    "Deuteronomy 31:9": ["The Law Given to the Priests", "Moses writes down the law and gives it to the priests and elders."],
+    "Deuteronomy 31:10": ["Reading the Law Every Seven Years", "The law must be read to all Israel during the Feast of Tabernacles every seven years."],
+    "Deuteronomy 31:14": ["Joshua Commissioned by the Lord", "The Lord appears at the tent of meeting and commissions Joshua to lead the people."],
+    "Deuteronomy 31:16": ["Warning of Future Rebellion", "God tells Moses that Israel will later turn away and worship other gods."],
+    "Deuteronomy 31:19": ["The Song as a Witness", "Moses is instructed to write a song that will testify against Israel when they forget God."],
+    "Deuteronomy 31:24": ["The Law Placed Beside the Ark", "The book of the law is placed beside the ark of the covenant as a witness."],
+    "Deuteronomy 31:27": ["Moses Warns of Israel's Rebellion", "Moses says he knows the people will be stubborn and rebel even after his death."],
+    "Deuteronomy 31:30": ["Moses Teaches the Song", "Moses recites the song before the entire assembly of Israel."],
 
     // Deuteronomy Chapter 32
-    "Deuteronomy 32:1": "The Song of Moses",
-    "Deuteronomy 32:48": "Moses to Die on Mount Nebo",
+    "Deuteronomy 32:1": ["The Song of Moses Begins", "Moses calls heaven and earth to listen as he declares the words of his song."],
+    "Deuteronomy 32:4": ["God's Perfect Character", "The Lord is described as the Rock whose works are perfect and whose ways are just."],
+    "Deuteronomy 32:7": ["Remember God's Faithfulness", "The people are urged to remember the past and consider how God guided them."],
+    "Deuteronomy 32:10": ["God's Care for Israel", "The Lord found Israel in the wilderness and cared for them like the apple of His eye."],
+    "Deuteronomy 32:15": ["Israel's Rebellion", "When Israel became prosperous, they turned away from the God who made them."],
+    "Deuteronomy 32:19": ["God's Anger at Their Idolatry", "The Lord becomes angry because His people turned to false gods."],
+    "Deuteronomy 32:23": ["Judgment for Disobedience", "God warns that disasters and troubles will come because of their rebellion."],
+    "Deuteronomy 32:34": ["God's Justice Stored Up", "The Lord declares that judgment is prepared and will come at the right time."],
+    "Deuteronomy 32:39": ["The Lord Alone Is God", "God proclaims that He alone has the power over life and death."],
+    "Deuteronomy 32:43": ["Rejoice with God's People", "The nations are called to rejoice because God will avenge His people."],
+    "Deuteronomy 32:44": ["Moses Finishes the Song", "Moses and Joshua speak the words of the song to the people."],
+    "Deuteronomy 32:48": ["Moses Told to View the Promised Land", "The Lord tells Moses to go up Mount Nebo to see the land before his death."],
 
     // Deuteronomy Chapter 33
-    "Deuteronomy 33:1": "Moses Blesses the Tribes",
+    "Deuteronomy 33:1": ["Moses Blesses the Tribes", "Before his death Moses blesses the tribes of Israel."],
+    "Deuteronomy 33:2": ["The Lord Comes in Majesty", "Moses describes the Lord coming from Sinai with glory and power."],
+    "Deuteronomy 33:6": ["Blessing for Reuben", "Moses blesses the tribe of Reuben, asking that they live and not disappear."],
+    "Deuteronomy 33:7": ["Blessing for Judah", "Moses prays that the Lord will help Judah and bring them victory over their enemies."],
+    "Deuteronomy 33:8": ["Blessing for Levi", "Levi is blessed for their faithfulness in teaching God's law and serving Him."],
+    "Deuteronomy 33:12": ["Blessing for Benjamin", "Benjamin is described as the beloved of the Lord who dwells safely under God's protection."],
+    "Deuteronomy 33:13": ["Blessing for Joseph", "Joseph receives abundant blessings from heaven and the earth."],
+    "Deuteronomy 33:18": ["Blessing for Zebulun and Issachar", "These tribes are blessed for their prosperity and joy in their work."],
+    "Deuteronomy 33:20": ["Blessing for Gad", "Gad is praised for courage and strength in battle."],
+    "Deuteronomy 33:22": ["Blessing for Dan", "Dan is compared to a young lion leaping from Bashan."],
+    "Deuteronomy 33:23": ["Blessing for Naphtali", "Naphtali is filled with favor and blessings from the Lord."],
+    "Deuteronomy 33:24": ["Blessing for Asher", "Asher is blessed with prosperity and security."],
+    "Deuteronomy 33:26": ["The Eternal God Protects Israel", "Moses declares that there is no one like the God of Israel who helps His people."],
+    "Deuteronomy 33:29": ["Blessed Is Israel", "Israel is called blessed because the Lord is their shield and helper."],
 
     // Deuteronomy Chapter 34
-    "Deuteronomy 34:1": "The Death of Moses",
-    "Deuteronomy 34:9": "Joshua Filled with Wisdom",
-    "Deuteronomy 34:10": "Moses' Greatness",
+    "Deuteronomy 34:1": ["Moses Views the Promised Land", "The Lord brings Moses to Mount Nebo and shows him the entire land promised to Israel."],
+    "Deuteronomy 34:4": ["God's Promise Fulfilled", "God tells Moses that this is the land promised to Abraham, Isaac, and Jacob, but Moses will not cross into it."],
+    "Deuteronomy 34:5": ["Death of Moses", "Moses dies in the land of Moab according to the word of the Lord."],
+    "Deuteronomy 34:6": ["Burial of Moses", "The Lord buries Moses in Moab, but no one knows the exact place of his grave."],
+    "Deuteronomy 34:7": ["Moses' Strength at Death", "Moses dies at the age of 120, yet his eyes were not weak nor his strength gone."],
+    "Deuteronomy 34:8": ["Israel Mourns Moses", "The people of Israel mourn for Moses for thirty days in the plains of Moab."],
+    "Deuteronomy 34:9": ["Joshua Filled with Wisdom", "Joshua is filled with the spirit of wisdom as he begins to lead Israel."],
+    "Deuteronomy 34:10": ["No Prophet Like Moses", "No prophet has arisen in Israel like Moses, whom the Lord knew face to face."],
+    "Deuteronomy 34:11": ["Mighty Signs and Wonders", "Moses performed great signs and wonders in Egypt and before all Israel."],
+    "Deuteronomy 34:12": ["Moses' Great Power", "Moses demonstrated mighty power and awe-inspiring deeds before all Israel."],
 
     // Joshua Chapter 1
     "Joshua 1:1": "God Commissions Joshua",
@@ -1405,90 +1614,90 @@ const verseHeaders = {
     "Ruth 4:18": "The Genealogy of David",
 
     // 1 Samuel Chapter 1
-    "1 Samuel 1:1": "Elkanah and His Wives",
-    "1 Samuel 1:9": "Hannah's Prayer",
-    "1 Samuel 1:19": "The Birth of Samuel",
+    "1 Samuel 1:1": ["Elkanah and His Wives", "Elkanah has two wives; Peninnah has children, but Hannah is childless."],
+    "1 Samuel 1:9": ["Hannah's Prayer", "Sorrowful Hannah prays in the temple, making a vow that if God gives her a son, she will dedicate him to the LORD for life."],
+    "1 Samuel 1:19": ["The Birth of Samuel", "The LORD remembers Hannah; she becomes pregnant and gives birth to a son, whom she names Samuel."],
 
     // 1 Samuel Chapter 2
-    "1 Samuel 2:1": "Hannah's Prayer of Thanksgiving",
-    "1 Samuel 2:12": "Eli's Wicked Sons",
-    "1 Samuel 2:18": "Samuel's Ministry",
-    "1 Samuel 2:22": "Eli Rebukes His Sons",
-    "1 Samuel 2:27": "A Prophecy Against Eli's House",
+    "1 Samuel 2:1": ["Hannah's Prayer of Thanksgiving", "Hannah rejoices in God's salvation and strength."],
+    "1 Samuel 2:12": ["Eli's Wicked Sons", "Eli's sons are wicked and do not honor God."],
+    "1 Samuel 2:18": ["Samuel's Ministry", "Samuel continues serving in the temple as a young boy."],
+    "1 Samuel 2:22": ["Eli Rebukes His Sons", "Eli speaks against his sons' sinful behavior."],
+    "1 Samuel 2:27": ["A Prophecy Against Eli's House", "A prophet warns Eli of judgment on his family."],
 
     // 1 Samuel Chapter 3
-    "1 Samuel 3:1": "The LORD Calls Samuel",
-    "1 Samuel 3:11": "The LORD's Message to Samuel",
-    "1 Samuel 3:19": "Samuel Established as a Prophet",
+    "1 Samuel 3:1": ["The LORD Calls Samuel", "The Lord reveals Himself to young Samuel in the temple."],
+    "1 Samuel 3:11": ["The LORD's Message to Samuel", "God tells Samuel of judgment coming upon Eli's house."],
+    "1 Samuel 3:19": ["Samuel Established as a Prophet", "Samuel is recognized by all Israel as a prophet of the Lord."],
 
     // 1 Samuel Chapter 4
-    "1 Samuel 4:1": "The Ark Captured by the Philistines",
-    "1 Samuel 4:12": "The Death of Eli",
+    "1 Samuel 4:1": ["The Ark Captured by the Philistines", "Israel battles the Philistines and the Ark of the Covenant is taken."],
+    "1 Samuel 4:12": ["The Death of Eli", "Eli dies when hearing news of the Ark's capture."],
 
     // 1 Samuel Chapter 5
-    "1 Samuel 5:1": "The Ark in Philistine Territory",
+    "1 Samuel 5:1": ["The Ark in Philistine Territory", "The Ark of the Covenant is placed in Philistine cities and brings judgment."],
 
     // 1 Samuel Chapter 6
-    "1 Samuel 6:1": "The Ark Returned to Israel",
-    "1 Samuel 6:19": "Judgment at Beth Shemesh",
+    "1 Samuel 6:1": ["The Ark Returned to Israel", "The Philistines send the Ark back to Israel on a cart."],
+    "1 Samuel 6:19": ["Judgment at Beth Shemesh", "Many are struck down for looking into the holy Ark."],
 
     // 1 Samuel Chapter 7
-    "1 Samuel 7:1": "The Ark at Kiriath Jearim",
-    "1 Samuel 7:3": "Samuel Leads Israel to Victory",
-    "1 Samuel 7:15": "Samuel as Judge",
+    "1 Samuel 7:1": ["The Ark at Kiriath Jearim", "The Ark is kept at Kiriath Jearim for twenty years."],
+    "1 Samuel 7:3": ["Samuel Leads Israel to Victory", "Samuel calls Israel to turn to God and defeats the Philistines."],
+    "1 Samuel 7:15": ["Samuel as Judge", "Samuel serves as judge over Israel throughout his life."],
 
     // 1 Samuel Chapter 8
-    "1 Samuel 8:1": "Israel Demands a King",
-    "1 Samuel 8:10": "Samuel Warns the People",
+    "1 Samuel 8:1": ["Israel Demands a King", "The people ask Samuel for a king to rule over them."],
+    "1 Samuel 8:10": ["Samuel Warns the People", "Samuel warns of the consequences of having an earthly king."],
 
     // 1 Samuel Chapter 9
-    "1 Samuel 9:1": "Saul Meets Samuel",
-    "1 Samuel 9:15": "The LORD Reveals His Plan",
+    "1 Samuel 9:1": ["Saul Meets Samuel", "Saul, searching for lost donkeys, meets the prophet Samuel."],
+    "1 Samuel 9:15": ["The LORD Reveals His Plan", "God tells Samuel that Saul will be anointed as king."],
 
     // 1 Samuel Chapter 10
-    "1 Samuel 10:1": "Samuel Anoints Saul",
-    "1 Samuel 10:9": "Saul Prophesies",
-    "1 Samuel 10:17": "Saul Chosen as King",
+    "1 Samuel 10:1": ["Samuel Anoints Saul", "Samuel anoints Saul as king over Israel."],
+    "1 Samuel 10:9": ["Saul Prophesies", "The Spirit of God comes upon Saul and he prophesies."],
+    "1 Samuel 10:17": ["Saul Chosen as King", "Saul is chosen as king through casting of lots before all Israel."],
 
     // 1 Samuel Chapter 11
-    "1 Samuel 11:1": "Saul Defeats the Ammonites",
-    "1 Samuel 11:12": "Saul Confirmed as King",
+    "1 Samuel 11:1": ["Saul Defeats the Ammonites", "Saul rescues Jabesh-gilead from Ammonite siege."],
+    "1 Samuel 11:12": ["Saul Confirmed as King", "The people gather to confirm Saul as their king."],
 
     // 1 Samuel Chapter 12
-    "1 Samuel 12:1": "Samuel's Farewell Speech",
+    "1 Samuel 12:1": ["Samuel's Farewell Speech", "Samuel addresses Israel and testifies of his integrity as judge."],
 
     // 1 Samuel Chapter 13
-    "1 Samuel 13:1": "Saul's Unlawful Sacrifice",
-    "1 Samuel 13:15": "Israel Without Weapons",
+    "1 Samuel 13:1": ["Saul's Unlawful Sacrifice", "Saul makes an unlawful offering and Samuel pronounces judgment."],
+    "1 Samuel 13:15": ["Israel Without Weapons", "Israel has no swords or spears except for Saul and Jonathan."],
 
     // 1 Samuel Chapter 14
-    "1 Samuel 14:1": "Jonathan's Victory",
-    "1 Samuel 14:24": "Saul's Rash Oath",
-    "1 Samuel 14:47": "Saul's Military Victories",
+    "1 Samuel 14:1": ["Jonathan's Victory", "Jonathan and his armor-bearer defeat a Philistine garrison."],
+    "1 Samuel 14:24": ["Saul's Rash Oath", "Saul's oath causes hunger among the troops."],
+    "1 Samuel 14:47": ["Saul's Military Victories", "Saul fights against Israel's enemies on every side."],
 
     // 1 Samuel Chapter 15
-    "1 Samuel 15:1": "Saul Defeats Amalek",
-    "1 Samuel 15:10": "Saul Rejected as King",
-    "1 Samuel 15:32": "Samuel Kills Agag",
+    "1 Samuel 15:1": ["Saul Defeats Amalek", "Saul defeats the Amalekites but disobeys the Lord's command."],
+    "1 Samuel 15:10": ["Saul Rejected as King", "The Lord rejects Saul as king because of his disobedience."],
+    "1 Samuel 15:32": ["Samuel Kills Agag", "Samuel executes the Amalekite king Agag before the Lord."],
 
     // 1 Samuel Chapter 16
-    "1 Samuel 16:1": "David Anointed King",
-    "1 Samuel 16:14": "David Serves Saul",
+    "1 Samuel 16:1": ["David Anointed King", "Samuel anoints David as the future king of Israel."],
+    "1 Samuel 16:14": ["David Serves Saul", "David enters Saul's service to play the harp for him."],
 
     // 1 Samuel Chapter 17
-    "1 Samuel 17:1": "Goliath's Challenge",
-    "1 Samuel 17:12": "David Accepts the Challenge",
-    "1 Samuel 17:41": "David Kills Goliath",
+    "1 Samuel 17:1": ["Goliath's Challenge", "The giant Goliath taunts Israel and demands single combat."],
+    "1 Samuel 17:12": ["David Accepts the Challenge", "Young David volunteers to fight Goliath in the Lord's name."],
+    "1 Samuel 17:41": ["David Kills Goliath", "David kills Goliath with a sling and stone."],
 
     // 1 Samuel Chapter 18
-    "1 Samuel 18:1": "Jonathan and David's Friendship",
-    "1 Samuel 18:6": "Saul's Jealousy of David",
-    "1 Samuel 18:17": "David Marries Michal",
+    "1 Samuel 18:1": ["Jonathan and David's Friendship", "Jonathan becomes deeply attached to David and they make a covenant."],
+    "1 Samuel 18:6": ["Saul's Jealousy of David", "Saul becomes jealous of David when the women praise him more than Saul."],
+    "1 Samuel 18:17": ["David Marries Michal", "Saul offers his daughter Michal to David in marriage, setting a deadly trap."],
 
     // 1 Samuel Chapter 19
-    "1 Samuel 19:1": "Saul Tries to Kill David",
-    "1 Samuel 19:8": "Michal Saves David",
-    "1 Samuel 19:18": "David Flees to Samuel",
+    "1 Samuel 19:1": ["Saul Tries to Kill David", "Saul commands his servants to kill David, but they protect him."],
+    "1 Samuel 19:8": ["Michal Saves David", "Michal helps David escape by letting him down through a window."],
+    "1 Samuel 19:18": ["David Flees to Samuel", "David flees to Samuel at Ramah for refuge from Saul."],
 
     // 1 Samuel Chapter 20
     "1 Samuel 20:1": "Jonathan Helps David",
@@ -6432,7 +6641,7 @@ const verseHeaders = {
     "Revelation 22:21": ["The Closing Blessing", "The grace of the Lord Jesus be with God's people."]
 };
 
-// Helper function to get header for a specific verse
+// Helper function to get header for a specific verse with language support
 function getVerseHeader(bookName, chapter, verse) {
     // Normalize book name: Convert "I Samuel" → "1 Samuel", "II Kings" → "2 Kings", etc.
     const normalizedBookName = bookName
@@ -6441,5 +6650,16 @@ function getVerseHeader(bookName, chapter, verse) {
         .replace(/^III\s+/, '3 ');
 
     const key = `${normalizedBookName} ${chapter}:${verse}`;
+    
+    // Get current language preference (default to 'tamil')
+    const lang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'tamil';
+    
+    // Try to get header in the requested language, fall back to English if not found
+    if (lang === 'tamil' && typeof verseHeadersTamil !== 'undefined') {
+        const tamilHeader = verseHeadersTamil[key];
+        if (tamilHeader) return tamilHeader;
+    }
+    
+    // Fall back to English headers
     return verseHeaders[key] || null;
 }
