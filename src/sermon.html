@@ -3074,14 +3074,17 @@
                 const dateStr = formatSermonDate(date);
                 let versesHtml = '';
                 if (sermon.verses && sermon.verses.length > 0) {
-                    const firstVerse = sermon.verses[0];
-                    const moreCount = sermon.verses.length - 1;
-                    versesHtml = `
-                        <div class="sermon-verse-item">
-                            <span class="sermon-verse-badge">${firstVerse.display}</span>
-                            ${moreCount > 0 ? `<span class="sermon-verse-more">+${moreCount} more</span>` : ''}
-                        </div>
-                    `;
+                    versesHtml = sermon.verses.slice(0, 2).map((v, idx) => {
+                        const moreCount = sermon.verses.length > 2 && idx === 1
+                            ? sermon.verses.length - 2
+                            : 0;
+                        return `
+                            <div class="sermon-verse-item">
+                                <span class="sermon-verse-badge">${v.display}</span>
+                                ${moreCount > 0 ? `<span class="sermon-verse-more">+${moreCount} more</span>` : ''}
+                            </div>
+                        `;
+                    }).join('');
                 }
                 const isFirstOfMonth = date.getDate() === 1;
                 const specialType = getSpecialCardType(date);
