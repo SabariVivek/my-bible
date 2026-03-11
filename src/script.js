@@ -365,7 +365,138 @@ async function loadUserSettingsFromSupabase() {
 }
 
 function openAdminPasswordModal(onSuccess) {
-    // Create password modal (reuse existing admin-password-modal markup/styles)
+    const ATTEMPTS_KEY = 'adminPinAttempts';
+    const LOCK_UNTIL_KEY = 'adminPinLockUntil';
+    const MAX_ATTEMPTS = 3;
+    const LOCK_DURATION_MS = 24 * 60 * 60 * 1000; // 24 hours
+
+    function showLockoutSheet(lockUntilTs) {
+        // Remove any existing modal instance
+        const existing = document.getElementById('admin-password-modal');
+        if (existing) existing.remove();
+
+        const modal = document.createElement('div');
+        modal.className = 'admin-password-modal';
+        modal.id = 'admin-password-modal';
+        modal.innerHTML = `
+            <div class="admin-lock-sheet">
+                <div class="admin-lock-warning-stripe"></div>
+                <div class="admin-lock-handle"></div>
+
+                <div class="admin-lock-header">
+                    <div class="admin-lock-header-left">
+                        <div class="admin-lock-badge">Security Alert</div>
+                    </div>
+                    <button class="admin-lock-close-btn" aria-label="Close">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="admin-lock-icon-zone">
+                    <div class="admin-lock-ring">
+                        <svg class="admin-lock-ring-svg" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="44" cy="44" r="40" stroke="#ff6b35" stroke-width="1.5" stroke-dasharray="6 6" stroke-opacity="0.4"></circle>
+                        </svg>
+                        <div class="admin-lock-icon-wrap">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                                <rect x="5" y="11" width="14" height="10" rx="2.5" fill="#ff6b35" opacity="0.9"></rect>
+                                <path d="M8 11V7.5a4 4 0 1 1 8 0V11" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"></path>
+                                <circle cx="12" cy="16" r="1.5" fill="#16161e"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-lock-content">
+                    <div class="admin-lock-title">Admin Locked</div>
+                    <div class="admin-lock-subtitle">
+                        Access has been suspended after <strong>3 failed attempts</strong>.<br>
+                        Please wait for the timer to reset before retrying.
+                    </div>
+                </div>
+
+                <div class="admin-lock-attempts-row">
+                    <div class="admin-lock-attempt-pip used"></div>
+                    <div class="admin-lock-attempt-pip used"></div>
+                    <div class="admin-lock-attempt-pip used"></div>
+                    <span class="admin-lock-attempt-label">3 / 3 attempts used</span>
+                </div>
+
+                <div class="admin-lock-divider"></div>
+
+                <div class="admin-lock-timer-block">
+                    <div class="admin-lock-timer-label">
+                        <div class="admin-lock-timer-label-text">Lockout ends in</div>
+                        <div class="admin-lock-timer-sublabel">Auto-resets when done</div>
+                    </div>
+                    <div class="admin-lock-timer-display" id="admin-lockout-timer">24:00:00</div>
+                </div>
+            </div>
+            <div class="admin-password-overlay"></div>
+        `;
+        document.body.appendChild(modal);
+
+        const iconCloseBtn = modal.querySelector('.admin-lock-close-btn');
+        const dismissBtn = modal.querySelector('.admin-lock-close-full-btn');
+        const overlay = modal.querySelector('.admin-password-overlay');
+        const timerEl = modal.querySelector('#admin-lockout-timer');
+
+        function formatRemaining(ms) {
+            if (ms <= 0) return '00:00:00';
+            const totalSeconds = Math.floor(ms / 1000);
+            const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+            const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+            const seconds = String(totalSeconds % 60).padStart(2, '0');
+            return `${hours}:${minutes}:${seconds}`;
+        }
+
+        function updateTimer() {
+            const now = Date.now();
+            const remaining = lockUntilTs - now;
+            if (remaining <= 0) {
+                clearInterval(intervalId);
+                localStorage.removeItem(LOCK_UNTIL_KEY);
+                localStorage.removeItem(ATTEMPTS_KEY);
+                timerEl.textContent = 'You can now try again.';
+                return;
+            }
+            timerEl.textContent = formatRemaining(remaining);
+        }
+
+        const intervalId = setInterval(updateTimer, 1000);
+        updateTimer();
+
+        function closeModal() {
+            clearInterval(intervalId);
+            const sheet = modal.querySelector('.admin-lock-sheet');
+            if (sheet) {
+                sheet.style.animation = 'slideDownSheet 0.3s ease forwards';
+                modal.style.opacity = '1';
+                setTimeout(() => {
+                    modal.remove();
+                }, 300);
+            } else {
+                modal.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => modal.remove(), 300);
+            }
+        }
+
+        if (iconCloseBtn) iconCloseBtn.addEventListener('click', closeModal);
+        if (dismissBtn) dismissBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+    }
+
+    // Check for lockout before showing PIN sheet
+    const lockUntilRaw = localStorage.getItem(LOCK_UNTIL_KEY);
+    const lockUntil = lockUntilRaw ? parseInt(lockUntilRaw, 10) : 0;
+    if (lockUntil && Date.now() < lockUntil) {
+        showLockoutSheet(lockUntil);
+        return;
+    }
+
+    // Remove any existing modal instance
     const existing = document.getElementById('admin-password-modal');
     if (existing) existing.remove();
 
@@ -380,56 +511,186 @@ function openAdminPasswordModal(onSuccess) {
             </div>
             <div class="admin-password-body">
                 <p>Enter 6-digit password to enable admin mode</p>
-                <input type="password" id="admin-password-input" class="admin-password-input" placeholder="••••••" maxlength="6" inputmode="numeric" />
+                <div class="pin-dots">
+                    <div class="pin-dot" data-index="0"></div>
+                    <div class="pin-dot" data-index="1"></div>
+                    <div class="pin-dot" data-index="2"></div>
+                    <div class="pin-dot" data-index="3"></div>
+                    <div class="pin-dot" data-index="4"></div>
+                    <div class="pin-dot" data-index="5"></div>
+                </div>
+                <div class="numpad">
+                    <button class="key" data-key="1"><span class="key-num">1</span><span class="key-letters"></span></button>
+                    <button class="key" data-key="2"><span class="key-num">2</span><span class="key-letters">ABC</span></button>
+                    <button class="key" data-key="3"><span class="key-num">3</span><span class="key-letters">DEF</span></button>
+
+                    <button class="key" data-key="4"><span class="key-num">4</span><span class="key-letters">GHI</span></button>
+                    <button class="key" data-key="5"><span class="key-num">5</span><span class="key-letters">JKL</span></button>
+                    <button class="key" data-key="6"><span class="key-num">6</span><span class="key-letters">MNO</span></button>
+
+                    <button class="key" data-key="7"><span class="key-num">7</span><span class="key-letters">PQRS</span></button>
+                    <button class="key" data-key="8"><span class="key-num">8</span><span class="key-letters">TUV</span></button>
+                    <button class="key" data-key="9"><span class="key-num">9</span><span class="key-letters">WXYZ</span></button>
+
+                    <div class="key empty"></div>
+                    <button class="key" data-key="0"><span class="key-num">0</span><span class="key-letters">+</span></button>
+                    <button class="key delete" data-delete="1">⌫</button>
+                </div>
                 <div class="admin-password-error" id="admin-password-error" style="display: none;">Incorrect password</div>
             </div>
             <div class="admin-password-footer">
                 <button class="admin-password-cancel-btn">Cancel</button>
-                <button class="admin-password-submit-btn">Submit</button>
             </div>
         </div>
         <div class="admin-password-overlay"></div>
     `;
     document.body.appendChild(modal);
 
-    const input = modal.querySelector('#admin-password-input');
+    let pin = '';
+    const dots = Array.from(modal.querySelectorAll('.pin-dot'));
     const errorDiv = modal.querySelector('#admin-password-error');
     const closeBtn = modal.querySelector('.admin-password-close');
     const cancelBtn = modal.querySelector('.admin-password-cancel-btn');
-    const submitBtn = modal.querySelector('.admin-password-submit-btn');
     const overlay = modal.querySelector('.admin-password-overlay');
+    const keys = Array.from(modal.querySelectorAll('.key'));
 
-    setTimeout(() => input.focus(), 100);
-
-    function closeModal() {
-        modal.style.animation = 'fadeOut 0.3s ease';
-        setTimeout(() => modal.remove(), 300);
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('filled', index < pin.length);
+            dot.classList.remove('error');
+        });
     }
 
-    function handleSubmit() {
-        const password = input.value;
-        if (password === ADMIN_PASSWORD) {
-            closeModal();
-            try {
-                if (typeof onSuccess === 'function') onSuccess();
-            } catch (e) {}
-        } else {
-            errorDiv.style.display = 'block';
-            input.value = '';
-            input.focus();
+    function lockOut() {
+        const until = Date.now() + LOCK_DURATION_MS;
+        localStorage.setItem(LOCK_UNTIL_KEY, String(until));
+        localStorage.removeItem(ATTEMPTS_KEY);
+        // Close current PIN modal and immediately show lockout sheet
+        const content = modal.querySelector('.admin-password-modal-content');
+        if (content) {
+            content.style.animation = 'slideDownSheet 0.3s ease forwards';
             setTimeout(() => {
-                errorDiv.style.display = 'none';
-            }, 3000);
+                modal.remove();
+                showLockoutSheet(until);
+            }, 300);
+        } else {
+            modal.style.animation = 'fadeOut 0.3s ease';
+            setTimeout(() => {
+                modal.remove();
+                showLockoutSheet(until);
+            }, 300);
         }
     }
 
-    submitBtn.addEventListener('click', handleSubmit);
-    input.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') handleSubmit();
+    function showErrorAndReset() {
+        dots.forEach(dot => {
+            dot.classList.remove('filled');
+            dot.classList.add('error');
+        });
+        errorDiv.style.display = 'block';
+
+        // Track attempts and apply lockout after 3 failures
+        let attempts = parseInt(localStorage.getItem(ATTEMPTS_KEY) || '0', 10);
+        if (Number.isNaN(attempts)) attempts = 0;
+        attempts += 1;
+
+        if (attempts >= MAX_ATTEMPTS) {
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+                pin = '';
+                updateDots();
+                lockOut();
+            }, 600);
+        } else {
+            localStorage.setItem(ATTEMPTS_KEY, String(attempts));
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+                pin = '';
+                updateDots();
+            }, 600);
+        }
+    }
+
+    function pressKey(num, btn) {
+        if (pin.length >= 6) return;
+
+        if (btn) {
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            btn.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 500);
+        }
+
+        pin += num;
+        updateDots();
+
+        if (pin.length === 6) {
+            if (pin === ADMIN_PASSWORD) {
+                // Successful entry clears attempts/lock
+                localStorage.removeItem(ATTEMPTS_KEY);
+                localStorage.removeItem(LOCK_UNTIL_KEY);
+                closeModal();
+                try {
+                    if (typeof onSuccess === 'function') onSuccess();
+                } catch (e) {}
+            } else {
+                showErrorAndReset();
+            }
+        }
+    }
+
+    function deleteKey(btn) {
+        if (!pin.length) return;
+
+        if (btn) {
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            btn.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 500);
+        }
+
+        pin = pin.slice(0, -1);
+        updateDots();
+    }
+
+    function handleKeyDown(e) {
+        if (e.key >= '0' && e.key <= '9') {
+            pressKey(e.key);
+        } else if (e.key === 'Backspace') {
+            deleteKey();
+        } else if (e.key === 'Escape') {
+            closeModal();
+        }
+    }
+
+    function closeModal() {
+        document.removeEventListener('keydown', handleKeyDown);
+        const content = modal.querySelector('.admin-password-modal-content');
+        if (content) {
+            content.style.animation = 'slideDownSheet 0.3s ease forwards';
+            setTimeout(() => modal.remove(), 300);
+        } else {
+            modal.style.animation = 'fadeOut 0.3s ease';
+            setTimeout(() => modal.remove(), 300);
+        }
+    }
+
+    // Attach button handlers
+    keys.forEach(key => {
+        const num = key.getAttribute('data-key');
+        const isDelete = key.hasAttribute('data-delete');
+        if (num) {
+            key.addEventListener('click', () => pressKey(num, key));
+        } else if (isDelete) {
+            key.addEventListener('click', () => deleteKey(key));
+        }
     });
+
     closeBtn.addEventListener('click', closeModal);
     cancelBtn.addEventListener('click', closeModal);
     overlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', handleKeyDown);
 }
 
 function setSettingsAdminUiFromState() {

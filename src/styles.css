@@ -11645,12 +11645,9 @@ body.dark-theme .passage-modal-content {
 /* Admin Password Modal Styles */
 .admin-password-modal {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     /* Above right-settings-panel (12050) */
     z-index: 13000;
@@ -11669,10 +11666,10 @@ body.dark-theme .passage-modal-content {
 .admin-password-modal-content {
     position: relative;
     background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    max-width: 400px;
-    width: 90%;
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
+    max-width: 420px;
+    width: 100%;
     overflow: hidden;
     animation: slideUp 0.3s ease;
     z-index: 13001;
@@ -11685,12 +11682,23 @@ body.dark-theme .admin-password-modal-content {
 
 @keyframes slideUp {
     from {
-        transform: translateY(30px);
+        transform: translateY(100%);
         opacity: 0;
     }
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes slideDownSheet {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
     }
 }
 
@@ -11895,4 +11903,413 @@ body.dark-theme .admin-password-submit-btn:hover {
     background-color: #2196f3;
 }
 
+.admin-lock-sheet {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 390px;
+    background: #16161e;
+    border-radius: 28px 28px 0 0;
+    padding: 0 0 40px;
+    overflow: hidden;
+    animation: slideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
 
+.admin-lock-warning-stripe {
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b35, #f7c59f, #ff6b35, #f7c59f);
+    background-size: 200% 100%;
+    animation: adminLockStripe 2s linear infinite;
+}
+
+@keyframes adminLockStripe {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+.admin-lock-handle {
+    width: 36px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 2px;
+    margin: 16px auto 0;
+}
+
+.admin-lock-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 0;
+}
+
+.admin-lock-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-lock-badge {
+    background: rgba(255, 107, 53, 0.15);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    color: #ff6b35;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.admin-lock-close-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.admin-lock-close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.admin-lock-icon-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px 0;
+    gap: 20px;
+}
+
+.admin-lock-ring {
+    position: relative;
+    width: 88px;
+    height: 88px;
+}
+
+.admin-lock-ring-svg {
+    position: absolute;
+    inset: 0;
+    animation: adminLockRotateSlow 6s linear infinite;
+}
+
+@keyframes adminLockRotateSlow {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.admin-lock-icon-wrap {
+    position: absolute;
+    inset: 12px;
+    background: linear-gradient(135deg, #1e1e28, #2a2a38);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.25);
+}
+
+.admin-lock-icon-wrap svg {
+    animation: adminLockPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes adminLockPulse {
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px rgba(255, 107, 53, 0.5));
+    }
+    50% {
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 14px rgba(255, 107, 53, 0.9));
+    }
+}
+
+.admin-lock-content {
+    padding: 0 28px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.admin-lock-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+}
+
+.admin-lock-subtitle {
+    font-size: 13.5px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.6;
+}
+
+.admin-lock-subtitle strong {
+    color: rgba(255, 107, 53, 0.85);
+    font-weight: 600;
+}
+
+.admin-lock-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07), transparent);
+    margin: 24px 24px;
+}
+
+.admin-lock-timer-block {
+    margin: 0 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 107, 53, 0.15);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.admin-lock-timer-label {
+    flex: 1;
+}
+
+.admin-lock-timer-label-text {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+
+.admin-lock-timer-sublabel {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.admin-lock-timer-display {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: 600;
+    color: #ff6b35;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+    min-width: 110px;
+    text-align: right;
+}
+
+.admin-lock-attempts-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 18px 24px 0;
+}
+
+.admin-lock-attempt-pip {
+    width: 28px;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.admin-lock-attempt-pip.used {
+    background: #ff6b35;
+    box-shadow: 0 0 8px rgba(255, 107, 53, 0.5);
+}
+
+.admin-lock-attempt-pip.empty {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.admin-lock-attempt-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.25);
+    margin-left: 4px;
+    letter-spacing: 0.05em;
+}
+
+.admin-lock-cta-area {
+    padding: 28px 24px 0;
+}
+
+.admin-lock-close-full-btn {
+    width: 100%;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.admin-lock-close-full-btn:hover {
+    background: rgba(255, 255, 255, 0.09);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pin-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 8px 0 20px 0;
+}
+
+.pin-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: #e0e0e0;
+    border: 2px solid #c0c0c0;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pin-dot.filled {
+    background: #1976d2;
+    border-color: #1976d2;
+    transform: scale(1.15);
+    box-shadow: 0 0 10px rgba(25, 118, 210, 0.5);
+}
+
+.pin-dot.error {
+    background: #e53935;
+    border-color: #e53935;
+    animation: shakePinDots 0.4s ease;
+}
+
+@keyframes shakePinDots {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-4px);
+    }
+    40% {
+        transform: translateX(4px);
+    }
+    60% {
+        transform: translateX(-3px);
+    }
+    80% {
+        transform: translateX(3px);
+    }
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.key {
+    background: #f5f5f5;
+    border: none;
+    border-radius: 12px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.key:active {
+    background: #e0e0e0;
+    transform: scale(0.96);
+}
+
+.key-num {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f1f1f;
+    line-height: 1;
+}
+
+.key-letters {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #9e9e9e;
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+
+.key.empty {
+    background: transparent;
+    cursor: default;
+}
+
+.key.delete {
+    background: #f5f5f5;
+    font-size: 20px;
+    color: #616161;
+}
+
+.key.delete:active {
+    background: #e0e0e0;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.06);
+    transform: scale(0);
+    pointer-events: none;
+    animation: rippleAnim 0.5s ease-out forwards;
+}
+
+@keyframes rippleAnim {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+body.dark-theme .key {
+    background: #2a2a2a;
+}
+
+body.dark-theme .key:active {
+    background: #3a3a3a;
+}
+
+body.dark-theme .key-num {
+    color: #ffffff;
+}
+
+body.dark-theme .key-letters {
+    color: #9ca3af;
+}
+
+body.dark-theme .key.delete {
+    background: #2a2a2a;
+    color: #d1d5db;
+}
+
+body.dark-theme .key.delete:active {
+    background: #3a3a3a;
+}
