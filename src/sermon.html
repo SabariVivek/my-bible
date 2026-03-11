@@ -396,6 +396,23 @@
             opacity: 0.9;
         }
 
+        .sermon-month-icon {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            width: 20px;
+            height: 20px;
+            opacity: 0.85;
+        }
+
+        .sermon-month-icon.favorite-badge {
+            bottom: 12px;
+            right: 34px; /* sits left of the heart */
+            width: 18px;
+            height: 18px;
+            opacity: 0.9;
+        }
+
         .sermon-item-header {
             display: flex;
             justify-content: space-between;
@@ -2916,7 +2933,7 @@
                 // Find the original index in the sermons array for onclick handlers
                 const originalIndex = sermons.findIndex(s => s.id === sermon.id);
                 
-                const date = new Date(sermon.date);
+                const date = parseSermonDate(sermon.date);
                 const dateStr = formatSermonDate(date);
                 let versesHtml = '';
                 if (sermon.verses && sermon.verses.length > 0) {
@@ -2930,6 +2947,7 @@
                         `;
                     }).join('');
                 }
+                const isFirstOfMonth = date.getDate() === 1;
                 return `
                     <div class="sermon-item ${sermon.is_favorite ? 'favorite' : ''}" data-index="${originalIndex}">
                         <div class="sermon-item-header">
@@ -2948,7 +2966,9 @@
                             </span>
                         </div>
                         ${versesHtml ? `<div class="sermon-item-verses">${versesHtml}</div>` : ''}
+                        ${sermon.is_favorite && isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon favorite-badge" alt="First of month">` : ''}
                         ${sermon.is_favorite ? `<span class="sermon-favorite-icon">❤️</span>` : ''}
+                        ${!sermon.is_favorite && isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon" alt="First of month">` : ''}
                     </div>
                 `;
             }).join('');
@@ -2962,6 +2982,32 @@
             const month = String(date.getMonth() + 1).padStart(2, '0');
             const year = String(date.getFullYear()).slice(-2);
             return `${dayName}, ${day}/${month}/${year}`;
+        }
+
+        // Parse sermon date value (string/Date) into a local Date without timezone shift
+        function parseSermonDate(dateValue) {
+            if (dateValue instanceof Date) {
+                return dateValue;
+            }
+            if (!dateValue) {
+                return new Date();
+            }
+
+            let dateStr = dateValue;
+
+            // Handle ISO strings like "YYYY-MM-DDTHH:mm:ss.sssZ"
+            if (typeof dateStr === 'string' && dateStr.includes('T')) {
+                dateStr = dateStr.split('T')[0];
+            }
+
+            // Handle plain "YYYY-MM-DD" strings as local dates
+            if (typeof dateStr === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+                const [year, month, day] = dateStr.split('-').map(Number);
+                return new Date(year, month - 1, day);
+            }
+
+            // Fallback to default Date parsing
+            return new Date(dateStr);
         }
 
         // Save sermons to localStorage
@@ -3290,7 +3336,7 @@
 
             // Update header with title and date
             const detailHeader = document.getElementById('sermon-detail-header');
-            const dateStr = formatSermonDate(new Date(sermon.date));
+            const dateStr = formatSermonDate(parseSermonDate(sermon.date));
             detailHeader.innerHTML = `
                 <div style="flex: 1;">
                     <h2 class="sermon-sheet-title" style="margin: 0; font-size: 1.1rem;">${sermon.title}</h2>
@@ -3472,8 +3518,9 @@
             // Pre-fill the form with sermon data
             document.getElementById('sermon-title-input').value = sermon.title;
             document.getElementById('sermon-tamil-title-input').value = sermon.tamilTitle || '';
-            selectedSermonDate = new Date(sermon.date);  // Convert string to Date object
-            document.getElementById('sermon-date-display').textContent = formatSermonDate(new Date(sermon.date));
+            const parsedDate = parseSermonDate(sermon.date);
+            selectedSermonDate = parsedDate;
+            document.getElementById('sermon-date-display').textContent = formatSermonDate(parsedDate);
             selectedSermonVerses = [...sermon.verses];
             currentEditingIndex = index;
             renderVersesChips();
@@ -4642,7 +4689,9 @@
             } else {
                 favoritesContainer.innerHTML = favSermons.map((sermon, index) => {
                     const originalIndex = sermons.findIndex(s => s.id === sermon.id);
-                    const dateStr = formatSermonDate(new Date(sermon.date));
+                    const parsedDate = parseSermonDate(sermon.date);
+                    const dateStr = formatSermonDate(parsedDate);
+                    const isFirstOfMonth = parsedDate.getDate() === 1;
                     
                     // Show only first verse with "+X more" if there are more
                     let versesHtml = '';
@@ -4676,6 +4725,8 @@
                                 </span>
                             </div>
                             ${versesHtml ? `<div class="sermon-item-verses">${versesHtml}</div>` : ''}
+                            ${sermon.is_favorite && isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon favorite-badge" alt="First of month">` : ''}
+                            ${!sermon.is_favorite && isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon" alt="First of month">` : ''}
                         </div>
                     `;
                 }).join('');
@@ -5005,10 +5056,21 @@
                 return;
             }
 
-            // Convert to ISO string if it's a Date object
-            const dateIso = selectedSermonDate instanceof Date 
-                ? selectedSermonDate.toISOString() 
-                : selectedSermonDate;
+            // Normalize stored date to YYYY-MM-DD (no timezone issues)
+            let dateIso;
+            if (selectedSermonDate instanceof Date) {
+                const y = selectedSermonDate.getFullYear();
+                const m = String(selectedSermonDate.getMonth() + 1).padStart(2, '0');
+                const d = String(selectedSermonDate.getDate()).padStart(2, '0');
+                dateIso = `${y}-${m}-${d}`;
+            } else if (typeof selectedSermonDate === 'string') {
+                const baseStr = selectedSermonDate.includes('T')
+                    ? selectedSermonDate.split('T')[0]
+                    : selectedSermonDate;
+                dateIso = baseStr;
+            } else {
+                dateIso = '';
+            }
 
             let isNewSermon = true;
 
