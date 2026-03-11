@@ -412,8 +412,8 @@ function openAdminPasswordModal(onSuccess) {
                 <div class="admin-lock-content">
                     <div class="admin-lock-title">Admin Locked</div>
                     <div class="admin-lock-subtitle">
-                        Access has been suspended after <strong>3 failed attempts</strong>.<br>
-                        Please wait for the timer to reset before retrying.
+                        Access has locked after <strong>3 failed attempts</strong>.<br>
+                        Please wait for the timer to reset.
                     </div>
                 </div>
 
