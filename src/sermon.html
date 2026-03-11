@@ -2590,15 +2590,42 @@
             }
         }, { passive: false });
 
-        // Disable double-tap zoom
+        // Disable double-tap zoom (without breaking scroll momentum)
+        // Only prevent default when it's a true double-tap (no movement) on non-input elements.
         let lastTouchEnd = 0;
-        document.addEventListener('touchend', function(e) {
+        let lastTapStartX = 0;
+        let lastTapStartY = 0;
+        let lastTapMoved = false;
+
+        document.addEventListener('touchstart', function (e) {
+            if (!e.changedTouches || e.changedTouches.length === 0) return;
+            lastTapMoved = false;
+            lastTapStartX = e.changedTouches[0].clientX;
+            lastTapStartY = e.changedTouches[0].clientY;
+        }, { passive: true });
+
+        document.addEventListener('touchmove', function (e) {
+            if (!e.changedTouches || e.changedTouches.length === 0) return;
+            const dx = Math.abs(e.changedTouches[0].clientX - lastTapStartX);
+            const dy = Math.abs(e.changedTouches[0].clientY - lastTapStartY);
+            if (dx > 10 || dy > 10) {
+                lastTapMoved = true;
+            }
+        }, { passive: true });
+
+        document.addEventListener('touchend', function (e) {
             const now = Date.now();
-            if (now - lastTouchEnd <= 300) {
-                e.preventDefault();  // Disable double-tap zoom
+            const target = e.target;
+            const isEditableTarget = target && (
+                target.closest('input, textarea, select, button, [contenteditable="true"]') ||
+                (target.tagName && ['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON'].includes(target.tagName))
+            );
+
+            if (!isEditableTarget && !lastTapMoved && (now - lastTouchEnd <= 300)) {
+                e.preventDefault();
             }
             lastTouchEnd = now;
-        }, false);
+        }, { passive: false });
 
         // Disable copy
         document.addEventListener('copy', (e) => {
