@@ -6632,8 +6632,12 @@ function getVerseHeader(bookName, chapter, verse) {
 
     const key = `${normalizedBookName} ${chapter}:${verse}`;
     
-    // Get current language preference (default to 'tamil')
-    const lang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'tamil';
+    // Get verse heading language preference from settings (not the main Bible language)
+    // This allows verse headings to be in a different language than the main text
+    const verseHeadingLang = typeof localStorage !== 'undefined' 
+        ? localStorage.getItem('settingsVerseHeadingLanguage') || 'ta'
+        : 'ta';
+    const lang = verseHeadingLang === 'ta' ? 'tamil' : verseHeadingLang === 'en' ? 'english' : 'tamil';
     
     // Try to get header in the requested language, fall back to English if not found
     if (lang === 'tamil' && typeof verseHeadersTamil !== 'undefined') {

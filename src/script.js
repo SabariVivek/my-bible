@@ -958,6 +958,10 @@ function settingsSelectVerseHeadingLanguage(event, btn) {
     btn.classList.add('active');
     // Persist verse heading language value
     localStorage.setItem('settingsVerseHeadingLanguage', btn.dataset.val);
+    // Refresh the Bible display to show verse headings in the selected language
+    if (typeof displayChapter === 'function') {
+        displayChapter();
+    }
     updateSettingsFooterVisibility();
 }
 function settingsSelectHeadingLanguage(btn) {
