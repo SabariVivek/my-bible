@@ -938,16 +938,8 @@ function settingsToggleVerseHeading(event, toggleEl) {
     toggleEl.classList.toggle('on');
     const row = toggleEl.closest('.settings-row');
     if (row) {
+        // Call settingsToggleRow with skipToggleClass to use the shared logic
         settingsToggleRow(row, { skipToggleClass: true });
-    }
-    // Show/hide language sub-option based on toggle state
-    const subOption = document.getElementById('verse-heading-language-sub');
-    if (subOption) {
-        if (toggleEl.classList.contains('on')) {
-            subOption.classList.remove('hidden');
-        } else {
-            subOption.classList.add('hidden');
-        }
     }
 }
 function settingsSelectVerseHeadingLanguage(event, btn) {
@@ -984,6 +976,19 @@ function settingsToggleRow(row, options = {}) {
         if (key && Object.prototype.hasOwnProperty.call(uiSettings, key)) {
             uiSettings[key] = isOn;
         }
+        
+        // Handle verse heading language sub-option visibility
+        if (key === 'verseHeading') {
+            const subOption = document.getElementById('verse-heading-language-sub');
+            if (subOption) {
+                if (isOn) {
+                    subOption.classList.remove('hidden');
+                } else {
+                    subOption.classList.add('hidden');
+                }
+            }
+        }
+        
         localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
         if (typeof applyUiSettingsToDocument === 'function') {
             applyUiSettingsToDocument();
