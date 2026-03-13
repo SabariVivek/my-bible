@@ -680,340 +680,88 @@ const verseHeaders = {
     "Genesis 50:25": ["Joseph's Final Request", "Joseph asks that his bones be carried back when God leads them out of Egypt."],
     "Genesis 50:26": ["Death of Joseph", "Joseph dies at the age of 110 and is placed in a coffin in Egypt."],
 
-    // Exodus Chapter 1
-    "Exodus 1:1": "Israel Multiplies in Egypt",
-    "Exodus 1:8": "A New Pharaoh Oppresses Israel",
-    "Exodus 1:15": "The Hebrew Midwives",
+    "Exodus 2:1": ["Birth of Moses", "A man from the tribe of Levi marries a woman from the same tribe and they have a son."],
+    "Exodus 2:2": ["Moses Hidden from Pharaoh", "The mother hides the baby for three months because he is beautiful."],
+    "Exodus 2:3": ["Baby Placed in the Nile", "Unable to hide him longer, she places the baby in a basket among the reeds of the Nile."],
+    "Exodus 2:4": ["Miriam Watches the Basket", "Moses' sister stands at a distance to see what will happen."],
+    "Exodus 2:5": ["Pharaoh's Daughter Finds the Baby", "Pharaoh's daughter discovers the baby in the basket and feels compassion for him."],
+    "Exodus 2:7": ["Moses' Mother Becomes His Nurse", "Miriam offers to find a Hebrew woman to nurse the baby, and Moses' mother is chosen."],
+    "Exodus 2:10": ["Moses Adopted by Pharaoh's Daughter", "When the child grows older, Pharaoh's daughter adopts him and names him Moses."],
+    "Exodus 2:11": ["Moses Defends a Hebrew", "As an adult, Moses sees an Egyptian beating a Hebrew and kills the Egyptian."],
+    "Exodus 2:13": ["Moses Confronts Hebrew Fighters", "Moses tries to stop two Hebrews from fighting, but they reject his authority."],
+    "Exodus 2:15": ["Moses Flees to Midian", "Pharaoh seeks to kill Moses, so he escapes to the land of Midian."],
+    "Exodus 2:16": ["Moses Helps Jethro's Daughters", "Moses helps the daughters of the priest of Midian at a well."],
+    "Exodus 2:21": ["Moses Marries Zipporah", "Moses agrees to live with the family and marries Zipporah."],
+    "Exodus 2:22": ["Birth of Gershom", "Zipporah gives birth to a son named Gershom."],
+    "Exodus 2:23": ["Israel Groans in Slavery", "The Israelites cry out because of their slavery in Egypt."],
+    "Exodus 2:24": ["God Remembers His Covenant", "God hears their cries and remembers His covenant with Abraham, Isaac, and Jacob."],
+    "Exodus 2:25": ["God Sees Israel's Suffering", "God sees the suffering of the Israelites and takes notice of them."],
+
+    "Exodus 3:1": ["Moses at Mount Horeb", "While tending the flock of Jethro in the wilderness, Moses comes to Mount Horeb, the mountain of God."],
+    "Exodus 3:2": ["The Burning Bush Appears", "The angel of the Lord appears to Moses in a bush that burns but is not consumed."],
+    "Exodus 3:4": ["God Calls Moses", "God calls Moses from the bush and tells him to come closer."],
+    "Exodus 3:5": ["Holy Ground", "God tells Moses to remove his sandals because he is standing on holy ground."],
+    "Exodus 3:6": ["God of the Patriarchs", "God identifies Himself as the God of Abraham, Isaac, and Jacob."],
+    "Exodus 3:7": ["God Sees Israel's Suffering", "God says He has seen the suffering of His people in Egypt."],
+    "Exodus 3:8": ["Promise of Deliverance", "God promises to rescue Israel and bring them to a good land flowing with milk and honey."],
+    "Exodus 3:10": ["Moses Sent to Pharaoh", "God sends Moses to Pharaoh to bring the Israelites out of Egypt."],
+    "Exodus 3:11": ["Moses Questions His Ability", "Moses asks God who he is to lead Israel out of Egypt."],
+    "Exodus 3:12": ["God Promises His Presence", "God assures Moses that He will be with him."],
+    "Exodus 3:13": ["Moses Asks God's Name", "Moses asks what he should say if the Israelites ask who sent him."],
+    "Exodus 3:14": ["God Reveals His Name", "God declares His name as 'I AM WHO I AM'."],
+    "Exodus 3:16": ["Message to the Elders of Israel", "God tells Moses to gather the elders and announce His plan to deliver them."],
+    "Exodus 3:18": ["Request to Pharaoh", "Moses is instructed to ask Pharaoh to let Israel go to worship in the wilderness."],
+    "Exodus 3:19": ["Pharaoh's Resistance Foretold", "God tells Moses that Pharaoh will resist until compelled by God's power."],
+    "Exodus 3:20": ["God's Mighty Wonders", "God promises to strike Egypt with wonders before Pharaoh lets them go."],
+    "Exodus 3:21": ["Israel Will Leave with Riches", "God promises the Israelites will leave Egypt with silver, gold, and clothing."],
+
+    "Exodus 4:1": ["Moses Doubts the Mission", "Moses fears the Israelites will not believe that God appeared to him."],
+    "Exodus 4:2": ["The Staff Becomes a Snake", "God turns Moses' staff into a snake as a sign of His power."],
+    "Exodus 4:6": ["The Leprous Hand Sign", "God causes Moses' hand to become leprous and then restores it."],
+    "Exodus 4:8": ["Signs for the People", "God tells Moses that these signs will help the Israelites believe."],
+    "Exodus 4:10": ["Moses Feels Inadequate", "Moses tells God that he is slow of speech and not a good speaker."],
+    "Exodus 4:11": ["God's Assurance", "God reminds Moses that He is the one who gives people their abilities."],
+    "Exodus 4:13": ["Moses Asks for Another Messenger", "Moses asks God to send someone else instead of him."],
+    "Exodus 4:14": ["Aaron Appointed as Spokesman", "God appoints Aaron, Moses' brother, to speak on Moses' behalf."],
+    "Exodus 4:18": ["Moses Returns to Egypt", "Moses asks Jethro for permission and prepares to return to Egypt."],
+    "Exodus 4:21": ["God Warns About Pharaoh", "God tells Moses that Pharaoh's heart will be hardened."],
+    "Exodus 4:24": ["Zipporah Saves Moses", "Zipporah circumcises her son and stops God's anger against Moses."],
+    "Exodus 4:27": ["Aaron Meets Moses", "God sends Aaron to meet Moses in the wilderness."],
+    "Exodus 4:29": ["Message Given to the Elders", "Moses and Aaron gather the elders of Israel and speak God's words."],
+    "Exodus 4:31": ["Israel Believes", "The people believe and worship God when they hear that He has seen their suffering."],
+
+    "Exodus 5:1": ["Moses and Aaron Speak to Pharaoh", "Moses and Aaron go to Pharaoh and ask him to let the Israelites go to worship the Lord."],
+    "Exodus 5:2": ["Pharaoh Rejects the Lord", "Pharaoh refuses, saying he does not know the Lord and will not let Israel go."],
+    "Exodus 5:5": ["Pharaoh Accuses Them of Idleness", "Pharaoh claims the Israelites are lazy and trying to avoid work."],
+    "Exodus 5:6": ["Stricter Labor Ordered", "Pharaoh orders the taskmasters to stop providing straw for making bricks."],
+    "Exodus 5:10": ["People Forced to Gather Straw", "The Israelites must gather their own straw while still meeting the same brick quota."],
+    "Exodus 5:14": ["Israelite Overseers Beaten", "The Israelite foremen are beaten when the brick quota is not met."],
+    "Exodus 5:15": ["Complaint to Pharaoh", "The overseers appeal to Pharaoh, explaining the impossible workload."],
+    "Exodus 5:17": ["Pharaoh Refuses to Change", "Pharaoh insists they are lazy and must continue their work."],
+    "Exodus 5:19": ["Israelites Realize the Trouble", "The Israelite overseers realize their situation has become worse."],
+    "Exodus 5:20": ["Blame Directed at Moses and Aaron", "The Israelites accuse Moses and Aaron of causing their suffering."],
+    "Exodus 5:22": ["Moses Prays to God", "Moses asks the Lord why He allowed such trouble for the people."],
+    "Exodus 5:23": ["Moses Questions the Mission", "Moses says that since he spoke to Pharaoh, the suffering of the people has increased."],
+
+    "Exodus 6:1": ["God Promises Deliverance", "The Lord tells Moses that Pharaoh will soon be forced to let the Israelites go because of God's powerful hand."],
+    "Exodus 6:2": ["God Reveals His Name", "God reminds Moses that He is the Lord who appeared to Abraham, Isaac, and Jacob."],
+    "Exodus 6:4": ["Covenant Remembered", "God recalls His covenant to give the land of Canaan to the descendants of the patriarchs."],
+    "Exodus 6:5": ["God Hears Israel's Groaning", "God hears the cries of the Israelites suffering under slavery in Egypt."],
+    "Exodus 6:6": ["Promise of Freedom", "God promises to bring the Israelites out of Egypt with mighty acts of judgment."],
+    "Exodus 6:7": ["Israel Becomes God's People", "God promises that the Israelites will become His people and He will be their God."],
+    "Exodus 6:8": ["Promise of the Land", "God promises to give them the land He swore to Abraham, Isaac, and Jacob."],
+    "Exodus 6:9": ["People Discouraged", "The Israelites do not listen to Moses because of their deep discouragement."],
+    "Exodus 6:10": ["Command to Speak to Pharaoh", "God instructs Moses to tell Pharaoh to let the Israelites leave Egypt."],
+    "Exodus 6:12": ["Moses Feels Unqualified", "Moses says Pharaoh will not listen since even the Israelites have not listened."],
+    "Exodus 6:14": ["Family Lines Listed", "The genealogies of the tribes of Reuben and Simeon are recorded."],
+    "Exodus 6:16": ["Descendants of Levi", "The genealogy of Levi and his family line is given."],
+    "Exodus 6:20": ["Birth of Moses and Aaron", "Amram and Jochebed are identified as the parents of Moses and Aaron."],
+    "Exodus 6:26": ["Moses and Aaron Commissioned", "Moses and Aaron are the ones chosen to bring the Israelites out of Egypt."],
+    "Exodus 6:28": ["God Speaks Again to Moses", "The Lord again commands Moses to speak to Pharaoh."],
+    "Exodus 6:30": ["Moses Doubts His Speech", "Moses again expresses concern that Pharaoh will not listen because of his speech."],
+
+    // Continue here...
 
-    // Exodus Chapter 2
-    "Exodus 2:1": "The Birth of Moses",
-    "Exodus 2:5": "Pharaoh's Daughter Finds Moses",
-    "Exodus 2:11": "Moses Flees to Midian",
-    "Exodus 2:16": "Moses Meets Zipporah",
-    "Exodus 2:23": "God Hears Israel's Cry",
-
-    // Exodus Chapter 3
-    "Exodus 3:1": "The Burning Bush",
-    "Exodus 3:7": "God's Compassion for Israel",
-    "Exodus 3:10": "Moses Commissioned",
-    "Exodus 3:13": "I AM WHO I AM",
-
-    // Exodus Chapter 4
-    "Exodus 4:1": "Three Signs for Moses",
-    "Exodus 4:10": "Moses' Objections",
-    "Exodus 4:14": "Aaron to Speak for Moses",
-    "Exodus 4:18": "Moses Returns to Egypt",
-    "Exodus 4:24": "The Bridegroom of Blood",
-    "Exodus 4:27": "Moses Meets Aaron",
-
-    // Exodus Chapter 5
-    "Exodus 5:1": "Moses and Aaron Before Pharaoh",
-    "Exodus 5:6": "Israel's Burden Increased",
-    "Exodus 5:19": "The Foremen Complain to Moses",
-
-    // Exodus Chapter 6
-    "Exodus 6:1": "God Promises Deliverance",
-    "Exodus 6:10": "Moses Speaks to Pharaoh Again",
-    "Exodus 6:14": "The Genealogy of Moses and Aaron",
-
-    // Exodus Chapter 7
-    "Exodus 7:1": "Moses and Aaron Commissioned",
-    "Exodus 7:8": "Aaron's Staff Becomes a Serpent",
-    "Exodus 7:14": "First Plague — Water Turned to Blood",
-
-    // Exodus Chapter 8
-    "Exodus 8:1": "Second Plague — Frogs",
-    "Exodus 8:16": "Third Plague — Gnats",
-    "Exodus 8:20": "Fourth Plague — Flies",
-
-    // Exodus Chapter 9
-    "Exodus 9:1": "Fifth Plague — Livestock Disease",
-    "Exodus 9:8": "Sixth Plague — Boils",
-    "Exodus 9:13": "Seventh Plague — Hail",
-
-    // Exodus Chapter 10
-    "Exodus 10:1": "Eighth Plague — Locusts",
-    "Exodus 10:21": "Ninth Plague — Darkness",
-
-    // Exodus Chapter 11
-    "Exodus 11:1": "The Tenth Plague Announced",
-    "Exodus 11:4": "Death of the Firstborn Foretold",
-
-    // Exodus Chapter 12
-    "Exodus 12:1": "The Passover Instituted",
-    "Exodus 12:21": "Instructions for the Passover",
-    "Exodus 12:29": "Tenth Plague — Death of the Firstborn",
-    "Exodus 12:37": "The Exodus Begins",
-    "Exodus 12:43": "Passover Regulations",
-
-    // Exodus Chapter 13
-    "Exodus 13:1": "The Consecration of the Firstborn",
-    "Exodus 13:17": "God Leads Israel by a Pillar of Cloud and Fire",
-
-    // Exodus Chapter 14
-    "Exodus 14:1": "Pharaoh Pursues Israel",
-    "Exodus 14:10": "Israel's Fear",
-    "Exodus 14:13": "The LORD Will Fight for You",
-    "Exodus 14:21": "The Red Sea Parted",
-    "Exodus 14:26": "The Egyptians Drowned",
-
-    // Exodus Chapter 15
-    "Exodus 15:1": "The Song of Moses",
-    "Exodus 15:20": "The Song of Miriam",
-    "Exodus 15:22": "The Bitter Waters of Marah",
-    "Exodus 15:27": "Twelve Springs at Elim",
-
-    // Exodus Chapter 16
-    "Exodus 16:1": "The Wilderness of Sin",
-    "Exodus 16:4": "God Provides Manna and Quail",
-    "Exodus 16:22": "The Sabbath Rest",
-    "Exodus 16:31": "The Manna Described",
-
-    // Exodus Chapter 17
-    "Exodus 17:1": "Water from the Rock",
-    "Exodus 17:8": "Israel Defeats Amalek",
-
-    // Exodus Chapter 18
-    "Exodus 18:1": "Jethro Visits Moses",
-    "Exodus 18:13": "Jethro's Advice",
-
-    // Exodus Chapter 19
-    "Exodus 19:1": "Israel at Mount Sinai",
-    "Exodus 19:3": "The LORD's Proposal",
-    "Exodus 19:16": "The LORD Descends on Sinai",
-
-    // Exodus Chapter 20
-    "Exodus 20:1": "The Ten Commandments",
-    "Exodus 20:18": "The People's Fear",
-    "Exodus 20:22": "Instructions About Altars",
-
-    // Exodus Chapter 21
-    "Exodus 21:1": "Laws About Servants",
-    "Exodus 21:12": "Laws About Personal Injury",
-    "Exodus 21:28": "Laws About Property Damage",
-
-    // Exodus Chapter 22
-    "Exodus 22:1": "Laws About Restitution",
-    "Exodus 22:16": "Laws About Social Responsibility",
-    "Exodus 22:21": "Laws About Mercy and Justice",
-
-    // Exodus Chapter 23
-    "Exodus 23:1": "Laws About Justice",
-    "Exodus 23:10": "Sabbath Laws",
-    "Exodus 23:14": "Three Annual Feasts",
-    "Exodus 23:20": "God's Angel to Lead Israel",
-
-    // Exodus Chapter 24
-    "Exodus 24:1": "The Covenant Confirmed",
-    "Exodus 24:9": "Moses Sees God",
-    "Exodus 24:12": "Moses on the Mountain",
-
-    // Exodus Chapter 25
-    "Exodus 25:1": "Offerings for the Tabernacle",
-    "Exodus 25:10": "The Ark of the Covenant",
-    "Exodus 25:23": "The Table of Showbread",
-    "Exodus 25:31": "The Golden Lampstand",
-
-    // Exodus Chapter 26
-    "Exodus 26:1": "The Tabernacle Curtains",
-    "Exodus 26:15": "The Frames and Bases",
-    "Exodus 26:31": "The Veil",
-
-    // Exodus Chapter 27
-    "Exodus 27:1": "The Altar of Burnt Offering",
-    "Exodus 27:9": "The Courtyard",
-    "Exodus 27:20": "Oil for the Lampstand",
-
-    // Exodus Chapter 28
-    "Exodus 28:1": "The Priestly Garments",
-    "Exodus 28:6": "The Ephod",
-    "Exodus 28:15": "The Breastpiece",
-    "Exodus 28:31": "The Robe",
-    "Exodus 28:36": "The Turban",
-
-    // Exodus Chapter 29
-    "Exodus 29:1": "Consecration of the Priests",
-    "Exodus 29:38": "The Daily Offerings",
-
-    // Exodus Chapter 30
-    "Exodus 30:1": "The Altar of Incense",
-    "Exodus 30:11": "The Census Tax",
-    "Exodus 30:17": "The Bronze Basin",
-    "Exodus 30:22": "The Anointing Oil",
-    "Exodus 30:34": "The Incense",
-
-    // Exodus Chapter 31
-    "Exodus 31:1": "Bezalel and Oholiab",
-    "Exodus 31:12": "The Sign of the Sabbath",
-    "Exodus 31:18": "The Two Tablets",
-
-    // Exodus Chapter 32
-    "Exodus 32:1": "The Golden Calf",
-    "Exodus 32:7": "God's Anger",
-    "Exodus 32:11": "Moses Intercedes",
-    "Exodus 32:19": "Moses' Anger",
-    "Exodus 32:25": "The Levites' Zeal",
-    "Exodus 32:30": "Moses Returns to the Mountain",
-
-    // Exodus Chapter 33
-    "Exodus 33:1": "God Commands Israel to Leave Sinai",
-    "Exodus 33:7": "The Tent of Meeting",
-    "Exodus 33:12": "Moses and God's Presence",
-    "Exodus 33:18": "God's Glory Passes By",
-
-    // Exodus Chapter 34
-    "Exodus 34:1": "New Stone Tablets",
-    "Exodus 34:5": "The LORD Proclaims His Name",
-    "Exodus 34:10": "The Covenant Renewed",
-    "Exodus 34:27": "Moses Writes the Covenant",
-    "Exodus 34:29": "Moses' Radiant Face",
-
-    // Exodus Chapter 35
-    "Exodus 35:1": "The Sabbath Reminder",
-    "Exodus 35:4": "Offerings for the Tabernacle",
-    "Exodus 35:30": "Bezalel and Oholiab Called",
-
-    // Exodus Chapter 36
-    "Exodus 36:1": "The Tabernacle Construction Begins",
-    "Exodus 36:8": "The Curtains and Coverings",
-
-    // Exodus Chapter 37
-    "Exodus 37:1": "The Ark",
-    "Exodus 37:10": "The Table",
-    "Exodus 37:17": "The Lampstand",
-    "Exodus 37:25": "The Altar of Incense",
-
-    // Exodus Chapter 38
-    "Exodus 38:1": "The Altar of Burnt Offering",
-    "Exodus 38:8": "The Bronze Basin",
-    "Exodus 38:9": "The Courtyard",
-    "Exodus 38:21": "The Inventory",
-
-    // Exodus Chapter 39
-    "Exodus 39:1": "The Priestly Garments Completed",
-    "Exodus 39:32": "Moses Inspects the Work",
-
-    // Exodus Chapter 40
-    "Exodus 40:1": "The Tabernacle Set Up",
-    "Exodus 40:34": "The Glory of the LORD Fills the Tabernacle",
-
-    // Leviticus Chapter 1
-    "Leviticus 1:1": "The Burnt Offering",
-
-    // Leviticus Chapter 2
-    "Leviticus 2:1": "The Grain Offering",
-
-    // Leviticus Chapter 3
-    "Leviticus 3:1": "The Peace Offering",
-
-    // Leviticus Chapter 4
-    "Leviticus 4:1": "The Sin Offering",
-    "Leviticus 4:13": "Sin Offering for the Congregation",
-    "Leviticus 4:22": "Sin Offering for a Leader",
-    "Leviticus 4:27": "Sin Offering for a Common Person",
-
-    // Leviticus Chapter 5
-    "Leviticus 5:1": "Cases Requiring a Sin Offering",
-    "Leviticus 5:14": "The Guilt Offering",
-
-    // Leviticus Chapter 6
-    "Leviticus 6:1": "The Guilt Offering for Deception",
-    "Leviticus 6:8": "Instructions for the Burnt Offering",
-    "Leviticus 6:14": "Instructions for the Grain Offering",
-    "Leviticus 6:24": "Instructions for the Sin Offering",
-
-    // Leviticus Chapter 7
-    "Leviticus 7:1": "Instructions for the Guilt Offering",
-    "Leviticus 7:11": "Instructions for the Peace Offering",
-    "Leviticus 7:22": "Prohibition Against Fat and Blood",
-    "Leviticus 7:28": "The Priests' Portion",
-
-    // Leviticus Chapter 8
-    "Leviticus 8:1": "The Consecration of Aaron and His Sons",
-
-    // Leviticus Chapter 9
-    "Leviticus 9:1": "The First Offerings of Aaron",
-    "Leviticus 9:23": "The Glory of the LORD Appears",
-
-    // Leviticus Chapter 10
-    "Leviticus 10:1": "Nadab and Abihu Killed",
-    "Leviticus 10:8": "Restrictions for Priests",
-    "Leviticus 10:16": "Moses' Anger at Aaron's Sons",
-
-    // Leviticus Chapter 11
-    "Leviticus 11:1": "Clean and Unclean Animals",
-    "Leviticus 11:24": "Laws About Carcasses",
-    "Leviticus 11:46": "Summary of Food Laws",
-
-    // Leviticus Chapter 12
-    "Leviticus 12:1": "Purification After Childbirth",
-
-    // Leviticus Chapter 13
-    "Leviticus 13:1": "Laws About Skin Diseases",
-    "Leviticus 13:47": "Laws About Mildew",
-
-    // Leviticus Chapter 14
-    "Leviticus 14:1": "Cleansing of Skin Diseases",
-    "Leviticus 14:33": "Cleansing of Mildew in Houses",
-
-    // Leviticus Chapter 15
-    "Leviticus 15:1": "Laws About Bodily Discharges",
-
-    // Leviticus Chapter 16
-    "Leviticus 16:1": "The Day of Atonement",
-    "Leviticus 16:29": "An Eternal Statute",
-
-    // Leviticus Chapter 17
-    "Leviticus 17:1": "The Sanctity of Blood",
-
-    // Leviticus Chapter 18
-    "Leviticus 18:1": "Unlawful Sexual Relations",
-
-    // Leviticus Chapter 19
-    "Leviticus 19:1": "You Shall Be Holy",
-    "Leviticus 19:9": "Laws About Harvest",
-    "Leviticus 19:11": "Laws About Honesty",
-    "Leviticus 19:18": "Love Your Neighbor as Yourself",
-    "Leviticus 19:23": "Various Laws",
-
-    // Leviticus Chapter 20
-    "Leviticus 20:1": "Punishments for Disobedience",
-
-    // Leviticus Chapter 21
-    "Leviticus 21:1": "Holiness Required of Priests",
-
-    // Leviticus Chapter 22
-    "Leviticus 22:1": "Regulations for Holy Offerings",
-
-    // Leviticus Chapter 23
-    "Leviticus 23:1": "The Appointed Feasts",
-    "Leviticus 23:3": "The Sabbath",
-    "Leviticus 23:4": "Passover and Unleavened Bread",
-    "Leviticus 23:9": "Firstfruits",
-    "Leviticus 23:15": "The Feast of Weeks",
-    "Leviticus 23:23": "The Feast of Trumpets",
-    "Leviticus 23:26": "The Day of Atonement",
-    "Leviticus 23:33": "The Feast of Tabernacles",
-
-    // Leviticus Chapter 24
-    "Leviticus 24:1": "The Oil and the Bread",
-    "Leviticus 24:10": "The Punishment for Blasphemy",
-
-    // Leviticus Chapter 25
-    "Leviticus 25:1": "The Sabbath Year",
-    "Leviticus 25:8": "The Year of Jubilee",
-    "Leviticus 25:23": "Redemption of Property",
-    "Leviticus 25:39": "Redemption of the Poor",
-
-    // Leviticus Chapter 26
-    "Leviticus 26:1": "Blessings for Obedience",
-    "Leviticus 26:14": "Curses for Disobedience",
-    "Leviticus 26:40": "Repentance and Restoration",
-
-    // Leviticus Chapter 27
-    "Leviticus 27:1": "Laws About Vows and Tithes",
-
-    // Updated...
     "Numbers 1:1": ["The Lord Commands a Census", "God tells Moses to count the men of Israel able to go to war."],
     "Numbers 1:5": ["Leaders of the Twelve Tribes Named", "One leader from each tribe is appointed."],
     "Numbers 1:17": ["Moses and Aaron Begin the Census", "They gather the community and register them by families."],
