@@ -2113,6 +2113,76 @@
             background: #4a84d6;
         }
 
+        /* Sermon description text in list (2-line clamp, inside summary) */
+        .sermon-description {
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: rgba(255,255,255,0.9);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        body.light-theme .sermon-description {
+            color: #333;
+        }
+
+        /* Sermon summary block (below verses) */
+        .sermon-summary-section {
+            margin-top: 0.9rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sermon-summary-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            font-size: 0.68rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #fbbf77;
+        }
+
+        .sermon-summary-header-bar {
+            height: 1px;
+            flex: 1;
+            background: linear-gradient(to right, rgba(251,191,77,0.7), transparent);
+            opacity: 0.9;
+        }
+
+        .sermon-summary-header-label {
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
+        .sermon-summary-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.32);
+            border: 1px solid rgba(251,191,77,0.24);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+        }
+
+        body.light-theme .sermon-summary-card {
+            background: rgba(255,255,255,0.8);
+            border-color: rgba(251,191,77,0.4);
+            box-shadow: 0 6px 18px rgba(15,23,42,0.12);
+        }
+
+        .sermon-summary-accent {
+            width: 3px;
+            border-radius: 999px;
+            background: linear-gradient(to bottom, #fbbf77, #f97316);
+            flex-shrink: 0;
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             .sermon-top-nav {
@@ -2487,6 +2557,12 @@
                 <label class="sermon-input-label">Tamil Title (Optional)</label>
                 <input type="text" class="sermon-input-text" id="sermon-tamil-title-input" placeholder="Enter Tamil title..."
                     autocomplete="off">
+            </div>
+            <div class="sermon-input-group">
+                <label class="sermon-input-label">Sermon Points / Description (Optional)</label>
+                <textarea class="sermon-input-text" id="sermon-description-input" rows="3"
+                    placeholder="Add key points or a short description of this sermon..."
+                    autocomplete="off"></textarea>
             </div>
             <div class="sermon-input-group">
                 <label class="sermon-input-label">Sermon Date</label>
@@ -2995,16 +3071,42 @@
 
                 if (data && data.length > 0) {
                     // Convert Supabase data to local format
-                    sermons = data.map(item => ({
+                    const supabaseSermons = data.map(item => ({
                         id: item.id,
                         title: item.title,
                         tamilTitle: item.tamil_title || '',
+                        description: item.description || '',
                         date: item.sermon_date,
                         verses: normalizeVerses(item.verses || []),
                         is_favorite: item.is_favorite || false,
                         _synced: true  // Mark as synced from Supabase
                     }));
-                    // Save to localStorage as backup
+
+                    // Merge in any locally created sermons that Supabase doesn't know about yet
+                    // This avoids "losing" a just-created sermon when navigating back to this page
+                    let localOnlySermons = [];
+                    try {
+                        const saved = localStorage.getItem('sermons');
+                        if (saved) {
+                            const loaded = JSON.parse(saved);
+                            const supabaseIds = new Set(supabaseSermons.map(s => s.id));
+                            localOnlySermons = loaded.filter(s => {
+                                // Keep sermons that don't exist in Supabase yet (e.g., newly created)
+                                return s.id && !supabaseIds.has(s.id);
+                            }).map(s => ({
+                                ...s,
+                                verses: normalizeVerses(s.verses || []),
+                                description: s.description || ''
+                            }));
+                        }
+                    } catch (e) {
+                        // If parsing fails, just fall back to Supabase data
+                        localOnlySermons = [];
+                    }
+
+                    sermons = [...supabaseSermons, ...localOnlySermons];
+
+                    // Save merged list to localStorage as backup
                     localStorage.setItem('sermons', JSON.stringify(sermons));
                 } else {
                     loadSermonsFromLocalStorage();
@@ -3144,6 +3246,20 @@
                             </span>
                         </div>
                         ${versesHtml ? `<div class="sermon-item-verses" style="position:relative;z-index:2">${versesHtml}</div>` : ''}
+                        ${sermon.description ? `
+                            <hr style="border: none; border-top: 1px solid #3b3838; margin: 12px 0;">
+                            <div style="display:flex; gap:10px; position:relative; z-index:2;">
+                                <div style="width:3px; background: linear-gradient(to bottom, #facc6b, #f97316); flex-shrink:0;"></div>
+                                <div>
+                                    <div style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #facc6b; margin-bottom: 4px;">
+                                        Sermon summary
+                                    </div>
+                                    <div style="font-size: 12.5px; color: #f5e1b0; line-height: 1.55; font-style: italic; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis;">
+                                        ${sermon.description}
+                                    </div>
+                                </div>
+                            </div>
+                        ` : ''}
                         ${sermon.is_favorite && isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon favorite-badge" alt="First of month">` : ''}
                         ${sermon.is_favorite ? `<span class="sermon-favorite-icon">❤️</span>` : ''}
                         ${!sermon.is_favorite && isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon" alt="First of month">` : ''}
@@ -3266,6 +3382,7 @@
                                 id: sermon.id,
                                 title: sermon.title,
                                 tamil_title: sermon.tamilTitle || null,
+                                description: sermon.description || null,
                                 sermon_date: dateStr,
                                 verses: sermon.verses || [],
                                 is_favorite: sermon.is_favorite || false
@@ -3299,6 +3416,7 @@
                     .update({
                         title: sermon.title,
                         tamil_title: sermon.tamilTitle || null,
+                        description: sermon.description || null,
                         sermon_date: dateStr,
                         verses: sermon.verses || [],
                         is_favorite: sermon.is_favorite || false
@@ -3553,6 +3671,20 @@
                     </div>
                     <div class="sermon-detail-verses">${versesHtml} ${showAllLink}</div>
                 </div>
+                ${sermon.description ? `
+                    <hr style="border: none; border-top: 1px solid #3b3838; margin: 10px 0 10px 0;">
+                    <div style="display:flex; gap:10px;">
+                        <div style="width:3px; background: linear-gradient(to bottom, #facc6b, #f97316); flex-shrink:0;"></div>
+                        <div>
+                            <div style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #facc6b; margin-bottom: 4px;">
+                                Sermon summary
+                            </div>
+                            <div style="font-size: 12.5px; color: #f5e1b0; line-height: 1.55; font-style: italic;">
+                                ${sermon.description}
+                            </div>
+                        </div>
+                    </div>
+                ` : ''}
                 ${actionsSection}
             `;
 
@@ -3740,6 +3872,7 @@
             // Pre-fill the form with sermon data
             document.getElementById('sermon-title-input').value = sermon.title;
             document.getElementById('sermon-tamil-title-input').value = sermon.tamilTitle || '';
+            document.getElementById('sermon-description-input').value = sermon.description || '';
             const parsedDate = parseSermonDate(sermon.date);
             selectedSermonDate = parsedDate;
             document.getElementById('sermon-date-display').textContent = formatSermonDate(parsedDate);
@@ -5292,6 +5425,7 @@
         saveBtn.addEventListener('click', () => {
             const title = titleInput.value.trim();
             const tamilTitle = document.getElementById('sermon-tamil-title-input').value.trim();
+            const description = document.getElementById('sermon-description-input').value.trim();
             
             // Clear previous error states
             document.querySelectorAll('.sermon-input-group').forEach(group => {
@@ -5340,8 +5474,9 @@
                 // Update existing sermon
                 const updatedSermon = {
                     ...sermons[currentEditingIndex],
-                    title: title,
+                    title,
                     tamilTitle: tamilTitle || '',
+                    description,
                     date: dateIso,
                     verses: selectedSermonVerses
                 };
@@ -5358,8 +5493,9 @@
                 // Create new sermon with sequential ID
                 const newSermon = {
                     id: generateSermonId(),
-                    title: title,
+                    title,
                     tamilTitle: tamilTitle || '',
+                    description,
                     date: dateIso,
                     verses: selectedSermonVerses,
                     content: '', // For future use

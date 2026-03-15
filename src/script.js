@@ -10375,7 +10375,7 @@ async function getRecentSermons() {
         
         const { data, error } = await supabase
             .from('sermons')
-            .select('id, title, tamil_title, sermon_date, verses')
+            .select('id, title, tamil_title, description, sermon_date, verses')
             .order('sermon_date', { ascending: false })
             .limit(10);
         
