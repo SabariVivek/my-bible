@@ -259,7 +259,7 @@
         .sermon-content {
             flex: 1;
             overflow-y: auto;
-            padding: 2rem;
+            padding: 2rem 2rem 4.5rem 2rem; /* extra bottom padding so last card is fully visible */
             position: relative;
             scrollbar-width: none;
         }
@@ -389,24 +389,24 @@
 
         .sermon-favorite-icon {
             position: absolute;
-            bottom: 12px;
-            right: 12px;
+            bottom: 0px;
+            right: 0px;
             font-size: 14px;
             opacity: 0.9;
         }
 
         .sermon-month-icon {
             position: absolute;
-            bottom: 8px;
-            right: 8px;
+            bottom: 0px;
+            right: 0px;
             width: 20px;
             height: 20px;
             opacity: 0.85;
         }
 
         .sermon-month-icon.favorite-badge {
-            bottom: 12px;
-            right: 34px; /* sits left of the heart */
+            bottom: 0px;
+            right: 24px; /* sits left of the heart */
             width: 18px;
             height: 18px;
             opacity: 0.9;
@@ -598,7 +598,6 @@
         .sermon-item-verses {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.4rem;
             margin-top: 0.75rem;
             align-items: center;
         }
@@ -3250,7 +3249,24 @@
                                 ${dateStr}
                             </span>
                         </div>
-                        ${versesHtml ? `<div class="sermon-item-verses" style="position:relative;z-index:2">${versesHtml}</div>` : ''}
+                        ${versesHtml ? `
+                            <div class="sermon-item-verses" style="position:relative;z-index:2; display:flex; align-items:flex-start; justify-content:space-between;">
+                                <div style="display:flex; flex-direction:column; align-items:flex-start; gap:4px;">
+                                    ${versesHtml}
+                                </div>
+                                <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
+                                    ${isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon ${sermon.is_favorite ? 'favorite-badge' : ''}" alt="First of month">` : ''}
+                                    ${sermon.is_favorite ? `<span class="sermon-favorite-icon">❤️</span>` : ''}
+                                </div>
+                            </div>
+                        ` : `
+                            ${(sermon.is_favorite || isFirstOfMonth) ? `
+                                <div class="sermon-item-verses" style="position:relative;z-index:2; display:flex; justify-content:flex-end; gap:6px;">
+                                    ${isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon ${sermon.is_favorite ? 'favorite-badge' : ''}" alt="First of month">` : ''}
+                                    ${sermon.is_favorite ? `<span class="sermon-favorite-icon">❤️</span>` : ''}
+                                </div>
+                            ` : ''}
+                        `}
                         ${sermon.description ? `
                             <hr style="border: none; border-top: 1px solid #3b3838; margin: 12px 0;">
                             <div style="display:flex; gap:10px; position:relative; z-index:2;">
@@ -3265,9 +3281,6 @@
                                 </div>
                             </div>
                         ` : ''}
-                        ${sermon.is_favorite && isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon favorite-badge" alt="First of month">` : ''}
-                        ${sermon.is_favorite ? `<span class="sermon-favorite-icon">❤️</span>` : ''}
-                        ${!sermon.is_favorite && isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon" alt="First of month">` : ''}
                     </div>
                 `;
             }).join('');
