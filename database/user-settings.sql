@@ -9,6 +9,7 @@ create table public.user_settings (
   bible_reading     boolean     not null default true,
   verse_heading     boolean     not null default true,
   verse_heading_language text    not null default 'ta',
+  only_headers      boolean     not null default true,
   author_details    boolean     not null default true,
   memory_verse      boolean     not null default true,
   bookmark          boolean     not null default true,

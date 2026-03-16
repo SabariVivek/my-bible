@@ -3082,6 +3082,17 @@ body.dark-theme .mobile-chapter-header {
     flex-grow: 1;
     line-height: 2;
     font-size: 0.88rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.verse-header.collapsible .verse-header-subtext.visible ~ .verse-header-header .verse-header-title,
+.verse-header.collapsible:has(.verse-header-subtext.visible) .verse-header-title {
+    -webkit-line-clamp: unset;
+    overflow: visible;
 }
 
 .verse-header-subtext {
