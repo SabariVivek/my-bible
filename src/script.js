@@ -96,6 +96,7 @@ const DEFAULT_UI_SETTINGS = {
     shortSummary: true,
     bibleReading: true,
     verseHeading: true,
+    verseHeadingOnly: true,
     authorDetails: true,
     memoryVerse: true,
     bookmark: true,
@@ -740,6 +741,11 @@ function applyUiSettingsToDocument() {
     verseHeaders.forEach(el => {
         el.style.display = uiSettings.verseHeading ? '' : 'none';
     });
+    // Verse Heading Only: hide verse-container when enabled (show only headers)
+    const verseContainers = document.querySelectorAll('.verse-container');
+    verseContainers.forEach(el => {
+        el.style.display = (uiSettings.verseHeading && uiSettings.verseHeadingOnly) ? 'none' : '';
+    });
     // Author Details: show/hide author-banner
     const authorBanner = document.getElementById('author-banner');
     if (authorBanner) {
@@ -942,6 +948,21 @@ function settingsToggleVerseHeading(event, toggleEl) {
         settingsToggleRow(row, { skipToggleClass: true });
     }
 }
+function settingsToggleOnlyHeaders(event, toggleEl) {
+    event.stopPropagation();
+    toggleEl.classList.toggle('on');
+    const isOn = toggleEl.classList.contains('on');
+    
+    // Update uiSettings
+    uiSettings.verseHeadingOnly = isOn;
+    localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
+    
+    // Apply the changes to hide/show verse-container
+    if (typeof applyUiSettingsToDocument === 'function') {
+        applyUiSettingsToDocument();
+    }
+    updateSettingsFooterVisibility();
+}
 function settingsSelectVerseHeadingLanguage(event, btn) {
     event.stopPropagation();
     const group = document.getElementById('settings-verse-heading-language-segment');
@@ -985,6 +1006,15 @@ function settingsToggleRow(row, options = {}) {
                     subOption.classList.remove('hidden');
                 } else {
                     subOption.classList.add('hidden');
+                }
+            }
+            // Also handle verse-heading-only-sub visibility
+            const onlyHeadersSub = document.getElementById('verse-heading-only-sub');
+            if (onlyHeadersSub) {
+                if (isOn) {
+                    onlyHeadersSub.classList.remove('hidden');
+                } else {
+                    onlyHeadersSub.classList.add('hidden');
                 }
             }
         }
@@ -5266,13 +5296,27 @@ function initializeRightSettingsPanel() {
         const verseHeadingRow = document.querySelector('[data-setting="verseHeading"]');
         const verseHeadingToggle = verseHeadingRow ? verseHeadingRow.querySelector('.settings-toggle') : null;
         const verseHeadingLanguageSub = document.getElementById('verse-heading-language-sub');
+        const verseHeadingOnlySub = document.getElementById('verse-heading-only-sub');
         if (verseHeadingToggle && verseHeadingLanguageSub) {
             if (uiSettings.verseHeading) {
                 verseHeadingToggle.classList.add('on');
                 verseHeadingLanguageSub.classList.remove('hidden');
+                if (verseHeadingOnlySub) {
+                    verseHeadingOnlySub.classList.remove('hidden');
+                }
             } else {
                 verseHeadingToggle.classList.remove('on');
                 verseHeadingLanguageSub.classList.add('hidden');
+                if (verseHeadingOnlySub) {
+                    verseHeadingOnlySub.classList.add('hidden');
+                }
+            }
+        }
+        // Sync verse heading only toggle state
+        if (verseHeadingOnlySub) {
+            const onlyHeadersToggle = verseHeadingOnlySub.querySelector('.settings-toggle');
+            if (onlyHeadersToggle) {
+                onlyHeadersToggle.classList.toggle('on', !!uiSettings.verseHeadingOnly);
             }
         }
         // Sync toggle rows from uiSettings
