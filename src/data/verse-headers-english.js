@@ -2914,366 +2914,1104 @@ const verseHeaders = {
     "Job 42:1": "Job's Repentance and Restoration",
     "Job 42:10": "The LORD Restores Job's Fortunes",
 
+    "Psalms 1:1": ["The Blessed Man", "Blessed is the person who does not follow the advice of the wicked or walk in the path of sinners."],
+    "Psalms 1:2": ["Delight in God's Law", "The righteous person delights in the law of the Lord and meditates on it day and night."],
+    "Psalms 1:3": ["Tree by the Streams", "The righteous are like a tree planted by streams of water, bearing fruit and prospering."],
+    "Psalms 1:4": ["The Wicked Like Chaff", "The wicked are like chaff that the wind blows away."],
+    "Psalms 1:5": ["No Standing in Judgment", "The wicked will not stand in the judgment nor sinners among the righteous."],
+    "Psalms 1:6": ["Two Different Paths", "The Lord watches over the way of the righteous, but the way of the wicked leads to destruction."],
+
+    "Psalms 2:1": ["Nations Rebel Against God", "The nations and rulers plot together against the Lord and His Anointed."],
+    "Psalms 2:4": ["God Laughs at the Rebels", "The One enthroned in heaven laughs at the rebellion of the nations."],
+    "Psalms 2:6": ["God's King Appointed", "God declares that He has installed His King on Zion, His holy mountain."],
+    "Psalms 2:7": ["The Son Declared", "The Lord proclaims His decree: 'You are My Son; today I have become Your Father.'"],
+    "Psalms 2:8": ["Inheritance of Nations", "The nations are promised to the Son as His inheritance."],
+    "Psalms 2:10": ["Warning to Kings", "Kings and rulers are warned to serve the Lord with fear."],
+    "Psalms 2:12": ["Blessed Who Trust Him", "Blessed are all who take refuge in Him."],
+
+    "Psalms 3:1": ["David Surrounded by Enemies", "David cries out to the Lord as many enemies rise against him."],
+    "Psalms 3:3": ["God the Protector", "The Lord is a shield around David and the lifter of his head."],
+    "Psalms 3:4": ["Answer from the Lord", "David calls to the Lord and receives an answer from His holy mountain."],
+    "Psalms 3:5": ["Peaceful Rest", "David lies down and sleeps because the Lord sustains him."],
+    "Psalms 3:6": ["Confidence Against Enemies", "David is not afraid even if thousands of enemies surround him."],
+    "Psalms 3:7": ["Prayer for Deliverance", "David asks the Lord to arise and deliver him."],
+    "Psalms 3:8": ["Salvation Belongs to the Lord", "Deliverance comes from the Lord and His blessing is on His people."],
+
+    "Psalms 4:1": ["Prayer for Help", "David calls on God to answer him in his distress."],
+    "Psalms 4:2": ["Rebuke of the Faithless", "David challenges those who love lies and dishonor him."],
+    "Psalms 4:3": ["God Hears the Faithful", "The Lord sets apart the faithful and hears when they call."],
+    "Psalms 4:4": ["Call to Righteous Living", "People are urged to tremble, reflect, and avoid sin."],
+    "Psalms 4:6": ["Seeking God's Favor", "Many ask for prosperity, but David seeks the Lord's light."],
+    "Psalms 4:7": ["Joy from the Lord", "God fills David's heart with greater joy than material abundance."],
+    "Psalms 4:8": ["Peaceful Trust", "David lies down and sleeps in peace because the Lord makes him dwell safely."],
+
+    "Psalms 5:1": ["Morning Prayer", "David asks the Lord to listen to his words and consider his sighing."],
+    "Psalms 5:3": ["Prayer at Daybreak", "In the morning David lays his requests before the Lord and waits expectantly."],
+    "Psalms 5:4": ["God Hates Wickedness", "God does not delight in wickedness and evil cannot dwell with Him."],
+    "Psalms 5:7": ["Entering God's House", "David approaches God's house with reverence and trust in His mercy."],
+    "Psalms 5:8": ["Guidance in Righteousness", "David asks God to lead him in righteousness because of his enemies."],
+    "Psalms 5:9": ["Deceitful Enemies", "David describes the wicked whose words are full of lies and destruction."],
+    "Psalms 5:11": ["Joy for the Righteous", "Those who take refuge in the Lord will rejoice and sing for joy."],
+    "Psalms 5:12": ["God's Favor", "The Lord blesses the righteous and surrounds them with favor like a shield."],
+
+    "Psalms 6:1": ["Prayer in Distress", "David pleads with the Lord not to rebuke him in anger."],
+    "Psalms 6:2": ["Cry for Mercy", "David asks God for mercy because he is weak and troubled."],
+    "Psalms 6:4": ["Plea for Deliverance", "David asks the Lord to return and save him because of His love."],
+    "Psalms 6:5": ["Life Needed for Praise", "David says the dead cannot praise God."],
+    "Psalms 6:6": ["Deep Sorrow", "David is weary with grief and his tears flood his bed."],
+    "Psalms 6:8": ["Enemies Depart", "David tells the evildoers to leave because the Lord has heard his cry."],
+    "Psalms 6:9": ["Prayer Heard", "The Lord has heard David's plea and accepts his prayer."],
+    "Psalms 6:10": ["Enemies Defeated", "David's enemies will be ashamed and suddenly turn back."],
+
+    "Psalms 7:1": ["Seeking Refuge", "David seeks refuge in the Lord from those who pursue him."],
+    "Psalms 7:3": ["Claim of Innocence", "David declares his innocence before God."],
+    "Psalms 7:6": ["Call for Justice", "David asks God to arise in anger against his enemies."],
+    "Psalms 7:9": ["God the Righteous Judge", "God examines hearts and minds and judges righteously."],
+    "Psalms 7:11": ["God's Righteous Judgment", "God is a righteous judge who shows anger against evil every day."],
+    "Psalms 7:14": ["Evil Returns on the Wicked", "Those who plan evil fall into their own traps."],
+    "Psalms 7:17": ["Praise to the Lord", "David praises the Lord for His righteousness."],
+
+    "Psalms 8:1": ["God's Majestic Name", "David praises the Lord whose name is majestic in all the earth."],
+    "Psalms 8:3": ["Wonder at Creation", "David reflects on the heavens, the moon, and the stars created by God."],
+    "Psalms 8:4": ["Value of Humanity", "David wonders why God cares so much for human beings."],
+    "Psalms 8:5": ["Humanity Honored", "God made humans a little lower than the heavenly beings and crowned them with glory."],
+    "Psalms 8:6": ["Dominion Over Creation", "Humans are given authority over the works of God's hands."],
+    "Psalms 8:9": ["Majestic Name Again", "David ends by praising the Lord whose name is majestic in all the earth."],
+
+    "Psalms 9:1": ["Praise with Whole Heart", "David praises the Lord with all his heart and tells of His wonderful deeds."],
+    "Psalms 9:3": ["Enemies Turn Back", "David's enemies fall and perish before God."],
+    "Psalms 9:7": ["God the Eternal Judge", "The Lord reigns forever and has established His throne for judgment."],
+    "Psalms 9:9": ["Refuge for the Oppressed", "The Lord is a refuge for the oppressed in times of trouble."],
+    "Psalms 9:11": ["Proclaim God's Deeds", "People are urged to sing praises and declare God's works."],
+    "Psalms 9:13": ["Prayer for Mercy", "David asks the Lord to show mercy and lift him from death."],
+    "Psalms 9:15": ["Nations Fall in Their Traps", "The nations fall into the pit they have dug."],
+    "Psalms 9:17": ["Fate of the Wicked", "The wicked will return to the grave."],
+    "Psalms 9:19": ["Call for Justice", "David asks the Lord to arise and judge the nations."],
+
+    "Psalms 10:1": ["Question of God's Distance", "The psalmist asks why God seems far away in times of trouble."],
+    "Psalms 10:2": ["Oppression of the Poor", "The wicked pursue and trap the poor."],
+    "Psalms 10:4": ["Pride of the Wicked", "In their pride the wicked do not seek God."],
+    "Psalms 10:8": ["Hidden Violence", "The wicked lie in wait to harm the innocent."],
+    "Psalms 10:11": ["False Confidence", "The wicked think God will never notice their actions."],
+    "Psalms 10:12": ["Call for God's Action", "The psalmist asks God to arise and help the helpless."],
+    "Psalms 10:14": ["God Sees the Trouble", "God sees the suffering of the afflicted and will help them."],
+    "Psalms 10:16": ["The Lord Is King Forever", "The Lord reigns forever and nations will perish from His land."],
+    "Psalms 10:17": ["God Hears the Humble", "The Lord hears the desire of the humble and strengthens their hearts."],
+    "Psalms 10:18": ["Justice for the Oppressed", "God defends the fatherless and the oppressed."],
+
+    "Psalms 11:1": ["Trust in the Lord", "David declares his trust in the Lord despite those telling him to flee."],
+    "Psalms 11:3": ["Foundations Destroyed", "David asks what the righteous can do when the foundations are destroyed."],
+    "Psalms 11:4": ["The Lord on His Throne", "The Lord is in His holy temple and His throne is in heaven."],
+    "Psalms 11:5": ["God Tests the Righteous", "The Lord examines both the righteous and the wicked."],
+    "Psalms 11:6": ["Judgment on the Wicked", "The wicked will face fire, burning sulfur, and scorching winds."],
+    "Psalms 11:7": ["God Loves Righteousness", "The upright will see God's face because He loves righteousness."],
+
+    "Psalms 12:1": ["Cry for Help", "David cries for help because faithful people seem to disappear."],
+    "Psalms 12:2": ["Deceitful Words", "People speak lies and flatter one another."],
+    "Psalms 12:3": ["God Silences the Proud", "The Lord will cut off flattering lips and arrogant tongues."],
+    "Psalms 12:5": ["God Promises Protection", "The Lord promises to protect the poor and needy."],
+    "Psalms 12:6": ["Pure Words of God", "The words of the Lord are pure like silver refined seven times."],
+    "Psalms 12:7": ["God Preserves His People", "The Lord will keep and protect His people."],
+    "Psalms 12:8": ["Wickedness Everywhere", "The wicked freely walk about when corruption is honored."],
+
+    "Psalms 13:1": ["Feeling Forgotten", "David asks how long the Lord will seem to forget him."],
+    "Psalms 13:2": ["Inner Struggle", "David struggles with sorrow and constant worry."],
+    "Psalms 13:3": ["Prayer for Light", "David asks the Lord to look on him and give him light."],
+    "Psalms 13:4": ["Fear of Enemies", "David fears his enemies will say they have defeated him."],
+    "Psalms 13:5": ["Trust in God's Love", "David trusts in God's unfailing love."],
+    "Psalms 13:6": ["Song of Praise", "David sings to the Lord because He has been good to him."],
+
+    "Psalms 14:1": ["The Fool Denies God", "The fool says in his heart that there is no God and people become corrupt."],
+    "Psalms 14:2": ["God Looks Down", "The Lord looks down from heaven to see if anyone seeks Him."],
+    "Psalms 14:3": ["Universal Corruption", "Everyone has turned away and become corrupt."],
+    "Psalms 14:4": ["Wicked Devour God's People", "Evildoers consume God's people without calling on the Lord."],
+    "Psalms 14:5": ["God with the Righteous", "God is present with the righteous generation."],
+    "Psalms 14:6": ["Refuge for the Poor", "The poor find refuge in the Lord despite the plans of the wicked."],
+    "Psalms 14:7": ["Hope for Israel", "The psalmist longs for salvation to come from Zion."],
+
+    "Psalms 15:1": ["Who May Dwell with God", "David asks who may live in the Lord's holy presence."],
+    "Psalms 15:2": ["Life of Integrity", "The one who walks blamelessly and speaks truth from the heart."],
+    "Psalms 15:3": ["No Harmful Speech", "They do not slander or harm their neighbor."],
+    "Psalms 15:4": ["Honor the Righteous", "They despise evil but honor those who fear the Lord."],
+    "Psalms 15:5": ["Honest Living", "They lend without exploitation and refuse bribes."],
+    "Psalms 15:5b": ["Unshakable Life", "Those who live this way will never be shaken."],
+
+    "Psalms 16:1": ["Refuge in God", "David asks God to protect him because he takes refuge in Him."],
+    "Psalms 16:2": ["God the Only Good", "David declares that all his good comes from the Lord."],
+    "Psalms 16:4": ["Rejecting Idols", "David refuses to follow other gods."],
+    "Psalms 16:5": ["God the Portion", "The Lord is David's chosen portion and inheritance."],
+    "Psalms 16:7": ["Guidance from the Lord", "David praises the Lord who gives him counsel."],
+    "Psalms 16:8": ["God Always Near", "David keeps the Lord always before him and remains secure."],
+    "Psalms 16:9": ["Joyful Confidence", "David's heart rejoices because he trusts in God."],
+    "Psalms 16:10": ["Hope Beyond Death", "God will not abandon him to the grave."],
+    "Psalms 16:11": ["Path of Life", "God shows the path of life and fills him with joy."],
+
+    "Psalms 17:1": ["Prayer for Justice", "David asks the Lord to hear his righteous plea."],
+    "Psalms 17:3": ["Tested Heart", "David says God has tested his heart and found no wrongdoing."],
+    "Psalms 17:5": ["Steady Steps", "David asks God to keep his steps firm on the right path."],
+    "Psalms 17:6": ["God Hears Prayer", "David calls on God knowing He will answer."],
+    "Psalms 17:8": ["Apple of the Eye", "David asks God to protect him like the apple of His eye."],
+    "Psalms 17:10": ["Enemies Surround", "The enemies surround David with arrogance."],
+    "Psalms 17:13": ["Deliverance from the Wicked", "David asks God to rise up and rescue him from the wicked."],
+    "Psalms 17:15": ["Hope of Seeing God", "David will be satisfied when he sees God."],
+
+    "Psalms 18:1": ["Love for the Lord", "David declares his love for the Lord his strength."],
+    "Psalms 18:2": ["God the Rock", "The Lord is David's rock, fortress, and deliverer."],
+    "Psalms 18:6": ["Cry for Help", "David calls to the Lord and God hears from His temple."],
+    "Psalms 18:7": ["God's Powerful Response", "The earth shakes as God responds in power."],
+    "Psalms 18:16": ["Rescued from Deep Waters", "God reaches down and rescues David from danger."],
+    "Psalms 18:20": ["Reward for Righteousness", "God rewards David according to his righteousness."],
+    "Psalms 18:28": ["God the Light", "The Lord lights David's lamp and removes darkness."],
+    "Psalms 18:30": ["God's Way Perfect", "God's way is perfect and His word is proven true."],
+    "Psalms 18:46": ["The Lord Lives", "David praises the living God who saves him."],
+    "Psalms 18:49": ["Praise Among Nations", "David promises to praise God among the nations."],
+
+    "Psalms 19:1": ["Heavens Declare God's Glory", "The heavens declare the glory of God and the skies proclaim His work."],
+    "Psalms 19:2": ["Creation Speaks", "Day after day creation pours out speech about God."],
+    "Psalms 19:4": ["Message Through the Earth", "Their message goes out through all the earth."],
+    "Psalms 19:7": ["The Perfect Law", "The law of the Lord is perfect and refreshes the soul."],
+    "Psalms 19:8": ["Right Commands", "The commands of the Lord bring joy and light."],
+    "Psalms 19:9": ["Pure Fear of the Lord", "The fear of the Lord is pure and endures forever."],
+    "Psalms 19:10": ["More Precious Than Gold", "God's words are more valuable than gold and sweeter than honey."],
+    "Psalms 19:12": ["Forgiveness of Hidden Faults", "The psalmist asks God to forgive hidden sins."],
+    "Psalms 19:14": ["Acceptable Words", "The psalmist prays that his words and thoughts please the Lord."],
+
+    "Psalms 20:1": ["Prayer for the King", "The people pray that the Lord will answer the king in times of trouble."],
+    "Psalms 20:2": ["Help from the Sanctuary", "They ask that God send help from His sanctuary in Zion."],
+    "Psalms 20:4": ["Grant the King's Desires", "They pray that God will grant the king the desires of his heart."],
+    "Psalms 20:6": ["Confidence in Salvation", "The people know the Lord saves His anointed."],
+    "Psalms 20:7": ["Trust in the Lord", "Some trust in chariots and horses, but we trust in the name of the Lord."],
+    "Psalms 20:8": ["Victory Through God", "Enemies fall but God's people rise and stand firm."],
+    "Psalms 20:9": ["Save the King", "The people ask the Lord to grant victory to the king."],
+
+    "Psalms 21:1": ["Joy in God's Strength", "The king rejoices in the Lord's strength and salvation."],
+    "Psalms 21:2": ["Desires Granted", "God has granted the king the desires of his heart."],
+    "Psalms 21:3": ["Blessings Given", "God blesses the king with prosperity and a crown of gold."],
+    "Psalms 21:4": ["Life and Length of Days", "The king asked for life and God gave him long life."],
+    "Psalms 21:7": ["Trust in God's Love", "Because the king trusts in the Lord he will not be shaken."],
+    "Psalms 21:8": ["Enemies Defeated", "God's hand will find and defeat His enemies."],
+    "Psalms 21:13": ["Praise to the Lord", "The people praise God for His strength and power."],
+
+    "Psalms 22:1": ["Cry of Abandonment", "The psalmist cries out, 'My God, my God, why have You forsaken me?'"],
+    "Psalms 22:3": ["God is Holy", "Even in suffering the psalmist declares that God is holy."],
+    "Psalms 22:6": ["Mocked and Despised", "The psalmist feels rejected and mocked by people."],
+    "Psalms 22:7": ["People Mock Him", "Those who see him mock and shake their heads."],
+    "Psalms 22:14": ["Deep Suffering", "The psalmist describes his suffering and weakness."],
+    "Psalms 22:16": ["Surrounded by Enemies", "Enemies surround him like fierce animals."],
+    "Psalms 22:18": ["Dividing Garments", "They divide his garments and cast lots for his clothing."],
+    "Psalms 22:22": ["Praise in the Assembly", "The psalmist promises to praise God among the people."],
+    "Psalms 22:27": ["All Nations Worship", "All the ends of the earth will remember and turn to the Lord."],
+    "Psalms 22:31": ["Future Generations", "Future generations will proclaim God's righteousness."],
+
+    "Psalms 23:1": ["The Lord My Shepherd", "The Lord is my shepherd and I lack nothing."],
+    "Psalms 23:2": ["Rest and Provision", "He makes me lie down in green pastures and leads me beside quiet waters."],
+    "Psalms 23:3": ["Restored Soul", "He refreshes my soul and leads me in right paths for His name's sake."],
+    "Psalms 23:4": ["Fearless Through the Valley", "Even in the darkest valley I will not fear because God is with me."],
+    "Psalms 23:5": ["Table Before Enemies", "God prepares a table before me in the presence of my enemies."],
+    "Psalms 23:6": ["Forever with the Lord", "Goodness and mercy will follow me and I will dwell in the Lord's house forever."],
+
+    "Psalms 24:1": ["The Earth Belongs to the Lord", "The earth and everything in it belong to the Lord."],
+    "Psalms 24:3": ["Who May Approach God", "Who may ascend the mountain of the Lord and stand in His holy place."],
+    "Psalms 24:4": ["Clean Hands and Pure Heart", "Those with clean hands and a pure heart may stand before Him."],
+    "Psalms 24:7": ["Lift Up Your Gates", "The gates are called to open for the King of Glory."],
+    "Psalms 24:8": ["The King of Glory", "The Lord strong and mighty is the King of Glory."],
+    "Psalms 24:10": ["The Lord Almighty", "The Lord of hosts is the King of Glory."],
+
+    "Psalms 25:1": ["Trust in the Lord", "David lifts up his soul to the Lord and trusts in Him."],
+    "Psalms 25:4": ["Teach Me Your Ways", "David asks God to show him His ways and teach him His paths."],
+    "Psalms 25:7": ["Forgiveness Requested", "David asks God not to remember the sins of his youth."],
+    "Psalms 25:8": ["God Guides Sinners", "The Lord is good and teaches sinners the right way."],
+    "Psalms 25:10": ["Paths of Love and Faithfulness", "All the Lord's ways are loving and faithful."],
+    "Psalms 25:14": ["Secret of the Lord", "The Lord confides in those who fear Him."],
+    "Psalms 25:16": ["Prayer for Mercy", "David asks God to turn to him and show mercy."],
+    "Psalms 25:20": ["Protection from Enemies", "David asks God to guard his life and rescue him."],
+
+    "Psalms 26:1": ["Prayer for Vindication", "David asks the Lord to judge him because he has walked in integrity."],
+    "Psalms 26:2": ["Test My Heart", "David asks God to examine and test his heart and mind."],
+    "Psalms 26:4": ["Avoiding the Wicked", "David does not associate with deceitful or hypocritical people."],
+    "Psalms 26:6": ["Approaching the Altar", "David washes his hands in innocence and approaches God's altar."],
+    "Psalms 26:8": ["Love for God's House", "David loves the place where God's glory dwells."],
+    "Psalms 26:9": ["Prayer for Protection", "David asks God not to take his life with sinners."],
+    "Psalms 26:11": ["Walk in Integrity", "David commits to walk in integrity and asks for redemption."],
+    "Psalms 26:12": ["Praise in the Assembly", "David stands on level ground and praises the Lord."],
+
+    "Psalms 27:1": ["The Lord My Light", "The Lord is my light and salvation so I will not fear."],
+    "Psalms 27:2": ["Enemies Stumble", "Enemies who attack will stumble and fall."],
+    "Psalms 27:4": ["One Thing Desired", "David desires to dwell in the house of the Lord."],
+    "Psalms 27:5": ["Shelter in Trouble", "God will hide and protect him in times of trouble."],
+    "Psalms 27:8": ["Seek God's Face", "David responds to God's call to seek His face."],
+    "Psalms 27:10": ["God Never Forsakes", "Even if parents abandon him the Lord will receive him."],
+    "Psalms 27:11": ["Teach Me Your Way", "David asks God to lead him on a straight path."],
+    "Psalms 27:13": ["Confidence in God", "David believes he will see God's goodness."],
+    "Psalms 27:14": ["Wait for the Lord", "David encourages patience and courage while waiting for the Lord."],
+
+    "Psalms 28:1": ["Cry for Help", "David calls to the Lord his rock asking Him not to remain silent."],
+    "Psalms 28:2": ["Prayer Toward the Sanctuary", "David lifts his hands toward God's holy sanctuary."],
+    "Psalms 28:3": ["Do Not Count Me with the Wicked", "David asks not to be treated like the wicked."],
+    "Psalms 28:5": ["Judgment on the Wicked", "Because they ignore God's works they will face destruction."],
+    "Psalms 28:6": ["Praise for Answered Prayer", "David praises the Lord for hearing his cry."],
+    "Psalms 28:7": ["Strength and Shield", "The Lord is David's strength and shield."],
+    "Psalms 28:8": ["Strength of His People", "The Lord is the strength and saving refuge of His people."],
+    "Psalms 28:9": ["Prayer for the Nation", "David asks God to save and shepherd His people forever."],
+
+    "Psalms 29:1": ["Give Glory to the Lord", "The heavenly beings are called to give glory and strength to the Lord."],
+    "Psalms 29:2": ["Worship in Holiness", "Worship the Lord in the beauty of His holiness."],
+    "Psalms 29:3": ["Voice Over the Waters", "The voice of the Lord thunders over the mighty waters."],
+    "Psalms 29:4": ["Powerful Voice", "The voice of the Lord is powerful and full of majesty."],
+    "Psalms 29:5": ["Breaks the Cedars", "The voice of the Lord breaks the mighty cedars of Lebanon."],
+    "Psalms 29:7": ["Flames of Fire", "The voice of the Lord strikes with flashes of lightning."],
+    "Psalms 29:9": ["Glory in His Temple", "All in His temple cry, 'Glory!'"],
+    "Psalms 29:10": ["The Lord Reigns", "The Lord sits enthroned over the flood as eternal King."],
+    "Psalms 29:11": ["Peace to His People", "The Lord gives strength and peace to His people."],
+
+    "Psalms 30:1": ["Praise for Deliverance", "David praises the Lord for lifting him out of trouble."],
+    "Psalms 30:2": ["Healing from God", "David cried to the Lord and was healed."],
+    "Psalms 30:4": ["Sing to the Lord", "God's people are called to sing and give thanks."],
+    "Psalms 30:5": ["Joy After Sorrow", "Weeping may last for the night but joy comes in the morning."],
+    "Psalms 30:6": ["False Confidence", "David once felt secure and thought he would never be shaken."],
+    "Psalms 30:8": ["Prayer for Mercy", "David cried to the Lord for mercy."],
+    "Psalms 30:11": ["Mourning Turned to Joy", "God turned mourning into dancing."],
+    "Psalms 30:12": ["Endless Praise", "David promises to praise the Lord forever."],
+
+    "Psalms 31:1": ["Refuge in the Lord", "David seeks refuge in the Lord and asks not to be put to shame."],
+    "Psalms 31:3": ["God the Rock", "The Lord is David's rock and fortress."],
+    "Psalms 31:5": ["Commit My Spirit", "David commits his spirit into God's hands."],
+    "Psalms 31:7": ["Rejoicing in God's Love", "David rejoices because God sees his troubles."],
+    "Psalms 31:9": ["Distress and Sorrow", "David describes his suffering and grief."],
+    "Psalms 31:14": ["Trust in God", "David declares his trust in the Lord."],
+    "Psalms 31:19": ["God's Goodness", "God's goodness is stored up for those who fear Him."],
+    "Psalms 31:23": ["Love the Lord", "God's faithful people are encouraged to love Him."],
+    "Psalms 31:24": ["Be Strong and Courageous", "Those who hope in the Lord are called to be strong."],
+
+    "Psalms 32:1": ["Blessing of Forgiveness", "Blessed is the person whose sins are forgiven and covered."],
+    "Psalms 32:3": ["Silence and Suffering", "When David kept silent about his sin he felt weak and troubled."],
+    "Psalms 32:5": ["Confession Brings Forgiveness", "David confessed his sin and God forgave him."],
+    "Psalms 32:6": ["Prayer in Time of Trouble", "The faithful pray to God while He may be found."],
+    "Psalms 32:7": ["God the Hiding Place", "The Lord is a hiding place who protects and surrounds with songs of deliverance."],
+    "Psalms 32:8": ["God's Guidance", "The Lord promises to teach and guide the right way."],
+    "Psalms 32:10": ["Love Surrounds the Faithful", "Unfailing love surrounds those who trust in the Lord."],
+    "Psalms 32:11": ["Rejoice in the Lord", "The righteous are called to rejoice and shout for joy."],
+
+    "Psalms 33:1": ["Praise the Lord", "The righteous are called to rejoice and sing praises to the Lord."],
+    "Psalms 33:4": ["God's Word Is True", "The word of the Lord is right and all His works are faithful."],
+    "Psalms 33:6": ["Creation by God's Word", "The heavens were made by the word of the Lord."],
+    "Psalms 33:10": ["God Overrules Nations", "The Lord frustrates the plans of nations."],
+    "Psalms 33:12": ["Blessed Nation", "Blessed is the nation whose God is the Lord."],
+    "Psalms 33:13": ["God Watches Humanity", "The Lord looks down from heaven and sees all people."],
+    "Psalms 33:16": ["Victory Not by Strength", "A king is not saved by a great army."],
+    "Psalms 33:18": ["God Watches the Faithful", "The Lord watches those who fear Him."],
+    "Psalms 33:20": ["Hope in the Lord", "The people wait for the Lord who is their help and shield."],
+    "Psalms 33:22": ["Prayer for Mercy", "The psalm ends with a prayer for God's unfailing love."],
+
+    "Psalms 34:1": ["Continual Praise", "David declares he will bless the Lord at all times."],
+    "Psalms 34:4": ["Delivered from Fear", "David sought the Lord and was delivered from fear."],
+    "Psalms 34:7": ["Angel of the Lord", "The angel of the Lord surrounds and protects those who fear Him."],
+    "Psalms 34:8": ["Taste and See", "Taste and see that the Lord is good."],
+    "Psalms 34:10": ["No Lack for the Faithful", "Those who seek the Lord lack no good thing."],
+    "Psalms 34:13": ["Guard Your Words", "Keep your tongue from evil and deceit."],
+    "Psalms 34:15": ["God Hears the Righteous", "The Lord's eyes are on the righteous and He hears their cry."],
+    "Psalms 34:18": ["Close to the Brokenhearted", "The Lord is near to the brokenhearted."],
+    "Psalms 34:19": ["Delivered from Troubles", "The righteous face many troubles but the Lord delivers them."],
+    "Psalms 34:22": ["God Redeems His Servants", "The Lord redeems His servants who take refuge in Him."],
+
+    "Psalms 35:1": ["Prayer Against Enemies", "David asks the Lord to fight against those who fight against him."],
+    "Psalms 35:3": ["God the Defender", "David asks God to say to his soul, 'I am your salvation.'"],
+    "Psalms 35:5": ["Enemies Driven Away", "David prays that his enemies will be like chaff blown by the wind."],
+    "Psalms 35:9": ["Joy in Salvation", "David will rejoice in the Lord and be glad in His salvation."],
+    "Psalms 35:11": ["False Witnesses", "False witnesses rise up and accuse David."],
+    "Psalms 35:13": ["Prayer for Enemies", "David once prayed and mourned for those who now oppose him."],
+    "Psalms 35:19": ["Unjust Hatred", "David asks that those who hate him without cause not rejoice over him."],
+    "Psalms 35:22": ["God Sees Everything", "David asks the Lord not to remain silent because He has seen the injustice."],
+    "Psalms 35:27": ["Rejoicing in God's Justice", "Those who desire David's vindication will rejoice and praise the Lord."],
+    "Psalms 35:28": ["Praise All Day", "David promises to proclaim God's righteousness and praise all day long."],
+
+    "Psalms 36:1": ["Sin of the Wicked", "The wicked have no fear of God and sin speaks deeply within their hearts."],
+    "Psalms 36:3": ["Deceitful Words", "Their words are wicked and deceitful."],
+    "Psalms 36:5": ["God's Unfailing Love", "The Lord's love reaches to the heavens and His faithfulness to the skies."],
+    "Psalms 36:6": ["God's Righteousness", "God's righteousness is like mighty mountains and His justice like the great deep."],
+    "Psalms 36:7": ["Refuge in God", "People take refuge in the shadow of God's wings."],
+    "Psalms 36:8": ["Abundance from God", "God gives abundance and refreshment like a flowing river."],
+    "Psalms 36:9": ["Source of Life", "With God is the fountain of life and in His light we see light."],
+    "Psalms 36:10": ["Prayer for Continued Love", "The psalmist asks God to continue His love to those who know Him."],
+    "Psalms 36:12": ["Fall of the Wicked", "The evildoers fall and cannot rise again."],
+
+    "Psalms 37:1": ["Do Not Envy the Wicked", "Do not worry about evildoers or envy those who do wrong."],
+    "Psalms 37:3": ["Trust in the Lord", "Trust in the Lord and do good and dwell safely in the land."],
+    "Psalms 37:4": ["Delight in the Lord", "Delight in the Lord and He will give you the desires of your heart."],
+    "Psalms 37:5": ["Commit Your Way", "Commit your way to the Lord and trust Him."],
+    "Psalms 37:7": ["Be Still Before the Lord", "Be still before the Lord and wait patiently for Him."],
+    "Psalms 37:9": ["Inheritance of the Land", "Those who hope in the Lord will inherit the land."],
+    "Psalms 37:11": ["The Meek Will Inherit", "The meek will inherit the land and enjoy peace."],
+    "Psalms 37:23": ["Steps Directed by God", "The Lord makes firm the steps of those who delight in Him."],
+    "Psalms 37:28": ["God Does Not Forsake", "The Lord loves justice and will not forsake His faithful ones."],
+    "Psalms 37:39": ["Salvation from the Lord", "The salvation of the righteous comes from the Lord."],
+
+    "Psalms 38:1": ["Prayer in Suffering", "David asks the Lord not to rebuke him in anger."],
+    "Psalms 38:3": ["Burden of Sin", "David says his sins have brought pain and sickness upon him."],
+    "Psalms 38:6": ["Deep Distress", "David is bowed down and mourns all day long."],
+    "Psalms 38:9": ["God Knows His Desire", "David says all his longing is known to the Lord."],
+    "Psalms 38:11": ["Friends Keep Distance", "Friends and neighbors stand far away from his suffering."],
+    "Psalms 38:12": ["Enemies Plot Harm", "Enemies seek his life and speak deceit."],
+    "Psalms 38:15": ["Hope in the Lord", "David places his hope in the Lord who will answer him."],
+    "Psalms 38:18": ["Confession of Sin", "David confesses his sin and feels sorrow for it."],
+    "Psalms 38:21": ["Prayer for God's Presence", "David asks the Lord not to forsake him."],
+    "Psalms 38:22": ["Urgent Plea for Help", "David asks God to come quickly to help him."],
+
+    "Psalms 39:1": ["Guarding the Tongue", "David decides to guard his words so he will not sin."],
+    "Psalms 39:4": ["Life Is Short", "David asks God to remind him how short and fragile life is."],
+    "Psalms 39:5": ["Human Life a Breath", "Every human life is like a breath before God."],
+    "Psalms 39:6": ["Futile Efforts", "People busy themselves for wealth they cannot keep."],
+    "Psalms 39:7": ["Hope in God", "David declares that his hope is in the Lord."],
+    "Psalms 39:8": ["Deliverance from Sin", "David asks God to deliver him from his transgressions."],
+    "Psalms 39:11": ["God's Discipline", "God disciplines people for their sin and their beauty fades away."],
+    "Psalms 39:12": ["Prayer of a Stranger", "David asks God to hear his prayer because life is temporary."],
+    "Psalms 39:13": ["Relief Before Death", "David asks for relief before his life ends."],
+
+    "Psalms 40:1": ["Waiting on the Lord", "David waited patiently for the Lord and God heard his cry."],
+    "Psalms 40:2": ["Lifted from the Pit", "God lifted him from a slimy pit and set his feet on a rock."],
+    "Psalms 40:3": ["New Song of Praise", "God put a new song of praise in David's mouth."],
+    "Psalms 40:5": ["God's Wonderful Works", "David speaks of God's many wonders and plans."],
+    "Psalms 40:6": ["Obedience Over Sacrifice", "God desires obedience rather than sacrifices."],
+    "Psalms 40:8": ["Delight in God's Will", "David delights to do God's will and keep His law."],
+    "Psalms 40:11": ["Prayer for Mercy", "David asks for God's mercy and protection."],
+    "Psalms 40:13": ["Cry for Deliverance", "David asks God to come quickly and help him."],
+    "Psalms 40:16": ["Joy for Seekers", "Those who seek the Lord will rejoice and be glad."],
+    "Psalms 40:17": ["God Thinks of the Needy", "Though poor and needy, David trusts that God cares for him."],
+
+    "Psalms 41:1": ["Blessed Are the Compassionate", "Blessed are those who care for the poor; the Lord will rescue them in trouble."],
+    "Psalms 41:2": ["God Protects the Faithful", "The Lord protects and preserves them and blesses them in the land."],
+    "Psalms 41:3": ["Healing from Sickness", "The Lord sustains them on their sickbed and restores them."],
+    "Psalms 41:4": ["Prayer for Mercy", "David asks the Lord to have mercy and heal him."],
+    "Psalms 41:5": ["Enemies Speak Evil", "Enemies wish for David's death and speak evil about him."],
+    "Psalms 41:6": ["False Friends", "Visitors pretend kindness but spread rumors."],
+    "Psalms 41:9": ["Betrayal by a Friend", "Even a close friend who shared bread with him has betrayed him."],
+    "Psalms 41:10": ["Prayer for Strength", "David asks God to raise him up so he may repay his enemies."],
+    "Psalms 41:12": ["God Upholds the Faithful", "God upholds David because of his integrity."],
+    "Psalms 41:13": ["Praise to the Lord", "Blessed be the Lord, the God of Israel, forever."],
+
+    "Psalms 42:1": ["Longing for God", "As a deer longs for water, the soul longs for God."],
+    "Psalms 42:2": ["Thirst for the Living God", "The psalmist thirsts for the living God."],
+    "Psalms 42:3": ["Tears Day and Night", "Tears have been his food while people mock him."],
+    "Psalms 42:4": ["Memories of Worship", "He remembers leading the people in joyful worship."],
+    "Psalms 42:5": ["Hope in God", "The psalmist encourages himself to hope in God."],
+    "Psalms 42:7": ["Deep Calls to Deep", "Troubles overwhelm him like waves and waterfalls."],
+    "Psalms 42:8": ["God's Love by Day", "The Lord sends His love by day and His song by night."],
+    "Psalms 42:9": ["Question in Suffering", "The psalmist asks why God seems to have forgotten him."],
+    "Psalms 42:11": ["Hope Again", "He again reminds himself to hope in God his Savior."],
+
+    "Psalms 43:1": ["Prayer for Vindication", "The psalmist asks God to defend him against ungodly people."],
+    "Psalms 43:2": ["Seeking God's Protection", "He asks why God has rejected him and why he must suffer."],
+    "Psalms 43:3": ["Light and Truth", "The psalmist asks God to send His light and truth to guide him."],
+    "Psalms 43:4": ["Joy at God's Altar", "He longs to go to God's altar with joy."],
+    "Psalms 43:5": ["Hope in God", "He encourages himself to hope in God and praise Him."],
+
+    "Psalms 44:1": ["God's Works in the Past", "The people remember how God helped their ancestors and gave them victory."],
+    "Psalms 44:3": ["Victory by God's Power", "Their ancestors did not win by their own strength but by God's favor."],
+    "Psalms 44:5": ["Confidence in God", "Through God they push back their enemies."],
+    "Psalms 44:9": ["Feeling Rejected", "Now the people feel that God has rejected them."],
+    "Psalms 44:11": ["Scattered Among Nations", "They feel like sheep scattered among the nations."],
+    "Psalms 44:17": ["Faithfulness Despite Suffering", "Even though they suffer they have not forgotten God's covenant."],
+    "Psalms 44:22": ["Suffering for God's Sake", "They feel like sheep being led to slaughter for God's sake."],
+    "Psalms 44:23": ["Call for God's Help", "They cry out asking God to awaken and help them."],
+    "Psalms 44:26": ["Redeem Us", "They ask God to rise up and redeem them because of His love."],
+
+    "Psalms 45:1": ["Song for the King", "The psalmist writes a song in honor of the king."],
+    "Psalms 45:2": ["Graceful King", "The king is praised for his grace and blessing from God."],
+    "Psalms 45:3": ["Mighty Warrior", "The king is called to gird his sword and ride in majesty."],
+    "Psalms 45:6": ["Eternal Throne", "The king's throne is established forever with righteousness."],
+    "Psalms 45:7": ["Anointed with Joy", "God anoints the king with the oil of joy."],
+    "Psalms 45:10": ["Advice to the Bride", "The bride is told to leave her people and honor the king."],
+    "Psalms 45:13": ["Royal Bride", "The princess bride is dressed in glorious clothing."],
+    "Psalms 45:16": ["Future Princes", "The king's sons will become princes throughout the land."],
+    "Psalms 45:17": ["Eternal Praise", "The king's name will be remembered in all generations."],
+
+    "Psalms 46:1": ["God Our Refuge", "God is our refuge and strength, always ready to help in trouble."],
+    "Psalms 46:2": ["Fearless Faith", "Even if the earth shakes we will not fear."],
+    "Psalms 46:4": ["River of God's City", "A river brings joy to the city where God dwells."],
+    "Psalms 46:7": ["The Lord with Us", "The Lord Almighty is with us and is our fortress."],
+    "Psalms 46:8": ["See God's Works", "People are invited to see the mighty works of God."],
+    "Psalms 46:9": ["End of Wars", "God brings wars to an end and breaks weapons."],
+    "Psalms 46:10": ["Be Still", "Be still and know that God is God."],
+    "Psalms 46:11": ["God Our Fortress", "The Lord Almighty is our fortress."],
+
+    "Psalms 47:1": ["Clap and Shout to God", "All nations are called to clap their hands and shout to God with joy."],
+    "Psalms 47:2": ["The Great King", "The Lord Most High is awesome and the great King over all the earth."],
+    "Psalms 47:3": ["Nations Under God", "God subdues nations and peoples under His rule."],
+    "Psalms 47:5": ["God Ascends with Shouts", "God ascends with shouts of joy and the sound of trumpets."],
+    "Psalms 47:6": ["Sing Praises", "Sing praises to God and to our King."],
+    "Psalms 47:7": ["King of All the Earth", "God is the King of all the earth."],
+    "Psalms 47:8": ["God Reigns Over Nations", "God reigns over the nations and sits on His holy throne."],
+    "Psalms 47:9": ["Nations Gather", "Leaders of nations gather with the people of God."],
+
+    "Psalms 48:1": ["Great Is the Lord", "The Lord is greatly praised in the city of our God."],
+    "Psalms 48:2": ["Mount Zion", "Mount Zion is beautiful and brings joy to the whole earth."],
+    "Psalms 48:3": ["God the Fortress", "God is known as a fortress in His city."],
+    "Psalms 48:6": ["Enemies Tremble", "Enemies who see the city are filled with fear."],
+    "Psalms 48:9": ["Meditating on God's Love", "People reflect on God's love in His temple."],
+    "Psalms 48:11": ["Rejoice in Zion", "Mount Zion rejoices because of God's judgments."],
+    "Psalms 48:12": ["Walk Around Zion", "People are invited to walk around Zion and see its towers."],
+    "Psalms 48:14": ["God Our Guide", "God will be our guide forever."],
+
+    "Psalms 49:1": ["Listen All People", "All people everywhere are called to listen to this wisdom."],
+    "Psalms 49:5": ["Do Not Fear the Rich", "There is no reason to fear when wealthy people prosper."],
+    "Psalms 49:7": ["No One Can Redeem Another", "No one can pay the price to redeem another person's life."],
+    "Psalms 49:10": ["Everyone Dies", "Both wise and foolish people die and leave their wealth behind."],
+    "Psalms 49:12": ["Human Pride Is Temporary", "Even in honor humans do not last forever."],
+    "Psalms 49:15": ["God Redeems Life", "God will redeem the faithful from the grave."],
+    "Psalms 49:16": ["Do Not Be Afraid of the Rich", "Do not fear when someone becomes rich."],
+    "Psalms 49:20": ["Without Understanding", "People without understanding are like animals that perish."],
+
+    "Psalms 50:1": ["God the Mighty Judge", "The Mighty One, God the Lord, speaks and summons the earth."],
+    "Psalms 50:3": ["God Comes to Judge", "Our God comes with fire and a powerful storm around Him."],
+    "Psalms 50:5": ["Gather My Faithful", "God calls His faithful people who made a covenant with Him."],
+    "Psalms 50:7": ["God Speaks to His People", "God testifies against His people even though He is their God."],
+    "Psalms 50:8": ["Not for Sacrifices", "God says He does not rebuke them for sacrifices."],
+    "Psalms 50:10": ["God Owns Everything", "Every animal of the forest and cattle on a thousand hills belong to God."],
+    "Psalms 50:14": ["Offer Thanks", "God desires thanksgiving and faithfulness."],
+    "Psalms 50:15": ["Call on God", "Call on God in times of trouble and He will deliver."],
+    "Psalms 50:16": ["Warning to the Wicked", "The wicked are rebuked for speaking God's laws while disobeying them."],
+    "Psalms 50:23": ["Right Worship", "Those who offer thanksgiving honor God."],
+
+    "Psalms 51:1": ["Prayer for Mercy", "David asks God for mercy according to His unfailing love."],
+    "Psalms 51:2": ["Cleanse from Sin", "David asks God to wash away his guilt."],
+    "Psalms 51:4": ["Sin Against God", "David confesses that he has sinned against God."],
+    "Psalms 51:7": ["Purify Me", "David asks to be cleansed and made clean."],
+    "Psalms 51:10": ["Create a Clean Heart", "David asks God to create a clean heart and renew his spirit."],
+    "Psalms 51:11": ["Do Not Take Your Spirit", "David asks God not to take His Holy Spirit away."],
+    "Psalms 51:12": ["Restore Joy", "David asks God to restore the joy of salvation."],
+    "Psalms 51:16": ["God Desires the Heart", "God does not delight in sacrifices but in a humble heart."],
+    "Psalms 51:17": ["Broken Spirit", "A broken and contrite heart God will not despise."],
+    "Psalms 51:19": ["Restoration of Worship", "Then proper sacrifices will be offered again."],
+
+    "Psalms 52:1": ["Pride of the Wicked", "The wicked boast about evil and misuse their power."],
+    "Psalms 52:2": ["Deceitful Tongue", "Their tongue plans destruction like a sharp razor."],
+    "Psalms 52:5": ["God Will Bring Them Down", "God will bring down the wicked forever."],
+    "Psalms 52:6": ["The Righteous See", "The righteous will see and fear God's judgment."],
+    "Psalms 52:7": ["Trusting Riches", "The wicked trusted in riches rather than God."],
+    "Psalms 52:8": ["Like an Olive Tree", "The righteous are like a flourishing olive tree in God's house."],
+    "Psalms 52:9": ["Praise Forever", "The psalmist will praise God forever for what He has done."],
+
+    "Psalms 53:1": ["The Fool Denies God", "The fool says in his heart that there is no God and people become corrupt."],
+    "Psalms 53:2": ["God Looks Down", "God looks down from heaven to see if anyone seeks Him."],
+    "Psalms 53:3": ["Everyone Turned Away", "All have turned away and become corrupt."],
+    "Psalms 53:4": ["Wicked Devour God's People", "The evildoers consume God's people without calling on Him."],
+    "Psalms 53:5": ["Fear of Judgment", "The wicked will be filled with terror when God judges them."],
+    "Psalms 53:6": ["Hope for Israel", "The psalmist longs for salvation to come from Zion."],
+
+    "Psalms 54:1": ["Prayer for Deliverance", "David asks God to save him by His name."],
+    "Psalms 54:3": ["Enemies Attack", "Strangers rise against him and seek his life."],
+    "Psalms 54:4": ["God My Helper", "God is the one who helps and sustains David."],
+    "Psalms 54:5": ["Justice on Enemies", "David asks God to bring justice upon his enemies."],
+    "Psalms 54:6": ["Freewill Offering", "David promises to offer sacrifices with thanksgiving."],
+    "Psalms 54:7": ["Rescue from Trouble", "God has delivered David from all his troubles."],
+
+    "Psalms 55:1": ["Cry for Help", "David asks God to listen to his prayer and not ignore him."],
+    "Psalms 55:4": ["Fear and Anxiety", "David's heart is troubled and fear overwhelms him."],
+    "Psalms 55:6": ["Longing to Escape", "David wishes he had wings like a dove to fly away."],
+    "Psalms 55:9": ["Confusion in the City", "Violence and conflict fill the city."],
+    "Psalms 55:12": ["Betrayal by a Friend", "David is hurt by betrayal from a close companion."],
+    "Psalms 55:16": ["Call to God", "David calls on God and trusts that He will save him."],
+    "Psalms 55:17": ["Prayer Continually", "Morning, noon, and night David cries out to God."],
+    "Psalms 55:22": ["Cast Your Burden", "Cast your burden on the Lord and He will sustain you."],
+    "Psalms 55:23": ["God Judges the Wicked", "The wicked will be brought down while the psalmist trusts in God."],
+
+    "Psalms 56:1": ["Prayer for Mercy", "David asks God to have mercy because enemies pursue him."],
+    "Psalms 56:3": ["Trust in God", "When afraid David puts his trust in God."],
+    "Psalms 56:4": ["Confidence in God's Word", "David praises God's word and does not fear what people can do."],
+    "Psalms 56:5": ["Enemies Twist Words", "Enemies twist David's words and plot harm."],
+    "Psalms 56:8": ["God Sees the Tears", "God records David's tears and suffering."],
+    "Psalms 56:9": ["God on My Side", "David knows that God is for him."],
+    "Psalms 56:11": ["Fearless Trust", "David trusts in God and does not fear people."],
+    "Psalms 56:12": ["Thanksgiving to God", "David promises to fulfill vows and give thanks."],
+    "Psalms 56:13": ["Delivered from Death", "God has delivered him so he can walk before Him in life."],
+
+    "Psalms 57:1": ["Refuge in God", "David seeks refuge under God's wings until danger passes."],
+    "Psalms 57:2": ["God Fulfills His Purpose", "David cries out to God who fulfills His purpose for him."],
+    "Psalms 57:3": ["God Sends Help", "God sends help from heaven and saves him."],
+    "Psalms 57:4": ["Surrounded by Enemies", "David describes enemies like lions and fiery spears."],
+    "Psalms 57:5": ["God Exalted", "David asks that God be exalted above the heavens."],
+    "Psalms 57:7": ["Steadfast Heart", "David's heart is steadfast and ready to sing praises."],
+    "Psalms 57:9": ["Praise Among Nations", "David will praise God among the nations."],
+    "Psalms 57:10": ["Great Love and Faithfulness", "God's love reaches to the heavens."],
+    "Psalms 57:11": ["God Exalted Over All", "David again calls for God to be exalted over all the earth."],
+
+    "Psalms 58:1": ["Corrupt Rulers", "The psalmist questions whether rulers truly judge justly."],
+    "Psalms 58:2": ["Wicked Hearts", "The wicked plan injustice and violence."],
+    "Psalms 58:3": ["Wicked from Birth", "The wicked go astray from birth speaking lies."],
+    "Psalms 58:6": ["Prayer for Justice", "The psalmist asks God to break the power of the wicked."],
+    "Psalms 58:7": ["Enemies Vanish", "May the wicked vanish like water that runs away."],
+    "Psalms 58:10": ["Joy in Justice", "The righteous rejoice when justice is done."],
+    "Psalms 58:11": ["God the True Judge", "People will know that God judges the earth."],
+
+    "Psalms 59:1": ["Deliver Me from Enemies", "David asks God to deliver him from those who are attacking him."],
+    "Psalms 59:3": ["Enemies Lie in Wait", "Enemies lie in wait to take David's life."],
+    "Psalms 59:6": ["Enemies Like Dogs", "The enemies roam the city like growling dogs."],
+    "Psalms 59:8": ["God Laughs at the Nations", "The Lord laughs at the nations that oppose Him."],
+    "Psalms 59:9": ["God My Fortress", "David waits for God who is his fortress."],
+    "Psalms 59:13": ["End of the Wicked", "God will destroy the wicked so the world knows He rules."],
+    "Psalms 59:16": ["Sing of God's Strength", "David will sing of God's strength and love in the morning."],
+    "Psalms 59:17": ["God My Refuge", "David praises God who is his refuge in times of trouble."],
+
+    "Psalms 60:1": ["Nation in Distress", "David says God has rejected and scattered His people."],
+    "Psalms 60:3": ["Hardships from God", "God has made His people drink a difficult cup."],
+    "Psalms 60:4": ["Banner for the Faithful", "God has given a banner for those who fear Him."],
+    "Psalms 60:6": ["God Speaks from His Sanctuary", "God declares ownership over His people and lands."],
+    "Psalms 60:8": ["Victory over Enemies", "God declares triumph over surrounding nations."],
+    "Psalms 60:11": ["Help from God", "Human help is useless but God gives victory."],
+    "Psalms 60:12": ["Victory Through God", "With God they will gain victory over enemies."],
+
+    "Psalms 61:1": ["Cry for Help", "David asks God to hear his cry and listen to his prayer."],
+    "Psalms 61:2": ["Lead Me to the Rock", "David asks God to lead him to the rock higher than himself."],
+    "Psalms 61:3": ["God the Strong Tower", "God has been a refuge and strong tower against enemies."],
+    "Psalms 61:4": ["Dwelling with God", "David longs to dwell in God's presence forever."],
+    "Psalms 61:5": ["God Hears Vows", "God has heard David's vows and given him an inheritance."],
+    "Psalms 61:6": ["Blessing for the King", "David asks God to prolong the king's life."],
+    "Psalms 61:7": ["God's Protection", "The king will remain before God forever."],
+    "Psalms 61:8": ["Praise Forever", "David will praise God's name forever and fulfill his vows daily."],
+
+    "Psalms 62:1": ["Rest in God Alone", "David finds rest and salvation in God alone."],
+    "Psalms 62:2": ["God My Rock", "God is David's rock and fortress so he will not be shaken."],
+    "Psalms 62:3": ["Attack of Enemies", "Enemies attack like a leaning wall ready to collapse."],
+    "Psalms 62:5": ["Hope in God", "David again tells his soul to find rest in God."],
+    "Psalms 62:6": ["Unshaken Faith", "God alone is his rock and salvation."],
+    "Psalms 62:8": ["Trust at All Times", "People are urged to trust God and pour out their hearts to Him."],
+    "Psalms 62:9": ["Human Strength Is Nothing", "People are like a breath and cannot be trusted."],
+    "Psalms 62:10": ["Do Not Trust Riches", "Do not rely on wealth even if it increases."],
+    "Psalms 62:11": ["Power Belongs to God", "God has declared that power belongs to Him."],
+    "Psalms 62:12": ["God Rewards Everyone", "The Lord rewards each person according to their deeds."],
+
+    "Psalms 63:1": ["Thirst for God", "David longs for God like a dry land thirsts for water."],
+    "Psalms 63:2": ["Seeking God's Power", "David desires to see God's power and glory."],
+    "Psalms 63:3": ["Better Than Life", "God's love is better than life itself."],
+    "Psalms 63:4": ["Praise with Hands Lifted", "David will praise God and lift up his hands in worship."],
+    "Psalms 63:5": ["Satisfied in God", "His soul is satisfied like with rich food."],
+    "Psalms 63:6": ["Remembering God", "David remembers God during the night."],
+    "Psalms 63:7": ["Shelter Under God's Wings", "God helps him and he rejoices under His protection."],
+    "Psalms 63:8": ["Clinging to God", "David clings to God who upholds him."],
+    "Psalms 63:9": ["Enemies Destroyed", "Those who seek his life will go down to the depths."],
+    "Psalms 63:11": ["Joy for the Faithful", "The king and those who trust in God will rejoice."],
+
+    "Psalms 64:1": ["Prayer for Protection", "David asks God to protect him from enemy threats."],
+    "Psalms 64:3": ["Sharp Words", "Enemies sharpen their tongues like swords."],
+    "Psalms 64:4": ["Secret Attacks", "They shoot their words suddenly at the innocent."],
+    "Psalms 64:6": ["Hidden Plots", "The wicked plan evil schemes carefully."],
+    "Psalms 64:7": ["God Strikes Back", "God suddenly strikes them with His arrows."],
+    "Psalms 64:8": ["Enemies Fall", "Their own words cause their downfall."],
+    "Psalms 64:9": ["People Fear God", "All people will fear and proclaim God's work."],
+    "Psalms 64:10": ["Joy of the Righteous", "The righteous rejoice in the Lord and take refuge in Him."],
+
+    "Psalms 65:1": ["Praise Awaits God", "Praise belongs to God in Zion and vows will be fulfilled to Him."],
+    "Psalms 65:2": ["God Hears Prayer", "All people come to God because He hears prayer."],
+    "Psalms 65:3": ["Forgiveness of Sin", "Though sins overwhelm us God forgives our transgressions."],
+    "Psalms 65:4": ["Blessed Near God", "Blessed are those chosen to dwell near God's courts."],
+    "Psalms 65:5": ["God of Salvation", "God answers with awesome deeds of righteousness."],
+    "Psalms 65:7": ["Calming the Seas", "God calms the roaring seas and waves."],
+    "Psalms 65:9": ["God Waters the Earth", "God cares for the land and enriches it with water."],
+    "Psalms 65:10": ["Preparing the Harvest", "God softens the ground and blesses the crops."],
+    "Psalms 65:11": ["Crown of the Year", "God crowns the year with His bounty."],
+    "Psalms 65:13": ["Fields Shout for Joy", "The fields and valleys sing with joy."],
+
+    "Psalms 66:1": ["Shout for Joy", "All the earth is called to shout joyfully to God."],
+    "Psalms 66:3": ["God's Awesome Works", "God's deeds are so great that enemies cringe before Him."],
+    "Psalms 66:5": ["Come and See", "People are invited to see the works of God."],
+    "Psalms 66:6": ["Crossing the Sea", "God turned the sea into dry land for His people."],
+    "Psalms 66:8": ["Praise God", "Nations are urged to praise God."],
+    "Psalms 66:10": ["Testing of the Faithful", "God tests His people like silver refined in fire."],
+    "Psalms 66:13": ["Offering Thanks", "The psalmist will come to God's house with offerings."],
+    "Psalms 66:16": ["Testimony", "The psalmist tells what God has done for his soul."],
+    "Psalms 66:19": ["God Heard the Prayer", "God has surely listened to the prayer."],
+    "Psalms 66:20": ["Praise for God's Love", "God has not rejected the prayer nor withheld His love."],
+
+    "Psalms 67:1": ["Bless Us O God", "The psalmist asks God to bless and shine His face upon His people."],
+    "Psalms 67:2": ["Known Among Nations", "God's ways may be known among all nations."],
+    "Psalms 67:3": ["Nations Praise God", "Let the nations praise and worship God."],
+    "Psalms 67:4": ["God Judges Justly", "God judges the people with fairness and guides the nations."],
+    "Psalms 67:5": ["Universal Praise", "All nations are called to praise God."],
+    "Psalms 67:6": ["Earth's Harvest", "The earth yields its harvest and God blesses His people."],
+    "Psalms 67:7": ["God's Blessing Worldwide", "God blesses His people so all the earth will fear Him."],
+
+    "Psalms 68:1": ["God Arises", "When God arises His enemies scatter and flee before Him."],
+    "Psalms 68:3": ["Joy for the Righteous", "The righteous rejoice and celebrate before God."],
+    "Psalms 68:4": ["Sing to God", "People are called to sing praises to the Lord."],
+    "Psalms 68:5": ["Father to the Fatherless", "God is a father to the fatherless and defender of widows."],
+    "Psalms 68:6": ["God Sets the Lonely in Families", "God places the lonely in families and frees prisoners."],
+    "Psalms 68:7": ["God Leads His People", "God led His people through the wilderness."],
+    "Psalms 68:10": ["Provision for the Needy", "God provided for the needy people."],
+    "Psalms 68:18": ["God Ascends on High", "God ascends on high and receives gifts from people."],
+    "Psalms 68:19": ["Daily Burden Bearer", "God daily bears our burdens and saves us."],
+    "Psalms 68:35": ["God Gives Strength", "God gives strength and power to His people."],
+
+    "Psalms 69:1": ["Save Me O God", "David cries out to God because troubles overwhelm him."],
+    "Psalms 69:3": ["Weary from Crying", "David is exhausted from calling for help."],
+    "Psalms 69:4": ["Enemies Without Cause", "Those who hate him without reason are many."],
+    "Psalms 69:7": ["Suffering for God", "David suffers shame for the sake of God."],
+    "Psalms 69:9": ["Zeal for God's House", "Zeal for God's house consumes him."],
+    "Psalms 69:14": ["Prayer for Rescue", "David asks God to rescue him from deep trouble."],
+    "Psalms 69:21": ["Given Vinegar", "In his thirst they give him vinegar to drink."],
+    "Psalms 69:29": ["God Saves the Afflicted", "God will save the poor and needy."],
+    "Psalms 69:33": ["God Hears the Needy", "The Lord hears the needy and does not despise them."],
+    "Psalms 69:34": ["All Creation Praise", "Heaven and earth are called to praise God."],
+
+    "Psalms 70:1": ["Urgent Prayer", "David urgently asks God to come quickly and help him."],
+    "Psalms 70:2": ["Enemies Confounded", "Those who seek his life will be put to shame."],
+    "Psalms 70:3": ["Mockers Ashamed", "Those who mock him will turn back in disgrace."],
+    "Psalms 70:4": ["Joy for Seekers", "Those who seek God will rejoice in Him."],
+    "Psalms 70:5": ["Come Quickly Lord", "David asks God to hurry and deliver him."],
+
+    "Psalms 71:1": ["Refuge in God", "The psalmist takes refuge in the Lord and asks not to be put to shame."],
+    "Psalms 71:3": ["God the Rock", "God is a rock of refuge and a fortress for protection."],
+    "Psalms 71:5": ["Hope from Youth", "The Lord has been the psalmist's hope since youth."],
+    "Psalms 71:9": ["Do Not Forsake Me", "The psalmist asks God not to abandon him in old age."],
+    "Psalms 71:12": ["Come Quickly", "The psalmist asks God to come quickly to help."],
+    "Psalms 71:14": ["Hope Continually", "The psalmist will hope in God and praise Him more and more."],
+    "Psalms 71:17": ["Teaching from Youth", "God has taught the psalmist from youth."],
+    "Psalms 71:20": ["Revived Again", "God will restore and revive him from troubles."],
+    "Psalms 71:23": ["Joyful Praise", "The psalmist sings praises with joyful lips."],
+    "Psalms 71:24": ["Proclaiming Righteousness", "The psalmist will speak of God's righteousness all day."],
+
+    "Psalms 72:1": ["Prayer for the King", "A prayer that God will give the king justice and righteousness."],
+    "Psalms 72:3": ["Peace for the People", "The king's rule will bring peace and prosperity."],
+    "Psalms 72:4": ["Defender of the Poor", "The king will defend the needy and crush the oppressor."],
+    "Psalms 72:5": ["Enduring Reign", "The king will endure as long as the sun and moon."],
+    "Psalms 72:8": ["Worldwide Rule", "His rule will extend from sea to sea."],
+    "Psalms 72:11": ["Kings Bow Down", "All kings will bow down and serve him."],
+    "Psalms 72:12": ["Rescue for the Needy", "He will rescue the needy who cry out."],
+    "Psalms 72:17": ["Name Endures Forever", "His name will endure and all nations will be blessed through him."],
+    "Psalms 72:18": ["Praise the Lord", "Praise be to the Lord who does marvelous deeds."],
+    "Psalms 72:19": ["Glory Forever", "May God's glory fill the whole earth."],
+
+    "Psalms 73:1": ["God Is Good to Israel", "God is truly good to those who are pure in heart."],
+    "Psalms 73:2": ["Almost Stumbled", "The psalmist almost lost faith when he saw the prosperity of the wicked."],
+    "Psalms 73:4": ["Prosperity of the Wicked", "The wicked seem to live without trouble."],
+    "Psalms 73:12": ["Carefree Lives", "The wicked live carefree and grow rich."],
+    "Psalms 73:16": ["Struggle to Understand", "The psalmist struggles to understand this injustice."],
+    "Psalms 73:17": ["Entered God's Sanctuary", "Understanding comes when he enters God's sanctuary."],
+    "Psalms 73:18": ["Sudden Destruction", "The wicked are placed on slippery ground and will fall."],
+    "Psalms 73:23": ["God Holds My Hand", "God continually holds the psalmist's hand."],
+    "Psalms 73:25": ["God My Desire", "There is nothing on earth the psalmist desires besides God."],
+    "Psalms 73:28": ["Nearness to God", "Being near to God is the psalmist's greatest good."],
+
+    "Psalms 74:1": ["Why Have You Rejected Us", "The people cry out asking why God has rejected them."],
+    "Psalms 74:3": ["Sanctuary Destroyed", "Enemies have destroyed the sanctuary."],
+    "Psalms 74:7": ["Temple Burned", "The holy place of God's name has been burned."],
+    "Psalms 74:9": ["No Prophet Seen", "The people feel lost because there is no prophet."],
+    "Psalms 74:12": ["God the Ancient King", "God has been King from ancient times bringing salvation."],
+    "Psalms 74:13": ["God's Power Over Creation", "God divided the sea and broke the power of the sea monsters."],
+    "Psalms 74:16": ["God Created Day and Night", "The day, night, sun, and moon belong to God."],
+    "Psalms 74:20": ["Remember the Covenant", "The people ask God to remember His covenant."],
+    "Psalms 74:22": ["Rise Up O God", "They ask God to rise up and defend His cause."],
+
+    "Psalms 75:1": ["Thanks to God", "The people give thanks to God because His name is near."],
+    "Psalms 75:2": ["God the Judge", "God declares that He judges with fairness."],
+    "Psalms 75:4": ["Warning to the Proud", "God warns the arrogant not to boast."],
+    "Psalms 75:6": ["Promotion from God", "Exaltation does not come from east or west but from God."],
+    "Psalms 75:7": ["God Raises and Lowers", "God brings down one and lifts up another."],
+    "Psalms 75:8": ["Cup of Judgment", "God holds a cup of judgment for the wicked."],
+    "Psalms 75:9": ["Praise Forever", "The psalmist will proclaim God's greatness forever."],
+    "Psalms 75:10": ["Power of the Righteous", "God will cut off the power of the wicked and lift up the righteous."],
+
+    "Psalms 76:1": ["God Known in Judah", "God is known in Judah and His name is great in Israel."],
+    "Psalms 76:3": ["God Breaks Weapons", "God breaks the weapons of war."],
+    "Psalms 76:4": ["God's Glory", "God is more majestic than the mountains of prey."],
+    "Psalms 76:7": ["Fear of the Lord", "God is to be feared when He rises to judge."],
+    "Psalms 76:8": ["Judgment from Heaven", "God's judgment causes the earth to fear and be silent."],
+    "Psalms 76:9": ["Saving the Humble", "God rises to save the humble of the earth."],
+    "Psalms 76:11": ["Make Vows to God", "People are called to make and fulfill vows to the Lord."],
+    "Psalms 76:12": ["God Humbles Rulers", "God cuts off the spirit of rulers and is feared by kings."],
+
+    "Psalms 77:1": ["Cry to God", "The psalmist cries out loudly to God for help."],
+    "Psalms 77:3": ["Troubled Spirit", "When remembering God his spirit becomes overwhelmed."],
+    "Psalms 77:5": ["Remembering the Past", "He thinks about the former days and years long ago."],
+    "Psalms 77:7": ["Questioning God's Favor", "He wonders if the Lord has rejected him forever."],
+    "Psalms 77:10": ["Change of Perspective", "The psalmist recalls the mighty works of God."],
+    "Psalms 77:13": ["God's Holy Way", "God's ways are holy and no god is like Him."],
+    "Psalms 77:16": ["Waters Saw God", "The waters saw God and trembled."],
+    "Psalms 77:19": ["God's Hidden Path", "God's path was through the sea though His footprints were unseen."],
+    "Psalms 77:20": ["God Leads His People", "God led His people like a flock through Moses and Aaron."],
+
+    "Psalms 78:1": ["Listen to the Teaching", "The people are called to listen to the teaching of God's works."],
+    "Psalms 78:4": ["Tell the Next Generation", "God's deeds must be told to future generations."],
+    "Psalms 78:7": ["Trust in God", "The children should place their hope in God."],
+    "Psalms 78:10": ["Israel's Disobedience", "The people failed to keep God's covenant."],
+    "Psalms 78:13": ["Crossing the Sea", "God divided the sea and led them through."],
+    "Psalms 78:17": ["Continued Rebellion", "The people continued to sin against God."],
+    "Psalms 78:23": ["Bread from Heaven", "God opened the skies and gave them manna."],
+    "Psalms 78:38": ["God's Compassion", "God forgave them many times and restrained His anger."],
+    "Psalms 78:52": ["God Leads Like a Shepherd", "God led His people like a shepherd through the wilderness."],
+    "Psalms 78:70": ["David Chosen", "God chose David to shepherd His people Israel."],
+
+    "Psalms 79:1": ["Nations Invade", "Foreign nations have invaded and defiled God's temple."],
+    "Psalms 79:3": ["Bloodshed in Jerusalem", "The blood of God's servants was poured out in Jerusalem."],
+    "Psalms 79:5": ["How Long O Lord", "The people ask how long God's anger will last."],
+    "Psalms 79:8": ["Prayer for Mercy", "They ask God not to remember past sins but show mercy."],
+    "Psalms 79:9": ["Help and Forgiveness", "They ask God to help and forgive for the sake of His name."],
+    "Psalms 79:11": ["Hear the Prisoners", "They ask God to hear the groans of prisoners."],
+    "Psalms 79:13": ["Praise Forever", "God's people promise to praise Him forever."],
+
+    "Psalms 80:1": ["Shepherd of Israel", "The psalmist calls on the Shepherd of Israel to lead and save His people."],
+    "Psalms 80:3": ["Restore Us", "The people ask God to restore them and make His face shine upon them."],
+    "Psalms 80:5": ["Tears as Food", "God's people have been given tears as their food and drink."],
+    "Psalms 80:7": ["Restore Us Again", "They again ask the God of hosts to restore them."],
+    "Psalms 80:8": ["Vine from Egypt", "God brought a vine out of Egypt and planted it in the land."],
+    "Psalms 80:12": ["Vine Broken Down", "Now the vine's walls are broken and it is plundered."],
+    "Psalms 80:14": ["Look Down from Heaven", "They ask God to look down and care for His vine."],
+    "Psalms 80:17": ["Man at Your Right Hand", "God is asked to strengthen the man at His right hand."],
+    "Psalms 80:19": ["Final Plea", "The people again ask God to restore them and save them."],
+
+    "Psalms 81:1": ["Sing for Joy", "The people are called to sing for joy to God their strength."],
+    "Psalms 81:3": ["Sound the Trumpet", "Trumpets are sounded at the new moon and festivals."],
+    "Psalms 81:5": ["God's Deliverance", "God delivered Israel from Egypt."],
+    "Psalms 81:7": ["God Answered in Trouble", "God answered His people when they called in distress."],
+    "Psalms 81:10": ["Open Your Mouth Wide", "God says He will fill His people's needs if they trust Him."],
+    "Psalms 81:11": ["Israel Did Not Listen", "But God's people would not listen to Him."],
+    "Psalms 81:13": ["Longing for Obedience", "God wishes His people would walk in His ways."],
+    "Psalms 81:14": ["Enemies Subdued", "God would quickly defeat their enemies."],
+    "Psalms 81:16": ["Best Provision", "God would feed them with the finest wheat and honey."],
+
+    "Psalms 82:1": ["God Judges the Rulers", "God stands in the assembly and judges the rulers."],
+    "Psalms 82:2": ["Unjust Judgment", "The rulers are rebuked for judging unjustly."],
+    "Psalms 82:3": ["Defend the Weak", "They are commanded to defend the weak and the needy."],
+    "Psalms 82:5": ["Ignorance of Justice", "The rulers do not understand and walk in darkness."],
+    "Psalms 82:6": ["Called Gods", "They were called gods and sons of the Most High."],
+    "Psalms 82:7": ["Fall Like Men", "Yet they will die like ordinary people."],
+    "Psalms 82:8": ["God Judge the Earth", "The psalmist asks God to rise and judge the earth."],
+
+    "Psalms 83:1": ["Prayer Against Enemies", "The psalmist asks God not to remain silent while enemies gather."],
+    "Psalms 83:3": ["Plots Against God's People", "Enemies secretly plan against God's people."],
+    "Psalms 83:5": ["Nations Conspire", "Many nations unite together against Israel."],
+    "Psalms 83:9": ["Remember Past Victories", "The psalmist asks God to defeat them like past enemies."],
+    "Psalms 83:13": ["Enemies Like Dust", "He prays that enemies will be blown away like dust in the wind."],
+    "Psalms 83:16": ["Seek God's Name", "May their shame lead them to seek the Lord."],
+    "Psalms 83:18": ["God Alone Most High", "Let everyone know that the Lord alone is the Most High over all the earth."],
+
+    "Psalms 84:1": ["Love for God's House", "The psalmist expresses deep love for the dwelling place of the Lord."],
+    "Psalms 84:2": ["Longing for God's Presence", "The psalmist longs and yearns for the courts of the Lord."],
+    "Psalms 84:4": ["Blessed in God's House", "Blessed are those who live in God's house and continually praise Him."],
+    "Psalms 84:5": ["Strength from God", "Blessed are those whose strength comes from the Lord."],
+    "Psalms 84:7": ["Journey to Zion", "They grow stronger as they travel to appear before God in Zion."],
+    "Psalms 84:10": ["One Day with God", "One day in God's courts is better than a thousand elsewhere."],
+    "Psalms 84:11": ["God the Sun and Shield", "The Lord gives grace and glory and withholds no good thing."],
+    "Psalms 84:12": ["Blessed Who Trust", "Blessed are those who trust in the Lord."],
+
+    "Psalms 85:1": ["God's Past Favor", "The psalmist remembers how God restored the land."],
+    "Psalms 85:2": ["Forgiveness of Sin", "God forgave the sins of His people."],
+    "Psalms 85:4": ["Prayer for Restoration", "The people ask God to restore them again."],
+    "Psalms 85:6": ["Revive Us Again", "They ask God to revive them so they may rejoice."],
+    "Psalms 85:8": ["God Promises Peace", "God promises peace to His faithful people."],
+    "Psalms 85:10": ["Love and Faithfulness", "Love and faithfulness meet together with righteousness and peace."],
+    "Psalms 85:11": ["Blessings from Heaven", "Faithfulness springs from the earth and righteousness looks down."],
+    "Psalms 85:12": ["Good Things from God", "The Lord will give what is good and the land will yield its harvest."],
+    "Psalms 85:13": ["Righteous Path", "Righteousness goes before God preparing His way."],
+
+    "Psalms 86:1": ["Prayer for Mercy", "David asks the Lord to hear him because he is poor and needy."],
+    "Psalms 86:2": ["Protect My Life", "David asks God to guard his life because he trusts in Him."],
+    "Psalms 86:4": ["Bring Joy", "David asks the Lord to bring joy to his soul."],
+    "Psalms 86:5": ["God Forgives", "The Lord is good and ready to forgive."],
+    "Psalms 86:7": ["Answer in Trouble", "David says he will call on God in trouble because God answers."],
+    "Psalms 86:8": ["No God Like You", "There is no god like the Lord and none can do His works."],
+    "Psalms 86:10": ["God Alone Is Great", "God alone does wonderful things."],
+    "Psalms 86:11": ["Teach Me Your Way", "David asks God to teach him His ways."],
+    "Psalms 86:13": ["Great Love", "God's great love has delivered David from death."],
+    "Psalms 86:17": ["Sign of Favor", "David asks God to show a sign of His goodness."],
+
+    "Psalms 87:1": ["City Founded by God", "The Lord has founded His city on the holy mountains."],
+    "Psalms 87:2": ["God Loves Zion", "The Lord loves the gates of Zion more than all the dwellings of Jacob."],
+    "Psalms 87:3": ["Glorious Things Spoken", "Glorious things are spoken about the city of God."],
+    "Psalms 87:4": ["Nations Recorded", "People from many nations will be counted as born in Zion."],
+    "Psalms 87:5": ["Zion Established", "The Most High Himself will establish Zion."],
+    "Psalms 87:6": ["God Records the Peoples", "The Lord will record the nations as belonging to Zion."],
+    "Psalms 87:7": ["Joyful Songs", "Singers and musicians declare their joy in Zion."],
+
+    "Psalms 88:1": ["Cry Day and Night", "The psalmist cries out to the Lord day and night."],
+    "Psalms 88:3": ["Life Full of Trouble", "The psalmist feels overwhelmed with troubles."],
+    "Psalms 88:6": ["In the Depths", "He feels placed in the lowest pit and darkness."],
+    "Psalms 88:8": ["Friends Far Away", "Friends have been taken away and he feels isolated."],
+    "Psalms 88:9": ["Daily Prayer", "The psalmist stretches out his hands to God every day."],
+    "Psalms 88:13": ["Morning Prayer", "He continues to cry out to the Lord every morning."],
+    "Psalms 88:18": ["Darkness Surrounds", "The psalm ends with a feeling of loneliness and darkness."],
+
+    "Psalms 89:1": ["Sing of God's Love", "The psalmist will sing forever of the Lord's great love."],
+    "Psalms 89:3": ["Covenant with David", "God made a covenant with David and promised his throne would endure."],
+    "Psalms 89:5": ["Heavens Praise God", "The heavens praise God's wonders and faithfulness."],
+    "Psalms 89:8": ["God's Mighty Power", "No one is as mighty as the Lord."],
+    "Psalms 89:11": ["Creator of All", "The heavens and earth belong to God."],
+    "Psalms 89:14": ["Foundation of God's Throne", "Righteousness and justice are the foundation of God's throne."],
+    "Psalms 89:19": ["Chosen Servant", "God chose David as His servant and anointed him."],
+    "Psalms 89:27": ["Firstborn King", "God will make David the highest of the kings."],
+    "Psalms 89:34": ["Unbreakable Covenant", "God will not break His covenant with David."],
+    "Psalms 89:46": ["Question of God's Anger", "The psalmist asks how long God's anger will last."],
+
+    "Psalms 90:1": ["God Our Dwelling", "The Lord has been our dwelling place through all generations."],
+    "Psalms 90:2": ["God Eternal", "Before the mountains were born God existed forever."],
+    "Psalms 90:3": ["Human Life Returns to Dust", "Humans return to dust at God's command."],
+    "Psalms 90:4": ["Time Before God", "A thousand years are like a day to God."],
+    "Psalms 90:7": ["God's Anger at Sin", "Human lives are troubled by God's anger against sin."],
+    "Psalms 90:10": ["Shortness of Life", "Human life is short and quickly passes."],
+    "Psalms 90:12": ["Teach Us to Number Our Days", "The psalmist asks God to teach wisdom through life's brevity."],
+    "Psalms 90:14": ["Satisfy Us with Love", "The psalmist asks God to satisfy them with His love."],
+    "Psalms 90:17": ["Establish Our Work", "The psalmist asks God to establish the work of their hands."],
+
+    "Psalms 91:1": ["Dwelling in God's Shelter", "Those who live under God's protection will find rest."],
+    "Psalms 91:2": ["God My Refuge", "The Lord is a refuge and fortress to those who trust Him."],
+    "Psalms 91:3": ["Protection from Danger", "God delivers from traps and deadly disease."],
+    "Psalms 91:4": ["Covered by God's Wings", "God protects like a bird covering its young."],
+    "Psalms 91:7": ["Safety in Trouble", "Though thousands fall the faithful remain safe."],
+    "Psalms 91:9": ["God the Dwelling Place", "Those who make the Lord their refuge are protected."],
+    "Psalms 91:11": ["Angels Guard", "God commands His angels to guard His people."],
+    "Psalms 91:13": ["Victory Over Danger", "The faithful will overcome lions and serpents."],
+    "Psalms 91:14": ["God's Promise of Rescue", "God promises to rescue those who love Him."],
+    "Psalms 91:16": ["Long Life and Salvation", "God promises long life and salvation."],
+
+    "Psalms 92:1": ["Good to Praise the Lord", "It is good to give thanks and sing praises to the Lord."],
+    "Psalms 92:2": ["Proclaim God's Love", "Declare God's love in the morning and His faithfulness at night."],
+    "Psalms 92:4": ["Joy in God's Works", "The psalmist rejoices in the works of the Lord."],
+    "Psalms 92:6": ["Foolish Do Not Understand", "The foolish do not understand God's plans."],
+    "Psalms 92:7": ["Wicked Flourish Briefly", "The wicked may flourish like grass but will be destroyed."],
+    "Psalms 92:8": ["God Exalted Forever", "The Lord is exalted forever."],
+    "Psalms 92:10": ["Strength Given", "God gives strength and fresh anointing."],
+    "Psalms 92:12": ["Righteous Flourish", "The righteous flourish like palm trees and cedars."],
+    "Psalms 92:13": ["Planted in God's House", "They flourish in the courts of the Lord."],
+    "Psalms 92:15": ["God Is Upright", "They proclaim that the Lord is righteous."],
+
+    "Psalms 93:1": ["The Lord Reigns", "The Lord reigns clothed in majesty and strength."],
+    "Psalms 93:2": ["Eternal Throne", "God's throne has been established from ancient times."],
+    "Psalms 93:3": ["Mighty Waters", "The seas lift up their roaring waves."],
+    "Psalms 93:4": ["God Stronger Than the Seas", "The Lord on high is mightier than the waves."],
+    "Psalms 93:5": ["Faithful Decrees", "God's laws are trustworthy and holiness fills His house."],
+
+    "Psalms 94:1": ["God of Justice", "The psalmist calls on God the avenger to shine forth."],
+    "Psalms 94:3": ["Wicked Boast", "The wicked boast and act arrogantly."],
+    "Psalms 94:6": ["Oppression of the Weak", "They kill widows, foreigners, and the fatherless."],
+    "Psalms 94:9": ["God Sees and Hears", "The God who made ears and eyes surely hears and sees."],
+    "Psalms 94:12": ["Blessed Discipline", "Blessed are those whom the Lord disciplines."],
+    "Psalms 94:16": ["God My Defender", "The Lord stands up for the righteous."],
+    "Psalms 94:19": ["Comfort in Anxiety", "God's comfort brings joy during anxious times."],
+    "Psalms 94:22": ["God My Refuge", "The Lord is a strong refuge and rock of safety."],
+    "Psalms 94:23": ["Justice for the Wicked", "God will destroy the wicked for their evil."],
+
+    "Psalms 95:1": ["Come Sing to the Lord", "People are called to sing joyfully to the Lord our rock of salvation."],
+    "Psalms 95:2": ["Enter with Thanksgiving", "Come before God with thanksgiving and songs of praise."],
+    "Psalms 95:3": ["Great King Above All", "The Lord is a great God and King above all gods."],
+    "Psalms 95:4": ["Creator of the Earth", "The depths of the earth and the mountain peaks belong to Him."],
+    "Psalms 95:6": ["Bow in Worship", "Come and bow down in worship before the Lord our Maker."],
+    "Psalms 95:7": ["We Are His People", "We are the people of His pasture and the sheep of His hand."],
+    "Psalms 95:8": ["Do Not Harden Your Hearts", "Do not harden your hearts as Israel did in the wilderness."],
+    "Psalms 95:10": ["Forty Years of Anger", "God was angry with that generation who went astray."],
+    "Psalms 95:11": ["Denied Rest", "God swore they would not enter His rest."],
+
+    "Psalms 96:1": ["Sing a New Song", "All the earth is called to sing a new song to the Lord."],
+    "Psalms 96:2": ["Proclaim Salvation", "Declare God's salvation day after day."],
+    "Psalms 96:3": ["Declare His Glory", "Tell the nations about God's glory and wonders."],
+    "Psalms 96:4": ["The Lord Is Great", "The Lord is great and worthy of praise."],
+    "Psalms 96:7": ["Give Glory to God", "Families of nations should give glory and strength to the Lord."],
+    "Psalms 96:8": ["Bring Offerings", "Bring offerings and come into His courts."],
+    "Psalms 96:9": ["Worship in Holiness", "Worship the Lord in the beauty of holiness."],
+    "Psalms 96:10": ["The Lord Reigns", "Declare among the nations that the Lord reigns."],
+    "Psalms 96:11": ["Creation Rejoices", "Let the heavens and earth rejoice before the Lord."],
+    "Psalms 96:13": ["God Comes to Judge", "The Lord comes to judge the earth with righteousness."],
+
+    "Psalms 97:1": ["The Lord Reigns", "The Lord reigns and the earth rejoices."],
+    "Psalms 97:2": ["Righteous Throne", "Clouds and darkness surround Him and righteousness is His throne's foundation."],
+    "Psalms 97:3": ["Fire Before Him", "Fire goes before the Lord and consumes His enemies."],
+    "Psalms 97:6": ["Heavens Declare His Righteousness", "The heavens proclaim God's righteousness."],
+    "Psalms 97:7": ["Idols Ashamed", "Those who worship idols will be put to shame."],
+    "Psalms 97:9": ["God Above All", "The Lord is exalted above all gods."],
+    "Psalms 97:10": ["Love the Lord Hate Evil", "Those who love the Lord must hate evil."],
+    "Psalms 97:11": ["Light for the Righteous", "Light shines on the righteous and joy for the upright."],
+    "Psalms 97:12": ["Rejoice in the Lord", "The righteous rejoice and praise God's holy name."],
+
+    "Psalms 98:1": ["Sing a New Song", "Sing a new song to the Lord because He has done marvelous things."],
+    "Psalms 98:2": ["Salvation Revealed", "The Lord has made His salvation known to the nations."],
+    "Psalms 98:3": ["Faithfulness to Israel", "God remembers His love and faithfulness to Israel."],
+    "Psalms 98:4": ["Shout for Joy", "All the earth is called to shout joyfully to the Lord."],
+    "Psalms 98:5": ["Music to the Lord", "Praise God with harp, song, and music."],
+    "Psalms 98:6": ["Trumpets and Horns", "Sound trumpets and horns before the Lord the King."],
+    "Psalms 98:7": ["Creation Rejoices", "Let the sea and everything in it rejoice."],
+    "Psalms 98:8": ["Rivers Clap Hands", "The rivers clap their hands and the mountains sing."],
+    "Psalms 98:9": ["God Judges with Justice", "The Lord comes to judge the earth with righteousness."],
+
+    "Psalms 99:1": ["The Lord Reigns", "The Lord reigns and the nations tremble."],
+    "Psalms 99:2": ["Great in Zion", "The Lord is great in Zion and exalted over all peoples."],
+    "Psalms 99:3": ["Holy Name", "Let people praise God's great and holy name."],
+    "Psalms 99:4": ["Lover of Justice", "The King loves justice and establishes fairness."],
+    "Psalms 99:5": ["Exalt the Lord", "Exalt the Lord and worship at His footstool."],
+    "Psalms 99:6": ["Faithful Leaders", "Moses, Aaron, and Samuel called on the Lord and He answered them."],
+    "Psalms 99:7": ["God Spoke to Them", "God spoke to them from the pillar of cloud."],
+    "Psalms 99:8": ["Forgiving Yet Just", "God forgave His people but punished their wrongdoing."],
+    "Psalms 99:9": ["Holy Is the Lord", "Exalt the Lord our God because He is holy."],
+
+    "Psalms 100:1": ["Shout for Joy", "All the earth is called to shout joyfully to the Lord."],
+    "Psalms 100:2": ["Serve with Gladness", "Serve the Lord with gladness and come before Him with singing."],
+    "Psalms 100:3": ["Know the Lord", "Know that the Lord is God and we belong to Him."],
+    "Psalms 100:4": ["Enter with Thanksgiving", "Enter His gates with thanksgiving and His courts with praise."],
+    "Psalms 100:5": ["God's Enduring Love", "The Lord is good and His love and faithfulness last forever."],
+
+    "Psalms 101:1": ["Song of Mercy and Justice", "David sings about God's mercy and justice."],
+    "Psalms 101:2": ["Walk with Integrity", "David commits to live with integrity in his house."],
+    "Psalms 101:3": ["Reject Evil", "He refuses to set anything wicked before his eyes."],
+    "Psalms 101:5": ["No Slander Allowed", "Those who secretly slander neighbors will not be tolerated."],
+    "Psalms 101:6": ["Faithful Companions", "David will choose faithful people to serve with him."],
+    "Psalms 101:7": ["No Deceit in the House", "Those who practice deceit will not live in his house."],
+    "Psalms 101:8": ["Justice in the Land", "David promises to destroy wickedness from the land."],
+
+    "Psalms 102:1": ["Prayer of the Afflicted", "The psalmist asks the Lord to hear his prayer in distress."],
+    "Psalms 102:3": ["Life Fading Away", "His days vanish like smoke and his bones burn with pain."],
+    "Psalms 102:6": ["Lonely Like a Bird", "He feels lonely like a bird in the desert."],
+    "Psalms 102:12": ["God Eternal", "The Lord remains forever and His name endures through generations."],
+    "Psalms 102:13": ["Mercy on Zion", "God will arise and show mercy to Zion."],
+    "Psalms 102:16": ["The Lord Rebuilds Zion", "God will rebuild Zion and appear in His glory."],
+    "Psalms 102:18": ["Future Generations", "These things will be written for future generations."],
+    "Psalms 102:24": ["Life in God's Hands", "The psalmist asks God not to take him away in midlife."],
+    "Psalms 102:27": ["God Never Changes", "God remains the same and His years never end."],
+
+    "Psalms 103:1": ["Praise the Lord", "David calls his soul to bless and praise the Lord."],
+    "Psalms 103:2": ["Remember His Benefits", "Do not forget the good things God has done."],
+    "Psalms 103:3": ["Forgives and Heals", "God forgives sins and heals diseases."],
+    "Psalms 103:6": ["Justice for the Oppressed", "The Lord works righteousness and justice."],
+    "Psalms 103:8": ["Compassionate God", "The Lord is compassionate, gracious, and slow to anger."],
+    "Psalms 103:11": ["Great Love", "God's love is as high as the heavens above the earth."],
+    "Psalms 103:12": ["Sins Removed", "God removes sins as far as the east is from the west."],
+    "Psalms 103:13": ["Father's Compassion", "The Lord shows compassion like a father to his children."],
+    "Psalms 103:19": ["God's Throne in Heaven", "The Lord has established His throne in heaven."],
+    "Psalms 103:22": ["All Creation Praise", "Everything in God's kingdom should praise the Lord."],
+
+    "Psalms 104:1": ["Praise the Creator", "The psalmist praises the Lord who is clothed with majesty and glory."],
+    "Psalms 104:2": ["Light as Garment", "God covers Himself with light and stretches out the heavens."],
+    "Psalms 104:5": ["Foundation of the Earth", "God set the earth on its foundations so it cannot be moved."],
+    "Psalms 104:10": ["Water for the Land", "God sends springs into the valleys to give water."],
+    "Psalms 104:14": ["Food from the Earth", "God causes plants and crops to grow for people and animals."],
+    "Psalms 104:19": ["Sun and Moon", "God made the moon to mark seasons and the sun knows when to set."],
+    "Psalms 104:24": ["Wisdom in Creation", "The earth is full of God's creatures made with wisdom."],
+    "Psalms 104:27": ["Dependence on God", "All creatures depend on God to give them food."],
+    "Psalms 104:30": ["Spirit Gives Life", "God sends His Spirit and renews the face of the earth."],
+    "Psalms 104:33": ["Praise Forever", "The psalmist will sing praise to the Lord all his life."],
+
+    "Psalms 105:1": ["Give Thanks to the Lord", "Give thanks and make known God's deeds among the nations."],
+    "Psalms 105:5": ["Remember His Wonders", "Remember the miracles and judgments God has done."],
+    "Psalms 105:8": ["God Remembers His Covenant", "God remembers His covenant forever."],
+    "Psalms 105:16": ["Joseph Sent Ahead", "God sent Joseph ahead to Egypt."],
+    "Psalms 105:23": ["Israel in Egypt", "Israel went to live in the land of Egypt."],
+    "Psalms 105:26": ["Moses and Aaron", "God sent Moses and Aaron to lead His people."],
+    "Psalms 105:29": ["Plagues in Egypt", "God turned the waters into blood and sent plagues."],
+    "Psalms 105:37": ["Israel Leaves Egypt", "God brought Israel out with silver and gold."],
+    "Psalms 105:39": ["Guided by Cloud and Fire", "God guided them with a cloud by day and fire by night."],
+    "Psalms 105:43": ["Joyful Deliverance", "God brought His people out with joy."],
+
+    "Psalms 106:1": ["Praise the Lord", "Give thanks to the Lord for He is good and His love endures forever."],
+    "Psalms 106:4": ["Remember Me Lord", "The psalmist asks God to remember him with favor."],
+    "Psalms 106:7": ["Rebellion at the Sea", "The people rebelled at the Red Sea."],
+    "Psalms 106:13": ["Forgot God's Works", "They quickly forgot God's works."],
+    "Psalms 106:19": ["Golden Calf", "They made a calf at Horeb and worshiped an idol."],
+    "Psalms 106:23": ["Moses Intercedes", "Moses stood in the gap to stop God's anger."],
+    "Psalms 106:32": ["Anger at Meribah", "The people angered God at the waters of Meribah."],
+    "Psalms 106:36": ["Idolatry with Nations", "They served idols and became trapped by them."],
+    "Psalms 106:44": ["God Heard Their Cry", "God heard their cry and showed compassion."],
+    "Psalms 106:48": ["Praise Forever", "Praise the Lord forever and let all people say Amen."],
+
+    "Psalms 107:1": ["Give Thanks to the Lord", "Give thanks to the Lord for He is good and His love endures forever."],
+    "Psalms 107:4": ["Wanderers in the Desert", "Some wandered in the desert and found no city to live in."],
+    "Psalms 107:6": ["Cry for Help", "They cried to the Lord and He delivered them from trouble."],
+    "Psalms 107:8": ["Praise for His Love", "Let them give thanks for God's wonderful works."],
+    "Psalms 107:10": ["Prisoners in Darkness", "Some sat in darkness and chains because of rebellion."],
+    "Psalms 107:13": ["Delivered from Trouble", "They cried to the Lord and He saved them."],
+    "Psalms 107:17": ["Suffering from Sin", "Some suffered because of their sinful ways."],
+    "Psalms 107:20": ["Healing by His Word", "God sent His word and healed them."],
+    "Psalms 107:23": ["Sailors in the Sea", "Some went out on the sea and saw God's wonders."],
+    "Psalms 107:29": ["Calming the Storm", "God calmed the storm and the waves became still."],
+    "Psalms 107:43": ["Wisdom from God's Works", "Those who are wise will consider God's loving deeds."],
+
+    "Psalms 108:1": ["Steadfast Heart", "The psalmist declares his heart is steadfast to sing praises."],
+    "Psalms 108:3": ["Praise Among Nations", "He will praise the Lord among the nations."],
+    "Psalms 108:4": ["God's Great Love", "God's love is higher than the heavens."],
+    "Psalms 108:5": ["God Exalted", "The psalmist asks that God be exalted over the earth."],
+    "Psalms 108:6": ["Deliver Your People", "God is asked to save His beloved people."],
+    "Psalms 108:7": ["God Speaks in Victory", "God declares victory over lands and nations."],
+    "Psalms 108:11": ["Need God's Help", "Human help is worthless without God."],
+    "Psalms 108:13": ["Victory Through God", "With God they will gain victory over enemies."],
+
+    "Psalms 109:1": ["Cry Against Enemies", "David asks God not to remain silent while enemies accuse him."],
+    "Psalms 109:3": ["Unjust Hatred", "Enemies attack him without cause."],
+    "Psalms 109:4": ["Prayer Instead of Revenge", "Though accused David continues to pray."],
+    "Psalms 109:6": ["Judgment on the Wicked", "David asks for justice against the wicked accuser."],
+    "Psalms 109:16": ["Cruelty of the Wicked", "The enemy showed no kindness to the poor and needy."],
+    "Psalms 109:21": ["Prayer for Deliverance", "David asks God to help him for the sake of His name."],
+    "Psalms 109:26": ["Save Me Lord", "David asks God to save him by His faithful love."],
+    "Psalms 109:30": ["Public Praise", "David promises to praise the Lord among many people."],
+    "Psalms 109:31": ["God Defends the Poor", "The Lord stands at the right hand of the needy."],
+
+    "Psalms 110:1": ["The Lord to My Lord", "The Lord says to my Lord: sit at my right hand until your enemies are made your footstool."],
+    "Psalms 110:2": ["Rule from Zion", "The Lord extends the scepter of the king from Zion to rule among enemies."],
+    "Psalms 110:3": ["Willing People", "Your people offer themselves freely in the day of your power."],
+    "Psalms 110:4": ["Priest Forever", "The Lord swears that the king is a priest forever in the order of Melchizedek."],
+    "Psalms 110:5": ["God Defeats Kings", "The Lord at your right hand will crush kings in the day of His wrath."],
+    "Psalms 110:7": ["Victory and Strength", "He drinks from the brook and lifts up his head in victory."],
+
+    "Psalms 111:1": ["Praise the Lord", "The psalmist praises the Lord with a whole heart."],
+    "Psalms 111:2": ["Great Works of God", "The works of the Lord are great and studied by those who delight in them."],
+    "Psalms 111:4": ["Memorable Wonders", "God has made His wonders remembered."],
+    "Psalms 111:5": ["Provision for His People", "God provides food for those who fear Him."],
+    "Psalms 111:7": ["Faithful Works", "God's works are faithful and just."],
+    "Psalms 111:9": ["Redemption Sent", "God sent redemption to His people."],
+    "Psalms 111:10": ["Beginning of Wisdom", "The fear of the Lord is the beginning of wisdom."],
+
+    "Psalms 112:1": ["Blessed Fear the Lord", "Blessed are those who fear the Lord and delight in His commands."],
+    "Psalms 112:2": ["Blessed Descendants", "Their descendants will be mighty and blessed."],
+    "Psalms 112:4": ["Light in Darkness", "Light shines for the upright in the darkness."],
+    "Psalms 112:5": ["Generous and Just", "Good will come to those who are generous and lend freely."],
+    "Psalms 112:6": ["Righteous Remembered", "The righteous will never be shaken and will be remembered forever."],
+    "Psalms 112:7": ["No Fear of Bad News", "They are not afraid of bad news because their hearts trust in the Lord."],
+    "Psalms 112:9": ["Generosity to the Poor", "They give freely to the poor and their righteousness endures."],
+    "Psalms 112:10": ["Frustration of the Wicked", "The wicked will see and be frustrated."],
+
+    "Psalms 113:1": ["Praise the Lord", "Servants of the Lord are called to praise His name."],
+    "Psalms 113:2": ["Blessed Name Forever", "The Lord's name is to be praised forever."],
+    "Psalms 113:3": ["Praise Everywhere", "From sunrise to sunset the Lord's name is praised."],
+    "Psalms 113:4": ["God Above Nations", "The Lord is exalted above all nations."],
+    "Psalms 113:5": ["God Above All", "No one is like the Lord who sits enthroned on high."],
+    "Psalms 113:7": ["Lifts the Poor", "God raises the poor from the dust."],
+    "Psalms 113:9": ["Joy for the Barren", "God gives the barren woman a home with children."],
+
+    "Psalms 114:1": ["Israel Leaves Egypt", "Israel came out of Egypt and became God's people."],
+    "Psalms 114:3": ["Sea and River Flee", "The sea saw and fled and the Jordan turned back."],
+    "Psalms 114:4": ["Mountains Skip", "The mountains skipped like rams."],
+    "Psalms 114:5": ["Question to Creation", "Why did the sea flee and the Jordan turn back?"],
+    "Psalms 114:7": ["Earth Trembles", "The earth trembles before the Lord."],
+    "Psalms 114:8": ["Rock into Water", "God turned the rock into a pool of water."],
+
+    "Psalms 115:1": ["Glory to God Alone", "Not to us but to God's name be the glory."],
+    "Psalms 115:3": ["God in Heaven", "Our God is in heaven and does whatever pleases Him."],
+    "Psalms 115:4": ["Idols Are Useless", "Idols are made by human hands and cannot speak or see."],
+    "Psalms 115:8": ["Like the Idols", "Those who trust idols become like them."],
+    "Psalms 115:9": ["Trust in the Lord", "Israel is called to trust in the Lord their help and shield."],
+    "Psalms 115:12": ["God Remembers", "The Lord remembers and blesses His people."],
+    "Psalms 115:16": ["Heaven and Earth", "The highest heavens belong to the Lord but the earth He gave to mankind."],
+    "Psalms 115:18": ["Praise Forever", "God's people will praise the Lord forever."],
+
+    "Psalms 116:1": ["Love for the Lord", "The psalmist loves the Lord because He heard his cry for mercy."],
+    "Psalms 116:3": ["Saved from Death", "The cords of death surrounded him but the Lord saved him."],
+    "Psalms 116:5": ["Gracious and Righteous", "The Lord is gracious, righteous, and full of compassion."],
+    "Psalms 116:6": ["Protection for the Helpless", "The Lord protects the simple and rescues them."],
+    "Psalms 116:8": ["Delivered from Trouble", "God delivered his soul from death and his feet from falling."],
+    "Psalms 116:10": ["Faith in Affliction", "Even in great distress the psalmist continued to believe."],
+    "Psalms 116:12": ["What Shall I Return", "The psalmist asks how he can repay the Lord for His goodness."],
+    "Psalms 116:13": ["Cup of Salvation", "He will lift up the cup of salvation and call on the Lord."],
+    "Psalms 116:15": ["Precious to God", "The death of God's faithful people is precious to Him."],
+    "Psalms 116:17": ["Offering Thanks", "The psalmist will offer a sacrifice of thanksgiving."],
+
+    "Psalms 117:1": ["Praise from All Nations", "All nations and peoples are called to praise the Lord."],
+    "Psalms 117:2": ["Enduring Love", "God's love is great toward us and His faithfulness lasts forever."],
+
+    "Psalms 118:1": ["Give Thanks to the Lord", "Give thanks to the Lord for He is good and His love endures forever."],
+    "Psalms 118:5": ["Help in Distress", "The psalmist called to the Lord in distress and was answered."],
+    "Psalms 118:6": ["No Fear of People", "The Lord is on my side so I will not fear what people can do."],
+    "Psalms 118:8": ["Trust in the Lord", "It is better to trust in the Lord than in people."],
+    "Psalms 118:10": ["Victory Over Enemies", "Enemies surrounded him but he overcame them in the Lord's name."],
+    "Psalms 118:14": ["God My Strength", "The Lord is my strength and my salvation."],
+    "Psalms 118:19": ["Enter the Gates", "Open the gates of righteousness so the righteous may enter."],
+    "Psalms 118:22": ["Cornerstone", "The stone the builders rejected has become the cornerstone."],
+    "Psalms 118:24": ["Day the Lord Made", "This is the day the Lord has made; we will rejoice."],
+    "Psalms 118:26": ["Blessed One", "Blessed is the one who comes in the name of the Lord."],
 
-
-    // Psalms Chapter 1
-    "Psalms 1:1": "The Two Ways",
-
-    // Psalms Chapter 2
-    "Psalms 2:1": "The LORD's Anointed King",
-
-    // Psalms Chapter 3
-    "Psalms 3:1": "A Morning Prayer for Deliverance",
-
-    // Psalms Chapter 4
-    "Psalms 4:1": "An Evening Prayer of Trust",
-
-    // Psalms Chapter 5
-    "Psalms 5:1": "A Morning Prayer for Guidance",
-
-    // Psalms Chapter 6
-    "Psalms 6:1": "Prayer in Deep Distress",
-
-    // Psalms Chapter 7
-    "Psalms 7:1": "Prayer for Vindication",
-
-    // Psalms Chapter 8
-    "Psalms 8:1": "The Majesty of God and the Dignity of Man",
-
-    // Psalms Chapter 9
-    "Psalms 9:1": "Thanksgiving for God's Justice",
-
-    // Psalms Chapter 10
-    "Psalms 10:1": "Why Do You Hide, O LORD?",
-
-    // Psalms Chapter 11
-    "Psalms 11:1": "In the LORD I Take Refuge",
-
-    // Psalms Chapter 12
-    "Psalms 12:1": "A Plea Against the Wicked",
-
-    // Psalms Chapter 13
-    "Psalms 13:1": "How Long, O LORD?",
-
-    // Psalms Chapter 14
-    "Psalms 14:1": "The Fool Says There Is No God",
-
-    // Psalms Chapter 15
-    "Psalms 15:1": "Who May Dwell in Your Sanctuary?",
-
-    // Psalms Chapter 16
-    "Psalms 16:1": "The Path of Life",
-
-    // Psalms Chapter 17
-    "Psalms 17:1": "A Prayer for Protection",
-
-    // Psalms Chapter 18
-    "Psalms 18:1": "The LORD Is My Rock and Fortress",
-
-    // Psalms Chapter 19
-    "Psalms 19:1": "The Heavens Declare God's Glory",
-    "Psalms 19:7": "The Perfection of God's Law",
-
-    // Psalms Chapter 20
-    "Psalms 20:1": "Prayer for Victory",
-
-    // Psalms Chapter 21
-    "Psalms 21:1": "Thanksgiving for Victory",
-
-    // Psalms Chapter 22
-    "Psalms 22:1": "My God, My God, Why Have You Forsaken Me?",
-    "Psalms 22:22": "Praise in the Assembly",
-
-    // Psalms Chapter 23
-    "Psalms 23:1": "The LORD Is My Shepherd",
-
-    // Psalms Chapter 24
-    "Psalms 24:1": "The King of Glory",
-
-    // Psalms Chapter 25
-    "Psalms 25:1": "Teach Me Your Paths",
-
-    // Psalms Chapter 26
-    "Psalms 26:1": "Vindicate Me, O LORD",
-
-    // Psalms Chapter 27
-    "Psalms 27:1": "The LORD Is My Light and Salvation",
-
-    // Psalms Chapter 28
-    "Psalms 28:1": "A Cry for Help",
-
-    // Psalms Chapter 29
-    "Psalms 29:1": "The Voice of the LORD",
-
-    // Psalms Chapter 30
-    "Psalms 30:1": "Thanksgiving for Deliverance",
-
-    // Psalms Chapter 31
-    "Psalms 31:1": "Into Your Hand I Commit My Spirit",
-
-    // Psalms Chapter 32
-    "Psalms 32:1": "Blessed Is the One Whose Sin Is Forgiven",
-
-    // Psalms Chapter 33
-    "Psalms 33:1": "Sing to the LORD a New Song",
-
-    // Psalms Chapter 34
-    "Psalms 34:1": "Taste and See That the LORD Is Good",
-
-    // Psalms Chapter 35
-    "Psalms 35:1": "Contend with Those Who Contend with Me",
-
-    // Psalms Chapter 36
-    "Psalms 36:1": "How Precious Is Your Steadfast Love",
-
-    // Psalms Chapter 37
-    "Psalms 37:1": "Trust in the LORD and Do Good",
-
-    // Psalms Chapter 38
-    "Psalms 38:1": "A Psalm of Confession and Distress",
-
-    // Psalms Chapter 39
-    "Psalms 39:1": "The Brevity of Life",
-
-    // Psalms Chapter 40
-    "Psalms 40:1": "I Waited Patiently for the LORD",
-
-    // Psalms Chapter 41
-    "Psalms 41:1": "Blessed Is the One Who Considers the Poor",
-
-    // Psalms Chapter 42
-    "Psalms 42:1": "As a Deer Pants for Water",
-
-    // Psalms Chapter 43
-    "Psalms 43:1": "Send Out Your Light and Truth",
-
-    // Psalms Chapter 44
-    "Psalms 44:1": "We Have Heard with Our Ears, O God",
-
-    // Psalms Chapter 45
-    "Psalms 45:1": "A Royal Wedding Song",
-
-    // Psalms Chapter 46
-    "Psalms 46:1": "God Is Our Refuge and Strength",
-
-    // Psalms Chapter 47
-    "Psalms 47:1": "Clap Your Hands, All Peoples",
-
-    // Psalms Chapter 48
-    "Psalms 48:1": "Great Is the LORD in Zion",
-
-    // Psalms Chapter 49
-    "Psalms 49:1": "Riches Cannot Ransom",
-
-    // Psalms Chapter 50
-    "Psalms 50:1": "The Mighty One Summons the Earth",
-
-    // Psalms Chapter 51
-    "Psalms 51:1": "Create in Me a Clean Heart, O God",
-
-    // Psalms Chapter 52
-    "Psalms 52:1": "The Fate of the Wicked",
-
-    // Psalms Chapter 53
-    "Psalms 53:1": "The Fool Says There Is No God",
-
-    // Psalms Chapter 54
-    "Psalms 54:1": "Save Me, O God, by Your Name",
-
-    // Psalms Chapter 55
-    "Psalms 55:1": "Cast Your Burden on the LORD",
-
-    // Psalms Chapter 56
-    "Psalms 56:1": "In God I Trust",
-
-    // Psalms Chapter 57
-    "Psalms 57:1": "Be Merciful to Me, O God",
-
-    // Psalms Chapter 58
-    "Psalms 58:1": "God the Righteous Judge",
-
-    // Psalms Chapter 59
-    "Psalms 59:1": "Deliver Me from My Enemies",
-
-    // Psalms Chapter 60
-    "Psalms 60:1": "A Prayer After Defeat",
-
-    // Psalms Chapter 61
-    "Psalms 61:1": "Lead Me to the Rock",
-
-    // Psalms Chapter 62
-    "Psalms 62:1": "My Soul Waits in Silence for God",
-
-    // Psalms Chapter 63
-    "Psalms 63:1": "My Soul Thirsts for You",
-
-    // Psalms Chapter 64
-    "Psalms 64:1": "Hide Me from the Wicked",
-
-    // Psalms Chapter 65
-    "Psalms 65:1": "You Crown the Year with Bounty",
-
-    // Psalms Chapter 66
-    "Psalms 66:1": "Come and See What God Has Done",
-
-    // Psalms Chapter 67
-    "Psalms 67:1": "May God Be Gracious to Us",
-
-    // Psalms Chapter 68
-    "Psalms 68:1": "God's Triumphant March",
-
-    // Psalms Chapter 69
-    "Psalms 69:1": "Save Me, O God",
-
-    // Psalms Chapter 70
-    "Psalms 70:1": "Make Haste to Help Me",
-
-    // Psalms Chapter 71
-    "Psalms 71:1": "A Prayer in Old Age",
-
-    // Psalms Chapter 72
-    "Psalms 72:1": "A Prayer for the King",
-
-    // Psalms Chapter 73
-    "Psalms 73:1": "God Is Good to the Pure in Heart",
-
-    // Psalms Chapter 74
-    "Psalms 74:1": "A Plea for God to Remember His People",
-
-    // Psalms Chapter 75
-    "Psalms 75:1": "God the Righteous Judge",
-
-    // Psalms Chapter 76
-    "Psalms 76:1": "God Is Known in Judah",
-
-    // Psalms Chapter 77
-    "Psalms 77:1": "I Will Remember the Deeds of the LORD",
-
-    // Psalms Chapter 78
-    "Psalms 78:1": "Tell the Coming Generation",
-
-    // Psalms Chapter 79
-    "Psalms 79:1": "How Long, O LORD?",
-
-    // Psalms Chapter 80
-    "Psalms 80:1": "Restore Us, O God",
-
-    // Psalms Chapter 81
-    "Psalms 81:1": "Sing Aloud to God Our Strength",
-
-    // Psalms Chapter 82
-    "Psalms 82:1": "God Presides in the Divine Council",
-
-    // Psalms Chapter 83
-    "Psalms 83:1": "O God, Do Not Keep Silence",
-
-    // Psalms Chapter 84
-    "Psalms 84:1": "How Lovely Is Your Dwelling Place",
-
-    // Psalms Chapter 85
-    "Psalms 85:1": "Restore Us Again, O God",
-
-    // Psalms Chapter 86
-    "Psalms 86:1": "Teach Me Your Way, O LORD",
-
-    // Psalms Chapter 87
-    "Psalms 87:1": "Glorious Things Are Spoken of Zion",
-
-    // Psalms Chapter 88
-    "Psalms 88:1": "A Prayer in Deep Darkness",
-
-    // Psalms Chapter 89
-    "Psalms 89:1": "I Will Sing of Your Steadfast Love Forever",
-
-    // Psalms Chapter 90
-    "Psalms 90:1": "Teach Us to Number Our Days",
-
-    // Psalms Chapter 91
-    "Psalms 91:1": "He Who Dwells in the Shelter of the Most High",
-
-    // Psalms Chapter 92
-    "Psalms 92:1": "It Is Good to Give Thanks to the LORD",
-
-    // Psalms Chapter 93
-    "Psalms 93:1": "The LORD Reigns",
-
-    // Psalms Chapter 94
-    "Psalms 94:1": "O LORD, God of Vengeance",
-
-    // Psalms Chapter 95
-    "Psalms 95:1": "Come, Let Us Worship and Bow Down",
-
-    // Psalms Chapter 96
-    "Psalms 96:1": "Sing to the LORD a New Song",
-
-    // Psalms Chapter 97
-    "Psalms 97:1": "The LORD Reigns, Let the Earth Rejoice",
-
-    // Psalms Chapter 98
-    "Psalms 98:1": "Make a Joyful Noise to the LORD",
-
-    // Psalms Chapter 99
-    "Psalms 99:1": "The LORD Is King, Holy Is He",
-
-    // Psalms Chapter 100
-    "Psalms 100:1": "Make a Joyful Noise, All the Earth",
-
-    // Psalms Chapter 101
-    "Psalms 101:1": "I Will Walk with Integrity",
-
-    // Psalms Chapter 102
-    "Psalms 102:1": "A Prayer of the Afflicted",
-
-    // Psalms Chapter 103
-    "Psalms 103:1": "Bless the LORD, O My Soul",
-
-    // Psalms Chapter 104
-    "Psalms 104:1": "O LORD, How Manifold Are Your Works",
-
-    // Psalms Chapter 105
-    "Psalms 105:1": "Give Thanks to the LORD",
-
-    // Psalms Chapter 106
-    "Psalms 106:1": "Praise the LORD for His Faithfulness",
-
-    // Psalms Chapter 107
-    "Psalms 107:1": "Give Thanks to the LORD, for He Is Good",
-
-    // Psalms Chapter 108
-    "Psalms 108:1": "My Heart Is Steadfast, O God",
-
-    // Psalms Chapter 109
-    "Psalms 109:1": "A Cry Against Enemies",
-
-    // Psalms Chapter 110
-    "Psalms 110:1": "Sit at My Right Hand",
-
-    // Psalms Chapter 111
-    "Psalms 111:1": "Great Are the Works of the LORD",
-
-    // Psalms Chapter 112
-    "Psalms 112:1": "Blessed Is the Man Who Fears the LORD",
-
-    // Psalms Chapter 113
-    "Psalms 113:1": "Who Is Like the LORD Our God?",
-
-    // Psalms Chapter 114
-    "Psalms 114:1": "When Israel Went Out from Egypt",
-
-    // Psalms Chapter 115
-    "Psalms 115:1": "Not to Us, O LORD",
-
-    // Psalms Chapter 116
-    "Psalms 116:1": "I Love the LORD",
-
-    // Psalms Chapter 117
-    "Psalms 117:1": "Praise the LORD, All Nations",
-
-    // Psalms Chapter 118
-    "Psalms 118:1": "His Steadfast Love Endures Forever",
-    "Psalms 118:22": "The Stone the Builders Rejected",
-
-    // Psalms Chapter 119
     "Psalms 119:1": ["Blessed Who Walk in God's Law", "Blessed are those whose ways are blameless and who walk according to the law of the Lord."],
     "Psalms 119:9": ["Keeping Life Pure", "A young person keeps his way pure by living according to God's word."],
     "Psalms 119:11": ["Word Hidden in the Heart", "The psalmist stores God's word in his heart so he will not sin against God."],
@@ -3290,98 +4028,243 @@ const verseHeaders = {
     "Psalms 119:165": ["Great Peace", "Those who love God's law have great peace and nothing makes them stumble."],
     "Psalms 119:176": ["Seeking the Shepherd", "The psalmist asks God to seek him like a lost sheep."],
 
-    // Psalms Chapter 120
-    "Psalms 120:1": "Deliver Me, O LORD",
+    "Psalms 120:1": ["Cry for Help", "The psalmist calls to the Lord in distress and God answers."],
+    "Psalms 120:2": ["Deliver from Lies", "The psalmist asks God to save him from lying lips."],
+    "Psalms 120:5": ["Living Among Trouble", "The psalmist laments living among people who hate peace."],
+    "Psalms 120:6": ["Too Long with Conflict", "He has lived too long with those who hate peace."],
+    "Psalms 120:7": ["Desire for Peace", "Though he desires peace others want war."],
 
-    // Psalms Chapter 121
-    "Psalms 121:1": "I Lift Up My Eyes to the Hills",
+    "Psalms 121:1": ["Looking to the Hills", "The psalmist looks to the hills for help."],
+    "Psalms 121:2": ["Help from the Lord", "Help comes from the Lord who made heaven and earth."],
+    "Psalms 121:3": ["God Watches Over You", "God will not let your foot slip."],
+    "Psalms 121:4": ["God Never Sleeps", "The Lord who watches over Israel never sleeps."],
+    "Psalms 121:5": ["The Lord Your Protector", "The Lord stands beside you as your shade."],
+    "Psalms 121:7": ["Protection from Harm", "The Lord will keep you from all harm."],
+    "Psalms 121:8": ["Guarding Your Life", "The Lord will watch over your coming and going forever."],
+    "Psalms 122:1": ["Joy to Go to God's House", "The psalmist rejoices when invited to go to the house of the Lord."],
+    "Psalms 122:2": ["Standing in Jerusalem", "The people stand within the gates of Jerusalem."],
+    "Psalms 122:3": ["United City", "Jerusalem is built as a city closely joined together."],
+    "Psalms 122:4": ["Tribes Go Up", "The tribes go up to give thanks to the Lord."],
+    "Psalms 122:5": ["Thrones of Justice", "The thrones of judgment of David's house stand there."],
+    "Psalms 122:6": ["Pray for Jerusalem", "Pray for the peace of Jerusalem."],
+    "Psalms 122:7": ["Peace Within Walls", "May there be peace within the city's walls."],
+    "Psalms 122:9": ["Seek the City's Good", "For the sake of God's house the psalmist seeks Jerusalem's good."],
 
-    // Psalms Chapter 122
-    "Psalms 122:1": "Pray for the Peace of Jerusalem",
+    "Psalms 123:1": ["Eyes on the Lord", "The psalmist lifts his eyes to the Lord who sits in heaven."],
+    "Psalms 123:2": ["Servants Look to Master", "Like servants watch their master the people look to God for mercy."],
+    "Psalms 123:3": ["Prayer for Mercy", "The psalmist asks the Lord to show mercy."],
+    "Psalms 123:4": ["Scorn from the Proud", "They have endured much scorn from the proud."],
 
-    // Psalms Chapter 123
-    "Psalms 123:1": "Our Eyes Look to the LORD",
+    "Psalms 124:1": ["If the Lord Had Not Helped", "If the Lord had not been on Israel's side enemies would have swallowed them."],
+    "Psalms 124:3": ["Enemies' Anger", "When enemies attacked their anger would have overwhelmed them."],
+    "Psalms 124:6": ["Praise for Rescue", "Praise the Lord who did not let them be torn by enemies."],
+    "Psalms 124:7": ["Escaped Like a Bird", "They escaped like a bird from a trap."],
+    "Psalms 124:8": ["Help from the Creator", "Our help is in the name of the Lord who made heaven and earth."],
 
-    // Psalms Chapter 124
-    "Psalms 124:1": "If the LORD Had Not Been on Our Side",
+    "Psalms 125:1": ["Trust Like Mount Zion", "Those who trust in the Lord are like Mount Zion which cannot be shaken."],
+    "Psalms 125:2": ["God Surrounds His People", "Just as mountains surround Jerusalem the Lord surrounds His people."],
+    "Psalms 125:3": ["Wicked Rule Will End", "The rule of the wicked will not remain over the righteous."],
+    "Psalms 125:4": ["Do Good to the Upright", "The psalmist asks the Lord to do good to the upright in heart."],
+    "Psalms 125:5": ["Peace on Israel", "Those who turn to evil will be judged but peace will be upon Israel."],
 
-    // Psalms Chapter 125
-    "Psalms 125:1": "Those Who Trust in the LORD",
+    "Psalms 126:1": ["Joy of Restoration", "When the Lord restored Zion it felt like a dream."],
+    "Psalms 126:2": ["Laughter and Joy", "Their mouths were filled with laughter and songs of joy."],
+    "Psalms 126:3": ["Great Things Done", "The Lord has done great things and they are glad."],
+    "Psalms 126:4": ["Restore Us Again", "They ask God to restore their fortunes again."],
+    "Psalms 126:5": ["Sowing in Tears", "Those who sow in tears will reap with joy."],
+    "Psalms 126:6": ["Harvest with Joy", "Those who go out weeping will return with songs of joy."],
 
-    // Psalms Chapter 126
-    "Psalms 126:1": "Those Who Sow in Tears",
+    "Psalms 127:1": ["God Builds the House", "Unless the Lord builds the house the builders work in vain."],
+    "Psalms 127:2": ["Rest from God", "Working without trusting God is useless because He gives rest."],
+    "Psalms 127:3": ["Children Are a Gift", "Children are a heritage and reward from the Lord."],
+    "Psalms 127:4": ["Arrows in a Warrior's Hand", "Children born in youth are like arrows in a warrior's hand."],
+    "Psalms 127:5": ["Blessed Family", "Blessed is the one whose quiver is full of children."],
 
-    // Psalms Chapter 127
-    "Psalms 127:1": "Unless the LORD Builds the House",
+    "Psalms 128:1": ["Blessed Who Fear the Lord", "Blessed are those who fear the Lord and walk in His ways."],
+    "Psalms 128:2": ["Fruit of Labor", "They will enjoy the fruit of their labor and prosper."],
+    "Psalms 128:3": ["Blessed Family", "Their wife will be fruitful and children like olive shoots around the table."],
+    "Psalms 128:4": ["Blessing for the Faithful", "This is the blessing for the one who fears the Lord."],
+    "Psalms 128:5": ["Blessing from Zion", "The Lord blesses them from Zion."],
+    "Psalms 128:6": ["Peace on Israel", "They will see their children's children and peace on Israel."],
 
-    // Psalms Chapter 128
-    "Psalms 128:1": "Blessed Is Everyone Who Fears the LORD",
+    "Psalms 129:1": ["Afflicted from Youth", "Israel says they have been greatly afflicted since youth."],
+    "Psalms 129:2": ["Enemies Did Not Defeat", "Though attacked many times they did not overcome Israel."],
+    "Psalms 129:3": ["Deep Wounds", "Enemies plowed long furrows on their backs."],
+    "Psalms 129:4": ["God Brings Freedom", "The righteous Lord cut the cords of the wicked."],
+    "Psalms 129:5": ["Enemies Put to Shame", "Those who hate Zion will be turned back in shame."],
+    "Psalms 129:6": ["Like Grass on Roofs", "They will be like grass on rooftops that quickly withers."],
+    "Psalms 129:8": ["No Blessing for Them", "No one will bless those who oppose God's people."],
 
-    // Psalms Chapter 129
-    "Psalms 129:1": "They Have Greatly Oppressed Me",
+    "Psalms 130:1": ["Cry from the Depths", "The psalmist cries to the Lord from the depths."],
+    "Psalms 130:3": ["Who Can Stand", "If the Lord counted sins no one could stand."],
+    "Psalms 130:4": ["Forgiveness with God", "But with the Lord there is forgiveness."],
+    "Psalms 130:5": ["Waiting for the Lord", "The psalmist waits and hopes in God's word."],
+    "Psalms 130:6": ["Watch for the Morning", "He waits for the Lord more than watchmen wait for morning."],
+    "Psalms 130:7": ["Hope in the Lord", "Israel is called to put hope in the Lord."],
+    "Psalms 130:8": ["Redemption for Israel", "The Lord will redeem Israel from all sins."],
 
-    // Psalms Chapter 130
-    "Psalms 130:1": "Out of the Depths I Cry to You",
+    "Psalms 131:1": ["Humble Heart", "The psalmist says his heart is not proud and he does not concern himself with great matters."],
+    "Psalms 131:2": ["Quiet Trust", "He has calmed and quieted his soul like a weaned child with its mother."],
+    "Psalms 131:3": ["Hope in the Lord", "Israel is called to put their hope in the Lord now and forever."],
 
-    // Psalms Chapter 131
-    "Psalms 131:1": "My Heart Is Not Proud",
+    "Psalms 132:1": ["Remember David", "The psalmist asks the Lord to remember David and his hardships."],
+    "Psalms 132:2": ["David's Promise", "David vowed not to rest until he found a place for the Lord."],
+    "Psalms 132:6": ["Finding the Ark", "The people heard about the ark and came to worship."],
+    "Psalms 132:8": ["Arise O Lord", "The people ask the Lord to arise and come to His resting place."],
+    "Psalms 132:11": ["Promise to David", "The Lord swore to David that his descendants would sit on the throne."],
+    "Psalms 132:13": ["Chosen Zion", "The Lord has chosen Zion as His dwelling place."],
+    "Psalms 132:16": ["Blessing for Priests", "God promises salvation for Zion's priests."],
+    "Psalms 132:17": ["Horn of David", "God will make David's power grow and provide a lamp for His anointed."],
 
-    // Psalms Chapter 132
-    "Psalms 132:1": "Remember David's Hardships",
+    "Psalms 133:1": ["Unity Is Good", "How good and pleasant it is when God's people live together in unity."],
+    "Psalms 133:2": ["Like Precious Oil", "Unity is like precious oil poured on the head."],
+    "Psalms 133:3": ["Blessing of Life", "It is like the dew of Hermon where the Lord gives His blessing."],
 
-    // Psalms Chapter 133
-    "Psalms 133:1": "How Good It Is When Brothers Dwell in Unity",
+    "Psalms 134:1": ["Bless the Lord at Night", "Servants of the Lord who stand in His house at night are called to bless Him."],
+    "Psalms 134:2": ["Lift Your Hands", "Lift up your hands in the sanctuary and praise the Lord."],
+    "Psalms 134:3": ["Blessing from Zion", "May the Lord who made heaven and earth bless you from Zion."],
 
-    // Psalms Chapter 134
-    "Psalms 134:1": "Bless the LORD, All You Servants",
+    "Psalms 135:1": ["Praise the Lord", "Servants of the Lord are called to praise His name."],
+    "Psalms 135:3": ["The Lord Is Good", "Sing praises because the Lord is good."],
+    "Psalms 135:5": ["God Greater Than All", "The Lord is greater than all gods."],
+    "Psalms 135:6": ["God Does Whatever He Pleases", "The Lord does whatever pleases Him in heaven and earth."],
+    "Psalms 135:8": ["Plagues on Egypt", "God struck down the firstborn of Egypt."],
+    "Psalms 135:10": ["Victory Over Kings", "God defeated many nations and mighty kings."],
+    "Psalms 135:13": ["God's Name Endures", "The Lord's name endures forever."],
+    "Psalms 135:15": ["Idols Are Useless", "Idols are made by human hands and cannot speak or see."],
+    "Psalms 135:19": ["Bless the Lord", "Israel, priests, and all who fear the Lord are called to bless Him."],
 
-    // Psalms Chapter 135
-    "Psalms 135:1": "Praise the LORD",
+    "Psalms 136:1": ["Give Thanks to the Lord", "Give thanks to the Lord for He is good and His love endures forever."],
+    "Psalms 136:4": ["God's Great Wonders", "Only God does great wonders."],
+    "Psalms 136:5": ["Creator of the Heavens", "God made the heavens with wisdom."],
+    "Psalms 136:10": ["Deliverance from Egypt", "God struck down Egypt's firstborn."],
+    "Psalms 136:11": ["Israel Brought Out", "God brought Israel out from Egypt."],
+    "Psalms 136:13": ["Red Sea Divided", "God divided the Red Sea."],
+    "Psalms 136:16": ["Guided Through Wilderness", "God led His people through the wilderness."],
+    "Psalms 136:23": ["Remembered in Low Estate", "God remembered His people in their low condition."],
+    "Psalms 136:25": ["Provider for All", "God gives food to every creature."],
+    "Psalms 136:26": ["Give Thanks Forever", "Give thanks to the God of heaven."],
 
-    // Psalms Chapter 136
-    "Psalms 136:1": "His Steadfast Love Endures Forever",
+    "Psalms 137:1": ["By the Rivers of Babylon", "The people of Israel sit by the rivers of Babylon and weep remembering Zion."],
+    "Psalms 137:3": ["Songs Requested", "Their captors ask them to sing songs of Zion."],
+    "Psalms 137:4": ["Song in a Foreign Land", "They ask how they can sing the Lord's song in a foreign land."],
+    "Psalms 137:5": ["Never Forget Jerusalem", "The psalmist vows never to forget Jerusalem."],
+    "Psalms 137:7": ["Remember Edom", "The psalmist asks the Lord to remember those who destroyed Jerusalem."],
+    "Psalms 137:8": ["Fall of Babylon", "Babylon will be repaid for the harm it caused."],
 
-    // Psalms Chapter 137
-    "Psalms 137:1": "By the Waters of Babylon",
+    "Psalms 138:1": ["Praise with Whole Heart", "David praises the Lord with all his heart."],
+    "Psalms 138:2": ["God's Faithfulness", "David bows toward God's temple and praises His faithfulness."],
+    "Psalms 138:3": ["Answer to Prayer", "When David called the Lord answered and strengthened him."],
+    "Psalms 138:4": ["Kings Praise God", "All kings of the earth will praise the Lord."],
+    "Psalms 138:6": ["God Sees the Humble", "Though the Lord is exalted He cares for the humble."],
+    "Psalms 138:7": ["Protection in Trouble", "God preserves David's life in trouble."],
+    "Psalms 138:8": ["God's Purpose Fulfilled", "The Lord will fulfill His purpose for David."],
 
-    // Psalms Chapter 138
-    "Psalms 138:1": "I Give You Thanks with My Whole Heart",
+    "Psalms 139:1": ["God Knows Me", "The Lord knows the psalmist completely."],
+    "Psalms 139:2": ["God Knows Thoughts", "God knows every action and thought."],
+    "Psalms 139:7": ["God Everywhere", "No one can escape from God's presence."],
+    "Psalms 139:13": ["Created by God", "God formed the psalmist in the womb."],
+    "Psalms 139:14": ["Wonderfully Made", "The psalmist praises God for being wonderfully made."],
+    "Psalms 139:17": ["Precious Thoughts", "God's thoughts toward the psalmist are precious and countless."],
+    "Psalms 139:19": ["Hate for Evil", "The psalmist rejects those who oppose God."],
+    "Psalms 139:23": ["Search My Heart", "The psalmist asks God to search and know his heart."],
+    "Psalms 139:24": ["Lead Me", "The psalmist asks God to lead him in the everlasting way."],
 
-    // Psalms Chapter 139
-    "Psalms 139:1": "You Have Searched Me and Known Me",
+    "Psalms 140:1": ["Rescue from Evil", "David asks the Lord to rescue him from evil and violent people."],
+    "Psalms 140:3": ["Poisonous Words", "Enemies use their tongues like snakes with deadly poison."],
+    "Psalms 140:4": ["Protection from the Wicked", "David asks God to keep him safe from those who plan evil."],
+    "Psalms 140:6": ["God My Lord", "David declares that the Lord is his God."],
+    "Psalms 140:7": ["God the Defender", "The Lord protects him in the day of battle."],
+    "Psalms 140:9": ["Enemies' Plans Fail", "May the evil plans of enemies fall on themselves."],
+    "Psalms 140:12": ["Justice for the Needy", "The Lord will defend the cause of the poor."],
+    "Psalms 140:13": ["Righteous Praise", "The righteous will live in God's presence."],
 
-    // Psalms Chapter 140
-    "Psalms 140:1": "Deliver Me from Evil Men",
+    "Psalms 141:1": ["Prayer for Help", "David calls to the Lord and asks Him to hear his prayer."],
+    "Psalms 141:2": ["Prayer Like Incense", "David asks that his prayer rise like incense before God."],
+    "Psalms 141:3": ["Guard My Words", "David asks God to guard his mouth and lips."],
+    "Psalms 141:4": ["Avoid Evil", "He asks God not to let his heart be drawn to evil."],
+    "Psalms 141:5": ["Correction from the Righteous", "David accepts correction from the righteous."],
+    "Psalms 141:8": ["Refuge in God", "David looks to the Lord for refuge."],
+    "Psalms 141:10": ["Escape from Traps", "David asks that the wicked fall into their own traps."],
 
-    // Psalms Chapter 141
-    "Psalms 141:1": "Set a Guard Over My Mouth",
+    "Psalms 142:1": ["Cry for Mercy", "David cries aloud to the Lord for mercy."],
+    "Psalms 142:3": ["God Knows the Path", "When David feels weak God knows his path."],
+    "Psalms 142:4": ["No One to Help", "David feels abandoned with no one to care."],
+    "Psalms 142:5": ["God My Refuge", "David declares the Lord as his refuge."],
+    "Psalms 142:6": ["Deliver Me", "David asks God to rescue him from his pursuers."],
+    "Psalms 142:7": ["Bring Me Out", "David asks God to bring him out of prison so he can praise Him."],
 
-    // Psalms Chapter 142
-    "Psalms 142:1": "No One Cares for My Soul",
+    "Psalms 143:1": ["Prayer for Mercy", "David asks the Lord to hear his prayer and answer in faithfulness."],
+    "Psalms 143:3": ["Oppressed by Enemies", "Enemies pursue him and crush his life to the ground."],
+    "Psalms 143:4": ["Spirit Faints", "David's spirit grows weak within him."],
+    "Psalms 143:5": ["Remembering God's Works", "David remembers the works and wonders of God."],
+    "Psalms 143:6": ["Thirst for God", "David stretches out his hands to God like dry land longing for water."],
+    "Psalms 143:8": ["Show Me the Way", "David asks God to show him the way he should go."],
+    "Psalms 143:10": ["Teach Me Your Will", "David asks God to teach him to do His will."],
+    "Psalms 143:11": ["Preserve My Life", "David asks God to preserve his life for His name's sake."],
+    "Psalms 143:12": ["Destroy the Enemies", "David asks God to silence his enemies."],
 
-    // Psalms Chapter 143
-    "Psalms 143:1": "Hear My Prayer, O LORD",
+    "Psalms 144:1": ["Praise the Lord My Rock", "David praises the Lord who trains his hands for battle."],
+    "Psalms 144:3": ["Human Life Is Short", "David wonders why God cares for humans whose lives are brief."],
+    "Psalms 144:5": ["Come Down O Lord", "David asks God to come down and help him."],
+    "Psalms 144:7": ["Rescue from Enemies", "David asks God to rescue him from powerful enemies."],
+    "Psalms 144:9": ["New Song to God", "David promises to sing a new song of praise."],
+    "Psalms 144:12": ["Blessed Nation", "Blessed are the people whose children grow strong."],
+    "Psalms 144:15": ["People of the Lord", "Blessed are the people whose God is the Lord."],
 
-    // Psalms Chapter 144
-    "Psalms 144:1": "Blessed Be the LORD, My Rock",
+    "Psalms 145:1": ["Exalting the King", "David praises God the King and blesses His name forever."],
+    "Psalms 145:3": ["God's Greatness", "The Lord is great and worthy of praise."],
+    "Psalms 145:4": ["Generations Praise", "One generation tells the next about God's works."],
+    "Psalms 145:8": ["Compassionate God", "The Lord is gracious and compassionate."],
+    "Psalms 145:10": ["All Creation Praises", "All God's works praise Him."],
+    "Psalms 145:13": ["Everlasting Kingdom", "God's kingdom is everlasting."],
+    "Psalms 145:15": ["Provider for All", "God gives food to all who look to Him."],
+    "Psalms 145:18": ["Near to Those Who Call", "The Lord is near to those who call on Him."],
+    "Psalms 145:20": ["God Protects the Faithful", "The Lord watches over those who love Him."],
 
-    // Psalms Chapter 145
-    "Psalms 145:1": "I Will Extol You, My God and King",
+    "Psalms 146:1": ["Praise the Lord", "The psalmist calls his soul to praise the Lord."],
+    "Psalms 146:3": ["Do Not Trust in Princes", "Do not put your trust in human leaders who cannot save."],
+    "Psalms 146:5": ["Help from God", "Blessed are those whose help is the God of Jacob."],
+    "Psalms 146:6": ["Creator of All", "God made heaven, earth, sea, and everything in them."],
+    "Psalms 146:7": ["Justice for the Oppressed", "God gives justice to the oppressed and food to the hungry."],
+    "Psalms 146:8": ["God Cares for People", "The Lord gives sight to the blind and lifts up those who are bowed down."],
+    "Psalms 146:9": ["Protects the Vulnerable", "God watches over the foreigner and sustains the fatherless and widow."],
+    "Psalms 146:10": ["The Lord Reigns Forever", "The Lord reigns forever, the God of Zion for all generations."],
 
-    // Psalms Chapter 146
-    "Psalms 146:1": "Praise the LORD, O My Soul",
+    "Psalms 147:1": ["Praise the Lord", "It is good to sing praises to our God."],
+    "Psalms 147:3": ["Heals the Brokenhearted", "God heals the brokenhearted and binds up their wounds."],
+    "Psalms 147:4": ["Counts the Stars", "God determines the number of the stars and calls them by name."],
+    "Psalms 147:5": ["Great and Powerful God", "The Lord is great and mighty in power."],
+    "Psalms 147:6": ["God Lifts the Humble", "The Lord lifts up the humble but casts the wicked down."],
+    "Psalms 147:8": ["Provider of Rain", "God covers the sky with clouds and provides rain for the earth."],
+    "Psalms 147:10": ["God Delights in Faith", "God does not delight in strength but in those who fear Him."],
+    "Psalms 147:13": ["Blessings on Jerusalem", "God strengthens the gates of Jerusalem and blesses its people."],
+    "Psalms 147:15": ["Powerful Word", "God sends His command to the earth and His word runs swiftly."],
+    "Psalms 147:20": ["Special Revelation", "God has revealed His laws to Israel."],
 
-    // Psalms Chapter 147
-    "Psalms 147:1": "How Good It Is to Sing Praises",
+    "Psalms 148:1": ["Praise from the Heavens", "All in the heavens are called to praise the Lord."],
+    "Psalms 148:3": ["Sun and Moon Praise", "Sun, moon, and shining stars praise Him."],
+    "Psalms 148:5": ["Created by His Command", "All creation was made by God's command."],
+    "Psalms 148:7": ["Praise from the Earth", "Creatures of the earth are called to praise the Lord."],
+    "Psalms 148:10": ["All Living Creatures", "Animals, birds, and all creatures praise Him."],
+    "Psalms 148:11": ["Kings and Nations", "Kings and all nations are called to praise the Lord."],
+    "Psalms 148:13": ["Name Above All", "The Lord's name alone is exalted."],
+    "Psalms 148:14": ["Honor for His People", "God lifts up His people and they praise Him."],
 
-    // Psalms Chapter 148
-    "Psalms 148:1": "Praise the LORD from the Heavens",
+    "Psalms 149:1": ["Sing a New Song", "God's people are called to sing a new song and praise Him in the assembly."],
+    "Psalms 149:2": ["Joy in the Creator", "Israel rejoices in their Creator and King."],
+    "Psalms 149:3": ["Praise with Dance", "Praise God with dancing and music."],
+    "Psalms 149:4": ["God Delights in His People", "The Lord delights in His people and crowns the humble with salvation."],
+    "Psalms 149:5": ["Joyful Praise", "The faithful rejoice in glory and sing for joy."],
+    "Psalms 149:6": ["Praise and Victory", "High praises of God are in their mouths."],
+    "Psalms 149:9": ["Honor for the Faithful", "God's faithful people share in His victory."],
 
-    // Psalms Chapter 149
-    "Psalms 149:1": "Sing to the LORD a New Song",
-
-    // Psalms Chapter 150
-    "Psalms 150:1": "Praise the LORD! Let Everything Praise the LORD",
+    "Psalms 150:1": ["Praise in the Sanctuary", "Praise the Lord in His sanctuary and mighty heavens."],
+    "Psalms 150:2": ["Praise for His Mighty Acts", "Praise Him for His mighty deeds and greatness."],
+    "Psalms 150:3": ["Praise with Trumpet", "Praise Him with trumpet sound."],
+    "Psalms 150:4": ["Praise with Instruments", "Praise Him with harp, tambourine, dancing, and strings."],
+    "Psalms 150:5": ["Praise with Cymbals", "Praise Him with loud clashing cymbals."],
+    "Psalms 150:6": ["Everything That Has Breath", "Let everything that has breath praise the Lord."],
 
     // Proverbs Chapter 1
     "Proverbs 1:1": "The Purpose of Proverbs",
