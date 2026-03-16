@@ -2566,7 +2566,7 @@
                 return;
             }
             
-            const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
+            const dateKey = `${state.selectedDate.getFullYear()}-${String(state.selectedDate.getMonth() + 1).padStart(2, '0')}-${String(state.selectedDate.getDate()).padStart(2, '0')}`;
             const portionKey = `${dateKey}-${portionIndex}`;
             
             console.log('dateKey:', dateKey);
@@ -2605,7 +2605,7 @@
             const reading = getTodayReading(state.selectedDate);
             if (!reading) return;
             
-            const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
+            const dateKey = `${state.selectedDate.getFullYear()}-${String(state.selectedDate.getMonth() + 1).padStart(2, '0')}-${String(state.selectedDate.getDate()).padStart(2, '0')}`;
             reading.portions.forEach((_, idx) => {
                 completedPortions.add(`${dateKey}-${idx}`);
             });
@@ -2616,7 +2616,7 @@
             
             try {
                 const portions = await BibleReadingDB.getCompletedPortions(state.currentUser.id, state.selectedDate);
-                const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
+                const dateKey = `${state.selectedDate.getFullYear()}-${String(state.selectedDate.getMonth() + 1).padStart(2, '0')}-${String(state.selectedDate.getDate()).padStart(2, '0')}`;
                 
                 completedPortions.clear();
                 portions.forEach(portionIndex => {
@@ -2870,7 +2870,7 @@
             if (!user) return null;
             
             const today = new Date();
-            const dateKey = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+            const dateKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
             const hasReadToday = user.completedDates && user.completedDates[dateKey];
             
             // Calculate last read date
@@ -2996,7 +2996,7 @@
 
         function getDashboardStats() {
             const today = new Date();
-            const dateKey = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+            const dateKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
             
             // Use daysPending from getUserStats to check if user has ANY pending days
             const pendingUsers = state.users.filter(user => {
@@ -4515,7 +4515,7 @@
             const reading = getTodayReading(state.selectedDate);
             if (!reading || !state.currentUser) return;
 
-            const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
+            const dateKey = `${state.selectedDate.getFullYear()}-${String(state.selectedDate.getMonth() + 1).padStart(2, '0')}-${String(state.selectedDate.getDate()).padStart(2, '0')}`;
 
             // Check if already completed
             if (state.currentUser.completedDates && state.currentUser.completedDates[dateKey]) {
@@ -6295,7 +6295,7 @@
             const otProgress = calculateProgress('old');
             const ntProgress = calculateProgress('new');
             const todayReading = getTodayReading(state.selectedDate);
-            const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
+            const dateKey = `${state.selectedDate.getFullYear()}-${String(state.selectedDate.getMonth() + 1).padStart(2, '0')}-${String(state.selectedDate.getDate()).padStart(2, '0')}`;
             const isDateCompleted = state.currentUser.completedDates && state.currentUser.completedDates[dateKey];
             const today = new Date();
             today.setHours(0, 0, 0, 0);
@@ -6371,7 +6371,7 @@
                                         </div>
                                         <div class="space-y-3">
                                             ${expandChapterRanges(todayReading.portions).map((portion, idx) => {
-                                                const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
+                                                const dateKey = `${state.selectedDate.getFullYear()}-${String(state.selectedDate.getMonth() + 1).padStart(2, '0')}-${String(state.selectedDate.getDate()).padStart(2, '0')}`;
                                                 const portionKey = `${dateKey}-${idx}`;
                                                 const isPortionChecked = isDateCompleted || completedPortions.has(portionKey);
                                                 const tamilName = getTamilName(portion.book);
