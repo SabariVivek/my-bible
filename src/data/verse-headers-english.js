@@ -4377,562 +4377,1508 @@ const verseHeaders = {
     "Proverbs 31:1": "The Words of King Lemuel",
     "Proverbs 31:10": "The Excellent Wife",
 
-    // Ecclesiastes Chapter 1
-    "Ecclesiastes 1:1": "All Is Vanity",
-    "Ecclesiastes 1:12": "The Vanity of Wisdom",
-
-    // Ecclesiastes Chapter 2
-    "Ecclesiastes 2:1": "The Vanity of Pleasure",
-    "Ecclesiastes 2:12": "The Vanity of Wisdom and Folly",
-    "Ecclesiastes 2:18": "The Vanity of Toil",
-
-    // Ecclesiastes Chapter 3
-    "Ecclesiastes 3:1": "A Time for Everything",
-    "Ecclesiastes 3:16": "The Injustice of Life",
-
-    // Ecclesiastes Chapter 4
-    "Ecclesiastes 4:1": "Oppression, Toil, and Friendlessness",
-
-    // Ecclesiastes Chapter 5
-    "Ecclesiastes 5:1": "Fear God",
-    "Ecclesiastes 5:8": "The Vanity of Wealth",
-
-    // Ecclesiastes Chapter 6
-    "Ecclesiastes 6:1": "The Vanity of Wealth and Honor",
-
-    // Ecclesiastes Chapter 7
-    "Ecclesiastes 7:1": "The Value of Wisdom",
-
-    // Ecclesiastes Chapter 8
-    "Ecclesiastes 8:1": "Obey the King",
-    "Ecclesiastes 8:9": "The Wicked and the Righteous",
-
-    // Ecclesiastes Chapter 9
-    "Ecclesiastes 9:1": "Death Comes to All",
-    "Ecclesiastes 9:13": "Wisdom Better Than Folly",
-
-    // Ecclesiastes Chapter 10
-    "Ecclesiastes 10:1": "Miscellaneous Observations",
-
-    // Ecclesiastes Chapter 11
-    "Ecclesiastes 11:1": "Cast Your Bread Upon the Waters",
-    "Ecclesiastes 11:7": "Rejoice in Your Youth",
-
-    // Ecclesiastes Chapter 12
-    "Ecclesiastes 12:1": "Remember Your Creator",
-    "Ecclesiastes 12:9": "The Conclusion",
-
-    // Song of Solomon Chapter 1
-    "Song of Solomon 1:1": "The Song of Songs",
-    "Song of Solomon 1:2": "The Bride's Desire",
-
-    // Song of Solomon Chapter 2
-    "Song of Solomon 2:1": "The Bride and the Bridegroom",
-    "Song of Solomon 2:8": "The Bride Hears Her Beloved",
-
-    // Song of Solomon Chapter 3
-    "Song of Solomon 3:1": "The Bride's Dream",
-    "Song of Solomon 3:6": "Solomon's Wedding Procession",
-
-    // Song of Solomon Chapter 4
-    "Song of Solomon 4:1": "The Bridegroom Praises the Bride",
-
-    // Song of Solomon Chapter 5
-    "Song of Solomon 5:1": "The Bride and Bridegroom Feast",
-    "Song of Solomon 5:2": "The Bride's Second Dream",
-
-    // Song of Solomon Chapter 6
-    "Song of Solomon 6:1": "Where Has Your Beloved Gone?",
-    "Song of Solomon 6:4": "The Bridegroom Praises the Bride",
-
-    // Song of Solomon Chapter 7
-    "Song of Solomon 7:1": "How Beautiful Are Your Feet",
-
-    // Song of Solomon Chapter 8
-    "Song of Solomon 8:1": "The Bride's Love",
-    "Song of Solomon 8:8": "We Have a Little Sister",
-
-    // Isaiah Chapter 1
-    "Isaiah 1:1": "The Vision of Isaiah",
-    "Isaiah 1:2": "Israel's Rebellion",
-    "Isaiah 1:10": "The Worthlessness of Israel's Worship",
-    "Isaiah 1:18": "Come, Let Us Reason Together",
-    "Isaiah 1:21": "The Unfaithful City",
-
-    // Isaiah Chapter 2
-    "Isaiah 2:1": "The Mountain of the LORD",
-    "Isaiah 2:6": "The Day of the LORD",
-
-    // Isaiah Chapter 3
-    "Isaiah 3:1": "Judgment on Judah and Jerusalem",
-    "Isaiah 3:16": "Judgment on the Daughters of Zion",
-
-    // Isaiah Chapter 4
-    "Isaiah 4:1": "Seven Women",
-    "Isaiah 4:2": "The Branch of the LORD",
-
-    // Isaiah Chapter 5
-    "Isaiah 5:1": "The Song of the Vineyard",
-    "Isaiah 5:8": "Woes Upon the Wicked",
-    "Isaiah 5:26": "The LORD's Anger Against Israel",
-
-    // Isaiah Chapter 6
-    "Isaiah 6:1": "Isaiah's Vision of the LORD",
-    "Isaiah 6:8": "Here Am I! Send Me",
-
-    // Isaiah Chapter 7
-    "Isaiah 7:1": "The Sign of Immanuel",
-
-    // Isaiah Chapter 8
-    "Isaiah 8:1": "The Coming Assyrian Invasion",
-    "Isaiah 8:11": "Fear God, Wait for the LORD",
-
-    // Isaiah Chapter 9
-    "Isaiah 9:1": "For to Us a Child Is Born",
-    "Isaiah 9:8": "Judgment on Israel's Arrogance",
-
-    // Isaiah Chapter 10
-    "Isaiah 10:1": "Woe to the Unjust",
-    "Isaiah 10:5": "Assyria, the Rod of God's Anger",
-    "Isaiah 10:20": "The Remnant of Israel Will Return",
-
-    // Isaiah Chapter 11
-    "Isaiah 11:1": "The Righteous Reign of the Branch",
-    "Isaiah 11:10": "The Remnant Recovered",
-
-    // Isaiah Chapter 12
-    "Isaiah 12:1": "A Song of Thanksgiving",
-
-    // Isaiah Chapter 13
-    "Isaiah 13:1": "The Burden Against Babylon",
-
-    // Isaiah Chapter 14
-    "Isaiah 14:1": "Israel's Restoration",
-    "Isaiah 14:4": "The Fall of the King of Babylon",
-    "Isaiah 14:12": "How You Have Fallen from Heaven, O Lucifer",
-    "Isaiah 14:24": "Assyria Will Be Destroyed",
-    "Isaiah 14:28": "The Burden Against Philistia",
-
-    // Isaiah Chapter 15
-    "Isaiah 15:1": "The Burden Against Moab",
-
-    // Isaiah Chapter 16
-    "Isaiah 16:1": "Moab's Plea for Refuge",
-    "Isaiah 16:13": "The Prophecy Against Moab",
-
-    // Isaiah Chapter 17
-    "Isaiah 17:1": "The Burden Against Damascus",
-
-    // Isaiah Chapter 18
-    "Isaiah 18:1": "The Burden Against Cush",
-
-    // Isaiah Chapter 19
-    "Isaiah 19:1": "The Burden Against Egypt",
-    "Isaiah 19:16": "The LORD Will Strike and Heal Egypt",
-
-    // Isaiah Chapter 20
-    "Isaiah 20:1": "Isaiah Walks Naked as a Sign",
-
-    // Isaiah Chapter 21
-    "Isaiah 21:1": "The Burden Against Babylon",
-    "Isaiah 21:11": "The Burden Against Edom",
-    "Isaiah 21:13": "The Burden Against Arabia",
-
-    // Isaiah Chapter 22
-    "Isaiah 22:1": "The Burden Against the Valley of Vision",
-    "Isaiah 22:15": "Shebna's Disgrace and Eliakim's Promotion",
-
-    // Isaiah Chapter 23
-    "Isaiah 23:1": "The Burden Against Tyre",
-
-    // Isaiah Chapter 24
-    "Isaiah 24:1": "The LORD's Judgment on the Earth",
-
-    // Isaiah Chapter 25
-    "Isaiah 25:1": "Praise for the LORD's Favor",
-    "Isaiah 25:6": "A Feast for All Peoples",
-
-    // Isaiah Chapter 26
-    "Isaiah 26:1": "A Song of Salvation",
-
-    // Isaiah Chapter 27
-    "Isaiah 27:1": "The Deliverance of Israel",
-
-    // Isaiah Chapter 28
-    "Isaiah 28:1": "Woe to Ephraim",
-    "Isaiah 28:14": "A Cornerstone in Zion",
-
-    // Isaiah Chapter 29
-    "Isaiah 29:1": "Woe to the City of David",
-    "Isaiah 29:13": "Hypocrisy Rebuked",
-
-    // Isaiah Chapter 30
-    "Isaiah 30:1": "Woe to the Rebellious Children",
-    "Isaiah 30:18": "The LORD Will Be Gracious",
-
-    // Isaiah Chapter 31
-    "Isaiah 31:1": "Woe to Those Who Trust in Egypt",
-
-    // Isaiah Chapter 32
-    "Isaiah 32:1": "A Righteous King",
-    "Isaiah 32:9": "The Women of Jerusalem",
-
-    // Isaiah Chapter 33
-    "Isaiah 33:1": "Woe to the Destroyer",
-    "Isaiah 33:13": "The Sinners in Zion",
-
-    // Isaiah Chapter 34
-    "Isaiah 34:1": "God's Judgment on the Nations",
-
-    // Isaiah Chapter 35
-    "Isaiah 35:1": "The Glory of Zion",
-
-    // Isaiah Chapter 36
-    "Isaiah 36:1": "Sennacherib Threatens Jerusalem",
-
-    // Isaiah Chapter 37
-    "Isaiah 37:1": "Hezekiah's Prayer",
-    "Isaiah 37:21": "Isaiah's Prophecy",
-    "Isaiah 37:36": "The Angel Destroys the Assyrians",
-
-    // Isaiah Chapter 38
-    "Isaiah 38:1": "Hezekiah's Illness and Recovery",
-    "Isaiah 38:9": "Hezekiah's Song of Thanksgiving",
-
-    // Isaiah Chapter 39
-    "Isaiah 39:1": "Envoys from Babylon",
-
-    // Isaiah Chapter 40
-    "Isaiah 40:1": "Comfort for God's People",
-    "Isaiah 40:9": "Here Is Your God",
-    "Isaiah 40:12": "Who Can Be Compared to God?",
-    "Isaiah 40:27": "The LORD Is the Everlasting God",
-
-    // Isaiah Chapter 41
-    "Isaiah 41:1": "God's Help to Israel",
-    "Isaiah 41:21": "The Futility of Idols",
-
-    // Isaiah Chapter 42
-    "Isaiah 42:1": "The Servant of the LORD",
-    "Isaiah 42:10": "A New Song of Praise",
-    "Isaiah 42:18": "Israel's Blindness",
-
-    // Isaiah Chapter 43
-    "Isaiah 43:1": "Israel's Only Savior",
-    "Isaiah 43:14": "Deliverance Promised",
-    "Isaiah 43:22": "Israel's Unfaithfulness",
-
-    // Isaiah Chapter 44
-    "Isaiah 44:1": "The LORD Has Chosen Israel",
-    "Isaiah 44:9": "The Folly of Idolatry",
-    "Isaiah 44:21": "The LORD Redeems Israel",
-    "Isaiah 44:24": "Jerusalem to Be Restored",
-
-    // Isaiah Chapter 45
-    "Isaiah 45:1": "Cyrus God's Instrument",
-    "Isaiah 45:9": "Woe to Him Who Quarrels with His Maker",
-    "Isaiah 45:14": "The LORD, the Only Savior",
-
-    // Isaiah Chapter 46
-    "Isaiah 46:1": "The Idols of Babylon",
-    "Isaiah 46:5": "To Whom Will You Compare Me?",
-
-    // Isaiah Chapter 47
-    "Isaiah 47:1": "The Humiliation of Babylon",
-
-    // Isaiah Chapter 48
-    "Isaiah 48:1": "Deliverance Promised",
-    "Isaiah 48:12": "The LORD's Ancient Plan",
-
-    // Isaiah Chapter 49
-    "Isaiah 49:1": "The Servant's Mission",
-    "Isaiah 49:14": "Zion Restored",
-
-    // Isaiah Chapter 50
-    "Isaiah 50:1": "Israel's Sin",
-    "Isaiah 50:4": "The Obedience of the Servant",
-
-    // Isaiah Chapter 51
-    "Isaiah 51:1": "Salvation for Zion",
-    "Isaiah 51:17": "The Cup of the LORD's Wrath",
-
-    // Isaiah Chapter 52
-    "Isaiah 52:1": "Awake, Awake, O Zion",
-    "Isaiah 52:7": "How Beautiful Are the Feet",
-    "Isaiah 52:13": "The Suffering Servant",
-
-    // Isaiah Chapter 53
-    "Isaiah 53:1": "Who Has Believed Our Message?",
-    "Isaiah 53:4": "He Was Pierced for Our Transgressions",
-    "Isaiah 53:10": "The LORD's Good Plan",
-
-    // Isaiah Chapter 54
-    "Isaiah 54:1": "The Future Glory of Zion",
-
-    // Isaiah Chapter 55
-    "Isaiah 55:1": "The Invitation to Abundant Life",
-    "Isaiah 55:6": "Seek the LORD While He May Be Found",
-
-    // Isaiah Chapter 56
-    "Isaiah 56:1": "Salvation for Foreigners",
-    "Isaiah 56:9": "Israel's Blind Watchmen",
-
-    // Isaiah Chapter 57
-    "Isaiah 57:1": "The Righteous Perish",
-    "Isaiah 57:14": "Healing for the Repentant",
-
-    // Isaiah Chapter 58
-    "Isaiah 58:1": "True Fasting",
-
-    // Isaiah Chapter 59
-    "Isaiah 59:1": "Sin Separates from God",
-    "Isaiah 59:15": "The Redeemer Will Come to Zion",
-
-    // Isaiah Chapter 60
-    "Isaiah 60:1": "Arise, Shine, for Your Light Has Come",
-
-    // Isaiah Chapter 61
-    "Isaiah 61:1": "The Year of the LORD's Favor",
-    "Isaiah 61:10": "Clothed with Salvation",
-
-    // Isaiah Chapter 62
-    "Isaiah 62:1": "Zion's New Name",
-
-    // Isaiah Chapter 63
-    "Isaiah 63:1": "God's Vengeance on the Nations",
-    "Isaiah 63:7": "God's Mercy Remembered",
-
-    // Isaiah Chapter 64
-    "Isaiah 64:1": "Prayer for Mercy",
-
-    // Isaiah Chapter 65
-    "Isaiah 65:1": "Judgment and Salvation",
-    "Isaiah 65:17": "New Heavens and a New Earth",
-
-    // Isaiah Chapter 66
-    "Isaiah 66:1": "Heaven Is My Throne",
-    "Isaiah 66:10": "Rejoice with Jerusalem",
-    "Isaiah 66:18": "All Nations Will Come",
-
-    // Jeremiah Chapter 1
-    "Jeremiah 1:1": "The Call of Jeremiah",
-    "Jeremiah 1:11": "Two Visions",
-
-    // Jeremiah Chapter 2
-    "Jeremiah 2:1": "Israel's Apostasy",
-    "Jeremiah 2:14": "The Results of Israel's Sin",
-
-    // Jeremiah Chapter 3
-    "Jeremiah 3:1": "Unfaithful Israel",
-    "Jeremiah 3:11": "A Call to Repentance",
-
-    // Jeremiah Chapter 4
-    "Jeremiah 4:1": "A Call to Repentance",
-    "Jeremiah 4:5": "Disaster from the North",
-
-    // Jeremiah Chapter 5
-    "Jeremiah 5:1": "Jerusalem's Godlessness",
-    "Jeremiah 5:14": "Coming Judgment",
-
-    // Jeremiah Chapter 6
-    "Jeremiah 6:1": "The Siege of Jerusalem",
-    "Jeremiah 6:16": "Stand at the Crossroads",
-
-    // Jeremiah Chapter 7
-    "Jeremiah 7:1": "Trust Not in Lying Words",
-    "Jeremiah 7:21": "Obedience, Not Sacrifice",
-
-    // Jeremiah Chapter 8
-    "Jeremiah 8:1": "The Sin and Punishment of Judah",
-    "Jeremiah 8:18": "Jeremiah's Grief",
-
-    // Jeremiah Chapter 9
-    "Jeremiah 9:1": "Jeremiah Weeps for the People",
-    "Jeremiah 9:17": "A Lament for Zion",
-    "Jeremiah 9:23": "Let Him Who Boasts Boast in the LORD",
-
-    // Jeremiah Chapter 10
-    "Jeremiah 10:1": "Idols and the True God",
-    "Jeremiah 10:17": "The Coming Exile",
-
-    // Jeremiah Chapter 11
-    "Jeremiah 11:1": "The Broken Covenant",
-    "Jeremiah 11:18": "The Plot Against Jeremiah",
-
-    // Jeremiah Chapter 12
-    "Jeremiah 12:1": "Jeremiah's Question",
-    "Jeremiah 12:7": "The LORD's Answer",
-
-    // Jeremiah Chapter 13
-    "Jeremiah 13:1": "The Linen Belt",
-    "Jeremiah 13:12": "The Wineskins",
-    "Jeremiah 13:15": "The Captivity Threatened",
-
-    // Jeremiah Chapter 14
-    "Jeremiah 14:1": "The Drought",
-    "Jeremiah 14:7": "Prayer for Mercy",
-    "Jeremiah 14:13": "Lying Prophets",
-
-    // Jeremiah Chapter 15
-    "Jeremiah 15:1": "The LORD's Answer",
-    "Jeremiah 15:10": "Jeremiah's Complaint",
-
-    // Jeremiah Chapter 16
-    "Jeremiah 16:1": "Jeremiah Forbidden to Marry",
-    "Jeremiah 16:14": "Restoration Promised",
-
-    // Jeremiah Chapter 17
-    "Jeremiah 17:1": "Judah's Sin Written with an Iron Pen",
-    "Jeremiah 17:5": "Trust in Man Versus Trust in God",
-    "Jeremiah 17:9": "The Heart Is Deceitful",
-    "Jeremiah 17:19": "Hallow the Sabbath",
-
-    // Jeremiah Chapter 18
-    "Jeremiah 18:1": "The Potter and the Clay",
-    "Jeremiah 18:18": "A Plot Against Jeremiah",
-
-    // Jeremiah Chapter 19
-    "Jeremiah 19:1": "The Broken Flask",
-
-    // Jeremiah Chapter 20
-    "Jeremiah 20:1": "Jeremiah Persecuted",
-    "Jeremiah 20:7": "Jeremiah's Complaint",
-
-    // Jeremiah Chapter 21
-    "Jeremiah 21:1": "Jerusalem Will Fall to Babylon",
-
-    // Jeremiah Chapter 22
-    "Jeremiah 22:1": "Message to the House of David",
-    "Jeremiah 22:10": "Messages Concerning Kings",
-
-    // Jeremiah Chapter 23
-    "Jeremiah 23:1": "The Righteous Branch",
-    "Jeremiah 23:9": "Lying Prophets",
-
-    // Jeremiah Chapter 24
-    "Jeremiah 24:1": "The Good and Bad Figs",
-
-    // Jeremiah Chapter 25
-    "Jeremiah 25:1": "Seventy Years of Captivity",
-    "Jeremiah 25:15": "The Cup of God's Wrath",
-
-    // Jeremiah Chapter 26
-    "Jeremiah 26:1": "Jeremiah Threatened with Death",
-
-    // Jeremiah Chapter 27
-    "Jeremiah 27:1": "The Yoke of Babylon",
-
-    // Jeremiah Chapter 28
-    "Jeremiah 28:1": "Hananiah's False Prophecy",
-
-    // Jeremiah Chapter 29
-    "Jeremiah 29:1": "Letter to the Exiles",
-    "Jeremiah 29:15": "False Prophets in Babylon",
-
-    // Jeremiah Chapter 30
-    "Jeremiah 30:1": "Restoration Promised",
-
-    // Jeremiah Chapter 31
-    "Jeremiah 31:1": "Israel's Restoration",
-    "Jeremiah 31:15": "Rachel Weeping for Her Children",
-    "Jeremiah 31:27": "A New Covenant",
-
-    // Jeremiah Chapter 32
-    "Jeremiah 32:1": "Jeremiah Buys a Field",
-    "Jeremiah 32:16": "Jeremiah's Prayer",
-    "Jeremiah 32:26": "The LORD's Answer",
-
-    // Jeremiah Chapter 33
-    "Jeremiah 33:1": "The LORD's Assurance",
-    "Jeremiah 33:14": "The Righteous Branch",
-
-    // Jeremiah Chapter 34
-    "Jeremiah 34:1": "Zedekiah Warned",
-    "Jeremiah 34:8": "The Broken Covenant with the Slaves",
-
-    // Jeremiah Chapter 35
-    "Jeremiah 35:1": "The Rechabites' Obedience",
-
-    // Jeremiah Chapter 36
-    "Jeremiah 36:1": "Jeremiah's Scroll Read",
-    "Jeremiah 36:20": "The King Burns the Scroll",
-
-    // Jeremiah Chapter 37
-    "Jeremiah 37:1": "Jeremiah Warns Zedekiah",
-    "Jeremiah 37:11": "Jeremiah Imprisoned",
-
-    // Jeremiah Chapter 38
-    "Jeremiah 38:1": "Jeremiah Thrown into a Cistern",
-    "Jeremiah 38:14": "Zedekiah Questions Jeremiah",
-
-    // Jeremiah Chapter 39
-    "Jeremiah 39:1": "The Fall of Jerusalem",
-    "Jeremiah 39:11": "Jeremiah Released",
-
-    // Jeremiah Chapter 40
-    "Jeremiah 40:1": "Jeremiah Remains in Judah",
-    "Jeremiah 40:7": "Gedaliah Made Governor",
-
-    // Jeremiah Chapter 41
-    "Jeremiah 41:1": "Gedaliah Assassinated",
-
-    // Jeremiah Chapter 42
-    "Jeremiah 42:1": "The People Ask Jeremiah to Pray",
-    "Jeremiah 42:7": "The LORD's Answer",
-
-    // Jeremiah Chapter 43
-    "Jeremiah 43:1": "The Flight to Egypt",
-    "Jeremiah 43:8": "Jeremiah Prophesies Against Egypt",
-
-    // Jeremiah Chapter 44
-    "Jeremiah 44:1": "Judgment for Idolatry",
-
-    // Jeremiah Chapter 45
-    "Jeremiah 45:1": "A Message to Baruch",
-
-    // Jeremiah Chapter 46
-    "Jeremiah 46:1": "Prophecies Against Egypt",
-    "Jeremiah 46:27": "The LORD Will Save Israel",
-
-    // Jeremiah Chapter 47
-    "Jeremiah 47:1": "Prophecy Against the Philistines",
-
-    // Jeremiah Chapter 48
-    "Jeremiah 48:1": "Prophecy Against Moab",
-
-    // Jeremiah Chapter 49
-    "Jeremiah 49:1": "Prophecy Against Ammon",
-    "Jeremiah 49:7": "Prophecy Against Edom",
-    "Jeremiah 49:23": "Prophecy Against Damascus",
-    "Jeremiah 49:28": "Prophecy Against Kedar and Hazor",
-    "Jeremiah 49:34": "Prophecy Against Elam",
-
-    // Jeremiah Chapter 50
-    "Jeremiah 50:1": "Prophecy Against Babylon",
-
-    // Jeremiah Chapter 51
-    "Jeremiah 51:1": "The Destruction of Babylon",
-    "Jeremiah 51:59": "Jeremiah's Command to Seraiah",
-
-    // Jeremiah Chapter 52
-    "Jeremiah 52:1": "The Fall of Jerusalem Recounted",
-    "Jeremiah 52:31": "Jehoiachin Released",
-
-    // Lamentations Chapter 1
-    "Lamentations 1:1": "How Lonely Sits the City",
-
-    // Lamentations Chapter 2
-    "Lamentations 2:1": "God's Anger Against Jerusalem",
-
-    // Lamentations Chapter 3
-    "Lamentations 3:1": "Hope in the LORD's Faithfulness",
-    "Lamentations 3:22": "Great Is Your Faithfulness",
-
-    // Lamentations Chapter 4
-    "Lamentations 4:1": "The Horrors of the Siege",
-
-    // Lamentations Chapter 5
-    "Lamentations 5:1": "A Prayer for Restoration",
+    "Ecclesiastes 1:1": ["Words of the Teacher", "These are the words of the Teacher, the son of David, king in Jerusalem."],
+    "Ecclesiastes 1:2": ["Meaninglessness of Life", "The Teacher declares that everything in life seems meaningless."],
+    "Ecclesiastes 1:3": ["Question of Profit", "The Teacher asks what people gain from all their labor."],
+    "Ecclesiastes 1:4": ["Generations Come and Go", "Generations pass away but the earth remains."],
+    "Ecclesiastes 1:5": ["Cycle of Nature", "The sun rises and sets, continuing its endless cycle."],
+    "Ecclesiastes 1:7": ["Rivers Flow to the Sea", "All rivers flow into the sea, yet the sea is never full."],
+    "Ecclesiastes 1:8": ["Weariness of Life", "Everything is wearisome and human desires are never satisfied."],
+    "Ecclesiastes 1:9": ["Nothing New Under the Sun", "What has been will be again; there is nothing truly new."],
+    "Ecclesiastes 1:12": ["The Teacher's Search", "The Teacher describes his role as king searching for wisdom."],
+    "Ecclesiastes 1:14": ["Life Like Chasing the Wind", "The Teacher concludes that human efforts are like chasing the wind."],
+    "Ecclesiastes 1:16": ["Pursuit of Wisdom", "He says he gained great wisdom and knowledge."],
+    "Ecclesiastes 1:18": ["Sorrow with Knowledge", "Greater wisdom brings greater sorrow."],
+
+    "Ecclesiastes 2:1": ["Testing Pleasure", "The Teacher decides to test pleasure to find meaning in life."],
+    "Ecclesiastes 2:4": ["Great Achievements", "He describes building houses, planting vineyards, and creating gardens."],
+    "Ecclesiastes 2:7": ["Great Wealth", "He gains servants, livestock, silver, and gold."],
+    "Ecclesiastes 2:8": ["Entertainment and Pleasure", "He gathers singers and many pleasures of life."],
+    "Ecclesiastes 2:10": ["Enjoying His Labor", "He enjoys the results of all his work."],
+    "Ecclesiastes 2:11": ["Meaninglessness of Achievements", "Yet he concludes it is all meaningless, like chasing the wind."],
+    "Ecclesiastes 2:13": ["Wisdom Better Than Folly", "Wisdom is better than foolishness, like light is better than darkness."],
+    "Ecclesiastes 2:16": ["Death Comes to All", "Both the wise and the foolish eventually die."],
+    "Ecclesiastes 2:18": ["Hating His Labor", "He hates his work because others will inherit it."],
+    "Ecclesiastes 2:22": ["Burden of Work", "Hard work brings worry and sleepless nights."],
+    "Ecclesiastes 2:24": ["Enjoy Life as God's Gift", "The Teacher concludes that enjoying food, drink, and work is from God."],
+    "Ecclesiastes 2:26": ["God's Reward", "God gives wisdom and joy to those who please Him."],
+
+    "Ecclesiastes 3:1": ["A Time for Everything", "There is a time and season for every activity under heaven."],
+    "Ecclesiastes 3:2": ["Opposite Seasons of Life", "There is a time to be born and a time to die, a time to plant and a time to uproot."],
+    "Ecclesiastes 3:4": ["Emotions of Life", "There is a time to weep and a time to laugh."],
+    "Ecclesiastes 3:6": ["Gain and Loss", "There is a time to search and a time to give up."],
+    "Ecclesiastes 3:8": ["Peace and Conflict", "There is a time to love and a time to hate, a time for war and a time for peace."],
+    "Ecclesiastes 3:9": ["Question of Gain", "The Teacher asks what workers gain from their labor."],
+    "Ecclesiastes 3:11": ["God's Perfect Timing", "God has made everything beautiful in its time."],
+    "Ecclesiastes 3:12": ["Enjoy Life", "People should be happy and enjoy the good things in life."],
+    "Ecclesiastes 3:14": ["God's Work Endures", "Whatever God does lasts forever."],
+    "Ecclesiastes 3:16": ["Injustice in the World", "The Teacher observes injustice even in places meant for justice."],
+    "Ecclesiastes 3:19": ["Humans and Animals", "Humans and animals share the same breath and both return to dust."],
+    "Ecclesiastes 3:22": ["Enjoy Your Work", "The Teacher concludes that people should enjoy their work."],
+
+    "Ecclesiastes 4:1": ["Oppression Observed", "The Teacher sees oppression and the tears of the oppressed."],
+    "Ecclesiastes 4:4": ["Jealousy and Work", "Many people work hard because they envy others."],
+    "Ecclesiastes 4:6": ["Contentment Over Toil", "Better one handful with peace than two handfuls with toil."],
+    "Ecclesiastes 4:7": ["Loneliness of Labor", "A person working alone may gain wealth but has no one to share it with."],
+    "Ecclesiastes 4:9": ["Value of Companionship", "Two people are better than one because they help each other."],
+    "Ecclesiastes 4:10": ["Helping Each Other", "If one falls the other can help them up."],
+    "Ecclesiastes 4:12": ["Strength in Unity", "A cord of three strands is not easily broken."],
+    "Ecclesiastes 4:13": ["Better a Poor Wise Youth", "A wise but poor youth is better than a foolish old king."],
+    "Ecclesiastes 4:16": ["Temporary Popularity", "Even great leaders are eventually forgotten."],
+
+    "Ecclesiastes 5:1": ["Reverence in Worship", "Be careful when approaching the house of God and listen rather than speak rashly."],
+    "Ecclesiastes 5:2": ["Few Words Before God", "Do not be quick with your words before God."],
+    "Ecclesiastes 5:4": ["Keeping Vows", "When you make a vow to God, do not delay in fulfilling it."],
+    "Ecclesiastes 5:6": ["Guard Your Words", "Do not let your words lead you into sin."],
+    "Ecclesiastes 5:8": ["Oppression in Society", "Oppression and injustice exist because of the structure of authority."],
+    "Ecclesiastes 5:10": ["Love of Money", "Those who love money are never satisfied."],
+    "Ecclesiastes 5:12": ["Sleep of the Worker", "The sleep of a laborer is sweet."],
+    "Ecclesiastes 5:13": ["Danger of Hoarded Wealth", "Wealth stored up can harm its owner."],
+    "Ecclesiastes 5:15": ["Nothing Taken After Death", "People leave this world just as they came into it."],
+    "Ecclesiastes 5:18": ["Enjoy God's Gifts", "It is good to enjoy food, drink, and work as God's gift."],
+    "Ecclesiastes 5:19": ["Joy from God", "God gives the ability to enjoy wealth and possessions."],
+
+    "Ecclesiastes 6:1": ["Misfortune of Wealth Without Enjoyment", "Some people have wealth and honor but cannot enjoy them."],
+    "Ecclesiastes 6:3": ["Unfulfilled Life", "A person may live long but still not enjoy life."],
+    "Ecclesiastes 6:6": ["Same Destination", "Both the rich and poor eventually go to the same place."],
+    "Ecclesiastes 6:7": ["Endless Human Desire", "Human labor is for the mouth, yet the appetite is never satisfied."],
+    "Ecclesiastes 6:9": ["Contentment", "Better to enjoy what one has than chase after desires."],
+    "Ecclesiastes 6:10": ["Limits of Humanity", "Humans cannot contend with one stronger than themselves."],
+    "Ecclesiastes 6:11": ["Many Words Meaningless", "More words do not bring real advantage."],
+    "Ecclesiastes 6:12": ["Uncertainty of Life", "No one truly knows what is best for life."],
+
+    "Ecclesiastes 7:1": ["Value of a Good Name", "A good name is better than fine perfume and the day of death better than the day of birth."],
+    "Ecclesiastes 7:2": ["Wisdom from Mourning", "It is better to go to a house of mourning than to a house of feasting."],
+    "Ecclesiastes 7:5": ["Correction from the Wise", "It is better to listen to rebuke from the wise than to the song of fools."],
+    "Ecclesiastes 7:8": ["Patience Over Pride", "Patience is better than pride."],
+    "Ecclesiastes 7:10": ["Do Not Long for the Past", "Do not say the past days were better than these."],
+    "Ecclesiastes 7:11": ["Value of Wisdom", "Wisdom is good like an inheritance and benefits those who see the sun."],
+    "Ecclesiastes 7:13": ["Accept God's Work", "Consider the work of God because no one can straighten what He has made crooked."],
+    "Ecclesiastes 7:15": ["Righteous and Wicked", "Sometimes the righteous perish while the wicked live long."],
+    "Ecclesiastes 7:18": ["Balanced Living", "The one who fears God avoids extremes."],
+    "Ecclesiastes 7:20": ["Human Sinfulness", "There is no righteous person on earth who never sins."],
+    "Ecclesiastes 7:23": ["Search for Wisdom", "The Teacher says he sought wisdom but it was beyond him."],
+    "Ecclesiastes 7:29": ["God Made People Upright", "God made people upright but they pursue many schemes."],
+
+    "Ecclesiastes 8:1": ["Wisdom Changes a Person", "Wisdom brightens a person's face and softens their appearance."],
+    "Ecclesiastes 8:2": ["Obey the King", "Keep the king's command because of your oath to God."],
+    "Ecclesiastes 8:5": ["Wisdom and Judgment", "The wise know the proper time and procedure."],
+    "Ecclesiastes 8:8": ["Power Over Life and Death", "No one has power over the day of death."],
+    "Ecclesiastes 8:11": ["Delayed Justice", "When punishment is delayed people become bold in doing evil."],
+    "Ecclesiastes 8:12": ["Fear God", "Even though sinners may prosper for a time, it will go well for those who fear God."],
+    "Ecclesiastes 8:14": ["Life's Mysteries", "Sometimes the righteous receive what the wicked deserve."],
+    "Ecclesiastes 8:15": ["Enjoy Life", "People should enjoy life with food, drink, and work."],
+    "Ecclesiastes 8:16": ["Limits of Human Wisdom", "Even the wise cannot fully understand God's work."],
+
+    "Ecclesiastes 9:1": ["Life in God's Hands", "Everything that happens is in God's control."],
+    "Ecclesiastes 9:2": ["Same Fate for All", "The same fate comes to both the righteous and the wicked."],
+    "Ecclesiastes 9:4": ["Hope for the Living", "Anyone who is alive has hope."],
+    "Ecclesiastes 9:5": ["The Dead Know Nothing", "The living know they will die but the dead know nothing."],
+    "Ecclesiastes 9:7": ["Enjoy Life's Gifts", "Eat your food with joy and drink with a glad heart."],
+    "Ecclesiastes 9:9": ["Enjoy Marriage", "Enjoy life with the wife whom you love."],
+    "Ecclesiastes 9:10": ["Work Diligently", "Whatever your hand finds to do, do it with all your strength."],
+    "Ecclesiastes 9:11": ["Unpredictable Life", "Time and chance happen to everyone."],
+    "Ecclesiastes 9:13": ["Example of Wisdom", "A poor wise man saved a city though he was forgotten."],
+    "Ecclesiastes 9:16": ["Wisdom Better Than Strength", "Wisdom is better than strength even if it is overlooked."],
+
+    "Ecclesiastes 10:1": ["Small Folly Causes Damage", "A little foolishness can spoil wisdom and honor."],
+    "Ecclesiastes 10:2": ["Wisdom vs Folly", "The heart of the wise leads to the right, but the heart of fools to the left."],
+    "Ecclesiastes 10:4": ["Calmness in Leadership", "If a ruler becomes angry, remain calm and avoid making matters worse."],
+    "Ecclesiastes 10:6": ["Folly in High Places", "Fools are sometimes given great authority while the capable are overlooked."],
+    "Ecclesiastes 10:8": ["Consequences of Actions", "Those who dig a pit may fall into it."],
+    "Ecclesiastes 10:10": ["Value of Wisdom", "Wisdom helps one succeed even when tools are dull."],
+    "Ecclesiastes 10:12": ["Words of Wisdom", "Words from the mouth of the wise bring favor."],
+    "Ecclesiastes 10:16": ["Woe to a Nation", "A nation suffers when its leaders are immature."],
+    "Ecclesiastes 10:18": ["Laziness Causes Ruin", "Through laziness a house decays."],
+    "Ecclesiastes 10:19": ["Money's Influence", "Money answers many practical needs."],
+    "Ecclesiastes 10:20": ["Guard Your Words", "Do not curse a king even in private."],
+
+    "Ecclesiastes 11:1": ["Invest and Give", "Cast your bread upon the waters and you will find it again."],
+    "Ecclesiastes 11:3": ["Natural Certainties", "When clouds are full they pour rain on the earth."],
+    "Ecclesiastes 11:4": ["Act Without Delay", "Those who wait for perfect conditions will never act."],
+    "Ecclesiastes 11:5": ["Mystery of God's Work", "Just as you do not understand the wind, you cannot fully understand God's work."],
+    "Ecclesiastes 11:6": ["Work Diligently", "Sow your seed in the morning and in the evening."],
+    "Ecclesiastes 11:7": ["Joy in Life", "Light is sweet and it is pleasant to see the sun."],
+    "Ecclesiastes 11:9": ["Enjoy Youth Wisely", "Young people should rejoice in their youth but remember that God will judge all actions."],
+    "Ecclesiastes 11:10": ["Remove Trouble from the Heart", "Put away sorrow and remember that youth passes quickly."],
+
+    "Ecclesiastes 12:1": ["Remember Your Creator", "Remember your Creator in the days of your youth before difficult days come."],
+    "Ecclesiastes 12:3": ["Decline of Old Age", "The body grows weak and the senses begin to fail."],
+    "Ecclesiastes 12:6": ["Life's End Approaches", "The silver cord is severed and life returns to dust."],
+    "Ecclesiastes 12:7": ["Return to God", "The dust returns to the earth and the spirit returns to God."],
+    "Ecclesiastes 12:8": ["Meaninglessness Declared", "The Teacher repeats that everything is meaningless."],
+    "Ecclesiastes 12:9": ["Teacher's Wisdom", "The Teacher taught knowledge and carefully arranged many proverbs."],
+    "Ecclesiastes 12:11": ["Words of the Wise", "The words of the wise are like goads that guide people."],
+    "Ecclesiastes 12:12": ["Limit of Study", "Making many books has no end and much study can weary the body."],
+    "Ecclesiastes 12:13": ["Final Conclusion", "Fear God and keep His commandments because this is the whole duty of humanity."],
+    "Ecclesiastes 12:14": ["God's Judgment", "God will bring every deed into judgment, including every hidden thing."],
+
+    "Song of Solomon 1:1": ["Song of Songs", "This is the Song of Songs, the most beautiful song of Solomon."],
+    "Song of Solomon 1:2": ["Desire for Love", "The bride expresses her longing for the love of her beloved."],
+    "Song of Solomon 1:4": ["Joy in Love", "She rejoices in being brought close to the one she loves."],
+    "Song of Solomon 1:5": ["Beauty of the Bride", "The bride describes herself as dark but lovely."],
+    "Song of Solomon 1:7": ["Searching for the Beloved", "She asks where her beloved pastures his flock."],
+    "Song of Solomon 1:8": ["Guidance to the Bride", "She is told where she can find her beloved."],
+    "Song of Solomon 1:9": ["Praise from the Groom", "The groom compares the bride to a beautiful mare."],
+    "Song of Solomon 1:12": ["Sweet Fragrance of Love", "The bride describes the fragrance of her beloved."],
+    "Song of Solomon 1:15": ["Admiration Between Lovers", "The groom praises the beauty of the bride."],
+    "Song of Solomon 1:16": ["Mutual Delight", "The couple delight in each other's love."],
+
+    "Song of Solomon 2:1": ["Beauty of the Bride", "The bride describes herself as a rose of Sharon and a lily of the valleys."],
+    "Song of Solomon 2:2": ["Unique Love", "The groom compares the bride to a lily among thorns."],
+    "Song of Solomon 2:3": ["Joy in the Beloved", "The bride describes the joy and protection she finds in her beloved."],
+    "Song of Solomon 2:4": ["Banner of Love", "The beloved brings her into a place of celebration and love."],
+    "Song of Solomon 2:7": ["Do Not Awaken Love Too Soon", "Love should not be awakened before the right time."],
+    "Song of Solomon 2:8": ["The Beloved Arrives", "The bride hears her beloved approaching over the hills."],
+    "Song of Solomon 2:10": ["Invitation to Come Away", "The beloved calls the bride to come away with him."],
+    "Song of Solomon 2:12": ["Season of Joy", "Springtime arrives with flowers and singing."],
+    "Song of Solomon 2:14": ["Longing for Each Other", "The beloved asks to see and hear the bride."],
+    "Song of Solomon 2:15": ["Guard the Vineyard", "The couple warns about the little foxes that spoil the vineyards."],
+    "Song of Solomon 2:16": ["Belonging to Each Other", "The bride declares that her beloved is hers and she is his."],
+    "Song of Solomon 2:17": ["Waiting for Reunion", "The bride longs for the return of her beloved."],
+
+    "Song of Solomon 3:1": ["Searching for the Beloved", "The bride searches for her beloved during the night but cannot find him."],
+    "Song of Solomon 3:2": ["Seeking Through the City", "She goes through the streets and squares searching for him."],
+    "Song of Solomon 3:3": ["Questioning the Watchmen", "She asks the watchmen of the city if they have seen her beloved."],
+    "Song of Solomon 3:4": ["Finding the Beloved", "Soon after she finds him and holds on to him."],
+    "Song of Solomon 3:6": ["Royal Procession", "A grand procession appears coming up from the wilderness."],
+    "Song of Solomon 3:7": ["King Solomon's Carriage", "Solomon's carriage is surrounded by mighty warriors."],
+    "Song of Solomon 3:9": ["Splendor of the Carriage", "The carriage is beautifully crafted with precious materials."],
+    "Song of Solomon 3:11": ["Joyful Celebration", "The daughters of Zion are invited to see King Solomon crowned on his wedding day."],
+
+    "Song of Solomon 4:1": ["Beauty of the Bride", "The groom praises the beauty of his bride in detail."],
+    "Song of Solomon 4:7": ["Perfect Beauty", "The groom declares that the bride is altogether beautiful without flaw."],
+    "Song of Solomon 4:8": ["Invitation to Come Away", "The bride is invited to come with him from the mountains."],
+    "Song of Solomon 4:9": ["Captivated by Love", "The groom says the bride has captured his heart."],
+    "Song of Solomon 4:10": ["Sweetness of Love", "Her love is described as more delightful than wine."],
+    "Song of Solomon 4:12": ["A Sealed Garden", "The bride is compared to a locked garden and a sealed fountain."],
+    "Song of Solomon 4:15": ["Source of Living Water", "She is described as a fountain and flowing stream."],
+    "Song of Solomon 4:16": ["Invitation to the Garden", "The bride invites the beloved to come into his garden and enjoy its fruits."],
+
+    "Song of Solomon 5:1": ["Invitation Fulfilled", "The groom enters his garden and enjoys the fruits of love."],
+    "Song of Solomon 5:2": ["The Bride's Dream", "The bride dreams that her beloved is knocking at the door."],
+    "Song of Solomon 5:5": ["Opening the Door", "She rises to open the door for him."],
+    "Song of Solomon 5:6": ["The Beloved Gone", "When she opens the door, her beloved has already left."],
+    "Song of Solomon 5:7": ["Searching Through the City", "The watchmen find her and treat her roughly."],
+    "Song of Solomon 5:8": ["Message to the Beloved", "She asks others to tell her beloved that she is lovesick."],
+    "Song of Solomon 5:9": ["Question About the Beloved", "The daughters of Jerusalem ask what makes her beloved so special."],
+    "Song of Solomon 5:10": ["Description of the Beloved", "She begins describing the beauty and strength of her beloved."],
+    "Song of Solomon 5:16": ["Praise of the Beloved", "She concludes that he is altogether lovely."],
+
+    "Song of Solomon 6:1": ["Search for the Beloved", "The daughters of Jerusalem ask where the beloved has gone."],
+    "Song of Solomon 6:2": ["Beloved in the Garden", "The bride says her beloved has gone to his garden."],
+    "Song of Solomon 6:3": ["Mutual Belonging", "The bride declares that she belongs to her beloved and he belongs to her."],
+    "Song of Solomon 6:4": ["Praise of the Bride", "The groom praises the beauty of his beloved."],
+    "Song of Solomon 6:9": ["Unique Among Women", "The bride is described as unique and admired by others."],
+    "Song of Solomon 6:10": ["Radiant Beauty", "She is compared to the dawn, moon, and sun."],
+    "Song of Solomon 6:11": ["Going to the Garden", "The bride goes down to the garden to see the blossoms."],
+    "Song of Solomon 6:13": ["Call to Return", "The bride is asked to return so her beauty can be admired."],
+
+    "Song of Solomon 7:1": ["Beauty of the Bride", "The groom praises the beauty of the bride from head to toe."],
+    "Song of Solomon 7:6": ["Delight in Love", "The groom expresses how beautiful and delightful the bride is."],
+    "Song of Solomon 7:7": ["Desire for the Bride", "The bride is compared to a tall palm tree with beautiful fruit."],
+    "Song of Solomon 7:10": ["Belonging to the Beloved", "The bride declares that she belongs to her beloved and that he desires her."],
+    "Song of Solomon 7:11": ["Invitation to the Countryside", "The bride invites her beloved to go to the countryside together."],
+    "Song of Solomon 7:12": ["Love in the Vineyards", "They plan to enjoy their love among the vineyards."],
+    "Song of Solomon 7:13": ["Treasures of Love", "The bride promises the beloved special fruits and delights she has prepared."],
+
+    "Song of Solomon 8:1": ["Longing for Open Love", "The bride wishes she could openly express her love."],
+    "Song of Solomon 8:3": ["Embrace of Love", "The bride imagines being held by her beloved."],
+    "Song of Solomon 8:4": ["Do Not Awaken Love Too Soon", "Love should not be awakened until the right time."],
+    "Song of Solomon 8:6": ["Power of Love", "Love is described as strong as death and unquenchable like fire."],
+    "Song of Solomon 8:7": ["Unquenchable Love", "Many waters cannot extinguish true love."],
+    "Song of Solomon 8:8": ["Protection of the Young", "The brothers discuss protecting their younger sister."],
+    "Song of Solomon 8:10": ["Confidence of the Bride", "The bride declares she is mature and finds favor in her beloved's eyes."],
+    "Song of Solomon 8:13": ["Call of the Beloved", "The beloved asks to hear the bride's voice."],
+    "Song of Solomon 8:14": ["Final Invitation", "The bride invites her beloved to come quickly like a gazelle."],
+
+    "Isaiah 1:1": ["Vision of Isaiah", "These are the visions of Isaiah concerning Judah and Jerusalem."],
+    "Isaiah 1:2": ["God's Charge Against Israel", "The Lord calls heaven and earth as witnesses against His rebellious people."],
+    "Isaiah 1:4": ["Nation Full of Sin", "The people have turned away from the Lord and are filled with corruption."],
+    "Isaiah 1:7": ["Desolation of the Land", "The land is devastated because of sin and rebellion."],
+    "Isaiah 1:9": ["Remnant Preserved", "The Lord has preserved a small remnant of His people."],
+    "Isaiah 1:10": ["Warning to Leaders", "The leaders are compared to those of Sodom and Gomorrah."],
+    "Isaiah 1:11": ["Empty Worship", "God rejects sacrifices and religious rituals done without righteousness."],
+    "Isaiah 1:16": ["Call to Repentance", "The people are urged to wash themselves and stop doing evil."],
+    "Isaiah 1:18": ["Invitation to Reason", "The Lord invites the people to come and reason with Him about their sins."],
+    "Isaiah 1:19": ["Blessing for Obedience", "Those who are willing and obedient will enjoy the good of the land."],
+    "Isaiah 1:21": ["Corruption of Jerusalem", "The once faithful city has become corrupt."],
+    "Isaiah 1:24": ["Judgment on the Wicked", "The Lord promises to act against His enemies."],
+    "Isaiah 1:26": ["Restoration Promised", "God promises to restore righteous leaders."],
+    "Isaiah 1:27": ["Redemption of Zion", "Zion will be redeemed through justice and righteousness."],
+    "Isaiah 1:31": ["Fall of the Wicked", "The wicked will perish like a spark that sets dry wood on fire."],
+
+    "Isaiah 2:1": ["Vision of the Last Days", "Isaiah receives a vision concerning Judah and Jerusalem."],
+    "Isaiah 2:2": ["Mountain of the Lord", "In the last days the mountain of the Lord will be established above all mountains."],
+    "Isaiah 2:3": ["Nations Seek God's Ways", "Many nations will come to learn the ways of the Lord."],
+    "Isaiah 2:4": ["Peace Among Nations", "Swords will be turned into plowshares and nations will not learn war anymore."],
+    "Isaiah 2:5": ["Walk in the Lord's Light", "The people of Israel are urged to walk in the light of the Lord."],
+    "Isaiah 2:6": ["People Turn from God", "The people have embraced foreign customs and practices."],
+    "Isaiah 2:8": ["Idolatry in the Land", "The land is filled with idols made by human hands."],
+    "Isaiah 2:10": ["Fear of the Lord", "People will hide from the terror of the Lord."],
+    "Isaiah 2:12": ["Day of the Lord", "The Lord will humble everything proud and exalted."],
+    "Isaiah 2:17": ["Human Pride Brought Low", "Human pride will be humbled and the Lord alone will be exalted."],
+    "Isaiah 2:20": ["Abandoning Idols", "People will throw away their idols when God judges the earth."],
+    "Isaiah 2:22": ["Trust in God Alone", "Stop trusting in human beings who have only breath."],
+
+    "Isaiah 3:1": ["Judgment on Jerusalem", "The Lord will remove the leaders and support from Jerusalem and Judah."],
+    "Isaiah 3:4": ["Inexperienced Leaders", "Young and inexperienced rulers will govern the people."],
+    "Isaiah 3:5": ["Social Disorder", "People will oppress one another and disrespect authority."],
+    "Isaiah 3:8": ["Sin of Jerusalem", "Jerusalem has fallen because their words and actions oppose the Lord."],
+    "Isaiah 3:10": ["Reward for the Righteous", "The righteous will be rewarded for their good deeds."],
+    "Isaiah 3:11": ["Woe to the Wicked", "The wicked will receive the consequences of their actions."],
+    "Isaiah 3:12": ["Poor Leadership", "Children and women rule while leaders mislead the people."],
+    "Isaiah 3:14": ["God Judges the Leaders", "The Lord brings judgment against the leaders who oppress the poor."],
+    "Isaiah 3:16": ["Pride of the Women of Zion", "The women of Zion are rebuked for their pride and vanity."],
+    "Isaiah 3:18": ["Loss of Beauty and Luxury", "Their ornaments and fine clothing will be taken away."],
+    "Isaiah 3:24": ["Shame Instead of Beauty", "Their beauty will be replaced with disgrace."],
+    "Isaiah 3:26": ["City in Mourning", "Jerusalem will sit desolate and mourn."],
+
+    "Isaiah 4:1": ["Shame After Judgment", "Many women will seek one man for protection after the devastation."],
+    "Isaiah 4:2": ["The Branch of the Lord", "The Branch of the Lord will be beautiful and glorious for the survivors of Israel."],
+    "Isaiah 4:3": ["Holy Remnant", "Those left in Zion will be called holy."],
+    "Isaiah 4:4": ["Purification of Jerusalem", "The Lord will cleanse the bloodstains of Jerusalem."],
+    "Isaiah 4:5": ["God's Protective Presence", "The Lord will create a cloud by day and fire by night over Mount Zion."],
+    "Isaiah 4:6": ["Shelter from Trouble", "God's presence will be a shelter and refuge from heat and storm."],
+
+    "Isaiah 5:1": ["Song of the Vineyard", "Isaiah sings a song about the Lord's vineyard."],
+    "Isaiah 5:2": ["Expectation of Good Fruit", "The vineyard was carefully prepared but produced bad fruit."],
+    "Isaiah 5:5": ["Judgment on the Vineyard", "God declares He will remove its protection and allow it to be destroyed."],
+    "Isaiah 5:7": ["Meaning of the Vineyard", "The vineyard represents Israel and Judah."],
+    "Isaiah 5:8": ["Woe to Greedy Landowners", "Those who accumulate houses and land are warned."],
+    "Isaiah 5:11": ["Woe to Drunkenness", "Those who chase after wine and pleasure are rebuked."],
+    "Isaiah 5:18": ["Woe to Those Who Mock God", "People who draw sin toward themselves are condemned."],
+    "Isaiah 5:20": ["Woe to Moral Confusion", "Woe to those who call evil good and good evil."],
+    "Isaiah 5:21": ["Woe to the Proud", "Those wise in their own eyes are rebuked."],
+    "Isaiah 5:22": ["Woe to Corrupt Leaders", "Leaders who justify the wicked for bribes are condemned."],
+    "Isaiah 5:25": ["God's Anger", "The Lord's anger burns against His people."],
+    "Isaiah 5:26": ["Nation Called for Judgment", "God raises distant nations to bring judgment."],
+
+    "Isaiah 6:1": ["Isaiah's Vision of the Lord", "Isaiah sees the Lord seated on a high and exalted throne."],
+    "Isaiah 6:2": ["Seraphim Around the Throne", "Seraphim surround God's throne proclaiming His holiness."],
+    "Isaiah 6:3": ["Holy, Holy, Holy", "The whole earth is filled with God's glory."],
+    "Isaiah 6:5": ["Isaiah's Confession", "Isaiah realizes his sinfulness in the presence of God's holiness."],
+    "Isaiah 6:6": ["Cleansing with a Coal", "A seraph touches Isaiah's lips with a burning coal to cleanse him."],
+    "Isaiah 6:8": ["Isaiah's Commission", "Isaiah responds to God's call saying, 'Here am I, send me.'"],
+    "Isaiah 6:9": ["Message to the People", "Isaiah is told to deliver a message to people who will not understand."],
+    "Isaiah 6:11": ["Duration of Judgment", "Isaiah asks how long the judgment will last."],
+    "Isaiah 6:13": ["Hope of a Remnant", "A holy seed will remain like a stump after a tree is cut down."],
+
+    "Isaiah 7:1": ["Threat from Enemy Kings", "Judah is threatened by the alliance of Syria and Israel."],
+    "Isaiah 7:3": ["Message to King Ahaz", "God sends Isaiah to reassure King Ahaz not to fear."],
+    "Isaiah 7:7": ["God's Promise of Protection", "The Lord declares that the enemy plan will not succeed."],
+    "Isaiah 7:10": ["Offer of a Sign", "God invites Ahaz to ask for a sign."],
+    "Isaiah 7:12": ["Ahaz Refuses the Sign", "Ahaz refuses to ask for a sign from the Lord."],
+    "Isaiah 7:14": ["Sign of Immanuel", "A virgin will conceive and give birth to a son called Immanuel."],
+    "Isaiah 7:17": ["Warning of Judgment", "God warns that Assyria will bring trouble upon Judah."],
+    "Isaiah 7:20": ["Humiliation of the Nation", "Assyria will be used as an instrument of humiliation."],
+    "Isaiah 7:23": ["Desolation of the Land", "The land will become overgrown with thorns and briars."],
+
+    "Isaiah 8:1": ["The Birth of Maher-Shalal-Hash-Baz", "Isaiah is told to name his son as a sign of coming judgment."],
+    "Isaiah 8:5": ["Assyria as Judgment", "God warns that Assyria will sweep through Judah like a flood."],
+    "Isaiah 8:8": ["Land of Immanuel", "The invading army will reach even to Judah, the land of Immanuel."],
+    "Isaiah 8:11": ["Fear God Alone", "God warns Isaiah not to follow the fear of the people."],
+    "Isaiah 8:13": ["The Lord as Holy", "The Lord alone should be feared and honored."],
+    "Isaiah 8:14": ["Stone of Stumbling", "God will become a stone of stumbling for Israel."],
+    "Isaiah 8:16": ["Preserving the Testimony", "The message of God is to be sealed among the disciples."],
+    "Isaiah 8:19": ["Warning Against False Guidance", "People are warned not to consult mediums and spirits."],
+    "Isaiah 8:20": ["Seek God's Word", "People must turn to God's law and testimony for guidance."],
+    "Isaiah 8:22": ["Darkness and Distress", "Those who reject God will face deep darkness and distress."],
+
+    "Isaiah 9:1": ["Light in the Darkness", "A great light will shine on those living in darkness."],
+    "Isaiah 9:3": ["Joy for the Nation", "God will increase the joy of the people."],
+    "Isaiah 9:4": ["Freedom from Oppression", "The burden of oppression will be broken."],
+    "Isaiah 9:6": ["Child Born to Us", "A child will be born who will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace."],
+    "Isaiah 9:7": ["Eternal Kingdom", "His government and peace will never end."],
+    "Isaiah 9:8": ["Judgment on Israel", "God sends a message of judgment against Israel."],
+    "Isaiah 9:13": ["People Do Not Repent", "Despite punishment the people do not turn back to the Lord."],
+    "Isaiah 9:16": ["Leaders Mislead", "The leaders guide the people in the wrong direction."],
+    "Isaiah 9:18": ["Spread of Wickedness", "Wickedness spreads like a fire across the land."],
+    "Isaiah 9:21": ["Continued Anger of the Lord", "God's anger remains because of the people's sin."],
+
+    "Isaiah 10:1": ["Unjust Laws Condemned", "Woe to those who make unjust laws and oppress the poor."],
+    "Isaiah 10:5": ["Assyria as God's Instrument", "Assyria is described as the rod of God's anger."],
+    "Isaiah 10:7": ["Pride of Assyria", "The king of Assyria does not realize he is being used by God."],
+    "Isaiah 10:12": ["Judgment on Assyria", "After using Assyria, God will punish its pride."],
+    "Isaiah 10:15": ["Tool in God's Hand", "An axe cannot boast against the one who uses it."],
+    "Isaiah 10:20": ["Faithful Remnant", "A remnant of Israel will return to the Lord."],
+    "Isaiah 10:24": ["Encouragement to Zion", "God tells His people not to fear the Assyrians."],
+    "Isaiah 10:27": ["Burden Removed", "The oppression will be broken."],
+    "Isaiah 10:33": ["God Humbles the Proud", "The Lord will cut down the proud like tall trees."],
+
+    "Isaiah 11:1": ["The Shoot from Jesse", "A shoot will come from the stump of Jesse."],
+    "Isaiah 11:2": ["Spirit of the Lord", "The Spirit of the Lord will rest upon Him."],
+    "Isaiah 11:4": ["Righteous Judge", "He will judge with righteousness and justice."],
+    "Isaiah 11:6": ["Peaceful Kingdom", "The wolf will live with the lamb."],
+    "Isaiah 11:8": ["Harmony in Creation", "Even a child will safely play near a cobra's den."],
+    "Isaiah 11:9": ["Earth Filled with Knowledge", "The earth will be full of the knowledge of the Lord."],
+    "Isaiah 11:10": ["Root of Jesse", "The nations will seek the Root of Jesse."],
+    "Isaiah 11:11": ["Return of the Remnant", "God will gather His people from many nations."],
+    "Isaiah 11:16": ["Highway for the Remnant", "A highway will be prepared for the returning people."],
+
+    "Isaiah 12:1": ["Song of Thanksgiving", "The people will praise the Lord for His salvation."],
+    "Isaiah 12:2": ["God My Salvation", "The Lord is my strength and my song."],
+    "Isaiah 12:3": ["Joyful Salvation", "With joy people will draw water from the wells of salvation."],
+    "Isaiah 12:4": ["Praise the Lord", "Give thanks to the Lord and proclaim His deeds."],
+    "Isaiah 12:5": ["Sing to the Lord", "Sing praises because He has done glorious things."],
+    "Isaiah 12:6": ["Great Is the Holy One", "Shout for joy because the Holy One of Israel is among you."],
+
+    "Isaiah 13:1": ["Burden Against Babylon", "Isaiah receives a prophecy concerning Babylon."],
+    "Isaiah 13:3": ["Army for Judgment", "God calls mighty warriors to execute His judgment."],
+    "Isaiah 13:6": ["Day of the Lord", "The day of the Lord is near bringing destruction."],
+    "Isaiah 13:9": ["Day of Wrath", "The day of the Lord comes with fierce anger."],
+    "Isaiah 13:10": ["Cosmic Disturbance", "The sun, moon, and stars will be darkened."],
+    "Isaiah 13:11": ["Punishment for Pride", "God will punish the world for its evil and pride."],
+    "Isaiah 13:17": ["Medes Rise Against Babylon", "The Medes will be stirred up against Babylon."],
+    "Isaiah 13:19": ["Fall of Babylon", "Babylon will become like Sodom and Gomorrah."],
+    "Isaiah 13:20": ["Desolate City", "Babylon will never again be inhabited."],
+
+    "Isaiah 14:1": ["Restoration of Israel", "The Lord will again choose Israel and settle them in their land."],
+    "Isaiah 14:3": ["Song of Triumph", "Israel will taunt the fallen king of Babylon."],
+    "Isaiah 14:4": ["Fall of the Oppressor", "The tyrant who oppressed nations is brought low."],
+    "Isaiah 14:12": ["Fall of the Morning Star", "How the shining one has fallen from heaven."],
+    "Isaiah 14:13": ["Prideful Ambition", "The king sought to exalt himself above God."],
+    "Isaiah 14:15": ["Fall to the Grave", "Instead he is brought down to the depths of the pit."],
+    "Isaiah 14:24": ["God's Plan for Assyria", "The Lord declares His plan against Assyria."],
+    "Isaiah 14:29": ["Warning to Philistia", "Philistia is warned not to rejoice over Judah's troubles."],
+
+    "Isaiah 15:1": ["Judgment on Moab", "Moab is suddenly destroyed in a night."],
+    "Isaiah 15:2": ["Moab's Mourning", "The people go to their temples and high places to weep."],
+    "Isaiah 15:5": ["Isaiah's Compassion", "Isaiah's heart cries out for Moab."],
+    "Isaiah 15:6": ["Land in Desolation", "The waters dry up and the land becomes barren."],
+    "Isaiah 15:8": ["Crying Throughout the Land", "The cries of Moab are heard throughout the land."],
+    "Isaiah 15:9": ["Blood and Judgment", "The waters of Dimon are filled with blood and further judgment is coming."],
+
+    "Isaiah 16:1": ["Appeal for Mercy", "Moab is urged to send tribute to the ruler in Zion."],
+    "Isaiah 16:3": ["Shelter for Refugees", "Moab is asked to give refuge to the fugitives."],
+    "Isaiah 16:5": ["Throne Established in Mercy", "A throne will be established in faithfulness in the house of David."],
+    "Isaiah 16:6": ["Pride of Moab", "Moab's pride and arrogance are exposed."],
+    "Isaiah 16:9": ["Isaiah Weeps for Moab", "Isaiah mourns for the destruction of Moab's vineyards."],
+    "Isaiah 16:11": ["Inner Grief", "Isaiah's heart mourns deeply for Moab."],
+    "Isaiah 16:13": ["Prophecy Against Moab", "This is the message the Lord spoke earlier about Moab."],
+    "Isaiah 16:14": ["Moab's Glory Ends", "Within three years Moab's glory will fade."],
+
+    "Isaiah 17:1": ["Burden Against Damascus", "Damascus will cease to be a city and become a heap of ruins."],
+    "Isaiah 17:3": ["Fall of Israel's Strength", "The fortress of Ephraim will disappear."],
+    "Isaiah 17:4": ["Weakness of Jacob", "The glory of Jacob will fade."],
+    "Isaiah 17:6": ["Small Remnant", "Only a few people will remain like olives left after harvest."],
+    "Isaiah 17:7": ["People Look to God", "In that day people will look to their Maker."],
+    "Isaiah 17:8": ["Abandoning Idols", "They will no longer trust in idols made by their hands."],
+    "Isaiah 17:10": ["Forgetting God", "They forgot the God of their salvation."],
+    "Isaiah 17:12": ["Nations in Turmoil", "Many nations roar like the sea."],
+    "Isaiah 17:14": ["Sudden Judgment", "God rebukes the nations and they vanish quickly."],
+
+    "Isaiah 18:1": ["Land Beyond the Rivers", "A message is given concerning a land beyond the rivers of Cush."],
+    "Isaiah 18:2": ["Swift Messengers", "Envoys travel by sea in swift boats."],
+    "Isaiah 18:3": ["Signal to the Nations", "All nations are called to watch when the signal is raised."],
+    "Isaiah 18:4": ["God Watches Quietly", "The Lord observes quietly like heat in sunshine."],
+    "Isaiah 18:5": ["Judgment Before Harvest", "God cuts down the branches before harvest."],
+    "Isaiah 18:6": ["Defeat of the Proud", "The defeated are left for birds and animals."],
+    "Isaiah 18:7": ["Gift Brought to the Lord", "People from a powerful nation will bring gifts to the Lord in Zion."],
+
+    "Isaiah 19:1": ["Burden Against Egypt", "The Lord rides on a swift cloud and comes to judge Egypt."],
+    "Isaiah 19:3": ["Confusion in Egypt", "The wisdom of Egypt will fail and the people will seek idols."],
+    "Isaiah 19:5": ["Drying of the Nile", "The waters of the Nile will dry up causing hardship."],
+    "Isaiah 19:11": ["Foolish Counsel", "The wise advisers of Pharaoh give foolish advice."],
+    "Isaiah 19:16": ["Fear of the Lord", "Egypt will tremble because of the Lord's hand."],
+    "Isaiah 19:18": ["Cities Turn to the Lord", "Some cities in Egypt will speak the language of Canaan."],
+    "Isaiah 19:19": ["Altar to the Lord", "An altar to the Lord will be established in Egypt."],
+    "Isaiah 19:21": ["Egypt Worships the Lord", "Egypt will know the Lord and worship Him."],
+    "Isaiah 19:23": ["Peace Among Nations", "A highway will connect Egypt, Assyria, and Israel."],
+    "Isaiah 19:24": ["Blessing to the World", "Israel will join Egypt and Assyria as a blessing."],
+    "Isaiah 19:25": ["God's People Among Nations", "God calls Egypt His people and Assyria the work of His hands."],
+
+    "Isaiah 20:1": ["Assyria Attacks Ashdod", "The commander of Assyria captures the city of Ashdod."],
+    "Isaiah 20:2": ["Isaiah's Symbolic Action", "God tells Isaiah to walk barefoot and without his outer garment."],
+    "Isaiah 20:3": ["Three-Year Sign", "Isaiah's action becomes a sign concerning Egypt and Cush."],
+    "Isaiah 20:4": ["Captivity of Egypt and Cush", "The king of Assyria will lead Egypt and Cush away as captives."],
+    "Isaiah 20:5": ["Fear of the Nations", "People who trusted Egypt will be afraid."],
+    "Isaiah 20:6": ["False Trust Exposed", "Those who relied on Egypt will realize their trust was misplaced."],
+
+    "Isaiah 21:1": ["Burden Against Babylon", "A vision describes the fall of Babylon."],
+    "Isaiah 21:2": ["Vision of Destruction", "The prophet sees betrayal and destruction coming."],
+    "Isaiah 21:5": ["Prepare for Battle", "Leaders prepare shields and watch for the enemy."],
+    "Isaiah 21:6": ["Watchman on the Tower", "A watchman is stationed to observe what is coming."],
+    "Isaiah 21:9": ["Fall of Babylon", "Babylon has fallen and its idols are shattered."],
+    "Isaiah 21:11": ["Burden Against Edom", "A voice from Edom asks how long the night will last."],
+    "Isaiah 21:12": ["Watchman's Reply", "Morning comes but night will return again."],
+    "Isaiah 21:13": ["Burden Against Arabia", "Arabian tribes will flee into the desert."],
+    "Isaiah 21:16": ["Fall of Kedar", "Within a year the glory of Kedar will disappear."],
+
+    "Isaiah 22:1": ["Burden Against the Valley of Vision", "A prophecy is given concerning Jerusalem, called the Valley of Vision."],
+    "Isaiah 22:5": ["Day of Trouble", "The Lord brings a day of panic and confusion upon Jerusalem."],
+    "Isaiah 22:8": ["Defenses of the City", "The people prepare weapons and defenses instead of trusting God."],
+    "Isaiah 22:11": ["Ignoring the Lord", "They make plans for protection but do not look to the Lord."],
+    "Isaiah 22:12": ["Call to Repentance", "God calls the people to weep and mourn."],
+    "Isaiah 22:13": ["Careless Attitude", "Instead of repentance the people choose pleasure."],
+    "Isaiah 22:15": ["Message to Shebna", "God rebukes Shebna, the palace steward."],
+    "Isaiah 22:19": ["Removal from Office", "Shebna will be removed from his position."],
+    "Isaiah 22:20": ["Eliakim Appointed", "Eliakim will replace Shebna as leader."],
+    "Isaiah 22:22": ["Key of David", "Eliakim will be given authority over the house of David."],
+    "Isaiah 22:25": ["Fall of the Peg", "Even the secure position will eventually give way."],
+
+    "Isaiah 23:1": ["Burden Against Tyre", "A prophecy announces the destruction of Tyre."],
+    "Isaiah 23:4": ["Sidon's Shame", "Sidon mourns because of Tyre's downfall."],
+    "Isaiah 23:7": ["Ancient City Humbled", "The once joyful city of Tyre will be brought low."],
+    "Isaiah 23:8": ["God's Plan Against Tyre", "The Lord has planned Tyre's downfall to humble pride."],
+    "Isaiah 23:11": ["God Stretches His Hand", "The Lord stretches His hand over the sea to destroy kingdoms."],
+    "Isaiah 23:15": ["Tyre Forgotten", "Tyre will be forgotten for seventy years."],
+    "Isaiah 23:17": ["Restoration of Tyre", "After seventy years Tyre will return to trade."],
+    "Isaiah 23:18": ["Wealth for the Lord", "Tyre's wealth will ultimately belong to the Lord."],
+
+    "Isaiah 24:1": ["Judgment on the Earth", "The Lord will lay waste to the earth and scatter its inhabitants."],
+    "Isaiah 24:4": ["The Earth Mourns", "The earth dries up and withers under judgment."],
+    "Isaiah 24:5": ["Broken Covenant", "The earth is defiled because people have broken God's laws."],
+    "Isaiah 24:10": ["City of Chaos", "The city is left desolate and empty."],
+    "Isaiah 24:13": ["Small Remnant", "Only a few remain like olives after harvest."],
+    "Isaiah 24:14": ["Songs of Praise", "Some people praise the Lord even in the midst of judgment."],
+    "Isaiah 24:19": ["Earth Shaken", "The earth is violently broken and shaken."],
+    "Isaiah 24:21": ["Punishment of the Proud", "God will punish both heavenly and earthly rulers."],
+    "Isaiah 24:23": ["Lord Reigns in Zion", "The Lord will reign gloriously on Mount Zion."],
+
+    "Isaiah 25:1": ["Praise to God", "Isaiah praises the Lord for His wonderful plans and faithful works."],
+    "Isaiah 25:2": ["City Brought Low", "God has turned a strong city into ruins."],
+    "Isaiah 25:4": ["Refuge for the Poor", "The Lord is a refuge for the poor and needy in their distress."],
+    "Isaiah 25:6": ["Feast on God's Mountain", "The Lord will prepare a great feast for all nations on His holy mountain."],
+    "Isaiah 25:7": ["Removal of the Veil", "God will remove the covering that separates the nations."],
+    "Isaiah 25:8": ["Death Swallowed Up", "The Lord will swallow up death forever and wipe away every tear."],
+    "Isaiah 25:9": ["Joy in Salvation", "People will rejoice because the Lord has saved them."],
+    "Isaiah 25:10": ["Judgment on Moab", "Moab will be trampled down under God's judgment."],
+
+    "Isaiah 26:1": ["Song of Salvation", "A song will be sung in Judah celebrating God's salvation."],
+    "Isaiah 26:2": ["Open the Gates", "The righteous nation is invited to enter the city."],
+    "Isaiah 26:3": ["Perfect Peace", "God keeps in perfect peace those who trust in Him."],
+    "Isaiah 26:4": ["Trust in the Lord", "Trust in the Lord forever because He is the eternal Rock."],
+    "Isaiah 26:7": ["Path of the Righteous", "The path of the righteous is made smooth by God."],
+    "Isaiah 26:9": ["Seeking God", "The people long for the Lord and desire His ways."],
+    "Isaiah 26:12": ["God Gives Peace", "The Lord grants peace and accomplishes what His people do."],
+    "Isaiah 26:16": ["Prayer in Trouble", "The people seek the Lord during times of trouble."],
+    "Isaiah 26:19": ["Hope of Resurrection", "The dead will live again and rise with joy."],
+    "Isaiah 26:20": ["Wait for God's Protection", "God's people are told to hide until His anger passes."],
+
+    "Isaiah 27:1": ["Defeat of Leviathan", "The Lord will punish the great sea monster Leviathan."],
+    "Isaiah 27:2": ["Song of the Vineyard", "God speaks about His vineyard that He watches over."],
+    "Isaiah 27:3": ["God Guards His People", "The Lord waters and protects His vineyard continually."],
+    "Isaiah 27:6": ["Israel Will Flourish", "Israel will take root and fill the world with fruit."],
+    "Isaiah 27:8": ["Measured Judgment", "God disciplines His people but with restraint."],
+    "Isaiah 27:9": ["Removal of Sin", "Jacob's guilt will be removed when idols are destroyed."],
+    "Isaiah 27:12": ["Gathering of Israel", "The Lord will gather His people one by one."],
+    "Isaiah 27:13": ["Return to Worship", "Those scattered will return to worship the Lord in Jerusalem."],
+
+    "Isaiah 28:1": ["Woe to Ephraim", "A warning is given to the proud leaders of Ephraim who are drunk with pride."],
+    "Isaiah 28:5": ["The Lord as a Crown", "The Lord will become a crown of glory for the faithful remnant."],
+    "Isaiah 28:7": ["Corrupt Leaders", "Priests and prophets stagger because of wine and fail in judgment."],
+    "Isaiah 28:9": ["Mocking God's Message", "The people mock God's teaching as if it were childish."],
+    "Isaiah 28:11": ["Foreign Tongues as Judgment", "God will speak to them through foreign lips and strange tongues."],
+    "Isaiah 28:14": ["Leaders of Jerusalem Rebuked", "The rulers of Jerusalem who mock God are warned."],
+    "Isaiah 28:16": ["Cornerstone in Zion", "God lays a precious cornerstone in Zion for a sure foundation."],
+    "Isaiah 28:17": ["Justice as the Standard", "God will measure everything with justice and righteousness."],
+    "Isaiah 28:23": ["Parable of the Farmer", "Isaiah compares God's wisdom to a farmer who knows how to cultivate properly."],
+
+    "Isaiah 29:1": ["Woe to Ariel", "Jerusalem, called Ariel, will face distress and siege."],
+    "Isaiah 29:4": ["City Brought Low", "Jerusalem will be humbled and speak from the dust."],
+    "Isaiah 29:5": ["Enemies Defeated", "The enemies of Jerusalem will vanish suddenly like fine dust."],
+    "Isaiah 29:9": ["Spiritual Blindness", "The people are spiritually blind and confused."],
+    "Isaiah 29:11": ["Sealed Vision", "God's revelation becomes like a sealed book to the people."],
+    "Isaiah 29:13": ["Empty Worship", "The people honor God with their lips but their hearts are far from Him."],
+    "Isaiah 29:14": ["God's Wonderful Work", "God will perform a marvelous work that confounds human wisdom."],
+    "Isaiah 29:17": ["Future Restoration", "The humble will rejoice and the deaf will hear."],
+    "Isaiah 29:22": ["Jacob's Redemption", "Jacob will no longer be ashamed because God will redeem His people."],
+
+    "Isaiah 30:1": ["Rebellious Children", "God rebukes those who seek help from Egypt instead of trusting Him."],
+    "Isaiah 30:6": ["Foolish Alliance", "The alliance with Egypt is described as useless and dangerous."],
+    "Isaiah 30:8": ["Record of Rebellion", "Isaiah is told to write down the people's rebellion as a witness."],
+    "Isaiah 30:9": ["People Reject Truth", "The people refuse to listen to the Lord's instruction."],
+    "Isaiah 30:15": ["Salvation Through Trust", "Salvation comes through repentance, quietness, and trust."],
+    "Isaiah 30:18": ["God's Compassion", "The Lord waits to show mercy to His people."],
+    "Isaiah 30:20": ["Teachers Revealed", "God will guide His people and they will hear His voice."],
+    "Isaiah 30:23": ["Blessings After Restoration", "God promises rain, harvest, and abundance."],
+    "Isaiah 30:27": ["The Lord Comes in Judgment", "The Lord comes with burning anger to judge His enemies."],
+
+    "Isaiah 31:1": ["Warning Against Trusting Egypt", "Woe to those who go down to Egypt for help and rely on horses instead of trusting the Lord."],
+    "Isaiah 31:3": ["Egypt's Weakness", "Egyptians are human and their horses are flesh, not spirit."],
+    "Isaiah 31:4": ["God as Protector", "The Lord will come down to fight for Mount Zion like a lion defending its prey."],
+    "Isaiah 31:5": ["God Defends Jerusalem", "Like birds hovering overhead, the Lord will shield and rescue Jerusalem."],
+    "Isaiah 31:6": ["Call to Return to God", "The people of Israel are urged to return to the Lord whom they have rejected."],
+    "Isaiah 31:7": ["Rejection of Idols", "In that day people will throw away their idols of silver and gold."],
+    "Isaiah 31:8": ["Fall of Assyria", "Assyria will fall by a sword not made by human hands."],
+
+    "Isaiah 32:1": ["Righteous King", "A king will reign in righteousness and rulers will govern with justice."],
+    "Isaiah 32:2": ["Protection and Refuge", "Each leader will be like a shelter from the wind and a refuge from the storm."],
+    "Isaiah 32:3": ["Clear Understanding", "The eyes of those who see will no longer be blind."],
+    "Isaiah 32:5": ["Fools Exposed", "Fools will no longer be called noble nor scoundrels respected."],
+    "Isaiah 32:9": ["Warning to Complacent Women", "Careless women are warned about coming trouble."],
+    "Isaiah 32:13": ["Land in Desolation", "Thorns and briars will grow in the land because of judgment."],
+    "Isaiah 32:15": ["Spirit Poured Out", "The Spirit will be poured out from on high bringing renewal."],
+    "Isaiah 32:16": ["Justice and Righteousness", "Justice will dwell in the wilderness and righteousness in the fertile field."],
+    "Isaiah 32:17": ["Peace Through Righteousness", "The result of righteousness will be peace and quiet confidence."],
+    "Isaiah 32:18": ["Secure Dwelling", "God's people will live in peaceful and secure homes."],
+
+    "Isaiah 33:1": ["Woe to the Destroyer", "Woe to those who destroy others but will themselves be destroyed."],
+    "Isaiah 33:2": ["Prayer for Mercy", "The people cry out asking the Lord to be their strength and salvation."],
+    "Isaiah 33:5": ["The Lord Exalted", "The Lord is exalted and fills Zion with justice and righteousness."],
+    "Isaiah 33:6": ["Stability Through Wisdom", "Wisdom and knowledge will be the stability of the times."],
+    "Isaiah 33:10": ["God Arises", "The Lord declares that He will rise up and act."],
+    "Isaiah 33:14": ["Fear Among Sinners", "Sinners in Zion tremble at the consuming fire of God's holiness."],
+    "Isaiah 33:15": ["Righteous Character", "Those who walk righteously and speak truth will dwell securely."],
+    "Isaiah 33:17": ["Vision of the King", "People will see the King in His beauty."],
+    "Isaiah 33:20": ["Jerusalem Secure", "Jerusalem will be a peaceful and secure city."],
+    "Isaiah 33:22": ["The Lord Our King", "The Lord is our judge, lawgiver, and king."],
+    "Isaiah 33:24": ["Forgiveness and Healing", "The people living in Zion will be forgiven of their sins."],
+
+    "Isaiah 34:1": ["Judgment on the Nations", "The nations are called to listen as the Lord announces judgment on the world."],
+    "Isaiah 34:2": ["God's Wrath", "The Lord's anger is against all nations and their armies."],
+    "Isaiah 34:5": ["Sword of the Lord", "God's sword is prepared in heaven to bring judgment on Edom."],
+    "Isaiah 34:8": ["Day of Vengeance", "It is the day of the Lord's vengeance for Zion."],
+    "Isaiah 34:9": ["Land Turned to Burning Pitch", "Edom's streams will turn into burning pitch and its dust into sulfur."],
+    "Isaiah 34:10": ["Desolation Forever", "The land will burn night and day and remain desolate forever."],
+    "Isaiah 34:11": ["Wild Creatures Occupy the Land", "Owls, ravens, and wild animals will live in the ruins."],
+    "Isaiah 34:16": ["Certainty of God's Word", "The scroll of the Lord confirms that these things will happen."],
+
+    "Isaiah 35:1": ["Joyful Restoration", "The desert and wilderness will rejoice and blossom."],
+    "Isaiah 35:3": ["Strength for the Weak", "Strengthen the weak hands and steady the trembling knees."],
+    "Isaiah 35:4": ["God Comes to Save", "God will come with vengeance and save His people."],
+    "Isaiah 35:5": ["Healing Miracles", "The eyes of the blind will be opened and the ears of the deaf unstopped."],
+    "Isaiah 35:6": ["Joyful Transformation", "The lame will leap like a deer and the mute will shout for joy."],
+    "Isaiah 35:8": ["The Highway of Holiness", "A holy road will be prepared for the redeemed to walk on."],
+    "Isaiah 35:9": ["Safe Journey", "No dangerous beast will be found on this road."],
+    "Isaiah 35:10": ["Return to Zion", "The redeemed will return to Zion with everlasting joy."],
+
+    "Isaiah 36:1": ["Assyrian Invasion", "King Sennacherib of Assyria attacks the fortified cities of Judah."],
+    "Isaiah 36:2": ["Rabshakeh's Challenge", "The Assyrian commander confronts Jerusalem with a message of intimidation."],
+    "Isaiah 36:4": ["Questioning Judah's Trust", "Rabshakeh mocks Judah for trusting in Egypt and in the Lord."],
+    "Isaiah 36:7": ["Mocking Faith", "He falsely claims that Hezekiah removed God's altars."],
+    "Isaiah 36:13": ["Public Threat", "Rabshakeh speaks loudly to the people in Hebrew to frighten them."],
+    "Isaiah 36:15": ["Discouraging Trust in God", "He tells the people not to believe that the Lord will rescue them."],
+    "Isaiah 36:18": ["Comparison with Other Nations", "He claims no god has saved any nation from Assyria."],
+    "Isaiah 36:21": ["People Remain Silent", "The people remain silent as King Hezekiah commanded."],
+
+    "Isaiah 37:1": ["Hezekiah Seeks God", "King Hezekiah tears his clothes and goes to the temple when he hears the Assyrian threats."],
+    "Isaiah 37:5": ["Message Through Isaiah", "Isaiah tells Hezekiah that God has heard the blasphemy of Assyria."],
+    "Isaiah 37:16": ["Hezekiah's Prayer", "Hezekiah prays to the Lord asking Him to deliver Jerusalem."],
+    "Isaiah 37:21": ["God's Answer", "The Lord sends a message through Isaiah promising judgment on Assyria."],
+    "Isaiah 37:29": ["God Rebukes Assyria", "God declares that Assyria's pride will be restrained."],
+    "Isaiah 37:33": ["Promise of Protection", "God promises that the Assyrian king will not enter Jerusalem."],
+    "Isaiah 37:36": ["Angel Defeats Assyria", "The angel of the Lord strikes down the Assyrian army."],
+    "Isaiah 37:38": ["Death of Sennacherib", "Sennacherib is later killed by his own sons."],
+
+    "Isaiah 38:1": ["Hezekiah's Illness", "King Hezekiah becomes sick and is told he will die."],
+    "Isaiah 38:2": ["Prayer for Mercy", "Hezekiah prays to the Lord and weeps bitterly."],
+    "Isaiah 38:5": ["God Extends His Life", "God promises to add fifteen years to Hezekiah's life."],
+    "Isaiah 38:7": ["Sign from the Lord", "God gives a sign by making the shadow go backward."],
+    "Isaiah 38:10": ["Hezekiah's Reflection", "Hezekiah writes about his sorrow during illness."],
+    "Isaiah 38:17": ["Gratitude for Healing", "Hezekiah thanks God for rescuing him from death."],
+    "Isaiah 38:19": ["Praise to God", "The living praise the Lord and declare His faithfulness."],
+
+    "Isaiah 39:1": ["Babylonian Envoys", "Messengers from Babylon visit Hezekiah after his recovery."],
+    "Isaiah 39:2": ["Hezekiah Shows His Treasures", "Hezekiah proudly shows all his wealth to the visitors."],
+    "Isaiah 39:3": ["Isaiah Questions the King", "Isaiah asks Hezekiah about the visitors and what they saw."],
+    "Isaiah 39:5": ["Prophecy of Exile", "Isaiah announces that Babylon will carry away Judah's treasures."],
+    "Isaiah 39:7": ["Future Captivity", "Some of Hezekiah's descendants will serve in the palace of Babylon."],
+
+    "Isaiah 40:1": ["Comfort for God's People", "God speaks words of comfort to His people."],
+    "Isaiah 40:3": ["Voice in the Wilderness", "A voice calls to prepare the way for the Lord."],
+    "Isaiah 40:5": ["Revelation of God's Glory", "The glory of the Lord will be revealed to all people."],
+    "Isaiah 40:8": ["Enduring Word", "The grass withers but the word of God stands forever."],
+    "Isaiah 40:10": ["The Lord Comes with Power", "The Lord comes with strength and authority."],
+    "Isaiah 40:12": ["God's Greatness", "God measures the waters and the heavens with His hand."],
+    "Isaiah 40:18": ["God Above Idols", "No idol can compare to the greatness of God."],
+    "Isaiah 40:28": ["Everlasting God", "The Lord is the eternal Creator who never grows weary."],
+    "Isaiah 40:31": ["Strength for the Weary", "Those who hope in the Lord will renew their strength."],
+
+    "Isaiah 41:1": ["God Challenges the Nations", "The Lord calls the nations to stand before Him."],
+    "Isaiah 41:4": ["God Controls History", "The Lord declares that He directs the course of history."],
+    "Isaiah 41:8": ["Israel Chosen", "Israel is reminded that they are God's chosen servant."],
+    "Isaiah 41:10": ["Do Not Fear", "God promises to strengthen and uphold His people."],
+    "Isaiah 41:13": ["God Holds Their Hand", "The Lord says He will help them and tells them not to fear."],
+    "Isaiah 41:17": ["Help for the Needy", "God promises water and provision for the poor."],
+    "Isaiah 41:21": ["Challenge to Idols", "God challenges idols to prove their power."],
+    "Isaiah 41:29": ["Worthlessness of Idols", "All idols are declared empty and worthless."],
+
+    "Isaiah 42:1": ["God's Chosen Servant", "God presents His servant who will bring justice to the nations."],
+    "Isaiah 42:3": ["Gentle Servant", "The servant will not break a bruised reed or extinguish a faint flame."],
+    "Isaiah 42:5": ["God the Creator Speaks", "The Lord who created the heavens and earth declares His authority."],
+    "Isaiah 42:6": ["Light for the Nations", "The servant will be a covenant for the people and a light to the nations."],
+    "Isaiah 42:7": ["Freedom for the Captives", "He will open blind eyes and release prisoners from darkness."],
+    "Isaiah 42:8": ["God's Glory", "The Lord declares that He will not give His glory to idols."],
+    "Isaiah 42:10": ["Song of Praise", "A new song of praise is called from all the earth."],
+    "Isaiah 42:13": ["The Lord the Warrior", "The Lord goes forth like a mighty warrior."],
+    "Isaiah 42:16": ["Guidance for the Blind", "God promises to lead the blind on a path they do not know."],
+    "Isaiah 42:18": ["Spiritual Blindness", "Israel is described as blind and deaf to God's message."],
+
+    "Isaiah 43:1": ["Do Not Fear", "God tells Israel not to fear because He has redeemed them."],
+    "Isaiah 43:2": ["God's Protection", "When they pass through waters or fire God will be with them."],
+    "Isaiah 43:4": ["Precious to God", "Israel is precious and honored in God's sight."],
+    "Isaiah 43:7": ["Created for God's Glory", "God created His people for His glory."],
+    "Isaiah 43:10": ["God's Witnesses", "Israel is chosen to witness that the Lord is the only God."],
+    "Isaiah 43:13": ["God's Sovereign Power", "No one can deliver from God's hand."],
+    "Isaiah 43:16": ["God Makes a Way", "The Lord who made a path through the sea speaks again."],
+    "Isaiah 43:18": ["New Things Coming", "God says not to dwell on the past because He is doing something new."],
+    "Isaiah 43:19": ["Way in the Wilderness", "God will make a way in the wilderness and streams in the desert."],
+    "Isaiah 43:22": ["Israel's Unfaithfulness", "The people have not called upon the Lord."],
+    "Isaiah 43:25": ["God Forgives Sins", "God blots out sins for His own sake."],
+
+    "Isaiah 44:1": ["God Encourages Israel", "God calls Jacob His chosen servant."],
+    "Isaiah 44:3": ["Spirit Poured Out", "God promises to pour His Spirit like water on thirsty land."],
+    "Isaiah 44:6": ["God the Only King", "The Lord declares that He is the first and the last."],
+    "Isaiah 44:9": ["Foolishness of Idols", "Those who make idols are described as foolish."],
+    "Isaiah 44:13": ["Crafting an Idol", "A craftsman shapes wood to make an idol."],
+    "Isaiah 44:17": ["Worshiping the Idol", "People bow down to the idol they made."],
+    "Isaiah 44:21": ["Remember the Lord", "Israel is urged to remember that God formed them."],
+    "Isaiah 44:22": ["Sins Blotted Out", "God promises to wipe away sins like a cloud."],
+    "Isaiah 44:24": ["God the Creator", "The Lord alone created the heavens and the earth."],
+    "Isaiah 44:28": ["Cyrus Named", "God declares that Cyrus will fulfill His purpose and rebuild Jerusalem."],
+
+    "Isaiah 45:1": ["Cyrus Chosen by God", "The Lord calls Cyrus His anointed and says he will conquer nations and open gates."],
+    "Isaiah 45:3": ["Treasures of Darkness", "God promises to give hidden treasures so Cyrus will know the Lord."],
+    "Isaiah 45:5": ["The Only God", "The Lord declares that He alone is God and there is no other."],
+    "Isaiah 45:7": ["Creator of All", "God forms light and creates darkness and controls all things."],
+    "Isaiah 45:9": ["Warning Against Questioning God", "People are warned not to argue with their Creator."],
+    "Isaiah 45:12": ["God the Creator", "The Lord made the earth and created mankind."],
+    "Isaiah 45:14": ["Nations Will Submit", "Other nations will acknowledge that God is with Israel."],
+    "Isaiah 45:18": ["God Created the Earth to Be Inhabited", "The Lord formed the earth not to be empty but to be lived in."],
+    "Isaiah 45:22": ["Call to Salvation", "All the ends of the earth are invited to turn to God and be saved."],
+    "Isaiah 45:23": ["Every Knee Will Bow", "Every knee will bow and every tongue will confess allegiance to God."],
+
+    "Isaiah 46:1": ["Fall of Babylon's Idols", "The idols Bel and Nebo bow down and are carried away as burdens."],
+    "Isaiah 46:3": ["God Carries His People", "The Lord reminds Israel that He has carried them from birth."],
+    "Isaiah 46:4": ["God's Lifelong Care", "God promises to sustain and rescue His people even in old age."],
+    "Isaiah 46:5": ["No God Like the Lord", "No idol can compare to the Lord."],
+    "Isaiah 46:7": ["Idols Cannot Save", "People carry idols but they cannot answer or save."],
+    "Isaiah 46:8": ["Remember God's Power", "The people are urged to remember God's mighty works."],
+    "Isaiah 46:9": ["God Alone Is God", "The Lord declares that there is no other like Him."],
+    "Isaiah 46:10": ["God Declares the Future", "God announces the end from the beginning."],
+    "Isaiah 46:11": ["God's Plan Will Stand", "The Lord will accomplish everything He has planned."],
+    "Isaiah 46:12": ["Call to the Stubborn", "Those who are stubborn are urged to listen."],
+    "Isaiah 46:13": ["Salvation Near", "God promises that His righteousness and salvation are near."],
+
+    "Isaiah 47:1": ["Fall of Babylon", "Babylon is told to come down from her throne and sit in the dust."],
+    "Isaiah 47:5": ["Babylon Humbled", "Babylon will sit in silence and darkness."],
+    "Isaiah 47:6": ["Cruelty Toward God's People", "Babylon showed no mercy to God's people."],
+    "Isaiah 47:7": ["False Confidence", "Babylon believed she would rule forever."],
+    "Isaiah 47:8": ["Sudden Disaster", "Babylon will face sudden loss and destruction."],
+    "Isaiah 47:10": ["Pride and Deception", "Babylon trusted in her wisdom and wickedness."],
+    "Isaiah 47:12": ["Failure of Sorcery", "Babylon's sorcerers and astrologers will not save her."],
+    "Isaiah 47:14": ["Powerless Magicians", "Those who practiced magic will be burned like straw."],
+    "Isaiah 47:15": ["No One to Save Babylon", "All Babylon's allies will scatter and no one will rescue her."],
+
+    "Isaiah 48:1": ["Israel's Stubbornness", "God rebukes Israel for claiming His name but not living faithfully."],
+    "Isaiah 48:3": ["God Foretold Events", "The Lord declared things in advance before they happened."],
+    "Isaiah 48:6": ["New Things Revealed", "God now reveals new things that were hidden before."],
+    "Isaiah 48:9": ["God's Patience", "God restrains His anger for the sake of His name."],
+    "Isaiah 48:12": ["God the First and Last", "The Lord declares that He is the first and the last."],
+    "Isaiah 48:16": ["God Sends His Servant", "The Lord God and His Spirit have sent His servant."],
+    "Isaiah 48:17": ["God the Teacher", "The Lord teaches His people what is best for them."],
+    "Isaiah 48:18": ["Blessing Through Obedience", "If they had listened, their peace would be like a river."],
+    "Isaiah 48:20": ["Call to Leave Babylon", "God's people are called to leave Babylon with joy."],
+    "Isaiah 48:22": ["No Peace for the Wicked", "There is no peace for the wicked."],
+
+    "Isaiah 49:1": ["The Servant's Calling", "The servant of the Lord speaks about being called from the womb."],
+    "Isaiah 49:4": ["Discouragement of the Servant", "The servant feels his work seems in vain."],
+    "Isaiah 49:6": ["Light to the Nations", "The servant will bring salvation to the ends of the earth."],
+    "Isaiah 49:8": ["Time of Favor", "God promises help and restoration in the time of favor."],
+    "Isaiah 49:10": ["God Guides His People", "The Lord will guide them and lead them to springs of water."],
+    "Isaiah 49:13": ["Joyful Restoration", "Heaven and earth rejoice because the Lord comforts His people."],
+    "Isaiah 49:15": ["God's Unfailing Love", "God says He will not forget His people."],
+    "Isaiah 49:16": ["Written on God's Hands", "God declares that His people are engraved on His hands."],
+    "Isaiah 49:22": ["Nations Help Israel", "Nations will bring Israel's children back."],
+    "Isaiah 49:25": ["God the Deliverer", "The Lord promises to rescue His people from their enemies."],
+
+    "Isaiah 50:1": ["Israel's Separation Explained", "God explains that Israel's sins caused their separation from Him."],
+    "Isaiah 50:2": ["God's Power Questioned", "The Lord asks why no one responded when He called."],
+    "Isaiah 50:4": ["The Obedient Servant", "The servant is given a tongue to speak encouragement to the weary."],
+    "Isaiah 50:5": ["Servant's Obedience", "The servant listens to God and does not rebel."],
+    "Isaiah 50:6": ["Servant Suffers", "The servant gives his back to those who strike him and does not hide from shame."],
+    "Isaiah 50:7": ["Confidence in God", "The servant trusts the Lord to help him."],
+    "Isaiah 50:8": ["God the Defender", "The servant declares that the Lord will vindicate him."],
+    "Isaiah 50:10": ["Trust in the Lord", "Those who fear the Lord should trust in Him even in darkness."],
+    "Isaiah 50:11": ["Warning to the Wicked", "Those who rely on their own light will lie down in torment."],
+
+    "Isaiah 51:1": ["Look to Abraham", "The people are urged to look to Abraham and Sarah as examples of God's blessing."],
+    "Isaiah 51:3": ["Comfort for Zion", "The Lord will comfort Zion and make her deserts like Eden."],
+    "Isaiah 51:4": ["God's Justice", "God's law and justice will be a light to the nations."],
+    "Isaiah 51:6": ["Eternal Salvation", "The heavens will vanish but God's salvation will last forever."],
+    "Isaiah 51:7": ["Fear Not", "Those who know righteousness should not fear human insults."],
+    "Isaiah 51:9": ["Call for God's Power", "The people call for the Lord to awaken His mighty arm."],
+    "Isaiah 51:11": ["Return to Zion", "The redeemed will return to Zion with singing and everlasting joy."],
+    "Isaiah 51:12": ["God the Comforter", "The Lord comforts His people so they need not fear humans."],
+    "Isaiah 51:17": ["Jerusalem's Suffering", "Jerusalem has drunk the cup of God's wrath."],
+    "Isaiah 51:22": ["Cup of Wrath Removed", "God promises to remove the cup of wrath from Jerusalem."],
+
+    "Isaiah 52:1": ["Awake, Zion", "Jerusalem is called to awaken and clothe herself with strength."],
+    "Isaiah 52:3": ["Redemption Without Payment", "God declares that His people will be redeemed without money."],
+    "Isaiah 52:7": ["Beautiful Messenger", "Beautiful are the feet of those who bring good news of peace."],
+    "Isaiah 52:9": ["Joyful Celebration", "The ruins of Jerusalem are told to sing for joy."],
+    "Isaiah 52:10": ["Salvation Revealed", "The Lord reveals His salvation to all nations."],
+    "Isaiah 52:11": ["Call to Leave Babylon", "God's people are told to depart and remain pure."],
+    "Isaiah 52:13": ["Exaltation of the Servant", "God's servant will be exalted and lifted up."],
+    "Isaiah 52:14": ["Servant's Suffering", "Many are shocked at how marred the servant appears."],
+    "Isaiah 52:15": ["Astonishing the Nations", "The servant will sprinkle many nations and kings will be silent."],
+
+    "Isaiah 53:1": ["Who Believed the Message", "Few believe the message about the Lord's servant."],
+    "Isaiah 53:2": ["Humble Appearance", "The servant grows up without outward beauty or majesty."],
+    "Isaiah 53:3": ["Rejected Servant", "He is despised and rejected, a man of sorrows."],
+    "Isaiah 53:4": ["Bearing Our Sorrows", "He carries our griefs and sorrows."],
+    "Isaiah 53:5": ["Wounded for Our Sins", "He is pierced for our transgressions and brings us peace."],
+    "Isaiah 53:6": ["All Have Gone Astray", "All people have turned away but the Lord laid our sins on Him."],
+    "Isaiah 53:7": ["Silent Before Suffering", "Like a lamb led to slaughter, He does not open His mouth."],
+    "Isaiah 53:9": ["Buried with the Rich", "Though innocent, He is assigned a grave with the wicked."],
+    "Isaiah 53:10": ["God's Purpose Through Suffering", "The Lord's will prospers through the servant's sacrifice."],
+    "Isaiah 53:11": ["Justifying Many", "The servant will justify many and bear their sins."],
+    "Isaiah 53:12": ["Exalted After Suffering", "Because He bore the sin of many, He will be honored."],
+
+    "Isaiah 54:1": ["Joyful Restoration", "The barren woman is told to sing because her family will grow."],
+    "Isaiah 54:4": ["No More Shame", "God tells His people not to fear shame anymore."],
+    "Isaiah 54:5": ["The Lord as Husband", "The Creator is described as the husband of His people."],
+    "Isaiah 54:7": ["Compassionate Return", "God says He forsook them briefly but will gather them with compassion."],
+    "Isaiah 54:9": ["Covenant of Peace", "God promises His covenant of peace will not be removed."],
+    "Isaiah 54:11": ["Beautiful Restoration", "Jerusalem will be rebuilt with precious stones."],
+    "Isaiah 54:13": ["Children Taught by God", "All children will be taught by the Lord and have great peace."],
+    "Isaiah 54:14": ["Security in Righteousness", "The people will be established in righteousness and free from fear."],
+    "Isaiah 54:17": ["No Weapon Will Succeed", "No weapon formed against God's people will prevail."],
+
+    "Isaiah 55:1": ["Invitation to the Thirsty", "Everyone who is thirsty is invited to come and receive freely."],
+    "Isaiah 55:3": ["Everlasting Covenant", "God promises an everlasting covenant like the one given to David."],
+    "Isaiah 55:6": ["Seek the Lord", "People are urged to seek the Lord while He may be found."],
+    "Isaiah 55:7": ["Turn from Wickedness", "The wicked are called to abandon their ways and return to God."],
+    "Isaiah 55:8": ["God's Higher Ways", "God's thoughts and ways are higher than human thoughts."],
+    "Isaiah 55:10": ["Power of God's Word", "God's word is like rain that accomplishes its purpose."],
+    "Isaiah 55:12": ["Joyful Departure", "God's people will go out with joy and be led in peace."],
+    "Isaiah 55:13": ["Transformation of the Land", "Thorns will be replaced by cypress trees as a sign of God's blessing."],
+
+    "Isaiah 56:1": ["Keep Justice and Righteousness", "The Lord calls people to maintain justice because His salvation is near."],
+    "Isaiah 56:3": ["Welcome for Foreigners", "Foreigners who follow the Lord will not be excluded from His people."],
+    "Isaiah 56:4": ["Blessing for the Faithful", "Those who keep God's covenant will receive an everlasting name."],
+    "Isaiah 56:6": ["House of Prayer for All Nations", "Foreigners who serve the Lord will be welcomed."],
+    "Isaiah 56:7": ["Universal Worship", "God's house will be called a house of prayer for all nations."],
+    "Isaiah 56:8": ["Gathering of the Nations", "The Lord gathers others to His people."],
+    "Isaiah 56:9": ["Blind Watchmen", "Israel's leaders are described as blind and ignorant."],
+    "Isaiah 56:11": ["Greedy Leaders", "The leaders pursue their own gain."],
+    "Isaiah 56:12": ["Careless Living", "They continue living carelessly without concern."],
+
+    "Isaiah 57:1": ["Righteous Taken Away", "The righteous perish and no one considers that they are spared from evil."],
+    "Isaiah 57:3": ["Wicked Rebuked", "The Lord calls out those involved in sinful practices."],
+    "Isaiah 57:5": ["Idolatrous Practices", "The people burn with lust among the idols."],
+    "Isaiah 57:8": ["Unfaithfulness to God", "They abandon the Lord and pursue false gods."],
+    "Isaiah 57:13": ["Worthless Idols", "Their idols cannot save them."],
+    "Isaiah 57:14": ["Prepare the Way", "The obstacles are removed so God's people can return."],
+    "Isaiah 57:15": ["God Dwells with the Humble", "The high and holy God lives with those who are humble."],
+    "Isaiah 57:18": ["Healing and Restoration", "God promises to heal and restore His people."],
+    "Isaiah 57:20": ["Restlessness of the Wicked", "The wicked are like a restless sea."],
+    "Isaiah 57:21": ["No Peace for the Wicked", "There is no peace for the wicked."],
+
+    "Isaiah 58:1": ["Expose the People's Sin", "The prophet is told to declare Israel's sins loudly."],
+    "Isaiah 58:3": ["Question About Fasting", "The people ask why God does not notice their fasting."],
+    "Isaiah 58:6": ["True Fasting", "True fasting is to free the oppressed and help the needy."],
+    "Isaiah 58:7": ["Care for the Poor", "People should share food and shelter with those in need."],
+    "Isaiah 58:8": ["Blessings of Obedience", "Light and healing will come to those who practice righteousness."],
+    "Isaiah 58:10": ["Helping the Hungry", "Helping the hungry brings light in the darkness."],
+    "Isaiah 58:11": ["God's Guidance", "The Lord will guide and satisfy His people."],
+    "Isaiah 58:12": ["Rebuilding the Ruins", "The people will rebuild ancient ruins."],
+    "Isaiah 58:13": ["Honor the Sabbath", "God calls people to honor the Sabbath."],
+    "Isaiah 58:14": ["Joy in the Lord", "Those who honor the Lord will find joy and blessing."],
+
+    "Isaiah 59:1": ["Sin Separates from God", "The Lord's hand is not too short to save, but sin separates people from Him."],
+    "Isaiah 59:3": ["Corruption of the People", "The people's hands are stained with blood and their lips speak lies."],
+    "Isaiah 59:7": ["Paths of Violence", "Their feet rush into evil and destruction follows their ways."],
+    "Isaiah 59:9": ["Justice Far Away", "The people wait for justice but only find darkness."],
+    "Isaiah 59:12": ["Confession of Sin", "The people confess that their sins are many."],
+    "Isaiah 59:14": ["Truth Fallen in the Streets", "Justice and truth are pushed aside."],
+    "Isaiah 59:16": ["God Intervenes", "The Lord sees no one to help and acts Himself."],
+    "Isaiah 59:17": ["Armor of Righteousness", "God puts on righteousness like armor."],
+    "Isaiah 59:19": ["Fear of the Lord", "People will fear the Lord from the west to the east."],
+    "Isaiah 59:20": ["The Redeemer Comes", "A Redeemer will come to Zion."],
+    "Isaiah 59:21": ["Everlasting Covenant", "God promises His Spirit and His word will remain with His people."],
+
+    "Isaiah 60:1": ["Arise and Shine", "Jerusalem is told to arise because God's glory shines upon her."],
+    "Isaiah 60:3": ["Nations Drawn to Light", "Nations and kings will come to Jerusalem's light."],
+    "Isaiah 60:5": ["Abundance from the Nations", "Wealth from distant lands will come to Zion."],
+    "Isaiah 60:10": ["Foreigners Rebuild", "Foreign nations will help rebuild Jerusalem's walls."],
+    "Isaiah 60:14": ["Honor to Zion", "Those who once oppressed Zion will bow before her."],
+    "Isaiah 60:18": ["City of Peace", "Violence will no longer be heard in the land."],
+    "Isaiah 60:19": ["The Lord the Everlasting Light", "The Lord will be the everlasting light of His people."],
+    "Isaiah 60:21": ["Righteous People", "All God's people will be righteous and inherit the land forever."],
+    "Isaiah 60:22": ["God's Perfect Timing", "The smallest family will become a great nation in God's time."],
+
+    "Isaiah 61:1": ["The Anointed Servant", "The Spirit of the Lord is upon the servant to preach good news to the poor."],
+    "Isaiah 61:2": ["Year of the Lord's Favor", "The servant proclaims freedom and the year of God's favor."],
+    "Isaiah 61:3": ["Comfort for the Mourning", "Those who mourn will receive beauty instead of ashes."],
+    "Isaiah 61:4": ["Rebuilding the Ruins", "The people will rebuild the ancient ruins."],
+    "Isaiah 61:6": ["Priests of the Lord", "God's people will be called priests and servants of the Lord."],
+    "Isaiah 61:7": ["Double Blessing", "Instead of shame they will receive a double portion of joy."],
+    "Isaiah 61:8": ["God Loves Justice", "The Lord loves justice and hates wrongdoing."],
+    "Isaiah 61:10": ["Joy in Salvation", "The prophet rejoices in God's salvation like a bride and bridegroom."],
+    "Isaiah 61:11": ["Righteousness Grows", "The Lord will cause righteousness and praise to grow among the nations."],
+
+    "Isaiah 62:1": ["Zion's Future Glory", "For Zion's sake God will not remain silent until her righteousness shines like a bright light."],
+    "Isaiah 62:2": ["New Name for Zion", "The nations will see Zion's righteousness and she will receive a new name from the Lord."],
+    "Isaiah 62:3": ["Crown of Glory", "Zion will be a crown of beauty in the hand of the Lord."],
+    "Isaiah 62:4": ["No Longer Forsaken", "The land will no longer be called Desolate but Delight and Married."],
+    "Isaiah 62:6": ["Watchmen on the Walls", "God appoints watchmen on Jerusalem's walls who will never be silent."],
+    "Isaiah 62:8": ["Security of the Land", "The Lord promises that enemies will no longer steal their harvest."],
+    "Isaiah 62:10": ["Prepare the Way", "The people are told to prepare the road for the returning people."],
+    "Isaiah 62:11": ["Salvation Comes", "The Lord announces that salvation is coming to Zion."],
+    "Isaiah 62:12": ["Holy People", "They will be called the Holy People and the Redeemed of the Lord."],
+
+    "Isaiah 63:1": ["The Lord the Warrior", "The Lord comes from Edom with garments stained from victory in battle."],
+    "Isaiah 63:3": ["Winepress of Wrath", "God treads the winepress alone bringing judgment on the nations."],
+    "Isaiah 63:7": ["Remembering God's Kindness", "The prophet recalls the loving kindness and mercy of the Lord."],
+    "Isaiah 63:9": ["God Saved His People", "In their distress God also suffered and delivered them."],
+    "Isaiah 63:11": ["Remembering the Exodus", "The people remember how God led them through Moses."],
+    "Isaiah 63:15": ["Prayer for Compassion", "The people cry out asking God to show His compassion again."],
+    "Isaiah 63:16": ["God Our Father", "The Lord is declared to be the Father and Redeemer of His people."],
+    "Isaiah 63:17": ["Prayer for Return", "They ask God to turn their hearts back to Him."],
+    "Isaiah 63:19": ["Longing for God's Presence", "The people feel as though they are no longer under God's rule."],
+
+    "Isaiah 64:1": ["Prayer for God's Intervention", "The people ask God to come down and shake the mountains."],
+    "Isaiah 64:4": ["God Acts for Those Who Wait", "No one has seen a God like the Lord who works for those who wait for Him."],
+    "Isaiah 64:6": ["Confession of Sin", "All people are unclean and their righteous acts are like filthy garments."],
+    "Isaiah 64:8": ["God the Potter", "The people acknowledge that God is the potter and they are the clay."],
+    "Isaiah 64:10": ["Desolation of Zion", "The holy cities have become a wilderness and Jerusalem is desolate."],
+    "Isaiah 64:11": ["Temple Destroyed", "The temple where their fathers praised God has been burned."],
+    "Isaiah 64:12": ["Plea for Mercy", "The people ask God not to hold back His compassion any longer."],
+
+    "Isaiah 65:1": ["God Revealed to the Nations", "God says He was found by people who did not seek Him."],
+    "Isaiah 65:2": ["Rebellious People", "God stretches out His hands all day to a stubborn people."],
+    "Isaiah 65:5": ["Hypocrisy Condemned", "The people claim holiness while practicing sinful acts."],
+    "Isaiah 65:8": ["Remnant Preserved", "God promises not to destroy everyone but to preserve a remnant."],
+    "Isaiah 65:11": ["Judgment on the Unfaithful", "Those who forsake the Lord will face destruction."],
+    "Isaiah 65:13": ["Contrast of Servants", "God's servants will rejoice while the rebellious suffer."],
+    "Isaiah 65:17": ["New Heavens and New Earth", "God promises to create a new heaven and a new earth."],
+    "Isaiah 65:19": ["Joy in Jerusalem", "Jerusalem will be filled with joy and no more weeping."],
+    "Isaiah 65:21": ["Blessed Life", "People will build houses and enjoy the work of their hands."],
+    "Isaiah 65:23": ["Blessed Generations", "They will not labor in vain and their children will be blessed."],
+    "Isaiah 65:25": ["Peaceful Creation", "The wolf and the lamb will feed together."],
+
+    "Isaiah 66:1": ["Heaven Is God's Throne", "God declares that heaven is His throne and the earth His footstool."],
+    "Isaiah 66:2": ["God Values the Humble", "The Lord looks favorably on the humble and contrite in spirit."],
+    "Isaiah 66:5": ["Comfort for the Faithful", "Those who fear the Lord will be comforted."],
+    "Isaiah 66:7": ["Sudden Birth of a Nation", "Zion gives birth to her children suddenly."],
+    "Isaiah 66:10": ["Rejoice with Jerusalem", "All who love Jerusalem are called to rejoice with her."],
+    "Isaiah 66:12": ["Peace Like a River", "God promises peace and comfort like a flowing river."],
+    "Isaiah 66:15": ["The Lord Comes in Fire", "The Lord will come with fire to judge His enemies."],
+    "Isaiah 66:18": ["Nations Gathered", "God will gather all nations and they will see His glory."],
+    "Isaiah 66:22": ["New Creation Endures", "The new heavens and new earth will remain before the Lord."],
+    "Isaiah 66:23": ["Universal Worship", "All people will come to worship the Lord."],
+    "Isaiah 66:24": ["Final Judgment", "The wicked will face everlasting shame."],
+
+    "Lamentations 1:1": ["Jerusalem in Desolation", "Jerusalem sits alone like a widow after once being full of people."],
+    "Lamentations 1:2": ["Betrayed by Allies", "Those who were once friends have become enemies."],
+    "Lamentations 1:5": ["Enemies Triumph", "Her enemies prosper because of her many sins."],
+    "Lamentations 1:8": ["Jerusalem's Sin", "Jerusalem has sinned greatly and become unclean."],
+    "Lamentations 1:11": ["People Suffer Hunger", "The people search for food to survive."],
+    "Lamentations 1:12": ["Unmatched Suffering", "Jerusalem cries out asking if anyone has suffered like she has."],
+    "Lamentations 1:16": ["Jerusalem Weeps", "Jerusalem weeps bitterly because no one comforts her."],
+    "Lamentations 1:18": ["God's Righteous Judgment", "Jerusalem admits that the Lord is righteous."],
+    "Lamentations 1:20": ["Cry for Mercy", "Jerusalem cries to the Lord because of deep distress."],
+    "Lamentations 1:22": ["Prayer Against Enemies", "Jerusalem asks God to judge her enemies as He judged her."],
+
+    "Lamentations 2:1": ["God's Anger on Jerusalem", "The Lord in His anger has brought great destruction on Jerusalem."],
+    "Lamentations 2:3": ["Strength of Israel Cut Off", "God has withdrawn His protection and allowed enemies to attack."],
+    "Lamentations 2:5": ["The Lord as an Enemy", "The Lord has acted like an enemy against His own people."],
+    "Lamentations 2:7": ["Temple Rejected", "The Lord has rejected His altar and abandoned His sanctuary."],
+    "Lamentations 2:10": ["Mourning in Zion", "The elders sit on the ground in silence and the young women bow their heads."],
+    "Lamentations 2:11": ["Jeremiah's Tears", "The prophet weeps as children faint from hunger in the streets."],
+    "Lamentations 2:14": ["False Prophets", "The prophets gave false visions instead of exposing the people's sins."],
+    "Lamentations 2:15": ["Enemies Mock Jerusalem", "People passing by mock the fallen city."],
+    "Lamentations 2:17": ["God Fulfills His Word", "The Lord has carried out the destruction He planned."],
+    "Lamentations 2:18": ["Cry to the Lord", "The people are urged to cry out to the Lord day and night."],
+
+    "Lamentations 3:1": ["Man of Suffering", "The writer describes the deep suffering brought by God's anger."],
+    "Lamentations 3:7": ["Trapped in Darkness", "He feels surrounded by darkness with no escape."],
+    "Lamentations 3:16": ["Deep Affliction", "He feels crushed and humiliated by suffering."],
+    "Lamentations 3:19": ["Remembering the Pain", "He remembers his bitterness and sorrow."],
+    "Lamentations 3:21": ["Hope Returns", "The writer remembers something that gives him hope."],
+    "Lamentations 3:22": ["God's Great Mercy", "Because of the Lord's love we are not consumed."],
+    "Lamentations 3:23": ["New Every Morning", "God's mercies are new every morning."],
+    "Lamentations 3:25": ["Hope in the Lord", "The Lord is good to those who wait for Him."],
+    "Lamentations 3:31": ["God Does Not Reject Forever", "Though He causes grief, He will show compassion."],
+    "Lamentations 3:37": ["God's Sovereign Authority", "Nothing happens unless the Lord commands it."],
+    "Lamentations 3:40": ["Call to Self-Examination", "The people are urged to examine their ways and return to the Lord."],
+    "Lamentations 3:55": ["Prayer from the Pit", "The writer calls on the Lord from the depths."],
+    "Lamentations 3:58": ["God the Defender", "The Lord has defended the writer's cause and redeemed his life."],
+
+    "Lamentations 4:1": ["Gold Turned Dull", "The once precious city has lost its glory."],
+    "Lamentations 4:4": ["Children Starving", "Children suffer thirst and hunger in the streets."],
+    "Lamentations 4:6": ["Greater Than Sodom", "Jerusalem's punishment is greater than that of Sodom."],
+    "Lamentations 4:8": ["Severe Suffering", "The people become unrecognizable because of famine."],
+    "Lamentations 4:10": ["Terrible Desperation", "Starving mothers cook their own children."],
+    "Lamentations 4:11": ["God's Fierce Anger", "The Lord pours out His anger and burns Zion."],
+    "Lamentations 4:13": ["Sins of Leaders", "The sins of prophets and priests caused the disaster."],
+    "Lamentations 4:18": ["People Hunted", "Enemies chase the people through the streets."],
+    "Lamentations 4:21": ["Warning to Edom", "Edom rejoices now but judgment will come to them."],
+    "Lamentations 4:22": ["End of Punishment", "Zion's punishment will end but Edom will be judged."],
+
+    "Lamentations 5:1": ["Prayer for Mercy", "The people ask the Lord to remember what has happened to them."],
+    "Lamentations 5:3": ["Orphans and Widows", "Many have become fatherless and widows because of the disaster."],
+    "Lamentations 5:5": ["Oppression of the People", "The people are pursued and exhausted with no rest."],
+    "Lamentations 5:8": ["Servants Rule Over Them", "Servants rule over them and no one rescues them."],
+    "Lamentations 5:10": ["Famine Suffering", "Their skin burns with hunger because of famine."],
+    "Lamentations 5:12": ["Humiliation of Leaders", "Princes are hung up and elders are not respected."],
+    "Lamentations 5:15": ["Joy Turned to Mourning", "Their joy has turned into sorrow and mourning."],
+    "Lamentations 5:16": ["Confession of Sin", "The people admit that their suffering is because of their sin."],
+    "Lamentations 5:19": ["God's Eternal Reign", "The Lord reigns forever and His throne endures through generations."],
+    "Lamentations 5:21": ["Prayer for Restoration", "The people ask God to restore them to Himself."],
+    "Lamentations 5:22": ["Fear of Rejection", "They wonder if God has completely rejected them."],
+
+    "Jeremiah 1:1": ["Introduction to Jeremiah", "These are the words of Jeremiah, the son of Hilkiah, one of the priests from Anathoth in the land of Benjamin."],
+    "Jeremiah 1:4": ["God Calls Jeremiah", "The word of the Lord comes to Jeremiah saying that he was known and appointed before he was born."],
+    "Jeremiah 1:6": ["Jeremiah's Hesitation", "Jeremiah says he is too young and does not know how to speak."],
+    "Jeremiah 1:7": ["God Encourages Jeremiah", "The Lord tells Jeremiah not to say he is too young and promises to be with him."],
+    "Jeremiah 1:9": ["God Touches Jeremiah's Mouth", "The Lord touches Jeremiah's mouth and puts His words in it."],
+    "Jeremiah 1:10": ["Prophet to the Nations", "Jeremiah is appointed over nations to uproot, tear down, destroy, and also to build and plant."],
+    "Jeremiah 1:11": ["Vision of the Almond Branch", "Jeremiah sees an almond branch as a sign that God is watching over His word."],
+    "Jeremiah 1:13": ["Vision of the Boiling Pot", "Jeremiah sees a boiling pot tipping from the north, symbolizing coming disaster."],
+    "Jeremiah 1:17": ["Jeremiah Commissioned", "God tells Jeremiah to stand firm and speak all that He commands."],
+    "Jeremiah 1:18": ["Strengthened Prophet", "God makes Jeremiah like a fortified city, an iron pillar, and a bronze wall."],
+    "Jeremiah 1:19": ["God Promises Protection", "Enemies will fight against Jeremiah but will not overcome him because the Lord is with him."],
+
+    "Jeremiah 2:1": ["Israel’s Early Devotion", "The Lord remembers how Israel loved Him and followed Him in the wilderness."],
+    "Jeremiah 2:5": ["Israel Forsakes God", "The people turned away from the Lord and followed worthless idols."],
+    "Jeremiah 2:8": ["Leaders Failed", "Priests, rulers, and prophets did not seek the Lord and led the people astray."],
+    "Jeremiah 2:11": ["Exchange of Glory", "Israel exchanged their glorious God for worthless idols."],
+    "Jeremiah 2:13": ["Two Great Evils", "The people abandoned the Lord, the source of living water, and dug broken cisterns."],
+    "Jeremiah 2:17": ["Consequences of Sin", "Their troubles came because they forsook the Lord."],
+    "Jeremiah 2:19": ["Sin Brings Judgment", "Their own wickedness will discipline them."],
+    "Jeremiah 2:20": ["Persistent Idolatry", "Israel refused to serve the Lord and pursued idols."],
+    "Jeremiah 2:27": ["False Gods Exposed", "They call idols their father but turn to God only in trouble."],
+    "Jeremiah 2:32": ["Forgotten God", "The people have forgotten the Lord for countless days."],
+    "Jeremiah 2:35": ["False Innocence", "The people claim innocence but God declares their guilt."],
+
+    "Jeremiah 3:1": ["Call to Return", "Though Israel has been unfaithful like an adulterous wife, God calls her to return."],
+    "Jeremiah 3:6": ["Israel’s Unfaithfulness", "Israel committed spiritual adultery by worshiping idols."],
+    "Jeremiah 3:10": ["Judah’s Hypocrisy", "Judah also turned away from God but only pretended to return."],
+    "Jeremiah 3:12": ["God’s Mercy", "The Lord invites Israel to return because He is merciful."],
+    "Jeremiah 3:14": ["Return of the Remnant", "God promises to gather His people and bring them back to Zion."],
+    "Jeremiah 3:15": ["Faithful Shepherds", "God promises to give leaders who will guide His people wisely."],
+    "Jeremiah 3:17": ["Jerusalem Exalted", "Jerusalem will be called the throne of the Lord."],
+    "Jeremiah 3:19": ["God’s Desire for His People", "God wanted Israel to call Him Father and remain faithful."],
+    "Jeremiah 3:22": ["Invitation to Repent", "God calls His unfaithful children to return."],
+    "Jeremiah 3:25": ["Confession of Sin", "The people admit their shame and confess their sins."],
+
+    "Jeremiah 4:1": ["Return to the Lord", "God calls Israel to return and remove their idols."],
+    "Jeremiah 4:3": ["Prepare Your Hearts", "The people are urged to break up their hardened hearts like unplowed ground."],
+    "Jeremiah 4:5": ["Warning of Invasion", "The trumpet is sounded because danger from the north is coming."],
+    "Jeremiah 4:7": ["Lion from the North", "A powerful enemy is coming to destroy the land."],
+    "Jeremiah 4:9": ["Leaders Terrified", "The king, priests, and prophets will be filled with fear."],
+    "Jeremiah 4:13": ["Swift Invaders", "The enemy comes quickly like clouds and eagles."],
+    "Jeremiah 4:18": ["Sin Brings Disaster", "The people’s own actions have brought this judgment."],
+    "Jeremiah 4:22": ["Foolish People", "God calls His people foolish because they do not know Him."],
+    "Jeremiah 4:23": ["Vision of Desolation", "Jeremiah sees the land becoming empty and chaotic."],
+    "Jeremiah 4:27": ["Partial Destruction", "Though the land will be devastated, God will not completely destroy it."],
+
+    "Jeremiah 5:1": ["Search for a Righteous Person", "God says if even one person who acts justly is found in Jerusalem He will spare the city."],
+    "Jeremiah 5:3": ["People Refuse Correction", "Though God disciplined them they refused to repent."],
+    "Jeremiah 5:6": ["Judgment Like Wild Beasts", "Because of their sins enemies will attack them like lions and wolves."],
+    "Jeremiah 5:7": ["Unfaithfulness of the People", "The people have forsaken God and worshiped false gods."],
+    "Jeremiah 5:10": ["Partial Destruction", "The enemy is told to destroy but not completely wipe them out."],
+    "Jeremiah 5:12": ["Denying God's Word", "The people falsely say that no disaster will come."],
+    "Jeremiah 5:15": ["Nation from Afar", "God will bring a powerful nation from the north against Judah."],
+    "Jeremiah 5:19": ["Reason for Judgment", "Their punishment comes because they abandoned the Lord."],
+    "Jeremiah 5:23": ["Stubborn Hearts", "The people have stubborn and rebellious hearts."],
+    "Jeremiah 5:24": ["Failure to Fear God", "They do not fear the Lord who gives rain and harvest."],
+    "Jeremiah 5:30": ["Shocking Corruption", "Prophets prophesy lies and priests rule by their own authority."],
+
+    "Jeremiah 6:1": ["Warning to Jerusalem", "People are warned to flee Jerusalem because disaster is coming from the north."],
+    "Jeremiah 6:6": ["City of Oppression", "Jerusalem is described as full of violence and oppression."],
+    "Jeremiah 6:9": ["Thorough Judgment", "The enemy will gather the remnant like grapes left on a vine."],
+    "Jeremiah 6:10": ["People Reject God's Word", "The people refuse to listen to God's message."],
+    "Jeremiah 6:13": ["Greed of the Leaders", "From the least to the greatest everyone is greedy for gain."],
+    "Jeremiah 6:14": ["False Peace", "Leaders say 'peace' when there is no peace."],
+    "Jeremiah 6:16": ["Ancient Paths", "God calls the people to follow the good and ancient paths."],
+    "Jeremiah 6:19": ["Judgment Announced", "God brings disaster because they rejected His law."],
+    "Jeremiah 6:22": ["Enemy from the North", "A great nation is coming from the north to attack."],
+    "Jeremiah 6:27": ["Jeremiah the Tester", "Jeremiah is appointed to test the character of the people."],
+    "Jeremiah 6:30": ["Rejected Silver", "The people are called rejected silver because the Lord has rejected them."],
+
+    "Jeremiah 7:1": ["Message at the Temple Gate", "Jeremiah is told to stand at the temple gate and proclaim God's message."],
+    "Jeremiah 7:4": ["False Trust in the Temple", "The people wrongly believe the temple will protect them."],
+    "Jeremiah 7:5": ["Call to True Obedience", "God promises to let them remain if they act justly."],
+    "Jeremiah 7:9": ["Hypocrisy in Worship", "They steal and commit sin yet still come to worship God."],
+    "Jeremiah 7:11": ["Den of Robbers", "God says the temple has become a den of robbers."],
+    "Jeremiah 7:12": ["Example of Shiloh", "God reminds them how He destroyed Shiloh because of sin."],
+    "Jeremiah 7:16": ["Do Not Pray for Them", "God tells Jeremiah not to pray for the people."],
+    "Jeremiah 7:21": ["Empty Sacrifices", "God says their sacrifices are meaningless without obedience."],
+    "Jeremiah 7:23": ["Obedience Over Ritual", "God commands them to obey His voice."],
+    "Jeremiah 7:31": ["Valley of Hinnom", "They built high places to sacrifice children."],
+    "Jeremiah 7:34": ["Joy Removed", "The sounds of joy and weddings will disappear from the land."],
+
+    "Jeremiah 8:1": ["Shame of the Nation", "The bones of kings, priests, and prophets will be exposed before the sun and moon."],
+    "Jeremiah 8:4": ["People Refuse to Return", "Though people fall they usually rise, but Israel refuses to return to God."],
+    "Jeremiah 8:7": ["Ignoring God's Law", "Even birds know their seasons but God's people do not know His ways."],
+    "Jeremiah 8:8": ["False Wisdom", "The scribes claim wisdom but have rejected the word of the Lord."],
+    "Jeremiah 8:10": ["Corrupt Leaders", "From the least to the greatest everyone is greedy for gain."],
+    "Jeremiah 8:11": ["False Peace", "They say 'peace, peace' when there is no peace."],
+    "Jeremiah 8:14": ["Coming Destruction", "The people gather in cities but cannot escape God's judgment."],
+    "Jeremiah 8:18": ["Jeremiah's Grief", "Jeremiah expresses deep sorrow for his people."],
+    "Jeremiah 8:20": ["Lost Opportunity", "The harvest is past and the people are not saved."],
+    "Jeremiah 8:22": ["Balm in Gilead", "Jeremiah asks why healing has not come for his people."],
+
+    "Jeremiah 9:1": ["Jeremiah's Lament", "Jeremiah wishes his head were a fountain of tears for the slain of his people."],
+    "Jeremiah 9:3": ["Deceit Everywhere", "The people use their tongues like bows to spread lies."],
+    "Jeremiah 9:6": ["Refusal to Know God", "Because of deceit the people refuse to acknowledge the Lord."],
+    "Jeremiah 9:10": ["Mourning for the Land", "Jeremiah mourns for the mountains and pastures that are desolate."],
+    "Jeremiah 9:12": ["Reason for Destruction", "The land is ruined because the people abandoned God's law."],
+    "Jeremiah 9:15": ["Judgment Announced", "God will feed the people bitterness and scatter them among nations."],
+    "Jeremiah 9:17": ["Call for Mourning", "Professional mourners are called to weep for the nation."],
+    "Jeremiah 9:23": ["True Boasting", "Let no one boast in wisdom or strength but in knowing the Lord."],
+    "Jeremiah 9:25": ["Judgment on All Nations", "God will punish those who are outwardly circumcised but inwardly uncircumcised."],
+
+    "Jeremiah 10:1": ["Do Not Follow the Nations", "Israel is warned not to learn the ways of other nations."],
+    "Jeremiah 10:3": ["Foolish Idols", "Idols are made from wood and decorated with silver and gold."],
+    "Jeremiah 10:5": ["Idols Cannot Speak", "Idols must be carried because they cannot move or speak."],
+    "Jeremiah 10:6": ["The Greatness of God", "There is no one like the Lord who is great and mighty."],
+    "Jeremiah 10:10": ["The Living God", "The Lord is the true God and everlasting King."],
+    "Jeremiah 10:12": ["God the Creator", "God made the earth by His power and wisdom."],
+    "Jeremiah 10:17": ["Coming Exile", "The people are told to gather their belongings because exile is near."],
+    "Jeremiah 10:19": ["Jeremiah's Sorrow", "Jeremiah laments the destruction of his people."],
+    "Jeremiah 10:23": ["Human Dependence on God", "People cannot direct their own steps without the Lord."],
+    "Jeremiah 10:25": ["Prayer for Justice", "Jeremiah asks God to pour out His wrath on the nations."],
+
+    "Jeremiah 11:1": ["The Broken Covenant", "The Lord reminds Judah of the covenant made with their ancestors."],
+    "Jeremiah 11:3": ["Curse of Disobedience", "Anyone who does not obey the covenant is under a curse."],
+    "Jeremiah 11:6": ["Proclaim the Covenant", "Jeremiah is told to proclaim the covenant throughout Judah."],
+    "Jeremiah 11:8": ["People Refuse to Listen", "The people refuse to obey and follow their stubborn hearts."],
+    "Jeremiah 11:10": ["Return to Idolatry", "The people return to the sins of their ancestors and worship other gods."],
+    "Jeremiah 11:11": ["Disaster Announced", "God declares disaster will come and they will not escape."],
+    "Jeremiah 11:14": ["Do Not Pray for Them", "God tells Jeremiah not to pray for the people."],
+    "Jeremiah 11:18": ["Plot Against Jeremiah", "Jeremiah learns that people are plotting to kill him."],
+    "Jeremiah 11:20": ["Jeremiah's Appeal to God", "Jeremiah asks the Lord, the righteous judge, to deal with them."],
+    "Jeremiah 11:21": ["Threat from Anathoth", "The men of Jeremiah's hometown threaten him."],
+    "Jeremiah 11:22": ["Judgment on Anathoth", "God promises punishment for those who plotted against Jeremiah."],
+
+    "Jeremiah 12:1": ["Jeremiah Questions God", "Jeremiah asks why the wicked prosper while the faithful suffer."],
+    "Jeremiah 12:5": ["God Challenges Jeremiah", "God tells Jeremiah that greater challenges are coming."],
+    "Jeremiah 12:7": ["God Abandons His House", "Because of their sin God has abandoned His people."],
+    "Jeremiah 12:10": ["Destroyers of the Vineyard", "Many shepherds have ruined God's vineyard."],
+    "Jeremiah 12:13": ["Fruitless Labor", "The people will reap thorns instead of harvest."],
+    "Jeremiah 12:14": ["Judgment on Neighboring Nations", "God promises to punish the nations that attacked Israel."],
+    "Jeremiah 12:15": ["Future Compassion", "God promises that after punishment He will show compassion."],
+    "Jeremiah 12:16": ["Nations May Learn God's Ways", "Even the nations can be restored if they learn to follow the Lord."],
+    "Jeremiah 12:17": ["Final Judgment", "Those who refuse will be destroyed."],
+
+    "Jeremiah 13:1": ["The Linen Belt", "God tells Jeremiah to buy a linen belt and wear it."],
+    "Jeremiah 13:4": ["Belt Hidden by the River", "Jeremiah hides the belt near the Euphrates as God commands."],
+    "Jeremiah 13:7": ["Ruined Belt", "When Jeremiah retrieves it, the belt is ruined and useless."],
+    "Jeremiah 13:9": ["Meaning of the Sign", "God explains that Judah's pride will be ruined like the belt."],
+    "Jeremiah 13:12": ["Parable of the Wine Jars", "All jars will be filled with wine as a symbol of coming judgment."],
+    "Jeremiah 13:15": ["Call to Humility", "The people are urged to listen before darkness falls."],
+    "Jeremiah 13:18": ["Fall of the Leaders", "The king and queen mother will be humbled."],
+    "Jeremiah 13:22": ["Reason for Shame", "Their humiliation comes because of their great sins."],
+    "Jeremiah 13:23": ["Nature of Sin", "Just as a leopard cannot change its spots, the people cannot easily change their evil ways."],
+    "Jeremiah 13:25": ["Judgment for Idolatry", "God declares their punishment for forgetting Him."],
+
+    "Jeremiah 14:1": ["Drought in the Land", "A severe drought comes upon Judah causing deep mourning."],
+    "Jeremiah 14:3": ["Empty Wells", "The people search for water but return with empty jars."],
+    "Jeremiah 14:7": ["Prayer for Mercy", "The people confess their sins and ask God to help them."],
+    "Jeremiah 14:10": ["God Rejects Their Ways", "The Lord says the people love to wander and will be punished."],
+    "Jeremiah 14:11": ["Do Not Pray for Them", "God tells Jeremiah not to pray for the people."],
+    "Jeremiah 14:13": ["False Prophets", "Prophets falsely promise peace though disaster is coming."],
+    "Jeremiah 14:15": ["Judgment on False Prophets", "The prophets who lie will perish by sword and famine."],
+    "Jeremiah 14:17": ["Jeremiah's Tears", "Jeremiah weeps day and night for the destruction of his people."],
+    "Jeremiah 14:19": ["Plea for Healing", "The people cry out asking if God has rejected Judah completely."],
+    "Jeremiah 14:22": ["Hope in God", "They acknowledge that only the Lord can send rain."],
+
+    "Jeremiah 15:1": ["Judgment Determined", "God says even Moses and Samuel could not persuade Him to spare the people."],
+    "Jeremiah 15:2": ["Different Fates", "Some will die by sword, others by famine, captivity, or death."],
+    "Jeremiah 15:5": ["No One to Pity", "No one will show compassion for Jerusalem."],
+    "Jeremiah 15:6": ["God's Weariness", "The Lord says He is weary of relenting."],
+    "Jeremiah 15:10": ["Jeremiah's Complaint", "Jeremiah laments the trouble his ministry has brought him."],
+    "Jeremiah 15:15": ["Prayer for Justice", "Jeremiah asks God to remember him and take revenge on his persecutors."],
+    "Jeremiah 15:16": ["Joy in God's Word", "Jeremiah delights in God's words."],
+    "Jeremiah 15:19": ["Call to Faithfulness", "God tells Jeremiah to remain faithful and he will continue to serve Him."],
+    "Jeremiah 15:20": ["Protection Promised", "God promises to make Jeremiah like a fortified wall."],
+
+    "Jeremiah 16:1": ["Jeremiah Forbidden to Marry", "God tells Jeremiah not to marry or have children in this place."],
+    "Jeremiah 16:5": ["Do Not Mourn", "Jeremiah is told not to attend funerals because judgment is coming."],
+    "Jeremiah 16:8": ["Do Not Celebrate", "Jeremiah is also told not to attend feasts or celebrations."],
+    "Jeremiah 16:10": ["People Question Jeremiah", "The people ask why such terrible disaster is announced."],
+    "Jeremiah 16:11": ["Reason for Judgment", "God explains it is because their ancestors and they themselves abandoned Him."],
+    "Jeremiah 16:14": ["Future Restoration", "A time will come when people will speak of a new deliverance greater than the Exodus."],
+    "Jeremiah 16:16": ["Hunters and Fishers", "God will send many hunters and fishers to gather the people."],
+    "Jeremiah 16:19": ["God the True Refuge", "Jeremiah declares the Lord is his strength and refuge."],
+    "Jeremiah 16:21": ["Nations Will Know the Lord", "God says the nations will learn that His name is the Lord."],
+
+    "Jeremiah 17:1": ["Sin Written on the Heart", "Judah’s sin is engraved on their hearts and on the horns of their altars."],
+    "Jeremiah 17:5": ["Trusting in Humans", "Cursed is the one who trusts in human strength instead of the Lord."],
+    "Jeremiah 17:7": ["Trusting in the Lord", "Blessed is the one who trusts in the Lord."],
+    "Jeremiah 17:9": ["Deceitful Heart", "The human heart is deceitful above all things and difficult to understand."],
+    "Jeremiah 17:10": ["God Searches the Heart", "The Lord searches the heart and rewards each person according to their actions."],
+    "Jeremiah 17:13": ["The Lord the Fountain", "Those who turn away from God will be ashamed because He is the source of living water."],
+    "Jeremiah 17:14": ["Jeremiah's Prayer for Healing", "Jeremiah asks the Lord to heal and save him."],
+    "Jeremiah 17:19": ["Keep the Sabbath", "Jeremiah is told to warn the people to keep the Sabbath holy."],
+    "Jeremiah 17:24": ["Blessing for Obedience", "If they keep the Sabbath, Jerusalem will prosper."],
+    "Jeremiah 17:27": ["Judgment for Disobedience", "If they ignore the Sabbath, fire will consume Jerusalem."],
+
+    "Jeremiah 18:1": ["The Potter's House", "Jeremiah is told to go to the potter’s house to hear God’s message."],
+    "Jeremiah 18:4": ["Clay in the Potter's Hand", "The potter reshapes the clay into another vessel."],
+    "Jeremiah 18:6": ["God's Authority", "God declares that Israel is like clay in His hands."],
+    "Jeremiah 18:7": ["Nation Uprooted or Built", "God may destroy or build a nation depending on its response."],
+    "Jeremiah 18:11": ["Call to Repent", "God urges the people to turn from their evil ways."],
+    "Jeremiah 18:12": ["People Refuse to Change", "The people say they will continue following their own plans."],
+    "Jeremiah 18:15": ["People Forget God", "They stumble because they have forgotten the Lord."],
+    "Jeremiah 18:18": ["Plot Against Jeremiah", "The people plan to attack Jeremiah and ignore his message."],
+    "Jeremiah 18:19": ["Jeremiah's Appeal", "Jeremiah asks God to hear him and defend him."],
+    "Jeremiah 18:23": ["Prayer for Justice", "Jeremiah asks God to deal with those who plot against him."],
+
+    "Jeremiah 19:1": ["The Broken Jar", "Jeremiah is told to buy a clay jar and go to the Valley of Hinnom."],
+    "Jeremiah 19:3": ["Warning of Disaster", "God announces terrible disaster for Jerusalem."],
+    "Jeremiah 19:4": ["Reason for Judgment", "The people filled the land with innocent blood and worshiped other gods."],
+    "Jeremiah 19:6": ["Valley of Slaughter", "The valley will be called the Valley of Slaughter because of the coming destruction."],
+    "Jeremiah 19:9": ["Terrible Siege", "The people will suffer greatly during the siege."],
+    "Jeremiah 19:10": ["Jar Broken", "Jeremiah breaks the jar to symbolize the destruction of the nation."],
+    "Jeremiah 19:11": ["Nation Shattered", "God will shatter the people like a broken jar that cannot be repaired."],
+    "Jeremiah 19:14": ["Message at the Temple", "Jeremiah repeats the warning in the temple courtyard."],
+    "Jeremiah 19:15": ["Stubborn People", "Disaster will come because they refused to listen."],
+
+    "Jeremiah 20:1": ["Jeremiah Persecuted", "Pashhur the priest strikes Jeremiah and puts him in the stocks."],
+    "Jeremiah 20:3": ["Pashhur Renamed", "Jeremiah renames Pashhur 'Terror on Every Side' as a sign of coming judgment."],
+    "Jeremiah 20:4": ["Judgment on Judah", "God says Pashhur and the people will see the fall of Judah."],
+    "Jeremiah 20:7": ["Jeremiah's Complaint", "Jeremiah says the Lord persuaded him and he became a laughingstock."],
+    "Jeremiah 20:9": ["Fire in His Bones", "Jeremiah cannot keep silent because God's word burns within him."],
+    "Jeremiah 20:10": ["Enemies Watching", "Jeremiah hears people plotting against him."],
+    "Jeremiah 20:11": ["God the Mighty Warrior", "Jeremiah trusts that the Lord will stand with him and defeat his enemies."],
+    "Jeremiah 20:13": ["Song of Praise", "Jeremiah praises the Lord for rescuing the needy."],
+    "Jeremiah 20:14": ["Day of Birth Cursed", "In deep anguish Jeremiah curses the day he was born."],
+
+    "Jeremiah 21:1": ["King Zedekiah Seeks Jeremiah", "King Zedekiah sends messengers to ask Jeremiah to seek the Lord."],
+    "Jeremiah 21:4": ["God Against Jerusalem", "God says He Himself will fight against Jerusalem."],
+    "Jeremiah 21:7": ["Surrender or Death", "The king and people will be handed over to Babylon."],
+    "Jeremiah 21:8": ["The Way of Life and Death", "God sets before the people the choice between life and death."],
+    "Jeremiah 21:9": ["Life Through Surrender", "Those who surrender to Babylon will live."],
+    "Jeremiah 21:11": ["Message to the Royal House", "The king's household is warned to act with justice."],
+    "Jeremiah 21:13": ["Judgment on Jerusalem", "God declares that He will punish the city for its pride."],
+
+    "Jeremiah 22:1": ["Call to Justice", "The king of Judah is commanded to do justice and righteousness."],
+    "Jeremiah 22:3": ["Protect the Oppressed", "The king must rescue the oppressed and avoid violence."],
+    "Jeremiah 22:6": ["Judgment on the Palace", "God warns that the royal palace will become a desolation."],
+    "Jeremiah 22:10": ["Lament for the Exiled King", "People are told not to weep for the dead king but for the one taken into exile."],
+    "Jeremiah 22:13": ["Woe to Jehoiakim", "Jehoiakim is condemned for building his palace with injustice."],
+    "Jeremiah 22:18": ["No Mourning for Jehoiakim", "Jehoiakim will die without the usual mourning."],
+    "Jeremiah 22:24": ["Judgment on Jehoiachin", "Even if Jehoiachin were a signet ring, God would remove him."],
+    "Jeremiah 22:28": ["Rejected King", "Jehoiachin is cast aside like a broken pot."],
+    "Jeremiah 22:30": ["Childless King", "Jehoiachin's line will not prosper on the throne of David."],
+
+    "Jeremiah 23:1": ["Woe to the Shepherds", "God condemns the leaders who have scattered and destroyed His people."],
+    "Jeremiah 23:3": ["Gathering the Remnant", "The Lord promises to gather the remaining people and bring them back."],
+    "Jeremiah 23:4": ["Faithful Shepherds", "God will appoint new shepherds who will care for His flock."],
+    "Jeremiah 23:5": ["Righteous Branch", "A righteous king from David’s line will rule with wisdom and justice."],
+    "Jeremiah 23:6": ["The Lord Our Righteousness", "Judah will be saved and the king will be called 'The Lord Our Righteousness.'"],
+    "Jeremiah 23:9": ["Grief Over False Prophets", "Jeremiah mourns because of the corruption of prophets."],
+    "Jeremiah 23:11": ["Corrupt Leaders", "Both prophets and priests are ungodly."],
+    "Jeremiah 23:16": ["Do Not Listen to False Prophets", "They speak visions from their own minds and not from God."],
+    "Jeremiah 23:21": ["Prophets Not Sent by God", "God says He did not send these prophets."],
+    "Jeremiah 23:23": ["God Is Everywhere", "The Lord declares that He fills heaven and earth."],
+    "Jeremiah 23:28": ["True and False Messages", "God compares His true word to grain and false words to straw."],
+    "Jeremiah 23:29": ["Power of God's Word", "God's word is like fire and a hammer that breaks rock."],
+    "Jeremiah 23:31": ["Judgment on False Prophets", "God opposes prophets who speak lies in His name."],
+
+    "Jeremiah 24:1": ["Vision of Two Baskets of Figs", "Jeremiah sees two baskets of figs placed before the temple."],
+    "Jeremiah 24:2": ["Good and Bad Figs", "One basket has very good figs and the other very bad ones."],
+    "Jeremiah 24:5": ["Meaning of the Good Figs", "The good figs represent the exiles whom God will watch over."],
+    "Jeremiah 24:6": ["Promise of Restoration", "God will bring the exiles back and rebuild them."],
+    "Jeremiah 24:7": ["New Heart", "God will give them a heart to know Him."],
+    "Jeremiah 24:8": ["Meaning of the Bad Figs", "The bad figs represent those who remain in Jerusalem and will face judgment."],
+    "Jeremiah 24:9": ["Disaster for the Wicked", "They will become an object of horror among the nations."],
+    "Jeremiah 24:10": ["Sword, Famine, and Plague", "God will send destruction until they are removed from the land."],
+
+    "Jeremiah 25:1": ["Prophecy During Jehoiakim", "Jeremiah speaks during the reign of Jehoiakim when Babylon rises to power."],
+    "Jeremiah 25:3": ["Years of Warning", "Jeremiah reminds the people that he has spoken God's message for many years."],
+    "Jeremiah 25:4": ["Prophets Ignored", "God sent prophets repeatedly but the people would not listen."],
+    "Jeremiah 25:8": ["Judgment Announced", "Because they refused to listen, God will bring destruction."],
+    "Jeremiah 25:9": ["Babylon as Instrument", "God will bring Nebuchadnezzar and the Babylonians against Judah."],
+    "Jeremiah 25:11": ["Seventy Years of Exile", "The land will serve Babylon for seventy years."],
+    "Jeremiah 25:12": ["Judgment on Babylon", "After seventy years God will punish Babylon."],
+    "Jeremiah 25:15": ["Cup of God's Wrath", "Jeremiah receives a cup symbolizing God's wrath for the nations."],
+    "Jeremiah 25:27": ["Nations Must Drink", "The nations must drink the cup of judgment."],
+    "Jeremiah 25:31": ["The Lord Judges the Earth", "God will bring judgment upon all nations."],
+    "Jeremiah 25:33": ["Great Slaughter", "Many will fall across the earth because of God's judgment."],
+
+    "Jeremiah 26:1": ["Jeremiah at the Temple", "At the beginning of King Jehoiakim’s reign, Jeremiah is told to stand in the temple court and speak God's message."],
+    "Jeremiah 26:3": ["Call to Repent", "God says if the people turn from their evil ways He may relent from sending disaster."],
+    "Jeremiah 26:6": ["Warning of Shiloh", "The temple could become like Shiloh and Jerusalem a curse among nations."],
+    "Jeremiah 26:8": ["Jeremiah Arrested", "Priests and prophets seize Jeremiah and accuse him of deserving death."],
+    "Jeremiah 26:12": ["Jeremiah's Defense", "Jeremiah declares that the Lord sent him to warn the city."],
+    "Jeremiah 26:13": ["Opportunity for Repentance", "Jeremiah urges the people to change their ways so God may relent."],
+    "Jeremiah 26:16": ["Officials Spare Jeremiah", "The officials decide Jeremiah should not die because he spoke in God's name."],
+    "Jeremiah 26:18": ["Example of Micah", "They recall that the prophet Micah warned Jerusalem and was not killed."],
+    "Jeremiah 26:20": ["Prophet Uriah Killed", "Another prophet named Uriah is executed for speaking against the city."],
+    "Jeremiah 26:24": ["Jeremiah Protected", "Ahikam supports Jeremiah so he is not handed over to be killed."],
+
+    "Jeremiah 27:1": ["The Yoke of Babylon", "God instructs Jeremiah to make a wooden yoke as a symbol of submission to Babylon."],
+    "Jeremiah 27:3": ["Message to the Nations", "Jeremiah sends messages to surrounding kings about serving Babylon."],
+    "Jeremiah 27:5": ["God's Sovereignty", "God declares He made the earth and gives it to whom He chooses."],
+    "Jeremiah 27:6": ["Babylon Appointed", "God has given these lands into the hand of King Nebuchadnezzar."],
+    "Jeremiah 27:8": ["Refusing Babylon", "Any nation that refuses to serve Babylon will face sword, famine, and plague."],
+    "Jeremiah 27:9": ["Warning Against False Prophets", "People are warned not to listen to prophets who promise freedom from Babylon."],
+    "Jeremiah 27:12": ["Advice to Zedekiah", "Jeremiah tells King Zedekiah to submit to Babylon and live."],
+    "Jeremiah 27:16": ["Temple Items Not Returning Soon", "Jeremiah warns that temple treasures will not return soon."],
+    "Jeremiah 27:22": ["Exile of Temple Treasures", "The remaining temple items will be taken to Babylon until God restores them."],
+
+    "Jeremiah 28:1": ["Hananiah the False Prophet", "The prophet Hananiah claims that Babylon’s power will soon be broken."],
+    "Jeremiah 28:3": ["False Promise of Return", "Hananiah says the temple vessels and exiles will return within two years."],
+    "Jeremiah 28:6": ["Jeremiah's Response", "Jeremiah says he wishes it were true but reminds them that prophets of peace must be proven."],
+    "Jeremiah 28:10": ["Breaking the Yoke", "Hananiah breaks the wooden yoke from Jeremiah’s neck as a sign."],
+    "Jeremiah 28:13": ["Yoke of Iron", "God tells Jeremiah that the wooden yoke will be replaced by an iron yoke."],
+    "Jeremiah 28:14": ["Babylon's Rule Confirmed", "God declares that the nations must serve Babylon."],
+    "Jeremiah 28:15": ["Hananiah Rebuked", "Jeremiah tells Hananiah he has made the people trust in lies."],
+    "Jeremiah 28:16": ["Death of Hananiah", "Jeremiah prophesies that Hananiah will die that year."],
+    "Jeremiah 28:17": ["Prophecy Fulfilled", "Hananiah dies in the seventh month."],
+
+    "Jeremiah 29:1": ["Letter to the Exiles", "Jeremiah sends a letter from Jerusalem to the people exiled in Babylon."],
+    "Jeremiah 29:4": ["Settle in Babylon", "God tells the exiles to build houses and live peacefully in Babylon."],
+    "Jeremiah 29:7": ["Seek the City's Peace", "The exiles should pray for the welfare of Babylon because their welfare depends on it."],
+    "Jeremiah 29:8": ["Warning About False Prophets", "They are warned not to listen to false prophets among them."],
+    "Jeremiah 29:10": ["Seventy Years in Babylon", "God promises that after seventy years He will bring them back."],
+    "Jeremiah 29:11": ["Plans for Good", "God declares He has plans to give them hope and a future."],
+    "Jeremiah 29:12": ["Prayer Heard", "When they call on God, He will listen."],
+    "Jeremiah 29:13": ["Seek God Wholeheartedly", "Those who seek God with all their heart will find Him."],
+    "Jeremiah 29:14": ["Return from Exile", "God promises to gather His people from all nations."],
+    "Jeremiah 29:21": ["Judgment on False Prophets", "False prophets among the exiles will be punished."],
+    "Jeremiah 29:31": ["Message About Shemaiah", "God condemns the false prophet Shemaiah for misleading the people."],
+
+    "Jeremiah 30:1": ["Promise of Restoration", "God tells Jeremiah to write down the words about Israel's future restoration."],
+    "Jeremiah 30:3": ["Return to the Land", "God promises to bring Israel and Judah back to their land."],
+    "Jeremiah 30:5": ["Time of Fear", "A time of terror is coming upon the people."],
+    "Jeremiah 30:7": ["Time of Jacob's Trouble", "A terrible time will come but Israel will be saved out of it."],
+    "Jeremiah 30:8": ["Freedom from Oppression", "God will break the yoke of foreign nations."],
+    "Jeremiah 30:11": ["God's Presence", "God promises to be with His people and not destroy them completely."],
+    "Jeremiah 30:12": ["Wound of Sin", "Their suffering comes from their many sins."],
+    "Jeremiah 30:17": ["Healing Promised", "God promises to restore health and heal their wounds."],
+    "Jeremiah 30:18": ["Rebuilding the City", "The city will be rebuilt and restored."],
+    "Jeremiah 30:22": ["Renewed Covenant", "God's people will again belong to Him."],
+    "Jeremiah 30:24": ["God's Plan Fulfilled", "God's purposes will be accomplished in the days to come."],
+
+    "Jeremiah 31:1": ["God's Everlasting Love", "God declares He will be the God of all the families of Israel."],
+    "Jeremiah 31:3": ["Love from Afar", "God loves His people with an everlasting love."],
+    "Jeremiah 31:5": ["Restoration of the Land", "Vineyards will again be planted in Samaria."],
+    "Jeremiah 31:8": ["Return of the Exiles", "God will gather His people from the north and distant lands."],
+    "Jeremiah 31:10": ["Shepherd of Israel", "God will gather and guard His people like a shepherd."],
+    "Jeremiah 31:12": ["Joyful Blessing", "The people will rejoice in God's goodness."],
+    "Jeremiah 31:15": ["Rachel Weeping", "Rachel weeps for her children who are gone."],
+    "Jeremiah 31:16": ["Hope for the Future", "God promises that the children will return."],
+    "Jeremiah 31:22": ["New Thing in the Land", "God will create something new in the land."],
+    "Jeremiah 31:31": ["New Covenant Promised", "God promises a new covenant with Israel and Judah."],
+    "Jeremiah 31:33": ["Law Written on Hearts", "God will write His law on their hearts."],
+    "Jeremiah 31:34": ["Complete Forgiveness", "God will forgive their sins and remember them no more."],
+
+    "Jeremiah 32:1": ["Jeremiah Imprisoned", "Jeremiah is confined in the courtyard of the guard during the siege of Jerusalem."],
+    "Jeremiah 32:6": ["Field of Anathoth", "God tells Jeremiah that his cousin will offer him a field to buy."],
+    "Jeremiah 32:8": ["Jeremiah Buys the Field", "Jeremiah buys the field as a sign of future restoration."],
+    "Jeremiah 32:10": ["Deed Sealed", "The purchase deed is sealed and stored safely."],
+    "Jeremiah 32:14": ["Preserved for the Future", "The documents are kept so they will last many days."],
+    "Jeremiah 32:17": ["Prayer of Jeremiah", "Jeremiah prays acknowledging God's great power."],
+    "Jeremiah 32:27": ["God's Power Declared", "The Lord says nothing is too difficult for Him."],
+    "Jeremiah 32:36": ["Promise of Restoration", "Though the city will fall, God promises future restoration."],
+    "Jeremiah 32:38": ["Renewed Relationship", "The people will again be God's people and He will be their God."],
+    "Jeremiah 32:41": ["Joyful Restoration", "God promises to plant His people firmly in the land again."],
+
+    "Jeremiah 33:1": ["Word to Jeremiah in Prison", "The Lord speaks to Jeremiah again while he is still confined."],
+    "Jeremiah 33:3": ["Call to God", "God invites Jeremiah to call on Him and promises to reveal great things."],
+    "Jeremiah 33:6": ["Healing and Peace", "God promises to bring healing and abundant peace."],
+    "Jeremiah 33:9": ["City of Joy", "Jerusalem will become a city of joy and praise among the nations."],
+    "Jeremiah 33:10": ["Return of Joyful Sounds", "Voices of joy and weddings will again be heard in Judah."],
+    "Jeremiah 33:14": ["Promise Fulfilled", "God promises to fulfill the good promise made to Israel and Judah."],
+    "Jeremiah 33:15": ["Righteous Branch of David", "A righteous branch from David's line will bring justice."],
+    "Jeremiah 33:17": ["Enduring Kingship", "David will never lack a man to sit on Israel's throne."],
+    "Jeremiah 33:20": ["God's Covenant Sure", "God's covenant is as certain as day and night."],
+    "Jeremiah 33:25": ["Creation's Covenant", "God's promises are as firm as His laws of heaven and earth."],
+
+    "Jeremiah 34:1": ["Message to King Zedekiah", "Jeremiah warns King Zedekiah about the coming fall of Jerusalem."],
+    "Jeremiah 34:3": ["Babylon's Victory", "Zedekiah will face the king of Babylon and be taken captive."],
+    "Jeremiah 34:4": ["Promise of Peaceful Death", "Zedekiah will die peacefully despite the coming judgment."],
+    "Jeremiah 34:8": ["Freedom for Hebrew Slaves", "The people make a covenant to free their Hebrew slaves."],
+    "Jeremiah 34:11": ["Breaking the Covenant", "The people later force the freed slaves back into slavery."],
+    "Jeremiah 34:13": ["Reminder of God's Law", "God reminds them that He commanded their ancestors to free slaves."],
+    "Jeremiah 34:15": ["Temporary Obedience", "They had briefly obeyed but then turned back to sin."],
+    "Jeremiah 34:17": ["Judgment for Breaking the Covenant", "Because they broke their promise, God declares judgment."],
+    "Jeremiah 34:20": ["Enemies Take the City", "The people who broke the covenant will fall by sword and famine."],
+
+    "Jeremiah 35:1": ["The Rechabites Tested", "Jeremiah is told to invite the Rechabites to the temple and offer them wine."],
+    "Jeremiah 35:6": ["Rechabites Refuse Wine", "The Rechabites refuse because their ancestor commanded them never to drink wine."],
+    "Jeremiah 35:8": ["Faithful Obedience", "They explain that they have obeyed their ancestor's command for generations."],
+    "Jeremiah 35:12": ["Lesson for Judah", "God tells Jeremiah to use the Rechabites as an example to Judah."],
+    "Jeremiah 35:14": ["Contrast with Judah", "The Rechabites obey their ancestor but Judah refuses to obey God."],
+    "Jeremiah 35:16": ["Persistent Disobedience", "Though God repeatedly spoke to Judah they would not listen."],
+    "Jeremiah 35:17": ["Judgment Announced", "Because of their disobedience God will bring disaster."],
+    "Jeremiah 35:18": ["Blessing for the Rechabites", "God promises to honor the Rechabites for their obedience."],
+    "Jeremiah 35:19": ["Enduring Line", "A descendant of the Rechabites will always serve before the Lord."],
+
+    "Jeremiah 36:1": ["Scroll of Jeremiah's Prophecies", "God instructs Jeremiah to write all His messages on a scroll."],
+    "Jeremiah 36:4": ["Baruch Writes the Scroll", "Jeremiah dictates the words and Baruch writes them."],
+    "Jeremiah 36:6": ["Scroll Read at the Temple", "Baruch reads the scroll to the people at the temple."],
+    "Jeremiah 36:11": ["Officials Hear the Message", "The officials hear the words and become concerned."],
+    "Jeremiah 36:16": ["Fear of the Officials", "They realize the message must be reported to the king."],
+    "Jeremiah 36:20": ["Scroll Taken to the King", "The scroll is brought before King Jehoiakim."],
+    "Jeremiah 36:23": ["King Burns the Scroll", "Jehoiakim cuts the scroll and burns it in the fire."],
+    "Jeremiah 36:27": ["God Commands Another Scroll", "God tells Jeremiah to write the words again."],
+    "Jeremiah 36:30": ["Judgment on Jehoiakim", "God declares that Jehoiakim will have no descendant on David's throne."],
+
+    "Jeremiah 37:1": ["Reign of Zedekiah", "Zedekiah becomes king but does not listen to God's message."],
+    "Jeremiah 37:3": ["Request for Prayer", "Zedekiah sends messengers asking Jeremiah to pray for the nation."],
+    "Jeremiah 37:5": ["Egypt Advances", "The Babylonian army temporarily withdraws because of Egypt."],
+    "Jeremiah 37:7": ["Babylon Will Return", "God says the Babylonians will come back and capture the city."],
+    "Jeremiah 37:11": ["Jeremiah Arrested", "Jeremiah is accused of deserting to the Babylonians."],
+    "Jeremiah 37:15": ["Jeremiah Imprisoned", "Officials beat Jeremiah and put him in prison."],
+    "Jeremiah 37:17": ["Secret Meeting with the King", "Zedekiah secretly asks Jeremiah for God's message."],
+    "Jeremiah 37:18": ["Jeremiah Defends Himself", "Jeremiah asks what crime he committed."],
+    "Jeremiah 37:21": ["Jeremiah Given Bread", "Jeremiah is placed in the courtyard of the guard and given bread daily."],
+
+    "Jeremiah 38:1": ["Jeremiah Opposed by Officials", "Some officials accuse Jeremiah of weakening the soldiers by his message."],
+    "Jeremiah 38:3": ["Prophecy of the City's Fall", "Jeremiah says Jerusalem will certainly be handed over to Babylon."],
+    "Jeremiah 38:4": ["Officials Demand Death", "The officials ask the king to put Jeremiah to death."],
+    "Jeremiah 38:6": ["Jeremiah in the Cistern", "Jeremiah is thrown into a muddy cistern where he sinks in the mud."],
+    "Jeremiah 38:7": ["Ebed-Melech Intervenes", "Ebed-Melech appeals to the king to rescue Jeremiah."],
+    "Jeremiah 38:10": ["Jeremiah Rescued", "Jeremiah is pulled out of the cistern with ropes and rags."],
+    "Jeremiah 38:14": ["Zedekiah Consults Jeremiah", "King Zedekiah secretly asks Jeremiah for God's message."],
+    "Jeremiah 38:17": ["Call to Surrender", "Jeremiah tells the king to surrender to Babylon and save the city."],
+    "Jeremiah 38:19": ["King's Fear", "Zedekiah fears the people who might harm him."],
+    "Jeremiah 38:21": ["Warning of Consequences", "If the king refuses, Jerusalem will be burned."],
+    "Jeremiah 38:24": ["Secret Kept", "The king tells Jeremiah not to reveal their conversation."],
+
+    "Jeremiah 39:1": ["Siege of Jerusalem", "The Babylonian army lays siege to Jerusalem."],
+    "Jeremiah 39:2": ["City Captured", "Jerusalem falls to Babylon in the eleventh year of King Zedekiah."],
+    "Jeremiah 39:4": ["Zedekiah Flees", "King Zedekiah tries to escape but is captured."],
+    "Jeremiah 39:6": ["Judgment on Zedekiah", "Zedekiah's sons are killed and his eyes are put out."],
+    "Jeremiah 39:8": ["City Destroyed", "The Babylonians burn Jerusalem and break down its walls."],
+    "Jeremiah 39:9": ["People Taken to Babylon", "Many of the people are taken into exile."],
+    "Jeremiah 39:11": ["Jeremiah Protected", "Nebuchadnezzar orders that Jeremiah be treated kindly."],
+    "Jeremiah 39:14": ["Jeremiah Released", "Jeremiah is taken from prison and given freedom."],
+    "Jeremiah 39:15": ["Promise to Ebed-Melech", "God promises to protect Ebed-Melech because he trusted Him."],
+
+    "Jeremiah 40:1": ["Jeremiah Freed", "Jeremiah is released by the Babylonian commander."],
+    "Jeremiah 40:2": ["Reason for the Disaster", "The commander explains that the destruction happened because Judah sinned against the Lord."],
+    "Jeremiah 40:4": ["Choice Given to Jeremiah", "Jeremiah is free to go wherever he wishes."],
+    "Jeremiah 40:5": ["Jeremiah Goes to Gedaliah", "Jeremiah chooses to stay with Gedaliah the governor."],
+    "Jeremiah 40:7": ["Leaders Return", "Military leaders come to Gedaliah at Mizpah."],
+    "Jeremiah 40:9": ["Call to Serve Babylon", "Gedaliah encourages the people to serve Babylon and live peacefully."],
+    "Jeremiah 40:11": ["Jews Return", "Many Jews who had fled return to Judah."],
+    "Jeremiah 40:13": ["Plot Against Gedaliah", "Johanan warns Gedaliah about a plot to kill him."],
+    "Jeremiah 40:16": ["Gedaliah Rejects the Warning", "Gedaliah refuses to believe the warning."],
+
+    "Jeremiah 41:1": ["Assassination of Gedaliah", "Ishmael son of Nethaniah kills Gedaliah at Mizpah."],
+    "Jeremiah 41:4": ["Pilgrims Killed", "Ishmael kills men who came to worship at the temple."],
+    "Jeremiah 41:7": ["Bodies Thrown into a Pit", "The victims are thrown into a large cistern."],
+    "Jeremiah 41:10": ["Captives Taken", "Ishmael captures the remaining people and plans to take them to Ammon."],
+    "Jeremiah 41:11": ["Johanan Pursues Ishmael", "Johanan and the commanders chase Ishmael to rescue the captives."],
+    "Jeremiah 41:14": ["Captives Freed", "The people Ishmael captured turn and join Johanan."],
+    "Jeremiah 41:15": ["Ishmael Escapes", "Ishmael escapes with a few men to the land of Ammon."],
+    "Jeremiah 41:16": ["People Fear Babylon", "Johanan gathers the rescued people fearing Babylonian retaliation."],
+    "Jeremiah 41:17": ["Journey Toward Egypt", "They stop near Bethlehem planning to flee to Egypt."],
+
+    "Jeremiah 42:1": ["Request for Guidance", "Johanan and the people ask Jeremiah to seek God's guidance for them."],
+    "Jeremiah 42:4": ["Jeremiah Prays", "Jeremiah promises to pray to the Lord and tell them His answer."],
+    "Jeremiah 42:6": ["Promise to Obey", "The people promise to obey whatever message God gives."],
+    "Jeremiah 42:7": ["God's Answer", "After ten days God gives His message to Jeremiah."],
+    "Jeremiah 42:10": ["Stay in the Land", "God tells them to remain in Judah and not fear Babylon."],
+    "Jeremiah 42:13": ["Warning Against Egypt", "If they go to Egypt they will face disaster."],
+    "Jeremiah 42:16": ["Sword and Famine", "The sword and famine they fear will follow them to Egypt."],
+    "Jeremiah 42:19": ["Clear Command", "God warns them not to go to Egypt."],
+    "Jeremiah 42:21": ["People Disobey", "Jeremiah warns that they will suffer if they refuse to listen."],
+
+    "Jeremiah 43:1": ["People Reject God's Word", "The leaders accuse Jeremiah of lying about God's message."],
+    "Jeremiah 43:4": ["Refusal to Stay", "Johanan and the people refuse to remain in Judah."],
+    "Jeremiah 43:5": ["Journey to Egypt", "They take the remaining people and Jeremiah with them to Egypt."],
+    "Jeremiah 43:8": ["Prophecy in Egypt", "God gives Jeremiah a message in Egypt."],
+    "Jeremiah 43:9": ["Stones Buried at Tahpanhes", "Jeremiah hides stones in the pavement as a prophetic sign."],
+    "Jeremiah 43:10": ["Babylon Will Conquer Egypt", "God says Nebuchadnezzar will come and conquer Egypt."],
+    "Jeremiah 43:12": ["Temples Destroyed", "The temples of Egypt will be burned and its idols destroyed."],
+    "Jeremiah 43:13": ["Egypt's Pillars Broken", "Babylon will break the sacred pillars and burn Egypt's temples."],
+
+    "Jeremiah 44:1": ["Message to Jews in Egypt", "Jeremiah delivers God's message to the Jews living in Egypt."],
+    "Jeremiah 44:3": ["Reason for Disaster", "Judah was destroyed because the people worshiped other gods."],
+    "Jeremiah 44:4": ["Prophets Sent Repeatedly", "God sent prophets again and again warning them to stop their evil."],
+    "Jeremiah 44:7": ["Warning to the People", "Jeremiah asks why they continue to bring disaster upon themselves."],
+    "Jeremiah 44:10": ["No Humility", "The people still have not humbled themselves or followed God's law."],
+    "Jeremiah 44:11": ["Judgment on the Remnant", "God declares He will bring disaster on those who went to Egypt."],
+    "Jeremiah 44:15": ["People Reject the Message", "The people openly refuse to obey God's word."],
+    "Jeremiah 44:17": ["Worship of the Queen of Heaven", "They insist on continuing their offerings to the queen of heaven."],
+    "Jeremiah 44:22": ["Reason for Desolation", "Their sins caused Judah to become a ruin."],
+    "Jeremiah 44:26": ["End of God's Name in Egypt", "God says His name will no longer be called upon by the people in Egypt."],
+    "Jeremiah 44:30": ["Sign of Judgment", "Pharaoh Hophra will be handed over to his enemies."],
+
+    "Jeremiah 45:1": ["Message to Baruch", "Jeremiah gives a message from the Lord to Baruch during the reign of Jehoiakim."],
+    "Jeremiah 45:2": ["Baruch's Complaint", "Baruch feels overwhelmed by sorrow and trouble."],
+    "Jeremiah 45:4": ["God's Plan for the Land", "God says He will uproot what He has planted."],
+    "Jeremiah 45:5": ["Encouragement to Baruch", "Baruch is told not to seek great things for himself but his life will be spared."],
+
+    "Jeremiah 46:1": ["Prophecies About the Nations", "These are messages from the Lord about other nations."],
+    "Jeremiah 46:2": ["Battle of Carchemish", "Egypt is defeated by Babylon at the battle of Carchemish."],
+    "Jeremiah 46:7": ["Egypt's Rising Pride", "Egypt rises like the Nile thinking it will cover the land."],
+    "Jeremiah 46:10": ["Day of the Lord's Vengeance", "The battle is described as a day of the Lord's judgment."],
+    "Jeremiah 46:13": ["Babylon Invades Egypt", "God announces that Babylon will attack Egypt."],
+    "Jeremiah 46:20": ["Egypt Compared to a Heifer", "Egypt is described as a beautiful heifer attacked from the north."],
+    "Jeremiah 46:24": ["Egypt Put to Shame", "Egypt will be handed over to the Babylonians."],
+    "Jeremiah 46:27": ["Comfort for Israel", "God promises not to destroy Israel completely."],
+    "Jeremiah 46:28": ["God's Discipline", "God will discipline Israel but not destroy them completely."],
+
+    "Jeremiah 47:1": ["Prophecy Against Philistia", "This message from the Lord came to Jeremiah about the Philistines before Pharaoh attacked Gaza."],
+    "Jeremiah 47:2": ["Flood from the North", "An army from the north will rise like a flood and sweep through the land."],
+    "Jeremiah 47:3": ["Panic in the Land", "The sound of horses and chariots will cause fathers to flee without helping their children."],
+    "Jeremiah 47:4": ["Destruction of Philistia", "The Lord will destroy the Philistines and the remaining people along the coast."],
+    "Jeremiah 47:5": ["Ashkelon Silenced", "Cities like Gaza and Ashkelon will be brought to silence."],
+    "Jeremiah 47:6": ["Sword of the Lord", "The sword of the Lord is called to stop its destruction."],
+    "Jeremiah 47:7": ["God's Command", "The sword cannot stop because the Lord has commanded it."],
+
+    "Jeremiah 48:1": ["Judgment on Moab", "The Lord announces disaster for the land of Moab."],
+    "Jeremiah 48:7": ["Moab's False Confidence", "Moab trusted in its wealth and will be captured."],
+    "Jeremiah 48:10": ["Instrument of Judgment", "Those who carry out the Lord's judgment are warned not to be careless."],
+    "Jeremiah 48:11": ["Moab's Comfort", "Moab has lived at ease and has not experienced exile."],
+    "Jeremiah 48:17": ["Lament for Moab", "The surrounding nations are told to mourn Moab's downfall."],
+    "Jeremiah 48:26": ["Moab's Pride", "Moab is judged for its pride and arrogance."],
+    "Jeremiah 48:29": ["Arrogance Condemned", "Moab's pride, arrogance, and haughtiness are described."],
+    "Jeremiah 48:36": ["Jeremiah's Lament", "Jeremiah mourns for Moab like someone playing a flute."],
+    "Jeremiah 48:42": ["Moab Destroyed", "Moab will be destroyed as a nation because it exalted itself against the Lord."],
+    "Jeremiah 48:47": ["Future Restoration", "In later days the Lord promises to restore Moab."],
+
+    "Jeremiah 49:1": ["Judgment on Ammon", "The Lord announces judgment against the nation of Ammon."],
+    "Jeremiah 49:7": ["Judgment on Edom", "God questions whether wisdom still exists in Edom."],
+    "Jeremiah 49:13": ["Edom's Destruction", "Edom will become a desolation and object of horror."],
+    "Jeremiah 49:16": ["Pride of Edom", "Edom's pride deceived them though they lived in high cliffs."],
+    "Jeremiah 49:23": ["Judgment on Damascus", "The cities of Damascus will be filled with fear and distress."],
+    "Jeremiah 49:28": ["Judgment on Kedar", "The tribes of Kedar will be attacked and plundered."],
+    "Jeremiah 49:30": ["Call to Flee", "The people of Hazor are warned to flee and hide."],
+    "Jeremiah 49:34": ["Prophecy Against Elam", "The Lord speaks against Elam during King Zedekiah's reign."],
+    "Jeremiah 49:36": ["Elam Scattered", "God will scatter the people of Elam to the four winds."],
+    "Jeremiah 49:39": ["Future Restoration of Elam", "God promises to restore Elam in the latter days."],
+
+    "Jeremiah 50:1": ["Prophecy Against Babylon", "The Lord announces judgment against Babylon through Jeremiah."],
+    "Jeremiah 50:2": ["Babylon's Idols Shamed", "The gods of Babylon will be put to shame and destroyed."],
+    "Jeremiah 50:4": ["Return of Israel and Judah", "The people will seek the Lord and return together."],
+    "Jeremiah 50:6": ["Lost Sheep", "God's people were like lost sheep led astray by their shepherds."],
+    "Jeremiah 50:9": ["Army from the North", "A great alliance from the north will attack Babylon."],
+    "Jeremiah 50:14": ["Attack on Babylon", "Archers are called to surround Babylon because she has sinned against the Lord."],
+    "Jeremiah 50:20": ["Forgiveness for Israel", "God promises to forgive the sins of the remnant of Israel."],
+    "Jeremiah 50:23": ["Hammer of the Earth Broken", "Babylon, once the hammer of the earth, will be shattered."],
+    "Jeremiah 50:29": ["Babylon's Pride", "Babylon will be repaid for its pride against the Lord."],
+    "Jeremiah 50:34": ["Israel's Redeemer", "The Lord will defend Israel and bring justice."],
+    "Jeremiah 50:38": ["Drought on Babylon", "A drought will come upon Babylon's waters."],
+    "Jeremiah 50:39": ["Babylon Desolate", "Babylon will become a desert where no one lives."],
+
+    "Jeremiah 51:1": ["God Raises a Destroyer", "The Lord stirs up a destroying wind against Babylon."],
+    "Jeremiah 51:6": ["Call to Flee Babylon", "God's people are urged to flee Babylon to escape judgment."],
+    "Jeremiah 51:7": ["Babylon the Golden Cup", "Babylon was like a golden cup that made the nations drunk."],
+    "Jeremiah 51:11": ["Attack by the Medes", "God prepares the Medes to destroy Babylon."],
+    "Jeremiah 51:15": ["God the Creator", "The Lord made the earth by His power and wisdom."],
+    "Jeremiah 51:20": ["Instrument of Judgment", "Babylon was once used as God's weapon to break nations."],
+    "Jeremiah 51:24": ["Babylon Repays for Evil", "Babylon will be repaid for all the harm done to Zion."],
+    "Jeremiah 51:36": ["Babylon's Fall", "God will dry up Babylon's sea and bring its downfall."],
+    "Jeremiah 51:41": ["Babylon Captured", "Babylon, the pride of the whole earth, will be captured."],
+    "Jeremiah 51:45": ["People Called to Leave", "God's people are urged again to leave Babylon."],
+    "Jeremiah 51:58": ["Babylon's Walls Destroyed", "The great walls of Babylon will fall."],
+    "Jeremiah 51:63": ["Scroll Thrown into the River", "A scroll describing Babylon's destruction is thrown into the Euphrates as a sign."],
+
+    "Jeremiah 52:1": ["Reign of Zedekiah", "Zedekiah becomes king in Jerusalem but does evil before the Lord."],
+    "Jeremiah 52:4": ["Siege of Jerusalem", "The Babylonian army begins the siege of Jerusalem."],
+    "Jeremiah 52:6": ["Severe Famine", "The famine becomes so severe that there is no food left in the city."],
+    "Jeremiah 52:7": ["City Breached", "The Babylonians break through the walls and the king tries to escape."],
+    "Jeremiah 52:9": ["Zedekiah Captured", "Zedekiah is captured and brought before the king of Babylon."],
+    "Jeremiah 52:11": ["Zedekiah Blinded", "After seeing his sons killed, Zedekiah's eyes are put out."],
+    "Jeremiah 52:12": ["Temple Destroyed", "The Babylonians burn the temple and the city."],
+    "Jeremiah 52:17": ["Temple Treasures Taken", "The bronze pillars and temple items are taken to Babylon."],
+    "Jeremiah 52:24": ["Leaders Executed", "Important leaders are captured and executed."],
+    "Jeremiah 52:28": ["Exiles Counted", "The number of people taken into exile is recorded."],
+    "Jeremiah 52:31": ["Jehoiachin Released", "The exiled king Jehoiachin is later released from prison and honored."],
 
     "Ezekiel 1:1": ["Vision by the River Chebar", "Ezekiel sees visions of God while among the exiles in Babylon."],
     "Ezekiel 1:4": ["The Stormy Cloud", "A great storm with fire and brightness approaches from the north."],
