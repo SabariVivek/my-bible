@@ -4934,474 +4934,1379 @@ const verseHeaders = {
     // Lamentations Chapter 5
     "Lamentations 5:1": "A Prayer for Restoration",
 
-    // Ezekiel Chapter 1
-    "Ezekiel 1:1": "Ezekiel's Vision of God's Glory",
-    "Ezekiel 1:15": "The Four Wheels",
-
-    // Ezekiel Chapter 2
-    "Ezekiel 2:1": "Ezekiel's Call",
-
-    // Ezekiel Chapter 3
-    "Ezekiel 3:1": "Ezekiel Eats the Scroll",
-    "Ezekiel 3:16": "Ezekiel a Watchman",
-
-    // Ezekiel Chapter 4
-    "Ezekiel 4:1": "The Siege of Jerusalem Portrayed",
-
-    // Ezekiel Chapter 5
-    "Ezekiel 5:1": "Jerusalem's Judgment",
-
-    // Ezekiel Chapter 6
-    "Ezekiel 6:1": "Prophecy Against the Mountains",
-
-    // Ezekiel Chapter 7
-    "Ezekiel 7:1": "The End Has Come",
-
-    // Ezekiel Chapter 8
-    "Ezekiel 8:1": "Idolatry in the Temple",
-
-    // Ezekiel Chapter 9
-    "Ezekiel 9:1": "The Slaughter of the Idolaters",
-
-    // Ezekiel Chapter 10
-    "Ezekiel 10:1": "God's Glory Leaves the Temple",
-
-    // Ezekiel Chapter 11
-    "Ezekiel 11:1": "Judgment on Israel's Leaders",
-    "Ezekiel 11:14": "Promise of Restoration",
-    "Ezekiel 11:22": "God's Glory Departs",
-
-    // Ezekiel Chapter 12
-    "Ezekiel 12:1": "The Exile Symbolized",
-    "Ezekiel 12:21": "The Fulfillment Is at Hand",
-
-    // Ezekiel Chapter 13
-    "Ezekiel 13:1": "False Prophets Condemned",
-
-    // Ezekiel Chapter 14
-    "Ezekiel 14:1": "Idolaters Condemned",
-    "Ezekiel 14:12": "Four Severe Judgments",
-
-    // Ezekiel Chapter 15
-    "Ezekiel 15:1": "Jerusalem a Useless Vine",
-
-    // Ezekiel Chapter 16
-    "Ezekiel 16:1": "Jerusalem's Unfaithfulness",
-    "Ezekiel 16:44": "Like Mother, Like Daughter",
-    "Ezekiel 16:59": "The LORD's Covenant Remembered",
-
-    // Ezekiel Chapter 17
-    "Ezekiel 17:1": "The Parable of Two Eagles",
-    "Ezekiel 17:22": "A Tender Twig",
-
-    // Ezekiel Chapter 18
-    "Ezekiel 18:1": "The Soul Who Sins Shall Die",
-    "Ezekiel 18:30": "Repent and Live",
-
-    // Ezekiel Chapter 19
-    "Ezekiel 19:1": "A Lament for Israel's Princes",
-
-    // Ezekiel Chapter 20
-    "Ezekiel 20:1": "Israel's History of Rebellion",
-    "Ezekiel 20:45": "Prophecy Against the South",
-
-    // Ezekiel Chapter 21
-    "Ezekiel 21:1": "The Sword of the LORD",
-    "Ezekiel 21:18": "The Sword of Babylon",
-
-    // Ezekiel Chapter 22
-    "Ezekiel 22:1": "Jerusalem's Sins",
-    "Ezekiel 22:17": "Israel Like Dross",
-
-    // Ezekiel Chapter 23
-    "Ezekiel 23:1": "Two Adulterous Sisters",
-
-    // Ezekiel Chapter 24
-    "Ezekiel 24:1": "The Parable of the Cooking Pot",
-    "Ezekiel 24:15": "Ezekiel's Wife Dies",
-
-    // Ezekiel Chapter 25
-    "Ezekiel 25:1": "Prophecies Against Ammon, Moab, Edom, and Philistia",
-
-    // Ezekiel Chapter 26
-    "Ezekiel 26:1": "Prophecy Against Tyre",
-
-    // Ezekiel Chapter 27
-    "Ezekiel 27:1": "A Lament for Tyre",
-
-    // Ezekiel Chapter 28
-    "Ezekiel 28:1": "Prophecy Against the Prince of Tyre",
-    "Ezekiel 28:11": "A Lament for the King of Tyre",
-    "Ezekiel 28:20": "Prophecy Against Sidon",
-
-    // Ezekiel Chapter 29
-    "Ezekiel 29:1": "Prophecy Against Egypt",
-
-    // Ezekiel Chapter 30
-    "Ezekiel 30:1": "A Lament for Egypt",
-
-    // Ezekiel Chapter 31
-    "Ezekiel 31:1": "Egypt Like a Cedar in Lebanon",
-
-    // Ezekiel Chapter 32
-    "Ezekiel 32:1": "A Lament for Pharaoh",
-    "Ezekiel 32:17": "Egypt in Sheol",
-
-    // Ezekiel Chapter 33
-    "Ezekiel 33:1": "Ezekiel a Watchman",
-    "Ezekiel 33:10": "Why Will You Die?",
-    "Ezekiel 33:21": "Jerusalem's Fall Announced",
-
-    // Ezekiel Chapter 34
-    "Ezekiel 34:1": "Prophecy Against the Shepherds",
-    "Ezekiel 34:11": "The LORD the True Shepherd",
-
-    // Ezekiel Chapter 35
-    "Ezekiel 35:1": "Prophecy Against Mount Seir",
-
-    // Ezekiel Chapter 36
-    "Ezekiel 36:1": "Prophecy to the Mountains of Israel",
-    "Ezekiel 36:16": "A New Heart and Spirit",
-
-    // Ezekiel Chapter 37
-    "Ezekiel 37:1": "The Valley of Dry Bones",
-    "Ezekiel 37:15": "The Two Sticks",
-
-    // Ezekiel Chapter 38
-    "Ezekiel 38:1": "Prophecy Against Gog",
-
-    // Ezekiel Chapter 39
-    "Ezekiel 39:1": "The Destruction of Gog",
-    "Ezekiel 39:21": "Israel to Be Restored",
-
-    // Ezekiel Chapter 40
-    "Ezekiel 40:1": "The Vision of the New Temple",
-
-    // Ezekiel Chapter 41
-    "Ezekiel 41:1": "The Inner Temple",
-
-    // Ezekiel Chapter 42
-    "Ezekiel 42:1": "The Chambers for the Priests",
-
-    // Ezekiel Chapter 43
-    "Ezekiel 43:1": "The Glory of the LORD Returns",
-    "Ezekiel 43:13": "The Altar",
-
-    // Ezekiel Chapter 44
-    "Ezekiel 44:1": "The East Gate",
-    "Ezekiel 44:9": "The Levites and Priests",
-
-    // Ezekiel Chapter 45
-    "Ezekiel 45:1": "The Portion for the LORD",
-    "Ezekiel 45:18": "The Feasts",
-
-    // Ezekiel Chapter 46
-    "Ezekiel 46:1": "The Prince's Offerings",
-    "Ezekiel 46:19": "The Temple Kitchens",
-
-    // Ezekiel Chapter 47
-    "Ezekiel 47:1": "The River from the Temple",
-    "Ezekiel 47:13": "The Boundaries of the Land",
-
-    // Ezekiel Chapter 48
-    "Ezekiel 48:1": "The Division of the Land",
-    "Ezekiel 48:30": "The Gates of the City",
-
-    // Daniel Chapter 1
-    "Daniel 1:1": "Daniel Taken to Babylon",
-    "Daniel 1:8": "Daniel's Faithfulness",
-
-    // Daniel Chapter 2
-    "Daniel 2:1": "Nebuchadnezzar's Dream",
-    "Daniel 2:14": "Daniel Interprets the Dream",
-    "Daniel 2:31": "The Dream Revealed",
-    "Daniel 2:46": "Daniel Promoted",
-
-    // Daniel Chapter 3
-    "Daniel 3:1": "The Image of Gold",
-    "Daniel 3:8": "The Three Hebrews Accused",
-    "Daniel 3:13": "Into the Fiery Furnace",
-    "Daniel 3:24": "Delivered from the Furnace",
-
-    // Daniel Chapter 4
-    "Daniel 4:1": "Nebuchadnezzar's Second Dream",
-    "Daniel 4:19": "Daniel Interprets the Dream",
-    "Daniel 4:28": "The Dream Fulfilled",
-
-    // Daniel Chapter 5
-    "Daniel 5:1": "Belshazzar's Feast",
-    "Daniel 5:5": "The Writing on the Wall",
-    "Daniel 5:13": "Daniel Interprets the Writing",
-
-    // Daniel Chapter 6
-    "Daniel 6:1": "The Plot Against Daniel",
-    "Daniel 6:16": "Daniel in the Lions' Den",
-
-    // Daniel Chapter 7
-    "Daniel 7:1": "Daniel's Vision of Four Beasts",
-    "Daniel 7:15": "The Interpretation of the Vision",
-
-    // Daniel Chapter 8
-    "Daniel 8:1": "Daniel's Vision of the Ram and Goat",
-    "Daniel 8:15": "The Interpretation of the Vision",
-
-    // Daniel Chapter 9
-    "Daniel 9:1": "Daniel's Prayer",
-    "Daniel 9:20": "The Seventy Weeks",
-
-    // Daniel Chapter 10
-    "Daniel 10:1": "Daniel's Vision of a Man",
-
-    // Daniel Chapter 11
-    "Daniel 11:1": "Kings of the South and North",
-
-    // Daniel Chapter 12
-    "Daniel 12:1": "The Time of the End",
-    "Daniel 12:5": "How Long Until the End?",
-
-    // Hosea Chapter 1
-    "Hosea 1:1": "Hosea's Wife and Children",
-
-    // Hosea Chapter 2
-    "Hosea 2:1": "Israel's Unfaithfulness",
-    "Hosea 2:14": "The LORD's Mercy on Israel",
-
-    // Hosea Chapter 3
-    "Hosea 3:1": "Hosea Redeems His Wife",
-
-    // Hosea Chapter 4
-    "Hosea 4:1": "The Charge Against Israel",
-
-    // Hosea Chapter 5
-    "Hosea 5:1": "Judgment on Israel and Judah",
-
-    // Hosea Chapter 6
-    "Hosea 6:1": "A Call to Repentance",
-    "Hosea 6:4": "Faithless Israel",
-
-    // Hosea Chapter 7
-    "Hosea 7:1": "Israel's Corruption",
-
-    // Hosea Chapter 8
-    "Hosea 8:1": "Israel Will Reap the Whirlwind",
-
-    // Hosea Chapter 9
-    "Hosea 9:1": "Punishment for Israel",
-
-    // Hosea Chapter 10
-    "Hosea 10:1": "Israel's Sin and Captivity",
-
-    // Hosea Chapter 11
-    "Hosea 11:1": "The LORD's Love for Israel",
-
-    // Hosea Chapter 12
-    "Hosea 12:1": "The LORD's Indictment of Israel",
-
-    // Hosea Chapter 13
-    "Hosea 13:1": "The LORD's Anger Against Israel",
-
-    // Hosea Chapter 14
-    "Hosea 14:1": "A Plea to Return to the LORD",
-    "Hosea 14:4": "Healing for the Repentant",
-
-    // Joel Chapter 1
-    "Joel 1:1": "The Invasion of Locusts",
-    "Joel 1:13": "A Call to Repentance",
-
-    // Joel Chapter 2
-    "Joel 2:1": "The Day of the LORD",
-    "Joel 2:12": "Return to the LORD",
-    "Joel 2:18": "The LORD's Response",
-    "Joel 2:28": "The Outpouring of the Spirit",
-
-    // Joel Chapter 3
-    "Joel 3:1": "Judgment on the Nations",
-    "Joel 3:14": "The Valley of Decision",
-
-    // Amos Chapter 1
-    "Amos 1:1": "Judgment on Israel's Neighbors",
-
-    // Amos Chapter 2
-    "Amos 2:1": "Judgment on Moab",
-    "Amos 2:4": "Judgment on Judah",
-    "Amos 2:6": "Judgment on Israel",
-
-    // Amos Chapter 3
-    "Amos 3:1": "Witnesses Against Israel",
-
-    // Amos Chapter 4
-    "Amos 4:1": "Israel Has Not Returned to the LORD",
-
-    // Amos Chapter 5
-    "Amos 5:1": "A Lament for Israel",
-    "Amos 5:18": "The Day of the LORD Is Darkness",
-
-    // Amos Chapter 6
-    "Amos 6:1": "Woe to the Complacent",
-
-    // Amos Chapter 7
-    "Amos 7:1": "Five Visions of Judgment",
-    "Amos 7:10": "Amaziah Opposes Amos",
-
-    // Amos Chapter 8
-    "Amos 8:1": "The Vision of the Basket of Fruit",
-    "Amos 8:4": "The Unscrupulous Merchant",
-
-    // Amos Chapter 9
-    "Amos 9:1": "The Destruction of Israel",
-    "Amos 9:11": "The Restoration of Israel",
-
-    // Obadiah Chapter 1
-    "Obadiah 1:1": "Edom's Destruction",
-    "Obadiah 1:15": "The Day of the LORD",
-
-    // Jonah Chapter 1
-    "Jonah 1:1": "Jonah Flees from the LORD",
-
-    // Jonah Chapter 2
-    "Jonah 2:1": "Jonah's Prayer",
-
-    // Jonah Chapter 3
-    "Jonah 3:1": "Jonah Goes to Nineveh",
-
-    // Jonah Chapter 4
-    "Jonah 4:1": "Jonah's Anger at the LORD's Compassion",
-
-    // Micah Chapter 1
-    "Micah 1:1": "Judgment on Samaria and Jerusalem",
-
-    // Micah Chapter 2
-    "Micah 2:1": "Woe to Oppressors",
-    "Micah 2:12": "A Promise of Restoration",
-
-    // Micah Chapter 3
-    "Micah 3:1": "Rulers and Prophets Rebuked",
-
-    // Micah Chapter 4
-    "Micah 4:1": "The Mountain of the LORD",
-    "Micah 4:9": "The LORD Will Rescue Zion",
-
-    // Micah Chapter 5
-    "Micah 5:1": "A Ruler from Bethlehem",
-    "Micah 5:7": "The Remnant of Jacob",
-
-    // Micah Chapter 6
-    "Micah 6:1": "The LORD's Case Against Israel",
-    "Micah 6:6": "What Does the LORD Require?",
-
-    // Micah Chapter 7
-    "Micah 7:1": "Misery Turned to Hope",
-    "Micah 7:14": "God's Compassion on Israel",
-
-    // Nahum Chapter 1
-    "Nahum 1:1": "The LORD Is Slow to Anger",
-    "Nahum 1:9": "The Destruction of Nineveh",
-
-    // Nahum Chapter 2
-    "Nahum 2:1": "The Destruction of Nineveh",
-
-    // Nahum Chapter 3
-    "Nahum 3:1": "Woe to Nineveh",
-
-    // Habakkuk Chapter 1
-    "Habakkuk 1:1": "Habakkuk's Complaint",
-    "Habakkuk 1:5": "The LORD's Answer",
-    "Habakkuk 1:12": "Habakkuk's Second Complaint",
-
-    // Habakkuk Chapter 2
-    "Habakkuk 2:1": "The LORD's Answer",
-    "Habakkuk 2:6": "Woe to the Wicked",
-    "Habakkuk 2:18": "The Futility of Idols",
-
-    // Habakkuk Chapter 3
-    "Habakkuk 3:1": "Habakkuk's Prayer",
-    "Habakkuk 3:16": "Trust in God's Salvation",
-
-    // Zephaniah Chapter 1
-    "Zephaniah 1:1": "The Great Day of the LORD",
-
-    // Zephaniah Chapter 2
-    "Zephaniah 2:1": "A Call to Repentance",
-    "Zephaniah 2:4": "Judgment on the Nations",
-
-    // Zephaniah Chapter 3
-    "Zephaniah 3:1": "Woe to Jerusalem",
-    "Zephaniah 3:8": "The Purification of the Nations",
-    "Zephaniah 3:14": "The Joy of Zion",
-
-    // Haggai Chapter 1
-    "Haggai 1:1": "A Call to Rebuild the Temple",
-
-    // Haggai Chapter 2
-    "Haggai 2:1": "The Coming Glory of the Temple",
-    "Haggai 2:10": "Blessings for a Defiled People",
-    "Haggai 2:20": "Zerubbabel the LORD's Signet Ring",
-
-    // Zechariah Chapter 1
-    "Zechariah 1:1": "A Call to Return to the LORD",
-    "Zechariah 1:7": "The Vision of the Horses",
-    "Zechariah 1:18": "The Vision of the Horns and Craftsmen",
-
-    // Zechariah Chapter 2
-    "Zechariah 2:1": "The Vision of the Measuring Line",
-
-    // Zechariah Chapter 3
-    "Zechariah 3:1": "The Vision of Joshua the High Priest",
-
-    // Zechariah Chapter 4
-    "Zechariah 4:1": "The Vision of the Golden Lampstand",
-
-    // Zechariah Chapter 5
-    "Zechariah 5:1": "The Vision of the Flying Scroll",
-    "Zechariah 5:5": "The Vision of the Woman in a Basket",
-
-    // Zechariah Chapter 6
-    "Zechariah 6:1": "The Vision of the Four Chariots",
-    "Zechariah 6:9": "The Crowning of Joshua",
-
-    // Zechariah Chapter 7
-    "Zechariah 7:1": "A Question About Fasting",
-
-    // Zechariah Chapter 8
-    "Zechariah 8:1": "The LORD Promises to Bless Jerusalem",
-
-    // Zechariah Chapter 9
-    "Zechariah 9:1": "Judgment on Israel's Enemies",
-    "Zechariah 9:9": "Your King Comes to You",
-
-    // Zechariah Chapter 10
-    "Zechariah 10:1": "The Restoration of Judah and Israel",
-
-    // Zechariah Chapter 11
-    "Zechariah 11:1": "The Fall of Israel's Oppressors",
-    "Zechariah 11:4": "The Two Shepherds",
-
-    // Zechariah Chapter 12
-    "Zechariah 12:1": "The Coming Deliverance of Jerusalem",
-
-    // Zechariah Chapter 13
-    "Zechariah 13:1": "A Fountain for Cleansing",
-    "Zechariah 13:7": "The Shepherd Struck",
-
-    // Zechariah Chapter 14
-    "Zechariah 14:1": "The Day of the LORD",
-
-    // Malachi Chapter 1
-    "Malachi 1:1": "The LORD's Love for Israel",
-    "Malachi 1:6": "Polluted Offerings",
-
-    // Malachi Chapter 2
-    "Malachi 2:1": "The Priests Rebuked",
-    "Malachi 2:10": "Judah's Unfaithfulness",
-
-    // Malachi Chapter 3
-    "Malachi 3:1": "The Messenger of the Covenant",
-    "Malachi 3:6": "Robbing God",
-    "Malachi 3:13": "The Book of Remembrance",
-
-    // Malachi Chapter 4
-    "Malachi 4:1": "The Day of the LORD",
-    "Malachi 4:4": "Behold, I Will Send Elijah",
+    "Ezekiel 1:1": ["Vision by the River Chebar", "Ezekiel sees visions of God while among the exiles in Babylon."],
+    "Ezekiel 1:4": ["The Stormy Cloud", "A great storm with fire and brightness approaches from the north."],
+    "Ezekiel 1:5": ["Four Living Creatures", "Ezekiel sees four living creatures with human form."],
+    "Ezekiel 1:10": ["Four Faces", "Each creature has four faces: human, lion, ox, and eagle."],
+    "Ezekiel 1:15": ["Wheels Within Wheels", "Beside the creatures are wheels that move in every direction."],
+    "Ezekiel 1:18": ["Eyes on the Wheels", "The wheels are full of eyes all around."],
+    "Ezekiel 1:22": ["Expanse Above Them", "Above the creatures is something like a shining expanse."],
+    "Ezekiel 1:26": ["Throne Above the Expanse", "Above the expanse is a throne with a figure like a man."],
+    "Ezekiel 1:28": ["Glory of the Lord", "Ezekiel sees the appearance of the glory of the Lord and falls face down."],
+
+    "Ezekiel 2:1": ["Ezekiel Called", "God tells Ezekiel to stand up and listen to His message."],
+    "Ezekiel 2:3": ["Sent to a Rebellious Nation", "Ezekiel is sent to speak to the rebellious people of Israel."],
+    "Ezekiel 2:5": ["Prophet Among Them", "Whether they listen or not, they will know a prophet was among them."],
+    "Ezekiel 2:6": ["Do Not Fear", "Ezekiel is told not to fear the rebellious people."],
+    "Ezekiel 2:8": ["Eat the Scroll", "God commands Ezekiel to open his mouth and eat what He gives him."],
+    "Ezekiel 2:9": ["Scroll of Lamentation", "Ezekiel sees a scroll written with words of mourning and woe."],
+
+    "Ezekiel 3:1": ["Eat the Scroll", "Ezekiel eats the scroll God gives him."],
+    "Ezekiel 3:4": ["Sent to Israel", "God sends Ezekiel to speak His words to the people of Israel."],
+    "Ezekiel 3:7": ["Stubborn People", "The people will not listen because they are stubborn."],
+    "Ezekiel 3:12": ["Spirit Lifts Ezekiel", "The Spirit lifts Ezekiel and he hears the sound of God's glory."],
+    "Ezekiel 3:15": ["Among the Exiles", "Ezekiel sits overwhelmed among the exiles for seven days."],
+    "Ezekiel 3:17": ["Watchman for Israel", "God appoints Ezekiel as a watchman for Israel."],
+    "Ezekiel 3:18": ["Warning the Wicked", "If Ezekiel does not warn the wicked, he will be responsible."],
+    "Ezekiel 3:20": ["Warning the Righteous", "If a righteous person turns to sin, Ezekiel must warn him."],
+    "Ezekiel 3:22": ["God Speaks in the Valley", "God calls Ezekiel to go out to a valley."],
+    "Ezekiel 3:26": ["Silent Prophet", "God makes Ezekiel silent except when He gives him a message."],
+
+    "Ezekiel 4:1": ["Siege of Jerusalem Portrayed", "God tells Ezekiel to draw Jerusalem on a brick and portray the siege against it."],
+    "Ezekiel 4:4": ["Lying on His Side", "Ezekiel must lie on his left side for many days to represent Israel's sin."],
+    "Ezekiel 4:6": ["Symbol of Judah's Sin", "He must then lie on his right side to represent Judah's sin."],
+    "Ezekiel 4:9": ["Bread of Hardship", "Ezekiel must eat a mixture of grains as a symbol of famine."],
+    "Ezekiel 4:12": ["Defiled Food", "The food must be baked over dung to show the impurity of exile."],
+    "Ezekiel 4:15": ["Cow Dung Allowed", "God allows Ezekiel to use cow dung instead of human dung."],
+    "Ezekiel 4:16": ["Shortage of Food", "Jerusalem will suffer severe hunger during the siege."],
+
+    "Ezekiel 5:1": ["Shaving the Hair", "God tells Ezekiel to shave his head and beard with a sword."],
+    "Ezekiel 5:2": ["Dividing the Hair", "The hair is divided into three parts to represent different judgments."],
+    "Ezekiel 5:5": ["Jerusalem at the Center", "God placed Jerusalem at the center of the nations."],
+    "Ezekiel 5:6": ["Rebellion Against God", "Jerusalem rebelled more than the surrounding nations."],
+    "Ezekiel 5:8": ["God Against Jerusalem", "The Lord declares that He Himself will judge Jerusalem."],
+    "Ezekiel 5:10": ["Terrible Famine", "People will suffer so severely that they will eat their own children."],
+    "Ezekiel 5:12": ["Threefold Judgment", "Some will die by famine, some by sword, and others by exile."],
+    "Ezekiel 5:13": ["God's Anger Satisfied", "God says His anger will be satisfied after judgment."],
+    "Ezekiel 5:15": ["City Becomes a Warning", "Jerusalem will become a disgrace and warning to other nations."],
+
+    "Ezekiel 6:1": ["Prophecy Against the Mountains", "God tells Ezekiel to prophesy against the mountains of Israel."],
+    "Ezekiel 6:3": ["Destruction of High Places", "The altars and high places of idol worship will be destroyed."],
+    "Ezekiel 6:5": ["Bodies Before Idols", "The bodies of idol worshipers will fall before their idols."],
+    "Ezekiel 6:7": ["Knowing the Lord", "The people will know that the Lord is God."],
+    "Ezekiel 6:8": ["A Remnant Survives", "Some people will survive among the nations."],
+    "Ezekiel 6:9": ["Remnant Remembers God", "The survivors will remember the Lord and regret their sins."],
+    "Ezekiel 6:11": ["Clap and Stomp", "Ezekiel must show sorrow over the terrible sins of Israel."],
+    "Ezekiel 6:12": ["Judgment Everywhere", "Death by sword, famine, and plague will spread across the land."],
+    "Ezekiel 6:14": ["Land Made Desolate", "The land will become a desolate wasteland."],
+
+    "Ezekiel 7:1": ["The End Has Come", "The Lord announces that the end has come upon the land of Israel."],
+    "Ezekiel 7:3": ["Judgment According to Their Ways", "God will judge the people according to their conduct and sins."],
+    "Ezekiel 7:6": ["The End Is Near", "The end has come and disaster is approaching quickly."],
+    "Ezekiel 7:10": ["The Day Has Come", "Pride has blossomed and violence has grown in the land."],
+    "Ezekiel 7:12": ["Time of Trouble", "Buyers and sellers should not rejoice because wrath is coming on everyone."],
+    "Ezekiel 7:15": ["Sword, Famine, and Plague", "Those outside will die by the sword and those inside by famine and plague."],
+    "Ezekiel 7:19": ["Wealth Cannot Save", "Silver and gold will not be able to save them in the day of God's wrath."],
+    "Ezekiel 7:23": ["Land Filled with Violence", "Chains will be prepared because the land is full of bloodshed."],
+    "Ezekiel 7:25": ["Search for Peace", "The people will look for peace but will not find it."],
+    "Ezekiel 7:27": ["Leaders in Despair", "The king, prince, and people will be filled with fear and despair."],
+
+    "Ezekiel 8:1": ["Vision in Jerusalem", "While sitting with the elders, Ezekiel sees a vision of God's glory."],
+    "Ezekiel 8:3": ["Taken to Jerusalem", "The Spirit lifts Ezekiel and brings him in a vision to Jerusalem."],
+    "Ezekiel 8:5": ["Idol of Jealousy", "Ezekiel sees a provoking idol at the entrance of the temple."],
+    "Ezekiel 8:7": ["Hidden Idolatry", "Ezekiel discovers elders secretly worshiping idols in a hidden room."],
+    "Ezekiel 8:10": ["Images on the Walls", "Creeping animals and idols are carved on the temple walls."],
+    "Ezekiel 8:12": ["Secret Worship", "The elders say the Lord does not see them."],
+    "Ezekiel 8:14": ["Women Mourning Tammuz", "Women are weeping for the false god Tammuz."],
+    "Ezekiel 8:16": ["Sun Worship", "Men in the temple courtyard are bowing down to the sun."],
+    "Ezekiel 8:18": ["God's Anger", "Because of these abominations, God declares He will not spare them."],
+
+    "Ezekiel 9:1": ["Executioners Called", "God calls six men with weapons to execute judgment in Jerusalem."],
+    "Ezekiel 9:3": ["Glory Moves to the Threshold", "The glory of the Lord moves to the entrance of the temple."],
+    "Ezekiel 9:4": ["Mark on the Faithful", "A man marks the foreheads of those who mourn over the city's sins."],
+    "Ezekiel 9:5": ["Judgment Begins", "The others are told to follow and kill without mercy."],
+    "Ezekiel 9:6": ["Start at the Sanctuary", "The judgment begins with the elders at the temple."],
+    "Ezekiel 9:8": ["Ezekiel's Plea", "Ezekiel falls on his face and pleads with God for the remnant."],
+    "Ezekiel 9:9": ["Great Sin of the Nation", "God says the land is full of bloodshed and injustice."],
+    "Ezekiel 9:10": ["No Pity", "God declares He will not spare them."],
+    "Ezekiel 9:11": ["Task Completed", "The man with the ink reports that he has done as commanded."],
+
+    "Ezekiel 10:1": ["Glory Above the Cherubim", "Ezekiel sees a throne above the cherubim in the temple."],
+    "Ezekiel 10:2": ["Burning Coals Scattered", "A man is told to take burning coals from among the cherubim and scatter them over the city."],
+    "Ezekiel 10:4": ["Glory Fills the Temple", "The glory of the Lord moves to the threshold and the temple fills with a cloud."],
+    "Ezekiel 10:6": ["Coals Taken from the Cherubim", "The man takes fire from among the cherubim as commanded."],
+    "Ezekiel 10:9": ["Wheels Beside the Cherubim", "Ezekiel sees four wheels beside the cherubim shining like precious stones."],
+    "Ezekiel 10:12": ["Covered with Eyes", "The cherubim, wheels, and their bodies are covered with eyes."],
+    "Ezekiel 10:14": ["Four Faces", "Each cherub has four faces: cherub, human, lion, and eagle."],
+    "Ezekiel 10:18": ["Glory Leaves the Temple", "The glory of the Lord departs from the temple entrance."],
+    "Ezekiel 10:20": ["Creatures Identified", "Ezekiel recognizes the living creatures as cherubim."],
+
+    "Ezekiel 11:1": ["Leaders of Wicked Counsel", "Ezekiel sees leaders who are giving evil advice in Jerusalem."],
+    "Ezekiel 11:4": ["Prophesy Against Them", "God commands Ezekiel to prophesy against these leaders."],
+    "Ezekiel 11:7": ["False Security", "The leaders wrongly believe Jerusalem will protect them."],
+    "Ezekiel 11:8": ["Fear of the Sword", "The sword they fear will come upon them."],
+    "Ezekiel 11:13": ["Death of Pelatiah", "Pelatiah dies while Ezekiel is prophesying."],
+    "Ezekiel 11:14": ["Hope for the Exiles", "God says the exiles, not those in Jerusalem, are the true remnant."],
+    "Ezekiel 11:17": ["Promise of Restoration", "God promises to gather His people from the nations."],
+    "Ezekiel 11:19": ["New Heart and Spirit", "God promises to give His people a new heart and spirit."],
+    "Ezekiel 11:22": ["Glory Leaves the City", "The glory of the Lord moves to the mountain east of Jerusalem."],
+    "Ezekiel 11:25": ["Vision Shared", "Ezekiel tells the exiles everything the Lord showed him."],
+
+    "Ezekiel 12:1": ["Rebellious House", "God tells Ezekiel that Israel is rebellious and refuses to see or hear."],
+    "Ezekiel 12:3": ["Act Out the Exile", "Ezekiel must pack belongings and act out going into exile."],
+    "Ezekiel 12:6": ["Symbolic Escape", "Ezekiel covers his face and leaves through a hole in the wall."],
+    "Ezekiel 12:9": ["Meaning of the Sign", "The people ask Ezekiel what these actions mean."],
+    "Ezekiel 12:10": ["Prophecy About the Prince", "The sign refers to the prince in Jerusalem who will go into exile."],
+    "Ezekiel 12:13": ["Capture of the Prince", "The prince will be captured and taken to Babylon."],
+    "Ezekiel 12:17": ["Eating in Fear", "Ezekiel must eat and drink with trembling as another sign."],
+    "Ezekiel 12:21": ["End of the Proverb", "The saying that visions take a long time will end."],
+    "Ezekiel 12:25": ["God's Word Fulfilled", "God declares that His word will be fulfilled without delay."],
+    "Ezekiel 12:27": ["Vision for Their Time", "The visions refer to their own time, not the distant future."],
+
+    "Ezekiel 13:1": ["Prophecy Against False Prophets", "The Lord tells Ezekiel to speak against the false prophets of Israel."],
+    "Ezekiel 13:3": ["Foolish Prophets", "These prophets follow their own spirit and have seen nothing."],
+    "Ezekiel 13:6": ["False Visions", "They proclaim false visions and lies in the name of the Lord."],
+    "Ezekiel 13:10": ["False Peace", "They say 'peace' when there is no peace."],
+    "Ezekiel 13:11": ["Wall of Lies", "Their false message is like a weak wall that will collapse in a storm."],
+    "Ezekiel 13:14": ["Wall Destroyed", "God will destroy the wall built with lies."],
+    "Ezekiel 13:17": ["Prophecy Against False Prophetesses", "God tells Ezekiel to speak against women who practice false prophecy."],
+    "Ezekiel 13:18": ["Deceptive Practices", "They deceive people with charms and magic."],
+    "Ezekiel 13:22": ["Encouraging the Wicked", "They discourage the righteous and strengthen the wicked."],
+    "Ezekiel 13:23": ["End of False Visions", "God will stop their false visions and rescue His people."],
+
+    "Ezekiel 14:1": ["Elders Seek Ezekiel", "Some elders of Israel come to Ezekiel to inquire of the Lord."],
+    "Ezekiel 14:3": ["Idols in the Heart", "God says the people have set up idols in their hearts."],
+    "Ezekiel 14:4": ["God Answers According to Idols", "God will answer them according to their idolatry."],
+    "Ezekiel 14:6": ["Call to Repentance", "The people are urged to turn away from their idols."],
+    "Ezekiel 14:9": ["Judgment on False Prophets", "If a prophet is deceived, God will judge him."],
+    "Ezekiel 14:12": ["Four Severe Judgments", "God speaks of famine, wild beasts, sword, and plague."],
+    "Ezekiel 14:14": ["Righteous Men Cannot Save Others", "Even Noah, Daniel, and Job could only save themselves."],
+    "Ezekiel 14:21": ["Jerusalem's Judgment", "God will send His four severe judgments upon Jerusalem."],
+    "Ezekiel 14:22": ["A Surviving Remnant", "Some survivors will escape and be brought out."],
+    "Ezekiel 14:23": ["Understanding the Judgment", "People will understand that God acted justly."],
+
+    "Ezekiel 15:1": ["The Vine Wood", "God compares Jerusalem to useless wood from a vine."],
+    "Ezekiel 15:3": ["Useless for Building", "Vine wood cannot be used to make anything useful."],
+    "Ezekiel 15:4": ["Fit Only for Fire", "The wood is only good for burning."],
+    "Ezekiel 15:6": ["Jerusalem Like Burned Wood", "Jerusalem is like vine wood thrown into the fire."],
+    "Ezekiel 15:7": ["God Against Them", "God declares that He will set His face against them."],
+    "Ezekiel 15:8": ["Land Made Desolate", "The land will become desolate because of their unfaithfulness."],
+
+    "Ezekiel 16:1": ["Jerusalem's Unfaithfulness", "The Lord tells Ezekiel to confront Jerusalem with her detestable sins."],
+    "Ezekiel 16:3": ["Origins of Jerusalem", "Jerusalem is described as a child born to Amorite and Hittite parents."],
+    "Ezekiel 16:6": ["God Rescues the Child", "God finds the abandoned child and gives her life."],
+    "Ezekiel 16:8": ["Covenant with Jerusalem", "God enters into a covenant and Jerusalem becomes His."],
+    "Ezekiel 16:10": ["God's Blessings", "God clothes and adorns Jerusalem with beauty and honor."],
+    "Ezekiel 16:15": ["Jerusalem's Unfaithfulness", "Jerusalem trusts in her beauty and becomes unfaithful."],
+    "Ezekiel 16:20": ["Child Sacrifice", "Jerusalem sacrifices her children to idols."],
+    "Ezekiel 16:30": ["Shameless Sin", "Jerusalem acts like a shameless prostitute."],
+    "Ezekiel 16:35": ["Judgment on the Adulterous City", "God declares punishment for Jerusalem's unfaithfulness."],
+    "Ezekiel 16:44": ["Like Mother Like Daughter", "Jerusalem follows the sinful example of her ancestors."],
+    "Ezekiel 16:53": ["Future Restoration", "God promises that restoration will come after judgment."],
+    "Ezekiel 16:60": ["Everlasting Covenant", "God promises to remember His covenant."],
+    "Ezekiel 16:63": ["Shame and Forgiveness", "Jerusalem will remember her shame when God forgives her."],
+
+    "Ezekiel 17:1": ["Parable of Two Eagles", "God gives Ezekiel a riddle about two great eagles and a vine."],
+    "Ezekiel 17:3": ["First Eagle", "The first eagle takes the top of a cedar and plants it in a fertile land."],
+    "Ezekiel 17:5": ["Vine Planted", "A seed is planted and grows into a low spreading vine."],
+    "Ezekiel 17:7": ["Second Eagle", "The vine turns toward another eagle seeking water."],
+    "Ezekiel 17:9": ["Vine Uprooted", "The vine will be uprooted and wither because of its betrayal."],
+    "Ezekiel 17:11": ["Meaning of the Parable", "The parable refers to Babylon and the king of Judah."],
+    "Ezekiel 17:13": ["Broken Covenant", "The king of Judah breaks his covenant with Babylon."],
+    "Ezekiel 17:16": ["King's Fate", "The king will die in Babylon for breaking the covenant."],
+    "Ezekiel 17:22": ["Tender Sprig Planted", "God promises to plant a new branch from the cedar."],
+    "Ezekiel 17:23": ["Great Tree", "The branch will grow into a great tree where many birds live."],
+    "Ezekiel 17:24": ["God Exalts the Lowly", "The Lord declares that He brings down the high and raises the low."],
+
+    "Ezekiel 18:1": ["The Proverb About Sour Grapes", "People say children suffer for their parents' sins."],
+    "Ezekiel 18:3": ["Individual Responsibility", "God declares that each person is responsible for their own sin."],
+    "Ezekiel 18:5": ["Example of a Righteous Man", "A righteous man who does what is just will live."],
+    "Ezekiel 18:10": ["Example of a Wicked Son", "A wicked son who commits violence will die."],
+    "Ezekiel 18:14": ["Righteous Grandson", "A son who sees his father's sins and chooses righteousness will live."],
+    "Ezekiel 18:20": ["Soul That Sins", "The person who sins will die; the child will not bear the parent's guilt."],
+    "Ezekiel 18:21": ["Repentance Brings Life", "If a wicked person turns from sin he will live."],
+    "Ezekiel 18:24": ["Righteous Turning to Sin", "If a righteous person turns to sin he will die."],
+    "Ezekiel 18:30": ["Call to Repent", "God calls Israel to repent and turn from sin."],
+    "Ezekiel 18:31": ["New Heart and Spirit", "The people are urged to get a new heart and spirit."],
+    "Ezekiel 18:32": ["God Desires Life", "God takes no pleasure in death but wants people to live."],
+
+    "Ezekiel 19:1": ["Lament for Israel's Princes", "God tells Ezekiel to sing a lament for the princes of Israel."],
+    "Ezekiel 19:2": ["Lioness and Her Cubs", "Israel is compared to a lioness raising strong lion cubs."],
+    "Ezekiel 19:3": ["First Lion Captured", "One cub becomes strong but is captured and taken to Egypt."],
+    "Ezekiel 19:5": ["Second Lion", "Another cub rises to power and becomes fierce."],
+    "Ezekiel 19:7": ["Destructive Ruler", "He devastates cities and the land becomes desolate."],
+    "Ezekiel 19:9": ["Captured by Nations", "He is trapped and taken to Babylon."],
+    "Ezekiel 19:10": ["Vine in a Vineyard", "Israel is compared to a fruitful vine planted by waters."],
+    "Ezekiel 19:12": ["Vine Uprooted", "The vine is uprooted in anger and thrown to the ground."],
+    "Ezekiel 19:14": ["End of the Vine", "The vine is burned with fire and no strong branch remains."],
+
+    "Ezekiel 20:1": ["Elders Seek the Lord", "Some elders come to Ezekiel to inquire of the Lord."],
+    "Ezekiel 20:5": ["God Remembers Israel's Past", "God recalls choosing Israel in Egypt."],
+    "Ezekiel 20:8": ["Rebellion in Egypt", "Even in Egypt the people rebelled and worshiped idols."],
+    "Ezekiel 20:10": ["God Brings Them Out", "God brings Israel out of Egypt into the wilderness."],
+    "Ezekiel 20:12": ["Gift of the Sabbath", "God gives them the Sabbath as a sign between Him and them."],
+    "Ezekiel 20:16": ["Rebellion in the Wilderness", "The people reject God's laws and desecrate the Sabbath."],
+    "Ezekiel 20:21": ["Second Generation Rebels", "The next generation also rebels against God."],
+    "Ezekiel 20:30": ["Idolatry in the Land", "Israel continues to defile itself with idols."],
+    "Ezekiel 20:33": ["God Will Rule", "God declares He will rule over them with a mighty hand."],
+    "Ezekiel 20:37": ["Passing Under the Rod", "God will purify His people and renew His covenant."],
+    "Ezekiel 20:41": ["Restoration Among the Nations", "God will gather His people from the nations."],
+    "Ezekiel 20:44": ["God Acts for His Name", "The people will know the Lord when He restores them."],
+
+    "Ezekiel 21:1": ["Sword Against Jerusalem", "The Lord announces His sword will come against Jerusalem."],
+    "Ezekiel 21:3": ["Sword Against All", "God's sword will strike both righteous and wicked."],
+    "Ezekiel 21:6": ["Ezekiel Groans", "Ezekiel must groan as a sign of coming disaster."],
+    "Ezekiel 21:9": ["Sharpened Sword", "The sword is sharpened and polished for slaughter."],
+    "Ezekiel 21:14": ["Clap Your Hands", "God commands Ezekiel to strike his hands as a sign of judgment."],
+    "Ezekiel 21:18": ["Two Roads for the King", "The king of Babylon consults omens to choose which city to attack."],
+    "Ezekiel 21:21": ["Divination at the Crossroads", "The king uses divination to decide between Jerusalem and Rabbah."],
+    "Ezekiel 21:25": ["Judgment on the Prince", "The wicked prince of Israel will lose his crown."],
+    "Ezekiel 21:26": ["Reversal of Power", "The humble will be exalted and the proud brought low."],
+    "Ezekiel 21:27": ["Coming King", "The kingdom will remain overturned until the rightful ruler comes."],
+    "Ezekiel 21:28": ["Prophecy Against Ammon", "The sword is also prepared against the people of Ammon."],
+
+    "Ezekiel 22:1": ["Sins of Jerusalem", "God tells Ezekiel to expose the sins of Jerusalem."],
+    "Ezekiel 22:3": ["City of Bloodshed", "Jerusalem is guilty of bloodshed and idolatry."],
+    "Ezekiel 22:6": ["Corrupt Leaders", "Israel's princes misuse their power to shed blood."],
+    "Ezekiel 22:7": ["Oppression of the Weak", "The people mistreat parents, foreigners, orphans, and widows."],
+    "Ezekiel 22:12": ["Greed and Bribery", "They take bribes, charge interest, and exploit others."],
+    "Ezekiel 22:17": ["Impure Metal", "Israel is compared to worthless metal impurities."],
+    "Ezekiel 22:19": ["Gathered for Judgment", "God gathers them like metal to be melted in a furnace."],
+    "Ezekiel 22:23": ["Land Without Justice", "The land is described as polluted and full of violence."],
+    "Ezekiel 22:26": ["Priests Corrupt the Law", "Priests violate God's law and profane holy things."],
+    "Ezekiel 22:27": ["Princes Like Wolves", "The rulers are like wolves tearing their prey."],
+    "Ezekiel 22:30": ["No One to Stand in the Gap", "God searches for someone to intercede but finds none."],
+    "Ezekiel 22:31": ["Judgment Poured Out", "God pours out His wrath because of their sins."],
+
+    "Ezekiel 23:1": ["Two Sisters", "God gives a message comparing Samaria and Jerusalem to two sisters."],
+    "Ezekiel 23:4": ["Names of the Sisters", "The older sister is Samaria and the younger is Jerusalem."],
+    "Ezekiel 23:5": ["Samaria's Unfaithfulness", "Samaria commits adultery by trusting foreign nations."],
+    "Ezekiel 23:7": ["Idolatry with Assyria", "Samaria becomes defiled by idol worship with Assyria."],
+    "Ezekiel 23:11": ["Jerusalem Worse Than Samaria", "Jerusalem behaves even more wickedly than Samaria."],
+    "Ezekiel 23:14": ["Desire for Babylon", "Jerusalem becomes fascinated with Babylon."],
+    "Ezekiel 23:17": ["Alliance with Babylon", "Jerusalem becomes involved with Babylon but later despises them."],
+    "Ezekiel 23:22": ["Enemies Turn Against Her", "The very nations she trusted will come against her."],
+    "Ezekiel 23:25": ["Severe Judgment", "Jerusalem will face humiliation and punishment."],
+    "Ezekiel 23:35": ["Forgotten God", "Jerusalem suffers because she forgot the Lord."],
+    "Ezekiel 23:49": ["Punishment for Sin", "The people will bear the consequences of their sins."],
+
+    "Ezekiel 24:1": ["Siege of Jerusalem Begins", "God announces the day Babylon begins the siege of Jerusalem."],
+    "Ezekiel 24:3": ["Parable of the Boiling Pot", "Jerusalem is compared to a pot filled with meat set on the fire."],
+    "Ezekiel 24:6": ["City of Bloodshed", "The pot represents the corrupt city full of bloodshed."],
+    "Ezekiel 24:9": ["Great Fire of Judgment", "God declares He will pile the wood high and burn the pot."],
+    "Ezekiel 24:11": ["Pot Emptied and Burned", "The pot is placed empty on the fire to burn away its impurities."],
+    "Ezekiel 24:15": ["Death of Ezekiel's Wife", "God tells Ezekiel that his beloved wife will die."],
+    "Ezekiel 24:16": ["No Public Mourning", "Ezekiel is commanded not to mourn publicly."],
+    "Ezekiel 24:19": ["People Ask Ezekiel", "The people ask why Ezekiel behaves this way."],
+    "Ezekiel 24:21": ["Temple Will Be Destroyed", "God explains that the temple will also be taken away."],
+    "Ezekiel 24:24": ["Ezekiel as a Sign", "Ezekiel's actions serve as a sign to the people."],
+    "Ezekiel 24:27": ["Speech Restored", "Ezekiel will speak again when news of Jerusalem's fall arrives."],
+
+    "Ezekiel 25:1": ["Prophecy Against Ammon", "The Lord tells Ezekiel to speak against the people of Ammon."],
+    "Ezekiel 25:3": ["Mocking Israel's Fall", "Ammon rejoiced when the sanctuary and land of Israel were destroyed."],
+    "Ezekiel 25:4": ["Ammon Given to the East", "God will hand Ammon over to eastern peoples."],
+    "Ezekiel 25:6": ["Punishment for Ammon", "Ammon clapped and rejoiced over Israel's destruction."],
+    "Ezekiel 25:7": ["Judgment on Ammon", "God will cut them off and they will know the Lord."],
+    "Ezekiel 25:8": ["Prophecy Against Moab", "Moab claims that Judah is like other nations."],
+    "Ezekiel 25:9": ["Moab's Cities Exposed", "God will open Moab's cities to attack."],
+    "Ezekiel 25:12": ["Prophecy Against Edom", "Edom took revenge on Judah."],
+    "Ezekiel 25:13": ["Judgment on Edom", "God will stretch out His hand against Edom."],
+    "Ezekiel 25:15": ["Prophecy Against Philistia", "Philistia acted with revenge and hatred."],
+    "Ezekiel 25:16": ["Punishment of Philistines", "God will destroy the Philistines."],
+
+    "Ezekiel 26:1": ["Prophecy Against Tyre", "The Lord speaks against the city of Tyre."],
+    "Ezekiel 26:2": ["Tyre Rejoices Over Jerusalem", "Tyre celebrates Jerusalem's fall."],
+    "Ezekiel 26:3": ["Many Nations Against Tyre", "God will bring many nations against Tyre like waves."],
+    "Ezekiel 26:4": ["City Destroyed", "Tyre's walls and towers will be destroyed."],
+    "Ezekiel 26:5": ["Bare Rock", "The city will become a place for fishermen to spread their nets."],
+    "Ezekiel 26:7": ["Nebuchadnezzar Attacks", "The king of Babylon will come against Tyre."],
+    "Ezekiel 26:10": ["Great Army", "Horses and chariots will fill the land."],
+    "Ezekiel 26:12": ["City Plundered", "Tyre's wealth and houses will be destroyed."],
+    "Ezekiel 26:14": ["Never Rebuilt", "Tyre will become a bare rock and never be rebuilt."],
+    "Ezekiel 26:19": ["City Brought Down", "Tyre will sink into the depths like other ruined cities."],
+
+    "Ezekiel 27:1": ["Lament for Tyre", "God tells Ezekiel to raise a lament for the city of Tyre."],
+    "Ezekiel 27:3": ["Beautiful Ship", "Tyre is compared to a magnificent ship."],
+    "Ezekiel 27:5": ["Fine Materials", "The ship is built with the finest wood and materials."],
+    "Ezekiel 27:12": ["Trade with Nations", "Tyre trades silver, iron, and goods with many nations."],
+    "Ezekiel 27:17": ["Trade with Judah", "Judah trades wheat, honey, oil, and balm with Tyre."],
+    "Ezekiel 27:25": ["Ships of Tarshish", "Large trading ships carry Tyre's goods."],
+    "Ezekiel 27:27": ["Shipwreck", "The great ship sinks into the sea."],
+    "Ezekiel 27:30": ["Sailors Mourn", "Sailors cry and mourn over Tyre's destruction."],
+    "Ezekiel 27:33": ["Wealth of Nations", "Tyre enriched many nations with its trade."],
+    "Ezekiel 27:36": ["Terrible End", "Tyre meets a sudden and terrible end."],
+
+    "Ezekiel 28:1": ["Prophecy Against the Prince of Tyre", "The ruler of Tyre is rebuked for thinking he is a god."],
+    "Ezekiel 28:2": ["Pride of the Prince", "Though he claims divine wisdom, he is only a man."],
+    "Ezekiel 28:6": ["Judgment for Pride", "Because of his pride, foreign nations will attack him."],
+    "Ezekiel 28:11": ["Lament for the King of Tyre", "A lament is given describing the king's former beauty and wisdom."],
+    "Ezekiel 28:13": ["In Eden", "The king is symbolically described as being in Eden, adorned with precious stones."],
+    "Ezekiel 28:14": ["Anointed Cherub", "He is described as a guardian cherub placed on God's holy mountain."],
+    "Ezekiel 28:15": ["Corruption Through Pride", "His perfection became corrupted because of pride."],
+    "Ezekiel 28:16": ["Cast Down", "He is cast out because of violence and sin."],
+    "Ezekiel 28:20": ["Prophecy Against Sidon", "God declares judgment against the city of Sidon."],
+    "Ezekiel 28:22": ["God's Glory in Judgment", "Sidon will know the Lord when He executes judgment."],
+    "Ezekiel 28:24": ["Israel's Enemies Removed", "Hostile neighbors will no longer harm Israel."],
+    "Ezekiel 28:25": ["Restoration of Israel", "God promises to gather Israel back to their land."],
+
+
+    "Ezekiel 29:1": ["Prophecy Against Pharaoh", "God speaks against Pharaoh king of Egypt."],
+    "Ezekiel 29:3": ["Pharaoh Compared to a Monster", "Pharaoh is compared to a great monster in the Nile."],
+    "Ezekiel 29:4": ["Captured from the River", "God will pull Pharaoh from the Nile with hooks."],
+    "Ezekiel 29:6": ["Egypt a Weak Support", "Egypt failed to support Israel when they relied on it."],
+    "Ezekiel 29:8": ["Sword Against Egypt", "God will bring a sword against Egypt."],
+    "Ezekiel 29:11": ["Forty Years of Desolation", "Egypt will be desolate for forty years."],
+    "Ezekiel 29:13": ["Restoration of Egypt", "After forty years Egypt will be restored."],
+    "Ezekiel 29:15": ["Humble Kingdom", "Egypt will become a lowly kingdom."],
+    "Ezekiel 29:17": ["Reward for Babylon", "God gives Egypt to Babylon as payment for attacking Tyre."],
+    "Ezekiel 29:21": ["Strength for Israel", "God promises to restore strength to Israel."],
+
+    "Ezekiel 30:1": ["Day of the Lord for Egypt", "The day of the Lord brings disaster upon Egypt."],
+    "Ezekiel 30:4": ["Egypt Devastated", "War will come and Egypt will be filled with anguish."],
+    "Ezekiel 30:6": ["Fall of Allies", "Egypt's allies will fall with her."],
+    "Ezekiel 30:10": ["Nebuchadnezzar Attacks", "Babylon's king will destroy Egypt's wealth."],
+    "Ezekiel 30:13": ["End of Idols", "God will destroy Egypt's idols."],
+    "Ezekiel 30:15": ["Wrath on Sin", "God will pour out His anger on the strongholds of Egypt."],
+    "Ezekiel 30:18": ["Dark Day in Egypt", "The power of Egypt will be broken."],
+    "Ezekiel 30:20": ["Pharaoh's Arm Broken", "God says Pharaoh's arm will be broken."],
+    "Ezekiel 30:24": ["Babylon Strengthened", "God will strengthen the king of Babylon."],
+    "Ezekiel 30:26": ["Egypt Scattered", "Egyptians will be scattered among the nations."],
+
+    "Ezekiel 31:1": ["Assyria Compared to a Cedar", "God compares Assyria to a tall cedar tree in Lebanon."],
+    "Ezekiel 31:3": ["Great and Beautiful Tree", "The cedar grows tall and strong above all other trees."],
+    "Ezekiel 31:6": ["Shelter for Nations", "Birds and animals find shelter in its branches."],
+    "Ezekiel 31:10": ["Pride Leads to Fall", "Because of its pride, God decides to bring it down."],
+    "Ezekiel 31:11": ["Given to the Mighty One", "The tree is handed over to a powerful nation for judgment."],
+    "Ezekiel 31:12": ["Tree Cut Down", "Foreign nations cut down the tree and leave it fallen."],
+    "Ezekiel 31:14": ["Lesson for Nations", "No tree should exalt itself because all will die."],
+    "Ezekiel 31:16": ["Nations Tremble", "The nations tremble when the tree falls."],
+    "Ezekiel 31:18": ["Pharaoh Compared to the Tree", "Pharaoh and Egypt are warned they will fall like the cedar."],
+
+    "Ezekiel 32:1": ["Lament for Pharaoh", "God gives Ezekiel a lament about Pharaoh king of Egypt."],
+    "Ezekiel 32:2": ["Pharaoh Like a Monster", "Pharaoh is compared to a monster in the seas."],
+    "Ezekiel 32:3": ["Captured by Nations", "God will capture Pharaoh through many nations."],
+    "Ezekiel 32:7": ["Darkened Heavens", "When Egypt falls the sky will grow dark."],
+    "Ezekiel 32:9": ["Nations Troubled", "Many nations will be distressed by Egypt's fall."],
+    "Ezekiel 32:11": ["Sword of Babylon", "The sword of Babylon will destroy Egypt."],
+    "Ezekiel 32:17": ["Egypt Joins the Dead", "Egypt will join the nations that have already fallen."],
+    "Ezekiel 32:22": ["Assyria in the Pit", "Assyria and its army are described in the grave."],
+    "Ezekiel 32:26": ["Meshech and Tubal", "Other fallen nations lie in the pit."],
+    "Ezekiel 32:31": ["Pharaoh Comforted", "Pharaoh will see other fallen nations and be comforted."],
+    "Ezekiel 32:32": ["Final Judgment", "Pharaoh and his army will lie among the slain."],
+
+    "Ezekiel 33:1": ["Watchman for Israel", "God appoints Ezekiel as a watchman for Israel."],
+    "Ezekiel 33:3": ["Warning the People", "If the watchman sees danger he must warn the people."],
+    "Ezekiel 33:7": ["Ezekiel the Watchman", "Ezekiel must warn the wicked about their sins."],
+    "Ezekiel 33:10": ["People in Despair", "The people feel overwhelmed by their sins."],
+    "Ezekiel 33:11": ["God Desires Repentance", "God takes no pleasure in the death of the wicked."],
+    "Ezekiel 33:21": ["Fall of Jerusalem Reported", "A messenger arrives saying Jerusalem has fallen."],
+    "Ezekiel 33:23": ["Claiming the Land", "Some people wrongly believe they deserve the land."],
+    "Ezekiel 33:27": ["Judgment on Survivors", "Those remaining in the land will fall by sword or wild animals."],
+    "Ezekiel 33:30": ["People Listen but Do Not Obey", "Many listen to Ezekiel but do not follow God's word."],
+    "Ezekiel 33:33": ["Prophecy Fulfilled", "When the message is fulfilled they will know a prophet was among them."],
+
+    "Ezekiel 33:1": ["Watchman for Israel", "God appoints Ezekiel as a watchman for Israel."],
+    "Ezekiel 33:3": ["Warning the People", "If the watchman sees danger he must warn the people."],
+    "Ezekiel 33:7": ["Ezekiel the Watchman", "Ezekiel must warn the wicked about their sins."],
+    "Ezekiel 33:10": ["People in Despair", "The people feel overwhelmed by their sins."],
+    "Ezekiel 33:11": ["God Desires Repentance", "God takes no pleasure in the death of the wicked."],
+    "Ezekiel 33:21": ["Fall of Jerusalem Reported", "A messenger arrives saying Jerusalem has fallen."],
+    "Ezekiel 33:23": ["Claiming the Land", "Some people wrongly believe they deserve the land."],
+    "Ezekiel 33:27": ["Judgment on Survivors", "Those remaining in the land will fall by sword or wild animals."],
+    "Ezekiel 33:30": ["People Listen but Do Not Obey", "Many listen to Ezekiel but do not follow God's word."],
+    "Ezekiel 33:33": ["Prophecy Fulfilled", "When the message is fulfilled they will know a prophet was among them."],
+
+    "Ezekiel 34:1": ["Woe to the Shepherds", "God condemns the leaders of Israel who only care for themselves."],
+    "Ezekiel 34:4": ["Neglect of the Flock", "The shepherds failed to strengthen the weak or care for the sick."],
+    "Ezekiel 34:5": ["Sheep Scattered", "Because of poor leadership the people were scattered."],
+    "Ezekiel 34:7": ["God Against the Shepherds", "The Lord declares that He is against the false shepherds."],
+    "Ezekiel 34:11": ["God the True Shepherd", "God promises to search for His scattered sheep."],
+    "Ezekiel 34:15": ["Shepherd of the Flock", "The Lord Himself will shepherd His people."],
+    "Ezekiel 34:17": ["Judgment Among the Sheep", "God will judge between sheep and sheep."],
+    "Ezekiel 34:23": ["One Shepherd", "God will appoint one shepherd, His servant David."],
+    "Ezekiel 34:25": ["Covenant of Peace", "God promises peace and safety for His people."],
+    "Ezekiel 34:31": ["God's People", "Israel is God's flock and He is their God."],
+
+    "Ezekiel 35:1": ["Prophecy Against Mount Seir", "God tells Ezekiel to speak against Mount Seir."],
+    "Ezekiel 35:5": ["Edom's Hatred", "Edom held a long hatred against Israel."],
+    "Ezekiel 35:6": ["Bloodshed Returned", "Because Edom loved bloodshed, blood will pursue them."],
+    "Ezekiel 35:10": ["Desire for Israel's Land", "Edom desired to possess the lands of Israel and Judah."],
+    "Ezekiel 35:12": ["Mocking Israel", "Edom mocked Israel saying their land was deserted."],
+    "Ezekiel 35:14": ["Judgment for Rejoicing", "Edom rejoiced when Israel suffered."],
+    "Ezekiel 35:15": ["Desolation of Edom", "Edom will become desolate because of its pride."],
+
+    "Ezekiel 36:1": ["Hope for Israel's Mountains", "God promises restoration for the mountains of Israel."],
+    "Ezekiel 36:4": ["Land Reclaimed", "The land will again be inhabited and rebuilt."],
+    "Ezekiel 36:8": ["Fruitful Land", "The mountains will produce fruit for the returning people."],
+    "Ezekiel 36:16": ["Israel's Past Sin", "Israel had defiled the land with their actions."],
+    "Ezekiel 36:19": ["Scattered Among Nations", "Because of their sin God scattered them among the nations."],
+    "Ezekiel 36:22": ["For God's Name", "God will restore Israel for the sake of His holy name."],
+    "Ezekiel 36:25": ["Cleansing with Water", "God promises to cleanse them from their impurities."],
+    "Ezekiel 36:26": ["New Heart and Spirit", "God will give them a new heart and a new spirit."],
+    "Ezekiel 36:27": ["Spirit Within", "God will place His Spirit within them."],
+    "Ezekiel 36:33": ["Rebuilt Cities", "The ruined cities will be rebuilt and inhabited again."],
+    "Ezekiel 36:35": ["Land Like Eden", "The restored land will become like the garden of Eden."],
+    "Ezekiel 36:37": ["God Will Multiply the People", "God promises to increase the people like a flock."],
+
+    "Ezekiel 37:1": ["Valley of Dry Bones", "The Spirit brings Ezekiel to a valley full of dry bones."],
+    "Ezekiel 37:3": ["Can These Bones Live", "God asks Ezekiel if the dry bones can live again."],
+    "Ezekiel 37:5": ["Breath of Life", "God promises to bring breath into the bones so they will live."],
+    "Ezekiel 37:7": ["Bones Come Together", "The bones begin to come together with tendons and flesh."],
+    "Ezekiel 37:9": ["Breath Enters Them", "The breath enters the bodies and they stand as a vast army."],
+    "Ezekiel 37:11": ["Meaning of the Vision", "The bones represent the whole house of Israel."],
+    "Ezekiel 37:12": ["Graves Opened", "God promises to bring His people out of their graves."],
+    "Ezekiel 37:15": ["Two Sticks Joined", "Ezekiel joins two sticks representing Judah and Israel."],
+    "Ezekiel 37:21": ["Nation Reunited", "God will gather Israel from the nations and make them one nation."],
+    "Ezekiel 37:24": ["One King Over Them", "David will be their shepherd and king."],
+    "Ezekiel 37:26": ["Covenant of Peace", "God promises an everlasting covenant with His people."],
+    "Ezekiel 37:28": ["God Dwells Among Them", "The nations will know that the Lord sanctifies Israel."],
+
+    "Ezekiel 38:1": ["Prophecy Against Gog", "God tells Ezekiel to prophesy against Gog of the land of Magog."],
+    "Ezekiel 38:4": ["Gathering for Battle", "God will bring Gog and his armies with horses and weapons."],
+    "Ezekiel 38:8": ["Attack on Israel", "Gog will attack the land of Israel after it is restored."],
+    "Ezekiel 38:11": ["Peaceful Land Targeted", "The attack comes against a peaceful and unsuspecting people."],
+    "Ezekiel 38:14": ["God's Awareness", "God tells Gog that he will come against Israel in the latter days."],
+    "Ezekiel 38:16": ["God's Purpose", "God brings Gog so the nations will know His holiness."],
+    "Ezekiel 38:18": ["God's Anger", "God's anger will rise when Gog attacks Israel."],
+    "Ezekiel 38:19": ["Great Earthquake", "A great earthquake will shake the land."],
+    "Ezekiel 38:21": ["Sword Against Gog", "God will bring the sword against Gog."],
+    "Ezekiel 38:22": ["Judgment with Fire", "God will judge Gog with plague, rain, hailstones, fire, and sulfur."],
+    "Ezekiel 38:23": ["God's Glory Revealed", "The nations will know that the Lord is God."],
+
+    "Ezekiel 39:1": ["Defeat of Gog", "God declares that He will defeat Gog and his armies."],
+    "Ezekiel 39:3": ["Weapons Destroyed", "Gog's bow and arrows will be struck from his hands."],
+    "Ezekiel 39:4": ["Army Falls", "Gog and his armies will fall on the mountains of Israel."],
+    "Ezekiel 39:6": ["Fire on Magog", "God will send fire on Magog and those living in safety."],
+    "Ezekiel 39:9": ["Burning the Weapons", "Israel will use the enemy's weapons as fuel for seven years."],
+    "Ezekiel 39:11": ["Valley of Burial", "A valley will be set aside to bury Gog's armies."],
+    "Ezekiel 39:12": ["Seven Months of Burial", "It will take seven months to bury the dead."],
+    "Ezekiel 39:17": ["Feast for the Birds", "Birds and animals are invited to feast on the fallen armies."],
+    "Ezekiel 39:21": ["God's Glory Among Nations", "God will display His glory among the nations."],
+    "Ezekiel 39:25": ["Restoration of Israel", "God promises to restore Israel."],
+    "Ezekiel 39:29": ["Spirit Poured Out", "God promises to pour out His Spirit on Israel."],
+
+    "Ezekiel 40:1": ["Vision of the New Temple", "Ezekiel is taken in a vision to the land of Israel and shown a new temple."],
+    "Ezekiel 40:3": ["The Man with the Measuring Rod", "A man with a measuring rod begins measuring the temple area."],
+    "Ezekiel 40:5": ["Outer Wall Measured", "The wall surrounding the temple complex is measured."],
+    "Ezekiel 40:6": ["Eastern Gate", "The east gate and its chambers are carefully measured."],
+    "Ezekiel 40:17": ["Outer Court", "Ezekiel is brought into the outer court of the temple."],
+    "Ezekiel 40:20": ["North Gate", "The north gate is measured with its chambers and details."],
+    "Ezekiel 40:24": ["South Gate", "The south gate of the outer court is also measured."],
+    "Ezekiel 40:28": ["Inner Court Gates", "The gates leading to the inner court are measured."],
+    "Ezekiel 40:38": ["Rooms for Sacrifices", "Special rooms are prepared for washing and preparing sacrifices."],
+    "Ezekiel 40:44": ["Rooms for Priests", "Rooms are assigned for priests who serve in the temple."],
+    "Ezekiel 40:47": ["Inner Court Measured", "The inner court and altar area are measured."],
+    "Ezekiel 40:48": ["Temple Entrance", "The entrance to the temple building itself is measured."],
+
+    "Ezekiel 41:1": ["The Temple Building", "The inner temple structure is measured."],
+    "Ezekiel 41:5": ["Side Chambers", "Side rooms are built along the temple walls."],
+    "Ezekiel 41:10": ["Space Around the Temple", "There is open space surrounding the temple structure."],
+    "Ezekiel 41:12": ["Building at the West", "A large building stands behind the temple on the west side."],
+    "Ezekiel 41:15": ["Measurements Completed", "The entire temple complex is carefully measured."],
+    "Ezekiel 41:18": ["Cherubim Decorations", "Carvings of cherubim and palm trees decorate the walls."],
+    "Ezekiel 41:22": ["Wooden Altar", "A wooden altar stands before the Lord in the temple."],
+    "Ezekiel 41:25": ["Doors of the Temple", "The temple doors are decorated with carvings of cherubim and palm trees."],
+
+    "Ezekiel 42:1": ["Chambers for Priests", "Ezekiel is shown rooms prepared for the priests."],
+    "Ezekiel 42:5": ["Upper Chambers", "The upper rooms are smaller because of the structure above them."],
+    "Ezekiel 42:7": ["Outer Wall", "A wall runs along the outer side of the priestly chambers."],
+    "Ezekiel 42:10": ["South Chambers", "Another set of priestly rooms is located on the south side."],
+    "Ezekiel 42:13": ["Holy Chambers", "These rooms are used by priests who serve the Lord."],
+    "Ezekiel 42:14": ["Garments of the Priests", "Priests must leave their holy garments in these rooms."],
+    "Ezekiel 42:15": ["Measuring the Outer Area", "The man measures the entire temple area."],
+    "Ezekiel 42:16": ["East Side Measured", "The eastern side of the temple complex is measured."],
+    "Ezekiel 42:17": ["North Side Measured", "The northern side is measured."],
+    "Ezekiel 42:18": ["South Side Measured", "The southern side is measured."],
+    "Ezekiel 42:19": ["West Side Measured", "The western side is also measured."],
+    "Ezekiel 42:20": ["Sacred Boundary", "The wall separates the holy area from the common."],
+
+    "Ezekiel 43:1": ["Glory Returns from the East", "Ezekiel sees the glory of the Lord coming from the east."],
+    "Ezekiel 43:2": ["Voice Like Many Waters", "The voice of the Lord sounds like mighty waters and the earth shines with His glory."],
+    "Ezekiel 43:4": ["Glory Enters the Temple", "The glory of the Lord enters the temple through the east gate."],
+    "Ezekiel 43:5": ["Temple Filled with Glory", "The Spirit lifts Ezekiel and the temple is filled with God's glory."],
+    "Ezekiel 43:7": ["God's Throne Among His People", "God declares the temple as the place of His throne among Israel."],
+    "Ezekiel 43:10": ["Show the Temple to Israel", "Ezekiel must show the design of the temple to the people so they will repent."],
+    "Ezekiel 43:13": ["Altar Measurements", "The measurements of the altar are described."],
+    "Ezekiel 43:18": ["Dedication of the Altar", "Instructions are given for dedicating the altar."],
+    "Ezekiel 43:22": ["Second Day Offering", "A goat is offered for a sin offering."],
+    "Ezekiel 43:25": ["Seven Days of Purification", "Sacrifices are offered for seven days to cleanse the altar."],
+    "Ezekiel 43:27": ["Acceptable Offerings", "After purification the people's offerings will be accepted."],
+
+    "Ezekiel 44:1": ["East Gate Closed", "The east gate of the temple must remain shut because the Lord entered through it."],
+    "Ezekiel 44:3": ["Prince at the Gate", "The prince may sit in the gateway to eat before the Lord."],
+    "Ezekiel 44:6": ["Rebuke for Israel", "God rebukes Israel for their past unfaithfulness."],
+    "Ezekiel 44:9": ["Foreigners Excluded", "Uncircumcised foreigners cannot enter the sanctuary."],
+    "Ezekiel 44:10": ["Unfaithful Levites", "Levites who led Israel astray will serve lower duties."],
+    "Ezekiel 44:15": ["Faithful Priests", "The sons of Zadok may serve directly before the Lord."],
+    "Ezekiel 44:17": ["Priestly Garments", "Priests must wear linen garments when serving."],
+    "Ezekiel 44:20": ["Priestly Appearance", "Priests must maintain proper hair and appearance."],
+    "Ezekiel 44:23": ["Teaching the People", "Priests must teach the difference between holy and common."],
+    "Ezekiel 44:28": ["Priests' Inheritance", "The Lord Himself will be the inheritance of the priests."],
+
+    "Ezekiel 45:1": ["Sacred Portion of the Land", "A holy section of land is set apart for the Lord."],
+    "Ezekiel 45:4": ["Land for the Priests", "Part of the land is given to priests who serve in the sanctuary."],
+    "Ezekiel 45:6": ["Land for the City", "A portion is designated for the city and its people."],
+    "Ezekiel 45:7": ["Land for the Prince", "The prince receives land on both sides of the holy portion."],
+    "Ezekiel 45:9": ["Justice for the People", "Rulers are commanded to stop oppression and act justly."],
+    "Ezekiel 45:10": ["Honest Measurements", "The people must use fair scales and measurements."],
+    "Ezekiel 45:13": ["Offerings for the Prince", "The people must give offerings for the prince."],
+    "Ezekiel 45:18": ["Cleansing the Sanctuary", "Special offerings cleanse the sanctuary at the start of the year."],
+    "Ezekiel 45:21": ["Passover Observed", "The Passover festival is to be celebrated."],
+    "Ezekiel 45:25": ["Feast of Tabernacles", "Offerings are also given during the Feast of Tabernacles."],
+
+    "Ezekiel 46:1": ["Gate for Worship", "The east gate of the inner court will be opened on the Sabbath and new moon."],
+    "Ezekiel 46:2": ["Prince Worships the Lord", "The prince enters by the gateway to worship before the Lord."],
+    "Ezekiel 46:3": ["People Worship at the Gate", "The people will worship at the entrance of the gate."],
+    "Ezekiel 46:4": ["Sabbath Offerings", "Specific offerings are required on the Sabbath day."],
+    "Ezekiel 46:6": ["New Moon Offerings", "Special offerings are also given on the new moon."],
+    "Ezekiel 46:9": ["Orderly Worship", "People must enter and leave the temple in an orderly way."],
+    "Ezekiel 46:16": ["Inheritance of the Prince", "The prince may give gifts from his inheritance to his sons."],
+    "Ezekiel 46:18": ["Protection of the People's Land", "The prince must not take land from the people."],
+    "Ezekiel 46:19": ["Place for Priests' Offerings", "Ezekiel is shown a place where priests cook the offerings."],
+    "Ezekiel 46:21": ["Courts for Cooking", "Special courts are used for cooking the sacrifices."],
+
+    "Ezekiel 47:1": ["River from the Temple", "Water flows from the temple threshold toward the east."],
+    "Ezekiel 47:3": ["Water to the Ankles", "The water measures ankle-deep as it flows outward."],
+    "Ezekiel 47:4": ["Water to the Knees", "The river grows deeper to the knees."],
+    "Ezekiel 47:5": ["River Too Deep to Cross", "The water becomes a deep river that cannot be crossed."],
+    "Ezekiel 47:7": ["Trees Along the River", "Many trees grow along the banks of the river."],
+    "Ezekiel 47:8": ["Waters Heal the Sea", "The river flows to the Dead Sea and heals its waters."],
+    "Ezekiel 47:9": ["Life Everywhere", "Where the river flows everything will live."],
+    "Ezekiel 47:12": ["Fruitful Trees", "The trees bear fruit every month and their leaves bring healing."],
+    "Ezekiel 47:13": ["Boundaries of the Land", "God describes the boundaries of the land for Israel."],
+    "Ezekiel 47:21": ["Land Divided Among Tribes", "The land will be divided among the tribes of Israel."],
+    "Ezekiel 47:22": ["Foreigners Included", "Foreigners living among Israel will receive inheritance."],
+
+    "Ezekiel 48:1": ["Portions for the Tribes", "The land is divided among the tribes from north to south."],
+    "Ezekiel 48:8": ["Holy Portion of the Land", "A central holy portion is set apart for the Lord."],
+    "Ezekiel 48:10": ["Land for Priests and Levites", "Part of the sacred area is assigned to priests and Levites."],
+    "Ezekiel 48:15": ["Land for the City", "A section is designated for the city and its people."],
+    "Ezekiel 48:21": ["Prince's Portion", "Land on both sides of the sacred portion belongs to the prince."],
+    "Ezekiel 48:30": ["Gates of the City", "The city has twelve gates named after the tribes of Israel."],
+    "Ezekiel 48:35": ["The Lord Is There", "The name of the city will be 'The Lord Is There.'"],
+
+    "Daniel 1:1": ["Jerusalem Captured", "King Nebuchadnezzar of Babylon comes to Jerusalem and besieges the city."],
+    "Daniel 1:3": ["Young Men Taken to Babylon", "The king orders selected young men from Israel's royal families to be brought to Babylon."],
+    "Daniel 1:4": ["Training for Royal Service", "The young men are chosen for their wisdom and appearance and are trained to serve the king."],
+    "Daniel 1:6": ["Daniel and His Friends", "Among those taken are Daniel, Hananiah, Mishael, and Azariah."],
+    "Daniel 1:7": ["New Babylonian Names", "They are given new Babylonian names by the chief official."],
+    "Daniel 1:8": ["Daniel's Resolve", "Daniel decides not to defile himself with the king's food and wine."],
+    "Daniel 1:9": ["God Gives Favor", "God gives Daniel favor with the chief official."],
+    "Daniel 1:12": ["Ten-Day Test", "Daniel asks for a ten-day test with vegetables and water."],
+    "Daniel 1:15": ["Healthier Than Others", "After ten days they appear healthier than those eating the king's food."],
+    "Daniel 1:17": ["God Gives Wisdom", "God gives the four young men knowledge and wisdom, and Daniel understands visions and dreams."],
+    "Daniel 1:19": ["They Serve the King", "The king finds them better than all the other wise men."],
+    "Daniel 1:21": ["Daniel's Long Service", "Daniel remains in service until the first year of King Cyrus."],
+
+    "Daniel 2:1": ["Nebuchadnezzar's Dream", "King Nebuchadnezzar has troubling dreams that disturb his sleep."],
+    "Daniel 2:2": ["Wise Men Summoned", "The king calls the magicians, astrologers, and wise men to explain his dream."],
+    "Daniel 2:5": ["Impossible Demand", "The king demands that they tell both the dream and its interpretation."],
+    "Daniel 2:10": ["Wise Men Helpless", "The wise men say no one can reveal the king's dream."],
+    "Daniel 2:12": ["Decree to Kill the Wise Men", "The king becomes furious and orders all the wise men to be executed."],
+    "Daniel 2:16": ["Daniel Seeks Time", "Daniel asks the king for time to reveal the dream."],
+    "Daniel 2:17": ["Prayer for Mercy", "Daniel and his friends pray for God's mercy concerning the mystery."],
+    "Daniel 2:19": ["Dream Revealed to Daniel", "God reveals the mystery of the dream to Daniel in a vision."],
+    "Daniel 2:27": ["God Reveals Mysteries", "Daniel tells the king that only God can reveal such mysteries."],
+    "Daniel 2:31": ["The Great Statue", "Daniel describes the king's dream of a large statue made of different metals."],
+    "Daniel 2:37": ["Head of Gold", "Nebuchadnezzar is the head of gold representing his kingdom."],
+    "Daniel 2:44": ["God's Eternal Kingdom", "God will establish a kingdom that will never be destroyed."],
+    "Daniel 2:48": ["Daniel Promoted", "The king honors Daniel and gives him a high position."],
+
+    "Daniel 3:1": ["Golden Image Built", "King Nebuchadnezzar builds a large golden image."],
+    "Daniel 3:4": ["Command to Worship", "Everyone is commanded to bow and worship the image."],
+    "Daniel 3:8": ["Accusation Against the Jews", "Some officials accuse Shadrach, Meshach, and Abednego."],
+    "Daniel 3:13": ["King's Anger", "The king angrily summons the three men."],
+    "Daniel 3:16": ["Faithful Response", "They refuse to worship the image and trust God to deliver them."],
+    "Daniel 3:19": ["Furnace Heated", "The king orders the furnace heated seven times hotter."],
+    "Daniel 3:21": ["Thrown into the Fire", "The three men are thrown into the blazing furnace."],
+    "Daniel 3:24": ["A Fourth Man Appears", "The king sees a fourth figure walking with them in the fire."],
+    "Daniel 3:26": ["Called Out of the Fire", "The three men come out unharmed."],
+    "Daniel 3:28": ["God Praised", "The king praises the God who saved them."],
+    "Daniel 3:29": ["Royal Decree", "The king orders that no one speak against their God."],
+    "Daniel 3:30": ["Promotion", "The three men are promoted in Babylon."],
+
+    "Daniel 4:1": ["Nebuchadnezzar's Proclamation", "The king announces the wonders God has done for him."],
+    "Daniel 4:4": ["Another Troubling Dream", "Nebuchadnezzar has another dream that troubles him."],
+    "Daniel 4:8": ["Daniel Called", "Daniel is brought to interpret the dream."],
+    "Daniel 4:10": ["The Great Tree", "The king sees a huge tree reaching to heaven."],
+    "Daniel 4:13": ["Watcher from Heaven", "A holy messenger commands that the tree be cut down."],
+    "Daniel 4:19": ["Daniel Troubled", "Daniel hesitates because the dream concerns the king."],
+    "Daniel 4:22": ["Tree Represents the King", "Daniel explains that the tree represents Nebuchadnezzar."],
+    "Daniel 4:25": ["King's Humbling", "The king will live like an animal until he acknowledges God."],
+    "Daniel 4:28": ["Prophecy Fulfilled", "The dream's warning comes true."],
+    "Daniel 4:33": ["King Humbled", "Nebuchadnezzar lives like a wild animal."],
+    "Daniel 4:34": ["King Praises God", "The king lifts his eyes to heaven and praises God."],
+    "Daniel 4:37": ["God Exalts the Humble", "Nebuchadnezzar declares that God humbles the proud."],
+
+    "Daniel 5:1": ["Belshazzar's Feast", "King Belshazzar holds a great feast and drinks wine with his nobles."],
+    "Daniel 5:2": ["Sacred Vessels Used", "The king uses the gold and silver vessels taken from God's temple."],
+    "Daniel 5:4": ["Praise to False Gods", "They drink wine and praise idols made of gold, silver, bronze, iron, wood, and stone."],
+    "Daniel 5:5": ["Writing on the Wall", "A mysterious hand appears and writes on the palace wall."],
+    "Daniel 5:7": ["Wise Men Called", "The king calls the wise men to read the writing."],
+    "Daniel 5:10": ["Daniel Remembered", "The queen suggests calling Daniel who can interpret mysteries."],
+    "Daniel 5:13": ["Daniel Before the King", "Daniel is brought before Belshazzar to explain the writing."],
+    "Daniel 5:17": ["Daniel Refuses Rewards", "Daniel refuses the king's gifts but agrees to interpret the message."],
+    "Daniel 5:18": ["Lesson from Nebuchadnezzar", "Daniel reminds the king how God humbled Nebuchadnezzar."],
+    "Daniel 5:25": ["The Writing Explained", "The words 'Mene, Mene, Tekel, Parsin' are interpreted."],
+    "Daniel 5:26": ["Kingdom Numbered", "God has numbered Belshazzar's kingdom and ended it."],
+    "Daniel 5:27": ["Weighed and Found Wanting", "The king has been weighed and found lacking."],
+    "Daniel 5:28": ["Kingdom Divided", "The kingdom will be given to the Medes and Persians."],
+    "Daniel 5:30": ["Belshazzar Falls", "That very night Belshazzar is killed."],
+
+    "Daniel 6:1": ["Daniel in the New Government", "King Darius appoints officials to govern the kingdom."],
+    "Daniel 6:3": ["Daniel Distinguished", "Daniel stands out because of his excellent spirit."],
+    "Daniel 6:4": ["Officials Plot Against Daniel", "The officials try to find fault with Daniel but cannot."],
+    "Daniel 6:5": ["Trap Through the Law", "They plan to accuse Daniel through his devotion to God."],
+    "Daniel 6:7": ["Royal Decree", "A decree is issued that no one may pray to any god except the king."],
+    "Daniel 6:10": ["Daniel Continues to Pray", "Daniel continues praying to God three times a day."],
+    "Daniel 6:13": ["Accusation", "The officials accuse Daniel of breaking the decree."],
+    "Daniel 6:16": ["Thrown into the Lions' Den", "Daniel is thrown into the den of lions."],
+    "Daniel 6:19": ["King Seeks Daniel", "The king rushes to the den early in the morning."],
+    "Daniel 6:22": ["God Sends an Angel", "Daniel says God sent an angel to shut the lions' mouths."],
+    "Daniel 6:24": ["Enemies Punished", "Those who accused Daniel are thrown into the den."],
+    "Daniel 6:26": ["Decree Honoring God", "The king commands all people to fear the God of Daniel."],
+    "Daniel 6:28": ["Daniel Prospers", "Daniel prospers during the reigns of Darius and Cyrus."],
+
+    "Daniel 7:1": ["Daniel's Vision of Beasts", "Daniel has a vision during the reign of Belshazzar."],
+    "Daniel 7:3": ["Four Great Beasts", "Four different beasts rise from the sea."],
+    "Daniel 7:4": ["First Beast Like a Lion", "The first beast resembles a lion with eagle's wings."],
+    "Daniel 7:5": ["Second Beast Like a Bear", "The second beast looks like a bear raised on one side."],
+    "Daniel 7:6": ["Third Beast Like a Leopard", "The third beast resembles a leopard with four wings."],
+    "Daniel 7:7": ["Fourth Terrifying Beast", "The fourth beast is terrifying with iron teeth and ten horns."],
+    "Daniel 7:9": ["Ancient of Days", "Daniel sees God's throne and the Ancient of Days seated in glory."],
+    "Daniel 7:11": ["Beast Destroyed", "The fourth beast is destroyed and thrown into fire."],
+    "Daniel 7:13": ["Son of Man", "One like the Son of Man comes with the clouds."],
+    "Daniel 7:14": ["Everlasting Kingdom", "Authority and glory are given to Him and His kingdom never ends."],
+    "Daniel 7:18": ["Saints Receive the Kingdom", "The saints of the Most High will receive the kingdom forever."],
+    "Daniel 7:23": ["Fourth Kingdom Explained", "The fourth beast represents a powerful kingdom."],
+    "Daniel 7:27": ["Kingdom Given to God's People", "God's kingdom will belong to His holy people forever."],
+
+    "Daniel 8:1": ["Vision of the Ram and Goat", "Daniel receives another vision during the reign of Belshazzar."],
+    "Daniel 8:3": ["The Ram with Two Horns", "Daniel sees a ram with two horns pushing in different directions."],
+    "Daniel 8:5": ["The Goat from the West", "A goat with a prominent horn rushes from the west."],
+    "Daniel 8:7": ["Ram Defeated", "The goat attacks and defeats the ram."],
+    "Daniel 8:8": ["Great Horn Broken", "The goat becomes powerful but its great horn is broken."],
+    "Daniel 8:9": ["Little Horn Appears", "A small horn grows and becomes very powerful."],
+    "Daniel 8:11": ["Attack on the Sanctuary", "The horn exalts itself and stops the daily sacrifices."],
+    "Daniel 8:13": ["Question About the Vision", "A question is asked about how long the vision will last."],
+    "Daniel 8:14": ["2,300 Evenings and Mornings", "The sanctuary will be restored after 2,300 evenings and mornings."],
+    "Daniel 8:15": ["Gabriel Explains the Vision", "The angel Gabriel is sent to explain the vision to Daniel."],
+    "Daniel 8:20": ["Ram Explained", "The ram represents the kings of Media and Persia."],
+    "Daniel 8:21": ["Goat Explained", "The goat represents the kingdom of Greece."],
+    "Daniel 8:23": ["A Fierce King", "A fierce king will arise and cause destruction."],
+    "Daniel 8:25": ["Proud but Destroyed", "This king will oppose God but will ultimately be destroyed."],
+
+    "Daniel 9:1": ["Daniel Prays for Israel", "Daniel studies the prophecy of Jeremiah and prays for Israel."],
+    "Daniel 9:3": ["Prayer and Fasting", "Daniel seeks God through prayer, fasting, and confession."],
+    "Daniel 9:5": ["Confession of Sin", "Daniel confesses the sins of the people."],
+    "Daniel 9:7": ["God Is Righteous", "Daniel acknowledges God's righteousness and Israel's shame."],
+    "Daniel 9:16": ["Plea for Mercy", "Daniel asks God to turn away His anger from Jerusalem."],
+    "Daniel 9:20": ["Gabriel Arrives", "While Daniel is praying the angel Gabriel comes to him."],
+    "Daniel 9:24": ["Seventy Weeks Decreed", "A prophecy of seventy weeks is given concerning Israel."],
+    "Daniel 9:25": ["Coming of the Anointed One", "The timeline begins until the coming of the Messiah."],
+    "Daniel 9:26": ["Messiah Cut Off", "The Anointed One will be cut off and the city destroyed."],
+    "Daniel 9:27": ["Final Week", "A ruler will make and break a covenant during the final week."],
+
+    "Daniel 10:1": ["Daniel's Vision by the Tigris", "Daniel receives a message about a great conflict."],
+    "Daniel 10:2": ["Three Weeks of Mourning", "Daniel mourns and fasts for three weeks."],
+    "Daniel 10:5": ["A Glorious Man Appears", "Daniel sees a radiant heavenly figure."],
+    "Daniel 10:7": ["Daniel Overwhelmed", "Daniel alone sees the vision and becomes weak."],
+    "Daniel 10:10": ["Angel Strengthens Daniel", "A hand touches Daniel and strengthens him."],
+    "Daniel 10:12": ["Prayer Heard", "The angel tells Daniel that his prayer was heard from the first day."],
+    "Daniel 10:13": ["Prince of Persia Opposes", "A spiritual prince of Persia resisted the angel."],
+    "Daniel 10:20": ["Spiritual Battle", "The angel speaks of battles with the princes of Persia and Greece."],
+    "Daniel 10:21": ["Book of Truth", "The angel refers to what is written in the Book of Truth."],
+
+    "Daniel 11:1": ["Support for the Persian King", "The messenger explains how he supported the king of Persia."],
+    "Daniel 11:2": ["Four Kings of Persia", "Four more kings will arise in Persia before a powerful ruler."],
+    "Daniel 11:3": ["Rise of a Mighty King", "A mighty king will arise and rule with great power."],
+    "Daniel 11:4": ["Kingdom Divided", "After his rise the kingdom will be divided into four parts."],
+    "Daniel 11:5": ["Kings of the North and South", "Two rival kingdoms will arise, one in the north and one in the south."],
+    "Daniel 11:6": ["Alliance Through Marriage", "An alliance is attempted through marriage but it fails."],
+    "Daniel 11:11": ["Battle Between Kingdoms", "The king of the south attacks the king of the north."],
+    "Daniel 11:15": ["Northern Victory", "The king of the north captures fortified cities."],
+    "Daniel 11:20": ["Short Reign of a Successor", "A ruler arises but his reign is brief."],
+    "Daniel 11:21": ["Rise of a Contemptible King", "A despised ruler gains power through deception."],
+    "Daniel 11:31": ["Desecration of the Temple", "Forces will stop the daily sacrifices and set up an abomination."],
+    "Daniel 11:32": ["Faithful Stand Firm", "Those who know their God will remain strong."],
+    "Daniel 11:36": ["Arrogant King", "A king will exalt himself above every god."],
+    "Daniel 11:40": ["Final Conflict", "A great conflict will occur between the north and the south."],
+
+    "Daniel 12:1": ["Time of Trouble", "A great time of trouble will come but God's people will be delivered."],
+    "Daniel 12:2": ["Resurrection", "Many who sleep in the dust will awake to everlasting life or shame."],
+    "Daniel 12:3": ["The Wise Will Shine", "Those who lead many to righteousness will shine like stars."],
+    "Daniel 12:4": ["Seal the Book", "Daniel is told to seal the book until the time of the end."],
+    "Daniel 12:5": ["Two Angels", "Two angels stand on opposite sides of the river."],
+    "Daniel 12:6": ["How Long Will It Be", "One asks how long until these events are fulfilled."],
+    "Daniel 12:7": ["Time, Times, and Half a Time", "The events will last for a set period determined by God."],
+    "Daniel 12:9": ["Words Sealed", "The words are sealed until the end time."],
+    "Daniel 12:10": ["Purification of the Wise", "The wise will understand but the wicked will not."],
+    "Daniel 12:13": ["Daniel's Final Promise", "Daniel is told he will rest and rise to receive his inheritance."],
+
+    "Jonah 1:1": ["Jonah Called", "The Lord commands Jonah to go to Nineveh and preach against it."],
+    "Jonah 1:3": ["Jonah Flees", "Jonah runs away from the Lord toward Tarshish."],
+    "Jonah 1:4": ["Great Storm", "God sends a violent storm on the sea."],
+    "Jonah 1:5": ["Sailors Afraid", "The sailors cry out to their gods and throw cargo overboard."],
+    "Jonah 1:7": ["Casting Lots", "The sailors cast lots and the lot falls on Jonah."],
+    "Jonah 1:9": ["Jonah Confesses", "Jonah admits he worships the Lord who made the sea and land."],
+    "Jonah 1:12": ["Thrown into the Sea", "Jonah tells them to throw him into the sea to calm the storm."],
+    "Jonah 1:15": ["Sea Becomes Calm", "When Jonah is thrown overboard the sea becomes calm."],
+    "Jonah 1:16": ["Sailors Fear the Lord", "The sailors fear the Lord and offer sacrifices."],
+    "Jonah 1:17": ["Great Fish", "God appoints a great fish to swallow Jonah."],
+
+    "Jonah 2:1": ["Jonah's Prayer", "Jonah prays to the Lord from inside the fish."],
+    "Jonah 2:2": ["Cry from the Depths", "Jonah cries out to God from the depths of distress."],
+    "Jonah 2:3": ["Cast into the Sea", "Jonah describes being thrown into the deep waters."],
+    "Jonah 2:5": ["Waters Surround Him", "The waters close around him and seaweed wraps his head."],
+    "Jonah 2:6": ["Life Brought Up", "Jonah says God brought his life up from the pit."],
+    "Jonah 2:7": ["Prayer Reaches God", "Jonah's prayer reaches the Lord in His holy temple."],
+    "Jonah 2:8": ["Idols Forsaken", "Those who cling to idols forsake God's mercy."],
+    "Jonah 2:9": ["Salvation from the Lord", "Jonah vows to give thanks and declares salvation belongs to the Lord."],
+    "Jonah 2:10": ["Jonah Released", "The Lord commands the fish and it spits Jonah onto dry land."],
+
+    "Jonah 3:1": ["Jonah Sent Again", "The word of the Lord comes to Jonah a second time telling him to go to Nineveh."],
+    "Jonah 3:3": ["Jonah Goes to Nineveh", "Jonah obeys and goes to the great city of Nineveh."],
+    "Jonah 3:4": ["Message of Judgment", "Jonah proclaims that Nineveh will be overthrown in forty days."],
+    "Jonah 3:5": ["People Believe God", "The people of Nineveh believe God and declare a fast."],
+    "Jonah 3:6": ["King Repents", "The king humbles himself, sits in ashes, and calls for repentance."],
+    "Jonah 3:7": ["National Fast", "The king orders people and animals to fast and cry out to God."],
+    "Jonah 3:8": ["Turn from Evil", "Everyone is urged to turn from violence and evil."],
+    "Jonah 3:9": ["Hope for Mercy", "The people hope that God will turn from His anger."],
+    "Jonah 3:10": ["God Shows Mercy", "God sees their repentance and does not bring the disaster."],
+
+    "Jonah 4:1": ["Jonah's Anger", "Jonah becomes angry that God spared Nineveh."],
+    "Jonah 4:2": ["God's Compassion", "Jonah admits that God is gracious and merciful."],
+    "Jonah 4:3": ["Jonah Wants to Die", "Jonah asks God to take his life."],
+    "Jonah 4:4": ["God Questions Jonah", "God asks Jonah if his anger is justified."],
+    "Jonah 4:6": ["Plant for Shade", "God provides a plant to give Jonah shade."],
+    "Jonah 4:7": ["Plant Destroyed", "God appoints a worm to destroy the plant."],
+    "Jonah 4:8": ["Scorching Wind", "A hot wind makes Jonah faint and wish for death."],
+    "Jonah 4:9": ["Lesson About Compassion", "God questions Jonah about his concern for the plant."],
+    "Jonah 4:10": ["God's Mercy Explained", "God explains that Jonah cared for the plant he did not grow."],
+    "Jonah 4:11": ["God's Care for Nineveh", "God shows concern for the many people and animals in Nineveh."],
+
+    "Obadiah 1:1": ["Vision Against Edom", "Obadiah receives a vision about the judgment coming on Edom."],
+    "Obadiah 1:2": ["Edom Made Small", "God declares that Edom will be made small among the nations."],
+    "Obadiah 1:3": ["Pride of Edom", "Edom's pride deceives them because they live in the mountains."],
+    "Obadiah 1:4": ["Brought Down", "Even if Edom rises high like an eagle God will bring them down."],
+    "Obadiah 1:10": ["Violence Against Jacob", "Edom is judged for violence against Israel."],
+    "Obadiah 1:12": ["Rejoicing Over Judah", "Edom rejoiced over Judah's destruction."],
+    "Obadiah 1:15": ["Day of the Lord", "The day of the Lord is near for all nations."],
+    "Obadiah 1:17": ["Deliverance in Zion", "Mount Zion will have deliverance and holiness."],
+    "Obadiah 1:18": ["House of Jacob Victorious", "Israel will destroy Edom like fire consuming stubble."],
+    "Obadiah 1:21": ["Kingdom Belongs to the Lord", "Deliverers will rule on Mount Zion and the kingdom will belong to the Lord."],
+
+    "Amos 1:1": ["Amos the Prophet", "Amos, a shepherd from Tekoa, receives the Lord's message during the reigns of Uzziah and Jeroboam."],
+    "Amos 1:2": ["The Lord Roars from Zion", "The Lord roars from Zion and the land mourns."],
+    "Amos 1:3": ["Judgment on Damascus", "God declares judgment on Damascus for its cruelty."],
+    "Amos 1:6": ["Judgment on Gaza", "Gaza is condemned for capturing and selling entire communities."],
+    "Amos 1:9": ["Judgment on Tyre", "Tyre is judged for breaking a treaty and selling captives."],
+    "Amos 1:11": ["Judgment on Edom", "Edom is condemned for pursuing his brother with violence."],
+    "Amos 1:13": ["Judgment on Ammon", "Ammon is judged for cruel acts against the people of Gilead."],
+
+    "Amos 2:1": ["Judgment on Moab", "Moab is judged for desecrating the bones of Edom's king."],
+    "Amos 2:4": ["Judgment on Judah", "Judah is condemned for rejecting the law of the Lord."],
+    "Amos 2:6": ["Judgment on Israel", "Israel is judged for selling the righteous for silver."],
+    "Amos 2:7": ["Oppression of the Poor", "They trample on the poor and deny justice to the oppressed."],
+    "Amos 2:9": ["God's Past Deliverance", "God reminds them how He destroyed the Amorites before them."],
+    "Amos 2:11": ["Prophets and Nazirites", "God raised prophets and Nazirites among them."],
+    "Amos 2:13": ["Burden of Judgment", "God warns that judgment will press down on them like a heavy cart."],
+    "Amos 2:14": ["No Escape", "The swift will not escape and the strong will not prevail."],
+
+    "Amos 3:1": ["Chosen People Accountable", "God reminds Israel that He brought them out of Egypt."],
+    "Amos 3:2": ["Punishment for Sin", "Because they are chosen, they will be punished for their sins."],
+    "Amos 3:3": ["Two Walking Together", "Two people cannot walk together unless they agree."],
+    "Amos 3:7": ["God Reveals to Prophets", "The Lord reveals His plans to His prophets."],
+    "Amos 3:9": ["Witness Against Israel", "Nations are called to witness the injustice in Israel."],
+    "Amos 3:10": ["Violence and Robbery", "The people store up violence and robbery in their houses."],
+    "Amos 3:12": ["Remnant Saved", "Only a small remnant will survive like a few bones from a lion's mouth."],
+    "Amos 3:14": ["Altars Destroyed", "The altars of Bethel will be destroyed."],
+    "Amos 3:15": ["Houses Ruined", "The wealthy houses of Israel will be destroyed."],
+
+    "Amos 4:1": ["Oppression in Samaria", "The wealthy women of Samaria are rebuked for oppressing the poor."],
+    "Amos 4:4": ["False Worship", "The people continue offering sacrifices at Bethel and Gilgal."],
+    "Amos 4:6": ["Famine Sent", "God sent famine to turn them back but they did not return."],
+    "Amos 4:7": ["Drought Sent", "God withheld rain but the people still did not return."],
+    "Amos 4:9": ["Crop Destruction", "God struck their crops with blight and locusts."],
+    "Amos 4:10": ["Plagues and War", "God sent plagues and war but they did not return."],
+    "Amos 4:11": ["Near Destruction", "Some were overthrown like Sodom and Gomorrah."],
+    "Amos 4:12": ["Prepare to Meet God", "Israel is warned to prepare to meet their God."],
+    "Amos 4:13": ["The Creator Revealed", "God is the One who forms mountains and creates the wind."],
+
+    "Amos 5:1": ["Lament for Israel", "Amos sings a lament over the fallen nation of Israel."],
+    "Amos 5:4": ["Seek the Lord and Live", "God calls the people to seek Him and live."],
+    "Amos 5:5": ["Avoid False Sanctuaries", "Bethel, Gilgal, and Beersheba will not save them."],
+    "Amos 5:7": ["Justice Turned to Bitterness", "The people turn justice into bitterness."],
+    "Amos 5:10": ["Hatred for Truth", "The people hate those who speak truth in the courts."],
+    "Amos 5:14": ["Seek Good Not Evil", "They are urged to seek good and establish justice."],
+    "Amos 5:18": ["Day of the Lord Warning", "The day of the Lord will be darkness not light."],
+    "Amos 5:21": ["Rejected Worship", "God rejects their festivals and offerings."],
+    "Amos 5:24": ["Justice Like a River", "God desires justice to flow like a river."],
+    "Amos 5:27": ["Exile Announced", "Israel will go into exile beyond Damascus."],
+
+    "Amos 6:1": ["Woe to the Complacent", "Those who feel secure in Zion and Samaria are warned."],
+    "Amos 6:4": ["Luxury and Indifference", "The wealthy live in comfort while ignoring the nation's ruin."],
+    "Amos 6:6": ["Careless Living", "They enjoy luxury but do not grieve over Israel's downfall."],
+    "Amos 6:7": ["First to Go into Exile", "They will be the first to go into exile."],
+    "Amos 6:8": ["God Rejects Pride", "The Lord hates the pride of Jacob."],
+    "Amos 6:11": ["Great Houses Destroyed", "Large and small houses alike will be destroyed."],
+    "Amos 6:12": ["Justice Corrupted", "The people have turned justice into poison."],
+    "Amos 6:14": ["Nation Raised Against Israel", "God will raise a nation to oppress Israel."],
+
+    "Amos 7:1": ["Vision of Locusts", "Amos sees a vision of locusts devouring the crops."],
+    "Amos 7:2": ["Amos Intercedes", "Amos pleads with God to forgive Israel."],
+    "Amos 7:3": ["Judgment Relented", "The Lord relents and the disaster does not happen."],
+    "Amos 7:4": ["Vision of Fire", "Amos sees a vision of a great fire consuming the land."],
+    "Amos 7:5": ["Amos Prays Again", "Amos again asks the Lord to stop the judgment."],
+    "Amos 7:6": ["God Relents Again", "The Lord relents and the fire does not come."],
+    "Amos 7:7": ["Vision of the Plumb Line", "God shows Amos a plumb line to measure Israel."],
+    "Amos 7:8": ["Israel Measured", "God says He will no longer spare Israel."],
+    "Amos 7:10": ["Amaziah Complains", "Amaziah the priest accuses Amos before the king."],
+    "Amos 7:12": ["Amos Told to Leave", "Amaziah tells Amos to go back to Judah."],
+    "Amos 7:14": ["Amos the Shepherd", "Amos explains he was a shepherd called by God."],
+    "Amos 7:16": ["Prophecy Against Amaziah", "Amos declares judgment against Amaziah and Israel."],
+
+    "Amos 8:1": ["Vision of Ripe Fruit", "God shows Amos a basket of ripe fruit."],
+    "Amos 8:2": ["Israel's End Near", "The ripe fruit symbolizes that Israel's end has come."],
+    "Amos 8:4": ["Oppressing the Poor", "Merchants cheat the poor and use dishonest scales."],
+    "Amos 8:7": ["God Will Not Forget", "God swears He will never forget their sins."],
+    "Amos 8:9": ["Day Turned to Darkness", "The sun will go down at noon and the land will become dark."],
+    "Amos 8:10": ["Time of Mourning", "Festivals will turn into mourning."],
+    "Amos 8:11": ["Famine of God's Word", "A famine will come—not of bread but of hearing God's word."],
+    "Amos 8:12": ["Searching for the Word", "People will search for God's word but will not find it."],
+    "Amos 8:14": ["Fall of Idol Worshipers", "Those who swear by idols will fall and never rise again."],
+
+    "Amos 9:1": ["The Lord by the Altar", "Amos sees the Lord standing beside the altar announcing judgment."],
+    "Amos 9:2": ["No Escape", "Even if they hide in the deepest places they cannot escape God."],
+    "Amos 9:5": ["God the Mighty Creator", "The Lord who touches the earth and it melts rules over all."],
+    "Amos 9:7": ["God Rules All Nations", "God reminds Israel that He governs all nations."],
+    "Amos 9:8": ["Kingdom Destroyed", "The sinful kingdom will be destroyed but not completely."],
+    "Amos 9:11": ["Restoration of David's Tent", "God promises to restore the fallen house of David."],
+    "Amos 9:13": ["Abundant Blessings", "A time of great harvest and prosperity will come."],
+    "Amos 9:14": ["Cities Rebuilt", "Israel will rebuild ruined cities and plant vineyards."],
+    "Amos 9:15": ["Permanent Restoration", "God promises His people will never again be uprooted."],
+
+    "Joel 1:1": ["Word of the Lord to Joel", "The message of the Lord comes to the prophet Joel."],
+    "Joel 1:2": ["Call to Listen", "The elders and people are called to hear about the coming disaster."],
+    "Joel 1:4": ["Locust Plague", "Different swarms of locusts destroy everything in the land."],
+    "Joel 1:5": ["Wake Up and Mourn", "The people are urged to wake up and mourn over the destruction."],
+    "Joel 1:8": ["Lament Like a Widow", "The land mourns like a bride grieving her husband."],
+    "Joel 1:9": ["Offerings Stop", "Grain and drink offerings stop because the crops are destroyed."],
+    "Joel 1:11": ["Farmers in Distress", "Farmers grieve because the harvest has failed."],
+    "Joel 1:13": ["Call to Prayer", "Priests are told to fast and cry out to the Lord."],
+    "Joel 1:15": ["Day of the Lord Near", "The day of the Lord is near and will bring destruction."],
+    "Joel 1:19": ["Cry to the Lord", "Joel cries to the Lord because the land is consumed by fire."],
+
+    "Joel 2:1": ["Trumpet of Warning", "A trumpet sounds in Zion warning that the day of the Lord is coming."],
+    "Joel 2:2": ["Day of Darkness", "A day of darkness and gloom approaches."],
+    "Joel 2:3": ["Devouring Fire", "A consuming fire leaves the land desolate."],
+    "Joel 2:11": ["Army of the Lord", "The Lord leads a powerful army on the day of judgment."],
+    "Joel 2:12": ["Call to Repent", "God calls the people to return to Him with fasting and repentance."],
+    "Joel 2:13": ["God's Compassion", "The Lord is gracious, compassionate, and slow to anger."],
+    "Joel 2:15": ["Sacred Assembly", "The people are called to gather for fasting and prayer."],
+    "Joel 2:18": ["God Responds", "The Lord shows compassion and answers His people."],
+    "Joel 2:23": ["Blessing Restored", "God promises rain and restoration of the harvest."],
+    "Joel 2:25": ["Years Restored", "God promises to restore the years the locusts destroyed."],
+    "Joel 2:28": ["Spirit Poured Out", "God promises to pour out His Spirit on all people."],
+    "Joel 2:31": ["Signs in Heaven", "The sun and moon will show signs before the day of the Lord."],
+    "Joel 2:32": ["Salvation in the Lord", "Everyone who calls on the name of the Lord will be saved."],
+
+    "Joel 3:1": ["Restoration of Judah", "God promises to restore Judah and Jerusalem."],
+    "Joel 3:2": ["Judgment of the Nations", "God gathers the nations to judge them for harming His people."],
+    "Joel 3:9": ["Prepare for War", "The nations are called to prepare for battle."],
+    "Joel 3:12": ["Valley of Judgment", "God will judge the nations in the Valley of Jehoshaphat."],
+    "Joel 3:13": ["Harvest of Judgment", "The nations are ripe for judgment like a harvest."],
+    "Joel 3:14": ["Valley of Decision", "Multitudes stand in the valley where judgment is decided."],
+    "Joel 3:16": ["Lord Roars from Zion", "The Lord speaks powerfully from Zion."],
+    "Joel 3:17": ["God Dwells in Zion", "The people will know that the Lord lives in Zion."],
+    "Joel 3:18": ["Blessings Flow", "Mountains drip with wine and a river flows from the Lord's house."],
+    "Joel 3:19": ["Judgment on Enemies", "Egypt and Edom will become desolate."],
+    "Joel 3:20": ["Judah Forever", "Judah and Jerusalem will remain forever."],
+    "Joel 3:21": ["Lord Dwells in Zion", "The Lord declares that He dwells in Zion."],
+
+    "Hosea 1:1": ["Hosea's Ministry", "The word of the Lord comes to Hosea during the reigns of several kings of Judah and Israel."],
+    "Hosea 1:2": ["Hosea's Marriage", "God tells Hosea to marry a woman who will be unfaithful as a symbol of Israel's unfaithfulness."],
+    "Hosea 1:3": ["Marriage to Gomer", "Hosea marries Gomer and she bears a son."],
+    "Hosea 1:4": ["Son Named Jezreel", "God tells Hosea to name the child Jezreel as a sign of coming judgment."],
+    "Hosea 1:6": ["Daughter Named Lo-Ruhamah", "Another child is born and named Lo-Ruhamah meaning 'not loved.'"],
+    "Hosea 1:8": ["Son Named Lo-Ammi", "A third child is born and named Lo-Ammi meaning 'not my people.'"],
+    "Hosea 1:10": ["Future Restoration", "God promises that Israel will again be called the children of the living God."],
+    "Hosea 1:11": ["People Reunited", "Judah and Israel will be reunited under one leader."],
+
+    "Hosea 2:1": ["Children of God", "The people will again be called God's people and receive His mercy."],
+    "Hosea 2:2": ["Charge Against Israel", "God calls Israel to turn away from spiritual adultery."],
+    "Hosea 2:5": ["Israel's Unfaithfulness", "Israel runs after other gods thinking they provide her blessings."],
+    "Hosea 2:7": ["Seeking the True Husband", "Israel will eventually realize it was better with the Lord."],
+    "Hosea 2:9": ["God Removes Blessings", "God declares He will take away the grain, wine, and wool He gave."],
+    "Hosea 2:11": ["End of Festivals", "Israel's festivals and celebrations will cease."],
+    "Hosea 2:14": ["God's Tender Appeal", "God promises to bring Israel back and speak kindly to her."],
+    "Hosea 2:16": ["New Relationship", "Israel will call the Lord 'my husband' instead of 'my master.'"],
+    "Hosea 2:18": ["Covenant of Peace", "God will make a covenant bringing safety and peace."],
+    "Hosea 2:19": ["Betrothed Forever", "God promises to betroth His people to Himself forever."],
+    "Hosea 2:23": ["People Restored", "Those once called 'not my people' will be called God's people."],
+
+    "Hosea 3:1": ["Hosea Redeems His Wife", "God tells Hosea to love his unfaithful wife again."],
+    "Hosea 3:2": ["Price of Redemption", "Hosea buys her back with silver and barley."],
+    "Hosea 3:3": ["Faithfulness Required", "Hosea tells her she must remain faithful."],
+    "Hosea 3:4": ["Israel Without King", "Israel will remain many days without king, sacrifice, or idols."],
+    "Hosea 3:5": ["Return to the Lord", "In the future Israel will return and seek the Lord and David their king."],
+
+    "Hosea 4:1": ["Charge Against Israel", "The Lord brings a charge against Israel because there is no truth, mercy, or knowledge of God."],
+    "Hosea 4:2": ["Widespread Sin", "The land is filled with lying, murder, stealing, and adultery."],
+    "Hosea 4:4": ["Priests Rebuked", "God rebukes the priests who should guide the people."],
+    "Hosea 4:6": ["Destroyed for Lack of Knowledge", "The people are destroyed because they reject knowledge of God."],
+    "Hosea 4:8": ["Priests Feed on Sin", "The priests benefit from the people's sins."],
+    "Hosea 4:11": ["Wine and Immorality", "Wine and prostitution lead the people astray."],
+    "Hosea 4:12": ["Seeking Idols", "The people seek guidance from idols instead of God."],
+    "Hosea 4:17": ["Ephraim Joined to Idols", "Ephraim is devoted to idols."],
+    "Hosea 4:19": ["Shameful Worship", "Their idol worship will bring them shame."],
+
+    "Hosea 5:1": ["Judgment on Leaders", "Priests, kings, and people are warned of coming judgment."],
+    "Hosea 5:3": ["God Knows Ephraim", "God sees Israel's unfaithfulness clearly."],
+    "Hosea 5:4": ["Spirit of Prostitution", "A spirit of unfaithfulness keeps them from returning to God."],
+    "Hosea 5:6": ["Seeking God Too Late", "They search for the Lord but cannot find Him."],
+    "Hosea 5:8": ["Alarm of War", "The trumpet sounds warning of coming invasion."],
+    "Hosea 5:10": ["Leaders Condemned", "Judah's leaders are compared to those who move boundary stones."],
+    "Hosea 5:13": ["Seeking Help from Assyria", "Israel turns to Assyria for help instead of God."],
+    "Hosea 5:14": ["God Like a Lion", "God will tear them like a lion and withdraw."],
+    "Hosea 5:15": ["Return Through Repentance", "God waits until the people acknowledge their guilt and seek Him."],
+
+    "Hosea 6:1": ["Call to Return", "The people say they will return to the Lord who has wounded them."],
+    "Hosea 6:3": ["Knowing the Lord", "They seek to know the Lord who comes like refreshing rain."],
+    "Hosea 6:4": ["Shallow Devotion", "God says their love fades quickly like morning dew."],
+    "Hosea 6:6": ["Mercy Not Sacrifice", "God desires mercy and knowledge of Him rather than sacrifices."],
+    "Hosea 6:7": ["Breaking the Covenant", "The people have broken God's covenant."],
+    "Hosea 6:8": ["City of Bloodshed", "Gilead is described as a city of wickedness."],
+    "Hosea 6:9": ["Priests Like Robbers", "Priests are compared to robbers waiting to attack."],
+    "Hosea 6:10": ["Horrible Sin in Israel", "God sees terrible corruption in Israel."],
+    "Hosea 6:11": ["Harvest of Judgment", "A harvest of judgment is prepared for Judah."],
+
+    "Hosea 7:1": ["Israel's Hidden Sin", "When God tries to heal Israel, their sins are revealed."],
+    "Hosea 7:3": ["Wicked Leaders", "The people please their king with their wickedness."],
+    "Hosea 7:4": ["Burning Passions", "Their sinful desires are compared to a heated oven."],
+    "Hosea 7:7": ["Leaders Fall", "Their rulers fall because of their rebellion."],
+    "Hosea 7:8": ["Mixed with Nations", "Ephraim mixes with other nations and becomes weak."],
+    "Hosea 7:11": ["Like a Silly Dove", "Israel runs to Egypt and Assyria for help."],
+    "Hosea 7:13": ["Rebellion Against God", "God warns that destruction is coming because of their rebellion."],
+    "Hosea 7:16": ["Turning the Wrong Way", "They turn but not toward God."],
+
+    "Hosea 8:1": ["Trumpet of Warning", "The trumpet sounds because the people have broken God's covenant."],
+    "Hosea 8:3": ["Rejecting What Is Good", "Israel rejects what is good and enemies pursue them."],
+    "Hosea 8:4": ["Kings Without God's Approval", "They set up kings and idols without God's approval."],
+    "Hosea 8:5": ["Calf of Samaria", "The idol calf of Samaria is rejected by God."],
+    "Hosea 8:7": ["Sowing the Wind", "They sow the wind and will reap the whirlwind."],
+    "Hosea 8:9": ["Seeking Help from Assyria", "Israel goes to Assyria like a wild donkey wandering alone."],
+    "Hosea 8:11": ["Altars for Sin", "Many altars built for worship become places of sin."],
+    "Hosea 8:13": ["Empty Sacrifices", "God rejects their sacrifices and remembers their sins."],
+    "Hosea 8:14": ["Forgetting the Creator", "Israel forgets their Maker and builds many fortified cities."],
+
+    "Hosea 9:1": ["False Joy", "Israel should not celebrate because they have been unfaithful."],
+    "Hosea 9:3": ["Exile Coming", "The people will not remain in the Lord's land."],
+    "Hosea 9:4": ["Offerings Rejected", "Their sacrifices will not be accepted by God."],
+    "Hosea 9:7": ["Days of Punishment", "The days of punishment and judgment have come."],
+    "Hosea 9:10": ["Israel Once Precious", "God once found Israel like grapes in the desert."],
+    "Hosea 9:11": ["Loss of Blessings", "Ephraim's glory will fly away like a bird."],
+    "Hosea 9:13": ["Children to Destruction", "Their children will be brought to destruction."],
+    "Hosea 9:15": ["God Rejects Them", "Because of their wickedness God will drive them out."],
+    "Hosea 9:17": ["People Become Wanderers", "They will wander among the nations because they refused to listen."],
+
+    "Hosea 10:1": ["Israel the Empty Vine", "Israel is compared to a vine that produced fruit only for itself."],
+    "Hosea 10:2": ["Divided Heart", "Because their heart is divided God will destroy their altars."],
+    "Hosea 10:3": ["No King to Save", "The people admit they have no king to save them."],
+    "Hosea 10:5": ["Calf of Samaria Mourned", "The people mourn over the idol calf of Samaria."],
+    "Hosea 10:7": ["King of Samaria Gone", "Samaria's king will disappear like foam on water."],
+    "Hosea 10:8": ["High Places Destroyed", "The places of idol worship will be destroyed."],
+    "Hosea 10:11": ["Ephraim Like a Trained Heifer", "Israel once loved righteousness but now must face discipline."],
+    "Hosea 10:12": ["Sow Righteousness", "The people are urged to sow righteousness and seek the Lord."],
+    "Hosea 10:13": ["Harvest of Wickedness", "They have reaped the consequences of their wickedness."],
+    "Hosea 10:15": ["Judgment on Bethel", "Because of great wickedness the king of Israel will be destroyed."],
+
+    "Hosea 11:1": ["God Loves Israel", "God recalls calling Israel out of Egypt as His son."],
+    "Hosea 11:2": ["Israel Turns Away", "The more God called them the more they turned to idols."],
+    "Hosea 11:3": ["God the Caring Father", "God taught Israel to walk and cared for them with love."],
+    "Hosea 11:5": ["Return to Bondage", "Because they refused to repent they will return to oppression."],
+    "Hosea 11:7": ["Bent on Turning Away", "The people are determined to turn away from God."],
+    "Hosea 11:8": ["God's Compassion", "God's heart is moved with compassion and He struggles to destroy them."],
+    "Hosea 11:9": ["God's Mercy", "God declares He will not completely destroy them."],
+    "Hosea 11:10": ["People Return", "The people will return trembling to the Lord."],
+    "Hosea 11:11": ["Restoration Promised", "God promises to bring His people back to their homes."],
+
+    "Hosea 12:1": ["Ephraim's Deceit", "Ephraim feeds on the wind and makes alliances with foreign nations."],
+    "Hosea 12:3": ["Jacob's Example", "Jacob struggled with God and prevailed."],
+    "Hosea 12:6": ["Return to God", "The people are urged to return to God with love and justice."],
+    "Hosea 12:7": ["Dishonest Merchants", "Israel acts like a merchant who loves dishonest scales."],
+    "Hosea 12:9": ["God Their Redeemer", "God reminds them He brought them out of Egypt."],
+    "Hosea 12:10": ["Messages Through Prophets", "God spoke through prophets and gave many visions."],
+    "Hosea 12:12": ["Jacob's Hard Work", "Jacob served for a wife and tended sheep."],
+    "Hosea 12:13": ["Prophet Led Israel", "Through a prophet God brought Israel out of Egypt."],
+    "Hosea 12:14": ["Guilt Remains", "Ephraim has provoked God and must bear the consequences."],
+    "Hosea 13:1": ["Ephraim's Pride and Fall", "Ephraim once had honor but fell into sin through idolatry."],
+    "Hosea 13:2": ["Idols of Silver", "The people continue making idols and worshiping them."],
+    "Hosea 13:3": ["Temporary Like Morning Mist", "Because of their sin they will disappear like morning mist."],
+    "Hosea 13:4": ["God the Only Savior", "The Lord reminds them that He alone is their God and Savior."],
+    "Hosea 13:6": ["Prosperity Leads to Pride", "When the people were satisfied they became proud and forgot God."],
+    "Hosea 13:7": ["God Like a Lion", "God will come against them like a lion because of their rebellion."],
+    "Hosea 13:9": ["Destroyed by Their Own Sin", "Israel is destroyed because it turned against its helper."],
+    "Hosea 13:10": ["Where Is Your King", "Their kings cannot save them from judgment."],
+    "Hosea 13:14": ["Victory Over Death", "God declares power over death and the grave."],
+    "Hosea 13:16": ["Samaria's Punishment", "Samaria will fall because of its rebellion."],
+
+    "Hosea 14:1": ["Call to Return", "Israel is urged to return to the Lord."],
+    "Hosea 14:2": ["Prayer of Repentance", "The people are encouraged to confess their sins."],
+    "Hosea 14:4": ["God's Healing Love", "God promises to heal their rebellion and love them freely."],
+    "Hosea 14:5": ["Blessing Like the Dew", "God will bless Israel like refreshing dew."],
+    "Hosea 14:6": ["Israel Flourishes", "Israel will grow strong like a tree."],
+    "Hosea 14:7": ["Revival and Fruitfulness", "The people will flourish and be fruitful again."],
+    "Hosea 14:8": ["God the Source of Fruit", "God alone provides true fruitfulness."],
+    "Hosea 14:9": ["Wisdom and Understanding", "The wise understand the ways of the Lord."],
+
+    "Habakkuk 1:1": ["Habakkuk's Complaint", "The prophet Habakkuk receives a message about Judah's injustice."],
+    "Habakkuk 1:2": ["Cry for Help", "Habakkuk asks God how long he must cry for help."],
+    "Habakkuk 1:3": ["Violence in the Land", "The prophet sees injustice, violence, and conflict everywhere."],
+    "Habakkuk 1:5": ["God's Answer", "God says He is raising the Babylonians to bring judgment."],
+    "Habakkuk 1:6": ["Babylon's Power", "The Babylonians are fierce and powerful conquerors."],
+    "Habakkuk 1:8": ["Swift Army", "Their horses are faster than leopards and their army advances quickly."],
+    "Habakkuk 1:11": ["Proud Nation", "They are guilty people whose strength is their god."],
+    "Habakkuk 1:12": ["Habakkuk Questions Again", "Habakkuk asks how God can use a wicked nation for judgment."],
+    "Habakkuk 1:13": ["God Too Pure for Evil", "Habakkuk says God is too pure to look on evil."],
+    "Habakkuk 1:16": ["Babylon Worships Power", "The Babylonians worship their own strength."],
+
+    "Habakkuk 2:1": ["Waiting for God's Answer", "Habakkuk waits for the Lord's response."],
+    "Habakkuk 2:2": ["Write the Vision", "God tells Habakkuk to write the vision clearly."],
+    "Habakkuk 2:3": ["Vision Will Be Fulfilled", "The vision will happen at the appointed time."],
+    "Habakkuk 2:4": ["The Righteous Live by Faith", "The proud will fall but the righteous live by faith."],
+    "Habakkuk 2:6": ["Woe to the Greedy", "Judgment is declared on those who gain wealth unjustly."],
+    "Habakkuk 2:9": ["Woe to the Unjust", "Those who build their houses by unjust gain will suffer."],
+    "Habakkuk 2:12": ["Woe to Violent Builders", "Cities built with bloodshed will not last."],
+    "Habakkuk 2:14": ["Earth Filled with God's Glory", "The earth will be filled with the knowledge of the Lord."],
+    "Habakkuk 2:15": ["Woe to the Corrupt", "Those who disgrace others will face shame."],
+    "Habakkuk 2:18": ["Foolish Idolatry", "Idols are worthless and cannot speak."],
+    "Habakkuk 2:20": ["The Lord in His Temple", "The Lord is in His holy temple; let the earth be silent."],
+
+    "Habakkuk 3:1": ["Habakkuk's Prayer", "Habakkuk offers a prayer and song to the Lord."],
+    "Habakkuk 3:2": ["Prayer for Mercy", "Habakkuk asks God to renew His works and show mercy."],
+    "Habakkuk 3:3": ["God's Glorious Appearance", "God comes with great glory and power."],
+    "Habakkuk 3:6": ["Power Over Nations", "God shakes the earth and the nations tremble."],
+    "Habakkuk 3:8": ["God the Divine Warrior", "God rides with power to bring salvation."],
+    "Habakkuk 3:13": ["Salvation of God's People", "God goes out to save His people and His anointed."],
+    "Habakkuk 3:16": ["Fear and Waiting", "Habakkuk trembles but waits patiently for God's plan."],
+    "Habakkuk 3:17": ["Faith Despite Loss", "Even if crops fail and flocks disappear, Habakkuk will trust God."],
+    "Habakkuk 3:18": ["Joy in the Lord", "Habakkuk rejoices in God his Savior."],
+    "Habakkuk 3:19": ["Strength from God", "The Lord gives strength and makes him secure."],
+
+    "Nahum 1:1": ["Oracle Against Nineveh", "The prophecy of Nahum concerning the city of Nineveh."],
+    "Nahum 1:2": ["God's Jealousy and Wrath", "The Lord is a jealous and avenging God who takes vengeance on His enemies."],
+    "Nahum 1:3": ["Slow to Anger", "The Lord is slow to anger but great in power and will not leave the guilty unpunished."],
+    "Nahum 1:5": ["Power Over Creation", "Mountains quake and the earth trembles before the Lord."],
+    "Nahum 1:7": ["The Lord Is Good", "The Lord is a refuge in times of trouble and cares for those who trust Him."],
+    "Nahum 1:8": ["End of Nineveh", "God will pursue His enemies with darkness and destruction."],
+    "Nahum 1:11": ["Plot Against the Lord", "One has come from Nineveh who plots evil against the Lord."],
+    "Nahum 1:13": ["Breaking the Yoke", "God promises to break the oppression over His people."],
+    "Nahum 1:15": ["Good News of Peace", "A messenger announces peace and deliverance for Judah."],
+
+    "Nahum 2:1": ["Nineveh Under Attack", "The attacker advances against Nineveh and the city prepares for battle."],
+    "Nahum 2:3": ["Shields and Chariots", "Warriors appear with red shields and flashing chariots."],
+    "Nahum 2:5": ["Defense of the Walls", "The defenders rush to protect the city walls."],
+    "Nahum 2:6": ["City Flooded", "The river gates are opened and the palace collapses."],
+    "Nahum 2:8": ["People Flee", "Nineveh's people flee as the city falls."],
+    "Nahum 2:9": ["Plunder of the City", "The attackers seize the city's silver and gold."],
+    "Nahum 2:10": ["Total Desolation", "The city becomes empty, desolate, and ruined."],
+    "Nahum 2:11": ["Lion's Den Destroyed", "Nineveh once strong like a lion's den will be destroyed."],
+    "Nahum 2:13": ["God Against Nineveh", "The Lord declares He is against the city and will destroy its power."],
+
+    "Nahum 3:1": ["Woe to the Bloody City", "Nineveh is condemned as a city full of lies and violence."],
+    "Nahum 3:3": ["Battle and Slaughter", "Chariots charge and many fall in battle."],
+    "Nahum 3:4": ["City of Sorcery", "Nineveh is accused of sorcery and corruption."],
+    "Nahum 3:5": ["God Opposes Nineveh", "The Lord declares that He is against the city."],
+    "Nahum 3:8": ["Like Thebes", "Nineveh will fall just as the city of Thebes did."],
+    "Nahum 3:12": ["Weak Defenses", "Nineveh's fortresses will fall easily."],
+    "Nahum 3:15": ["Devoured by Fire", "Fire and sword will destroy the city."],
+    "Nahum 3:18": ["Leaders Asleep", "The leaders of Nineveh fail to protect the people."],
+    "Nahum 3:19": ["Irreparable Fall", "Nineveh's destruction will be complete and final."],
+
+    "Micah 1:1": ["Micah the Prophet", "The word of the Lord comes to Micah during the reigns of Judah's kings."],
+    "Micah 1:2": ["God Witness Against Nations", "The Lord calls all people to hear His judgment."],
+    "Micah 1:3": ["God Comes in Judgment", "The Lord comes down to judge the earth."],
+    "Micah 1:6": ["Samaria Destroyed", "Samaria will become a heap of ruins."],
+    "Micah 1:8": ["Micah's Lament", "Micah mourns over the coming destruction."],
+    "Micah 1:10": ["Cities Warned", "Various towns are warned about coming judgment."],
+    "Micah 1:13": ["Judgment Reaches Judah", "The sin of Israel spreads to Judah."],
+    "Micah 1:16": ["Mourning for Children", "The people mourn for children taken into exile."],
+
+    "Micah 2:1": ["Woe to the Oppressors", "Those who plan evil and seize others' property are condemned."],
+    "Micah 2:3": ["Disaster Announced", "God declares that disaster is coming upon them."],
+    "Micah 2:6": ["Rejecting God's Word", "The people do not want to hear God's warnings."],
+    "Micah 2:8": ["Violence Against the Weak", "The people rise against the peaceful and take what belongs to others."],
+    "Micah 2:10": ["No Rest in the Land", "Because of their sin the land will no longer be their resting place."],
+    "Micah 2:11": ["False Prophets", "People prefer prophets who promise prosperity."],
+    "Micah 2:12": ["Promise of Restoration", "God promises to gather the remnant of Israel."],
+    "Micah 2:13": ["The Lord Leads His People", "God will lead His people like a shepherd."],
+
+    "Micah 3:1": ["Leaders Rebuked", "The leaders of Israel are rebuked for hating justice."],
+    "Micah 3:3": ["Cruel Oppression", "The rulers devour the people like flesh."],
+    "Micah 3:4": ["God Will Not Answer", "When they cry to God He will not answer them."],
+    "Micah 3:5": ["False Prophets", "Prophets who lead people astray are condemned."],
+    "Micah 3:8": ["Micah Filled with Power", "Micah declares he is filled with God's Spirit to speak truth."],
+    "Micah 3:9": ["Corrupt Rulers", "Leaders twist justice and build Zion with bloodshed."],
+    "Micah 3:11": ["False Confidence", "They trust in the Lord while committing injustice."],
+    "Micah 3:12": ["Jerusalem Destroyed", "Because of their sin Jerusalem will become ruins."],
+
+    "Micah 4:1": ["The Lord's Mountain Exalted", "In the last days the Lord's mountain will be established above all."],
+    "Micah 4:2": ["Nations Seek God", "Many nations will come to learn the Lord's ways."],
+    "Micah 4:3": ["Peace Among Nations", "Weapons will be turned into farming tools."],
+    "Micah 4:4": ["Time of Peace", "Everyone will live in peace and safety."],
+    "Micah 4:6": ["Gathering the Weak", "God promises to gather the lame and scattered."],
+    "Micah 4:7": ["Remnant Made Strong", "The weak remnant will become a strong nation."],
+    "Micah 4:8": ["Kingdom Restored", "The former kingdom will be restored to Jerusalem."],
+    "Micah 4:10": ["Exile to Babylon", "The people will go to Babylon but will later be rescued."],
+    "Micah 4:12": ["God's Plan for Nations", "The nations gathered against Jerusalem do not know God's plan."],
+    "Micah 4:13": ["Victory for Zion", "Zion will defeat the nations."],
+
+    "Micah 5:1": ["Ruler from Bethlehem", "A ruler will come from Bethlehem to lead Israel."],
+    "Micah 5:2": ["Ancient Origins", "The ruler's origins are from ancient times."],
+    "Micah 5:3": ["Israel Given Up for a Time", "Israel will suffer until the ruler's time comes."],
+    "Micah 5:4": ["Shepherd King", "He will stand and shepherd His flock in the Lord's strength."],
+    "Micah 5:5": ["Source of Peace", "This ruler will bring peace to the people."],
+    "Micah 5:7": ["Remnant Among Nations", "The remnant of Jacob will be like dew among nations."],
+    "Micah 5:10": ["Removal of Weapons", "God will remove horses and chariots from the land."],
+    "Micah 5:12": ["End of Sorcery", "God will destroy sorcery and witchcraft."],
+    "Micah 5:13": ["End of Idols", "God will destroy idols and sacred pillars."],
+    "Micah 5:15": ["Judgment on Nations", "God will take vengeance on disobedient nations."],
+
+    "Micah 6:1": ["God's Case Against Israel", "The Lord brings a case against His people."],
+    "Micah 6:3": ["God's Faithfulness", "God reminds Israel how He delivered them from Egypt."],
+    "Micah 6:6": ["Question of True Worship", "The people ask what offerings will please God."],
+    "Micah 6:8": ["What God Requires", "God requires justice, mercy, and humble walking with Him."],
+    "Micah 6:10": ["Dishonest Wealth", "The people store up wealth gained through dishonesty."],
+    "Micah 6:12": ["Violence and Lies", "The rich commit violence and speak lies."],
+    "Micah 6:13": ["Punishment Announced", "God declares that He will strike them because of their sins."],
+    "Micah 6:16": ["Following Wicked Kings", "The people follow the evil practices of past kings."],
+
+    "Micah 7:1": ["Corruption Everywhere", "Micah laments that good people are hard to find."],
+    "Micah 7:3": ["Leaders and Judges Corrupt", "Leaders and judges work together for evil."],
+    "Micah 7:5": ["Broken Trust", "People cannot trust even close friends."],
+    "Micah 7:7": ["Hope in the Lord", "Micah declares that he will look to the Lord for help."],
+    "Micah 7:8": ["Light After Darkness", "Even if he falls the Lord will lift him up."],
+    "Micah 7:11": ["Restoration of the City", "A day will come when the city will be rebuilt."],
+    "Micah 7:14": ["Shepherd Your People", "Micah asks God to shepherd His people again."],
+    "Micah 7:18": ["God Forgives", "God delights in showing mercy and forgiving sins."],
+    "Micah 7:20": ["Faithfulness to the Covenant", "God will remain faithful to the promises made to Abraham."],
+
+    "Zephaniah 1:1": ["Zephaniah the Prophet", "The word of the Lord comes to Zephaniah during the reign of King Josiah."],
+    "Zephaniah 1:2": ["Total Judgment Announced", "God declares He will sweep away everything from the earth."],
+    "Zephaniah 1:4": ["Judgment on Judah", "The Lord will stretch out His hand against Judah and Jerusalem."],
+    "Zephaniah 1:5": ["Condemnation of Idolatry", "Those who worship the sun, moon, and false gods will be judged."],
+    "Zephaniah 1:7": ["Day of the Lord Near", "The people are called to be silent before the Lord."],
+    "Zephaniah 1:10": ["Cry in Jerusalem", "A cry will be heard from different parts of the city."],
+    "Zephaniah 1:12": ["Search with Lamps", "God will search Jerusalem and punish the complacent."],
+    "Zephaniah 1:14": ["Great Day of the Lord", "The day of the Lord is near and coming quickly."],
+    "Zephaniah 1:15": ["Day of Wrath", "It will be a day of darkness, distress, and destruction."],
+    "Zephaniah 1:18": ["Wealth Cannot Save", "Neither silver nor gold will save them from God's wrath."],
+
+
+    "Zephaniah 2:1": ["Call to Repent", "The people are urged to gather and seek the Lord before judgment comes."],
+    "Zephaniah 2:3": ["Seek Humility", "The humble are encouraged to seek righteousness and humility."],
+    "Zephaniah 2:4": ["Judgment on Philistia", "Cities of the Philistines will be abandoned."],
+    "Zephaniah 2:8": ["Judgment on Moab and Ammon", "Moab and Ammon will be punished for mocking Israel."],
+    "Zephaniah 2:11": ["God Against False Gods", "The Lord will destroy the gods of the nations."],
+    "Zephaniah 2:12": ["Judgment on Cush", "Cush will fall by the sword of the Lord."],
+    "Zephaniah 2:13": ["Judgment on Assyria", "Assyria and Nineveh will be destroyed."],
+    "Zephaniah 2:15": ["Proud City Ruined", "The once proud city of Nineveh will become desolate."],
+
+    "Zephaniah 3:1": ["Jerusalem's Rebellion", "Jerusalem is rebuked for rebellion and corruption."],
+    "Zephaniah 3:3": ["Corrupt Leaders", "Her officials and judges act like wolves."],
+    "Zephaniah 3:4": ["False Prophets and Priests", "Prophets are reckless and priests profane the sanctuary."],
+    "Zephaniah 3:5": ["God's Justice", "The Lord within the city is righteous and does no wrong."],
+    "Zephaniah 3:8": ["Judgment of Nations", "God will gather the nations for judgment."],
+    "Zephaniah 3:9": ["Purified People", "God will give the nations pure speech to call on His name."],
+    "Zephaniah 3:12": ["Humble Remnant", "A humble and faithful remnant will remain."],
+    "Zephaniah 3:14": ["Song of Joy", "Zion is called to sing and rejoice."],
+    "Zephaniah 3:17": ["God Rejoices Over His People", "The Lord rejoices over His people with singing."],
+    "Zephaniah 3:20": ["Restoration and Honor", "God promises to restore His people and give them honor."],
+
+    "Haggai 1:1": ["Haggai's First Message", "The word of the Lord comes to Haggai during the reign of King Darius."],
+    "Haggai 1:2": ["Excuse for Delay", "The people say it is not yet time to rebuild the Lord's house."],
+    "Haggai 1:4": ["Comfortable Houses", "The people live in paneled houses while the temple lies in ruins."],
+    "Haggai 1:5": ["Consider Your Ways", "God urges the people to reflect on their actions."],
+    "Haggai 1:6": ["Unproductive Labor", "They plant much but harvest little because of disobedience."],
+    "Haggai 1:7": ["Call to Rebuild", "The Lord again tells them to consider their ways."],
+    "Haggai 1:8": ["Build the Temple", "The people are commanded to go to the mountains and rebuild the temple."],
+    "Haggai 1:12": ["People Obey", "Zerubbabel, Joshua, and the people obey the Lord."],
+    "Haggai 1:13": ["God's Presence", "The Lord assures them that He is with them."],
+    "Haggai 1:14": ["Work Begins", "God stirs the people to begin rebuilding the temple."],
+
+    "Haggai 2:1": ["Encouragement for Builders", "God encourages the people who are rebuilding the temple."],
+    "Haggai 2:3": ["Temple Compared", "The new temple seems small compared to the former one."],
+    "Haggai 2:4": ["Be Strong", "God tells the leaders and people to be strong and continue working."],
+    "Haggai 2:6": ["Shaking the Nations", "God promises to shake the heavens and the earth."],
+    "Haggai 2:7": ["Glory of the Temple", "The glory of the new temple will surpass the former."],
+    "Haggai 2:9": ["Peace in This Place", "God promises peace in the temple."],
+    "Haggai 2:11": ["Lesson About Holiness", "The priests explain the difference between holiness and impurity."],
+    "Haggai 2:14": ["Impure Offerings", "The people's work and offerings were impure."],
+    "Haggai 2:18": ["Blessing Promised", "From this day forward God promises to bless them."],
+    "Haggai 2:21": ["Message to Zerubbabel", "God promises to shake the kingdoms of the world."],
+    "Haggai 2:23": ["Chosen Servant", "God declares Zerubbabel as His chosen servant."],
+
+    "Zechariah 1:1": ["Zechariah's Call to Repent", "The word of the Lord comes to Zechariah urging the people to return to God."],
+    "Zechariah 1:3": ["Return to the Lord", "God promises to return to them if they return to Him."],
+    "Zechariah 1:6": ["Prophets' Words Fulfilled", "The people realize God's warnings through the prophets were true."],
+    "Zechariah 1:7": ["Vision of the Horsemen", "Zechariah sees a vision of horsemen among myrtle trees."],
+    "Zechariah 1:11": ["Peace in the Earth", "The horsemen report that the earth is at rest."],
+    "Zechariah 1:12": ["Prayer for Mercy", "An angel asks God how long Jerusalem will suffer."],
+    "Zechariah 1:14": ["God's Compassion", "God declares His deep concern for Jerusalem."],
+    "Zechariah 1:16": ["Temple Rebuilt", "God promises that His house will be rebuilt."],
+    "Zechariah 1:18": ["Vision of Four Horns", "Zechariah sees four horns representing nations that scattered Israel."],
+    "Zechariah 1:20": ["Four Craftsmen", "Four craftsmen appear to defeat the horns."],
+
+    "Zechariah 2:1": ["Vision of the Measuring Line", "Zechariah sees a man with a measuring line going to measure Jerusalem."],
+    "Zechariah 2:4": ["Jerusalem Without Walls", "Jerusalem will be a city without walls because of the many people and animals."],
+    "Zechariah 2:5": ["God the Protective Wall", "The Lord will be a wall of fire around Jerusalem."],
+    "Zechariah 2:6": ["Call to Return from Exile", "The people are urged to flee from the land of the north."],
+    "Zechariah 2:8": ["Precious to God", "Those who harm God's people harm the apple of His eye."],
+    "Zechariah 2:10": ["God Dwells Among His People", "The Lord promises to come and dwell among His people."],
+    "Zechariah 2:11": ["Nations Join the Lord", "Many nations will join the Lord and become His people."],
+    "Zechariah 2:13": ["Silence Before the Lord", "All people are called to be silent before the Lord."],
+
+    "Zechariah 3:1": ["Joshua Before the Angel", "Joshua the high priest stands before the angel of the Lord while Satan accuses him."],
+    "Zechariah 3:2": ["Satan Rebuked", "The Lord rebukes Satan and declares Joshua chosen."],
+    "Zechariah 3:3": ["Filthy Garments", "Joshua stands in filthy garments representing sin."],
+    "Zechariah 3:4": ["Garments Replaced", "Joshua's filthy clothes are replaced with clean garments."],
+    "Zechariah 3:7": ["Charge to Joshua", "Joshua is told to walk in God's ways and keep His commands."],
+    "Zechariah 3:8": ["Servant the Branch", "God promises to bring His servant called the Branch."],
+    "Zechariah 3:9": ["Stone with Seven Eyes", "God sets a stone before Joshua and promises to remove sin in one day."],
+    "Zechariah 3:10": ["Peaceful Future", "Everyone will invite neighbors to sit under their vine and fig tree."],
+
+    "Zechariah 4:1": ["Vision of the Lampstand", "Zechariah sees a golden lampstand with seven lamps."],
+    "Zechariah 4:2": ["Lampstand and Olive Trees", "Two olive trees stand beside the lampstand supplying oil."],
+    "Zechariah 4:6": ["Not by Might but by Spirit", "God declares that His work will be accomplished by His Spirit."],
+    "Zechariah 4:7": ["Mountain Made Level", "The great mountain will become a plain before Zerubbabel."],
+    "Zechariah 4:9": ["Temple Completed", "Zerubbabel will finish building the temple."],
+    "Zechariah 4:10": ["Do Not Despise Small Beginnings", "People should not despise the day of small beginnings."],
+    "Zechariah 4:11": ["Question About Olive Trees", "Zechariah asks about the two olive trees beside the lampstand."],
+    "Zechariah 4:14": ["Two Anointed Ones", "The olive trees represent two anointed servants who serve the Lord."],
+
+    "Zechariah 5:1": ["Vision of the Flying Scroll", "Zechariah sees a large flying scroll."],
+    "Zechariah 5:3": ["Curse on the Land", "The scroll represents a curse against thieves and those who swear falsely."],
+    "Zechariah 5:4": ["Judgment on Sin", "The curse will enter the houses of the guilty and destroy them."],
+    "Zechariah 5:5": ["Vision of the Basket", "An angel shows Zechariah a basket being carried."],
+    "Zechariah 5:7": ["Woman in the Basket", "A woman representing wickedness is seen inside the basket."],
+    "Zechariah 5:9": ["Carried to Babylon", "Two women carry the basket to the land of Babylon."],
+    "Zechariah 5:11": ["House for Wickedness", "A house is prepared there for wickedness."],
+
+    "Zechariah 6:1": ["Vision of Four Chariots", "Zechariah sees four chariots coming from between two mountains."],
+    "Zechariah 6:2": ["Different Colored Horses", "Each chariot is pulled by horses of different colors."],
+    "Zechariah 6:5": ["Spirits of Heaven", "The chariots represent the four spirits of heaven sent by God."],
+    "Zechariah 6:7": ["Patrolling the Earth", "The chariots go out to patrol the earth."],
+    "Zechariah 6:9": ["Crown for Joshua", "God commands a crown to be made for Joshua the high priest."],
+    "Zechariah 6:12": ["The Branch", "A man called the Branch will build the Lord's temple."],
+    "Zechariah 6:13": ["Priest and King", "He will rule on the throne and serve as priest."],
+    "Zechariah 6:15": ["Temple Completed", "People from far away will help build the temple."],
+
+    "Zechariah 7:1": ["Question About Fasting", "People ask whether they should continue their fasts."],
+    "Zechariah 7:4": ["God Questions Their Motives", "God asks if their fasting was truly for Him."],
+    "Zechariah 7:7": ["Message of the Prophets", "God reminds them of the messages given by earlier prophets."],
+    "Zechariah 7:9": ["Call for Justice", "The people are told to act with justice and mercy."],
+    "Zechariah 7:11": ["People Refused to Listen", "The people refused to listen and turned away."],
+    "Zechariah 7:12": ["Hard Hearts", "Their hearts became hard like stone."],
+    "Zechariah 7:13": ["God Did Not Hear", "Because they refused to listen God did not hear their cries."],
+    "Zechariah 7:14": ["Scattered Among Nations", "God scattered them among foreign nations."],
+
+    "Zechariah 8:1": ["God's Zeal for Zion", "The Lord declares His deep love and zeal for Zion."],
+    "Zechariah 8:3": ["Return to Jerusalem", "God promises to return and dwell in Jerusalem."],
+    "Zechariah 8:4": ["Peaceful City", "Old men and women will again sit in the streets of Jerusalem."],
+    "Zechariah 8:5": ["Children Playing", "Children will safely play in the city streets."],
+    "Zechariah 8:7": ["People Gathered", "God will bring His people back from east and west."],
+    "Zechariah 8:9": ["Encouragement to Build", "The people are encouraged to continue building the temple."],
+    "Zechariah 8:12": ["Blessing and Prosperity", "God promises peace and fruitful harvests."],
+    "Zechariah 8:16": ["Practice Truth and Justice", "The people are commanded to speak truth and judge fairly."],
+    "Zechariah 8:19": ["Fasts Turn to Joy", "Times of fasting will become joyful celebrations."],
+    "Zechariah 8:22": ["Nations Seek the Lord", "Many nations will come to seek the Lord in Jerusalem."],
+    "Zechariah 8:23": ["People Grasp a Jew's Robe", "People from many nations will seek God's favor through His people."],
+
+    "Zechariah 9:1": ["Judgment on Neighboring Nations", "God announces judgment on surrounding nations."],
+    "Zechariah 9:3": ["Tyre's Wealth", "The wealthy city of Tyre will be brought down."],
+    "Zechariah 9:5": ["Fear Among Cities", "Neighboring cities will tremble at the coming judgment."],
+    "Zechariah 9:8": ["God Protects His House", "The Lord promises to guard His temple."],
+    "Zechariah 9:9": ["King Comes to Zion", "Zion's king comes humble and riding on a donkey."],
+    "Zechariah 9:10": ["King of Peace", "He will proclaim peace to the nations."],
+    "Zechariah 9:11": ["Prisoners Freed", "God promises freedom for prisoners."],
+    "Zechariah 9:13": ["Judah as a Bow", "God will use Judah and Ephraim like weapons."],
+    "Zechariah 9:16": ["God Saves His People", "The Lord will save His people like a shepherd."],
+    "Zechariah 9:17": ["Blessings of the Land", "Grain and wine will make the people flourish."],
+
+    "Zechariah 10:1": ["Ask the Lord for Rain", "The people are told to ask the Lord for rain."],
+    "Zechariah 10:2": ["False Shepherds", "Idols and false leaders mislead the people."],
+    "Zechariah 10:3": ["God Punishes Shepherds", "God will punish the false shepherds."],
+    "Zechariah 10:4": ["Cornerstone from Judah", "A cornerstone and ruler will arise from Judah."],
+    "Zechariah 10:6": ["Restoration of Judah and Israel", "God promises to strengthen Judah and restore Israel."],
+    "Zechariah 10:8": ["People Gathered", "God will gather His people and redeem them."],
+    "Zechariah 10:10": ["Return from Exile", "God will bring His people back from distant lands."],
+    "Zechariah 10:11": ["Crossing the Sea", "God will lead them through hardship and defeat their enemies."],
+    "Zechariah 10:12": ["Strength in the Lord", "The people will walk in the strength of the Lord."],
+
+    "Zechariah 11:1": ["Lebanon's Forest Destroyed", "Lebanon's cedars are told to open their doors as fire devours the forest."],
+    "Zechariah 11:4": ["Shepherd of the Flock", "The Lord tells the prophet to shepherd a flock marked for slaughter."],
+    "Zechariah 11:7": ["Two Shepherd Staffs", "The prophet shepherds the flock using two staffs named Favor and Union."],
+    "Zechariah 11:8": ["Three Shepherds Removed", "Three shepherds are removed in a short time because the flock rejects leadership."],
+    "Zechariah 11:10": ["Staff of Favor Broken", "The staff called Favor is broken, symbolizing the end of God's covenant protection."],
+    "Zechariah 11:12": ["Thirty Pieces of Silver", "The prophet receives thirty pieces of silver as his wages."],
+    "Zechariah 11:13": ["Silver Thrown to the Potter", "The silver is thrown into the house of the Lord to the potter."],
+    "Zechariah 11:14": ["Union Broken", "The staff called Union is broken, symbolizing division between Judah and Israel."],
+    "Zechariah 11:17": ["Woe to the Worthless Shepherd", "A warning is given against the worthless shepherd who abandons the flock."],
+
+    "Zechariah 12:1": ["The Lord's Word for Israel", "The Lord declares His message concerning Israel, the Creator of heaven and earth."],
+    "Zechariah 12:2": ["Jerusalem a Cup of Trembling", "Jerusalem will become a cup that causes surrounding nations to stagger."],
+    "Zechariah 12:3": ["A Heavy Stone", "Jerusalem will be like a heavy stone that injures those who try to move it."],
+    "Zechariah 12:6": ["Leaders of Judah Strengthened", "God strengthens the leaders of Judah against their enemies."],
+    "Zechariah 12:8": ["God Protects Jerusalem", "The Lord will defend the inhabitants of Jerusalem."],
+    "Zechariah 12:9": ["Nations Destroyed", "God declares He will destroy the nations that attack Jerusalem."],
+    "Zechariah 12:10": ["Spirit of Grace", "God will pour out a spirit of grace and the people will look upon the one they pierced."],
+    "Zechariah 12:11": ["Great Mourning", "There will be great mourning in Jerusalem for the one they pierced."],
+
+    "Zechariah 13:1": ["Fountain for Cleansing", "A fountain will be opened to cleanse sin and impurity."],
+    "Zechariah 13:2": ["Idols Removed", "God will remove idols and false prophets from the land."],
+    "Zechariah 13:3": ["False Prophets Exposed", "False prophets will be exposed and rejected."],
+    "Zechariah 13:6": ["Marks of Wounds", "The prophet speaks of wounds received among friends."],
+    "Zechariah 13:7": ["Strike the Shepherd", "The shepherd will be struck and the sheep will scatter."],
+    "Zechariah 13:8": ["Two-Thirds Cut Off", "Two-thirds of the land will perish while one-third remains."],
+    "Zechariah 13:9": ["Refined People", "The remaining people will be refined like silver and gold."],
+
+    "Zechariah 14:1": ["Day of the Lord Coming", "A day of the Lord is coming when Jerusalem will face great conflict."],
+    "Zechariah 14:2": ["Nations Gather Against Jerusalem", "Many nations will gather to fight against Jerusalem."],
+    "Zechariah 14:3": ["The Lord Fights for His People", "The Lord Himself will go out and fight against those nations."],
+    "Zechariah 14:4": ["Mount of Olives Split", "The Lord's feet will stand on the Mount of Olives which will split in two."],
+    "Zechariah 14:6": ["Unique Day", "A unique day will come with neither day nor night but continuous light."],
+    "Zechariah 14:8": ["Living Waters Flow", "Living waters will flow out from Jerusalem."],
+    "Zechariah 14:9": ["The Lord King Over All", "The Lord will be king over the whole earth."],
+    "Zechariah 14:12": ["Plague on the Nations", "The Lord will strike the nations that fought against Jerusalem."],
+    "Zechariah 14:16": ["Nations Worship the King", "Survivors of the nations will come yearly to worship the Lord."],
+    "Zechariah 14:20": ["Holiness to the Lord", "Everything in Jerusalem will be dedicated as holy to the Lord."],
+
+    "Malachi 1:1": ["Malachi's Prophecy", "The message of the Lord to Israel through the prophet Malachi."],
+    "Malachi 1:2": ["God's Love for Israel", "God reminds Israel of His love shown through choosing Jacob."],
+    "Malachi 1:6": ["Priests Dishonor God", "The priests dishonor God's name with careless offerings."],
+    "Malachi 1:8": ["Defective Sacrifices", "The people bring blind and lame animals as sacrifices."],
+    "Malachi 1:10": ["Empty Worship", "God says He takes no pleasure in their worthless offerings."],
+    "Malachi 1:11": ["God's Name Great Among Nations", "God declares His name will be great among the nations."],
+    "Malachi 1:12": ["Polluted Worship", "The priests treat the Lord's table with contempt."],
+    "Malachi 1:14": ["Cursed Deceiver", "Those who offer flawed sacrifices while having better ones are cursed."],
+
+    "Malachi 2:1": ["Warning to the Priests", "God warns the priests to honor His name."],
+    "Malachi 2:4": ["Covenant with Levi", "God reminds them of His covenant with the tribe of Levi."],
+    "Malachi 2:7": ["Priests as Messengers", "Priests are meant to guard knowledge and teach God's law."],
+    "Malachi 2:8": ["Corrupt Priests", "The priests have turned from the right path and caused many to stumble."],
+    "Malachi 2:10": ["Faithless People", "The people act treacherously against one another."],
+    "Malachi 2:13": ["Broken Marriages", "Men are condemned for being unfaithful to their wives."],
+    "Malachi 2:16": ["God Hates Divorce", "The Lord declares that He hates divorce and violence."],
+    "Malachi 2:17": ["Questioning God's Justice", "The people weary the Lord by questioning His justice."],
+
+    "Malachi 3:1": ["The Messenger Sent", "God promises to send a messenger to prepare the way before Him."],
+    "Malachi 3:2": ["Refiner's Fire", "The coming of the Lord will purify like a refiner's fire."],
+    "Malachi 3:5": ["Judgment Against Sin", "God will judge sorcerers, adulterers, and those who oppress others."],
+    "Malachi 3:6": ["God Does Not Change", "The Lord declares that He does not change."],
+    "Malachi 3:7": ["Return to the Lord", "God calls the people to return to Him."],
+    "Malachi 3:8": ["Robbing God", "The people are accused of robbing God in tithes and offerings."],
+    "Malachi 3:10": ["Bring the Whole Tithe", "God invites them to bring the full tithe and receive blessing."],
+    "Malachi 3:13": ["Complaints Against God", "The people speak harshly against the Lord."],
+    "Malachi 3:16": ["Book of Remembrance", "Those who fear the Lord are recorded in His book."],
+    "Malachi 3:17": ["God's Treasured Possession", "The faithful will be God's treasured possession."],
+
+    "Malachi 4:1": ["Day of Burning Judgment", "The coming day will burn like a furnace for the wicked."],
+    "Malachi 4:2": ["Sun of Righteousness", "The Sun of righteousness will rise with healing for those who fear God."],
+    "Malachi 4:3": ["Victory Over the Wicked", "The righteous will trample the wicked under their feet."],
+    "Malachi 4:4": ["Remember the Law", "The people are told to remember the law of Moses."],
+    "Malachi 4:5": ["Elijah Will Come", "God promises to send the prophet Elijah before the great day of the Lord."],
+    "Malachi 4:6": ["Hearts Turned Back", "He will turn the hearts of fathers to their children and children to their fathers."],
 
     // ===========================
     // NEW TESTAMENT
