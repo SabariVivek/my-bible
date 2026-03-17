@@ -2768,6 +2768,7 @@ body:not(.dark-theme) .right-settings-panel .settings-segment-compact {
     justify-content: center;
     width: 100%;
     margin-bottom: 4px;
+    font-size: 0.7rem;
 }
 
 .book-intro-item:hover {
@@ -2776,7 +2777,7 @@ body:not(.dark-theme) .right-settings-panel .settings-segment-compact {
 
 .book-intro-item.active {
     background-color: #3c4043 !important;
-    color: #ffffff;
+    color: #e8eaed;
     font-weight: 500;
 }
 
