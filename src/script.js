@@ -2119,7 +2119,7 @@ function updateChapters() {
     // Add book intro button at the top
     const hasIntro = bookIntroductions && bookIntroductions[bookName] && bookIntroductions[bookName].trim() !== '';
     if (hasIntro) {
-        html += `<div class="book-intro-item" data-book-intro="true">Intro</div>`;
+        html += `<div class="book-intro-item" data-book-intro="true"><img src="resources/icons/info.png" alt="Intro" class="intro-icon"></div>`;
     }
     
     for (let i = 1; i <= book.chapters; i++) {

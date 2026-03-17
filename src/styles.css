@@ -2799,6 +2799,16 @@ body:not(.dark-theme) .book-intro-item.active {
     opacity: 1;
 }
 
+.book-intro-item .intro-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.7;
+}
+
+.book-intro-item:hover .intro-icon {
+    opacity: 1;
+}
+
 /* Content Area */
 .content-area {
     flex: 1;
