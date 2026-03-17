@@ -2898,7 +2898,7 @@ body.dark-theme .mobile-chapter-header {
 }
 
 .book-intro-title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-primary, #202124);
     margin-bottom: 1.5rem;
@@ -2908,7 +2908,7 @@ body.dark-theme .mobile-chapter-header {
 }
 
 .book-intro-text {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: var(--text-secondary, #5f6368);
     text-align: justify;

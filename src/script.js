@@ -2942,7 +2942,7 @@ function displayBookIntro() {
     // Update navigation text
     const currentChapterText = document.querySelector('.current-chapter');
     if (currentChapterText) {
-        currentChapterText.textContent = `${bookName} - Intro`;
+        currentChapterText.textContent = `Intro`;
     }
     
     // Scroll to top of content
