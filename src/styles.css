@@ -2756,6 +2756,38 @@ body:not(.dark-theme) .right-settings-panel .settings-segment-compact {
     font-weight: 600;
 }
 
+/* Book Intro Button */
+.book-intro-item {
+    padding: 0.625rem 0;
+    text-align: center;
+    cursor: pointer;
+    color: #9aa0a6;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.book-intro-item:hover {
+    background-color: #3c4043 !important;
+}
+
+.book-intro-item.active {
+    background-color: #3c4043 !important;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.book-intro-item svg {
+    opacity: 0.7;
+}
+
+.book-intro-item:hover svg {
+    opacity: 1;
+}
+
 /* Content Area */
 .content-area {
     flex: 1;
@@ -2846,6 +2878,44 @@ body.dark-theme .mobile-chapter-header {
     .scripture-text {
         padding-top: 0;
     }
+}
+
+/* Book Intro Content Styling */
+.book-intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.book-intro-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary, #202124);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--border-color, #e0e0e0);
+    padding-bottom: 1rem;
+}
+
+.book-intro-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-secondary, #5f6368);
+    text-align: justify;
+}
+
+.book-intro-text p {
+    margin-bottom: 1rem;
+}
+
+/* Dark theme for book intro */
+body.dark-theme .book-intro-title {
+    color: #e8eaed;
+    border-bottom-color: #3c4043;
+}
+
+body.dark-theme .book-intro-text {
+    color: #9aa0a6;
 }
 
 .verse-line {
@@ -3089,7 +3159,7 @@ body.dark-theme .mobile-chapter-header {
     -webkit-box-orient: vertical;
 }
 
-.verse-header.collapsible .verse-header-subtext.visible ~ .verse-header-header .verse-header-title,
+.verse-header.collapsible .verse-header-subtext.visible~.verse-header-header .verse-header-title,
 .verse-header.collapsible:has(.verse-header-subtext.visible) .verse-header-title {
     -webkit-line-clamp: unset;
     overflow: visible;

@@ -2115,6 +2115,13 @@ function updateChapters() {
     const book = bibleBooks[currentBook];
     const bookName = book.name;
     let html = '';
+    
+    // Add book intro button at the top
+    const hasIntro = bookIntroductions && bookIntroductions[bookName] && bookIntroductions[bookName].trim() !== '';
+    if (hasIntro) {
+        html += `<div class="book-intro-item" data-book-intro="true">Intro</div>`;
+    }
+    
     for (let i = 1; i <= book.chapters; i++) {
         const activeClass = i === currentChapter ? 'active' : '';
         const hasMemVerse = chapterHasMemoryVerses(bookName, i);
@@ -2122,6 +2129,44 @@ function updateChapters() {
         html += `<div class="number-item ${activeClass}${hasMemoryVerse}" data-chapter="${i}">${i}</div>`;
     }
     chaptersColumn.innerHTML = html;
+    
+    // Add click handler for book intro button
+    const bookIntroItem = chaptersColumn.querySelector('.book-intro-item');
+    if (bookIntroItem) {
+        bookIntroItem.addEventListener('click', () => {
+            displayBookIntro();
+            
+            // Auto-close the drawer on mobile
+            if (window.innerWidth <= 768) {
+                const drawerOverlay = document.querySelector('.drawer-overlay');
+                const booksSidebar = document.querySelector('.books-sidebar');
+                const chaptersColumn = document.querySelector('.chapters-column');
+                const versesColumn = document.querySelector('.verses-column');
+                const menuBtn = document.querySelector('.mobile-only');
+                
+                if (drawerOverlay) {
+                    drawerOverlay.classList.remove('active');
+                }
+                if (booksSidebar) {
+                    booksSidebar.classList.remove('drawer-open');
+                }
+                if (chaptersColumn) {
+                    chaptersColumn.classList.remove('drawer-open');
+                }
+                if (versesColumn) {
+                    versesColumn.classList.remove('drawer-open');
+                }
+                if (menuBtn) {
+                    const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
+                    const closeIcon = menuBtn.querySelector('.close-icon');
+                    if (hamburgerIcon) hamburgerIcon.style.display = 'block';
+                    if (closeIcon) closeIcon.style.display = 'none';
+                }
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
     // Scroll to active chapter
     setTimeout(() => {
         const activeChapter = chaptersColumn.querySelector('.number-item.active');
@@ -2475,6 +2520,16 @@ function loadVerseImages(bookName, chapterNum, contentArea) {
 // Display chapter content
 function displayChapter() {
     const contentArea = document.querySelector('.scripture-text');
+    
+    // Clear intro flag since we're displaying a chapter
+    window.isViewingIntro = false;
+    
+    // Show mobile chapter header when displaying a chapter
+    const mobileChapterHeader = document.getElementById('mobile-chapter-header');
+    if (mobileChapterHeader) {
+        mobileChapterHeader.style.display = '';
+    }
+    
     // Update mobile chapter header
     updateMobileChapterHeader();
     // Safety check: if currentData is not loaded yet, skip display
@@ -2841,6 +2896,79 @@ function displayChapter() {
     console.log(`[DISPLAY-CHAPTER] Calling pullout init for ${bibleBooks[currentBook].name} ${currentChapter}`);
     if (typeof initializeChapterSummaryPullout === 'function') {
         initializeChapterSummaryPullout(bibleBooks[currentBook].name, String(currentChapter));
+    }
+}
+
+// Display book introduction
+function displayBookIntro() {
+    const contentArea = document.querySelector('.scripture-text');
+    const book = bibleBooks[currentBook];
+    const bookName = book.name;
+    
+    // Check if book intro exists
+    if (!bookIntroductions || !bookIntroductions[bookName] || bookIntroductions[bookName].trim() === '') {
+        contentArea.innerHTML = '<p>No introduction available for this book.</p>';
+        return;
+    }
+    
+    const intro = bookIntroductions[bookName];
+    
+    // Convert \n to <br> for proper line breaks
+    // Split by actual newline character and wrap each paragraph in <p> tags
+    const paragraphs = intro.split(/\n+/).filter(p => p.trim() !== '');
+    const formattedIntro = paragraphs.map(p => `<p>${p.trim()}</p>`).join('');
+    
+    // Create HTML for book intro
+    let html = `
+        <div class="book-intro-content">
+            <h2 class="book-intro-title">Introduction to ${bookName}</h2>
+            <div class="book-intro-text">
+                ${formattedIntro}
+            </div>
+        </div>
+    `;
+    
+    contentArea.innerHTML = html;
+    
+    // Set flag to track that we're viewing intro
+    window.isViewingIntro = true;
+    
+    // Hide mobile chapter header when displaying intro
+    const mobileChapterHeader = document.getElementById('mobile-chapter-header');
+    if (mobileChapterHeader) {
+        mobileChapterHeader.style.display = 'none';
+    }
+    
+    // Update navigation text
+    const currentChapterText = document.querySelector('.current-chapter');
+    if (currentChapterText) {
+        currentChapterText.textContent = `${bookName} - Intro`;
+    }
+    
+    // Scroll to top of content
+    contentArea.scrollTop = 0;
+    if (window.innerWidth > 1024) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    // Clear verses column since we're not showing a chapter
+    const versesColumn = document.querySelector('.verses-column');
+    if (versesColumn) {
+        versesColumn.innerHTML = '';
+    }
+    
+    // Remove active class from all chapter items
+    const chaptersColumn = document.querySelector('.chapters-column');
+    if (chaptersColumn) {
+        chaptersColumn.querySelectorAll('.number-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Add active class to intro button
+        const introButton = chaptersColumn.querySelector('.book-intro-item');
+        if (introButton) {
+            introButton.classList.add('active');
+        }
     }
 }
 
@@ -4218,19 +4346,43 @@ document.addEventListener('click', (e) => {
         if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
             return; // Don't navigate if note viewer is open
         }
-        if (currentChapter > 1) {
+        
+        // If viewing intro, go to last chapter of previous book
+        if (window.isViewingIntro) {
+            if (currentBook > 0) {
+                currentBook--;
+                currentChapter = bibleBooks[currentBook].chapters;
+                loadBook(currentBook, currentChapter).then(() => {
+                    refreshOpenSummaryDrawer();
+                });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        } else if (currentChapter > 1) {
             currentChapter--;
             localStorage.setItem('currentChapter', currentChapter);
             updateUI();
             refreshOpenSummaryDrawer();
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else if (currentBook > 0) {
-            currentBook--;
-            currentChapter = bibleBooks[currentBook].chapters;
-            loadBook(currentBook, currentChapter).then(() => {
+        } else if (currentChapter === 1) {
+            // At chapter 1, check if current book has intro
+            const book = bibleBooks[currentBook];
+            const bookName = book.name;
+            const hasIntro = bookIntroductions && bookIntroductions[bookName] && bookIntroductions[bookName].trim() !== '';
+            
+            if (hasIntro) {
+                // Go to current book's introduction
+                displayBookIntro();
                 refreshOpenSummaryDrawer();
-            });
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (currentBook > 0) {
+                // No intro, go to previous book's last chapter
+                currentBook--;
+                currentChapter = bibleBooks[currentBook].chapters;
+                loadBook(currentBook, currentChapter).then(() => {
+                    refreshOpenSummaryDrawer();
+                });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         }
     }
     // Next chapter (disabled if note viewer is open)
@@ -4239,20 +4391,47 @@ document.addEventListener('click', (e) => {
         if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
             return; // Don't navigate if note viewer is open
         }
-        const book = bibleBooks[currentBook];
-        if (currentChapter < book.chapters) {
-            currentChapter++;
+        
+        // If viewing intro, go to first chapter of current book
+        if (window.isViewingIntro) {
+            currentChapter = 1;
             localStorage.setItem('currentChapter', currentChapter);
             updateUI();
             refreshOpenSummaryDrawer();
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else if (currentBook < bibleBooks.length - 1) {
-            currentBook++;
-            currentChapter = 1;
-            loadBook(currentBook, currentChapter).then(() => {
+        } else {
+            const book = bibleBooks[currentBook];
+            if (currentChapter < book.chapters) {
+                currentChapter++;
+                localStorage.setItem('currentChapter', currentChapter);
+                updateUI();
                 refreshOpenSummaryDrawer();
-            });
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (currentBook < bibleBooks.length - 1) {
+                // At last chapter, go to next book's introduction
+                currentBook++;
+                const nextBook = bibleBooks[currentBook];
+                const nextBookName = nextBook.name;
+                
+                // Check if next book has an intro
+                const hasIntro = bookIntroductions && bookIntroductions[nextBookName] && bookIntroductions[nextBookName].trim() !== '';
+                
+                if (hasIntro) {
+                    // Load the book and display its introduction
+                    currentChapter = 1; // Set to chapter 1 for loading purposes
+                    loadBook(currentBook, currentChapter).then(() => {
+                        displayBookIntro();
+                        refreshOpenSummaryDrawer();
+                    });
+                } else {
+                    // No intro, go to chapter 1
+                    currentChapter = 1;
+                    loadBook(currentBook, currentChapter).then(() => {
+                        refreshOpenSummaryDrawer();
+                    });
+                }
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         }
     }
 });
