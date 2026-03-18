@@ -2460,7 +2460,7 @@
                     state.currentUser.completedDates = {};
                     savedDates.forEach(dateStr => {
                         const [year, month, day] = dateStr.split('-').map(Number);
-                        const key = `${year}-${month}-${day}`;
+                        const key = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                         state.currentUser.completedDates[key] = true;
                     });
                 } catch (error) {
@@ -2485,7 +2485,7 @@
                     state.currentUser.completedDates = {};
                     savedDates.forEach(dateStr => {
                         const [year, month, day] = dateStr.split('-').map(Number);
-                        const key = `${year}-${month}-${day}`;
+                        const key = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                         state.currentUser.completedDates[key] = true;
                     });
                 } catch (error) {
@@ -3632,7 +3632,7 @@
                                 user.completedDates = {};
                                 dates.forEach(dateStr => {
                                     const [year, month, day] = dateStr.split('-').map(Number);
-                                    const dateKey = `${year}-${month}-${day}`;
+                                    const dateKey = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                                     user.completedDates[dateKey] = true;
                                 });
                                 
@@ -3689,7 +3689,7 @@
                 // Process completed dates - merge with existing to preserve any recent updates
                 dates.forEach(dateStr => {
                     const [year, month, day] = dateStr.split('-').map(Number);
-                    const dateKey = `${year}-${month}-${day}`;
+                    const dateKey = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                     user.completedDates[dateKey] = true;
                 });
                 
@@ -7093,7 +7093,7 @@
                             user.completedDates = {};
                             dates.forEach(dateStr => {
                                 const [year, month, day] = dateStr.split('-').map(Number);
-                                const dateKey = `${year}-${month}-${day}`;
+                                const dateKey = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                                 user.completedDates[dateKey] = true;
                             });
                             
@@ -7168,7 +7168,7 @@
                                 user.completedDates = {};
                                 dates.forEach(dateStr => {
                                     const [year, month, day] = dateStr.split('-').map(Number);
-                                    const dateKey = `${year}-${month}-${day}`;
+                                    const dateKey = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                                     user.completedDates[dateKey] = true;
                                 });
                                 
@@ -7474,7 +7474,7 @@
                             state.currentUser.completedDates = {};
                             savedDates.forEach(dateStr => {
                                 const [year, month, day] = dateStr.split('-').map(Number);
-                                const key = `${year}-${month}-${day}`;
+                                const key = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                                 state.currentUser.completedDates[key] = true;
                             });
                         } catch (error) {
@@ -7547,7 +7547,7 @@
                     calendarState.currentYear === tempDate.getFullYear();
                 
                 // Check if date is completed
-                const dateKey = `${calendarState.currentYear}-${calendarState.currentMonth + 1}-${day}`;
+                const dateKey = `${calendarState.currentYear}-${String(calendarState.currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                 const isCompleted = state.currentUser && state.currentUser.completedDates && state.currentUser.completedDates[dateKey];
                 
                 // Check if date is in the future
