@@ -3269,7 +3269,7 @@
             try {
                 // Get today's date
                 const today = new Date();
-                const dateKey = today.toISOString().split('T')[0];
+                const dateKey = getISTDateString(today);
                 
                 // Fetch quiz chapter results from new table for today
                 const { data: chapterResults, error } = await supabase
@@ -3319,7 +3319,7 @@
         async function loadQuizSummary(chapter, book) {
             try {
                 const today = new Date();
-                const dateKey = today.toISOString().split('T')[0];
+                const dateKey = getISTDateString(today);
                 
                 // Set the selected chapter and book
                 state.selectedQuizChapter = chapter;
@@ -3378,6 +3378,11 @@
             } catch (error) {
                 console.error('Error loading quiz summary:', error);
             }
+        }
+
+        // Returns date string in YYYY-MM-DD format using IST (Asia/Kolkata) timezone
+        function getISTDateString(date) {
+            return (date || new Date()).toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' });
         }
 
         function getTodayReading(date) {
@@ -4558,7 +4563,7 @@
                 // Mark date as completed in Supabase
                 await BibleReadingDB.markDateAsCompleted(
                     state.currentUser.id,
-                    state.selectedDate.toISOString().split('T')[0]
+                    dateKey
                 );
 
                 // Update local state
