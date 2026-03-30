@@ -4283,41 +4283,19 @@ function updateVerseHighlighting(selectedVerses) {
 // Scroll to specific verse
 function scrollToVerse(verseNum) {
     const contentArea = document.querySelector('.scripture-text');
+    const contentAreaContainer = document.querySelector('.content-area');
     
     // Don't add highlight here - let the click handlers manage highlighting
     // Just scroll to the verse
     
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     if (verseLine) {
-        // Find the verse-header that comes before this verse
-        let verseHeader = verseLine.previousElementSibling;
-        while (verseHeader && !verseHeader.classList.contains('verse-header')) {
-            verseHeader = verseHeader.previousElementSibling;
-        }
-        
-        // If there's a verse header before this verse, scroll it completely off-screen
-        if (verseHeader) {
-            // Scroll the header to the top and then past it
-            const headerPosition = verseHeader.getBoundingClientRect().top + window.scrollY;
-            const headerHeight = verseHeader.offsetHeight;
-            const topNavHeight = window.innerWidth <= 1024 ? 62 : 0;
-            const offsetPosition = headerPosition - topNavHeight + 5; // Reduced to 5px for less scroll
-            
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        } else {
-            // No header before this verse, just scroll to verse normally
-            const topNavHeight = window.innerWidth <= 1024 ? 60 : 0;
-            const versePosition = verseLine.getBoundingClientRect().top + window.scrollY;
-            const offsetPosition = versePosition - topNavHeight;
-            
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
+        // Use scrollIntoView for proper scrolling behavior
+        // block: 'center' will center the verse in the viewport
+        verseLine.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'center'
+        });
     } else {
         // Verse doesn't exist in this chapter - silently ignore
     }
