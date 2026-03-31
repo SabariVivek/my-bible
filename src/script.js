@@ -5008,6 +5008,8 @@ function initializeSearch() {
     const searchResultsInfo = document.getElementById('search-results-info');
     const resultsCount = document.getElementById('results-count');
     let searchTimeout = null;
+    let saveRecentTimeout = null;
+    const MIN_SEARCH_LENGTH = 3; // Avoid overly short partial matches and reduce flicker
     
     // Default suggestions (if no recent searches)
     const defaultSuggestions = [
@@ -5030,6 +5032,10 @@ function initializeSearch() {
     
     // Save recent searches to localStorage
     function saveRecentSearch(term) {
+        term = term.trim();
+        if (term.length < MIN_SEARCH_LENGTH) {
+            return; // Prevent short tokens like J, Je from being saved
+        }
         try {
             const recent = getRecentSearches();
             // Remove duplicates and add new term at the beginning
@@ -5081,10 +5087,13 @@ function initializeSearch() {
             filterBtn.classList.remove('active');
         }
         const query = searchInput.value.trim();
-        if (query) {
+        if (query.length >= MIN_SEARCH_LENGTH) {
             showLoadingState();
             clearTimeout(searchTimeout);
             performSearch(query);
+        } else {
+            searchResultsInfo.style.display = 'none';
+            showEmptyState();
         }
     }
     // Clear filter values
@@ -5206,7 +5215,9 @@ function initializeSearch() {
         clearBtn.style.display = value ? 'flex' : 'none';
         // Debounce search
         clearTimeout(searchTimeout);
-        if (!value) {
+        clearTimeout(saveRecentTimeout);
+
+        if (!value || value.length < MIN_SEARCH_LENGTH) {
             searchResultsInfo.style.display = 'none';
             showEmptyState();
             return;
@@ -5215,6 +5226,11 @@ function initializeSearch() {
         searchTimeout = setTimeout(() => {
             performSearch(value);
         }, 500);
+
+        // Only save recent search after user stops typing for a moment
+        saveRecentTimeout = setTimeout(() => {
+            saveRecentSearch(value);
+        }, 1200);
     });
     // Show empty state
     function showEmptyState() {
@@ -5248,6 +5264,7 @@ function initializeSearch() {
                 searchInput.value = suggestion;
                 clearBtn.style.display = 'block';
                 performSearch(suggestion);
+                saveRecentSearch(suggestion);
             });
         });
     }
@@ -5359,9 +5376,6 @@ function initializeSearch() {
     }
     // Display search results
     function displaySearchResults(results, query) {
-        // Save the search term to recent searches
-        saveRecentSearch(query);
-        
         if (results.length === 0) {
             searchResultsInfo.style.display = 'none';
             searchResults.innerHTML = `
