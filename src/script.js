@@ -2212,7 +2212,7 @@ function updateChapters() {
             // Scroll to top of content
             const contentArea = document.querySelector('.content-area');
             if (contentArea) {
-                contentArea.scrollTop = 0;
+                contentArea.scrollTo({ top: 0, behavior: 'smooth' });
             }
             // Only scroll window on desktop (tablets and mobile have fixed headers)
             if (window.innerWidth > 1024) {
@@ -2527,7 +2527,7 @@ function displayChapter() {
     // Show mobile chapter header when displaying a chapter
     const mobileChapterHeader = document.getElementById('mobile-chapter-header');
     if (mobileChapterHeader) {
-        mobileChapterHeader.style.display = '';
+        mobileChapterHeader.style.display = 'block';
     }
     
     // Update mobile chapter header
@@ -2946,7 +2946,7 @@ function displayBookIntro() {
     }
     
     // Scroll to top of content
-    contentArea.scrollTop = 0;
+    contentArea.scrollTo({ top: 0, behavior: 'smooth' });
     if (window.innerWidth > 1024) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -4332,15 +4332,25 @@ document.addEventListener('click', (e) => {
                 currentChapter = bibleBooks[currentBook].chapters;
                 loadBook(currentBook, currentChapter).then(() => {
                     refreshOpenSummaryDrawer();
+                    setTimeout(() => {
+                        const contentArea = document.querySelector('.content-area');
+                        if (contentArea) {
+                            contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 100);
                 });
-                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         } else if (currentChapter > 1) {
             currentChapter--;
             localStorage.setItem('currentChapter', currentChapter);
             updateUI();
             refreshOpenSummaryDrawer();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => {
+                const contentArea = document.querySelector('.content-area');
+                if (contentArea) {
+                    contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }, 100);
         } else if (currentChapter === 1) {
             // At chapter 1, check if current book has intro
             const book = bibleBooks[currentBook];
@@ -4351,15 +4361,25 @@ document.addEventListener('click', (e) => {
                 // Go to current book's introduction
                 displayBookIntro();
                 refreshOpenSummaryDrawer();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                setTimeout(() => {
+                    const contentArea = document.querySelector('.content-area');
+                    if (contentArea) {
+                        contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }, 100);
             } else if (currentBook > 0) {
                 // No intro, go to previous book's last chapter
                 currentBook--;
                 currentChapter = bibleBooks[currentBook].chapters;
                 loadBook(currentBook, currentChapter).then(() => {
                     refreshOpenSummaryDrawer();
+                    setTimeout(() => {
+                        const contentArea = document.querySelector('.content-area');
+                        if (contentArea) {
+                            contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 100);
                 });
-                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         }
     }
@@ -4376,7 +4396,12 @@ document.addEventListener('click', (e) => {
             localStorage.setItem('currentChapter', currentChapter);
             updateUI();
             refreshOpenSummaryDrawer();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => {
+                const contentArea = document.querySelector('.content-area');
+                if (contentArea) {
+                    contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }, 100);
         } else {
             const book = bibleBooks[currentBook];
             if (currentChapter < book.chapters) {
@@ -4384,7 +4409,12 @@ document.addEventListener('click', (e) => {
                 localStorage.setItem('currentChapter', currentChapter);
                 updateUI();
                 refreshOpenSummaryDrawer();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                setTimeout(() => {
+                    const contentArea = document.querySelector('.content-area');
+                    if (contentArea) {
+                        contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }, 100);
             } else if (currentBook < bibleBooks.length - 1) {
                 // At last chapter, go to next book's introduction
                 currentBook++;
@@ -4400,15 +4430,26 @@ document.addEventListener('click', (e) => {
                     loadBook(currentBook, currentChapter).then(() => {
                         displayBookIntro();
                         refreshOpenSummaryDrawer();
+                        setTimeout(() => {
+                            const contentArea = document.querySelector('.content-area');
+                            if (contentArea) {
+                                contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                            }
+                        }, 100);
                     });
                 } else {
                     // No intro, go to chapter 1
                     currentChapter = 1;
                     loadBook(currentBook, currentChapter).then(() => {
                         refreshOpenSummaryDrawer();
+                        setTimeout(() => {
+                            const contentArea = document.querySelector('.content-area');
+                            if (contentArea) {
+                                contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                            }
+                        }, 100);
                     });
                 }
-                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         }
     }

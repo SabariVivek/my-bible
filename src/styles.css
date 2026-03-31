@@ -729,7 +729,7 @@ body.dark-theme .current-user-avatar {
 /* Search Bar (below header) */
 .search-bar {
     position: fixed;
-    top: 60px;
+    top: 55px;
     z-index: 999;
     background: #202124;
     border-bottom: 1px solid #404040;
@@ -761,13 +761,12 @@ body.dark-theme .current-user-avatar {
     }
 }
 
-/* Desktop-only: lift side columns slightly to reduce top gap after banner change */
+/* Desktop: ensure search-bar is full width and centered */
 @media (min-width: 769px) {
-
-    .books-sidebar,
-    .chapters-column,
-    .verses-column {
-        /* margin-top: -4px; */
+    .search-bar {
+        width: 100%;
+        left: 0;
+        right: 0;
     }
 }
 
@@ -1189,6 +1188,7 @@ body.dark-theme .search-bar .filter-btn.active::after {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 1rem;
+    margin-top: 50px;
 }
 
 .search-results {
@@ -2827,7 +2827,6 @@ body:not(.dark-theme) .book-intro-item.active {
 
 /* Mobile Chapter Header */
 .mobile-chapter-header {
-    display: none;
     background: var(--background-color);
     text-align: center;
     padding: 8px 8px 8px 8px;
@@ -2859,12 +2858,6 @@ body:not(.dark-theme) .book-intro-item.active {
 body.dark-theme .mobile-chapter-header {
     background: #202124;
     border-bottom-color: #3c4043;
-}
-
-@media (max-width: 768px) {
-    .mobile-chapter-header {
-        display: block;
-    }
 }
 
 .scripture-text {
