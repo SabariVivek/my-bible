@@ -5089,6 +5089,12 @@ function initializeSearch() {
         if (chapterHeader) chapterHeader.style.display = 'none';
         // Hide chapter summary arc shape on search page
         if (chapterSummaryPullout) chapterSummaryPullout.style.display = 'none';
+        // Clear search input and results
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        searchResults.innerHTML = '';
+        searchResultsInfo.style.display = 'none';
+        showEmptyState();
         searchInput.focus();
     }
     function closeSearch() {
