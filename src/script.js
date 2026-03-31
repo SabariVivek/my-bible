@@ -5008,6 +5008,44 @@ function initializeSearch() {
     const searchResultsInfo = document.getElementById('search-results-info');
     const resultsCount = document.getElementById('results-count');
     let searchTimeout = null;
+    
+    // Default suggestions (if no recent searches)
+    const defaultSuggestions = [
+        'Abraham',
+        'Jesus',
+        'Mighty',
+        'அப்பம்',
+        'தேவாலய'
+    ];
+    
+    // Get recent searches from localStorage
+    function getRecentSearches() {
+        try {
+            const recent = localStorage.getItem('recentSearches');
+            return recent ? JSON.parse(recent) : [];
+        } catch (e) {
+            return [];
+        }
+    }
+    
+    // Save recent searches to localStorage
+    function saveRecentSearch(term) {
+        try {
+            const recent = getRecentSearches();
+            // Remove duplicates and add new term at the beginning
+            const filtered = recent.filter(s => s !== term);
+            const updated = [term, ...filtered].slice(0, 5); // Keep only top 5
+            localStorage.setItem('recentSearches', JSON.stringify(updated));
+        } catch (e) {
+            console.error('Failed to save recent search:', e);
+        }
+    }
+    
+    // Get suggestions (recent or default)
+    function getSuggestions() {
+        const recent = getRecentSearches();
+        return recent.length > 0 ? recent : defaultSuggestions;
+    }
     let isSearchActive = false;
     let isFilterVisible = false;
     // Populate book dropdown
@@ -5180,15 +5218,38 @@ function initializeSearch() {
     });
     // Show empty state
     function showEmptyState() {
-        searchResults.innerHTML = `
-            <div class="search-empty-state">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        const suggestions = getSuggestions();
+        const isRecentSearches = getRecentSearches().length > 0;
+        const title = isRecentSearches ? 'Recent Searches' : 'Top Suggestions';
+        
+        let suggestionsHtml = suggestions.map(suggestion => `
+            <div class="search-suggestion-item" data-suggestion="${suggestion}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="8"></circle>
                     <path d="m21 21-4.35-4.35"></path>
                 </svg>
-                <p>Search for verses in Tamil or English</p>
+                <span>${suggestion}</span>
+            </div>
+        `).join('');
+        
+        searchResults.innerHTML = `
+            <div class="search-suggestions">
+                <div class="search-suggestions-title">${title}</div>
+                <div class="search-suggestions-list">
+                    ${suggestionsHtml}
+                </div>
             </div>
         `;
+        
+        // Add click handlers to suggestions
+        document.querySelectorAll('.search-suggestion-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const suggestion = item.dataset.suggestion;
+                searchInput.value = suggestion;
+                clearBtn.style.display = 'block';
+                performSearch(suggestion);
+            });
+        });
     }
     // Show loading state
     function showLoadingState() {
@@ -5298,6 +5359,9 @@ function initializeSearch() {
     }
     // Display search results
     function displaySearchResults(results, query) {
+        // Save the search term to recent searches
+        saveRecentSearch(query);
+        
         if (results.length === 0) {
             searchResultsInfo.style.display = 'none';
             searchResults.innerHTML = `
