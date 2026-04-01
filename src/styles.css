@@ -8147,9 +8147,9 @@ body.dark-theme .add-character-btn:hover {
         display: flex;
         justify-content: center;
         padding: 12px 8px;
-        border-top: 1px solid #d0d0d0;
+        border-top: 1px solid #292a2d;
         border-right: none;
-        background: #e0e0e0;
+        background: #292a2d;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -8163,7 +8163,7 @@ body.dark-theme .add-character-btn:hover {
     display: none;
     width: 100%;
     padding: 12px 16px;
-    background: #d32f2f;
+    background: #4a4a4a;
     color: white;
     border: none;
     border-radius: 6px;
@@ -8179,7 +8179,7 @@ body.dark-theme .add-character-btn:hover {
         display: block;
         width: calc(100% - 16px);
         padding: 10px 8px;
-        background: #d32f2f;
+        background: #eb410c87;
         color: white;
         font-size: 13px;
         margin: 0 8px;
@@ -8187,11 +8187,11 @@ body.dark-theme .add-character-btn:hover {
 }
 
 .close-verse-selection-btn:hover {
-    background: #c62828;
+    background: #5a5a5a;
 }
 
 .close-verse-selection-btn:active {
-    background: #b71c1c;
+    background: #3a3a3a;
 }
 
 .verse-bottom-action {
