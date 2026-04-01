@@ -3518,6 +3518,9 @@ function showVerseActionsBottomSheet(verseNum) {
                 </button>
                 ` : ''}
             </div>
+            <div class="verse-actions-footer">
+                <button class="close-verse-selection-btn" aria-label="Close">Close</button>
+            </div>
         </div>
     `;
     
@@ -3527,6 +3530,7 @@ function showVerseActionsBottomSheet(verseNum) {
     
     // Add event listeners
     const closeBtn = bottomSheet.querySelector('.close-bottom-sheet');
+    const closeBtnFooter = bottomSheet.querySelector('.close-verse-selection-btn');
     const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
     
     const closeBottomSheet = () => {
@@ -3560,7 +3564,10 @@ function showVerseActionsBottomSheet(verseNum) {
         }
     };
     
-    closeBtn.addEventListener('click', closeBottomSheet);
+    closeBtn?.addEventListener('click', closeBottomSheet);
+    if (closeBtnFooter) {
+        closeBtnFooter.addEventListener('click', closeBottomSheet);
+    }
     backdrop.addEventListener('click', closeBottomSheet);
     
     // Setup scrollbar visibility for action buttons
