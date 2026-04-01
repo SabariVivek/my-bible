@@ -7919,6 +7919,16 @@ body.dark-theme .add-character-btn:hover {
         transform: translateX(0);
         transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
     }
+
+    /* Adjust content-area when right pane is open */
+    .main-layout .content-area {
+        margin-right: 0;
+        transition: margin-right 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+    }
+
+    body:has(.verse-actions-bottom-sheet.visible) .content-area {
+        margin-right: 100px;
+    }
 }
 
 .verse-actions-backdrop {
