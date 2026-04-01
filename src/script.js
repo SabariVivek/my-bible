@@ -4463,11 +4463,26 @@ document.addEventListener('click', (e) => {
 });
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
-    // Disable arrow key navigation if note viewer is open
+    // Disable arrow key navigation if note viewer or notes editor is open
     const noteViewerPopup = document.getElementById('note-viewer-popup');
+    const notesModal = document.getElementById('notes-modal');
+    
+    // Check if note viewer popup is open
     if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
         return; // Don't navigate if note viewer is open
     }
+    
+    // Check if notes editing modal is open
+    if (notesModal && notesModal.classList.contains('visible')) {
+        return; // Don't navigate if notes editor is open
+    }
+    
+    // Check if notes-textarea is focused
+    const notesTextarea = document.getElementById('notes-textarea');
+    if (notesTextarea && document.activeElement === notesTextarea) {
+        return; // Don't navigate if notes-textarea is focused
+    }
+    
     if (e.key === 'ArrowLeft') {
         document.querySelector('.nav-btn[aria-label="Previous"]').click();
     } else if (e.key === 'ArrowRight') {

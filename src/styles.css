@@ -5658,7 +5658,7 @@ body.dark-theme .note-viewer-content blockquote {
 /* Horizontal Rule styling */
 .note-viewer-content hr {
     border: none;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #343232;
     background-color: transparent;
     margin: 16px 0;
     height: 0;
@@ -5675,7 +5675,7 @@ body.dark-theme .note-viewer-content pre {
 }
 
 body.dark-theme .note-viewer-content hr {
-    border-top-color: #4a4a4a;
+    border-top-color: #343232;
 }
 
 /* Link styling */
