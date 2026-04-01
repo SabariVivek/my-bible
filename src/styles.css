@@ -9982,18 +9982,19 @@ body.dark-theme .color-option:hover {
 .sermon-modal-content {
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
     background: #e0e0e0;
-    border-radius: 16px 16px 0 0;
+    border-radius: 24px 24px 0 0;
     z-index: 1001;
     max-height: 80vh;
+    max-width: 420px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
     /* GPU acceleration for smooth animations */
     will-change: transform;
-    transform: translateY(100%);
     transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
     overflow: visible;
     backface-visibility: hidden;
@@ -10002,7 +10003,7 @@ body.dark-theme .color-option:hover {
 }
 
 .sermon-selection-modal.visible .sermon-modal-content {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 .sermon-modal-content.dragging {
@@ -10303,19 +10304,20 @@ body.sermon-modal-open {
 .bookmark-color-picker-sheet {
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
     background: #e0e0e0;
-    border-radius: 16px 16px 0 0;
+    border-radius: 24px 24px 0 0;
     z-index: 9999;
+    max-width: 420px;
+    width: 100%;
     /* GPU acceleration for smooth animations */
     will-change: transform;
-    transform: translateY(100%);
     transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
     max-height: 70vh;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
     overflow: visible;
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
@@ -10323,11 +10325,11 @@ body.sermon-modal-open {
 }
 
 .bookmark-color-picker-sheet.visible {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 .bookmark-color-picker-sheet.closing {
-    transform: translateY(100%);
+    transform: translateX(-50%) translateY(100%);
 }
 
 .bookmark-color-picker-overlay.dragging .bookmark-color-picker-sheet {
@@ -11406,17 +11408,18 @@ body.dark-theme .cross-ref-loader-spinner {
 .add-ref-sheet {
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
     background: #ffffff;
-    border-radius: 16px 16px 0 0;
+    border-radius: 24px 24px 0 0;
     z-index: 1202;
     height: 70vh;
+    max-width: 420px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    transform: translateY(100%);
     transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
 }
 
 body.dark-theme .add-ref-sheet {
@@ -11424,7 +11427,7 @@ body.dark-theme .add-ref-sheet {
 }
 
 .add-ref-sheet.active {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
     transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
 }
 
