@@ -5303,16 +5303,16 @@ body.modal-open {
     flex-direction: column;
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
     width: 100%;
+    max-width: 600px;
     max-height: 80vh;
     border-radius: 16px 16px 0 0;
     box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
     z-index: 1101;
     /* GPU acceleration for smooth animations */
     will-change: transform;
-    transform: translateY(100%);
     transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
     overflow: visible;
     backface-visibility: hidden;
@@ -5321,7 +5321,7 @@ body.modal-open {
 }
 
 .note-viewer-overlay.visible .note-viewer-modal {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 .note-viewer-modal.dragging {
@@ -5535,9 +5535,157 @@ body.dark-theme #note-tab-content {
     line-height: 1.7;
     color: #202124;
     overflow-y: auto;
-    white-space: pre-wrap;
+    white-space: normal;
     word-wrap: break-word;
     flex: 1;
+}
+
+/* Styling for preserved HTML elements in notes */
+.note-viewer-content h1,
+.note-viewer-content h2,
+.note-viewer-content h3,
+.note-viewer-content h4,
+.note-viewer-content h5,
+.note-viewer-content h6 {
+    font-weight: 700;
+    margin: 16px 0 8px 0;
+    line-height: 1.5;
+}
+
+.note-viewer-content h1 { font-size: 24px; }
+.note-viewer-content h2 { font-size: 20px; }
+.note-viewer-content h3 { font-size: 18px; }
+.note-viewer-content h4 { font-size: 16px; }
+.note-viewer-content h5 { font-size: 15px; }
+.note-viewer-content h6 { font-size: 14px; }
+
+/* Blockquote styling for verses and quotes */
+.note-viewer-content blockquote {
+    margin: 12px 0;
+    padding: 12px 16px;
+    border-left: 4px solid #1a73e8;
+    background-color: #f8f9fa;
+    font-style: italic;
+    color: #3c4043;
+}
+
+body.dark-theme .note-viewer-content blockquote {
+    background-color: #2d2d2d;
+    border-left-color: #8ab4f8;
+    color: #e8eaed;
+}
+
+/* List styling */
+.note-viewer-content ul,
+.note-viewer-content ol {
+    margin: 12px 0;
+    padding-left: 24px;
+}
+
+.note-viewer-content li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.note-viewer-content ul li {
+    list-style-type: disc;
+}
+
+.note-viewer-content ol li {
+    list-style-type: decimal;
+}
+
+/* Nested lists */
+.note-viewer-content ul ul {
+    list-style-type: circle;
+    margin-top: 8px;
+}
+
+.note-viewer-content ul ul ul {
+    list-style-type: square;
+}
+
+/* Paragraph styling */
+.note-viewer-content p {
+    margin: 8px 0;
+    line-height: 1.7;
+}
+
+/* Text formatting */
+.note-viewer-content strong,
+.note-viewer-content b {
+    font-weight: 700;
+}
+
+.note-viewer-content em,
+.note-viewer-content i {
+    font-style: italic;
+}
+
+.note-viewer-content u {
+    text-decoration: underline;
+}
+
+.note-viewer-content s,
+.note-viewer-content strike {
+    text-decoration: line-through;
+}
+
+/* Code styling */
+.note-viewer-content code {
+    background-color: #f1f3f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+}
+
+.note-viewer-content pre {
+    background-color: #f1f3f4;
+    padding: 12px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 12px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+}
+
+.note-viewer-content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+body.dark-theme .note-viewer-content code {
+    background-color: #2d2d2d;
+    color: #e8eaed;
+}
+
+body.dark-theme .note-viewer-content pre {
+    background-color: #2d2d2d;
+    color: #e8eaed;
+}
+
+/* Link styling */
+.note-viewer-content a {
+    color: #1a73e8;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.note-viewer-content a:hover {
+    text-decoration: underline;
+}
+
+body.dark-theme .note-viewer-content a {
+    color: #8ab4f8;
+}
+
+/* Image styling */
+.note-viewer-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 12px 0;
 }
 
 /* Reference Language Buttons Wrapper */
@@ -6340,11 +6488,12 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
     border-radius: 8px;
     font-family: inherit;
     font-size: 14px;
+    line-height: 1.7;
     color: #202124;
     margin-bottom: 20px;
     transition: border-color 0.2s ease;
     overflow-y: auto;
-    white-space: pre-wrap;
+    white-space: normal;
     word-wrap: break-word;
     cursor: text !important;
     user-select: text !important;
@@ -6364,6 +6513,135 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
     color: #999;
     pointer-events: none;
     display: block;
+}
+
+/* Formatting styles for notes-textarea */
+.notes-textarea h1,
+.notes-textarea h2,
+.notes-textarea h3,
+.notes-textarea h4,
+.notes-textarea h5,
+.notes-textarea h6 {
+    font-weight: 700;
+    margin: 16px 0 8px 0;
+    line-height: 1.5;
+}
+
+.notes-textarea h1 { font-size: 24px; }
+.notes-textarea h2 { font-size: 20px; }
+.notes-textarea h3 { font-size: 18px; }
+.notes-textarea h4 { font-size: 16px; }
+.notes-textarea h5 { font-size: 15px; }
+.notes-textarea h6 { font-size: 14px; }
+
+/* Blockquote styling for verses and quotes */
+.notes-textarea blockquote {
+    margin: 12px 0;
+    padding: 12px 16px;
+    border-left: 4px solid #1a73e8;
+    background-color: #f8f9fa;
+    font-style: italic;
+    color: #3c4043;
+    border-radius: 4px;
+}
+
+/* List styling */
+.notes-textarea ul,
+.notes-textarea ol {
+    margin: 12px 0;
+    padding-left: 24px;
+}
+
+.notes-textarea li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.notes-textarea ul li {
+    list-style-type: disc;
+}
+
+.notes-textarea ol li {
+    list-style-type: decimal;
+}
+
+/* Nested lists */
+.notes-textarea ul ul {
+    list-style-type: circle;
+    margin-top: 8px;
+}
+
+.notes-textarea ul ul ul {
+    list-style-type: square;
+}
+
+/* Paragraph styling */
+.notes-textarea p {
+    margin: 8px 0;
+    line-height: 1.7;
+}
+
+/* Text formatting */
+.notes-textarea strong,
+.notes-textarea b {
+    font-weight: 700;
+}
+
+.notes-textarea em,
+.notes-textarea i {
+    font-style: italic;
+}
+
+.notes-textarea u {
+    text-decoration: underline;
+}
+
+.notes-textarea s,
+.notes-textarea strike {
+    text-decoration: line-through;
+}
+
+/* Code styling */
+.notes-textarea code {
+    background-color: #f1f3f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+}
+
+.notes-textarea pre {
+    background-color: #f1f3f4;
+    padding: 12px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 12px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+}
+
+.notes-textarea pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Link styling */
+.notes-textarea a {
+    color: #1a73e8;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.notes-textarea a:hover {
+    text-decoration: underline;
+}
+
+/* Image styling */
+.notes-textarea img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 12px 0;
 }
 
 .notes-color-section h4 {
@@ -6639,6 +6917,31 @@ body.dark-theme .notes-textarea:empty:before {
 
 body.dark-theme .notes-textarea:focus {
     border-color: #8ab4f8;
+}
+
+/* Dark theme - notes-textarea formatting */
+body.dark-theme .notes-textarea blockquote {
+    background-color: #2d2d2d;
+    border-left-color: #8ab4f8;
+    color: #e8eaed;
+}
+
+body.dark-theme .notes-textarea code {
+    background-color: #2d2d2d;
+    color: #e8eaed;
+}
+
+body.dark-theme .notes-textarea pre {
+    background-color: #2d2d2d;
+    color: #e8eaed;
+}
+
+body.dark-theme .notes-textarea a {
+    color: #8ab4f8;
+}
+
+body.dark-theme .notes-textarea a:hover {
+    color: #aecbfa;
 }
 
 body.dark-theme .notes-color-section h4 {

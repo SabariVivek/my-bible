@@ -8024,9 +8024,18 @@ function handleNotesPaste(e) {
     
     if (htmlData) {
         const cleaned = cleanPastedHtml(htmlData);
+        // Use insertHTML for better contenteditable support
         document.execCommand('insertHTML', false, cleaned);
     } else if (textData) {
-        document.execCommand('insertHTML', false, textData.replace(/\n/g, '<br>'));
+        // Better handling of plain text - preserve multiple lines and formatting
+        let formattedText = textData
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/\n\n+/g, '</p><p>')
+            .replace(/\n/g, '<br>');
+        document.execCommand('insertHTML', false, formattedText);
     }
 }
 
@@ -8036,26 +8045,158 @@ function cleanPastedHtml(html) {
     div.innerHTML = html;
     
     // Remove only dangerous elements
-    div.querySelectorAll('script, style, meta, link').forEach(el => el.remove());
+    div.querySelectorAll('script, style, meta, link, form, input, button').forEach(el => el.remove());
     
-    // Clean attributes but preserve styling
-    div.querySelectorAll('*').forEach(el => {
-        const allowedAttrs = ['href', 'src', 'alt', 'title', 'style', 'class'];
-        Array.from(el.attributes).forEach(attr => {
-            if (!allowedAttrs.includes(attr.name)) {
-                el.removeAttribute(attr.name);
-            }
-        });
-        
-        // Preserve common formatting tags
-        if (el.tagName === 'SPAN' && !el.style.cssText && !el.className) {
-            // Unwrap empty spans
+    // Allowed block and inline tags for rich formatting
+    const allowedTags = ['P', 'DIV', 'BR', 'STRONG', 'B', 'EM', 'I', 'U', 'S', 'STRIKE', 
+                         'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'UL', 'OL', 'LI', 'BLOCKQUOTE',
+                         'CODE', 'PRE', 'SPAN', 'A', 'IMG', 'ARTICLE', 'SECTION', 'FIGURE'];
+    
+    // Allowed attributes for each tag type
+    const allowedAttrs = {
+        'A': ['href', 'title', 'style'],
+        'IMG': ['src', 'alt', 'title', 'style', 'width', 'height'],
+        '*': ['style', 'class'] // Default for all other tags
+    };
+    
+    // Safe CSS properties to preserve
+    const safeCssProps = [
+        'color', 'background-color', 'font-weight', 'font-style', 'text-decoration',
+        'text-align', 'line-height', 'margin', 'padding', 'font-size', 'font-family'
+    ];
+    
+    // Recursively clean elements
+    function cleanElement(el) {
+        // Remove element if not in allowed list
+        if (!allowedTags.includes(el.tagName)) {
+            // Unwrap - move children to parent
             while (el.firstChild) {
                 el.parentNode.insertBefore(el.firstChild, el);
             }
             el.remove();
+            return;
+        }
+        
+        // Clean attributes based on tag type
+        const allowedForTag = allowedAttrs[el.tagName] || allowedAttrs['*'];
+        Array.from(el.attributes).forEach(attr => {
+            if (!allowedForTag.includes(attr.name)) {
+                el.removeAttribute(attr.name);
+            }
+        });
+        
+        // Clean style attribute - only keep safe CSS properties
+        if (el.style && el.style.cssText) {
+            const style = el.style.cssText;
+            const cleanedStyles = [];
+            
+            safeCssProps.forEach(prop => {
+                const regex = new RegExp(`${prop}\\s*:\\s*([^;]+)`, 'i');
+                const match = style.match(regex);
+                if (match) {
+                    cleanedStyles.push(`${prop}: ${match[1]}`);
+                }
+            });
+            
+            if (cleanedStyles.length > 0) {
+                el.style.cssText = cleanedStyles.join('; ');
+            } else {
+                el.removeAttribute('style');
+            }
+        }
+        
+        // Remove empty or unnecessary spans
+        if (el.tagName === 'SPAN' && !el.style.cssText && !el.className) {
+            while (el.firstChild) {
+                el.parentNode.insertBefore(el.firstChild, el);
+            }
+            el.remove();
+            return;
+        }
+        
+        // Clean children
+        Array.from(el.children).forEach(cleanElement);
+    }
+    
+    // After cleaning, remove empty list items and unnecessary elements
+    function removeEmptyElements(el) {
+        let changed = true;
+        
+        // Keep removing empty elements until no more are found
+        while (changed) {
+            changed = false;
+            const childrenToRemove = [];
+            
+            Array.from(el.childNodes).forEach(node => {
+                // For elements
+                if (node.nodeType === 1) {
+                    // First, recursively clean nested empty elements
+                    removeEmptyElements(node);
+                    
+                    // Check if element is actually empty
+                    const hasContent = hasTextContent(node);
+                    
+                    // Remove empty list items
+                    if (node.tagName === 'LI' && !hasContent) {
+                        childrenToRemove.push(node);
+                        changed = true;
+                    }
+                    // Remove empty paragraphs
+                    else if (node.tagName === 'P' && !hasContent) {
+                        childrenToRemove.push(node);
+                    }
+                    // Remove empty DIVs
+                    else if (node.tagName === 'DIV' && !hasContent) {
+                        childrenToRemove.push(node);
+                    }
+                    // Remove empty lists
+                    else if ((node.tagName === 'UL' || node.tagName === 'OL') && node.children.length === 0) {
+                        childrenToRemove.push(node);
+                        changed = true;
+                    }
+                }
+                // Remove text nodes that are only whitespace
+                else if (node.nodeType === 3) {
+                    if (!node.textContent.trim()) {
+                        childrenToRemove.push(node);
+                    }
+                }
+            });
+            
+            childrenToRemove.forEach(node => node.remove());
+        }
+    }
+    
+    // Helper function to check if element has actual text content (not just whitespace)
+    function hasTextContent(el) {
+        // Check for text nodes with content
+        for (let node of el.childNodes) {
+            if (node.nodeType === 3) { // Text node
+                if (node.textContent.trim() !== '') {
+                    return true;
+                }
+            } else if (node.nodeType === 1) { // Element node
+                // Check for images, links, or other content-bearing elements
+                if (node.tagName === 'IMG' || node.tagName === 'BR') {
+                    return true;
+                }
+                // Recursively check nested elements
+                if (hasTextContent(node)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    Array.from(div.children).forEach(child => {
+        if (child.tagName === 'UL' || child.tagName === 'OL') {
+            removeEmptyElements(child);
         }
     });
+    removeEmptyElements(div);
+    
+    Array.from(div.children).forEach(cleanElement);
     
     return div.innerHTML;
 }
@@ -8403,26 +8544,9 @@ function showNoteViewerIfExists(verseNum) {
 function formatNoteContent(text) {
     if (!text) return '';
     
-    // Handle both <br> tags and newlines as paragraph separators
-    // First convert <br> tags to newlines for consistent processing
-    text = text.replace(/<br\s*\/?>/gi, '\n');
-    
-    // Split text into paragraphs (by single or multiple newlines)
-    let paragraphs = text.split(/\n+/).filter(p => p.trim());
-    
-    // Convert each paragraph to a bullet point and handle formatting
-    const bulletPoints = paragraphs.map(para => {
-        // Handle **text** highlighting - replace with green colored span
-        para = para.replace(/\*\*(.+?)\*\*/g, '<span style="color: #7ac97a; font-weight: 600;">$1</span>');
-        
-        // Handle chapter:verse patterns inline with a dash
-        para = para.replace(/^(\d+:\d+)\s*/, '<span style="color: #7ac97a; font-weight: 600;">$1</span> - ');
-        
-        return `<li style="line-height: 2.2; margin-bottom: 12px;">${para}</li>`;
-    }).join('');
-    
-    // Wrap in ul with proper styling
-    return `<ul style="margin: 0; padding-left: 20px; line-height: 2.2;">${bulletPoints}</ul>`;
+    // Return the formatted HTML content as-is without adding bullet points
+    // The content already contains proper HTML formatting from the paste handler
+    return text;
 }
 function showNoteViewer(verseNum, note) {
     const popup = document.getElementById('note-viewer-popup');
