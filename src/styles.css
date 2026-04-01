@@ -5655,6 +5655,15 @@ body.dark-theme .note-viewer-content blockquote {
     padding: 0;
 }
 
+/* Horizontal Rule styling */
+.note-viewer-content hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    background-color: transparent;
+    margin: 16px 0;
+    height: 0;
+}
+
 body.dark-theme .note-viewer-content code {
     background-color: #2d2d2d;
     color: #e8eaed;
@@ -5663,6 +5672,10 @@ body.dark-theme .note-viewer-content code {
 body.dark-theme .note-viewer-content pre {
     background-color: #2d2d2d;
     color: #e8eaed;
+}
+
+body.dark-theme .note-viewer-content hr {
+    border-top-color: #4a4a4a;
 }
 
 /* Link styling */
@@ -6625,6 +6638,15 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
     padding: 0;
 }
 
+/* Horizontal Rule styling */
+.notes-textarea hr {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    background-color: transparent;
+    margin: 16px 0;
+    height: 0;
+}
+
 /* Link styling */
 .notes-textarea a {
     color: #1a73e8;
@@ -6934,6 +6956,10 @@ body.dark-theme .notes-textarea code {
 body.dark-theme .notes-textarea pre {
     background-color: #2d2d2d;
     color: #e8eaed;
+}
+
+body.dark-theme .notes-textarea hr {
+    border-top-color: #4a4a4a;
 }
 
 body.dark-theme .notes-textarea a {

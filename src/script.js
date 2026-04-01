@@ -7998,6 +7998,10 @@ function initializeAndroidBottomSheetGestures() {
 
     // Mouse events
     sheet.addEventListener('mousedown', (e) => {
+        // Don't interfere with text selection in textarea
+        if (textarea && (e.target === textarea || textarea.contains(e.target))) {
+            return; // Allow normal selection behavior in textarea
+        }
         handleStart(e.clientY);
     });
 
@@ -8050,7 +8054,7 @@ function cleanPastedHtml(html) {
     // Allowed block and inline tags for rich formatting
     const allowedTags = ['P', 'DIV', 'BR', 'STRONG', 'B', 'EM', 'I', 'U', 'S', 'STRIKE', 
                          'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'UL', 'OL', 'LI', 'BLOCKQUOTE',
-                         'CODE', 'PRE', 'SPAN', 'A', 'IMG', 'ARTICLE', 'SECTION', 'FIGURE'];
+                         'CODE', 'PRE', 'SPAN', 'A', 'IMG', 'ARTICLE', 'SECTION', 'FIGURE', 'HR'];
     
     // Allowed attributes for each tag type
     const allowedAttrs = {
@@ -8842,6 +8846,36 @@ function initializeNotesModal() {
     // Add paste event listener to preserve formatting
     if (textarea) {
         textarea.addEventListener('paste', handleNotesPaste);
+        
+        // Add keyboard handler for text selection and editing
+        textarea.addEventListener('keydown', (e) => {
+            // Allow Ctrl+A (or Cmd+A on Mac) to select all text
+            if ((e.ctrlKey || e.metaKey) && e.key === 'a') {
+                e.preventDefault();
+                // Select all content in textarea
+                const range = document.createRange();
+                const sel = window.getSelection();
+                range.selectNodeContents(textarea);
+                sel.removeAllRanges();
+                sel.addRange(range);
+                return;
+            }
+            
+            // Allow Ctrl+C for copy
+            if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+                return true; // Allow browser default behavior
+            }
+            
+            // Allow Ctrl+X for cut
+            if ((e.ctrlKey || e.metaKey) && e.key === 'x') {
+                return true; // Allow browser default behavior
+            }
+            
+            // Allow keyboard selection with Shift+Arrow keys
+            if (e.shiftKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
+                return true; // Allow browser default selection behavior
+            }
+        });
     }
     
     // Close modal handlers
@@ -10688,14 +10722,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Disable copy functionality on the entire document
+    // Disable copy functionality on the entire document (except notes-textarea)
     document.addEventListener('copy', (e) => {
+        const notesTextarea = document.getElementById('notes-textarea');
+        if (notesTextarea && (e.target === notesTextarea || notesTextarea.contains(e.target))) {
+            // Allow copy in notes-textarea - use default copy behavior
+            return true;
+        }
         e.preventDefault();
         return false;
     });
     
-    // Disable context menu (right-click)
+    // Disable context menu (right-click) except in notes-textarea
     document.addEventListener('contextmenu', (e) => {
+        const notesTextarea = document.getElementById('notes-textarea');
+        if (notesTextarea && (e.target === notesTextarea || notesTextarea.contains(e.target))) {
+            // Allow context menu in notes-textarea for copy/paste options
+            return true;
+        }
         e.preventDefault();
         return false;
     });
@@ -10709,17 +10753,50 @@ document.addEventListener('DOMContentLoaded', () => {
         scriptureText.style.msUserSelect = 'none';
     }
     
-    // Disable selection on mobile with touch events
+    // Disable selection on mobile with touch events (except in notes-textarea)
     document.addEventListener('selectstart', (e) => {
+        // Allow selection in notes-textarea
+        const notesTextarea = document.getElementById('notes-textarea');
+        if (notesTextarea && (e.target === notesTextarea || notesTextarea.contains(e.target))) {
+            return true; // Allow selection in notes-textarea
+        }
         e.preventDefault();
         return false;
     });
     
-    // Prevent drag and drop for copying text
+    // Prevent drag and drop for copying text (except in notes-textarea)
     document.addEventListener('dragstart', (e) => {
+        const notesTextarea = document.getElementById('notes-textarea');
+        if (notesTextarea && (e.target === notesTextarea || notesTextarea.contains(e.target))) {
+            return true; // Allow drag in notes-textarea
+        }
         e.preventDefault();
         return false;
     });
+    
+    // Handle copy in notes-textarea for selected text
+    const notesTextarea = document.getElementById('notes-textarea');
+    if (notesTextarea) {
+        notesTextarea.addEventListener('copy', (e) => {
+            // Get selected text from contenteditable div
+            const selection = window.getSelection();
+            if (selection.toString()) {
+                // Get the selected HTML content
+                const selectedHTML = selection.toString();
+                
+                // Copy to clipboard using both methods for better compatibility
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    e.preventDefault(); // Prevent default to use our handler
+                    navigator.clipboard.writeText(selectedHTML).then(() => {
+                        // Copy successful - Ctrl+C/Cmd+C will show native browser feedback
+                    }).catch(err => {
+                        console.error('Copy failed:', err);
+                    });
+                }
+                // If navigator.clipboard is not available, let browser handle it naturally
+            }
+        });
+    }
 });
 
 /**
