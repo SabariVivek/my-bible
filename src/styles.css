@@ -3514,6 +3514,14 @@ body.dark-theme .jesus-name {
     color: #e88888;
 }
 
+/* Matthew 1:1 special highlighting */
+.matthew-1-1-highlight {
+    background: rgb(128 118 80 / 15%) !important;
+    color: #b8b8b8;
+    border-bottom: 1.5px dashed rgba(255, 248, 220, 0.5);
+    padding-bottom: 1px;
+}
+
 /* Verse Images */
 .verse-image-container {
     float: left;

@@ -646,7 +646,7 @@ function openAdminPasswordModal(onSuccess) {
                 closeModal();
                 try {
                     if (typeof onSuccess === 'function') onSuccess();
-                } catch (e) {}
+                } catch (e) { }
             } else {
                 showErrorAndReset();
             }
@@ -877,7 +877,7 @@ function settingsSelectSeg(groupId, btn) {
                         pseudoElement: '::view-transition-new(root)'
                     }
                 );
-            }).catch(() => {});
+            }).catch(() => { });
         }
     }
     // Persist segment state (locally) and mark panel as dirty
@@ -920,7 +920,7 @@ function settingsSelectColor(el) {
     el.classList.add('selected');
     // Mirror bottom sheet color behavior
     const color = el.classList.contains('blue') ? 'blue' :
-                  el.classList.contains('red') ? 'red' : 'default';
+        el.classList.contains('red') ? 'red' : 'default';
     englishTextColor = color;
     localStorage.setItem('englishTextColor', color);
     if (typeof updateBookNames === 'function') {
@@ -954,11 +954,11 @@ function settingsToggleOnlyHeaders(event, toggleEl) {
     event.stopPropagation();
     toggleEl.classList.toggle('on');
     const isOn = toggleEl.classList.contains('on');
-    
+
     // Update uiSettings
     uiSettings.verseHeadingOnly = isOn;
     localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
-    
+
     // Apply the changes to hide/show verse-container
     if (typeof applyUiSettingsToDocument === 'function') {
         applyUiSettingsToDocument();
@@ -999,7 +999,7 @@ function settingsToggleRow(row, options = {}) {
         if (key && Object.prototype.hasOwnProperty.call(uiSettings, key)) {
             uiSettings[key] = isOn;
         }
-        
+
         // Handle verse heading language sub-option visibility
         if (key === 'verseHeading') {
             const subOption = document.getElementById('verse-heading-language-sub');
@@ -1020,7 +1020,7 @@ function settingsToggleRow(row, options = {}) {
                 }
             }
         }
-        
+
         localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
         if (typeof applyUiSettingsToDocument === 'function') {
             applyUiSettingsToDocument();
@@ -1070,10 +1070,10 @@ function settingsHandleAdminToggle() {
     });
 }
 // Unused stubs from previous admin modal (kept for markup safety)
-function settingsCloseAdminModal() {}
-function settingsOnAdminPinInput() {}
-function settingsOnAdminPinKey() {}
-function settingsSubmitAdminPin() {}
+function settingsCloseAdminModal() { }
+function settingsOnAdminPinInput() { }
+function settingsOnAdminPinKey() { }
+function settingsSubmitAdminPin() { }
 // Helper function to check if a chapter has any memory verses
 function chapterHasMemoryVerses(bookName, chapter) {
     if (typeof window.memoryVerses === 'undefined') return false;
@@ -1100,15 +1100,15 @@ function verseHasMemoryVerse(bookName, chapter, verse) {
             if (versePart.includes('–') || versePart.includes('-')) {
                 // Range like "12:1-6"
                 const [startVerse, endVerse] = versePart.split(/[–-]/);
-                return normalizedMemBook === normalizedBookName && 
-                       parseInt(chapterPart) === chapter && 
-                       verse >= parseInt(startVerse) && 
-                       verse <= parseInt(endVerse);
+                return normalizedMemBook === normalizedBookName &&
+                    parseInt(chapterPart) === chapter &&
+                    verse >= parseInt(startVerse) &&
+                    verse <= parseInt(endVerse);
             } else {
                 // Single verse like "3:16"
-                return normalizedMemBook === normalizedBookName && 
-                       parseInt(chapterPart) === chapter && 
-                       parseInt(versePart) === verse;
+                return normalizedMemBook === normalizedBookName &&
+                    parseInt(chapterPart) === chapter &&
+                    parseInt(versePart) === verse;
             }
         }
         return false;
@@ -1259,7 +1259,7 @@ function initializeHistoryManagement() {
                             }
                             // Persist reverted settings to Supabase
                             if (typeof saveUserSettingsToSupabase === 'function') {
-                                saveUserSettingsToSupabase().catch(() => {});
+                                saveUserSettingsToSupabase().catch(() => { });
                             }
                         }
                     } catch (e) {
@@ -1287,7 +1287,7 @@ function initializeHistoryManagement() {
                 const prayersDoc = prayersFrame.contentDocument || prayersFrame.contentWindow.document;
                 const bottomSheet = prayersDoc.querySelector('.prayers-bottom-sheet');
                 const sheetOverlay = prayersDoc.querySelector('.prayers-bottom-sheet-overlay');
-                
+
                 // If sheet is open, close it and prevent back navigation
                 if (bottomSheet && bottomSheet.classList.contains('active')) {
                     bottomSheet.classList.remove('active');
@@ -1298,7 +1298,7 @@ function initializeHistoryManagement() {
                 // Frame access denied, continue with normal navigation
             }
         }
-        
+
         // Skip admin pages in history
         if (event.state && event.state.adminPage) {
             history.back();
@@ -1436,6 +1436,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSummaryDrawer();
     initializeScrollbarBehavior();
     initializeNotesModal();
+    initializePopupHighlights(); // Initialize dynamic highlighting for popup content
     console.log('[MyBible] Initializing right settings panel');
     initializeRightSettingsPanel();
     // Apply persisted UI settings to initial document
@@ -1474,13 +1475,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rightMenuBtn) {
         rightMenuBtn.style.display = isGuestUser ? 'none' : 'flex';
     }
-    
+
     // Always show public menu items (not admin-only)
     if (bibleReadingOption) bibleReadingOption.style.display = 'flex';
     if (rightSermonOption) rightSermonOption.style.display = 'flex';
-    
+
     // Show/hide admin-only menu items based on admin status
-    
+
     if (isAdmin()) {
         if (isMobile) {
             // On mobile, show admin menu wrapper and toggle
@@ -1655,7 +1656,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // If activating admin mode, show admin menu items immediately
                 isFadingOut = false;
                 localStorage.setItem('isAdmin', 'true');
-                
+
                 // Show admin-only menu items - clear any conflicting styles
                 if (rightNotesOption) {
                     rightNotesOption.style.display = 'flex';
@@ -1687,7 +1688,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     rightLifeOfJesusOption.style.transition = '';
                     rightLifeOfJesusOption.style.pointerEvents = '';
                 }
-                
+
                 updateAdminUI();
                 // Slight delay to ensure localStorage is set before refresh
                 setTimeout(() => {
@@ -1729,7 +1730,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Initialize voice command functionality
     initializeVoiceCommand();
-    
+
     // Initialize pinned verses button
     const pinnedVersesBtn = document.getElementById('pinned-verses-btn');
     if (pinnedVersesBtn) {
@@ -1737,7 +1738,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showPinnedVersesBottomSheet();
         });
     }
-    
+
     // Always load Bible directly on all devices (mobile, tablet, desktop)
     loadBook(currentBook, currentChapter);
     // Start background preload after initial load (non-blocking, silent)
@@ -1821,50 +1822,50 @@ function initializeMobileDrawer() {
     if (drawerCloseBtn) {
         drawerCloseBtn.addEventListener('click', closeDrawer);
     }
-    
+
     // Left swipe to open drawer (ultra smooth) - from anywhere on screen
     let touchStartX = 0;
     let touchStartY = 0;
     const swipeThreshold = 150; // Minimum swipe distance
-    
+
     document.addEventListener('touchstart', (e) => {
         touchStartX = e.touches[0].clientX;
         touchStartY = e.touches[0].clientY;
     }, false);
-    
+
     document.addEventListener('touchmove', (e) => {
         // Only handle if drawer is not already open
         if (drawerOverlay.classList.contains('active')) {
             return;
         }
-        
+
         // Don't allow swipe to open drawer if image viewer is open
         const viewer = document.getElementById('viewer');
         if (viewer && viewer.classList.contains('open')) {
             return;
         }
-        
+
         // Don't allow swipe to open drawer if any bottom sheet is active
         const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
         const notesModal = document.getElementById('notes-modal');
         const bookmarkColorPicker = document.getElementById('bookmark-color-picker-overlay');
         const languageSheet = document.getElementById('language-bottom-sheet-overlay');
-        
-        const isAnySheetOpen = 
+
+        const isAnySheetOpen =
             (verseActionsSheet && verseActionsSheet.classList.contains('visible')) ||
             (notesModal && notesModal.classList.contains('visible')) ||
             (bookmarkColorPicker && bookmarkColorPicker.classList.contains('active')) ||
             (languageSheet && languageSheet.classList.contains('active'));
-        
+
         if (isAnySheetOpen) {
             return;
         }
-        
+
         const touchCurrentX = e.touches[0].clientX;
         const touchCurrentY = e.touches[0].clientY;
         const deltaX = touchCurrentX - touchStartX;
         const deltaY = Math.abs(touchCurrentY - touchStartY);
-        
+
         // Check if it's a horizontal swipe (not vertical) from right to left
         if (Math.abs(deltaX) > deltaY && deltaX > swipeThreshold) {
             // Left swipe detected - open drawer
@@ -1933,7 +1934,7 @@ function updateVerseMemoryVerseIndicators() {
     const verseItems = document.querySelectorAll('.verses-column .number-item');
     const bookName = bibleBooks[currentBook].name;
     const memoryVersesInChapter = [];
-    
+
     verseItems.forEach(item => {
         const verse = parseInt(item.dataset.verse);
         if (verseHasMemoryVerse(bookName, currentChapter, verse)) {
@@ -1943,7 +1944,7 @@ function updateVerseMemoryVerseIndicators() {
             item.classList.remove('has-memory-verse');
         }
     });
-    
+
     if (memoryVersesInChapter.length > 0) {
     }
 }
@@ -2087,10 +2088,10 @@ async function updateUI() {
     updateDrawerContent();
     // Apply persisted UI settings (images, headings, summary, author banner)
     applyUiSettingsToDocument();
-    
+
     // Preload notes and references for current chapter in background
     preloadChapterNotesAndReferences();
-    
+
     // Preload all referenced verse data in background (so references display instantly when clicked)
     preloadReferencedVerseData();
 }
@@ -2115,13 +2116,13 @@ function updateChapters() {
     const book = bibleBooks[currentBook];
     const bookName = book.name;
     let html = '';
-    
+
     // Add book intro button at the top
     const hasIntro = bookIntroductions && bookIntroductions[bookName] && bookIntroductions[bookName].trim() !== '';
     if (hasIntro) {
         html += `<div class="book-intro-item" data-book-intro="true"><img src="resources/icons/info.png" alt="Intro" class="intro-icon"></div>`;
     }
-    
+
     for (let i = 1; i <= book.chapters; i++) {
         const activeClass = i === currentChapter ? 'active' : '';
         const hasMemVerse = chapterHasMemoryVerses(bookName, i);
@@ -2129,13 +2130,13 @@ function updateChapters() {
         html += `<div class="number-item ${activeClass}${hasMemoryVerse}" data-chapter="${i}">${i}</div>`;
     }
     chaptersColumn.innerHTML = html;
-    
+
     // Add click handler for book intro button
     const bookIntroItem = chaptersColumn.querySelector('.book-intro-item');
     if (bookIntroItem) {
         bookIntroItem.addEventListener('click', () => {
             displayBookIntro();
-            
+
             // Auto-close the drawer on mobile
             if (window.innerWidth <= 768) {
                 const drawerOverlay = document.querySelector('.drawer-overlay');
@@ -2143,7 +2144,7 @@ function updateChapters() {
                 const chaptersColumn = document.querySelector('.chapters-column');
                 const versesColumn = document.querySelector('.verses-column');
                 const menuBtn = document.querySelector('.mobile-only');
-                
+
                 if (drawerOverlay) {
                     drawerOverlay.classList.remove('active');
                 }
@@ -2166,7 +2167,7 @@ function updateChapters() {
             }
         });
     }
-    
+
     // Scroll to active chapter
     setTimeout(() => {
         const activeChapter = chaptersColumn.querySelector('.number-item.active');
@@ -2256,20 +2257,20 @@ function updateVerses() {
             hasUserInteracted = true;
             localStorage.setItem('hasUserInteracted', 'true');
             const verse = parseInt(item.dataset.verse);
-            
+
             // Check if bottom sheet is visible
             const existingBottomSheet = document.getElementById('verse-actions-bottom-sheet');
             const isBottomSheetVisible = existingBottomSheet && existingBottomSheet.classList.contains('visible');
-            
+
             if (isBottomSheetVisible) {
                 // Bottom sheet is open - close it and clear multi-highlights
                 const wasSelected = item.classList.contains('active');
                 const contentArea = document.querySelector('.scripture-text');
-                
+
                 // Close the bottom sheet
                 existingBottomSheet.classList.remove('visible');
                 document.body.classList.remove('bottom-sheet-open');
-                
+
                 // IMMEDIATELY remove or add highlight in the UI (using left-pane-selected grey color)
                 if (wasSelected) {
                     // Remove highlight immediately from this verse
@@ -2287,16 +2288,16 @@ function updateVerses() {
                         verseLine.classList.remove('multi-highlighted');
                     }
                 }
-                
+
                 // Now toggle the verse selection state
                 item.classList.toggle('active');
-                
+
                 // Get updated selected verses
                 const updatedSelectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(v => parseInt(v.dataset.verse));
                 if (wasSelected) {
                 } else {
                 }
-                
+
                 // Update all selected verses with left-pane-selected grey color and remove underline
                 if (updatedSelectedVerses.length > 0) {
                     updatedSelectedVerses.forEach(vNum => {
@@ -2314,12 +2315,12 @@ function updateVerses() {
                         v.style.backgroundColor = '';
                     });
                 }
-                
+
             } else {
                 // Bottom sheet not open - just select this verse, don't open bottom sheet
                 versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
                 item.classList.add('active');
-                
+
                 const contentArea = document.querySelector('.scripture-text');
                 contentArea.querySelectorAll('.verse-line').forEach(v => {
                     v.classList.remove('left-pane-selected');
@@ -2338,7 +2339,7 @@ function updateVerses() {
                     verseContainer.classList.add('left-pane-selected');
                 }
             }
-            
+
             // Close drawer on mobile after selecting verse
             if (window.innerWidth <= 768) {
                 const drawerOverlay = document.querySelector('.drawer-overlay');
@@ -2363,14 +2364,219 @@ function updateVerses() {
         });
     });
 }
-// Highlight special text
-function highlightSpecialText(text, language) {
+// ════════════════════════════════════════════════════════════════════════════════
+// POPUP HIGHLIGHT SYSTEM - Dynamic Bible Text Highlighting
+// ════════════════════════════════════════════════════════════════════════════════
+// 
+// HOW TO USE:
+// 1. Add entries to biblePopups in src/data/bible-popups.js
+//    Example:
+//    {
+//        content: "தமிழ்வார்த்தை",
+//        description: "Description of the term",
+//        references: ["Book Chapter:Verse"]
+//    }
+// 2. The system automatically:
+//    - Generates unique CSS classes for each entry
+//    - Highlights the text when it appears in the Bible
+//    - Handles click events to show the popup information
+// 3. To add entries dynamically, use:
+//    addPopupEntry("Matthew", 1, "தமிழ்வார்த்தை", "Description", ["Reference"])
+// ════════════════════════════════════════════════════════════════════════════════
+
+// Initialize biblePopups as empty object if not defined
+if (typeof biblePopups === 'undefined') {
+    window.biblePopups = {};
+}
+
+// Generate a unique CSS class name for popup highlights
+function getPopupHighlightClass(bookName, chapter, contentText) {
+    // Create a hash-based unique identifier
+    const sanitizedBook = bookName.toLowerCase().replace(/\s+/g, '-');
+    const contentHash = contentText.substring(0, 10).replace(/\s+/g, '-');
+    return `popup-highlight-${sanitizedBook}-ch${chapter}-${contentHash}`;
+}
+
+// Initialize dynamic popup highlight styles
+function initializePopupHighlights() {
+    if (!biblePopups || typeof biblePopups !== 'object') return;
+
+    let styleContent = '';
+
+    // Iterate through all books and chapters in biblePopups
+    for (const bookKey in biblePopups) {
+        const book = biblePopups[bookKey];
+        const normalizedBookName = bookKey.charAt(0).toUpperCase() + bookKey.slice(1);
+
+        for (const chapterKey in book) {
+            const chapterNum = chapterKey.replace(/chapter/i, '');
+            const verses = book[chapterKey];
+
+            if (Array.isArray(verses)) {
+                verses.forEach((item, index) => {
+                    if (item.content) {
+                        const className = getPopupHighlightClass(normalizedBookName, chapterNum, item.content);
+                        styleContent += `.${className} {
+    background: rgb(128 118 80 / 15%) !important;
+    color: #b8b8b8;
+    border-bottom: 1.5px dashed rgba(255, 248, 220, 0.5);
+    padding-bottom: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.${className}:hover {
+    background: rgb(128 118 80 / 25%) !important;
+}
+`;
+                    }
+                });
+            }
+        }
+    }
+
+    // Remove existing styles if any
+    const existingStyle = document.getElementById('popup-highlight-dynamic-styles');
+    if (existingStyle) {
+        existingStyle.remove();
+    }
+    
+    // Inject the generated styles into the page
+    if (styleContent) {
+        const styleEl = document.createElement('style');
+        styleEl.id = 'popup-highlight-dynamic-styles';
+        styleEl.textContent = styleContent;
+        document.head.appendChild(styleEl);
+    }
+    
+    // Attach event listeners to all popup highlights
+    attachPopupHighlightListeners();
+}
+
+// Attach click listeners to popup highlight elements
+function attachPopupHighlightListeners() {
+    document.addEventListener('click', function(e) {
+        // Check if the clicked element has a popup-highlight class and data-popup-content attribute
+        if (e.target.hasAttribute('data-popup-content') && e.target.className.includes('popup-highlight-')) {
+            const contentText = e.target.getAttribute('data-popup-content');
+            if (contentText) {
+                showPopupInfo(contentText);
+            }
+        }
+    }, true); // Use capture phase to ensure we catch clicks on dynamically added content
+}
+
+// Highlight special text (Jesus names in English, and popup highlights in Tamil)
+function highlightSpecialText(text, language, bookName = null, chapter = null, verseNum = null) {
     if (language === 'english' || language === 'both-english') {
         // Highlight "Jesus Christ" and "Jesus" in soft red
         text = text.replace(/\bJesus Christ\b/g, '<span class="jesus-name">Jesus Christ</span>');
         text = text.replace(/\bJesus\b/g, '<span class="jesus-name">Jesus</span>');
     }
+    
+    // Apply dynamic highlighting for all popup entries in Tamil
+    if ((language === 'tamil' || language === 'both-tamil') && bookName && chapter) {
+        text = applyPopupHighlights(text, bookName, chapter);
+    }
+    
     return text;
+}
+
+// Show popup info when a highlighted text is clicked
+function showPopupInfo(contentText) {
+    // Find the popup entry with this content
+    if (!biblePopups || typeof biblePopups !== 'object') return;
+    
+    for (const bookKey in biblePopups) {
+        const book = biblePopups[bookKey];
+        for (const chapterKey in book) {
+            const verses = book[chapterKey];
+            if (Array.isArray(verses)) {
+                for (const item of verses) {
+                    if (item.content === contentText) {
+                        // Show an alert or modal with the description and references
+                        let message = `📖 ${contentText}\n\n${item.description}`;
+                        if (item.references && item.references.length > 0) {
+                            message += `\n\nReferences: ${item.references.join(', ')}`;
+                        }
+                        console.log('Popup Info:', message);
+                        // You can also create a custom modal here instead of alert
+                        // For now, logging to console for debugging
+                        return;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Apply highlighting for all popup entries matching the book and chapter
+function applyPopupHighlights(text, bookName, chapter) {
+    if (!biblePopups || typeof biblePopups !== 'object') return text;
+    
+    const bookLower = bookName.toLowerCase();
+    const book = biblePopups[bookLower];
+    
+    if (!book) return text;
+    
+    const chapterKey = `chapter${chapter}`;
+    const verses = book[chapterKey];
+    
+    if (!Array.isArray(verses)) return text;
+    
+    // Apply highlighting for each popup entry content
+    verses.forEach((item) => {
+        if (item.content && item.content.trim()) {
+            // Escape special regex characters and create a case-sensitive regex
+            const escapedContent = item.content.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(escapedContent, 'g');
+            
+            const className = getPopupHighlightClass(bookName, chapter, item.content);
+            text = text.replace(regex, `<span class="${className}" data-popup-content="${item.content}">${item.content}</span>`);
+        }
+    });
+    
+    return text;
+}
+
+// Utility function to add a new popup entry
+function addPopupEntry(bookName, chapterNum, contentText, description, references = []) {
+    const bookLower = bookName.toLowerCase();
+    
+    // Create book entry if it doesn't exist
+    if (!biblePopups[bookLower]) {
+        biblePopups[bookLower] = {};
+    }
+    
+    const chapterKey = `chapter${chapterNum}`;
+    
+    // Create chapter array if it doesn't exist
+    if (!biblePopups[bookLower][chapterKey]) {
+        biblePopups[bookLower][chapterKey] = [];
+    }
+    
+    // Add the new entry
+    biblePopups[bookLower][chapterKey].push({
+        content: contentText,
+        description: description,
+        references: references
+    });
+    
+    // Re-initialize highlights to apply the new entry
+    initializePopupHighlights();
+    
+    // Re-render the current view to show the new highlighting
+    console.log(`Added new popup: ${bookName} ${chapterNum} - "${contentText}"`);
+}
+
+// Utility function to reload highlights on existing content
+function reloadPopupHighlights() {
+    // This can be called when the content is updated or refreshed
+    const versesColumn = document.getElementById('verses-column');
+    if (versesColumn && typeof highlightSpecialText === 'function') {
+        // Re-initialize the popup highlights
+        initializePopupHighlights();
+        console.log('Popup highlights reloaded');
+    }
 }
 
 // Verse Images Manager
@@ -2405,18 +2611,18 @@ function getVerseImageHTML(bookName, chapter, verse) {
     return new Promise((resolve) => {
         const imagePath = getVerseImagePath(bookName, chapter, verse);
         const img = new Image();
-        
+
         img.onload = () => {
             const html = `<div class="verse-image-container">
                 <img src="${imagePath}" alt="Verse illustration for ${bookName} ${chapter}:${verse}" class="verse-image" />
             </div>`;
             resolve(html);
         };
-        
+
         img.onerror = () => {
             resolve(''); // Return empty string if image doesn't exist
         };
-        
+
         img.src = imagePath;
     });
 }
@@ -2428,7 +2634,7 @@ function getVerseImageHTML(bookName, chapter, verse) {
 async function getVerseImagesForChapter(bookName, chapterData, chapterNum) {
     const verseImageCache = {};
     const verseKeys = Object.keys(chapterData).filter(key => key.startsWith('verse_'));
-    
+
     // Create promises for all verses in parallel
     const promises = verseKeys.map(verseKey => {
         const verseNum = verseKey.replace('verse_', '');
@@ -2437,7 +2643,7 @@ async function getVerseImagesForChapter(bookName, chapterData, chapterNum) {
                 verseImageCache[verseNum] = html;
             });
     });
-    
+
     await Promise.all(promises);
     return verseImageCache;
 }
@@ -2449,35 +2655,35 @@ async function getVerseImagesForChapter(bookName, chapterData, chapterNum) {
 function loadVerseImages(bookName, chapterNum, contentArea) {
     // Get all verse containers that were just rendered
     const verseContainers = contentArea.querySelectorAll('.verse-container');
-    
+
     verseContainers.forEach(container => {
         const verseNum = container.dataset.verse;
         const imagePath = getVerseImagePath(bookName, chapterNum, verseNum);
         const uniqueId = `image-${bookName}-${chapterNum}-${verseNum}`.replace(/\s+/g, '-');
         const verseLine = container.querySelector('.verse-line');
-        
+
         if (!verseLine) return;
-        
+
         // First check if image actually exists - use a silent fetch (no-cors mode to prevent CORS errors)
         const checkImage = document.createElement('img');
         let imageExists = false;
-        
+
         const onImageCheck = () => {
             if (!imageExists) return; // Already handled as not existing
-            
+
             // Image confirmed to exist, now show the loading skeleton
             const skeletonHTML = `<div class="verse-image-container" id="${uniqueId}">
                 <div class="image-skeleton"></div>
             </div>`;
             verseLine.insertAdjacentHTML('afterbegin', skeletonHTML);
-            
+
             // Load the actual image
             const img = new Image();
             img.onload = () => {
                 const container = document.getElementById(uniqueId);
                 if (container) {
                     container.innerHTML = `<img src="${imagePath}" alt="Verse illustration for ${bookName} ${chapterNum}:${verseNum}" class="verse-image" />`;
-                    
+
                     // Add click handler to open viewer
                     const verseImg = container.querySelector('.verse-image');
                     if (verseImg) {
@@ -2489,7 +2695,7 @@ function loadVerseImages(bookName, chapterNum, contentArea) {
                     }
                 }
             };
-            
+
             img.onerror = () => {
                 // Silently remove skeleton if load fails
                 const container = document.getElementById(uniqueId);
@@ -2497,21 +2703,21 @@ function loadVerseImages(bookName, chapterNum, contentArea) {
                     container.remove();
                 }
             };
-            
+
             img.src = imagePath;
         };
-        
+
         // Check if image exists by attempting to load it
         checkImage.onload = () => {
             imageExists = true;
             onImageCheck();
         };
-        
+
         checkImage.onerror = () => {
             imageExists = false;
             // Do nothing - don't render container if image doesn't exist
         };
-        
+
         // Start the check (using a data URL to avoid cors issues)
         checkImage.src = imagePath;
     });
@@ -2520,16 +2726,16 @@ function loadVerseImages(bookName, chapterNum, contentArea) {
 // Display chapter content
 function displayChapter() {
     const contentArea = document.querySelector('.scripture-text');
-    
+
     // Clear intro flag since we're displaying a chapter
     window.isViewingIntro = false;
-    
+
     // Show mobile chapter header when displaying a chapter
     const mobileChapterHeader = document.getElementById('mobile-chapter-header');
     if (mobileChapterHeader) {
         mobileChapterHeader.style.display = 'block';
     }
-    
+
     // Update mobile chapter header
     updateMobileChapterHeader();
     // Safety check: if currentData is not loaded yet, skip display
@@ -2549,7 +2755,7 @@ function displayChapter() {
         const numB = parseInt(b.replace('verse_', ''));
         return numA - numB;
     });
-    
+
     // Update verse count badge in mobile chapter header
     const verseCount = verses.length;
     const verseCountBadge = document.getElementById('mobile-verse-count-badge');
@@ -2557,20 +2763,20 @@ function displayChapter() {
         verseCountBadge.textContent = verseCount;
         verseCountBadge.style.display = 'inline-block';
     }
-    
+
     // Keep old banner hidden
     const verseCountBanner = document.getElementById('verse-count-banner');
     if (verseCountBanner) {
         verseCountBanner.style.display = 'none';
     }
-    
+
     const bookName = bibleBooks[currentBook].name;
     if (currentLanguage === 'both' && currentTamilData) {
         // Display both Tamil and English
         const tamilChapterData = currentTamilData[chapterKey];
         verses.forEach(verseKey => {
             const verseNum = verseKey.replace('verse_', '');
-            
+
             // Check for verse header
             const header = getVerseHeader(bookName, currentChapter, parseInt(verseNum));
             if (header) {
@@ -2594,18 +2800,18 @@ function displayChapter() {
                     html += `<div class="verse-header">${header}</div>`;
                 }
             }
-            
+
             let tamilText = tamilChapterData ? tamilChapterData[verseKey] : '';
             let englishText = chapterData[verseKey];
             // Apply highlighting
-            tamilText = highlightSpecialText(tamilText, 'both-tamil');
-            englishText = highlightSpecialText(englishText, 'both-english');
+            tamilText = highlightSpecialText(tamilText, 'both-tamil', bookName, currentChapter, verseNum);
+            englishText = highlightSpecialText(englishText, 'both-english', bookName, currentChapter, verseNum);
             const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
             const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
             const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
             const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
             const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
-            
+
             // Check for cross-references (admin only)
             let crossRefIcon = '';
             if (isAdmin()) {
@@ -2617,7 +2823,7 @@ function displayChapter() {
                 const hasCrossRef = crossRefs && crossRefs.length > 0;
                 crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
             }
-            
+
             html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
                 <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}>
                     <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
@@ -2629,7 +2835,7 @@ function displayChapter() {
         // Display single language
         verses.forEach(verseKey => {
             const verseNum = verseKey.replace('verse_', '');
-            
+
             // Check for verse header
             const header = getVerseHeader(bookName, currentChapter, parseInt(verseNum));
             if (header) {
@@ -2653,16 +2859,16 @@ function displayChapter() {
                     html += `<div class="verse-header">${header}</div>`;
                 }
             }
-            
+
             let verseText = chapterData[verseKey];
             // Apply highlighting based on current language
-            verseText = highlightSpecialText(verseText, currentLanguage);
+            verseText = highlightSpecialText(verseText, currentLanguage, bookName, currentChapter, verseNum);
             const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
             const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
             const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
             const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
             const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
-            
+
             // Check for cross-references (admin only)
             let crossRefIcon = '';
             if (isAdmin()) {
@@ -2674,62 +2880,62 @@ function displayChapter() {
                 const hasCrossRef = crossRefs && crossRefs.length > 0;
                 crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
             }
-            
+
             html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
                 <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}${crossRefIcon}</p>
             </div>`;
         });
     }
     contentArea.innerHTML = html;
-    
+
     // Load and display verse images asynchronously
     loadVerseImages(bookName, currentChapter, contentArea);
-    
+
     // Setup event listeners for collapsible verse headers
     setupVerseHeaderToggle();
-    
+
     // Update pin button visibility for current chapter
     updatePinButtonBar();
-    
+
     // Refresh pinned verse display (in case data was loaded after initial render)
     refreshPinnedVerseDisplay();
-    
+
     // Add click handlers to verse containers to show bottom sheet
     contentArea.querySelectorAll('.verse-container').forEach(container => {
         const verseLine = container.querySelector('.verse-line');
         const verseNum = parseInt(container.dataset.verse);
-        
+
         // Handle verse line click to show bottom sheet
         let tapTimeout;
         let tapCount = 0;
-        
+
         verseLine.addEventListener('click', (e) => {
             // Skip verse actions if clicking cross-ref icon
             if (e.target.classList.contains('cross-ref-icon')) {
                 return;
             }
-            
+
             e.stopPropagation();
             tapCount++;
-            
+
             if (tapCount === 1) {
                 tapTimeout = setTimeout(() => {
                     // Single tap - show or update bottom sheet
                     const versesColumn = document.querySelector('.verses-column');
-                    
+
                     // Get current selected verses BEFORE making changes
                     const selectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(item => parseInt(item.dataset.verse));
-                    
+
                     // Check if bottom sheet already exists and is visible
                     const existingBottomSheet = document.getElementById('verse-actions-bottom-sheet');
                     const isBottomSheetVisible = existingBottomSheet && existingBottomSheet.classList.contains('visible');
-                    
+
                     // If bottom sheet is open, handle multi-verse selection
                     if (isBottomSheetVisible) {
                         const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
                         const wasSelected = verseItem && verseItem.classList.contains('active');
                         const contentArea = document.querySelector('.scripture-text');
-                        
+
                         // IMMEDIATELY remove or update highlighting in DOM before doing anything else
                         if (wasSelected) {
                             // Remove highlight immediately from this verse
@@ -2746,15 +2952,15 @@ function displayChapter() {
                                 verseContainer.style.backgroundColor = '';
                             }
                         }
-                        
+
                         // Now toggle the verse selection
                         if (verseItem) {
                             verseItem.classList.toggle('active');
                         }
-                        
+
                         // Get updated selected verses after toggle
                         const updatedSelectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(item => parseInt(item.dataset.verse));
-                        
+
                         // Update highlighting based on selection count
                         // For manual selections in main content, use multi-highlighted class
                         if (updatedSelectedVerses.length > 0) {
@@ -2764,7 +2970,7 @@ function displayChapter() {
                                 v.classList.remove('multi-highlighted');
                                 v.classList.remove('left-pane-selected');
                             });
-                            
+
                             // Then add multi-highlighted to all selected verses
                             updatedSelectedVerses.forEach(vNum => {
                                 const verseLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
@@ -2781,7 +2987,7 @@ function displayChapter() {
                                 v.style.backgroundColor = '';
                             });
                         }
-                        
+
                         // Debug: Check what verse elements exist
                         const allVerseElements = contentArea.querySelectorAll('.verse-line');
                         // Debug: Show all highlighted verses after update
@@ -2809,13 +3015,13 @@ function displayChapter() {
                                 v.style.backgroundColor = '';
                             }
                         });
-                        
+
                         // Select only the clicked verse
                         const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
                         if (verseItem) {
                             verseItem.classList.add('active');
                         }
-                        
+
                         // Add highlight to clicked verse only
                         const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
                         if (verseLine) {
@@ -2824,7 +3030,7 @@ function displayChapter() {
                         // Show bottom sheet for single verse
                         showVerseActionsBottomSheet(verseNum);
                     }
-                    
+
                     tapCount = 0;
                 }, 300);
             } else if (tapCount === 2) {
@@ -2832,13 +3038,13 @@ function displayChapter() {
                 // Double tap - show note viewer for this verse
                 const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
                 const note = verseNotes[noteKey];
-                
+
                 // Check if this verse has cross-references
                 const bookName = bibleBooks[currentBook].name;
                 const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
                 const crossRefs = crossReferences[crossRefKey];
                 const hasCrossRefs = crossRefs && crossRefs.length > 0;
-                
+
                 // Show the note viewer if note exists with text OR if verse has cross-references
                 if ((note && note.text && note.text.trim()) || hasCrossRefs) {
                     if (hasCrossRefs && (!note || !note.text || !note.text.trim())) {
@@ -2852,16 +3058,16 @@ function displayChapter() {
                 tapCount = 0;
             }
         });
-        
+
         // Note: Right-click/long-press context menu removed
     });
-    
+
     // Apply note displays to verses
     applyAllNoteDisplays();
-    
+
     // Initialize swipe gestures for cross-references
     initializeCrossReferenceSwipe();
-    
+
     // Update mobile chapter header
     updateMobileChapterHeader();
     // Update navigation text
@@ -2887,11 +3093,11 @@ function displayChapter() {
     }
     // Note: Scroll to top is now handled by updateUI() and navigation buttons only
     // Don't scroll here to prevent jumping when interacting with verses or adding notes
-    
+
     // Initialize pinned verses and update button visibility
     initializePinnedVerses();
     updatePinButtonBar();
-    
+
     // Initialize chapter summary pullout (only if summary exists)
     console.log(`[DISPLAY-CHAPTER] Calling pullout init for ${bibleBooks[currentBook].name} ${currentChapter}`);
     if (typeof initializeChapterSummaryPullout === 'function') {
@@ -2904,20 +3110,20 @@ function displayBookIntro() {
     const contentArea = document.querySelector('.scripture-text');
     const book = bibleBooks[currentBook];
     const bookName = book.name;
-    
+
     // Check if book intro exists
     if (!bookIntroductions || !bookIntroductions[bookName] || bookIntroductions[bookName].trim() === '') {
         contentArea.innerHTML = '<p>No introduction available for this book.</p>';
         return;
     }
-    
+
     const intro = bookIntroductions[bookName];
-    
+
     // Convert \n to <br> for proper line breaks
     // Split by actual newline character and wrap each paragraph in <p> tags
     const paragraphs = intro.split(/\n+/).filter(p => p.trim() !== '');
     const formattedIntro = paragraphs.map(p => `<p>${p.trim()}</p>`).join('');
-    
+
     // Create HTML for book intro
     let html = `
         <div class="book-intro-content">
@@ -2927,43 +3133,43 @@ function displayBookIntro() {
             </div>
         </div>
     `;
-    
+
     contentArea.innerHTML = html;
-    
+
     // Set flag to track that we're viewing intro
     window.isViewingIntro = true;
-    
+
     // Hide mobile chapter header when displaying intro
     const mobileChapterHeader = document.getElementById('mobile-chapter-header');
     if (mobileChapterHeader) {
         mobileChapterHeader.style.display = 'none';
     }
-    
+
     // Update navigation text
     const currentChapterText = document.querySelector('.current-chapter');
     if (currentChapterText) {
         currentChapterText.textContent = `Intro`;
     }
-    
+
     // Scroll to top of content
     contentArea.scrollTo({ top: 0, behavior: 'smooth' });
     if (window.innerWidth > 1024) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    
+
     // Clear verses column since we're not showing a chapter
     const versesColumn = document.querySelector('.verses-column');
     if (versesColumn) {
         versesColumn.innerHTML = '';
     }
-    
+
     // Remove active class from all chapter items
     const chaptersColumn = document.querySelector('.chapters-column');
     if (chaptersColumn) {
         chaptersColumn.querySelectorAll('.number-item').forEach(item => {
             item.classList.remove('active');
         });
-        
+
         // Add active class to intro button
         const introButton = chaptersColumn.querySelector('.book-intro-item');
         if (introButton) {
@@ -3060,32 +3266,32 @@ function updateMobileChapterHeader() {
 async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
     const currentColor = verseNotes[noteKey]?.color;
-    
+
     // Open bookmark color picker bottom sheet
     const overlay = document.getElementById('bookmark-color-picker-overlay');
     const sheet = document.querySelector('.bookmark-color-picker-sheet');
     const closeBtn = document.getElementById('bookmark-color-close-btn');
-    
+
     if (!overlay || !sheet) return;
-    
+
     // Show the overlay and sheet with smooth animation
     overlay.classList.add('active');
     sheet.classList.add('visible');
     sheet.classList.remove('closing');
     document.body.style.overflow = 'hidden';
-    
+
     // Set up color option click handlers
     const colorOptions = sheet.querySelectorAll('.bookmark-color-option');
-    
+
     // Remove and re-add event listeners to prevent duplicates
     colorOptions.forEach(option => {
         const newOption = option.cloneNode(true);
         option.parentNode.replaceChild(newOption, option);
     });
-    
+
     // Re-query after replacing nodes
     const updatedColorOptions = sheet.querySelectorAll('.bookmark-color-option');
-    
+
     // Mark currently selected color
     updatedColorOptions.forEach(option => {
         if (option.dataset.color === currentColor) {
@@ -3094,19 +3300,19 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             option.classList.remove('selected');
         }
     });
-    
+
     // Add click handlers
     updatedColorOptions.forEach(colorBtn => {
         colorBtn.addEventListener('click', async (e) => {
             e.stopPropagation();
             const selectedColor = colorBtn.dataset.color;
-            
+
             // Show selection animation
             updatedColorOptions.forEach(option => {
                 option.classList.remove('selected');
             });
             colorBtn.classList.add('selected');
-            
+
             // Create or update note entry with selected color
             if (!verseNotes[noteKey]) {
                 verseNotes[noteKey] = {
@@ -3120,7 +3326,7 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             } else {
                 verseNotes[noteKey].color = selectedColor;
             }
-            
+
             // Add the color highlight to the verse in the UI
             const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
             if (verseLine) {
@@ -3131,13 +3337,13 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
                 // Add animation for visual feedback
                 verseLine.style.animation = 'highlightPulse 0.5s ease-out';
             }
-            
+
             // Update button state with the color
             bookmarkBtn.classList.add('bookmarked');
             bookmarkBtn.setAttribute('data-bookmark-color', selectedColor);
             const colorHex = colorBtn.style.background;
             bookmarkBtn.style.setProperty('--bookmark-color', colorHex);
-            
+
             // Save changes
             localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
             try {
@@ -3146,18 +3352,18 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             } catch (error) {
                 console.error('❌ Error saving bookmark:', error);
             }
-            
+
             // Close the bottom sheet after selection with smooth animation
             setTimeout(() => {
                 closeBookmarkColorPicker();
             }, 400);
         });
     });
-    
+
     // Add close button handler
     closeBtn.removeEventListener('click', closeButtonHandler);
     closeBtn.addEventListener('click', closeButtonHandler);
-    
+
     // Initialize drag-to-close gestures
     initializeBookmarkColorPickerGestures();
 }
@@ -3172,13 +3378,13 @@ function closeButtonHandler(e) {
 function closeBookmarkColorPicker() {
     const overlay = document.getElementById('bookmark-color-picker-overlay');
     const sheet = document.querySelector('.bookmark-color-picker-sheet');
-    
+
     if (!sheet || !overlay) return;
-    
+
     sheet.classList.add('closing');
     sheet.classList.remove('visible');
     document.body.style.overflow = '';
-    
+
     setTimeout(() => {
         overlay.classList.remove('active');
         sheet.classList.remove('closing');
@@ -3191,12 +3397,12 @@ function initializeBookmarkColorPickerGestures() {
     const overlay = document.getElementById('bookmark-color-picker-overlay');
     const sheet = document.querySelector('.bookmark-color-picker-sheet');
     const content = document.querySelector('.bookmark-color-sheet-content');
-    
+
     if (!sheet || !overlay || !content) {
         console.warn('Bookmark color picker elements not found');
         return;
     }
-    
+
     let startY = 0;
     let currentY = 0;
     let isDragging = false;
@@ -3204,10 +3410,10 @@ function initializeBookmarkColorPickerGestures() {
     let lastY = 0;
     let lastTime = 0;
     let startScrollTop = 0;
-    
+
     function handleStart(clientY) {
         const scrollTop = content.scrollTop;
-        
+
         // Only allow dragging if at the top of scroll
         if (scrollTop > 5) {
             isDragging = false;
@@ -3291,7 +3497,7 @@ function initializeBookmarkColorPickerGestures() {
     sheet.addEventListener('touchmove', (e) => {
         const scrollTop = content.scrollTop;
         const deltaY = e.touches[0].clientY - startY;
-        
+
         // Only prevent default when actually dragging the sheet (at top and dragging down)
         if (isDragging && scrollTop <= 5 && deltaY > 0) {
             e.preventDefault();
@@ -3320,7 +3526,7 @@ function initializeBookmarkColorPickerGestures() {
             handleEnd();
         }
     });
-    
+
     // Overlay click to close
     overlay.addEventListener('click', (e) => {
         if (e.target === overlay) {
@@ -3335,23 +3541,23 @@ function handleVersesCopy(copyBtn) {
     const contentArea = document.querySelector('.scripture-text');
     const book = bibleBooks[currentBook];
     const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
-    
+
     // Determine if it's single or multi-verse based on button class
     const isSingleVerse = copyBtn.classList.contains('copy-verse-action');
     const isMultiVerse = copyBtn.classList.contains('copy-multi-verses-action');
-    
+
     let copyText = '';
     let versesToCopy = [];
-    
+
     if (isSingleVerse) {
         // Single verse - get verse number from data attribute
         const verseNum = parseInt(copyBtn.getAttribute('data-verse'));
         const verseElement = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
-        
+
         if (verseElement) {
             const verseText = verseElement.textContent || '';
             const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
-            versesToCopy.push({verseNum, text: cleanVerseText});
+            versesToCopy.push({ verseNum, text: cleanVerseText });
             copyText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
         }
     } else if (isMultiVerse) {
@@ -3363,16 +3569,16 @@ function handleVersesCopy(copyBtn) {
             verseNumbers.push(verseNum);
             const verseText = verseLine.textContent || '';
             const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
-            versesToCopy.push({verseNum, text: cleanVerseText});
+            versesToCopy.push({ verseNum, text: cleanVerseText });
             // Add verse reference with text and space between verses
             if (index > 0) {
                 copyText += '\n'; // Space between verses
             }
             copyText += `[${verseNum}] ${cleanVerseText}\n`;
         });
-        
+
         // Add book chapter and verse range
-        const verseRange = verseNumbers.length > 1 
+        const verseRange = verseNumbers.length > 1
             ? `${verseNumbers[0]} - ${verseNumbers[verseNumbers.length - 1]}`
             : verseNumbers[0];
         copyText += `\n${bookName} ${currentChapter} : ${verseRange}`;
@@ -3380,14 +3586,14 @@ function handleVersesCopy(copyBtn) {
     // Add animation
     copyBtn.style.transform = 'scale(0.9)';
     copyBtn.style.opacity = '0.7';
-    
+
     navigator.clipboard.writeText(copyText).then(() => {
         showToast(isSingleVerse ? 'Copied...' : 'Verses copied...', 'success');
         // Restore animation
         setTimeout(() => {
             copyBtn.style.transform = 'scale(1)';
             copyBtn.style.opacity = '1';
-            
+
             // Remove highlights from selected verses
             if (isMultiVerse) {
                 const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted'));
@@ -3395,10 +3601,10 @@ function handleVersesCopy(copyBtn) {
                     verseLine.classList.remove('multi-highlighted');
                     verseLine.style.backgroundColor = '';
                 });
-                
+
                 // Clear selectedVerses array
                 selectedVerses = [];
-                
+
                 // Update left pane active states
                 const leftPane = document.querySelector('.verses-column');
                 if (leftPane) {
@@ -3407,7 +3613,7 @@ function handleVersesCopy(copyBtn) {
                     });
                 }
             }
-            
+
             // Close bottom sheet
             if (bottomSheet) {
                 bottomSheet.classList.remove('visible');
@@ -3416,7 +3622,7 @@ function handleVersesCopy(copyBtn) {
         }, 300);
     }).catch((err) => {
         showToast(isSingleVerse ? 'Failed to copy verse' : 'Failed to copy verses', 'error');
-        
+
         // Restore animation on error
         copyBtn.style.transform = 'scale(1)';
         copyBtn.style.opacity = '1';
@@ -3434,12 +3640,12 @@ function showVerseActionsBottomSheet(verseNum) {
         bottomSheet.className = 'verse-actions-bottom-sheet';
         document.body.appendChild(bottomSheet);
     }
-    
+
     // Build the complete verse reference (e.g., "Matthew 1 : 1")
     const book = bibleBooks[currentBook];
     const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
     const verseReference = `${bookName} ${currentChapter} : ${verseNum}`;
-    
+
     // Set up the bottom sheet content
     bottomSheet.innerHTML = `
         <div class="verse-actions-backdrop"></div>
@@ -3523,16 +3729,16 @@ function showVerseActionsBottomSheet(verseNum) {
             </div>
         </div>
     `;
-    
+
     // Show the bottom sheet
     bottomSheet.classList.add('visible');
     document.body.classList.add('bottom-sheet-open');
-    
+
     // Add event listeners
     const closeBtn = bottomSheet.querySelector('.close-bottom-sheet');
     const closeBtnFooter = bottomSheet.querySelector('.close-verse-selection-btn');
     const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
-    
+
     const closeBottomSheet = () => {
         // Restore hidden buttons if color picker was active
         const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
@@ -3546,16 +3752,16 @@ function showVerseActionsBottomSheet(verseNum) {
                 });
             }
         }
-        
+
         bottomSheet.classList.remove('visible');
         document.body.classList.remove('bottom-sheet-open');
-        
+
         // Deselect all verses when closing bottom sheet
         const versesColumn = document.querySelector('.verses');
         if (versesColumn) {
             versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
         }
-        
+
         const contentArea = document.querySelector('.scripture-text');
         if (contentArea) {
             contentArea.querySelectorAll('.verse-line').forEach(v => {
@@ -3563,20 +3769,20 @@ function showVerseActionsBottomSheet(verseNum) {
             });
         }
     };
-    
+
     closeBtn?.addEventListener('click', closeBottomSheet);
     if (closeBtnFooter) {
         closeBtnFooter.addEventListener('click', closeBottomSheet);
     }
     backdrop.addEventListener('click', closeBottomSheet);
-    
+
     // Setup scrollbar visibility for action buttons
     const setupScrollbarVisibility = () => {
         const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
         if (!buttonsContainer) return;
-        
+
         let scrollbarTimeout;
-        
+
         const showScrollbar = () => {
             buttonsContainer.classList.add('show-scrollbar');
             clearTimeout(scrollbarTimeout);
@@ -3584,23 +3790,23 @@ function showVerseActionsBottomSheet(verseNum) {
                 buttonsContainer.classList.remove('show-scrollbar');
             }, 500);
         };
-        
+
         buttonsContainer.addEventListener('scroll', showScrollbar, { passive: true });
     };
-    
+
     setupScrollbarVisibility();
-    
+
     // Copy verse button
-    bottomSheet.querySelector('.copy-verse-action').addEventListener('click', function() {
+    bottomSheet.querySelector('.copy-verse-action').addEventListener('click', function () {
         handleVersesCopy(this);
-        
+
         // Clear verse selection for single-verse copy
         const versesColumn = document.querySelector('.verses-column');
         if (versesColumn) {
             versesColumn.querySelectorAll('.number-item.active').forEach(item => item.classList.remove('active'));
         }
     });
-    
+
     // Add note button (only if admin access enabled)
     const noteBtn = bottomSheet.querySelector('.add-note-action');
     if (noteBtn) {
@@ -3609,7 +3815,7 @@ function showVerseActionsBottomSheet(verseNum) {
             closeBottomSheet();
         });
     }
-    
+
     // Add reference button (only if admin access enabled)
     const refBtn = bottomSheet.querySelector('.add-reference-action');
     if (refBtn) {
@@ -3620,13 +3826,13 @@ function showVerseActionsBottomSheet(verseNum) {
             openAddRefSheet();
         });
     }
-    
+
     // Add sermon button (only if admin access enabled)
     const sermonBtn = bottomSheet.querySelector('.add-sermon-action');
     if (sermonBtn) {
         sermonBtn.addEventListener('click', () => {
             closeBottomSheet();
-            
+
             // Get all selected verses from the verses column
             const versesColumn = document.querySelector('.verses-column');
             const selectedVerseElements = versesColumn.querySelectorAll('.number-item.active');
@@ -3639,7 +3845,7 @@ function showVerseActionsBottomSheet(verseNum) {
                     display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
                 };
             });
-            
+
             // If no verses are selected, add the current verse only
             const versesToAdd = selectedVerses.length > 0 ? selectedVerses : [{
                 book: bibleBooks[currentBook].name,
@@ -3647,16 +3853,16 @@ function showVerseActionsBottomSheet(verseNum) {
                 verse: verseNum,
                 display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
             }];
-            
+
             // Show sermon selection sheet
             showSermonSelectionSheet(versesToAdd);
         });
     }
-    
+
     // Add bookmark button
     const bookmarkBtn = bottomSheet.querySelector('.add-favorite-action');
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
-    
+
     // Check if verse has a color and update button appearance
     if (verseNotes[noteKey] && verseNotes[noteKey].color) {
         bookmarkBtn.classList.add('bookmarked');
@@ -3683,38 +3889,38 @@ function showVerseActionsBottomSheet(verseNum) {
         bookmarkBtn.classList.remove('bookmarked');
         bookmarkBtn.removeAttribute('data-bookmark-color');
     }
-    
+
     bookmarkBtn.addEventListener('click', async () => {
         // If already bookmarked (has color), remove the bookmark
         if (verseNotes[noteKey] && verseNotes[noteKey].color) {
             const oldColor = verseNotes[noteKey].color;
             verseNotes[noteKey].color = null;
-            
+
             // Remove the color highlight from the verse in the UI
             const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
             if (verseLine) {
                 // Add fade out animation first
                 verseLine.style.animation = 'fadeOutHighlight 0.4s ease-out forwards';
-                
+
                 // After animation, remove the classes
                 setTimeout(() => {
                     verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green', 'note-blue', 'note-pink', 'note-orange', 'note-purple');
-                    
+
                     // If no text, remove the note entirely and remove the has-note class
                     if (!verseNotes[noteKey].text) {
                         delete verseNotes[noteKey];
                         verseLine.classList.remove('has-note', 'has-text');
                     }
-                    
+
                     // Clear animation after removal
                     verseLine.style.animation = '';
                 }, 400);
             }
-            
+
             bookmarkBtn.classList.remove('bookmarked');
             bookmarkBtn.removeAttribute('data-bookmark-color');
             bookmarkBtn.style.removeProperty('--bookmark-color');
-            
+
             // Save changes
             localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
             try {
@@ -3740,15 +3946,15 @@ function showVerseActionsBottomSheet(verseNum) {
             showColorPickerForBookmark(verseNum, bookmarkBtn);
         }
     });
-    
+
     // Add memory verse button
     // Add memory verse button with dynamic state
     const memoryBtn = bottomSheet.querySelector('.add-memory-action');
-    
+
     // Function to update memory verse button appearance
     const updateMemoryButtonAppearance = (isMemory) => {
         const starIcon = memoryBtn.querySelector('.memory-star-icon');
-        
+
         if (isMemory) {
             memoryBtn.classList.add('memory-verse-active');
             // Show filled star emoji
@@ -3763,21 +3969,21 @@ function showVerseActionsBottomSheet(verseNum) {
             }
         }
     };
-    
+
     // Check if this verse is a memory verse and update button appearance
     const memoryVerseRef = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
     const isMemory = isMemoryVerse(bibleBooks[currentBook].name, currentChapter, verseNum);
     updateMemoryButtonAppearance(isMemory);
-    
+
     memoryBtn.addEventListener('click', async () => {
         currentNoteVerse = verseNum;
         await toggleMemoryVerse();
-        
+
         // Update button appearance after toggling
         const isNowMemory = isMemoryVerse(bibleBooks[currentBook].name, currentChapter, verseNum);
         updateMemoryButtonAppearance(isNowMemory);
     });
-    
+
     // Share verse button
     bottomSheet.querySelector('.share-verse-action').addEventListener('click', () => {
         const book = bibleBooks[currentBook];
@@ -3785,7 +3991,7 @@ function showVerseActionsBottomSheet(verseNum) {
         const verseText = document.querySelector(`.verse-line[data-verse="${verseNum}"]`)?.textContent || '';
         const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
         const shareText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
-        
+
         if (navigator.share) {
             navigator.share({
                 title: `${bookName} ${currentChapter} : ${verseNum}`,
@@ -3803,14 +4009,14 @@ function showVerseActionsBottomSheet(verseNum) {
             });
         }
     });
-    
+
     // Pin verse button
     const pinBtn = bottomSheet.querySelector('.pin-verse-action');
     if (pinBtn) {
         // Check if verse is already pinned and update button appearance
         const pinState = isPinnedInCurrentChapter(verseNum);
         updatePinButtonAppearance(pinBtn, pinState);
-        
+
         pinBtn.addEventListener('click', () => {
             const isCurrentlyPinned = isPinnedInCurrentChapter(verseNum);
             if (isCurrentlyPinned) {
@@ -3840,12 +4046,12 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
         bottomSheet.className = 'verse-actions-bottom-sheet';
         document.body.appendChild(bottomSheet);
     }
-    
+
     // Build the verse reference (only book and chapter for multi-verse, no verse numbers)
     const book = bibleBooks[currentBook];
     const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
     const verseReference = `${bookName} ${currentChapter}`;
-    
+
     // Set up the bottom sheet content with all actions
     bottomSheet.innerHTML = `
         <div class="verse-actions-backdrop"></div>
@@ -3918,25 +4124,25 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
             </div>
         </div>
     `;
-    
+
     // Show the bottom sheet
     bottomSheet.classList.add('visible');
     document.body.classList.add('bottom-sheet-open');
-    
+
     // Add event listeners
     const closeBtn = bottomSheet.querySelector('.close-bottom-sheet');
     const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
-    
+
     const closeBottomSheet = () => {
         bottomSheet.classList.remove('visible');
         document.body.classList.remove('bottom-sheet-open');
-        
+
         // Deselect all verses when closing bottom sheet
         const versesColumn = document.querySelector('.verses');
         if (versesColumn) {
             versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
         }
-        
+
         const contentArea = document.querySelector('.scripture-text');
         if (contentArea) {
             contentArea.querySelectorAll('.verse-line').forEach(v => {
@@ -3944,17 +4150,17 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
             });
         }
     };
-    
+
     closeBtn.addEventListener('click', closeBottomSheet);
     backdrop.addEventListener('click', closeBottomSheet);
-    
+
     // Setup scrollbar visibility for action buttons
     const setupScrollbarVisibility = () => {
         const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
         if (!buttonsContainer) return;
-        
+
         let scrollbarTimeout;
-        
+
         const showScrollbar = () => {
             buttonsContainer.classList.add('show-scrollbar');
             clearTimeout(scrollbarTimeout);
@@ -3962,20 +4168,20 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                 buttonsContainer.classList.remove('show-scrollbar');
             }, 500);
         };
-        
+
         buttonsContainer.addEventListener('scroll', showScrollbar, { passive: true });
     };
-    
+
     setupScrollbarVisibility();
-    
+
     // Copy multiple verses button
     const copyBtn = bottomSheet.querySelector('.copy-multi-verses-action');
     if (copyBtn) {
-        copyBtn.addEventListener('click', function() {
+        copyBtn.addEventListener('click', function () {
             handleVersesCopy(this);
         });
     }
-    
+
     // Add note button
     const noteBtn = bottomSheet.querySelector('.add-note-action');
     if (noteBtn) {
@@ -3990,7 +4196,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
             closeBottomSheet();
         });
     }
-    
+
     // Add memory verse button
     const memoryBtn = bottomSheet.querySelector('.add-memory-action');
     if (memoryBtn) {
@@ -3998,13 +4204,13 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
         memoryBtn.disabled = true;
         memoryBtn.style.opacity = '0.5';
         memoryBtn.style.cursor = 'not-allowed';
-        
+
         // Update to show filled star emoji (active state)
         const starIcon = memoryBtn.querySelector('.memory-star-icon');
         if (starIcon) {
             starIcon.textContent = '⭐';
         }
-        
+
         memoryBtn.addEventListener('click', async () => {
             // For multi-verse, toggle memory for first verse
             currentNoteVerse = selectedVerses[0];
@@ -4012,13 +4218,13 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
             closeBottomSheet();
         });
     }
-    
+
     // Add sermon button (only if admin access enabled)
     const multiSermonBtn = bottomSheet.querySelector('.add-sermon-action');
     if (multiSermonBtn) {
         multiSermonBtn.addEventListener('click', () => {
             closeBottomSheet();
-            
+
             // For multi-select, use the selectedVerses array
             const versesToAdd = selectedVerses.map(verseNum => ({
                 book: bibleBooks[currentBook].name,
@@ -4026,37 +4232,37 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                 verse: verseNum,
                 display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
             }));
-            
+
             // Show sermon selection sheet
             showSermonSelectionSheet(versesToAdd);
         });
     }
-    
+
     // Add bookmark button (color picker for all selected verses)
     const bookmarkBtn = bottomSheet.querySelector('.add-favorite-action');
     const firstVerse = selectedVerses[0];
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${firstVerse}`;
-    
+
     // Check if first verse has a color
     if (verseNotes[noteKey] && verseNotes[noteKey].color) {
         bookmarkBtn.classList.add('bookmarked');
     }
-    
+
     bookmarkBtn.addEventListener('click', async () => {
         showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn);
     });
-    
+
     // Share button
     const shareBtn = bottomSheet.querySelector('.share-verses-action');
     if (shareBtn) {
         shareBtn.addEventListener('click', () => {
             const book = bibleBooks[currentBook];
             const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
-            
+
             // Get all highlighted verses from the text area
             const contentArea = document.querySelector('.scripture-text');
             const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.highlighted'));
-            
+
             let shareText = '';
             highlightedVerses.forEach(verseLine => {
                 const verseText = verseLine.textContent || '';
@@ -4064,7 +4270,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                 shareText += `${cleanVerseText}\n`;
             });
             shareText += `\n${bookName} ${currentChapter}`;
-            
+
             if (navigator.share) {
                 navigator.share({
                     title: `${bookName} ${currentChapter}`,
@@ -4082,7 +4288,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
             }
         });
     }
-    
+
     // Pin button for multiple verses
     const pinBtn = bottomSheet.querySelector('.pin-multi-verses-action');
     if (pinBtn) {
@@ -4102,42 +4308,42 @@ async function showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn) {
     // Open bookmark color picker bottom sheet
     const overlay = document.getElementById('bookmark-color-picker-overlay');
     const sheet = document.querySelector('.bookmark-color-picker-sheet');
-    
+
     if (!overlay || !sheet) return;
-    
+
     // Show the overlay and sheet
     overlay.classList.add('active');
     sheet.classList.add('visible');
     sheet.classList.remove('closing');
-    
+
     // Set up color option click handlers
     const colorOptions = sheet.querySelectorAll('.bookmark-color-option');
-    
+
     // Remove and re-add event listeners to prevent duplicates
     colorOptions.forEach(option => {
         const newOption = option.cloneNode(true);
         option.parentNode.replaceChild(newOption, option);
     });
-    
+
     // Re-query after replacing nodes
     const updatedColorOptions = sheet.querySelectorAll('.bookmark-color-option');
-    
+
     // Add click handlers
     updatedColorOptions.forEach(colorBtn => {
         colorBtn.addEventListener('click', async (e) => {
             e.stopPropagation();
             const selectedColor = colorBtn.dataset.color;
-            
+
             // Update selected state
             updatedColorOptions.forEach(option => {
                 option.classList.remove('selected');
             });
             colorBtn.classList.add('selected');
-            
+
             // Update all selected verses with the color
             for (const verseNum of selectedVerses) {
                 const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
-                
+
                 // Create or update note entry
                 if (!verseNotes[noteKey]) {
                     verseNotes[noteKey] = {
@@ -4152,39 +4358,39 @@ async function showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn) {
                     // Update existing note with new color
                     verseNotes[noteKey].color = selectedColor;
                 }
-                
+
                 // Update UI
                 const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
                 if (verseLine) {
                     // Remove all existing note color classes
                     const colorClasses = Array.from(verseLine.classList).filter(cls => cls.startsWith('note-'));
                     colorClasses.forEach(cls => verseLine.classList.remove(cls));
-                    
+
                     // Add has-note and new color class
                     verseLine.classList.add('has-note', `note-${selectedColor}`);
-                    
+
                     // Apply fade-in animation
                     verseLine.style.animation = 'fadeInHighlight 0.4s ease-out forwards';
                 }
             }
-            
+
             // Save all changes to localStorage and Supabase
             localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
             try {
                 await saveNotesToSupabase();
             } catch (error) {
             }
-            
+
             // Update bookmark button appearance
             bookmarkBtn.classList.add('bookmarked');
-            
+
             // Close the bottom sheet after selection
             setTimeout(() => {
                 closeBookmarkColorPicker();
             }, 300);
         });
     });
-    
+
     // Initialize drag-to-close gestures
     initializeBookmarkColorPickerGestures();
 }
@@ -4193,17 +4399,17 @@ async function showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn) {
 function updateSingleVerseActionsBottomSheet(verseNum) {
     const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
     if (!bottomSheet) return;
-    
+
     const book = bibleBooks[currentBook];
     const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
     const verseReference = `${bookName} ${currentChapter} : ${verseNum}`;
-    
+
     // Update only the header and reference
     const headerRef = bottomSheet.querySelector('.verse-reference');
     if (headerRef) {
         headerRef.textContent = verseReference;
     }
-    
+
     // Enable note button for single verse
     const noteBtn = bottomSheet.querySelector('.add-note-action');
     if (noteBtn) {
@@ -4211,7 +4417,7 @@ function updateSingleVerseActionsBottomSheet(verseNum) {
         noteBtn.style.opacity = '1';
         noteBtn.style.cursor = 'pointer';
     }
-    
+
     // Enable memory button for single verse
     const memoryBtn = bottomSheet.querySelector('.add-memory-action');
     if (memoryBtn) {
@@ -4225,17 +4431,17 @@ function updateSingleVerseActionsBottomSheet(verseNum) {
 function updateMultiVerseActionsBottomSheet(selectedVerses) {
     const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
     if (!bottomSheet) return;
-    
+
     const book = bibleBooks[currentBook];
     const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
     const verseReference = `${bookName} ${currentChapter}`;
-    
+
     // Update only the header and reference
     const headerRef = bottomSheet.querySelector('.verse-reference');
     if (headerRef) {
         headerRef.textContent = verseReference;
     }
-    
+
     // Disable note button for multi-verse
     const noteBtn = bottomSheet.querySelector('.add-note-action');
     if (noteBtn) {
@@ -4243,7 +4449,7 @@ function updateMultiVerseActionsBottomSheet(selectedVerses) {
         noteBtn.style.opacity = '0.5';
         noteBtn.style.cursor = 'not-allowed';
     }
-    
+
     // Disable memory button for multi-verse
     const memoryBtn = bottomSheet.querySelector('.add-memory-action');
     if (memoryBtn) {
@@ -4260,10 +4466,10 @@ function updateVerseHighlighting(selectedVerses) {
     if (!bottomSheet || !bottomSheet.classList.contains('visible')) {
         return;
     }
-    
+
     const contentArea = document.querySelector('.scripture-text');
     if (!contentArea) return;
-    
+
     // Remove highlighted class from all verses
     contentArea.querySelectorAll('.verse-line').forEach(v => {
         if (v.classList.contains('multi-highlighted')) {
@@ -4277,7 +4483,7 @@ function updateVerseHighlighting(selectedVerses) {
             v.style.backgroundColor = '';
         }
     });
-    
+
     // Add multi-highlighted class to all selected verses
     selectedVerses.forEach(verseNum => {
         const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
@@ -4291,15 +4497,15 @@ function updateVerseHighlighting(selectedVerses) {
 function scrollToVerse(verseNum) {
     const contentArea = document.querySelector('.scripture-text');
     const contentAreaContainer = document.querySelector('.content-area');
-    
+
     // Don't add highlight here - let the click handlers manage highlighting
     // Just scroll to the verse
-    
+
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     if (verseLine) {
         // Use scrollIntoView for proper scrolling behavior
         // block: 'center' will center the verse in the viewport
-        verseLine.scrollIntoView({ 
+        verseLine.scrollIntoView({
             behavior: 'smooth',
             block: 'center'
         });
@@ -4331,7 +4537,7 @@ document.addEventListener('click', (e) => {
         if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
             return; // Don't navigate if note viewer is open
         }
-        
+
         // If viewing intro, go to last chapter of previous book
         if (window.isViewingIntro) {
             if (currentBook > 0) {
@@ -4363,7 +4569,7 @@ document.addEventListener('click', (e) => {
             const book = bibleBooks[currentBook];
             const bookName = book.name;
             const hasIntro = bookIntroductions && bookIntroductions[bookName] && bookIntroductions[bookName].trim() !== '';
-            
+
             if (hasIntro) {
                 // Go to current book's introduction
                 displayBookIntro();
@@ -4396,7 +4602,7 @@ document.addEventListener('click', (e) => {
         if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
             return; // Don't navigate if note viewer is open
         }
-        
+
         // If viewing intro, go to first chapter of current book
         if (window.isViewingIntro) {
             currentChapter = 1;
@@ -4427,10 +4633,10 @@ document.addEventListener('click', (e) => {
                 currentBook++;
                 const nextBook = bibleBooks[currentBook];
                 const nextBookName = nextBook.name;
-                
+
                 // Check if next book has an intro
                 const hasIntro = bookIntroductions && bookIntroductions[nextBookName] && bookIntroductions[nextBookName].trim() !== '';
-                
+
                 if (hasIntro) {
                     // Load the book and display its introduction
                     currentChapter = 1; // Set to chapter 1 for loading purposes
@@ -4466,23 +4672,23 @@ document.addEventListener('keydown', (e) => {
     // Disable arrow key navigation if note viewer or notes editor is open
     const noteViewerPopup = document.getElementById('note-viewer-popup');
     const notesModal = document.getElementById('notes-modal');
-    
+
     // Check if note viewer popup is open
     if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
         return; // Don't navigate if note viewer is open
     }
-    
+
     // Check if notes editing modal is open
     if (notesModal && notesModal.classList.contains('visible')) {
         return; // Don't navigate if notes editor is open
     }
-    
+
     // Check if notes-textarea is focused
     const notesTextarea = document.getElementById('notes-textarea');
     if (notesTextarea && document.activeElement === notesTextarea) {
         return; // Don't navigate if notes-textarea is focused
     }
-    
+
     if (e.key === 'ArrowLeft') {
         document.querySelector('.nav-btn[aria-label="Previous"]').click();
     } else if (e.key === 'ArrowRight') {
@@ -4500,17 +4706,17 @@ function initializeScrollbar() {
     scrollableElements.forEach(element => {
         if (element) {
             let scrollTimeout;
-            element.addEventListener('scroll', function() {
+            element.addEventListener('scroll', function () {
                 this.classList.add('scrolling');
                 clearTimeout(scrollTimeout);
                 scrollTimeout = setTimeout(() => {
                     this.classList.remove('scrolling');
                 }, 1000);
             });
-            element.addEventListener('mouseenter', function() {
+            element.addEventListener('mouseenter', function () {
                 clearTimeout(scrollTimeout);
             });
-            element.addEventListener('mouseleave', function() {
+            element.addEventListener('mouseleave', function () {
                 scrollTimeout = setTimeout(() => {
                     this.classList.remove('scrolling');
                 }, 1000);
@@ -4534,7 +4740,7 @@ function initializeTheme() {
     const drawerThemeToggle = document.querySelector('.drawer-theme-toggle');
     const hasVisited = localStorage.getItem('hasVisited');
     const currentTheme = localStorage.getItem('theme') || 'light';
-    
+
     // Function to update meta theme colors
     function updateMetaTheme(isDark) {
         const metaThemeColor = document.querySelector('meta[name="theme-color"]');
@@ -4546,7 +4752,7 @@ function initializeTheme() {
             metaColorScheme.setAttribute('content', isDark ? 'dark' : 'light');
         }
     }
-    
+
     // On first visit, keep light theme as default
     if (!hasVisited) {
         // Apply light theme
@@ -4656,26 +4862,26 @@ function initializeMobileLanguageModal() {
     const sheetOptions = document.querySelectorAll('.language-sheet-option');
     const sheetColorPalette = document.getElementById('language-sheet-color-palette');
     const sheetColorOptions = document.querySelectorAll('.language-sheet-color-option');
-    
+
     if (!langBtn || !modalOverlay) return;
-    
+
     // Ensure currentLanguage is properly initialized
     if (!currentLanguage || !['english', 'tamil', 'both'].includes(currentLanguage)) {
         currentLanguage = 'tamil';
         localStorage.setItem('currentLanguage', 'tamil');
     }
-    
+
     // Ensure englishTextColor is properly initialized
     if (!englishTextColor || !['default', 'blue', 'red'].includes(englishTextColor)) {
         englishTextColor = 'default';
         localStorage.setItem('englishTextColor', 'default');
     }
-    
+
     // Check if mobile
     function isMobile() {
         return window.innerWidth <= 768;
     }
-    
+
     // Update active state based on current language
     function updateModalActiveState() {
         modalOptions.forEach(option => {
@@ -4692,7 +4898,7 @@ function initializeMobileLanguageModal() {
             colorPaletteSection.classList.remove('visible');
         }
     }
-    
+
     // Update sheet active state
     function updateSheetActiveState() {
         sheetOptions.forEach(option => {
@@ -4709,7 +4915,7 @@ function initializeMobileLanguageModal() {
             sheetColorPalette.style.display = 'none';
         }
     }
-    
+
     // Update sheet color active state
     function updateSheetColorActiveState() {
         sheetColorOptions.forEach(option => {
@@ -4720,7 +4926,7 @@ function initializeMobileLanguageModal() {
             }
         });
     }
-    
+
     // Update color option active state
     function updateColorActiveState() {
         colorOptions.forEach(option => {
@@ -4735,7 +4941,7 @@ function initializeMobileLanguageModal() {
     langBtn.addEventListener('click', (e) => {
         closeBottomSheet();
         e.stopPropagation();
-        
+
         if (isMobile()) {
             // Mobile: Show bottom sheet
             updateSheetActiveState();
@@ -4749,32 +4955,32 @@ function initializeMobileLanguageModal() {
             document.body.style.overflow = 'hidden';
         }
     });
-    
+
     // Close modal
     function closeModal() {
         modalOverlay.classList.remove('active');
         document.body.style.overflow = '';
     }
-    
+
     // Close bottom sheet
     function closeLanguageSheet() {
         languageBottomSheetOverlay.classList.remove('active');
         document.body.style.overflow = '';
     }
-    
+
     modalCloseBtn.addEventListener('click', closeModal);
-    
+
     // Close when clicking overlay
     modalOverlay.addEventListener('click', (e) => {
         if (e.target === modalOverlay) {
             closeModal();
         }
     });
-    
+
     // Language bottom sheet variables
     const languageBackdrop = document.getElementById('language-bottom-sheet-overlay');
     const languageBottomSheet = document.getElementById('language-bottom-sheet');
-    
+
     let startY = 0;
     let currentY = 0;
     let isDragging = false;
@@ -4793,7 +4999,7 @@ function initializeMobileLanguageModal() {
         languageBackdrop.classList.remove('active');
         languageBottomSheet.classList.remove('active');
         document.body.style.overflow = '';
-        
+
         // Clear inline transform after transition completes
         setTimeout(() => {
             languageBottomSheet.style.transform = '';
@@ -4802,7 +5008,7 @@ function initializeMobileLanguageModal() {
 
     function handleStart(clientY) {
         const scrollTop = languageBottomSheet.scrollTop;
-        
+
         // Only allow dragging if at the top of scroll
         if (scrollTop > 5) {
             isDragging = false;
@@ -4887,7 +5093,7 @@ function initializeMobileLanguageModal() {
         languageBottomSheet.addEventListener('touchmove', (e) => {
             const scrollTop = languageBottomSheet.scrollTop;
             const deltaY = e.touches[0].clientY - startY;
-            
+
             // Only prevent default when actually dragging the sheet (at top and dragging down)
             if (isDragging && scrollTop <= 5 && deltaY > 0) {
                 e.preventDefault();
@@ -4924,7 +5130,7 @@ function initializeMobileLanguageModal() {
             closeLanguageSheet();
         }
     });
-    
+
     // Handle language selection from modal
     modalOptions.forEach(option => {
         option.addEventListener('click', () => {
@@ -4947,47 +5153,47 @@ function initializeMobileLanguageModal() {
             // If 'both' selected but no color chosen yet, keep modal open for first-time selection
         });
     });
-    
+
     // Handle language selection from bottom sheet (mobile)
     sheetOptions.forEach(option => {
         option.addEventListener('click', () => {
             const selectedLang = option.dataset.lang;
             currentLanguage = selectedLang;
             localStorage.setItem('currentLanguage', selectedLang);
-            
+
             // Update active state
             updateSheetActiveState();
             updateBookNames();
-            
+
             // If 'both' is selected, show color palette and don't close
             if (selectedLang === 'both') {
                 // Wait for animation to complete
                 return;
             }
-            
+
             // For other languages, close sheet and reload
             closeLanguageSheet();
             loadBook(currentBook, currentChapter);
         });
     });
-    
+
     // Handle color selection in bottom sheet
     sheetColorOptions.forEach(option => {
         option.addEventListener('click', () => {
             const selectedColor = option.dataset.color;
             englishTextColor = selectedColor;
             localStorage.setItem('englishTextColor', selectedColor);
-            
+
             // Update active state
             updateSheetColorActiveState();
             updateBookNames();
-            
+
             // Close sheet and reload
             closeLanguageSheet();
             loadBook(currentBook, currentChapter);
         });
     });
-    
+
     // Handle color selection
     colorOptions.forEach(option => {
         option.addEventListener('click', () => {
@@ -5032,7 +5238,7 @@ function initializeSearch() {
     let searchTimeout = null;
     let saveRecentTimeout = null;
     const MIN_SEARCH_LENGTH = 3; // Avoid overly short partial matches and reduce flicker
-    
+
     // Default suggestions (if no recent searches)
     const defaultSuggestions = [
         'Abraham',
@@ -5041,7 +5247,7 @@ function initializeSearch() {
         'அப்பம்',
         'தேவாலய'
     ];
-    
+
     // Get recent searches from localStorage
     function getRecentSearches() {
         try {
@@ -5051,7 +5257,7 @@ function initializeSearch() {
             return [];
         }
     }
-    
+
     // Save recent searches to localStorage
     function saveRecentSearch(term) {
         term = term.trim();
@@ -5068,7 +5274,7 @@ function initializeSearch() {
             console.error('Failed to save recent search:', e);
         }
     }
-    
+
     // Get suggestions (recent or default)
     function getSuggestions() {
         const recent = getRecentSearches();
@@ -5224,8 +5430,8 @@ function initializeSearch() {
     clearFilterBtn.addEventListener('click', clearFilterValues);
     // Close filter when clicking outside
     document.addEventListener('click', (e) => {
-        if (isFilterVisible && 
-            !advancedFilter.contains(e.target) && 
+        if (isFilterVisible &&
+            !advancedFilter.contains(e.target) &&
             !filterBtn.contains(e.target)) {
             closeFilter();
         }
@@ -5259,7 +5465,7 @@ function initializeSearch() {
         const suggestions = getSuggestions();
         const isRecentSearches = getRecentSearches().length > 0;
         const title = isRecentSearches ? 'Recent Searches' : 'Top Suggestions';
-        
+
         let suggestionsHtml = suggestions.map(suggestion => `
             <div class="search-suggestion-item" data-suggestion="${suggestion}">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -5269,7 +5475,7 @@ function initializeSearch() {
                 <span>${suggestion}</span>
             </div>
         `).join('');
-        
+
         searchResults.innerHTML = `
             <div class="search-suggestions">
                 <div class="search-suggestions-title">${title}</div>
@@ -5278,7 +5484,7 @@ function initializeSearch() {
                 </div>
             </div>
         `;
-        
+
         // Add click handlers to suggestions
         document.querySelectorAll('.search-suggestion-item').forEach(item => {
             item.addEventListener('click', () => {
@@ -5475,7 +5681,7 @@ function initializeSiteTitle() {
     const siteTitle = document.querySelector('.site-title');
     const secretIcon = document.getElementById('secret-icon');
     // Disable old 5-click admin activation on site title.
-    
+
     // Add click handler for secret icon
     if (secretIcon) {
         secretIcon.addEventListener('click', () => {
@@ -5517,7 +5723,7 @@ function initializeHomeOptions() {
         option.addEventListener('click', () => {
             const action = option.getAttribute('data-action');
             homeOptionsCard.classList.remove('active');
-            switch(action) {
+            switch (action) {
                 case 'summary':
                     // Show Chapter Summary
                     showChapterSummary();
@@ -5555,7 +5761,7 @@ function initializeRightSettingsPanel() {
         // Add to history so Android back returns to Bible instead of closing app
         try {
             navigateToPage('settings');
-        } catch (e) {}
+        } catch (e) { }
         // Capture original state so Cancel can revert
         try {
             settingsPanelOriginalState = getCurrentSettingsSnapshot();
@@ -5580,7 +5786,7 @@ function initializeRightSettingsPanel() {
         const colorSwatches = document.querySelectorAll('#settings-color-panel .settings-swatch');
         colorSwatches.forEach(sw => {
             const swColor = sw.classList.contains('blue') ? 'blue' :
-                            sw.classList.contains('red') ? 'red' : 'default';
+                sw.classList.contains('red') ? 'red' : 'default';
             sw.classList.toggle('selected', swColor === colorVal);
         });
         // Show/hide color panel based on current language val
@@ -5682,9 +5888,9 @@ function initializeRightSettingsPanel() {
         if (event) event.stopPropagation();
         try {
             if (typeof saveUserSettingsToSupabase === 'function') {
-                saveUserSettingsToSupabase().catch(() => {});
+                saveUserSettingsToSupabase().catch(() => { });
             }
-        } catch (e) {}
+        } catch (e) { }
         settingsPanelOriginalState = null;
         updateSettingsFooterVisibility();
         settingsPanel.classList.remove('active');
@@ -5776,7 +5982,7 @@ function initializeRightSettingsPanel() {
 
                 // Persist reverted settings to Supabase so remote matches local
                 if (typeof saveUserSettingsToSupabase === 'function') {
-                    saveUserSettingsToSupabase().catch(() => {});
+                    saveUserSettingsToSupabase().catch(() => { });
                 }
             } catch (e) {
             }
@@ -5907,10 +6113,10 @@ function showHomePage() {
     const loader = document.getElementById('loader');
     if (loader) loader.classList.add('active');
     // Preload all data immediately when home is first shown
-    const dataLoadingPromise = !window.homeDataPreloaded 
+    const dataLoadingPromise = !window.homeDataPreloaded
         ? Promise.all([
             loadSummaryData(),
-            loadTimelineData(), 
+            loadTimelineData(),
             loadCharacterData()
         ]).then(() => {
             window.homeDataPreloaded = true;
@@ -6036,11 +6242,11 @@ function loadRandomMemoryVerse() {
             .replace(/^psalm$/, 'psalms'); // Handle Psalm -> Psalms
         const normalizedName = book.name.toLowerCase();
         const normalizedShortName = book.shortName.toLowerCase();
-        return normalizedName === normalizedBookName || 
-               normalizedShortName === normalizedBookName ||
-               normalizedName === verseData.bookName.toLowerCase() ||
-               normalizedShortName === verseData.bookName.toLowerCase() ||
-               (normalizedName === 'psalms' && verseData.bookName.toLowerCase() === 'psalm');
+        return normalizedName === normalizedBookName ||
+            normalizedShortName === normalizedBookName ||
+            normalizedName === verseData.bookName.toLowerCase() ||
+            normalizedShortName === verseData.bookName.toLowerCase() ||
+            (normalizedName === 'psalms' && verseData.bookName.toLowerCase() === 'psalm');
     });
     if (bookIndex === -1) {
         scriptureText.style.display = 'block';
@@ -6176,78 +6382,78 @@ function updateAvailableHomeOptions() {
             mainResolve();
             return;
         }
-    // Check availability for each type (non-admin mode)
-    const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
-    const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
-    // Load scripts and check data availability
-    const checkPromises = [];
-    // Check summary
-    if (summaryPath) {
-        const promise = new Promise((resolve) => {
-            if (window[summaryVarName] && window[summaryVarName][chapterNum]) {
-                resolve(true);
-            } else if (!document.querySelector(`script[src="${summaryPath}"]`)) {
-                const script = document.createElement('script');
-                script.src = summaryPath;
-                script.onload = () => {
+        // Check availability for each type (non-admin mode)
+        const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
+        const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+        // Load scripts and check data availability
+        const checkPromises = [];
+        // Check summary
+        if (summaryPath) {
+            const promise = new Promise((resolve) => {
+                if (window[summaryVarName] && window[summaryVarName][chapterNum]) {
+                    resolve(true);
+                } else if (!document.querySelector(`script[src="${summaryPath}"]`)) {
+                    const script = document.createElement('script');
+                    script.src = summaryPath;
+                    script.onload = () => {
+                        resolve(window[summaryVarName] && window[summaryVarName][chapterNum]);
+                    };
+                    script.onerror = () => resolve(false);
+                    document.body.appendChild(script);
+                } else {
                     resolve(window[summaryVarName] && window[summaryVarName][chapterNum]);
-                };
-                script.onerror = () => resolve(false);
-                document.body.appendChild(script);
-            } else {
-                resolve(window[summaryVarName] && window[summaryVarName][chapterNum]);
-            }
-        });
-        checkPromises.push(promise.then(hasSummary => {
-            if (summaryOption) summaryOption.style.display = hasSummary ? 'flex' : 'none';
-        }));
-    } else {
-        if (summaryOption) summaryOption.style.display = 'none';
-    }
-    // Check timeline
-    if (timelinePath) {
-        const promise = new Promise((resolve) => {
-            if (window[timelineVarName] && window[timelineVarName][chapterNum]) {
-                resolve(true);
-            } else if (!document.querySelector(`script[src="${timelinePath}"]`)) {
-                const script = document.createElement('script');
-                script.src = timelinePath;
-                script.onload = () => {
-                    resolve(window[timelineVarName] && window[timelineVarName][chapterNum]);
-                };
-                script.onerror = () => resolve(false);
-                document.body.appendChild(script);
-            } else {
-                resolve(window[timelineVarName] && window[timelineVarName][chapterNum]);
-            }
-        });
-        checkPromises.push(promise.then(hasTimeline => {
-            if (timelineOption) timelineOption.style.display = hasTimeline ? 'flex' : 'none';
-        }));
-    } else {
-        if (timelineOption) timelineOption.style.display = 'none';
-    }
-    // Check characters from Supabase
-    const charactersPromise = (async () => {
-        try {
-            const { data, error, count } = await bibleDataManager.supabaseClient
-                .from('bible_characters')
-                .select('id', { count: 'exact', head: true })
-                .eq('book_file', bibleBooks[currentBook].file)
-                .eq('chapter', chapterNum);
-            return !error && count > 0;
-        } catch (error) {
-            return false;
+                }
+            });
+            checkPromises.push(promise.then(hasSummary => {
+                if (summaryOption) summaryOption.style.display = hasSummary ? 'flex' : 'none';
+            }));
+        } else {
+            if (summaryOption) summaryOption.style.display = 'none';
         }
-    })();
-    checkPromises.push(charactersPromise.then(hasCharacters => {
-        if (charactersOption) charactersOption.style.display = hasCharacters ? 'flex' : 'none';
-    }));
-    // Wait for all checks to complete
-    Promise.all(checkPromises).then(() => {
-        mainResolve();
+        // Check timeline
+        if (timelinePath) {
+            const promise = new Promise((resolve) => {
+                if (window[timelineVarName] && window[timelineVarName][chapterNum]) {
+                    resolve(true);
+                } else if (!document.querySelector(`script[src="${timelinePath}"]`)) {
+                    const script = document.createElement('script');
+                    script.src = timelinePath;
+                    script.onload = () => {
+                        resolve(window[timelineVarName] && window[timelineVarName][chapterNum]);
+                    };
+                    script.onerror = () => resolve(false);
+                    document.body.appendChild(script);
+                } else {
+                    resolve(window[timelineVarName] && window[timelineVarName][chapterNum]);
+                }
+            });
+            checkPromises.push(promise.then(hasTimeline => {
+                if (timelineOption) timelineOption.style.display = hasTimeline ? 'flex' : 'none';
+            }));
+        } else {
+            if (timelineOption) timelineOption.style.display = 'none';
+        }
+        // Check characters from Supabase
+        const charactersPromise = (async () => {
+            try {
+                const { data, error, count } = await bibleDataManager.supabaseClient
+                    .from('bible_characters')
+                    .select('id', { count: 'exact', head: true })
+                    .eq('book_file', bibleBooks[currentBook].file)
+                    .eq('chapter', chapterNum);
+                return !error && count > 0;
+            } catch (error) {
+                return false;
+            }
+        })();
+        checkPromises.push(charactersPromise.then(hasCharacters => {
+            if (charactersOption) charactersOption.style.display = hasCharacters ? 'flex' : 'none';
+        }));
+        // Wait for all checks to complete
+        Promise.all(checkPromises).then(() => {
+            mainResolve();
+        });
     });
-});
 }
 // Show chapter summary
 function showChapterSummary() {
@@ -6275,17 +6481,17 @@ function showChapterSummary() {
 // Get summary file path based on book name
 function getSummaryPath(bookName) {
     // New Testament books
-    const newTestamentBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 
-        'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians', 'Philippians', 
-        'Colossians', 'I Thessalonians', 'II Thessalonians', 'I Timothy', 'II Timothy', 
-        'Titus', 'Philemon', 'Hebrews', 'James', 'I Peter', 'II Peter', 'I John', 
+    const newTestamentBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans',
+        'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians', 'Philippians',
+        'Colossians', 'I Thessalonians', 'II Thessalonians', 'I Timothy', 'II Timothy',
+        'Titus', 'Philemon', 'Hebrews', 'James', 'I Peter', 'II Peter', 'I John',
         'II John', 'III John', 'Jude', 'Revelation'];
     // Old Testament books
-    const oldTestamentBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 
-        'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings', 
-        'I Chronicles', 'II Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 
-        'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 
-        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 
+    const oldTestamentBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy',
+        'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings',
+        'I Chronicles', 'II Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms',
+        'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations',
+        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah',
         'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
     const fileName = bookName.toLowerCase().replace(/ /g, '_');
     if (newTestamentBooks.includes(bookName)) {
@@ -6508,7 +6714,7 @@ function initializeScrollbarBehavior() {
         if (element) {
             let hideTimeout;
             // Handle scroll events
-            element.addEventListener('scroll', function() {
+            element.addEventListener('scroll', function () {
                 element.classList.add('scrolling');
                 clearTimeout(hideTimeout);
                 hideTimeout = setTimeout(() => {
@@ -6516,11 +6722,11 @@ function initializeScrollbarBehavior() {
                 }, 1000);
             });
             // Handle mouse hover events
-            element.addEventListener('mouseenter', function() {
+            element.addEventListener('mouseenter', function () {
                 element.classList.add('scrolling');
                 clearTimeout(hideTimeout);
             });
-            element.addEventListener('mouseleave', function() {
+            element.addEventListener('mouseleave', function () {
                 clearTimeout(hideTimeout);
                 hideTimeout = setTimeout(() => {
                     element.classList.remove('scrolling');
@@ -6604,17 +6810,17 @@ async function loadTimelineScriptWithDatabase(path, bookName, chapterNum) {
 // Get timeline file path based on book name
 function getTimelinePath(bookName) {
     // New Testament books
-    const newTestamentBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 
-        'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians', 'Philippians', 
-        'Colossians', 'I Thessalonians', 'II Thessalonians', 'I Timothy', 'II Timothy', 
-        'Titus', 'Philemon', 'Hebrews', 'James', 'I Peter', 'II Peter', 'I John', 
+    const newTestamentBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans',
+        'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians', 'Philippians',
+        'Colossians', 'I Thessalonians', 'II Thessalonians', 'I Timothy', 'II Timothy',
+        'Titus', 'Philemon', 'Hebrews', 'James', 'I Peter', 'II Peter', 'I John',
         'II John', 'III John', 'Jude', 'Revelation'];
     // Old Testament books
-    const oldTestamentBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 
-        'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings', 
-        'I Chronicles', 'II Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 
-        'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 
-        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 
+    const oldTestamentBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy',
+        'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings',
+        'I Chronicles', 'II Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms',
+        'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations',
+        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah',
         'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
     const fileName = bookName.toLowerCase().replace(/ /g, '_');
     if (newTestamentBooks.includes(bookName)) {
@@ -7126,10 +7332,10 @@ async function handleAddCharacter(e) {
     e.preventDefault();
     const name = document.getElementById('character-name').value.trim();
     const description = document.getElementById('character-description').value.trim();
-        if (!name || !description) {
-            showToast('Please fill in all required fields.', 'error');
-            return;
-        }    const saveBtn = document.querySelector('.save-btn');
+    if (!name || !description) {
+        showToast('Please fill in all required fields.', 'error');
+        return;
+    } const saveBtn = document.querySelector('.save-btn');
     saveBtn.disabled = true;
     saveBtn.textContent = 'Saving...';
     try {
@@ -7220,7 +7426,7 @@ async function loadNotesFromSupabase() {
                 verseNotes = {};
             }
         }
-        
+
         // Load bookmarks from bible_verse_bookmarks table
         try {
             const bookmarksResponse = await fetch(`${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}?select=*`, {
@@ -7230,7 +7436,7 @@ async function loadNotesFromSupabase() {
                     'Content-Type': 'application/json'
                 }
             });
-            
+
             if (bookmarksResponse.ok) {
                 const bookmarks = await bookmarksResponse.json();
                 if (bookmarks && bookmarks.length > 0) {
@@ -7251,7 +7457,7 @@ async function loadNotesFromSupabase() {
         } catch (error) {
             console.log('ℹ️ Could not load bookmarks from Supabase:', error.message);
         }
-        
+
         // Load notes from bible_verse_notes table
         try {
             const notesResponse = await fetch(`${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}?select=*`, {
@@ -7261,7 +7467,7 @@ async function loadNotesFromSupabase() {
                     'Content-Type': 'application/json'
                 }
             });
-            
+
             if (notesResponse.ok) {
                 const notes = await notesResponse.json();
                 if (notes && notes.length > 0) {
@@ -7276,7 +7482,7 @@ async function loadNotesFromSupabase() {
                         verseNotes[noteKey].text = note.text;
                         verseNotes[noteKey].chapter = note.chapter;
                         verseNotes[noteKey].verse = note.verse;
-                        
+
                         // Load cross-references and populate crossReferences object
                         if (note.cross_references && note.cross_references.length > 0) {
                             const bookMeta = bibleBooks.find(b => b.file === note.book_file);
@@ -7291,18 +7497,18 @@ async function loadNotesFromSupabase() {
         } catch (error) {
             console.log('ℹ️ Could not load verse notes from Supabase:', error.message);
         }
-        
+
         // Load documentation/notes structure from bible_notes_pages table (separate feature)
         try {
             const serviceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzU0MzYzOSwiZXhwIjoyMDc5MTE5NjM5fQ.WGtQxBTBcJh96Y4ppTiHGQygztdJduf5O4-JNTZBP90';
-            
+
             const docsResponse = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?select=id,title,type,content,parent_id,folder_path&order=id.asc`, {
                 headers: {
                     'apikey': serviceKey,
                     'Authorization': `Bearer ${serviceKey}`
                 }
             });
-            
+
             if (docsResponse.ok) {
                 const rows = await docsResponse.json();
                 if (rows && rows.length > 0) {
@@ -7314,7 +7520,7 @@ async function loadNotesFromSupabase() {
         } catch (error) {
             console.log('ℹ️ Could not load documentation notes:', error.message);
         }
-        
+
         applyAllNoteDisplays();
         return Object.keys(verseNotes).length > 0;
     } catch (error) {
@@ -7334,7 +7540,7 @@ async function loadNotesFromSupabase() {
 function rebuildTreeFromRows(rows) {
     const itemsById = new Map();
     const rootItems = [];
-    
+
     // First pass: create items map
     rows.forEach(row => {
         const item = {
@@ -7348,7 +7554,7 @@ function rebuildTreeFromRows(rows) {
         };
         itemsById.set(row.id, item);
     });
-    
+
     // Second pass: build parent-child relationships
     rows.forEach(row => {
         const item = itemsById.get(row.id);
@@ -7365,7 +7571,7 @@ function rebuildTreeFromRows(rows) {
             rootItems.push(item);
         }
     });
-    
+
     return rootItems;
 }
 // Save a single bookmark to Supabase (optimized for individual verse updates)
@@ -7374,29 +7580,29 @@ async function saveSingleBookmarkToSupabase(noteKey, note) {
         console.log('⏭️ Skipping save - no note or color:', { note });
         return true;
     }
-    
+
     try {
         // noteKey format: "bookFile_chapter_verse" where bookFile might contain underscores
         // Extract chapter and verse (last two numbers)
         const lastUnderscoreIndex = noteKey.lastIndexOf('_');
         const secondLastUnderscoreIndex = noteKey.lastIndexOf('_', lastUnderscoreIndex - 1);
-        
+
         const bookFile = noteKey.substring(0, secondLastUnderscoreIndex);
         const chapter = noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex);
         const verse = noteKey.substring(lastUnderscoreIndex + 1);
-        
+
         if (!bookFile || !chapter || !verse) {
             console.error('❌ Invalid noteKey format:', noteKey);
             return false;
         }
-        
+
         const bookmark = {
             color: note.color,
             timestamp: note.timestamp || new Date().toISOString()
         };
-        
+
         console.log('📤 Attempting to save bookmark:', { noteKey, bookFile, chapter, verse, bookmark });
-        
+
         // Try to update existing bookmark first (PATCH)
         const updateResponse = await fetch(
             `${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}?book_file=eq.${bookFile}&chapter=eq.${parseInt(chapter)}&verse=eq.${parseInt(verse)}`,
@@ -7411,9 +7617,9 @@ async function saveSingleBookmarkToSupabase(noteKey, note) {
                 body: JSON.stringify(bookmark)
             }
         );
-        
+
         console.log('PATCH Response:', { status: updateResponse.status, ok: updateResponse.ok });
-        
+
         // 204 means success but may not have matched any rows, so always try POST
         if (updateResponse.status === 204) {
             // 204 = No Content (could mean no rows matched), try POST
@@ -7425,7 +7631,7 @@ async function saveSingleBookmarkToSupabase(noteKey, note) {
         } else {
             console.log('⚠️ PATCH failed, attempting POST...');
         }
-        
+
         // Always try POST (either PATCH failed or returned 204)
         if (updateResponse.status === 204 || !updateResponse.ok) {
             // If update fails (row doesn't exist), insert new bookmark
@@ -7447,15 +7653,15 @@ async function saveSingleBookmarkToSupabase(noteKey, note) {
                     })
                 }
             );
-            
+
             console.log('POST Response:', { status: insertResponse.status, ok: insertResponse.ok });
-            
+
             if (!insertResponse.ok) {
                 const error = await insertResponse.text();
                 console.error('❌ Failed to save bookmark:', error, insertResponse.status);
                 return false;
             }
-            
+
             console.log('✅ Bookmark created:', `${bookFile} ${chapter}:${verse}`);
             return true;
         }
@@ -7467,7 +7673,7 @@ async function saveSingleBookmarkToSupabase(noteKey, note) {
 async function saveNotesToSupabase() {
     // Save to localStorage immediately so notes appear right away
     localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
-    
+
     // Save bookmarks to Supabase table (one row per verse)
     try {
         // Get all bookmarks from verseNotes
@@ -7490,7 +7696,7 @@ async function saveNotesToSupabase() {
                 }
             }
         });
-        
+
         // If there are bookmarks to save
         if (bookmarks.length > 0) {
             // First, delete existing bookmarks to avoid conflicts
@@ -7512,7 +7718,7 @@ async function saveNotesToSupabase() {
                 } catch (e) {
                     // Ignore delete errors
                 }
-                
+
                 // Insert the bookmark
                 try {
                     const response = await fetch(
@@ -7528,7 +7734,7 @@ async function saveNotesToSupabase() {
                             body: JSON.stringify(bookmark)
                         }
                     );
-                    
+
                     if (!response.ok) {
                         const error = await response.text();
                         console.error('Failed to save bookmark:', error);
@@ -7537,11 +7743,11 @@ async function saveNotesToSupabase() {
                     console.error('Error inserting bookmark:', e);
                 }
             }
-            
+
             console.log('✅ Bookmarks synced to Supabase:', bookmarks.length);
             return true;
         }
-        
+
         return true;
     } catch (error) {
         console.error('Error syncing bookmarks to Supabase:', error);
@@ -7555,7 +7761,7 @@ async function loadMemoryVersesFromSupabase() {
     if (typeof window.memoryVerses === 'undefined') {
         window.memoryVerses = [];
     }
-    
+
     // Load from localStorage first (instant, offline-safe)
     const localVerses = localStorage.getItem('memoryVerses');
     if (localVerses) {
@@ -7567,7 +7773,7 @@ async function loadMemoryVersesFromSupabase() {
         } catch (e) {
         }
     }
-    
+
     // Async sync from Supabase (don't block UI)
     try {
         // Fetch all rows - each row contains one verse_reference
@@ -7608,12 +7814,12 @@ async function loadMemoryVersesFromSupabase() {
 async function toggleMemoryVerse() {
     if (!currentNoteVerse) return;
     const verseReference = `${bibleBooks[currentBook].name} ${currentChapter}:${currentNoteVerse}`;
-    
+
     // Initialize memoryVerses if it doesn't exist
     if (typeof window.memoryVerses === 'undefined') {
         window.memoryVerses = [];
     }
-    
+
     // Toggle memory verse status
     const isMemoryVerse = window.memoryVerses.includes(verseReference);
     if (isMemoryVerse) {
@@ -7623,14 +7829,14 @@ async function toggleMemoryVerse() {
         // Add to memory verses
         window.memoryVerses.push(verseReference);
     }
-    
+
     // Save to localStorage immediately (for instant UI update)
     localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
-    
+
     // Update UI indicators immediately
     markBooksWithMemoryVerses();
     updateVerseMemoryVerseIndicators();
-    
+
     // Update the verse line class
     const verseLine = document.querySelector(`.verse-line[data-verse="${currentNoteVerse}"]`);
     if (verseLine) {
@@ -7640,7 +7846,7 @@ async function toggleMemoryVerse() {
             verseLine.classList.add('memory-verse');
         }
     }
-    
+
     // Async save to Supabase (non-blocking) - don't await
     saveMemoryVersesToSupabase().catch(error => {
     });
@@ -7735,16 +7941,16 @@ function openNotesModal(verseNum = null) {
     if (!isAdmin()) {
         return; // Silently prevent opening in non-admin mode
     }
-    
+
     const overlay = document.getElementById('notes-modal-overlay');
     const modal = document.getElementById('notes-modal');
     const textarea = document.getElementById('notes-textarea');
     const verseRef = document.getElementById('notes-verse-ref');
     const deleteBtn = document.getElementById('delete-note-btn');
     const loadingEl = document.getElementById('notes-loading');
-    
+
     if (!overlay || !modal) return;
-    
+
     // Reset modal state before opening (in case it was previously open)
     modal.classList.remove('closing');
     modal.classList.remove('dragging');
@@ -7753,12 +7959,12 @@ function openNotesModal(verseNum = null) {
     overlay.classList.remove('visible');
     overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.32)';
     overlay.style.transition = '';
-    
+
     // Clear loading state
     if (loadingEl) {
         loadingEl.classList.remove('active');
     }
-    
+
     // If verseNum provided, use it, otherwise check for highlighted verse
     if (verseNum === null) {
         const highlightedVerse = document.querySelector('.verse-line.highlighted');
@@ -7769,14 +7975,14 @@ function openNotesModal(verseNum = null) {
             return;
         }
     }
-    
+
     currentNoteVerse = verseNum;
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
     const existingNote = verseNotes[noteKey];
-    
+
     // Set verse reference
     verseRef.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
-    
+
     // Load existing note if available
     if (existingNote) {
         textarea.innerHTML = existingNote.text || '';
@@ -7787,24 +7993,24 @@ function openNotesModal(verseNum = null) {
         currentNoteColor = null;
         deleteBtn.style.display = 'none';
     }
-    
+
     // Save current scroll position before preventing body scroll
     const scrollY = window.scrollY;
     document.body.style.top = `-${scrollY}px`;
     document.body.classList.add('modal-open');
     document.body.style.overflow = 'hidden';
-    
+
     // Track navigation
     navigateToPage('notes');
-    
+
     // Show overlay with fade-in animation
     overlay.style.display = 'flex';
-    
+
     // Trigger animation on next frame
     requestAnimationFrame(() => {
         overlay.classList.add('visible');
         initializeAndroidBottomSheetGestures();
-        
+
         // Focus textarea after modal is visible
         setTimeout(() => {
             if (textarea) {
@@ -7826,9 +8032,9 @@ function openNotesModal(verseNum = null) {
 function closeNotesModal() {
     const overlay = document.getElementById('notes-modal-overlay');
     const modal = document.getElementById('notes-modal');
-    
+
     if (!overlay || !modal) return;
-    
+
     // Trigger close animation on mobile
     if (window.innerWidth <= 768) {
         modal.classList.add('closing');
@@ -7849,18 +8055,18 @@ function closeNotesModal() {
 function finishClosing() {
     const modal = document.getElementById('notes-modal');
     const overlay = document.getElementById('notes-modal-overlay');
-    
+
     // Restore scroll position
     const scrollYStyle = document.body.style.top;
     document.body.classList.remove('modal-open');
     document.body.style.top = '';
     document.body.style.overflow = '';
-    
+
     if (scrollYStyle) {
         const scrollY = Math.abs(parseInt(scrollYStyle));
         window.scrollTo(0, scrollY);
     }
-    
+
     // Reset modal state for next open
     if (modal) {
         modal.classList.remove('closing');
@@ -7868,14 +8074,14 @@ function finishClosing() {
         modal.style.transform = '';
         modal.style.transition = '';
     }
-    
+
     // Reset overlay state
     if (overlay) {
         overlay.style.backgroundColor = '';
         overlay.style.transition = '';
         overlay.classList.remove('visible');
     }
-    
+
     // Track navigation back to bible page
     navigateToBiblePage();
 }
@@ -7888,14 +8094,14 @@ function finishClosing() {
  */
 function initializeAndroidBottomSheetGestures() {
     if (window.innerWidth > 768) return; // Desktop doesn't need drag
-    
+
     const overlay = document.getElementById('notes-modal-overlay');
     const sheet = document.getElementById('notes-modal');
     const contentArea = document.getElementById('notes-modal-content');
     const textarea = document.getElementById('notes-textarea');
-    
+
     if (!overlay || !sheet || !contentArea) return;
-    
+
     // Ensure textarea is always clickable and editable
     if (textarea) {
         textarea.style.pointerEvents = 'auto';
@@ -7904,7 +8110,7 @@ function initializeAndroidBottomSheetGestures() {
             textarea.focus();
         });
     }
-    
+
     let startY = 0;
     let currentY = 0;
     let isDragging = false;
@@ -7912,10 +8118,10 @@ function initializeAndroidBottomSheetGestures() {
     let lastY = 0;
     let lastTime = 0;
     let startScrollTop = 0;
-    
+
     function handleStart(clientY) {
         const scrollTop = contentArea.scrollTop;
-        
+
         // Only allow dragging if at the top of scroll
         if (scrollTop > 5) {
             isDragging = false;
@@ -7999,7 +8205,7 @@ function initializeAndroidBottomSheetGestures() {
     sheet.addEventListener('touchmove', (e) => {
         const scrollTop = contentArea.scrollTop;
         const deltaY = e.touches[0].clientY - startY;
-        
+
         // Only prevent default when actually dragging the sheet (at top and dragging down)
         if (isDragging && scrollTop <= 5 && deltaY > 0) {
             e.preventDefault();
@@ -8040,7 +8246,7 @@ function handleNotesPaste(e) {
     const clipboardData = e.clipboardData || window.clipboardData;
     const htmlData = clipboardData.getData('text/html');
     const textData = clipboardData.getData('text/plain');
-    
+
     if (htmlData) {
         const cleaned = cleanPastedHtml(htmlData);
         // Use insertHTML for better contenteditable support
@@ -8062,28 +8268,28 @@ function handleNotesPaste(e) {
 function cleanPastedHtml(html) {
     const div = document.createElement('div');
     div.innerHTML = html;
-    
+
     // Remove only dangerous elements
     div.querySelectorAll('script, style, meta, link, form, input, button').forEach(el => el.remove());
-    
+
     // Allowed block and inline tags for rich formatting
-    const allowedTags = ['P', 'DIV', 'BR', 'STRONG', 'B', 'EM', 'I', 'U', 'S', 'STRIKE', 
-                         'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'UL', 'OL', 'LI', 'BLOCKQUOTE',
-                         'CODE', 'PRE', 'SPAN', 'A', 'IMG', 'ARTICLE', 'SECTION', 'FIGURE', 'HR'];
-    
+    const allowedTags = ['P', 'DIV', 'BR', 'STRONG', 'B', 'EM', 'I', 'U', 'S', 'STRIKE',
+        'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'UL', 'OL', 'LI', 'BLOCKQUOTE',
+        'CODE', 'PRE', 'SPAN', 'A', 'IMG', 'ARTICLE', 'SECTION', 'FIGURE', 'HR'];
+
     // Allowed attributes for each tag type
     const allowedAttrs = {
         'A': ['href', 'title', 'style'],
         'IMG': ['src', 'alt', 'title', 'style', 'width', 'height'],
         '*': ['style', 'class'] // Default for all other tags
     };
-    
+
     // Safe CSS properties to preserve
     const safeCssProps = [
         'color', 'background-color', 'font-weight', 'font-style', 'text-decoration',
         'text-align', 'line-height', 'margin', 'padding', 'font-size', 'font-family'
     ];
-    
+
     // Recursively clean elements
     function cleanElement(el) {
         // Remove element if not in allowed list
@@ -8095,7 +8301,7 @@ function cleanPastedHtml(html) {
             el.remove();
             return;
         }
-        
+
         // Clean attributes based on tag type
         const allowedForTag = allowedAttrs[el.tagName] || allowedAttrs['*'];
         Array.from(el.attributes).forEach(attr => {
@@ -8103,12 +8309,12 @@ function cleanPastedHtml(html) {
                 el.removeAttribute(attr.name);
             }
         });
-        
+
         // Clean style attribute - only keep safe CSS properties
         if (el.style && el.style.cssText) {
             const style = el.style.cssText;
             const cleanedStyles = [];
-            
+
             safeCssProps.forEach(prop => {
                 const regex = new RegExp(`${prop}\\s*:\\s*([^;]+)`, 'i');
                 const match = style.match(regex);
@@ -8116,14 +8322,14 @@ function cleanPastedHtml(html) {
                     cleanedStyles.push(`${prop}: ${match[1]}`);
                 }
             });
-            
+
             if (cleanedStyles.length > 0) {
                 el.style.cssText = cleanedStyles.join('; ');
             } else {
                 el.removeAttribute('style');
             }
         }
-        
+
         // Remove empty or unnecessary spans
         if (el.tagName === 'SPAN' && !el.style.cssText && !el.className) {
             while (el.firstChild) {
@@ -8132,29 +8338,29 @@ function cleanPastedHtml(html) {
             el.remove();
             return;
         }
-        
+
         // Clean children
         Array.from(el.children).forEach(cleanElement);
     }
-    
+
     // After cleaning, remove empty list items and unnecessary elements
     function removeEmptyElements(el) {
         let changed = true;
-        
+
         // Keep removing empty elements until no more are found
         while (changed) {
             changed = false;
             const childrenToRemove = [];
-            
+
             Array.from(el.childNodes).forEach(node => {
                 // For elements
                 if (node.nodeType === 1) {
                     // First, recursively clean nested empty elements
                     removeEmptyElements(node);
-                    
+
                     // Check if element is actually empty
                     const hasContent = hasTextContent(node);
-                    
+
                     // Remove empty list items
                     if (node.tagName === 'LI' && !hasContent) {
                         childrenToRemove.push(node);
@@ -8181,11 +8387,11 @@ function cleanPastedHtml(html) {
                     }
                 }
             });
-            
+
             childrenToRemove.forEach(node => node.remove());
         }
     }
-    
+
     // Helper function to check if element has actual text content (not just whitespace)
     function hasTextContent(el) {
         // Check for text nodes with content
@@ -8207,16 +8413,16 @@ function cleanPastedHtml(html) {
         }
         return false;
     }
-    
+
     Array.from(div.children).forEach(child => {
         if (child.tagName === 'UL' || child.tagName === 'OL') {
             removeEmptyElements(child);
         }
     });
     removeEmptyElements(div);
-    
+
     Array.from(div.children).forEach(cleanElement);
-    
+
     return div.innerHTML;
 }
 
@@ -8231,13 +8437,13 @@ async function saveNote() {
         const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
         const lastUnderscoreIndex = noteKey.lastIndexOf('_');
         const secondLastUnderscoreIndex = noteKey.lastIndexOf('_', lastUnderscoreIndex - 1);
-        
+
         const bookFile = noteKey.substring(0, secondLastUnderscoreIndex);
         const chapter = parseInt(noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex));
         const verse = parseInt(noteKey.substring(lastUnderscoreIndex + 1));
-        
+
         console.log('💾 Saving note:', { noteKey, bookFile, chapter, verse, noteText });
-        
+
         if (noteText) {
             // Create or update note entry
             if (!verseNotes[noteKey]) {
@@ -8246,11 +8452,11 @@ async function saveNote() {
             verseNotes[noteKey].text = noteText;
             verseNotes[noteKey].chapter = chapter;
             verseNotes[noteKey].verse = verse;
-            
+
             // Get cross-references for this verse
             const crossRefKey = `${bibleBooks[currentBook].name} ${chapter}:${verse}`;
             const crossRefs = crossReferences[crossRefKey] || [];
-            
+
             // Use Supabase client's upsert method
             const { data, error } = await bibleDataManager.supabaseClient
                 .from('bible_verse_notes')
@@ -8264,7 +8470,7 @@ async function saveNote() {
                 }, {
                     onConflict: 'book_file,chapter,verse'
                 });
-            
+
             if (error) {
                 console.error('❌ Failed to save note:', error);
             } else {
@@ -8274,21 +8480,21 @@ async function saveNote() {
             // Delete note if text is empty
             console.log('🗑️ Deleting note (empty text)');
             delete verseNotes[noteKey];
-            
+
             const { error } = await bibleDataManager.supabaseClient
                 .from('bible_verse_notes')
                 .delete()
                 .eq('book_file', bookFile)
                 .eq('chapter', chapter)
                 .eq('verse', verse);
-            
+
             if (error) {
                 console.error('❌ Failed to delete note:', error);
             } else {
                 console.log('✅ Note deleted:', `${bookFile} ${chapter}:${verse}`);
             }
         }
-        
+
         updateVerseNoteDisplay(currentNoteVerse);
         closeNotesModal();
     } finally {
@@ -8307,13 +8513,13 @@ async function deleteNote() {
         // Delete from Supabase notes table (not bookmarks)
         const lastUnderscoreIndex = noteKey.lastIndexOf('_');
         const secondLastUnderscoreIndex = noteKey.lastIndexOf('_', lastUnderscoreIndex - 1);
-        
+
         const bookFile = noteKey.substring(0, secondLastUnderscoreIndex);
         const chapter = parseInt(noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex));
         const verse = parseInt(noteKey.substring(lastUnderscoreIndex + 1));
-        
+
         console.log('🗑️ Deleting note from Supabase:', { bookFile, chapter, verse });
-        
+
         if (bookFile && chapter && verse) {
             const { error } = await bibleDataManager.supabaseClient
                 .from('bible_verse_notes')
@@ -8321,7 +8527,7 @@ async function deleteNote() {
                 .eq('book_file', bookFile)
                 .eq('chapter', chapter)
                 .eq('verse', verse);
-            
+
             if (error) {
                 console.error('❌ Failed to delete note from Supabase:', error);
             } else {
@@ -8339,18 +8545,18 @@ function updateVerseNoteDisplay(verseNum) {
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     if (!verseLine) return;
-    
+
     console.log('Updating verse note display:', { verseNum, noteKey, noteExists: !!verseNotes[noteKey] });
-    
+
     // Remove all note classes
     verseLine.classList.remove('has-note', 'has-text', 'note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate');
-    
+
     // Remove note indicator if it exists
     const noteIndicator = verseLine.querySelector('.note-indicator');
     if (noteIndicator) {
         noteIndicator.remove();
     }
-    
+
     // Add note classes if note exists
     if (verseNotes[noteKey]) {
         verseLine.classList.add('has-note');
@@ -8386,38 +8592,38 @@ async function preloadChapterNotesAndReferences() {
     try {
         const book = bibleBooks[currentBook];
         const bookFile = book.file;
-        
+
         // Fetch all notes/references for this book and chapter from Supabase
         const { data, error } = await bibleDataManager.supabaseClient
             .from('bible_verse_notes')
             .select('*')
             .eq('book_file', bookFile)
             .eq('chapter', currentChapter);
-        
+
         if (error) {
             console.error('❌ Error preloading notes:', error);
             return;
         }
-        
+
         if (data && data.length > 0) {
             console.log(`📚 Preloaded ${data.length} notes/references for ${bookFile} chapter ${currentChapter}`);
-            
+
             // Update verseNotes and crossReferences objects
             data.forEach(note => {
                 const noteKey = `${bookFile}_${note.chapter}_${note.verse}`;
-                
+
                 // Update or create note entry
                 if (!verseNotes[noteKey]) {
                     verseNotes[noteKey] = {};
                 }
-                
+
                 // Store note text if exists
                 if (note.text) {
                     verseNotes[noteKey].text = note.text;
                     verseNotes[noteKey].chapter = note.chapter;
                     verseNotes[noteKey].verse = note.verse;
                 }
-                
+
                 // Store cross-references if exist
                 if (note.cross_references && note.cross_references.length > 0) {
                     const crossRefKey = `${book.name} ${note.chapter}:${note.verse}`;
@@ -8425,7 +8631,7 @@ async function preloadChapterNotesAndReferences() {
                     console.log(`📖 Loaded ${note.cross_references.length} references for ${crossRefKey}`);
                 }
             });
-            
+
             // Refresh note displays with newly loaded data
             applyAllNoteDisplays();
         }
@@ -8442,7 +8648,7 @@ async function preloadReferencedVerseData() {
         const book = bibleBooks[currentBook];
         const bookFile = book.file;
         const allReferencesToPreload = new Set();
-        
+
         // Go through all cross-references in current chapter
         for (const [crossRefKey, references] of Object.entries(crossReferences)) {
             // Only process references from current chapter (format: "BookName Chapter:Verse")
@@ -8451,7 +8657,7 @@ async function preloadReferencedVerseData() {
                 const refBook = matches[1];
                 const refChapter = parseInt(matches[2]);
                 const refVerse = parseInt(matches[3]);
-                
+
                 // Check if this reference is from current chapter
                 if (refBook === book.name) {
                     if (references && Array.isArray(references)) {
@@ -8462,34 +8668,34 @@ async function preloadReferencedVerseData() {
                 }
             }
         }
-        
+
         if (allReferencesToPreload.size === 0) {
             console.log('📚 No references to preload for current chapter');
             return;
         }
-        
+
         console.log(`🔄 Starting to preload ${allReferencesToPreload.size} referenced verses...`);
-        
+
         // For each reference, preload both English and Tamil verse data
         for (const reference of allReferencesToPreload) {
             const parsed = parseReference(reference);
             if (!parsed) continue;
-            
+
             const { bookName, chapter, startVerse, endVerse } = parsed;
             const bookMeta = bibleBooks.find(b => b.name === bookName);
-            
+
             if (!bookMeta) {
                 console.log(`⚠️ Book not found: ${bookName}`);
                 continue;
             }
-            
+
             // Preload English verse data
             await preloadVerseDataForLanguage(bookMeta.file, chapter, startVerse, endVerse, 'english');
-            
+
             // Preload Tamil verse data
             await preloadVerseDataForLanguage(bookMeta.file, chapter, startVerse, endVerse, 'tamil');
         }
-        
+
         console.log('✅ Finished preloading referenced verse data');
     } catch (error) {
         console.error('❌ Error preloading referenced verse data:', error);
@@ -8505,7 +8711,7 @@ async function preloadVerseDataForLanguage(bookFile, chapter, startVerse, endVer
             bookFile.replace('-', '_'),
             bookFile.replace('_', '-')
         ];
-        
+
         for (const fileVariant of bookFileAlternatives) {
             const { data } = await bibleDataManager.supabaseClient
                 .from('bible_verses')
@@ -8515,7 +8721,7 @@ async function preloadVerseDataForLanguage(bookFile, chapter, startVerse, endVer
                 .eq('language', language)
                 .gte('verse', startVerse)
                 .lte('verse', endVerse);
-            
+
             if (data && data.length > 0) {
                 // Store in cache object based on language
                 const cacheKey = `${fileVariant}_${chapter}_${language}`;
@@ -8534,12 +8740,12 @@ function parseReference(reference) {
     try {
         const match = reference.match(/^(.+?)\s+(\d+):(\d+)(?:-(\d+))?$/);
         if (!match) return null;
-        
+
         const bookName = match[1];
         const chapter = parseInt(match[2]);
         const startVerse = parseInt(match[3]);
         const endVerse = match[4] ? parseInt(match[4]) : startVerse;
-        
+
         return { bookName, chapter, startVerse, endVerse };
     } catch (error) {
         console.error('Error parsing reference:', reference, error);
@@ -8562,7 +8768,7 @@ function showNoteViewerIfExists(verseNum) {
 // Format note content: style chapter:verse headings and **highlighted** text
 function formatNoteContent(text) {
     if (!text) return '';
-    
+
     // Return the formatted HTML content as-is without adding bullet points
     // The content already contains proper HTML formatting from the paste handler
     return text;
@@ -8576,12 +8782,12 @@ function showNoteViewer(verseNum, note) {
     const noteTab = document.querySelector('.note-viewer-tab[data-tab="note"]');
     const tabsContainer = document.querySelector('.note-viewer-tabs');
     const singleTitle = document.getElementById('note-viewer-single-title');
-    
+
     if (!popup) return;
-    
+
     ref.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
     content.innerHTML = formatNoteContent(note.text || '');
-    
+
     // Check if this verse has cross-references
     const bookName = bibleBooks[currentBook].name;
     const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
@@ -8589,7 +8795,7 @@ function showNoteViewer(verseNum, note) {
     const hasRefs = crossRefs && crossRefs.length > 0;
     const hasNote = note && note.text && note.text.trim();
     const isAdminMode = isAdmin();
-    
+
     // Handle tab visibility based on admin mode and content
     if (isAdminMode) {
         // Admin mode: Always show both tabs UNLESS there's only references and no note
@@ -8634,7 +8840,7 @@ function showNoteViewer(verseNum, note) {
         // Non-admin mode: Hide all references, show only notes
         // References are admin-only feature
         window.currentNoteRefs = null; // Clear any reference data
-        
+
         if (hasNote) {
             // Show only note
             if (noteTab) noteTab.style.display = 'none';
@@ -8655,29 +8861,29 @@ function showNoteViewer(verseNum, note) {
             switchNoteViewerTab('note');
         }
     }
-    
+
     // Reset modal transform and height
     if (modal) {
         modal.style.transform = '';
         modal.style.height = '';
         modal.style.transition = '';
     }
-    
+
     // Save current scroll position before hiding overflow
     const scrollY = window.scrollY;
-    
+
     // First set display to flex (required for visibility)
     popup.style.display = 'flex';
-    
+
     // Show the bottom sheet with visible class
     popup.classList.add('visible');
     document.body.classList.add('modal-open');
-    
+
     // Preserve scroll position when setting overflow hidden
     document.body.style.position = 'fixed';
     document.body.style.top = `-${scrollY}px`;
     document.body.style.width = '100%';
-    
+
     // Update admin UI to show/hide edit button
     updateAdminUI();
     // Store current viewing verse for edit button
@@ -8686,19 +8892,19 @@ function showNoteViewer(verseNum, note) {
 function hideNoteViewer() {
     const popup = document.getElementById('note-viewer-popup');
     const modal = document.querySelector('.note-viewer-modal');
-    
+
     if (!popup) return;
-    
+
     // Hide language wrapper when closing
     const langWrapper = document.querySelector('.note-viewer-ref-lang-wrapper');
     if (langWrapper) {
         langWrapper.classList.remove('active');
     }
-    
+
     // Remove visible class to trigger slide down animation
     popup.classList.remove('visible');
     document.body.classList.remove('modal-open');
-    
+
     // Restore scroll position
     const scrollY = document.body.style.top;
     document.body.style.position = '';
@@ -8707,7 +8913,7 @@ function hideNoteViewer() {
     if (scrollY) {
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
-    
+
     // Hide after animation completes
     setTimeout(() => {
         popup.style.display = 'none';
@@ -8746,11 +8952,11 @@ function updateAdminUI() {
     const rightCultOption = document.getElementById('right-cult-option');
     const rightPrayersOption = document.getElementById('right-prayers-option');
     const rightLogoutOption = document.getElementById('right-logout-option');
-    
+
     editButtons.forEach(btn => {
         btn.style.display = isAdminMode ? 'flex' : 'none';
     });
-    
+
     // Show/hide Add Reference button for admin
     if (addRefButton) {
         addRefButton.style.display = isAdminMode ? 'flex' : 'none';
@@ -8764,7 +8970,7 @@ function updateAdminUI() {
         pinnedVersesBtn.style.display = (isAdminMode && pinnedVerses.length > 0) ? 'flex' : 'none';
     }
     // Right menu button should always be visible (removed admin check)
-    
+
     // Show/hide admin-only menu items in right sidebar
     if (rightNotesOption) {
         rightNotesOption.style.display = isAdminMode ? 'flex' : 'none';
@@ -8787,14 +8993,14 @@ function updateAdminUI() {
     if (rightCultOption) {
         rightCultOption.style.display = isAdminMode ? 'flex' : 'none';
     }
-    
+
     if (rightPrayersOption) {
         rightPrayersOption.style.display = isAdminMode ? 'flex' : 'none';
     }
     if (rightLogoutOption) {
         rightLogoutOption.style.display = isAdminMode ? 'flex' : 'none';
     }
-    
+
     // Update admin toggle button state
     if (adminToggle) {
         if (isAdminMode) {
@@ -8855,13 +9061,13 @@ function initializeNotesModal() {
     const saveBtn = document.getElementById('save-note-btn');
     const deleteBtn = document.getElementById('delete-note-btn');
     const textarea = document.getElementById('notes-textarea');
-    
+
     if (!modal) return;
-    
+
     // Add paste event listener to preserve formatting
     if (textarea) {
         textarea.addEventListener('paste', handleNotesPaste);
-        
+
         // Add keyboard handler for text selection and editing
         textarea.addEventListener('keydown', (e) => {
             // Allow Ctrl+A (or Cmd+A on Mac) to select all text
@@ -8875,24 +9081,24 @@ function initializeNotesModal() {
                 sel.addRange(range);
                 return;
             }
-            
+
             // Allow Ctrl+C for copy
             if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
                 return true; // Allow browser default behavior
             }
-            
+
             // Allow Ctrl+X for cut
             if ((e.ctrlKey || e.metaKey) && e.key === 'x') {
                 return true; // Allow browser default behavior
             }
-            
+
             // Allow keyboard selection with Shift+Arrow keys
             if (e.shiftKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
                 return true; // Allow browser default selection behavior
             }
         });
     }
-    
+
     // Close modal handlers
     closeBtn?.addEventListener('click', closeNotesModal);
     modal.addEventListener('click', (e) => {
@@ -8908,9 +9114,9 @@ function initializeNotesModal() {
             deleteNote();
         }
     });
-    
+
     // Color selection removed - note colors no longer available
-    
+
     // Color navigation buttons
     const colorPrev = document.querySelector('.notes-color-prev');
     const colorNext = document.querySelector('.notes-color-next');
@@ -8938,12 +9144,12 @@ function initializeNotesModal() {
     // Mobile drag functionality - expand/collapse bottom sheet
     const noteViewerModal = document.querySelector('.note-viewer-modal');
     const noteViewerHeader = document.querySelector('.note-viewer-header');
-    
+
     // Prevent clicks inside modal from closing it (must be set first)
     noteViewerModal?.addEventListener('click', (e) => {
         e.stopPropagation();
     });
-    
+
     // Close note viewer when clicking on overlay background only
     const noteViewerOverlay = document.getElementById('note-viewer-popup');
     noteViewerOverlay?.addEventListener('click', (e) => {
@@ -9275,7 +9481,7 @@ async function updateSummaryInSupabase(summaryId, content) {
         }
         const { error } = await bibleDataManager.supabaseClient
             .from('chapter_summaries')
-            .update({ 
+            .update({
                 content: content,
                 updated_at: new Date().toISOString()
             })
@@ -9525,7 +9731,7 @@ async function updateTimelineInSupabase(eventId, verse, description) {
         }
         const { error } = await bibleDataManager.supabaseClient
             .from('chapter_timeline')
-            .update({ 
+            .update({
                 event_description: description,
                 verse_reference: verse,
                 updated_at: new Date().toISOString()
@@ -9950,8 +10156,8 @@ async function addTimelineEvent() {
             .eq('chapter', chapterNum)
             .order('order_index', { ascending: false })
             .limit(1);
-        const nextOrderIndex = maxOrderData && maxOrderData.length > 0 
-            ? maxOrderData[0].order_index + 10 
+        const nextOrderIndex = maxOrderData && maxOrderData.length > 0
+            ? maxOrderData[0].order_index + 10
             : 10;
         const { error } = await bibleDataManager.supabaseClient
             .from('chapter_timeline')
@@ -10064,8 +10270,8 @@ async function insertTimelineEventAt(position, description, verseReference = '')
             newOrderIndex = existingEvents.length > 0 ? existingEvents[0].order_index - 10 : 10;
         } else if (position >= existingEvents.length) {
             // Insert at end
-            newOrderIndex = existingEvents.length > 0 
-                ? existingEvents[existingEvents.length - 1].order_index + 10 
+            newOrderIndex = existingEvents.length > 0
+                ? existingEvents[existingEvents.length - 1].order_index + 10
                 : 10;
         } else {
             // Insert between existing items
@@ -10112,7 +10318,7 @@ async function reindexTimeline(bookFile, chapter) {
             .order('id', { ascending: true });
         if (!events || events.length === 0) return;
         // Update each event with new order_index (increments of 10)
-        const updates = events.map((event, index) => 
+        const updates = events.map((event, index) =>
             bibleDataManager.supabaseClient
                 .from('chapter_timeline')
                 .update({ order_index: (index + 1) * 10 })
@@ -10210,8 +10416,8 @@ async function saveNewTimelineItem(button) {
             .eq('chapter', chapterNum)
             .order('order_index', { ascending: false })
             .limit(1);
-        const nextOrderIndex = maxOrderData && maxOrderData.length > 0 
-            ? maxOrderData[0].order_index + 10 
+        const nextOrderIndex = maxOrderData && maxOrderData.length > 0
+            ? maxOrderData[0].order_index + 10
             : 10;
         const { error } = await bibleDataManager.supabaseClient
             .from('chapter_timeline')
@@ -10616,18 +10822,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close right sidebar when clicking outside (both mobile and desktop)
     document.addEventListener('click', (e) => {
         if (rightSidebar && rightMenuBtn) {
-            const isSidebarOpen = window.innerWidth <= 768 
+            const isSidebarOpen = window.innerWidth <= 768
                 ? rightSidebar.classList.contains('drawer-open')
                 : !rightSidebar.classList.contains('hidden');
-            if (isSidebarOpen && 
-                !rightSidebar.contains(e.target) && 
+            if (isSidebarOpen &&
+                !rightSidebar.contains(e.target) &&
                 !rightMenuBtn.contains(e.target)) {
                 rightSidebar.classList.add('hidden');
                 rightSidebar.classList.remove('drawer-open');
             }
         }
     });
-    
+
     // Helper function to close right sidebar drawer
     function closeRightSidebar() {
         if (rightSidebar) {
@@ -10635,7 +10841,7 @@ document.addEventListener('DOMContentLoaded', () => {
             rightSidebar.classList.remove('drawer-open');
         }
     }
-    
+
     // Bible Reading option - navigate to Bible Reading page
     if (bibleReadingOption) {
         bibleReadingOption.addEventListener('click', () => {
@@ -10732,11 +10938,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.removeItem('currentUserName');
                 localStorage.removeItem('currentUserIsGuest');
                 localStorage.removeItem('isAdmin');
-            } catch (e) {}
+            } catch (e) { }
             window.location.href = 'login.html';
         });
     }
-    
+
     // Disable copy functionality on the entire document (except notes-textarea)
     document.addEventListener('copy', (e) => {
         const notesTextarea = document.getElementById('notes-textarea');
@@ -10747,7 +10953,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         return false;
     });
-    
+
     // Disable context menu (right-click) except in notes-textarea
     document.addEventListener('contextmenu', (e) => {
         const notesTextarea = document.getElementById('notes-textarea');
@@ -10758,7 +10964,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         return false;
     });
-    
+
     // Disable text selection on the main scripture content
     const scriptureText = document.querySelector('.scripture-text');
     if (scriptureText) {
@@ -10767,7 +10973,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scriptureText.style.mozUserSelect = 'none';
         scriptureText.style.msUserSelect = 'none';
     }
-    
+
     // Disable selection on mobile with touch events (except in notes-textarea)
     document.addEventListener('selectstart', (e) => {
         // Allow selection in notes-textarea
@@ -10778,7 +10984,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         return false;
     });
-    
+
     // Prevent drag and drop for copying text (except in notes-textarea)
     document.addEventListener('dragstart', (e) => {
         const notesTextarea = document.getElementById('notes-textarea');
@@ -10788,7 +10994,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         return false;
     });
-    
+
     // Handle copy in notes-textarea for selected text
     const notesTextarea = document.getElementById('notes-textarea');
     if (notesTextarea) {
@@ -10798,7 +11004,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (selection.toString()) {
                 // Get the selected HTML content
                 const selectedHTML = selection.toString();
-                
+
                 // Copy to clipboard using both methods for better compatibility
                 if (navigator.clipboard && navigator.clipboard.writeText) {
                     e.preventDefault(); // Prevent default to use our handler
@@ -10822,14 +11028,14 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function getVerseRanges(verses) {
     if (!verses || verses.length === 0) return [];
-    
+
     // Sort and deduplicate
     const uniqueVerses = [...new Set(verses)].sort((a, b) => a - b);
-    
+
     const ranges = [];
     let rangeStart = uniqueVerses[0];
     let rangeEnd = uniqueVerses[0];
-    
+
     for (let i = 1; i < uniqueVerses.length; i++) {
         if (uniqueVerses[i] === rangeEnd + 1) {
             // Consecutive verse, extend the range
@@ -10841,10 +11047,10 @@ function getVerseRanges(verses) {
             rangeEnd = uniqueVerses[i];
         }
     }
-    
+
     // Add the last range
     ranges.push({ start: rangeStart, end: rangeEnd });
-    
+
     return ranges;
 }
 
@@ -10873,10 +11079,10 @@ function formatVerseRanges(ranges) {
  */
 function consolidateVerses(versesToAdd) {
     if (!versesToAdd || versesToAdd.length === 0) return [];
-    
+
     // Group verses by book and chapter
     const grouped = {};
-    
+
     versesToAdd.forEach(verse => {
         const key = `${verse.book}:${verse.chapter}`;
         if (!grouped[key]) {
@@ -10888,14 +11094,14 @@ function consolidateVerses(versesToAdd) {
         }
         grouped[key].verses.push(verse.verse);
     });
-    
+
     // Convert to consolidated format
     const consolidated = [];
     for (const key in grouped) {
         const group = grouped[key];
         const ranges = getVerseRanges(group.verses);
         const rangeStr = formatVerseRanges(ranges);
-        
+
         consolidated.push({
             book: group.book,
             chapter: group.chapter,
@@ -10904,7 +11110,7 @@ function consolidateVerses(versesToAdd) {
             display: `${group.book} ${group.chapter} : ${rangeStr}`
         });
     }
-    
+
     return consolidated;
 }
 
@@ -10918,22 +11124,22 @@ async function getRecentSermons() {
         if (!window.supabase) {
             return [];
         }
-        
+
         const supabase = window.supabase.createClient(
             'https://encjogfdbrfcatvytpir.supabase.co',
             'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck'
         );
-        
+
         const { data, error } = await supabase
             .from('sermons')
             .select('id, title, tamil_title, description, sermon_date, verses')
             .order('sermon_date', { ascending: false })
             .limit(10);
-        
+
         if (error) {
             return [];
         }
-        
+
         return data || [];
     } catch (error) {
         return [];
@@ -10953,11 +11159,11 @@ async function showSermonSelectionSheet(versesToAdd) {
         sermonModal.className = 'sermon-selection-modal';
         document.body.appendChild(sermonModal);
     }
-    
+
     // Show loading state
     const consolidatedVerses = consolidateVerses(versesToAdd);
     const verseDisplayText = consolidatedVerses.map(v => v.display).join(', ');
-    
+
     sermonModal.innerHTML = `
         <div class="sermon-modal-backdrop"></div>
         <div class="sermon-modal-content">
@@ -10983,14 +11189,14 @@ async function showSermonSelectionSheet(versesToAdd) {
             </div>
         </div>
     `;
-    
+
     sermonModal.classList.add('visible');
     document.body.classList.add('sermon-modal-open');
     document.body.style.overflow = 'hidden';
-    
+
     // Fetch recent sermons
     const sermons = await getRecentSermons();
-    
+
     // Render sermons
     const sermonBody = sermonModal.querySelector('.sermon-modal-body');
     if (sermons.length === 0) {
@@ -10999,7 +11205,7 @@ async function showSermonSelectionSheet(versesToAdd) {
         // Show only the most recent sermon by default
         const renderSermons = (sermonList, showAll = false) => {
             const displaySermons = showAll ? sermonList : [sermonList[0]];
-            
+
             let sermonListHTML = '<div class="sermon-list">';
             displaySermons.forEach((sermon) => {
                 const dateStr = new Date(sermon.sermon_date).toLocaleDateString('en-US', {
@@ -11007,13 +11213,13 @@ async function showSermonSelectionSheet(versesToAdd) {
                     month: 'short',
                     day: 'numeric'
                 });
-                const displayTitle = sermon.tamil_title && sermon.tamil_title.trim() 
+                const displayTitle = sermon.tamil_title && sermon.tamil_title.trim()
                     ? `${sermon.title} (${sermon.tamil_title})`
                     : sermon.title;
-                
+
                 // Preselect the first sermon when showing default view
                 const isPreselected = !showAll;
-                
+
                 sermonListHTML += `
                     <div class="sermon-item ${isPreselected ? 'selected' : ''}" data-sermon-id="${sermon.id}">
                         <div class="sermon-item-header">
@@ -11026,7 +11232,7 @@ async function showSermonSelectionSheet(versesToAdd) {
                     </div>
                 `;
             });
-            
+
             // Add "Any Other Sermon?" link if not showing all
             if (!showAll && sermons.length > 1) {
                 sermonListHTML += `
@@ -11035,17 +11241,17 @@ async function showSermonSelectionSheet(versesToAdd) {
                     </div>
                 `;
             }
-            
+
             sermonListHTML += '</div>';
             sermonBody.innerHTML = sermonListHTML;
-            
+
             // Enable button if showing default view (first sermon is preselected)
             if (!showAll) {
                 sermonModal.querySelector('.sermon-modal-save').disabled = false;
             } else {
                 sermonModal.querySelector('.sermon-modal-save').disabled = true;
             }
-            
+
             // Add click handlers to sermon items
             sermonBody.querySelectorAll('.sermon-item').forEach(item => {
                 item.addEventListener('click', () => {
@@ -11054,7 +11260,7 @@ async function showSermonSelectionSheet(versesToAdd) {
                     sermonModal.querySelector('.sermon-modal-save').disabled = false;
                 });
             });
-            
+
             // Add click handler for "Any Other Sermon?" link
             const viewAllBtn = sermonBody.querySelector('.sermon-view-all-btn');
             if (viewAllBtn) {
@@ -11064,27 +11270,27 @@ async function showSermonSelectionSheet(versesToAdd) {
                 });
             }
         };
-        
+
         // Initial render with only the most recent sermon
         renderSermons(sermons, false);
     }
-    
+
     // Close modal
     const closeModal = () => {
         sermonModal.classList.remove('visible');
         document.body.classList.remove('sermon-modal-open');
         document.body.style.overflow = '';
-        
+
         // Clear inline transform after transition completes
         setTimeout(() => {
             sermonModal.querySelector('.sermon-modal-content').style.transform = '';
         }, 300); // Match the 0.3s transition duration
     };
-    
+
     sermonModal.querySelector('.sermon-modal-close').addEventListener('click', closeModal);
     sermonModal.querySelector('.sermon-modal-backdrop').addEventListener('click', closeModal);
     sermonModal.querySelector('.sermon-modal-cancel').addEventListener('click', closeModal);
-    
+
     // Add drag-to-close functionality
     const content = sermonModal.querySelector('.sermon-modal-content');
     const modalBody = sermonModal.querySelector('.sermon-modal-body');
@@ -11095,10 +11301,10 @@ async function showSermonSelectionSheet(versesToAdd) {
     let lastY = 0;
     let lastTime = 0;
     let startScrollTop = 0;
-    
+
     function handleStart(clientY) {
         const scrollTop = modalBody.scrollTop;
-        
+
         // Only allow dragging if at the top of scroll
         if (scrollTop > 5) {
             isDragging = false;
@@ -11182,7 +11388,7 @@ async function showSermonSelectionSheet(versesToAdd) {
     content.addEventListener('touchmove', (e) => {
         const scrollTop = modalBody.scrollTop;
         const deltaY = e.touches[0].clientY - startY;
-        
+
         // Only prevent default when actually dragging the sheet (at top and dragging down)
         if (isDragging && scrollTop <= 5 && deltaY > 0) {
             e.preventDefault();
@@ -11211,14 +11417,14 @@ async function showSermonSelectionSheet(versesToAdd) {
             handleEnd();
         }
     });
-    
+
     // Save to sermon
     sermonModal.querySelector('.sermon-modal-save').addEventListener('click', async () => {
         const selectedSermon = sermonBody.querySelector('.sermon-item.selected');
         if (!selectedSermon) return;
-        
+
         const sermonId = parseInt(selectedSermon.dataset.sermonId);
-        
+
         try {
             // Find the sermon from the list
             const sermon = sermons.find(s => s.id === sermonId);
@@ -11226,36 +11432,36 @@ async function showSermonSelectionSheet(versesToAdd) {
                 showToast('Sermon not found', 'error');
                 return;
             }
-            
+
             // Consolidate verses into ranges
             const consolidatedVersesToAdd = consolidateVerses(versesToAdd);
-            
+
             // Merge verses
             const existingVerses = sermon.verses || [];
             const newVerses = [...existingVerses];
-            
+
             // Add new verse ranges if not already in the sermon
             consolidatedVersesToAdd.forEach(newVerseRange => {
                 const verseRangeKey = `${newVerseRange.book}:${newVerseRange.chapter}:${newVerseRange.ranges.map(r => r.start === r.end ? r.start : `${r.start}-${r.end}`).join(',')}`;
-                
+
                 const alreadyExists = newVerses.some(v => {
                     if (v.book !== newVerseRange.book || v.chapter !== newVerseRange.chapter) {
                         return false;
                     }
-                    
+
                     // Check if all verses in the new range already exist
                     const existingVersesInChapter = Array.isArray(v.verses) ? v.verses : [v.verse];
                     return newVerseRange.verses.every(verse => existingVersesInChapter.includes(verse));
                 });
-                
+
                 if (!alreadyExists) {
                     newVerses.push(newVerseRange);
                 }
             });
-            
+
             // Update sermon with new verses
             await updateSermon(sermonId, { verses: newVerses });
-            
+
             closeModal();
             showToast('Added...', 'success');
         } catch (error) {
@@ -11275,23 +11481,23 @@ async function updateSermon(sermonId, updates) {
         if (!window.supabase) {
             throw new Error('Supabase not available');
         }
-        
+
         const supabase = window.supabase.createClient(
             'https://encjogfdbrfcatvytpir.supabase.co',
             'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck'
         );
-        
+
         const { data, error } = await supabase
             .from('sermons')
             .update(updates)
             .eq('id', sermonId)
             .select()
             .single();
-        
+
         if (error) {
             throw error;
         }
-        
+
         return data;
     } catch (error) {
         throw error;
@@ -11320,7 +11526,7 @@ function initializePinnedVerses() {
         console.error('Error loading pinned verses:', e);
         pinnedVerses = [];
     }
-    
+
     // Load from Supabase immediately (no delay)
     if (window.loadPinnedVersesFromSupabase) {
         try {
@@ -11353,9 +11559,9 @@ function initializePinnedVerses() {
  * @returns {boolean} - True if verse is pinned in current book/chapter
  */
 function isPinnedInCurrentChapter(verseNum) {
-    return pinnedVerses.some(v => 
-        v.verse === verseNum && 
-        v.book === currentBook && 
+    return pinnedVerses.some(v =>
+        v.verse === verseNum &&
+        v.book === currentBook &&
         v.chapter === currentChapter
     );
 }
@@ -11367,14 +11573,14 @@ function isPinnedInCurrentChapter(verseNum) {
 function refreshPinnedVerseDisplay() {
     const contentArea = document.querySelector('.scripture-text');
     if (!contentArea) return;
-    
+
     // Get all verse containers in the current chapter
     contentArea.querySelectorAll('.verse-container').forEach(container => {
         const verseNum = parseInt(container.dataset.verse);
-        
+
         // Check if this verse is pinned
         const isPinned = isPinnedInCurrentChapter(verseNum);
-        
+
         if (isPinned) {
             // Add the pinned-verse-highlight class if not already present
             if (!container.classList.contains('pinned-verse-highlight')) {
@@ -11393,8 +11599,8 @@ function refreshPinnedVerseDisplay() {
  * @returns {Array} - Array of pinned verse objects for current book/chapter
  */
 function getPinnedVersesForCurrentChapter() {
-    return pinnedVerses.filter(v => 
-        v.book === currentBook && 
+    return pinnedVerses.filter(v =>
+        v.book === currentBook &&
         v.chapter === currentChapter
     );
 }
@@ -11409,25 +11615,25 @@ function pinVerse(verseNum) {
         book: currentBook,
         chapter: currentChapter
     };
-    
+
     // Check if already pinned in this chapter
-    const exists = pinnedVerses.some(v => 
-        v.verse === verseNum && 
-        v.book === currentBook && 
+    const exists = pinnedVerses.some(v =>
+        v.verse === verseNum &&
+        v.book === currentBook &&
         v.chapter === currentChapter
     );
-    
+
     if (!exists) {
         pinnedVerses.push(pinnedVerse);
         savePinnedVersesToStorage();
-        
+
         // Sync to Supabase if user is authenticated
         if (window.addPinnedVerseToSupabase) {
             addPinnedVerseToSupabase(verseNum, currentBook, currentChapter).catch(err => {
                 console.warn('Failed to sync to Supabase:', err);
             });
         }
-        
+
         updatePinButtonBar();
     }
 }
@@ -11437,18 +11643,18 @@ function pinVerse(verseNum) {
  * @param {number} verseNum - The verse number to unpin
  */
 function unpinVerseFromCurrentChapter(verseNum) {
-    pinnedVerses = pinnedVerses.filter(v => 
+    pinnedVerses = pinnedVerses.filter(v =>
         !(v.verse === verseNum && v.book === currentBook && v.chapter === currentChapter)
     );
     savePinnedVersesToStorage();
-    
+
     // Sync to Supabase if user is authenticated
     if (window.removePinnedVerseFromSupabase) {
         removePinnedVerseFromSupabase(verseNum, currentBook, currentChapter).catch(err => {
             console.warn('Failed to sync to Supabase:', err);
         });
     }
-    
+
     updatePinButtonBar();
 }
 
@@ -11465,30 +11671,30 @@ function savePinnedVersesToStorage() {
 function setupVerseHeaderToggle() {
     const contentArea = document.querySelector('.scripture-text');
     if (!contentArea) return;
-    
+
     // Get all collapsible headers
     const collapsibleHeaders = contentArea.querySelectorAll('.verse-header.collapsible');
-    
+
     collapsibleHeaders.forEach(header => {
         const toggleBtn = header.querySelector('.verse-header-toggle');
-        
+
         if (!toggleBtn) return;
-        
+
         // Add click listener to entire header section (including subtext)
-        header.addEventListener('click', function(e) {
+        header.addEventListener('click', function (e) {
             // Don't trigger if clicking on other interactive elements
             if (e.target.closest('.verse-actions') || e.target.closest('.cross-ref-icon')) {
                 return;
             }
-            
+
             const headerId = toggleBtn.dataset.headerId;
             const subtextElement = document.getElementById(headerId);
-            
+
             if (!subtextElement) return;
-            
+
             const isExpanded = subtextElement.classList.contains('visible');
             const toggleIcon = toggleBtn.querySelector('.toggle-icon');
-            
+
             if (isExpanded) {
                 // Collapse
                 subtextElement.classList.remove('visible');
@@ -11500,7 +11706,7 @@ function setupVerseHeaderToggle() {
             }
         });
     });
-    
+
     // Setup expand all button
     setupExpandAllButton();
 }
@@ -11511,28 +11717,28 @@ function setupVerseHeaderToggle() {
 function setupExpandAllButton() {
     const expandAllBtn = document.getElementById('expand-all-headers-btn');
     if (!expandAllBtn) return;
-    
-    expandAllBtn.addEventListener('click', function(e) {
+
+    expandAllBtn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        
+
         const contentArea = document.querySelector('.scripture-text');
         if (!contentArea) return;
-        
+
         const subtexts = contentArea.querySelectorAll('.verse-header-subtext');
-        
+
         // Check if all are expanded
-        const allExpanded = Array.from(subtexts).every(subtext => 
+        const allExpanded = Array.from(subtexts).every(subtext =>
             subtext.classList.contains('visible')
         );
-        
+
         subtexts.forEach(subtext => {
             const headerId = subtext.id;
             const toggleBtn = contentArea.querySelector(`[data-header-id="${headerId}"]`);
-            
+
             if (toggleBtn) {
                 const toggleIcon = toggleBtn.querySelector('.toggle-icon');
-                
+
                 if (allExpanded) {
                     // Collapse all
                     subtext.classList.remove('visible');
@@ -11554,10 +11760,10 @@ function setupExpandAllButton() {
 function updatePinButtonBar() {
     const pinnedVersesBtn = document.getElementById('pinned-verses-btn');
     if (!pinnedVersesBtn) return;
-    
+
     const isAdminMode = isAdmin();
     const currentChapterPinned = getPinnedVersesForCurrentChapter();
-    
+
     // Show button only if admin AND there are pinned verses in current chapter
     if (isAdminMode && currentChapterPinned.length > 0) {
         pinnedVersesBtn.style.display = 'flex';
@@ -11596,14 +11802,14 @@ function scrollToVerseWithHighlight(verseNum) {
         // Get the top bar height and add padding
         const topBar = document.querySelector('.top-bar');
         const offset = topBar ? topBar.offsetHeight + 20 : 100; // 20px extra padding
-        
+
         // Scroll with offset to account for top nav
         const elementPosition = verseElement.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({
             top: elementPosition,
             behavior: 'smooth'
         });
-        
+
         // Apply the same highlight style as left-pane selection (permanent)
         verseElement.classList.add('left-pane-selected');
     }
@@ -11617,14 +11823,14 @@ function scrollToVerseWithHighlight(verseNum) {
         const topNavHeight = 80; // height of top bar with padding
         const extraPadding = 20; // additional padding
         const totalOffset = topNavHeight + extraPadding;
-        
+
         const versePosition = verseElement.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = versePosition - totalOffset;
         window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth'
         });
-        
+
         // Highlight the verse briefly
         verseElement.classList.add('verse-scroll-highlight');
         setTimeout(() => {
@@ -11643,32 +11849,32 @@ function showPinnedVersesBottomSheet() {
         bottomSheet.className = 'pinned-verses-modal-overlay';
         document.body.appendChild(bottomSheet);
     }
-    
+
     // Get only pinned verses for the CURRENT chapter
     const currentChapterPinned = getPinnedVersesForCurrentChapter();
-    
+
     if (currentChapterPinned.length === 0) {
         showToast('No pinned verses in this chapter', 'info');
         return;
     }
-    
+
     // Build the content - only for current chapter verses
     let versesHtml = '';
     currentChapterPinned.forEach(pinnedVerse => {
         const verseNum = pinnedVerse.verse;
         const savedBook = pinnedVerse.book;
         const savedChapter = pinnedVerse.chapter;
-        
+
         // Get verse text from current view
         const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
         let verseText = '';
-        
+
         if (verseElement) {
             verseText = verseElement.textContent.trim().replace(/^\d+/, '').trim();
         } else {
             verseText = '(Verse text not available)';
         }
-        
+
         // Get the book name from the saved book index
         const book = bibleBooks[savedBook];
         if (!book) {
@@ -11676,7 +11882,7 @@ function showPinnedVersesBottomSheet() {
             return; // Skip this verse if book data is invalid
         }
         const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
-        
+
         versesHtml += `
             <div class="pinned-verse-list-item" data-verse="${verseNum}">
                 <div class="pinned-verse-list-header">
@@ -11692,7 +11898,7 @@ function showPinnedVersesBottomSheet() {
             </div>
         `;
     });
-    
+
     // Set up the bottom sheet content - matching sermon modal structure
     bottomSheet.innerHTML = `
         <div class="pinned-verses-backdrop"></div>
@@ -11714,28 +11920,28 @@ function showPinnedVersesBottomSheet() {
             </div>
         </div>
     `;
-    
+
     // Show the bottom sheet
     bottomSheet.classList.add('visible');
     document.body.classList.add('pinned-verses-sheet-open');
     document.body.style.overflow = 'hidden';
-    
+
     // Add event listeners
     const closeBtn = bottomSheet.querySelector('.pinned-verses-close-btn');
     const backdrop = bottomSheet.querySelector('.pinned-verses-backdrop');
     const content = bottomSheet.querySelector('.pinned-verses-content');
     const body = bottomSheet.querySelector('.pinned-verses-body');
-    
+
     const closePinnedSheet = (isDragClose = false) => {
         if (isDragClose) {
             // When closing via drag, we need to animate from current position to off-screen
             // The dragging class is still on, so we remove it and set transform in same frame
             content.classList.remove('dragging');
-            
+
             // Use requestAnimationFrame to ensure transition is enabled before animating
             requestAnimationFrame(() => {
                 content.style.transform = 'translateY(100%)';
-                
+
                 // After animation completes, clean up
                 setTimeout(() => {
                     bottomSheet.classList.remove('visible');
@@ -11749,17 +11955,17 @@ function showPinnedVersesBottomSheet() {
             bottomSheet.classList.remove('visible');
             document.body.classList.remove('pinned-verses-sheet-open');
             document.body.style.overflow = '';
-            
+
             // Clear inline transform after transition completes
             setTimeout(() => {
                 content.style.transform = '';
             }, 300);
         }
     };
-    
+
     closeBtn.addEventListener('click', () => closePinnedSheet(false));
     backdrop.addEventListener('click', () => closePinnedSheet(false));
-    
+
     // Add drag-to-close functionality
     let startY = 0;
     let currentY = 0;
@@ -11768,10 +11974,10 @@ function showPinnedVersesBottomSheet() {
     let lastY = 0;
     let lastTime = 0;
     let startScrollTop = 0;
-    
+
     function handleStart(clientY) {
         const scrollTop = body.scrollTop;
-        
+
         // Only allow dragging if at the top of scroll
         if (scrollTop > 5) {
             isDragging = false;
@@ -11857,7 +12063,7 @@ function showPinnedVersesBottomSheet() {
     content.addEventListener('touchmove', (e) => {
         const scrollTop = body.scrollTop;
         const deltaY = e.touches[0].clientY - startY;
-        
+
         // Only prevent default when actually dragging the sheet (at top and dragging down)
         if (isDragging && scrollTop <= 5 && deltaY > 0) {
             e.preventDefault();
@@ -11886,7 +12092,7 @@ function showPinnedVersesBottomSheet() {
             handleEnd();
         }
     });
-    
+
     // Add event listeners to unpin buttons
     const unpinBtns = bottomSheet.querySelectorAll('.pinned-verse-list-unpin');
     unpinBtns.forEach(btn => {
@@ -11894,10 +12100,10 @@ function showPinnedVersesBottomSheet() {
             e.stopPropagation();
             const verseNum = parseInt(btn.dataset.verse);
             const verseItem = btn.closest('.pinned-verse-list-item');
-            
+
             // Add animation class
             verseItem.classList.add('pinned-verse-removing');
-            
+
             // Wait for animation to complete before unpinning (matches CSS animation duration)
             setTimeout(() => {
                 unpinVerseFromCurrentChapter(verseNum);
@@ -11907,7 +12113,7 @@ function showPinnedVersesBottomSheet() {
             }, 600);
         });
     });
-    
+
     // Add event listeners to verse items
     const verseItems = bottomSheet.querySelectorAll('.pinned-verse-list-item');
     verseItems.forEach(item => {
@@ -11916,7 +12122,7 @@ function showPinnedVersesBottomSheet() {
                 const verseNum = parseInt(item.dataset.verse);
                 // Close sheet immediately
                 closePinnedSheet();
-                
+
                 // Clear any previous selections
                 const contentArea = document.querySelector('.scripture-text');
                 if (contentArea) {
@@ -11928,7 +12134,7 @@ function showPinnedVersesBottomSheet() {
                         v.classList.remove('left-pane-selected');
                         v.style.backgroundColor = '';
                     });
-                    
+
                     // Add highlight to the selected verse (same as left pane)
                     const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
                     const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
@@ -11939,7 +12145,7 @@ function showPinnedVersesBottomSheet() {
                         verseContainer.classList.add('left-pane-selected');
                     }
                 }
-                
+
                 // Scroll to verse (same as left pane)
                 scrollToVerse(verseNum);
             }
@@ -11950,47 +12156,47 @@ function showPinnedVersesBottomSheet() {
 // Cross Reference in Note Viewer Tab Functions
 function openNoteViewerWithReferences(verseNum, crossRefs) {
     console.log('openNoteViewerWithReferences called:', { verseNum, crossRefs });
-    
+
     const overlay = document.getElementById('note-viewer-popup');
     const refElement = document.getElementById('note-viewer-ref');
     const editBtn = document.getElementById('note-viewer-edit-btn');
     const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
-    
+
     console.log('Elements found:', { overlay: !!overlay, refElement: !!refElement, refTab: !!refTab });
-    
+
     if (!overlay || !refElement) {
         console.error('Missing overlay or refElement');
         return;
     }
-    
+
     // Update verse reference
     const bookName = bibleBooks[currentBook].name;
     refElement.textContent = `${bookName} ${currentChapter}:${verseNum}`;
-    
+
     // Hide edit button (no note to edit)
     if (editBtn) editBtn.style.display = 'none';
-    
+
     // Show references tab
     if (refTab) {
         refTab.style.display = 'block';
         console.log('References tab shown');
     }
-    
+
     // Switch to references tab
     switchNoteViewerTab('references');
-    
+
     // Ensure language button states match current language
     document.querySelectorAll('.note-viewer-ref-lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === noteRefCurrentLang);
     });
-    
+
     // Store current refs for language switching
     window.currentNoteRefs = { refs: crossRefs, verseNum };
-    
+
     // Load references
     console.log('About to load references with noteRefCurrentLang:', noteRefCurrentLang);
     loadNoteReferences(crossRefs);
-    
+
     // Show modal
     overlay.style.display = 'flex';
     setTimeout(() => overlay.classList.add('show'), 10);
@@ -12001,25 +12207,25 @@ function switchNoteViewerTab(tabName) {
     document.querySelectorAll('.note-viewer-tab').forEach(tab => {
         tab.classList.toggle('active', tab.dataset.tab === tabName);
     });
-    
+
     // Update tab content
     document.querySelectorAll('.note-viewer-tab-content').forEach(content => {
         content.classList.toggle('active', content.id === `${tabName}-tab-content`);
     });
-    
+
     // Hide language wrapper when switching away from references tab
     const langWrapper = document.querySelector('.note-viewer-ref-lang-wrapper');
     if (tabName !== 'references' && langWrapper) {
         langWrapper.classList.remove('active');
     }
-    
+
     // Load references when switching to references tab
     if (tabName === 'references' && window.currentNoteRefs) {
         // Ensure language button states match current language
         document.querySelectorAll('.note-viewer-ref-lang-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === noteRefCurrentLang);
         });
-        
+
         // Show loader on first load, not on subsequent tab switches
         const showLoader = !referencesLoadedInViewer;
         console.log('Loading references on tab switch with lang:', noteRefCurrentLang, 'showLoader:', showLoader);
@@ -12030,21 +12236,21 @@ function switchNoteViewerTab(tabName) {
 
 function switchNoteRefLanguage(lang) {
     noteRefCurrentLang = lang;
-    
+
     // Update button states
     document.querySelectorAll('.note-viewer-ref-lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
     });
-    
+
     // Re-render from cache without fetching or showing loader
     if (window.currentNoteRefs) {
         const content = document.getElementById('note-viewer-references-content');
         if (!content) return;
-        
+
         const cacheKey = JSON.stringify(window.currentNoteRefs.refs.sort());
         if (renderedReferencesCache[cacheKey]) {
             console.log('🎨 Re-rendering references in', lang, 'mode from cache');
-            const allHtml = window.currentNoteRefs.refs.map(ref => 
+            const allHtml = window.currentNoteRefs.refs.map(ref =>
                 renderReference(renderedReferencesCache[cacheKey][ref], lang)
             ).join('');
             content.innerHTML = allHtml || '<p style="text-align:center;color:#999;">No verses found</p>';
@@ -12064,16 +12270,16 @@ function showAddReferenceDialog() {
     // Get current verse from note viewer
     const refElement = document.getElementById('note-viewer-ref');
     if (!refElement) return;
-    
+
     const refText = refElement.textContent; // e.g., "Matthew 1:1"
     console.log('🔍 showAddReferenceDialog - refText:', refText);
     const match = refText.match(/(\d+):(\d+)/);
     if (!match) return;
-    
+
     currentAddRefVerseNum = parseInt(match[2]);
     console.log('🔍 showAddReferenceDialog - currentAddRefVerseNum:', currentAddRefVerseNum);
     selectedRefVerses = [];
-    
+
     // Open bottom sheet
     openAddRefSheet();
 }
@@ -12085,9 +12291,9 @@ function openAddRefSheet() {
     const chapterSelect = document.getElementById('add-ref-chapter-select');
     const versesSelect = document.getElementById('add-ref-verses-select');
     const addVerseBtn = document.getElementById('add-ref-add-verse-btn');
-    
+
     if (!overlay || !sheet) return;
-    
+
     // Reset form
     bookSelect.value = '';
     chapterSelect.value = '';
@@ -12097,13 +12303,13 @@ function openAddRefSheet() {
     addVerseBtn.disabled = true;
     selectedRefVerses = [];
     renderRefVersesChips();
-    
+
     // Populate book dropdown
     populateRefBookDropdown();
-    
+
     // Show existing references
     displayExistingReferences();
-    
+
     // Show overlay and sheet
     overlay.classList.add('active');
     sheet.classList.add('active');
@@ -12112,12 +12318,12 @@ function openAddRefSheet() {
 function closeAddRefSheet() {
     const overlay = document.getElementById('add-ref-sheet-overlay');
     const sheet = document.getElementById('add-ref-sheet');
-    
+
     if (!overlay || !sheet) return;
-    
+
     overlay.classList.remove('active');
     sheet.classList.remove('active');
-    
+
     // Reset state
     currentAddRefVerseNum = null;
     selectedRefVerses = [];
@@ -12127,25 +12333,25 @@ function closeAddRefSheet() {
 function displayExistingReferences() {
     const existingRefsSection = document.getElementById('add-ref-existing-refs');
     const existingList = document.getElementById('add-ref-existing-list');
-    
+
     if (!existingRefsSection || !existingList) return;
-    
+
     // Get current verse cross-reference key
     const book = bibleBooks[currentBook];
     const crossRefKey = `${book.name} ${currentChapter}:${currentAddRefVerseNum}`;
-    
+
     const existingRefs = crossReferences[crossRefKey] || [];
-    
+
     // Store the initial refs when sheet opens (for validation)
     if (!window.refsWhenSheetOpened) {
         window.refsWhenSheetOpened = [...existingRefs];
     }
-    
+
     if (existingRefs.length === 0) {
         existingRefsSection.classList.remove('active');
         return;
     }
-    
+
     // Populate existing references list
     existingList.innerHTML = existingRefs.map(ref => `
         <div class="add-ref-existing-item">
@@ -12158,30 +12364,30 @@ function displayExistingReferences() {
             </button>
         </div>
     `).join('');
-    
+
     existingRefsSection.classList.add('active');
 }
 
 function removeExistingReference(ref, crossRefKey) {
     console.log('Removing reference:', ref, 'from', crossRefKey);
-    
+
     if (!crossReferences[crossRefKey]) return;
-    
+
     // Remove from crossReferences object
     crossReferences[crossRefKey] = crossReferences[crossRefKey].filter(r => r !== ref);
-    
+
     // If no more references, delete the key
     const hasReferencesLeft = crossReferences[crossRefKey].length > 0;
     if (!hasReferencesLeft) {
         delete crossReferences[crossRefKey];
     }
-    
+
     // Save to Supabase
     saveNote();
-    
+
     // Refresh display
     displayExistingReferences();
-    
+
     // Remove the cross-ref icon if no references remain
     if (!hasReferencesLeft) {
         const verseLine = document.querySelector(`.verse-line[data-verse="${currentAddRefVerseNum}"]`);
@@ -12196,17 +12402,17 @@ function removeExistingReference(ref, crossRefKey) {
         // If some references still exist, just update the display
         updateCrossRefDisplay(currentAddRefVerseNum);
     }
-    
+
     console.log('✅ Reference removed and saved');
 }
 
 function populateRefBookDropdown() {
     const bookSelect = document.getElementById('add-ref-book-select');
     if (!bookSelect) return;
-    
+
     // Clear existing options except placeholder
     bookSelect.innerHTML = '<option value="">Select Book</option>';
-    
+
     // Add all books from bibleBooks array
     bibleBooks.forEach((book, index) => {
         const option = document.createElement('option');
@@ -12221,9 +12427,9 @@ function onRefBookChange() {
     const chapterSelect = document.getElementById('add-ref-chapter-select');
     const versesSelect = document.getElementById('add-ref-verses-select');
     const addVerseBtn = document.getElementById('add-ref-add-verse-btn');
-    
+
     const bookIndex = parseInt(bookSelect.value);
-    
+
     if (isNaN(bookIndex)) {
         chapterSelect.disabled = true;
         chapterSelect.value = '';
@@ -12232,9 +12438,9 @@ function onRefBookChange() {
         addVerseBtn.disabled = true;
         return;
     }
-    
+
     const book = bibleBooks[bookIndex];
-    
+
     // Populate chapter dropdown
     chapterSelect.innerHTML = '<option value="">Select Chapter</option>';
     for (let i = 1; i <= book.chapters; i++) {
@@ -12243,7 +12449,7 @@ function onRefBookChange() {
         option.textContent = i;
         chapterSelect.appendChild(option);
     }
-    
+
     chapterSelect.disabled = false;
     versesSelect.disabled = true;
     versesSelect.value = '';
@@ -12256,19 +12462,19 @@ function onRefChapterChange() {
     const chapterSelect = document.getElementById('add-ref-chapter-select');
     const versesSelect = document.getElementById('add-ref-verses-select');
     const addVerseBtn = document.getElementById('add-ref-add-verse-btn');
-    
+
     const bookIndex = parseInt(bookSelect.value);
     const chapter = parseInt(chapterSelect.value);
-    
+
     if (isNaN(bookIndex) || isNaN(chapter)) {
         versesSelect.disabled = true;
         versesSelect.value = '';
         addVerseBtn.disabled = true;
         return;
     }
-    
+
     const book = bibleBooks[bookIndex];
-    
+
     // Map book name to match bible-meta.js format (I Samuel -> 1 Samuel, etc.)
     let bookName = book.name;
     if (bookName.startsWith('I ')) {
@@ -12278,23 +12484,23 @@ function onRefChapterChange() {
     } else if (bookName.startsWith('III ')) {
         bookName = bookName.replace('III ', '3 ');
     }
-    
+
     // Get verse count from bible-meta.js or fallback to bibleBooks chapters count
     let verseCount = 0;
-    
+
     if (window.bibleMeta) {
         const bookMeta = window.bibleMeta.find(b => b.book === bookName);
         if (bookMeta && bookMeta.chapters[chapter - 1]) {
             verseCount = bookMeta.chapters[chapter - 1];
         }
     }
-    
+
     // Fallback: estimate max verses as 180 (safe upper limit for any chapter)
     if (verseCount === 0) {
         console.warn('bible-meta.js not loaded, using fallback verse count');
         verseCount = 180; // Maximum verses in any Bible chapter
     }
-    
+
     // Populate verses dropdown
     versesSelect.innerHTML = '';
     for (let i = 1; i <= verseCount; i++) {
@@ -12303,7 +12509,7 @@ function onRefChapterChange() {
         option.textContent = i;
         versesSelect.appendChild(option);
     }
-    
+
     versesSelect.disabled = false;
     addVerseBtn.disabled = false;
 }
@@ -12312,20 +12518,20 @@ function addRefVerse() {
     const bookSelect = document.getElementById('add-ref-book-select');
     const chapterSelect = document.getElementById('add-ref-chapter-select');
     const versesSelect = document.getElementById('add-ref-verses-select');
-    
+
     const bookIndex = parseInt(bookSelect.value);
     const chapter = parseInt(chapterSelect.value);
-    
+
     if (isNaN(bookIndex) || isNaN(chapter)) return;
-    
+
     const book = bibleBooks[bookIndex];
     const selectedOptions = Array.from(versesSelect.selectedOptions);
-    
+
     if (selectedOptions.length === 0) return;
-    
+
     // Sort verses numerically
     const verses = selectedOptions.map(opt => parseInt(opt.value)).sort((a, b) => a - b);
-    
+
     // Create verse ranges for consecutive verses
     let refString = '';
     if (verses.length === 1) {
@@ -12339,7 +12545,7 @@ function addRefVerse() {
                 break;
             }
         }
-        
+
         if (isConsecutive) {
             // Create range format: "Book Chapter:Start-End"
             refString = `${book.name} ${chapter}:${verses[0]}-${verses[verses.length - 1]}`;
@@ -12356,15 +12562,15 @@ function addRefVerse() {
             return;
         }
     }
-    
+
     // Check if already added
     if (!selectedRefVerses.includes(refString)) {
         selectedRefVerses.push(refString);
     }
-    
+
     // Clear verse selection
     versesSelect.value = '';
-    
+
     // Render chips
     renderRefVersesChips();
 }
@@ -12377,12 +12583,12 @@ function removeRefChip(index) {
 function renderRefVersesChips() {
     const chipsContainer = document.getElementById('add-ref-verses-chips');
     if (!chipsContainer) return;
-    
+
     if (selectedRefVerses.length === 0) {
         chipsContainer.innerHTML = '';
         return;
     }
-    
+
     chipsContainer.innerHTML = selectedRefVerses.map((verse, index) => `
         <div class="add-ref-verse-chip">
             <span>${verse}</span>
@@ -12395,11 +12601,11 @@ async function saveReference() {
     const bookName = bibleBooks[currentBook].name;
     const crossRefKey = `${bookName} ${currentChapter}:${currentAddRefVerseNum}`;
     const currentRefs = crossReferences[crossRefKey] || [];
-    
+
     // Allow save if user hasn't made any changes (no new verses added AND no deletion attempts)
     // If both are empty and no deletion button was clicked, ask user to add at least one
     // But if references existed before and user deleted them all via X buttons, that's allowed
-    
+
     // Only show alert if user opens sheet WITHOUT any existing references and tries to save without adding any
     if (selectedRefVerses.length === 0 && currentRefs.length === 0) {
         // Check if there were references when sheet opened
@@ -12407,36 +12613,36 @@ async function saveReference() {
         // Only block if truly nothing was done
         const refsWhenOpened = window.refsWhenSheetOpened || [];
         const userDeletedAll = refsWhenOpened.length > 0 && currentRefs.length === 0;
-        
+
         if (!userDeletedAll) {
             alert('Please add at least one verse reference.');
             return;
         }
     }
-    
+
     if (currentAddRefVerseNum === null) {
         alert('Unable to determine current verse.');
         return;
     }
-    
+
     console.log('🔍 saveReference - Saving for verse:', crossRefKey);
     console.log('🔍 saveReference - currentBook:', currentBook, 'currentChapter:', currentChapter, 'currentAddRefVerseNum:', currentAddRefVerseNum);
     console.log('🔍 saveReference - selectedRefVerses:', selectedRefVerses);
-    
+
     // Add or update cross-reference
     if (!crossReferences[crossRefKey]) {
         crossReferences[crossRefKey] = [];
     }
-    
+
     // Merge new references with existing ones (avoid duplicates)
     selectedRefVerses.forEach(ref => {
         if (!crossReferences[crossRefKey].includes(ref)) {
             crossReferences[crossRefKey].push(ref);
         }
     });
-    
+
     console.log('✅ Cross-reference saved:', crossRefKey, '→', crossReferences[crossRefKey]);
-    
+
     // Save to Supabase
     try {
         const bookFile = bibleBooks[currentBook].file;
@@ -12451,7 +12657,7 @@ async function saveReference() {
             }, {
                 onConflict: 'book_file,chapter,verse'
             });
-        
+
         if (error) {
             console.error('❌ Failed to save cross-reference:', error);
         } else {
@@ -12460,28 +12666,28 @@ async function saveReference() {
     } catch (error) {
         console.error('❌ Error saving cross-reference:', error);
     }
-    
+
     // Update display: add cross-ref icon if not already present
     console.log('🔍 updateCrossRefDisplay - verseNum:', currentAddRefVerseNum, 'currentChapter:', currentChapter, 'currentBook:', currentBook);
     updateCrossRefDisplay(currentAddRefVerseNum);
-    
+
     // Refresh note viewer if it's open
     const noteViewerPopup = document.getElementById('note-viewer-popup');
     if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
         // Update the stored references
         window.currentNoteRefs = { refs: crossReferences[crossRefKey], verseNum: currentAddRefVerseNum };
-        
+
         // Update header to show both tabs
         const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentAddRefVerseNum}`;
         const note = verseNotes[noteKey];
         const hasNote = note && note.text && note.text.trim();
         const isAdminMode = isAdmin();
-        
+
         const noteTab = document.querySelector('.note-viewer-tab[data-tab="note"]');
         const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
         const tabsContainer = document.querySelector('.note-viewer-tabs');
         const singleTitle = document.getElementById('note-viewer-single-title');
-        
+
         if (isAdminMode) {
             // Admin: Always show both tabs
             if (noteTab) noteTab.style.display = 'block';
@@ -12496,38 +12702,38 @@ async function saveReference() {
             if (singleTitle) singleTitle.style.display = 'none';
         }
         // If non-admin with no note, keep single title mode
-        
+
         // Switch to references tab and load the new references
         switchNoteViewerTab('references');
         loadNoteReferences(crossReferences[crossRefKey]);
     }
-    
+
     // Close sheet
     closeAddRefSheet();
 }
 
 function updateCrossRefDisplay(verseNum) {
     console.log('🔍 updateCrossRefDisplay called - verseNum:', verseNum, 'currentBook:', currentBook, 'currentChapter:', currentChapter);
-    
+
     // Get the cross-references for this verse
     const bookName = bibleBooks[currentBook].name;
     const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
     const crossRefs = crossReferences[crossRefKey];
-    
+
     console.log('🔍 crossRefKey:', crossRefKey, 'crossRefs:', crossRefs);
-    
+
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     console.log('🔍 verseLine found:', !!verseLine, 'HTML:', verseLine?.outerHTML?.substring(0, 100));
-    
+
     if (!verseLine) {
         console.log(`❌ Verse ${verseNum} not found in current view`);
         return;
     }
-    
+
     // Check if cross-ref icon already exists
     let crossRefIcon = verseLine.querySelector('.cross-ref-icon');
     console.log('🔍 Existing cross-ref icon:', !!crossRefIcon);
-    
+
     if (!crossRefIcon && crossRefs && crossRefs.length > 0) {
         // Create and add cross-ref icon
         crossRefIcon = document.createElement('span');
@@ -12536,7 +12742,7 @@ function updateCrossRefDisplay(verseNum) {
         crossRefIcon.title = 'This verse has cross-references';
         crossRefIcon.dataset.verse = verseNum;
         crossRefIcon.dataset.crossRefs = JSON.stringify(crossRefs);
-        
+
         // Append at the end of the verse line (like the initial render does)
         verseLine.appendChild(crossRefIcon);
         console.log(`✅ Added cross-ref icon to verse ${verseNum}`, crossRefs);
@@ -12554,47 +12760,47 @@ document.addEventListener('DOMContentLoaded', () => {
     if (addRefOverlay) {
         addRefOverlay.addEventListener('click', closeAddRefSheet);
     }
-    
+
     // Close button
     const addRefCloseBtn = document.getElementById('add-ref-close-btn');
     if (addRefCloseBtn) {
         addRefCloseBtn.addEventListener('click', closeAddRefSheet);
     }
-    
+
     // Book dropdown change
     const addRefBookSelect = document.getElementById('add-ref-book-select');
     if (addRefBookSelect) {
         addRefBookSelect.addEventListener('change', onRefBookChange);
     }
-    
+
     // Chapter dropdown change
     const addRefChapterSelect = document.getElementById('add-ref-chapter-select');
     if (addRefChapterSelect) {
         addRefChapterSelect.addEventListener('change', onRefChapterChange);
     }
-    
+
     // Add Verse button
     const addRefAddVerseBtn = document.getElementById('add-ref-add-verse-btn');
     if (addRefAddVerseBtn) {
         addRefAddVerseBtn.addEventListener('click', addRefVerse);
     }
-    
+
     // Cancel button
     const addRefCancelBtn = document.getElementById('add-ref-btn-cancel');
     if (addRefCancelBtn) {
         addRefCancelBtn.addEventListener('click', closeAddRefSheet);
     }
-    
+
     // Save button
     const addRefSaveBtn = document.getElementById('add-ref-btn-save');
     if (addRefSaveBtn) {
         addRefSaveBtn.addEventListener('click', saveReference);
     }
-    
+
     // Verses multi-select - enable single-click selection
     const addRefVersesSelect = document.getElementById('add-ref-verses-select');
     if (addRefVersesSelect) {
-        addRefVersesSelect.addEventListener('mousedown', function(e) {
+        addRefVersesSelect.addEventListener('mousedown', function (e) {
             e.preventDefault();
             const option = e.target;
             if (option.tagName === 'OPTION') {
@@ -12602,9 +12808,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.focus();
             }
         });
-        
+
         // Prevent default click behavior
-        addRefVersesSelect.addEventListener('click', function(e) {
+        addRefVersesSelect.addEventListener('click', function (e) {
             e.preventDefault();
         });
     }
@@ -12613,58 +12819,58 @@ document.addEventListener('DOMContentLoaded', () => {
 // Fetch verse data for a single reference (used only on first load)
 async function fetchReferenceVerseData(ref) {
     console.log('🔍 fetchReferenceVerseData called with:', ref);
-    
+
     const match = ref.match(/^(.+?)\s+(\d+):(\d+)(?:[-–](\d+))?$/);
     if (!match) {
         console.error('❌ Failed to parse reference:', ref);
         return null;
     }
-    
+
     let bookName = match[1].trim();
     const chapter = match[2];
     const verseStart = match[3];
     const verseEnd = match[4];
-    
+
     console.log('📖 Parsed - bookName:', bookName, 'chapter:', chapter, 'verseStart:', verseStart, 'verseEnd:', verseEnd);
-    
+
     // Normalize book name - convert "1", "2", "3" to "I", "II", "III"
     const normalizedName = bookName
         .replace(/^1\s+/, 'I ')
         .replace(/^2\s+/, 'II ')
         .replace(/^3\s+/, 'III ');
-    
+
     console.log('🔄 Normalized name:', normalizedName);
-    
+
     // Find book in bibleBooks
-    const book = bibleBooks.find(b => 
-        b.name === bookName || 
-        b.shortName === bookName || 
+    const book = bibleBooks.find(b =>
+        b.name === bookName ||
+        b.shortName === bookName ||
         b.name === normalizedName ||
         b.shortName === normalizedName
     );
-    
+
     if (!book) {
         console.error('❌ Book not found:', bookName, 'or normalized:', normalizedName);
         console.log('📚 First 10 books:', bibleBooks.slice(0, 10).map(b => ({ name: b.name, shortName: b.shortName })));
         return null;
     }
-    
+
     console.log('✅ Found book:', book.name, 'file:', book.file);
-    
+
     let bookFile = book.file;
     const bookFileAlternatives = [
         bookFile,
         bookFile.replace(/^i_/, '1-').replace(/^ii_/, '2-').replace(/^iii_/, '3-'),
         bookFile.replace(/^i_/, '1_').replace(/^ii_/, '2_').replace(/^iii_/, '3_')
     ];
-    
+
     console.log('🔗 Book file alternatives:', bookFileAlternatives);
-    
+
     const startVerse = parseInt(verseStart);
     const endVerse = verseEnd ? parseInt(verseEnd) : startVerse;
-    
+
     const data = { english: null, tamil: null };
-    
+
     // Fetch English data
     if (!data.english) {
         if (currentBook === bibleBooks.findIndex(b => b.file === bookFile) && parseInt(chapter) === currentChapter && currentData) {
@@ -12679,7 +12885,7 @@ async function fetchReferenceVerseData(ref) {
             }
         }
     }
-    
+
     if (!data.english) {
         for (const fileVariant of bookFileAlternatives) {
             const cacheKey = `${fileVariant}_${chapter}_english`;
@@ -12691,7 +12897,7 @@ async function fetchReferenceVerseData(ref) {
             }
         }
     }
-    
+
     if (!data.english) {
         for (const fileVariant of bookFileAlternatives) {
             console.log(`   Trying to fetch from database with fileVariant: ${fileVariant}`);
@@ -12704,11 +12910,11 @@ async function fetchReferenceVerseData(ref) {
                 .gte('verse', startVerse)
                 .lte('verse', endVerse)
                 .order('verse', { ascending: true });
-            
+
             if (error) {
                 console.log(`   Error fetching from ${fileVariant}:`, error.message);
             }
-            
+
             if (result && result.length > 0) {
                 data.english = result;
                 bookFile = fileVariant;
@@ -12717,7 +12923,7 @@ async function fetchReferenceVerseData(ref) {
             }
         }
     }
-    
+
     // Fetch Tamil data
     if (!data.tamil) {
         if (currentBook === bibleBooks.findIndex(b => b.file === bookFile) && parseInt(chapter) === currentChapter && currentTamilData) {
@@ -12732,7 +12938,7 @@ async function fetchReferenceVerseData(ref) {
             }
         }
     }
-    
+
     if (!data.tamil) {
         for (const fileVariant of bookFileAlternatives) {
             const cacheKey = `${fileVariant}_${chapter}_tamil`;
@@ -12743,7 +12949,7 @@ async function fetchReferenceVerseData(ref) {
             }
         }
     }
-    
+
     if (!data.tamil) {
         for (const fileVariant of bookFileAlternatives) {
             const { data: result, error } = await bibleDataManager.supabaseClient
@@ -12755,11 +12961,11 @@ async function fetchReferenceVerseData(ref) {
                 .gte('verse', startVerse)
                 .lte('verse', endVerse)
                 .order('verse', { ascending: true });
-            
+
             if (error) {
                 console.log(`   Error fetching Tamil from ${fileVariant}:`, error.message);
             }
-            
+
             if (result && result.length > 0) {
                 data.tamil = result;
                 console.log('✅ Fetched Tamil data from DB:', result.length, 'verses');
@@ -12767,7 +12973,7 @@ async function fetchReferenceVerseData(ref) {
             }
         }
     }
-    
+
     const returnValue = { ref, data };
     console.log('📤 Returning from fetchReferenceVerseData:', returnValue);
     return returnValue;
@@ -12776,9 +12982,9 @@ async function fetchReferenceVerseData(ref) {
 // Render a reference in a specific language using cached data
 function renderReference(cachedData, language) {
     if (!cachedData || !cachedData.data) return '';
-    
+
     const { ref, data } = cachedData;
-    
+
     if (language === 'english') {
         if (!data.english || data.english.length === 0) return '';
         const englishText = data.english.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>');
@@ -12789,7 +12995,7 @@ function renderReference(cachedData, language) {
             </div>
         `;
     }
-    
+
     if (language === 'tamil') {
         if (!data.tamil || data.tamil.length === 0) return '';
         const tamilText = data.tamil.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>');
@@ -12800,7 +13006,7 @@ function renderReference(cachedData, language) {
             </div>
         `;
     }
-    
+
     if (language === 'dual') {
         if ((!data.english || data.english.length === 0) && (!data.tamil || data.tamil.length === 0)) return '';
         const englishText = data.english?.length > 0 ? data.english.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>') : '';
@@ -12815,39 +13021,39 @@ function renderReference(cachedData, language) {
             </div>
         `;
     }
-    
+
     return '';
 }
 
 // Main function: Load and cache references, then display in current language
 async function loadNoteReferences(crossRefs, showLoader = true) {
     console.log('loadNoteReferences called with:', crossRefs);
-    
+
     const content = document.getElementById('note-viewer-references-content');
     if (!content) {
         console.error('note-viewer-references-content not found');
         return;
     }
-    
+
     // Create badges immediately without waiting for data fetch
     let badgesHtml = '<div style="padding: 12px; text-align: left;">';
-    
+
     crossRefs.forEach((ref) => {
         badgesHtml += `<span class="note-viewer-verse-badge" onclick="loadAndOpenNotePassageModal('${ref}')">${ref}</span>`;
     });
-    
+
     badgesHtml += '</div>';
     content.innerHTML = badgesHtml;
-    
+
     // Fetch data in background without blocking UI
     const fetchPromises = crossRefs.map(ref => fetchReferenceVerseData(ref));
     const results = await Promise.all(fetchPromises);
-    
+
     console.log('📊 Fetched results in background:', results);
-    
+
     // Store results for later use when clicking badges
     window.noteViewerVerseData = results;
-    
+
     console.log('✅ References loaded with badges');
 }
 
@@ -12859,28 +13065,28 @@ function parseVerseReference(ref) {
         console.error('Failed to parse verse reference:', ref);
         return null;
     }
-    
+
     let bookName = match[1].trim();
     const chapter = parseInt(match[2]);
     const verseStart = parseInt(match[3]);
     const verseEnd = match[4] ? parseInt(match[4]) : verseStart;
-    
+
     // Normalize book name - convert "1", "2", "3" to "I", "II", "III"
     bookName = bookName
         .replace(/^1\s+/, 'I ')
         .replace(/^2\s+/, 'II ')
         .replace(/^3\s+/, 'III ');
-    
+
     console.log('🔍 Parsing - original:', match[1], 'normalized:', bookName);
-    
+
     // Find book file name - try both original and normalized
-    let book = bibleBooks.find(b => 
-        b.name === match[1] || 
-        b.shortName === match[1] || 
+    let book = bibleBooks.find(b =>
+        b.name === match[1] ||
+        b.shortName === match[1] ||
         b.name === bookName ||
         b.shortName === bookName
     );
-    
+
     if (!book) {
         console.error('Book not found for:', match[1], 'or normalized:', bookName);
         console.log('📚 Looking for match in bibleBooks...');
@@ -12891,9 +13097,9 @@ function parseVerseReference(ref) {
         });
         return null;
     }
-    
+
     console.log('✅ Found book:', book.name);
-    
+
     return {
         book: book.file,
         bookName: book.name,
@@ -12906,21 +13112,21 @@ function parseVerseReference(ref) {
 // Load verse data when clicking on badge and open modal
 async function loadAndOpenNotePassageModal(verseRef) {
     console.log('Loading and opening passage modal for:', verseRef);
-    
+
     // Check if data is already cached
     let verseDataItem = window.noteViewerVerseData?.find(v => v && (v.reference || v.ref) === verseRef);
-    
+
     // If not cached, fetch it
     if (!verseDataItem) {
         verseDataItem = await fetchReferenceVerseData(verseRef);
-        
+
         // Store in cache for future use
         if (!window.noteViewerVerseData) {
             window.noteViewerVerseData = [];
         }
         window.noteViewerVerseData.push(verseDataItem);
     }
-    
+
     // Now open the modal with the data
     if (verseDataItem && verseDataItem.data) {
         openNotePassageModalWithData(verseRef, verseDataItem);
@@ -12931,28 +13137,28 @@ async function loadAndOpenNotePassageModal(verseRef) {
 
 function openNotePassageModalWithData(verseRef, verseDataItem) {
     console.log('Opening passage modal with data for:', verseRef);
-    
+
     if (!verseDataItem || !verseDataItem.data) {
         console.error('Verse data not found:', verseRef);
         return;
     }
-    
+
     console.log('🔍 Found verse data:', verseDataItem);
-    
+
     // Update passage modal with verse data
     const passageBadge = document.getElementById('notePassageBadge');
     const passageContent = document.getElementById('notePassageContent');
-    
+
     if (passageBadge) {
         passageBadge.textContent = verseRef;
     }
-    
+
     // Build passage content in both languages
     let englishHtml = '';
     let tamilHtml = '';
-    
+
     const verseData = verseDataItem.data;
-    
+
     // English verses
     if (verseData.english && Array.isArray(verseData.english)) {
         verseData.english.forEach(v => {
@@ -12961,7 +13167,7 @@ function openNotePassageModalWithData(verseRef, verseDataItem) {
             </p>`;
         });
     }
-    
+
     // Tamil verses
     if (verseData.tamil && Array.isArray(verseData.tamil)) {
         verseData.tamil.forEach(v => {
@@ -12970,7 +13176,7 @@ function openNotePassageModalWithData(verseRef, verseDataItem) {
             </p>`;
         });
     }
-    
+
     // Store verse data in window for language switching
     window.currentNotePassageData = {
         english: englishHtml,
@@ -12986,24 +13192,24 @@ function openNotePassageModalWithData(verseRef, verseDataItem) {
             </div>
         </div>`
     };
-    
+
     // Display English by default
     if (passageContent) {
         passageContent.innerHTML = window.currentNotePassageData.english;
     }
-    
+
     // Reset language buttons
     document.querySelectorAll('#notePassagePopup .passage-lang-btn').forEach(btn => {
         btn.classList.remove('active');
     });
     document.querySelector('#notePassagePopup [data-lang="english"]')?.classList.add('active');
-    
+
     // Show the language wrapper when verse is clicked
     const langWrapper = document.querySelector('.note-viewer-ref-lang-wrapper');
     if (langWrapper) {
         langWrapper.classList.add('active');
     }
-    
+
     // Show passage modal
     const passagePopup = document.getElementById('notePassagePopup');
     if (passagePopup) {
@@ -13013,14 +13219,14 @@ function openNotePassageModalWithData(verseRef, verseDataItem) {
 
 function switchNotePassageLanguage(lang) {
     console.log('Switching passage language to:', lang);
-    
+
     if (!window.currentNotePassageData) return;
-    
+
     const passageContent = document.getElementById('notePassageContent');
     if (passageContent) {
         passageContent.innerHTML = window.currentNotePassageData[lang] || '';
     }
-    
+
     // Update button states
     document.querySelectorAll('#notePassagePopup .passage-lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
@@ -13045,19 +13251,19 @@ function navigateToRef(bookFile, chapter, verse) {
     // Find book index
     const bookIndex = bibleBooks.findIndex(b => b.file === bookFile);
     if (bookIndex === -1) return;
-    
+
     // Close note viewer
     const overlay = document.getElementById('note-viewer-popup');
     if (overlay) {
         overlay.classList.remove('show');
         setTimeout(() => overlay.style.display = 'none', 300);
     }
-    
+
     // Navigate to the verse
     currentBook = bookIndex;
     currentChapter = chapter;
     loadChapterData();
-    
+
     // Scroll to verse after a short delay
     setTimeout(() => {
         scrollToVerse(verse);
