@@ -2399,70 +2399,48 @@ function getPopupHighlightClass(bookName, chapter, contentText) {
 
 // Initialize dynamic popup highlight styles
 function initializePopupHighlights() {
-    if (!biblePopups || typeof biblePopups !== 'object') return;
-
-    let styleContent = '';
-
-    // Iterate through all books and chapters in biblePopups
-    for (const bookKey in biblePopups) {
-        const book = biblePopups[bookKey];
-        const normalizedBookName = bookKey.charAt(0).toUpperCase() + bookKey.slice(1);
-
-        for (const chapterKey in book) {
-            const chapterNum = chapterKey.replace(/chapter/i, '');
-            const verses = book[chapterKey];
-
-            if (Array.isArray(verses)) {
-                verses.forEach((item, index) => {
-                    if (item.content) {
-                        const className = getPopupHighlightClass(normalizedBookName, chapterNum, item.content);
-                        styleContent += `.${className} {
-    background: rgb(128 118 80 / 15%) !important;
-    color: #b8b8b8;
-    border-bottom: 1.5px dashed rgba(255, 248, 220, 0.5);
-    padding-bottom: 1px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-.${className}:hover {
-    background: rgb(128 118 80 / 25%) !important;
-}
-`;
-                    }
-                });
-            }
-        }
-    }
-
-    // Remove existing styles if any
-    const existingStyle = document.getElementById('popup-highlight-dynamic-styles');
-    if (existingStyle) {
-        existingStyle.remove();
-    }
-    
-    // Inject the generated styles into the page
-    if (styleContent) {
-        const styleEl = document.createElement('style');
-        styleEl.id = 'popup-highlight-dynamic-styles';
-        styleEl.textContent = styleContent;
-        document.head.appendChild(styleEl);
-    }
-    
     // Attach event listeners to all popup highlights
     attachPopupHighlightListeners();
+    
+    // Log popup entries for debugging
+    if (biblePopups && typeof biblePopups === 'object') {
+        console.log('📖 Bible Popups Loaded:', biblePopups);
+    } else {
+        console.warn('⚠️ Bible Popups not loaded yet');
+    }
 }
 
-// Attach click listeners to popup highlight elements
+// Attach click listeners to popup highlight elements (optional - for analytics or additional interactions)
 function attachPopupHighlightListeners() {
-    document.addEventListener('click', function(e) {
-        // Check if the clicked element has a popup-highlight class and data-popup-content attribute
-        if (e.target.hasAttribute('data-popup-content') && e.target.className.includes('popup-highlight-')) {
-            const contentText = e.target.getAttribute('data-popup-content');
-            if (contentText) {
-                showPopupInfo(contentText);
+    // Add event delegation for hover on highlighted text
+    if (typeof document !== 'undefined') {
+        document.addEventListener('mouseenter', function(e) {
+            if (e.target.classList && e.target.classList.contains('hl')) {
+                const content = e.target.getAttribute('data-popup');
+                if (content && popupDataMap.has(content)) {
+                    const item = popupDataMap.get(content);
+                    const popupHTML = generatePopupHTML(item);
+                    
+                    // Check if popup doesn't already exist
+                    if (!e.target.querySelector('.tip')) {
+                        const tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = popupHTML;
+                        e.target.appendChild(tempDiv.firstChild);
+                    }
+                }
             }
-        }
-    }, true); // Use capture phase to ensure we catch clicks on dynamically added content
+        }, true);
+        
+        // Remove popup on mouse leave
+        document.addEventListener('mouseleave', function(e) {
+            if (e.target.classList && e.target.classList.contains('hl')) {
+                const popup = e.target.querySelector('.tip');
+                if (popup) {
+                    popup.remove();
+                }
+            }
+        }, true);
+    }
 }
 
 // Highlight special text (Jesus names in English, and popup highlights in Tamil)
@@ -2481,35 +2459,42 @@ function highlightSpecialText(text, language, bookName = null, chapter = null, v
     return text;
 }
 
-// Show popup info when a highlighted text is clicked
+// Show popup info when a highlighted text is clicked (kept for reference/analytics)
 function showPopupInfo(contentText) {
-    // Find the popup entry with this content
-    if (!biblePopups || typeof biblePopups !== 'object') return;
-    
-    for (const bookKey in biblePopups) {
-        const book = biblePopups[bookKey];
-        for (const chapterKey in book) {
-            const verses = book[chapterKey];
-            if (Array.isArray(verses)) {
-                for (const item of verses) {
-                    if (item.content === contentText) {
-                        // Show an alert or modal with the description and references
-                        let message = `📖 ${contentText}\n\n${item.description}`;
-                        if (item.references && item.references.length > 0) {
-                            message += `\n\nReferences: ${item.references.join(', ')}`;
-                        }
-                        console.log('Popup Info:', message);
-                        // You can also create a custom modal here instead of alert
-                        // For now, logging to console for debugging
-                        return;
-                    }
-                }
-            }
-        }
-    }
+    // Popups now appear automatically on hover
+    // This function is kept for backward compatibility
+    console.log('Hovering over:', contentText);
 }
 
-// Apply highlighting for all popup entries matching the book and chapter
+// Generate popup HTML for an item
+function generatePopupHTML(item) {
+    if (!item.content || !item.description) return '';
+    
+    // Determine band color based on content (hash-based)
+    const colors = ['band-amber', 'band-gold', 'band-purple', 'band-blue', 'band-green'];
+    const hash = item.content.charCodeAt(0) + item.content.charCodeAt(item.content.length - 1);
+    const bandColor = colors[hash % colors.length];
+    
+    // Build references HTML
+    let referencesHTML = '';
+    if (item.references && item.references.length > 0) {
+        const badges = item.references.map(ref => `<span class="tip-badge">${ref}</span>`).join('');
+        referencesHTML = `<div class="tip-ref-section"><div class="tip-ref-label">Reference</div><div class="tip-badges">${badges}</div></div>`;
+    }
+    
+    // Generate popup HTML (no newlines to prevent text breaking)
+    return `<div class="tip"><div class="tip-inner"><div class="tip-band ${bandColor}"></div><div class="tip-body"><div class="tip-title">${item.content}</div><div class="tip-desc">${item.description}</div>${referencesHTML}</div></div></div>`;
+}
+
+// Global map to store popup data (keyed by content)
+const popupDataMap = new Map();
+
+// Store popup data for later retrieval
+function storePopupData(content, data) {
+    popupDataMap.set(content, data);
+}
+
+// Apply highlighting for all popup entries matching the book and chapter - SAFE VERSION
 function applyPopupHighlights(text, bookName, chapter) {
     if (!biblePopups || typeof biblePopups !== 'object') return text;
     
@@ -2523,17 +2508,30 @@ function applyPopupHighlights(text, bookName, chapter) {
     
     if (!Array.isArray(verses)) return text;
     
-    // Apply highlighting for each popup entry content
-    verses.forEach((item) => {
-        if (item.content && item.content.trim()) {
-            // Escape special regex characters and create a case-sensitive regex
-            const escapedContent = item.content.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const regex = new RegExp(escapedContent, 'g');
-            
-            const className = getPopupHighlightClass(bookName, chapter, item.content);
-            text = text.replace(regex, `<span class="${className}" data-popup-content="${item.content}">${item.content}</span>`);
-        }
-    });
+    try {
+        // Apply highlighting for each popup entry content - just add CSS class, no popup HTML
+        verses.forEach((item, index) => {
+            if (item.content && item.content.trim()) {
+                // Check if the content actually exists in the text
+                if (text.includes(item.content)) {
+                    // Escape special regex characters
+                    const escapedContent = item.content.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    const regex = new RegExp(escapedContent, 'g');
+                    
+                    const className = getPopupHighlightClass(bookName, chapter, item.content);
+                    
+                    // Store the item for later reference
+                    storePopupData(item.content, item);
+                    
+                    // SIMPLE: Just wrap with highlight class, no popup HTML - we'll add popup dynamically
+                    text = text.replace(regex, `<span class="hl ${className}" data-popup="${item.content}">$&</span>`);
+                    console.log(`✓ Highlighted "${item.content}" in ${bookName} ${chapter}`);
+                }
+            }
+        });
+    } catch (e) {
+        console.error('Error applying popup highlights:', e);
+    }
     
     return text;
 }

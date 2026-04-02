@@ -3522,6 +3522,210 @@ body.dark-theme .jesus-name {
     padding-bottom: 1px;
 }
 
+/* ════════════════════════════════════════════════════════════════ */
+/* POPUP HIGHLIGHT STYLES - Hover Popup System */
+/* ════════════════════════════════════════════════════════════════ */
+
+.hl {
+    position: relative;
+    display: inline;
+    cursor: default;
+    border-bottom: 1.5px dashed rgba(0,0,0,0.2);
+    transition: border-color 0.15s;
+}
+
+.hl:hover { 
+    border-color: rgba(0,0,0,0.35);
+}
+
+.tip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s, transform 0.15s;
+    z-index: 20;
+    white-space: nowrap;
+}
+
+.hl:hover .tip { 
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
+
+.tip-inner {
+    background: #ffffff;
+    border: 0.5px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 200px;
+    white-space: normal;
+    pointer-events: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.tip-band { 
+    height: 3px;
+}
+
+.tip-body { 
+    padding: 10px 13px;
+}
+
+.tip-title { 
+    font-size: 13px; 
+    font-weight: 500; 
+    color: #1a1a18; 
+    margin-bottom: 3px;
+}
+
+.tip-desc { 
+    font-size: 12px; 
+    color: #5f5e5a; 
+    line-height: 1.5;
+}
+
+.tip-ref-section { 
+    margin-top: 9px;
+}
+
+.tip-ref-label { 
+    font-size: 10px; 
+    font-weight: 500; 
+    color: #888780; 
+    text-transform: uppercase; 
+    letter-spacing: 0.06em; 
+    margin-bottom: 5px;
+}
+
+.tip-badges { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 4px;
+}
+
+.tip-badge { 
+    font-size: 11px; 
+    font-weight: 500; 
+    padding: 2px 8px; 
+    border-radius: 20px; 
+    border: 0.5px solid rgba(0,0,0,0.2); 
+    color: #5f5e5a; 
+    background: #f5f5f3;
+}
+
+.tip::after { 
+    content: ''; 
+    position: absolute; 
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border: 5px solid transparent; 
+    border-top-color: rgba(0,0,0,0.2);
+}
+
+.tip::before { 
+    content: ''; 
+    position: absolute; 
+    top: calc(100% - 0.5px); 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border: 5px solid transparent; 
+    border-top-color: #ffffff; 
+    z-index: 1;
+}
+
+.band-amber { background: #BA7517; }
+.band-gold { background: #D4A96A; }
+.band-purple { background: #9B7EA8; }
+.band-blue { background: #5B8DBE; }
+.band-green { background: #7BA878; }
+
+/* Light theme popup styles (default) */
+body:not(.dark-theme) .hl { 
+    border-bottom-color: rgba(0,0,0,0.2); 
+}
+
+body:not(.dark-theme) .hl:hover { 
+    border-color: rgba(0,0,0,0.35); 
+}
+
+body:not(.dark-theme) .tip-inner { 
+    background: #ffffff; 
+    border-color: rgba(0,0,0,0.2); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+body:not(.dark-theme) .tip-title { 
+    color: #1a1a18; 
+}
+
+body:not(.dark-theme) .tip-desc { 
+    color: #5f5e5a; 
+}
+
+body:not(.dark-theme) .tip-ref-label { 
+    color: #888780; 
+}
+
+body:not(.dark-theme) .tip-badge { 
+    border-color: rgba(0,0,0,0.2); 
+    color: #5f5e5a; 
+    background: #f5f5f3;
+}
+
+body:not(.dark-theme) .tip::after { 
+    border-top-color: rgba(0,0,0,0.2); 
+}
+
+body:not(.dark-theme) .tip::before { 
+    border-top-color: #ffffff; 
+}
+
+/* Dark mode support for popups */
+body.dark-theme .hl { 
+    border-bottom-color: rgba(255,255,255,0.2); 
+}
+
+body.dark-theme .hl:hover { 
+    border-color: rgba(255,255,255,0.35); 
+}
+
+body.dark-theme .tip-inner { 
+    background: #1e1e1c; 
+    border-color: rgba(255,255,255,0.2); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark-theme .tip-title { 
+    color: #f0efea; 
+}
+
+body.dark-theme .tip-desc { 
+    color: #b4b2a9; 
+}
+
+body.dark-theme .tip-ref-label { 
+    color: #888780; 
+}
+
+body.dark-theme .tip-badge { 
+    border-color: rgba(255,255,255,0.2); 
+    color: #b4b2a9; 
+    background: #2a2a28;
+}
+
+body.dark-theme .tip::after { 
+    border-top-color: rgba(255,255,255,0.2); 
+}
+
+body.dark-theme .tip::before { 
+    border-top-color: #1e1e1c; 
+}
+
 /* Verse Images */
 .verse-image-container {
     float: left;
