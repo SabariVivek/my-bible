@@ -25,6 +25,35 @@ const biblePopups = {
                 content: "தாமாரினிடத்தில்",
                 description: 'Tamar was the daughter-in-law of Judah. Through a difficult situation, she became part of the lineage of Jesus.',
                 references: ["Gen 38:6-30"]
+            },
+            {
+                content: "ராகாபினிடத்தில்",
+                description: 'Rahab was a woman from Jericho who helped Israel’s spies. Because of her faith, she became part of the lineage of Jesus.',
+                references: ["Josh 2:1-21"]
+            },
+            {
+                content: "ஈசாய்",
+                description: 'Jesse was the father of King David. He belonged to the tribe of Judah and became part of Jesus’ lineage.',
+                references: ["1 Sam 16:1"]
+            },
+            {
+                content: "உரியாவின்",
+                description: 'Uriah was a faithful soldier of King David. His wife Bathsheba later became part of the lineage of Jesus.',
+                references: ["2 Sam 11:3-17"]
+            },
+            {
+                content: "சாலொமோனைப்",
+                description: 'Solomon was the son of King David and Bathsheba. He was known for his great wisdom and built the temple of God.',
+                references: ["1 Kings 3:12"]
+            },
+            {
+                content: "பாபிலோனுக்குச் சிறைப்பட்டுப்",
+                description: 'This refers to the time when the people of Judah were taken into exile in Babylon because of their disobedience to God.',
+                references: ["2 Kings 24:14", "2 Chron 36:20"]
+            },
+            {
+                content: "அறியாதிருந்து",
+                description: 'This means Joseph had no marital relations with Mary until Jesus was born, showing the miraculous birth by God’s power.',
             }
         ]
     }

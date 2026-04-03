@@ -2417,14 +2417,22 @@ function initializePopupHighlights() {
                     if (item.content) {
                         const className = getPopupHighlightClass(normalizedBookName, chapterNum, item.content);
                         styleContent += `.${className} {
-    background: rgb(98 96 89 / 15%) !important;
-    color: #b8b8b8;
-    border-bottom: 1.5px dashed rgba(255, 248, 220, 0.5);
-    padding-bottom: 1px;
-    cursor: pointer;
+    background: rgba(255, 220, 100, 0.25) !important;
+    color: inherit !important;
+    border-bottom: 1.5px dashed #f5d547 !important;
+    padding-bottom: 1px !important;
+    cursor: pointer !important;
     transition: background-color 0.2s ease;
 }
 .${className}:hover {
+    background: rgba(255, 220, 100, 0.35) !important;
+}
+body.dark-theme .${className} {
+    background: rgb(98 96 89 / 15%) !important;
+    color: #b8b8b8 !important;
+    border-bottom: 1.5px dashed rgba(255, 248, 220, 0.5) !important;
+}
+body.dark-theme .${className}:hover {
     background: rgb(98 96 89 / 15%) !important;
 }
 `;
@@ -2543,7 +2551,14 @@ function showPopupInfoBottomSheet(item) {
 
     const referencesHtml = item.references && item.references.length > 0
         ? item.references.map(ref => `<button class="ref-pill" data-ref="${ref}">${ref}</button>`).join('')
-        : '<p class="note-muted">No references available.</p>';
+        : '';
+
+    const referencesSection = item.references && item.references.length > 0
+        ? `<div class="ref-label">REFERENCES</div>
+                <div class="ref-row">
+                    ${referencesHtml}
+                </div>`
+        : '';
 
     bottomSheet.innerHTML = `
         <div class="verse-actions-backdrop"></div>
@@ -2559,10 +2574,7 @@ function showPopupInfoBottomSheet(item) {
                     </button>
                 </div>
                 <div class="popup-description">${item.description || 'No description available.'}</div>
-                <div class="ref-label">REFERENCES</div>
-                <div class="ref-row">
-                    ${referencesHtml}
-                </div>
+                ${referencesSection}
                 <div class="verse-box" id="verse-box">
                     <div class="verse-inner" id="verse-inner">
                         <div class="verse-ref-label" id="verse-ref-label"></div>
@@ -2575,6 +2587,33 @@ function showPopupInfoBottomSheet(item) {
 
     bottomSheet.classList.add('visible');
     document.body.classList.add('bottom-sheet-open');
+
+    // Apply light theme inline styles if needed
+    const isLightTheme = !document.body.classList.contains('dark-theme');
+    console.log('Light theme check:', isLightTheme, 'Body classes:', document.body.className);
+    if (isLightTheme) {
+        const content = bottomSheet.querySelector('.verse-actions-content');
+        if (content) {
+            console.log('Applying light theme to content element');
+            content.style.background = '#f5f5f5 !important';
+            content.style.border = '2px solid #c9a227 !important';
+            content.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.15) !important';
+        }
+        const title = bottomSheet.querySelector('.popup-title');
+        if (title) title.style.color = '#1a1a1a !important';
+        const desc = bottomSheet.querySelector('.popup-description');
+        if (desc) desc.style.color = 'rgba(0, 0, 0, 0.7) !important';
+        const handle = bottomSheet.querySelector('.handle');
+        if (handle) handle.style.backgroundColor = 'rgba(0, 0, 0, 0.15) !important';
+        const refLabel = bottomSheet.querySelector('.ref-label');
+        if (refLabel) refLabel.style.color = 'rgba(0, 0, 0, 0.45) !important';
+        const refPills = bottomSheet.querySelectorAll('.ref-pill');
+        refPills.forEach(pill => {
+            pill.style.border = '0.5px solid rgba(0, 0, 0, 0.14) !important';
+            pill.style.backgroundColor = 'rgba(0, 0, 0, 0.03) !important';
+            pill.style.color = 'rgba(0, 0, 0, 0.7) !important';
+        });
+    }
 
     // Add drag functionality
     addDragFunctionality(bottomSheet);
