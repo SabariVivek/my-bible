@@ -2417,7 +2417,7 @@ function initializePopupHighlights() {
                     if (item.content) {
                         const className = getPopupHighlightClass(normalizedBookName, chapterNum, item.content);
                         styleContent += `.${className} {
-    background: rgb(128 118 80 / 15%) !important;
+    background: rgb(98 96 89 / 15%) !important;
     color: #b8b8b8;
     border-bottom: 1.5px dashed rgba(255, 248, 220, 0.5);
     padding-bottom: 1px;
@@ -2425,7 +2425,7 @@ function initializePopupHighlights() {
     transition: background-color 0.2s ease;
 }
 .${className}:hover {
-    background: rgb(128 118 80 / 25%) !important;
+    background: rgb(98 96 89 / 15%) !important;
 }
 `;
                     }
@@ -2439,7 +2439,7 @@ function initializePopupHighlights() {
     if (existingStyle) {
         existingStyle.remove();
     }
-    
+
     // Inject the generated styles into the page
     if (styleContent) {
         const styleEl = document.createElement('style');
@@ -2447,18 +2447,31 @@ function initializePopupHighlights() {
         styleEl.textContent = styleContent;
         document.head.appendChild(styleEl);
     }
-    
+
     // Attach event listeners to all popup highlights
     attachPopupHighlightListeners();
 }
 
 // Attach click listeners to popup highlight elements
 function attachPopupHighlightListeners() {
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
+        // Don't open popup if one is already visible
+        const existingPopup = document.getElementById('popup-info-bottom-sheet');
+        if (existingPopup && existingPopup.classList.contains('visible')) {
+            return;
+        }
+
+        // Don't open popup if verse-actions-bottom-sheet is open
+        const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
+        if (verseActionsSheet && verseActionsSheet.classList.contains('visible')) {
+            return;
+        }
+
         // Check if the clicked element has a popup-highlight class and data-popup-content attribute
         if (e.target.hasAttribute('data-popup-content') && e.target.className.includes('popup-highlight-')) {
             const contentText = e.target.getAttribute('data-popup-content');
             if (contentText) {
+                e.stopPropagation();
                 showPopupInfo(contentText);
             }
         }
@@ -2472,20 +2485,20 @@ function highlightSpecialText(text, language, bookName = null, chapter = null, v
         text = text.replace(/\bJesus Christ\b/g, '<span class="jesus-name">Jesus Christ</span>');
         text = text.replace(/\bJesus\b/g, '<span class="jesus-name">Jesus</span>');
     }
-    
+
     // Apply dynamic highlighting for all popup entries in Tamil
     if ((language === 'tamil' || language === 'both-tamil') && bookName && chapter) {
         text = applyPopupHighlights(text, bookName, chapter);
     }
-    
+
     return text;
 }
 
 // Show popup info when a highlighted text is clicked
 function showPopupInfo(contentText) {
-    // Find the popup entry with this content
     if (!biblePopups || typeof biblePopups !== 'object') return;
-    
+
+    let matchingItem = null;
     for (const bookKey in biblePopups) {
         const book = biblePopups[bookKey];
         for (const chapterKey in book) {
@@ -2493,77 +2506,255 @@ function showPopupInfo(contentText) {
             if (Array.isArray(verses)) {
                 for (const item of verses) {
                     if (item.content === contentText) {
-                        // Show an alert or modal with the description and references
-                        let message = `📖 ${contentText}\n\n${item.description}`;
-                        if (item.references && item.references.length > 0) {
-                            message += `\n\nReferences: ${item.references.join(', ')}`;
-                        }
-                        console.log('Popup Info:', message);
-                        // You can also create a custom modal here instead of alert
-                        // For now, logging to console for debugging
-                        return;
+                        matchingItem = item;
+                        break;
                     }
                 }
             }
+            if (matchingItem) break;
         }
+        if (matchingItem) break;
+    }
+
+    if (!matchingItem) {
+        console.warn(`No popup entry found for "${contentText}".`);
+        return;
+    }
+
+    showPopupInfoBottomSheet(matchingItem);
+}
+
+function showPopupInfoBottomSheet(item) {
+    if (!item || !item.content) return;
+
+    // Close existing bottom sheets (verse actions + popup info)
+    document.querySelectorAll('#verse-actions-bottom-sheet.visible, #popup-info-bottom-sheet.visible').forEach(sheet => {
+        sheet.classList.remove('visible');
+    });
+    document.body.classList.remove('bottom-sheet-open');
+
+    let bottomSheet = document.getElementById('popup-info-bottom-sheet');
+    if (!bottomSheet) {
+        bottomSheet = document.createElement('div');
+        bottomSheet.id = 'popup-info-bottom-sheet';
+        bottomSheet.className = 'verse-actions-bottom-sheet popup-info-bottom-sheet';
+        document.body.appendChild(bottomSheet);
+    }
+
+    const referencesHtml = item.references && item.references.length > 0
+        ? item.references.map(ref => `<button class="ref-pill" data-ref="${ref}">${ref}</button>`).join('')
+        : '<p class="note-muted">No references available.</p>';
+
+    bottomSheet.innerHTML = `
+        <div class="verse-actions-backdrop"></div>
+        <div class="verse-actions-content popup-info-content">
+            <div class="handle-container">
+                <div class="handle"></div>
+            </div>
+            <div class="popup-content">
+                <div class="popup-header">
+                    <div class="popup-title">${item.content}</div>
+                    <button class="close-bottom-sheet" aria-label="Close">
+                        <div class="x-curved-thin"></div>
+                    </button>
+                </div>
+                <div class="popup-description">${item.description || 'No description available.'}</div>
+                <div class="ref-label">REFERENCES</div>
+                <div class="ref-row">
+                    ${referencesHtml}
+                </div>
+                <div class="verse-box" id="verse-box">
+                    <div class="verse-inner" id="verse-inner">
+                        <div class="verse-ref-label" id="verse-ref-label"></div>
+                        <div class="verse-text" id="verse-text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    bottomSheet.classList.add('visible');
+    document.body.classList.add('bottom-sheet-open');
+
+    // Add drag functionality
+    addDragFunctionality(bottomSheet);
+
+    // Add reference pill click handlers
+    addReferenceHandlers(bottomSheet, item);
+
+    const closeBtn = bottomSheet.querySelector('.close-bottom-sheet');
+    const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
+
+    const closeThisSheet = (e) => {
+        if (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
+        bottomSheet.classList.remove('visible');
+        document.body.classList.remove('bottom-sheet-open');
+        collapseVerse();
+    };
+
+    closeBtn?.addEventListener('click', closeThisSheet);
+    backdrop?.addEventListener('click', closeThisSheet);
+}
+
+function addDragFunctionality(bottomSheet) {
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+
+    const content = bottomSheet.querySelector('.verse-actions-content');
+    const handle = bottomSheet.querySelector('.handle');
+
+    const startDrag = (e) => {
+        isDragging = true;
+        startY = e.touches ? e.touches[0].clientY : e.clientY;
+        content.style.transition = 'none';
+    };
+
+    const moveDrag = (e) => {
+        if (!isDragging) return;
+        currentY = e.touches ? e.touches[0].clientY : e.clientY;
+        const deltaY = currentY - startY;
+
+        if (deltaY > 0) {
+            content.style.transform = `translateY(${deltaY}px)`;
+        }
+    };
+
+    const endDrag = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        content.style.transition = 'transform 0.3s cubic-bezier(0.2, 0, 0, 1)';
+
+        const deltaY = currentY - startY;
+        if (deltaY > 70) {
+            // Dismiss sheet
+            content.style.transform = `translateY(100vh)`;
+            setTimeout(() => {
+                bottomSheet.classList.remove('visible');
+                document.body.classList.remove('bottom-sheet-open');
+                collapseVerse();
+            }, 300);
+        } else {
+            // Snap back
+            content.style.transform = 'translateY(0)';
+        }
+    };
+
+    // Mouse events
+    handle.addEventListener('mousedown', startDrag);
+    document.addEventListener('mousemove', moveDrag);
+    document.addEventListener('mouseup', endDrag);
+
+    // Touch events
+    handle.addEventListener('touchstart', startDrag, { passive: true });
+    document.addEventListener('touchmove', moveDrag, { passive: true });
+    document.addEventListener('touchend', endDrag, { passive: true });
+}
+
+function addReferenceHandlers(bottomSheet, item) {
+    const refPills = bottomSheet.querySelectorAll('.ref-pill');
+    const verseBox = bottomSheet.querySelector('#verse-box');
+    const verseInner = bottomSheet.querySelector('#verse-inner');
+    const verseRefLabel = bottomSheet.querySelector('#verse-ref-label');
+    const verseTextDiv = bottomSheet.querySelector('#verse-text');
+
+    let activeRef = null;
+
+    refPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            const ref = pill.dataset.ref;
+
+            if (activeRef === ref) {
+                // Collapse
+                collapseVerse();
+                activeRef = null;
+            } else {
+                // Expand with new verse
+                expandVerse(ref, item);
+                activeRef = ref;
+            }
+        });
+    });
+
+    function expandVerse(ref, item) {
+        const verseText = item.verses && item.verses[ref] ? item.verses[ref] : `Verse text for ${ref} would be loaded here. This is a placeholder for the actual verse content.`;
+
+        verseRefLabel.textContent = ref;
+        verseTextDiv.textContent = verseText;
+
+        verseBox.style.maxHeight = '160px';
+        verseBox.style.opacity = '1';
+        verseInner.style.display = 'block';
+    }
+
+    function collapseVerse() {
+        verseBox.style.maxHeight = '0';
+        verseBox.style.opacity = '0';
+        setTimeout(() => {
+            verseInner.style.display = 'none';
+        }, 300);
     }
 }
+
 
 // Apply highlighting for all popup entries matching the book and chapter
 function applyPopupHighlights(text, bookName, chapter) {
     if (!biblePopups || typeof biblePopups !== 'object') return text;
-    
+
     const bookLower = bookName.toLowerCase();
     const book = biblePopups[bookLower];
-    
+
     if (!book) return text;
-    
+
     const chapterKey = `chapter${chapter}`;
     const verses = book[chapterKey];
-    
+
     if (!Array.isArray(verses)) return text;
-    
+
     // Apply highlighting for each popup entry content
     verses.forEach((item) => {
         if (item.content && item.content.trim()) {
             // Escape special regex characters and create a case-sensitive regex
             const escapedContent = item.content.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             const regex = new RegExp(escapedContent, 'g');
-            
+
             const className = getPopupHighlightClass(bookName, chapter, item.content);
             text = text.replace(regex, `<span class="${className}" data-popup-content="${item.content}">${item.content}</span>`);
         }
     });
-    
+
     return text;
 }
 
 // Utility function to add a new popup entry
 function addPopupEntry(bookName, chapterNum, contentText, description, references = []) {
     const bookLower = bookName.toLowerCase();
-    
+
     // Create book entry if it doesn't exist
     if (!biblePopups[bookLower]) {
         biblePopups[bookLower] = {};
     }
-    
+
     const chapterKey = `chapter${chapterNum}`;
-    
+
     // Create chapter array if it doesn't exist
     if (!biblePopups[bookLower][chapterKey]) {
         biblePopups[bookLower][chapterKey] = [];
     }
-    
+
     // Add the new entry
     biblePopups[bookLower][chapterKey].push({
         content: contentText,
         description: description,
         references: references
     });
-    
+
     // Re-initialize highlights to apply the new entry
     initializePopupHighlights();
-    
+
     // Re-render the current view to show the new highlighting
     console.log(`Added new popup: ${bookName} ${chapterNum} - "${contentText}"`);
 }
@@ -2912,6 +3103,12 @@ function displayChapter() {
         verseLine.addEventListener('click', (e) => {
             // Skip verse actions if clicking cross-ref icon
             if (e.target.classList.contains('cross-ref-icon')) {
+                return;
+            }
+
+            // Skip verse actions if a popup is currently open
+            const existingPopup = document.getElementById('popup-info-bottom-sheet');
+            if (existingPopup && existingPopup.classList.contains('visible')) {
                 return;
             }
 
@@ -3739,7 +3936,11 @@ function showVerseActionsBottomSheet(verseNum) {
     const closeBtnFooter = bottomSheet.querySelector('.close-verse-selection-btn');
     const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
 
-    const closeBottomSheet = () => {
+    const closeBottomSheet = (e) => {
+        if (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
         // Restore hidden buttons if color picker was active
         const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
         if (buttonsContainer) {
@@ -4133,7 +4334,11 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     const closeBtn = bottomSheet.querySelector('.close-bottom-sheet');
     const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
 
-    const closeBottomSheet = () => {
+    const closeBottomSheet = (e) => {
+        if (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
         bottomSheet.classList.remove('visible');
         document.body.classList.remove('bottom-sheet-open');
 
@@ -4515,6 +4720,16 @@ function scrollToVerse(verseNum) {
 }
 // Navigation buttons
 document.addEventListener('click', (e) => {
+    // Close popup-info-bottom-sheet when clicking outside
+    const popupSheet = document.getElementById('popup-info-bottom-sheet');
+    if (popupSheet && popupSheet.classList.contains('visible')) {
+        const content = popupSheet.querySelector('.verse-actions-content');
+        if (content && !content.contains(e.target)) {
+            popupSheet.classList.remove('visible');
+            document.body.classList.remove('bottom-sheet-open');
+        }
+    }
+
     // Current chapter text - open drawer on mobile
     if (e.target.closest('.current-chapter')) {
         if (window.innerWidth <= 768) {
@@ -4727,9 +4942,20 @@ function initializeScrollbar() {
 
 // Helper function to close bottom sheet
 function closeBottomSheet() {
-    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
-    if (bottomSheet && bottomSheet.classList.contains('visible')) {
-        bottomSheet.classList.remove('visible');
+    const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
+    const popupInfoSheet = document.getElementById('popup-info-bottom-sheet');
+
+    if (verseActionsSheet && verseActionsSheet.classList.contains('visible')) {
+        verseActionsSheet.classList.remove('visible');
+    }
+
+    if (popupInfoSheet && popupInfoSheet.classList.contains('visible')) {
+        popupInfoSheet.classList.remove('visible');
+    }
+
+    if ((verseActionsSheet && verseActionsSheet.classList.contains('visible')) || (popupInfoSheet && popupInfoSheet.classList.contains('visible'))) {
+        // If still visible in one of them, keep body flag; otherwise remove.
+    } else {
         document.body.classList.remove('bottom-sheet-open');
     }
 }

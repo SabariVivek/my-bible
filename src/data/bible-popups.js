@@ -20,6 +20,11 @@ const biblePopups = {
                 content: "யூதாவையும்",
                 description: 'Judah was one of the 12 sons of Jacob. The tribe of Judah became the royal line from which King David and Jesus came.',
                 references: ["Gen 29:35", "Gen 49:10"]
+            },
+            {
+                content: "தாமாரினிடத்தில்",
+                description: 'Tamar was the daughter-in-law of Judah. Through a difficult situation, she became part of the lineage of Jesus.',
+                references: ["Gen 38:6-30"]
             }
         ]
     }
