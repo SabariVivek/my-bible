@@ -2602,7 +2602,10 @@ function showPopupInfoBottomSheet(item) {
         const title = bottomSheet.querySelector('.popup-title');
         if (title) title.style.color = '#1a1a1a !important';
         const desc = bottomSheet.querySelector('.popup-description');
-        if (desc) desc.style.color = 'rgba(0, 0, 0, 0.7) !important';
+        if (desc) {
+            desc.style.color = 'rgba(0, 0, 0, 0.7) !important';
+            desc.style.fontFamily = "Georgia, 'Times New Roman', serif";
+        }
         const handle = bottomSheet.querySelector('.handle');
         if (handle) handle.style.backgroundColor = 'rgba(0, 0, 0, 0.15) !important';
         const refLabel = bottomSheet.querySelector('.ref-label');

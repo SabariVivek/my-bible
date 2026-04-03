@@ -8393,7 +8393,7 @@ body.dark-theme .add-character-btn:hover {
     color: rgba(255, 255, 255, 0.7);
     line-height: 22px;
     margin-bottom: 18px;
-    font-family: "Pacifico", cursive;
+    font-family: Georgia, 'Times New Roman', serif;
     font-weight: 400;
 }
 
@@ -8517,6 +8517,7 @@ body:not(.dark-theme) .popup-info-content .popup-title {
 
 body:not(.dark-theme) .popup-info-content .popup-description {
     color: rgba(0, 0, 0, 0.7) !important;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 body:not(.dark-theme) .popup-info-content .ref-label {
