@@ -2661,21 +2661,11 @@ function addReferenceHandlers(bottomSheet, item) {
     const verseRefLabel = bottomSheet.querySelector('#verse-ref-label');
     const verseTextDiv = bottomSheet.querySelector('#verse-text');
 
-    let activeRef = null;
-
+    // Ref pills no longer expand/collapse verse - just maintain the functionality for styling if needed
     refPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-            const ref = pill.dataset.ref;
-
-            if (activeRef === ref) {
-                // Collapse
-                collapseVerse();
-                activeRef = null;
-            } else {
-                // Expand with new verse
-                expandVerse(ref, item);
-                activeRef = ref;
-            }
+        pill.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // Do nothing - don't show verse-inner
         });
     });
 
