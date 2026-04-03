@@ -8293,16 +8293,17 @@ body.dark-theme .add-character-btn:hover {
 
 .popup-info-bottom-sheet .verse-actions-content {
     padding: 0;
-    border-radius: 0;
+    border-radius: 12px;
     margin-bottom: 14px;
     width: 100%;
     min-height: 200px;
     max-height: 75vh;
     overflow: hidden;
     transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
-    background: #1c1c28;
-    border: 0.5px solid rgba(255, 255, 255, 0.08);
+    background: #2a2a35;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .popup-info-bottom-sheet .handle-container {
@@ -8332,10 +8333,11 @@ body.dark-theme .add-character-btn:hover {
 }
 
 .popup-info-content .popup-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: #f0ece0;
-    letter-spacing: 0.2px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .popup-info-content .close-bottom-sheet {
@@ -8385,19 +8387,18 @@ body.dark-theme .add-character-btn:hover {
 
 .popup-info-content .popup-description {
     font-size: 13.5px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 22px;
     margin-bottom: 18px;
-    font-family: cursive;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
 }
 
 .popup-info-content .ref-label {
     font-size: 10px;
-    font-weight: 500;
     letter-spacing: 1px;
-    color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.45);
     margin-bottom: 10px;
-    text-transform: uppercase;
 }
 
 .popup-info-content .ref-row {
@@ -8494,6 +8495,60 @@ body.dark-theme .add-character-btn:hover {
     color: #b3b3b3;
     margin-bottom: 4px;
     letter-spacing: 0.08em;
+}
+
+/* Light Mode Styles for Popup Info */
+body.light-theme .popup-info-bottom-sheet .verse-actions-content {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .popup-info-bottom-sheet .handle {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-theme .popup-info-content .popup-title {
+    color: #1a1a1a;
+}
+
+body.light-theme .popup-info-content .popup-description {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+body.light-theme .popup-info-content .ref-label {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+body.light-theme .popup-info-content .ref-pill {
+    border: 0.5px solid rgba(0, 0, 0, 0.14);
+    background-color: rgba(0, 0, 0, 0.03);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+body.light-theme .popup-info-content .ref-pill:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+body.light-theme .popup-info-content .verse-box {
+    border-left: 2px solid #c9a227;
+}
+
+body.light-theme .popup-info-content .verse-inner {
+    border-left: 2px solid #c9a227;
+    background-color: rgba(201, 162, 39, 0.08);
+}
+
+body.light-theme .popup-info-content .verse-ref-label {
+    color: #c9a227;
+}
+
+body.light-theme .popup-info-content .verse-text {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+body.light-theme .popup-info-content .close-bottom-sheet:hover {
+    background-color: rgba(226, 75, 74, 0.08);
 }
 
 .popup-info-text {
