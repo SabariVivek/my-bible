@@ -5291,9 +5291,9 @@ body.modal-open {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: brightness(0.5);
+    -webkit-backdrop-filter: brightness(0.5);
     z-index: 1100;
     opacity: 0;
     pointer-events: none;
@@ -5305,25 +5305,17 @@ body.modal-open {
     pointer-events: auto;
 }
 
-/* Desktop: Hide note viewer overlay on desktop */
-@media (min-width: 769px) {
-    .note-viewer-overlay {
-        display: none;
-    }
-}
-
-/* Base modal styles - Bottom sheet for mobile only */
+/* Base modal styles - Bottom sheet for all devices */
 .note-viewer-modal {
     background: #ffffff;
     display: flex;
     flex-direction: column;
     position: fixed;
-    bottom: 12px;
-    left: 12px;
-    right: 12px;
-    transform: translateY(100%);
-    width: calc(100% - 24px);
-    max-width: calc(100% - 24px);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 100%;
+    max-width: 600px;
     max-height: 80vh;
     border-radius: 16px 16px 0 0;
     box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
@@ -5338,18 +5330,11 @@ body.modal-open {
 }
 
 .note-viewer-overlay.visible .note-viewer-modal {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 .note-viewer-modal.dragging {
     transition: none !important;
-}
-
-/* Desktop: Hide note viewer modal on desktop */
-@media (min-width: 769px) {
-    .note-viewer-modal {
-        display: none;
-    }
 }
 
 /* Handle bar for note viewer */
@@ -6285,8 +6270,8 @@ body.dark-theme .notes-spinner {
     }
 
     .notes-modal {
-        width: calc(100% - 24px);
-        max-width: calc(100% - 24px);
+        width: 100%;
+        max-width: 100%;
         max-height: 95vh;
         border-radius: 16px 16px 0 0;
         box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
@@ -6297,15 +6282,10 @@ body.dark-theme .notes-spinner {
         backface-visibility: hidden;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        left: 12px;
-        right: 12px;
-        position: fixed;
-        bottom: 0;
     }
 
     .notes-modal-overlay.visible .notes-modal {
         transform: translateY(0);
-        bottom: 12px;
     }
 
     .notes-modal.dragging {
@@ -8287,11 +8267,6 @@ body.dark-theme .add-character-btn:hover {
     body:has(.verse-actions-bottom-sheet.visible) .content-area {
         margin-right: 100px;
     }
-}
-
-/* Hide verse actions backdrop */
-.verse-actions-backdrop {
-    display: none;
 }
 
 .verse-actions-content {
@@ -10896,15 +10871,14 @@ body.dark-theme .color-option:hover {
 .sermon-modal-content {
     position: fixed;
     bottom: 0;
-    left: 12px;
-    right: 12px;
-    transform: translateY(100%);
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
     background: #e0e0e0;
     border-radius: 24px 24px 0 0;
     z-index: 1001;
     max-height: 80vh;
-    max-width: calc(100% - 24px);
-    width: calc(100% - 24px);
+    max-width: 420px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
@@ -10918,8 +10892,7 @@ body.dark-theme .color-option:hover {
 }
 
 .sermon-selection-modal.visible .sermon-modal-content {
-    transform: translateY(0);
-    bottom: 12px;
+    transform: translateX(-50%) translateY(0);
 }
 
 .sermon-modal-content.dragging {
@@ -11220,14 +11193,13 @@ body.sermon-modal-open {
 .bookmark-color-picker-sheet {
     position: fixed;
     bottom: 0;
-    left: 12px;
-    right: 12px;
-    transform: translateY(100%);
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
     background: #e0e0e0;
     border-radius: 24px 24px 0 0;
     z-index: 9999;
-    max-width: calc(100% - 24px);
-    width: calc(100% - 24px);
+    max-width: 420px;
+    width: 100%;
     /* GPU acceleration for smooth animations */
     will-change: transform;
     transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
@@ -11242,12 +11214,11 @@ body.sermon-modal-open {
 }
 
 .bookmark-color-picker-sheet.visible {
-    transform: translateY(0);
-    bottom: 12px;
+    transform: translateX(-50%) translateY(0);
 }
 
 .bookmark-color-picker-sheet.closing {
-    transform: translateY(100%);
+    transform: translateX(-50%) translateY(100%);
 }
 
 .bookmark-color-picker-overlay.dragging .bookmark-color-picker-sheet {
@@ -12326,15 +12297,14 @@ body.dark-theme .cross-ref-loader-spinner {
 .add-ref-sheet {
     position: fixed;
     bottom: 0;
-    left: 12px;
-    right: 12px;
-    transform: translateY(100%);
-    width: calc(100% - 24px);
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
     background: #ffffff;
     border-radius: 24px 24px 0 0;
     z-index: 1202;
     height: 70vh;
-    max-width: calc(100% - 24px);
+    max-width: 420px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
@@ -12346,10 +12316,8 @@ body.dark-theme .add-ref-sheet {
 }
 
 .add-ref-sheet.active {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
     transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
-    left: 12px;
-    right: 12px;
 }
 
 .add-ref-sheet-handle {
