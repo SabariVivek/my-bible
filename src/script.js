@@ -2460,30 +2460,223 @@ body.dark-theme .${className}:hover {
     attachPopupHighlightListeners();
 }
 
-// Attach click listeners to popup highlight elements
-function attachPopupHighlightListeners() {
-    document.addEventListener('click', function (e) {
-        // Don't open popup if one is already visible
-        const existingPopup = document.getElementById('popup-info-bottom-sheet');
-        if (existingPopup && existingPopup.classList.contains('visible')) {
-            return;
-        }
+// Check if device is mobile
+function isMobileDevice() {
+    return window.innerWidth <= 768;
+}
 
-        // Don't open popup if verse-actions-bottom-sheet is open
-        const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
-        if (verseActionsSheet && verseActionsSheet.classList.contains('visible')) {
-            return;
-        }
+// Show small tooltip popup for desktop hover
+function showPopupTooltip(contentText, x, y) {
+    if (!biblePopups || typeof biblePopups !== 'object') return;
 
-        // Check if the clicked element has a popup-highlight class and data-popup-content attribute
-        if (e.target.hasAttribute('data-popup-content') && e.target.className.includes('popup-highlight-')) {
-            const contentText = e.target.getAttribute('data-popup-content');
-            if (contentText) {
-                e.stopPropagation();
-                showPopupInfo(contentText);
+    let matchingItem = null;
+    for (const bookKey in biblePopups) {
+        const book = biblePopups[bookKey];
+        for (const chapterKey in book) {
+            const verses = book[chapterKey];
+            if (Array.isArray(verses)) {
+                for (const item of verses) {
+                    if (item.content === contentText) {
+                        matchingItem = item;
+                        break;
+                    }
+                }
             }
+            if (matchingItem) break;
         }
-    }, true); // Use capture phase to ensure we catch clicks on dynamically added content
+        if (matchingItem) break;
+    }
+
+    if (!matchingItem) return;
+
+    // Remove existing tooltip
+    const existingTooltip = document.getElementById('popup-tooltip');
+    if (existingTooltip) {
+        existingTooltip.remove();
+    }
+
+    // Create references HTML if available
+    const referencesHtml = matchingItem.references && matchingItem.references.length > 0
+        ? matchingItem.references.map(ref => `<button class="ref-pill" data-ref="${ref}">${ref}</button>`).join('')
+        : '';
+
+    const referencesSection = matchingItem.references && matchingItem.references.length > 0
+        ? `<div class="popup-tooltip-refs">
+                <div class="ref-label">Ref : </div>
+                <div class="ref-row">${referencesHtml}</div>
+            </div>`
+        : '';
+
+    // Create tooltip
+    const tooltip = document.createElement('div');
+    tooltip.id = 'popup-tooltip';
+    tooltip.className = 'popup-tooltip';
+    
+    const isLightTheme = !document.body.classList.contains('dark-theme');
+    
+    tooltip.innerHTML = `
+        <div class="popup-tooltip-content">
+            <div class="popup-tooltip-title">${matchingItem.content}</div>
+            <div class="popup-tooltip-description">${matchingItem.description || 'No description available.'}</div>
+            ${referencesSection}
+        </div>
+    `;
+    
+    document.body.appendChild(tooltip);
+    
+    // Apply light theme styles if needed
+    if (isLightTheme) {
+        tooltip.style.backgroundColor = '#f5f5f5';
+        tooltip.style.borderColor = '#c9a227';
+        const title = tooltip.querySelector('.popup-tooltip-title');
+        if (title) title.style.color = '#1a1a1a';
+        const desc = tooltip.querySelector('.popup-tooltip-description');
+        if (desc) desc.style.color = 'rgba(0, 0, 0, 0.7)';
+        const refLabel = tooltip.querySelector('.ref-label');
+        if (refLabel) refLabel.style.color = 'rgba(0, 0, 0, 0.45)';
+        const refPills = tooltip.querySelectorAll('.ref-pill');
+        refPills.forEach(pill => {
+            pill.style.border = '0.5px solid rgba(0, 0, 0, 0.14)';
+            pill.style.backgroundColor = 'rgba(0, 0, 0, 0.03)';
+            pill.style.color = 'rgba(0, 0, 0, 0.7)';
+        });
+    }
+    
+    // Position tooltip near cursor, keep it within viewport
+    const tooltipWidth = 320;
+    const tooltipHeight = tooltip.offsetHeight;
+    let tooltipX = x + 15;
+    let tooltipY = y + 15;
+    
+    // Check if tooltip goes out of bounds and adjust
+    if (tooltipX + tooltipWidth > window.innerWidth) {
+        tooltipX = x - tooltipWidth - 15;
+    }
+    if (tooltipY + tooltipHeight > window.innerHeight) {
+        tooltipY = y - tooltipHeight - 15;
+    }
+    
+    tooltip.style.left = Math.max(10, tooltipX) + 'px';
+    tooltip.style.top = Math.max(10, tooltipY) + 'px';
+    
+    // Fade in animation
+    tooltip.style.opacity = '0';
+    tooltip.offsetHeight; // Trigger reflow
+    tooltip.style.opacity = '1';
+}
+
+// Hide tooltip popup
+function hidePopupTooltip() {
+    const tooltip = document.getElementById('popup-tooltip');
+    if (tooltip) {
+        tooltip.style.opacity = '0';
+        setTimeout(() => {
+            tooltip.remove();
+        }, 200);
+    }
+}
+
+// Attach click/hover listeners to popup highlight elements
+function attachPopupHighlightListeners() {
+    const isMobile = isMobileDevice();
+    let hoveredElement = null;
+    let tooltipHideTimer = null;
+    let tooltipShowTimer = null;
+    
+    if (isMobile) {
+        // Mobile: use click listeners
+        document.addEventListener('click', function (e) {
+            // Don't open popup if one is already visible
+            const existingPopup = document.getElementById('popup-info-bottom-sheet');
+            if (existingPopup && existingPopup.classList.contains('visible')) {
+                return;
+            }
+
+            // Don't open popup if verse-actions-bottom-sheet is open
+            const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
+            if (verseActionsSheet && verseActionsSheet.classList.contains('visible')) {
+                return;
+            }
+
+            // Check if the clicked element has a popup-highlight class and data-popup-content attribute
+            if (e.target.hasAttribute('data-popup-content') && e.target.className.includes('popup-highlight-')) {
+                const contentText = e.target.getAttribute('data-popup-content');
+                if (contentText) {
+                    e.stopPropagation();
+                    showPopupInfo(contentText);
+                }
+            }
+        }, true); // Use capture phase to ensure we catch clicks on dynamically added content
+    } else {
+        // Desktop: use hover listeners for tooltip
+        document.addEventListener('mouseover', function (e) {
+            // Check if the hovered element has a popup-highlight class and data-popup-content attribute
+            if (e.target.hasAttribute('data-popup-content') && e.target.className.includes('popup-highlight-')) {
+                const contentText = e.target.getAttribute('data-popup-content');
+                if (contentText) {
+                    hoveredElement = e.target;
+                    
+                    // Clear any pending timers
+                    if (tooltipHideTimer) {
+                        clearTimeout(tooltipHideTimer);
+                        tooltipHideTimer = null;
+                    }
+                    if (tooltipShowTimer) {
+                        clearTimeout(tooltipShowTimer);
+                    }
+                    
+                    // Show tooltip with a light delay for smooth experience
+                    tooltipShowTimer = setTimeout(() => {
+                        showPopupTooltip(contentText, e.clientX, e.clientY);
+                    }, 150);
+                }
+            }
+        }, true);
+        
+        // Update tooltip position on mouse move
+        document.addEventListener('mousemove', function (e) {
+            const tooltip = document.getElementById('popup-tooltip');
+            if (tooltip && hoveredElement) {
+                const tooltipWidth = 280;
+                const tooltipHeight = tooltip.offsetHeight;
+                let tooltipX = e.clientX + 15;
+                let tooltipY = e.clientY + 15;
+                
+                // Check if tooltip goes out of bounds and adjust
+                if (tooltipX + tooltipWidth > window.innerWidth) {
+                    tooltipX = e.clientX - tooltipWidth - 15;
+                }
+                if (tooltipY + tooltipHeight > window.innerHeight) {
+                    tooltipY = e.clientY - tooltipHeight - 15;
+                }
+                
+                tooltip.style.left = Math.max(10, tooltipX) + 'px';
+                tooltip.style.top = Math.max(10, tooltipY) + 'px';
+            }
+        }, true);
+        
+        // Close tooltip on mouse leave from highlighted text
+        document.addEventListener('mouseout', function (e) {
+            if (e.target.hasAttribute('data-popup-content') && 
+                e.target.className.includes('popup-highlight-')) {
+                
+                // Clear any pending show timer
+                if (tooltipShowTimer) {
+                    clearTimeout(tooltipShowTimer);
+                    tooltipShowTimer = null;
+                }
+                
+                // Clear previous hide timer if exists
+                if (tooltipHideTimer) {
+                    clearTimeout(tooltipHideTimer);
+                }
+                
+                // Hide tooltip immediately for smooth experience
+                hidePopupTooltip();
+                hoveredElement = null;
+            }
+        }, true);
+    }
 }
 
 // Highlight special text (Jesus names in English, and popup highlights in Tamil)
@@ -2554,10 +2747,10 @@ function showPopupInfoBottomSheet(item) {
         : '';
 
     const referencesSection = item.references && item.references.length > 0
-        ? `<div class="ref-label">REFERENCES</div>
-                <div class="ref-row">
-                    ${referencesHtml}
-                </div>`
+        ? `<div class="refs-container">
+                <div class="ref-label">Ref : </div>
+                <div class="ref-row">${referencesHtml}</div>
+            </div>`
         : '';
 
     bottomSheet.innerHTML = `
@@ -3031,7 +3224,7 @@ function displayChapter() {
             englishText = highlightSpecialText(englishText, 'both-english', bookName, currentChapter, verseNum);
             const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
             const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
-            const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
+            const tooltip = ''; // Removed Memory Verse tooltip to show only popup-highlight tooltips
             const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
             const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
 
@@ -3088,7 +3281,7 @@ function displayChapter() {
             verseText = highlightSpecialText(verseText, currentLanguage, bookName, currentChapter, verseNum);
             const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
             const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
-            const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
+            const tooltip = ''; // Removed Memory Verse tooltip to show only popup-highlight tooltips
             const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
             const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
 

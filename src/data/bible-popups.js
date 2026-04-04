@@ -54,7 +54,28 @@ const biblePopups = {
             {
                 content: "அறியாதிருந்து",
                 description: 'This means Joseph had no marital relations with Mary until Jesus was born, showing the miraculous birth by God’s power.',
-            }
+            },
+            {
+                "content": "கன்னிகை",
+                "description": "A young unmarried woman; a virgin, often associated with purity and innocence."
+            },
+            {
+                "content": "முதற்பேறான",
+                "description": "Firstborn; the first child born in a family, often given special importance or inheritance rights."
+            },
+            {
+                "content": "பெறுமளவும்",
+                "description": "Until the birth; referring specifically to the time when the child was born (as in Matthew 1:25)."
+            },
+            {
+                "content": "ஐயப்படாதே",
+                "description": "Do not doubt; do not be afraid or uncertain, but trust with confidence."
+            },
+            {
+                "content": "உற்பத்தியாயிருக்கிறது",
+                "description": "Has been formed; a baby has started growing inside the womb."
+            },
+
         ]
     }
 };
