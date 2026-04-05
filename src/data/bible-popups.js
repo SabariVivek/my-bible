@@ -369,5 +369,188 @@ const biblePopups = {
                 "description": "For inheritance; referring to receiving land or blessings passed down in a family."
             }
         ]
+    },
+    ruth: {
+        chapter1: [
+            {
+                "content": "சஞ்சரித்தான்",
+                "description": "Traveled; moved from place to place."
+            },
+            {
+                "content": "மோவாப்",
+                "description": "Moab; a land east of Israel, whose people were descendants of Lot."
+            },
+            {
+                "content": "பெண் கொண்டார்கள்",
+                "description": "Took wives; they married women."
+            },
+            {
+                "content": "தனித்தவளானாள்",
+                "description": "Was left alone; became without husband or family support."
+            },
+            {
+                "content": "ஜனத்தண்டைக்கே",
+                "description": "Among the people; in the presence of the community."
+            },
+            {
+                "content": "மன உறுதியாயிருக்கிறதைக்",
+                "description": "Being strong in heart; having courage or firm determination."
+            },
+            {
+                "content": "மாராள்",
+                "description": "Mara; the name Naomi chose for herself, meaning 'bitter,' because of her sorrow."
+            },
+            {
+                "content": "நகோமி",
+                "description": "Her name means 'sweetness' or 'pleasantness'."
+            },
+            {
+                "content": "கிலேசப்படுத்தியிருக்கையில்",
+                "description": "When caused suffering; when someone has been troubled or made to suffer."
+            },
+            {
+                "content": "வாற்கோதுமை",
+                "description": "Barley; a type of grain used for food, especially during harvest time."
+            }
+        ],
+        chapter2: [
+            {
+                "content": "பொறுக்கிக்கொண்டு",
+                "description": "Gleaning; picking up leftover grain from the field (as Ruth did)."
+            },
+            {
+                "content": "கண்காணியாக",
+                "description": "As an overseer; someone who watches over and supervises others."
+            },
+            {
+                "content": "ஊழியக்காரப்",
+                "description": "Servant; a person who works and serves under someone."
+            },
+            {
+                "content": "அந்நியதேசத்தாளாயிருக்க",
+                "description": "To be a foreigner; to live in a land that is not one's own."
+            },
+            {
+                "content": "ஜந்மதேசத்தையும்",
+                "description": "Birthplace; the land where a person was born."
+            },
+            {
+                "content": "அடியாளோடே",
+                "description": "With a servant woman; together with a female servant."
+            },
+            {
+                "content": "காடியிலே",
+                "description": "In the vinegar/wine; a sour drink used for dipping bread."
+            },
+            {
+                "content": "அரிக்கட்டுகள்",
+                "description": "Bundles of grain; tied groups of harvested crops."
+            },
+            {
+                "content": "ஈனம்பண்ணவேண்டாம்",
+                "description": "Do not insult; do not treat someone badly or with disrespect."
+            },
+            {
+                "content": "ஒரு மரக்கால்",
+                "description": "One marakkal; a traditional grain measure, about 2.5 to 3 liters (around 2 to 2.5 kg of rice, approximately)."
+            },
+            {
+                "content": "சுதந்தரவாளிகளில் ஒருவனுமாய்",
+                "description": "One of the redeemers; a close relative who has the duty to redeem family property and marry the widow, as commanded by God in the Law.",
+                references: ["Leviticus 25:25", "Deuteronomy 25:5-10"]
+            }
+        ],
+        chapter3: [
+            {
+                "content": "சவுக்கியத்தைத்",
+                "description": "Well-being; health, safety, or peaceful condition."
+            },
+            {
+                "content": "களத்திலே",
+                "description": "In the threshing floor; a place where grain is separated and processed."
+            },
+            {
+                "content": "தூற்றுவான்",
+                "description": "He will winnow (blow a current of air through (grain) in order to remove the chaff); he will separate the grain from the chaff at the threshing floor."
+            },
+            {
+                "content": "அம்பாரத்து அடியிலே",
+                "description": "At the foot of the grain heap; near the piled-up grain at the threshing floor."
+            },
+            {
+                "content": "அருண்டு",
+                "description": "Startled; suddenly afraid or disturbed."
+            },
+            {
+                "content": "போர்வையை விரியும்",
+                "description": "To cover someone with a cloth as a sign of protection and care."
+            },
+            {
+                "content": "சுதந்தரவாளி",
+                "description": "Redeemer; a close relative who takes responsibility to protect and care for the family, including marriage and property."
+            },
+            {
+                "content": "ஆறுபடி",
+                "description": "Six measures; about 9 to 12 liters of grain (approximately 7 to 10 kg)."
+            },
+            {
+                "content": "இளைப்பாறமாட்டான்",
+                "description": "He will not stop until the matter is finished."
+            }
+        ]
+    },
+    'i peter': {
+        chapter1: [
+            {
+                "content": "அப்போஸ்தலனாகிய",
+                "description": "One who is sent; an apostle — a chosen messenger sent by God with authority to preach the Gospel and establish the Church.",
+                references: ["Matthew 10:2", "Luke 6:13", "Acts 1:2", "Ephesians 4:11", "Ephesians 4:11"]
+            },
+            {
+                "content": "முன்னறிவின்படியே",
+                "description": "God knew it before and planned it.",
+                references: ["1 Peter 1:2", "Romans 8:29", "Acts 2:23"]
+            },
+            {
+                "content": "பரதேசிகளுக்கு",
+                "description": "To foreigners; people living in a place that is not their own home.",
+                references: ["Hebrews 11:13"]
+            },
+            {
+                "content": "ஸ்தோத்திரம்",
+                "description": "Praise; thanking God.",
+                references: ["Psalm 100:4", "Hebrews 13:15"]
+            },
+            {
+                "content": "மாசற்றதும்",
+                "description": "Without stain; completely pure and clean."
+            },
+            {
+                "content": "ஜெநிப்பித்தார்",
+                "description": "Gave birth; caused to be born (spiritually)."
+            },
+            {
+                "content": "கடைசிக்காலத்திலே",
+                "description": "In the last time — the final period when God’s full salvation will be revealed.",
+                "references": ["Hebrews 1:2", "1 John 2:18"]
+            },
+            {
+                "content": "ஏதுவாக",
+                "description": "For a reason; for a purpose."
+            },
+            {
+                "content": "சோதிக்கப்படும்",
+                "description": "Tested; examined to prove if it is true or strong."
+            },
+            {
+                "content": "விலையேறப்பெற்றதாயிருக்கிற",
+                "description": "Very valuable; worth a high price.",
+                references: ["Proverbs 3:15"]
+            },
+            {
+                "content": "கனமும்",
+                "description": "Honor; glory; great value or respect."
+            }
+        ]
     }
 };

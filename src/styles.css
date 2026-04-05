@@ -8609,15 +8609,8 @@ body:not(.dark-theme) .popup-info-content .ref-pill {
     align-items: center;
     gap: 6px;
     margin-top: 6px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-}
-
-@media (max-width: 768px) {
-    .popup-tooltip-refs {
-        flex-wrap: wrap;
-        overflow-x: visible;
-    }
+    flex-wrap: wrap;
+    overflow-x: visible;
 }
 
 .popup-tooltip-refs .ref-label {
@@ -8629,27 +8622,14 @@ body:not(.dark-theme) .popup-info-content .ref-pill {
     flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
-    .popup-tooltip-refs .ref-label {
-        flex-basis: 100%;
-    }
-}
-
 .popup-tooltip-refs .ref-row {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 4px;
     align-items: center;
     flex-grow: 1;
-    overflow-x: auto;
+    overflow-x: visible;
     min-width: 0;
-}
-
-@media (max-width: 768px) {
-    .popup-tooltip-refs .ref-row {
-        flex-wrap: wrap;
-        overflow-x: visible;
-    }
 }
 
 .popup-tooltip-refs .ref-pill {
