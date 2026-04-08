@@ -1741,6 +1741,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Always load Bible directly on all devices (mobile, tablet, desktop)
     loadBook(currentBook, currentChapter);
+
+    // Initialize PDF icon event listeners
+    const pdfIcon = document.getElementById('pdf-icon');
+
+    if (pdfIcon) {
+        pdfIcon.addEventListener('click', () => {
+            openPdfModal();
+        });
+    }
+
     // Start background preload after initial load (non-blocking, silent)
     setTimeout(() => {
         startBackgroundPreload();
@@ -2043,6 +2053,66 @@ async function loadBook(bookIndex, chapter) {
         hideLoader();
     }
 }
+
+// Check if PDF exists for current chapter and update icon visibility
+// Books that have PDF chapters available - specify which chapters have PDFs
+const BOOKS_WITH_PDF = {
+    'Job': [1],              // Only chapter 1 has PDF
+    'I Chronicles': [1],     // Only chapter 1 has PDF
+};
+
+// Convert Roman numerals to digits for PDF folder matching
+function convertRomanNumeralsInName(name) {
+    return name
+        .replace(/^I\s+/, '1 ')   // I Samuel, I Kings, I Chronicles, etc.
+        .replace(/^II\s+/, '2 ')  // II Samuel, II Kings, II Chronicles, etc.
+        .replace(/^III\s+/, '3 '); // III John
+}
+
+function updatePdfIconVisibility() {
+    const pdfIcon = document.getElementById('pdf-icon');
+    if (!pdfIcon) return;
+
+    const book = bibleBooks[currentBook];
+    const bookName = book.name;
+    
+    console.log(`[PDF Debug] Checking if ${bookName} Chapter ${currentChapter} has PDF...`);
+    
+    // Check if this book has PDFs and if this chapter is available
+    if (BOOKS_WITH_PDF[bookName] && BOOKS_WITH_PDF[bookName].includes(currentChapter)) {
+        console.log(`[PDF Debug] ✓ Chapter ${currentChapter} has PDF - SHOWING ICON`);
+        
+        const testament = book.testament === 'new' ? 'new-testament' : 'old-testament';
+        const bookNameConverted = convertRomanNumeralsInName(bookName);
+        const bookNameWithHyphens = bookNameConverted.replace(/\s+/g, '-');
+        const pdfPath = `resources/pdf/${testament}/${bookNameWithHyphens}/${bookNameWithHyphens}-${currentChapter}.pdf`;
+        
+        console.log(`[PDF Debug] PDF Path: ${pdfPath}`);
+        
+        pdfIcon.style.display = 'flex';
+        pdfIcon.dataset.pdfPath = pdfPath;
+    } else {
+        console.log(`[PDF Debug] ✗ Chapter ${currentChapter} does not have PDF - HIDING ICON`);
+        pdfIcon.style.display = 'none';
+    }
+}
+
+// Open PDF in a new window
+function openPdfModal() {
+    const pdfIcon = document.getElementById('pdf-icon');
+    const pdfPath = pdfIcon?.dataset.pdfPath;
+
+    if (!pdfPath) return;
+
+    const book = bibleBooks[currentBook];
+    const windowName = `pdf-${book.name.toLowerCase().replace(/\s+/g, '-')}-${currentChapter}`;
+    
+    // Open PDF in a new window/tab
+    window.open(pdfPath, windowName, 'width=1000,height=800,resizable=yes,scrollbars=yes');
+    
+    console.log(`[PDF Debug] Opening PDF in new window: ${pdfPath}`);
+}
+
 // Update UI with loaded data
 async function updateUI() {
     const book = bibleBooks[currentBook];
@@ -2091,6 +2161,9 @@ async function updateUI() {
 
     // Preload notes and references for current chapter in background
     preloadChapterNotesAndReferences();
+
+    // Update PDF icon visibility based on current chapter
+    updatePdfIconVisibility();
 
     // Preload all referenced verse data in background (so references display instantly when clicked)
     preloadReferencedVerseData();
