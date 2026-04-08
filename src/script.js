@@ -2055,10 +2055,14 @@ async function loadBook(bookIndex, chapter) {
 }
 
 // Check if PDF exists for current chapter and update icon visibility
-// Books that have PDF chapters available - specify which chapters have PDFs
+// PDF Configuration - List available chapter PDFs for each book
+// To add more: books must match exact names from bibleBooks array
+// When you add a new PDF file, add its chapter number to this list
+// Example: 'Genesis': [1, 2, 3] means chapters 1, 2, 3 have PDFs
 const BOOKS_WITH_PDF = {
-    'Job': [1],              // Only chapter 1 has PDF
-    'I Chronicles': [1],     // Only chapter 1 has PDF
+    'Job': [1],
+    'I Chronicles': [1, 2],
+    'I Samuel': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
 };
 
 // Convert Roman numerals to digits for PDF folder matching
@@ -2076,23 +2080,19 @@ function updatePdfIconVisibility() {
     const book = bibleBooks[currentBook];
     const bookName = book.name;
     
-    console.log(`[PDF Debug] Checking if ${bookName} Chapter ${currentChapter} has PDF...`);
-    
-    // Check if this book has PDFs and if this chapter is available
+    // Check if this book has PDF chapters and if current chapter is available
     if (BOOKS_WITH_PDF[bookName] && BOOKS_WITH_PDF[bookName].includes(currentChapter)) {
-        console.log(`[PDF Debug] ✓ Chapter ${currentChapter} has PDF - SHOWING ICON`);
+        console.log(`[PDF Debug] ✓ ${bookName} Chapter ${currentChapter} has PDF - SHOWING`);
         
         const testament = book.testament === 'new' ? 'new-testament' : 'old-testament';
         const bookNameConverted = convertRomanNumeralsInName(bookName);
         const bookNameWithHyphens = bookNameConverted.replace(/\s+/g, '-');
         const pdfPath = `resources/pdf/${testament}/${bookNameWithHyphens}/${bookNameWithHyphens}-${currentChapter}.pdf`;
         
-        console.log(`[PDF Debug] PDF Path: ${pdfPath}`);
-        
         pdfIcon.style.display = 'flex';
         pdfIcon.dataset.pdfPath = pdfPath;
     } else {
-        console.log(`[PDF Debug] ✗ Chapter ${currentChapter} does not have PDF - HIDING ICON`);
+        console.log(`[PDF Debug] ✗ ${bookName} Chapter ${currentChapter} no PDF - HIDING`);
         pdfIcon.style.display = 'none';
     }
 }
