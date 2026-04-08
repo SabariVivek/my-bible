@@ -5168,6 +5168,7 @@
                                 <div id="intro-content" class="intro-content"></div>
                             </div>
                         ` : state.dashboardTab === 'quiz' ? `
+                            <div style="margin-left: -1rem; margin-right: -1rem; margin-top: -1.5rem; margin-bottom: -1.5rem;">
                             ${(() => {
                                 // Get today's date for tracking submissions
                                 const today = new Date();
@@ -5194,7 +5195,7 @@
                                     
                                     return `
                                         <div class="space-y-6">
-                                            <div class="flex items-center justify-center mb-8">
+                                            <div class="flex items-center justify-center mb-8 pt-6">
                                                 <h1 style="font-size: 28px; font-weight: 800; font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin: 0; padding: 0; text-align: center; letter-spacing: 1px;">Leaderboard</h1>
                                             </div>
                                             
@@ -5645,13 +5646,13 @@
                                         const displayBooks = state.quizTestamentTab === 'NT' ? ntBooksArr : otBooksArr;
                                         
                                         return `
-                                            <div id="quizContainer" style="padding-bottom: 5rem;">
+                                            <div id="quizContainer" class="pt-0 md:pt-6">
                                                 <button onclick="state.quizStarted = false; render();" class="back-button-desktop mb-6 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
                                                     ${icons.chevronLeft} Back to Leaderboard
                                                 </button>
                                                 
                                                 <!-- Quiz Content -->
-                                                <div id="quizContent" class="mt-6">
+                                                <div id="quizContent">
                                     ${
                                         window.quizQuestions && 
                                         (state.quizTestamentTab === 'OT' ? otBooks : ntBooks).map(book => {
@@ -5665,7 +5666,7 @@
                                             );
                                             
                                             return `
-                                                <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4 ${!hasAnyChapterData ? 'opacity-60' : ''}" style="position: relative;">
+                                                <div class="${theme.card} rounded-none p-6 border ${theme.border} shadow-sm mb-4 ${!hasAnyChapterData ? 'opacity-60' : ''}" style="position: relative;">
                                                     ${!hasAnyChapterData ? `
                                                         <img src="../resources/images/coming-soon.png" alt="Coming Soon" style="position: absolute; top: 1.1rem; right: 1.1rem; width: 45px; height: 45px; object-fit: contain;">
                                                     ` : ''}
@@ -5853,6 +5854,7 @@
 
                                 return `<div class="${theme.card} rounded-xl p-6"><div class="${theme.textSecondary}">Loading...</div></div>`;
                             })()}
+                            </div>
                         ` : `
                             <!-- Quiz Toppers Section -->
                             ${state.quizLeaderboard && state.quizLeaderboard.length > 0 ? `
