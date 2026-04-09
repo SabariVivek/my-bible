@@ -2060,6 +2060,7 @@ async function loadBook(bookIndex, chapter) {
 // When you add a new PDF file, add its chapter number to this list
 // Example: 'Genesis': [1, 2, 3] means chapters 1, 2, 3 have PDFs
 const BOOKS_WITH_PDF = {
+    'Genesis': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
     'Job': [1],
     'I Chronicles': [1, 2],
     'I Samuel': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
@@ -2079,16 +2080,16 @@ function updatePdfIconVisibility() {
 
     const book = bibleBooks[currentBook];
     const bookName = book.name;
-    
+
     // Check if this book has PDF chapters and if current chapter is available
     if (BOOKS_WITH_PDF[bookName] && BOOKS_WITH_PDF[bookName].includes(currentChapter)) {
         console.log(`[PDF Debug] ✓ ${bookName} Chapter ${currentChapter} has PDF - SHOWING`);
-        
+
         const testament = book.testament === 'new' ? 'new-testament' : 'old-testament';
         const bookNameConverted = convertRomanNumeralsInName(bookName);
         const bookNameWithHyphens = bookNameConverted.replace(/\s+/g, '-');
         const pdfPath = `resources/pdf/${testament}/${bookNameWithHyphens}/${bookNameWithHyphens}-${currentChapter}.pdf`;
-        
+
         pdfIcon.style.display = 'flex';
         pdfIcon.dataset.pdfPath = pdfPath;
     } else {
@@ -2106,10 +2107,10 @@ function openPdfModal() {
 
     const book = bibleBooks[currentBook];
     const windowName = `pdf-${book.name.toLowerCase().replace(/\s+/g, '-')}-${currentChapter}`;
-    
+
     // Open PDF in a new window/tab
     window.open(pdfPath, windowName, 'width=1000,height=800,resizable=yes,scrollbars=yes');
-    
+
     console.log(`[PDF Debug] Opening PDF in new window: ${pdfPath}`);
 }
 
@@ -2584,9 +2585,9 @@ function showPopupTooltip(contentText, x, y) {
     const tooltip = document.createElement('div');
     tooltip.id = 'popup-tooltip';
     tooltip.className = 'popup-tooltip';
-    
+
     const isLightTheme = !document.body.classList.contains('dark-theme');
-    
+
     tooltip.innerHTML = `
         <div class="popup-tooltip-content">
             <div class="popup-tooltip-title">${matchingItem.content}</div>
@@ -2594,9 +2595,9 @@ function showPopupTooltip(contentText, x, y) {
             ${referencesSection}
         </div>
     `;
-    
+
     document.body.appendChild(tooltip);
-    
+
     // Apply light theme styles if needed
     if (isLightTheme) {
         tooltip.style.backgroundColor = '#f5f5f5';
@@ -2614,13 +2615,13 @@ function showPopupTooltip(contentText, x, y) {
             pill.style.color = 'rgba(0, 0, 0, 0.7)';
         });
     }
-    
+
     // Position tooltip near cursor, keep it within viewport
     const tooltipWidth = 320;
     const tooltipHeight = tooltip.offsetHeight;
     let tooltipX = x + 15;
     let tooltipY = y + 15;
-    
+
     // Check if tooltip goes out of bounds and adjust
     if (tooltipX + tooltipWidth > window.innerWidth) {
         tooltipX = x - tooltipWidth - 15;
@@ -2628,10 +2629,10 @@ function showPopupTooltip(contentText, x, y) {
     if (tooltipY + tooltipHeight > window.innerHeight) {
         tooltipY = y - tooltipHeight - 15;
     }
-    
+
     tooltip.style.left = Math.max(10, tooltipX) + 'px';
     tooltip.style.top = Math.max(10, tooltipY) + 'px';
-    
+
     // Fade in animation
     tooltip.style.opacity = '0';
     tooltip.offsetHeight; // Trigger reflow
@@ -2655,7 +2656,7 @@ function attachPopupHighlightListeners() {
     let hoveredElement = null;
     let tooltipHideTimer = null;
     let tooltipShowTimer = null;
-    
+
     if (isMobile) {
         // Mobile: use click listeners
         document.addEventListener('click', function (e) {
@@ -2688,7 +2689,7 @@ function attachPopupHighlightListeners() {
                 const contentText = e.target.getAttribute('data-popup-content');
                 if (contentText) {
                     hoveredElement = e.target;
-                    
+
                     // Clear any pending timers
                     if (tooltipHideTimer) {
                         clearTimeout(tooltipHideTimer);
@@ -2697,7 +2698,7 @@ function attachPopupHighlightListeners() {
                     if (tooltipShowTimer) {
                         clearTimeout(tooltipShowTimer);
                     }
-                    
+
                     // Show tooltip with a light delay for smooth experience
                     tooltipShowTimer = setTimeout(() => {
                         showPopupTooltip(contentText, e.clientX, e.clientY);
@@ -2705,7 +2706,7 @@ function attachPopupHighlightListeners() {
                 }
             }
         }, true);
-        
+
         // Update tooltip position on mouse move
         document.addEventListener('mousemove', function (e) {
             const tooltip = document.getElementById('popup-tooltip');
@@ -2714,7 +2715,7 @@ function attachPopupHighlightListeners() {
                 const tooltipHeight = tooltip.offsetHeight;
                 let tooltipX = e.clientX + 15;
                 let tooltipY = e.clientY + 15;
-                
+
                 // Check if tooltip goes out of bounds and adjust
                 if (tooltipX + tooltipWidth > window.innerWidth) {
                     tooltipX = e.clientX - tooltipWidth - 15;
@@ -2722,28 +2723,28 @@ function attachPopupHighlightListeners() {
                 if (tooltipY + tooltipHeight > window.innerHeight) {
                     tooltipY = e.clientY - tooltipHeight - 15;
                 }
-                
+
                 tooltip.style.left = Math.max(10, tooltipX) + 'px';
                 tooltip.style.top = Math.max(10, tooltipY) + 'px';
             }
         }, true);
-        
+
         // Close tooltip on mouse leave from highlighted text
         document.addEventListener('mouseout', function (e) {
-            if (e.target.hasAttribute('data-popup-content') && 
+            if (e.target.hasAttribute('data-popup-content') &&
                 e.target.className.includes('popup-highlight-')) {
-                
+
                 // Clear any pending show timer
                 if (tooltipShowTimer) {
                     clearTimeout(tooltipShowTimer);
                     tooltipShowTimer = null;
                 }
-                
+
                 // Clear previous hide timer if exists
                 if (tooltipHideTimer) {
                     clearTimeout(tooltipHideTimer);
                 }
-                
+
                 // Hide tooltip immediately for smooth experience
                 hidePopupTooltip();
                 hoveredElement = null;
