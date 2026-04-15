@@ -312,6 +312,8 @@
     <script src="lib/supabase-bible-reading.js?v=20251126003722"></script>
     <script src="lib/supabase-quiz.js?v=20251126003722"></script>
     <script src="lib/quiz-questions-formatter.js?v=20251126003722"></script>
+    <link rel="stylesheet" href="lib/quiz-mobile.css?v=20260415">
+    <script src="lib/quiz-mobile.js?v=20260415"></script>
     <script src="yearlyReadingPlan.js?v=20251126003722"></script>
     <script>
         // Force cache refresh for updated reading plan
@@ -7297,6 +7299,33 @@
                     
                     // Setup scroll guard to prevent accidental back button clicks while scrolling
                     setupScrollGuard('quizContainer');
+                }
+
+                // Launch mobile quiz overlay when a quiz chapter is selected on mobile
+                if (typeof MobileQuiz !== 'undefined' && MobileQuiz.isMobile() 
+                    && state.selectedQuizChapter && state.selectedQuizBook 
+                    && !state.quizSummaryData && state.dashboardTab === 'quiz') {
+                    const chapter = state.selectedQuizChapter;
+                    const selectedBookKey = state.selectedQuizBook.toLowerCase().replace(/\s+/g, '-');
+                    if (window.quizQuestions && window.quizQuestions[selectedBookKey] && window.quizQuestions[selectedBookKey][String(chapter)]) {
+                        const chapterQuestions = window.quizQuestions[selectedBookKey][String(chapter)].questions;
+                        const quizQuestionList = [];
+                        chapterQuestions.forEach((q, idx) => {
+                            quizQuestionList.push({
+                                ...q,
+                                id: `ch${chapter}-${idx}`,
+                                chapter: chapter
+                            });
+                        });
+                        if (quizQuestionList.length > 0) {
+                            const today = new Date();
+                            const dateKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+                            MobileQuiz.launch(quizQuestionList, state.selectedQuizBook, chapter, dateKey, state.darkMode);
+                        }
+                    }
+                } else if (typeof MobileQuiz !== 'undefined' && (!state.selectedQuizChapter || state.quizSummaryData)) {
+                    // Destroy mobile overlay if we navigated away from quiz questions
+                    MobileQuiz.destroy();
                 }
                 
                 // Trigger confetti when family tab is first opened
