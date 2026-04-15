@@ -246,9 +246,9 @@ const MobileQuiz = (() => {
                 <div class="mq-score-big">${score}/${total}</div>
                 <div class="mq-score-pct">${pct}% correct</div>
                 <div class="mq-score-msg">Quiz Complete!</div>
+                <button class="mq-next-btn active mq-score-summary-btn" id="mqScoreReview">View Summary</button>
             </div>
-            <div class="mq-footer" style="flex-direction:column;gap:8px;">
-                <button class="mq-next-btn active" id="mqScoreReview" style="width:100%">View Summary</button>
+            <div class="mq-footer" style="justify-content:center;">
                 <button class="mq-score-back-btn" id="mqScoreBack" style="width:100%">← Back to Books</button>
             </div>
         `;
@@ -309,6 +309,11 @@ const MobileQuiz = (() => {
             if (footer) footer.style.display = 'none';
         }
 
+        // Keep a reference to the loader overlay so we can remove it after render
+        const loaderOverlay = _overlayEl;
+        // Detach from module state so destroy() won't try to remove it
+        _overlayEl = null;
+
         if (skipSummary && typeof state !== 'undefined') {
             const origRender = window.render;
             window.render = function() {
@@ -317,19 +322,38 @@ const MobileQuiz = (() => {
                     state.quizStarted = true;
                 }
                 window.render = origRender;
+                // Remove loader right before the real render paints
+                if (loaderOverlay && loaderOverlay.parentNode) {
+                    loaderOverlay.parentNode.removeChild(loaderOverlay);
+                }
+                origRender();
+            };
+        } else {
+            // Intercept render to remove loader at the right moment
+            const origRender = window.render;
+            window.render = function() {
+                window.render = origRender;
+                if (loaderOverlay && loaderOverlay.parentNode) {
+                    loaderOverlay.parentNode.removeChild(loaderOverlay);
+                }
                 origRender();
             };
         }
 
         // Small delay so the loader is visible, then submit
         setTimeout(() => {
-            destroy();
             if (typeof submitQuiz === 'function') {
                 submitQuiz(questions, dateKey, chapter);
             }
             if (createdForm && existingForm.parentNode) {
                 existingForm.parentNode.removeChild(existingForm);
             }
+            // Fallback: if render wasn't called within 2s, clean up loader
+            setTimeout(() => {
+                if (loaderOverlay && loaderOverlay.parentNode) {
+                    loaderOverlay.parentNode.removeChild(loaderOverlay);
+                }
+            }, 2000);
         }, 400);
     }
 
