@@ -6027,9 +6027,9 @@
                             justify-content: space-around;
                             height: 68px;
                             border-radius: 20px 20px 0 0;
-                            background: ${state.darkMode ? '#161a26' : '#ffffff'};
-                            border-top: 1px solid ${state.darkMode ? 'rgba(51,65,85,0.25)' : 'rgba(0,0,0,0.06)'};
-                            box-shadow: ${state.darkMode ? '0 -4px 24px rgba(0,0,0,0.4)' : '0 -2px 16px rgba(0,0,0,0.06)'};
+                            background: ${state.darkMode ? '#1e293b' : '#ffffff'};
+                            border-top: 1px solid ${state.darkMode ? '#334155' : 'rgba(0,0,0,0.06)'};
+                            box-shadow: ${state.darkMode ? '0 -4px 24px rgba(0,0,0,0.3)' : '0 -2px 16px rgba(0,0,0,0.06)'};
                             padding: 0 8px;
                             padding-bottom: env(safe-area-inset-bottom, 0px);
                         ">
@@ -6055,7 +6055,7 @@
                                             : '<img src="' + tab.iconImg + '" alt="' + tab.label + '" style="width:20px; height:20px; ' + (isActive ? activeImgFilter : inactiveImgFilter) + '">') +
                                     '</div>' +
                                     '<span style="font-size:10px; font-weight:' + (isActive ? '600' : '400') + '; color:' + (isActive ? activeColor : inactiveColor) + '; letter-spacing:0.01em;">' + tab.label + '</span>' +
-                                    (isActive ? '<div style="position:absolute; bottom:4px; left:50%; transform:translateX(-50%); width:24px; height:3px; border-radius:2px; background:' + activeColor + ';"></div>' : '') +
+                                    (isActive ? '<div style="position:absolute; top:2px; left:50%; transform:translateX(-50%); width:24px; height:3px; border-radius:2px; background:' + activeColor + ';"></div>' : '') +
                                     '</button>';
                             }).join('')}
                         </div>
