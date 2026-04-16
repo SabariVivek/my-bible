@@ -7024,6 +7024,17 @@
             const app = document.getElementById('app');
             console.log('render() called - showAdminView:', state.showAdminView, 'currentUser:', state.currentUser?.name, 'users count:', state.users.length, 'isAdmin:', state.isAdmin);
 
+            // Update Android notification bar color based on active tab
+            const metaThemeColor = document.getElementById('theme-color-meta');
+            if (metaThemeColor) {
+                const isQuizLeaderboard = state.showDashboard && state.dashboardTab === 'quiz' && !state.quizStarted;
+                if (isQuizLeaderboard && state.darkMode) {
+                    metaThemeColor.setAttribute('content', '#0f172a');
+                } else {
+                    metaThemeColor.setAttribute('content', state.darkMode ? '#1e293b' : '#ffffff');
+                }
+            }
+
             if (state.showAdminView) {
                 console.log('Rendering profile management view');
                 // Show profile management view with delete and mark up to date buttons
