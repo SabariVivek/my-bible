@@ -199,8 +199,10 @@ const MobileQuiz = (() => {
                 state.selectedQuizChapter = null;
                 state.selectedQuizBook = null;
                 state.quizSummaryData = null;
-                state.quizTestamentTab = 'NT';
+                state.quizTestamentTab = state.quizTestamentTab || 'NT';
                 state.showQuizBackConfirmation = false;
+                // Stay in quiz grid (chapter selection) instead of exiting entirely
+                state.quizStarted = true;
             }
             if (typeof render === 'function') render();
         });
@@ -457,8 +459,10 @@ const MobileQuiz = (() => {
             state.selectedQuizChapter = null;
             state.selectedQuizBook = null;
             state.quizSummaryData = null;
-            state.quizTestamentTab = 'NT';
+            state.quizTestamentTab = state.quizTestamentTab || 'NT';
             state.showQuizBackConfirmation = false;
+            // Stay in quiz grid (chapter selection) instead of exiting entirely
+            state.quizStarted = true;
         }
         if (typeof render === 'function') render();
     }

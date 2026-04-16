@@ -11,7 +11,7 @@
     <meta name="google" content="notranslate">
     <title>Bible Reading</title>
     <link rel="icon" type="image/png" href="../resources/icons/bible.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Light theme body background - matching docs.html */
         body {
@@ -1924,80 +1924,201 @@
             }
         }
 
-        /* Notes Card Styles */
+        /* Notes Card Styles — Gold Glow Design */
+        .notes-cards-area {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            margin-bottom: 14px;
+            font-family: 'DM Sans', 'Cinzel', sans-serif;
+        }
+
+        .notes-section-label {
+            padding: 0 4px 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .notes-sec-title {
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            color: #3a3e5a;
+            font-family: 'DM Sans', sans-serif;
+            text-transform: uppercase;
+        }
+        html:not(.dark-theme) .notes-sec-title {
+            color: #8a8ea0;
+        }
+
         .notes-card {
-            opacity: 1;
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: border-color 0.2s;
+            margin-bottom: 0;
         }
-
-        @keyframes slideUpFade {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        html.dark-theme .notes-card {
+            background: #161820;
+            border: 1px solid #2b2d3e;
         }
-
-        /* Reference Badge */
-        .reference-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 600;
-            margin-top: 8px;
-        }
-
-        .reference-badge-dark {
-            background: rgba(232, 220, 200, 0.15);
-            color: #d4af8f;
-            border: 1px solid rgba(232, 220, 200, 0.3);
-        }
-
-        .reference-badge-light {
-            background: rgba(212, 175, 143, 0.15);
-            color: #8b6f47;
-            border: 1px solid rgba(212, 175, 143, 0.3);
-        }
-
-        /* Theme-aware card backgrounds */
-        .notes-card-content {
-            border-radius: 12px;
-            padding: 16px;
-            min-height: 80px;
-            display: block;
-            transition: all 0.3s;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-        }
-
-        .notes-card-content-dark {
-            background: rgb(30 41 59 / var(--tw-bg-opacity, 1));
-            border: 1px solid rgba(232, 220, 200, 0.15);
-            color: #e8dcc8;
-        }
-
-        .notes-card-content-light {
+        html:not(.dark-theme) .notes-card {
             background: #ffffff;
-            border: 1px solid rgba(212, 175, 143, 0.3);
-            color: #2c2417;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0e2ec;
+        }
+        .notes-card:hover {
+            border-color: #c9a22755;
         }
 
-        .notes-card {
-            margin-bottom: 16px;
+        .notes-card-glow-line {
+            height: 2px;
+            width: 100%;
+            border-radius: 0;
+        }
+        html.dark-theme .notes-card-glow-line { background: #c9a22755; }
+        html:not(.dark-theme) .notes-card-glow-line { background: #c9a22744; }
+        html.dark-theme .notes-card-glow-line.bright { background: #c9a227aa; }
+        html:not(.dark-theme) .notes-card-glow-line.bright { background: #c9a22788; }
+
+        .notes-card-inner {
+            padding: 13px 15px 12px;
+        }
+        .notes-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .notes-card-title-wrap {
+            flex: 1;
+        }
+        .notes-card-category {
+            font-size: 9px;
+            letter-spacing: 0.12em;
+            font-family: 'DM Sans', sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+        html.dark-theme .notes-card-category { color: #4a4e6a; }
+        html:not(.dark-theme) .notes-card-category { color: #9098b8; }
+
+        .notes-card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #c9a227;
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+        html:not(.dark-theme) .notes-card-title { color: #9a7a10; }
+
+        .notes-card-sub {
+            font-size: 11px;
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.45;
+            margin-bottom: 8px;
+        }
+        html.dark-theme .notes-card-sub { color: #7a809a; }
+        html:not(.dark-theme) .notes-card-sub { color: #6a6e82; }
+
+        .notes-card-pill {
+            display: inline-block;
+            border-radius: 20px;
+            padding: 3px 10px;
+            font-size: 10px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        html.dark-theme .notes-card-pill {
+            background: #1e2130;
+            border: 1px solid #323652;
+            color: #9098b8;
+        }
+        html:not(.dark-theme) .notes-card-pill {
+            background: #f0f1f8;
+            border: 1px solid #d0d2e0;
+            color: #6a6e82;
         }
 
-        .notes-card .notes-card-content:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        .notes-card-arrow {
+            width: 22px;
+            height: 22px;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
         }
+        html.dark-theme .notes-card-arrow {
+            background: #1e2130;
+            border: 1px solid #2e3148;
+        }
+        html:not(.dark-theme) .notes-card-arrow {
+            background: #f0f1f8;
+            border: 1px solid #d0d2e0;
+        }
+        .notes-card-arrow .arr {
+            width: 0;
+            height: 0;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            margin-left: 1px;
+        }
+        html.dark-theme .notes-card-arrow .arr { border-left: 6px solid #4a5070; }
+        html:not(.dark-theme) .notes-card-arrow .arr { border-left: 6px solid #9098b8; }
 
-        html.dark-theme .notes-card .notes-card-content-dark:hover {
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
-            border-color: rgba(232, 220, 200, 0.25);
+        .notes-card-footer {
+            padding: 7px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+        html.dark-theme .notes-card-footer { border-top: 1px solid #1e2035; }
+        html:not(.dark-theme) .notes-card-footer { border-top: 1px solid #e8eaf0; }
+
+        .notes-card-meta {
+            font-size: 9px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        html.dark-theme .notes-card-meta { color: #3a3e58; }
+        html:not(.dark-theme) .notes-card-meta { color: #9098b8; }
+
+        .notes-card-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
+        html.dark-theme .notes-card-dot { background: #c9a22740; }
+        html:not(.dark-theme) .notes-card-dot { background: #c9a22750; }
+        html.dark-theme .notes-card-dot.green { background: #3a8a4a40; }
+        html:not(.dark-theme) .notes-card-dot.green { background: #3a8a4a60; }
+        html.dark-theme .notes-card-dot.blue { background: #3a6aaa40; }
+        html:not(.dark-theme) .notes-card-dot.blue { background: #3a6aaa60; }
+
+        /* Search bar for notes */
+        .notes-search-bar {
+            margin: 0 0 14px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 12px;
+        }
+        html.dark-theme .notes-search-bar {
+            background: #161820;
+            border: 1px solid #2a2d42;
+        }
+        html:not(.dark-theme) .notes-search-bar {
+            background: #f5f6fa;
+            border: 1px solid #d0d2e0;
+        }
+        .notes-search-text {
+            font-size: 12px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        html.dark-theme .notes-search-text { color: #3a3e58; }
+        html:not(.dark-theme) .notes-search-text { color: #9098b8; }
     </style>
 </head>
 
@@ -2777,9 +2898,32 @@
                 
                 // Navigate backwards through the quiz states
                 if (state.selectedQuizChapter) {
-                    // From quiz questions/summary -> show confirmation dialog
-                    state.showQuizBackConfirmation = true;
-                    render();
+                    // Check if viewing a summary (completed quiz review)
+                    if (state.quizSummaryData) {
+                        // From quiz summary -> go back to chapter selection grid directly
+                        state.selectedQuizChapter = null;
+                        state.selectedQuizBook = null;
+                        state.quizSummaryData = null;
+                        state.quizTestamentTab = state.quizTestamentTab || 'NT';
+                        state.showQuizBackConfirmation = false;
+                        // Ensure we stay in the quiz grid (quizStarted remains true)
+                        state.quizStarted = true;
+                        render();
+                    } else if (typeof MobileQuiz !== 'undefined' && MobileQuiz.isMobile()) {
+                        // On mobile during active quiz -> trigger MobileQuiz exit modal
+                        // The MobileQuiz overlay handles its own exit UI
+                        const mqOverlay = document.getElementById('mobileQuizOverlay');
+                        if (mqOverlay) {
+                            const exitBtn = mqOverlay.querySelector('#mqExitBtn');
+                            if (exitBtn) {
+                                exitBtn.click();
+                            }
+                        }
+                    } else {
+                        // Desktop: From quiz questions -> show confirmation dialog
+                        state.showQuizBackConfirmation = true;
+                        render();
+                    }
                 } else if (state.selectedQuizBook) {
                     // From books selection -> back to testament selection
                     state.selectedQuizBook = null;
@@ -2800,7 +2944,6 @@
                     render();
                 }
                 
-                render();
                 // Push state again so back works for next navigation
                 window.history.pushState({ page: 'quiz' }, '', window.location.href);
                 return;
@@ -3326,7 +3469,7 @@
                 // Set the selected chapter and book
                 state.selectedQuizChapter = chapter;
                 state.selectedQuizBook = book || state.selectedQuizBook;  // Use passed book or current selected book
-                const bookKey = state.selectedQuizBook.toLowerCase();
+                const bookKey = state.selectedQuizBook.toLowerCase().replace(/\s+/g, '-');
                 
                 // Get the questions for this chapter
                 if (!window.quizQuestions || !window.quizQuestions[bookKey] || !window.quizQuestions[bookKey][chapter]) {
@@ -4998,101 +5141,227 @@
                                     </div>`;
                             })()}
                         ` : state.dashboardTab === 'notes' ? `
-                            <!-- NOTES TAB CONTENT -->
-                            <div id="notesCardsContainer" style="width: 100%;">
-                                <!-- Real cards -->
-                                <div class="notesCardsWrapper" style="display: block;">
-                                    ${(() => {
-                                        const isDarkMode = document.documentElement.classList.contains('dark-theme') ? 'dark' : 'light';
-                                        return `
-                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                                                <div onclick="window.location.href='bible-characters.html'" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px;">
-                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Bible Characters</h3>
-                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Explore biblical figures, their stories and lessons</p>
+                            <!-- NOTES TAB CONTENT — Gold Glow Design -->
+                            <div id="notesCardsContainer" style="width: 100%; margin-top: -0.5rem;">
+
+                                <div class="notes-search-bar">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                        <circle cx="6" cy="6" r="4" stroke="#3a3e58" stroke-width="1.5"/>
+                                        <path d="M9 9l2.5 2.5" stroke="#3a3e58" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                    <span class="notes-search-text">Search topics, characters, passages...</span>
+                                </div>
+
+                                <div class="notes-section-label">
+                                    <span class="notes-sec-title">Study Topics</span>
+                                </div>
+
+                                <div class="notes-cards-area">
+
+                                    <div class="notes-card" onclick="window.location.href='bible-characters.html'">
+                                        <div class="notes-card-glow-line bright"></div>
+                                        <div class="notes-card-inner">
+                                            <div class="notes-card-top">
+                                                <div class="notes-card-title-wrap">
+                                                    <div class="notes-card-category">Characters</div>
+                                                    <div class="notes-card-title">Bible Characters</div>
+                                                    <div class="notes-card-sub">Explore biblical figures, their stories and lessons</div>
                                                 </div>
+                                                <div class="notes-card-arrow"><div class="arr"></div></div>
                                             </div>
+                                        </div>
+                                    </div>
 
-                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                                                <div onclick="window.location.href='journey-to-canaan.html'" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px;">
-                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Journey to Canaan</h3>
-                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Explore the journey of faith and obedience</p>
-                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">Genesis 12:1 – Joshua 6:25</div>
+                                    <div class="notes-card" onclick="window.location.href='journey-to-canaan.html'">
+                                        <div class="notes-card-glow-line"></div>
+                                        <div class="notes-card-inner">
+                                            <div class="notes-card-top">
+                                                <div class="notes-card-title-wrap">
+                                                    <div class="notes-card-category">Journey · Old Testament</div>
+                                                    <div class="notes-card-title">Journey to Canaan</div>
+                                                    <div class="notes-card-sub">Explore the journey of faith and obedience</div>
+                                                    <span class="notes-card-pill">Genesis 12:1 – Joshua 6:25</span>
                                                 </div>
+                                                <div class="notes-card-arrow"><div class="arr"></div></div>
                                             </div>
+                                        </div>
+                                        <div class="notes-card-footer">
+                                            <span class="notes-card-meta">84 chapters · 6 books</span>
+                                            <div class="notes-card-dot green"></div>
+                                        </div>
+                                    </div>
 
-                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                                                <a href="../docs/docs.html?context=revelation" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
-                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">The Revelation of Jesus Christ</h3>
-                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Understanding the end times and Christ's return</p>
-                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">Revelation 1 - 22</div>
-                                                </a>
+                                    <div class="notes-card" onclick="window.location.href='../docs/docs.html?context=revelation'">
+                                        <div class="notes-card-glow-line"></div>
+                                        <div class="notes-card-inner">
+                                            <div class="notes-card-top">
+                                                <div class="notes-card-title-wrap">
+                                                    <div class="notes-card-category">Prophecy · New Testament</div>
+                                                    <div class="notes-card-title">The Revelation of Jesus Christ</div>
+                                                    <div class="notes-card-sub">Understanding the end times and Christ's return</div>
+                                                    <span class="notes-card-pill">Revelation 1 - 22</span>
+                                                </div>
+                                                <div class="notes-card-arrow"><div class="arr"></div></div>
                                             </div>
+                                        </div>
+                                        <div class="notes-card-footer">
+                                            <span class="notes-card-meta">22 chapters · 1 book</span>
+                                            <div class="notes-card-dot blue"></div>
+                                        </div>
+                                    </div>
 
-                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                                                <a href="../resources/html/sermon_on_the_mount.html" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
-                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Sermon on the Mount</h3>
-                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Jesus' foundational teachings on the kingdom</p>
-                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">Matthew 5 - 7</div>
-                                                </a>
+                                    <div class="notes-card" onclick="window.location.href='../resources/html/sermon_on_the_mount.html'">
+                                        <div class="notes-card-glow-line"></div>
+                                        <div class="notes-card-inner">
+                                            <div class="notes-card-top">
+                                                <div class="notes-card-title-wrap">
+                                                    <div class="notes-card-category">Teaching · New Testament</div>
+                                                    <div class="notes-card-title">Sermon on the Mount</div>
+                                                    <div class="notes-card-sub">Jesus' foundational teachings on the kingdom</div>
+                                                    <span class="notes-card-pill">Matthew 5 - 7</span>
+                                                </div>
+                                                <div class="notes-card-arrow"><div class="arr"></div></div>
                                             </div>
+                                        </div>
+                                        <div class="notes-card-footer">
+                                            <span class="notes-card-meta">3 chapters · beatitudes</span>
+                                            <div class="notes-card-dot"></div>
+                                        </div>
+                                    </div>
 
-                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                                                <a href="../resources/html/amaziah.html" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
-                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Amaziah: Victory, Pride and Defeat</h3>
-                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">A king's story of faith, pride, and consequences</p>
-                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">2 Chronicles 25</div>
-                                                </a>
+                                    <div class="notes-card" onclick="window.location.href='../resources/html/amaziah.html'">
+                                        <div class="notes-card-glow-line"></div>
+                                        <div class="notes-card-inner">
+                                            <div class="notes-card-top">
+                                                <div class="notes-card-title-wrap">
+                                                    <div class="notes-card-category">History · Old Testament</div>
+                                                    <div class="notes-card-title">Amaziah: Victory, Pride and Defeat</div>
+                                                    <div class="notes-card-sub">A king's story of faith, pride, and consequences</div>
+                                                    <span class="notes-card-pill">2 Chronicles 25</span>
+                                                </div>
+                                                <div class="notes-card-arrow"><div class="arr"></div></div>
                                             </div>
+                                        </div>
+                                        <div class="notes-card-footer">
+                                            <span class="notes-card-meta">1 chapter · kings</span>
+                                            <div class="notes-card-dot green"></div>
+                                        </div>
+                                    </div>
 
-                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                                                <a href="../resources/html/gideon.html" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
-                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Gideon: Faith, Fear & Victory</h3>
-                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Jesus' foundational teachings on the kingdom</p>
-                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">Matthew 5 - 7</div>
-                                                </a>
+                                    <div class="notes-card" onclick="window.location.href='../resources/html/gideon.html'">
+                                        <div class="notes-card-glow-line"></div>
+                                        <div class="notes-card-inner">
+                                            <div class="notes-card-top">
+                                                <div class="notes-card-title-wrap">
+                                                    <div class="notes-card-category">Faith · Old Testament</div>
+                                                    <div class="notes-card-title">Gideon: Faith, Fear & Victory</div>
+                                                    <div class="notes-card-sub">From fearful farmer to mighty warrior by God's call</div>
+                                                    <span class="notes-card-pill">Judges 6 - 8</span>
+                                                </div>
+                                                <div class="notes-card-arrow"><div class="arr"></div></div>
                                             </div>
+                                        </div>
+                                        <div class="notes-card-footer">
+                                            <span class="notes-card-meta">3 chapters · judges</span>
+                                            <div class="notes-card-dot green"></div>
+                                        </div>
+                                    </div>
 
-                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                                                <a href="../resources/html/ananias_sapphira.html" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
-                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Ananias & Sapphira: Deception Before God</h3>
-                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Jesus' foundational teachings on the kingdom</p>
-                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">Acts 5 : 1 - 11</div>
-                                                </a>
+                                    <div class="notes-card" onclick="window.location.href='../resources/html/ananias_sapphira.html'">
+                                        <div class="notes-card-glow-line"></div>
+                                        <div class="notes-card-inner">
+                                            <div class="notes-card-top">
+                                                <div class="notes-card-title-wrap">
+                                                    <div class="notes-card-category">Warning · New Testament</div>
+                                                    <div class="notes-card-title">Ananias & Sapphira: Deception Before God</div>
+                                                    <div class="notes-card-sub">The cost of lying to the Holy Spirit</div>
+                                                    <span class="notes-card-pill">Acts 5 : 1 - 11</span>
+                                                </div>
+                                                <div class="notes-card-arrow"><div class="arr"></div></div>
                                             </div>
+                                        </div>
+                                        <div class="notes-card-footer">
+                                            <span class="notes-card-meta">1 chapter · early church</span>
+                                            <div class="notes-card-dot blue"></div>
+                                        </div>
+                                    </div>
 
-                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                                                <a href="../resources/html/cornelius.html" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
-                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Cornelius: Salvation Comes to the Gentiles</h3>
-                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Jesus' foundational teachings on the kingdom</p>
-                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">Acts 10 - 11</div>
-                                                </a>
+                                    <div class="notes-card" onclick="window.location.href='../resources/html/cornelius.html'">
+                                        <div class="notes-card-glow-line"></div>
+                                        <div class="notes-card-inner">
+                                            <div class="notes-card-top">
+                                                <div class="notes-card-title-wrap">
+                                                    <div class="notes-card-category">Mission · New Testament</div>
+                                                    <div class="notes-card-title">Cornelius: Salvation Comes to the Gentiles</div>
+                                                    <div class="notes-card-sub">God's grace extends beyond Israel</div>
+                                                    <span class="notes-card-pill">Acts 10 - 11</span>
+                                                </div>
+                                                <div class="notes-card-arrow"><div class="arr"></div></div>
                                             </div>
+                                        </div>
+                                        <div class="notes-card-footer">
+                                            <span class="notes-card-meta">2 chapters · gentiles</span>
+                                            <div class="notes-card-dot blue"></div>
+                                        </div>
+                                    </div>
 
-                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                                                <a href="../resources/html/david_and_goliath.html" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
-                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">David & Goliath</h3>
-                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Jesus' foundational teachings on the kingdom</p>
-                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">1 Samuel 17</div>
-                                                </a>
+                                    <div class="notes-card" onclick="window.location.href='../resources/html/david_and_goliath.html'">
+                                        <div class="notes-card-glow-line"></div>
+                                        <div class="notes-card-inner">
+                                            <div class="notes-card-top">
+                                                <div class="notes-card-title-wrap">
+                                                    <div class="notes-card-category">Faith · Old Testament</div>
+                                                    <div class="notes-card-title">David & Goliath</div>
+                                                    <div class="notes-card-sub">A shepherd boy's faith defeats a giant warrior</div>
+                                                    <span class="notes-card-pill">1 Samuel 17</span>
+                                                </div>
+                                                <div class="notes-card-arrow"><div class="arr"></div></div>
                                             </div>
+                                        </div>
+                                        <div class="notes-card-footer">
+                                            <span class="notes-card-meta">1 chapter · kings</span>
+                                            <div class="notes-card-dot green"></div>
+                                        </div>
+                                    </div>
 
-                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                                                <a href="../resources/html/samson.html" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
-                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Samson: Strength, Weakness & Redemption</h3>
-                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Jesus' foundational teachings on the kingdom</p>
-                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">Judges 13 – 16</div>
-                                                </a>
+                                    <div class="notes-card" onclick="window.location.href='../resources/html/samson.html'">
+                                        <div class="notes-card-glow-line"></div>
+                                        <div class="notes-card-inner">
+                                            <div class="notes-card-top">
+                                                <div class="notes-card-title-wrap">
+                                                    <div class="notes-card-category">Faith · Old Testament</div>
+                                                    <div class="notes-card-title">Samson: Strength, Weakness & Redemption</div>
+                                                    <div class="notes-card-sub">God's power through a flawed but chosen judge</div>
+                                                    <span class="notes-card-pill">Judges 13 – 16</span>
+                                                </div>
+                                                <div class="notes-card-arrow"><div class="arr"></div></div>
                                             </div>
+                                        </div>
+                                        <div class="notes-card-footer">
+                                            <span class="notes-card-meta">4 chapters · judges</span>
+                                            <div class="notes-card-dot green"></div>
+                                        </div>
+                                    </div>
 
-                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                                                <a href="../resources/html/tower_of_babel.html" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
-                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Tower of Babel: Pride, Unity & Confusion</h3>
-                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Jesus' foundational teachings on the kingdom</p>
-                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">Genesis 11 : 1 – 9</div>
-                                                </a>
+                                    <div class="notes-card" onclick="window.location.href='../resources/html/tower_of_babel.html'">
+                                        <div class="notes-card-glow-line"></div>
+                                        <div class="notes-card-inner">
+                                            <div class="notes-card-top">
+                                                <div class="notes-card-title-wrap">
+                                                    <div class="notes-card-category">History · Old Testament</div>
+                                                    <div class="notes-card-title">Tower of Babel: Pride, Unity & Confusion</div>
+                                                    <div class="notes-card-sub">When humanity's ambition challenged God's plan</div>
+                                                    <span class="notes-card-pill">Genesis 11 : 1 – 9</span>
+                                                </div>
+                                                <div class="notes-card-arrow"><div class="arr"></div></div>
                                             </div>
-                                        `;
-                                    })()}
+                                        </div>
+                                        <div class="notes-card-footer">
+                                            <span class="notes-card-meta">1 chapter · origins</span>
+                                            <div class="notes-card-dot green"></div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         ` : state.dashboardTab === 'revelation-chapters' ? `
@@ -5646,6 +5915,12 @@
 
                                     function renderBooksWithSegmentedView(ntBooksArr, otBooksArr, counts) {
                                         const displayBooks = state.quizTestamentTab === 'NT' ? ntBooksArr : otBooksArr;
+
+                                        // On mobile, MobileQuiz grid overlay handles book/chapter selection
+                                        // Return empty container to avoid flashing the old desktop view underneath
+                                        if (typeof MobileQuiz !== 'undefined' && MobileQuiz.isMobile()) {
+                                            return '<div id="quizContainer"></div>';
+                                        }
                                         
                                         return `
                                             <div id="quizContainer" class="pt-0 md:pt-6">
@@ -6065,7 +6340,7 @@
                                     <p class="${theme.textSecondary} text-sm">You haven't completed this quiz. Your progress will be lost if you go back.</p>
                                 </div>
                                 <div class="flex gap-3">
-                                    <button onclick="state.selectedQuizChapter = null; state.selectedQuizBook = null; state.quizSummaryData = null; state.quizTestamentTab = 'NT'; state.showQuizBackConfirmation = false; render();" class="flex-1 bg-red-600 hover:bg-red-700 text-white rounded-lg py-3 font-semibold transition-colors">
+                                    <button onclick="state.selectedQuizChapter = null; state.selectedQuizBook = null; state.quizSummaryData = null; state.quizTestamentTab = state.quizTestamentTab || 'NT'; state.showQuizBackConfirmation = false; state.quizStarted = true; render();" class="flex-1 bg-red-600 hover:bg-red-700 text-white rounded-lg py-3 font-semibold transition-colors">
                                         OK, Go Back
                                     </button>
                                     <button onclick="state.showQuizBackConfirmation = false; render();" class="flex-1 ${theme.card} border ${theme.border} rounded-lg py-3 font-semibold hover:opacity-80 transition-colors">
