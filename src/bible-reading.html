@@ -6020,30 +6020,44 @@
                     ` : ''}
                     
                     <!-- Bottom Navigation Bar - STICKY to Bottom -->
-                    <div class="fixed bottom-0 left-0 right-0 ${state.darkMode ? 'bg-slate-800' : 'bg-gray-100'} ${theme.border} z-50 ${(state.dashboardTab === 'revelation-chapters' || state.dashboardTab === 'revelation-introduction' || state.quizStarted) ? 'hidden' : ''}" style="border-top-width: 1.5px; position: fixed !important; bottom: 0 !important; left: 0 !important; right: 0 !important; z-index: 999 !important; transform: none !important; will-change: transform;">
-                        <div class="flex items-center justify-between h-16">
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'home'; ensureVersesLoaded().then(() => render()).catch(() => render());" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 h-full transition-colors ${state.dashboardTab === 'home' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="home">
-                                <svg class="w-6 h-6 opacity-70" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
-                                <span class="text-xs font-semibold">Home</span>
-                            </button>
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 h-full transition-colors ${state.dashboardTab === 'my-plan' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="my-plan">
-                                <img src="../resources/icons/my_plan.png" alt="My Plan" class="w-6 h-6 opacity-70" style="${state.darkMode ? 'filter: invert(1);' : ''}" />
-                                <span class="text-xs font-semibold">My Plan</span>
-                            </button>
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'family'; if (!state.quizDataLoaded) { loadQuizChaptersFromSupabase().then(() => render()).catch(() => render()); } else { render(); }" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 h-full transition-colors ${state.dashboardTab === 'family' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="family">
-                                <img src="../resources/icons/family.png" alt="Family" class="w-5 h-5 opacity-70" style="${state.darkMode ? 'filter: invert(1);' : ''}" />
-                                <span class="text-xs font-semibold">Family</span>
-                            </button>
-            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'notes'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 h-full transition-colors ${state.dashboardTab === 'notes' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="notes">
-                                <img src="../resources/icons/notes.png" alt="Notes" class="w-5 h-5 opacity-70" style="${state.darkMode ? 'filter: invert(1);' : ''}" />
-                                <span class="text-xs font-semibold">Notes</span>
-                            </button>
-                            ${state.quizTabVisible ? `
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'quiz'; loadQuizChaptersFromSupabase(); render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 h-full transition-colors ${state.dashboardTab === 'quiz' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="quiz">
-                                <img src="../resources/icons/quiz.png" alt="Quiz" class="w-5 h-5 opacity-70" style="${state.darkMode ? 'filter: invert(1);' : ''}" />
-                                <span class="text-xs font-semibold">Quiz</span>
-                            </button>
-                            ` : ''}
+                    <div class="${(state.dashboardTab === 'revelation-chapters' || state.dashboardTab === 'revelation-introduction' || state.quizStarted) ? 'hidden' : ''}" style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;">
+                        <div style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            height: 68px;
+                            border-radius: 20px 20px 0 0;
+                            background: ${state.darkMode ? '#161a26' : '#ffffff'};
+                            border-top: 1px solid ${state.darkMode ? 'rgba(51,65,85,0.25)' : 'rgba(0,0,0,0.06)'};
+                            box-shadow: ${state.darkMode ? '0 -4px 24px rgba(0,0,0,0.4)' : '0 -2px 16px rgba(0,0,0,0.06)'};
+                            padding: 0 8px;
+                            padding-bottom: env(safe-area-inset-bottom, 0px);
+                        ">
+                            ${[
+                                { id: 'home', label: 'Home', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'home'; ensureVersesLoaded().then(() => render()).catch(() => render());", icon: '<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10"/></svg>' },
+                                { id: 'my-plan', label: 'My Plan', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();", iconImg: '../resources/icons/my_plan.png' },
+                                { id: 'family', label: 'Family', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'family'; if (!state.quizDataLoaded) { loadQuizChaptersFromSupabase().then(() => render()).catch(() => render()); } else { render(); }", iconImg: '../resources/icons/family.png' },
+                                { id: 'notes', label: 'Notes', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'notes'; render();", iconImg: '../resources/icons/notes.png' },
+                                ...(state.quizTabVisible ? [{ id: 'quiz', label: 'Quiz', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'quiz'; loadQuizChaptersFromSupabase(); render();", iconImg: '../resources/icons/quiz.png' }] : [])
+                            ].map(tab => {
+                                const isActive = state.dashboardTab === tab.id;
+                                const activeColor = state.darkMode ? '#ffffff' : '#1e293b';
+                                const inactiveColor = state.darkMode ? '#4a5168' : '#9ca3af';
+                                const activeImgFilter = state.darkMode ? 'filter:invert(1) brightness(1);' : 'filter:brightness(0);';
+                                const inactiveImgFilter = state.darkMode ? 'filter:invert(1) brightness(0.3);' : 'filter:brightness(0) opacity(0.35);';
+
+                                return '<button onclick="' + tab.onclick + '" data-tab="' + tab.id + '" style="' +
+                                    'flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; border:none; background:transparent; cursor:pointer; position:relative; padding:8px 0 10px; margin:0;' +
+                                    '">' +
+                                    '<div style="display:flex; align-items:center; justify-content:center; width:24px; height:24px; color:' + (isActive ? activeColor : inactiveColor) + ';">' +
+                                        (tab.icon
+                                            ? tab.icon
+                                            : '<img src="' + tab.iconImg + '" alt="' + tab.label + '" style="width:20px; height:20px; ' + (isActive ? activeImgFilter : inactiveImgFilter) + '">') +
+                                    '</div>' +
+                                    '<span style="font-size:10px; font-weight:' + (isActive ? '600' : '400') + '; color:' + (isActive ? activeColor : inactiveColor) + '; letter-spacing:0.01em;">' + tab.label + '</span>' +
+                                    (isActive ? '<div style="position:absolute; bottom:4px; left:50%; transform:translateX(-50%); width:24px; height:3px; border-radius:2px; background:' + activeColor + ';"></div>' : '') +
+                                    '</button>';
+                            }).join('')}
                         </div>
                     </div>
                     
