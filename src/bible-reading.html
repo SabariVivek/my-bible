@@ -1943,32 +1943,35 @@
         .notes-sec-title {
             font-size: 10px;
             letter-spacing: 0.1em;
-            color: #3a3e5a;
             font-family: 'DM Sans', sans-serif;
             text-transform: uppercase;
         }
-        html:not(.dark-theme) .notes-sec-title {
-            color: #8a8ea0;
-        }
+        html.dark-theme .notes-sec-title { color: #64748b; }
+        html:not(.dark-theme) .notes-sec-title { color: #94a3b8; }
 
         .notes-card {
             border-radius: 14px;
             overflow: hidden;
             position: relative;
             cursor: pointer;
-            transition: border-color 0.2s;
+            transition: border-color 0.2s, box-shadow 0.2s;
             margin-bottom: 0;
         }
         html.dark-theme .notes-card {
-            background: #161820;
-            border: 1px solid #2b2d3e;
+            background: #1e293b;
+            border: 1px solid #334155;
         }
         html:not(.dark-theme) .notes-card {
             background: #ffffff;
-            border: 1px solid #e0e2ec;
+            border: 1px solid #e2e8f0;
         }
-        .notes-card:hover {
-            border-color: #c9a22755;
+        html.dark-theme .notes-card:hover {
+            border-color: #c9a22766;
+            box-shadow: 0 0 12px rgba(201, 162, 39, 0.08);
+        }
+        html:not(.dark-theme) .notes-card:hover {
+            border-color: #c9a22744;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
         }
 
         .notes-card-glow-line {
@@ -1976,8 +1979,8 @@
             width: 100%;
             border-radius: 0;
         }
-        html.dark-theme .notes-card-glow-line { background: #c9a22755; }
-        html:not(.dark-theme) .notes-card-glow-line { background: #c9a22744; }
+        html.dark-theme .notes-card-glow-line { background: #c9a22740; }
+        html:not(.dark-theme) .notes-card-glow-line { background: #c9a22730; }
         html.dark-theme .notes-card-glow-line.bright { background: #c9a227aa; }
         html:not(.dark-theme) .notes-card-glow-line.bright { background: #c9a22788; }
 
@@ -2000,18 +2003,18 @@
             text-transform: uppercase;
             margin-bottom: 3px;
         }
-        html.dark-theme .notes-card-category { color: #4a4e6a; }
-        html:not(.dark-theme) .notes-card-category { color: #9098b8; }
+        html.dark-theme .notes-card-category { color: #64748b; }
+        html:not(.dark-theme) .notes-card-category { color: #94a3b8; }
 
         .notes-card-title {
             font-family: 'Cinzel', serif;
             font-size: 13px;
             font-weight: 600;
-            color: #c9a227;
             line-height: 1.3;
             margin-bottom: 4px;
         }
-        html:not(.dark-theme) .notes-card-title { color: #9a7a10; }
+        html.dark-theme .notes-card-title { color: #c9a227; }
+        html:not(.dark-theme) .notes-card-title { color: #92700c; }
 
         .notes-card-sub {
             font-size: 11px;
@@ -2019,8 +2022,8 @@
             line-height: 1.45;
             margin-bottom: 8px;
         }
-        html.dark-theme .notes-card-sub { color: #7a809a; }
-        html:not(.dark-theme) .notes-card-sub { color: #6a6e82; }
+        html.dark-theme .notes-card-sub { color: #94a3b8; }
+        html:not(.dark-theme) .notes-card-sub { color: #64748b; }
 
         .notes-card-pill {
             display: inline-block;
@@ -2030,14 +2033,14 @@
             font-family: 'DM Sans', sans-serif;
         }
         html.dark-theme .notes-card-pill {
-            background: #1e2130;
-            border: 1px solid #323652;
-            color: #9098b8;
+            background: #0f172a;
+            border: 1px solid #334155;
+            color: #94a3b8;
         }
         html:not(.dark-theme) .notes-card-pill {
-            background: #f0f1f8;
-            border: 1px solid #d0d2e0;
-            color: #6a6e82;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            color: #64748b;
         }
 
         .notes-card-arrow {
@@ -2051,12 +2054,12 @@
             margin-top: 2px;
         }
         html.dark-theme .notes-card-arrow {
-            background: #1e2130;
-            border: 1px solid #2e3148;
+            background: #0f172a;
+            border: 1px solid #334155;
         }
         html:not(.dark-theme) .notes-card-arrow {
-            background: #f0f1f8;
-            border: 1px solid #d0d2e0;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
         }
         .notes-card-arrow .arr {
             width: 0;
@@ -2065,8 +2068,8 @@
             border-bottom: 4px solid transparent;
             margin-left: 1px;
         }
-        html.dark-theme .notes-card-arrow .arr { border-left: 6px solid #4a5070; }
-        html:not(.dark-theme) .notes-card-arrow .arr { border-left: 6px solid #9098b8; }
+        html.dark-theme .notes-card-arrow .arr { border-left: 6px solid #475569; }
+        html:not(.dark-theme) .notes-card-arrow .arr { border-left: 6px solid #94a3b8; }
 
         .notes-card-footer {
             padding: 7px 15px;
@@ -2074,15 +2077,15 @@
             justify-content: space-between;
             align-items: center;
         }
-        html.dark-theme .notes-card-footer { border-top: 1px solid #1e2035; }
-        html:not(.dark-theme) .notes-card-footer { border-top: 1px solid #e8eaf0; }
+        html.dark-theme .notes-card-footer { border-top: 1px solid #1e293b; }
+        html:not(.dark-theme) .notes-card-footer { border-top: 1px solid #f1f5f9; }
 
         .notes-card-meta {
             font-size: 9px;
             font-family: 'DM Sans', sans-serif;
         }
-        html.dark-theme .notes-card-meta { color: #3a3e58; }
-        html:not(.dark-theme) .notes-card-meta { color: #9098b8; }
+        html.dark-theme .notes-card-meta { color: #475569; }
+        html:not(.dark-theme) .notes-card-meta { color: #94a3b8; }
 
         .notes-card-dot {
             width: 5px;
@@ -2091,10 +2094,10 @@
         }
         html.dark-theme .notes-card-dot { background: #c9a22740; }
         html:not(.dark-theme) .notes-card-dot { background: #c9a22750; }
-        html.dark-theme .notes-card-dot.green { background: #3a8a4a40; }
-        html:not(.dark-theme) .notes-card-dot.green { background: #3a8a4a60; }
-        html.dark-theme .notes-card-dot.blue { background: #3a6aaa40; }
-        html:not(.dark-theme) .notes-card-dot.blue { background: #3a6aaa60; }
+        html.dark-theme .notes-card-dot.green { background: #22c55e50; }
+        html:not(.dark-theme) .notes-card-dot.green { background: #22c55e60; }
+        html.dark-theme .notes-card-dot.blue { background: #3b82f650; }
+        html:not(.dark-theme) .notes-card-dot.blue { background: #3b82f660; }
 
         /* Search bar for notes */
         .notes-search-bar {
@@ -2106,19 +2109,27 @@
             padding: 9px 12px;
         }
         html.dark-theme .notes-search-bar {
-            background: #161820;
-            border: 1px solid #2a2d42;
+            background: #1e293b;
+            border: 1px solid #334155;
         }
         html:not(.dark-theme) .notes-search-bar {
-            background: #f5f6fa;
-            border: 1px solid #d0d2e0;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
         }
+        .notes-search-bar svg circle,
+        .notes-search-bar svg path {
+            transition: stroke 0.3s;
+        }
+        html.dark-theme .notes-search-bar svg circle,
+        html.dark-theme .notes-search-bar svg path { stroke: #475569; }
+        html:not(.dark-theme) .notes-search-bar svg circle,
+        html:not(.dark-theme) .notes-search-bar svg path { stroke: #94a3b8; }
         .notes-search-text {
             font-size: 12px;
             font-family: 'DM Sans', sans-serif;
         }
-        html.dark-theme .notes-search-text { color: #3a3e58; }
-        html:not(.dark-theme) .notes-search-text { color: #9098b8; }
+        html.dark-theme .notes-search-text { color: #475569; }
+        html:not(.dark-theme) .notes-search-text { color: #94a3b8; }
     </style>
 </head>
 
@@ -5034,9 +5045,25 @@
                                         <div id="dashboardReadingCard" class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-amber-600/50' : 'bg-white border-2 border-amber-300'}">
                                             <div style="height: 0.25rem;" class="bg-gradient-to-r from-amber-400"></div>
                                             <div class="p-3 relative">
-                                            <div class="flex items-center justify-center mb-5 gap-2 mt-3">
-                                                <img src="../resources/images/calendar.png" alt="Calendar" class="w-5 h-5 -mt-0.5">
-                                                <h2 class="text-base font-bold">${isDashboardToday ? "Today's Reading" : dashboardDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
+                                            <div class="flex items-center justify-between mb-5 mt-3 px-3">
+                                                <div class="flex items-center gap-2">
+                                                    <img src="../resources/images/calendar.png" alt="Calendar" class="w-5 h-5 -mt-0.5">
+                                                    <h2 class="text-base font-bold">${isDashboardToday ? "Today's Reading" : dashboardDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
+                                                </div>
+                                                ${(() => {
+                                                    const dbDateKey = `${dashboardDate.getFullYear()}-${String(dashboardDate.getMonth() + 1).padStart(2, '0')}-${String(dashboardDate.getDate()).padStart(2, '0')}`;
+                                                    const dbPortions = getTodayReading(dashboardDate)?.portions || [];
+                                                    const allDone = dbPortions.length > 0 && dbPortions.every((_, idx) => completedPortions.has(`${dbDateKey}-${idx}`));
+                                                    const dateCompleted = state.currentUser?.completedDates?.[dbDateKey];
+                                                    const isComplete = allDone || dateCompleted;
+                                                    const now = new Date(); now.setHours(0,0,0,0);
+                                                    const dbDay = new Date(dashboardDate); dbDay.setHours(0,0,0,0);
+                                                    const isFuture = dbDay.getTime() > now.getTime();
+                                                    if (isFuture) return '';
+                                                    return isComplete
+                                                        ? `<span style="font-size:9px;font-weight:600;padding:2px 7px;border-radius:10px;background:#16a34a22;color:#22c55e;border:1px solid #22c55e44;">Completed</span>`
+                                                        : `<span style="font-size:9px;font-weight:600;padding:2px 7px;border-radius:10px;background:#ef444422;color:#ef4444;border:1px solid #ef444444;">Pending</span>`;
+                                                })()}
                                             </div>
                             <div class="space-y-2 mb-5">
                                 ${getTodayReading(dashboardDate).portions.map((portion, idx) => {
@@ -5143,18 +5170,6 @@
                         ` : state.dashboardTab === 'notes' ? `
                             <!-- NOTES TAB CONTENT — Gold Glow Design -->
                             <div id="notesCardsContainer" style="width: 100%; margin-top: -0.5rem;">
-
-                                <div class="notes-search-bar">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                        <circle cx="6" cy="6" r="4" stroke="#3a3e58" stroke-width="1.5"/>
-                                        <path d="M9 9l2.5 2.5" stroke="#3a3e58" stroke-width="1.5" stroke-linecap="round"/>
-                                    </svg>
-                                    <span class="notes-search-text">Search topics, characters, passages...</span>
-                                </div>
-
-                                <div class="notes-section-label">
-                                    <span class="notes-sec-title">Study Topics</span>
-                                </div>
 
                                 <div class="notes-cards-area">
 
