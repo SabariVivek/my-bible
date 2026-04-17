@@ -5150,8 +5150,8 @@
                                 }
                                 
                                 // Ring SVG parameters
-                                const ringSize = 120;
-                                const strokeW = 10;
+                                const ringSize = 88;
+                                const strokeW = 8;
                                 const radius = (ringSize - strokeW) / 2;
                                 const circumference = 2 * Math.PI * radius;
                                 const dashOffset = circumference - (overallPct / 100) * circumference;
@@ -5164,19 +5164,19 @@
                                 return `
                                     <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-amber-600/50' : 'bg-white border-2 border-amber-300'} cursor-pointer">
                                         <div style="height: 0.25rem;" class="bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400"></div>
-                                        <div class="p-5 relative z-10">
+                                        <div class="p-4 relative z-10">
                                         
                                         <!-- Header Row -->
-                                        <div class="flex items-center justify-between mb-5">
-                                            <div class="flex items-center gap-2.5">
+                                        <div class="flex items-center justify-between mb-3">
+                                            <div class="flex items-center gap-2">
                                                 ${icons.trendingUp || '📈'}
-                                                <h3 class="text-lg font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">Yearly Progress</h3>
+                                                <h3 class="text-sm font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">Yearly Progress</h3>
                                             </div>
-                                            <span class="text-xs px-2.5 py-1 rounded-full font-semibold ${state.darkMode ? 'bg-amber-900/50 text-amber-300' : 'bg-amber-100 text-amber-700'}">Day ${progress.dayOfYear} of 365</span>
+                                            <span style="font-size:10px;" class="px-2 py-0.5 rounded-full font-semibold ${state.darkMode ? 'bg-amber-900/50 text-amber-300' : 'bg-amber-100 text-amber-700'}">Day ${progress.dayOfYear} of 365</span>
                                         </div>
 
                                         <!-- Main Content: Ring + Stats -->
-                                        <div class="flex items-center gap-5 mb-5">
+                                        <div class="flex items-center gap-3 mb-4">
                                             <!-- Circular Progress Ring -->
                                             <div class="relative flex-shrink-0" style="width:${ringSize}px; height:${ringSize}px;">
                                                 <svg width="${ringSize}" height="${ringSize}" viewBox="0 0 ${ringSize} ${ringSize}" style="transform: rotate(-90deg);">
@@ -5190,67 +5190,66 @@
                                                     </defs>
                                                 </svg>
                                                 <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                                    <span class="text-2xl font-extrabold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${overallPct}%</span>
-                                                    <span class="text-[10px] ${state.darkMode ? 'text-gray-400' : 'text-gray-500'}">Complete</span>
+                                                    <span class="text-lg font-extrabold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${overallPct}%</span>
+                                                    <span style="font-size:9px;" class="${state.darkMode ? 'text-gray-400' : 'text-gray-500'}">Complete</span>
                                                 </div>
                                             </div>
 
                                             <!-- Quick Stats Grid -->
-                                            <div class="flex-1 grid grid-cols-2 gap-2.5">
-                                                <div class="rounded-lg p-2.5 ${state.darkMode ? 'bg-slate-700/60' : 'bg-amber-50'}">
-                                                    <p class="text-[10px] uppercase tracking-wider ${state.darkMode ? 'text-gray-400' : 'text-gray-500'} mb-0.5">Completed</p>
-                                                    <p class="text-base font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${totalRead}<span class="text-xs font-normal ${state.darkMode ? 'text-gray-500' : 'text-gray-400'}"> / ${totalChapters}</span></p>
+                                            <div class="flex-1 grid grid-cols-2 gap-2">
+                                                <div class="rounded-lg p-2 ${state.darkMode ? 'bg-slate-700/60' : 'bg-amber-50'}">
+                                                    <p style="font-size:9px;" class="uppercase tracking-wider ${state.darkMode ? 'text-gray-400' : 'text-gray-500'} mb-0.5">Completed</p>
+                                                    <p class="text-sm font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${totalRead}<span style="font-size:10px;" class="font-normal ${state.darkMode ? 'text-gray-500' : 'text-gray-400'}"> / ${totalChapters}</span></p>
                                                 </div>
-                                                <div class="rounded-lg p-2.5 ${state.darkMode ? 'bg-slate-700/60' : 'bg-green-50'}">
-                                                    <p class="text-[10px] uppercase tracking-wider ${state.darkMode ? 'text-gray-400' : 'text-gray-500'} mb-0.5">Days Done</p>
-                                                    <p class="text-base font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${completedDays}<span class="text-xs font-normal ${state.darkMode ? 'text-gray-500' : 'text-gray-400'}"> / ${totalPlanDays}</span></p>
+                                                <div class="rounded-lg p-2 ${state.darkMode ? 'bg-slate-700/60' : 'bg-green-50'}">
+                                                    <p style="font-size:9px;" class="uppercase tracking-wider ${state.darkMode ? 'text-gray-400' : 'text-gray-500'} mb-0.5">Days Done</p>
+                                                    <p class="text-sm font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${completedDays}<span style="font-size:10px;" class="font-normal ${state.darkMode ? 'text-gray-500' : 'text-gray-400'}"> / ${totalPlanDays}</span></p>
                                                 </div>
-                                                <div class="rounded-lg p-2.5 ${state.darkMode ? 'bg-slate-700/60' : 'bg-red-50'}">
-                                                    <p class="text-[10px] uppercase tracking-wider ${state.darkMode ? 'text-gray-400' : 'text-gray-500'} mb-0.5">Pending</p>
-                                                    <p class="text-base font-bold ${pendingDays > 0 ? 'text-red-500' : (state.darkMode ? 'text-gray-100' : 'text-gray-900')}">${pendingDays} day${pendingDays !== 1 ? 's' : ''}</p>
+                                                <div class="rounded-lg p-2 ${state.darkMode ? 'bg-slate-700/60' : 'bg-red-50'}">
+                                                    <p style="font-size:9px;" class="uppercase tracking-wider ${state.darkMode ? 'text-gray-400' : 'text-gray-500'} mb-0.5">Pending</p>
+                                                    <p class="text-sm font-bold ${pendingDays > 0 ? 'text-red-500' : (state.darkMode ? 'text-gray-100' : 'text-gray-900')}">${pendingDays} day${pendingDays !== 1 ? 's' : ''}</p>
                                                 </div>
-                                                <div class="rounded-lg p-2.5 ${state.darkMode ? 'bg-slate-700/60' : 'bg-orange-50'}">
-                                                    <p class="text-[10px] uppercase tracking-wider ${state.darkMode ? 'text-gray-400' : 'text-gray-500'} mb-0.5">Streak</p>
-                                                    <p class="text-base font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${streak} day${streak !== 1 ? 's' : ''}</p>
+                                                <div class="rounded-lg p-2 ${state.darkMode ? 'bg-slate-700/60' : 'bg-orange-50'}">
+                                                    <p style="font-size:9px;" class="uppercase tracking-wider ${state.darkMode ? 'text-gray-400' : 'text-gray-500'} mb-0.5">Streak</p>
+                                                    <p class="text-sm font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${streak} day${streak !== 1 ? 's' : ''}</p>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <!-- Divider -->
-                                        <div class="h-px w-full ${state.darkMode ? 'bg-slate-700' : 'bg-gray-200'} mb-4"></div>
+                                        <div class="h-px w-full ${state.darkMode ? 'bg-slate-700' : 'bg-gray-200'} mb-3"></div>
 
                                         <!-- Testament Breakdown -->
-                                        <div class="grid grid-cols-2 gap-4">
+                                        <div class="grid grid-cols-2 gap-3">
                                             <!-- Old Testament -->
                                             <div>
-                                                <div class="flex items-center justify-between mb-1.5">
-                                                    <p class="text-xs font-semibold ${state.darkMode ? 'text-gray-300' : 'text-gray-700'}">Old Testament</p>
-                                                    <span class="text-xs font-bold" style="color: ${otColor};">${otProgress.percentage}%</span>
+                                                <div class="flex items-center justify-between mb-1">
+                                                    <p style="font-size:11px;" class="font-semibold ${state.darkMode ? 'text-gray-300' : 'text-gray-700'}">Old Testament</p>
+                                                    <span style="font-size:11px;" class="font-bold" style="color: ${otColor};">${otProgress.percentage}%</span>
                                                 </div>
-                                                <div class="w-full h-2 rounded-full ${state.darkMode ? 'bg-slate-700' : 'bg-gray-200'} overflow-hidden">
+                                                <div class="w-full rounded-full ${state.darkMode ? 'bg-slate-700' : 'bg-gray-200'} overflow-hidden" style="height:3px;">
                                                     <div class="h-full rounded-full transition-all duration-700" style="width: ${otProgress.percentage}%; background: linear-gradient(90deg, ${otColor}, #60a5fa);"></div>
                                                 </div>
-                                                <p class="text-[10px] mt-1 ${state.darkMode ? 'text-gray-500' : 'text-gray-400'}">${otProgress.read} of ${otProgress.total} chapters</p>
+                                                <p style="font-size:9px;" class="mt-1 ${state.darkMode ? 'text-gray-500' : 'text-gray-400'}">${otProgress.read} of ${otProgress.total} chapters</p>
                                             </div>
                                             <!-- New Testament -->
                                             <div>
-                                                <div class="flex items-center justify-between mb-1.5">
-                                                    <p class="text-xs font-semibold ${state.darkMode ? 'text-gray-300' : 'text-gray-700'}">New Testament</p>
-                                                    <span class="text-xs font-bold" style="color: ${ntColor};">${ntProgress.percentage}%</span>
+                                                <div class="flex items-center justify-between mb-1">
+                                                    <p style="font-size:11px;" class="font-semibold ${state.darkMode ? 'text-gray-300' : 'text-gray-700'}">New Testament</p>
+                                                    <span style="font-size:11px;" class="font-bold" style="color: ${ntColor};">${ntProgress.percentage}%</span>
                                                 </div>
-                                                <div class="w-full h-2 rounded-full ${state.darkMode ? 'bg-slate-700' : 'bg-gray-200'} overflow-hidden">
+                                                <div class="w-full rounded-full ${state.darkMode ? 'bg-slate-700' : 'bg-gray-200'} overflow-hidden" style="height:3px;">
                                                     <div class="h-full rounded-full transition-all duration-700" style="width: ${ntProgress.percentage}%; background: linear-gradient(90deg, ${ntColor}, #34d399);"></div>
                                                 </div>
-                                                <p class="text-[10px] mt-1 ${state.darkMode ? 'text-gray-500' : 'text-gray-400'}">${ntProgress.read} of ${ntProgress.total} chapters</p>
+                                                <p style="font-size:9px;" class="mt-1 ${state.darkMode ? 'text-gray-500' : 'text-gray-400'}">${ntProgress.read} of ${ntProgress.total} chapters</p>
                                             </div>
                                         </div>
 
-                                        <!-- Month Progress Heatmap -->
-                                        <div class="mt-4 pt-4 border-t ${state.darkMode ? 'border-slate-700' : 'border-gray-200'}">
-                                            <p class="text-xs font-semibold ${state.darkMode ? 'text-gray-300' : 'text-gray-700'} mb-2">Monthly Activity</p>
-                                            <div class="flex gap-1 justify-between">
-                                                ${['J','F','M','A','M','J','J','A','S','O','N','D'].map((m, i) => {
-                                                    // Count completed days in this month
+                                        <!-- Month Progress Heatmap - 6 per row -->
+                                        <div class="mt-3 pt-3 border-t ${state.darkMode ? 'border-slate-700' : 'border-gray-200'}">
+                                            <p style="font-size:11px;" class="font-semibold ${state.darkMode ? 'text-gray-300' : 'text-gray-700'} mb-2">Monthly Activity</p>
+                                            <div style="display:grid; grid-template-columns:repeat(6, 1fr); gap:6px;">
+                                                ${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].map((m, i) => {
                                                     let monthCompleted = 0;
                                                     const daysInMonth = new Date(currentYear, i + 1, 0).getDate();
                                                     if (state.currentUser && state.currentUser.completedDates) {
@@ -5263,7 +5262,6 @@
                                                     const isFuture = i > now.getMonth();
                                                     const pct = isFuture ? 0 : Math.round((monthCompleted / daysInMonth) * 100);
                                                     
-                                                    // Color intensity based on percentage
                                                     let bgColor;
                                                     if (isFuture) bgColor = state.darkMode ? '#1e293b' : '#f3f4f6';
                                                     else if (pct < 50) bgColor = state.darkMode ? '#7f1d1d' : '#fecaca';
@@ -5271,11 +5269,9 @@
                                                     else if (pct < 100) bgColor = state.darkMode ? '#b45309' : '#f59e0b';
                                                     else bgColor = state.darkMode ? '#15803d' : '#22c55e';
                                                     
-                                                    return '<div class="flex flex-col items-center gap-1">' +
-                                                        '<div style="width:22px; height:22px; border-radius:4px; background:' + bgColor + '; display:flex; align-items:center; justify-content:center;' + (isCurrentMonth ? ' box-shadow:0 0 0 2px ' + accentColor + ';' : '') + '">' +
-                                                            (pct === 100 ? '<span style="font-size:10px;">✓</span>' : '') +
-                                                        '</div>' +
-                                                        '<span style="font-size:9px; color:' + (state.darkMode ? (isCurrentMonth ? '#fbbf24' : '#64748b') : (isCurrentMonth ? '#d97706' : '#9ca3af')) + '; font-weight:' + (isCurrentMonth ? '700' : '500') + ';">' + m + '</span>' +
+                                                    return '<div style="display:flex; align-items:center; justify-content:center; padding:4px 5px; border-radius:5px;' + (isFuture ? ' border:1px dashed ' + (state.darkMode ? '#334155' : '#d1d5db') + ';' : ' background:' + bgColor + ';') + (isCurrentMonth ? ' box-shadow:0 0 0 2px ' + accentColor + ';' : '') + '">' +
+                                                        (pct === 100 ? '<span style="font-size:9px; margin-right:2px;">✓</span>' : '') +
+                                                        '<span style="font-size:9px; color:' + (state.darkMode ? (isCurrentMonth ? '#fbbf24' : (isFuture ? '#475569' : '#e2e8f0')) : (isCurrentMonth ? '#92400e' : (isFuture ? '#9ca3af' : '#1f2937'))) + '; font-weight:' + (isCurrentMonth ? '700' : '500') + ';">' + m + '</span>' +
                                                     '</div>';
                                                 }).join('')}
                                             </div>
