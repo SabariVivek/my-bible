@@ -6042,14 +6042,14 @@
                             ].map(tab => {
                                 const isActive = state.dashboardTab === tab.id;
                                 const activeColor = state.darkMode ? '#ffffff' : '#1e293b';
-                                const inactiveColor = state.darkMode ? '#4a5168' : '#9ca3af';
+                                const inactiveColor = state.darkMode ? '#919296' : '#9ca3af';
                                 const activeImgFilter = state.darkMode ? 'filter:invert(1) brightness(1);' : 'filter:brightness(0);';
-                                const inactiveImgFilter = state.darkMode ? 'filter:invert(1) brightness(0.3);' : 'filter:brightness(0) opacity(0.35);';
+                                const inactiveImgFilter = state.darkMode ? 'filter:invert(1) brightness(0.4);' : 'filter:brightness(0) opacity(0.35);';
 
                                 return '<button onclick="' + tab.onclick + '" data-tab="' + tab.id + '" style="' +
                                     'flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; border:none; background:transparent; cursor:pointer; position:relative; padding:8px 0 10px; margin:0;' +
                                     '">' +
-                                    '<div style="display:flex; align-items:center; justify-content:center; width:24px; height:24px; color:' + (isActive ? activeColor : inactiveColor) + ';">' +
+                                    '<div style="display:flex; align-items:center; justify-content:center; width:24px; height:24px; color:' + (isActive ? activeColor : inactiveColor) + '; ' + (tab.icon && !isActive ? 'opacity:0.35;' : '') + '">' +
                                         (tab.icon
                                             ? tab.icon
                                             : '<img src="' + tab.iconImg + '" alt="' + tab.label + '" style="width:20px; height:20px; ' + (isActive ? activeImgFilter : inactiveImgFilter) + '">') +
