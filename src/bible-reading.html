@@ -5041,53 +5041,6 @@
 
                         ` : state.dashboardTab === 'my-plan' ? `
                             <!-- MY PLAN TAB -->
-                            
-                            <!-- Pending Dates Section (My Plan) -->
-                            ${(() => {
-                                if (!state.currentUser || !state.currentUser.completedDates) return '';
-                                const now = new Date();
-                                const currentYear = now.getFullYear();
-                                const isLeapYear = (currentYear % 4 === 0 && currentYear % 100 !== 0) || (currentYear % 400 === 0);
-                                const todayMidnight = new Date(currentYear, now.getMonth(), now.getDate());
-                                
-                                const pendingDates = [];
-                                for (const entry of yearlyReadingPlan) {
-                                    if (entry.leapYearOnly && !isLeapYear) continue;
-                                    const entryDate = new Date(currentYear, entry.month - 1, entry.day);
-                                    entryDate.setHours(0, 0, 0, 0);
-                                    if (entryDate > todayMidnight) break;
-                                    const dateKey = `${currentYear}-${String(entry.month).padStart(2, '0')}-${String(entry.day).padStart(2, '0')}`;
-                                    if (!state.currentUser.completedDates[dateKey]) {
-                                        pendingDates.push({ month: entry.month, day: entry.day, date: entryDate, dateKey });
-                                    }
-                                }
-                                
-                                if (pendingDates.length <= 3) return '';
-                                
-                                const allPending = pendingDates.slice().reverse();
-                                const showAll = state.showAllPendingDatesDashboard;
-                                
-                                return `
-                                <div class="rounded-xl p-4 border shadow-sm mb-3 ${state.darkMode ? 'bg-red-950 border-red-500' : 'bg-red-50 border-red-300'}">
-                                    <div class="flex items-center justify-between mb-3">
-                                        <div class="flex items-center gap-2">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-rose-500"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                                            <h2 class="text-sm font-bold">Pending Days</h2>
-                                        </div>
-                                    </div>
-                                    ${showAll ? '<div style="display:flex; flex-wrap:wrap; gap:6px;">' + allPending.map(pd => {
-                                        const d = pd.date;
-                                        const label = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-                                        return '<button onclick="dashboardDate = new Date(' + currentYear + ', ' + (pd.month - 1) + ', ' + pd.day + '); render();" class="' + (state.darkMode ? 'bg-red-900 hover:bg-red-800 text-red-400 border-red-700' : 'bg-red-100 hover:bg-red-200 text-red-600 border-red-300') + '" style="padding: 5px 10px; border-radius: 8px; border: 1px solid; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s ease;">' + label + '</button>';
-                                    }).join('') + '</div>'
-                                    : '<div style="display:flex; gap:6px; overflow-x:auto; padding-top:0px; padding-bottom:16px; scrollbar-width:thin;">' + allPending.map(pd => {
-                                        const d = pd.date;
-                                        const label = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-                                        return '<button onclick="dashboardDate = new Date(' + currentYear + ', ' + (pd.month - 1) + ', ' + pd.day + '); render();" class="' + (state.darkMode ? 'bg-red-900 hover:bg-red-800 text-red-400 border-red-700' : 'bg-red-100 hover:bg-red-200 text-red-600 border-red-300') + '" style="padding: 5px 10px; border-radius: 8px; border: 1px solid; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s ease; white-space:nowrap; flex-shrink:0;">' + label + '</button>';
-                                    }).join('') + '</div>'}
-                                </div>`;
-                            })()}
-
                             ${todayReading ? `
                                 <div class="reading-card-container">
                                     <div class="reading-card-wrapper dashboard-reading-card-wrapper">
@@ -5987,7 +5940,7 @@
                                             `;
                                         }).join('')}
                                     </div>
-                                </div>
+                                    </div>
                             ` : `
                                 <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-amber-600/50' : 'bg-white border-2 border-amber-300'}">
                                     <div style="height: 0.25rem;" class="bg-gradient-to-r from-amber-400"></div>
@@ -6396,7 +6349,7 @@
                             const hasMore = allPending.length > 10;
                             
                             return `
-                            <div class="rounded-xl p-4 border shadow-sm mb-3 ${state.darkMode ? 'bg-red-950 border-red-500' : 'bg-red-50 border-red-300'}">
+                            <div class="rounded-xl p-4 border shadow-sm mb-6 ${state.darkMode ? 'bg-red-950 border-red-500' : 'bg-red-50 border-red-300'}">
                                 <div class="flex items-center justify-between mb-3">
                                     <div class="flex items-center gap-2">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-rose-500"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
