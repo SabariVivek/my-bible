@@ -5059,7 +5059,7 @@
                                                     const now = new Date(); now.setHours(0,0,0,0);
                                                     const dbDay = new Date(dashboardDate); dbDay.setHours(0,0,0,0);
                                                     const isFuture = dbDay.getTime() > now.getTime();
-                                                    if (isFuture) return '';
+                                                    if (isFuture) return `<span style="font-size:9px;font-weight:600;padding:2px 7px;border-radius:10px;background:#64748b22;color:#64748b;border:1px solid #64748b44;">Future</span>`;
                                                     return isComplete
                                                         ? `<span style="font-size:9px;font-weight:600;padding:2px 7px;border-radius:10px;background:#16a34a22;color:#22c55e;border:1px solid #22c55e44;">Completed</span>`
                                                         : `<span style="font-size:9px;font-weight:600;padding:2px 7px;border-radius:10px;background:#ef444422;color:#ef4444;border:1px solid #ef444444;">Pending</span>`;
