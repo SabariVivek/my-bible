@@ -2101,8 +2101,10 @@
             sheet.classList.remove('show');
             document.body.style.overflow = '';
 
-            // If not triggered by popstate, pop the history entry we pushed
+            // If not triggered by popstate, pop the history entry we pushed.
+            // Use a flag to prevent the popstate handler from cascading.
             if (!fromPopState) {
+                window._closingReadingPlan = true;
                 window.history.back();
             }
         }
@@ -2438,20 +2440,33 @@
             });
         }
 
+        let _loadPortionsTimer = null;
+        let _loadPortionsPromise = null;
+
         async function loadCompletedPortionsForDate() {
             if (!state.currentUser) return;
             
-            try {
-                const portions = await BibleReadingDB.getCompletedPortions(state.currentUser.id, state.selectedDate);
-                const dateKey = `${state.selectedDate.getFullYear()}-${String(state.selectedDate.getMonth() + 1).padStart(2, '0')}-${String(state.selectedDate.getDate()).padStart(2, '0')}`;
-                
-                completedPortions.clear();
-                portions.forEach(portionIndex => {
-                    completedPortions.add(`${dateKey}-${portionIndex}`);
-                });
-            } catch (error) {
-                console.error('Error loading portions:', error);
-            }
+            // Debounce: cancel any pending call and coalesce into one
+            if (_loadPortionsTimer) clearTimeout(_loadPortionsTimer);
+            
+            _loadPortionsPromise = new Promise((resolve) => {
+                _loadPortionsTimer = setTimeout(async () => {
+                    try {
+                        const portions = await BibleReadingDB.getCompletedPortions(state.currentUser.id, state.selectedDate);
+                        const dateKey = `${state.selectedDate.getFullYear()}-${String(state.selectedDate.getMonth() + 1).padStart(2, '0')}-${String(state.selectedDate.getDate()).padStart(2, '0')}`;
+                        
+                        completedPortions.clear();
+                        portions.forEach(portionIndex => {
+                            completedPortions.add(`${dateKey}-${portionIndex}`);
+                        });
+                    } catch (error) {
+                        console.error('Error loading portions:', error);
+                    }
+                    resolve();
+                }, 150);
+            });
+            
+            return _loadPortionsPromise;
         }
 
         // SVG Icons as functions
@@ -2576,6 +2591,12 @@
 
         // Handle back navigation (mobile swipe back, browser back button)
         window.addEventListener('popstate', (event) => {
+            // If we just closed the reading plan via X button, consume this popstate and stop
+            if (window._closingReadingPlan) {
+                window._closingReadingPlan = false;
+                return;
+            }
+
             // If the reading plan sheet is open, close it and stop
             const rpSheet = document.getElementById('readingPlanSheet');
             if (rpSheet && rpSheet.classList.contains('show')) {
@@ -3767,33 +3788,12 @@
 
         // Start periodic sync for dashboard data
         function startDashboardSync() {
-            // Clear any existing interval
+            // Disabled — Realtime subscriptions handle live updates.
+            // The 5-second polling was redundant and caused ~120+ queries/minute.
             if (dashboardSyncInterval) {
                 clearInterval(dashboardSyncInterval);
+                dashboardSyncInterval = null;
             }
-
-            // Sync every 5 seconds when dashboard is visible
-            dashboardSyncInterval = setInterval(async () => {
-                if (state.showDashboard && !state.showAdminView && state.currentUser) {
-                    try {
-                        // Reload all users' progress data
-                        const refreshPromises = state.users.map(user => 
-                            loadUserProgress(user).catch(error => {
-                                console.error(`Error syncing ${user.name}:`, error);
-                            })
-                        );
-                        
-                        await Promise.all(refreshPromises);
-                        
-                        // Re-render dashboard to reflect changes
-                        if (state.showDashboard && !state.showAdminView) {
-                            renderDashboardOnly();
-                        }
-                    } catch (error) {
-                        console.error('Error in dashboard sync:', error);
-                    }
-                }
-            }, 5000); // Sync every 5 seconds
         }
 
         // Stop periodic sync
@@ -3891,16 +3891,15 @@
             if (loadingAllUsersPromise) {
                 return loadingAllUsersPromise;
             }
+            
+            // Skip if all users are already loaded
+            const usersToLoad = state.users.filter(u => !state.loadedUserData.has(u.id));
+            if (usersToLoad.length === 0) {
+                return;
+            }
 
             loadingAllUsersPromise = (async () => {
                 try {
-                    // Load progress for users that haven't been loaded yet
-                    const usersToLoad = state.users.filter(u => !state.loadedUserData.has(u.id));
-                    
-                    if (usersToLoad.length === 0) {
-                        return;
-                    }
-
                     // Load in batches of 3 to avoid overwhelming the database
                     const batchSize = 3;
                     for (let i = 0; i < usersToLoad.length; i += batchSize) {
@@ -5851,7 +5850,7 @@
                                 { id: 'my-plan', label: 'My Plan', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();", iconImg: '../resources/icons/my_plan.png' },
                                 { id: 'family', label: 'Family', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'family'; if (!state.quizDataLoaded) { loadQuizChaptersFromSupabase().then(() => render()).catch(() => render()); } else { render(); }", iconImg: '../resources/icons/family.png' },
                                 { id: 'notes', label: 'Notes', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'notes'; render();", iconImg: '../resources/icons/notes.png' },
-                                ...(state.quizTabVisible ? [{ id: 'quiz', label: 'Quiz', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'quiz'; loadQuizChaptersFromSupabase(); render();", iconImg: '../resources/icons/quiz.png' }] : [])
+                                ...(state.quizTabVisible ? [{ id: 'quiz', label: 'Quiz', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'quiz'; if (!state.quizDataLoaded) { loadQuizChaptersFromSupabase(); } render();", iconImg: '../resources/icons/quiz.png' }] : [])
                             ].map(tab => {
                                 const isActive = state.dashboardTab === tab.id;
                                 const activeColor = state.darkMode ? '#ffffff' : '#1e293b';
@@ -6813,12 +6812,21 @@
             `;
         }
 
+        const _revelationContentCache = {};
+
         async function loadIntroContent() {
             if (!state.selectedVerse && state.selectedChapter) {
                 const introDiv = document.getElementById('intro-content');
                 if (introDiv) {
                     try {
                         const folderPath = `Revelation/Chapter - ${state.selectedChapter}/Intro`;
+                        
+                        // Check cache first
+                        if (_revelationContentCache[folderPath]) {
+                            introDiv.innerHTML = _revelationContentCache[folderPath];
+                            return;
+                        }
+                        
                         const serviceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzU0MzYzOSwiZXhwIjoyMDc5MTE5NjM5fQ.WGtQxBTBcJh96Y4ppTiHGQygztdJduf5O4-JNTZBP90';
                         
                         const response = await fetch(`https://encjogfdbrfcatvytpir.supabase.co/rest/v1/bible_notes_pages?select=content&folder_path=eq.${encodeURIComponent(folderPath)}`, {
@@ -6832,7 +6840,7 @@
                             const data = await response.json();
                             if (data && data.length > 0 && data[0].content) {
                                 introDiv.innerHTML = data[0].content;
-                                // Fix table widths and remove problematic classes
+                                _revelationContentCache[folderPath] = data[0].content;
                                 const tables = introDiv.querySelectorAll('table');
                                 tables.forEach(table => {
                                     // Remove width-constraining classes
@@ -6862,6 +6870,13 @@
                 if (verseDiv) {
                     try {
                         const folderPath = `Revelation/Chapter - ${state.selectedChapter}/Verse - ${state.selectedVerse}`;
+                        
+                        // Check cache first
+                        if (_revelationContentCache[folderPath]) {
+                            verseDiv.innerHTML = _revelationContentCache[folderPath];
+                            return;
+                        }
+                        
                         const serviceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzU0MzYzOSwiZXhwIjoyMDc5MTE5NjM5fQ.WGtQxBTBcJh96Y4ppTiHGQygztdJduf5O4-JNTZBP90';
                         
                         const response = await fetch(`https://encjogfdbrfcatvytpir.supabase.co/rest/v1/bible_notes_pages?select=content&folder_path=eq.${encodeURIComponent(folderPath)}`, {
@@ -6875,8 +6890,7 @@
                             const data = await response.json();
                             if (data && data.length > 0 && data[0].content) {
                                 verseDiv.innerHTML = data[0].content;
-                                // Fix table widths and remove problematic classes
-                                const tables = verseDiv.querySelectorAll('table');
+                                _revelationContentCache[folderPath] = data[0].content;
                                 tables.forEach(table => {
                                     // Remove width-constraining classes
                                     table.className = table.className.replace(/w-fit|min-w-\S+/g, '');
@@ -6926,7 +6940,10 @@
                 }
                 
                 // Load all users' progress data for accurate statistics display
-                showLoading('Loading user statistics...');
+                // Only fetch if not already loaded for all users
+                const allUsersLoaded = state.users.every(u => state.loadedUserData.has(u.id));
+                if (!allUsersLoaded) {
+                    showLoading('Loading user statistics...');
                 try {
                     await Promise.all(state.users.map(async user => {
                         try {
@@ -6966,6 +6983,7 @@
                     console.error('Error loading admin view statistics:', error);
                 }
                 hideLoading();
+                }
                 
                 console.log('Calling renderProfileManagement()');
                 app.innerHTML = renderProfileManagement();
@@ -7134,6 +7152,9 @@
                     setupScrollGuard('quizContainer');
                 }
 
+                // Tamil book names for quiz loader labels
+                const tamilNames = {'Matthew':'மத்தேயு','Mark':'மாற்கு','Luke':'லூக்கா','John':'யோவான்','Acts':'அப்போஸ்தலர்','Romans':'ரோமர்','1 Corinthians':'1 கொரிந்தியர்','2 Corinthians':'2 கொரிந்தியர்','Galatians':'கலாத்தியர்','Ephesians':'எபேசியர்','Philippians':'பிலிப்பியர்','Colossians':'கொலோசெயர்','1 Thessalonians':'1 தெசலோனிக்கேயர்','2 Thessalonians':'2 தெசலோனிக்கேயர்','1 Timothy':'1 திமோத்தேயு','2 Timothy':'2 திமோத்தேயு','Titus':'திது','Philemon':'பிலேமோன்','Hebrews':'எபிரேயர்','James':'யாக்கோபு','1 Peter':'1 பேதுரு','2 Peter':'2 பேதுரு','1 John':'1 யோவான்','2 John':'2 யோவான்','3 John':'3 யோவான்','Jude':'யூதா','Revelation':'வெளிப்படுத்தின விசேஷம்','Genesis':'ஆதியாகமம்','Exodus':'யாத்திராகமம்','Leviticus':'லேவியராகமம்','Numbers':'எண்ணாகமம்','Deuteronomy':'உபாகமம்','Joshua':'யோசுவா','Judges':'நியாயாதிபதிகள்','Ruth':'ரூத்','1 Samuel':'1 சாமுவேல்','2 Samuel':'2 சாமுவேல்','1 Kings':'1 இராஜாக்கள்','2 Kings':'2 இராஜாக்கள்','1 Chronicles':'1 நாளாகமம்','2 Chronicles':'2 நாளாகமம்','Ezra':'எஸ்றா','Nehemiah':'நெகேமியா','Esther':'எஸ்தர்','Job':'யோபு','Psalms':'சங்கீதம்','Proverbs':'நீதிமொழிகள்','Ecclesiastes':'பிரசங்கி','Song of Solomon':'உன்னதப்பாட்டு','Isaiah':'ஏசாயா','Jeremiah':'எரேமியா','Lamentations':'புலம்பல்','Ezekiel':'எசேக்கியேல்','Daniel':'தானியேல்','Hosea':'ஓசியா','Joel':'யோவேல்','Amos':'ஆமோஸ்','Obadiah':'ஒபதியா','Jonah':'யோனா','Micah':'மீகா','Nahum':'நாகூம்','Habakkuk':'ஆபகூக்','Zephaniah':'செப்பனியா','Haggai':'ஆகாய்','Zechariah':'சகரியா','Malachi':'மல்கியா'};
+
                 // Launch mobile quiz overlay when a quiz chapter is selected on mobile
                 if (typeof MobileQuiz !== 'undefined'
                     && state.selectedQuizChapter && state.selectedQuizBook 
@@ -7153,20 +7174,19 @@
                         if (quizQuestionList.length > 0) {
                             const today = new Date();
                             const dateKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-                            MobileQuiz.launch(quizQuestionList, state.selectedQuizBook, chapter, dateKey, state.darkMode);
+                            MobileQuiz.launch(quizQuestionList, state.selectedQuizBook, chapter, dateKey, state.darkMode, tamilNames[state.selectedQuizBook]);
                         }
                     }
                 } else if (typeof MobileQuiz !== 'undefined'
                     && state.quizSummaryData && state.dashboardTab === 'quiz') {
                     // Launch mobile summary overlay
-                    MobileQuiz.launchSummary(state.quizSummaryData, state.darkMode);
+                    MobileQuiz.launchSummary(state.quizSummaryData, state.darkMode, tamilNames[state.quizSummaryData.book]);
                 } else if (typeof MobileQuiz !== 'undefined'
                     && state.quizStarted && !state.selectedQuizBook && !state.selectedQuizChapter
                     && !state.quizSummaryData && state.dashboardTab === 'quiz') {
                     // Launch mobile chapter grid overlay
                     const ntBooks = ['Matthew','Mark','Luke','John','Acts','Romans','1 Corinthians','2 Corinthians','Galatians','Ephesians','Philippians','Colossians','1 Thessalonians','2 Thessalonians','1 Timothy','2 Timothy','Titus','Philemon','Hebrews','James','1 Peter','2 Peter','1 John','2 John','3 John','Jude','Revelation'];
                     const otBooks = ['Genesis','Exodus','Leviticus','Numbers','Deuteronomy','Joshua','Judges','Ruth','1 Samuel','2 Samuel','1 Kings','2 Kings','1 Chronicles','2 Chronicles','Ezra','Nehemiah','Esther','Job','Psalms','Proverbs','Ecclesiastes','Song of Solomon','Isaiah','Jeremiah','Lamentations','Ezekiel','Daniel','Hosea','Joel','Amos','Obadiah','Jonah','Micah','Nahum','Habakkuk','Zephaniah','Haggai','Zechariah','Malachi'];
-                    const tamilNames = {'Matthew':'மத்தேயு','Mark':'மாற்கு','Luke':'லூக்கா','John':'யோவான்','Acts':'அப்போஸ்தலர்','Romans':'ரோமர்','1 Corinthians':'1 கொரிந்தியர்','2 Corinthians':'2 கொரிந்தியர்','Galatians':'கலாத்தியர்','Ephesians':'எபேசியர்','Philippians':'பிலிப்பியர்','Colossians':'கொலோசெயர்','1 Thessalonians':'1 தெசலோனிக்கேயர்','2 Thessalonians':'2 தெசலோனிக்கேயர்','1 Timothy':'1 திமோத்தேயு','2 Timothy':'2 திமோத்தேயு','Titus':'திது','Philemon':'பிலேமோன்','Hebrews':'எபிரேயர்','James':'யாக்கோபு','1 Peter':'1 பேதுரு','2 Peter':'2 பேதுரு','1 John':'1 யோவான்','2 John':'2 யோவான்','3 John':'3 யோவான்','Jude':'யூதா','Revelation':'வெளிப்படுத்தின விசேஷம்','Genesis':'ஆதியாகமம்','Exodus':'யாத்திராகமம்','Leviticus':'லேவியராகமம்','Numbers':'எண்ணாகமம்','Deuteronomy':'உபாகமம்','Joshua':'யோசுவா','Judges':'நியாயாதிபதிகள்','Ruth':'ரூத்','1 Samuel':'1 சாமுவேல்','2 Samuel':'2 சாமுவேல்','1 Kings':'1 இராஜாக்கள்','2 Kings':'2 இராஜாக்கள்','1 Chronicles':'1 நாளாகமம்','2 Chronicles':'2 நாளாகமம்','Ezra':'எஸ்றா','Nehemiah':'நெகேமியா','Esther':'எஸ்தர்','Job':'யோபு','Psalms':'சங்கீதம்','Proverbs':'நீதிமொழிகள்','Ecclesiastes':'பிரசங்கி','Song of Solomon':'உன்னதப்பாட்டு','Isaiah':'ஏசாயா','Jeremiah':'எரேமியா','Lamentations':'புலம்பல்','Ezekiel':'எசேக்கியேல்','Daniel':'தானியேல்','Hosea':'ஓசியா','Joel':'யோவேல்','Amos':'ஆமோஸ்','Obadiah':'ஒபதியா','Jonah':'யோனா','Micah':'மீகா','Nahum':'நாகூம்','Habakkuk':'ஆபகூக்','Zephaniah':'செப்பனியா','Haggai':'ஆகாய்','Zechariah':'சகரியா','Malachi':'மல்கியா'};
                     const chapterCounts = {'Matthew':28,'Mark':16,'Luke':24,'John':21,'Acts':28,'Romans':16,'1 Corinthians':16,'2 Corinthians':13,'Galatians':6,'Ephesians':6,'Philippians':4,'Colossians':4,'1 Thessalonians':5,'2 Thessalonians':3,'1 Timothy':6,'2 Timothy':4,'Titus':3,'Philemon':1,'Hebrews':13,'James':5,'1 Peter':5,'2 Peter':3,'1 John':5,'2 John':1,'3 John':1,'Jude':1,'Revelation':22,'Genesis':50,'Exodus':40,'Leviticus':27,'Numbers':36,'Deuteronomy':34,'Joshua':24,'Judges':21,'Ruth':4,'1 Samuel':31,'2 Samuel':24,'1 Kings':22,'2 Kings':25,'1 Chronicles':29,'2 Chronicles':36,'Ezra':10,'Nehemiah':13,'Esther':10,'Job':42,'Psalms':150,'Proverbs':31,'Ecclesiastes':12,'Song of Solomon':8,'Isaiah':66,'Jeremiah':52,'Lamentations':5,'Ezekiel':48,'Daniel':12,'Hosea':14,'Joel':3,'Amos':9,'Obadiah':1,'Jonah':4,'Micah':7,'Nahum':3,'Habakkuk':3,'Zephaniah':3,'Haggai':2,'Zechariah':14,'Malachi':4};
                     const tab = state.quizTestamentTab || 'NT';
                     MobileQuiz.launchGrid({

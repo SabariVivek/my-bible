@@ -24,12 +24,32 @@ const MobileQuiz = (() => {
         return window.innerWidth <= 768;
     }
 
-    function launch(questions, bookName, chapter, dateKey, isDarkMode) {
+    function _showLoaderThen(isDarkMode, label, cb) {
+        const theme = isDarkMode ? 'dark-mode' : 'light-mode';
+        if (_overlayEl && _overlayEl.parentNode) {
+            _overlayEl.parentNode.removeChild(_overlayEl);
+        }
+        const loader = document.createElement('div');
+        loader.className = `mobile-quiz-overlay ${theme}`;
+        loader.innerHTML = `<div class="mq-loader"><div class="mq-spinner"></div>${label ? `<div class="mq-loader-label">${label}</div>` : ''}</div>`;
+        document.body.appendChild(loader);
+        _overlayEl = loader;
+        setTimeout(() => {
+            if (loader.parentNode) loader.parentNode.removeChild(loader);
+            _overlayEl = null;
+            cb();
+        }, 800);
+    }
+
+    function launch(questions, bookName, chapter, dateKey, isDarkMode, tamilBookName) {
         if (!questions || questions.length === 0) return false;
         _currentIndex = 0;
         _selectedAnswers = {};
         document.body.classList.add('mobile-quiz-active');
-        _render(questions, bookName, chapter, dateKey, isDarkMode);
+        const label = `${tamilBookName || bookName} - ${chapter} திறக்கிறது...`;
+        _showLoaderThen(isDarkMode, label, () => {
+            _render(questions, bookName, chapter, dateKey, isDarkMode);
+        });
         return true;
     }
 
@@ -108,7 +128,7 @@ const MobileQuiz = (() => {
                 </div>
             </div>
             <div class="mq-footer">
-                <button class="mq-prev-btn ${hasPrev ? '' : 'hidden'}" id="mqPrevBtn" aria-label="Previous">←</button>
+                <button class="mq-prev-btn ${hasPrev ? '' : 'hidden'}" id="mqPrevBtn">← Previous</button>
                 <button class="mq-next-btn ${hasSelection ? 'active' : 'disabled'}"
                         id="mqNextBtn" ${!hasSelection ? 'disabled' : ''}>
                     ${_currentIndex < total - 1 ? 'Next →' : 'Submit Quiz'}
@@ -365,16 +385,25 @@ const MobileQuiz = (() => {
        ------------------------------------------------ */
     let _summaryActive = false;
 
-    function launchSummary(summaryData, isDarkMode) {
+    function launchSummary(summaryData, isDarkMode, tamilBookName) {
         if (!summaryData) return false;
         if (_summaryActive && _overlayEl) return true; // already showing
         destroy(); // clean up any quiz overlay
         _summaryActive = true;
 
+        document.body.classList.add('mobile-quiz-active');
+        const label = `${tamilBookName || summaryData.book} - ${summaryData.chapter} சுருக்கம்...`;
+        _showLoaderThen(isDarkMode, label, () => {
+            _renderSummary(summaryData, isDarkMode);
+        });
+
+        return true;
+    }
+
+    function _renderSummary(summaryData, isDarkMode) {
+        _summaryActive = true;
         const { chapter, book, questions, userAnswers, score, totalQuestions } = summaryData;
         const theme = isDarkMode ? 'dark-mode' : 'light-mode';
-
-        document.body.classList.add('mobile-quiz-active');
 
         const overlay = document.createElement('div');
         overlay.className = `mobile-quiz-overlay ${theme}`;

@@ -397,17 +397,19 @@
 }
 
 .mq-prev-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    padding: 10px 16px;
+    border-radius: 14px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
     flex-shrink: 0;
     transition: all 0.15s;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
 }
 
 .mq-prev-btn.hidden {
@@ -1013,9 +1015,27 @@ body.mobile-quiz-active #quizContent {
 /* ---- Loader / Spinner ---- */
 .mq-loader {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: 1;
+    gap: 20px;
+}
+
+.mq-loader-label {
+    font-family: 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.7;
+    letter-spacing: 0.3px;
+}
+
+.dark-mode .mq-loader-label {
+    color: #cbd5e1;
+}
+
+.light-mode .mq-loader-label {
+    color: #475569;
 }
 
 .mq-spinner {
