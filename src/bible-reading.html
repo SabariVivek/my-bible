@@ -6452,7 +6452,7 @@
                                 }
                             }
                             
-                            if (pendingDates.length <= 2) return '';
+                            if (pendingDates.length < 2) return '';
                             
                             const allPending = pendingDates.slice().reverse();
                             const showAll = state.showAllPendingDates;
@@ -6472,7 +6472,7 @@
                                     ${displayDates.map(pd => {
                                         const d = pd.date;
                                         const label = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-                                        return '<button onclick="state.selectedDate = new Date(' + currentYear + ', ' + (pd.month - 1) + ', ' + pd.day + '); loadCompletedPortionsForDate(); render();" class="' + (state.darkMode ? 'bg-red-900 hover:bg-red-800 text-red-400 border-red-700' : 'bg-red-100 hover:bg-red-200 text-red-600 border-red-300') + '" style="padding: 5px 10px; border-radius: 8px; border: 1px solid; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s ease;">' + label + '</button>';
+                                        return '<button onclick="state.selectedDate = new Date(' + currentYear + ', ' + (pd.month - 1) + ', ' + pd.day + '); loadCompletedPortionsForDate(); render();" class="' + (state.darkMode ? 'bg-red-900 hover:bg-red-800 border-red-700' : 'bg-red-100 hover:bg-red-200 text-red-600 border-red-300') + '" style="padding: 5px 10px; border-radius: 8px; border: 1px solid; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s ease;' + (state.darkMode ? ' color: rgb(228, 169, 169);' : '') + '">' + label + '</button>';
                                     }).join('')}
                                     ${hasMore && !showAll ? '<button onclick="state.showAllPendingDates = true; render();" class="' + (state.darkMode ? 'text-red-400 hover:bg-red-900' : 'text-red-500 hover:bg-red-100') + '" style="padding: 5px 10px; border-radius: 8px; border: 1px dashed; font-size: 12px; font-weight: 600; cursor: pointer; border-color: currentColor;">more</button>' : ''}
                                     ${showAll && hasMore ? '<button onclick="state.showAllPendingDates = false; render();" class="' + (state.darkMode ? 'text-gray-400 hover:bg-slate-800' : 'text-gray-500 hover:bg-gray-100') + '" style="padding: 5px 10px; border-radius: 8px; border: 1px dashed; font-size: 12px; font-weight: 600; cursor: pointer; border-color: currentColor;">Show Less</button>' : ''}
