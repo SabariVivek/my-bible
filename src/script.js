@@ -13917,7 +13917,35 @@ function syncSettingsProfileSection() {
 function initSettingsProfileUpload() {
     const changeBtn = document.getElementById('settings-profile-change-btn');
     const fileInput = document.getElementById('settings-profile-file-input');
+    const avatarEl = document.getElementById('settings-profile-avatar');
     if (!changeBtn || !fileInput) return;
+
+    // Click avatar to preview full size
+    if (avatarEl) {
+        avatarEl.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const bg = avatarEl.style.backgroundImage;
+            if (!bg || bg === 'none') return;
+            const url = bg.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+            if (!url) return;
+            const overlay = document.getElementById('profile-preview-overlay');
+            const previewImg = document.getElementById('profile-preview-img');
+            if (!overlay || !previewImg) return;
+            previewImg.src = url;
+            overlay.classList.add('active');
+        });
+    }
+
+    // Close preview on click
+    const previewOverlay = document.getElementById('profile-preview-overlay');
+    if (previewOverlay) {
+        previewOverlay.addEventListener('click', (e) => {
+            e.stopPropagation();
+            previewOverlay.classList.remove('active');
+            const img = document.getElementById('profile-preview-img');
+            if (img) img.src = '';
+        });
+    }
 
     changeBtn.addEventListener('click', (e) => {
         e.stopPropagation();

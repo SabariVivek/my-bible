@@ -2031,6 +2031,12 @@ body:not(.dark-theme) .right-settings-panel .settings-footer {
     font-weight: 700;
     color: #c9a84c;
     border: 2px solid rgba(201, 168, 76, 0.3);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.settings-profile-avatar:active {
+    transform: scale(0.95);
 }
 
 .settings-profile-info {
@@ -2103,6 +2109,44 @@ body:not(.dark-theme) .settings-profile-change-btn {
 
 body:not(.dark-theme) .settings-profile-change-btn:active {
     background: rgba(146, 112, 12, 0.16);
+}
+
+/* Profile Image Full Preview */
+.profile-preview-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 13000;
+    cursor: zoom-out;
+    padding: 24px;
+    animation: profilePreviewFadeIn 0.2s ease;
+}
+
+.profile-preview-overlay.active {
+    display: flex;
+}
+
+.profile-preview-img {
+    max-width: min(90vw, 360px);
+    max-height: min(90vh, 360px);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 60px rgba(201, 168, 76, 0.15);
+    border: 3px solid rgba(201, 168, 76, 0.3);
+    animation: profilePreviewZoomIn 0.25s ease;
+}
+
+@keyframes profilePreviewFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes profilePreviewZoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 /* Profile Image Crop Modal */
