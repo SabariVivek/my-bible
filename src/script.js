@@ -1892,8 +1892,8 @@ function initializeMobileDrawer() {
         direction = '';
         drawerWidth = window.innerWidth;
 
-        // Decide if this could be an open-swipe (from left edge) or close-swipe (drawer is open)
-        if (!isDrawerOpen() && startX <= EDGE_ZONE) {
+        // Decide if this could be an open-swipe or close-swipe
+        if (!isDrawerOpen()) {
             direction = 'open';
         } else if (isDrawerOpen()) {
             direction = 'close';
