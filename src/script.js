@@ -1387,7 +1387,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 avatarEl.title = userName || 'Current user';
                 if (userName) {
                     const fileKey = userName.trim().toLowerCase();
-                    avatarEl.style.backgroundImage = `url('resources/profiles/${fileKey}.png')`;
+                    const ts = localStorage.getItem('profileImageTimestamp') || '';
+                    avatarEl.style.backgroundImage = `url('${PROFILE_IMAGE_BASE_URL}/${fileKey}.png${ts ? '?t=' + ts : ''}')`;
                     avatarEl.style.backgroundSize = 'cover';
                     avatarEl.style.backgroundPosition = 'center';
                 } else {
@@ -6461,6 +6462,8 @@ function initializeRightSettingsPanel() {
         settingsPanel.setAttribute('aria-hidden', 'false');
         // Disable background page scroll while settings is open
         document.body.style.overflow = 'hidden';
+        // Sync profile image section
+        syncSettingsProfileSection();
         // When first opened, buttons should be hidden until something changes
         updateSettingsFooterVisibility();
         console.log('[MyBible] settings panel opened, classes:', settingsPanel.className);
@@ -6643,6 +6646,9 @@ function initializeRightSettingsPanel() {
             }
         });
     }
+    // --- Profile Image Upload ---
+    initSettingsProfileUpload();
+
     // Close when clicking outside the panel
     document.addEventListener('click', (event) => {
         if (!settingsPanel.classList.contains('active')) return;
@@ -13872,4 +13878,152 @@ function navigateToRef(bookFile, chapter, verse) {
     setTimeout(() => {
         scrollToVerse(verse);
     }, 300);
+}
+
+// ========== Profile Image Upload for Settings ==========
+
+function syncSettingsProfileSection() {
+    const section = document.getElementById('settings-profile-section');
+    const avatar = document.getElementById('settings-profile-avatar');
+    const nameEl = document.getElementById('settings-profile-name');
+    const userName = localStorage.getItem('currentUserName') || '';
+    const isGuest = localStorage.getItem('currentUserIsGuest') === 'true';
+
+    if (!section) return;
+
+    if (isGuest || !userName) {
+        section.style.display = 'none';
+        return;
+    }
+    section.style.display = '';
+
+    if (nameEl) nameEl.textContent = userName;
+    if (avatar) {
+        const fileKey = userName.trim().toLowerCase();
+        const ts = localStorage.getItem('profileImageTimestamp') || '';
+        const imgUrl = `${PROFILE_IMAGE_BASE_URL}/${fileKey}.png${ts ? '?t=' + ts : ''}`;
+        avatar.style.backgroundImage = `url('${imgUrl}')`;
+        avatar.textContent = '';
+        // Fallback if image fails
+        const testImg = new Image();
+        testImg.src = imgUrl;
+        testImg.onerror = () => {
+            avatar.style.backgroundImage = '';
+            avatar.textContent = userName.charAt(0).toUpperCase();
+        };
+    }
+}
+
+function initSettingsProfileUpload() {
+    const changeBtn = document.getElementById('settings-profile-change-btn');
+    const fileInput = document.getElementById('settings-profile-file-input');
+    if (!changeBtn || !fileInput) return;
+
+    changeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fileInput.click();
+    });
+
+    fileInput.addEventListener('change', async () => {
+        const file = fileInput.files[0];
+        if (!file) return;
+
+        // Validate file
+        const MAX_SIZE = 2 * 1024 * 1024; // 2 MB
+        const ALLOWED_TYPES = ['image/png', 'image/jpeg', 'image/webp'];
+        if (!ALLOWED_TYPES.includes(file.type)) {
+            showProfileUploadStatus('Please select a PNG, JPEG, or WebP image.', 'error');
+            fileInput.value = '';
+            return;
+        }
+        if (file.size > MAX_SIZE) {
+            showProfileUploadStatus('Image must be under 2 MB.', 'error');
+            fileInput.value = '';
+            return;
+        }
+
+        const userName = localStorage.getItem('currentUserName') || '';
+        if (!userName) {
+            showProfileUploadStatus('No user signed in.', 'error');
+            fileInput.value = '';
+            return;
+        }
+
+        const fileKey = userName.trim().toLowerCase();
+        // Always upload as .png to match the naming convention
+        const filePath = `${fileKey}.png`;
+
+        showProfileUploadStatus('Uploading…', 'info');
+
+        try {
+            const client = typeof getSupabaseClient === 'function' ? getSupabaseClient() : null;
+            if (!client) {
+                showProfileUploadStatus('Unable to connect to storage.', 'error');
+                fileInput.value = '';
+                return;
+            }
+
+            // Remove old file first (ignore errors — file may not exist yet)
+            await client.storage
+                .from('Profile_Images')
+                .remove([filePath]);
+
+            // Upload the new file
+            const { data, error } = await client.storage
+                .from('Profile_Images')
+                .upload(filePath, file, {
+                    cacheControl: '0',
+                    contentType: file.type
+                });
+
+            if (error) {
+                console.error('Profile upload error:', error);
+                showProfileUploadStatus('Upload failed: ' + error.message, 'error');
+                fileInput.value = '';
+                return;
+            }
+
+            console.log('Profile image uploaded successfully:', data);
+            // Store a cache-buster timestamp so all pages use the fresh image
+            const ts = Date.now().toString();
+            localStorage.setItem('profileImageTimestamp', ts);
+
+            showProfileUploadStatus('Photo updated!', 'success');
+            // Refresh avatar in settings panel
+            syncSettingsProfileSection();
+            // Refresh avatar in main app top bar
+            refreshTopBarAvatar();
+
+            setTimeout(() => {
+                showProfileUploadStatus('', 'hide');
+            }, 3000);
+        } catch (err) {
+            console.error('Profile upload exception:', err);
+            showProfileUploadStatus('Upload failed. Please try again.', 'error');
+        }
+        fileInput.value = '';
+    });
+}
+
+function showProfileUploadStatus(message, type) {
+    const el = document.getElementById('settings-profile-upload-status');
+    if (!el) return;
+    if (type === 'hide' || !message) {
+        el.style.display = 'none';
+        el.textContent = '';
+        return;
+    }
+    el.textContent = message;
+    el.className = 'settings-profile-upload-status status-' + type;
+    el.style.display = 'block';
+}
+
+function refreshTopBarAvatar() {
+    const avatarEl = document.getElementById('current-user-avatar');
+    if (!avatarEl) return;
+    const userName = localStorage.getItem('currentUserName') || '';
+    if (!userName) return;
+    const fileKey = userName.trim().toLowerCase();
+    const ts = localStorage.getItem('profileImageTimestamp') || '';
+    avatarEl.style.backgroundImage = `url('${PROFILE_IMAGE_BASE_URL}/${fileKey}.png${ts ? '?t=' + ts : ''}')`;
 }

@@ -4591,7 +4591,7 @@
                                         ${state.profileButtonVisible ? `
                                             <button onclick="${state.profileButtonClickable ? "state.currentUser = null; state.showDashboard = false; state.quizTabVisible = false; state.dashboardTitleClicks = 0; state.profileButtonClickable = false; stopDashboardSync(); render();" : ""}" class="${theme.card} border ${theme.border} rounded-lg p-1.5 hover:shadow-lg transition-all ${state.profileButtonClickable ? 'cursor-pointer' : 'cursor-not-allowed'}" title="${state.profileButtonClickable ? 'Change Profile' : 'Hold Dashboard title for 10s to enable'}">
                                                 ${(state.currentUser) ? `
-                                                    <img src="../resources/profiles/${state.currentUser.name.toLowerCase()}.png" alt="${state.currentUser.name}" class="w-6 h-6 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                                    <img src="${PROFILE_IMAGE_BASE_URL}/${state.currentUser.name.toLowerCase()}.png" alt="${state.currentUser.name}" class="w-6 h-6 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                                     <div class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-gradient-to-br from-blue-500 to-purple-600 text-white" style="display: none;">
                                                         ${state.currentUser.name.charAt(0).toUpperCase()}
                                                     </div>
@@ -5321,7 +5321,7 @@
                                                     <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
                                                         ${isFirst ? '<div style="font-size:18px; margin-bottom:4px;">👑</div>' : ''}
                                                         <div style="width:${sizes[idx]}px; height:${sizes[idx]}px; border-radius:50%; overflow:hidden; border: 3px solid ${medalColors[idx]}; margin-bottom:6px; background: ${state.darkMode ? '#1e293b' : '#f1f5f9'}; display:flex; align-items:center; justify-content:center; font-size:${sizes[idx]/2.2}px;">
-                                                            <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.parentElement.textContent='👤';">
+                                                            <img src="${PROFILE_IMAGE_BASE_URL}/${user.name.toLowerCase()}.png" alt="${user.name}" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.parentElement.textContent='👤';">
                                                         </div>
                                                         <div style="font-size:12px; font-weight:600; color:${state.darkMode ? '#e2e8f0' : '#1e293b'}; text-align:center; max-width:80px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${user.name || 'User'}</div>
                                                         <div style="font-size:10px; color:${state.darkMode ? '#64748b' : '#94a3b8'}; margin-bottom:6px;">${user.total_questions || 0} Qs</div>
@@ -5346,7 +5346,7 @@
                                                     <div style="display:flex; align-items:center; gap:10px; padding:10px 12px; margin-bottom:6px; border-radius:10px; background:${state.darkMode ? '#1e293b' : '#ffffff'}; border:1px solid ${state.darkMode ? '#334155' : '#e2e8f0'};">
                                                         <span style="width:24px; height:24px; border-radius:6px; background:${state.darkMode ? '#0f172a' : '#f1f5f9'}; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:${state.darkMode ? '#64748b' : '#94a3b8'}; flex-shrink:0;">${idx + 4}</span>
                                                         <div style="width:32px; height:32px; border-radius:50%; overflow:hidden; background:${state.darkMode ? '#334155' : '#e2e8f0'}; display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0;">
-                                                            <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.parentElement.textContent='👤';">
+                                                            <img src="${PROFILE_IMAGE_BASE_URL}/${user.name.toLowerCase()}.png" alt="${user.name}" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.parentElement.textContent='👤';">
                                                         </div>
                                                         <div style="flex:1; min-width:0;">
                                                             <div style="font-size:13px; font-weight:600; color:${state.darkMode ? '#e2e8f0' : '#1e293b'}; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${user.name || 'User'}</div>
@@ -5776,7 +5776,7 @@
                                             <div class="flex items-center gap-4">
                                                 <!-- Profile Avatar -->
                                                 <div class="relative flex-shrink-0">
-                                                    <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-12 h-12 rounded-full object-cover shadow-lg group-hover:scale-110 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                                    <img src="${PROFILE_IMAGE_BASE_URL}/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-12 h-12 rounded-full object-cover shadow-lg group-hover:scale-110 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                                     <div class="w-12 h-12 rounded-full bg-gradient-to-br ${gradient} flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300" style="display: none;">
                                                         ${user.name.charAt(0).toUpperCase()}
                                                     </div>
@@ -5844,7 +5844,7 @@
                                 return `
                                 <button onclick="switchUser(${user.id})" class="w-full ${theme.card} hover:bg-slate-750 border ${theme.border} rounded-xl p-6 flex items-center justify-between transition-all">
                                     <div class="flex items-center gap-4">
-                                        <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-12 h-12 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <img src="${PROFILE_IMAGE_BASE_URL}/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-12 h-12 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                         <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg" style="display: none;">
                                             ${user.name.charAt(0).toUpperCase()}
                                         </div>
@@ -6583,7 +6583,7 @@
                 return `
                                     <div class="${theme.card} border ${theme.border} rounded-2xl p-6">
                                         <div class="flex items-center gap-3 mb-4">
-                                            <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-12 h-12 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                            <img src="${PROFILE_IMAGE_BASE_URL}/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-12 h-12 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                             <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg" style="display: none;">
                                                 ${user.name.charAt(0).toUpperCase()}
                                             </div>

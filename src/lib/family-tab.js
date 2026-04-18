@@ -45,7 +45,7 @@
     }
 
     function avatarHTML(user, cls, fbCls, extraStyle) {
-        return '<img src="../resources/profiles/' + esc(user.name.toLowerCase()) + '.png" alt="' + esc(user.name) + '" class="' + cls + '"' + (extraStyle ? ' style="' + extraStyle + '"' : '') + ' onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">' +
+        return '<img src="' + PROFILE_IMAGE_BASE_URL + '/' + esc(user.name.toLowerCase()) + '.png" alt="' + esc(user.name) + '" class="' + cls + '"' + (extraStyle ? ' style="' + extraStyle + '"' : '') + ' onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">' +
             '<div class="' + fbCls + '" style="display:none;">' + esc(user.name.charAt(0).toUpperCase()) + '</div>';
     }
 
@@ -194,7 +194,7 @@
                 var user = x.user, streak = x.streak;
                 var color = progressColor(getUserStats(user).totalProgress || 0);
                 return '<div class="ft-streak-card">' +
-                    '<img src="../resources/profiles/' + esc(user.name.toLowerCase()) + '.png" alt="' + esc(user.name) + '" class="ft-streak-avatar" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">' +
+                    '<img src="' + PROFILE_IMAGE_BASE_URL + '/' + esc(user.name.toLowerCase()) + '.png" alt="' + esc(user.name) + '" class="ft-streak-avatar" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">' +
                     '<div class="ft-streak-avatar-fb" style="display:none; background:' + color + ';">' + esc(user.name.charAt(0).toUpperCase()) + '</div>' +
                     '<p class="ft-streak-name">' + esc(user.name) + '</p>' +
                     '<p class="ft-streak-flame">\uD83D\uDD25 ' + streak + '</p>' +
@@ -232,7 +232,7 @@
                 ? '<button class="ft-pending-action" onclick="switchUser(' + user.id + '); state.showDashboard = false; stopDashboardSync(); render();">\u2192</button>'
                 : '';
             return '<div class="ft-pending-row">' +
-                '<img src="../resources/profiles/' + esc(user.name.toLowerCase()) + '.png" alt="' + esc(user.name) + '" class="ft-pending-avatar" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">' +
+                '<img src="' + PROFILE_IMAGE_BASE_URL + '/' + esc(user.name.toLowerCase()) + '.png" alt="' + esc(user.name) + '" class="ft-pending-avatar" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">' +
                 '<div class="ft-pending-avatar-fb" style="display:none;">' + esc(user.name.charAt(0).toUpperCase()) + '</div>' +
                 '<div class="ft-pending-info">' +
                     '<p class="ft-pending-name">' + esc(user.name) + '</p>' +
@@ -262,7 +262,7 @@
             return '<div class="ft-member">' +
                 '<div class="ft-member-avatar-wrap" style="--pct:' + pct + '%;--ring-color:' + color + ';">' +
                     '<div class="ft-member-avatar-inner">' +
-                        '<img src="../resources/profiles/' + esc(user.name.toLowerCase()) + '.png" class="ft-member-avatar" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">' +
+                        '<img src="' + PROFILE_IMAGE_BASE_URL + '/' + esc(user.name.toLowerCase()) + '.png" class="ft-member-avatar" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'grid\';">' +
                         '<div class="ft-member-avatar-fb" style="display:none;background:' + color + ';">' + esc(user.name.charAt(0).toUpperCase()) + '</div>' +
                     '</div>' +
                 '</div>' +

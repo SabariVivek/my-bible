@@ -411,7 +411,7 @@ select option { background: var(--surface); color: var(--text); }
       avatar.textContent = '';
       if (name) {
         const fileKey = name.trim().toLowerCase();
-        avatar.style.backgroundImage = `url('resources/profiles/${fileKey}.png')`;
+        avatar.style.backgroundImage = `url('${PROFILE_IMAGE_BASE_URL}/${fileKey}.png')`;
         avatar.style.backgroundSize = 'cover';
         avatar.style.backgroundPosition = 'center';
       } else {

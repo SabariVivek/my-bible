@@ -2008,6 +2008,103 @@ body:not(.dark-theme) .right-settings-panel .settings-footer {
     overflow: hidden;
 }
 
+/* Settings Profile Image Section */
+.settings-profile-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+.settings-profile-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #2a2b2e;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #c9a84c;
+    border: 2px solid rgba(201, 168, 76, 0.3);
+}
+
+.settings-profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.settings-profile-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.settings-profile-change-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(201, 168, 76, 0.12);
+    color: #c9a84c;
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    width: fit-content;
+}
+
+.settings-profile-change-btn:active {
+    background: rgba(201, 168, 76, 0.22);
+    border-color: rgba(201, 168, 76, 0.4);
+}
+
+.settings-profile-upload-status {
+    padding: 8px 16px 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.settings-profile-upload-status.status-info {
+    color: #60a5fa;
+}
+
+.settings-profile-upload-status.status-success {
+    color: #34d399;
+}
+
+.settings-profile-upload-status.status-error {
+    color: #f87171;
+}
+
+/* Light theme overrides for profile section */
+body:not(.dark-theme) .settings-profile-avatar {
+    background-color: #e8e5df;
+    border-color: rgba(146, 112, 12, 0.25);
+    color: #92700c;
+}
+
+body:not(.dark-theme) .settings-profile-change-btn {
+    background: rgba(146, 112, 12, 0.08);
+    color: #92700c;
+    border-color: rgba(146, 112, 12, 0.2);
+}
+
+body:not(.dark-theme) .settings-profile-change-btn:active {
+    background: rgba(146, 112, 12, 0.16);
+}
+
 /* Settings discard confirmation modal */
 .settings-discard-overlay {
     position: absolute;

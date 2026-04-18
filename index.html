@@ -1126,6 +1126,29 @@
             </div>
 
             <div class="settings-body">
+                <!-- PROFILE IMAGE -->
+                <div class="settings-section" id="settings-profile-section" style="display:none;">
+                    <div class="settings-section-label">Profile Image</div>
+                    <div class="settings-card">
+                        <div class="settings-profile-row">
+                            <div class="settings-profile-avatar" id="settings-profile-avatar"></div>
+                            <div class="settings-profile-info">
+                                <div class="settings-profile-name" id="settings-profile-name"></div>
+                                <button class="settings-profile-change-btn" id="settings-profile-change-btn">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="17 8 12 3 7 8"/>
+                                        <line x1="12" y1="3" x2="12" y2="15"/>
+                                    </svg>
+                                    Change Photo
+                                </button>
+                                <input type="file" id="settings-profile-file-input" accept="image/png,image/jpeg,image/webp" style="display:none;">
+                            </div>
+                        </div>
+                        <div class="settings-profile-upload-status" id="settings-profile-upload-status" style="display:none;"></div>
+                    </div>
+                </div>
+
                 <!-- THEME -->
                 <div class="settings-section">
                     <div class="settings-section-label">Theme</div>
