@@ -314,8 +314,8 @@
     <script src="lib/quiz-questions-formatter.js?v=20251126003722"></script>
     <link rel="stylesheet" href="lib/quiz-mobile.css?v=20260415">
     <script src="lib/quiz-mobile.js?v=20260415"></script>
-    <link rel="stylesheet" href="lib/family-tab.css?v=20260418c">
-    <script src="lib/family-tab.js?v=20260418c"></script>
+    <link rel="stylesheet" href="lib/family-tab.css?v=20260418f">
+    <script src="lib/family-tab.js?v=20260418f"></script>
     <script src="yearlyReadingPlan.js?v=20251126003722"></script>
     <script>
         // Force cache refresh for updated reading plan
@@ -7041,6 +7041,11 @@
                         createConfetti(topReadersSection);
                         state.confettiTriggeredForFamily = true;
                     }
+                }
+
+                // Auto-scroll rhythm heatmap to today
+                if (state.dashboardTab === 'family' && window.FamilyTab && window.FamilyTab.afterRender) {
+                    window.FamilyTab.afterRender();
                 }
             }, 0);
 
