@@ -38,6 +38,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="src/chapter-summary-pullout.css?cb=20260301210232">
+    <!-- Cropper.js for profile image cropping -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css?cb=20260418170421">
     <!-- Cache Management -->
     <script src="src/cache-manager.js?cb=20251126003722"></script>
 </head>
@@ -1149,6 +1151,33 @@
                     </div>
                 </div>
 
+                <!-- Profile Image Crop Modal -->
+                <div class="profile-crop-overlay" id="profile-crop-overlay">
+                    <div class="profile-crop-modal">
+                        <div class="profile-crop-header">
+                            <span class="profile-crop-title">Crop Photo</span>
+                            <button class="profile-crop-close-btn" id="profile-crop-cancel-btn" aria-label="Cancel">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="profile-crop-body">
+                            <img id="profile-crop-image" alt="Crop preview">
+                        </div>
+                        <div class="profile-crop-actions">
+                            <button class="profile-crop-btn secondary" id="profile-crop-rotate-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="1 4 1 10 7 10"></polyline>
+                                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                                </svg>
+                            </button>
+                            <button class="profile-crop-btn primary" id="profile-crop-confirm-btn">Upload</button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- THEME -->
                 <div class="settings-section">
                     <div class="settings-section-label">Theme</div>
@@ -1496,6 +1525,8 @@
 
     <!-- Supabase Client Library (Local for Offline Support) -->
     <script src="src/lib/supabase.js?cb=20251126003722"></script>
+    <!-- Cropper.js for profile image cropping -->
+    <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js?cb=20260418170421"></script>
 
     <!-- Supabase Integrations -->
     <script src="src/lib/supabase-pinned-verses.js?cb=20251126003722"></script>

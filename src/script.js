@@ -13924,12 +13924,12 @@ function initSettingsProfileUpload() {
         fileInput.click();
     });
 
-    fileInput.addEventListener('change', async () => {
+    fileInput.addEventListener('change', () => {
         const file = fileInput.files[0];
         if (!file) return;
 
         // Validate file
-        const MAX_SIZE = 2 * 1024 * 1024; // 2 MB
+        const MAX_SIZE = 5 * 1024 * 1024; // 5 MB (before crop)
         const ALLOWED_TYPES = ['image/png', 'image/jpeg', 'image/webp'];
         if (!ALLOWED_TYPES.includes(file.type)) {
             showProfileUploadStatus('Please select a PNG, JPEG, or WebP image.', 'error');
@@ -13937,72 +13937,164 @@ function initSettingsProfileUpload() {
             return;
         }
         if (file.size > MAX_SIZE) {
-            showProfileUploadStatus('Image must be under 2 MB.', 'error');
+            showProfileUploadStatus('Image must be under 5 MB.', 'error');
             fileInput.value = '';
             return;
         }
 
-        const userName = localStorage.getItem('currentUserName') || '';
-        if (!userName) {
-            showProfileUploadStatus('No user signed in.', 'error');
-            fileInput.value = '';
-            return;
-        }
-
-        const fileKey = userName.trim().toLowerCase();
-        // Always upload as .png to match the naming convention
-        const filePath = `${fileKey}.png`;
-
-        showProfileUploadStatus('Uploading…', 'info');
-
-        try {
-            const client = typeof getSupabaseClient === 'function' ? getSupabaseClient() : null;
-            if (!client) {
-                showProfileUploadStatus('Unable to connect to storage.', 'error');
-                fileInput.value = '';
-                return;
-            }
-
-            // Remove old file first (ignore errors — file may not exist yet)
-            await client.storage
-                .from('Profile_Images')
-                .remove([filePath]);
-
-            // Upload the new file
-            const { data, error } = await client.storage
-                .from('Profile_Images')
-                .upload(filePath, file, {
-                    cacheControl: '0',
-                    contentType: file.type
-                });
-
-            if (error) {
-                console.error('Profile upload error:', error);
-                showProfileUploadStatus('Upload failed: ' + error.message, 'error');
-                fileInput.value = '';
-                return;
-            }
-
-            console.log('Profile image uploaded successfully:', data);
-            // Store a cache-buster timestamp so all pages use the fresh image
-            const ts = Date.now().toString();
-            localStorage.setItem('profileImageTimestamp', ts);
-
-            showProfileUploadStatus('Photo updated!', 'success');
-            // Refresh avatar in settings panel
-            syncSettingsProfileSection();
-            // Refresh avatar in main app top bar
-            refreshTopBarAvatar();
-
-            setTimeout(() => {
-                showProfileUploadStatus('', 'hide');
-            }, 3000);
-        } catch (err) {
-            console.error('Profile upload exception:', err);
-            showProfileUploadStatus('Upload failed. Please try again.', 'error');
-        }
+        // Open crop modal
+        openProfileCropModal(file);
         fileInput.value = '';
     });
+}
+
+// --- Profile Crop Modal ---
+let _profileCropper = null;
+
+function openProfileCropModal(file) {
+    const overlay = document.getElementById('profile-crop-overlay');
+    const imgEl = document.getElementById('profile-crop-image');
+    if (!overlay || !imgEl) return;
+
+    // Load file into the image element
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        imgEl.src = e.target.result;
+        overlay.classList.add('active');
+
+        // Destroy previous cropper instance
+        if (_profileCropper) {
+            _profileCropper.destroy();
+            _profileCropper = null;
+        }
+
+        // Initialize Cropper.js
+        _profileCropper = new Cropper(imgEl, {
+            aspectRatio: 1,
+            viewMode: 1,
+            dragMode: 'move',
+            autoCropArea: 0.85,
+            cropBoxResizable: true,
+            cropBoxMovable: true,
+            background: false,
+            guides: false,
+            center: true,
+            highlight: false,
+            responsive: true,
+            restore: false,
+        });
+    };
+    reader.readAsDataURL(file);
+
+    // Wire up buttons (use one-time listeners to avoid stacking)
+    const cancelBtn = document.getElementById('profile-crop-cancel-btn');
+    const confirmBtn = document.getElementById('profile-crop-confirm-btn');
+    const rotateBtn = document.getElementById('profile-crop-rotate-btn');
+
+    const cleanup = () => {
+        if (_profileCropper) {
+            _profileCropper.destroy();
+            _profileCropper = null;
+        }
+        overlay.classList.remove('active');
+        imgEl.src = '';
+        cancelBtn.removeEventListener('click', handleCancel);
+        confirmBtn.removeEventListener('click', handleConfirm);
+        rotateBtn.removeEventListener('click', handleRotate);
+    };
+
+    const handleCancel = () => cleanup();
+
+    const handleRotate = () => {
+        if (_profileCropper) _profileCropper.rotate(-90);
+    };
+
+    const handleConfirm = async () => {
+        if (!_profileCropper) return;
+        confirmBtn.disabled = true;
+        confirmBtn.textContent = 'Uploading…';
+
+        try {
+            const canvas = _profileCropper.getCroppedCanvas({
+                width: 256,
+                height: 256,
+                imageSmoothingEnabled: true,
+                imageSmoothingQuality: 'high',
+            });
+
+            const blob = await new Promise((resolve) =>
+                canvas.toBlob(resolve, 'image/png', 0.92)
+            );
+
+            cleanup();
+            await uploadProfileBlob(blob);
+        } catch (err) {
+            console.error('Crop error:', err);
+            showProfileUploadStatus('Crop failed. Please try again.', 'error');
+            cleanup();
+        }
+        confirmBtn.disabled = false;
+        confirmBtn.textContent = 'Upload';
+    };
+
+    cancelBtn.addEventListener('click', handleCancel);
+    confirmBtn.addEventListener('click', handleConfirm);
+    rotateBtn.addEventListener('click', handleRotate);
+}
+
+async function uploadProfileBlob(blob) {
+    const userName = localStorage.getItem('currentUserName') || '';
+    if (!userName) {
+        showProfileUploadStatus('No user signed in.', 'error');
+        return;
+    }
+
+    const fileKey = userName.trim().toLowerCase();
+    const filePath = `${fileKey}.png`;
+
+    showProfileUploadStatus('Uploading…', 'info');
+
+    try {
+        const client = typeof getSupabaseClient === 'function' ? getSupabaseClient() : null;
+        if (!client) {
+            showProfileUploadStatus('Unable to connect to storage.', 'error');
+            return;
+        }
+
+        // Remove old file first (ignore errors — file may not exist yet)
+        await client.storage
+            .from('Profile_Images')
+            .remove([filePath]);
+
+        // Upload the new file
+        const { data, error } = await client.storage
+            .from('Profile_Images')
+            .upload(filePath, blob, {
+                cacheControl: '0',
+                contentType: 'image/png'
+            });
+
+        if (error) {
+            console.error('Profile upload error:', error);
+            showProfileUploadStatus('Upload failed: ' + error.message, 'error');
+            return;
+        }
+
+        console.log('Profile image uploaded successfully:', data);
+        const ts = Date.now().toString();
+        localStorage.setItem('profileImageTimestamp', ts);
+
+        showProfileUploadStatus('Photo updated!', 'success');
+        syncSettingsProfileSection();
+        refreshTopBarAvatar();
+
+        setTimeout(() => {
+            showProfileUploadStatus('', 'hide');
+        }, 3000);
+    } catch (err) {
+        console.error('Profile upload exception:', err);
+        showProfileUploadStatus('Upload failed. Please try again.', 'error');
+    }
 }
 
 function showProfileUploadStatus(message, type) {

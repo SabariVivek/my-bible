@@ -2105,6 +2105,165 @@ body:not(.dark-theme) .settings-profile-change-btn:active {
     background: rgba(146, 112, 12, 0.16);
 }
 
+/* Profile Image Crop Modal */
+.profile-crop-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 16px;
+}
+
+.profile-crop-overlay.active {
+    display: flex;
+}
+
+.profile-crop-modal {
+    width: 100%;
+    max-width: 400px;
+    background: #1a1a1a;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+}
+
+.profile-crop-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.profile-crop-title {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #c9a84c;
+    letter-spacing: 0.05em;
+}
+
+.profile-crop-close-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.06);
+    color: #999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-crop-body {
+    width: 100%;
+    max-height: 360px;
+    overflow: hidden;
+    background: #000;
+}
+
+.profile-crop-body img {
+    display: block;
+    max-width: 100%;
+}
+
+.profile-crop-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.profile-crop-btn {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background 0.2s;
+}
+
+.profile-crop-btn.secondary {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ccc;
+}
+
+.profile-crop-btn.secondary:active {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.profile-crop-btn.primary {
+    flex: 1;
+    height: 40px;
+    background: #c9a84c;
+    color: #1a1a1a;
+}
+
+.profile-crop-btn.primary:active {
+    background: #b8973e;
+}
+
+.profile-crop-btn.primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Light theme crop modal */
+body:not(.dark-theme) .profile-crop-modal {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body:not(.dark-theme) .profile-crop-header {
+    border-color: rgba(0, 0, 0, 0.06);
+}
+
+body:not(.dark-theme) .profile-crop-title {
+    color: #92700c;
+}
+
+body:not(.dark-theme) .profile-crop-close-btn {
+    background: rgba(0, 0, 0, 0.05);
+    color: #666;
+}
+
+body:not(.dark-theme) .profile-crop-actions {
+    border-color: rgba(0, 0, 0, 0.06);
+}
+
+body:not(.dark-theme) .profile-crop-btn.secondary {
+    background: rgba(0, 0, 0, 0.06);
+    color: #555;
+}
+
+body:not(.dark-theme) .profile-crop-btn.primary {
+    background: #92700c;
+    color: #fff;
+}
+
+/* Cropper.js overrides for circular preview */
+.profile-crop-body .cropper-view-box,
+.profile-crop-body .cropper-face {
+    border-radius: 50%;
+}
+
+.profile-crop-body .cropper-view-box {
+    outline: 2px solid rgba(201, 168, 76, 0.7);
+    outline-offset: -1px;
+}
+
 /* Settings discard confirmation modal */
 .settings-discard-overlay {
     position: absolute;
