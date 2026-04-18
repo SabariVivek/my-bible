@@ -8,6 +8,7 @@ const MobileQuiz = (() => {
     let _currentIndex = 0;
     let _selectedAnswers = {};
     let _overlayEl = null;
+    let _gridScrollTop = 0;
 
     // Strip the blue badge span and any leading HTML tags from question text
     function _cleanQuestion(text) {
@@ -565,6 +566,12 @@ const MobileQuiz = (() => {
         document.body.appendChild(overlay);
         _overlayEl = overlay;
 
+        // Restore scroll position
+        const booksBody = overlay.querySelector('#mqBooksBody');
+        if (booksBody && _gridScrollTop > 0) {
+            requestAnimationFrame(() => { booksBody.scrollTop = _gridScrollTop; });
+        }
+
         // Bind chapter button clicks
         overlay.querySelectorAll('.mq-ch-btn').forEach(btn => {
             btn.addEventListener('click', function () {
@@ -572,6 +579,10 @@ const MobileQuiz = (() => {
                 const ch = this.dataset.ch;
                 const completed = this.dataset.completed === 'true';
                 const enabled = this.dataset.enabled === 'true';
+                // Save scroll position before navigating away
+                const booksBody = document.getElementById('mqBooksBody');
+                if (booksBody) _gridScrollTop = booksBody.scrollTop;
+
                 if (completed) {
                     if (typeof loadQuizSummary === 'function') loadQuizSummary(ch, book);
                 } else if (enabled) {
