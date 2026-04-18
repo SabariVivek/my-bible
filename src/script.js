@@ -1767,54 +1767,20 @@ function initializeMobileDrawer() {
     const versesColumn = document.querySelector('.verses-column');
     const bottomNav = document.querySelector('.bottom-nav');
     if (!menuBtn || !drawerOverlay) return;
-    // Open/toggle drawer
-    menuBtn.addEventListener('click', () => {
-        closeBottomSheet();
-        // Check if on mobile or desktop
-        if (window.innerWidth <= 768) {
-            // Mobile: toggle drawer overlay
-            const isOpen = drawerOverlay.classList.contains('active');
-            if (isOpen) {
-                // Close drawer
-                drawerOverlay.classList.remove('active');
-                booksSidebar.classList.remove('drawer-open');
-                chaptersColumn.classList.remove('drawer-open');
-                versesColumn.classList.remove('drawer-open');
-                hamburgerIcon.style.display = 'block';
-                closeIcon.style.display = 'none';
-                document.body.style.overflow = '';
-            } else {
-                // Close summary drawer if open
-                closeSummaryDrawer();
-                // Open drawer
-                drawerOverlay.classList.add('active');
-                booksSidebar.classList.add('drawer-open');
-                chaptersColumn.classList.add('drawer-open');
-                versesColumn.classList.add('drawer-open');
-                hamburgerIcon.style.display = 'none';
-                closeIcon.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            }
-        } else {
-            // Desktop: toggle sidebar visibility
-            const isHidden = booksSidebar.classList.toggle('hidden');
-            chaptersColumn.classList.toggle('hidden');
-            versesColumn.classList.toggle('hidden');
-            // Expand bottom nav when sidebars are hidden
-            if (bottomNav) {
-                if (isHidden) {
-                    bottomNav.classList.add('expanded');
-                } else {
-                    bottomNav.classList.remove('expanded');
-                }
-            }
-        }
-    });
-    // Close drawer
+
+    // ── Helper: open/close drawer ──
+    function openDrawer() {
+        closeSummaryDrawer();
+        drawerOverlay.classList.add('active');
+        booksSidebar.classList.add('drawer-open');
+        chaptersColumn.classList.add('drawer-open');
+        versesColumn.classList.add('drawer-open');
+        hamburgerIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
     function closeDrawer() {
-        const menuBtn = document.querySelector('.mobile-only');
-        const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
-        const closeIcon = menuBtn.querySelector('.close-icon');
         drawerOverlay.classList.remove('active');
         booksSidebar.classList.remove('drawer-open');
         chaptersColumn.classList.remove('drawer-open');
@@ -1823,80 +1789,190 @@ function initializeMobileDrawer() {
         closeIcon.style.display = 'none';
         document.body.style.overflow = '';
     }
-    // Close on overlay click
-    if (drawerOverlay) {
-        drawerOverlay.addEventListener('click', closeDrawer);
+
+    function isDrawerOpen() {
+        return drawerOverlay.classList.contains('active');
     }
-    // Close button in drawer header (if it exists)
-    const drawerCloseBtn = document.querySelector('.drawer-close');
+
+    // ── Hamburger / close button ──
+    menuBtn.addEventListener('click', () => {
+        closeBottomSheet();
+        if (window.innerWidth <= 768) {
+            isDrawerOpen() ? closeDrawer() : openDrawer();
+        } else {
+            // Desktop: toggle sidebar visibility
+            const isHidden = booksSidebar.classList.toggle('hidden');
+            chaptersColumn.classList.toggle('hidden');
+            versesColumn.classList.toggle('hidden');
+            if (bottomNav) {
+                bottomNav.classList.toggle('expanded', isHidden);
+            }
+        }
+    });
+
+    // Close on overlay tap
+    drawerOverlay.addEventListener('click', closeDrawer);
+
+    // Close button in drawer header
+    const drawerCloseBtn = document.querySelector('.drawer-close-btn');
     if (drawerCloseBtn) {
         drawerCloseBtn.addEventListener('click', closeDrawer);
     }
 
-    // Left swipe to open drawer (ultra smooth) - from anywhere on screen
-    let touchStartX = 0;
-    let touchStartY = 0;
-    const swipeThreshold = 150; // Minimum swipe distance
+    // ── Touch-tracking swipe (open + close) ──
+    const EDGE_ZONE = 30;        // px from left edge to start open-swipe
+    const DRAG_THRESHOLD = 10;   // px to decide horizontal vs vertical
+    const VELOCITY_THRESHOLD = 0.3; // px/ms — fast flick completes action
+    const SNAP_RATIO = 0.3;      // if dragged past 30% of drawer width, commit
 
-    document.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-    }, false);
+    let touchId = null;
+    let startX = 0;
+    let startY = 0;
+    let startTime = 0;
+    let tracking = false;        // are we in a tracked horizontal drag?
+    let direction = '';          // 'open' | 'close'
+    let drawerWidth = 0;        // total width of the 3-panel drawer (100vw)
+    let decided = false;         // have we decided horizontal vs vertical?
 
-    document.addEventListener('touchmove', (e) => {
-        // Only handle if drawer is not already open
-        if (drawerOverlay.classList.contains('active')) {
-            return;
-        }
-
-        // Don't allow swipe to open drawer if image viewer is open
+    function isSwipeBlocked() {
         const viewer = document.getElementById('viewer');
-        if (viewer && viewer.classList.contains('open')) {
-            return;
-        }
-
-        // Don't allow swipe to open drawer if any bottom sheet is active
+        if (viewer && viewer.classList.contains('open')) return true;
         const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
         const notesModal = document.getElementById('notes-modal');
         const bookmarkColorPicker = document.getElementById('bookmark-color-picker-overlay');
         const languageSheet = document.getElementById('language-bottom-sheet-overlay');
-
-        const isAnySheetOpen =
+        return (
             (verseActionsSheet && verseActionsSheet.classList.contains('visible')) ||
             (notesModal && notesModal.classList.contains('visible')) ||
             (bookmarkColorPicker && bookmarkColorPicker.classList.contains('active')) ||
-            (languageSheet && languageSheet.classList.contains('active'));
+            (languageSheet && languageSheet.classList.contains('active'))
+        );
+    }
 
-        if (isAnySheetOpen) {
+    // Disable CSS transitions during drag for instant response
+    function setDrawerTransition(on) {
+        const val = on ? '' : 'none';
+        booksSidebar.style.transition = val;
+        chaptersColumn.style.transition = val;
+        versesColumn.style.transition = val;
+        drawerOverlay.style.transition = val;
+    }
+
+    // Set drawer position by progress (0 = fully closed, 1 = fully open)
+    function setDrawerProgress(progress) {
+        const p = Math.max(0, Math.min(1, progress));
+        // All panels slide from translateX(-100vw) to translateX(0)
+        const offset = -(1 - p) * window.innerWidth;
+        booksSidebar.style.transform = `translateX(${offset}px)`;
+        chaptersColumn.style.transform = `translateX(${offset}px)`;
+        versesColumn.style.transform = `translateX(${offset}px)`;
+        drawerOverlay.style.opacity = p;
+        drawerOverlay.style.visibility = p > 0 ? 'visible' : 'hidden';
+    }
+
+    function clearInlineStyles() {
+        booksSidebar.style.transform = '';
+        chaptersColumn.style.transform = '';
+        versesColumn.style.transform = '';
+        drawerOverlay.style.opacity = '';
+        drawerOverlay.style.visibility = '';
+        setDrawerTransition(true);
+    }
+
+    document.addEventListener('touchstart', (e) => {
+        if (window.innerWidth > 768) return;
+        if (isSwipeBlocked()) return;
+
+        const touch = e.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+        startTime = Date.now();
+        decided = false;
+        tracking = false;
+        direction = '';
+        drawerWidth = window.innerWidth;
+
+        // Decide if this could be an open-swipe (from left edge) or close-swipe (drawer is open)
+        if (!isDrawerOpen() && startX <= EDGE_ZONE) {
+            direction = 'open';
+        } else if (isDrawerOpen()) {
+            direction = 'close';
+        }
+    }, { passive: true });
+
+    document.addEventListener('touchmove', (e) => {
+        if (window.innerWidth > 768 || !direction) return;
+
+        const touch = e.touches[0];
+        const dx = touch.clientX - startX;
+        const dy = touch.clientY - startY;
+
+        // First movement: decide horizontal vs vertical
+        if (!decided) {
+            if (Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+            decided = true;
+            if (Math.abs(dy) > Math.abs(dx)) {
+                // Vertical scroll — bail out
+                direction = '';
+                return;
+            }
+            // Confirm correct swipe direction
+            if (direction === 'open' && dx <= 0) { direction = ''; return; }
+            if (direction === 'close' && dx >= 0) { direction = ''; return; }
+            tracking = true;
+            setDrawerTransition(false);
+        }
+
+        if (!tracking) return;
+
+        // Calculate progress
+        let progress;
+        if (direction === 'open') {
+            progress = Math.max(0, Math.min(1, dx / drawerWidth));
+        } else {
+            progress = Math.max(0, Math.min(1, 1 + dx / drawerWidth));
+        }
+        setDrawerProgress(progress);
+    }, { passive: true });
+
+    document.addEventListener('touchend', (e) => {
+        if (!tracking) {
+            direction = '';
             return;
         }
 
-        const touchCurrentX = e.touches[0].clientX;
-        const touchCurrentY = e.touches[0].clientY;
-        const deltaX = touchCurrentX - touchStartX;
-        const deltaY = Math.abs(touchCurrentY - touchStartY);
+        const touch = e.changedTouches[0];
+        const dx = touch.clientX - startX;
+        const elapsed = Date.now() - startTime;
+        const velocity = Math.abs(dx) / elapsed; // px/ms
 
-        // Check if it's a horizontal swipe (not vertical) from right to left
-        if (Math.abs(deltaX) > deltaY && deltaX > swipeThreshold) {
-            // Left swipe detected - open drawer
-            if (window.innerWidth <= 768) {
-                drawerOverlay.classList.add('active');
-                booksSidebar.classList.add('drawer-open');
-                chaptersColumn.classList.add('drawer-open');
-                versesColumn.classList.add('drawer-open');
-                const menuBtn = document.querySelector('.mobile-only');
-                if (menuBtn) {
-                    const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
-                    const closeIcon = menuBtn.querySelector('.close-icon');
-                    if (hamburgerIcon) hamburgerIcon.style.display = 'none';
-                    if (closeIcon) closeIcon.style.display = 'block';
-                }
-                document.body.style.overflow = 'hidden';
-                // Prevent further swipe events
-                touchStartX = window.innerWidth;
-            }
+        let progress;
+        if (direction === 'open') {
+            progress = Math.max(0, Math.min(1, dx / drawerWidth));
+        } else {
+            progress = Math.max(0, Math.min(1, 1 + dx / drawerWidth));
         }
-    }, false);
+
+        // Decide: commit open or close
+        let shouldOpen;
+        if (velocity > VELOCITY_THRESHOLD) {
+            // Fast flick — honour direction
+            shouldOpen = direction === 'open' ? dx > 0 : dx > 0;
+        } else {
+            shouldOpen = progress >= SNAP_RATIO;
+        }
+
+        // Animate to final state
+        clearInlineStyles(); // re-enable CSS transition
+        if (shouldOpen) {
+            openDrawer();
+        } else {
+            closeDrawer();
+        }
+
+        tracking = false;
+        direction = '';
+    }, { passive: true });
 }
 // Initialize book list with click handlers
 function initializeBookList() {
