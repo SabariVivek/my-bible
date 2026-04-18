@@ -1492,402 +1492,124 @@
             pointer-events: all;
         }
 
+        /* ---- Reading Plan Timeline (redesigned) ---- */
+
+        /* Bottom sheet → full-screen on mobile */
         .reading-plan-bottom-sheet {
             position: fixed;
-            top: 0;
-            right: -450px;
-            width: 450px;
-            height: 100vh;
-            background: white;
-            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+            bottom: 0; left: 0; right: 0;
+            height: 92vh;
+            max-height: 92vh;
+            background: #fff;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.12);
             z-index: 9999;
             display: flex;
             flex-direction: column;
-            transition: right 0.3s ease;
-            border-left: 1px solid #e0e0e0;
+            transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+            transform: translateY(100%);
+            border-radius: 16px 16px 0 0;
         }
+        .reading-plan-bottom-sheet.show { transform: translateY(0); }
+        html.dark-theme .reading-plan-bottom-sheet { background: #0f172a; box-shadow: 0 -4px 24px rgba(0,0,0,0.4); }
 
-        .reading-plan-bottom-sheet.show {
-            right: 0;
-        }
-
-        html.dark-theme .reading-plan-bottom-sheet {
-            background: #1e293b;
-            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
-            border-left-color: #334155;
+        @media (min-width: 640px) {
+            .reading-plan-bottom-sheet {
+                top: 0; right: 0; bottom: 0; left: auto;
+                width: 460px; height: 100vh; max-height: 100vh;
+                border-radius: 0;
+                transform: translateX(100%);
+            }
+            .reading-plan-bottom-sheet.show { transform: translateX(0); }
         }
 
         .reading-plan-header {
-            padding: 20px 20px 16px;
+            padding: 16px 20px 12px;
             border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            display: flex; align-items: center; justify-content: space-between;
             flex-shrink: 0;
         }
-
-        html.dark-theme .reading-plan-header {
-            border-bottom-color: #334155;
-        }
-
-        .reading-plan-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #1e293b;
-        }
-
-        html.dark-theme .reading-plan-title {
-            color: #f1f5f9;
-        }
-
-        .reading-plan-close-btn {
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #64748b;
-            padding: 4px 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: color 0.2s;
-        }
-
-        .reading-plan-close-btn:hover {
-            color: #1e293b;
-        }
-
-        html.dark-theme .reading-plan-close-btn {
-            color: #94a3b8;
-        }
-
-        html.dark-theme .reading-plan-close-btn:hover {
-            color: #f1f5f9;
-        }
-
-        .reading-plan-content {
-            flex: 1;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            padding: 16px 0;
-        }
-
-        .reading-plan-content::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .reading-plan-content::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .reading-plan-content::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 3px;
-        }
-
-        .reading-plan-content::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-
-        html.dark-theme .reading-plan-content::-webkit-scrollbar-thumb {
-            background: #475569;
-        }
-
-        html.dark-theme .reading-plan-content::-webkit-scrollbar-thumb:hover {
-            background: #64748b;
-        }
-
-        .reading-plan-day-item {
-            padding: 16px 20px;
-            border-bottom: 1px solid #f1f5f9;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .reading-plan-day-item:hover {
-            background: #f8fafc;
-        }
-
-        html.dark-theme .reading-plan-day-item {
-            border-bottom-color: #334155;
-        }
-
-        html.dark-theme .reading-plan-day-item:hover {
-            background: #334155;
-        }
-
-        .reading-plan-day-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 8px;
-        }
-
-        .reading-plan-day-date {
-            font-weight: 600;
-            color: #1e293b;
-            min-width: 120px;
-        }
-
-        html.dark-theme .reading-plan-day-date {
-            color: #f1f5f9;
-        }
-
-        .reading-plan-day-status {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .reading-plan-day-status.completed {
-            background: #10b981;
-            color: white;
-        }
-
-        .reading-plan-day-status.pending {
-            background: #e2e8f0;
-            color: #64748b;
-        }
-
-        html.dark-theme .reading-plan-day-status.pending {
-            background: #475569;
-            color: #cbd5e1;
-        }
-
-        .reading-plan-day-portions {
-            margin-left: 32px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .reading-plan-portion {
-            font-size: 14px;
-            color: #475569;
-            line-height: 1.4;
-        }
-
-        html.dark-theme .reading-plan-portion {
-            color: #cbd5e1;
-        }
-
-        .reading-plan-book-name {
-            font-weight: 500;
-        }
-
-        .reading-plan-chapters {
-            color: #64748b;
-        }
-
-        html.dark-theme .reading-plan-chapters {
-            color: #94a3b8;
-        }
-
-        /* Timeline Visualization Styles */
-        .timeline-visualization {
-            padding: 8px 0;
-        }
-
-        .timeline-month-section {
-            padding: 16px 20px;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        html.dark-theme .timeline-month-section {
-            border-bottom-color: #334155;
-        }
-
-        .timeline-month-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-
-        html.dark-theme .timeline-month-header {
-            border-bottom-color: #475569;
-        }
-
-        .timeline-month-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #1e293b;
-            margin: 0;
-        }
-
-        html.dark-theme .timeline-month-title {
-            color: #f1f5f9;
-        }
-
-        .timeline-month-progress {
-            font-size: 12px;
-            color: #64748b;
-            font-weight: 500;
-        }
-
-        html.dark-theme .timeline-month-progress {
-            color: #cbd5e1;
-        }
-
-        .progress-count {
-            background: #f1f5f9;
-            padding: 4px 10px;
-            border-radius: 12px;
-        }
-
-        html.dark-theme .progress-count {
-            background: #334155;
-        }
-
-        .timeline-month-content {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            position: relative;
-        }
-
-        .timeline-month-content::before {
-            content: '';
-            position: absolute;
-            left: 9px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #3b82f6, #10b981);
-        }
-
-        .timeline-day-node {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            padding: 12px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s;
-            position: relative;
-            z-index: 1;
-            margin-left: 8px;
-        }
-
-        .timeline-day-node:hover {
-            background: #f8fafc;
-        }
-
-        html.dark-theme .timeline-day-node:hover {
-            background: #334155;
-        }
-
-        .timeline-day-node.completed {
-            background: rgba(16, 185, 129, 0.08);
-        }
-
-        html.dark-theme .timeline-day-node.completed {
-            background: rgba(16, 185, 129, 0.1);
-        }
-
-        .timeline-day-node.pending-past {
-            background: rgba(239, 68, 68, 0.08);
-        }
-
-        html.dark-theme .timeline-day-node.pending-past {
-            background: rgba(239, 68, 68, 0.1);
-        }
-
-        .timeline-day-node.pending-future {
-            background: rgba(59, 130, 246, 0.08);
-        }
-
-        html.dark-theme .timeline-day-node.pending-future {
-            background: rgba(59, 130, 246, 0.1);
-        }
-
-        .timeline-node-dot {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: white;
-            border: 2px solid #3b82f6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: 600;
-            color: #3b82f6;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .timeline-day-node.completed .timeline-node-dot {
-            background: #10b981;
-            border-color: #10b981;
-            color: white;
-        }
-
-        .timeline-day-node.pending-past .timeline-node-dot {
-            background: #ef4444;
-            border-color: #ef4444;
-            color: white;
-        }
-
-        .timeline-day-node.pending-future .timeline-node-dot {
-            background: #e5e7eb;
-            border-color: #e5e7eb;
-            color: #9ca3af;
-        }
-
-        .timeline-node-content {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .timeline-day-date {
-            font-weight: 600;
-            color: #1e293b;
-            font-size: 14px;
-            margin-bottom: 4px;
-        }
-
-        html.dark-theme .timeline-day-date {
-            color: #f1f5f9;
-        }
-
-        .timeline-day-books {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            flex-wrap: wrap;
-        }
-        
-        .timeline-day-books .book-badge {
-            font-size: 10px;
-            color: #475569;
-            background: #e2e8f0;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-weight: 500;
-            width: fit-content;
-        }
-
-        html.dark-theme .timeline-day-books .book-badge {
-            color: #cbd5e1;
-            background: #475569;
-        }
-
-        .timeline-book-item {
-            font-size: 12px;
-            color: #64748b;
-        }
-
-        html.dark-theme .timeline-book-item {
-            color: #cbd5e1;
-        }
+        html.dark-theme .reading-plan-header { border-bottom-color: #1e293b; }
+        .reading-plan-title { font-size: 17px; font-weight: 700; color: #1e293b; margin: 0; }
+        html.dark-theme .reading-plan-title { color: #f1f5f9; }
+        .reading-plan-close-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: #94a3b8; padding: 4px 8px; }
+        html.dark-theme .reading-plan-close-btn { color: #64748b; }
+
+        .reading-plan-content { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+        .reading-plan-content::-webkit-scrollbar { width: 4px; }
+        .reading-plan-content::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        html.dark-theme .reading-plan-content::-webkit-scrollbar-thumb { background: #334155; }
+
+        /* Summary ring */
+        .rp-summary { display: flex; align-items: center; gap: 14px; padding: 20px 20px 16px; flex-wrap: wrap; }
+        .rp-summary-ring { position: relative; width: 56px; height: 56px; flex-shrink: 0; }
+        .rp-ring-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+        .rp-ring-bg { fill: none; stroke: #e2e8f0; stroke-width: 3; }
+        html.dark-theme .rp-ring-bg { stroke: #1e293b; }
+        .rp-ring-fill { fill: none; stroke: #6366f1; stroke-width: 3; stroke-linecap: round; transition: stroke-dasharray 0.6s; }
+        .rp-ring-text { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #6366f1; }
+        .rp-summary-info { flex: 1; min-width: 0; }
+        .rp-summary-title { font-size: 16px; font-weight: 700; color: #1e293b; }
+        html.dark-theme .rp-summary-title { color: #f1f5f9; }
+        .rp-summary-sub { font-size: 12px; color: #94a3b8; }
+
+        .rp-legend { display: flex; gap: 12px; width: 100%; padding-top: 4px; }
+        .rp-legend-item { display: flex; align-items: center; gap: 4px; font-size: 11px; color: #64748b; }
+        html.dark-theme .rp-legend-item { color: #94a3b8; }
+        .rp-dot { width: 8px; height: 8px; border-radius: 50%; }
+        .rp-dot-done { background: #10b981; }
+        .rp-dot-missed { background: #ef4444; }
+        .rp-dot-future { background: #cbd5e1; }
+        html.dark-theme .rp-dot-future { background: #334155; }
+
+        /* Month section */
+        .rp-month { padding: 0 16px 8px; }
+        .rp-month-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 4px 10px; position: sticky; top: 0; z-index: 2; background: #fff; }
+        html.dark-theme .rp-month-head { background: #0f172a; }
+        .rp-month-name { font-size: 14px; font-weight: 700; color: #1e293b; }
+        html.dark-theme .rp-month-name { color: #f1f5f9; }
+        .rp-month-stat { display: flex; align-items: center; gap: 8px; }
+        .rp-month-bar { width: 48px; height: 4px; border-radius: 2px; background: #e2e8f0; overflow: hidden; }
+        html.dark-theme .rp-month-bar { background: #1e293b; }
+        .rp-month-bar-fill { height: 100%; border-radius: 2px; background: #6366f1; transition: width 0.4s; }
+        .rp-month-count { font-size: 11px; font-weight: 600; color: #94a3b8; min-width: 36px; text-align: right; }
+
+        /* Day rows */
+        .rp-days { display: flex; flex-direction: column; }
+        .rp-day { display: flex; gap: 0; cursor: pointer; position: relative; }
+        .rp-day:active { opacity: 0.7; }
+
+        /* Indicator column (dot + line) */
+        .rp-day-indicator { display: flex; flex-direction: column; align-items: center; width: 28px; flex-shrink: 0; }
+        .rp-day-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 7px; font-weight: 800; color: #fff; margin-top: 14px; }
+        .rp-day-line { flex: 1; width: 2px; background: #e2e8f0; }
+        html.dark-theme .rp-day-line { background: #1e293b; }
+        .rp-day:last-child .rp-day-line { background: transparent; }
+
+        .rp-day-done .rp-day-dot { background: #10b981; }
+        .rp-day-missed .rp-day-dot { background: #ef4444; }
+        .rp-day-future .rp-day-dot { background: #cbd5e1; }
+        html.dark-theme .rp-day-future .rp-day-dot { background: #334155; }
+
+        .rp-day-done .rp-day-line { background: #10b981; }
+        .rp-day-missed .rp-day-line { background: #fca5a5; }
+        html.dark-theme .rp-day-missed .rp-day-line { background: #7f1d1d; }
+
+        /* Card */
+        .rp-day-card { flex: 1; min-width: 0; padding: 10px 12px; margin: 3px 0; border-radius: 10px; background: transparent; transition: background 0.15s; }
+        .rp-day:hover .rp-day-card { background: #f8fafc; }
+        html.dark-theme .rp-day:hover .rp-day-card { background: #1e293b; }
+
+        .rp-day-today .rp-day-card { background: #eef2ff; }
+        html.dark-theme .rp-day-today .rp-day-card { background: #1e1b4b; }
+        .rp-day-today .rp-day-dot { background: #6366f1 !important; box-shadow: 0 0 0 3px rgba(99,102,241,0.25); }
+
+        .rp-day-top { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; }
+        .rp-day-label { font-size: 13px; font-weight: 600; color: #334155; }
+        html.dark-theme .rp-day-label { color: #e2e8f0; }
+        .rp-today-tag { font-size: 9px; font-weight: 700; background: #6366f1; color: #fff; padding: 1px 6px; border-radius: 6px; }
+        .rp-day-books { display: flex; flex-wrap: wrap; gap: 4px; }
+        .rp-book { font-size: 11px; color: #64748b; background: #f1f5f9; padding: 2px 8px; border-radius: 8px; font-weight: 500; }
+        html.dark-theme .rp-book { color: #94a3b8; background: #1e293b; }
 
         /* Mobile/Desktop back button styling */
         .back-button-desktop {
@@ -2352,43 +2074,31 @@
 
         // Reading Plan Bottom Sheet Functions
         function openReadingPlanSheet() {
-            console.log('Opening reading plan sheet...');
             const backdrop = document.getElementById('readingPlanBackdrop');
             const sheet = document.getElementById('readingPlanSheet');
-            
-            console.log('Backdrop element:', backdrop);
-            console.log('Sheet element:', sheet);
-            
-            if (!backdrop || !sheet) {
-                console.error('Bottom sheet elements not found in DOM');
-                return;
-            }
-            
-            // Generate reading plan content
+
+            if (!backdrop || !sheet) return;
+
             const contentDiv = document.getElementById('readingPlanContent');
-            if (!contentDiv) {
-                console.error('Content div not found');
-                return;
-            }
-            
-            console.log('Current user:', state.currentUser);
-            console.log('Completed dates:', state.currentUser ? state.currentUser.completedDates : 'No user');
-            
+            if (!contentDiv) return;
+
             try {
                 contentDiv.innerHTML = generateReadingPlanContent();
-                console.log('Content generated successfully');
             } catch (error) {
-                console.error('Error generating content:', error);
                 contentDiv.innerHTML = `<div style="padding: 20px; color: red;">Error loading reading plan: ${error.message}</div>`;
             }
-            
-            // Show with animation
+
             backdrop.classList.add('show');
             sheet.classList.add('show');
-            
-            // Prevent body scroll
             document.body.style.overflow = 'hidden';
-            console.log('Reading plan sheet opened');
+
+            // Scroll to today's entry
+            requestAnimationFrame(() => {
+                const todayEl = contentDiv.querySelector('.rp-day-today');
+                if (todayEl) {
+                    todayEl.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                }
+            });
         }
 
         function closeReadingPlanSheet() {
@@ -2407,109 +2117,101 @@
         }
 
         function generateReadingPlanContent() {
-            console.log('Generating reading plan content...');
-            
-            // Check if yearlyReadingPlan exists
             if (typeof yearlyReadingPlan === 'undefined') {
-                console.error('yearlyReadingPlan is not defined');
                 return '<div style="padding: 20px; color: red;">Error: Reading plan data not loaded</div>';
             }
-            
-            // Get current year or use 2026
+
             const currentYear = new Date().getFullYear();
             const today = new Date();
             today.setHours(0, 0, 0, 0);
-            
-            console.log(`Generating timeline for year ${currentYear}, total days: ${yearlyReadingPlan.length}`);
-            
-            // Group data by months for better timeline visualization
-            const timelineByMonth = {};
-            
-            yearlyReadingPlan.forEach((day, index) => {
-                const monthKey = `Month ${day.month}`;
-                if (!timelineByMonth[monthKey]) {
-                    timelineByMonth[monthKey] = [];
-                }
-                
-                // Create date for this day (set to midnight)
+            const isDark = state.darkMode;
+            const completedDates = (state.currentUser && state.currentUser.completedDates) || {};
+
+            // Group by month
+            const months = {};
+            let totalCompleted = 0;
+            let totalDays = 0;
+
+            yearlyReadingPlan.forEach(day => {
+                const isLeapYear = (currentYear % 4 === 0 && currentYear % 100 !== 0) || (currentYear % 400 === 0);
+                if (day.leapYearOnly && !isLeapYear) return;
+                const mk = day.month;
+                if (!months[mk]) months[mk] = [];
                 const date = new Date(currentYear, day.month - 1, day.day);
                 date.setHours(0, 0, 0, 0);
-                
-                // Check if this day has been marked as completed
-                let completionStatus = 'pending-future';
-                const dateKey = `${currentYear}-${day.month}-${day.day}`;
-                
-                if (state.currentUser && state.currentUser.completedDates) {
-                    if (state.currentUser.completedDates[dateKey]) {
-                        completionStatus = 'completed';
-                    }
-                }
-                
-                // If not completed and date is today or in the past, mark as red
-                if (completionStatus !== 'completed' && date <= today) {
-                    completionStatus = 'pending-past';
-                    if (index < 10) { // Log first 10 days only to avoid console spam
-                        console.log(`Day ${day.day}: dateKey=${dateKey}, status=${completionStatus}`);
-                    }
-                }
-                
-                timelineByMonth[monthKey].push({
-                    day: day.day,
-                    month: day.month,
-                    portions: day.portions,
-                    date: date,
-                    completionStatus: completionStatus,
-                    dateKey: dateKey,
-                    index: index
-                });
+                const dateKey = `${currentYear}-${String(day.month).padStart(2, '0')}-${String(day.day).padStart(2, '0')}`;
+                const isCompleted = !!completedDates[dateKey];
+                const isPast = date <= today;
+                const isToday = date.getTime() === today.getTime();
+                const status = isCompleted ? 'done' : (isPast ? 'missed' : 'future');
+                if (isCompleted) totalCompleted++;
+                totalDays++;
+                months[mk].push({ day: day.day, month: day.month, portions: day.portions, date, dateKey, status, isToday });
             });
-            
-            // Generate timeline HTML
-            let timelineHTML = '<div class="timeline-visualization">';
-            
-            Object.entries(timelineByMonth).forEach(([monthLabel, days]) => {
-                const monthNum = parseInt(monthLabel.split(' ')[1]);
-                const monthName = new Date(currentYear, monthNum - 1).toLocaleDateString('en-US', { month: 'long' });
-                
-                timelineHTML += `
-                    <div class="timeline-month-section">
-                        <div class="timeline-month-header">
-                            <h3 class="timeline-month-title">${monthName} 2026</h3>
-                            <div class="timeline-month-progress">
-                                <span class="progress-count">${days.filter(d => d.completionStatus === 'completed').length}/${days.length}</span>
-                            </div>
-                        </div>
-                        <div class="timeline-month-content">
-                            ${days.map(dayData => {
-                                const dateStr = dayData.date.toLocaleDateString('en-US', { 
-                                    weekday: 'short', 
-                                    month: 'short', 
-                                    day: 'numeric'
-                                });
-                                
-                                const statusClass = dayData.completionStatus; // Use the actual status directly
-                                const statusIcon = dayData.completionStatus === 'completed' ? '✓' : (dayData.completionStatus === 'pending-past' ? '✕' : '');
-                                
-                                return `
-                                    <div class="timeline-day-node ${statusClass}" onclick="selectDateAndNavigate(${currentYear}, ${dayData.month}, ${dayData.day})">
-                                        <div class="timeline-node-dot">${statusIcon}</div>
-                                        <div class="timeline-node-content">
-                                            <div class="timeline-day-date">${dateStr}</div>
-                                            <div class="timeline-day-books">
-                                                ${dayData.portions.map(p => `<div class="book-badge">${p.book} ${p.chapters}</div>`).join('')}
-                                            </div>
-                                        </div>
-                                    </div>
-                                `;
-                            }).join('')}
+
+            const overallPct = Math.round((totalCompleted / totalDays) * 100);
+
+            // Summary header
+            let html = `
+            <div class="rp-summary">
+                <div class="rp-summary-ring">
+                    <svg viewBox="0 0 36 36" class="rp-ring-svg">
+                        <path class="rp-ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <path class="rp-ring-fill" stroke-dasharray="${overallPct}, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    </svg>
+                    <span class="rp-ring-text">${overallPct}%</span>
+                </div>
+                <div class="rp-summary-info">
+                    <div class="rp-summary-title">${totalCompleted} of ${totalDays} days</div>
+                    <div class="rp-summary-sub">completed so far</div>
+                </div>
+                <div class="rp-legend">
+                    <span class="rp-legend-item"><span class="rp-dot rp-dot-done"></span>Done</span>
+                    <span class="rp-legend-item"><span class="rp-dot rp-dot-missed"></span>Missed</span>
+                    <span class="rp-legend-item"><span class="rp-dot rp-dot-future"></span>Upcoming</span>
+                </div>
+            </div>`;
+
+            // Month sections
+            Object.entries(months).forEach(([monthNum, days]) => {
+                const monthName = new Date(currentYear, parseInt(monthNum) - 1).toLocaleDateString('en-US', { month: 'long' });
+                const mDone = days.filter(d => d.status === 'done').length;
+                const mPct = Math.round((mDone / days.length) * 100);
+
+                html += `
+                <div class="rp-month">
+                    <div class="rp-month-head">
+                        <div class="rp-month-name">${monthName}</div>
+                        <div class="rp-month-stat">
+                            <div class="rp-month-bar"><div class="rp-month-bar-fill" style="width:${mPct}%"></div></div>
+                            <span class="rp-month-count">${mDone}/${days.length}</span>
                         </div>
                     </div>
-                `;
+                    <div class="rp-days">
+                        ${days.map(d => {
+                            const label = d.date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+                            const books = d.portions.map(p => `<span class="rp-book">${p.book} ${p.chapters}</span>`).join('');
+                            const todayTag = d.isToday ? '<span class="rp-today-tag">Today</span>' : '';
+                            return `
+                            <div class="rp-day rp-day-${d.status} ${d.isToday ? 'rp-day-today' : ''}" onclick="selectDateAndNavigate(${currentYear}, ${d.month}, ${d.day})">
+                                <div class="rp-day-indicator">
+                                    <div class="rp-day-dot">${d.status === 'done' ? '✓' : d.status === 'missed' ? '!' : ''}</div>
+                                    <div class="rp-day-line"></div>
+                                </div>
+                                <div class="rp-day-card">
+                                    <div class="rp-day-top">
+                                        <span class="rp-day-label">${label}</span>
+                                        ${todayTag}
+                                    </div>
+                                    <div class="rp-day-books">${books}</div>
+                                </div>
+                            </div>`;
+                        }).join('')}
+                    </div>
+                </div>`;
             });
-            
-            timelineHTML += '</div>';
-            
-            return timelineHTML;
+
+            return html;
         }
 
         function selectDateAndNavigate(year, month, day) {
@@ -6418,6 +6120,10 @@
                                         </p>
                                     </div>
                                 </div>
+                                <button onclick="openReadingPlanSheet();" class="${state.darkMode ? 'bg-indigo-900/50 text-indigo-300 border-indigo-700 hover:bg-indigo-800/60' : 'bg-indigo-50 text-indigo-600 border-indigo-200 hover:bg-indigo-100'} border rounded-lg transition-colors" style="padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:5px;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                    Plan
+                                </button>
                             </div>
                         </div>
                     </div>
