@@ -347,12 +347,13 @@
 
     var startX = 0, startY = 0, dx = 0;
     var swiping = false, lockAxis = null;
+    var closeDragging = false; // true when dragging past boundary to close
     function W() { return outer.offsetWidth; }
 
     outer.addEventListener('touchstart', function (e) {
       startX = e.touches[0].clientX;
       startY = e.touches[0].clientY;
-      dx = 0; lockAxis = null; swiping = false;
+      dx = 0; lockAxis = null; swiping = false; closeDragging = false;
       track.classList.add('no-transition');
     }, { passive: true });
 
@@ -366,19 +367,65 @@
       e.preventDefault();
       swiping = true;
       dx = cx - startX;
+
+      // Calculate track position
       var base = bsCurrentTab * W();
       var raw = base - dx;
-      var clamped = raw < 0 ? raw * 0.25 : raw > W() ? W() + (raw - W()) * 0.25 : raw;
-      track.style.transform = 'translateX(' + (-clamped / (W() * 2) * 100) + '%)';
+      // Excess past the last tab boundary (only when on NT swiping left)
+      var excess = raw - W();
+      var CLOSE_ENGAGE = 30; // px past boundary before whole-panel drag starts
+
+      if (excess > CLOSE_ENGAGE && bsCurrentTab === 1) {
+        // Swipe went well past the last tab — move entire panel to close
+        closeDragging = true;
+        var shift = -(excess - CLOSE_ENGAGE) * 0.5; // only the excess beyond threshold, dampened
+        var selector = document.getElementById('bible-selector-new');
+        var overlay = document.querySelector('.drawer-overlay');
+        if (selector) {
+          selector.style.transform = 'translateX(' + shift + 'px)';
+        }
+        if (overlay) {
+          var progress = Math.max(0, 1 + shift / W());
+          overlay.style.opacity = progress;
+        }
+        // Lock track at last tab position
+        track.style.transform = 'translateX(-' + (bsCurrentTab * 50) + '%)';
+      } else {
+        // Normal tab-to-tab swipe (or within-boundary rubber-band)
+        if (closeDragging) {
+          // Was close-dragging, snap panel back
+          var selector = document.getElementById('bible-selector-new');
+          if (selector) selector.style.transform = '';
+          var overlay = document.querySelector('.drawer-overlay');
+          if (overlay) overlay.style.opacity = '';
+          closeDragging = false;
+        }
+        var clamped = raw < 0 ? raw * 0.25 : raw > W() ? W() + (raw - W()) * 0.25 : raw;
+        track.style.transform = 'translateX(' + (-clamped / (W() * 2) * 100) + '%)';
+      }
     }, { passive: false });
 
     outer.addEventListener('touchend', function () {
       track.classList.remove('no-transition');
       if (!swiping) return;
       var threshold = W() * 0.25;
+
+      if (closeDragging) {
+        // Was dragging the whole panel to close
+        var selector = document.getElementById('bible-selector-new');
+        if (selector) { selector.style.transform = ''; }
+        var overlay = document.querySelector('.drawer-overlay');
+        if (overlay) { overlay.style.opacity = ''; }
+        if (Math.abs(dx) > threshold) {
+          closeBibleSelectorSmooth();
+        }
+        // else: snap back (styles already cleared above)
+        closeDragging = false;
+        return;
+      }
+
       if (dx < -threshold && bsCurrentTab === 0) switchBsTab(1);       // OT → NT
       else if (dx > threshold && bsCurrentTab === 1) switchBsTab(0);   // NT → OT
-      else if (dx < -threshold && bsCurrentTab === 1) closeBibleSelectorSmooth(); // NT last tab → close
       else switchBsTab(bsCurrentTab);
     });
   }
