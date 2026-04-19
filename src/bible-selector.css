@@ -13,19 +13,19 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 1000;
+  z-index: 1002;
   padding-top: 0;
   box-sizing: border-box;
   font-family: 'DM Sans', 'Lato', sans-serif;
+  background: var(--bs-bg);
 }
 
 .bible-selector-new.active {
   display: flex;
 }
 
-/* Hide the top bar when new selector is visible (active or being swiped in) */
-body:has(.bible-selector-new.active) .top-bar,
-body:has(.bible-selector-new[style*="display"]) .top-bar {
+/* Hide the top bar when new selector is open */
+body:has(.bible-selector-new.active) .top-bar {
   display: none !important;
 }
 
