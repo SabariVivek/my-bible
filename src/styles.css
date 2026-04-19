@@ -2515,6 +2515,14 @@ body:not(.dark-theme) .right-settings-panel .settings-row:active {
 }
 
 /* Per-icon colors from provided design */
+.right-settings-panel .icon-selector {
+    background: rgba(160, 120, 210, 0.13);
+}
+
+.right-settings-panel .icon-selector svg {
+    stroke: #a078d2;
+}
+
 .right-settings-panel .icon-images {
     background: rgba(78, 142, 247, 0.13);
 }
@@ -2675,6 +2683,76 @@ body:not(.dark-theme) .right-settings-panel .settings-admin-subtext {
     max-height: 80px;
     opacity: 1;
     margin-top: 12px;
+}
+
+/* ── Radio button group for settings ── */
+.right-settings-panel .settings-radio-group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.right-settings-panel .settings-radio-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #b0b3be;
+    cursor: pointer;
+    user-select: none;
+}
+
+.right-settings-panel .settings-radio-label input[type="radio"] {
+    display: none;
+}
+
+.right-settings-panel .settings-radio-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    position: relative;
+    transition: border-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.right-settings-panel .settings-radio-label input[type="radio"]:checked + .settings-radio-dot {
+    border-color: #c9a84c;
+}
+
+.right-settings-panel .settings-radio-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #c9a84c;
+    transition: transform 0.2s ease;
+}
+
+.right-settings-panel .settings-radio-label input[type="radio"]:checked + .settings-radio-dot::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Light theme radio */
+body:not(.dark-theme) .right-settings-panel .settings-radio-label {
+    color: #555;
+}
+
+body:not(.dark-theme) .right-settings-panel .settings-radio-dot {
+    border-color: #ccc;
+}
+
+body:not(.dark-theme) .right-settings-panel .settings-radio-label input[type="radio"]:checked + .settings-radio-dot {
+    border-color: #8b7332;
+}
+
+body:not(.dark-theme) .right-settings-panel .settings-radio-dot::after {
+    background: #8b7332;
 }
 
 .right-settings-panel .settings-color-row {

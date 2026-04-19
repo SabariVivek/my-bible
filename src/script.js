@@ -883,16 +883,29 @@ function settingsSelectSeg(groupId, btn) {
             }).catch(() => { });
         }
     }
-    // Handle selector style segment
-    if (groupId === 'settings-selector-style-segment') {
-        localStorage.setItem('selectorStyle', btn.dataset.val);
-        updateSettingsFooterVisibility();
-        return;
-    }
     // Persist segment state (locally) and mark panel as dirty
     localStorage.setItem('settingsTheme', btn.dataset.val);
     updateSettingsFooterVisibility();
 }
+
+// Initialize selector style radio buttons
+(function initSelectorStyleRadio() {
+    function setup() {
+        var radios = document.querySelectorAll('input[name="selectorStyle"]');
+        radios.forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                localStorage.setItem('selectorStyle', this.value);
+                updateSettingsFooterVisibility();
+            });
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setup);
+    } else {
+        setup();
+    }
+})();
+
 function settingsSelectLang(btn) {
     const group = document.getElementById('settings-lang-segment');
     if (!group) return;
@@ -6517,11 +6530,11 @@ function initializeRightSettingsPanel() {
                 colorPanel.classList.remove('visible');
             }
         }
-        // Sync selector style segment
+        // Sync selector style radio
         const selectorStyleVal = localStorage.getItem('selectorStyle') || 'old';
-        const selectorStyleBtns = document.querySelectorAll('#settings-selector-style-segment .settings-seg-btn');
-        selectorStyleBtns.forEach(b => {
-            b.classList.toggle('active', b.dataset.val === selectorStyleVal);
+        const selectorRadios = document.querySelectorAll('input[name="selectorStyle"]');
+        selectorRadios.forEach(r => {
+            r.checked = r.value === selectorStyleVal;
         });
 
         // Sync verse heading language segment

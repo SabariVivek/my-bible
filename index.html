@@ -1257,21 +1257,36 @@
                     </div>
                 </div>
 
-                <!-- SELECTOR STYLE -->
-                <div class="settings-section">
-                    <div class="settings-section-label">Selector Style</div>
-                    <div class="settings-segment" id="settings-selector-style-segment">
-                        <button class="settings-seg-btn active" data-val="old"
-                            onclick="settingsSelectSeg('settings-selector-style-segment', this)">Old</button>
-                        <button class="settings-seg-btn" data-val="new"
-                            onclick="settingsSelectSeg('settings-selector-style-segment', this)">New</button>
-                    </div>
-                </div>
-
                 <!-- DISPLAY OPTIONS -->
                 <div class="settings-section">
                     <div class="settings-section-label">Display Options</div>
                     <div class="settings-card">
+                        <div class="settings-row" id="settings-selector-style-row">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-selector">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                    </svg>
+                                </div>
+                                <span class="settings-row-text">Drawyer</span>
+                            </div>
+                            <div class="settings-radio-group" id="settings-selector-style-radio">
+                                <label class="settings-radio-label">
+                                    <input type="radio" name="selectorStyle" value="old" checked>
+                                    <span class="settings-radio-dot"></span>
+                                    Old
+                                </label>
+                                <label class="settings-radio-label">
+                                    <input type="radio" name="selectorStyle" value="new">
+                                    <span class="settings-radio-dot"></span>
+                                    New
+                                </label>
+                            </div>
+                        </div>
+
                         <div class="settings-row" data-setting="images" onclick="settingsToggleRow(this)">
                             <div class="settings-row-left">
                                 <div class="settings-row-icon icon-images">
