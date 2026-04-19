@@ -38,6 +38,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="src/chapter-summary-pullout.css?cb=20260301210232">
+    <link rel="stylesheet" href="src/bible-selector.css?cb=20260419000000">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Cropper.js for profile image cropping -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css?cb=20260418170421">
     <!-- Cache Management -->
@@ -732,6 +734,45 @@
             }
         </style>
 
+        <!-- New Bible Selector (mobile only, toggled via settings) -->
+        <div class="bible-selector-new" id="bible-selector-new">
+            <div class="bs-tab-bar">
+                <div class="bs-tab-buttons">
+                    <button class="bs-tab-btn active" id="bs-tab-ot">Old Testament</button>
+                    <button class="bs-tab-btn" id="bs-tab-nt">New Testament</button>
+                </div>
+            </div>
+            <div class="bs-cat-wrap">
+                <div class="bs-cat-row" id="bs-cat-row"></div>
+            </div>
+            <div class="bs-swipe-outer" id="bs-swipe-outer">
+                <div class="bs-swipe-track" id="bs-swipe-track">
+                    <div class="bs-swipe-page" id="bs-page-ot">
+                        <div class="bs-left">
+                            <div class="bs-book-list" id="bs-books-ot"></div>
+                        </div>
+                        <div class="bs-right" id="bs-right-ot">
+                            <div class="bs-sec-label">Chapter</div>
+                            <div class="bs-num-grid" id="bs-ch-ot"></div>
+                            <div class="bs-sec-label">Verse</div>
+                            <div class="bs-num-grid" id="bs-vs-ot"></div>
+                        </div>
+                    </div>
+                    <div class="bs-swipe-page" id="bs-page-nt">
+                        <div class="bs-left">
+                            <div class="bs-book-list" id="bs-books-nt"></div>
+                        </div>
+                        <div class="bs-right" id="bs-right-nt">
+                            <div class="bs-sec-label">Chapter</div>
+                            <div class="bs-num-grid" id="bs-ch-nt"></div>
+                            <div class="bs-sec-label">Verse</div>
+                            <div class="bs-num-grid" id="bs-vs-nt"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Left Sidebar - Books -->
         <aside class="books-sidebar">
             <div class="book-item active">
@@ -1216,6 +1257,17 @@
                     </div>
                 </div>
 
+                <!-- SELECTOR STYLE -->
+                <div class="settings-section">
+                    <div class="settings-section-label">Selector Style</div>
+                    <div class="settings-segment" id="settings-selector-style-segment">
+                        <button class="settings-seg-btn active" data-val="old"
+                            onclick="settingsSelectSeg('settings-selector-style-segment', this)">Old</button>
+                        <button class="settings-seg-btn" data-val="new"
+                            onclick="settingsSelectSeg('settings-selector-style-segment', this)">New</button>
+                    </div>
+                </div>
+
                 <!-- DISPLAY OPTIONS -->
                 <div class="settings-section">
                     <div class="settings-section-label">Display Options</div>
@@ -1542,6 +1594,7 @@
     <script src="src/data/book-intro.js?cb=20260317000100"></script>
     <script src="src/data/bible-popups.js?cb=20260402000000"></script>
     <script src="src/script.js?cb=20251210007400"></script>
+    <script src="src/bible-selector.js?cb=20260419000000"></script>
     <script src="src/chapter-summary-pullout.js?cb=20260301210232"></script>
 
     <!-- Image Viewer Modal -->

@@ -122,11 +122,13 @@ function getCurrentSettingsSnapshot() {
         const langSegVal = localStorage.getItem('settingsLanguage') || (currentLanguage === 'both' ? 'both' : currentLanguage === 'english' ? 'en' : 'ta');
         const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
         const verseHeadingLangVal = localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
+        const selectorStyleVal = localStorage.getItem('selectorStyle') || 'old';
         return {
             theme: themeSegVal,
             language: langSegVal,
             englishColor: colorVal,
             verseHeadingLanguage: verseHeadingLangVal,
+            selectorStyle: selectorStyleVal,
             uiSettings: { ...uiSettings },
             isAdmin: typeof isAdmin === 'function' ? isAdmin() : false
         };
@@ -141,6 +143,7 @@ function areSettingsEqual(a, b) {
     if (a.language !== b.language) return false;
     if (a.englishColor !== b.englishColor) return false;
     if (a.verseHeadingLanguage !== b.verseHeadingLanguage) return false;
+    if ((a.selectorStyle || 'old') !== (b.selectorStyle || 'old')) return false;
     if (!!a.isAdmin !== !!b.isAdmin) return false;
     const keys = Object.keys(DEFAULT_UI_SETTINGS);
     for (const key of keys) {
@@ -879,6 +882,12 @@ function settingsSelectSeg(groupId, btn) {
                 );
             }).catch(() => { });
         }
+    }
+    // Handle selector style segment
+    if (groupId === 'settings-selector-style-segment') {
+        localStorage.setItem('selectorStyle', btn.dataset.val);
+        updateSettingsFooterVisibility();
+        return;
     }
     // Persist segment state (locally) and mark panel as dirty
     localStorage.setItem('settingsTheme', btn.dataset.val);
@@ -1772,6 +1781,15 @@ function initializeMobileDrawer() {
     // ── Helper: open/close drawer ──
     function openDrawer() {
         closeSummaryDrawer();
+        // Check if new selector style is active
+        if (localStorage.getItem('selectorStyle') === 'new' && typeof openBibleSelectorNew === 'function') {
+            drawerOverlay.classList.add('active');
+            hamburgerIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            openBibleSelectorNew();
+            return;
+        }
         drawerOverlay.classList.add('active');
         booksSidebar.classList.add('drawer-open');
         chaptersColumn.classList.add('drawer-open');
@@ -1786,6 +1804,14 @@ function initializeMobileDrawer() {
         booksSidebar.classList.remove('drawer-open');
         chaptersColumn.classList.remove('drawer-open');
         versesColumn.classList.remove('drawer-open');
+        // Also close new selector if open
+        var newSelector = document.getElementById('bible-selector-new');
+        if (newSelector) {
+            newSelector.classList.remove('active');
+            newSelector.style.transform = '';
+            newSelector.style.display = '';
+            newSelector.style.transition = '';
+        }
         hamburgerIcon.style.display = 'block';
         closeIcon.style.display = 'none';
         document.body.style.overflow = '';
@@ -1850,23 +1876,43 @@ function initializeMobileDrawer() {
         );
     }
 
+    // Check if new selector style is active
+    function isNewSelectorActive() {
+        return localStorage.getItem('selectorStyle') === 'new';
+    }
+
     // Disable CSS transitions during drag for instant response
     function setDrawerTransition(on) {
         const val = on ? '' : 'none';
-        booksSidebar.style.transition = val;
-        chaptersColumn.style.transition = val;
-        versesColumn.style.transition = val;
+        if (!isNewSelectorActive()) {
+            booksSidebar.style.transition = val;
+            chaptersColumn.style.transition = val;
+            versesColumn.style.transition = val;
+        } else {
+            const newSelector = document.getElementById('bible-selector-new');
+            if (newSelector) newSelector.style.transition = on ? 'transform 0.3s ease' : 'none';
+        }
         drawerOverlay.style.transition = val;
     }
 
     // Set drawer position by progress (0 = fully closed, 1 = fully open)
     function setDrawerProgress(progress) {
         const p = Math.max(0, Math.min(1, progress));
-        // All panels slide from translateX(-100vw) to translateX(0)
-        const offset = -(1 - p) * window.innerWidth;
-        booksSidebar.style.transform = `translateX(${offset}px)`;
-        chaptersColumn.style.transform = `translateX(${offset}px)`;
-        versesColumn.style.transform = `translateX(${offset}px)`;
+        if (!isNewSelectorActive()) {
+            // All panels slide from translateX(-100vw) to translateX(0)
+            const offset = -(1 - p) * window.innerWidth;
+            booksSidebar.style.transform = `translateX(${offset}px)`;
+            chaptersColumn.style.transform = `translateX(${offset}px)`;
+            versesColumn.style.transform = `translateX(${offset}px)`;
+        } else {
+            // Animate the new selector panel sliding in
+            const newSelector = document.getElementById('bible-selector-new');
+            if (newSelector) {
+                newSelector.style.display = 'flex';
+                const offset = -(1 - p) * window.innerWidth;
+                newSelector.style.transform = `translateX(${offset}px)`;
+            }
+        }
         drawerOverlay.style.opacity = p;
         drawerOverlay.style.visibility = p > 0 ? 'visible' : 'hidden';
     }
@@ -1877,12 +1923,28 @@ function initializeMobileDrawer() {
         versesColumn.style.transform = '';
         drawerOverlay.style.opacity = '';
         drawerOverlay.style.visibility = '';
+        // Also clear new selector inline styles
+        const newSelector = document.getElementById('bible-selector-new');
+        if (newSelector) {
+            newSelector.style.transform = '';
+            // Only reset display if not active (let CSS handle it)
+            if (!newSelector.classList.contains('active')) {
+                newSelector.style.display = '';
+            }
+        }
         setDrawerTransition(true);
     }
 
     document.addEventListener('touchstart', (e) => {
         if (window.innerWidth > 768) return;
         if (isSwipeBlocked()) return;
+        // When new bible selector is open, only allow close-swipe from outside the swipe area
+        const newSelector = document.getElementById('bible-selector-new');
+        if (newSelector && newSelector.classList.contains('active')) {
+            // Let the internal OT/NT swipe handler manage touches inside bs-swipe-outer
+            const swipeOuter = document.getElementById('bs-swipe-outer');
+            if (swipeOuter && swipeOuter.contains(e.target)) return;
+        }
 
         const touch = e.touches[0];
         startX = touch.clientX;
@@ -1896,6 +1958,10 @@ function initializeMobileDrawer() {
         // Decide if this could be an open-swipe or close-swipe
         if (!isDrawerOpen()) {
             direction = 'open';
+            // Pre-initialize new selector content so it's ready during swipe animation
+            if (isNewSelectorActive() && typeof openBibleSelectorNew === 'function') {
+                openBibleSelectorNew(true); // true = prepare only, don't fully open
+            }
         } else if (isDrawerOpen()) {
             direction = 'close';
         }
@@ -1963,12 +2029,55 @@ function initializeMobileDrawer() {
             shouldOpen = progress >= SNAP_RATIO;
         }
 
-        // Animate to final state
-        clearInlineStyles(); // re-enable CSS transition
-        if (shouldOpen) {
-            openDrawer();
+        // For new selector: animate smoothly to final position
+        if (isNewSelectorActive()) {
+            const newSelector = document.getElementById('bible-selector-new');
+            if (newSelector) {
+                newSelector.style.transition = 'transform 0.3s ease';
+                drawerOverlay.style.transition = 'opacity 0.3s ease';
+                if (shouldOpen) {
+                    newSelector.style.transform = 'translateX(0)';
+                    drawerOverlay.style.opacity = '1';
+                    // After animation, finalize open state
+                    setTimeout(() => {
+                        newSelector.style.transition = '';
+                        newSelector.style.transform = '';
+                        newSelector.classList.add('active');
+                        drawerOverlay.classList.add('active');
+                        drawerOverlay.style.opacity = '';
+                        drawerOverlay.style.visibility = '';
+                        drawerOverlay.style.transition = '';
+                        hamburgerIcon.style.display = 'none';
+                        closeIcon.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }, 310);
+                } else {
+                    newSelector.style.transform = 'translateX(-100%)';
+                    drawerOverlay.style.opacity = '0';
+                    // After animation, clean up
+                    setTimeout(() => {
+                        newSelector.style.transition = '';
+                        newSelector.style.transform = '';
+                        newSelector.style.display = '';
+                        newSelector.classList.remove('active');
+                        drawerOverlay.classList.remove('active');
+                        drawerOverlay.style.opacity = '';
+                        drawerOverlay.style.visibility = '';
+                        drawerOverlay.style.transition = '';
+                        hamburgerIcon.style.display = 'block';
+                        closeIcon.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }, 310);
+                }
+            }
         } else {
-            closeDrawer();
+            // Old selector: clear inline styles and open/close
+            clearInlineStyles();
+            if (shouldOpen) {
+                openDrawer();
+            } else {
+                closeDrawer();
+            }
         }
 
         tracking = false;
@@ -5118,9 +5227,14 @@ document.addEventListener('click', (e) => {
             const versesColumn = document.querySelector('.verses-column');
             const menuBtn = document.querySelector('.mobile-only');
             drawerOverlay.classList.add('active');
-            booksSidebar.classList.add('drawer-open');
-            chaptersColumn.classList.add('drawer-open');
-            versesColumn.classList.add('drawer-open');
+            // Use new selector if enabled
+            if (localStorage.getItem('selectorStyle') === 'new' && typeof openBibleSelectorNew === 'function') {
+                openBibleSelectorNew();
+            } else {
+                booksSidebar.classList.add('drawer-open');
+                chaptersColumn.classList.add('drawer-open');
+                versesColumn.classList.add('drawer-open');
+            }
             menuBtn.classList.add('drawer-active');
             document.body.style.overflow = 'hidden';
         }
@@ -6403,6 +6517,13 @@ function initializeRightSettingsPanel() {
                 colorPanel.classList.remove('visible');
             }
         }
+        // Sync selector style segment
+        const selectorStyleVal = localStorage.getItem('selectorStyle') || 'old';
+        const selectorStyleBtns = document.querySelectorAll('#settings-selector-style-segment .settings-seg-btn');
+        selectorStyleBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.val === selectorStyleVal);
+        });
+
         // Sync verse heading language segment
         const verseHeadingLangVal = localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
         const verseHeadingLangSegBtns = document.querySelectorAll('#settings-verse-heading-language-segment .settings-seg-btn');
@@ -6567,6 +6688,11 @@ function initializeRightSettingsPanel() {
                 // Verse heading language
                 if (snap.verseHeadingLanguage) {
                     localStorage.setItem('settingsVerseHeadingLanguage', snap.verseHeadingLanguage);
+                }
+
+                // Selector style
+                if (snap.selectorStyle) {
+                    localStorage.setItem('selectorStyle', snap.selectorStyle);
                 }
 
                 // UI toggles
