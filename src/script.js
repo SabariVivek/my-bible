@@ -247,6 +247,10 @@ async function saveUserSettingsToSupabase() {
             (typeof englishTextColor !== 'undefined' ? englishTextColor : 'default');
         const verseHeadingLangVal =
             localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
+        const verseHeadingColorVal =
+            localStorage.getItem('verseHeadingColor') || 'green';
+        const selectorStyleVal =
+            localStorage.getItem('selectorStyle') || 'old';
 
         const payload = {
             user_id: userId,
@@ -262,7 +266,9 @@ async function saveUserSettingsToSupabase() {
             author_details: !!uiSettings.authorDetails,
             memory_verse: !!uiSettings.memoryVerse,
             bookmark: !!uiSettings.bookmark,
-            notes_feature: !!uiSettings.notesFeature
+            notes_feature: !!uiSettings.notesFeature,
+            verse_heading_color: verseHeadingColorVal,
+            selector_style: selectorStyleVal
         };
 
         // Upsert by user_id so both existing and new users are handled
@@ -350,6 +356,19 @@ async function loadUserSettingsFromSupabase() {
         // Verse heading language
         if (row.verse_heading_language) {
             localStorage.setItem('settingsVerseHeadingLanguage', row.verse_heading_language);
+        }
+
+        // Verse heading color
+        if (row.verse_heading_color) {
+            localStorage.setItem('verseHeadingColor', row.verse_heading_color);
+            if (typeof applyVerseHeadingColor === 'function') {
+                applyVerseHeadingColor(row.verse_heading_color);
+            }
+        }
+
+        // Selector style (old / new)
+        if (row.selector_style) {
+            localStorage.setItem('selectorStyle', row.selector_style);
         }
 
         // Boolean display / feature options
@@ -997,11 +1016,59 @@ function selectVerseHeadingColor(swatchEl) {
     // Update swatch selection
     document.querySelectorAll('#verse-heading-color-swatches .vh-swatch').forEach(s => s.classList.remove('selected'));
     swatchEl.classList.add('selected');
+    // Update preview dot color
+    var dot = swatchEl.querySelector('.vh-dot');
+    var preview = document.getElementById('vh-picker-preview');
+    if (dot && preview) {
+        preview.style.background = dot.style.background;
+    }
+    // Close dropdown
+    closeVhColorPicker();
     // Apply color class to body
     applyVerseHeadingColor(color);
     // Persist
     localStorage.setItem('verseHeadingColor', color);
     updateSettingsFooterVisibility();
+}
+
+function toggleVhColorPicker(e) {
+    e.stopPropagation();
+    var dropdown = document.getElementById('vh-picker-dropdown');
+    var trigger = document.getElementById('vh-picker-trigger');
+    var wrap = dropdown ? dropdown.closest('.vh-picker-wrap') : null;
+    if (!dropdown || !wrap || !trigger) return;
+    var isOpen = dropdown.classList.contains('open');
+    if (isOpen) {
+        closeVhColorPicker();
+    } else {
+        // Position dropdown below trigger
+        var rect = trigger.getBoundingClientRect();
+        dropdown.style.top = (rect.bottom + 6) + 'px';
+        dropdown.style.right = (window.innerWidth - rect.right) + 'px';
+        dropdown.style.left = 'auto';
+        dropdown.classList.add('open');
+        wrap.classList.add('open');
+        // Close on outside click
+        setTimeout(function() {
+            document.addEventListener('click', _vhOutsideClick, { once: true });
+        }, 0);
+    }
+}
+
+function _vhOutsideClick(e) {
+    var wrap = document.querySelector('.vh-picker-wrap');
+    if (wrap && !wrap.contains(e.target)) {
+        closeVhColorPicker();
+    } else if (wrap) {
+        document.addEventListener('click', _vhOutsideClick, { once: true });
+    }
+}
+
+function closeVhColorPicker() {
+    var dropdown = document.getElementById('vh-picker-dropdown');
+    var wrap = dropdown ? dropdown.closest('.vh-picker-wrap') : null;
+    if (dropdown) dropdown.classList.remove('open');
+    if (wrap) wrap.classList.remove('open');
 }
 
 function applyVerseHeadingColor(color) {
@@ -1024,10 +1091,16 @@ function applyVerseHeadingColor(color) {
     function apply() {
         var saved = localStorage.getItem('verseHeadingColor') || 'green';
         applyVerseHeadingColor(saved);
-        // Sync swatch selection
+        // Sync swatch selection and preview
         var swatches = document.querySelectorAll('#verse-heading-color-swatches .vh-swatch');
+        var preview = document.getElementById('vh-picker-preview');
         swatches.forEach(function(s) {
-            s.classList.toggle('selected', s.dataset.vhColor === saved);
+            var isSelected = s.dataset.vhColor === saved;
+            s.classList.toggle('selected', isSelected);
+            if (isSelected && preview) {
+                var dot = s.querySelector('.vh-dot');
+                if (dot) preview.style.background = dot.style.background;
+            }
         });
     }
     if (document.readyState === 'loading') {
@@ -6628,11 +6701,19 @@ function initializeRightSettingsPanel() {
                 }
             }
         }
-        // Sync verse heading color swatch
+        // Sync verse heading color swatch and preview
         const savedVhColor = localStorage.getItem('verseHeadingColor') || 'green';
+        const vhPreview = document.getElementById('vh-picker-preview');
         document.querySelectorAll('#verse-heading-color-swatches .vh-swatch').forEach(s => {
-            s.classList.toggle('selected', s.dataset.vhColor === savedVhColor);
+            const isSelected = s.dataset.vhColor === savedVhColor;
+            s.classList.toggle('selected', isSelected);
+            if (isSelected && vhPreview) {
+                const dot = s.querySelector('.vh-dot');
+                if (dot) vhPreview.style.background = dot.style.background;
+            }
         });
+        // Close dropdown if open
+        closeVhColorPicker();
         // Sync verse heading only toggle state
         if (verseHeadingOnlySub) {
             const onlyHeadersToggle = verseHeadingOnlySub.querySelector('.settings-toggle');

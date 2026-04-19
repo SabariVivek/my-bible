@@ -10,6 +10,8 @@ create table public.user_settings (
   verse_heading     boolean     not null default true,
   verse_heading_language text    not null default 'ta',
   only_headers      boolean     not null default true,
+  verse_heading_color text      not null default 'green',
+  selector_style    text        not null default 'old',
   author_details    boolean     not null default true,
   memory_verse      boolean     not null default true,
   bookmark          boolean     not null default true,

@@ -1418,13 +1418,39 @@
                             <div class="settings-row-sub-left">
                                 <span class="settings-row-sub-label">Color</span>
                             </div>
-                            <div class="settings-color-swatches" id="verse-heading-color-swatches">
-                                <div class="settings-swatch vh-swatch selected" data-vh-color="green" style="background: #4caf50;" onclick="selectVerseHeadingColor(this)" title="Green"></div>
-                                <div class="settings-swatch vh-swatch" data-vh-color="blue" style="background: #4a72aa;" onclick="selectVerseHeadingColor(this)" title="Royal Blue"></div>
-                                <div class="settings-swatch vh-swatch" data-vh-color="crimson" style="background: #8b2a2a;" onclick="selectVerseHeadingColor(this)" title="Deep Crimson"></div>
-                                <div class="settings-swatch vh-swatch" data-vh-color="lavender" style="background: #7a6aaa;" onclick="selectVerseHeadingColor(this)" title="Soft Lavender"></div>
-                                <div class="settings-swatch vh-swatch" data-vh-color="teal" style="background: #2a8a8a;" onclick="selectVerseHeadingColor(this)" title="Teal Cyan"></div>
-                                <div class="settings-swatch vh-swatch" data-vh-color="mauve" style="background: #8a5a6a;" onclick="selectVerseHeadingColor(this)" title="Dusty Mauve"></div>
+                            <div class="vh-picker-wrap">
+                                <div class="vh-picker-trigger" id="vh-picker-trigger" onclick="toggleVhColorPicker(event)">
+                                    <span class="vh-picker-preview" id="vh-picker-preview" style="background:#4caf50;"></span>
+                                    <span class="vh-picker-arrow">▾</span>
+                                </div>
+                                <div class="vh-picker-dropdown" id="vh-picker-dropdown">
+                                    <div class="vh-color-picker" id="verse-heading-color-swatches">
+                                        <div class="vh-swatch selected" data-vh-color="green" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#4caf50;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                        <div class="vh-swatch" data-vh-color="blue" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#4a72aa;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                        <div class="vh-swatch" data-vh-color="crimson" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#8b2a2a;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                        <div class="vh-swatch" data-vh-color="lavender" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#7a6aaa;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                        <div class="vh-swatch" data-vh-color="teal" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#2a8a8a;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                        <div class="vh-swatch" data-vh-color="mauve" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#8a5a6a;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

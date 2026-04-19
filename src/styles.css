@@ -2816,6 +2816,139 @@ body:not(.dark-theme) .right-settings-panel .settings-radio-dot::after {
     border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
+/* ── Verse Heading Color Picker ── */
+.vh-picker-wrap {
+    position: relative;
+}
+
+.vh-picker-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 4px 8px 4px 4px;
+    border-radius: 16px;
+    border: 1.5px solid #ddd;
+    background: #fafafa;
+    transition: border-color 0.2s, background 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.vh-picker-trigger:hover {
+    border-color: #bbb;
+}
+
+.vh-picker-preview {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: block;
+    flex-shrink: 0;
+}
+
+.vh-picker-arrow {
+    font-size: 12px;
+    color: #888;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.vh-picker-dropdown {
+    position: fixed;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+    z-index: 9999;
+}
+
+.vh-picker-dropdown.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.vh-picker-wrap.open .vh-picker-arrow {
+    transform: rotate(180deg);
+}
+
+.vh-color-picker {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.vh-swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+    border: 2px solid transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.vh-swatch:hover {
+    transform: scale(1.12);
+}
+
+.vh-dot {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+}
+
+.vh-check {
+    position: absolute;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.vh-swatch.selected {
+    border-color: #c9a84c;
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.18);
+    transform: scale(1.1);
+}
+
+.vh-swatch.selected .vh-check {
+    opacity: 1;
+}
+
+/* Dark theme */
+body.dark-theme .vh-picker-trigger {
+    background: #2a2a2a;
+    border-color: #444;
+}
+
+body.dark-theme .vh-picker-arrow {
+    color: #999;
+}
+
+body.dark-theme .vh-picker-dropdown {
+    background: #2a2a2a;
+    border-color: #444;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-theme .vh-swatch.selected {
+    border-color: #c9a84c;
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.25);
+}
+
 .right-settings-panel .settings-row-sub {
     display: flex;
     align-items: center;
@@ -3746,6 +3879,25 @@ body.dark-theme.vh-color-mauve .verse-header {
 }
 body.dark-theme.vh-color-mauve .verse-header-toggle,
 body.dark-theme.vh-color-mauve .verse-header-title { color: #bb8a9a; }
+
+/* ── Badge & Banner Color Variants ── */
+body.vh-color-blue .mobile-verse-count-badge { background: #4a72aa; }
+body.vh-color-crimson .mobile-verse-count-badge { background: #8b2a2a; }
+body.vh-color-lavender .mobile-verse-count-badge { background: #7a6aaa; }
+body.vh-color-teal .mobile-verse-count-badge { background: #2a8a8a; }
+body.vh-color-mauve .mobile-verse-count-badge { background: #8a5a6a; }
+
+body.dark-theme.vh-color-blue .mobile-verse-count-badge { background: #2a4a7a; color: #a8c8f0; }
+body.dark-theme.vh-color-crimson .mobile-verse-count-badge { background: #5a1a1a; color: #f0b8b8; }
+body.dark-theme.vh-color-lavender .mobile-verse-count-badge { background: #3a2a5a; color: #d0c8f0; }
+body.dark-theme.vh-color-teal .mobile-verse-count-badge { background: #1a4a4a; color: #a8e8e8; }
+body.dark-theme.vh-color-mauve .mobile-verse-count-badge { background: #4a2a3a; color: #e8c0d0; }
+
+body.vh-color-blue .author-banner { background: linear-gradient(90deg, rgba(74, 114, 170, 0.1) 0%, transparent 100%); }
+body.vh-color-crimson .author-banner { background: linear-gradient(90deg, rgba(139, 42, 42, 0.1) 0%, transparent 100%); }
+body.vh-color-lavender .author-banner { background: linear-gradient(90deg, rgba(122, 106, 170, 0.1) 0%, transparent 100%); }
+body.vh-color-teal .author-banner { background: linear-gradient(90deg, rgba(42, 138, 138, 0.1) 0%, transparent 100%); }
+body.vh-color-mauve .author-banner { background: linear-gradient(90deg, rgba(138, 90, 106, 0.1) 0%, transparent 100%); }
 
 /* Expand all headers button */
 #expand-all-headers-btn {
