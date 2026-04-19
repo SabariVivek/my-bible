@@ -123,12 +123,14 @@ function getCurrentSettingsSnapshot() {
         const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
         const verseHeadingLangVal = localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
         const selectorStyleVal = localStorage.getItem('selectorStyle') || 'old';
+        const verseHeadingColorVal = localStorage.getItem('verseHeadingColor') || 'green';
         return {
             theme: themeSegVal,
             language: langSegVal,
             englishColor: colorVal,
             verseHeadingLanguage: verseHeadingLangVal,
             selectorStyle: selectorStyleVal,
+            verseHeadingColor: verseHeadingColorVal,
             uiSettings: { ...uiSettings },
             isAdmin: typeof isAdmin === 'function' ? isAdmin() : false
         };
@@ -144,6 +146,7 @@ function areSettingsEqual(a, b) {
     if (a.englishColor !== b.englishColor) return false;
     if (a.verseHeadingLanguage !== b.verseHeadingLanguage) return false;
     if ((a.selectorStyle || 'old') !== (b.selectorStyle || 'old')) return false;
+    if ((a.verseHeadingColor || 'green') !== (b.verseHeadingColor || 'green')) return false;
     if (!!a.isAdmin !== !!b.isAdmin) return false;
     const keys = Object.keys(DEFAULT_UI_SETTINGS);
     for (const key of keys) {
@@ -987,6 +990,52 @@ function settingsToggleOnlyHeaders(event, toggleEl) {
     }
     updateSettingsFooterVisibility();
 }
+
+function selectVerseHeadingColor(swatchEl) {
+    const color = swatchEl.dataset.vhColor;
+    if (!color) return;
+    // Update swatch selection
+    document.querySelectorAll('#verse-heading-color-swatches .vh-swatch').forEach(s => s.classList.remove('selected'));
+    swatchEl.classList.add('selected');
+    // Apply color class to body
+    applyVerseHeadingColor(color);
+    // Persist
+    localStorage.setItem('verseHeadingColor', color);
+    updateSettingsFooterVisibility();
+}
+
+function applyVerseHeadingColor(color) {
+    // Remove all vh-color-* classes
+    var toRemove = [];
+    document.body.classList.forEach(function(cls) {
+        if (cls.startsWith('vh-color-')) toRemove.push(cls);
+    });
+    toRemove.forEach(function(cls) {
+        document.body.classList.remove(cls);
+    });
+    // Add new one (green = default, no class needed)
+    if (color && color !== 'green') {
+        document.body.classList.add('vh-color-' + color);
+    }
+}
+
+// Initialize verse heading color on page load
+(function initVerseHeadingColor() {
+    function apply() {
+        var saved = localStorage.getItem('verseHeadingColor') || 'green';
+        applyVerseHeadingColor(saved);
+        // Sync swatch selection
+        var swatches = document.querySelectorAll('#verse-heading-color-swatches .vh-swatch');
+        swatches.forEach(function(s) {
+            s.classList.toggle('selected', s.dataset.vhColor === saved);
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', apply);
+    } else {
+        apply();
+    }
+})();
 function settingsSelectVerseHeadingLanguage(event, btn) {
     event.stopPropagation();
     const group = document.getElementById('settings-verse-heading-language-segment');
@@ -1039,6 +1088,15 @@ function settingsToggleRow(row, options = {}) {
                     onlyHeadersSub.classList.remove('hidden');
                 } else {
                     onlyHeadersSub.classList.add('hidden');
+                }
+            }
+            // Also handle verse-heading-color-sub visibility
+            const colorSub = document.getElementById('verse-heading-color-sub');
+            if (colorSub) {
+                if (isOn) {
+                    colorSub.classList.remove('hidden');
+                } else {
+                    colorSub.classList.add('hidden');
                 }
             }
         }
@@ -6548,6 +6606,7 @@ function initializeRightSettingsPanel() {
         const verseHeadingToggle = verseHeadingRow ? verseHeadingRow.querySelector('.settings-toggle') : null;
         const verseHeadingLanguageSub = document.getElementById('verse-heading-language-sub');
         const verseHeadingOnlySub = document.getElementById('verse-heading-only-sub');
+        const verseHeadingColorSub = document.getElementById('verse-heading-color-sub');
         if (verseHeadingToggle && verseHeadingLanguageSub) {
             if (uiSettings.verseHeading) {
                 verseHeadingToggle.classList.add('on');
@@ -6555,14 +6614,25 @@ function initializeRightSettingsPanel() {
                 if (verseHeadingOnlySub) {
                     verseHeadingOnlySub.classList.remove('hidden');
                 }
+                if (verseHeadingColorSub) {
+                    verseHeadingColorSub.classList.remove('hidden');
+                }
             } else {
                 verseHeadingToggle.classList.remove('on');
                 verseHeadingLanguageSub.classList.add('hidden');
                 if (verseHeadingOnlySub) {
                     verseHeadingOnlySub.classList.add('hidden');
                 }
+                if (verseHeadingColorSub) {
+                    verseHeadingColorSub.classList.add('hidden');
+                }
             }
         }
+        // Sync verse heading color swatch
+        const savedVhColor = localStorage.getItem('verseHeadingColor') || 'green';
+        document.querySelectorAll('#verse-heading-color-swatches .vh-swatch').forEach(s => {
+            s.classList.toggle('selected', s.dataset.vhColor === savedVhColor);
+        });
         // Sync verse heading only toggle state
         if (verseHeadingOnlySub) {
             const onlyHeadersToggle = verseHeadingOnlySub.querySelector('.settings-toggle');
@@ -6706,6 +6776,15 @@ function initializeRightSettingsPanel() {
                 // Selector style
                 if (snap.selectorStyle) {
                     localStorage.setItem('selectorStyle', snap.selectorStyle);
+                }
+
+                // Verse heading color
+                if (snap.verseHeadingColor) {
+                    localStorage.setItem('verseHeadingColor', snap.verseHeadingColor);
+                    applyVerseHeadingColor(snap.verseHeadingColor);
+                    document.querySelectorAll('#verse-heading-color-swatches .vh-swatch').forEach(s => {
+                        s.classList.toggle('selected', s.dataset.vhColor === snap.verseHeadingColor);
+                    });
                 }
 
                 // UI toggles

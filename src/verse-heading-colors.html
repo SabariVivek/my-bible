@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Verse Heading Color Variants</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;1,400&family=Noto+Sans+Tamil:wght@400&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #212121;
+  padding: 0 0 60px;
+  font-family: 'EB Garamond', serif;
+}
+
+.page-label {
+  text-align: center;
+  padding: 24px 20px 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #3a3a3a;
+  text-transform: uppercase;
+}
+
+/* ── SHARED SECTION ── */
+.section {
+  padding: 22px 16px 16px;
+  border-bottom: 1px solid #2a2a2a;
+}
+.variant-label {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #3a3a3a;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* ── SHARED CARD STRUCTURE ── */
+.card {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-radius: 3px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.arrow {
+  font-size: 10px;
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+.card.closed .arrow { transform: rotate(-90deg); }
+.title {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+}
+.body {
+  overflow: hidden;
+  max-height: 200px;
+  transition: max-height 0.35s ease, opacity 0.25s;
+  opacity: 1;
+}
+.card.closed .body { max-height: 0; opacity: 0; }
+.desc {
+  margin-top: 8px;
+  font-family: 'EB Garamond', serif;
+  font-size: 15px;
+  line-height: 1.55;
+  padding-left: 20px;
+}
+
+/* verse preview */
+.verse {
+  margin-top: 16px;
+  font-family: 'Noto Sans Tamil', serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+}
+.vn {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  color: #3a4a3a;
+  vertical-align: super;
+  margin-right: 3px;
+}
+
+/* ════════════════════════════
+   COLOR VARIANTS
+════════════════════════════ */
+
+/* 1. Original Green */
+.v1 { background: #253525; border-left-color: #4a8a4a; }
+.v1 .arrow { color: #4a8a4a; }
+.v1 .title { color: #5aaa5a; }
+.v1 .desc { color: #7a9a7a; }
+
+/* 2. Royal Blue */
+.v2 { background: #1e2a3e; border-left-color: #4a72aa; }
+.v2 .arrow { color: #4a72aa; }
+.v2 .title { color: #6a9acc; }
+.v2 .desc { color: #6a7e9a; }
+
+/* 3. Amber Gold */
+.v3 { background: #2e2210; border-left-color: #b8860b; }
+.v3 .arrow { color: #b8860b; }
+.v3 .title { color: #d4a84b; }
+.v3 .desc { color: #9a7a40; }
+
+/* 4. Deep Crimson */
+.v4 { background: #2e1414; border-left-color: #8b2a2a; }
+.v4 .arrow { color: #8b2a2a; }
+.v4 .title { color: #cc5a5a; }
+.v4 .desc { color: #8a5a5a; }
+
+/* 5. Soft Lavender */
+.v5 { background: #221e30; border-left-color: #7a6aaa; }
+.v5 .arrow { color: #7a6aaa; }
+.v5 .title { color: #aaa0dd; }
+.v5 .desc { color: #7a7298; }
+
+/* 6. Teal Cyan */
+.v6 { background: #102828; border-left-color: #2a8a8a; }
+.v6 .arrow { color: #2a8a8a; }
+.v6 .title { color: #4ab8b8; }
+.v6 .desc { color: #5a8a8a; }
+
+/* 7. Warm Rose */
+.v7 { background: #2e1a22; border-left-color: #aa4a6a; }
+.v7 .arrow { color: #aa4a6a; }
+.v7 .title { color: #dd7a9a; }
+.v7 .desc { color: #8a5a68; }
+
+/* 8. Burnt Orange */
+.v8 { background: #281a0e; border-left-color: #a05a20; }
+.v8 .arrow { color: #a05a20; }
+.v8 .title { color: #d08040; }
+.v8 .desc { color: #8a6040; }
+
+/* 9. Sage Muted */
+.v9 { background: #1e2820; border-left-color: #5a7a5a; }
+.v9 .arrow { color: #5a7a5a; }
+.v9 .title { color: #8aaa8a; }
+.v9 .desc { color: #607060; }
+
+/* 10. Steel Blue-Grey */
+.v10 { background: #1a2028; border-left-color: #5a7a9a; }
+.v10 .arrow { color: #5a7a9a; }
+.v10 .title { color: #88aacc; }
+.v10 .desc { color: #607080; }
+
+/* 11. Olive Moss */
+.v11 { background: #222010; border-left-color: #7a7a20; }
+.v11 .arrow { color: #7a7a20; }
+.v11 .title { color: #aaaa40; }
+.v11 .desc { color: #7a7a40; }
+
+/* 12. Dusty Mauve */
+.v12 { background: #281e22; border-left-color: #8a5a6a; }
+.v12 .arrow { color: #8a5a6a; }
+.v12 .title { color: #bb8a9a; }
+.v12 .desc { color: #7a5a62; }
+
+</style>
+</head>
+<body>
+
+<div class="page-label">Color Variants — Tap to Toggle</div>
+
+<!-- 1 -->
+<div class="section">
+  <div class="variant-label">01 · Original Green</div>
+  <div class="card v1 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+<!-- 2 -->
+<div class="section">
+  <div class="variant-label">02 · Royal Blue</div>
+  <div class="card v2 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+<!-- 3 -->
+<div class="section">
+  <div class="variant-label">03 · Amber Gold</div>
+  <div class="card v3 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+<!-- 4 -->
+<div class="section">
+  <div class="variant-label">04 · Deep Crimson</div>
+  <div class="card v4 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+<!-- 5 -->
+<div class="section">
+  <div class="variant-label">05 · Soft Lavender</div>
+  <div class="card v5 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+<!-- 6 -->
+<div class="section">
+  <div class="variant-label">06 · Teal Cyan</div>
+  <div class="card v6 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+<!-- 7 -->
+<div class="section">
+  <div class="variant-label">07 · Warm Rose</div>
+  <div class="card v7 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+<!-- 8 -->
+<div class="section">
+  <div class="variant-label">08 · Burnt Orange</div>
+  <div class="card v8 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+<!-- 9 -->
+<div class="section">
+  <div class="variant-label">09 · Sage Muted</div>
+  <div class="card v9 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+<!-- 10 -->
+<div class="section">
+  <div class="variant-label">10 · Steel Blue-Grey</div>
+  <div class="card v10 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+<!-- 11 -->
+<div class="section">
+  <div class="variant-label">11 · Olive Moss</div>
+  <div class="card v11 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+<!-- 12 -->
+<div class="section">
+  <div class="variant-label">12 · Dusty Mauve</div>
+  <div class="card v12 open" onclick="this.classList.toggle('closed')">
+    <div class="card-header">
+      <span class="arrow">▼</span>
+      <span class="title">The Lord Commands a Census</span>
+    </div>
+    <div class="body">
+      <div class="desc">God tells Moses to count the men of Israel able to go to war.</div>
+    </div>
+  </div>
+  <div class="verse"><sup class="vn">1</sup>இஸ்ரவேலர் எகிப்துதேசத்திலிருந்து புறப்பட்ட இரண்டாம் வருஷம்...</div>
+</div>
+
+</body>
+</html>
