@@ -299,19 +299,13 @@
 
         var completed = _orbitData.filter(function (m) { return m.pct >= 100; }).length;
 
-        return '<section class="ft-card ft-orbit-section" aria-label="Solar orbit">' +
+        return '<section class="ft-card ft-orbit-section" aria-label="Drawing nearer">' +
             '<div class="ft-card-head">' +
-                '<h3 class="ft-card-title"><span class="ft-emoji">\u2600\uFE0F</span> Solar Orbit</h3>' +
+                '<h3 class="ft-card-title"><span class="ft-emoji">\u2600\uFE0F</span> Nearer to God</h3>' +
                 '<span class="ft-card-meta">' + completed + '/' + _orbitData.length + ' done</span>' +
             '</div>' +
             '<div class="ft-orbit-wrap">' +
                 '<svg id="ftOrbitSvg" viewBox="0 0 360 380" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;"></svg>' +
-            '</div>' +
-            '<div class="ft-orbit-key">' +
-                '<span class="ft-ok"><span class="ft-ok-dot" style="background:#00e676"></span>25-99 %</span>' +
-                '<span class="ft-ok"><span class="ft-ok-dot" style="background:#f0c060"></span>10-24 %</span>' +
-                '<span class="ft-ok"><span class="ft-ok-dot" style="background:#ff6060"></span>&lt; 10 %</span>' +
-                '<span class="ft-ok"><span class="ft-ok-dot" style="background:#ffe060"></span>100 % \u2713</span>' +
             '</div>' +
         '</section>';
     }
@@ -402,8 +396,8 @@
         // Defs
         var defs = cel('defs');
         var bgG = cel('radialGradient', { id: 'ftBgG', cx: '50%', cy: '48%', r: '60%' });
-        var bgDark = isDark ? '#0c1828' : '#e8ecf4';
-        var bgEdge = isDark ? '#03060d' : '#d0d8e8';
+        var bgDark = isDark ? '#252b33' : '#e8ecf4';
+        var bgEdge = isDark ? '#1a1f25' : '#d0d8e8';
         var s1 = cel('stop', { offset: '0%', 'stop-color': bgDark, 'stop-opacity': '1' });
         var s2 = cel('stop', { offset: '100%', 'stop-color': bgEdge, 'stop-opacity': '1' });
         bgG.appendChild(s1); bgG.appendChild(s2); defs.appendChild(bgG);
@@ -491,16 +485,16 @@
             var nameEl = cel('text', {
                 x: m._lx.toFixed(1), y: m._ly.toFixed(1),
                 'text-anchor': m._anchor, fill: labelFill,
-                'font-size': '9', 'font-weight': '700', 'font-family': 'system-ui,sans-serif',
+                'font-size': '7.5', 'font-weight': '600', 'font-family': 'system-ui,sans-serif',
                 'dominant-baseline': 'auto'
             });
             nameEl.textContent = m.name;
             svg.appendChild(nameEl);
 
             var pctEl = cel('text', {
-                x: m._lx.toFixed(1), y: (m._ly + 11).toFixed(1),
+                x: m._lx.toFixed(1), y: (m._ly + 10).toFixed(1),
                 'text-anchor': m._anchor, fill: m._col,
-                'font-size': '8.5', 'font-weight': '700', 'font-family': 'system-ui,sans-serif',
+                'font-size': '7', 'font-weight': '700', 'font-family': 'system-ui,sans-serif',
                 'dominant-baseline': 'auto'
             });
             pctEl.textContent = m.pct >= 100 ? '100%\u2713' : m.pct + '%';

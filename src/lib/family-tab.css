@@ -15,12 +15,13 @@
 }
 
 html.dark-theme {
-    --ft-surface: #1e293b;
-    --ft-surface-2: #334155;
-    --ft-border: rgba(255, 255, 255, 0.08);
+    --ft-surface: #282e36;
+    --ft-surface-2: #313840;
+    --ft-border: rgba(255, 255, 255, 0.07);
     --ft-text: #f1f5f9;
     --ft-text-muted: #94a3b8;
-    --ft-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    --ft-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    --ft-bg: #21252b;
 }
 
 .ft-root {
@@ -29,6 +30,12 @@ html.dark-theme {
     gap: 16px;
     font-family: 'DM Sans', system-ui, sans-serif;
     color: var(--ft-text);
+}
+
+html.dark-theme .ft-root {
+    background: var(--ft-bg, transparent);
+    border-radius: 18px;
+    padding: 2px 0;
 }
 
 /* ============ Card ============ */
@@ -234,27 +241,6 @@ html.dark-theme .ft-pending-pill {
     margin-bottom: 10px;
 }
 
-.ft-orbit-key {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 14px;
-    justify-content: center;
-}
 
-.ft-ok {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 10px;
-    font-weight: 600;
-    color: var(--ft-text-muted);
-}
-
-.ft-ok-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
 
 
