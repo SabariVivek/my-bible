@@ -506,7 +506,6 @@
     function render(state, theme, icons, stats, getUserStats) {
         return '<div class="ft-root">' +
             renderStreaks(state, getUserStats) +
-            renderSolarOrbit(state, getUserStats) +
             renderPending(state, stats, getUserStats) +
             renderMembers(state, getUserStats) +
         '</div>';
@@ -516,5 +515,13 @@
         drawOrbitSVG();
     }
 
-    global.FamilyTab = { render: render, afterRender: afterRender };
+    function prepareFaithOrbit(state, getUserStats) {
+        _orbitData = state.users.map(function (u) {
+            var s = getUserStats(u);
+            var pct = Math.max(0, Math.round(s.totalProgress || 0));
+            return { name: u.name, pct: pct };
+        });
+    }
+
+    global.FamilyTab = { render: render, afterRender: afterRender, prepareFaithOrbit: prepareFaithOrbit };
 })(window);

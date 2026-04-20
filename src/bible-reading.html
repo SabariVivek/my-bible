@@ -326,7 +326,7 @@
     <link rel="stylesheet" href="lib/quiz-mobile.css?v=20260415">
     <script src="lib/quiz-mobile.js?v=20260415"></script>
     <link rel="stylesheet" href="lib/family-tab.css?v=20260420">
-    <script src="lib/family-tab.js?v=20260420"></script>
+    <script src="lib/family-tab.js?v=20260420b"></script>
     <script src="yearlyReadingPlan.js?v=20251126003722"></script>
     <script>
         // Force cache refresh for updated reading plan
@@ -2570,7 +2570,7 @@
             showAllUsers: false,  // Track if all users should be shown in dashboard
             loadedUserData: new Set(),  // Track which users have their progress loaded
             userModalError: '',  // Error message for user modal
-            dashboardTab: 'my-plan',  // 'home', 'my-plan', 'family', 'notes', or 'quiz' - for tabbed dashboard view
+            dashboardTab: 'my-plan',  // 'home', 'my-plan', 'family', 'faith', or 'quiz' - for tabbed dashboard view
             skipLoadingScreen: false,  // Skip loading screen when switching views
             dashboardStatsLoaded: false,  // Only load dashboard stats once per session
             isInitializing: true,  // Track if app is still initializing
@@ -2628,8 +2628,8 @@
                     state.selectedVerse = null;
                     render();
                 } else if (state.dashboardTab === 'revelation-chapters') {
-                    // From revelation chapters -> back to notes tab
-                    state.dashboardTab = 'notes';
+                    // From revelation chapters -> back to faith tab
+                    state.dashboardTab = 'faith';
                     state.selectedChapter = 1;
                     state.selectedVerse = null;
                     state.previousRevealTab = 'revelation-chapters';  // Reset for next back
@@ -4992,6 +4992,11 @@
                                         </div>
                                     </div>`;
                             })()}
+                        ` : state.dashboardTab === 'faith' ? `
+                            <!-- FAITH TAB — Nearer to God orbit -->
+                            <div style="margin-left:-1rem;margin-right:-1rem;margin-top:-1.5rem;">
+                                <svg id="ftOrbitSvg" viewBox="0 0 360 380" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;"></svg>
+                            </div>
                         ` : state.dashboardTab === 'notes' ? `
                             <!-- NOTES TAB CONTENT — Gold Glow Design -->
                             <div id="notesCardsContainer" style="width: 100%; margin-top: -0.5rem;">
@@ -5689,7 +5694,7 @@
                                 { id: 'home', label: 'Home', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'home'; ensureVersesLoaded().then(() => render()).catch(() => render());", icon: '<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10"/></svg>' },
                                 { id: 'my-plan', label: 'My Plan', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();", iconImg: '../resources/icons/my_plan.png' },
                                 { id: 'family', label: 'Family', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'family'; if (!state.quizDataLoaded) { loadQuizChaptersFromSupabase().then(() => render()).catch(() => render()); } else { render(); }", iconImg: '../resources/icons/family.png' },
-                                { id: 'notes', label: 'Notes', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'notes'; render();", iconImg: '../resources/icons/notes.png' },
+                                { id: 'faith', label: 'Faith', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'faith'; render();", icon: '<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M12 3v18M6 8h12\"/></svg>' },
                                 ...(state.quizTabVisible ? [{ id: 'quiz', label: 'Quiz', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'quiz'; if (!state.quizDataLoaded) { loadQuizChaptersFromSupabase(); } render();", iconImg: '../resources/icons/quiz.png' }] : [])
                             ].map(tab => {
                                 const isActive = state.dashboardTab === tab.id;
@@ -6899,6 +6904,12 @@
                 await ensureVersesLoaded();
                 
                 app.innerHTML = renderDashboard();
+
+                // Draw faith orbit SVG synchronously to avoid flicker
+                if (state.dashboardTab === 'faith' && window.FamilyTab) {
+                    window.FamilyTab.prepareFaithOrbit(state, getUserStats);
+                    window.FamilyTab.afterRender();
+                }
                 
                 // Initialize carousel swipe gestures for home tab
                 setTimeout(() => {
