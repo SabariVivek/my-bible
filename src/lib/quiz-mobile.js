@@ -524,8 +524,8 @@ const MobileQuiz = (() => {
             // Verse reference
             if (q.verse) {
                 const verseDiv = document.createElement('div');
-                verseDiv.style.cssText = `padding:0 14px 14px;font-size:12px;font-weight:600;color:${dk ? '#fbbf24' : '#d97706'};`;
-                verseDiv.textContent = '📖 ' + q.verse;
+                verseDiv.style.cssText = `padding:0 14px 14px;font-size:12px;font-weight:600;color:${dk ? '#fbbf24' : '#d97706'};text-align:right;`;
+                verseDiv.textContent = 'Read - ' + q.verse;
                 card.appendChild(verseDiv);
             }
 
