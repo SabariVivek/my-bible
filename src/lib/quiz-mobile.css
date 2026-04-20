@@ -597,10 +597,10 @@ body.mobile-quiz-active #quizContent {
 }
 
 /* ============================================
-   Summary View — reuses quiz chat-bubble layout
+   Summary View — Redesigned Card Layout
    ============================================ */
 
-/* Score badge in header (right side, like counter pill) */
+/* Score badge in header */
 .mq-header-score {
     font-size: 12px;
     font-weight: 700;
@@ -620,32 +620,348 @@ body.mobile-quiz-active #quizContent {
     color: #4ade80;
 }
 
-/* Summary option color states — matches desktop (emerald, red, gray) */
-.mq-option.summary-correct {
-    background: #059669 !important;
-    color: #fff !important;
-    border-color: #059669 !important;
-    cursor: default;
+/* Summary body — replaces chat-bubble layout */
+.mq-summary-body {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.mq-option.summary-wrong {
-    background: #dc2626 !important;
-    color: #fff !important;
-    border-color: #dc2626 !important;
-    cursor: default;
+/* Score hero card at top */
+.mq-summary-hero {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 16px;
 }
 
-.light-mode .mq-option.summary-default {
-    background: #d1d5db !important;
-    color: #1f2937 !important;
-    border-color: #d1d5db !important;
-    cursor: default;
+.light-mode .mq-summary-hero {
+    background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+    border: 1px solid #bbf7d0;
 }
 
-.dark-mode .mq-option.summary-default {
-    background: #363c44 !important;
-    color: #fff !important;
-    border-color: #363c44 !important;
+.dark-mode .mq-summary-hero {
+    background: linear-gradient(135deg, #14532d33, #16533033);
+    border: 1px solid #16a34a33;
+}
+
+.mq-summary-ring {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+}
+
+.mq-summary-ring svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.mq-summary-ring-bg {
+    fill: none;
+    stroke-width: 4;
+}
+
+.light-mode .mq-summary-ring-bg {
+    stroke: #e2e8f0;
+}
+
+.dark-mode .mq-summary-ring-bg {
+    stroke: #363c44;
+}
+
+.mq-summary-ring-fill {
+    fill: none;
+    stroke: #10b981;
+    stroke-width: 4;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.8s ease;
+}
+
+.mq-summary-ring-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.light-mode .mq-summary-ring-text {
+    color: #059669;
+}
+
+.dark-mode .mq-summary-ring-text {
+    color: #4ade80;
+}
+
+.mq-summary-stats {
+    flex: 1;
+    min-width: 0;
+}
+
+.mq-summary-stats-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.light-mode .mq-summary-stats-title {
+    color: #111827;
+}
+
+.dark-mode .mq-summary-stats-title {
+    color: #f1f5f9;
+}
+
+.mq-summary-stats-sub {
+    font-size: 13px;
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.mq-summary-stats-sub span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.mq-summary-correct-count {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.mq-summary-wrong-count {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+/* Question card */
+.mq-summary-qcard {
+    border-radius: 14px;
+    overflow: hidden;
+    animation: mqSummaryCardIn 0.3s ease both;
+}
+
+@keyframes mqSummaryCardIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.light-mode .mq-summary-qcard {
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border: 1px solid #e5e7eb;
+}
+
+.dark-mode .mq-summary-qcard {
+    background: #282e36;
+    border: 1px solid #363c44;
+}
+
+/* Question header strip */
+.mq-summary-qhead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.mq-summary-qcard.is-correct .mq-summary-qhead {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.dark-mode .mq-summary-qcard.is-correct .mq-summary-qhead {
+    background: #14532d44;
+    color: #4ade80;
+}
+
+.mq-summary-qcard.is-wrong .mq-summary-qhead {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.dark-mode .mq-summary-qcard.is-wrong .mq-summary-qhead {
+    background: #7f1d1d33;
+    color: #f87171;
+}
+
+.mq-summary-qhead-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.mq-summary-qhead-badge svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Question text */
+.mq-summary-qtext {
+    padding: 14px 14px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+.light-mode .mq-summary-qtext {
+    color: #111827;
+}
+
+.dark-mode .mq-summary-qtext {
+    color: #f1f5f9;
+}
+
+/* Answer options in summary */
+.mq-summary-opts {
+    padding: 0 14px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mq-summary-opt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 500;
+    transition: none;
+}
+
+/* Default state */
+.light-mode .mq-summary-opt {
+    background: #f9fafb;
+    color: #6b7280;
+    border: 1px solid #f3f4f6;
+}
+
+.dark-mode .mq-summary-opt {
+    background: #21252b;
+    color: #94a3b8;
+    border: 1px solid #363c44;
+}
+
+/* Correct answer option */
+.mq-summary-opt.opt-correct {
+    font-weight: 600;
+}
+
+.light-mode .mq-summary-opt.opt-correct {
+    background: #ecfdf5;
+    color: #065f46;
+    border-color: #a7f3d0;
+}
+
+.dark-mode .mq-summary-opt.opt-correct {
+    background: #14532d33;
+    color: #6ee7b7;
+    border-color: #16a34a44;
+}
+
+/* Wrong selected option */
+.mq-summary-opt.opt-wrong {
+    font-weight: 600;
+}
+
+.light-mode .mq-summary-opt.opt-wrong {
+    background: #fef2f2;
+    color: #991b1b;
+    border-color: #fecaca;
+}
+
+.dark-mode .mq-summary-opt.opt-wrong {
+    background: #7f1d1d22;
+    color: #fca5a5;
+    border-color: #dc262644;
+}
+
+/* Option letter circle */
+.mq-summary-opt-letter {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.light-mode .mq-summary-opt-letter {
+    background: #e5e7eb;
+    color: #6b7280;
+}
+
+.dark-mode .mq-summary-opt-letter {
+    background: #363c44;
+    color: #94a3b8;
+}
+
+.mq-summary-opt.opt-correct .mq-summary-opt-letter {
+    background: #10b981;
+    color: #fff;
+}
+
+.mq-summary-opt.opt-wrong .mq-summary-opt-letter {
+    background: #ef4444;
+    color: #fff;
+}
+
+.mq-summary-opt-text {
+    flex: 1;
+    line-height: 1.4;
+}
+
+/* Correct/wrong icon on the right */
+.mq-summary-opt-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Verse reference */
+.mq-summary-verse {
+    padding: 0 14px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.light-mode .mq-summary-verse {
+    color: #d97706;
+}
+
+.dark-mode .mq-summary-verse {
+    color: #fbbf24;
+}
+
+/* Keep old classes for backward compat — hide them in summary context */
+.mq-option.summary-correct,
+.mq-option.summary-wrong,
+.mq-option.summary-default {
     cursor: default;
 }
 
@@ -655,7 +971,7 @@ body.mobile-quiz-active #quizContent {
     transform: none;
 }
 
-/* Verse reference below options */
+/* Verse reference (old class kept) */
 .mq-verse-ref {
     align-self: flex-end;
     max-width: 88%;

@@ -323,8 +323,8 @@
     <script src="lib/supabase-bible-reading.js?v=20251126003722"></script>
     <script src="lib/supabase-quiz.js?v=20251126003722"></script>
     <script src="lib/quiz-questions-formatter.js?v=20251126003722"></script>
-    <link rel="stylesheet" href="lib/quiz-mobile.css?v=20260415">
-    <script src="lib/quiz-mobile.js?v=20260415"></script>
+    <link rel="stylesheet" href="lib/quiz-mobile.css?v=20260420">
+    <script src="lib/quiz-mobile.js?v=20260420d"></script>
     <link rel="stylesheet" href="lib/family-tab.css?v=20260420">
     <script src="lib/family-tab.js?v=20260420b"></script>
     <script src="yearlyReadingPlan.js?v=20251126003722"></script>
@@ -5519,53 +5519,80 @@
                                         }
                                         
                                         return `
-                                            <div id="quizContainer" class="${theme.card} p-6 border ${theme.border} shadow-sm">
-                                                <button onclick="state.selectedQuizChapter = null; state.quizSummaryData = null; state.selectedQuizBook = null; state.quizTestamentTab = 'NT'; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                            <div id="quizContainer" style="display:flex;flex-direction:column;gap:16px;padding:0;">
+                                                <button onclick="state.selectedQuizChapter = null; state.quizSummaryData = null; state.selectedQuizBook = null; state.quizTestamentTab = 'NT'; render();" class="back-button-desktop mb-2 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
                                                     ${icons.chevronLeft} Back to Books
                                                 </button>
-                                                <div class="mb-6 text-center">
-                                                    <h3 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4">${state.quizSummaryData.book} - ${chapter}</h3>
-                                                    <div class="border-b-2 ${theme.border} mb-4"></div>
-                                                    <div class="text-lg font-semibold text-emerald-400">Score: ${score}/${state.quizSummaryData.totalQuestions}</div>
+
+                                                <!-- Score Hero -->
+                                                <div style="display:flex;align-items:center;gap:16px;padding:20px;border-radius:16px;${state.darkMode ? 'background:linear-gradient(135deg,#14532d33,#16533033);border:1px solid #16a34a33;' : 'background:linear-gradient(135deg,#ecfdf5,#f0fdf4);border:1px solid #bbf7d0;'}">
+                                                    <div style="position:relative;width:64px;height:64px;flex-shrink:0;">
+                                                        <svg viewBox="0 0 36 36" style="width:100%;height:100%;transform:rotate(-90deg);">
+                                                            <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="${state.darkMode ? '#363c44' : '#e2e8f0'}" stroke-width="4"/>
+                                                            <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" stroke-dasharray="${Math.round((score / state.quizSummaryData.totalQuestions) * 100)}, 100"/>
+                                                        </svg>
+                                                        <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:${state.darkMode ? '#4ade80' : '#059669'}">${Math.round((score / state.quizSummaryData.totalQuestions) * 100)}%</span>
+                                                    </div>
+                                                    <div>
+                                                        <div style="font-size:18px;font-weight:700;color:${state.darkMode ? '#f1f5f9' : '#111827'}">${score}/${state.quizSummaryData.totalQuestions} Correct</div>
+                                                        <div style="font-size:13px;display:flex;gap:12px;margin-top:4px;">
+                                                            <span style="color:#10b981;font-weight:600;">✓ ${score}</span>
+                                                            <span style="color:#ef4444;font-weight:600;">✗ ${state.quizSummaryData.totalQuestions - score}</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="space-y-6">
-                                                    ${questions.map((q, idx) => {
-                                                        const userAnswer = userAnswers[q.id];
-                                                        const selectedAnswerIndex = userAnswer !== null && userAnswer !== undefined ? parseInt(userAnswer) : null;
-                                                        const isCorrect = selectedAnswerIndex === q.correctAnswer;
-                                                        
-                                                        return `
-                                                            <div class="pb-4 border-b ${theme.border}">
-                                                                <h4 class="font-bold mb-4 text-base leading-loose">${q.question}</h4>
-                                                                <div class="space-y-2 mb-4">
-                                                                    ${q.options.map((option, optIdx) => {
-                                                                        const isSelectedOption = selectedAnswerIndex === optIdx;
-                                                                        const isCorrectOption = optIdx === q.correctAnswer;
-                                                                        let bgColor = state.darkMode ? 'bg-slate-700' : 'bg-gray-300';
-                                                                        let textColor = state.darkMode ? 'text-white' : 'text-gray-900';
-                                                                        
-                                                                        if (isCorrectOption) {
-                                                                            bgColor = 'bg-emerald-600';
-                                                                            textColor = 'text-white';
-                                                                        } else if (isSelectedOption && !isCorrect) {
-                                                                            bgColor = 'bg-red-600';
-                                                                            textColor = 'text-white';
-                                                                        }
-                                                                        
-                                                                        return `
-                                                                            <div class="p-3 rounded-lg ${bgColor} ${textColor}">
-                                                                                ${option}
-                                                                            </div>
-                                                                        `;
-                                                                    }).join('')}
-                                                                </div>
-                                                                <div>
-                                                                    <div class="font-semibold text-yellow-600">🔖 Verse : ${q.verse || 'No verse reference available'}</div>
-                                                                </div>
+
+                                                <!-- Question Cards -->
+                                                ${questions.map((q, idx) => {
+                                                    const userAnswer = userAnswers[q.id];
+                                                    const selectedAnswerIndex = userAnswer !== null && userAnswer !== undefined ? parseInt(userAnswer) : null;
+                                                    const isCorrect = selectedAnswerIndex === q.correctAnswer;
+                                                    const headBg = isCorrect
+                                                        ? (state.darkMode ? 'background:#14532d44;color:#4ade80;' : 'background:#ecfdf5;color:#059669;')
+                                                        : (state.darkMode ? 'background:#7f1d1d33;color:#f87171;' : 'background:#fef2f2;color:#dc2626;');
+
+                                                    return `
+                                                        <div style="border-radius:14px;overflow:hidden;${state.darkMode ? 'background:#282e36;border:1px solid #363c44;' : 'background:#fff;border:1px solid #e5e7eb;box-shadow:0 1px 4px rgba(0,0,0,0.06);'}">
+                                                            <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;font-size:12px;font-weight:700;${headBg}">
+                                                                <span>Question ${idx + 1}</span>
+                                                                <span style="display:flex;align-items:center;gap:4px;">${isCorrect ? '✓ Correct' : '✗ Wrong'}</span>
                                                             </div>
-                                                        `;
-                                                    }).join('')}
-                                                </div>
+                                                            <div style="padding:14px 14px 10px;font-size:15px;font-weight:600;line-height:1.55;color:${state.darkMode ? '#f1f5f9' : '#111827'};">${q.question}</div>
+                                                            <div style="padding:0 14px 10px;display:flex;flex-direction:column;gap:6px;">
+                                                                ${q.options.map((option, optIdx) => {
+                                                                    const isSelectedOption = selectedAnswerIndex === optIdx;
+                                                                    const isCorrectOption = optIdx === q.correctAnswer;
+                                                                    let optStyle, iconHtml = '';
+                                                                    if (isCorrectOption) {
+                                                                        optStyle = state.darkMode
+                                                                            ? 'background:#14532d33;color:#6ee7b7;border:1px solid #16a34a44;font-weight:600;'
+                                                                            : 'background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;font-weight:600;';
+                                                                        iconHtml = '<span style="color:#10b981;font-weight:700;font-size:13px;flex-shrink:0;">✓</span>';
+                                                                    } else if (isSelectedOption && !isCorrect) {
+                                                                        optStyle = state.darkMode
+                                                                            ? 'background:#7f1d1d22;color:#fca5a5;border:1px solid #dc262644;font-weight:600;'
+                                                                            : 'background:#fef2f2;color:#991b1b;border:1px solid #fecaca;font-weight:600;';
+                                                                        iconHtml = '<span style="color:#ef4444;font-weight:700;font-size:13px;flex-shrink:0;">✗</span>';
+                                                                    } else {
+                                                                        optStyle = state.darkMode
+                                                                            ? 'background:#21252b;color:#94a3b8;border:1px solid #363c44;'
+                                                                            : 'background:#f9fafb;color:#6b7280;border:1px solid #f3f4f6;';
+                                                                    }
+                                                                    const letterBg = isCorrectOption ? 'background:#10b981;color:#fff;' : (isSelectedOption && !isCorrect ? 'background:#ef4444;color:#fff;' : (state.darkMode ? 'background:#363c44;color:#94a3b8;' : 'background:#e5e7eb;color:#6b7280;'));
+                                                                    const letter = String.fromCharCode(65 + optIdx);
+                                                                    return `
+                                                                        <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;font-size:13.5px;${optStyle}">
+                                                                            <span style="width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;${letterBg}">${letter}</span>
+                                                                            <span style="flex:1;line-height:1.4;">${option}</span>
+                                                                            ${iconHtml}
+                                                                        </div>
+                                                                    `;
+                                                                }).join('')}
+                                                            </div>
+                                                            ${q.verse ? `<div style="padding:0 14px 14px;font-size:12px;font-weight:600;color:${state.darkMode ? '#fbbf24' : '#d97706'};">📖 ${q.verse}</div>` : ''}
+                                                        </div>
+                                                    `;
+                                                }).join('')}
                                             </div>
                                         `;
                                     }

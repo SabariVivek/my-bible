@@ -404,49 +404,135 @@ const MobileQuiz = (() => {
         _summaryActive = true;
         const { chapter, book, questions, userAnswers, score, totalQuestions } = summaryData;
         const theme = isDarkMode ? 'dark-mode' : 'light-mode';
+        const pct = Math.round((score / totalQuestions) * 100);
+        const wrongCount = totalQuestions - score;
+        const dk = isDarkMode;
 
         const overlay = document.createElement('div');
         overlay.className = `mobile-quiz-overlay ${theme}`;
         overlay.id = 'mobileQuizOverlay';
 
-        // Build all questions as chat thread (same as quiz history + active)
-        let chatHtml = '';
+        // Build the scroll container
+        const scrollDiv = document.createElement('div');
+        scrollDiv.style.cssText = 'flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:16px;';
+
+        // Score hero
+        const hero = document.createElement('div');
+        hero.style.cssText = `display:flex;align-items:center;gap:16px;padding:20px;border-radius:16px;margin-bottom:16px;${dk ? 'background:linear-gradient(135deg,#14532d33,#16533033);border:1px solid #16a34a33;' : 'background:linear-gradient(135deg,#ecfdf5,#f0fdf4);border:1px solid #bbf7d0;'}`;
+        hero.innerHTML = `
+            <div style="position:relative;width:64px;height:64px;flex-shrink:0;">
+                <svg viewBox="0 0 36 36" style="width:100%;height:100%;transform:rotate(-90deg);">
+                    <path d="M18 2.0845a15.9155 15.9155 0 010 31.831 15.9155 15.9155 0 010-31.831" fill="none" stroke="${dk ? '#363c44' : '#e2e8f0'}" stroke-width="4"/>
+                    <path d="M18 2.0845a15.9155 15.9155 0 010 31.831 15.9155 15.9155 0 010-31.831" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" stroke-dasharray="${pct}, 100"/>
+                </svg>
+                <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:${dk ? '#4ade80' : '#059669'};">${pct}%</span>
+            </div>
+            <div>
+                <div style="font-size:18px;font-weight:700;color:${dk ? '#f1f5f9' : '#111827'};">${score}/${totalQuestions} Correct</div>
+                <div style="font-size:13px;display:flex;gap:12px;margin-top:4px;">
+                    <span style="color:#10b981;font-weight:600;">✓ ${score}</span>
+                    <span style="color:#ef4444;font-weight:600;">✗ ${wrongCount}</span>
+                </div>
+            </div>`;
+        scrollDiv.appendChild(hero);
+
+        // Question cards — built via DOM to avoid innerHTML nesting issues
         questions.forEach((q, i) => {
             const userAns = userAnswers[q.id];
             const correctIdx = typeof q.correctAnswer === 'number' ? q.correctAnswer : q.options.indexOf(q.correctAnswer);
             const isCorrect = parseInt(userAns) === correctIdx;
 
-            // Question bubble (left-aligned, same as quiz)
-            chatHtml += `
-                <div class="mq-question-bubble">
-                    <div class="mq-question-num">Q${i + 1}</div>
-                    ${_cleanQuestion(q.question)}
-                </div>`;
+            const card = document.createElement('div');
+            card.style.cssText = `border-radius:14px;margin-bottom:16px;${dk ? 'background:#282e36;border:1px solid #363c44;' : 'background:#fff;border:1px solid #e5e7eb;box-shadow:0 1px 4px rgba(0,0,0,0.06);'}`;
 
-            // Options (right-aligned, same layout as quiz but color-coded)
-            chatHtml += `<div class="mq-options-wrap">`;
+            // Header
+            const headBg = isCorrect
+                ? (dk ? 'background:#14532d66;color:#4ade80;' : 'background:#ecfdf5;color:#059669;')
+                : (dk ? 'background:#7f1d1d44;color:#f87171;' : 'background:#fef2f2;color:#dc2626;');
+            const head = document.createElement('div');
+            head.style.cssText = `display:flex;align-items:center;justify-content:space-between;padding:10px 14px;font-size:12px;font-weight:700;${headBg}`;
+            head.textContent = '';
+            const headLeft = document.createElement('span');
+            headLeft.textContent = 'Question ' + (i + 1);
+            const headRight = document.createElement('span');
+            headRight.style.cssText = 'display:flex;align-items:center;gap:4px;';
+            headRight.textContent = isCorrect ? '✓ Correct' : '✗ Wrong';
+            head.appendChild(headLeft);
+            head.appendChild(headRight);
+            card.appendChild(head);
+
+            // Question text
+            const qDiv = document.createElement('div');
+            qDiv.style.cssText = `padding:14px 14px 10px;font-size:15px;font-weight:600;line-height:1.55;color:${dk ? '#f1f5f9' : '#111827'};`;
+            // Strip the blue number badge span, show just the text
+            const cleanText = q.question.replace(/<span[^>]*style="[^"]*1a73e8[^"]*"[^>]*>\d+<\/span>/gi, '').trim();
+            qDiv.textContent = cleanText;
+            card.appendChild(qDiv);
+
+            // Options
+            const optsDiv = document.createElement('div');
+            optsDiv.style.cssText = 'padding:0 14px 10px;display:flex;flex-direction:column;gap:6px;';
             q.options.forEach((opt, idx) => {
-                let cls = 'summary-default';
+                const optEl = document.createElement('div');
+                const letter = String.fromCharCode(65 + idx);
+                const optText = opt.replace(/^[A-D]\.\s*/, '').trim();
+                let optBg, letterStyle, iconText = '';
+
                 if (idx === correctIdx) {
-                    cls = 'summary-correct';
+                    optBg = dk
+                        ? 'background:#14532d55;color:#6ee7b7;border:1px solid #16a34a66;font-weight:600;'
+                        : 'background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;font-weight:600;';
+                    letterStyle = 'background:#10b981;color:#fff;';
+                    iconText = '✓';
                 } else if (idx === parseInt(userAns) && !isCorrect) {
-                    cls = 'summary-wrong';
+                    optBg = dk
+                        ? 'background:#7f1d1d33;color:#fca5a5;border:1px solid #dc262666;font-weight:600;'
+                        : 'background:#fef2f2;color:#991b1b;border:1px solid #fecaca;font-weight:600;';
+                    letterStyle = 'background:#ef4444;color:#fff;';
+                    iconText = '✗';
+                } else {
+                    optBg = dk
+                        ? 'background:#21252b;color:#94a3b8;border:1px solid #363c44;'
+                        : 'background:#f9fafb;color:#6b7280;border:1px solid #f3f4f6;';
+                    letterStyle = dk ? 'background:#363c44;color:#94a3b8;' : 'background:#e5e7eb;color:#6b7280;';
                 }
-                const label = String.fromCharCode(65 + idx);
-                chatHtml += `
-                    <div class="mq-option ${cls}">
-                        <span class="mq-option-label">${label}</span>
-                        <span class="mq-option-text">${_cleanOption(opt)}</span>
-                    </div>`;
+
+                optEl.style.cssText = `display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;font-size:13.5px;${optBg}`;
+
+                const letterEl = document.createElement('span');
+                letterEl.style.cssText = `width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;${letterStyle}`;
+                letterEl.textContent = letter;
+
+                const textEl = document.createElement('span');
+                textEl.style.cssText = 'flex:1;line-height:1.4;';
+                textEl.textContent = optText;
+
+                optEl.appendChild(letterEl);
+                optEl.appendChild(textEl);
+
+                if (iconText) {
+                    const iconEl = document.createElement('span');
+                    iconEl.style.cssText = `flex-shrink:0;font-weight:700;font-size:13px;color:${idx === correctIdx ? '#10b981' : '#ef4444'};`;
+                    iconEl.textContent = iconText;
+                    optEl.appendChild(iconEl);
+                }
+
+                optsDiv.appendChild(optEl);
             });
-            chatHtml += `</div>`;
+            card.appendChild(optsDiv);
 
             // Verse reference
             if (q.verse) {
-                chatHtml += `<div class="mq-verse-ref">🔖 Verse : ${q.verse}</div>`;
+                const verseDiv = document.createElement('div');
+                verseDiv.style.cssText = `padding:0 14px 14px;font-size:12px;font-weight:600;color:${dk ? '#fbbf24' : '#d97706'};`;
+                verseDiv.textContent = '📖 ' + q.verse;
+                card.appendChild(verseDiv);
             }
+
+            scrollDiv.appendChild(card);
         });
 
+        // Assemble overlay
         overlay.innerHTML = `
             <div class="mq-header">
                 <button class="mq-close-btn" id="mqSummaryExit" aria-label="Close">✕</button>
@@ -459,20 +545,27 @@ const MobileQuiz = (() => {
             <div class="mq-progress">
                 <div class="mq-progress-fill" style="width:100%"></div>
             </div>
-            <div class="mq-chat-body" id="mqChatBody">
-                ${chatHtml}
-            </div>
-            <div class="mq-footer">
-                <button class="mq-next-btn active" id="mqSummaryBack" style="flex:1">← Back to Books</button>
-            </div>
         `;
+
+        overlay.appendChild(scrollDiv);
+
+        // Footer
+        const footer = document.createElement('div');
+        footer.className = 'mq-footer';
+        const backBtn = document.createElement('button');
+        backBtn.className = 'mq-next-btn active';
+        backBtn.id = 'mqSummaryBack';
+        backBtn.style.cssText = 'flex:1';
+        backBtn.textContent = '← Back to Books';
+        footer.appendChild(backBtn);
+        overlay.appendChild(footer);
 
         document.body.appendChild(overlay);
         _overlayEl = overlay;
 
         // Bind events
         overlay.querySelector('#mqSummaryExit').addEventListener('click', _closeSummary);
-        overlay.querySelector('#mqSummaryBack').addEventListener('click', _closeSummary);
+        backBtn.addEventListener('click', _closeSummary);
 
         return true;
     }
