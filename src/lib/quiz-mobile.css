@@ -145,11 +145,13 @@
 }
 
 .light-mode .mq-progress-fill {
-    background: linear-gradient(90deg, #3b82f6, #6366f1);
+    /* change it to green gradient for light mode to match the summary page theme */
+    background: linear-gradient(90deg, #10b981, #22c55e);
 }
 
 .dark-mode .mq-progress-fill {
-    background: linear-gradient(90deg, #3b82f6, #818cf8);
+    /* change it to green gradient for dark mode to match the summary page theme */
+    background: linear-gradient(90deg, #10b981, #22c55e);
 }
 
 /* ---- Chat body ---- */
