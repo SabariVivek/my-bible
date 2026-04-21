@@ -3278,8 +3278,27 @@ body .dark-mode-maps .page-title {
 
 .dark-mode-life-of-christ .chapter-section-heading {
     color: #ececec !important;
-    background: linear-gradient(to right, #1f2f1f 0%, #2a2a2a 100%);
-    border-left-color: #6ba876;
+}
+
+.dark-mode-life-of-christ .loc-section-pill {
+    background: linear-gradient(135deg, #1a3a28 0%, #0f2018 100%);
+    color: #a8d8b0;
+    border-color: #4a7a56;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode-life-of-christ .life-of-jesus-cards-grid::before {
+    background: linear-gradient(180deg, transparent 0%, #4a7a56 4%, #4a7a56 96%, transparent 100%);
+}
+
+.dark-mode-life-of-christ .loc-timeline-dot {
+    background: #4a7a56;
+    border-color: #6ba876;
+    box-shadow: 0 0 0 4px rgba(74, 122, 86, 0.25);
+}
+
+.dark-mode-life-of-christ .loc-timeline-connector {
+    background: #4a7a56;
 }
 
 .dark-mode-life-of-christ .life-of-jesus-card {
@@ -3290,11 +3309,24 @@ body .dark-mode-maps .page-title {
 
 .dark-mode-life-of-christ .life-of-jesus-card:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    border-color: #4a4a4a;
+    border-color: #4a7a56;
+}
+
+.dark-mode-life-of-christ .loc-left .life-of-jesus-card {
+    border-right-color: #4a7a56;
+}
+
+.dark-mode-life-of-christ .loc-right .life-of-jesus-card {
+    border-left-color: #4a7a56;
 }
 
 .dark-mode-life-of-christ .life-of-jesus-card-title {
     color: #ececec;
+}
+
+.dark-mode-life-of-christ .loc-event-number {
+    background: #4a7a56;
+    color: #e0f0e4;
 }
 
 .dark-mode-life-of-christ .verse-badge {
@@ -5725,35 +5757,206 @@ html #king-page-content.dark-mode-kings .order-number {
     display: none !important;
 }
 
+/* ============================================
+   LIFE OF CHRIST TIMELINE LAYOUT
+   ============================================ */
+
 .life-of-jesus-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
-    max-width: 100%;
+    position: relative;
+    padding: 20px 0 40px;
+    max-width: 700px;
     width: 100%;
     margin: 0 auto;
 }
 
-/* Limit grid to reasonable width on desktop when showing single column */
-@media (min-width: 769px) {
-    .life-of-jesus-cards-grid {
-        max-width: 600px;
-        justify-items: stretch;
-    }
+/* Central vertical timeline line */
+.life-of-jesus-cards-grid::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, transparent 0%, #6ba876 4%, #6ba876 96%, transparent 100%);
+    transform: translateX(-50%);
+    z-index: 0;
 }
 
-/* Make chapter section headings span full width in Life of Christ grid */
+/* Section headers as timeline milestones */
 .life-of-jesus-cards-grid .chapter-section-heading {
-    grid-column: 1 / -1;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 26px;
-    font-weight: 700;
+    position: relative;
+    text-align: center;
+    margin: 48px 0 32px;
+    z-index: 2;
+    /* Reset base chapter-section-heading styles */
+    border-left: none;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+}
+
+.life-of-jesus-cards-grid .chapter-section-heading:hover {
+    background: none;
+    transform: none;
+}
+
+.life-of-jesus-cards-grid .chapter-section-heading::before {
+    display: none;
 }
 
 .life-of-jesus-cards-grid .chapter-section-heading:first-child {
     margin-top: 0;
+}
+
+.loc-section-pill {
+    display: inline-block;
+    background: linear-gradient(135deg, #2d5a3d 0%, #1a3a28 100%);
+    color: #e0f0e4;
+    padding: 10px 24px;
+    border-radius: 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 16px rgba(45, 90, 61, 0.35);
+    border: 2px solid #6ba876;
+    position: relative;
+}
+
+.loc-section-subtitle {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    opacity: 0.85;
+    margin-top: 4px;
+    letter-spacing: 0.3px;
+}
+
+/* Timeline item wrapper */
+.loc-timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+/* Left-aligned items */
+.loc-timeline-item.loc-left {
+    justify-content: flex-start;
+    padding-right: calc(50% + 20px);
+}
+
+/* Right-aligned items */
+.loc-timeline-item.loc-right {
+    justify-content: flex-end;
+    padding-left: calc(50% + 20px);
+}
+
+/* Timeline dot on the center line */
+.loc-timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 16px;
+    width: 14px;
+    height: 14px;
+    background: #6ba876;
+    border: 3px solid #2d5a3d;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 4px rgba(107, 168, 118, 0.2);
+}
+
+.loc-timeline-item:hover .loc-timeline-dot {
+    background: #4a9e5e;
+    box-shadow: 0 0 0 6px rgba(107, 168, 118, 0.35);
+    transform: translateX(-50%) scale(1.2);
+}
+
+/* Connector line from dot to card */
+.loc-timeline-connector {
+    position: absolute;
+    top: 22px;
+    height: 2px;
+    background: #6ba876;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.loc-left .loc-timeline-connector {
+    right: calc(50% - 7px);
+    left: auto;
+    width: 13px;
+}
+
+.loc-right .loc-timeline-connector {
+    left: calc(50% - 7px);
+    right: auto;
+    width: 13px;
+}
+
+/* Card content */
+.life-of-jesus-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e8e8e8;
+    width: 100%;
+    z-index: 1;
+}
+
+.life-of-jesus-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+    border-color: #6ba876;
+}
+
+/* Subtle left border accent on cards */
+.loc-left .life-of-jesus-card {
+    border-right: 3px solid #6ba876;
+}
+
+.loc-right .life-of-jesus-card {
+    border-left: 3px solid #6ba876;
+}
+
+.life-of-jesus-card-header {
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.life-of-jesus-card-title {
+    font-size: 15px;
+    color: var(--text-dark);
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    line-height: 1.5;
+}
+
+/* Event number badge */
+.loc-event-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background: #6ba876;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-right: 8px;
+    flex-shrink: 0;
+    vertical-align: middle;
 }
 
 /* Hide section headers when no cards are visible in that section */
@@ -5763,7 +5966,6 @@ html #king-page-content.dark-mode-kings .order-number {
 
 /* No results message for Life of Christ */
 .life-of-christ-no-results {
-    grid-column: 1 / -1;
     text-align: center;
     padding: 80px 20px;
     color: #6b7280;
@@ -5790,36 +5992,23 @@ html #king-page-content.dark-mode-kings .order-number {
     color: #6b7280;
 }
 
-.life-of-jesus-card {
-    background: white;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid #f0f0f0;
+/* Animation for timeline items appearing */
+@keyframes timelineSlideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
-.life-of-jesus-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    border-color: var(--border-color);
+@keyframes timelineSlideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
-.life-of-jesus-card-header {
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 2;
+.loc-timeline-item.loc-left {
+    animation: timelineSlideInLeft 0.4s ease forwards;
 }
 
-.life-of-jesus-card-title {
-    font-size: 18px;
-    color: var(--text-dark);
-    font-weight: 700;
-    margin: 0 0 8px 0;
-    line-height: 1.7;
+.loc-timeline-item.loc-right {
+    animation: timelineSlideInRight 0.4s ease forwards;
 }
 
 .verse-badge {
@@ -6047,6 +6236,10 @@ html #king-page-content.dark-mode-kings .order-number {
 
 /* Hidden card class for search filtering */
 .life-of-jesus-card.hidden-by-search {
+    display: none;
+}
+
+.loc-timeline-item.hidden-by-search {
     display: none;
 }
 
@@ -6501,34 +6694,78 @@ html #king-page-content.dark-mode-kings .order-number {
 
 /* Chapter separator line - REMOVED, not used anymore */
 
-/* Responsive for Life of Christ */
+/* Responsive for Life of Christ Timeline */
 @media (max-width: 768px) {
     .life-of-jesus-container {
         height: 75vh;
-        /* Slightly taller on mobile */
         padding: 10px;
     }
 
+    /* Switch to single-column timeline on mobile */
     .life-of-jesus-cards-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
         padding: 10px 0;
     }
 
+    .life-of-jesus-cards-grid::before {
+        left: 16px;
+    }
+
+    .loc-timeline-item.loc-left,
+    .loc-timeline-item.loc-right {
+        padding-left: 44px;
+        padding-right: 0;
+        justify-content: flex-start;
+    }
+
+    .loc-timeline-dot {
+        left: 16px;
+        top: 14px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .loc-timeline-connector {
+        display: none;
+    }
+
+    .loc-left .life-of-jesus-card,
+    .loc-right .life-of-jesus-card {
+        border-right: none;
+        border-left: 3px solid #6ba876;
+    }
+
     .life-of-jesus-card {
-        padding: 20px;
+        padding: 14px 16px;
     }
 
     .life-of-jesus-card-title {
         font-size: 14px;
     }
 
+    .loc-section-pill {
+        font-size: 0.82rem;
+        padding: 8px 18px;
+    }
+
+    .loc-section-subtitle {
+        font-size: 0.65rem;
+    }
+
+    .loc-event-number {
+        width: 20px;
+        height: 20px;
+        font-size: 0.65rem;
+    }
+
+    .loc-timeline-item.loc-left,
+    .loc-timeline-item.loc-right {
+        animation: none;
+    }
+
     /* Responsive chapter section headings in Life of Christ */
     .life-of-jesus-cards-grid .chapter-section-heading {
         margin-top: 30px;
         margin-bottom: 16px;
-        font-size: 20px;
-        padding-left: 16px;
     }
     
     /* Override for hide-sidebar-mobile */
@@ -8058,7 +8295,11 @@ html #king-page-content.dark-mode-kings .order-number {
         padding: 0 8px 80px 8px;
     }
     
-    body.hide-sidebar-mobile .life-of-jesus-cards-grid,
+    body.hide-sidebar-mobile .life-of-jesus-cards-grid {
+        padding: 0;
+        margin: 0;
+    }
+    
     body.hide-sidebar-mobile .characters-cards-grid {
         padding: 0;
         margin: 0;
@@ -8068,7 +8309,7 @@ html #king-page-content.dark-mode-kings .order-number {
     
     /* Standard padding for all cards */
     body.hide-sidebar-mobile .life-of-jesus-card {
-        padding: 20px;
+        padding: 14px 16px;
         margin: 0;
     }
     
@@ -8841,8 +9082,15 @@ body.dark-mode-bible-variant2 .theme-toggle input[type="radio"]:checked+.theme-o
     background-color: #1d2a3b;
 }
 
-.dark-mode-life-of-christ-variant2 .chapter-section-heading {
-    background: linear-gradient(to right, #1a2f2a 0%, #1a2332 100%);
+.dark-mode-life-of-christ-variant2 .life-of-jesus-cards-grid .chapter-section-heading {
+    background: none;
+    border-left: none;
+}
+
+.dark-mode-life-of-christ-variant2 .loc-section-pill {
+    background: linear-gradient(135deg, #1a2f3a 0%, #0f1a28 100%);
+    border-color: #365069;
+    color: #a8c8d8;
 }
 
 .dark-mode-life-of-christ-variant2 .life-of-jesus-card {

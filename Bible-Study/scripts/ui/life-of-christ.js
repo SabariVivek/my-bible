@@ -38,7 +38,7 @@ const lifeSections = [
     { key: 'resurrectionAndAppearances', title: 'Resurrection and Appearances', subtitle: '40 days' }
 ];
 
-// Generate cards from data with section headers
+// Generate cards from data with timeline layout
 function generateLifeOfJesusCards() {
     const cardsGrid = document.getElementById('lifeOfJesusCardsGrid');
     
@@ -46,32 +46,59 @@ function generateLifeOfJesusCards() {
     
     cardsGrid.innerHTML = ''; // Clear existing cards
     
-    // Generate cards section by section
+    let globalEventIndex = 0; // Track event number across all sections
+    
+    // Generate timeline section by section
     lifeSections.forEach(section => {
         if (typeof lifeOfJesus !== 'undefined' && lifeOfJesus[section.key]) {
             const events = lifeOfJesus[section.key];
             
-            // Create section header
-            const sectionHeader = document.createElement('h2');
+            // Create section header as timeline milestone
+            const sectionHeader = document.createElement('div');
             sectionHeader.className = 'chapter-section-heading';
-            sectionHeader.innerHTML = `${section.title}<br><small style="font-size: 0.55em; font-weight: 500; opacity: 0.8;">${section.subtitle}</small>`;
+            sectionHeader.innerHTML = `<span class="loc-section-pill">${section.title}<span class="loc-section-subtitle">${section.subtitle}</span></span>`;
             cardsGrid.appendChild(sectionHeader);
             
-            // Generate cards for this section
-            events.forEach(event => {
+            // Generate timeline items for this section
+            events.forEach((event, index) => {
+                globalEventIndex++;
+                const side = index % 2 === 0 ? 'loc-left' : 'loc-right';
+                
+                // Timeline item wrapper
+                const timelineItem = document.createElement('div');
+                timelineItem.className = `loc-timeline-item ${side}`;
+                
+                // Store searchable text
+                const searchableText = `${event.title} ${event.category || ''} ${(event.verses || []).join(' ')}`.toLowerCase();
+                timelineItem.setAttribute('data-search-text', searchableText);
+                
+                // Timeline dot
+                const dot = document.createElement('div');
+                dot.className = 'loc-timeline-dot';
+                timelineItem.appendChild(dot);
+                
+                // Connector line
+                const connector = document.createElement('div');
+                connector.className = 'loc-timeline-connector';
+                timelineItem.appendChild(connector);
+                
+                // Card content
                 const card = document.createElement('div');
                 card.className = 'life-of-jesus-card';
-                
-                // Store searchable text in data attribute
-                const searchableText = `${event.title} ${event.category || ''} ${(event.verses || []).join(' ')}`.toLowerCase();
-                card.setAttribute('data-search-text', searchableText);
                 
                 const cardHeader = document.createElement('div');
                 cardHeader.className = 'life-of-jesus-card-header';
                 
                 const title = document.createElement('h2');
                 title.className = 'life-of-jesus-card-title';
-                title.textContent = event.title;
+                
+                // Event number
+                const numberBadge = document.createElement('span');
+                numberBadge.className = 'loc-event-number';
+                numberBadge.textContent = globalEventIndex;
+                
+                title.appendChild(numberBadge);
+                title.appendChild(document.createTextNode(event.title));
                 
                 cardHeader.appendChild(title);
                 card.appendChild(cardHeader);
@@ -115,7 +142,8 @@ function generateLifeOfJesusCards() {
                 }
                 
                 card.appendChild(badgeContainer);
-                cardsGrid.appendChild(card);
+                timelineItem.appendChild(card);
+                cardsGrid.appendChild(timelineItem);
             });
         }
     });
@@ -1665,14 +1693,16 @@ function initializeLifeOfChristSearch() {
 // Filter cards using smart search
 function filterLifeOfChristCardsWithFuse(searchTerm) {
     const cardsGrid = document.getElementById('lifeOfJesusCardsGrid');
-    const cards = document.querySelectorAll('.life-of-jesus-card');
+    const timelineItems = document.querySelectorAll('.loc-timeline-item');
     const sectionHeaders = document.querySelectorAll('.chapter-section-heading');
     const resultsInfo = document.getElementById('searchResultsInfo');
     
     if (!searchTerm) {
-        // Show all cards and section headers
-        cards.forEach(card => {
-            card.classList.remove('hidden-by-search');
+        // Show all timeline items and section headers
+        timelineItems.forEach(item => {
+            item.classList.remove('hidden-by-search');
+            const card = item.querySelector('.life-of-jesus-card');
+            if (card) card.classList.remove('hidden-by-search');
         });
         
         sectionHeaders.forEach(header => {
@@ -1703,19 +1733,24 @@ function filterLifeOfChristCardsWithFuse(searchTerm) {
     
     let visibleCount = 0;
     
-    // Show/hide cards based on search results
-    cards.forEach((card, index) => {
+    // Show/hide timeline items based on search results
+    timelineItems.forEach((item, index) => {
+        const card = item.querySelector('.life-of-jesus-card');
         if (matchingIndices.has(index)) {
-            card.classList.remove('hidden-by-search');
-            card.classList.add('search-result');
+            item.classList.remove('hidden-by-search');
+            if (card) {
+                card.classList.remove('hidden-by-search');
+                card.classList.add('search-result');
+            }
             visibleCount++;
             
             // Remove animation class after animation completes
             setTimeout(() => {
-                card.classList.remove('search-result');
+                if (card) card.classList.remove('search-result');
             }, 300);
         } else {
-            card.classList.add('hidden-by-search');
+            item.classList.add('hidden-by-search');
+            if (card) card.classList.add('hidden-by-search');
         }
     });
     
