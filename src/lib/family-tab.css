@@ -27,7 +27,7 @@ html.dark-theme {
 .ft-root {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
     font-family: 'DM Sans', system-ui, sans-serif;
     color: var(--ft-text);
 }
@@ -239,6 +239,82 @@ html.dark-theme .ft-pending-pill {
     border-radius: 14px;
     overflow: hidden;
     margin-bottom: 10px;
+}
+
+/* ============ Habit Tracker ============ */
+.ft-ht-wrap {
+    padding: 0 0 4px;
+}
+
+.ft-ht-scroll {
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+}
+
+.ft-ht-scroll::-webkit-scrollbar { display: none; }
+
+.ft-ht-month {
+    font-size: 8px;
+    color: var(--ft-text-muted);
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.ft-ht-month.ft-ht-month-hide {
+    color: transparent;
+}
+
+.ft-ht-day-label {
+    width: 22px;
+    font-size: 8px;
+    color: var(--ft-text-muted);
+    font-family: monospace;
+    text-align: right;
+    padding-right: 2px;
+    flex-shrink: 0;
+}
+
+.ft-ht-cell {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    position: relative;
+    cursor: default;
+    transition: none;
+}
+
+/* Light theme cells */
+.ft-ht-cell.is-future {
+    background: #e2e8f0;
+    opacity: 1;
+}
+
+.ft-ht-cell.is-read {
+    background: #22c55e;
+    box-shadow: 0 0 4px rgba(34, 197, 94, 0.3);
+}
+
+.ft-ht-cell.is-missed {
+    background: rgb(127, 29, 29);
+}
+
+/* Dark theme cells */
+html.dark-theme .ft-ht-cell.is-future {
+    background: #334155;
+    opacity: 1;
+}
+
+html.dark-theme .ft-ht-cell.is-read {
+    background: #22c55e;
+    box-shadow: 0 0 5px rgba(34, 197, 94, 0.4);
+}
+
+html.dark-theme .ft-ht-cell.is-missed {
+    background: rgb(127, 29, 29);
+    box-shadow: none;
 }
 
 

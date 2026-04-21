@@ -172,6 +172,138 @@
         '</section>';
     }
 
+    /* ========== Habit Tracker Heatmap ========== */
+    var HEATMAP_MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var HEATMAP_DAY_LABELS = ['S','M','T','W','T','F','S'];
+
+    function getYearDays(year) {
+        var days = [];
+        var d = new Date(year, 0, 1);
+        var end = new Date(year, 11, 31);
+        while (d <= end) {
+            days.push(new Date(d));
+            d.setDate(d.getDate() + 1);
+        }
+        return days;
+    }
+
+    function buildWeekColumns(year) {
+        var days = getYearDays(year);
+        var weeks = [];
+        var firstDay = days[0].getDay();
+        var week = [];
+        for (var i = 0; i < firstDay; i++) week.push(null);
+        for (var j = 0; j < days.length; j++) {
+            week.push(days[j]);
+            if (week.length === 7) {
+                weeks.push(week);
+                week = [];
+            }
+        }
+        if (week.length > 0) {
+            while (week.length < 7) week.push(null);
+            weeks.push(week);
+        }
+        return weeks;
+    }
+
+    function getHeatmapMonthLabels(weeks) {
+        var labels = [];
+        var lastMonth = -1;
+        for (var i = 0; i < weeks.length; i++) {
+            var firstReal = null;
+            for (var j = 0; j < weeks[i].length; j++) {
+                if (weeks[i][j] !== null) { firstReal = weeks[i][j]; break; }
+            }
+            if (firstReal) {
+                var m = firstReal.getMonth();
+                if (m !== lastMonth) {
+                    labels.push({ col: i, label: HEATMAP_MONTHS[m] });
+                    lastMonth = m;
+                }
+            }
+        }
+        return labels;
+    }
+
+    function calcHeatmapStats(completedDates, year) {
+        var todayStr = dateKey(new Date());
+        var allDays = getYearDays(year).filter(function (d) { return dateKey(d) <= todayStr; });
+        var streak = 0, longestStreak = 0, cur = 0, total = 0;
+
+        for (var i = 0; i < allDays.length; i++) {
+            var k = dateKey(allDays[i]);
+            if (completedDates[k]) {
+                cur++; total++;
+                if (cur > longestStreak) longestStreak = cur;
+            } else {
+                cur = 0;
+            }
+        }
+        // current streak from today backwards
+        var reversed = allDays.slice().reverse();
+        for (var r = 0; r < reversed.length; r++) {
+            if (completedDates[dateKey(reversed[r])]) streak++;
+            else break;
+        }
+        var percent = allDays.length ? Math.round((total / allDays.length) * 100) : 0;
+        return { streak: streak, longestStreak: longestStreak, total: total, percent: percent };
+    }
+
+    function renderHabitTracker(state) {
+        var currentYear = new Date().getFullYear();
+        var todayStr = dateKey(new Date());
+        var weeks = buildWeekColumns(currentYear);
+        var monthLabels = getHeatmapMonthLabels(weeks);
+        var BOX = 16, GAP = 3;
+
+        // Use current user data only
+        var currentUser = state.currentUser;
+        if (!currentUser) return '';
+        var cd = currentUser.completedDates || {};
+
+        // Month labels row (spacer to match day-label column)
+        var monthRow = '<div style="width:24px;flex-shrink:0;"></div>';
+        for (var wi = 0; wi < weeks.length; wi++) {
+            var ml = null;
+            for (var mi = 0; mi < monthLabels.length; mi++) {
+                if (monthLabels[mi].col === wi) { ml = monthLabels[mi]; break; }
+            }
+            monthRow += '<div class="ft-ht-month' + (ml ? '' : ' ft-ht-month-hide') + '" style="width:' + BOX + 'px;">' + (ml ? ml.label : '') + '</div>';
+        }
+
+        // Grid rows (7 rows, Sun–Sat)
+        var gridRows = '';
+        for (var rowIdx = 0; rowIdx < 7; rowIdx++) {
+            var cells = '<div class="ft-ht-day-label">' + HEATMAP_DAY_LABELS[rowIdx] + '</div>';
+            for (var wi2 = 0; wi2 < weeks.length; wi2++) {
+                var d = weeks[wi2][rowIdx];
+                if (!d) {
+                    cells += '<div style="width:' + BOX + 'px;height:' + BOX + 'px;"></div>';
+                    continue;
+                }
+                var k = dateKey(d);
+                var isChecked = !!cd[k];
+                var isFuture = k > todayStr;
+                var cls = 'ft-ht-cell';
+                if (isFuture) cls += ' is-future';
+                else if (isChecked) cls += ' is-read';
+                else cls += ' is-missed';
+                cells += '<div class="' + cls + '" title="' + esc(d.toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric'})) + ' \u2013 ' + (isFuture ? 'Future' : isChecked ? '\u2713 Read' : '\u2717 Missed') + '"></div>';
+            }
+            gridRows += '<div style="display:flex;gap:' + GAP + 'px;margin-bottom:' + GAP + 'px;align-items:center;">' + cells + '</div>';
+        }
+
+        return '<div class="ft-ht-wrap">' +
+            '<div class="ft-ht-scroll">' +
+                '<div style="position:relative;display:inline-flex;flex-direction:column;">' +
+                    '<div style="display:flex;gap:' + GAP + 'px;margin-bottom:4px;height:12px;position:relative;">' + monthRow + '</div>' +
+                    gridRows +
+                '</div>' +
+            '</div>' +
+        '</div>';
+    }
+
     /* ========== Streaks ========== */
     function renderStreaks(state, getUserStats) {
         var currentYear = new Date().getFullYear();
@@ -505,11 +637,24 @@
     /* ========== Main ========== */
     function render(state, theme, icons, stats, getUserStats) {
         return '<div class="ft-root">' +
+            renderHabitTracker(state) +
             renderStreaks(state, getUserStats) +
             renderPending(state, stats, getUserStats) +
             renderMembers(state, getUserStats) +
         '</div>';
     }
+
+    // Tab switching for habit tracker panels
+    window._ftHabitTabSwitch = function (idx) {
+        var tabs = document.querySelectorAll('.ft-ht-tab');
+        var panels = document.querySelectorAll('.ft-ht-panel');
+        tabs.forEach(function (t) { t.classList.remove('is-active'); });
+        panels.forEach(function (p) { p.style.display = 'none'; });
+        var activeTab = document.querySelector('.ft-ht-tab[data-ht-idx="' + idx + '"]');
+        var activePanel = document.querySelector('.ft-ht-panel[data-ht-panel="' + idx + '"]');
+        if (activeTab) activeTab.classList.add('is-active');
+        if (activePanel) activePanel.style.display = '';
+    };
 
     function afterRender() {
         drawOrbitSVG();
