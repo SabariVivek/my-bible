@@ -38,7 +38,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="src/chapter-summary-pullout.css?cb=20260301210232">
+    <link rel="stylesheet" href="src/ai-summary.css?cb=20260423000000">
     <link rel="stylesheet" href="src/bible-selector.css?cb=20260419000000">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Cropper.js for profile image cropping -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css?cb=20260418170421">
@@ -89,8 +91,8 @@
             <h1 class="site-title">My Bible</h1>
         </div>
         <div class="header-controls">
-            <!-- PDF icon -->
-            <button id="pdf-icon" class="icon-btn pdf-icon" aria-label="PDF">
+            <!-- PDF icon (hidden) -->
+            <button id="pdf-icon" class="icon-btn pdf-icon" aria-label="PDF" style="display:none;">
                 <img src="resources/icons/pdf.png" alt="PDF" style="width: 18px; height: 18px;">
             </button>
             <!-- Right Menu button -->
@@ -1652,6 +1654,7 @@
     <script src="src/script.js?cb=20251210007400"></script>
     <script src="src/bible-selector.js?cb=20260419000000"></script>
     <script src="src/chapter-summary-pullout.js?cb=20260301210232"></script>
+    <script src="src/ai-summary.js?cb=20260423000000"></script>
 
     <!-- Image Viewer Modal -->
     <style>

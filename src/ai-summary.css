@@ -1,0 +1,446 @@
+/**
+ * AI SUMMARY TERMINAL STYLES
+ * Terminal-style overlay for AI-generated chapter summaries
+ * Matches genesis-terminal-new.html design exactly
+ */
+
+/* ── AI TRIGGER BUTTON (inside header-controls) ── */
+.ai-summary-trigger {
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.ai-summary-trigger.visible {
+    display: inline-block;
+}
+
+/* ── FULL-SCREEN TERMINAL OVERLAY ── */
+.ai-terminal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: none;
+    flex-direction: column;
+    background: #070b0f;
+    color: #c8ffe8;
+    font-family: 'Share Tech Mono', monospace;
+    overflow: hidden;
+}
+
+.ai-terminal-overlay.open {
+    display: flex;
+}
+
+/* scanlines */
+.ai-terminal-overlay::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0,0,0,0.18) 3px,
+        rgba(0,0,0,0.18) 4px
+    );
+}
+
+/* grid lines */
+.ai-terminal-overlay::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,255,157,0.03) 39px, rgba(0,255,157,0.03) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(0,255,157,0.02) 79px, rgba(0,255,157,0.02) 80px);
+}
+
+/* ── TOP BAR ── */
+.ai-terminal-topbar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px;
+    background: rgba(0,255,157,0.04);
+    border-bottom: 1px solid rgba(0,255,157,0.12);
+    position: relative;
+    z-index: 1;
+}
+
+.ai-terminal-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+.ai-terminal-dot.r { background: #ff2d78; box-shadow: 0 0 6px #ff2d78; }
+.ai-terminal-dot.y { background: #ffd700; box-shadow: 0 0 6px #ffd700; }
+.ai-terminal-dot.g { background: #00ff9d; box-shadow: 0 0 6px #00ff9d; }
+
+.ai-terminal-topbar-spacer {
+    flex: 1;
+}
+
+.ai-terminal-badge {
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 3px 10px;
+    border: 1px solid rgba(0,255,157,.3);
+    color: #00ff9d;
+    background: rgba(0,255,157,.06);
+    border-radius: 2px;
+    transition: color .3s, border-color .3s;
+}
+
+.ai-terminal-close {
+    background: none;
+    border: 1px solid rgba(255,45,120,.3);
+    color: #ff2d78;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-family: 'Share Tech Mono', monospace;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    transition: all 0.2s;
+}
+
+.ai-terminal-close:hover {
+    background: rgba(255,45,120,.1);
+    border-color: #ff2d78;
+}
+
+/* ── VIEWPORT ── */
+.ai-terminal-viewport {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 32px 24px 100px;
+    scroll-behavior: smooth;
+    position: relative;
+    z-index: 1;
+}
+
+.ai-terminal-viewport::-webkit-scrollbar { width: 4px; }
+.ai-terminal-viewport::-webkit-scrollbar-track { background: transparent; }
+.ai-terminal-viewport::-webkit-scrollbar-thumb { background: rgba(0,255,157,.2); border-radius: 2px; }
+
+/* ── SKELETON LOADER ── */
+.ai-skeleton {
+    display: none;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.ai-skeleton.active {
+    display: block;
+}
+
+@keyframes aiShimmer {
+    0%   { background-position: -600px 0; }
+    100% { background-position: 600px 0; }
+}
+
+.ai-sk-bar {
+    border-radius: 2px;
+    background: linear-gradient(
+        90deg,
+        rgba(0,255,157,0.04) 0%,
+        rgba(0,255,157,0.13) 40%,
+        rgba(0,255,157,0.04) 80%
+    );
+    background-size: 600px 100%;
+    animation: aiShimmer 1.6s infinite linear;
+}
+
+/* progress bar */
+.ai-sk-progress-wrap {
+    width: 100%;
+    height: 2px;
+    background: rgba(0,255,157,.08);
+    margin-bottom: 28px;
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.ai-sk-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #00ff9d, #00cfff);
+    box-shadow: 0 0 8px #00ff9d;
+    transition: width .1s linear;
+}
+
+/* heading skeleton */
+.ai-sk-heading { margin-bottom: 28px; }
+.ai-sk-tag  { height: 9px;  width: 200px; margin-bottom: 10px; }
+.ai-sk-h1   { height: 28px; width: 260px; margin-bottom: 8px; }
+.ai-sk-sub  { height: 11px; width: 160px; }
+
+/* intro skeleton */
+.ai-sk-intro {
+    border-left: 2px solid rgba(0,255,157,.2);
+    padding-left: 14px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ai-sk-line-full  { height: 11px; width: 100%; }
+.ai-sk-line-long  { height: 11px; width: 85%; }
+.ai-sk-line-short { height: 11px; width: 65%; }
+
+/* section label skeleton */
+.ai-sk-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 26px 0 14px;
+}
+
+.ai-sk-arrow  { height: 9px; width: 9px; flex-shrink: 0; }
+.ai-sk-slabel { height: 9px; width: 160px; flex-shrink: 0; }
+.ai-sk-sline  { flex: 1; height: 1px; background: rgba(0,255,157,.07); }
+
+/* day skeleton */
+.ai-sk-day {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 13px;
+    padding: 10px 12px;
+    border: 1px solid rgba(0,255,157,.05);
+    border-radius: 2px;
+}
+
+.ai-sk-daynum  { height: 12px; width: 28px; flex-shrink: 0; margin-top: 2px; }
+.ai-sk-daybody { flex: 1; display: flex; flex-direction: column; gap: 7px; }
+.ai-sk-daylabel { height: 11px; width: 100px; }
+.ai-sk-daytext  { height: 10px; width: 100%; }
+.ai-sk-daytext2 { height: 10px; width: 75%; }
+
+/* quote skeleton */
+.ai-sk-quote {
+    border: 1px solid rgba(0,255,157,.1);
+    background: rgba(0,255,157,.02);
+    padding: 16px 18px;
+    margin: 22px 0;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ai-sk-qline1 { height: 12px; width: 95%; }
+.ai-sk-qline2 { height: 12px; width: 80%; }
+.ai-sk-qref   { height: 8px;  width: 120px; margin-top: 4px; }
+
+/* ── CONTENT AREA ── */
+.ai-terminal-content {
+    display: none;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.ai-terminal-content.active {
+    display: block;
+}
+
+/* ── CONTENT BLOCK TYPES ── */
+.ai-block {
+    animation: aiFadeUp .3s ease;
+}
+
+/* heading */
+.ai-block-heading { margin-bottom: 28px; }
+
+.ai-block-heading .ai-tag {
+    font-size: 10px;
+    color: #00ff9d;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+}
+
+.ai-block-heading h1 {
+    font-size: 26px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 20px #00ff9d;
+    line-height: 1.15;
+    margin-bottom: 4px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.ai-block-heading .ai-sub {
+    font-size: 13px;
+    color: #00cfff;
+}
+
+/* intro */
+.ai-block-intro {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px;
+    line-height: 1.85;
+    color: #a0ffd0;
+    padding-left: 14px;
+    border-left: 2px solid #00ff9d;
+    margin-bottom: 20px;
+}
+
+/* section label */
+.ai-block-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    color: #ff2d78;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 26px 0 14px;
+}
+
+.ai-block-section .ai-arrow { color: #ff2d78; }
+
+.ai-block-section .ai-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, #ff2d78, transparent);
+}
+
+/* day / numbered item */
+.ai-block-day {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 13px;
+    padding: 10px 12px;
+    background: rgba(0,255,157,.02);
+    border: 1px solid rgba(0,255,157,.07);
+    border-radius: 2px;
+    transition: background .2s;
+}
+
+.ai-block-day:hover { background: rgba(0,255,157,.05); }
+
+.ai-block-day .ai-day-num {
+    color: #00ff9d;
+    font-size: 12px;
+    min-width: 32px;
+    margin-top: 1px;
+}
+
+.ai-block-day .ai-day-label {
+    color: #00cfff;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.ai-block-day .ai-day-text {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    color: #c8ffe8;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* quote */
+.ai-block-quote {
+    border: 1px solid rgba(0,255,157,.3);
+    background: rgba(0,255,157,.04);
+    padding: 16px 18px;
+    margin: 22px 0;
+    box-shadow: 0 0 20px rgba(0,255,157,.08);
+    border-radius: 2px;
+}
+
+.ai-block-quote p {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px;
+    color: #00ff9d;
+    font-style: italic;
+    line-height: 1.75;
+    margin-bottom: 8px;
+}
+
+.ai-block-quote .ai-ref {
+    font-size: 10px;
+    color: #445;
+    letter-spacing: 2px;
+}
+
+/* key points */
+.ai-block-key {
+    margin-bottom: 11px;
+    font-size: 13px;
+}
+
+.ai-block-key .ai-kn {
+    color: #ff2d78;
+}
+
+.ai-block-key .ai-kl {
+    color: #00cfff;
+    font-weight: 700;
+}
+
+.ai-block-key .ai-kt {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    color: #b0e8d0;
+    line-height: 1.8;
+}
+
+/* generic text block */
+.ai-block-text {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px;
+    line-height: 1.85;
+    color: #c8ffe8;
+    margin-bottom: 14px;
+    padding-left: 10px;
+}
+
+/* streaming cursor */
+.ai-stream-cursor {
+    font-size: 14px;
+    color: #00ff9d;
+    margin-top: 12px;
+    display: none;
+}
+
+.ai-stream-cursor.active {
+    display: block;
+}
+
+.ai-stream-cursor span {
+    animation: aiBlink .5s step-end infinite;
+}
+
+/* ── ERROR STATE ── */
+.ai-terminal-error {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.ai-terminal-error-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.ai-terminal-error-text {
+    color: #ff2d78;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes aiFadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes aiBlink { 50% { opacity: 0; } }

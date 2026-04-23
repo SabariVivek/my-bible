@@ -3932,6 +3932,11 @@ function displayChapter() {
     if (typeof initializeChapterSummaryPullout === 'function') {
         initializeChapterSummaryPullout(bibleBooks[currentBook].name, String(currentChapter));
     }
+
+    // Initialize AI Summary button (only if AI summary exists for this chapter)
+    if (typeof initializeAISummaryButton === 'function') {
+        initializeAISummaryButton(bibleBooks[currentBook].name, currentChapter);
+    }
 }
 
 // Display book introduction
