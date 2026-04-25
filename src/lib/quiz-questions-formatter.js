@@ -102,9 +102,14 @@ async function initializeQuizQuestions() {
 
         // Organize questions by book and chapter
         // Normalize book key to lowercase-hyphenated to match UI lookups
+        // Map Supabase book name aliases to the UI-expected key
+        const bookAliases = {
+            'song-of-songs': 'song-of-solomon'
+        };
         const quizData = {};
         allData.forEach(question => {
-            const bookKey = question.book.toLowerCase().replace(/\s+/g, '-');
+            let bookKey = question.book.toLowerCase().replace(/\s+/g, '-');
+            bookKey = bookAliases[bookKey] || bookKey;
             if (!quizData[bookKey]) {
                 quizData[bookKey] = {};
             }
