@@ -321,8 +321,8 @@
     <!-- Supabase Client Library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.26.0/dist/umd/supabase.min.js"></script>
     <script src="lib/supabase-bible-reading.js?v=20251126003722"></script>
-    <script src="lib/supabase-quiz.js?v=20251126003722"></script>
-    <script src="lib/quiz-questions-formatter.js?v=20251126003722"></script>
+    <script src="lib/supabase-quiz.js?v=20260425"></script>
+    <script src="lib/quiz-questions-formatter.js?v=20260425b"></script>
     <link rel="stylesheet" href="lib/quiz-mobile.css?v=20260420">
     <script src="lib/quiz-mobile.js?v=20260420d"></script>
     <link rel="stylesheet" href="lib/family-tab.css?v=20260420">
@@ -369,7 +369,8 @@
             if (typeof initializeQuizQuestions === 'function') {
                 initializeQuizQuestions().then(quizData => {
                     window.quizQuestions = quizData;
-                    console.log('Quiz questions loaded from Supabase');
+                    console.log('Quiz questions loaded from Supabase:', Object.keys(quizData));
+                    console.log('Ruth available:', !!quizData['ruth'], 'Titus available:', !!quizData['titus']);
                 }).catch(error => {
                     console.warn('Failed to load quiz from Supabase, using local data:', error);
                     // Falls back to local window.quizQuestions already loaded

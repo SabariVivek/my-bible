@@ -70,29 +70,48 @@ async function initializeQuizQuestions() {
             return window.quizQuestions || {};
         }
 
-        // Fetch all quiz questions from Supabase
-        const { data, error } = await supabase
-            .from('quiz_questions')
-            .select('*')
-            .order('book', { ascending: true })
-            .order('chapter', { ascending: true })
-            .order('question_number', { ascending: true });
+        // Fetch all quiz questions from Supabase using pagination
+        // Supabase server caps results at 1000 rows regardless of .limit(),
+        // so we paginate to ensure all books are fetched
+        let allData = [];
+        let from = 0;
+        const pageSize = 1000;
+        while (true) {
+            const { data, error: pageError } = await supabase
+                .from('quiz_questions')
+                .select('*')
+                .order('book', { ascending: true })
+                .order('chapter', { ascending: true })
+                .order('question_number', { ascending: true })
+                .range(from, from + pageSize - 1);
 
-        if (error) {
-            console.error('Error loading quiz questions from Supabase:', error);
+            if (pageError) {
+                console.error('Error loading quiz questions from Supabase:', pageError);
+                return window.quizQuestions || {};
+            }
+            if (!data || data.length === 0) break;
+            allData = allData.concat(data);
+            if (data.length < pageSize) break;
+            from += pageSize;
+        }
+
+        if (allData.length === 0) {
+            console.warn('No quiz questions found in Supabase');
             return window.quizQuestions || {};
         }
 
         // Organize questions by book and chapter
+        // Normalize book key to lowercase-hyphenated to match UI lookups
         const quizData = {};
-        data.forEach(question => {
-            if (!quizData[question.book]) {
-                quizData[question.book] = {};
+        allData.forEach(question => {
+            const bookKey = question.book.toLowerCase().replace(/\s+/g, '-');
+            if (!quizData[bookKey]) {
+                quizData[bookKey] = {};
             }
-            if (!quizData[question.book][question.chapter]) {
-                quizData[question.book][question.chapter] = { questions: [] };
+            if (!quizData[bookKey][question.chapter]) {
+                quizData[bookKey][question.chapter] = { questions: [] };
             }
-            quizData[question.book][question.chapter].questions.push(
+            quizData[bookKey][question.chapter].questions.push(
                 formatQuestionFromSupabase(question)
             );
         });
