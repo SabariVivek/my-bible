@@ -2,6 +2,80 @@
 // This file handles styling for quiz questions loaded from Supabase
 
 /**
+ * Normalize book name for database queries
+ * Handles variations like "1 Corinthians", "I Corinthians", "First Corinthians"
+ * @param {string} book - Book name to normalize
+ * @returns {string} Normalized book name
+ */
+function normalizeQuizBookName(book) {
+    if (!book) return '';
+    
+    // Lowercase and remove extra spaces
+    let normalized = book.toLowerCase().trim();
+    
+    // Convert number words to digits (if any)
+    normalized = normalized
+        .replace(/\bfirst\b/, '1')
+        .replace(/\bsecond\b/, '2')
+        .replace(/\bthird\b/, '3')
+        .replace(/\bi\b(?=\s+[a-z])/g, '1')  // Roman numeral I followed by space and letter
+        .replace(/\bii\b(?=\s+[a-z])/g, '2') // Roman numeral II followed by space and letter
+        .replace(/\biii\b(?=\s+[a-z])/g, '3'); // Roman numeral III followed by space and letter
+    
+    // Normalize spaces to hyphens
+    normalized = normalized.replace(/\s+/g, '-');
+    
+    return normalized;
+}
+
+/**
+ * Get all possible book name variations for database searching
+ * @param {string} book - Book name
+ * @returns {string[]} Array of possible book name formats
+ */
+function getBookNameVariations(book) {
+    const normalized = normalizeQuizBookName(book);
+    const variations = [];
+    
+    // Start with normalized version (1-corinthians)
+    variations.push(normalized);
+    
+    // Add space-separated lowercase (1 corinthians)
+    const spaceVersion = normalized.replace(/-/g, ' ');
+    variations.push(spaceVersion);
+    
+    // Add original lowercase (1 corinthians or I corinthians as-is)
+    variations.push(book.toLowerCase());
+    
+    // Add camelCase version if it starts with a number
+    if (/^\d/.test(book)) {
+        const num = book.match(/^\d+/)[0];
+        const rest = book.substring(num.length).trim();
+        variations.push(num + rest.charAt(0).toUpperCase() + rest.slice(1).toLowerCase());
+    }
+    
+    // Try without the number prefix if it exists
+    if (/^\d/.test(normalized)) {
+        const withoutNumber = normalized.replace(/^\d+[\s-]/, '');
+        if (withoutNumber !== normalized) {
+            variations.push(withoutNumber);
+            variations.push(withoutNumber.replace(/-/g, ' ')); // Also with spaces
+        }
+    }
+    
+    // Add original book format as-is (might be stored exactly as provided)
+    variations.push(book);
+    
+    // Try all lowercase for the full book name
+    const allLowerNoDash = book.toLowerCase().replace(/\s+/g, '');
+    if (!variations.includes(allLowerNoDash)) {
+        variations.push(allLowerNoDash);
+    }
+    
+    return [...new Set(variations)]; // Remove duplicates
+}
+
+/**
  * Apply styling to question number badge
  * @param {number} questionNumber - The question number (1-10)
  * @returns {string} Styled HTML span element
@@ -32,28 +106,112 @@ function formatQuestionFromSupabase(rawQuestion) {
 
 /**
  * Load quiz questions from Supabase for a specific book and chapter
- * @param {string} book - Book name (e.g., 'matthew')
+ * @param {string} book - Book name (e.g., 'matthew' or '1 Corinthians')
  * @param {number} chapter - Chapter number
  * @returns {Promise<Array>} Array of formatted question objects
  */
 async function loadQuizQuestionsFromSupabase(book, chapter) {
     try {
-        const { data, error } = await supabase
+        // DB stores book names in lowercase-hyphenated format (e.g., "song-of-songs", "1-corinthians", "matthew")
+        const dbBookName = normalizeQuizBookName(book);
+        
+        // Known aliases: UI key → DB key (when the name differs, not just format)
+        const dbAliases = {
+            'song-of-solomon': 'song-of-songs',
+        };
+        const dbAlias = dbAliases[dbBookName];
+        
+        // Query 1: Try the normalized hyphenated form (matches DB format directly)
+        let { data, error } = await supabase
             .from('quiz_questions')
             .select('*')
-            .eq('book', book)
+            .eq('book', dbBookName)
             .eq('chapter', chapter)
             .order('question_number', { ascending: true });
 
+        // Query 2: If there's a known alias, try that
+        if ((!data || data.length === 0) && dbAlias) {
+            const { data: aliasData, error: aliasError } = await supabase
+                .from('quiz_questions')
+                .select('*')
+                .eq('book', dbAlias)
+                .eq('chapter', chapter)
+                .order('question_number', { ascending: true });
+            
+            if (aliasData?.length > 0) {
+                data = aliasData;
+                error = null;
+            }
+        }
+
+        // Query 3: Fallback - try original UI name with case-insensitive match
+        if ((!data || data.length === 0) && book !== dbBookName) {
+            const { data: origData, error: origError } = await supabase
+                .from('quiz_questions')
+                .select('*')
+                .ilike('book', book)
+                .eq('chapter', chapter)
+                .order('question_number', { ascending: true });
+            
+            if (origData?.length > 0) {
+                data = origData;
+                error = null;
+            }
+        }
+
         if (error) {
-            console.error('Error loading quiz questions from Supabase:', error);
+            console.error(`Error loading quiz questions for ${book} Chapter ${chapter}:`, error);
             return [];
         }
 
-        // Format questions with styling applied locally
+        if (!data || data.length === 0) {
+            return [];
+        }
+
         return data.map(formatQuestionFromSupabase);
     } catch (error) {
-        console.error('Error fetching quiz questions:', error);
+        console.error(`Error fetching quiz questions for ${book} Chapter ${chapter}:`, error);
+        return [];
+    }
+}
+
+/**
+ * Load and cache quiz questions for a specific chapter (lazy-loading version)
+ * Only loads the chapter when called, not all questions upfront
+ * @param {string} book - Book name (e.g., 'matthew' or '1 Corinthians')
+ * @param {number} chapter - Chapter number
+ * @returns {Promise<Array>} Array of formatted question objects
+ */
+async function loadChapterQuestionsLazy(book, chapter) {
+    try {
+        if (typeof supabase === 'undefined') {
+            return [];
+        }
+
+        // Use normalized book name for consistent cache keys
+        const bookKey = normalizeQuizBookName(book);
+        const chapterKey = String(chapter);
+        
+        // Check if already cached
+        if (window.quizQuestionsCache && window.quizQuestionsCache[bookKey] && window.quizQuestionsCache[bookKey][chapterKey]) {
+            return window.quizQuestionsCache[bookKey][chapterKey];
+        }
+
+        // Load from database
+        const questions = await loadQuizQuestionsFromSupabase(book, chapter);
+        
+        // Cache the results
+        if (!window.quizQuestionsCache) {
+            window.quizQuestionsCache = {};
+        }
+        if (!window.quizQuestionsCache[bookKey]) {
+            window.quizQuestionsCache[bookKey] = {};
+        }
+        window.quizQuestionsCache[bookKey][chapterKey] = questions;
+        
+        return questions;
+    } catch (error) {
+        console.error('Error in loadChapterQuestionsLazy:', error);
         return [];
     }
 }
@@ -134,6 +292,7 @@ if (typeof module !== 'undefined' && module.exports) {
         formatQuestionNumber,
         formatQuestionFromSupabase,
         loadQuizQuestionsFromSupabase,
+        loadChapterQuestionsLazy,
         initializeQuizQuestions
     };
 }

@@ -618,21 +618,21 @@ const MobileQuiz = (() => {
         // Build book cards
         let booksHtml = '';
         books.forEach(book => {
-            const bookKey = book.toLowerCase().replace(/\s+/g, '-');
+            // Use normalized book name (if available) to match cache keys
+            const bookKey = typeof normalizeQuizBookName === 'function'
+                ? normalizeQuizBookName(book)
+                : book.toLowerCase().replace(/\s+/g, '-');
             const chapterCount = chapterCounts[book] || 1;
             const chapters = Array.from({ length: chapterCount }, (_, i) => i + 1);
-            const hasAnyData = chapters.some(ch =>
-                quizQuestions && quizQuestions[bookKey] && quizQuestions[bookKey][String(ch)] && quizQuestions[bookKey][String(ch)].questions
-            );
+            // With lazy loading, all chapters are available by default
+            const hasAnyData = true;
 
             let chaptersHtml = '';
             chapters.forEach(ch => {
-                const hasData = quizQuestions && quizQuestions[bookKey] && quizQuestions[bookKey][String(ch)] && quizQuestions[bookKey][String(ch)].questions;
-                const totalQ = hasData ? quizQuestions[bookKey][String(ch)].questions.length : 0;
-
                 // Check completion across all dates
                 let isCompleted = false;
                 let score;
+                let totalQ = 0;
                 if (completedChapters) {
                     Object.keys(completedChapters).forEach(date => {
                         if (completedChapters[date]?.[currentUserId]?.[book]?.[ch]) {
@@ -643,14 +643,14 @@ const MobileQuiz = (() => {
                     });
                 }
 
-                const btnCls = isCompleted ? 'completed' : (hasData ? 'available' : 'disabled');
+                // For lazy loading, show all chapters as available (not disabled)
+                const btnCls = isCompleted ? 'completed' : 'available';
 
                 chaptersHtml += `
                     <div class="mq-ch-cell">
                         <button class="mq-ch-btn ${btnCls}"
                             data-book="${book}" data-ch="${ch}"
-                            data-completed="${isCompleted}" data-enabled="${!!hasData}"
-                            ${!hasData && !isCompleted ? 'disabled' : ''}>
+                            data-completed="${isCompleted}" data-enabled="true">
                             ${ch}
                         </button>
                         ${score !== undefined ? `<span class="mq-ch-score">${score}/${totalQ}</span>` : ''}
@@ -658,8 +658,7 @@ const MobileQuiz = (() => {
             });
 
             booksHtml += `
-                <div class="mq-book-card ${!hasAnyData ? 'disabled' : ''}">
-                    ${!hasAnyData ? '<img class="mq-coming-soon" src="../resources/images/coming-soon.png" alt="Coming Soon">' : ''}
+                <div class="mq-book-card">
                     <div class="mq-book-name">${book}</div>
                     <div class="mq-book-tamil">${tamilNames[book] || ''}</div>
                     <div class="mq-chapter-grid">
@@ -696,24 +695,39 @@ const MobileQuiz = (() => {
 
         // Bind chapter button clicks
         overlay.querySelectorAll('.mq-ch-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
+            btn.addEventListener('click', async function () {
                 const book = this.dataset.book;
                 const ch = this.dataset.ch;
                 const completed = this.dataset.completed === 'true';
                 const enabled = this.dataset.enabled === 'true';
+                
                 // Save scroll position before navigating away
                 const booksBody = document.getElementById('mqBooksBody');
                 if (booksBody) _gridScrollTop = booksBody.scrollTop;
 
                 if (completed) {
                     if (typeof loadQuizSummary === 'function') loadQuizSummary(ch, book);
-                } else if (enabled) {
-                    if (typeof state !== 'undefined') {
-                        state.selectedQuizBook = book;
-                        state.selectedQuizChapter = ch;
-                        window.history.pushState({ page: 'quiz', level: 'chapter' }, '', window.location.href);
+                } else if (enabled || true) { // Always allow, will load on-demand
+                    // Load questions for this chapter on-demand
+                    if (typeof loadChapterQuestionsLazy === 'function') {
+                        try {
+                            const questions = await loadChapterQuestionsLazy(book, ch);
+                            
+                            if (questions && questions.length > 0) {
+                                if (typeof state !== 'undefined') {
+                                    state.selectedQuizBook = book;
+                                    state.selectedQuizChapter = ch;
+                                    window.history.pushState({ page: 'quiz', level: 'chapter' }, '', window.location.href);
+                                }
+                                if (typeof render === 'function') render();
+                            } else {
+                                alert(`No quiz questions available for ${book} Chapter ${ch} yet. Questions may be coming soon!`);
+                            }
+                        } catch (error) {
+                            console.error('Error loading chapter questions:', error);
+                            alert('Error loading quiz questions. Please try again.');
+                        }
                     }
-                    if (typeof render === 'function') render();
                 }
             });
         });

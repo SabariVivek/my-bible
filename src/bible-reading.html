@@ -322,7 +322,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.26.0/dist/umd/supabase.min.js"></script>
     <script src="lib/supabase-bible-reading.js?v=20251126003722"></script>
     <script src="lib/supabase-quiz.js?v=20260425"></script>
-    <script src="lib/quiz-questions-formatter.js?v=20260425c"></script>
+    <script src="lib/quiz-questions-formatter.js?v=20260427i"></script>
     <link rel="stylesheet" href="lib/quiz-mobile.css?v=20260420">
     <script src="lib/quiz-mobile.js?v=20260420d"></script>
     <link rel="stylesheet" href="lib/family-tab.css?v=20260420">
@@ -365,17 +365,9 @@
                 }
             }, false);
 
-            // Initialize quiz questions from Supabase
-            if (typeof initializeQuizQuestions === 'function') {
-                initializeQuizQuestions().then(quizData => {
-                    window.quizQuestions = quizData;
-                    console.log('Quiz questions loaded from Supabase:', Object.keys(quizData));
-                    console.log('Ruth available:', !!quizData['ruth'], 'Titus available:', !!quizData['titus']);
-                }).catch(error => {
-                    console.warn('Failed to load quiz from Supabase, using local data:', error);
-                    // Falls back to local window.quizQuestions already loaded
-                });
-            }
+            // Initialize empty quiz questions cache (questions will load on-demand when chapter is clicked)
+            window.quizQuestions = {};
+            window.quizQuestionsCache = {}; // Cache to store loaded chapters
         });
     </script>
     <style>
@@ -3217,15 +3209,27 @@
                 // Set the selected chapter and book
                 state.selectedQuizChapter = chapter;
                 state.selectedQuizBook = book || state.selectedQuizBook;  // Use passed book or current selected book
-                const bookKey = state.selectedQuizBook.toLowerCase().replace(/\s+/g, '-');
+                // Use normalized book name for cache lookup
+                const bookKey = typeof normalizeQuizBookName === 'function' 
+                    ? normalizeQuizBookName(state.selectedQuizBook)
+                    : state.selectedQuizBook.toLowerCase().replace(/\s+/g, '-');
                 
-                // Get the questions for this chapter
-                if (!window.quizQuestions || !window.quizQuestions[bookKey] || !window.quizQuestions[bookKey][chapter]) {
-                    console.error('Questions not found for chapter', chapter);
-                    return;
+                // Get the questions for this chapter using lazy loading
+                let questions = null;
+                
+                // First check cache
+                if (window.quizQuestionsCache && window.quizQuestionsCache[bookKey] && window.quizQuestionsCache[bookKey][String(chapter)]) {
+                    questions = window.quizQuestionsCache[bookKey][String(chapter)];
+                } else if (typeof loadChapterQuestionsLazy === 'function') {
+                    // Load from database if not cached
+                    questions = await loadChapterQuestionsLazy(state.selectedQuizBook, chapter);
                 }
                 
-                const questions = window.quizQuestions[bookKey][chapter].questions;
+                if (!questions || questions.length === 0) {
+                    console.error('Questions not found for chapter', chapter);
+                    alert(`No quiz questions found for ${state.selectedQuizBook} Chapter ${chapter}`);
+                    return;
+                }
                 
                 // Fetch user answers from new quiz_chapter_results table
                 const { data: chapterResults, error } = await supabase
@@ -7039,11 +7043,17 @@
                     && state.selectedQuizChapter && state.selectedQuizBook 
                     && !state.quizSummaryData && state.dashboardTab === 'quiz') {
                     const chapter = state.selectedQuizChapter;
-                    const selectedBookKey = state.selectedQuizBook.toLowerCase().replace(/\s+/g, '-');
-                    if (window.quizQuestions && window.quizQuestions[selectedBookKey] && window.quizQuestions[selectedBookKey][String(chapter)]) {
-                        const chapterQuestions = window.quizQuestions[selectedBookKey][String(chapter)].questions;
+                    // Use normalized book name to access cache
+                    const selectedBookKey = typeof normalizeQuizBookName === 'function' 
+                        ? normalizeQuizBookName(state.selectedQuizBook)
+                        : state.selectedQuizBook.toLowerCase().replace(/\s+/g, '-');
+                    
+                    // Check if questions are cached (loaded via lazy loading)
+                    const cachedQuestions = window.quizQuestionsCache && window.quizQuestionsCache[selectedBookKey] && window.quizQuestionsCache[selectedBookKey][String(chapter)];
+                    
+                    if (cachedQuestions && cachedQuestions.length > 0) {
                         const quizQuestionList = [];
-                        chapterQuestions.forEach((q, idx) => {
+                        cachedQuestions.forEach((q, idx) => {
                             quizQuestionList.push({
                                 ...q,
                                 id: `ch${chapter}-${idx}`,
@@ -7055,6 +7065,8 @@
                             const dateKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
                             MobileQuiz.launch(quizQuestionList, state.selectedQuizBook, chapter, dateKey, state.darkMode, tamilNames[state.selectedQuizBook]);
                         }
+                    } else {
+                        console.warn('Quiz questions not loaded for', state.selectedQuizBook, 'Chapter', chapter);
                     }
                 } else if (typeof MobileQuiz !== 'undefined'
                     && state.quizSummaryData && state.dashboardTab === 'quiz') {
@@ -7075,7 +7087,7 @@
                         completedChapters: state.completedQuizChapters,
                         chapterScores: state.chapterScores,
                         currentUserId: state.currentUser ? state.currentUser.id : null,
-                        quizQuestions: window.quizQuestions,
+                        quizQuestions: {}, // Pass empty object since questions are now lazy-loaded on chapter click
                         testamentTab: tab
                     }, state.darkMode);
                 } else if (typeof MobileQuiz !== 'undefined'
