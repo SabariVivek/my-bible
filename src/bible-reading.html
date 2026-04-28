@@ -2990,7 +2990,7 @@
                 if (!state.chapterScores[dateKey][state.currentUser.id][bookName]) {
                     state.chapterScores[dateKey][state.currentUser.id][bookName] = {};
                 }
-                state.chapterScores[dateKey][state.currentUser.id][bookName][chapter] = score;
+                state.chapterScores[dateKey][state.currentUser.id][bookName][chapter] = { score: score, total: questions.length };
 
                 // Store in state
                 state.quizSubmitted[dateKey] = {
@@ -3023,20 +3023,12 @@
                             Object.keys(userChapters).forEach(book => {
                                 // Iterate through all chapters in each book
                                 Object.keys(userChapters[book]).forEach(chapter => {
-                                    totalScore += userChapters[book][chapter] || 0;
-                                });
-                            });
-                        }
-                        
-                        // Also count total questions from completed chapters
-                        if (state.completedQuizChapters[dateKey] && state.completedQuizChapters[dateKey][user.id]) {
-                            const userCompletedChapters = state.completedQuizChapters[dateKey][user.id];
-                            // Count the number of completed chapters
-                            Object.keys(userCompletedChapters).forEach(book => {
-                                Object.keys(userCompletedChapters[book]).forEach(chapter => {
-                                    if (userCompletedChapters[book][chapter]) {
-                                        // Estimate 10 questions per chapter (standard)
-                                        totalQuestions += 10;
+                                    const val = userChapters[book][chapter];
+                                    if (val && typeof val === 'object') {
+                                        totalScore += val.score || 0;
+                                        totalQuestions += val.total || 0;
+                                    } else {
+                                        totalScore += val || 0;
                                     }
                                 });
                             });
@@ -3191,9 +3183,9 @@
                         }
                         
                         state.completedQuizChapters[dateKey][user.id][bookName][chapterNum] = true;
-                        state.chapterScores[dateKey][user.id][bookName][chapterNum] = result.score;
+                        state.chapterScores[dateKey][user.id][bookName][chapterNum] = { score: result.score, total: result.total_questions || 0 };
                     });
-                    
+
                     console.log('Quiz progress loaded for user', user.id, 'on', dateKey);
                 }
             } catch (error) {
@@ -3995,7 +3987,7 @@
                         
                         // Mark chapter as completed and store score
                         state.completedQuizChapters[dateKey][userId][bookName][chapterNum] = true;
-                        state.chapterScores[dateKey][userId][bookName][chapterNum] = record.score;
+                        state.chapterScores[dateKey][userId][bookName][chapterNum] = { score: record.score, total: record.total_questions || 0 };
                     });
 
                     console.log('Quiz chapters loaded from new table');
@@ -5487,7 +5479,7 @@
                                                                                 >
                                                                                     ${ch}
                                                                                 </button>
-                                                                                ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore}/${totalQuestions}</span>` : ''}
+                                                                                ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore.score !== undefined ? chapterScore.score : chapterScore}/${chapterScore.total !== undefined ? chapterScore.total : totalQuestions}</span>` : ''}
                                                                             </div>
                                                                         `;
                                                                     }).join('')}

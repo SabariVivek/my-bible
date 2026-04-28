@@ -631,17 +631,19 @@ const MobileQuiz = (() => {
             chapters.forEach(ch => {
                 // Check completion across all dates
                 let isCompleted = false;
-                let score;
-                let totalQ = 0;
+                let scoreData;
                 if (completedChapters) {
                     Object.keys(completedChapters).forEach(date => {
                         if (completedChapters[date]?.[currentUserId]?.[book]?.[ch]) {
                             isCompleted = true;
                             const s = chapterScores?.[date]?.[currentUserId]?.[book]?.[ch];
-                            if (s !== undefined) score = s;
+                            if (s !== undefined) scoreData = s;
                         }
                     });
                 }
+
+                const displayScore = scoreData !== undefined ? (scoreData.score !== undefined ? scoreData.score : scoreData) : undefined;
+                const displayTotal = scoreData !== undefined ? (scoreData.total !== undefined ? scoreData.total : 0) : 0;
 
                 // For lazy loading, show all chapters as available (not disabled)
                 const btnCls = isCompleted ? 'completed' : 'available';
@@ -653,7 +655,7 @@ const MobileQuiz = (() => {
                             data-completed="${isCompleted}" data-enabled="true">
                             ${ch}
                         </button>
-                        ${score !== undefined ? `<span class="mq-ch-score">${score}/${totalQ}</span>` : ''}
+                        ${displayScore !== undefined ? `<span class="mq-ch-score">${displayScore}/${displayTotal}</span>` : ''}
                     </div>`;
             });
 
