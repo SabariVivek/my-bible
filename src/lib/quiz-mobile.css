@@ -1001,30 +1001,31 @@ body.mobile-quiz-active #quizContent {
     flex: 1;
     overflow: hidden;
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
 .mq-swipe-track {
     display: flex;
+    width: 200%;
     height: 100%;
-    width: 100%;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
 }
 
 .mq-swipe-track.no-transition {
     transition: none;
+    will-change: auto;
 }
 
 .mq-tab-content {
-    flex: 0 0 100%;
-    width: 100%;
+    width: 50%;
+    height: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     padding: 14px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-sizing: border-box;
 }
 
 /* Scrollable books body — when NOT in swipe context */

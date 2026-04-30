@@ -603,7 +603,7 @@ const MobileQuiz = (() => {
         'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel',
         '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra',
         'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs',
-        'Ecclesiastes', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel',
+        'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel',
         'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah',
         'Jonah', 'Micah', 'Nahum', 'Habakkuk', 'Zephaniah',
         'Haggai', 'Zechariah', 'Malachi'
@@ -765,10 +765,10 @@ const MobileQuiz = (() => {
             </div>
             <div class="mq-swipe-outer" id="mqSwipeOuter">
                 <div class="mq-swipe-track" id="mqSwipeTrack">
-                    <div class="mq-books-body mq-tab-content" data-tab="OT">
+                    <div class="mq-tab-content" data-tab="OT">
                         ${otBooksHtml}
                     </div>
-                    <div class="mq-books-body mq-tab-content" data-tab="NT">
+                    <div class="mq-tab-content" data-tab="NT">
                         ${ntBooksHtml}
                     </div>
                 </div>
@@ -849,7 +849,7 @@ const MobileQuiz = (() => {
         _gridCurrentTab = tabIndex;
         const track = _overlayEl.querySelector('#mqSwipeTrack');
         if (track) {
-            track.style.transform = `translateX(-${tabIndex * 100}%)`;
+            track.style.transform = `translateX(-${tabIndex * 50}%)`;
         }
         
         // Update button states
@@ -903,26 +903,12 @@ const MobileQuiz = (() => {
             dx = cx - startX;
 
             // Calculate track position
-            // Each tab is 100% width, so tab 0 is at 0%, tab 1 at -100%
-            const basePercent = _gridCurrentTab * 100;
-            const dragPercent = (dx / W()) * 100;
+            // Track is 200% width (2 tabs at 50% each)
+            const base = _gridCurrentTab * W();
+            const raw = base - dx;
+            let clamped = raw < 0 ? raw * 0.25 : raw > W() ? W() + (raw - W()) * 0.25 : raw;
             
-            // Apply rubber band effect at boundaries
-            let translationPercent = basePercent - dragPercent;
-            
-            // Clamp with rubber-band at boundaries
-            const maxRight = 0; // Can't scroll right of tab 0
-            const maxLeft = 100; // Can't scroll left of tab 1 (for 2 tabs)
-            
-            if (translationPercent > maxRight) {
-                // Dragging right past tab 0 - rubber band
-                translationPercent = maxRight + (translationPercent - maxRight) * 0.25;
-            } else if (translationPercent < -maxLeft) {
-                // Dragging left past tab 1 - rubber band
-                translationPercent = -maxLeft + (translationPercent + maxLeft) * 0.25;
-            }
-            
-            track.style.transform = `translateX(-${translationPercent}%)`;
+            track.style.transform = `translateX(${(-clamped / (W() * 2) * 100)}%)`;
         }, { passive: false });
 
         outer.addEventListener('touchend', function () {
