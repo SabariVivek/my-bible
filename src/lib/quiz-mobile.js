@@ -595,6 +595,73 @@ const MobileQuiz = (() => {
        ------------------------------------------------ */
     let _gridActive = false;
 
+    let _gridCurrentTab = 0; // 0 = OT, 1 = NT
+
+    // Complete list of Old Testament books (39 books)
+    const _otBooks = [
+        'Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy',
+        'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel',
+        '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra',
+        'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs',
+        'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel',
+        'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah',
+        'Jonah', 'Micah', 'Nahum', 'Habakkuk', 'Zephaniah',
+        'Haggai', 'Zechariah', 'Malachi'
+    ];
+    
+    // Complete list of New Testament books (27 books)
+    const _ntBooks = [
+        'Matthew', 'Mark', 'Luke', 'John', 'Acts',
+        'Romans', '1 Corinthians', '2 Corinthians', 'Galatians', 'Ephesians',
+        'Philippians', 'Colossians', '1 Thessalonians', '2 Thessalonians', '1 Timothy',
+        '2 Timothy', 'Titus', 'Philemon', 'Hebrews', 'James',
+        '1 Peter', '2 Peter', '1 John', '2 John', '3 John',
+        'Jude', 'Revelation'
+    ];
+
+    function _isOldTestament(bookName) {
+        // Normalize for comparison (handle variations in naming)
+        const normalized = bookName.trim().toLowerCase().replace(/\s+/g, ' ');
+        
+        // Check direct match first in OT list
+        if (_otBooks.some(b => b.toLowerCase() === normalized)) {
+            return true;
+        }
+        // Check if it's in NT list
+        if (_ntBooks.some(b => b.toLowerCase() === normalized)) {
+            return false;
+        }
+        
+        // Check partial matches for books with numbers (e.g., "1Sam" -> "1 Samuel")
+        const normalizedOT = _otBooks.map(b => b.toLowerCase());
+        for (let otBook of normalizedOT) {
+            const patterns = [
+                otBook.replace(/\s+/g, ''),           // no spaces
+                otBook.replace(/\s+/g, ' '),          // normalize spaces
+                otBook.replace(/\b(\d)\s+/g, '$1'),   // "1 Samuel" -> "1Samuel"
+            ];
+            if (patterns.includes(normalized)) {
+                return true;
+            }
+        }
+        
+        const normalizedNT = _ntBooks.map(b => b.toLowerCase());
+        for (let ntBook of normalizedNT) {
+            const patterns = [
+                ntBook.replace(/\s+/g, ''),
+                ntBook.replace(/\s+/g, ' '),
+                ntBook.replace(/\b(\d)\s+/g, '$1'),
+            ];
+            if (patterns.includes(normalized)) {
+                return false;
+            }
+        }
+        
+        // Fallback: Unknown book - log it and treat as NT
+        console.warn(`Unknown book: "${bookName}" - treating as NT`);
+        return false;
+    }
+
     function launchGrid(gridData, isDarkMode) {
         if (!gridData) return false;
         if (_gridActive && _overlayEl) return true; // already showing
@@ -609,65 +676,84 @@ const MobileQuiz = (() => {
         const { books, tamilNames, chapterCounts, completedChapters, chapterScores, currentUserId, quizQuestions, testamentTab } = gridData;
         const theme = isDarkMode ? 'dark-mode' : 'light-mode';
 
+        // Set initial tab based on testamentTab
+        _gridCurrentTab = testamentTab === 'OT' ? 0 : 1;
+
         document.body.classList.add('mobile-quiz-active');
 
         const overlay = document.createElement('div');
         overlay.className = `mobile-quiz-overlay ${theme}`;
         overlay.id = 'mobileQuizOverlay';
 
-        // Build book cards
-        let booksHtml = '';
+        // Separate books into OT and NT
+        const otBooks = [];
+        const ntBooks = [];
         books.forEach(book => {
-            // Use normalized book name (if available) to match cache keys
-            const bookKey = typeof normalizeQuizBookName === 'function'
-                ? normalizeQuizBookName(book)
-                : book.toLowerCase().replace(/\s+/g, '-');
-            const chapterCount = chapterCounts[book] || 1;
-            const chapters = Array.from({ length: chapterCount }, (_, i) => i + 1);
-            // With lazy loading, all chapters are available by default
-            const hasAnyData = true;
+            if (_isOldTestament(book)) {
+                otBooks.push(book);
+            } else {
+                ntBooks.push(book);
+            }
+        });
 
-            let chaptersHtml = '';
-            chapters.forEach(ch => {
-                // Check completion across all dates
-                let isCompleted = false;
-                let scoreData;
-                if (completedChapters) {
-                    Object.keys(completedChapters).forEach(date => {
-                        if (completedChapters[date]?.[currentUserId]?.[book]?.[ch]) {
-                            isCompleted = true;
-                            const s = chapterScores?.[date]?.[currentUserId]?.[book]?.[ch];
-                            if (s !== undefined) scoreData = s;
-                        }
-                    });
-                }
+        // Helper function to build book cards HTML
+        function buildBooksHtml(bookList) {
+            if (!bookList || bookList.length === 0) {
+                return `<div style="padding:20px; text-align:center; color:#999; font-size:14px;">No books available in this section</div>`;
+            }
+            
+            let html = '';
+            bookList.forEach(book => {
+                const chapterCount = chapterCounts[book] || 1;
+                const chapters = Array.from({ length: chapterCount }, (_, i) => i + 1);
 
-                const displayScore = scoreData !== undefined ? (scoreData.score !== undefined ? scoreData.score : scoreData) : undefined;
-                const displayTotal = scoreData !== undefined ? (scoreData.total !== undefined ? scoreData.total : 0) : 0;
+                let chaptersHtml = '';
+                chapters.forEach(ch => {
+                    let isCompleted = false;
+                    let scoreData;
+                    if (completedChapters) {
+                        Object.keys(completedChapters).forEach(date => {
+                            if (completedChapters[date]?.[currentUserId]?.[book]?.[ch]) {
+                                isCompleted = true;
+                                const s = chapterScores?.[date]?.[currentUserId]?.[book]?.[ch];
+                                if (s !== undefined) scoreData = s;
+                            }
+                        });
+                    }
 
-                // For lazy loading, show all chapters as available (not disabled)
-                const btnCls = isCompleted ? 'completed' : 'available';
+                    const displayScore = scoreData !== undefined ? (scoreData.score !== undefined ? scoreData.score : scoreData) : undefined;
+                    const displayTotal = scoreData !== undefined ? (scoreData.total !== undefined ? scoreData.total : 0) : 0;
+                    const btnCls = isCompleted ? 'completed' : 'available';
 
-                chaptersHtml += `
-                    <div class="mq-ch-cell">
-                        <button class="mq-ch-btn ${btnCls}"
-                            data-book="${book}" data-ch="${ch}"
-                            data-completed="${isCompleted}" data-enabled="true">
-                            ${ch}
-                        </button>
-                        ${displayScore !== undefined ? `<span class="mq-ch-score">${displayScore}/${displayTotal}</span>` : ''}
+                    chaptersHtml += `
+                        <div class="mq-ch-cell">
+                            <button class="mq-ch-btn ${btnCls}"
+                                data-book="${book}" data-ch="${ch}"
+                                data-completed="${isCompleted}" data-enabled="true">
+                                ${ch}
+                            </button>
+                            ${displayScore !== undefined ? `<span class="mq-ch-score">${displayScore}/${displayTotal}</span>` : ''}
+                        </div>`;
+                });
+
+                html += `
+                    <div class="mq-book-card">
+                        <div class="mq-book-name">${book}</div>
+                        <div class="mq-book-tamil">${tamilNames[book] || ''}</div>
+                        <div class="mq-chapter-grid">
+                            ${chaptersHtml}
+                        </div>
                     </div>`;
             });
+            return html;
+        }
 
-            booksHtml += `
-                <div class="mq-book-card">
-                    <div class="mq-book-name">${book}</div>
-                    <div class="mq-book-tamil">${tamilNames[book] || ''}</div>
-                    <div class="mq-chapter-grid">
-                        ${chaptersHtml}
-                    </div>
-                </div>`;
-        });
+        const otBooksHtml = buildBooksHtml(otBooks);
+        const ntBooksHtml = buildBooksHtml(ntBooks);
+        
+        // Debug: log book counts
+        console.log('OT Books:', otBooks.length, otBooks);
+        console.log('NT Books:', ntBooks.length, ntBooks);
 
         overlay.innerHTML = `
             <div class="mq-header">
@@ -677,8 +763,15 @@ const MobileQuiz = (() => {
                     <div class="mq-header-sub">${testamentTab === 'OT' ? 'Old Testament' : 'New Testament'}</div>
                 </div>
             </div>
-            <div class="mq-books-body" id="mqBooksBody">
-                ${booksHtml}
+            <div class="mq-swipe-outer" id="mqSwipeOuter">
+                <div class="mq-swipe-track" id="mqSwipeTrack">
+                    <div class="mq-tab-content" data-tab="OT">
+                        ${otBooksHtml}
+                    </div>
+                    <div class="mq-tab-content" data-tab="NT">
+                        ${ntBooksHtml}
+                    </div>
+                </div>
             </div>
             <div class="mq-testament-footer">
                 <button class="mq-tab-btn ${testamentTab === 'OT' ? 'active' : ''}" id="mqTabOT">பழைய ஏற்பாடு</button>
@@ -689,12 +782,6 @@ const MobileQuiz = (() => {
         document.body.appendChild(overlay);
         _overlayEl = overlay;
 
-        // Restore scroll position
-        const booksBody = overlay.querySelector('#mqBooksBody');
-        if (booksBody && _gridScrollTop > 0) {
-            requestAnimationFrame(() => { booksBody.scrollTop = _gridScrollTop; });
-        }
-
         // Bind chapter button clicks
         overlay.querySelectorAll('.mq-ch-btn').forEach(btn => {
             btn.addEventListener('click', async function () {
@@ -702,15 +789,10 @@ const MobileQuiz = (() => {
                 const ch = this.dataset.ch;
                 const completed = this.dataset.completed === 'true';
                 const enabled = this.dataset.enabled === 'true';
-                
-                // Save scroll position before navigating away
-                const booksBody = document.getElementById('mqBooksBody');
-                if (booksBody) _gridScrollTop = booksBody.scrollTop;
 
                 if (completed) {
                     if (typeof loadQuizSummary === 'function') loadQuizSummary(ch, book);
-                } else if (enabled || true) { // Always allow, will load on-demand
-                    // Load questions for this chapter on-demand
+                } else if (enabled || true) {
                     if (typeof loadChapterQuestionsLazy === 'function') {
                         try {
                             const questions = await loadChapterQuestionsLazy(book, ch);
@@ -737,13 +819,11 @@ const MobileQuiz = (() => {
         // Testament tab clicks
         overlay.querySelector('#mqTabOT').addEventListener('click', () => {
             if (typeof state !== 'undefined') state.quizTestamentTab = 'OT';
-            _gridActive = false;
-            if (typeof render === 'function') render();
+            _switchGridTab(0);
         });
         overlay.querySelector('#mqTabNT').addEventListener('click', () => {
             if (typeof state !== 'undefined') state.quizTestamentTab = 'NT';
-            _gridActive = false;
-            if (typeof render === 'function') render();
+            _switchGridTab(1);
         });
 
         // Exit button
@@ -755,7 +835,96 @@ const MobileQuiz = (() => {
             if (typeof render === 'function') render();
         });
 
+        // Initialize swipe gestures
+        _initGridSwipe();
+        
+        // Set initial tab state (buttons, header, transform)
+        _switchGridTab(_gridCurrentTab);
+
         return true;
+    }
+
+    function _switchGridTab(tabIndex) {
+        if (!_overlayEl) return;
+        _gridCurrentTab = tabIndex;
+        const track = _overlayEl.querySelector('#mqSwipeTrack');
+        if (track) {
+            track.style.transform = `translateX(-${tabIndex * 50}%)`;
+        }
+        
+        // Update button states
+        const tabOT = _overlayEl.querySelector('#mqTabOT');
+        const tabNT = _overlayEl.querySelector('#mqTabNT');
+        if (tabOT) tabOT.classList.toggle('active', tabIndex === 0);
+        if (tabNT) tabNT.classList.toggle('active', tabIndex === 1);
+
+        // Update header sub-title
+        const headerSub = _overlayEl.querySelector('.mq-header-sub');
+        if (headerSub) {
+            headerSub.textContent = tabIndex === 0 ? 'Old Testament' : 'New Testament';
+        }
+    }
+
+    function _initGridSwipe() {
+        if (!_overlayEl) return;
+        const outer = _overlayEl.querySelector('#mqSwipeOuter');
+        const track = _overlayEl.querySelector('#mqSwipeTrack');
+        if (!outer || !track) return;
+
+        let startX = 0, startY = 0, dx = 0;
+        let swiping = false, lockAxis = null;
+
+        function W() { return outer.offsetWidth; }
+
+        outer.addEventListener('touchstart', function (e) {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            dx = 0;
+            lockAxis = null;
+            swiping = false;
+            track.classList.add('no-transition');
+        }, { passive: true });
+
+        outer.addEventListener('touchmove', function (e) {
+            const cx = e.touches[0].clientX;
+            const cy = e.touches[0].clientY;
+            const adx = Math.abs(cx - startX);
+            const ady = Math.abs(cy - startY);
+            
+            if (!lockAxis) {
+                if (adx < 6 && ady < 6) return;
+                lockAxis = adx >= ady ? 'x' : 'y';
+            }
+            
+            if (lockAxis === 'y') return;
+            
+            e.preventDefault();
+            swiping = true;
+            dx = cx - startX;
+
+            // Calculate track position
+            // Track is 200% width (2 tabs at 50% each)
+            const base = _gridCurrentTab * W();
+            const raw = base - dx;
+            let clamped = raw < 0 ? raw * 0.25 : raw > W() ? W() + (raw - W()) * 0.25 : raw;
+            
+            track.style.transform = `translateX(${(-clamped / (W() * 2) * 100)}%)`;
+        }, { passive: false });
+
+        outer.addEventListener('touchend', function () {
+            track.classList.remove('no-transition');
+            if (!swiping) return;
+
+            const threshold = W() * 0.25;
+
+            if (dx < -threshold && _gridCurrentTab === 0) {
+                _switchGridTab(1); // OT → NT
+            } else if (dx > threshold && _gridCurrentTab === 1) {
+                _switchGridTab(0); // NT → OT
+            } else {
+                _switchGridTab(_gridCurrentTab); // Stay on current tab
+            }
+        });
     }
 
     return { isMobile, launch, destroy, launchSummary, launchGrid };

@@ -12,6 +12,8 @@
     flex-direction: column;
     overflow: hidden;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    height: 100vh;
+    max-height: 100vh;
 }
 
 .mobile-quiz-overlay.light-mode {
@@ -994,11 +996,40 @@ body.mobile-quiz-active #quizContent {
    Chapter Grid — Book/chapter selection
    ============================================ */
 
-/* Scrollable books body */
-.mq-books-body {
+/* Swipe container for testament tabs */
+.mq-swipe-outer {
     flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.mq-swipe-track {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.mq-swipe-track.no-transition {
+    transition: none;
+    will-change: auto;
+}
+
+.mq-tab-content {
+    width: 50%;
+    height: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+/* Scrollable books body — when NOT in swipe context */
+.mq-books-body {
     padding: 14px;
     display: flex;
     flex-direction: column;
@@ -1191,7 +1222,8 @@ body.mobile-quiz-active #quizContent {
 
 /* Center content on wide screens */
 .mq-chat-body,
-.mq-books-body {
+.mq-books-body,
+.mq-tab-content {
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
