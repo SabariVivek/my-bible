@@ -3546,6 +3546,55 @@ function loadVerseImages(bookName, chapterNum, contentArea) {
     });
 }
 
+// Generate king transition card HTML for a verse
+function getKingTransitionCardHTML(bookName, chapter, verseNum) {
+    if (typeof getKingTransitionCard !== 'function') return '';
+    const king = getKingTransitionCard(bookName, chapter, verseNum);
+    if (!king) return '';
+    const isJudah = king.kingdom === 'Judah';
+    const kingdomClass = isJudah ? 'judah' : 'israel';
+    const icon = isJudah ? '🦁' : '⚡';
+    const cardId = `ktc-${king.id}-${chapter}-${verseNum}`;
+    return `<div class="king-transition-card ${kingdomClass}" data-ktc-id="${cardId}">
+        <div class="king-transition-pill-row" onclick="toggleKingCard('${cardId}')">
+            <div class="ktc-line"></div>
+            <div class="king-transition-pill">
+                <span class="ktc-icon">${icon}</span>
+                <span class="ktc-name">${king.name}</span>
+                <span class="ktc-divider"></span>
+                <span class="ktc-kingdom">${king.kingdom}</span>
+                <span class="ktc-arrow" id="arrow-${cardId}">▾</span>
+            </div>
+            <div class="ktc-line"></div>
+        </div>
+        <div class="king-transition-expanded" id="expanded-${cardId}">
+            <div class="ktc-header">
+                <span class="ktc-king-name">${king.name}</span>
+                <span class="ktc-succeeds">Succeeds ${king.prevKing}</span>
+            </div>
+            <p class="ktc-context">${king.context}</p>
+            <p class="ktc-note">${king.note}</p>
+            <div class="ktc-footer">
+                <span class="ktc-kingdom-badge">${king.kingdom}</span>
+                <span class="ktc-year">${king.year}</span>
+                <span class="ktc-reign">· ${king.reignYears}</span>
+            </div>
+        </div>
+    </div>`;
+}
+
+// Toggle king transition card expanded state
+function toggleKingCard(cardId) {
+    const expanded = document.getElementById('expanded-' + cardId);
+    const arrow = document.getElementById('arrow-' + cardId);
+    if (expanded) {
+        expanded.classList.toggle('visible');
+    }
+    if (arrow) {
+        arrow.classList.toggle('open');
+    }
+}
+
 // Display chapter content
 function displayChapter() {
     const contentArea = document.querySelector('.scripture-text');
@@ -3624,6 +3673,9 @@ function displayChapter() {
                 }
             }
 
+            // Check for king transition card (after verse header)
+            html += getKingTransitionCardHTML(bookName, currentChapter, verseNum);
+
             let tamilText = tamilChapterData ? tamilChapterData[verseKey] : '';
             let englishText = chapterData[verseKey];
             // Apply highlighting
@@ -3682,6 +3734,9 @@ function displayChapter() {
                     html += `<div class="verse-header">${header}</div>`;
                 }
             }
+
+            // Check for king transition card (after verse header)
+            html += getKingTransitionCardHTML(bookName, currentChapter, verseNum);
 
             let verseText = chapterData[verseKey];
             // Apply highlighting based on current language
