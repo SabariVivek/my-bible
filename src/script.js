@@ -3549,12 +3549,21 @@ function loadVerseImages(bookName, chapterNum, contentArea) {
 // Generate king transition card HTML for a verse
 function getKingTransitionCardHTML(bookName, chapter, verseNum) {
     if (typeof getKingTransitionCard !== 'function') return '';
-    const king = getKingTransitionCard(bookName, chapter, verseNum);
+    const king = getKingTransitionCard(bookName, chapter, verseNum, currentLanguage);
     if (!king) return '';
-    const isJudah = king.kingdom === 'Judah';
+    const isJudah = king.kingdom === 'Judah' || king.kingdom === 'யூதா';
     const kingdomClass = isJudah ? 'judah' : 'israel';
     const icon = isJudah ? '🦁' : '⚡';
     const cardId = `ktc-${king.id}-${chapter}-${verseNum}`;
+    
+    // Build the "succeeds" text based on language
+    let succeedsText;
+    if (currentLanguage === 'tamil') {
+        succeedsText = `முன்பு: ${king.prevKing}`;
+    } else {
+        succeedsText = `Succeeds: ${king.prevKing}`;
+    }
+    
     return `<div class="king-transition-card ${kingdomClass}" data-ktc-id="${cardId}">
         <div class="king-transition-pill-row" onclick="toggleKingCard('${cardId}')">
             <div class="ktc-line"></div>
@@ -3570,7 +3579,7 @@ function getKingTransitionCardHTML(bookName, chapter, verseNum) {
         <div class="king-transition-expanded" id="expanded-${cardId}">
             <div class="ktc-header">
                 <span class="ktc-king-name">${king.name}</span>
-                <span class="ktc-succeeds">Succeeds ${king.prevKing}</span>
+                <span class="ktc-succeeds">${succeedsText}</span>
             </div>
             <p class="ktc-context">${king.context}</p>
             <p class="ktc-note">${king.note}</p>
