@@ -318,6 +318,47 @@
         </div>
     </div>
 
+    <!-- Book Meaning Bottom Sheet -->
+    <div class="book-meaning-backdrop" id="book-meaning-backdrop"></div>
+    <div class="book-meaning-bottom-sheet" id="book-meaning-bottom-sheet">
+        <div class="book-meaning-drag-handle">
+            <div class="book-meaning-handle-pill"></div>
+        </div>
+        <div class="book-meaning-header">
+            <div class="book-meaning-name-block">
+                <p class="book-meaning-title" id="book-meaning-title"></p>
+                <p class="book-meaning-tamil" id="book-meaning-tamil"></p>
+            </div>
+            <span class="book-meaning-testament-badge" id="book-meaning-testament-badge"></span>
+        </div>
+        <div class="book-meaning-info-card">
+            <div class="book-meaning-row">
+                <div class="book-meaning-icon-box book-meaning-icon-amber">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#633806" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/>
+                        <path d="M5 9c0 2.144 2.952 3.908 6.7 4"/>
+                        <path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="book-meaning-row-label">Hebrew / Greek</p>
+                    <p class="book-meaning-row-value"><span id="book-meaning-hebrew-name"></span><span class="book-meaning-script" id="book-meaning-hebrew-script"></span></p>
+                </div>
+            </div>
+            <div class="book-meaning-row">
+                <div class="book-meaning-icon-box book-meaning-icon-purple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3C3489" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3l1.912 5.813h6.088l-4.944 3.574 1.912 5.813-4.968-3.574-4.968 3.574 1.912-5.813-4.944-3.574h6.088z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="book-meaning-row-label">Meaning</p>
+                    <p class="book-meaning-row-value" id="book-meaning-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Note Viewer Modal -->
     <div class="note-viewer-overlay" id="note-viewer-popup" style="display: none;">
         <div class="note-viewer-modal">
@@ -1065,7 +1106,9 @@
             <!-- Scripture Text (Bible Content) -->
             <!-- Mobile Chapter Header -->
             <div class="mobile-chapter-header" id="mobile-chapter-header">
-                <div class="mobile-chapter-title"></div>
+                <div class="mobile-chapter-title-wrap">
+                    <span class="mobile-chapter-title"></span>
+                </div>
                 <div class="mobile-chapter-number-wrapper">
                     <div class="mobile-chapter-number"></div>
                     <span class="mobile-verse-count-badge" id="mobile-verse-count-badge"></span>

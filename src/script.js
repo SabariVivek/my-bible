@@ -1,73 +1,73 @@
 // Bible book configuration
 const bibleBooks = [
     // Old Testament
-    { name: 'Genesis', shortName: 'Gen', tamilName: 'ஆதியாகமம்', tamilShortName: 'ஆதி', file: 'genesis', testament: 'old', chapters: 50 },
-    { name: 'Exodus', shortName: 'Exod', tamilName: 'யாத்திராகமம்', tamilShortName: 'யாத்', file: 'exodus', testament: 'old', chapters: 40 },
-    { name: 'Leviticus', shortName: 'Lev', tamilName: 'லேவியராகமம்', tamilShortName: 'லேவி', file: 'leviticus', testament: 'old', chapters: 27 },
-    { name: 'Numbers', shortName: 'Num', tamilName: 'எண்ணாகமம்', tamilShortName: 'எண்', file: 'numbers', testament: 'old', chapters: 36 },
-    { name: 'Deuteronomy', shortName: 'Deut', tamilName: 'உபாகமம்', tamilShortName: 'உபா', file: 'deuteronomy', testament: 'old', chapters: 34 },
-    { name: 'Joshua', shortName: 'Josh', tamilName: 'யோசுவா', tamilShortName: 'யோசு', file: 'joshua', testament: 'old', chapters: 24 },
-    { name: 'Judges', shortName: 'Judg', tamilName: 'நியாயாதிபதிகள்', tamilShortName: 'நியா', file: 'judges', testament: 'old', chapters: 21 },
-    { name: 'Ruth', shortName: 'Ruth', tamilName: 'ரூத்', tamilShortName: 'ரூத்', file: 'ruth', testament: 'old', chapters: 4 },
-    { name: 'I Samuel', shortName: '1 Sam', tamilName: '1 சாமுவேல்', tamilShortName: '1 சாமு', file: 'i_samuel', testament: 'old', chapters: 31 },
-    { name: 'II Samuel', shortName: '2 Sam', tamilName: '2 சாமுவேல்', tamilShortName: '2 சாமு', file: 'ii_samuel', testament: 'old', chapters: 24 },
-    { name: 'I Kings', shortName: '1 Kgs', tamilName: '1 இராஜாக்கள்', tamilShortName: '1 இரா', file: 'i_kings', testament: 'old', chapters: 22 },
-    { name: 'II Kings', shortName: '2 Kgs', tamilName: '2 இராஜாக்கள்', tamilShortName: '2 இரா', file: 'ii_kings', testament: 'old', chapters: 25 },
-    { name: 'I Chronicles', shortName: '1 Chr', tamilName: '1 நாளாகமம்', tamilShortName: '1 நாளா', file: 'i_chronicles', testament: 'old', chapters: 29 },
-    { name: 'II Chronicles', shortName: '2 Chr', tamilName: '2 நாளாகமம்', tamilShortName: '2 நாளா', file: 'ii_chronicles', testament: 'old', chapters: 36 },
-    { name: 'Ezra', shortName: 'Ezra', tamilName: 'எஸ்றா', tamilShortName: 'எஸ்றா', file: 'ezra', testament: 'old', chapters: 10 },
-    { name: 'Nehemiah', shortName: 'Neh', tamilName: 'நெகேமியா', tamilShortName: 'நெகே', file: 'nehemiah', testament: 'old', chapters: 13 },
-    { name: 'Esther', shortName: 'Esth', tamilName: 'எஸ்தர்', tamilShortName: 'எஸ்தர்', file: 'esther', testament: 'old', chapters: 10 },
-    { name: 'Job', shortName: 'Job', tamilName: 'யோபு', tamilShortName: 'யோபு', file: 'job', testament: 'old', chapters: 42 },
-    { name: 'Psalms', shortName: 'Ps', tamilName: 'சங்கீதம்', tamilShortName: 'சங்கீ', file: 'psalms', testament: 'old', chapters: 150 },
-    { name: 'Proverbs', shortName: 'Prov', tamilName: 'நீதிமொழிகள்', tamilShortName: 'நீதி', file: 'proverbs', testament: 'old', chapters: 31 },
-    { name: 'Ecclesiastes', shortName: 'Eccl', tamilName: 'பிரசங்கி', tamilShortName: 'பிர', file: 'ecclesiastes', testament: 'old', chapters: 12 },
-    { name: 'Song of Solomon', shortName: 'Song', tamilName: 'உன்னதப்பாட்டு', tamilShortName: 'உன்ன', file: 'song_of_solomon', testament: 'old', chapters: 8 },
-    { name: 'Isaiah', shortName: 'Isa', tamilName: 'ஏசாயா', tamilShortName: 'ஏசா', file: 'isaiah', testament: 'old', chapters: 66 },
-    { name: 'Jeremiah', shortName: 'Jer', tamilName: 'எரேமியா', tamilShortName: 'எரே', file: 'jeremiah', testament: 'old', chapters: 52 },
-    { name: 'Lamentations', shortName: 'Lam', tamilName: 'புலம்பல்', tamilShortName: 'புல', file: 'lamentations', testament: 'old', chapters: 5 },
-    { name: 'Ezekiel', shortName: 'Ezek', tamilName: 'எசேக்கியேல்', tamilShortName: 'எசே', file: 'ezekiel', testament: 'old', chapters: 48 },
-    { name: 'Daniel', shortName: 'Dan', tamilName: 'தானியேல்', tamilShortName: 'தானி', file: 'daniel', testament: 'old', chapters: 12 },
-    { name: 'Hosea', shortName: 'Hos', tamilName: 'ஓசியா', tamilShortName: 'ஓசி', file: 'hosea', testament: 'old', chapters: 14 },
-    { name: 'Joel', shortName: 'Joel', tamilName: 'யோவேல்', tamilShortName: 'யோவே', file: 'joel', testament: 'old', chapters: 3 },
-    { name: 'Amos', shortName: 'Amos', tamilName: 'ஆமோஸ்', tamilShortName: 'ஆமோ', file: 'amos', testament: 'old', chapters: 9 },
-    { name: 'Obadiah', shortName: 'Obad', tamilName: 'ஒபதியா', tamilShortName: 'ஒபதி', file: 'obadiah', testament: 'old', chapters: 1 },
-    { name: 'Jonah', shortName: 'Jonah', tamilName: 'யோனா', tamilShortName: 'யோனா', file: 'jonah', testament: 'old', chapters: 4 },
-    { name: 'Micah', shortName: 'Mic', tamilName: 'மீகா', tamilShortName: 'மீகா', file: 'micah', testament: 'old', chapters: 7 },
-    { name: 'Nahum', shortName: 'Nah', tamilName: 'நாகூம்', tamilShortName: 'நாகூ', file: 'nahum', testament: 'old', chapters: 3 },
-    { name: 'Habakkuk', shortName: 'Hab', tamilName: 'ஆபகூக்', tamilShortName: 'ஆப', file: 'habakkuk', testament: 'old', chapters: 3 },
-    { name: 'Zephaniah', shortName: 'Zeph', tamilName: 'செப்பனியா', tamilShortName: 'செப்', file: 'zephaniah', testament: 'old', chapters: 3 },
-    { name: 'Haggai', shortName: 'Hag', tamilName: 'ஆகாய்', tamilShortName: 'ஆகாய்', file: 'haggai', testament: 'old', chapters: 2 },
-    { name: 'Zechariah', shortName: 'Zech', tamilName: 'சகரியா', tamilShortName: 'சகரி', file: 'zechariah', testament: 'old', chapters: 14 },
-    { name: 'Malachi', shortName: 'Mal', tamilName: 'மல்கியா', tamilShortName: 'மல்கி', file: 'malachi', testament: 'old', chapters: 4 },
+    { name: 'Genesis', shortName: 'Gen', tamilName: 'ஆதியாகமம்', tamilShortName: 'ஆதி', file: 'genesis', testament: 'old', chapters: 50, hebrew: 'Bereshit (בְּרֵאשִׁית)', meaning: 'In the beginning / start of everything' },
+    { name: 'Exodus', shortName: 'Exod', tamilName: 'யாத்திராகமம்', tamilShortName: 'யாத்', file: 'exodus', testament: 'old', chapters: 40, hebrew: 'Shemot (שְׁמוֹת)', meaning: 'Going out / leaving Egypt' },
+    { name: 'Leviticus', shortName: 'Lev', tamilName: 'லேவியராகமம்', tamilShortName: 'லேவி', file: 'leviticus', testament: 'old', chapters: 27, hebrew: 'Vayikra (וַיִּקְרָא)', meaning: 'About priests / worship rules' },
+    { name: 'Numbers', shortName: 'Num', tamilName: 'எண்ணாகமம்', tamilShortName: 'எண்', file: 'numbers', testament: 'old', chapters: 36, hebrew: 'Bamidbar (בְּמִדְבַּר)', meaning: 'In the desert / counting people' },
+    { name: 'Deuteronomy', shortName: 'Deut', tamilName: 'உபாகமம்', tamilShortName: 'உபா', file: 'deuteronomy', testament: 'old', chapters: 34, hebrew: 'Devarim (דְּבָרִים)', meaning: 'Words / repeating God\'s law' },
+    { name: 'Joshua', shortName: 'Josh', tamilName: 'யோசுவா', tamilShortName: 'யோசு', file: 'joshua', testament: 'old', chapters: 24, hebrew: 'Yehoshua (יְהוֹשֻׁעַ)', meaning: 'God saves / God is salvation' },
+    { name: 'Judges', shortName: 'Judg', tamilName: 'நியாயாதிபதிகள்', tamilShortName: 'நியா', file: 'judges', testament: 'old', chapters: 21, hebrew: 'Shoftim (שֹׁפְטִים)', meaning: 'Leaders who judge and save Israel' },
+    { name: 'Ruth', shortName: 'Ruth', tamilName: 'ரூத்', tamilShortName: 'ரூத்', file: 'ruth', testament: 'old', chapters: 4, hebrew: 'Rut (רוּת)', meaning: 'Friend / loyal woman' },
+    { name: 'I Samuel', shortName: '1 Sam', tamilName: '1 சாமுவேல்', tamilShortName: '1 சாமு', file: 'i_samuel', testament: 'old', chapters: 31, hebrew: 'Shmuel (שְׁמוּאֵל)', meaning: 'God has heard' },
+    { name: 'II Samuel', shortName: '2 Sam', tamilName: '2 சாமுவேல்', tamilShortName: '2 சாமு', file: 'ii_samuel', testament: 'old', chapters: 24, hebrew: 'Shmuel (שְׁמוּאֵל)', meaning: 'Story of King David\'s rule' },
+    { name: 'I Kings', shortName: '1 Kgs', tamilName: '1 இராஜாக்கள்', tamilShortName: '1 இரா', file: 'i_kings', testament: 'old', chapters: 22, hebrew: 'Melakhim (מְלָכִים)', meaning: 'Stories of kings' },
+    { name: 'II Kings', shortName: '2 Kgs', tamilName: '2 இராஜாக்கள்', tamilShortName: '2 இரா', file: 'ii_kings', testament: 'old', chapters: 25, hebrew: 'Melakhim (מְלָכִים)', meaning: 'Continuation of kings\' stories' },
+    { name: 'I Chronicles', shortName: '1 Chr', tamilName: '1 நாளாகமம்', tamilShortName: '1 நாளா', file: 'i_chronicles', testament: 'old', chapters: 29, hebrew: 'Divrei HaYamim (דִּבְרֵי הַיָּמִים)', meaning: 'Events of history' },
+    { name: 'II Chronicles', shortName: '2 Chr', tamilName: '2 நாளாகமம்', tamilShortName: '2 நாளா', file: 'ii_chronicles', testament: 'old', chapters: 36, hebrew: 'Divrei HaYamim (דִּבְרֵי הַיָּמִים)', meaning: 'More history records' },
+    { name: 'Ezra', shortName: 'Ezra', tamilName: 'எஸ்றா', tamilShortName: 'எஸ்றா', file: 'ezra', testament: 'old', chapters: 10, hebrew: 'Ezra (עֶזְרָא)', meaning: 'Helper / one who helps' },
+    { name: 'Nehemiah', shortName: 'Neh', tamilName: 'நெகேமியா', tamilShortName: 'நெகே', file: 'nehemiah', testament: 'old', chapters: 13, hebrew: 'Nechemyah (נְחֶמְיָה)', meaning: 'God comforts' },
+    { name: 'Esther', shortName: 'Esth', tamilName: 'எஸ்தர்', tamilShortName: 'எஸ்தர்', file: 'esther', testament: 'old', chapters: 10, hebrew: 'Ester (אֶסְתֵּר)', meaning: 'Hidden / star' },
+    { name: 'Job', shortName: 'Job', tamilName: 'யோபு', tamilShortName: 'யோபு', file: 'job', testament: 'old', chapters: 42, hebrew: 'Iyov (אִיּוֹב)', meaning: 'Suffering man / tested one' },
+    { name: 'Psalms', shortName: 'Ps', tamilName: 'சங்கீதம்', tamilShortName: 'சங்கீ', file: 'psalms', testament: 'old', chapters: 150, hebrew: 'Tehillim (תְּהִלִּים)', meaning: 'Praises / songs' },
+    { name: 'Proverbs', shortName: 'Prov', tamilName: 'நீதிமொழிகள்', tamilShortName: 'நீதி', file: 'proverbs', testament: 'old', chapters: 31, hebrew: 'Mishlei (מִשְׁלֵי)', meaning: 'Wisdom sayings' },
+    { name: 'Ecclesiastes', shortName: 'Eccl', tamilName: 'பிரசங்கி', tamilShortName: 'பிர', file: 'ecclesiastes', testament: 'old', chapters: 12, hebrew: 'Kohelet (קֹהֶלֶת)', meaning: 'Teacher / preacher' },
+    { name: 'Song of Solomon', shortName: 'Song', tamilName: 'உன்னதப்பாட்டு', tamilShortName: 'உன்ன', file: 'song_of_solomon', testament: 'old', chapters: 8, hebrew: 'Shir HaShirim (שִׁיר הַשִּׁירִים)', meaning: 'Song of love' },
+    { name: 'Isaiah', shortName: 'Isa', tamilName: 'ஏசாயா', tamilShortName: 'ஏசா', file: 'isaiah', testament: 'old', chapters: 66, hebrew: 'Yeshayahu (יְשַׁעְיָהוּ)', meaning: 'God is salvation' },
+    { name: 'Jeremiah', shortName: 'Jer', tamilName: 'எரேமியா', tamilShortName: 'எரே', file: 'jeremiah', testament: 'old', chapters: 52, hebrew: 'Yirmiyahu (יִרְמְיָהוּ)', meaning: 'God appoints' },
+    { name: 'Lamentations', shortName: 'Lam', tamilName: 'புலம்பல்', tamilShortName: 'புல', file: 'lamentations', testament: 'old', chapters: 5, hebrew: 'Eikhah (אֵיכָה)', meaning: 'Weeping / sorrow' },
+    { name: 'Ezekiel', shortName: 'Ezek', tamilName: 'எசேக்கியேல்', tamilShortName: 'எசே', file: 'ezekiel', testament: 'old', chapters: 48, hebrew: 'Yechezkel (יְחֶזְקֵאל)', meaning: 'God strengthens' },
+    { name: 'Daniel', shortName: 'Dan', tamilName: 'தானியேல்', tamilShortName: 'தானி', file: 'daniel', testament: 'old', chapters: 12, hebrew: 'Daniel (דָּנִיֵּאל)', meaning: 'God is my judge' },
+    { name: 'Hosea', shortName: 'Hos', tamilName: 'ஓசியா', tamilShortName: 'ஓசி', file: 'hosea', testament: 'old', chapters: 14, hebrew: 'Hoshea (הוֹשֵׁעַ)', meaning: 'Salvation' },
+    { name: 'Joel', shortName: 'Joel', tamilName: 'யோவேல்', tamilShortName: 'யோவே', file: 'joel', testament: 'old', chapters: 3, hebrew: 'Yoel (יוֹאֵל)', meaning: 'The Lord is God' },
+    { name: 'Amos', shortName: 'Amos', tamilName: 'ஆமோஸ்', tamilShortName: 'ஆமோ', file: 'amos', testament: 'old', chapters: 9, hebrew: 'Amos (עָמוֹס)', meaning: 'Burden bearer' },
+    { name: 'Obadiah', shortName: 'Obad', tamilName: 'ஒபதியா', tamilShortName: 'ஒபதி', file: 'obadiah', testament: 'old', chapters: 1, hebrew: 'Ovadyah (עֹבַדְיָה)', meaning: 'Servant of God' },
+    { name: 'Jonah', shortName: 'Jonah', tamilName: 'யோனா', tamilShortName: 'யோனா', file: 'jonah', testament: 'old', chapters: 4, hebrew: 'Yonah (יוֹנָה)', meaning: 'Dove / peaceful bird' },
+    { name: 'Micah', shortName: 'Mic', tamilName: 'மீகா', tamilShortName: 'மீகா', file: 'micah', testament: 'old', chapters: 7, hebrew: 'Mikhah (מִיכָה)', meaning: 'Who is like God?' },
+    { name: 'Nahum', shortName: 'Nah', tamilName: 'நாகூம்', tamilShortName: 'நாகூ', file: 'nahum', testament: 'old', chapters: 3, hebrew: 'Nachum (נַחוּם)', meaning: 'Comfort' },
+    { name: 'Habakkuk', shortName: 'Hab', tamilName: 'ஆபகூக்', tamilShortName: 'ஆப', file: 'habakkuk', testament: 'old', chapters: 3, hebrew: 'Chavakuk (חֲבַקּוּק)', meaning: 'Embrace / wrestling' },
+    { name: 'Zephaniah', shortName: 'Zeph', tamilName: 'செப்பனியா', tamilShortName: 'செப்', file: 'zephaniah', testament: 'old', chapters: 3, hebrew: 'Tzefanyah (צְפַנְיָה)', meaning: 'God hides / protects' },
+    { name: 'Haggai', shortName: 'Hag', tamilName: 'ஆகாய்', tamilShortName: 'ஆகாய்', file: 'haggai', testament: 'old', chapters: 2, hebrew: 'Chaggai (חַגַּי)', meaning: 'Festival / feast' },
+    { name: 'Zechariah', shortName: 'Zech', tamilName: 'சகரியா', tamilShortName: 'சகரி', file: 'zechariah', testament: 'old', chapters: 14, hebrew: 'Zekharyah (זְכַרְיָה)', meaning: 'God remembers' },
+    { name: 'Malachi', shortName: 'Mal', tamilName: 'மல்கியா', tamilShortName: 'மல்கி', file: 'malachi', testament: 'old', chapters: 4, hebrew: 'Malakhi (מַלְאָכִי)', meaning: 'My messenger' },
     // New Testament
-    { name: 'Matthew', shortName: 'Matt', tamilName: 'மத்தேயு', tamilShortName: 'மத்', file: 'matthew', testament: 'new', chapters: 28 },
-    { name: 'Mark', shortName: 'Mark', tamilName: 'மாற்கு', tamilShortName: 'மாற்', file: 'mark', testament: 'new', chapters: 16 },
-    { name: 'Luke', shortName: 'Luke', tamilName: 'லூக்கா', tamilShortName: 'லூக்', file: 'luke', testament: 'new', chapters: 24 },
-    { name: 'John', shortName: 'John', tamilName: 'யோவான்', tamilShortName: 'யோ', file: 'john', testament: 'new', chapters: 21 },
-    { name: 'Acts', shortName: 'Acts', tamilName: 'அப்போஸ்தலர்', tamilShortName: 'அப்போ', file: 'acts', testament: 'new', chapters: 28 },
-    { name: 'Romans', shortName: 'Rom', tamilName: 'ரோமர்', tamilShortName: 'ரோமர்', file: 'romans', testament: 'new', chapters: 16 },
-    { name: 'I Corinthians', shortName: '1 Cor', tamilName: '1 கொரிந்தியர்', tamilShortName: '1 கொரி', file: 'i_corinthians', testament: 'new', chapters: 16 },
-    { name: 'II Corinthians', shortName: '2 Cor', tamilName: '2 கொரிந்தியர்', tamilShortName: '2 கொரி', file: 'ii_corinthians', testament: 'new', chapters: 13 },
-    { name: 'Galatians', shortName: 'Gal', tamilName: 'கலாத்தியர்', tamilShortName: 'கலா', file: 'galatians', testament: 'new', chapters: 6 },
-    { name: 'Ephesians', shortName: 'Eph', tamilName: 'எபேசியர்', tamilShortName: 'எபே', file: 'ephesians', testament: 'new', chapters: 6 },
-    { name: 'Philippians', shortName: 'Phil', tamilName: 'பிலிப்பியர்', tamilShortName: 'பிலி', file: 'philippians', testament: 'new', chapters: 4 },
-    { name: 'Colossians', shortName: 'Col', tamilName: 'கொலோசெயர்', tamilShortName: 'கொலோ', file: 'colossians', testament: 'new', chapters: 4 },
-    { name: 'I Thessalonians', shortName: '1 Thess', tamilName: '1 தெசலோனிக்கேயர்', tamilShortName: '1 தெச', file: 'i_thessalonians', testament: 'new', chapters: 5 },
-    { name: 'II Thessalonians', shortName: '2 Thess', tamilName: '2 தெசலோனிக்கேயர்', tamilShortName: '2 தெச', file: 'ii_thessalonians', testament: 'new', chapters: 3 },
-    { name: 'I Timothy', shortName: '1 Tim', tamilName: '1 தீமோத்தேயு', tamilShortName: '1 தீமோ', file: 'i_timothy', testament: 'new', chapters: 6 },
-    { name: 'II Timothy', shortName: '2 Tim', tamilName: '2 தீமோத்தேயு', tamilShortName: '2 தீமோ', file: 'ii_timothy', testament: 'new', chapters: 4 },
-    { name: 'Titus', shortName: 'Titus', tamilName: 'தீத்து', tamilShortName: 'தீத்து', file: 'titus', testament: 'new', chapters: 3 },
-    { name: 'Philemon', shortName: 'Phlm', tamilName: 'பிலேமோன்', tamilShortName: 'பிலே', file: 'philemon', testament: 'new', chapters: 1 },
-    { name: 'Hebrews', shortName: 'Heb', tamilName: 'எபிரெயர்', tamilShortName: 'எபி', file: 'hebrews', testament: 'new', chapters: 13 },
-    { name: 'James', shortName: 'Jas', tamilName: 'யாக்கோபு', tamilShortName: 'யாக்', file: 'james', testament: 'new', chapters: 5 },
-    { name: 'I Peter', shortName: '1 Pet', tamilName: '1 பேதுரு', tamilShortName: '1 பேதுரு', file: 'i_peter', testament: 'new', chapters: 5 },
-    { name: 'II Peter', shortName: '2 Pet', tamilName: '2 பேதுரு', tamilShortName: '2 பேதுரு', file: 'ii_peter', testament: 'new', chapters: 3 },
-    { name: 'I John', shortName: '1 John', tamilName: '1 யோவான்', tamilShortName: '1 யோ', file: 'i_john', testament: 'new', chapters: 5 },
-    { name: 'II John', shortName: '2 John', tamilName: '2 யோவான்', tamilShortName: '2 யோ', file: 'ii_john', testament: 'new', chapters: 1 },
-    { name: 'III John', shortName: '3 John', tamilName: '3 யோவான்', tamilShortName: '3 யோ', file: 'iii_john', testament: 'new', chapters: 1 },
-    { name: 'Jude', shortName: 'Jude', tamilName: 'யூதா', tamilShortName: 'யூதா', file: 'jude', testament: 'new', chapters: 1 },
-    { name: 'Revelation', shortName: 'Rev', tamilName: 'வெளிப்படுத்தல்', tamilShortName: 'வெளி', file: 'revelation', testament: 'new', chapters: 22 }
+    { name: 'Matthew', shortName: 'Matt', tamilName: 'மத்தேயு', tamilShortName: 'மத்', file: 'matthew', testament: 'new', chapters: 28, hebrew: 'Mattityahu (מַתִּתְיָהוּ)', meaning: 'Gift of God' },
+    { name: 'Mark', shortName: 'Mark', tamilName: 'மாற்கு', tamilShortName: 'மாற்', file: 'mark', testament: 'new', chapters: 16, hebrew: 'Markos', meaning: 'Messenger / follower' },
+    { name: 'Luke', shortName: 'Luke', tamilName: 'லூக்கா', tamilShortName: 'லூக்', file: 'luke', testament: 'new', chapters: 24, hebrew: 'Loukas', meaning: 'Bringer of light' },
+    { name: 'John', shortName: 'John', tamilName: 'யோவான்', tamilShortName: 'யோ', file: 'john', testament: 'new', chapters: 21, hebrew: 'Yochanan (יוֹחָנָן)', meaning: 'God is gracious' },
+    { name: 'Acts', shortName: 'Acts', tamilName: 'அப்போஸ்தலர்', tamilShortName: 'அப்போ', file: 'acts', testament: 'new', chapters: 28, hebrew: 'Maasei HaShlichim', meaning: 'Acts of apostles' },
+    { name: 'Romans', shortName: 'Rom', tamilName: 'ரோமர்', tamilShortName: 'ரோமர்', file: 'romans', testament: 'new', chapters: 16, hebrew: 'Romiyim', meaning: 'People of Rome' },
+    { name: 'I Corinthians', shortName: '1 Cor', tamilName: '1 கொரிந்தியர்', tamilShortName: '1 கொரி', file: 'i_corinthians', testament: 'new', chapters: 16, hebrew: 'Korinthiyim', meaning: 'Letter to Corinth church' },
+    { name: 'II Corinthians', shortName: '2 Cor', tamilName: '2 கொரிந்தியர்', tamilShortName: '2 கொரி', file: 'ii_corinthians', testament: 'new', chapters: 13, hebrew: 'Korinthiyim', meaning: 'Second letter to Corinth' },
+    { name: 'Galatians', shortName: 'Gal', tamilName: 'கலாத்தியர்', tamilShortName: 'கலா', file: 'galatians', testament: 'new', chapters: 6, hebrew: 'Galatiyim', meaning: 'People of Galatia' },
+    { name: 'Ephesians', shortName: 'Eph', tamilName: 'எபேசியர்', tamilShortName: 'எபே', file: 'ephesians', testament: 'new', chapters: 6, hebrew: 'Ephesiyim', meaning: 'People of Ephesus' },
+    { name: 'Philippians', shortName: 'Phil', tamilName: 'பிலிப்பியர்', tamilShortName: 'பிலி', file: 'philippians', testament: 'new', chapters: 4, hebrew: 'Pilippiyim', meaning: 'People of Philippi' },
+    { name: 'Colossians', shortName: 'Col', tamilName: 'கொலோசெயர்', tamilShortName: 'கொலோ', file: 'colossians', testament: 'new', chapters: 4, hebrew: 'Kolossiyim', meaning: 'People of Colossae' },
+    { name: 'I Thessalonians', shortName: '1 Thess', tamilName: '1 தெசலோனிக்கேயர்', tamilShortName: '1 தெச', file: 'i_thessalonians', testament: 'new', chapters: 5, hebrew: 'Thessalonikiyim', meaning: 'First letter to Thessalonica' },
+    { name: 'II Thessalonians', shortName: '2 Thess', tamilName: '2 தெசலோனிக்கேயர்', tamilShortName: '2 தெச', file: 'ii_thessalonians', testament: 'new', chapters: 3, hebrew: 'Thessalonikiyim', meaning: 'Second letter to Thessalonica' },
+    { name: 'I Timothy', shortName: '1 Tim', tamilName: '1 தீமோத்தேயு', tamilShortName: '1 தீமோ', file: 'i_timothy', testament: 'new', chapters: 6, hebrew: 'Timotiyos', meaning: 'Honoring God' },
+    { name: 'II Timothy', shortName: '2 Tim', tamilName: '2 தீமோத்தேயு', tamilShortName: '2 தீமோ', file: 'ii_timothy', testament: 'new', chapters: 4, hebrew: 'Timotiyos', meaning: 'Second letter to Timothy' },
+    { name: 'Titus', shortName: 'Titus', tamilName: 'தீத்து', tamilShortName: 'தீத்து', file: 'titus', testament: 'new', chapters: 3, hebrew: 'Titos', meaning: 'Name of person Titus' },
+    { name: 'Philemon', shortName: 'Phlm', tamilName: 'பிலேமோன்', tamilShortName: 'பிலே', file: 'philemon', testament: 'new', chapters: 1, hebrew: 'Filemon', meaning: 'Loving / affectionate' },
+    { name: 'Hebrews', shortName: 'Heb', tamilName: 'எபிரெயர்', tamilShortName: 'எபி', file: 'hebrews', testament: 'new', chapters: 13, hebrew: 'Ivritim', meaning: 'Hebrew people' },
+    { name: 'James', shortName: 'Jas', tamilName: 'யாக்கோபு', tamilShortName: 'யாக்', file: 'james', testament: 'new', chapters: 5, hebrew: 'Yaakov (יַעֲקֹב)', meaning: 'Supplanter / follower of God' },
+    { name: 'I Peter', shortName: '1 Pet', tamilName: '1 பேதுரு', tamilShortName: '1 பேதுரு', file: 'i_peter', testament: 'new', chapters: 5, hebrew: 'Kefa (כֵּיפָא)', meaning: 'Rock / stone' },
+    { name: 'II Peter', shortName: '2 Pet', tamilName: '2 பேதுரு', tamilShortName: '2 பேதுரு', file: 'ii_peter', testament: 'new', chapters: 3, hebrew: 'Kefa', meaning: 'Second letter of Peter' },
+    { name: 'I John', shortName: '1 John', tamilName: '1 யோவான்', tamilShortName: '1 யோ', file: 'i_john', testament: 'new', chapters: 5, hebrew: 'Yochanan', meaning: 'God is gracious' },
+    { name: 'II John', shortName: '2 John', tamilName: '2 யோவான்', tamilShortName: '2 யோ', file: 'ii_john', testament: 'new', chapters: 1, hebrew: 'Yochanan', meaning: 'Second letter of John' },
+    { name: 'III John', shortName: '3 John', tamilName: '3 யோவான்', tamilShortName: '3 யோ', file: 'iii_john', testament: 'new', chapters: 1, hebrew: 'Yochanan', meaning: 'Third letter of John' },
+    { name: 'Jude', shortName: 'Jude', tamilName: 'யூதா', tamilShortName: 'யூதா', file: 'jude', testament: 'new', chapters: 1, hebrew: 'Yehuda (יְהוּדָה)', meaning: 'Praise / thanks' },
+    { name: 'Revelation', shortName: 'Rev', tamilName: 'வெளிப்படுத்தல்', tamilShortName: 'வெளி', file: 'revelation', testament: 'new', chapters: 22, hebrew: 'Hitgalut (הִתְגַּלּוּת)', meaning: 'Revelation / unveiling' }
 ];
 // Current state
 let currentBook = parseInt(localStorage.getItem('currentBook')) || 39; // Matthew (New Testament starts at index 39)
@@ -1905,11 +1905,100 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Book Meaning Bottom Sheet Functionality
+    setupBookMeaningBottomSheet();
+
     // Start background preload after initial load (non-blocking, silent)
     setTimeout(() => {
         startBackgroundPreload();
     }, 3000); // Wait 3 seconds after page load to start preloading
 });
+
+// ========================================
+// Book Meaning Bottom Sheet Functions
+// ========================================
+
+function setupBookMeaningBottomSheet() {
+    const mobileChapterTitle = document.querySelector('.mobile-chapter-title');
+    const backdrop = document.getElementById('book-meaning-backdrop');
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
+
+    if (!mobileChapterTitle) return;
+
+    // Open bottom sheet when clicking on book title
+    mobileChapterTitle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openBookMeaningSheet();
+    });
+
+    // Close when clicking backdrop
+    if (backdrop) {
+        backdrop.addEventListener('click', closeBookMeaningSheet);
+    }
+
+    // Close when pressing Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sheet && sheet.classList.contains('active')) {
+            closeBookMeaningSheet();
+        }
+    });
+}
+
+function openBookMeaningSheet() {
+    const backdrop = document.getElementById('book-meaning-backdrop');
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
+    const book = bibleBooks[currentBook];
+
+    if (!sheet || !backdrop) return;
+
+    const titleEl = document.getElementById('book-meaning-title');
+    const tamilEl = document.getElementById('book-meaning-tamil');
+    const hebrewNameEl = document.getElementById('book-meaning-hebrew-name');
+    const hebrewScriptEl = document.getElementById('book-meaning-hebrew-script');
+    const descriptionEl = document.getElementById('book-meaning-description');
+    const badgeEl = document.getElementById('book-meaning-testament-badge');
+
+    const isNT = book.testament === 'new';
+
+    if (titleEl) titleEl.textContent = book.name;
+    if (tamilEl) tamilEl.textContent = book.tamilName;
+    if (descriptionEl) descriptionEl.textContent = book.meaning || '';
+    if (badgeEl) {
+        badgeEl.textContent = isNT ? 'New' : 'Old';
+        badgeEl.classList.toggle('ot-badge', !isNT);
+    }
+
+    // Split "Mattityahu (מַתִּתְיָהוּ)" into name + script
+    const hebrewRaw = book.hebrew || '';
+    const parenIdx = hebrewRaw.indexOf(' (');
+    if (hebrewNameEl) hebrewNameEl.textContent = parenIdx !== -1 ? hebrewRaw.slice(0, parenIdx) : hebrewRaw;
+    if (hebrewScriptEl) hebrewScriptEl.textContent = parenIdx !== -1 ? hebrewRaw.slice(parenIdx + 2, -1) : '';
+
+    sheet.classList.add('active');
+    backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    const authorBanner = document.getElementById('author-banner');
+    if (authorBanner) authorBanner.classList.add('book-meaning-blurred');
+}
+
+function closeBookMeaningSheet() {
+    const backdrop = document.getElementById('book-meaning-backdrop');
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
+
+    if (!sheet || !backdrop) return;
+
+    sheet.classList.remove('active');
+    backdrop.classList.remove('active');
+    document.body.style.overflow = '';
+
+    const authorBanner = document.getElementById('author-banner');
+    if (authorBanner) authorBanner.classList.remove('book-meaning-blurred');
+}
+
+// ========================================
+// End Book Meaning Bottom Sheet Functions
+// ========================================
 // Initialize mobile drawer
 function initializeMobileDrawer() {
     const menuBtn = document.querySelector('.mobile-only');
