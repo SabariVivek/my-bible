@@ -1632,6 +1632,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Always show public menu items (not admin-only)
     if (bibleReadingOption) bibleReadingOption.style.display = 'flex';
+    const dailyPrayersOptionEl = document.getElementById('daily-prayers-option');
+    if (dailyPrayersOptionEl) dailyPrayersOptionEl.style.display = 'flex';
     if (rightSermonOption) rightSermonOption.style.display = 'flex';
 
     // Show/hide admin-only menu items based on admin status
@@ -11916,6 +11918,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Navigate to the Bible Reading HTML file with cache-busting parameter
             const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
             window.location.href = `src/bible-reading.html?cb=${cacheBuster}`;
+        });
+    }
+    // Daily Prayers option - navigate to Daily Prayers page
+    const dailyPrayersOption = document.getElementById('daily-prayers-option');
+    if (dailyPrayersOption) {
+        dailyPrayersOption.addEventListener('click', () => {
+            closeRightSidebar();
+            window.location.href = 'src/daily-bible-prayers.html';
         });
     }
     // Exit Bible Reading page

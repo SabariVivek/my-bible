@@ -510,12 +510,15 @@
     async function loadPrayers() {
       try {
         const today = getToday();
-        const { data, error } = await client
-          .from('daily_prayers')
-          .select('prayer_content, prayer_date, prayer_reference')
-          .lte('prayer_date', today)
-          .order('prayer_date', { ascending: false })
-          .limit(30);
+        const [{ data, error }] = await Promise.all([
+          client
+            .from('daily_prayers')
+            .select('prayer_content, prayer_date, prayer_reference')
+            .lte('prayer_date', today)
+            .order('prayer_date', { ascending: false })
+            .limit(30),
+          new Promise(r => setTimeout(r, 1000))
+        ]);
 
         if (error) throw error;
 
