@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#121212" />
+  <title>Daily Prayers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    :root {
+      --bg: #121212;
+      --card: #2a2a2a;
+      --card-border: #3a3a3a;
+      --accent: #e8b84b;
+      --accent-dim: #a07c2e;
+      --text: #f0ece6;
+      --text-sec: #a8a29e;
+      --text-dim: #6b6560;
+      --today-glow: rgba(232, 184, 75, 0.15);
+      --radius: 14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      touch-action: pan-y;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: env(safe-area-inset-top, 0px) 0 0 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .header-inner {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 20px 20px 18px;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .header-count {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .header-desc {
+      font-size: 0.82rem;
+      color: var(--text-sec);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .header-accent {
+      display: block;
+      height: 3px;
+      width: 40px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin-top: 14px;
+    }
+
+    /* ── MAIN ── */
+    .main {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 18px 16px 40px;
+    }
+
+    /* ── PRAYER CARD ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 14px;
+      position: relative;
+      transition: transform 0.15s ease;
+    }
+
+    .card:active {
+      transform: scale(0.98);
+    }
+
+    .card.today {
+      border-color: rgba(232, 184, 75, 0.4);
+      box-shadow: 0 0 30px var(--today-glow), inset 0 1px 0 rgba(232, 184, 75, 0.1);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .card-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: rgba(232, 184, 75, 0.1);
+      border: 1px solid rgba(232, 184, 75, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .card.today .card-num {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #1a1a1a;
+    }
+
+    .card-day-label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-sec);
+    }
+
+    .card.today .card-day-label {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .card-date-badge {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-sec);
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 5px 11px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+
+    .card.today .card-date-badge {
+      background: rgba(232, 184, 75, 0.1);
+      border-color: rgba(232, 184, 75, 0.25);
+      color: var(--accent);
+    }
+
+    /* Prayer text */
+    .card-body-wrap {
+      position: relative;
+    }
+
+    .card-body {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 0.93rem;
+      line-height: 2;
+      color: var(--text);
+      font-weight: 400;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .card-body.expanded {
+      -webkit-line-clamp: unset;
+      display: block;
+    }
+
+    /* Fade overlay */
+    .card-body-wrap .fade-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: linear-gradient(transparent, var(--card));
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .card-body-wrap.open .fade-overlay {
+      opacity: 0;
+    }
+
+    /* Expand toggle */
+    .expand-btn {
+      display: block;
+      margin-top: 10px;
+      margin-left: auto;
+      background: none;
+      border: none;
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      padding: 0;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+      text-align: right;
+    }
+
+    .expand-btn:active {
+      opacity: 1;
+    }
+
+    /* Card footer / reference */
+    .card-footer {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-footer.visible {
+      display: flex;
+    }
+
+    .ref-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-sec);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.3px;
+    }
+
+    .collapse-btn {
+      background: none;
+      border: none;
+      color: #646058;
+      font-size: 0.74rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      padding: 0;
+      opacity: 0.85;
+    }
+
+    .collapse-btn:active {
+      opacity: 1;
+    }
+
+    /* Amen line */
+    .amen-line {
+      display: none;
+      text-align: right;
+      margin-top: 8px;
+      font-family: 'Noto Sans Tamil', 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .card-body-wrap.open .amen-line {
+      display: block;
+    }
+
+    /* ── ANIMATION ── */
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card { animation: slideIn 0.4s ease forwards; opacity: 0; }
+    .card:nth-child(1) { animation-delay: 0s; }
+    .card:nth-child(2) { animation-delay: 0.05s; }
+    .card:nth-child(3) { animation-delay: 0.1s; }
+    .card:nth-child(4) { animation-delay: 0.15s; }
+    .card:nth-child(5) { animation-delay: 0.2s; }
+
+    @media (max-width: 360px) {
+      .card-body { font-size: 0.88rem; line-height: 1.9; }
+      .header-inner { padding: 16px; }
+      .main { padding: 14px 12px 40px; }
+    }
+
+    /* ── SKELETON ── */
+    .skeleton-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 14px;
+      animation: slideIn 0.4s ease forwards;
+      opacity: 0;
+    }
+    .skeleton-card:nth-child(1) { animation-delay: 0s; }
+    .skeleton-card:nth-child(2) { animation-delay: 0.05s; }
+    .skeleton-card:nth-child(3) { animation-delay: 0.1s; }
+
+    .skeleton-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .skeleton-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skeleton-bone {
+      background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+      border-radius: 6px;
+    }
+
+    .skeleton-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+    }
+
+    .skeleton-line {
+      height: 12px;
+      margin-bottom: 10px;
+    }
+
+    .skeleton-line:last-child {
+      margin-bottom: 0;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-inner">
+      <div class="header-top">
+        <h1>Daily Prayers</h1>
+        <span class="header-count"><span class="skeleton-bone" style="width:50px;height:12px;display:inline-block;"></span></span>
+      </div>
+      <p class="header-desc">One prayer a day &#8212; rooted in Scripture, spoken in faith.</p>
+      <span class="header-accent"></span>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="main" id="prayers-container">
+    <div class="skeleton-card">
+      <div class="skeleton-header">
+        <div class="skeleton-header-left">
+          <div class="skeleton-bone skeleton-circle"></div>
+          <div class="skeleton-bone" style="width:70px;height:12px;"></div>
+        </div>
+        <div class="skeleton-bone" style="width:90px;height:24px;border-radius:8px;"></div>
+      </div>
+      <div class="skeleton-bone skeleton-line" style="width:100%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:92%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:60%;"></div>
+    </div>
+    <div class="skeleton-card">
+      <div class="skeleton-header">
+        <div class="skeleton-header-left">
+          <div class="skeleton-bone skeleton-circle"></div>
+          <div class="skeleton-bone" style="width:70px;height:12px;"></div>
+        </div>
+        <div class="skeleton-bone" style="width:90px;height:24px;border-radius:8px;"></div>
+      </div>
+      <div class="skeleton-bone skeleton-line" style="width:100%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:85%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:55%;"></div>
+    </div>
+    <div class="skeleton-card">
+      <div class="skeleton-header">
+        <div class="skeleton-header-left">
+          <div class="skeleton-bone skeleton-circle"></div>
+          <div class="skeleton-bone" style="width:70px;height:12px;"></div>
+        </div>
+        <div class="skeleton-bone" style="width:90px;height:24px;border-radius:8px;"></div>
+      </div>
+      <div class="skeleton-bone skeleton-line" style="width:100%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:88%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:50%;"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const SUPABASE_URL = 'https://encjogfdbrfcatvytpir.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck';
+    const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const container = document.getElementById('prayers-container');
+    const headerCount = document.querySelector('.header-count');
+
+    function getToday() {
+      return new Date().toISOString().split('T')[0];
+    }
+
+    function getDayLabel(dateStr) {
+      const today = new Date(getToday());
+      const date = new Date(dateStr);
+      const diff = Math.round((today - date) / (1000 * 60 * 60 * 24));
+      if (diff === 0) return 'Today';
+      if (diff === 1) return 'Yesterday';
+      return `${diff} days ago`;
+    }
+
+    function formatDate(dateStr) {
+      const date = new Date(dateStr + 'T00:00:00');
+      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+
+    function renderPrayers(prayers) {
+      const today = getToday();
+      headerCount.textContent = `${prayers.length} prayer${prayers.length !== 1 ? 's' : ''}`;
+      container.innerHTML = '';
+
+      prayers.forEach((prayer, index) => {
+        const num = prayers.length - index;
+        const isToday = prayer.prayer_date === today;
+        const card = document.createElement('div');
+        card.className = `card${isToday ? ' today' : ''}`;
+        card.style.animationDelay = `${index * 0.05}s`;
+        card.innerHTML = `
+          <div class="card-header">
+            <div class="card-left">
+              <div class="card-num">${num}</div>
+              <span class="card-day-label">${getDayLabel(prayer.prayer_date)}</span>
+            </div>
+            <div class="card-date-badge">${formatDate(prayer.prayer_date)}</div>
+          </div>
+          <div class="card-body-wrap">
+            <p class="card-body">${prayer.prayer_content}</p>
+            <span class="amen-line">&mdash; &#2950;&#2990;&#3014;&#2985;&#3021; &#128591;</span>
+            <div class="fade-overlay"></div>
+          </div>
+          <button class="expand-btn" onclick="toggle(this)">Read more &#8250;</button>
+          <div class="card-footer">
+            <span class="ref-badge">${prayer.prayer_reference}</span>
+            <button class="collapse-btn" onclick="collapse(this)">&#8249; Show less</button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    async function loadPrayers() {
+      try {
+        const today = getToday();
+        const { data, error } = await client
+          .from('daily_prayers')
+          .select('prayer_content, prayer_date, prayer_reference')
+          .lte('prayer_date', today)
+          .order('prayer_date', { ascending: false })
+          .limit(30);
+
+        if (error) throw error;
+
+        if (!data || data.length === 0) {
+          container.innerHTML = '<div style="text-align:center;padding:40px 0;color:var(--text-sec);font-size:0.9rem;">No prayers found.</div>';
+          headerCount.textContent = '0 prayers';
+          return;
+        }
+
+        renderPrayers(data);
+      } catch (err) {
+        console.error('Failed to load prayers:', err);
+        container.innerHTML = '<div style="text-align:center;padding:40px 0;color:#e57373;font-size:0.9rem;">Failed to load prayers. Please try again later.</div>';
+      }
+    }
+
+    function toggle(btn) {
+      const wrap = btn.previousElementSibling;
+      const body = wrap.querySelector('.card-body');
+      const footer = btn.nextElementSibling;
+      body.classList.add('expanded');
+      wrap.classList.add('open');
+      footer.classList.add('visible');
+      btn.style.display = 'none';
+    }
+
+    function collapse(colBtn) {
+      const footer = colBtn.parentElement;
+      const card = footer.parentElement;
+      const wrap = card.querySelector('.card-body-wrap');
+      const body = card.querySelector('.card-body');
+      const expandBtn = card.querySelector('.expand-btn');
+      body.classList.remove('expanded');
+      wrap.classList.remove('open');
+      footer.classList.remove('visible');
+      expandBtn.style.display = 'block';
+    }
+
+    loadPrayers();
+  </script>
+</body>
+</html>
