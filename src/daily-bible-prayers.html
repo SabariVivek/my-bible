@@ -393,7 +393,12 @@
   <div class="header">
     <div class="header-inner">
       <div class="header-top">
-        <h1>Daily Prayers</h1>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button onclick="history.back()" style="background:none;border:none;color:var(--text);cursor:pointer;padding:4px;display:flex;align-items:center;-webkit-tap-highlight-color:transparent;" title="Back">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <h1>Daily Prayers</h1>
+        </div>
         <span class="header-count"><span class="skeleton-bone" style="width:50px;height:12px;display:inline-block;"></span></span>
       </div>
       <p class="header-desc">One prayer a day &#8212; rooted in Scripture, spoken in faith.</p>
