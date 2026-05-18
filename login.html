@@ -359,6 +359,77 @@ select option { background: var(--surface); color: var(--text); }
 <script src="src/lib/supabase.js?cb=20260310160629"></script>
 <script src="src/lib/supabase-pinned-verses.js?cb=20260310160629"></script>
 <script>
+  const USERS_CACHE_KEY = 'cachedUsersList';
+  const MAX_RETRY_ATTEMPTS = 3;
+  const RETRY_DELAY_MS = 1500;
+
+  function getCachedUsers() {
+    try {
+      const cached = localStorage.getItem(USERS_CACHE_KEY);
+      return cached ? JSON.parse(cached) : [];
+    } catch (e) { return []; }
+  }
+
+  function setCachedUsers(users) {
+    try {
+      localStorage.setItem(USERS_CACHE_KEY, JSON.stringify(users));
+    } catch (e) {}
+  }
+
+  async function fetchUsersWithRetry(attempts) {
+    for (let i = 0; i < attempts; i++) {
+      try {
+        if (typeof fetchUsersForLogin !== 'function') {
+          // Script may not have loaded yet, wait and retry
+          if (i < attempts - 1) {
+            await new Promise(r => setTimeout(r, RETRY_DELAY_MS));
+            continue;
+          }
+          return [];
+        }
+        const users = await fetchUsersForLogin();
+        if (users && users.length) return users;
+        // Empty result - wait and retry
+        if (i < attempts - 1) {
+          await new Promise(r => setTimeout(r, RETRY_DELAY_MS));
+        }
+      } catch (e) {
+        if (i < attempts - 1) {
+          await new Promise(r => setTimeout(r, RETRY_DELAY_MS));
+        }
+      }
+    }
+    return [];
+  }
+
+  function showRetryButton() {
+    let retryBtn = document.getElementById('retryUsersBtn');
+    if (!retryBtn) {
+      const select = document.getElementById('userSelect');
+      retryBtn = document.createElement('button');
+      retryBtn.id = 'retryUsersBtn';
+      retryBtn.textContent = 'Tap to Retry';
+      retryBtn.style.cssText = 'margin-top:12px;padding:10px 24px;border-radius:8px;border:1px solid var(--green);background:var(--green-soft);color:var(--green);font-size:14px;cursor:pointer;display:block;width:100%;';
+      retryBtn.onclick = () => {
+        retryBtn.textContent = 'Retrying…';
+        retryBtn.disabled = true;
+        populateUsersDropdown().finally(() => {
+          retryBtn.disabled = false;
+        });
+      };
+      if (select && select.parentNode) {
+        select.parentNode.insertBefore(retryBtn, select.nextSibling);
+      }
+    }
+    retryBtn.style.display = 'block';
+    retryBtn.textContent = 'Tap to Retry';
+  }
+
+  function hideRetryButton() {
+    const retryBtn = document.getElementById('retryUsersBtn');
+    if (retryBtn) retryBtn.style.display = 'none';
+  }
+
   async function populateUsersDropdown() {
     const select = document.getElementById('userSelect');
     if (!select) return;
@@ -371,30 +442,35 @@ select option { background: var(--surface); color: var(--text); }
     placeholder.value = '';
     placeholder.disabled = true;
     placeholder.selected = true;
-    placeholder.textContent = 'Choose your name…';
+    placeholder.textContent = 'Loading users…';
     select.appendChild(placeholder);
 
-    try {
-      const users = typeof fetchUsersForLogin === 'function'
-        ? await fetchUsersForLogin()
-        : [];
+    // Try fetching users from network with retries
+    let users = await fetchUsersWithRetry(MAX_RETRY_ATTEMPTS);
 
-      if (!users.length) {
-        placeholder.textContent = 'No users available';
-        return;
-      }
-
-      users.forEach((u) => {
-        const opt = document.createElement('option');
-        opt.value = u.id;
-        opt.textContent = u.name;
-        opt.dataset.displayName = u.name;
-        select.appendChild(opt);
-      });
-    } catch (e) {
-      console.warn('Failed to populate users dropdown:', e);
-      placeholder.textContent = 'Unable to load users';
+    // Fallback to localStorage cache if network failed
+    if (!users.length) {
+      users = getCachedUsers();
     }
+
+    if (!users.length) {
+      placeholder.textContent = 'No users available';
+      showRetryButton();
+      return;
+    }
+
+    // Cache the fresh user list for offline fallback
+    setCachedUsers(users);
+    hideRetryButton();
+
+    placeholder.textContent = 'Choose your name…';
+    users.forEach((u) => {
+      const opt = document.createElement('option');
+      opt.value = u.id;
+      opt.textContent = u.name;
+      opt.dataset.displayName = u.name;
+      select.appendChild(opt);
+    });
   }
 
   function onUserChange() {

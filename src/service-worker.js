@@ -18,6 +18,7 @@ const STATIC_ASSETS = [
   './config/config.js',
   './src/bible-data-manager.js',
   './src/lib/supabase.js',
+  './src/lib/supabase-pinned-verses.js',
   './src/voice-command.js',
   './manifest.json',
   './resources/icons/bible.png',
