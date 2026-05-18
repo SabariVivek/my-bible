@@ -256,6 +256,36 @@
             color: #333;
         }
 
+        .sermon-count-badge {
+            background: rgba(232, 184, 75, 0.1);
+            border: 1px solid rgba(232, 184, 75, 0.25);
+            color: #e8b84b;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 5px 11px;
+            border-radius: 16px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-right: 8px;
+        }
+
+        .sermon-count-badge.skeleton {
+            width: 70px;
+            height: 22px;
+            padding: 0;
+            border-color: transparent;
+            background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+            background-size: 200% 100%;
+            animation: sermon-shimmer 1.5s infinite;
+            color: transparent;
+        }
+
+        body.light-theme .sermon-count-badge {
+            background: rgba(180, 130, 20, 0.1);
+            border-color: rgba(180, 130, 20, 0.25);
+            color: #9a6e1a;
+        }
+
         .sermon-content {
             flex: 1;
             overflow-y: auto;
@@ -309,43 +339,80 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: #121212;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
             flex-direction: column;
-            gap: 20px;
+            gap: 1rem;
+            padding: 1rem;
+            z-index: 1000;
+            background: #1a1a1a;
         }
 
         .sermon-loader-wrapper.hidden {
+            display: none;
+        }
+
+        .sermon-skeleton-item {
+            padding: 16px;
+            border-radius: 14px;
+            background: #2a2a2a;
+            border: 1px solid rgba(255,255,255,0.07);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+            animation: sermon-skeleton-fadein 0.4s ease forwards;
             opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.5s ease-out;
         }
 
-        .sermon-loader-spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #333333;
-            border-top: 5px solid #ffffff;
-            border-right: 5px solid #cccccc;
-            border-radius: 50%;
-            animation: sermon-spin 1s linear infinite;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        .sermon-skeleton-item:nth-child(1) { animation-delay: 0s; }
+        .sermon-skeleton-item:nth-child(2) { animation-delay: 0.05s; }
+        .sermon-skeleton-item:nth-child(3) { animation-delay: 0.1s; }
+        .sermon-skeleton-item:nth-child(4) { animation-delay: 0.15s; }
+        .sermon-skeleton-item:nth-child(5) { animation-delay: 0.2s; }
+        .sermon-skeleton-item:nth-child(6) { animation-delay: 0.25s; }
+
+        .sermon-skeleton-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .sermon-loader-text {
-            color: #cccccc;
-            font-size: 16px;
-            text-align: center;
-            font-weight: 500;
-            letter-spacing: 1px;
+        .sermon-skeleton-bone {
+            background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+            background-size: 200% 100%;
+            animation: sermon-shimmer 1.5s infinite;
+            border-radius: 6px;
         }
 
-        @keyframes sermon-spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .sermon-skeleton-title {
+            height: 14px;
+            width: 70%;
+            margin-bottom: 8px;
+        }
+
+        .sermon-skeleton-subtitle {
+            height: 12px;
+            width: 50%;
+            margin-bottom: 12px;
+        }
+
+        .sermon-skeleton-badge {
+            height: 26px;
+            width: 100px;
+            border-radius: 20px;
+        }
+
+        .sermon-skeleton-date {
+            height: 22px;
+            width: 80px;
+            border-radius: 999px;
+        }
+
+        @keyframes sermon-skeleton-fadein {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes sermon-shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
 
         .sermon-list {
@@ -2499,6 +2566,7 @@
                 </svg>
             </button>
             <h1 class="sermon-nav-title">Sermons</h1>
+            <span class="sermon-count-badge skeleton" id="sermon-count-badge"></span>
             <button class="sermon-menu-btn" id="sermon-menu-btn" aria-label="Menu">
                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12" cy="5" r="2" />
@@ -2525,10 +2593,88 @@
 
         <!-- Content area with sermon list -->
         <div class="sermon-content">
-            <!-- Loader -->
+            <!-- Skeleton Loader -->
             <div class="sermon-loader-wrapper" id="sermon-loader">
-                <div class="sermon-loader-spinner"></div>
-                <p class="sermon-loader-text">Loading...</p>
+                <div class="sermon-skeleton-item">
+                    <div class="sermon-skeleton-row">
+                        <div class="sermon-skeleton-bone sermon-skeleton-title" style="width:65%;"></div>
+                        <div class="sermon-skeleton-bone sermon-skeleton-date"></div>
+                    </div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-subtitle" style="width:45%;"></div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-badge"></div>
+                </div>
+                <div class="sermon-skeleton-item">
+                    <div class="sermon-skeleton-row">
+                        <div class="sermon-skeleton-bone sermon-skeleton-title" style="width:72%;"></div>
+                        <div class="sermon-skeleton-bone sermon-skeleton-date"></div>
+                    </div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-subtitle" style="width:40%;"></div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-badge" style="width:120px;"></div>
+                </div>
+                <div class="sermon-skeleton-item">
+                    <div class="sermon-skeleton-row">
+                        <div class="sermon-skeleton-bone sermon-skeleton-title" style="width:58%;"></div>
+                        <div class="sermon-skeleton-bone sermon-skeleton-date"></div>
+                    </div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-subtitle" style="width:52%;"></div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-badge" style="width:90px;"></div>
+                </div>
+                <div class="sermon-skeleton-item">
+                    <div class="sermon-skeleton-row">
+                        <div class="sermon-skeleton-bone sermon-skeleton-title" style="width:68%;"></div>
+                        <div class="sermon-skeleton-bone sermon-skeleton-date"></div>
+                    </div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-subtitle" style="width:48%;"></div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-badge" style="width:110px;"></div>
+                </div>
+                <div class="sermon-skeleton-item">
+                    <div class="sermon-skeleton-row">
+                        <div class="sermon-skeleton-bone sermon-skeleton-title" style="width:75%;"></div>
+                        <div class="sermon-skeleton-bone sermon-skeleton-date"></div>
+                    </div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-subtitle" style="width:42%;"></div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-badge"></div>
+                </div>
+                <div class="sermon-skeleton-item">
+                    <div class="sermon-skeleton-row">
+                        <div class="sermon-skeleton-bone sermon-skeleton-title" style="width:60%;"></div>
+                        <div class="sermon-skeleton-bone sermon-skeleton-date"></div>
+                    </div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-subtitle" style="width:50%;"></div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-badge" style="width:95px;"></div>
+                </div>
+                <div class="sermon-skeleton-item">
+                    <div class="sermon-skeleton-row">
+                        <div class="sermon-skeleton-bone sermon-skeleton-title" style="width:70%;"></div>
+                        <div class="sermon-skeleton-bone sermon-skeleton-date"></div>
+                    </div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-subtitle" style="width:46%;"></div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-badge" style="width:105px;"></div>
+                </div>
+                <div class="sermon-skeleton-item">
+                    <div class="sermon-skeleton-row">
+                        <div class="sermon-skeleton-bone sermon-skeleton-title" style="width:55%;"></div>
+                        <div class="sermon-skeleton-bone sermon-skeleton-date"></div>
+                    </div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-subtitle" style="width:38%;"></div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-badge" style="width:115px;"></div>
+                </div>
+                <div class="sermon-skeleton-item">
+                    <div class="sermon-skeleton-row">
+                        <div class="sermon-skeleton-bone sermon-skeleton-title" style="width:78%;"></div>
+                        <div class="sermon-skeleton-bone sermon-skeleton-date"></div>
+                    </div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-subtitle" style="width:55%;"></div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-badge" style="width:88px;"></div>
+                </div>
+                <div class="sermon-skeleton-item">
+                    <div class="sermon-skeleton-row">
+                        <div class="sermon-skeleton-bone sermon-skeleton-title" style="width:62%;"></div>
+                        <div class="sermon-skeleton-bone sermon-skeleton-date"></div>
+                    </div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-subtitle" style="width:44%;"></div>
+                    <div class="sermon-skeleton-bone sermon-skeleton-badge" style="width:100px;"></div>
+                </div>
             </div>
             
             <div class="sermon-list" id="sermon-list">
@@ -3047,10 +3193,16 @@
         async function loadSermonsFromSupabase() {
             const loader = document.getElementById('sermon-loader');
             if (loader) loader.classList.remove('hidden');
+            const skeletonStart = Date.now();
 
             if (!supabase) {
                 loadSermonsFromLocalStorage();
+                renderSermons();
+                const elapsed = Date.now() - skeletonStart;
+                if (elapsed < 1000) await new Promise(r => setTimeout(r, 1000 - elapsed));
                 if (loader) loader.classList.add('hidden');
+                const countBadgeEl = document.getElementById('sermon-count-badge');
+                if (countBadgeEl) countBadgeEl.classList.remove('skeleton');
                 return;
             }
 
@@ -3069,7 +3221,12 @@
 
                 if (error) {
                     loadSermonsFromLocalStorage();
+                    renderSermons();
+                    const elapsed = Date.now() - skeletonStart;
+                    if (elapsed < 1000) await new Promise(r => setTimeout(r, 1000 - elapsed));
                     if (loader) loader.classList.add('hidden');
+                    const countBadgeEl = document.getElementById('sermon-count-badge');
+                    if (countBadgeEl) countBadgeEl.classList.remove('skeleton');
                     return;
                 }
 
@@ -3114,15 +3271,29 @@
                     localStorage.setItem('sermons', JSON.stringify(sermons));
                 } else {
                     loadSermonsFromLocalStorage();
+                    renderSermons();
+                    const elapsed = Date.now() - skeletonStart;
+                    if (elapsed < 1000) await new Promise(r => setTimeout(r, 1000 - elapsed));
                     if (loader) loader.classList.add('hidden');
+                    const countBadgeEl = document.getElementById('sermon-count-badge');
+                    if (countBadgeEl) countBadgeEl.classList.remove('skeleton');
                     return;
                 }
 
                 renderSermons();
+                const elapsed = Date.now() - skeletonStart;
+                if (elapsed < 1000) await new Promise(r => setTimeout(r, 1000 - elapsed));
                 if (loader) loader.classList.add('hidden');
+                const countBadgeEl = document.getElementById('sermon-count-badge');
+                if (countBadgeEl) countBadgeEl.classList.remove('skeleton');
             } catch (error) {
                 loadSermonsFromLocalStorage();
+                renderSermons();
+                const elapsed = Date.now() - skeletonStart;
+                if (elapsed < 1000) await new Promise(r => setTimeout(r, 1000 - elapsed));
                 if (loader) loader.classList.add('hidden');
+                const countBadgeEl = document.getElementById('sermon-count-badge');
+                if (countBadgeEl) countBadgeEl.classList.remove('skeleton');
             }
         }
 
@@ -3152,6 +3323,10 @@
         // Render sermons list
         function renderSermons() {
             const sermonList = document.getElementById('sermon-list');
+            const countBadge = document.getElementById('sermon-count-badge');
+            if (countBadge) {
+                countBadge.textContent = `${sermons.length} sermon${sermons.length !== 1 ? 's' : ''}`;
+            }
 
             if (sermons.length === 0) {
                 sermonList.innerHTML = `

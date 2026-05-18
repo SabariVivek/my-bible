@@ -49,60 +49,63 @@
 
     /* ── HEADER ── */
     .header {
-      background: var(--bg);
+      background: #2a2a2a;
       position: sticky;
       top: 0;
       z-index: 100;
       padding: env(safe-area-inset-top, 0px) 0 0 0;
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 1px solid #1f1f1f;
     }
 
     .header-inner {
       max-width: 520px;
       margin: 0 auto;
-      padding: 20px 20px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 16px;
     }
 
-    .header-top {
+    .header-back-btn {
       display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 12px;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border: none;
+      cursor: pointer;
+      color: var(--text);
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: opacity 0.2s ease;
+    }
+
+    .header-back-btn:active {
+      opacity: 0.6;
     }
 
     .header h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.5px;
-      line-height: 1.2;
-    }
-
-    .header-count {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      color: var(--accent);
-      font-size: 0.72rem;
+      font-size: 1.2rem;
       font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 20px;
+      color: var(--text);
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+      flex: 1;
       white-space: nowrap;
     }
 
-    .header-desc {
-      font-size: 0.82rem;
-      color: var(--text-sec);
-      font-weight: 400;
-      line-height: 1.5;
-    }
-
-    .header-accent {
-      display: block;
-      height: 3px;
-      width: 40px;
-      background: var(--accent);
-      border-radius: 2px;
-      margin-top: 14px;
+    .header-count {
+      background: rgba(232, 184, 75, 0.1);
+      border: 1px solid rgba(232, 184, 75, 0.25);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 16px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     /* ── MAIN ── */
@@ -392,17 +395,13 @@
   <!-- HEADER -->
   <div class="header">
     <div class="header-inner">
-      <div class="header-top">
-        <div style="display:flex;align-items:center;gap:10px;">
-          <button onclick="history.back()" style="background:none;border:none;color:var(--text);cursor:pointer;padding:4px;display:flex;align-items:center;-webkit-tap-highlight-color:transparent;" title="Back">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <h1>Daily Prayers</h1>
-        </div>
-        <span class="header-count"><span class="skeleton-bone" style="width:50px;height:12px;display:inline-block;"></span></span>
-      </div>
-      <p class="header-desc">One prayer a day &#8212; rooted in Scripture, spoken in faith.</p>
-      <span class="header-accent"></span>
+      <button class="header-back-btn" onclick="history.back()" title="Back">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <h1>Daily Prayers</h1>
+      <span class="header-count"><span class="skeleton-bone" style="width:50px;height:12px;display:inline-block;"></span></span>
     </div>
   </div>
 
@@ -444,6 +443,42 @@
       <div class="skeleton-bone skeleton-line" style="width:88%;"></div>
       <div class="skeleton-bone skeleton-line" style="width:50%;"></div>
     </div>
+    <div class="skeleton-card">
+      <div class="skeleton-header">
+        <div class="skeleton-header-left">
+          <div class="skeleton-bone skeleton-circle"></div>
+          <div class="skeleton-bone" style="width:70px;height:12px;"></div>
+        </div>
+        <div class="skeleton-bone" style="width:90px;height:24px;border-radius:8px;"></div>
+      </div>
+      <div class="skeleton-bone skeleton-line" style="width:100%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:80%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:65%;"></div>
+    </div>
+    <div class="skeleton-card">
+      <div class="skeleton-header">
+        <div class="skeleton-header-left">
+          <div class="skeleton-bone skeleton-circle"></div>
+          <div class="skeleton-bone" style="width:70px;height:12px;"></div>
+        </div>
+        <div class="skeleton-bone" style="width:90px;height:24px;border-radius:8px;"></div>
+      </div>
+      <div class="skeleton-bone skeleton-line" style="width:100%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:90%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:58%;"></div>
+    </div>
+    <div class="skeleton-card">
+      <div class="skeleton-header">
+        <div class="skeleton-header-left">
+          <div class="skeleton-bone skeleton-circle"></div>
+          <div class="skeleton-bone" style="width:70px;height:12px;"></div>
+        </div>
+        <div class="skeleton-bone" style="width:90px;height:24px;border-radius:8px;"></div>
+      </div>
+      <div class="skeleton-bone skeleton-line" style="width:100%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:82%;"></div>
+      <div class="skeleton-bone skeleton-line" style="width:48%;"></div>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -456,7 +491,11 @@
     const headerCount = document.querySelector('.header-count');
 
     function getToday() {
-      return new Date().toISOString().split('T')[0];
+      // Use IST (UTC+5:30) to determine today's date
+      const now = new Date();
+      const istOffset = 5.5 * 60 * 60 * 1000; // IST is UTC+5:30
+      const istDate = new Date(now.getTime() + istOffset);
+      return istDate.toISOString().split('T')[0];
     }
 
     function getDayLabel(dateStr) {
