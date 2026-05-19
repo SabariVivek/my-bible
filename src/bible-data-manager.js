@@ -123,6 +123,11 @@ class BibleDataManager {
     getBookCacheKey(bookFile, language) {
         return `${bookFile}_${language}_full`;
     }
+    // Check if a book is already cached in memory
+    isBookCached(bookFile, language) {
+        const bookCacheKey = this.getBookCacheKey(bookFile, language);
+        return this.bookCache.has(bookCacheKey);
+    }
     // Load entire book at once
     async loadEntireBook(bookFile, language) {
         const bookCacheKey = this.getBookCacheKey(bookFile, language);

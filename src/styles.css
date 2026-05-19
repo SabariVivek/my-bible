@@ -399,6 +399,344 @@ body.dark-theme .book-loader {
     border-top-color: #e8eaed;
 }
 
+/* ── Bible Skeleton Loader ── */
+.bible-skeleton-wrapper {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: rgb(248, 249, 250);
+    overflow: hidden;
+}
+
+.bible-skeleton-wrapper.active {
+    display: flex;
+}
+
+body.dark-theme .bible-skeleton-wrapper {
+    background: #202124;
+}
+
+.bible-skeleton-verse {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0.5rem;
+    margin-bottom: 0.8rem;
+    animation: bible-skeleton-fadein 0.4s ease forwards;
+    opacity: 0;
+}
+
+.bible-skeleton-verse:nth-child(1) { animation-delay: 0s; }
+.bible-skeleton-verse:nth-child(2) { animation-delay: 0.04s; }
+.bible-skeleton-verse:nth-child(3) { animation-delay: 0.08s; }
+.bible-skeleton-verse:nth-child(4) { animation-delay: 0.12s; }
+.bible-skeleton-verse:nth-child(5) { animation-delay: 0.16s; }
+.bible-skeleton-verse:nth-child(6) { animation-delay: 0.2s; }
+.bible-skeleton-verse:nth-child(7) { animation-delay: 0.24s; }
+.bible-skeleton-verse:nth-child(8) { animation-delay: 0.28s; }
+.bible-skeleton-verse:nth-child(9) { animation-delay: 0.32s; }
+.bible-skeleton-verse:nth-child(10) { animation-delay: 0.36s; }
+
+.bible-skeleton-lines {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bible-skeleton-bone {
+    background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.09) 50%, rgba(0,0,0,0.05) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+body.dark-theme .bible-skeleton-bone {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+}
+
+.bible-skeleton-number {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.bible-skeleton-line {
+    height: 16px;
+}
+
+.bible-skeleton-line:last-child {
+    margin-bottom: 0;
+}
+
+/* Skeleton Chapter Header (mimics mobile-chapter-header) */
+.bible-skeleton-chapter-header {
+    text-align: center;
+    padding: 8px 8px;
+    margin-bottom: 12px;
+}
+
+.bible-skeleton-book-title {
+    width: 120px;
+    height: 16px;
+    margin: 0 auto 10px;
+    border-radius: 12px;
+}
+
+.bible-skeleton-chapter-num {
+    width: 60px;
+    height: 52px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Skeleton Verse Header (mimics .verse-header) */
+.bible-skeleton-verse-header {
+    margin: 1.2rem 0 0.8rem 0;
+    padding: 0.5rem 0.8rem;
+    border-left: 2px solid rgba(0,0,0,0.06);
+    border-radius: 0;
+}
+
+body.dark-theme .bible-skeleton-verse-header {
+    border-left-color: rgba(255,255,255,0.08);
+}
+
+/* Skeleton Author Banner */
+body.skeleton-loading .author-banner .ab-name,
+body.skeleton-loading .author-banner .ab-meta,
+body.skeleton-loading .author-banner .ab-era {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.09) 50%, rgba(0,0,0,0.05) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+    border-radius: 4px;
+    min-width: 50px;
+    display: inline-block;
+}
+
+body.skeleton-loading .author-banner .ab-name {
+    min-width: 60px;
+    height: 14px;
+}
+
+body.skeleton-loading .author-banner .ab-meta {
+    min-width: 80px;
+    height: 12px;
+}
+
+body.skeleton-loading .author-banner .ab-era {
+    min-width: 55px;
+    height: 12px;
+}
+
+body.skeleton-loading .author-banner .ab-sep {
+    opacity: 0.3;
+}
+
+body.dark-theme.skeleton-loading .author-banner .ab-name,
+body.dark-theme.skeleton-loading .author-banner .ab-meta,
+body.dark-theme.skeleton-loading .author-banner .ab-era {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+}
+
+/* Skeleton for Mobile Chapter Header */
+body.skeleton-loading .mobile-chapter-header .mobile-chapter-title {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.09) 50%, rgba(0,0,0,0.05) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+    border-radius: 4px;
+    min-width: 80px;
+    display: inline-block;
+    height: 14px;
+}
+
+body.skeleton-loading .mobile-chapter-header .mobile-chapter-number {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.09) 50%, rgba(0,0,0,0.05) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+    border-radius: 8px;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+body.skeleton-loading .mobile-chapter-header .mobile-verse-count-badge,
+body.skeleton-loading .mobile-chapter-header .expand-all-headers-btn {
+    opacity: 0;
+}
+
+body.dark-theme.skeleton-loading .mobile-chapter-header .mobile-chapter-title,
+body.dark-theme.skeleton-loading .mobile-chapter-header .mobile-chapter-number {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+}
+
+@keyframes bible-skeleton-fadein {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bible-skeleton-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ── Skeleton Loading State for Top Bar ── */
+body.skeleton-loading .site-title {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.06) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+    border-radius: 4px;
+    min-width: 80px;
+    height: 20px;
+}
+
+body.skeleton-loading .header-controls .icon-btn {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+body.skeleton-loading .header-controls .icon-btn svg {
+    visibility: hidden;
+}
+
+body.dark-theme.skeleton-loading .site-title {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+}
+
+body.dark-theme.skeleton-loading .header-controls .icon-btn {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+}
+
+/* ── Skeleton Loading State for Bottom Nav ── */
+body.skeleton-loading .bottom-nav .nav-btn {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%) !important;
+    background-size: 200% 100% !important;
+    animation: bible-skeleton-shimmer 1.5s infinite !important;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    transition: none !important;
+}
+
+body.skeleton-loading .bottom-nav .nav-btn svg,
+body.skeleton-loading .bottom-nav .nav-btn span {
+    visibility: hidden;
+}
+
+body.skeleton-loading .bottom-nav .current-chapter {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.06) 75%) !important;
+    background-size: 200% 100% !important;
+    animation: bible-skeleton-shimmer 1.5s infinite !important;
+    border-radius: 4px;
+    min-width: 100px;
+    height: 18px;
+    transition: none !important;
+}
+
+body.dark-theme.skeleton-loading .bottom-nav .nav-btn {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%) !important;
+    background-size: 200% 100% !important;
+    animation: bible-skeleton-shimmer 1.5s infinite !important;
+}
+
+body.dark-theme.skeleton-loading .bottom-nav .current-chapter {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%) !important;
+    background-size: 200% 100% !important;
+    animation: bible-skeleton-shimmer 1.5s infinite !important;
+}
+
+/* ── Skeleton Loading State for Left Sidebar (Desktop) ── */
+body.skeleton-loading .books-sidebar .book-item .book-name {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+    border-radius: 4px;
+    display: inline-block;
+    min-width: 80px;
+    height: 14px;
+}
+
+body.skeleton-loading .books-sidebar .book-item:nth-child(odd) .book-name {
+    min-width: 100px;
+}
+
+body.skeleton-loading .books-sidebar .book-item:nth-child(3n) .book-name {
+    min-width: 120px;
+}
+
+body.skeleton-loading .books-sidebar .book-item:nth-child(4n) .book-name {
+    min-width: 90px;
+}
+
+body.dark-theme.skeleton-loading .books-sidebar .book-item .book-name {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+}
+
+/* ── Skeleton Loading State for Chapters/Verses Columns (Desktop) ── */
+body.skeleton-loading .chapters-column .number-item,
+body.skeleton-loading .verses-column .number-item {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+    border-radius: 4px;
+    min-width: 28px;
+    min-height: 28px;
+}
+
+body.dark-theme.skeleton-loading .chapters-column .number-item,
+body.dark-theme.skeleton-loading .verses-column .number-item {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background-size: 200% 100%;
+    animation: bible-skeleton-shimmer 1.5s infinite;
+}
+
+/* ── Show author banner skeleton (shimmer on text elements) ── */
+body.skeleton-loading .author-banner {
+    visibility: visible;
+}
+
+/* ── Hide left pane (sidebar + columns) during skeleton loading ── */
+body.skeleton-loading .books-sidebar,
+body.skeleton-loading .chapters-column,
+body.skeleton-loading .verses-column {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease;
+}
+
 /* Top Bar */
 .top-bar {
     display: flex;

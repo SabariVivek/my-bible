@@ -2324,7 +2324,8 @@ function initializeBookList() {
     const bookItems = document.querySelectorAll('.book-item');
     bookItems.forEach((item, index) => {
         item.addEventListener('click', () => {
-            // Always load chapter 1 for newly selected book
+            // Skip reload if same book is already loaded
+            if (index === currentBook && currentChapter === 1) return;
             loadBook(index, 1);
         });
     });
@@ -2405,22 +2406,42 @@ function updateBookNames() {
 }
 // Show/hide loader
 let loaderStartTime = 0;
+const SKELETON_MIN_DISPLAY = 1000; // minimum 1 second skeleton display
 function showLoader() {
     const loader = document.getElementById('loader');
     if (loader) {
         loader.classList.add('active');
         loaderStartTime = Date.now();
     }
+    document.body.classList.add('skeleton-loading');
 }
 function hideLoader() {
-    const loader = document.getElementById('loader');
-    if (loader) {
-        loader.classList.remove('active');
-    }
+    const elapsed = Date.now() - loaderStartTime;
+    const delay = Math.max(0, SKELETON_MIN_DISPLAY - elapsed);
+    setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) {
+            loader.classList.remove('active');
+        }
+        document.body.classList.remove('skeleton-loading');
+    }, delay);
 }
 // Load a book
 async function loadBook(bookIndex, chapter) {
-    showLoader();
+    const book = bibleBooks[bookIndex];
+    // Determine if data is already cached — skip skeleton if so
+    let isCached = false;
+    if (currentLanguage === 'both') {
+        const englishFile = getBookFileForLanguage(book.file, 'english');
+        isCached = bibleDataManager.isBookCached(book.file, 'tamil') && bibleDataManager.isBookCached(englishFile, 'english');
+    } else {
+        const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+        const bookFile = getBookFileForLanguage(book.file, language);
+        isCached = bibleDataManager.isBookCached(bookFile, language);
+    }
+    if (!isCached) {
+        showLoader();
+    }
     // Restore UI elements if coming from home page
     restoreUIFromHomePage();
     currentBook = bookIndex;
@@ -2429,7 +2450,6 @@ async function loadBook(bookIndex, chapter) {
     localStorage.setItem('currentBook', bookIndex);
     localStorage.setItem('currentChapter', chapter);
     localStorage.removeItem('isOnHomePage');
-    const book = bibleBooks[bookIndex];
     try {
         if (currentLanguage === 'both') {
             // Load entire book for both languages
@@ -7249,10 +7269,21 @@ function showHomePage() {
             }
         });
     // Hide loader only after both data preloading and verse loading are complete
+    const skeletonStart = Date.now();
     Promise.all([dataLoadingPromise, verseLoadingPromise]).then(() => {
-        if (loader) loader.classList.remove('active');
+        const elapsed = Date.now() - skeletonStart;
+        const delay = Math.max(0, SKELETON_MIN_DISPLAY - elapsed);
+        setTimeout(() => {
+            if (loader) loader.classList.remove('active');
+            document.body.classList.remove('skeleton-loading');
+        }, delay);
     }).catch(error => {
-        if (loader) loader.classList.remove('active');
+        const elapsed = Date.now() - skeletonStart;
+        const delay = Math.max(0, SKELETON_MIN_DISPLAY - elapsed);
+        setTimeout(() => {
+            if (loader) loader.classList.remove('active');
+            document.body.classList.remove('skeleton-loading');
+        }, delay);
     });
     // Store home state
     localStorage.setItem('isOnHomePage', 'true');

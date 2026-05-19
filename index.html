@@ -73,6 +73,8 @@
         if (isDarkThemes) {
             document.body.classList.add('dark-theme');
         }
+        // Add skeleton-loading class for initial load skeleton UI
+        document.body.classList.add('skeleton-loading');
     </script>
     <header class="top-bar" id="main-header">
         <div class="logo-container">
@@ -1074,11 +1076,99 @@
 
         <!-- Main Content Area -->
         <main class="content-area">
-            <!-- Loading Spinner -->
-            <div class="loader-overlay" id="loader">
-                <div class="loader-container">
-                    <div class="book-loader"></div>
-                    <p class="loader-text">Loading...</p>
+            <!-- Skeleton Loader -->
+            <div class="bible-skeleton-wrapper" id="loader">
+                <!-- Mobile Chapter Header Skeleton -->
+                <div class="bible-skeleton-chapter-header">
+                    <div class="bible-skeleton-bone bible-skeleton-book-title"></div>
+                    <div class="bible-skeleton-bone bible-skeleton-chapter-num"></div>
+                </div>
+
+                <!-- Verse Header Skeleton -->
+                <div class="bible-skeleton-verse-header">
+                    <div class="bible-skeleton-bone" style="width:60%; height:14px;"></div>
+                </div>
+
+                <div class="bible-skeleton-verse">
+                    <div class="bible-skeleton-bone bible-skeleton-number"></div>
+                    <div class="bible-skeleton-lines">
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:95%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:88%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:72%;"></div>
+                    </div>
+                </div>
+                <div class="bible-skeleton-verse">
+                    <div class="bible-skeleton-bone bible-skeleton-number"></div>
+                    <div class="bible-skeleton-lines">
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:100%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:82%;"></div>
+                    </div>
+                </div>
+                <div class="bible-skeleton-verse">
+                    <div class="bible-skeleton-bone bible-skeleton-number"></div>
+                    <div class="bible-skeleton-lines">
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:90%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:96%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:65%;"></div>
+                    </div>
+                </div>
+                <div class="bible-skeleton-verse">
+                    <div class="bible-skeleton-bone bible-skeleton-number"></div>
+                    <div class="bible-skeleton-lines">
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:85%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:78%;"></div>
+                    </div>
+                </div>
+
+                <!-- Another Verse Header Skeleton -->
+                <div class="bible-skeleton-verse-header">
+                    <div class="bible-skeleton-bone" style="width:45%; height:14px;"></div>
+                </div>
+
+                <div class="bible-skeleton-verse">
+                    <div class="bible-skeleton-bone bible-skeleton-number"></div>
+                    <div class="bible-skeleton-lines">
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:92%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:100%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:58%;"></div>
+                    </div>
+                </div>
+                <div class="bible-skeleton-verse">
+                    <div class="bible-skeleton-bone bible-skeleton-number"></div>
+                    <div class="bible-skeleton-lines">
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:88%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:75%;"></div>
+                    </div>
+                </div>
+                <div class="bible-skeleton-verse">
+                    <div class="bible-skeleton-bone bible-skeleton-number"></div>
+                    <div class="bible-skeleton-lines">
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:97%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:84%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:70%;"></div>
+                    </div>
+                </div>
+                <div class="bible-skeleton-verse">
+                    <div class="bible-skeleton-bone bible-skeleton-number"></div>
+                    <div class="bible-skeleton-lines">
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:80%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:93%;"></div>
+                    </div>
+                </div>
+                <div class="bible-skeleton-verse">
+                    <div class="bible-skeleton-bone bible-skeleton-number"></div>
+                    <div class="bible-skeleton-lines">
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:86%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:91%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:62%;"></div>
+                    </div>
+                </div>
+                <div class="bible-skeleton-verse">
+                    <div class="bible-skeleton-bone bible-skeleton-number"></div>
+                    <div class="bible-skeleton-lines">
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:94%;"></div>
+                        <div class="bible-skeleton-bone bible-skeleton-line" style="width:68%;"></div>
+                    </div>
                 </div>
             </div>
 
