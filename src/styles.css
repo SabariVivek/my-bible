@@ -634,44 +634,11 @@ body.dark-theme.skeleton-loading .header-controls .icon-btn {
     animation: bible-skeleton-shimmer 1.5s infinite;
 }
 
-/* ── Skeleton Loading State for Bottom Nav ── */
-body.skeleton-loading .bottom-nav .nav-btn {
-    color: transparent;
-    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%) !important;
-    background-size: 200% 100% !important;
-    animation: bible-skeleton-shimmer 1.5s infinite !important;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
+/* ── Hide Bottom Nav during skeleton loading ── */
+body.skeleton-loading .bottom-nav {
+    opacity: 0 !important;
+    pointer-events: none !important;
     transition: none !important;
-}
-
-body.skeleton-loading .bottom-nav .nav-btn svg,
-body.skeleton-loading .bottom-nav .nav-btn span {
-    visibility: hidden;
-}
-
-body.skeleton-loading .bottom-nav .current-chapter {
-    color: transparent;
-    background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.06) 75%) !important;
-    background-size: 200% 100% !important;
-    animation: bible-skeleton-shimmer 1.5s infinite !important;
-    border-radius: 4px;
-    min-width: 100px;
-    height: 18px;
-    transition: none !important;
-}
-
-body.dark-theme.skeleton-loading .bottom-nav .nav-btn {
-    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%) !important;
-    background-size: 200% 100% !important;
-    animation: bible-skeleton-shimmer 1.5s infinite !important;
-}
-
-body.dark-theme.skeleton-loading .bottom-nav .current-chapter {
-    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%) !important;
-    background-size: 200% 100% !important;
-    animation: bible-skeleton-shimmer 1.5s infinite !important;
 }
 
 /* ── Skeleton Loading State for Left Sidebar (Desktop) ── */
