@@ -1153,8 +1153,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(4px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1167,6 +1165,338 @@
         .loading-overlay.show {
             opacity: 1;
             pointer-events: all;
+        }
+
+        /* ── Skeleton Screens ── */
+        @keyframes skel-shimmer {
+            0% { background-position: -400px 0; }
+            100% { background-position: 400px 0; }
+        }
+        @keyframes skel-twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.8; }
+        }
+        @keyframes skel-pulse-glow {
+            0%, 100% { box-shadow: 0 0 18px 6px rgba(255,220,80,0.35); }
+            50% { box-shadow: 0 0 32px 12px rgba(255,220,80,0.6); }
+        }
+
+        .skeleton-screen {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .skel-container {
+            background: linear-gradient(180deg, #0d0d16 0%, #111120 100%);
+            min-height: 100vh;
+            max-width: 430px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            font-family: Georgia, serif;
+        }
+
+        .skeleton-family .skel-container {
+            background: linear-gradient(180deg, #0f0404 0%, #160606 100%);
+        }
+
+        .skel-faith-bg {
+            background: linear-gradient(180deg, #0a0a14 0%, #0d0d1a 100%) !important;
+            position: relative;
+        }
+
+        .skel-bone {
+            background: linear-gradient(90deg, #1a1a22 0%, #252535 40%, #2e2e42 50%, #252535 60%, #1a1a22 100%);
+            background-size: 800px 100%;
+            animation: skel-shimmer 1.7s infinite linear;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .skeleton-family .skel-bone {
+            background: linear-gradient(90deg, #1e1010 0%, #2e1a1a 40%, #3a2020 50%, #2e1a1a 60%, #1e1010 100%);
+            background-size: 800px 100%;
+            animation: skel-shimmer 1.6s infinite linear;
+        }
+
+        .skel-circle {
+            border-radius: 50%;
+            background: linear-gradient(90deg, #1a1a22 0%, #252535 40%, #2e2e42 50%, #252535 60%, #1a1a22 100%);
+            background-size: 800px 100%;
+            animation: skel-shimmer 1.7s infinite linear;
+            flex-shrink: 0;
+        }
+
+        .skeleton-family .skel-circle {
+            background: linear-gradient(90deg, #1e1010 0%, #2e1a1a 40%, #3a2020 50%, #2e1a1a 60%, #1e1010 100%);
+            background-size: 800px 100%;
+            animation: skel-shimmer 1.6s infinite linear;
+        }
+
+        .skel-header {
+            padding: 6px 18px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .skel-header-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skel-alert {
+            background: rgba(160,30,30,0.7);
+            border-radius: 10px;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 14px 16px;
+            border: 1px solid rgba(220,60,60,0.3);
+        }
+
+        .skel-alert-red {
+            background: rgba(140,30,30,0.6);
+            border: 1px solid rgba(200,60,60,0.25);
+        }
+
+        .skel-section {
+            background: rgba(28,28,40,0.95);
+            border-radius: 16px;
+            padding: 18px 16px;
+            margin: 0 14px 16px;
+            border: 1.5px solid rgba(255,180,0,0.18);
+            box-shadow: 0 2px 18px rgba(0,0,0,0.35);
+        }
+
+        .skel-section-red {
+            background: rgba(40,12,12,0.7);
+            border: 1px solid rgba(160,40,40,0.15);
+        }
+
+        .skel-family-card {
+            background: rgba(80,20,20,0.45);
+            border-radius: 14px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(180,60,60,0.12);
+        }
+
+        .skel-reading-item {
+            background: rgba(255,255,255,0.04);
+            border-radius: 12px;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .skel-bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 12px 0 22px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            background: rgba(14,14,20,0.98);
+            position: sticky;
+            bottom: 0;
+            margin-top: auto;
+        }
+
+        .skel-bottom-nav-red {
+            border-top-color: rgba(160,40,40,0.2);
+            background: rgba(20,6,6,0.98);
+        }
+
+        .skel-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Heatmap grid */
+        .skel-heatmap-grid {
+            display: grid;
+            grid-template-columns: repeat(17, 14px);
+            gap: 4px;
+            padding-left: 20px;
+        }
+
+        .skel-heatmap-grid::before {
+            content: '';
+            display: block;
+            grid-column: 1 / -1;
+        }
+
+        /* Podium styles */
+        .skel-podium {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 16px;
+            padding: 20px 16px 28px;
+        }
+
+        .skel-podium-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skel-podium-card {
+            background: rgba(40,40,56,0.9);
+            border-radius: 12px;
+            padding: 14px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            width: 90px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .skel-podium-card-gold {
+            background: rgba(60,55,20,0.9);
+            padding: 16px 22px;
+            width: 110px;
+            border: 1px solid rgba(255,185,0,0.25);
+        }
+
+        .skel-podium-card-bronze {
+            background: rgba(50,35,20,0.9);
+            border: 1px solid rgba(200,140,60,0.15);
+        }
+
+        .skel-player-item {
+            background: rgba(28,28,40,0.85);
+            border-radius: 14px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        /* Faith orbit styles */
+        .skel-orbit-wrapper {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 380px;
+        }
+
+        .skel-orbit-ring {
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .skel-orbit-inner {
+            width: 136px;
+            height: 136px;
+            border: 1.5px dashed rgba(80,200,80,0.18);
+        }
+
+        .skel-orbit-outer {
+            width: 256px;
+            height: 256px;
+            border: 1.5px dashed rgba(200,80,80,0.15);
+        }
+
+        .skel-sun {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ffe066 0%, #f5a623 60%, #e67e00 100%);
+            animation: skel-pulse-glow 2.4s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .skel-planet {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .skel-planet-green {
+            background: #4caf50;
+            box-shadow: 0 0 8px 3px rgba(76,175,80,0.4);
+        }
+
+        .skel-planet-red {
+            background: #e53935;
+            box-shadow: 0 0 8px 3px rgba(229,57,53,0.4);
+        }
+
+        .skel-planet-orange {
+            background: #f5a623;
+            box-shadow: 0 0 8px 3px rgba(245,166,35,0.4);
+        }
+
+        .skel-stars {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .skel-stars::before,
+        .skel-stars::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.7);
+            animation: skel-twinkle 2.5s infinite ease-in-out;
+            box-shadow:
+                40px 20px 0 rgba(255,255,255,0.5),
+                80px 60px 0 rgba(255,255,255,0.4),
+                120px 30px 0 rgba(255,255,255,0.6),
+                160px 80px 0 rgba(255,255,255,0.3),
+                200px 50px 0 rgba(255,255,255,0.5),
+                240px 90px 0 rgba(255,255,255,0.4),
+                280px 40px 0 rgba(255,255,255,0.6),
+                320px 70px 0 rgba(255,255,255,0.3),
+                60px 120px 0 rgba(255,255,255,0.5),
+                100px 150px 0 rgba(255,255,255,0.4),
+                140px 180px 0 rgba(255,255,255,0.6),
+                180px 130px 0 rgba(255,255,255,0.3),
+                220px 160px 0 rgba(255,255,255,0.5),
+                260px 140px 0 rgba(255,255,255,0.4),
+                300px 170px 0 rgba(255,255,255,0.6),
+                20px 200px 0 rgba(255,255,255,0.3),
+                50px 250px 0 rgba(255,255,255,0.5),
+                90px 280px 0 rgba(255,255,255,0.4),
+                130px 260px 0 rgba(255,255,255,0.6),
+                170px 290px 0 rgba(255,255,255,0.3);
+        }
+
+        .skel-stars::after {
+            animation-delay: 1.2s;
+            left: 30px;
+            top: 20px;
         }
 
         .loading-content {
@@ -1850,26 +2180,441 @@
 <body>
     <div id="app"></div>
     
-    <!-- Loading Overlay -->
+    <!-- Loading Overlay (Skeleton Screens) -->
     <div id="loadingOverlay" class="loading-overlay">
-        <div class="loading-content">
-            <div class="book-loader"></div>
-            <div class="loading-text">Loading...</div>
+        <!-- My Plan Skeleton (default) -->
+        <div class="skeleton-screen skeleton-myplan" id="skeleton-myplan">
+            <div class="skel-container">
+                <!-- Header -->
+                <div class="skel-header">
+                    <div class="skel-header-left">
+                        <div class="skel-bone" style="width:14px;height:22px;border-radius:4px;"></div>
+                        <div>
+                            <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px;">
+                                <div class="skel-bone" style="width:110px;height:22px;border-radius:6px;"></div>
+                                <div class="skel-bone" style="width:60px;height:18px;border-radius:6px;"></div>
+                            </div>
+                            <div class="skel-bone" style="width:80px;height:12px;border-radius:4px;"></div>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:10px;">
+                        <div class="skel-circle" style="width:38px;height:38px;"></div>
+                        <div class="skel-bone" style="width:32px;height:32px;border-radius:8px;"></div>
+                    </div>
+                </div>
+
+                <!-- Alert Banner -->
+                <div class="skel-alert">
+                    <div class="skel-bone" style="width:20px;height:20px;border-radius:10px;"></div>
+                    <div class="skel-bone" style="width:60%;height:13px;border-radius:5px;"></div>
+                </div>
+
+                <!-- Today's Reading Card -->
+                <div class="skel-section">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <div class="skel-bone" style="width:22px;height:22px;border-radius:5px;"></div>
+                            <div class="skel-bone" style="width:130px;height:17px;border-radius:6px;"></div>
+                        </div>
+                        <div class="skel-bone" style="width:66px;height:26px;border-radius:20px;"></div>
+                    </div>
+                    <!-- Reading items -->
+                    <div class="skel-reading-item">
+                        <div class="skel-circle" style="width:32px;height:32px;"></div>
+                        <div style="flex:1;display:flex;flex-direction:column;gap:7px;">
+                            <div class="skel-bone" style="width:58%;height:15px;border-radius:5px;"></div>
+                            <div class="skel-bone" style="width:45%;height:11px;border-radius:4px;"></div>
+                        </div>
+                        <div class="skel-bone" style="width:46px;height:28px;border-radius:8px;"></div>
+                    </div>
+                    <div class="skel-reading-item">
+                        <div class="skel-circle" style="width:32px;height:32px;"></div>
+                        <div style="flex:1;display:flex;flex-direction:column;gap:7px;">
+                            <div class="skel-bone" style="width:52%;height:15px;border-radius:5px;"></div>
+                            <div class="skel-bone" style="width:40%;height:11px;border-radius:4px;"></div>
+                        </div>
+                        <div class="skel-bone" style="width:46px;height:28px;border-radius:8px;"></div>
+                    </div>
+                    <!-- Track Progress button -->
+                    <div class="skel-bone" style="width:100%;height:48px;border-radius:12px;margin-top:6px;margin-bottom:14px;"></div>
+                    <!-- Prev / Next -->
+                    <div style="display:flex;justify-content:space-between;">
+                        <div class="skel-bone" style="width:100px;height:13px;border-radius:5px;"></div>
+                        <div class="skel-bone" style="width:80px;height:13px;border-radius:5px;"></div>
+                    </div>
+                </div>
+
+                <!-- Yearly Progress Card -->
+                <div class="skel-section">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <div class="skel-bone" style="width:20px;height:20px;border-radius:5px;"></div>
+                            <div class="skel-bone" style="width:130px;height:16px;border-radius:6px;"></div>
+                        </div>
+                        <div class="skel-bone" style="width:100px;height:26px;border-radius:20px;"></div>
+                    </div>
+                    <!-- Donut + stats -->
+                    <div style="display:flex;gap:14px;margin-bottom:18px;">
+                        <div class="skel-circle" style="width:90px;height:90px;box-shadow:0 0 0 10px rgba(255,255,255,0.03);"></div>
+                        <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;">
+                            <div style="display:flex;flex-direction:column;gap:5px;"><div class="skel-bone" style="width:70%;height:10px;border-radius:4px;"></div><div class="skel-bone" style="width:55%;height:15px;border-radius:5px;"></div></div>
+                            <div style="display:flex;flex-direction:column;gap:5px;"><div class="skel-bone" style="width:70%;height:10px;border-radius:4px;"></div><div class="skel-bone" style="width:55%;height:15px;border-radius:5px;"></div></div>
+                            <div style="display:flex;flex-direction:column;gap:5px;"><div class="skel-bone" style="width:70%;height:10px;border-radius:4px;"></div><div class="skel-bone" style="width:55%;height:15px;border-radius:5px;"></div></div>
+                            <div style="display:flex;flex-direction:column;gap:5px;"><div class="skel-bone" style="width:70%;height:10px;border-radius:4px;"></div><div class="skel-bone" style="width:55%;height:15px;border-radius:5px;"></div></div>
+                        </div>
+                    </div>
+                    <!-- Progress bars -->
+                    <div style="margin-bottom:14px;">
+                        <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><div class="skel-bone" style="width:110px;height:13px;border-radius:4px;"></div><div class="skel-bone" style="width:36px;height:13px;border-radius:4px;"></div></div>
+                        <div style="height:5px;border-radius:4px;background:rgba(255,255,255,0.07);overflow:hidden;"><div class="skel-bone" style="height:100%;width:37%;border-radius:4px;"></div></div>
+                    </div>
+                    <div style="margin-bottom:14px;">
+                        <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><div class="skel-bone" style="width:110px;height:13px;border-radius:4px;"></div><div class="skel-bone" style="width:36px;height:13px;border-radius:4px;"></div></div>
+                        <div style="height:5px;border-radius:4px;background:rgba(255,255,255,0.07);overflow:hidden;"><div class="skel-bone" style="height:100%;width:28%;border-radius:4px;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Bottom Nav -->
+                <div class="skel-bottom-nav">
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Family Tab Skeleton -->
+        <div class="skeleton-screen skeleton-family" id="skeleton-family" style="display:none;">
+            <div class="skel-container">
+                <!-- Header -->
+                <div class="skel-header">
+                    <div class="skel-header-left">
+                        <div class="skel-bone" style="width:14px;height:22px;border-radius:4px;"></div>
+                        <div>
+                            <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px;">
+                                <div class="skel-bone" style="width:110px;height:22px;border-radius:6px;"></div>
+                                <div class="skel-bone" style="width:58px;height:18px;border-radius:6px;"></div>
+                            </div>
+                            <div class="skel-bone" style="width:80px;height:12px;border-radius:4px;"></div>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:10px;">
+                        <div class="skel-circle" style="width:38px;height:38px;"></div>
+                        <div class="skel-bone" style="width:32px;height:32px;border-radius:8px;"></div>
+                    </div>
+                </div>
+
+                <!-- Alert Banner -->
+                <div class="skel-alert skel-alert-red">
+                    <div class="skel-bone" style="width:18px;height:18px;border-radius:9px;"></div>
+                    <div class="skel-bone" style="width:65%;height:13px;border-radius:5px;"></div>
+                </div>
+
+                <!-- Scrollable content -->
+                <div style="flex:1;overflow-y:auto;padding:0 14px;">
+
+                    <!-- Heatmap Section -->
+                    <div class="skel-section skel-section-red">
+                        <!-- Month labels -->
+                        <div style="display:flex;gap:4px;margin-bottom:8px;padding-left:20px;">
+                            <div class="skel-bone" style="width:46px;height:10px;border-radius:4px;margin-right:12px;"></div>
+                            <div class="skel-bone" style="width:46px;height:10px;border-radius:4px;margin-right:12px;"></div>
+                            <div class="skel-bone" style="width:46px;height:10px;border-radius:4px;margin-right:12px;"></div>
+                            <div class="skel-bone" style="width:46px;height:10px;border-radius:4px;"></div>
+                        </div>
+                        <!-- Row labels + grid -->
+                        <div style="display:flex;align-items:center;gap:4px;margin-bottom:4px;"><div class="skel-bone" style="width:14px;height:10px;border-radius:3px;margin-right:2px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div></div>
+                        <div style="display:flex;align-items:center;gap:4px;margin-bottom:4px;"><div class="skel-bone" style="width:14px;height:10px;border-radius:3px;margin-right:2px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div></div>
+                        <div style="display:flex;align-items:center;gap:4px;margin-bottom:4px;"><div class="skel-bone" style="width:14px;height:10px;border-radius:3px;margin-right:2px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div></div>
+                        <div style="display:flex;align-items:center;gap:4px;margin-bottom:4px;"><div class="skel-bone" style="width:14px;height:10px;border-radius:3px;margin-right:2px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div></div>
+                        <div style="display:flex;align-items:center;gap:4px;margin-bottom:4px;"><div class="skel-bone" style="width:14px;height:10px;border-radius:3px;margin-right:2px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div></div>
+                        <div style="display:flex;align-items:center;gap:4px;margin-bottom:4px;"><div class="skel-bone" style="width:14px;height:10px;border-radius:3px;margin-right:2px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div><div class="skel-bone" style="width:14px;height:14px;border-radius:3px;"></div></div>
+                    </div>
+
+                    <!-- Streaks Section -->
+                    <div class="skel-section skel-section-red">
+                        <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+                            <div class="skel-bone" style="width:20px;height:20px;border-radius:4px;"></div>
+                            <div class="skel-bone" style="width:120px;height:16px;border-radius:6px;"></div>
+                        </div>
+                        <div style="display:flex;justify-content:space-around;">
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+                                <div class="skel-circle" style="width:52px;height:52px;"></div>
+                                <div class="skel-bone" style="width:52px;height:11px;border-radius:5px;"></div>
+                                <div style="display:flex;align-items:center;gap:4px;"><div class="skel-bone" style="width:12px;height:12px;border-radius:3px;"></div><div class="skel-bone" style="width:28px;height:13px;border-radius:5px;"></div></div>
+                            </div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+                                <div class="skel-circle" style="width:52px;height:52px;"></div>
+                                <div class="skel-bone" style="width:52px;height:11px;border-radius:5px;"></div>
+                                <div style="display:flex;align-items:center;gap:4px;"><div class="skel-bone" style="width:12px;height:12px;border-radius:3px;"></div><div class="skel-bone" style="width:28px;height:13px;border-radius:5px;"></div></div>
+                            </div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+                                <div class="skel-circle" style="width:52px;height:52px;"></div>
+                                <div class="skel-bone" style="width:52px;height:11px;border-radius:5px;"></div>
+                                <div style="display:flex;align-items:center;gap:4px;"><div class="skel-bone" style="width:12px;height:12px;border-radius:3px;"></div><div class="skel-bone" style="width:28px;height:13px;border-radius:5px;"></div></div>
+                            </div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+                                <div class="skel-circle" style="width:52px;height:52px;"></div>
+                                <div class="skel-bone" style="width:52px;height:11px;border-radius:5px;"></div>
+                                <div style="display:flex;align-items:center;gap:4px;"><div class="skel-bone" style="width:12px;height:12px;border-radius:3px;"></div><div class="skel-bone" style="width:28px;height:13px;border-radius:5px;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pending Today Section -->
+                    <div class="skel-section skel-section-red">
+                        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+                            <div class="skel-bone" style="width:20px;height:20px;border-radius:4px;"></div>
+                            <div class="skel-bone" style="width:160px;height:16px;border-radius:6px;"></div>
+                            <div class="skel-bone" style="width:28px;height:22px;border-radius:8px;margin-left:auto;"></div>
+                        </div>
+                        <div class="skel-family-card"><div style="display:flex;align-items:center;gap:12px;"><div class="skel-circle" style="width:42px;height:42px;"></div><div style="flex:1;display:flex;flex-direction:column;gap:7px;"><div class="skel-bone" style="width:60%;height:14px;border-radius:5px;"></div><div class="skel-bone" style="width:42%;height:11px;border-radius:4px;"></div></div></div></div>
+                        <div class="skel-family-card"><div style="display:flex;align-items:center;gap:12px;"><div class="skel-circle" style="width:42px;height:42px;"></div><div style="flex:1;display:flex;flex-direction:column;gap:7px;"><div class="skel-bone" style="width:50%;height:14px;border-radius:5px;"></div><div class="skel-bone" style="width:38%;height:11px;border-radius:4px;"></div></div></div></div>
+                        <div class="skel-family-card"><div style="display:flex;align-items:center;gap:12px;"><div class="skel-circle" style="width:42px;height:42px;"></div><div style="flex:1;display:flex;flex-direction:column;gap:7px;"><div class="skel-bone" style="width:55%;height:14px;border-radius:5px;"></div><div class="skel-bone" style="width:40%;height:11px;border-radius:4px;"></div></div></div></div>
+                        <div class="skel-family-card"><div style="display:flex;align-items:center;gap:12px;"><div class="skel-circle" style="width:42px;height:42px;"></div><div style="flex:1;display:flex;flex-direction:column;gap:7px;"><div class="skel-bone" style="width:48%;height:14px;border-radius:5px;"></div><div class="skel-bone" style="width:35%;height:11px;border-radius:4px;"></div></div></div></div>
+                    </div>
+
+                    <!-- Family Members Section -->
+                    <div class="skel-section skel-section-red">
+                        <div style="display:flex;align-items:center;gap:8px;margin-bottom:18px;">
+                            <div class="skel-bone" style="width:22px;height:20px;border-radius:4px;"></div>
+                            <div class="skel-bone" style="width:140px;height:16px;border-radius:6px;"></div>
+                        </div>
+                        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px 12px;">
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div class="skel-circle" style="width:72px;height:72px;box-shadow:0 0 0 3px rgba(180,60,60,0.25);"></div><div class="skel-bone" style="width:56px;height:12px;border-radius:5px;"></div><div class="skel-bone" style="width:32px;height:11px;border-radius:5px;"></div></div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div class="skel-circle" style="width:72px;height:72px;box-shadow:0 0 0 3px rgba(180,60,60,0.25);"></div><div class="skel-bone" style="width:56px;height:12px;border-radius:5px;"></div><div class="skel-bone" style="width:32px;height:11px;border-radius:5px;"></div></div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div class="skel-circle" style="width:72px;height:72px;box-shadow:0 0 0 3px rgba(180,60,60,0.25);"></div><div class="skel-bone" style="width:56px;height:12px;border-radius:5px;"></div><div class="skel-bone" style="width:32px;height:11px;border-radius:5px;"></div></div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div class="skel-circle" style="width:72px;height:72px;box-shadow:0 0 0 3px rgba(180,60,60,0.25);"></div><div class="skel-bone" style="width:56px;height:12px;border-radius:5px;"></div><div class="skel-bone" style="width:32px;height:11px;border-radius:5px;"></div></div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div class="skel-circle" style="width:72px;height:72px;box-shadow:0 0 0 3px rgba(180,60,60,0.25);"></div><div class="skel-bone" style="width:56px;height:12px;border-radius:5px;"></div><div class="skel-bone" style="width:32px;height:11px;border-radius:5px;"></div></div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div class="skel-circle" style="width:72px;height:72px;box-shadow:0 0 0 3px rgba(180,60,60,0.25);"></div><div class="skel-bone" style="width:56px;height:12px;border-radius:5px;"></div><div class="skel-bone" style="width:32px;height:11px;border-radius:5px;"></div></div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div class="skel-circle" style="width:72px;height:72px;box-shadow:0 0 0 3px rgba(180,60,60,0.25);"></div><div class="skel-bone" style="width:56px;height:12px;border-radius:5px;"></div><div class="skel-bone" style="width:32px;height:11px;border-radius:5px;"></div></div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div class="skel-circle" style="width:72px;height:72px;box-shadow:0 0 0 3px rgba(180,60,60,0.25);"></div><div class="skel-bone" style="width:56px;height:12px;border-radius:5px;"></div><div class="skel-bone" style="width:32px;height:11px;border-radius:5px;"></div></div>
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div class="skel-circle" style="width:72px;height:72px;box-shadow:0 0 0 3px rgba(180,60,60,0.25);"></div><div class="skel-bone" style="width:56px;height:12px;border-radius:5px;"></div><div class="skel-bone" style="width:32px;height:11px;border-radius:5px;"></div></div>
+                        </div>
+                    </div>
+
+                    <div style="height:16px;"></div>
+                </div>
+
+                <!-- Bottom Nav -->
+                <div class="skel-bottom-nav skel-bottom-nav-red">
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:36px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:36px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:36px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:36px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:36px;height:10px;border-radius:4px;"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaderboard/Quiz Skeleton -->
+        <div class="skeleton-screen skeleton-leaderboard" id="skeleton-leaderboard" style="display:none;">
+            <div class="skel-container">
+                <!-- Header -->
+                <div class="skel-header" style="padding:14px 18px 10px;">
+                    <div style="display:flex;flex-direction:column;gap:8px;">
+                        <div class="skel-bone" style="width:180px;height:28px;border-radius:6px;"></div>
+                        <div class="skel-bone" style="width:130px;height:13px;border-radius:5px;"></div>
+                    </div>
+                    <div class="skel-bone" style="width:110px;height:46px;border-radius:14px;"></div>
+                </div>
+
+                <!-- Podium -->
+                <div class="skel-podium">
+                    <!-- 2nd place -->
+                    <div class="skel-podium-item" style="margin-bottom:20px;">
+                        <div class="skel-circle" style="width:70px;height:70px;border:3px solid rgba(180,180,200,0.3);"></div>
+                        <div class="skel-bone" style="width:60px;height:13px;border-radius:5px;"></div>
+                        <div class="skel-podium-card">
+                            <div class="skel-bone" style="width:24px;height:24px;border-radius:12px;"></div>
+                            <div class="skel-bone" style="width:52px;height:22px;border-radius:6px;"></div>
+                        </div>
+                    </div>
+                    <!-- 1st place -->
+                    <div class="skel-podium-item">
+                        <div class="skel-bone" style="width:36px;height:30px;border-radius:6px;margin-bottom:4px;"></div>
+                        <div class="skel-circle" style="width:90px;height:90px;border:3px solid rgba(255,185,0,0.5);box-shadow:0 0 20px rgba(255,180,0,0.2);"></div>
+                        <div class="skel-bone" style="width:72px;height:14px;border-radius:5px;"></div>
+                        <div class="skel-podium-card skel-podium-card-gold">
+                            <div class="skel-bone" style="width:24px;height:24px;border-radius:12px;"></div>
+                            <div class="skel-bone" style="width:64px;height:26px;border-radius:6px;"></div>
+                        </div>
+                    </div>
+                    <!-- 3rd place -->
+                    <div class="skel-podium-item" style="margin-bottom:20px;">
+                        <div class="skel-circle" style="width:70px;height:70px;border:3px solid rgba(200,140,60,0.35);"></div>
+                        <div class="skel-bone" style="width:60px;height:13px;border-radius:5px;"></div>
+                        <div class="skel-podium-card skel-podium-card-bronze">
+                            <div class="skel-bone" style="width:24px;height:24px;border-radius:12px;"></div>
+                            <div class="skel-bone" style="width:52px;height:22px;border-radius:6px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Players List -->
+                <div style="padding:0 16px;">
+                    <div class="skel-bone" style="width:120px;height:11px;border-radius:4px;margin-bottom:14px;opacity:0.5;"></div>
+                    <div class="skel-player-item">
+                        <div class="skel-bone" style="width:32px;height:32px;border-radius:8px;flex-shrink:0;"></div>
+                        <div class="skel-circle" style="width:50px;height:50px;"></div>
+                        <div style="flex:1;display:flex;flex-direction:column;gap:7px;"><div class="skel-bone" style="width:45%;height:15px;border-radius:5px;"></div><div class="skel-bone" style="width:38%;height:11px;border-radius:4px;"></div></div>
+                        <div class="skel-bone" style="width:48px;height:20px;border-radius:6px;"></div>
+                    </div>
+                    <div class="skel-player-item">
+                        <div class="skel-bone" style="width:32px;height:32px;border-radius:8px;flex-shrink:0;"></div>
+                        <div class="skel-circle" style="width:50px;height:50px;"></div>
+                        <div style="flex:1;display:flex;flex-direction:column;gap:7px;"><div class="skel-bone" style="width:50%;height:15px;border-radius:5px;"></div><div class="skel-bone" style="width:35%;height:11px;border-radius:4px;"></div></div>
+                        <div class="skel-bone" style="width:48px;height:20px;border-radius:6px;"></div>
+                    </div>
+                    <div class="skel-player-item">
+                        <div class="skel-bone" style="width:32px;height:32px;border-radius:8px;flex-shrink:0;"></div>
+                        <div class="skel-circle" style="width:50px;height:50px;"></div>
+                        <div style="flex:1;display:flex;flex-direction:column;gap:7px;"><div class="skel-bone" style="width:42%;height:15px;border-radius:5px;"></div><div class="skel-bone" style="width:40%;height:11px;border-radius:4px;"></div></div>
+                        <div class="skel-bone" style="width:48px;height:20px;border-radius:6px;"></div>
+                    </div>
+                    <div class="skel-player-item">
+                        <div class="skel-bone" style="width:32px;height:32px;border-radius:8px;flex-shrink:0;"></div>
+                        <div class="skel-circle" style="width:50px;height:50px;"></div>
+                        <div style="flex:1;display:flex;flex-direction:column;gap:7px;"><div class="skel-bone" style="width:48%;height:15px;border-radius:5px;"></div><div class="skel-bone" style="width:36%;height:11px;border-radius:4px;"></div></div>
+                        <div class="skel-bone" style="width:48px;height:20px;border-radius:6px;"></div>
+                    </div>
+                    <div class="skel-player-item">
+                        <div class="skel-bone" style="width:32px;height:32px;border-radius:8px;flex-shrink:0;"></div>
+                        <div class="skel-circle" style="width:50px;height:50px;"></div>
+                        <div style="flex:1;display:flex;flex-direction:column;gap:7px;"><div class="skel-bone" style="width:44%;height:15px;border-radius:5px;"></div><div class="skel-bone" style="width:32%;height:11px;border-radius:4px;"></div></div>
+                        <div class="skel-bone" style="width:48px;height:20px;border-radius:6px;"></div>
+                    </div>
+                </div>
+
+                <!-- Bottom Nav -->
+                <div class="skel-bottom-nav">
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Faith Skeleton -->
+        <div class="skeleton-screen skeleton-faith" id="skeleton-faith" style="display:none;">
+            <div class="skel-container skel-faith-bg">
+                <!-- Header -->
+                <div class="skel-header" style="background:rgba(12,12,22,0.85);border-bottom:1px solid rgba(255,255,255,0.06);">
+                    <div style="display:flex;align-items:center;gap:10px;">
+                        <div class="skel-bone" style="width:38px;height:38px;border-radius:10px;"></div>
+                        <div>
+                            <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px;">
+                                <div class="skel-bone" style="width:120px;height:22px;border-radius:6px;"></div>
+                                <div class="skel-bone" style="width:64px;height:18px;border-radius:6px;"></div>
+                            </div>
+                            <div class="skel-bone" style="width:88px;height:12px;border-radius:4px;"></div>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:10px;">
+                        <div class="skel-circle" style="width:42px;height:42px;"></div>
+                        <div class="skel-bone" style="width:42px;height:42px;border-radius:10px;"></div>
+                    </div>
+                </div>
+
+                <!-- Orbit Map -->
+                <div class="skel-orbit-wrapper">
+                    <!-- Stars -->
+                    <div class="skel-stars"></div>
+                    <!-- Orbit rings -->
+                    <div class="skel-orbit-ring skel-orbit-inner"></div>
+                    <div class="skel-orbit-ring skel-orbit-outer"></div>
+                    <!-- Center sun -->
+                    <div class="skel-sun">
+                        <div class="skel-bone" style="width:32px;height:11px;border-radius:5px;background:rgba(255,255,255,0.3);"></div>
+                    </div>
+                    <!-- Inner orbit dots -->
+                    <div class="skel-planet skel-planet-green" style="top:12%;left:50%;"></div>
+                    <div class="skel-planet skel-planet-green" style="top:30%;left:80%;"></div>
+                    <div class="skel-planet skel-planet-green" style="top:65%;left:82%;"></div>
+                    <div class="skel-planet skel-planet-green" style="top:85%;left:50%;"></div>
+                    <div class="skel-planet skel-planet-green" style="top:65%;left:18%;"></div>
+                    <div class="skel-planet skel-planet-green" style="top:30%;left:18%;"></div>
+                    <!-- Outer orbit dots -->
+                    <div class="skel-planet skel-planet-red" style="top:5%;left:65%;"></div>
+                    <div class="skel-planet skel-planet-orange" style="top:25%;left:92%;"></div>
+                    <div class="skel-planet skel-planet-red" style="top:70%;left:92%;"></div>
+                    <div class="skel-planet skel-planet-red" style="top:92%;left:65%;"></div>
+                    <div class="skel-planet skel-planet-red" style="top:92%;left:32%;"></div>
+                    <div class="skel-planet skel-planet-orange" style="top:5%;left:32%;"></div>
+                </div>
+
+                <!-- Bottom Nav -->
+                <div class="skel-bottom-nav">
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                    <div class="skel-nav-item"><div class="skel-bone" style="width:24px;height:24px;border-radius:6px;"></div><div class="skel-bone" style="width:38px;height:10px;border-radius:4px;"></div></div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        // Loading functions
+        // Loading functions - show tab-appropriate skeleton
         function showLoading(message = 'Loading...') {
             const overlay = document.getElementById('loadingOverlay');
-            const text = overlay.querySelector('.loading-text');
-            if (text) text.textContent = message;
+            // Determine which skeleton to show based on current tab
+            const tab = (typeof state !== 'undefined' && state.dashboardTab) ? state.dashboardTab : 'my-plan';
+            // Hide all skeletons first
+            const skeletons = overlay.querySelectorAll('.skeleton-screen');
+            skeletons.forEach(s => s.style.display = 'none');
+            // Show the appropriate skeleton
+            if (tab === 'family') {
+                document.getElementById('skeleton-family').style.display = 'block';
+            } else if (tab === 'quiz') {
+                document.getElementById('skeleton-leaderboard').style.display = 'block';
+            } else if (tab === 'faith') {
+                document.getElementById('skeleton-faith').style.display = 'block';
+            } else {
+                // home, my-plan, or default
+                document.getElementById('skeleton-myplan').style.display = 'block';
+            }
             overlay.classList.add('show');
         }
 
         function hideLoading() {
             const overlay = document.getElementById('loadingOverlay');
             overlay.classList.remove('show');
+        }
+
+        const SKELETON_MIN_DISPLAY = 1000; // 1 second minimum
+        let _skelShowTime = 0;
+
+        function switchDashboardTab(tabId) {
+            state.loadedUserData.clear();
+            state.dashboardTab = tabId;
+            _skelShowTime = Date.now();
+            showLoading();
+
+            const finishSwitch = () => {
+                const elapsed = Date.now() - _skelShowTime;
+                const remaining = Math.max(0, SKELETON_MIN_DISPLAY - elapsed);
+                setTimeout(() => { hideLoading(); render(); }, remaining);
+            };
+
+            if (tabId === 'faith') {
+                // No skeleton for faith tab - render immediately
+                hideLoading();
+                render();
+            } else if (tabId === 'home') {
+                ensureVersesLoaded().then(finishSwitch).catch(finishSwitch);
+            } else if (tabId === 'family' && !state.quizDataLoaded) {
+                loadQuizChaptersFromSupabase().then(finishSwitch).catch(finishSwitch);
+            } else if (tabId === 'quiz' && !state.quizDataLoaded) {
+                loadQuizChaptersFromSupabase().then(finishSwitch).catch(finishSwitch);
+            } else {
+                finishSwitch();
+            }
         }
 
         // Theme toggle function
@@ -5715,11 +6460,11 @@
                             padding-bottom: env(safe-area-inset-bottom, 0px);
                         ">
                             ${[
-                                { id: 'home', label: 'Home', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'home'; ensureVersesLoaded().then(() => render()).catch(() => render());", icon: '<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10"/></svg>' },
-                                { id: 'my-plan', label: 'My Plan', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();", iconImg: '../resources/icons/my_plan.png' },
-                                { id: 'family', label: 'Family', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'family'; if (!state.quizDataLoaded) { loadQuizChaptersFromSupabase().then(() => render()).catch(() => render()); } else { render(); }", iconImg: '../resources/icons/family.png' },
-                                { id: 'faith', label: 'Faith', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'faith'; render();", icon: '<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M12 3v18M6 8h12\"/></svg>' },
-                                ...(state.quizTabVisible ? [{ id: 'quiz', label: 'Quiz', onclick: "state.loadedUserData.clear(); state.dashboardTab = 'quiz'; if (!state.quizDataLoaded) { loadQuizChaptersFromSupabase(); } render();", iconImg: '../resources/icons/quiz.png' }] : [])
+                                { id: 'home', label: 'Home', onclick: "switchDashboardTab('home')", icon: '<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10"/></svg>' },
+                                { id: 'my-plan', label: 'My Plan', onclick: "switchDashboardTab('my-plan')", iconImg: '../resources/icons/my_plan.png' },
+                                { id: 'family', label: 'Family', onclick: "switchDashboardTab('family')", iconImg: '../resources/icons/family.png' },
+                                { id: 'faith', label: 'Faith', onclick: "switchDashboardTab('faith')", icon: '<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M12 3v18M6 8h12\"/></svg>' },
+                                ...(state.quizTabVisible ? [{ id: 'quiz', label: 'Quiz', onclick: "switchDashboardTab('quiz')", iconImg: '../resources/icons/quiz.png' }] : [])
                             ].map(tab => {
                                 const isActive = state.dashboardTab === tab.id;
                                 const activeColor = state.darkMode ? '#ffffff' : '#1e293b';

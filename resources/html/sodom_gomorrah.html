@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Sodom and Gomorrah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Söhne:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #212121; --text: #ececec; --divider: #3d3d3d; --font: 'Söhne', 'ui-sans-serif', system-ui, -apple-system, sans-serif; }
+    html, body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 16px; line-height: 1.7; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 480px; margin: 0 auto; padding: 28px 18px 48px; }
+    .section { padding: 26px 0 20px; border-bottom: 1px solid var(--divider); animation: fadeUp 0.4s ease both; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .section:nth-child(1)  { animation-delay: 0.02s; }
+    .section:nth-child(2)  { animation-delay: 0.04s; }
+    .section:nth-child(3)  { animation-delay: 0.06s; }
+    .section:nth-child(4)  { animation-delay: 0.08s; }
+    .section:nth-child(5)  { animation-delay: 0.10s; }
+    .section:nth-child(6)  { animation-delay: 0.12s; }
+    .section:nth-child(7)  { animation-delay: 0.14s; }
+    .section:nth-child(8)  { animation-delay: 0.16s; }
+    .section:nth-child(9)  { animation-delay: 0.18s; }
+    .section:nth-child(10) { animation-delay: 0.20s; }
+    .section:nth-child(11) { animation-delay: 0.22s; }
+    .section:nth-child(12) { animation-delay: 0.24s; }
+    .section:nth-child(13) { animation-delay: 0.26s; }
+    .section:nth-child(14) { animation-delay: 0.28s; }
+    .section:nth-child(15) { animation-delay: 0.30s; }
+
+    /* ── Page Title ── */
+    .page-title-wrap { padding: 24px 0 20px; margin-bottom: 4px; border-bottom: 1px solid var(--divider); }
+    .page-title { font-size: 1.5rem; font-weight: 700; line-height: 1.3; letter-spacing: 0.01em; margin-bottom: 14px; background: linear-gradient(90deg, #fbfbfb 0%, #a78bfa 60%, #22d3ee 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .verse-badges { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+    .badge-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8e8ea0; }
+    .badge { font-size: 0.72rem; font-weight: 500; color: #d4a574; background: transparent; border: 1px solid #b8834a; border-radius: 20px; padding: 3px 10px; letter-spacing: 0.02em; }
+
+    /* ── Section heading ── */
+    .section-title { font-size: 1.2rem; font-weight: 600; line-height: 1.35; color: #fbfbfb; margin-bottom: 6px; padding-bottom: 6px; border-bottom: 2px dotted #726b64; display: table; }
+    .section-ref { display: inline-block; font-size: 0.65rem; font-weight: 500; color: #d4a574; border: 1px solid #b8834a; border-radius: 20px; padding: 1px 8px; letter-spacing: 0.02em; margin-top: 6px; margin-bottom: 12px; }
+    .section-num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #b8834a; color: #1a1208; font-size: 0.72rem; font-weight: 700; border-radius: 50%; margin-right: 8px; vertical-align: middle; position: relative; top: -2px; flex-shrink: 0; }
+    .section-question { font-size: 0.85rem; font-weight: 600; color: #22d3ee; margin-bottom: 10px; letter-spacing: 0.01em; display: inline-block; }
+
+    /* ── Body ── */
+    .section p { color: var(--text); margin-bottom: 10px; font-size: 0.97rem; }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul { margin: 6px 0 10px 20px; font-size: 0.97rem; color: var(--text); }
+    .section ul li { margin-bottom: 5px; }
+
+    /* ── Blockquote ── */
+    blockquote { border-left: 3px solid #b8834a; margin: 12px 0; padding: 10px 14px; background: rgba(180,175,190,0.08); border-radius: 0 8px 8px 0; font-style: italic; color: #d4d4d4; font-size: 0.95rem; line-height: 1.6; }
+    blockquote p { margin-bottom: 5px; color: inherit; font-size: inherit; }
+    blockquote p:last-child { margin-bottom: 0; }
+
+    /* ── Meal cards ── */
+    .meal-grid { display: flex; flex-direction: column; gap: 7px; margin: 10px 0 12px; }
+    .meal-item { display: flex; align-items: center; gap: 10px; background: rgba(52,211,153,0.06); border: 1px solid rgba(52,211,153,0.14); border-radius: 8px; padding: 8px 12px; font-size: 0.92rem; color: #d4d4d4; }
+    .meal-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+    /* ── Negotiation steps ── */
+    .negot-row { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; margin-bottom: 7px; font-size: 0.92rem; }
+    .negot-row.accepted { background: rgba(52,211,153,0.06); border: 1px solid rgba(52,211,153,0.14); }
+    .negot-icon { font-size: 1rem; flex-shrink: 0; }
+    .negot-num { font-weight: 700; color: #34d399; min-width: 30px; }
+    .negot-label { color: #d4d4d4; }
+    .negot-badge { margin-left: auto; font-size: 0.72rem; font-weight: 700; color: #34d399; background: rgba(52,211,153,0.12); border-radius: 20px; padding: 2px 8px; white-space: nowrap; }
+
+    /* ── Night events cards ── */
+    .night-card { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.14); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
+    .night-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #ef4444; margin-bottom: 6px; }
+    .night-body { font-size: 0.9rem; color: #c0c0c0; line-height: 1.6; }
+
+    /* ── Destruction banner ── */
+    .destruction-banner { background: linear-gradient(90deg, rgba(239,68,68,0.12) 0%, rgba(251,113,133,0.05) 100%); border: 1px solid rgba(239,68,68,0.22); border-radius: 10px; padding: 12px 16px; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+    .destruction-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .destruction-title { font-size: 0.95rem; font-weight: 600; color: #ef4444; margin-bottom: 2px; }
+    .destruction-sub { font-size: 0.78rem; color: #8e8ea0; }
+
+    /* ── Destroyed items ── */
+    .destroyed-row { display: flex; gap: 8px; margin: 10px 0; }
+    .destroyed-pill { flex: 1; background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.14); border-radius: 8px; padding: 9px 10px; font-size: 0.85rem; font-weight: 500; color: #ef4444; text-align: center; }
+
+    /* ── Nations outcome ── */
+    .nation-row { display: flex; gap: 8px; margin: 10px 0; }
+    .nation-card { flex: 1; background: rgba(251,191,36,0.05); border: 1px solid rgba(251,191,36,0.14); border-radius: 8px; padding: 10px 12px; font-size: 0.88rem; text-align: center; }
+    .nation-name { font-weight: 700; color: #fbbf24; font-size: 0.9rem; margin-bottom: 3px; }
+    .nation-desc { color: #a0a0a0; font-size: 0.78rem; }
+
+    /* ── Lesson cards ── */
+    .lesson-card { background: rgba(167,139,250,0.06); border: 1px solid rgba(167,139,250,0.18); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
+    .lesson-num { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; background: #a78bfa; color: #1a0a2e; font-size: 0.7rem; font-weight: 700; border-radius: 50%; margin-right: 8px; vertical-align: middle; position: relative; top: -1px; }
+    .lesson-title { font-size: 0.9rem; font-weight: 600; color: #a78bfa; margin-bottom: 4px; }
+    .lesson-desc { font-size: 0.87rem; color: #b0b0b0; }
+
+    /* ── Highlights ── */
+    .num    { color: #ef4444; font-weight: 600; }
+    .place  { color: #fbbf24; font-weight: 500; }
+    .obj    { color: #34d399; font-weight: 500; }
+    .action { color: #fb7185; font-weight: 600; }
+    .name   { color: #c4b5fd; font-weight: 500; }
+    .harsh  { color: #ef4444; font-weight: 500; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-title-wrap">
+    <h1 class="page-title">Sodom &amp; Gomorrah: Sin, Judgment &amp; Rescue</h1>
+    <div class="verse-badges">
+      <span class="badge-label">REF</span>
+      <span class="badge">Genesis 18</span>
+      <span class="badge">Genesis 19</span>
+    </div>
+    <p style="margin-top:14px; font-size:0.9rem; color:#a0a0a0; line-height:1.6;">The story begins when three heavenly visitors come to <strong style="color:#ececec">Abraham</strong>. One is understood by many Christians to be the Lord Himself — a pre-incarnate appearance of Christ — while the other two are angels who later go to <strong style="color:#ececec">Sodom</strong>.</p>
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">1</span>Three Visitors Come to Abraham</h2>
+    <div><span class="section-ref">Genesis 18:1–8</span></div>
+    <p>One day <span class="name">Abraham</span> was sitting at the entrance of his tent near the great trees of <span class="place">Mamre</span> during the heat of the day. Suddenly he saw <span class="num">three</span> men standing nearby.</p>
+    <p><span class="name">Abraham</span> quickly <span class="action">ran</span> to greet them and <span class="action">bowed</span> respectfully. He said:</p>
+    <blockquote>
+      <p>"My Lord, if I have found favor in your sight, please do not pass by your servant."</p>
+    </blockquote>
+    <p>He offered them:</p>
+    <ul>
+      <li><span class="obj">Water</span> to wash their feet</li>
+      <li>Rest under the tree</li>
+      <li>Food to eat</li>
+    </ul>
+    <p><span class="name">Abraham</span> hurried and prepared a meal:</p>
+    <div class="meal-grid">
+      <div class="meal-item"><span class="meal-icon">🍞</span><div><span class="name">Sarah</span> baked fresh <span class="obj">bread</span></div></div>
+      <div class="meal-item"><span class="meal-icon">🐂</span><div>A young <span class="obj">calf</span> was prepared</div></div>
+      <div class="meal-item"><span class="meal-icon">🥛</span><div><span class="obj">Butter</span> and <span class="obj">milk</span> were served</div></div>
+    </div>
+    <p>The visitors ate while <span class="name">Abraham</span> stood nearby.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">2</span>The Promise of Isaac</h2>
+    <div><span class="section-ref">Genesis 18:9–15</span></div>
+    <p>The visitors asked: <em style="color:#d4d4d4">"Where is your wife Sarah?"</em> <span class="name">Abraham</span> said she was in the tent. Then the Lord said:</p>
+    <blockquote>
+      <p>"I will surely return to you about this time next year, and Sarah your wife will have a son."</p>
+    </blockquote>
+    <p><span class="name">Sarah</span> was listening inside the tent. But <span class="name">Sarah</span> and <span class="name">Abraham</span> were very old. So <span class="name">Sarah</span> <span class="action">laughed</span> to herself and thought:</p>
+    <blockquote>
+      <p>"After I am worn out and my lord is old, will I now have this pleasure?"</p>
+    </blockquote>
+    <p>The Lord asked <span class="name">Abraham</span>:</p>
+    <blockquote>
+      <p>"Why did Sarah laugh? Is anything too hard for the Lord?"</p>
+    </blockquote>
+    <p><span class="name">Sarah</span> became afraid and said she did not laugh. But the Lord said: <em style="color:#d4d4d4">"Yes, you did laugh."</em></p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">3</span>The Lord Reveals His Plan About Sodom</h2>
+    <div><span class="section-ref">Genesis 18:16–21</span></div>
+    <p>The three visitors began walking toward <span class="place">Sodom</span>. <span class="name">Abraham</span> walked with them for some distance. Then the Lord said:</p>
+    <blockquote>
+      <p>"Shall I hide from Abraham what I am about to do?"</p>
+    </blockquote>
+    <p>God said that the cry against <span class="place">Sodom</span> and <span class="place">Gomorrah</span> was very great because their sin was extremely serious. So the Lord said He would go down and see how terrible the sin was.</p>
+    <p>At that point:</p>
+    <ul>
+      <li><span class="num">Two</span> angels continued toward <span class="place">Sodom</span></li>
+      <li>The Lord remained with <span class="name">Abraham</span></li>
+    </ul>
+    <p>This begins the famous conversation between <span class="name">Abraham</span> and God.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">4</span>Abraham Pleads for Sodom</h2>
+    <div><span class="section-ref">Genesis 18:22–33</span></div>
+    <p><span class="name">Abraham</span> understood that God was planning to destroy <span class="place">Sodom</span> and <span class="place">Gomorrah</span>. So <span class="name">Abraham</span> boldly approached God and began interceding — especially for his nephew <span class="name">Lot</span>, who lived in <span class="place">Sodom</span>.</p>
+    <blockquote>
+      <p>"Will you sweep away the righteous with the wicked?"</p>
+    </blockquote>
+
+    <p class="section-question">Abraham negotiated six times:</p>
+
+    <div class="negot-row accepted">
+      <span class="negot-icon">🙏</span>
+      <span class="negot-num">50</span>
+      <span class="negot-label">"If I find 50 righteous people, I will spare the whole city."</span>
+      <span class="negot-badge">✓ Spared</span>
+    </div>
+    <div class="negot-row accepted">
+      <span class="negot-icon">🙏</span>
+      <span class="negot-num">45</span>
+      <span class="negot-label">"I will not destroy it if I find 45."</span>
+      <span class="negot-badge">✓ Spared</span>
+    </div>
+    <div class="negot-row accepted">
+      <span class="negot-icon">🙏</span>
+      <span class="negot-num">40</span>
+      <span class="negot-label">"For the sake of 40, I will not destroy it."</span>
+      <span class="negot-badge">✓ Spared</span>
+    </div>
+    <div class="negot-row accepted">
+      <span class="negot-icon">🙏</span>
+      <span class="negot-num">30</span>
+      <span class="negot-label">"I will not destroy it if I find 30."</span>
+      <span class="negot-badge">✓ Spared</span>
+    </div>
+    <div class="negot-row accepted">
+      <span class="negot-icon">🙏</span>
+      <span class="negot-num">20</span>
+      <span class="negot-label">"For the sake of 20, I will not destroy it."</span>
+      <span class="negot-badge">✓ Spared</span>
+    </div>
+    <div class="negot-row accepted">
+      <span class="negot-icon">🙏</span>
+      <span class="negot-num">10</span>
+      <span class="negot-label">"For the sake of 10, I will not destroy it."</span>
+      <span class="negot-badge">✓ Spared</span>
+    </div>
+
+    <p>Then the Lord left, and <span class="name">Abraham</span> returned home.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">5</span>The Two Angels Arrive in Sodom</h2>
+    <div><span class="section-ref">Genesis 19:1–3</span></div>
+    <p>That evening the two angels reached <span class="place">Sodom</span>. <span class="name">Lot</span> was sitting at the city gate. When <span class="name">Lot</span> saw them, he:</p>
+    <ul>
+      <li>Stood up</li>
+      <li>Bowed down</li>
+      <li>Urged them strongly to stay in his house</li>
+    </ul>
+    <p>At first the angels said they would stay in the city square. But <span class="name">Lot</span> insisted strongly, so they went to his house. <span class="name">Lot</span> prepared a meal and they ate.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">6</span>Wicked Men of Sodom</h2>
+    <div><span class="section-ref">Genesis 19:4–11</span></div>
+    <p>Before they went to sleep, men from the city surrounded <span class="name">Lot</span>'s house. The Bible says: <em style="color:#d4d4d4">both young and old, all the men of the city.</em> They shouted:</p>
+    <blockquote>
+      <p>"Where are the men who came to you tonight? Bring them out to us!"</p>
+    </blockquote>
+    <p>Their intention was evil. <span class="name">Lot</span> went outside and <span class="action">closed</span> the door behind him. Shockingly, <span class="name">Lot</span> said:</p>
+    <blockquote>
+      <p>"Please do not do this wicked thing."</p>
+    </blockquote>
+    <p>He even offered his <span class="num">two</span> daughters instead, but the crowd refused. The mob became violent and tried to <span class="action">break</span> the door. Then the angels <span class="action">pulled</span> <span class="name">Lot</span> back inside and <span class="action">struck</span> the men with <span class="harsh">blindness</span>, so they could not find the door.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">7</span>The Angels Warn Lot</h2>
+    <div><span class="section-ref">Genesis 19:12–14</span></div>
+    <p>The angels told <span class="name">Lot</span>:</p>
+    <blockquote>
+      <p>"Take your family and leave this place, because the Lord is about to destroy the city."</p>
+    </blockquote>
+    <p><span class="name">Lot</span> went to warn his sons-in-law, who were engaged to his daughters. But they thought he was joking and did not believe him.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">8</span>The Escape From Sodom</h2>
+    <div><span class="section-ref">Genesis 19:15–22</span></div>
+    <p>At dawn the angels urged <span class="name">Lot</span>:</p>
+    <blockquote>
+      <p>"Hurry! Take your wife and daughters and leave!"</p>
+    </blockquote>
+    <p>But <span class="name">Lot</span> <span class="action">hesitated</span>. So the angels took them by the hand and <span class="action">led</span> them out of the city. They said:</p>
+    <blockquote>
+      <p>"Run for your lives! Do not look back!"</p>
+    </blockquote>
+    <p><span class="name">Lot</span> asked permission to flee to a small town called <span class="place">Zoar</span>, and the angels allowed it.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">9</span>Destruction of Sodom and Gomorrah</h2>
+    <div><span class="section-ref">Genesis 19:23–25</span></div>
+    <div class="destruction-banner">
+      <div class="destruction-icon">🔥</div>
+      <div>
+        <div class="destruction-title">The Lord rained fire and sulfur from heaven</div>
+        <div class="destruction-sub">After Lot reached safety in Zoar</div>
+      </div>
+    </div>
+    <p>The cities were completely destroyed. Everything was destroyed:</p>
+    <div class="destroyed-row">
+      <div class="destroyed-pill">🏙️ The cities</div>
+      <div class="destroyed-pill">👤 The people</div>
+      <div class="destroyed-pill">🌿 The vegetation</div>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">10</span>Lot's Wife Turns Into Salt</h2>
+    <div><span class="section-ref">Genesis 19:26</span></div>
+    <p>While escaping, <span class="name">Lot</span>'s wife <span class="action">looked back</span> toward <span class="place">Sodom</span>. Because of this disobedience, she became a <span class="obj">pillar of salt</span>.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">11</span>Abraham Sees the Destruction</h2>
+    <div><span class="section-ref">Genesis 19:27–29</span></div>
+    <p>Early the next morning <span class="name">Abraham</span> went to the place where he had spoken with the Lord. He looked toward <span class="place">Sodom</span> and <span class="place">Gomorrah</span>. He saw dense smoke rising like smoke from a furnace.</p>
+    <p>But God remembered <span class="name">Abraham</span> and saved <span class="name">Lot</span> from the destruction.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">12</span>Lot and His Daughters in the Cave</h2>
+    <div><span class="section-ref">Genesis 19:30–38</span></div>
+    <p><span class="name">Lot</span> left <span class="place">Zoar</span> and lived in the mountains with his two daughters. They lived in a cave.</p>
+    <p>The daughters believed the whole world had been destroyed and there were no men left for them to marry. So they made a plan.</p>
+
+    <div class="night-card">
+      <div class="night-label">First Night</div>
+      <div class="night-body">The older daughter said: <em>"Let us get our father drunk and sleep with him so we can preserve our family line."</em> They gave <span class="name">Lot</span> wine. He became drunk. The older daughter slept with him, and <span class="name">Lot</span> did not know it.</div>
+    </div>
+    <div class="night-card">
+      <div class="night-label">Second Night</div>
+      <div class="night-body">The next day the older daughter told the younger one to do the same. They again gave <span class="name">Lot</span> wine. The younger daughter slept with him. Again <span class="name">Lot</span> did not realize it.</div>
+    </div>
+
+    <p class="section-question">Birth of two nations:</p>
+    <p>Both daughters became pregnant and gave birth to sons:</p>
+    <div class="nation-row">
+      <div class="nation-card">
+        <div class="nation-name">Moab</div>
+        <div class="nation-desc">Ancestor of the Moabites</div>
+      </div>
+      <div class="nation-card">
+        <div class="nation-name">Ben-Ammi</div>
+        <div class="nation-desc">Ancestor of the Ammonites</div>
+      </div>
+    </div>
+    <p>These nations later became enemies of <span class="place">Israel</span>.</p>
+  </div>
+
+  <!-- Lessons -->
+  <div class="section">
+    <h2 class="section-title">Important Spiritual Lessons</h2>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">1</span>God Is Just</div>
+      <div class="lesson-desc">God does not destroy without reason. The sin of Sodom was extremely great.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">2</span>God Listens to Intercession</div>
+      <div class="lesson-desc">Abraham's conversation shows how God listens to prayer for others.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">3</span>God Rescues the Righteous</div>
+      <div class="lesson-desc">Because of Abraham, Lot was saved.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">4</span>Obedience Matters</div>
+      <div class="lesson-desc">Lot's wife looked back and lost her life.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">5</span>Sin Has Consequences</div>
+      <div class="lesson-desc">The actions of Lot's daughters led to the origins of nations that later opposed Israel.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

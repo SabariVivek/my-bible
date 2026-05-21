@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Balaam and Balak</title>
+  <link href="https://fonts.googleapis.com/css2?family=Söhne:wght@400;500;600&family=Söhne+Mono&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #212121;
+      --text: #ececec;
+      --divider: #3d3d3d;
+      --font: 'Söhne', 'ui-sans-serif', system-ui, -apple-system, sans-serif;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+
+    .section {
+      padding: 26px 0 20px;
+      border-bottom: 1px solid var(--divider);
+      animation: fadeUp 0.4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1)  { animation-delay: 0.02s; }
+    .section:nth-child(2)  { animation-delay: 0.04s; }
+    .section:nth-child(3)  { animation-delay: 0.06s; }
+    .section:nth-child(4)  { animation-delay: 0.08s; }
+    .section:nth-child(5)  { animation-delay: 0.10s; }
+    .section:nth-child(6)  { animation-delay: 0.12s; }
+    .section:nth-child(7)  { animation-delay: 0.14s; }
+    .section:nth-child(8)  { animation-delay: 0.16s; }
+    .section:nth-child(9)  { animation-delay: 0.18s; }
+    .section:nth-child(10) { animation-delay: 0.20s; }
+    .section:nth-child(11) { animation-delay: 0.22s; }
+    .section:nth-child(12) { animation-delay: 0.24s; }
+    .section:nth-child(13) { animation-delay: 0.26s; }
+    .section:nth-child(14) { animation-delay: 0.28s; }
+    .section:nth-child(15) { animation-delay: 0.30s; }
+    .section:nth-child(16) { animation-delay: 0.32s; }
+    .section:nth-child(17) { animation-delay: 0.34s; }
+    .section:nth-child(18) { animation-delay: 0.36s; }
+    .section:nth-child(19) { animation-delay: 0.38s; }
+    .section:nth-child(20) { animation-delay: 0.40s; }
+
+    /* ── Page Title ── */
+    .page-title-wrap {
+      padding: 24px 0 20px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .page-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #fbfbfb 0%, #a78bfa 60%, #22d3ee 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .verse-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+    .badge-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8e8ea0;
+    }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 3px 10px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Section Heading ── */
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #fbfbfb;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 2px dotted #726b64;
+      display: table;
+    }
+
+    .section-ref {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 1px 8px;
+      letter-spacing: 0.02em;
+      margin-top: 6px;
+      margin-bottom: 12px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #b8834a;
+      color: #1a1208;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      flex-shrink: 0;
+    }
+
+    /* ── Sub-question ── */
+    .section-question {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #22d3ee;
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+      display: inline-block;
+    }
+
+    /* ── Body ── */
+    .section p {
+      color: var(--text);
+      margin-bottom: 10px;
+      font-size: 0.97rem;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── Blockquote ── */
+    blockquote {
+      border-left: 3px solid #b8834a;
+      margin: 12px 0;
+      padding: 10px 14px;
+      background: rgba(180, 175, 190, 0.08);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #d4d4d4;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    blockquote p { margin-bottom: 5px; color: inherit; font-size: inherit; }
+    blockquote p:last-child { margin-bottom: 0; }
+
+    /* ── Lists ── */
+    .section ul {
+      margin: 6px 0 10px 20px;
+      font-size: 0.97rem;
+      color: var(--text);
+    }
+    .section ul li { margin-bottom: 5px; }
+
+    /* ── Incident cards (donkey 3 times) ── */
+    .incident-card {
+      display: flex;
+      gap: 10px;
+      background: rgba(251, 191, 36, 0.05);
+      border: 1px solid rgba(251, 191, 36, 0.14);
+      border-radius: 8px;
+      padding: 9px 12px;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+      color: #d4d4d4;
+      align-items: flex-start;
+    }
+    .incident-num {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fbbf24;
+      background: rgba(251,191,36,0.12);
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Donkey speech bubbles ── */
+    .speech-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 8px;
+      align-items: flex-start;
+    }
+    .speech-row.right { flex-direction: row-reverse; }
+    .speech-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .speech-bubble {
+      border-radius: 0 8px 8px 8px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      font-style: italic;
+    }
+    .speech-row.right .speech-bubble { border-radius: 8px 0 8px 8px; }
+    .speech-donkey  { background: rgba(52,211,153,0.07);  border: 1px solid rgba(52,211,153,0.18);  color: #d4d4d4; }
+    .speech-balaam  { background: rgba(239,68,68,0.06);   border: 1px solid rgba(239,68,68,0.15);   color: #d4d4d4; }
+    .speech-label   { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 4px; font-style: normal; }
+    .speech-label.d { color: #34d399; }
+    .speech-label.b { color: #ef4444; }
+
+    /* ── Blessing attempts ── */
+    .attempt-card {
+      background: rgba(167,139,250,0.05);
+      border: 1px solid rgba(167,139,250,0.15);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .attempt-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .attempt-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; background: #a78bfa; color: #1a0a2e;
+      font-size: 0.7rem; font-weight: 700; border-radius: 50%; flex-shrink: 0;
+    }
+    .attempt-title { font-size: 0.9rem; font-weight: 600; color: #a78bfa; }
+    .attempt-body  { font-size: 0.87rem; color: #b0b0b0; line-height: 1.6; }
+
+    /* ── Warning banner for "What Balaam did later" ── */
+    .warning-banner {
+      background: linear-gradient(90deg, rgba(239,68,68,0.10) 0%, rgba(251,113,133,0.05) 100%);
+      border: 1px solid rgba(239,68,68,0.22);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .warning-icon  { font-size: 1.6rem; flex-shrink: 0; }
+    .warning-title { font-size: 0.95rem; font-weight: 600; color: #ef4444; margin-bottom: 2px; }
+    .warning-sub   { font-size: 0.78rem; color: #8e8ea0; }
+
+    /* ── NT reference cards ── */
+    .nt-card {
+      background: rgba(196,181,253,0.06);
+      border: 1px solid rgba(196,181,253,0.17);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .nt-ref  { font-size: 0.72rem; font-weight: 700; color: #c4b5fd; letter-spacing: 0.05em; margin-bottom: 5px; }
+    .nt-body { font-size: 0.87rem; color: #b0b0b0; line-height: 1.6; }
+
+    /* ── Lesson cards ── */
+    .lesson-card {
+      background: rgba(167,139,250,0.06);
+      border: 1px solid rgba(167,139,250,0.18);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .lesson-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; background: #a78bfa; color: #1a0a2e;
+      font-size: 0.7rem; font-weight: 700; border-radius: 50%;
+      margin-right: 8px; vertical-align: middle; position: relative; top: -1px;
+    }
+    .lesson-title { font-size: 0.9rem; font-weight: 600; color: #a78bfa; margin-bottom: 4px; }
+    .lesson-desc  { font-size: 0.87rem; color: #b0b0b0; }
+
+    /* ── Highlights ── */
+    .num    { color: #ef4444; font-weight: 600; }
+    .place  { color: #fbbf24; font-weight: 500; }
+    .obj    { color: #34d399; font-weight: 500; }
+    .action { color: #fb7185; font-weight: 600; }
+    .name   { color: #c4b5fd; font-weight: 500; }
+    .harsh  { color: #ef4444; font-weight: 500; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── TITLE ── -->
+  <div class="page-title-wrap">
+    <h1 class="page-title">Balaam &amp; Balak: Curse Turned to Blessing</h1>
+    <div class="verse-badges">
+      <span class="badge-label">REF</span>
+      <span class="badge">Numbers 22–24</span>
+      <span class="badge">Numbers 25</span>
+      <span class="badge">Numbers 31</span>
+    </div>
+    <p style="margin-top:14px; font-size:0.9rem; color:#a0a0a0; line-height:1.6;">This story happens when the Israelites were traveling toward the Promised Land and camped near <strong style="color:#ececec">Moab</strong>. The Moabite king <strong style="color:#ececec">Balak</strong> became afraid and tried to use a prophet named <strong style="color:#ececec">Balaam</strong> to curse Israel. But God turned the curse into a blessing.</p>
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">1</span>Israel Camps Near Moab</h2>
+    <div><span class="section-ref">Numbers 22:1</span></div>
+    <p>After many journeys in the wilderness, the Israelites camped in the plains of <span class="place">Moab</span>, near the <span class="place">Jordan River</span>, opposite <span class="place">Jericho</span>.</p>
+    <p><span class="name">King Balak</span>, the king of <span class="place">Moab</span>, saw how powerful <span class="place">Israel</span> had become. He had also heard what Israel did to the Amorite kings <span class="name">Sihon</span> and <span class="name">Og</span>.</p>
+    <p>Because of this:</p>
+    <ul>
+      <li>The Moabites were terrified</li>
+      <li>They believed Israel would destroy them</li>
+    </ul>
+    <p>So <span class="name">Balak</span> decided to stop <span class="place">Israel</span> using spiritual power instead of military power.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">2</span>Balak Sends for Balaam</h2>
+    <div><span class="section-ref">Numbers 22:2–7</span></div>
+    <p><span class="name">Balak</span> knew about a famous prophet named <span class="name">Balaam</span>, who lived near the <span class="place">Euphrates River</span>. People believed: whoever <span class="name">Balaam</span> blessed would be blessed, and whoever he cursed would be cursed.</p>
+    <p>So <span class="name">Balak</span> sent messengers with money to <span class="name">Balaam</span>. They told him:</p>
+    <blockquote>
+      <p>"A people has come out of Egypt and they cover the face of the land. Come and curse them for me, because they are too powerful for me."</p>
+    </blockquote>
+    <p class="section-question">Balak hoped:</p>
+    <ul>
+      <li><span class="name">Balaam</span> would curse <span class="place">Israel</span></li>
+      <li>Then <span class="place">Moab</span> could defeat them in battle</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">3</span>Balaam Asks God</h2>
+    <div><span class="section-ref">Numbers 22:8–13</span></div>
+    <p><span class="name">Balaam</span> asked the messengers to stay overnight. That night God spoke to <span class="name">Balaam</span> and asked: <em style="color:#d4d4d4">"Who are these men with you?"</em> <span class="name">Balaam</span> explained <span class="name">Balak</span>'s request.</p>
+    <p>Then God clearly commanded:</p>
+    <ul>
+      <li>Do not go with them</li>
+      <li>Do not curse <span class="place">Israel</span></li>
+      <li><span class="place">Israel</span> is blessed</li>
+    </ul>
+    <p>So <span class="name">Balaam</span> told <span class="name">Balak</span>'s messengers:</p>
+    <blockquote>
+      <p>"The Lord has refused to let me go with you."</p>
+    </blockquote>
+    <p>The messengers returned to <span class="name">Balak</span>.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">4</span>Balak Tries Again With Greater Rewards</h2>
+    <div><span class="section-ref">Numbers 22:15–21</span></div>
+    <p><span class="name">Balak</span> did not give up. He sent more important princes and promised <span class="name">Balaam</span> great honor, great riches, and anything he asked. But <span class="name">Balaam</span> replied:</p>
+    <blockquote>
+      <p>"Even if Balak gave me his house full of silver and gold, I cannot go beyond the command of the Lord."</p>
+    </blockquote>
+    <p>However, <span class="name">Balaam</span> still asked God again. This time God said <span class="name">Balaam</span> may go with them, but he must only speak what God tells him. So <span class="name">Balaam</span> went with the Moabite officials.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">5</span>The Angel Blocks Balaam</h2>
+    <div><span class="section-ref">Numbers 22:22–35</span></div>
+    <p>Although God allowed <span class="name">Balaam</span> to go, God was angry because <span class="name">Balaam</span>'s heart desired the reward. So an angel of the Lord stood in the road with a drawn <span class="obj">sword</span>. But <span class="name">Balaam</span> could not see the angel — only his <span class="obj">donkey</span> saw it.</p>
+
+    <div class="incident-card">
+      <div class="incident-num">1</div>
+      <div><strong style="color:#fbbf24">First time:</strong> The donkey turned off the road into a field. <span class="name">Balaam</span> became angry and <span class="action">beat</span> the donkey.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-num">2</div>
+      <div><strong style="color:#fbbf24">Second time:</strong> The angel stood in a narrow path between vineyards. The donkey pressed against a wall, <span class="action">crushing</span> <span class="name">Balaam</span>'s foot. Again <span class="name">Balaam</span> <span class="action">beat</span> the donkey.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-num">3</div>
+      <div><strong style="color:#fbbf24">Third time:</strong> The angel stood where there was no place to turn. The donkey <span class="action">lay down</span> under <span class="name">Balaam</span>. <span class="name">Balaam</span> became furious and <span class="action">beat</span> the donkey with a stick.</div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">6</span>The Donkey Speaks</h2>
+    <div><span class="section-ref">Numbers 22:28–30</span></div>
+    <p>Then something amazing happened. God opened the donkey's mouth, and it spoke!</p>
+
+    <div class="speech-row">
+      <span class="speech-icon">🐴</span>
+      <div class="speech-bubble speech-donkey">
+        <div class="speech-label d">Donkey</div>
+        "What have I done to you that you have beaten me these three times?"
+      </div>
+    </div>
+    <div class="speech-row right">
+      <span class="speech-icon">😠</span>
+      <div class="speech-bubble speech-balaam">
+        <div class="speech-label b">Balaam</div>
+        "You made a fool of me! If I had a sword, I would kill you!"
+      </div>
+    </div>
+    <div class="speech-row">
+      <span class="speech-icon">🐴</span>
+      <div class="speech-bubble speech-donkey">
+        <div class="speech-label d">Donkey</div>
+        "Have I ever behaved this way before?"
+      </div>
+    </div>
+    <div class="speech-row right">
+      <span class="speech-icon">😶</span>
+      <div class="speech-bubble speech-balaam">
+        <div class="speech-label b">Balaam</div>
+        "No."
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">7</span>Balaam Finally Sees the Angel</h2>
+    <div><span class="section-ref">Numbers 22:31–35</span></div>
+    <p>Then God opened <span class="name">Balaam</span>'s eyes. He saw the angel with a drawn <span class="obj">sword</span> standing in the road. The angel said:</p>
+    <blockquote>
+      <p>"Your path is reckless before me."</p>
+    </blockquote>
+    <p>The angel explained that the donkey had saved <span class="name">Balaam</span>'s life. If the donkey had not turned aside, the angel would have killed <span class="name">Balaam</span>.</p>
+    <p><span class="name">Balaam</span> repented and offered to return home. But the angel said:</p>
+    <blockquote>
+      <p>"Go with the men, but speak only what I tell you."</p>
+    </blockquote>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">8</span>Balaam Meets Balak</h2>
+    <div><span class="section-ref">Numbers 22:36–41</span></div>
+    <p><span class="name">Balak</span> came to meet <span class="name">Balaam</span> and said: <em style="color:#d4d4d4">"Why did you not come earlier? Am I not able to honor you?"</em></p>
+    <p><span class="name">Balaam</span> replied:</p>
+    <blockquote>
+      <p>"I cannot say anything except what God tells me."</p>
+    </blockquote>
+    <p><span class="name">Balak</span> then took <span class="name">Balaam</span> to high places where he could see part of <span class="place">Israel</span>'s camp.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">9</span>First Attempt to Curse Israel</h2>
+    <div><span class="section-ref">Numbers 23:1–12</span></div>
+    <div class="attempt-card">
+      <div class="attempt-header">
+        <span class="attempt-icon">1</span>
+        <span class="attempt-title">First Attempt — Mount Bamoth Baal</span>
+      </div>
+      <div class="attempt-body">
+        <span class="name">Balaam</span> asked <span class="name">Balak</span> to build <span class="num">7</span> altars and sacrifice <span class="num">7</span> bulls and <span class="num">7</span> rams. After the sacrifice, <span class="name">Balaam</span> sought God's message. Instead of a curse, God gave a blessing. <span class="name">Balaam</span> said:
+      </div>
+    </div>
+    <blockquote>
+      <p>"How can I curse those whom God has not cursed?"</p>
+    </blockquote>
+    <p>He declared that <span class="place">Israel</span> is a people set apart and their future is blessed. <span class="name">Balak</span> was frustrated.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">10</span>Second Attempt to Curse Israel</h2>
+    <div><span class="section-ref">Numbers 23:13–26</span></div>
+    <div class="attempt-card">
+      <div class="attempt-header">
+        <span class="attempt-icon">2</span>
+        <span class="attempt-title">Second Attempt — Field of Zophim</span>
+      </div>
+      <div class="attempt-body">
+        <span class="name">Balak</span> thought maybe the location was the problem. He took <span class="name">Balaam</span> to another mountain. Again they built <span class="num">7</span> altars and sacrifices. Again <span class="name">Balaam</span> asked God. But God again gave a blessing.
+      </div>
+    </div>
+    <blockquote>
+      <p>"God is not a man that He should lie."</p>
+    </blockquote>
+    <p>He declared: <span class="place">Israel</span> is blessed, God will not change His mind, and no curse can work against <span class="place">Israel</span>. <span class="name">Balak</span> became angry.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">11</span>Third Attempt</h2>
+    <div><span class="section-ref">Numbers 23:27 – 24:9</span></div>
+    <div class="attempt-card">
+      <div class="attempt-header">
+        <span class="attempt-icon">3</span>
+        <span class="attempt-title">Third Attempt — Top of Peor</span>
+      </div>
+      <div class="attempt-body">
+        <span class="name">Balak</span> tried one more place. But this time <span class="name">Balaam</span> did not even try to curse. The Spirit of God came upon him, and he prophesied blessings.
+      </div>
+    </div>
+    <p>He described <span class="place">Israel</span> as:</p>
+    <ul>
+      <li>Beautiful camps</li>
+      <li>A prosperous nation</li>
+      <li>Strong like a lion</li>
+    </ul>
+    <blockquote>
+      <p>"Blessed are those who bless you, and cursed are those who curse you."</p>
+    </blockquote>
+  </div>
+
+  <!-- 12 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">12</span>Balak Becomes Furious</h2>
+    <div><span class="section-ref">Numbers 24:10–14</span></div>
+    <p><span class="name">Balak</span> became extremely angry. He clapped his hands and said:</p>
+    <blockquote>
+      <p>"I called you to curse my enemies, but you have blessed them three times!"</p>
+    </blockquote>
+    <p>He told <span class="name">Balaam</span> to go home without reward. <span class="name">Balaam</span> replied:</p>
+    <blockquote>
+      <p>"Did I not tell you I can only speak what the Lord says?"</p>
+    </blockquote>
+  </div>
+
+  <!-- 13 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">13</span>Balaam's Final Prophecies</h2>
+    <div><span class="section-ref">Numbers 24:15–25</span></div>
+    <p>Before leaving, <span class="name">Balaam</span> gave more prophecies about the future. One famous prophecy says:</p>
+    <blockquote>
+      <p>"A star will come out of Jacob; a scepter will rise out of Israel."</p>
+    </blockquote>
+    <p>Many believe this prophecy points to the coming Messiah. He also predicted the defeat of several nations:</p>
+    <ul>
+      <li><span class="place">Moab</span></li>
+      <li><span class="place">Edom</span></li>
+      <li><span class="place">Amalek</span></li>
+      <li>Others</li>
+    </ul>
+    <p>After this, <span class="name">Balaam</span> returned home.</p>
+  </div>
+
+  <!-- ── EXTRA 1: What Balaam Did Later ── -->
+  <div class="section">
+    <div class="warning-banner">
+      <div class="warning-icon">⚠️</div>
+      <div>
+        <div class="warning-title">What Balaam Did Later — That Caused Israel to Sin</div>
+        <div class="warning-sub">Numbers 25 &amp; Numbers 31</div>
+      </div>
+    </div>
+    <p>Even though <span class="name">Balaam</span> could not curse <span class="place">Israel</span> directly, he found another way to cause harm.</p>
+
+    <p class="section-question">What happened in Numbers 25:</p>
+    <p>The Israelite men began to <span class="harsh">sin</span> with Moabite women. They also started worshipping the Moabite god <span class="name">Baal of Peor</span>. This brought God's anger against <span class="place">Israel</span>.</p>
+
+    <p class="section-question">Balaam's role — revealed in Numbers 31:</p>
+    <p>Later, when <span class="place">Israel</span> defeated <span class="place">Midian</span>, the Bible reveals the truth. <span class="name">Balaam</span> had given advice to the Moabites and Midianites to use women to <span class="harsh">seduce</span> the Israelite men into sexual <span class="harsh">sin</span> and idol worship. This was <span class="name">Balaam</span>'s strategy — since he could not curse <span class="place">Israel</span> from outside, he caused them to sin from within.</p>
+
+    <blockquote>
+      <p>"These women, on Balaam's advice, caused the Israelites to act unfaithfully against the Lord in the matter of Peor."</p>
+    </blockquote>
+    <p>Because of this, <span class="name">Balaam</span> was eventually killed in battle against <span class="place">Midian</span> (Numbers 31:8).</p>
+  </div>
+
+  <!-- ── EXTRA 2: Balaam in the New Testament ── -->
+  <div class="section">
+    <h2 class="section-title">Why Balaam Is Called a False Prophet in the New Testament</h2>
+    <div><span class="section-ref">2 Peter 2:15 · Jude 1:11 · Revelation 2:14</span></div>
+    <p>In the New Testament, <span class="name">Balaam</span>'s name is used as a warning. Three different writers mention him as an example of a <span class="harsh">false prophet</span>.</p>
+
+    <div class="nt-card">
+      <div class="nt-ref">📖 2 Peter 2:15</div>
+      <div class="nt-body"><span class="name">Peter</span> warns about false teachers who follow the <em>"way of Balaam"</em> — meaning people who use religion for personal profit and greed. <span class="name">Balaam</span> loved money so much that he kept looking for ways to please <span class="name">Balak</span> despite God's clear command.</div>
+    </div>
+
+    <div class="nt-card">
+      <div class="nt-ref">📖 Jude 1:11</div>
+      <div class="nt-body"><span class="name">Jude</span> warns that false teachers have rushed into the <em>"error of Balaam"</em> — meaning they compromise God's truth for reward and selfish gain.</div>
+    </div>
+
+    <div class="nt-card">
+      <div class="nt-ref">📖 Revelation 2:14</div>
+      <div class="nt-body"><span class="name">Jesus</span> rebukes the church at <span class="place">Pergamum</span> for holding on to the <em>"teaching of Balaam"</em> — allowing sexual <span class="harsh">immorality</span> and idol worship inside the church, just as <span class="name">Balaam</span> taught the Moabites to lead <span class="place">Israel</span> into sin.</div>
+    </div>
+
+    <p class="section-question">Why is he called a false prophet?</p>
+    <ul>
+      <li>He knew God's voice but still desired money and honor</li>
+      <li>He tried multiple times to find a way to curse <span class="place">Israel</span></li>
+      <li>He finally gave evil advice to destroy <span class="place">Israel</span> from within through sin</li>
+      <li>He used spiritual gifts for personal gain, not for God's glory</li>
+    </ul>
+    <p>The <em style="color:#c4b5fd">"way of Balaam"</em> became a phrase in the New Testament to describe anyone who mixes truth with greed, compromise, and spiritual corruption.</p>
+  </div>
+
+  <!-- ── Lessons ── -->
+  <div class="section">
+    <h2 class="section-title">Important Lessons From the Story</h2>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">1</span>God Protects His People</div>
+      <div class="lesson-desc">Even when enemies try to curse Israel, God turns the curse into blessing.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">2</span>God Controls Prophecy</div>
+      <div class="lesson-desc">Even a prophet hired to curse cannot go against God's will.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">3</span>Greed Is Dangerous</div>
+      <div class="lesson-desc">Balaam wanted money and honor, and this caused him trouble and eventually his death.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">4</span>God Can Use Anything</div>
+      <div class="lesson-desc">God even used a donkey to speak and correct Balaam.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">5</span>God's Blessing Cannot Be Reversed</div>
+      <div class="lesson-desc">What God blesses, no human can curse.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

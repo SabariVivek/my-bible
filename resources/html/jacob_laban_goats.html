@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Jacob and Laban's Goats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Söhne:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #212121; --text: #ececec; --divider: #3d3d3d; --font: 'Söhne', 'ui-sans-serif', system-ui, -apple-system, sans-serif; }
+    html, body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 16px; line-height: 1.7; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 480px; margin: 0 auto; padding: 28px 18px 48px; }
+    .section { padding: 26px 0 20px; border-bottom: 1px solid var(--divider); animation: fadeUp 0.4s ease both; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .section:nth-child(1)  { animation-delay: 0.02s; }
+    .section:nth-child(2)  { animation-delay: 0.04s; }
+    .section:nth-child(3)  { animation-delay: 0.06s; }
+    .section:nth-child(4)  { animation-delay: 0.08s; }
+    .section:nth-child(5)  { animation-delay: 0.10s; }
+    .section:nth-child(6)  { animation-delay: 0.12s; }
+    .section:nth-child(7)  { animation-delay: 0.14s; }
+    .section:nth-child(8)  { animation-delay: 0.16s; }
+    .section:nth-child(9)  { animation-delay: 0.18s; }
+    .section:nth-child(10) { animation-delay: 0.20s; }
+    .section:nth-child(11) { animation-delay: 0.22s; }
+    .section:nth-child(12) { animation-delay: 0.24s; }
+
+    /* ── Page Title ── */
+    .page-title-wrap { padding: 24px 0 20px; margin-bottom: 4px; border-bottom: 1px solid var(--divider); }
+    .page-title { font-size: 1.5rem; font-weight: 700; line-height: 1.3; letter-spacing: 0.01em; margin-bottom: 14px; background: linear-gradient(90deg, #fbfbfb 0%, #a78bfa 60%, #22d3ee 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .verse-badges { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+    .badge-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8e8ea0; }
+    .badge { font-size: 0.72rem; font-weight: 500; color: #d4a574; background: transparent; border: 1px solid #b8834a; border-radius: 20px; padding: 3px 10px; letter-spacing: 0.02em; }
+
+    /* ── Section heading ── */
+    .section-title { font-size: 1.2rem; font-weight: 600; line-height: 1.35; color: #fbfbfb; margin-bottom: 6px; padding-bottom: 6px; border-bottom: 2px dotted #726b64; display: table; }
+    .section-ref { display: inline-block; font-size: 0.65rem; font-weight: 500; color: #d4a574; border: 1px solid #b8834a; border-radius: 20px; padding: 1px 8px; letter-spacing: 0.02em; margin-top: 6px; margin-bottom: 12px; }
+    .section-num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #b8834a; color: #1a1208; font-size: 0.72rem; font-weight: 700; border-radius: 50%; margin-right: 8px; vertical-align: middle; position: relative; top: -2px; flex-shrink: 0; }
+    .section-question { font-size: 0.85rem; font-weight: 600; color: #22d3ee; margin-bottom: 10px; letter-spacing: 0.01em; display: inline-block; }
+
+    /* ── Body ── */
+    .section p { color: var(--text); margin-bottom: 10px; font-size: 0.97rem; }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul { margin: 6px 0 10px 20px; font-size: 0.97rem; color: var(--text); }
+    .section ul li { margin-bottom: 5px; }
+
+    /* ── Blockquote ── */
+    blockquote { border-left: 3px solid #b8834a; margin: 12px 0; padding: 10px 14px; background: rgba(180,175,190,0.08); border-radius: 0 8px 8px 0; font-style: italic; color: #d4d4d4; font-size: 0.95rem; line-height: 1.6; }
+    blockquote p { margin-bottom: 5px; color: inherit; font-size: inherit; }
+    blockquote p:last-child { margin-bottom: 0; }
+
+    /* ── Background summary cards ── */
+    .bg-grid { display: flex; flex-direction: column; gap: 7px; margin: 10px 0 12px; }
+    .bg-item { display: flex; align-items: center; gap: 10px; background: rgba(196,181,253,0.06); border: 1px solid rgba(196,181,253,0.14); border-radius: 8px; padding: 8px 12px; font-size: 0.92rem; color: #d4d4d4; }
+    .bg-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+    /* ── Animal type pills ── */
+    .animal-pills { display: flex; flex-wrap: wrap; gap: 7px; margin: 10px 0 12px; }
+    .animal-pill { font-size: 0.82rem; font-weight: 600; border-radius: 20px; padding: 4px 12px; }
+    .pill-speckled  { background: rgba(251,191,36,0.10); border: 1px solid rgba(251,191,36,0.25); color: #fbbf24; }
+    .pill-spotted   { background: rgba(251,113,133,0.08); border: 1px solid rgba(251,113,133,0.22); color: #fb7185; }
+    .pill-dark      { background: rgba(148,163,184,0.08); border: 1px solid rgba(148,163,184,0.20); color: #94a3b8; }
+    .pill-striped   { background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.20); color: #34d399; }
+
+    /* ── Tree / sticks cards ── */
+    .tree-row { display: flex; gap: 8px; margin: 10px 0 12px; }
+    .tree-card { flex: 1; background: rgba(52,211,153,0.05); border: 1px solid rgba(52,211,153,0.14); border-radius: 8px; padding: 10px 10px; text-align: center; font-size: 0.88rem; }
+    .tree-icon { font-size: 1.4rem; margin-bottom: 4px; }
+    .tree-name { font-weight: 600; color: #34d399; }
+
+    /* ── Strategy table ── */
+    .strategy-table { width: 100%; border-collapse: collapse; margin: 10px 0 12px; font-size: 0.88rem; }
+    .strategy-table th { background: rgba(34,211,238,0.08); color: #22d3ee; font-weight: 700; padding: 7px 10px; text-align: left; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; border-bottom: 1px solid var(--divider); }
+    .strategy-table td { padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #d4d4d4; vertical-align: top; line-height: 1.5; }
+    .strategy-table tr:last-child td { border-bottom: none; }
+    .tag-strong { background: rgba(52,211,153,0.10); color: #34d399; border-radius: 6px; padding: 2px 7px; font-size: 0.75rem; font-weight: 700; }
+    .tag-weak   { background: rgba(239,68,68,0.08); color: #ef4444; border-radius: 6px; padding: 2px 7px; font-size: 0.75rem; font-weight: 700; }
+
+    /* ── Wealth grid ── */
+    .wealth-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 10px 0 12px; }
+    .wealth-card { background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.15); border-radius: 8px; padding: 10px 12px; text-align: center; font-size: 0.88rem; }
+    .wealth-icon { font-size: 1.3rem; margin-bottom: 4px; }
+    .wealth-label { font-weight: 600; color: #fbbf24; }
+
+    /* ── Dream / God's revelation card ── */
+    .dream-card { background: rgba(167,139,250,0.07); border: 1px solid rgba(167,139,250,0.18); border-radius: 10px; padding: 14px 16px; margin: 10px 0 12px; display: flex; gap: 12px; align-items: flex-start; }
+    .dream-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+    .dream-title { font-size: 0.88rem; font-weight: 600; color: #a78bfa; margin-bottom: 5px; }
+    .dream-body { font-size: 0.87rem; color: #b0b0b0; line-height: 1.6; }
+
+    /* ── Summary cards ── */
+    .summary-card { background: rgba(34,211,238,0.05); border: 1px solid rgba(34,211,238,0.15); border-radius: 10px; padding: 10px 14px; margin-bottom: 8px; font-size: 0.93rem; color: #d4d4d4; line-height: 1.6; }
+    .summary-card::before { content: '→'; color: #22d3ee; font-weight: 700; margin-right: 8px; }
+
+    /* ── Lesson cards ── */
+    .lesson-card { background: rgba(167,139,250,0.06); border: 1px solid rgba(167,139,250,0.18); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
+    .lesson-num { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; background: #a78bfa; color: #1a0a2e; font-size: 0.7rem; font-weight: 700; border-radius: 50%; margin-right: 8px; vertical-align: middle; position: relative; top: -1px; }
+    .lesson-title { font-size: 0.9rem; font-weight: 600; color: #a78bfa; margin-bottom: 4px; }
+    .lesson-desc  { font-size: 0.87rem; color: #b0b0b0; }
+
+    /* ── Highlights ── */
+    .num    { color: #ef4444; font-weight: 600; }
+    .place  { color: #fbbf24; font-weight: 500; }
+    .obj    { color: #34d399; font-weight: 500; }
+    .action { color: #fb7185; font-weight: 600; }
+    .name   { color: #c4b5fd; font-weight: 500; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-title-wrap">
+    <h1 class="page-title">Jacob &amp; Laban's Goats: Strategy &amp; God's Blessing</h1>
+    <div class="verse-badges">
+      <span class="badge-label">REF</span>
+      <span class="badge">Genesis 30:25–43</span>
+      <span class="badge">Genesis 31:10–12</span>
+    </div>
+    <p style="margin-top:14px; font-size:0.9rem; color:#a0a0a0; line-height:1.6;">This story explains how <strong style="color:#ececec">Jacob</strong> became very wealthy while working for his uncle <strong style="color:#ececec">Laban</strong>. It shows both Jacob's clever strategy and God's blessing.</p>
+  </div>
+
+  <!-- Background -->
+  <div class="section">
+    <h2 class="section-title">Background: Jacob Working for Laban</h2>
+    <p><span class="name">Jacob</span> had fled from his brother <span class="name">Esau</span> and came to <span class="place">Haran</span>, where his uncle <span class="name">Laban</span> lived. There <span class="name">Jacob</span>:</p>
+    <div class="bg-grid">
+      <div class="bg-item"><span class="bg-icon">🐑</span> Worked for <span class="name" style="margin-left:4px">Laban</span></div>
+      <div class="bg-item"><span class="bg-icon">💍</span> Married <span class="name" style="margin-left:4px">Leah</span> and <span class="name" style="margin-left:4px">Rachel</span></div>
+      <div class="bg-item"><span class="bg-icon">📅</span> Stayed many years — <span class="num" style="margin-left:4px">14 years</span> to marry Laban's daughters, then continued working</div>
+    </div>
+    <p>During this time <span class="name">Laban</span> became rich because God blessed him through <span class="name">Jacob</span>.</p>
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">1</span>Jacob Decides to Return Home</h2>
+    <div><span class="section-ref">Genesis 30:25–26</span></div>
+    <p>After <span class="name">Joseph</span> was born, <span class="name">Jacob</span> said to <span class="name">Laban</span>:</p>
+    <blockquote>
+      <p>"Send me on my way so I can go back to my own country."</p>
+    </blockquote>
+    <p><span class="name">Jacob</span> wanted to return to the land of <span class="place">Canaan</span>. But <span class="name">Laban</span> did not want him to leave because he realized:</p>
+    <blockquote>
+      <p>"The Lord has blessed me because of you."</p>
+    </blockquote>
+    <p>So <span class="name">Laban</span> asked <span class="name">Jacob</span> to name his wages.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">2</span>Jacob Proposes an Unusual Wage</h2>
+    <div><span class="section-ref">Genesis 30:31–34</span></div>
+    <p><span class="name">Jacob</span> made a very unusual proposal. He said he would not take money. Instead he asked for certain animals from the flock. He said:</p>
+    <blockquote>
+      <p>"Let me pass through your flocks today and remove every speckled, spotted, or dark-colored sheep and goat. Those will be my wages."</p>
+    </blockquote>
+    <p>The animals <span class="name">Jacob</span> asked for:</p>
+    <div class="animal-pills">
+      <span class="animal-pill pill-speckled">Speckled</span>
+      <span class="animal-pill pill-spotted">Spotted</span>
+      <span class="animal-pill pill-dark">Dark-colored</span>
+    </div>
+    <p>This seemed like a very small portion of the flock because most animals were plain-colored. <span class="name">Laban</span> quickly agreed because it looked like a great deal for him.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">3</span>Laban Tries to Cheat Jacob</h2>
+    <div><span class="section-ref">Genesis 30:35–36</span></div>
+    <p>But <span class="name">Laban</span> secretly tried to cheat <span class="name">Jacob</span>. On that very day <span class="name">Laban</span> <span class="action">removed</span> all the speckled and spotted animals from the flock. Then he gave them to his sons and <span class="action">moved</span> them <span class="num">three days</span> away.</p>
+    <p>This meant <span class="name">Jacob</span> started with almost none of those animals. <span class="name">Laban</span> thought <span class="name">Jacob</span> would never gain wealth this way.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">4</span>Jacob's Strategy With the Sticks</h2>
+    <div><span class="section-ref">Genesis 30:37–39</span></div>
+    <p><span class="name">Jacob</span> then did something unusual. He took branches from these trees:</p>
+    <div class="tree-row">
+      <div class="tree-card"><div class="tree-icon">🌳</div><div class="tree-name">Poplar</div></div>
+      <div class="tree-card"><div class="tree-icon">🌰</div><div class="tree-name">Almond</div></div>
+      <div class="tree-card"><div class="tree-icon">🍃</div><div class="tree-name">Plane</div></div>
+    </div>
+    <p>He <span class="action">peeled</span> stripes in the sticks, exposing the white inside. Then he <span class="action">placed</span> these <span class="obj">striped sticks</span> near the <span class="obj">watering troughs</span> where the animals came to drink and mate.</p>
+    <p>When the animals bred in front of these sticks, many of the young were born:</p>
+    <div class="animal-pills">
+      <span class="animal-pill pill-speckled">Speckled</span>
+      <span class="animal-pill pill-spotted">Spotted</span>
+      <span class="animal-pill pill-striped">Striped</span>
+    </div>
+    <p>These animals became <span class="name">Jacob</span>'s property.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">5</span>Jacob Strengthens His Own Flocks</h2>
+    <div><span class="section-ref">Genesis 30:40–42</span></div>
+    <p><span class="name">Jacob</span> separated the animals that belonged to him. He also used a careful strategy:</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Animals</th>
+          <th>Jacob's Action</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag-strong">Strong</span> animals came to mate</td>
+          <td><span class="name">Jacob</span> placed the sticks</td>
+          <td>Strong young born into <span class="name">Jacob</span>'s flock</td>
+        </tr>
+        <tr>
+          <td><span class="tag-weak">Weak</span> animals came to mate</td>
+          <td><span class="name">Jacob</span> did not place the sticks</td>
+          <td>Weak young remained in <span class="name">Laban</span>'s flock</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Over time <span class="name">Jacob</span>'s flock became very strong and large.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">6</span>Jacob Becomes Very Wealthy</h2>
+    <div><span class="section-ref">Genesis 30:43</span></div>
+    <p><span class="name">Jacob</span> became extremely prosperous. He gained:</p>
+    <div class="wealth-grid">
+      <div class="wealth-card"><div class="wealth-icon">🐑</div><div class="wealth-label">Large flocks</div></div>
+      <div class="wealth-card"><div class="wealth-icon">👨‍👩‍👧</div><div class="wealth-label">Servants</div></div>
+      <div class="wealth-card"><div class="wealth-icon">🐪</div><div class="wealth-label">Camels</div></div>
+      <div class="wealth-card"><div class="wealth-icon">🫏</div><div class="wealth-label">Donkeys</div></div>
+    </div>
+    <p><span class="name">Jacob</span> became richer and richer.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">7</span>The Real Reason Jacob Succeeded</h2>
+    <div><span class="section-ref">Genesis 31:10–12</span></div>
+    <p>The Bible later explains something important. <span class="name">Jacob</span>'s success was not just his strategy.</p>
+    <div class="dream-card">
+      <div class="dream-icon">💭</div>
+      <div>
+        <div class="dream-title">God Spoke to Jacob in a Dream</div>
+        <div class="dream-body">God showed <span class="name">Jacob</span> that the animals producing speckled and spotted offspring were part of God's blessing. God told him: <em>"I have seen all that Laban has been doing to you."</em> God was protecting <span class="name">Jacob</span> from <span class="name">Laban</span>'s cheating.</div>
+      </div>
+    </div>
+    <p>So <span class="name">Jacob</span>'s wealth ultimately came from God's intervention.</p>
+  </div>
+
+  <!-- Lessons -->
+  <div class="section">
+    <h2 class="section-title">Important Lessons From This Story</h2>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">1</span>God Can Bless Even in Unfair Situations</div>
+      <div class="lesson-desc">Laban tried to cheat Jacob many times, but God still prospered Jacob.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">2</span>Hard Work Matters</div>
+      <div class="lesson-desc">Jacob was diligent in managing the flocks.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">3</span>God Sees Injustice</div>
+      <div class="lesson-desc">God told Jacob He had seen how Laban treated him.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">4</span>Blessing Comes From God</div>
+      <div class="lesson-desc">Even though Jacob used a strategy, the real success came from God's blessing.</div>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="section">
+    <h2 class="section-title">In Summary</h2>
+    <div class="summary-card"><span class="name">Jacob</span> worked for <span class="name">Laban</span></div>
+    <div class="summary-card"><span class="name">Laban</span> tried to cheat him</div>
+    <div class="summary-card"><span class="name">Jacob</span> asked for spotted and speckled animals as wages</div>
+    <div class="summary-card"><span class="name">Jacob</span> used a breeding strategy with striped sticks</div>
+    <div class="summary-card">God blessed <span class="name">Jacob</span>'s flocks</div>
+    <div class="summary-card"><span class="name">Jacob</span> became very wealthy</div>
+  </div>
+
+</div>
+</body>
+</html>
