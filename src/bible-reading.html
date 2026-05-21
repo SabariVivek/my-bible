@@ -2589,24 +2589,35 @@
 
         const SKELETON_MIN_DISPLAY = 1000; // 1 second minimum
         let _skelShowTime = 0;
+        const _tabLoaded = new Set(); // tracks tabs that have been loaded at least once
 
         function switchDashboardTab(tabId) {
+            // Don't do anything if already on this tab
+            if (state.dashboardTab === tabId) return;
+
             state.loadedUserData.clear();
             state.dashboardTab = tabId;
+
+            // Only show skeleton on first navigation to each tab
+            if (_tabLoaded.has(tabId) || tabId === 'faith') {
+                render();
+                return;
+            }
+
             _skelShowTime = Date.now();
             showLoading();
 
             const finishSwitch = () => {
                 const elapsed = Date.now() - _skelShowTime;
                 const remaining = Math.max(0, SKELETON_MIN_DISPLAY - elapsed);
-                setTimeout(() => { hideLoading(); render(); }, remaining);
+                setTimeout(() => {
+                    _tabLoaded.add(tabId);
+                    hideLoading();
+                    render();
+                }, remaining);
             };
 
-            if (tabId === 'faith') {
-                // No skeleton for faith tab - render immediately
-                hideLoading();
-                render();
-            } else if (tabId === 'home') {
+            if (tabId === 'home') {
                 ensureVersesLoaded().then(finishSwitch).catch(finishSwitch);
             } else if (tabId === 'family' && !state.quizDataLoaded) {
                 loadQuizChaptersFromSupabase().then(finishSwitch).catch(finishSwitch);
