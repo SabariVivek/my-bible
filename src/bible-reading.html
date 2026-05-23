@@ -1167,32 +1167,6 @@
             pointer-events: all;
         }
 
-        /* ── Simple Spinner (for save actions) ── */
-        .loading-overlay.show-spinner {
-            background: rgba(0, 0, 0, 0.45);
-        }
-        .simple-spinner-wrap {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
-        }
-        .simple-spinner-icon {
-            width: 44px;
-            height: 44px;
-            border: 4px solid rgba(255, 255, 255, 0.25);
-            border-top-color: #667eea;
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-        .simple-spinner-label {
-            color: #fff;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 0.3px;
-        }
-
         /* ── Skeleton Screens ── */
         @keyframes skel-shimmer {
             0% { background-position: -400px 0; }
@@ -2584,11 +2558,7 @@
             </div>
         </div>
 
-        <!-- Simple Spinner (for save/action loading, no skeleton) -->
-        <div id="simple-spinner" class="simple-spinner-wrap" style="display:none;">
-            <div class="simple-spinner-icon"></div>
-            <span class="simple-spinner-label">Saving...</span>
-        </div>
+        <!-- Reading-Card Save Skeleton removed: now rendered inline inside dailyReadingCard -->
     </div>
 
     <script>
@@ -2614,24 +2584,9 @@
             overlay.classList.add('show');
         }
 
-        function showSimpleLoading(label = 'Saving...') {
-            const overlay = document.getElementById('loadingOverlay');
-            // Hide all skeleton screens
-            overlay.querySelectorAll('.skeleton-screen').forEach(s => s.style.display = 'none');
-            // Show spinner
-            const spinner = document.getElementById('simple-spinner');
-            if (spinner) {
-                spinner.querySelector('.simple-spinner-label').textContent = label;
-                spinner.style.display = 'flex';
-            }
-            overlay.classList.add('show', 'show-spinner');
-        }
-
         function hideLoading() {
             const overlay = document.getElementById('loadingOverlay');
             overlay.classList.remove('show', 'show-spinner');
-            const spinner = document.getElementById('simple-spinner');
-            if (spinner) spinner.style.display = 'none';
         }
 
         const SKELETON_MIN_DISPLAY = 1000; // 1 second minimum
@@ -5212,7 +5167,68 @@
                 completedPortions.add(`${dateKey}-${idx}`);
             });
 
-            showSimpleLoading('Saving progress...');
+            const _saveStart = Date.now();
+            let _saveError = false;
+
+            // Show inline skeleton only inside the reading card — rest of the page stays as-is
+            const _card = document.getElementById('dailyReadingCard');
+            if (_card) {
+                _card.innerHTML = `
+                    <div style="height:0.25rem;" class="bg-gradient-to-r from-blue-400"></div>
+                    <div style="padding:24px;position:relative;">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+                            <div class="skel-bone" style="width:40px;height:40px;border-radius:8px;"></div>
+                            <div class="skel-bone" style="width:130px;height:20px;border-radius:6px;"></div>
+                            <div class="skel-bone" style="width:40px;height:40px;border-radius:8px;"></div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
+                            <div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.07);">
+                                <div class="skel-circle" style="width:24px;height:24px;flex-shrink:0;"></div>
+                                <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+                                    <div class="skel-bone" style="width:62%;height:14px;border-radius:5px;"></div>
+                                    <div class="skel-bone" style="width:42%;height:11px;border-radius:4px;"></div>
+                                </div>
+                                <div class="skel-bone" style="width:28px;height:28px;border-radius:6px;flex-shrink:0;"></div>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.07);">
+                                <div class="skel-circle" style="width:24px;height:24px;flex-shrink:0;"></div>
+                                <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+                                    <div class="skel-bone" style="width:50%;height:14px;border-radius:5px;"></div>
+                                    <div class="skel-bone" style="width:36%;height:11px;border-radius:4px;"></div>
+                                </div>
+                                <div class="skel-bone" style="width:28px;height:28px;border-radius:6px;flex-shrink:0;"></div>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.07);">
+                                <div class="skel-circle" style="width:24px;height:24px;flex-shrink:0;"></div>
+                                <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+                                    <div class="skel-bone" style="width:56%;height:14px;border-radius:5px;"></div>
+                                    <div class="skel-bone" style="width:40%;height:11px;border-radius:4px;"></div>
+                                </div>
+                                <div class="skel-bone" style="width:28px;height:28px;border-radius:6px;flex-shrink:0;"></div>
+                            </div>
+                        </div>
+                        <div class="skel-bone" style="width:100%;height:48px;border-radius:8px;"></div>
+                    </div>`;
+            }
+
+            // Skeleton the pending-dates chips only (header/badge of the pane stay as-is)
+            const _chips = document.getElementById('pending-dates-chips');
+            if (_chips) {
+                const _chipCount = Math.min(_chips.children.length || 5, 8);
+                const _chipStyle = state.darkMode
+                    ? 'background:linear-gradient(90deg,rgba(180,30,30,0.45) 25%,rgba(220,60,60,0.6) 50%,rgba(180,30,30,0.45) 75%);background-size:200% 100%;animation:skel-shimmer 1.7s infinite linear;border:1px solid rgba(200,60,60,0.2);'
+                    : 'background:linear-gradient(90deg,rgba(240,120,120,0.3) 25%,rgba(255,150,150,0.5) 50%,rgba(240,120,120,0.3) 75%);background-size:200% 100%;animation:skel-shimmer 1.7s infinite linear;border:1px solid rgba(200,80,80,0.2);';
+                _chips.innerHTML = Array.from({ length: _chipCount }, (_, i) =>
+                    `<div style="width:${58 + (i % 3) * 10}px;height:28px;border-radius:8px;${_chipStyle}"></div>`
+                ).join('');
+            }
+
+            // Skeleton the chapter count in the top header
+            const _chapterCount = document.getElementById('header-chapter-count');
+            if (_chapterCount) {
+                _chapterCount.innerHTML = '<div class="skel-bone" style="width:72px;height:12px;border-radius:4px;display:inline-block;vertical-align:middle;"></div>';
+            }
+
             try {
                 // Mark all chapters in Supabase
                 for (const portion of reading.portions) {
@@ -5264,15 +5280,16 @@
                 if (state.showDashboard) {
                     renderDashboardOnly();
                 }
-
-                // Trigger confetti animation
-                createConfetti();
-
-                render();
             } catch (error) {
+                _saveError = true;
                 alert('Failed to save progress. Please try again.');
             } finally {
-                hideLoading();
+                const elapsed = Date.now() - _saveStart;
+                const remaining = Math.max(0, SKELETON_MIN_DISPLAY - elapsed);
+                setTimeout(() => {
+                    render();
+                    if (!_saveError) createConfetti();
+                }, remaining);
             }
         }
 
@@ -6787,7 +6804,7 @@
                                     </div>
                                     <div>
                                         <h2 class="font-semibold">${state.currentUser.name}</h2>
-                                        <p class="text-xs ${theme.textSecondary}">
+                                        <p id="header-chapter-count" class="text-xs ${theme.textSecondary}">
                                             ${(() => {
                                                 const progressKeys = Object.keys(state.currentUser.progress).filter(k => state.currentUser.progress[k] === 'read');
                                                 const uniqueChapters = new Set();
@@ -6853,7 +6870,7 @@
                                     </div>
                                     <span style="font-size:9px;font-weight:600;padding:2px 7px;border-radius:10px;" class="${state.darkMode ? 'bg-red-900 text-red-400 border border-red-700' : 'bg-red-100 text-red-500 border border-red-300'}">Catch Up</span>
                                 </div>
-                                <div style="display:flex; flex-wrap:wrap; gap:6px;">
+                                <div id="pending-dates-chips" style="display:flex; flex-wrap:wrap; gap:6px;">
                                     ${displayDates.map(pd => {
                                         const d = pd.date;
                                         const label = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
