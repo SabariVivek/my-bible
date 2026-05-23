@@ -2174,10 +2174,85 @@
         }
         html.dark-theme .notes-search-text { color: #475569; }
         html:not(.dark-theme) .notes-search-text { color: #94a3b8; }
+
+        /* ── Instant page loader ───────────────────────────────────────── */
+        #page-loader {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 28px;
+            background: rgb(248, 249, 250);
+            z-index: 99999;
+            transition: opacity 0.25s ease;
+        }
+        html.dark-theme #page-loader { background: #202124; }
+        #page-loader.fade-out { opacity: 0; pointer-events: none; }
+
+        .page-loader-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #3c4043;
+            margin: 0 0 12px;
+        }
+        html.dark-theme .page-loader-text { color: #bdc1c6; }
+
+        .page-loader-track {
+            width: 100%;
+            max-width: 420px;
+            height: 8px;
+            border-radius: 999px;
+            background: #e8eaed;
+            overflow: hidden;
+        }
+        html.dark-theme .page-loader-track { background: #3c4043; }
+
+        .page-loader-fill {
+            height: 100%;
+            width: 45%;
+            border-radius: 999px;
+            background: #5b7cf6;
+            animation: pageLoaderSlide 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pageLoaderSlide {
+            0%   { transform: translateX(-120%); }
+            100% { transform: translateX(320%); }
+        }
+
+        /* Theme-aware skel bones for inline use inside family/other cards */
+        .ft-skel-bone {
+            border-radius: 6px; flex-shrink: 0;
+            background-size: 800px 100% !important;
+            animation: skel-shimmer 1.7s infinite linear;
+        }
+        .ft-skel-circle {
+            border-radius: 50%; flex-shrink: 0;
+            background-size: 800px 100% !important;
+            animation: skel-shimmer 1.7s infinite linear;
+        }
+        html:not(.dark-theme) .ft-skel-bone,
+        html:not(.dark-theme) .ft-skel-circle {
+            background: linear-gradient(90deg,#e8edf2 0%,#f1f5f9 40%,#f8fafc 50%,#f1f5f9 60%,#e8edf2 100%);
+        }
+        html.dark-theme .ft-skel-bone,
+        html.dark-theme .ft-skel-circle {
+            background: linear-gradient(90deg,#1a1a22 0%,#252535 40%,#2e2e42 50%,#252535 60%,#1a1a22 100%);
+        }
+        /* ────────────────────────────────────────────────────────────────── */
     </style>
 </head>
 
 <body>
+    <!-- Instant page loader — visible before any JS runs, removed on first render() -->
+    <div id="page-loader">
+        <p class="page-loader-text">Loading...</p>
+        <div class="page-loader-track">
+            <div class="page-loader-fill"></div>
+        </div>
+    </div>
     <div id="app"></div>
     
     <!-- Loading Overlay (Skeleton Screens) -->
@@ -2593,15 +2668,168 @@
         let _skelShowTime = 0;
         const _tabLoaded = new Set(); // tracks tabs that have been loaded at least once
 
-        function switchDashboardTab(tabId) {
+        async function switchDashboardTab(tabId) {
             // Don't do anything if already on this tab
             if (state.dashboardTab === tabId) return;
 
             state.loadedUserData.clear();
             state.dashboardTab = tabId;
 
-            // Only show skeleton for my-plan and quiz tabs
-            const SKELETON_TABS = new Set(['my-plan', 'quiz']);
+            // my-plan: render immediately then replace only the two cards with inline skeletons
+            if (tabId === 'my-plan' && !_tabLoaded.has(tabId)) {
+                _tabLoaded.add(tabId);
+                state.skipLoadingScreen = true; // suppress full-page overlay during this render
+                await render(); // ensures DOM has the card elements
+                state.skipLoadingScreen = false;
+                _skelShowTime = Date.now();
+                const _dm = state.darkMode;
+                const _cardBorder = _dm ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+
+                // Inline skeleton for dashboardReadingCard
+                const _dashCard = document.getElementById('dashboardReadingCard');
+                if (_dashCard) {
+                    _dashCard.innerHTML = `
+                        <div style="height:0.25rem;" class="bg-gradient-to-r from-amber-400"></div>
+                        <div style="padding:14px 12px 16px;position:relative;">
+                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding:0 10px;">
+                                <div class="skel-bone" style="width:28px;height:28px;border-radius:6px;"></div>
+                                <div class="skel-bone" style="width:140px;height:16px;border-radius:6px;"></div>
+                                <div class="skel-bone" style="width:60px;height:20px;border-radius:10px;"></div>
+                            </div>
+                            <div style="display:flex;flex-direction:column;gap:10px;">
+                                ${[110, 130, 100].map(w => `
+                                <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;border:1px solid ${_cardBorder};">
+                                    <div class="skel-bone" style="width:22px;height:22px;border-radius:50%;flex-shrink:0;"></div>
+                                    <div style="flex:1;">
+                                        <div class="skel-bone" style="width:${w}px;height:13px;border-radius:5px;margin-bottom:5px;"></div>
+                                        <div class="skel-bone" style="width:${w - 30}px;height:10px;border-radius:5px;"></div>
+                                    </div>
+                                    <div class="skel-bone" style="width:22px;height:22px;border-radius:6px;flex-shrink:0;"></div>
+                                </div>`).join('')}
+                            </div>
+                            <div class="skel-bone" style="width:100%;height:40px;border-radius:8px;margin-top:14px;"></div>
+                        </div>`;
+                }
+
+                // Inline skeleton for dashboardYearlyProgressCard
+                const _yearlyCard = document.getElementById('dashboardYearlyProgressCard');
+                if (_yearlyCard) {
+                    const _statBg = _dm ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.03)';
+                    _yearlyCard.innerHTML = `
+                        <div style="height:0.25rem;" class="bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400"></div>
+                        <div style="padding:16px;position:relative;">
+                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+                                <div class="skel-bone" style="width:110px;height:15px;border-radius:6px;"></div>
+                                <div class="skel-bone" style="width:80px;height:18px;border-radius:12px;"></div>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+                                <div class="skel-bone" style="width:88px;height:88px;border-radius:50%;flex-shrink:0;"></div>
+                                <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                                    ${[1,2,3,4].map(() => `
+                                    <div style="border-radius:8px;padding:8px;background:${_statBg};">
+                                        <div class="skel-bone" style="width:50px;height:9px;border-radius:4px;margin-bottom:6px;"></div>
+                                        <div class="skel-bone" style="width:70px;height:13px;border-radius:5px;"></div>
+                                    </div>`).join('')}
+                                </div>
+                            </div>
+                            <div class="skel-bone" style="width:100%;height:1px;margin-bottom:12px;border-radius:0;"></div>
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                                ${[1,2].map(() => `
+                                <div>
+                                    <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                                        <div class="skel-bone" style="width:80px;height:11px;border-radius:4px;"></div>
+                                        <div class="skel-bone" style="width:28px;height:11px;border-radius:4px;"></div>
+                                    </div>
+                                    <div class="skel-bone" style="width:100%;height:3px;border-radius:2px;"></div>
+                                </div>`).join('')}
+                            </div>
+                        </div>`;
+                }
+
+                const elapsed = Date.now() - _skelShowTime;
+                const remaining = Math.max(0, SKELETON_MIN_DISPLAY - elapsed);
+                setTimeout(() => { render(); }, remaining);
+                return;
+            }
+
+            // family tab: render immediately, inject inline skeletons into the 3 cards
+            if (tabId === 'family' && !_tabLoaded.has(tabId)) {
+                _tabLoaded.add(tabId);
+                state.skipLoadingScreen = true;
+                await render();
+                state.skipLoadingScreen = false;
+                _skelShowTime = Date.now();
+                state.familySkelLoading = true;
+
+                const _streaksEl = document.getElementById('ft-streaks-section');
+                if (_streaksEl) {
+                    _streaksEl.innerHTML = `
+                        <div class="ft-card-head">
+                            <h3 class="ft-card-title"><span class="ft-emoji">🏆</span> Streaks ${new Date().getFullYear()}</h3>
+                        </div>
+                        <div class="ft-streaks">
+                            ${[68,72,64,70].map(w => `
+                            <div class="ft-streak-card">
+                                <div class="ft-skel-circle" style="width:36px;height:36px;margin:0 auto 4px;"></div>
+                                <div class="ft-skel-bone" style="width:${w - 20}px;height:10px;margin:0 auto 4px;border-radius:5px;"></div>
+                                <div class="ft-skel-bone" style="width:36px;height:12px;margin:0 auto;border-radius:5px;"></div>
+                            </div>`).join('')}
+                        </div>`;
+                }
+
+                const _pendingEl = document.getElementById('ft-pending-section');
+                if (_pendingEl) {
+                    _pendingEl.className = 'ft-pending';
+                    _pendingEl.innerHTML = `
+                        <div class="ft-card-head">
+                            <h3 class="ft-card-title"><span class="ft-emoji">⏳</span> Pending Today</h3>
+                        </div>
+                        <div class="ft-pending-list">
+                            ${[58,48,54].map(w => `
+                            <div class="ft-pending-row">
+                                <div class="ft-skel-circle" style="width:38px;height:38px;flex-shrink:0;"></div>
+                                <div class="ft-pending-info">
+                                    <div class="ft-skel-bone" style="width:${w}%;height:14px;margin-bottom:5px;border-radius:5px;"></div>
+                                    <div class="ft-skel-bone" style="width:${w - 18}%;height:10px;border-radius:5px;"></div>
+                                </div>
+                            </div>`).join('')}
+                        </div>`;
+                }
+
+                const _membersEl = document.getElementById('ft-members-section');
+                if (_membersEl) {
+                    _membersEl.innerHTML = `
+                        <div class="ft-card-head">
+                            <h3 class="ft-card-title"><span class="ft-emoji">🙌</span> Family Members</h3>
+                        </div>
+                        <div class="ft-members">
+                            ${[1,2,3,4,5,6].map(() => `
+                            <div class="ft-member">
+                                <div style="width:64px;height:64px;margin:0 auto 6px;">
+                                    <div class="ft-skel-circle" style="width:64px;height:64px;"></div>
+                                </div>
+                                <div class="ft-skel-bone" style="width:50px;height:12px;margin:0 auto 4px;border-radius:5px;"></div>
+                                <div class="ft-skel-bone" style="width:32px;height:11px;margin:0 auto;border-radius:5px;"></div>
+                            </div>`).join('')}
+                        </div>`;
+                }
+
+                const _ftFinish = () => {
+                    state.familySkelLoading = false;
+                    const elapsed = Date.now() - _skelShowTime;
+                    const remaining = Math.max(0, SKELETON_MIN_DISPLAY - elapsed);
+                    setTimeout(() => { render(); }, remaining);
+                };
+                if (!state.quizDataLoaded) {
+                    loadQuizChaptersFromSupabase().then(_ftFinish).catch(_ftFinish);
+                } else {
+                    _ftFinish();
+                }
+                return;
+            }
+
+            // Only show full-page skeleton for quiz tab
+            const SKELETON_TABS = new Set(['quiz']);
 
             if (!SKELETON_TABS.has(tabId) || _tabLoaded.has(tabId)) {
                 // No skeleton for this tab — just load data (if needed) then render
@@ -2611,8 +2839,6 @@
                 };
                 if (tabId === 'home') {
                     ensureVersesLoaded().then(doRender).catch(doRender);
-                } else if (tabId === 'family' && !state.quizDataLoaded) {
-                    loadQuizChaptersFromSupabase().then(doRender).catch(doRender);
                 } else {
                     doRender();
                 }
@@ -4855,7 +5081,7 @@
 
         async function switchUser(userOrId) {
             state.skipLoadingScreen = true;
-            showLoading('Loading profile...');
+            // No full-page skeleton during profile switch
             
             // If a user ID is passed, look up the user from state.users
             // This ensures we're using the same reference with loaded progress
@@ -5701,7 +5927,7 @@
                                 const ntColor = '#10b981';
                                 
                                 return `
-                                    <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-amber-600/50' : 'bg-white border-2 border-amber-300'} cursor-pointer">
+                                    <div id="dashboardYearlyProgressCard" class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-amber-600/50' : 'bg-white border-2 border-amber-300'} cursor-pointer">
                                         <div style="height: 0.25rem;" class="bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400"></div>
                                         <div class="p-4 relative z-10">
                                         
@@ -7613,6 +7839,12 @@
         }
 
         async function render() {
+            // Remove the instant page loader on first render
+            const _pageLoader = document.getElementById('page-loader');
+            if (_pageLoader) {
+                _pageLoader.classList.add('fade-out');
+                setTimeout(() => _pageLoader.remove(), 260);
+            }
             const app = document.getElementById('app');
             console.log('render() called - showAdminView:', state.showAdminView, 'currentUser:', state.currentUser?.name, 'users count:', state.users.length, 'isAdmin:', state.isAdmin);
 
@@ -7715,41 +7947,75 @@
                 // Load dashboard statistics BEFORE rendering dashboard
                 // Only load if not already loaded during this session and not during initialization
                 if (state.users.length > 0 && !state.dashboardStatsLoaded && !state.isInitializing) {
-                    if (!state.skipLoadingScreen) {
-                        showLoading('Loading...');
-                    }
-                    try {
-                        // Load all users' completed dates and chapter counts
-                        await Promise.all(state.users.map(async user => {
+                    if (state.dashboardTab === 'my-plan') {
+                        // my-plan tab: render immediately with inline card skeletons, load stats in background
+                        _skelShowTime = Date.now();
+                        (async () => {
                             try {
-                                // Get completed dates
-                                const dates = await BibleReadingDB.getCompletedDates(user.id);
-                                user.completedDates = {};
-                                dates.forEach(dateStr => {
-                                    const [year, month, day] = dateStr.split('-').map(Number);
-                                    const dateKey = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-                                    user.completedDates[dateKey] = true;
-                                });
-                                
-                                // Get progress data and count read chapters
-                                const progress = await BibleReadingDB.getUserProgress(user.id);
-                                const readCount = progress ? progress.length : 0;
-                                user.readChaptersCount = readCount;
-                                
-                                state.loadedUserData.add(user.id);
-                            } catch (err) {
-                                console.warn(`Could not load data for user ${user.id}:`, err);
-                                // Ensure we at least have empty objects
-                                if (!user.completedDates) user.completedDates = {};
-                                user.readChaptersCount = 0;
+                                await Promise.all(state.users.map(async user => {
+                                    try {
+                                        const dates = await BibleReadingDB.getCompletedDates(user.id);
+                                        user.completedDates = {};
+                                        dates.forEach(dateStr => {
+                                            const [year, month, day] = dateStr.split('-').map(Number);
+                                            const dateKey = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                                            user.completedDates[dateKey] = true;
+                                        });
+                                        const progress = await BibleReadingDB.getUserProgress(user.id);
+                                        user.readChaptersCount = progress ? progress.length : 0;
+                                        state.loadedUserData.add(user.id);
+                                    } catch (err) {
+                                        console.warn(`Could not load data for user ${user.id}:`, err);
+                                        if (!user.completedDates) user.completedDates = {};
+                                        user.readChaptersCount = 0;
+                                    }
+                                }));
+                                state.dashboardStatsLoaded = true;
+                            } catch (error) {
+                                console.error('Error loading dashboard statistics:', error);
                             }
-                        }));
-                        state.dashboardStatsLoaded = true;
-                    } catch (error) {
-                        console.error('Error loading dashboard statistics:', error);
-                    }
-                    if (!state.skipLoadingScreen) {
-                        hideLoading();
+                            const elapsed = Date.now() - _skelShowTime;
+                            const remaining = Math.max(0, SKELETON_MIN_DISPLAY - elapsed);
+                            setTimeout(() => { render(); }, remaining);
+                        })();
+                        // Fall through — page renders below without waiting for stats
+                    } else {
+                        if (!state.skipLoadingScreen) {
+                            showLoading('Loading...');
+                        }
+                        try {
+                            // Load all users' completed dates and chapter counts
+                            await Promise.all(state.users.map(async user => {
+                                try {
+                                    // Get completed dates
+                                    const dates = await BibleReadingDB.getCompletedDates(user.id);
+                                    user.completedDates = {};
+                                    dates.forEach(dateStr => {
+                                        const [year, month, day] = dateStr.split('-').map(Number);
+                                        const dateKey = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                                        user.completedDates[dateKey] = true;
+                                    });
+                                    
+                                    // Get progress data and count read chapters
+                                    const progress = await BibleReadingDB.getUserProgress(user.id);
+                                    const readCount = progress ? progress.length : 0;
+                                    user.readChaptersCount = readCount;
+                                    
+                                    state.loadedUserData.add(user.id);
+                                } catch (err) {
+                                    console.warn(`Could not load data for user ${user.id}:`, err);
+                                    // Ensure we at least have empty objects
+                                    if (!user.completedDates) user.completedDates = {};
+                                    user.readChaptersCount = 0;
+                                }
+                            }));
+                            state.dashboardStatsLoaded = true;
+                        } catch (error) {
+                            console.error('Error loading dashboard statistics:', error);
+                        }
+                        if (!state.skipLoadingScreen) {
+                            hideLoading();
+                        }
                     }
                 }
                 
@@ -7758,6 +8024,69 @@
                 await ensureVersesLoaded();
                 
                 app.innerHTML = renderDashboard();
+
+                // For my-plan tab with stats still loading in background: inject inline card skeletons
+                if (state.dashboardTab === 'my-plan' && !state.dashboardStatsLoaded) {
+                    const _dm = state.darkMode;
+                    const _cardBorder = _dm ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+                    const _dashCard = document.getElementById('dashboardReadingCard');
+                    if (_dashCard) {
+                        _dashCard.innerHTML = `
+                            <div style="height:0.25rem;" class="bg-gradient-to-r from-amber-400"></div>
+                            <div style="padding:14px 12px 16px;position:relative;">
+                                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding:0 10px;">
+                                    <div class="skel-bone" style="width:28px;height:28px;border-radius:6px;"></div>
+                                    <div class="skel-bone" style="width:140px;height:16px;border-radius:6px;"></div>
+                                    <div class="skel-bone" style="width:60px;height:20px;border-radius:10px;"></div>
+                                </div>
+                                <div style="display:flex;flex-direction:column;gap:10px;">
+                                    ${[110, 130, 100].map(w => `
+                                    <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;border:1px solid ${_cardBorder};">
+                                        <div class="skel-bone" style="width:22px;height:22px;border-radius:50%;flex-shrink:0;"></div>
+                                        <div style="flex:1;">
+                                            <div class="skel-bone" style="width:${w}px;height:13px;border-radius:5px;margin-bottom:5px;"></div>
+                                            <div class="skel-bone" style="width:${w - 30}px;height:10px;border-radius:5px;"></div>
+                                        </div>
+                                        <div class="skel-bone" style="width:22px;height:22px;border-radius:6px;flex-shrink:0;"></div>
+                                    </div>`).join('')}
+                                </div>
+                                <div class="skel-bone" style="width:100%;height:40px;border-radius:8px;margin-top:14px;"></div>
+                            </div>`;
+                    }
+                    const _yearlyCard = document.getElementById('dashboardYearlyProgressCard');
+                    if (_yearlyCard) {
+                        const _statBg = _dm ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.03)';
+                        _yearlyCard.innerHTML = `
+                            <div style="height:0.25rem;" class="bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400"></div>
+                            <div style="padding:16px;position:relative;">
+                                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+                                    <div class="skel-bone" style="width:110px;height:15px;border-radius:6px;"></div>
+                                    <div class="skel-bone" style="width:80px;height:18px;border-radius:12px;"></div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+                                    <div class="skel-bone" style="width:88px;height:88px;border-radius:50%;flex-shrink:0;"></div>
+                                    <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                                        ${[1,2,3,4].map(() => `
+                                        <div style="border-radius:8px;padding:8px;background:${_statBg};">
+                                            <div class="skel-bone" style="width:50px;height:9px;border-radius:4px;margin-bottom:6px;"></div>
+                                            <div class="skel-bone" style="width:70px;height:13px;border-radius:5px;"></div>
+                                        </div>`).join('')}
+                                    </div>
+                                </div>
+                                <div class="skel-bone" style="width:100%;height:1px;margin-bottom:12px;border-radius:0;"></div>
+                                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                                    ${[1,2].map(() => `
+                                    <div>
+                                        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                                            <div class="skel-bone" style="width:80px;height:11px;border-radius:4px;"></div>
+                                            <div class="skel-bone" style="width:28px;height:11px;border-radius:4px;"></div>
+                                        </div>
+                                        <div class="skel-bone" style="width:100%;height:3px;border-radius:2px;"></div>
+                                    </div>`).join('')}
+                                </div>
+                            </div>`;
+                    }
+                }
 
                 // Draw faith orbit SVG synchronously to avoid flicker
                 if (state.dashboardTab === 'faith' && window.FamilyTab) {
@@ -7931,6 +8260,61 @@
                 if (state.dashboardTab === 'family' && window.FamilyTab && window.FamilyTab.afterRender) {
                     window.FamilyTab.afterRender();
                 }
+
+                // Re-inject family card skeletons if still in loading phase
+                // (prevents loadOtherUsersInBackground re-renders from clearing them)
+                if (state.dashboardTab === 'family' && state.familySkelLoading) {
+                    const _s = document.getElementById('ft-streaks-section');
+                    if (_s) {
+                        _s.innerHTML = `
+                            <div class="ft-card-head">
+                                <h3 class="ft-card-title"><span class="ft-emoji">🏆</span> Streaks ${new Date().getFullYear()}</h3>
+                            </div>
+                            <div class="ft-streaks">
+                                ${[68,72,64,70].map(w => `
+                                <div class="ft-streak-card">
+                                    <div class="ft-skel-circle" style="width:36px;height:36px;margin:0 auto 4px;"></div>
+                                    <div class="ft-skel-bone" style="width:${w - 20}px;height:10px;margin:0 auto 4px;border-radius:5px;"></div>
+                                    <div class="ft-skel-bone" style="width:36px;height:12px;margin:0 auto;border-radius:5px;"></div>
+                                </div>`).join('')}
+                            </div>`;
+                    }
+                    const _p = document.getElementById('ft-pending-section');
+                    if (_p) {
+                        _p.className = 'ft-pending';
+                        _p.innerHTML = `
+                            <div class="ft-card-head">
+                                <h3 class="ft-card-title"><span class="ft-emoji">⏳</span> Pending Today</h3>
+                            </div>
+                            <div class="ft-pending-list">
+                                ${[58,48,54].map(w => `
+                                <div class="ft-pending-row">
+                                    <div class="ft-skel-circle" style="width:38px;height:38px;flex-shrink:0;"></div>
+                                    <div class="ft-pending-info">
+                                        <div class="ft-skel-bone" style="width:${w}%;height:14px;margin-bottom:5px;border-radius:5px;"></div>
+                                        <div class="ft-skel-bone" style="width:${w - 18}%;height:10px;border-radius:5px;"></div>
+                                    </div>
+                                </div>`).join('')}
+                            </div>`;
+                    }
+                    const _m = document.getElementById('ft-members-section');
+                    if (_m) {
+                        _m.innerHTML = `
+                            <div class="ft-card-head">
+                                <h3 class="ft-card-title"><span class="ft-emoji">🙌</span> Family Members</h3>
+                            </div>
+                            <div class="ft-members">
+                                ${[1,2,3,4,5,6].map(() => `
+                                <div class="ft-member">
+                                    <div style="width:64px;height:64px;margin:0 auto 6px;">
+                                        <div class="ft-skel-circle" style="width:64px;height:64px;"></div>
+                                    </div>
+                                    <div class="ft-skel-bone" style="width:50px;height:12px;margin:0 auto 4px;border-radius:5px;"></div>
+                                    <div class="ft-skel-bone" style="width:32px;height:11px;margin:0 auto;border-radius:5px;"></div>
+                                </div>`).join('')}
+                            </div>`;
+                    }
+                }
             }, 0);
 
             // Update body class for theme
@@ -7978,9 +8362,7 @@
         // Initialize
         (async () => {
             try {
-                showLoading('Loading...');
-                
-                // Load base data
+                // Load base data silently (no full-page skeleton during init)
                 await loadData();
                 
                 // Setup real-time subscriptions for live updates across browsers

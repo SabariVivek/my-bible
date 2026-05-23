@@ -333,7 +333,7 @@
                 '</div>';
             }).join('');
 
-        return '<section class="ft-card" aria-label="Reading streaks">' +
+        return '<section id="ft-streaks-section" class="ft-card" aria-label="Reading streaks">' +
             '<div class="ft-card-head">' +
                 '<h3 class="ft-card-title"><span class="ft-emoji">\uD83C\uDFC6</span> Streaks ' + currentYear + '</h3>' +
             '</div>' +
@@ -344,7 +344,7 @@
     /* ========== Pending Today ========== */
     function renderPending(state, stats, getUserStats) {
         if (!stats.pendingCount) {
-            return '<section class="ft-caughtup">' +
+            return '<section id="ft-pending-section" class="ft-caughtup">' +
                 '<span class="ft-caughtup-emoji">\uD83C\uDF89</span>' +
                 '<h3 class="ft-caughtup-title">Everyone is up to date!</h3>' +
                 '<p class="ft-caughtup-sub">All family members have completed today\'s reading.</p>' +
@@ -373,7 +373,7 @@
             '</div>';
         }).join('');
 
-        return '<section class="ft-pending">' +
+        return '<section id="ft-pending-section" class="ft-pending">' +
             '<div class="ft-card-head">' +
                 '<h3 class="ft-card-title"><span class="ft-emoji">\u23F3</span> Pending Today (' + stats.pendingCount + ')</h3>' +
             '</div>' +
@@ -403,7 +403,7 @@
             '</div>';
         }).join('');
 
-        return '<section class="ft-card">' +
+        return '<section id="ft-members-section" class="ft-card">' +
             '<div class="ft-card-head">' +
                 '<h3 class="ft-card-title"><span class="ft-emoji">\uD83D\uDE4C</span> Family Members</h3>' +
             '</div>' +
