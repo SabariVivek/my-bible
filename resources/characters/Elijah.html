@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Elijah's Ministry Timeline</title>
     <style>
-        body { font-family: ui-sans-serif, system-ui, sans-serif; background-color: #f3f4f6; padding: 16px; margin: 0; }
+        body { font-family: ui-sans-serif, system-ui, sans-serif; background-color: #f3f4f6; padding: 16px; margin: 0; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; touch-action: pan-x pan-y; }
         .nb-timeline { max-width: 400px; margin: 0 auto; }
         .nb-section { margin-bottom: 32px; }
         .nb-phase { display: inline-block; background: #000000; color: #ffffff; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; padding: 4px 10px; transform: rotate(-1deg); margin-bottom: 16px; letter-spacing: 0.5px; }
@@ -362,6 +362,7 @@
     </div>
 
     <script>
+        document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener("DOMContentLoaded", () => {
             const containers = document.querySelectorAll('.card-container');
             const baseDelay = 350; 

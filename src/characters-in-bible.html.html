@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Bible Characters</title>
     <style>
-        body { font-family: ui-sans-serif, system-ui, sans-serif; background-color: #f3f4f6; padding: 40px 20px; margin: 0; }
+        body { font-family: ui-sans-serif, system-ui, sans-serif; background-color: #f3f4f6; padding: 40px 20px; margin: 0; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; touch-action: pan-x pan-y; }
         .container { max-width: 600px; margin: 0 auto; }
         
         /* Using the nb-phase style for the header */
@@ -58,5 +58,6 @@
         </div>
     </div>
 
+<script>document.addEventListener('contextmenu', e => e.preventDefault());</script>
 </body>
 </html>
