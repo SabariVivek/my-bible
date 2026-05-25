@@ -1616,6 +1616,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightProphetsOption = document.getElementById('right-prophets-option');
     const rightTimelineOption = document.getElementById('right-timeline-option');
     const rightCharacterOption = document.getElementById('right-character-option');
+    const rightBibleCharactersOption = document.getElementById('right-bible-characters-option');
     const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
     const rightCultOption = document.getElementById('right-cult-option');
     const rightPrayersOption = document.getElementById('right-prayers-option');
@@ -1635,6 +1636,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dailyPrayersOptionEl = document.getElementById('daily-prayers-option');
     if (dailyPrayersOptionEl) dailyPrayersOptionEl.style.display = 'flex';
     if (rightSermonOption) rightSermonOption.style.display = 'flex';
+    if (rightBibleCharactersOption) rightBibleCharactersOption.style.display = 'flex';
 
     // Show/hide admin-only menu items based on admin status
 
@@ -10048,6 +10050,7 @@ function updateAdminUI() {
     const rightProphetsOption = document.getElementById('right-prophets-option');
     const rightTimelineOption = document.getElementById('right-timeline-option');
     const rightCharacterOption = document.getElementById('right-character-option');
+    const rightBibleCharactersOption = document.getElementById('right-bible-characters-option');
     const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
     const rightCultOption = document.getElementById('right-cult-option');
     const rightPrayersOption = document.getElementById('right-prayers-option');
@@ -11880,6 +11883,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightProphetsOption = document.getElementById('right-prophets-option');
     const rightTimelineOption = document.getElementById('right-timeline-option');
     const rightCharacterOption = document.getElementById('right-character-option');
+    const rightBibleCharactersOption = document.getElementById('right-bible-characters-option');
     const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
     const rightSermonOption = document.getElementById('right-sermon-option');
     const rightPrayersOption = document.getElementById('right-prayers-option');
@@ -12004,6 +12008,14 @@ document.addEventListener('DOMContentLoaded', () => {
             closeRightSidebar();
             // Navigate directly with hash
             window.location.href = `Bible-Study/index.html#/genealogy`;
+        });
+    }
+    // Bible Characters option - navigate to characters-in-bible page
+    if (rightBibleCharactersOption) {
+        rightBibleCharactersOption.addEventListener('click', () => {
+            closeRightSidebar();
+            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
+            window.location.href = `src/characters-in-bible.html.html?cb=${cacheBuster}`;
         });
     }
     // Life of Jesus option - navigate to Bible-Study Life of Christ page

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elijah's Ministry Timeline</title>
+    <style>
+        body { font-family: ui-sans-serif, system-ui, sans-serif; background-color: #f3f4f6; padding: 16px; margin: 0; }
+        .nb-timeline { max-width: 400px; margin: 0 auto; }
+        .nb-section { margin-bottom: 32px; }
+        .nb-phase { display: inline-block; background: #000000; color: #ffffff; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; padding: 4px 10px; transform: rotate(-1deg); margin-bottom: 16px; letter-spacing: 0.5px; }
+        .nb-section:nth-child(even) .nb-phase { transform: rotate(1deg); background: #2563eb; }
+        .card-container { position: relative; margin-bottom: 14px; }
+        .nb-card { background: #ffffff; border: 3px solid #000000; border-radius: 4px; padding: 16px; box-shadow: 4px 4px 0px #000000; transition: all 0.15s ease; opacity: 0; transform: translateY(20px); }
+        .nb-card.reveal { opacity: 1; transform: translateY(0); transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1); }
+        .nb-meta { font-size: 0.7rem; font-weight: 700; color: #ef4444; text-transform: uppercase; margin-bottom: 4px; }
+        .nb-title { font-size: 1.1rem; font-weight: 800; margin: 0 0 6px 0; color: #000; line-height: 1.3; }
+        .nb-desc { font-size: 0.85rem; color: #374151; margin: 0 0 10px 0; line-height: 1.4; }
+        .nb-reference { font-size: 0.65rem; font-weight: 700; color: #6b7280; border-top: 1px solid #e5e7eb; padding-top: 8px; font-style: italic; }
+        .nb-skeleton { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #ffffff; border: 3px solid #000000; border-radius: 4px; padding: 16px; box-shadow: 4px 4px 0px #000000; z-index: 2; display: flex; flex-direction: column; gap: 8px; transition: opacity 0.3s ease, visibility 0.3s; }
+        .sk-line { background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite linear; border-radius: 2px; }
+        .sk-meta { width: 25%; height: 10px; } .sk-title { width: 75%; height: 18px; } .sk-desc { width: 100%; height: 12px; }
+        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+        .nb-skeleton.fade-out { opacity: 0; visibility: hidden; }
+    </style>
+</head>
+<body>
+    <div class="nb-timeline">
+        <div class="nb-section">
+            <span class="nb-phase">Phase 1: The Drought & Hidings</span>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 01</div>
+                    <h3 class="nb-title">Elijah Announces the Drought</h3>
+                    <p class="nb-desc">Elijah boldly confronts King Ahab, declaring that there will be neither dew nor rain except by his word.</p>
+                    <div class="nb-reference">Reference: 1 Kings 17:1</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 02</div>
+                    <h3 class="nb-title">Fed by Ravens at Brook Cherith</h3>
+                    <p class="nb-desc">Obeying God, Elijah hides by the brook where ravens miraculously bring him bread and meat.</p>
+                    <div class="nb-reference">Reference: 1 Kings 17:2-6</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 03</div>
+                    <h3 class="nb-title">Widow’s Flour and Oil Multiplied</h3>
+                    <p class="nb-desc">In Zarephath, a poor widow shares her last meal, causing her supply to never run dry.</p>
+                    <div class="nb-reference">Reference: 1 Kings 17:8-16</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 04</div>
+                    <h3 class="nb-title">Widow’s Son Raised to Life</h3>
+                    <p class="nb-desc">Elijah stretches himself over the widow's son and cries out to God, restoring his life.</p>
+                    <div class="nb-reference">Reference: 1 Kings 17:17-24</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nb-section">
+            <span class="nb-phase">Phase 2: The Carmel Confrontation</span>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 05</div>
+                    <h3 class="nb-title">Elijah Challenges King Ahab</h3>
+                    <p class="nb-desc">Elijah presents himself to Ahab, refusing blame for the famine and pointing out Israel's idolatry.</p>
+                    <div class="nb-reference">Reference: 1 Kings 18:16-19</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 06</div>
+                    <h3 class="nb-title">Obadiah Meets Elijah</h3>
+                    <p class="nb-desc">Ahab's governor Obadiah meets Elijah and reluctantly agrees to tell the king of his return.</p>
+                    <div class="nb-reference">Reference: 1 Kings 18:7-15</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 07</div>
+                    <h3 class="nb-title">Mount Carmel Challenge</h3>
+                    <p class="nb-desc">Elijah summons all Israel and 450 prophets of Baal to Mount Carmel for a spiritual showdown.</p>
+                    <div class="nb-reference">Reference: 1 Kings 18:20-24</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 08</div>
+                    <h3 class="nb-title">Fire from Heaven</h3>
+                    <p class="nb-desc">God answers Elijah’s prayer with fire, instantly consuming the water-soaked offering.</p>
+                    <div class="nb-reference">Reference: 1 Kings 18:30-38</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 09</div>
+                    <h3 class="nb-title">Destruction of Baal Prophets</h3>
+                    <p class="nb-desc">Elijah orders the capture and execution of the false prophets at Kishon Valley.</p>
+                    <div class="nb-reference">Reference: 1 Kings 18:40</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 10</div>
+                    <h3 class="nb-title">Rain Returns</h3>
+                    <p class="nb-desc">Elijah prays intently until a small cloud rises, breaking the severe drought.</p>
+                    <div class="nb-reference">Reference: 1 Kings 18:41-45</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 11</div>
+                    <h3 class="nb-title">Elijah Outruns Ahab’s Chariot</h3>
+                    <p class="nb-desc">Empowered by the Lord, Elijah outruns Ahab's chariot to Jezreel.</p>
+                    <div class="nb-reference">Reference: 1 Kings 18:46</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nb-section">
+            <span class="nb-phase">Phase 3: Flight & Successor</span>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 12</div>
+                    <h3 class="nb-title">Elijah Flees from Jezebel</h3>
+                    <p class="nb-desc">Terrified by Jezebel's death threat, Elijah flees into the desert.</p>
+                    <div class="nb-reference">Reference: 1 Kings 19:1-4</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 13</div>
+                    <h3 class="nb-title">Strengthened by Angelic Food</h3>
+                    <p class="nb-desc">An angel provides bread and water to sustain Elijah for his trek.</p>
+                    <div class="nb-reference">Reference: 1 Kings 19:5-8</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 14</div>
+                    <h3 class="nb-title">Elijah at Mount Horeb</h3>
+                    <p class="nb-desc">Traveling forty days, Elijah arrives at Horeb and shelters in a cave.</p>
+                    <div class="nb-reference">Reference: 1 Kings 19:9</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 15</div>
+                    <h3 class="nb-title">God Speaks in a Still Small Voice</h3>
+                    <p class="nb-desc">God reveals His presence to Elijah in a gentle, quiet whisper.</p>
+                    <div class="nb-reference">Reference: 1 Kings 19:11-13</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 16</div>
+                    <h3 class="nb-title">New Instructions</h3>
+                    <p class="nb-desc">God commands him to anoint Hazael, Jehu, and Elisha as his successor.</p>
+                    <div class="nb-reference">Reference: 1 Kings 19:15-17</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 17</div>
+                    <h3 class="nb-title">Elijah Anoints Elisha</h3>
+                    <p class="nb-desc">Elijah casts his prophetic mantle over Elisha, who follows him.</p>
+                    <div class="nb-reference">Reference: 1 Kings 19:19-21</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nb-section">
+            <span class="nb-phase">Phase 4: Judgments on Kings</span>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 18</div>
+                    <h3 class="nb-title">Naboth’s Vineyard</h3>
+                    <p class="nb-desc">Ahab and Jezebel conspire to kill Naboth to seize his vineyard.</p>
+                    <div class="nb-reference">Reference: 1 Kings 21:1-16</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 19</div>
+                    <h3 class="nb-title">Prophecy Against Ahab and Jezebel</h3>
+                    <p class="nb-desc">Elijah foretells the destruction of Ahab's lineage and Jezebel's death.</p>
+                    <div class="nb-reference">Reference: 1 Kings 21:17-24</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 20</div>
+                    <h3 class="nb-title">Ahab’s Humility</h3>
+                    <p class="nb-desc">Ahab fasts, leading God to delay the disaster in his time.</p>
+                    <div class="nb-reference">Reference: 1 Kings 21:27-29</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 21</div>
+                    <h3 class="nb-title">Ahab’s Death</h3>
+                    <p class="nb-desc">Ahab dies in battle, fulfilling Elijah’s prophecy.</p>
+                    <div class="nb-reference">Reference: 1 Kings 22:34-38</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 22</div>
+                    <h3 class="nb-title">Ahaziah Seeks Baal-Zebub</h3>
+                    <p class="nb-desc">King Ahaziah consults a false god regarding his injury.</p>
+                    <div class="nb-reference">Reference: 2 Kings 1:2</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 23</div>
+                    <h3 class="nb-title">Fire Against Soldiers</h3>
+                    <p class="nb-desc">Fire falls from heaven to consume soldiers sent to arrest Elijah.</p>
+                    <div class="nb-reference">Reference: 2 Kings 1:9-12</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 24</div>
+                    <h3 class="nb-title">Prophecy of Ahaziah’s Death</h3>
+                    <p class="nb-desc">Elijah tells the king he will never leave his bed alive.</p>
+                    <div class="nb-reference">Reference: 2 Kings 1:16-17</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nb-section">
+            <span class="nb-phase">Phase 5: Departure & Mantle</span>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 25</div>
+                    <h3 class="nb-title">Final Journey</h3>
+                    <p class="nb-desc">Elijah travels to the Jordan with Elisha.</p>
+                    <div class="nb-reference">Reference: 2 Kings 2:1-6</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 26</div>
+                    <h3 class="nb-title">Jordan River Parted</h3>
+                    <p class="nb-desc">Elijah strikes the water with his mantle, parting it for them to cross.</p>
+                    <div class="nb-reference">Reference: 2 Kings 2:8</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 27</div>
+                    <h3 class="nb-title">Ascension</h3>
+                    <p class="nb-desc">Elijah ascends to heaven in a whirlwind by a chariot of fire.</p>
+                    <div class="nb-reference">Reference: 2 Kings 2:11</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 28</div>
+                    <h3 class="nb-title">Mantle Falls to Elisha</h3>
+                    <p class="nb-desc">Elisha takes up the mantle and the double-portion spirit.</p>
+                    <div class="nb-reference">Reference: 2 Kings 2:13-14</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 29</div>
+                    <h3 class="nb-title">Elisha Parts Jordan</h3>
+                    <p class="nb-desc">Testing his authority, Elisha parts the river with the mantle.</p>
+                    <div class="nb-reference">Reference: 2 Kings 2:14</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nb-section">
+            <span class="nb-phase">Phase 6: Prophetic Return</span>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 30</div>
+                    <h3 class="nb-title">Malachi’s Prophecy</h3>
+                    <p class="nb-desc">God foretells sending Elijah before the great day of the Lord.</p>
+                    <div class="nb-reference">Reference: Malachi 4:5-6</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 31</div>
+                    <h3 class="nb-title">Transfiguration Appearance</h3>
+                    <p class="nb-desc">Elijah and Moses appear with Jesus on the mountain.</p>
+                    <div class="nb-reference">Reference: Matthew 17:1-3</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 32</div>
+                    <h3 class="nb-title">Referenced by Jesus</h3>
+                    <p class="nb-desc">Jesus identifies John the Baptist as the spiritual fulfillment of Elijah.</p>
+                    <div class="nb-reference">Reference: Matthew 11:13-14</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nb-section">
+            <span class="nb-phase">Phase 7: Legacy</span>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 33</div>
+                    <h3 class="nb-title">Prayer Life</h3>
+                    <p class="nb-desc">James highlights Elijah’s intense prayer as an example for believers.</p>
+                    <div class="nb-reference">Reference: James 5:17-18</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc"></div></div>
+                <div class="nb-card">
+                    <div class="nb-meta">Event 34</div>
+                    <h3 class="nb-title">Model of Faith</h3>
+                    <p class="nb-desc">Elijah is remembered as the pillar of faith against corruption.</p>
+                    <div class="nb-reference">Reference: Romans 11:2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const containers = document.querySelectorAll('.card-container');
+            const baseDelay = 350; 
+            const staggerInterval = 100; 
+            containers.forEach((container, index) => {
+                const skeleton = container.querySelector('.nb-skeleton');
+                const card = container.querySelector('.nb-card');
+                setTimeout(() => {
+                    if(skeleton) skeleton.classList.add('fade-out');
+                    if(card) card.classList.add('reveal');
+                }, baseDelay + (index * staggerInterval));
+            });
+        });
+    </script>
+</body>
+</html>
