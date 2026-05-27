@@ -1,0 +1,2467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Saturday Service Manager - Dashboard</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../config/config.js"></script>
+    <style>
+        :root {
+            --bg-primary: #f3f4f6; 
+            --bg-card: #ffffff;
+            --text-primary: #000000;
+            --text-secondary: #4b5563;
+            --accent-blue: #2563eb;
+            --accent-yellow: #fef08a;
+            --accent-red: #ef4444;
+            --accent-green: #10b981;
+            --accent-teal: #99f6e4;
+            --border-width: 3px;
+            --wa-teal: #075e54;
+            --chart-blue: #3b82f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* --- FLUSH TOP NAVIGATION WITH DROPDOWN MANAGEMENT --- */
+        .docked-top-nav {
+            background: var(--wa-teal);
+            color: #ffffff;
+            padding: 14px 20px;
+            border-bottom: var(--border-width) solid var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 110;
+        }
+
+        .nav-identity {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .nav-title {
+            font-size: 1.35rem;
+            font-weight: 700; 
+            margin: 0;
+            color: #ffffff;
+            letter-spacing: -0.2px;
+            line-height: 1.2;
+        }
+
+        .nav-subtitle {
+            font-size: 0.75rem;
+            color: #e0f2fe;
+            margin: 0;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .nav-actions {
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        .nav-actions i {
+            cursor: pointer;
+            opacity: 0.95;
+            stroke-width: 2.2;
+            padding: 4px;
+        }
+
+        /* --- ACTION OPTIONS DROPDOWN --- */
+        .actions-dropdown {
+            display: none;
+            position: absolute;
+            top: 35px;
+            right: 0;
+            background: var(--bg-card);
+            border: var(--border-width) solid var(--text-primary);
+            border-radius: 4px;
+            box-shadow: 4px 4px 0px var(--text-primary);
+            width: 135px;
+            z-index: 150;
+        }
+
+        .dropdown-item {
+            padding: 8px 12px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-bottom: 2px solid var(--text-primary);
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:active {
+            background-color: var(--accent-yellow);
+        }
+
+        /* --- NEO-BRUTALIST BOTTOM SHEETS ENGINE --- */
+        .sheet-overlay {
+            visibility: hidden;
+            opacity: 0;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 200;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+        }
+
+        .sheet-overlay.sheet-open {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .bottom-sheet {
+            background: var(--bg-card);
+            border-top: var(--border-width) solid var(--text-primary);
+            border-left: var(--border-width) solid var(--text-primary);
+            border-right: var(--border-width) solid var(--text-primary);
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            width: 100%;
+            max-width: 440px;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            padding: 16px 20px 24px 20px;
+            box-shadow: 0px -6px 0px var(--text-primary);
+            transform: translateY(100%);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .sheet-overlay.sheet-open .bottom-sheet {
+            transform: translateY(0);
+        }
+
+        .sheet-handle {
+            width: 44px;
+            height: 6px;
+            background-color: var(--text-primary);
+            border-radius: 3px;
+            margin: 0 auto 16px auto;
+            flex-shrink: 0;
+        }
+
+        .sheet-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            border-bottom: 2px dashed var(--text-primary);
+            padding-bottom: 10px;
+            flex-shrink: 0;
+        }
+
+        .sheet-title {
+            font-size: 1.1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .sheet-close {
+            cursor: pointer;
+            background: var(--bg-primary);
+            border: 2px solid var(--text-primary);
+            padding: 2px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sheet-scroll-content {
+            overflow-y: auto;
+            flex-grow: 1;
+            padding-right: 4px;
+            margin-bottom: 16px;
+        }
+
+        /* Forms Layout */
+        .form-group {
+            margin-bottom: 14px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: var(--border-width) solid var(--text-primary);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            outline: none;
+        }
+
+        /* Checkbox list for modern attendance roster sheet */
+        .attendance-selection-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .attendance-select-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 2px solid var(--text-primary);
+            padding: 10px 14px;
+            border-radius: 4px;
+            background: var(--bg-primary);
+            cursor: pointer;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .attendance-select-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--wa-teal);
+            cursor: pointer;
+        }
+
+        /* Image-Free Chores Gallery layout */
+        .chores-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .chore-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 2px solid var(--text-primary);
+            padding: 12px;
+            border-radius: 4px;
+            background: var(--bg-primary);
+            box-shadow: 2px 2px 0px var(--text-primary);
+        }
+
+        .chore-icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent-yellow);
+            border: 2px solid var(--text-primary);
+            border-radius: 4px;
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+        }
+
+        .chore-info {
+            flex-grow: 1;
+        }
+
+        .chore-name {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.2px;
+        }
+
+        .chore-area {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        /* --- MAIN WORKSPACE LAYOUT WRAPPER --- */
+        .dashboard-wrapper {
+            width: 100%;
+            max-width: 440px; 
+            padding: 24px 16px 90px 16px; 
+        }
+
+        /* --- TAB VIEWS --- */
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active-view {
+            display: block;
+        }
+
+        /* --- DATA ANALYTICS GRAPH ARCHITECTURE --- */
+        .analytics-deck {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+            width: 100%;
+        }
+
+        .graph-card {
+            background: var(--bg-card);
+            border: var(--border-width) solid var(--text-primary);
+            border-radius: 4px;
+            padding: 14px;
+            box-shadow: 4px 4px 0px var(--text-primary);
+        }
+
+        .graph-card.color-yellow-tint { background: #fef08a; }
+
+        .graph-header-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .graph-label {
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: -0.1px;
+        }
+
+        .nb-phase {
+            display: inline-block;
+            background: var(--text-primary);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .canvas-container {
+            width: 100%;
+            height: 90px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        /* Bar Distribution Grid Elements */
+        .bar-chart-grid {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 6px;
+            padding-top: 15px;
+        }
+
+        .bar-column-wrapper {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+        }
+
+        .bar-pillar {
+            width: 100%;
+            background: var(--chart-blue);
+            border: 2px solid var(--text-primary);
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            position: relative;
+            min-height: 4px;
+            transition: height 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+
+        .bar-pillar:hover {
+            background: var(--text-primary);
+        }
+
+        .bar-tooltip-val {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.6rem;
+            font-weight: 900;
+        }
+
+        .chart-axis-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6px;
+            border-top: 2px solid var(--text-primary);
+            padding-top: 4px;
+            font-size: 0.55rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-primary);
+        }
+
+        /* --- 2-COLUMN OPERATIONAL METRICS ARCHITECTURE --- */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+            width: 100%;
+        }
+
+        .metric-card {
+            border: var(--border-width) solid var(--text-primary);
+            border-radius: 4px;
+            padding: 14px 12px;
+            box-shadow: 4px 4px 0px var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .metric-card.color-blue { background: #bfdbfe; }
+        .metric-card.color-teal { background: var(--accent-teal); }
+
+        .metric-label {
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: -0.1px;
+        }
+
+        .metric-value {
+            font-size: 1.65rem;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        /* --- DASHBOARD NEO-BRUTALIST LIVE INLINE DATEPICKER --- */
+        .creator-card {
+            background: var(--bg-card);
+            border: var(--border-width) solid var(--text-primary);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 6px 6px 0px var(--text-primary);
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Diagonal Accent Flag background indicator */
+        .creator-card::after {
+            content: "SCHEDULER";
+            position: absolute;
+            top: 12px;
+            right: -25px;
+            background: var(--text-primary);
+            color: var(--bg-card);
+            font-size: 0.55rem;
+            font-weight: 900;
+            padding: 2px 24px;
+            transform: rotate(45deg);
+            letter-spacing: 1px;
+        }
+
+        .creator-label {
+            font-size: 0.85rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        /* Tactile Inline Row Box */
+        .date-input-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .datepicker-interactive-dock {
+            display: flex;
+            align-items: stretch;
+            border: var(--border-width) solid var(--text-primary);
+            border-radius: 6px;
+            background: var(--bg-primary);
+            box-shadow: 3px 3px 0px var(--text-primary);
+            overflow: hidden;
+        }
+
+        .datepicker-dock-side-badge {
+            background: var(--text-primary);
+            color: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 14px;
+            border-right: var(--border-width) solid var(--text-primary);
+        }
+
+        .modern-datepicker {
+            flex-grow: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            padding: 14px 12px;
+            font-size: 1rem;
+            font-weight: 800;
+            outline: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: -0.2px;
+        }
+
+        /* Custom design for native calendar icon selector drop button trigger */
+        .modern-datepicker::-webkit-calendar-picker-indicator {
+            background-color: var(--accent-yellow);
+            border: 2px solid var(--text-primary);
+            border-radius: 4px;
+            padding: 4px;
+            cursor: pointer;
+            box-shadow: 1px 1px 0px var(--text-primary);
+        }
+
+        /* Quick helper anchor buttons underneath picker dock */
+        .datepicker-quick-links {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .quick-date-pill {
+            background: var(--bg-card);
+            border: 2px solid var(--text-primary);
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.1s ease;
+        }
+
+        .quick-date-pill:active {
+            background: var(--accent-teal);
+            transform: translateY(1px);
+        }
+
+        /* Layout Block Plan Action Core Execution Button */
+        .btn-plan-action {
+            background: var(--accent-blue);
+            color: #ffffff;
+            border: var(--border-width) solid var(--text-primary);
+            padding: 14px;
+            border-radius: 6px;
+            font-weight: 900;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 4px 4px 0px var(--text-primary);
+            transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            margin-top: 4px;
+        }
+
+        .btn-plan-action:hover {
+            background: #1d4ed8;
+            box-shadow: 5px 5px 0px var(--text-primary);
+            transform: translate(-1px, -1px);
+        }
+
+        .btn-plan-action:active {
+            transform: translate(3px, 3px);
+            box-shadow: 1px 1px 0px var(--text-primary);
+        }
+
+        .creator-error-msg {
+            display: none;
+            background: #fee2e2;
+            border: var(--border-width) solid var(--accent-red);
+            color: var(--text-primary);
+            padding: 12px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            border-radius: 6px;
+            margin-top: 14px;
+            text-transform: uppercase;
+            box-shadow: 3px 3px 0px var(--text-primary);
+        }
+
+        .btn-confirm {
+            background: var(--text-primary);
+            color: white;
+            border: none;
+            padding: 0 16px;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 3px 3px 0px var(--accent-blue);
+            transition: all 0.1s ease;
+        }
+
+        .btn-confirm:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px var(--accent-blue);
+        }
+
+        /* --- CONTROL FILTERS ENGINE --- */
+        .search-box {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .search-input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 12px 12px 38px;
+            border: var(--border-width) solid var(--text-primary);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            box-shadow: 3px 3px 0px var(--text-primary);
+            outline: none;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        /* --- TIMELINE WORKFLOW LAYOUT --- */
+        .list-title {
+            font-size: 1.1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin: 24px 0 16px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .list-counter {
+            font-size: 0.75rem;
+            background: var(--text-primary);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .nb-section {
+            margin-bottom: 32px;
+        }
+
+        .card-container {
+            position: relative;
+            margin-bottom: 14px;
+            cursor: pointer;
+        }
+
+        .nb-card {
+            background: var(--bg-card);
+            border: var(--border-width) solid var(--text-primary);
+            border-radius: 4px;
+            padding: 16px;
+            box-shadow: 4px 4px 0px var(--text-primary);
+            transition: all 0.15s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .nb-card.loaded:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px var(--text-primary);
+        }
+
+        .nb-card.reveal {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+
+        /* --- WORK ASSIGNMENT SCREEN --- */
+        .plan-summary-header {
+            background: var(--accent-yellow);
+            border: var(--border-width) solid var(--text-primary);
+            padding: 12px;
+            border-radius: 4px;
+            box-shadow: 4px 4px 0px var(--text-primary);
+            margin-bottom: 20px;
+        }
+        
+        .plan-summary-header h4 {
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .plan-summary-header p {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .task-assign-card {
+            background: var(--bg-card);
+            border: 2px solid var(--text-primary);
+            border-radius: 4px;
+            padding: 14px 12px;
+            margin-bottom: 12px;
+            box-shadow: 3px 3px 0px var(--text-primary);
+        }
+
+        .task-main-title {
+            font-size: 0.95rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: -0.2px;
+        }
+
+        /* Multi-Select Styled Component */
+        .assignee-select {
+            width: 100%;
+            min-height: 75px;
+            padding: 6px;
+            border: 2px solid var(--text-primary);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            background: var(--bg-primary);
+            outline: none;
+            overflow-y: auto;
+        }
+
+        .assignee-select option {
+            padding: 4px 8px;
+            border-radius: 2px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        .assignee-select option:checked {
+            background-color: var(--wa-teal) !important;
+            color: #ffffff !important;
+        }
+
+        .multi-hint-caption {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            margin-top: 4px;
+            display: block;
+        }
+
+        /* --- USER CARD GRAPHICS LAYOUT --- */
+        .user-card-body {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .user-info-side {
+            flex-grow: 1;
+        }
+
+        .user-avatar-side {
+            width: 52px;
+            height: 52px;
+            border: 2px solid var(--text-primary);
+            border-radius: 4px;
+            object-fit: cover;
+            background-color: var(--bg-primary);
+            flex-shrink: 0;
+        }
+
+        /* --- MINI CIRCULAR DOTS TRACKER SECTION --- */
+        .attendance-tracker-box {
+            margin-top: 12px;
+            border-top: 2px dashed #e5e7eb;
+            padding-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .tracker-label {
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        .tracker-grid {
+            display: flex;
+            gap: 5px;
+        }
+
+        .tracker-dot {
+            width: 9px;
+            height: 9px;
+            border: 1px solid var(--text-primary);
+            border-radius: 50%;
+        }
+        .tracker-dot.visited { background-color: var(--accent-green); }
+        .tracker-dot.missed { background-color: var(--accent-red); }
+
+        .nb-meta {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nb-meta .status-badge {
+            background: var(--text-primary);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 2px;
+            font-size: 0.65rem;
+            font-weight: 800;
+        }
+
+        .nb-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin: 0 0 6px 0;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        .nb-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.4;
+            white-space: pre-line;
+        }
+
+        /* --- REPORT DISPLAY SPECIFICS --- */
+        .report-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--text-primary);
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-bottom: 16px;
+        }
+
+        .report-task-row {
+            background: var(--bg-card);
+            border: 2px solid var(--text-primary);
+            border-radius: 4px;
+            padding: 12px;
+            margin-bottom: 12px;
+            box-shadow: 3px 3px 0px var(--text-primary);
+        }
+
+        .report-task-head {
+            font-size: 0.85rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            border-bottom: 1px dashed var(--text-primary);
+            padding-bottom: 4px;
+        }
+
+        .report-assignee-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .report-tag {
+            background: var(--accent-teal);
+            border: 1px solid var(--text-primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .report-tag.empty {
+            background: #fee2e2;
+            color: var(--accent-red);
+        }
+
+        /* --- CHORE WEEK TRACKING LABELS --- */
+        .chore-timeline-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 6px;
+        }
+
+        .chore-week-badge {
+            font-size: 0.6rem;
+            font-weight: 800;
+            padding: 2px 5px;
+            border-radius: 3px;
+            border: 1px solid var(--text-primary);
+            text-transform: uppercase;
+        }
+
+        .chore-week-badge.worked {
+            background-color: var(--accent-green);
+            color: #000000;
+        }
+
+        .chore-week-badge.skipped {
+            background-color: #e5e7eb;
+            color: #9ca3af;
+            text-decoration: line-through;
+            border-color: #d1d5db;
+        }
+
+        /* --- NEO-BRUTALIST VERTICAL TIMELINE ARCHITECTURE --- */
+        .chore-timeline-track {
+            position: relative;
+            margin: 8px 4px;
+            padding-left: 32px;
+        }
+
+        .chore-timeline-track::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: var(--border-width);
+            background: var(--text-primary);
+            z-index: 1;
+        }
+
+        .timeline-milestone-node {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .timeline-milestone-node:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-indicator-bullet {
+            position: absolute;
+            left: -32px;
+            top: 4px;
+            width: 24px;
+            height: 24px;
+            background: var(--bg-card);
+            border: calc(var(--border-width) - 1px) solid var(--text-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            box-shadow: 2px 2px 0px var(--text-primary);
+        }
+
+        .timeline-milestone-node.has-assignees .timeline-indicator-bullet {
+            background: var(--accent-teal);
+        }
+
+        .timeline-milestone-node.empty-week .timeline-indicator-bullet {
+            background: #fee2e2;
+        }
+
+        .timeline-content-card {
+            background: var(--bg-card);
+            border: calc(var(--border-width) - 1px) solid var(--text-primary);
+            border-radius: 6px;
+            padding: 14px 16px !important;
+            box-shadow: 4px 4px 0px var(--text-primary);
+            display: block !important;
+        }
+
+        .timeline-content-card .card-meta-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            border-bottom: 2px dashed var(--bg-primary);
+            padding-bottom: 6px;
+        }
+
+        .timeline-week-title {
+            font-size: 0.85rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.1px;
+        }
+
+        .timeline-week-date {
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--text-secondary);
+            background: var(--bg-primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid var(--text-primary);
+        }
+
+        .timeline-assignees-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        /* --- FIXED PADDING SYSTEM OVERRIDES FOR TIMELINE VIEW --- */
+        #chore-report-weeks-area {
+            padding-top: 8px;
+        }
+
+        /* --- NEO-BRUTALIST SKELETON LOADERS --- */
+        .nb-skeleton {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--bg-card);
+            border: var(--border-width) solid var(--text-primary);
+            border-radius: 4px;
+            padding: 16px;
+            box-shadow: 4px 4px 0px var(--text-primary);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            box-sizing: border-box;
+            transition: opacity 0.3s ease, visibility 0.3;
+        }
+
+        .sk-line {
+            background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite linear;
+            border-radius: 2px;
+        }
+        .sk-meta { width: 30%; height: 10px; }
+        .sk-title { width: 65%; height: 18px; margin-bottom: 4px; }
+        .sk-desc-1 { width: 100%; height: 12px; }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .nb-skeleton.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* --- FIXED BOTTOM NAVIGATION --- */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 440px;
+            background: var(--bg-card);
+            border-top: var(--border-width) solid var(--text-primary);
+            border-left: var(--border-width) solid var(--text-primary);
+            border-right: var(--border-width) solid var(--text-primary);
+            border-bottom: var(--border-width) solid var(--text-primary);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            z-index: 100;
+            box-shadow: 0px -4px 0px rgba(0,0,0,0.05);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 0;
+            cursor: pointer;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            background: var(--bg-card);
+            border-right: calc(var(--border-width) - 1px) solid var(--text-primary);
+            transition: all 0.15s ease;
+        }
+
+        .nav-item:last-child {
+            border-right: none;
+        }
+
+        .nav-item i {
+            margin-bottom: 4px;
+            transition: transform 0.1s ease;
+        }
+
+        .nav-item.active-nav {
+            background: var(--accent-yellow);
+            color: var(--text-primary);
+        }
+        
+        .nav-item.active-nav i {
+            transform: scale(1.1);
+        }
+
+        /* ========== SKELETON LOADERS ========== */
+        .skeleton-card {
+            background: var(--bg-card);
+            border: var(--border-width) solid var(--card-border);
+            border-radius: 8px;
+            padding: 16px;
+            animation: skeleton-pulse 1.5s ease-in-out infinite;
+        }
+
+        .skeleton-volunteer-card {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .skeleton-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            flex-shrink: 0;
+        }
+
+        .skeleton-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .skeleton-line {
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 4px;
+        }
+
+        .skeleton-line.long {
+            width: 100%;
+        }
+
+        .skeleton-line.short {
+            width: 70%;
+        }
+
+        .skeleton-tracker {
+            display: flex;
+            gap: 4px;
+            margin-top: 8px;
+        }
+
+        .skeleton-tracker-item {
+            width: 8px;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 2px;
+        }
+
+        .skeleton-chore-item {
+            display: flex;
+            gap: 12px;
+            padding: 12px;
+            background: var(--bg-card);
+            border: var(--border-width) solid var(--card-border);
+            border-radius: 4px;
+            margin-bottom: 8px;
+            animation: skeleton-pulse 1.5s ease-in-out infinite;
+        }
+
+        .skeleton-chore-icon {
+            width: 36px;
+            height: 36px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .skeleton-chore-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        @keyframes skeleton-pulse {
+            0%, 100% {
+                opacity: 1;
+                background-color: #e0e0e0;
+            }
+            50% {
+                opacity: 0.7;
+                background-color: #f0f0f0;
+            }
+        }
+
+        /* ========== HOME PAGE SKELETON LOADERS ========== */
+        .skeleton-chart-overlay {
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+            justify-content: center;
+            height: 100%;
+            padding: 20px;
+        }
+
+        .skeleton-chart-bar {
+            width: 20px;
+            height: 60px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            animation: skeleton-pulse 1.5s ease-in-out infinite;
+        }
+
+        .skeleton-metric-card {
+            background: var(--bg-card);
+            border: var(--border-width) solid var(--card-border);
+            border-radius: 8px;
+            padding: 16px;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            animation: skeleton-pulse 1.5s ease-in-out infinite;
+        }
+
+        .skeleton-metric-label {
+            height: 12px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            width: 60%;
+        }
+
+        .skeleton-metric-value {
+            height: 32px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="docked-top-nav">
+        <div class="nav-identity">
+            <h1 class="nav-title">Church Ledger</h1>
+            <span class="nav-subtitle">Saturday Clean &amp; Setup Registry</span>
+        </div>
+        <div class="nav-actions">
+            <i data-lucide="more-vertical" size="20" onclick="toggleActionsDropdown(event)"></i>
+            <div id="top-actions-dropdown" class="actions-dropdown">
+                <div class="dropdown-item" onclick="openBottomSheet('sheet-add-user')">
+                    <i data-lucide="user-plus" size="12"></i> Add User
+                </div>
+                <div class="dropdown-item" onclick="openBottomSheet('sheet-add-chore')">
+                    <i data-lucide="sparkles" size="12"></i> Chores List
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="sheet-select-attendance" class="sheet-overlay" onclick="closeSheetOnOuterClick(event, 'sheet-select-attendance')">
+        <div class="bottom-sheet">
+            <div class="sheet-handle"></div>
+            <div class="sheet-header">
+                <span class="sheet-title">Who Came Today?</span>
+                <div class="sheet-close" onclick="closeBottomSheet('sheet-select-attendance')">
+                    <i data-lucide="x" size="16"></i>
+                </div>
+            </div>
+            <div class="sheet-scroll-content">
+                <div class="attendance-selection-list" id="attendance-checkbox-container"></div>
+            </div>
+            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0;" onclick="confirmAttendanceAndShowPlanPage()">
+                <i data-lucide="check-check" size="16"></i> Confirm Attendance
+            </button>
+        </div>
+    </div>
+
+    <div id="sheet-add-user" class="sheet-overlay" onclick="closeSheetOnOuterClick(event, 'sheet-add-user')">
+        <div class="bottom-sheet">
+            <div class="sheet-handle"></div>
+            <div class="sheet-header">
+                <span class="sheet-title">Register Volunteer</span>
+                <div class="sheet-close" onclick="closeBottomSheet('sheet-add-user')">
+                    <i data-lucide="x" size="16"></i>
+                </div>
+            </div>
+            <div class="sheet-scroll-content">
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-input" id="new-user-fullname" placeholder="e.g. Samuel Green">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Profile Description</label>
+                    <input type="text" class="form-input" placeholder="e.g. Dedicated to altar orchestration...">
+                </div>
+            </div>
+            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0;" onclick="closeBottomSheet('sheet-add-user')">Save Volunteer</button>
+        </div>
+    </div>
+
+    <div id="sheet-add-chore" class="sheet-overlay" onclick="closeSheetOnOuterClick(event, 'sheet-add-chore')">
+        <div class="bottom-sheet">
+            <div class="sheet-handle"></div>
+            <div class="sheet-header">
+                <span class="sheet-title">Church Chores Registry</span>
+                <div class="sheet-close" onclick="closeBottomSheet('sheet-add-chore')">
+                    <i data-lucide="x" size="16"></i>
+                </div>
+            </div>
+            <div class="sheet-scroll-content">
+                <p style="font-size: 0.75rem; font-weight: 700; margin-bottom: 12px; color: var(--text-secondary); text-transform: uppercase;">Default Configured Tasks (15):</p>
+                <div class="chores-gallery" id="global-chores-blueprint-gallery"></div>
+            </div>
+            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0;" onclick="closeBottomSheet('sheet-add-chore')">Close Registry</button>
+        </div>
+    </div>
+
+    <div class="dashboard-wrapper">
+
+        <div id="view-home" class="tab-content active-view">
+            
+            <div class="analytics-deck">
+                <div class="graph-card color-yellow-tint">
+                    <div class="graph-header-meta">
+                        <span class="graph-label"><i data-lucide="bar-chart-3" size="14"></i> Volunteers Strength</span>
+                        <span class="nb-phase">Last 10 Wks</span>
+                    </div>
+                    <div class="canvas-container">
+                        <div class="bar-chart-grid" id="bar-chart-container"></div>
+                    </div>
+                    <div class="chart-axis-labels" id="bar-axis-dates"></div>
+                </div>
+            </div>
+            
+            <div class="metrics-grid">
+                <div class="metric-card color-blue">
+                    <span class="metric-label"><i data-lucide="calendar" size="14"></i> Total Events</span>
+                    <span class="metric-value" id="kpi-total">04</span>
+                </div>
+                <div class="metric-card color-teal">
+                    <span class="metric-label"><i data-lucide="users" size="14"></i> Volunteers</span>
+                    <span class="metric-value" id="kpi-volunteers-count">10</span>
+                </div>
+            </div>
+
+            <div class="creator-card">
+                <label class="creator-label">
+                    <i data-lucide="layers" size="18" style="color: var(--accent-blue); stroke-width: 2.5;"></i> 
+                    Initialize Scheduled Event
+                </label>
+                
+                <div class="date-input-wrapper">
+                    <div class="datepicker-interactive-dock">
+                        <div class="datepicker-dock-side-badge">
+                            <i data-lucide="calendar" size="18"></i>
+                        </div>
+                        <input type="date" id="event-date-picker" class="modern-datepicker">
+                    </div>
+
+                    <div class="datepicker-quick-links">
+                        <div class="quick-date-pill" onclick="shiftDatePickerPresetDays(0)">Target Saturday</div>
+                        <div class="quick-date-pill" onclick="shiftDatePickerPresetDays(7)">Next Week (+7d)</div>
+                    </div>
+
+                    <button class="btn-plan-action" onclick="handlePlanActionInitiation()">
+                        <i data-lucide="plus-square" size="18"></i> Open Service Roster
+                    </button>
+                </div>
+
+                <div class="creator-error-msg" id="date-collision-error">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <i data-lucide="alert-triangle" size="16"></i>
+                        <span>Operational Alert: This Saturday configuration has already been initialized in timeline!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="view-plan-assignments" class="tab-content">
+            <div class="plan-summary-header">
+                <h4 id="assignment-heading-date">Sat, Jun 27, 2026</h4>
+                <p id="assignment-heading-attendance">0 Volunteers Present</p>
+            </div>
+            <div class="nb-section">
+                <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 16px;">Assign Chores Workspace</span>
+                <div id="assignment-tasks-load-area"></div>
+            </div>
+            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 14px 0; margin-top: 10px;" onclick="finalizeAndCommitAssignmentsToTimeline()">
+                <i data-lucide="save" size="16"></i> Save Registry
+            </button>
+        </div>
+
+        <div id="view-weekly-report" class="tab-content">
+            <div class="report-back-btn" onclick="switchMainTab('view-schedule', document.querySelectorAll('.nav-item')[1])">
+                <i data-lucide="arrow-left" size="14"></i> Back to Schedule
+            </div>
+            <div class="plan-summary-header" style="background: var(--accent-teal);">
+                <h4 id="report-heading-date">Sat, Jun 27, 2026</h4>
+                <p id="report-heading-meta">Saturday Sequence Work Summary</p>
+            </div>
+            <div class="nb-section">
+                <span class="nb-phase" style="transform: rotate(1deg); margin-bottom: 16px; background: var(--text-primary);">Completed Allocations</span>
+                <div id="weekly-report-tasks-area"></div>
+            </div>
+        </div>
+
+        <div id="view-user-report" class="tab-content">
+            <div class="report-back-btn" onclick="switchMainTab('view-users', document.querySelectorAll('.nav-item')[2])">
+                <i data-lucide="arrow-left" size="14"></i> Back to Volunteers
+            </div>
+            <div class="plan-summary-header" style="background: var(--accent-yellow); display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+                <div>
+                    <h4 id="user-report-name">Volunteer Name</h4>
+                    <p id="user-report-desc" style="margin-top: 4px;">Description profile details...</p>
+                </div>
+                <img id="user-report-avatar" src="" alt="" style="width: 52px; height: 52px; border: 2px solid var(--text-primary); border-radius: 4px; object-fit: cover;">
+            </div>
+
+            <div class="metrics-grid" style="margin-bottom: 20px;">
+                <div class="metric-card color-teal" style="grid-column: span 2;">
+                    <span class="metric-label"><i data-lucide="activity" size="14"></i> Attendance Ratio</span>
+                    <span class="metric-value" id="user-report-ratio">0%</span>
+                </div>
+            </div>
+
+            <div class="nb-section">
+                <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 16px;">Assigned Chores Portfolio Timeline</span>
+                <div id="user-report-tasks-area"></div>
+            </div>
+        </div>
+
+        <div id="view-chore-report" class="tab-content">
+            <div class="report-back-btn" onclick="openBottomSheet('sheet-add-chore')">
+                <i data-lucide="arrow-left" size="14"></i> Back to Registry
+            </div>
+            <div class="plan-summary-header" style="background: var(--accent-yellow);">
+                <h4 id="chore-report-name">Chore Name</h4>
+                <p id="chore-report-area" style="margin-top: 4px;">Task Location / Area</p>
+            </div>
+            <div class="nb-section">
+                <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 20px;">Weekly Assignment Timeline</span>
+                <div class="chore-timeline-track" id="chore-report-weeks-area"></div>
+            </div>
+        </div>
+
+        <div id="view-schedule" class="tab-content">
+            <div class="search-box">
+                <i data-lucide="search" size="18" class="search-icon"></i>
+                <input type="text" id="dashboard-search" class="search-input" placeholder="Search scheduled dates or text...">
+            </div>
+
+            <div id="service-timeline-container">
+                <div class="nb-section">
+                    <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 16px;">June 2026</span>
+                    <div class="card-container" onclick="loadWeeklyReportSummaryPage('2026-06-27', 'Sat, Jun 27, 2026')">
+                        <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc-1"></div></div>
+                        <div class="nb-card" data-volunteers="4" data-rawdate="2026-06-27">
+                            <div class="nb-meta"><span>Saturday Sequence 04</span><span class="status-badge active-count">4 Present</span></div>
+                            <h3 class="nb-title">Sat, Jun 27, 2026</h3>
+                            <p class="nb-desc"></p>
+                        </div>
+                    </div>
+                    <div class="card-container" onclick="loadWeeklyReportSummaryPage('2026-06-20', 'Sat, Jun 20, 2026')">
+                        <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc-1"></div></div>
+                        <div class="nb-card" data-volunteers="7" data-rawdate="2026-06-20">
+                            <div class="nb-meta"><span>Saturday Sequence 03</span><span class="status-badge active-count">7 Present</span></div>
+                            <h3 class="nb-title">Sat, Jun 20, 2026</h3>
+                            <p class="nb-desc"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nb-section">
+                    <span class="nb-phase" style="transform: rotate(1deg); background: var(--accent-blue); margin-bottom: 16px;">May 2026</span>
+                    <div class="card-container" onclick="loadWeeklyReportSummaryPage('2026-05-23', 'Sat, May 23, 2026')">
+                        <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc-1"></div></div>
+                        <div class="nb-card" data-volunteers="6" data-rawdate="2026-05-23">
+                            <div class="nb-meta"><span>Saturday Sequence 02</span><span class="status-badge active-count">6 Present</span></div>
+                            <h3 class="nb-title">Sat, May 23, 2026</h3>
+                            <p class="nb-desc"></p>
+                        </div>
+                    </div>
+                    <div class="card-container" onclick="loadWeeklyReportSummaryPage('2026-05-16', 'Sat, May 16, 2026')">
+                        <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc-1"></div></div>
+                        <div class="nb-card" data-volunteers="9" data-rawdate="2026-05-16">
+                            <div class="nb-meta"><span>Saturday Sequence 01</span><span class="status-badge active-count">9 Present</span></div>
+                            <h3 class="nb-title">Sat, May 16, 2026</h3>
+                            <p class="nb-desc"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="view-users" class="tab-content">
+            <div class="nb-section">
+                <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 16px;">Volunteer Roster</span>
+                <div id="master-volunteers-list-mount"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <div class="nav-item active-nav" onclick="switchMainTab('view-home', this)">
+            <i data-lucide="home" size="20"></i>Home
+        </div>
+        <div class="nav-item" onclick="switchMainTab('view-schedule', this)">
+            <i data-lucide="calendar" size="20"></i>Schedule
+        </div>
+        <div class="nav-item" onclick="switchMainTab('view-users', this)">
+            <i data-lucide="users" size="20"></i>Volunteers
+        </div>
+    </nav>
+
+    <script>
+        // Initialize Supabase client
+        const supabaseClient = supabase.createClient(
+            SUPABASE_SATURDAY_SERVICE_CONFIG.url,
+            SUPABASE_SATURDAY_SERVICE_CONFIG.anonKey
+        );
+
+        // Data containers - will be populated from Supabase
+        let defaultChoreRegistryArray = [];
+        let registeredVolunteersRoster = [];
+        let attendanceHistoryDataset = [];
+
+        // Fetch chores from database
+        async function fetchChores() {
+            try {
+                console.log('📍 Fetching chores from Supabase...');
+                const { data, error } = await supabaseClient
+                    .from('chores')
+                    .select('id, name, area, icon')
+                    .order('id');
+                
+                if (error) {
+                    console.error('❌ Chores query error:', error);
+                    throw error;
+                }
+                
+                if (!data) {
+                    console.warn('⚠️ Chores data is null');
+                    defaultChoreRegistryArray = [];
+                } else {
+                    defaultChoreRegistryArray = data;
+                    console.log('✅ Chores loaded:', defaultChoreRegistryArray.length, 'records', defaultChoreRegistryArray);
+                }
+                return defaultChoreRegistryArray;
+            } catch (err) {
+                console.error('❌ Failed to load chores:', err);
+                defaultChoreRegistryArray = [];
+            }
+        }
+
+        // Fetch volunteers from database
+        async function fetchVolunteers() {
+            try {
+                console.log('📍 Fetching volunteers from Supabase...');
+                const { data, error } = await supabaseClient
+                    .from('volunteers')
+                    .select('id, name, avatar, description')
+                    .order('id');
+                
+                if (error) {
+                    console.error('❌ Volunteers query error:', error);
+                    throw error;
+                }
+                
+                if (!data) {
+                    console.warn('⚠️ Volunteers data is null');
+                    registeredVolunteersRoster = [];
+                } else {
+                    registeredVolunteersRoster = data.map(vol => ({
+                        id: vol.id,
+                        name: vol.name,
+                        avatar: vol.avatar,
+                        description: vol.description,
+                        attendance: ""
+                    })) || [];
+                    console.log('✅ Volunteers loaded:', registeredVolunteersRoster.length, 'records', registeredVolunteersRoster);
+                }
+                return registeredVolunteersRoster;
+            } catch (err) {
+                console.error('❌ Failed to load volunteers:', err);
+                registeredVolunteersRoster = [];
+            }
+        }
+
+        // Fetch attendance history from database
+        async function fetchAttendanceHistory() {
+            try {
+                const { data, error } = await supabaseClient
+                    .from('attendance_history')
+                    .select('volunteer_id, week_number, present')
+                    .order('week_number');
+                
+                if (error) throw error;
+                
+                // Build attendance strings for each volunteer
+                if (data) {
+                    registeredVolunteersRoster.forEach(volunteer => {
+                        const attendance = data
+                            .filter(a => a.volunteer_id === volunteer.id)
+                            .sort((a, b) => a.week_number - b.week_number)
+                            .map(a => a.present ? '1' : '0')
+                            .join(',');
+                        volunteer.attendance = attendance;
+                    });
+                }
+                
+                console.log('✅ Attendance history loaded:', data?.length || 0, 'records');
+                return registeredVolunteersRoster;
+            } catch (err) {
+                console.error('❌ Failed to load attendance history:', err);
+            }
+        }
+
+        // Show skeleton loaders while data is loading
+        function showSkeletonLoaders() {
+            console.log('⏳ Showing skeleton loaders...');
+            
+            // Show chart skeleton on home page - overlay style
+            const chartContainer = document.getElementById('bar-chart-container');
+            if (chartContainer) {
+                const skeletonOverlay = document.createElement('div');
+                skeletonOverlay.className = 'skeleton-chart-overlay';
+                skeletonOverlay.innerHTML = Array(10).fill(0).map(() => '<div class="skeleton-chart-bar"></div>').join('');
+                chartContainer.innerHTML = '';
+                chartContainer.appendChild(skeletonOverlay);
+                console.log('✅ Chart skeleton shown');
+            }
+
+            // Show metrics skeleton on home page - keep card structure and colors
+            const metricsGrid = document.querySelector('.metrics-grid');
+            if (metricsGrid) {
+                const existingCards = metricsGrid.querySelectorAll('.metric-card');
+                existingCards.forEach(card => {
+                    // Save the card's style classes
+                    const cardClasses = card.className;
+                    card.innerHTML = `
+                        <span class="metric-label"><i data-lucide="loader" size="14"></i> <span style="opacity: 0;">Loading...</span></span>
+                        <span class="metric-value" style="height: 32px; background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite linear; border-radius: 4px; display: block;"></span>
+                    `;
+                    card.className = cardClasses;
+                });
+                console.log('✅ Metrics skeletons shown');
+            }
+
+            // Show volunteer skeleton loaders - keep card structure
+            const volunteersContainer = document.getElementById('master-volunteers-list-mount');
+            if (volunteersContainer) {
+                volunteersContainer.innerHTML = Array(5).fill(0).map(() => `
+                    <div class="card-container">
+                        <div class="nb-skeleton">
+                            <div class="sk-line sk-meta"></div>
+                            <div class="sk-line sk-title"></div>
+                            <div class="sk-line sk-desc-1"></div>
+                        </div>
+                        <div class="nb-card reveal loaded">
+                            <div class="user-card-body">
+                                <div class="user-info-side">
+                                    <h3 class="nb-title">-</h3>
+                                    <p class="nb-desc">-</p>
+                                </div>
+                                <img src="" alt="" class="user-avatar-side" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; background: #e0e0e0;">
+                            </div>
+                            <div class="attendance-tracker-box">
+                                <span class="tracker-label">Last 10 Weeks</span>
+                                <div class="tracker-grid"></div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                console.log('✅ Volunteer skeletons shown');
+            }
+
+            // Show chore skeleton loaders - keep card structure
+            const choresContainer = document.getElementById('global-chores-blueprint-gallery');
+            if (choresContainer) {
+                choresContainer.innerHTML = Array(6).fill(0).map(() => `
+                    <div style="position: relative;">
+                        <div class="nb-skeleton">
+                            <div class="sk-line sk-meta"></div>
+                            <div class="sk-line sk-title"></div>
+                        </div>
+                        <div class="chore-item" style="opacity: 0.5;">
+                            <div class="chore-icon-box"><i data-lucide="loader" size="16"></i></div>
+                            <div class="chore-info">
+                                <div class="chore-name">-</div>
+                                <div class="chore-area">-</div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                console.log('✅ Chore skeletons shown');
+            }
+            
+            // Render lucide icons for skeletons
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // Hide skeleton loaders after data loads
+        function hideSkeletonLoaders() {
+            console.log('👻 Hiding skeleton loaders...');
+            
+            // Fade out all skeleton overlay elements
+            const allSkeletons = document.querySelectorAll('.nb-skeleton, .skeleton-chart-overlay');
+            
+            allSkeletons.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transition = 'opacity 0.3s ease';
+            });
+            
+            // Clear after fade
+            setTimeout(() => {
+                allSkeletons.forEach(el => el.remove());
+                console.log('✅ Skeletons cleared');
+            }, 300);
+        }
+
+        // Initialize all data from Supabase
+        async function initializeDataFromSupabase() {
+            console.log('🔄 Starting data initialization from Supabase...');
+            await fetchChores();
+            await fetchVolunteers();
+            await fetchAttendanceHistory();
+            
+            // Calculate attendance history dataset for charts
+            const weeks = new Map();
+            const { data: attendanceData } = await supabaseClient
+                .from('attendance_history')
+                .select('week_number, week_date, present');
+            
+            if (attendanceData) {
+                attendanceData.forEach(record => {
+                    if (!weeks.has(record.week_number)) {
+                        weeks.set(record.week_number, {
+                            label: `W${record.week_number}`,
+                            date: record.week_date ? new Date(record.week_date).toLocaleDateString('en-US', {month:'numeric', day:'numeric'}) : '',
+                            count: 0
+                        });
+                    }
+                    if (record.present) {
+                        weeks.get(record.week_number).count++;
+                    }
+                });
+                
+                attendanceHistoryDataset = Array.from(weeks.values()).sort((a, b) => {
+                    const weekNumA = parseInt(a.label.replace('W', ''));
+                    const weekNumB = parseInt(b.label.replace('W', ''));
+                    return weekNumA - weekNumB;
+                });
+            }
+            
+            console.log('✅ All data initialized:');
+            console.log('   - Chores:', defaultChoreRegistryArray.length);
+            console.log('   - Volunteers:', registeredVolunteersRoster.length);
+            console.log('   - Weeks:', attendanceHistoryDataset.length);
+        }
+
+        const volunteerStatusMessages = {
+            0: `No volunteers selected yet.\nWaiting to begin today's service assignments.`,
+            1: `Only one volunteer available today.\nToday's work may be quite difficult to manage.`,
+            2: `Very limited volunteers available today.\nSome responsibilities may need to be combined.`,
+            3: `Only a small team available today.\nPreparation work may feel slightly hectic.`,
+            4: `Limited volunteer support available today.\nExtra coordination may be needed for arrangements.`,
+            5: `Five volunteers available today.\nTasks should be manageable with proper coordination.`,
+            6: `A balanced volunteer team available today.\nChurch preparation work should move smoothly.`,
+            7: `Good volunteer participation available today.\nMost duties can be shared comfortably.`,
+            8: `Strong volunteer support available this week.\nService arrangements should be well organized.`,
+            9: `A healthy number of volunteers available today.\nCleaning and setup work should be completed efficiently.`,
+            10: `Excellent volunteer turnout for today's service.\nResponsibilities can be distributed very comfortably.`
+        };
+
+        // Storage for task distributions committed dynamically during current runtime session
+        let persistentWeeklyRegistryLogs = {};
+
+        let transientSelectedDateString = "";
+        let transientPresentVolunteersArray = [];
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            // Show skeleton loaders
+            showSkeletonLoaders();
+            
+            // Load data from Supabase
+            await initializeDataFromSupabase();
+            
+            // Hide skeleton loaders and render actual data
+            hideSkeletonLoaders();
+            renderGlobalChoresRegistrySheet();
+            renderMasterVolunteersRegistryView();
+            buildDynamicAttendanceSelectionCheckboxes();
+            
+            // Wait for skeleton fade-out to complete before populating grids
+            setTimeout(() => {
+                populateOperationalDescriptions();
+                generateAttendanceVisualGrids();
+                generateBarDistributionGrid();
+                syncLiveKPIValues();
+            }, 350);
+            
+            runChronologicalReveal();
+            setUpcomingSaturdayDate();
+
+            document.getElementById('dashboard-search').addEventListener('input', runLiveSearchQuery);
+            document.addEventListener('click', () => {
+                document.getElementById('top-actions-dropdown').style.display = 'none';
+            });
+        });
+
+        /* SHORTCUT CALENDAR DATEPRESETS TRANSLATOR HELPER ENGINE */
+        function shiftDatePickerPresetDays(daysOffset) {
+            const dateInput = document.getElementById('event-date-picker');
+            const calculationBaseDate = new Date();
+            
+            // Re-evaluate matching dynamic target Saturday computation
+            const targetSaturday = new Date(calculationBaseDate.setDate(calculationBaseDate.getDate() + (6 - calculationBaseDate.getDay()) % 7 + daysOffset));
+            dateInput.value = targetSaturday.toISOString().split('T')[0];
+            
+            // Reset error banners visibility state automatically
+            document.getElementById('date-collision-error').style.display = "none";
+            
+            // Micro tactile haptic visual animation feedback loop
+            const dock = document.querySelector('.datepicker-interactive-dock');
+            dock.style.backgroundColor = 'var(--accent-teal)';
+            setTimeout(() => { dock.style.backgroundColor = ''; }, 150);
+        }
+
+        function generateBarDistributionGrid() {
+            const container = document.getElementById("bar-chart-container");
+            const labelsContainer = document.getElementById("bar-axis-dates");
+            if (!container) return;
+
+            let gridHTML = "";
+            let axisHTML = "";
+            const maxVal = 10;
+
+            attendanceHistoryDataset.forEach(data => {
+                const heightPercentage = (data.count / maxVal) * 100;
+                gridHTML += `
+                    <div class="bar-column-wrapper">
+                        <span class="bar-tooltip-val">${data.count}</span>
+                        <div class="bar-pillar" style="height: ${heightPercentage}%" title="Week Vol: ${data.count}"></div>
+                    </div>
+                `;
+                axisHTML += `<span>${data.date}</span>`;
+            });
+
+            container.innerHTML = gridHTML;
+            labelsContainer.innerHTML = axisHTML;
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function renderGlobalChoresRegistrySheet() {
+            const container = document.getElementById('global-chores-blueprint-gallery');
+            const skeletons = container.querySelectorAll('[style*="position: relative"]');
+            
+            if (skeletons.length > 0) {
+                // Update existing skeleton structure with real data
+                skeletons.forEach((skeleton, index) => {
+                    if (index < defaultChoreRegistryArray.length) {
+                        const task = defaultChoreRegistryArray[index];
+                        const choreItem = skeleton.querySelector('.chore-item');
+                        choreItem.style.opacity = '1';
+                        choreItem.onclick = () => loadChoreAssignmentPage(task.name.replace(/'/g, "\\'"), task.area.replace(/'/g, "\\'"));
+                        choreItem.querySelector('.chore-icon-box').innerHTML = `<i data-lucide="${task.icon}" size="16"></i>`;
+                        choreItem.querySelector('.chore-name').innerText = task.name;
+                        choreItem.querySelector('.chore-area').innerText = task.area;
+                    }
+                });
+            } else {
+                // Fallback for fresh render
+                container.innerHTML = defaultChoreRegistryArray.map(task => `
+                    <div class="chore-item" style="cursor: pointer;" onclick="loadChoreAssignmentPage('${task.name.replace(/'/g, "\\'")}', '${task.area.replace(/'/g, "\\'")}')">
+                        <div class="chore-icon-box"><i data-lucide="${task.icon}" size="16"></i></div>
+                        <div class="chore-info">
+                            <div class="chore-name">${task.name}</div>
+                            <div class="chore-area">${task.area}</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function renderMasterVolunteersRegistryView() {
+            const container = document.getElementById('master-volunteers-list-mount');
+            const existingCards = container.querySelectorAll('.card-container');
+            
+            if (existingCards.length > 0) {
+                // Update existing skeleton cards with real data
+                existingCards.forEach((cardContainer, index) => {
+                    if (index < registeredVolunteersRoster.length) {
+                        const vol = registeredVolunteersRoster[index];
+                        const card = cardContainer.querySelector('.nb-card');
+                        
+                        // Update card content
+                        card.setAttribute('data-username', vol.name);
+                        const userInfoSide = card.querySelector('.user-info-side');
+                        userInfoSide.querySelector('.nb-title').innerText = vol.name;
+                        userInfoSide.querySelector('.nb-desc').innerText = vol.description || '';
+                        
+                        // Update avatar
+                        card.querySelector('img').src = vol.avatar;
+                        card.querySelector('img').alt = vol.name;
+                        
+                        // Setup onclick
+                        cardContainer.onclick = () => loadVolunteerProfilePage(vol.name);
+                        
+                        // Update attendance tracker
+                        const trackerBox = card.querySelector('.attendance-tracker-box');
+                        trackerBox.setAttribute('data-attendance', vol.attendance);
+                    }
+                });
+            } else {
+                // Fallback for fresh render
+                container.innerHTML = registeredVolunteersRoster.map(vol => `
+                    <div class="card-container" onclick="loadVolunteerProfilePage('${vol.name}')">
+                        <div class="nb-card reveal loaded" data-username="${vol.name}">
+                            <div class="user-card-body">
+                                <div class="user-info-side">
+                                    <h3 class="nb-title">${vol.name}</h3>
+                                    <p class="nb-desc">${vol.description || ''}</p>
+                                </div>
+                                <img src="${vol.avatar}" alt="${vol.name}" class="user-avatar-side">
+                            </div>
+                            <div class="attendance-tracker-box" data-attendance="${vol.attendance}">
+                                <span class="tracker-label">Last 10 Weeks</span>
+                                <div class="tracker-grid"></div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function buildDynamicAttendanceSelectionCheckboxes() {
+            const container = document.getElementById('attendance-checkbox-container');
+            container.innerHTML = registeredVolunteersRoster.map(vol => `
+                <label class="attendance-select-item">
+                    <input type="checkbox" value="${vol.name}" class="attendance-tickbox">
+                    <span>${vol.name}</span>
+                </label>
+            `).join('');
+        }
+
+        function handlePlanActionInitiation() {
+            const datePicker = document.getElementById('event-date-picker');
+            const errorBanner = document.getElementById('date-collision-error');
+            const selectedDate = datePicker.value;
+
+            if (!selectedDate) return;
+            errorBanner.style.display = "none";
+
+            const existingDates = Array.from(document.querySelectorAll('#view-schedule .nb-card[data-rawdate]'))
+                                      .map(card => card.getAttribute('data-rawdate'));
+
+            if (existingDates.includes(selectedDate)) {
+                errorBanner.style.display = "block";
+                return;
+            }
+
+            transientSelectedDateString = selectedDate;
+            document.querySelectorAll('.attendance-tickbox').forEach(cb => cb.checked = false);
+            openBottomSheet('sheet-select-attendance');
+        }
+
+        function confirmAttendanceAndShowPlanPage() {
+            const checkedBoxes = document.querySelectorAll('.attendance-tickbox:checked');
+            transientPresentVolunteersArray = Array.from(checkedBoxes).map(cb => cb.value);
+
+            closeBottomSheet('sheet-select-attendance');
+
+            const dateObj = new Date(transientSelectedDateString);
+            const formattingOptions = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+            const localizedDate = dateObj.toLocaleDateString('en-US', formattingOptions);
+
+            document.getElementById('assignment-heading-date').innerText = localizedDate;
+            document.getElementById('assignment-heading-attendance').innerText = 
+                `${transientPresentVolunteersArray.length} Volunteer(s) Selected Present`;
+
+            const assignmentArea = document.getElementById('assignment-tasks-load-area');
+            
+            if (transientPresentVolunteersArray.length === 0) {
+                assignmentArea.innerHTML = `
+                    <div class="task-assign-card" style="text-align:center; padding: 20px; color: var(--accent-red); font-weight:800;">
+                        No volunteers checked in! Please assign chores to a roster that includes team members.
+                    </div>`;
+            } else {
+                const selectOptionsHTML = transientPresentVolunteersArray.map(name => 
+                    `<option value="${name}">${name}</option>`
+                ).join('');
+
+                assignmentArea.innerHTML = defaultChoreRegistryArray.map(task => `
+                    <div class="task-assign-card">
+                        <div class="task-main-title">${task.name}</div>
+                        <select class="assignee-select" data-task-name="${task.name}" multiple>
+                            ${selectOptionsHTML}
+                        </select>
+                        <span class="multi-hint-caption">Hold Ctrl/Cmd to select multiple</span>
+                    </div>
+                `).join('');
+            }
+
+            document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
+            document.getElementById('view-plan-assignments').classList.add('active-view');
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
+        }
+
+        function finalizeAndCommitAssignmentsToTimeline() {
+            const dateObj = new Date(transientSelectedDateString);
+            const formattingOptions = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+            const localizedDate = dateObj.toLocaleDateString('en-US', formattingOptions);
+            
+            const volunteerCount = transientPresentVolunteersArray.length;
+            const statusText = volunteerStatusMessages[volunteerCount] || `Blueprint published with standard tasks allocation.`;
+
+            // Capture chosen multi-select fields live
+            let singleEventTaskMap = {};
+            document.querySelectorAll('#assignment-tasks-load-area .task-assign-card').forEach(card => {
+                const taskName = card.querySelector('.task-main-title').innerText;
+                const selectElement = card.querySelector('.assignee-select');
+                const selectedNames = Array.from(selectElement.selectedOptions).map(opt => opt.value);
+                singleEventTaskMap[taskName] = selectedNames;
+            });
+
+            // Save inside persistent object store references
+            persistentWeeklyRegistryLogs[transientSelectedDateString] = singleEventTaskMap;
+
+            const targetSection = document.querySelector('#view-schedule .nb-section'); 
+            
+            const newCardItem = document.createElement('div');
+            newCardItem.className = 'card-container';
+            newCardItem.onclick = () => loadWeeklyReportSummaryPage(transientSelectedDateString, localizedDate);
+            newCardItem.innerHTML = `
+                <div class="nb-card reveal loaded" data-volunteers="${volunteerCount}" data-rawdate="${transientSelectedDateString}">
+                    <div class="nb-meta">
+                        <span>Saturday Sequence Ad-Hoc</span>
+                        <span class="status-badge active-count">${volunteerCount} Present</span>
+                    </div>
+                    <h3 class="nb-title">${localizedDate}</h3>
+                    <p class="nb-desc">${statusText}</p>
+                </div>
+            `;
+
+            targetSection.insertBefore(newCardItem, targetSection.querySelector('.card-container'));
+            
+            const miniDateLabel = `${dateObj.getMonth() + 1}/${dateObj.getDate()}`;
+            attendanceHistoryDataset.shift(); 
+            attendanceHistoryDataset.push({ label: "New", date: miniDateLabel, count: volunteerCount });
+            
+            generateBarDistributionGrid();
+            syncLiveKPIValues();
+            
+            switchMainTab('view-schedule', document.querySelectorAll('.nav-item')[1]);
+        }
+
+        /* SCREEN ROUTER: LOADS COMPLETED TASK RECORDS FOR WEEK */
+        function loadWeeklyReportSummaryPage(rawDateString, localizedTitle) {
+            document.getElementById('report-heading-date').innerText = localizedTitle;
+            const reportDisplayArea = document.getElementById('weekly-report-tasks-area');
+
+            let currentEventReportData = persistentWeeklyRegistryLogs[rawDateString];
+
+            if (!currentEventReportData) {
+                currentEventReportData = {};
+                defaultChoreRegistryArray.forEach(task => {
+                    let randomShuffle = [...registeredVolunteersRoster].sort(() => 0.5 - Math.random());
+                    let volunteerAllocationCount = Math.random() > 0.4 ? (Math.random() > 0.7 ? 2 : 1) : 0; 
+                    currentEventReportData[task.name] = randomShuffle.slice(0, volunteerAllocationCount).map(v => v.name);
+                });
+            }
+
+            reportDisplayArea.innerHTML = Object.keys(currentEventReportData).map(taskTitle => {
+                const assignedWorkers = currentEventReportData[taskTitle];
+                let tagsHTML = "";
+
+                if (assignedWorkers.length === 0) {
+                    tagsHTML = `<span class="report-tag empty">No Assignee</span>`;
+                } else {
+                    tagsHTML = assignedWorkers.map(name => `<span class="report-tag">${name}</span>`).join('');
+                }
+
+                return `
+                    <div class="report-task-row">
+                        <div class="report-task-head">${taskTitle}</div>
+                        <div class="report-assignee-tags">
+                            ${tagsHTML}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
+            document.getElementById('view-weekly-report').classList.add('active-view');
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
+            
+            if (window.lucide) lucide.createIcons();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /* SCREEN ROUTER: LOADS SPECIFIC VOLUNTEER'S CHORE HISTORY BY DATE */
+        function loadVolunteerProfilePage(volunteerName) {
+            const userObj = registeredVolunteersRoster.find(v => v.name === volunteerName);
+            if (!userObj) return;
+
+            document.getElementById('user-report-name').innerText = userObj.name;
+            document.getElementById('user-report-desc').innerText = userObj.description || 'Dedicated church worker.';
+            document.getElementById('user-report-avatar').src = userObj.avatar;
+
+            // Calculate precise attendance percentage matching standard metrics array
+            const checksArray = userObj.attendance.split(',');
+            const presentCount = checksArray.filter(v => v.trim() === "1").length;
+            const ratioPercentage = Math.round((presentCount / checksArray.length) * 100);
+            document.getElementById('user-report-ratio').innerText = `${ratioPercentage}% (${presentCount}/10 Wks)`;
+
+            const profileTasksContainer = document.getElementById('user-report-tasks-area');
+            let profileTimelineHTML = "";
+            
+            defaultChoreRegistryArray.forEach((task, taskIndex) => {
+                let timelineWeeksHTML = "";
+
+                // Generate status badges for each of the last 10 dates matching the layout dataset
+                attendanceHistoryDataset.forEach((weekData, weekIndex) => {
+                    const isPresentThisWeek = checksArray[weekIndex]?.trim() === "1";
+                    
+                    // Simulate specialized task distribution (or fall back to actual attendance logic)
+                    // If they are absent, they definitely didn't work. If present, assign realistically.
+                    const didChore = isPresentThisWeek && ((taskIndex + weekIndex) % 2 === 0);
+
+                    if (didChore) {
+                        timelineWeeksHTML += `<span class="chore-week-badge worked" title="Worked on ${weekData.date}">${weekData.date}</span>`;
+                    } else {
+                        timelineWeeksHTML += `<span class="chore-week-badge skipped" title="Absent / Not Assigned on ${weekData.date}">${weekData.date}</span>`;
+                    }
+                });
+
+                profileTimelineHTML += `
+                    <div class="report-task-row">
+                        <div class="report-task-head">
+                            ${task.name}
+                        </div>
+                        <div class="chore-timeline-container">
+                            ${timelineWeeksHTML}
+                        </div>
+                    </div>
+                `;
+            });
+
+            profileTasksContainer.innerHTML = profileTimelineHTML;
+
+            // Switch layout views cleanly
+            document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
+            document.getElementById('view-user-report').classList.add('active-view');
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /* SCREEN ROUTER: LOADS SPECIFIC CHORE'S ASSIGNMENT HISTORY BY WEEK WITH TIMELINE THEME */
+        function loadChoreAssignmentPage(choreName, choreArea) {
+            // Close the bottom registry drawer safely first
+            closeBottomSheet('sheet-add-chore');
+
+            document.getElementById('chore-report-name').innerText = choreName;
+            document.getElementById('chore-report-area').innerText = choreArea;
+
+            const weeksDisplayArea = document.getElementById('chore-report-weeks-area');
+            
+            // Find index to maintain deterministic generation identical to the user profile simulation
+            const taskIndex = defaultChoreRegistryArray.findIndex(t => t.name === choreName);
+
+            let timelineNodesHTML = "";
+
+            // Evaluate every single step of our active 10-week history
+            attendanceHistoryDataset.forEach((weekData, weekIndex) => {
+                let assignedWorkers = [];
+
+                // Find corresponding raw date block matching standard registry structure
+                const rawDateMatch = Array.from(document.querySelectorAll('#view-schedule .nb-card[data-rawdate]'))
+                                          .map(card => card.getAttribute('data-rawdate'))[9 - weekIndex] || "";
+
+                // Look up live custom workflow sessions first
+                if (rawDateMatch && persistentWeeklyRegistryLogs[rawDateMatch] && persistentWeeklyRegistryLogs[rawDateMatch][choreName]) {
+                    assignedWorkers = persistentWeeklyRegistryLogs[rawDateMatch][choreName];
+                } else {
+                    // Reconstruct underlying simulation data state safely
+                    registeredVolunteersRoster.forEach(vol => {
+                        const checksArray = vol.attendance.split(',');
+                        const isPresentThisWeek = checksArray[weekIndex]?.trim() === "1";
+                        const didChore = isPresentThisWeek && ((taskIndex + weekIndex) % 2 === 0);
+                        
+                        if (didChore) {
+                            assignedWorkers.push(vol.name);
+                        }
+                    });
+                }
+
+                // Determine styling and icon state flags based on work roster presence
+                const hasWorkers = assignedWorkers.length > 0;
+                const nodeClass = hasWorkers ? "timeline-milestone-node has-assignees" : "timeline-milestone-node empty-week";
+                const bulletIcon = hasWorkers ? "check" : "minus";
+
+                // Compile tag markup elements elegantly
+                let tagsHTML = "";
+                if (!hasWorkers) {
+                    tagsHTML = `<span class="report-tag empty" style="font-size: 0.65rem;">Unassigned (No Activity)</span>`;
+                } else {
+                    tagsHTML = assignedWorkers.map(name => `<span class="report-tag">${name}</span>`).join('');
+                }
+
+                timelineNodesHTML += `
+                    <div class="${nodeClass}">
+                        <div class="timeline-indicator-bullet">
+                            <i data-lucide="${bulletIcon}" size="11" style="stroke-width: 3.5;"></i>
+                        </div>
+                        <div class="timeline-content-card">
+                            <div class="card-meta-row">
+                                <span class="timeline-week-title">Week Run: ${weekData.label}</span>
+                                <span class="timeline-week-date">${weekData.date}</span>
+                            </div>
+                            <div class="timeline-assignees-box">
+                                ${tagsHTML}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            weeksDisplayArea.innerHTML = timelineNodesHTML;
+
+            // Route standard views layout
+            document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
+            document.getElementById('view-chore-report').classList.add('active-view');
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
+
+            // Refresh vector graphics and scroll to top smoothly
+            if (window.lucide) lucide.createIcons();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleActionsDropdown(event) {
+            event.stopPropagation();
+            const dropdown = document.getElementById('top-actions-dropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function openBottomSheet(sheetId) {
+            document.getElementById('top-actions-dropdown').style.display = 'none';
+            document.getElementById(sheetId).classList.add('sheet-open');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeBottomSheet(sheetId) {
+            document.getElementById(sheetId).classList.remove('sheet-open');
+            document.body.style.overflow = ''; 
+        }
+
+        function closeSheetOnOuterClick(event, sheetId) {
+            if (event.target === document.getElementById(sheetId)) {
+                closeBottomSheet(sheetId);
+            }
+        }
+
+        function switchMainTab(targetViewId, element) {
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
+            if(element) element.classList.add('active-nav');
+
+            document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
+            document.getElementById(targetViewId).classList.add('active-view');
+            
+            // Render icons for the current view
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function populateOperationalDescriptions() {
+            const cards = document.querySelectorAll('#view-schedule .nb-card[data-volunteers]');
+            cards.forEach(card => {
+                const countAttr = card.getAttribute('data-volunteers');
+                if (countAttr !== null) {
+                    const count = parseInt(countAttr, 10);
+                    const descContainer = card.querySelector('.nb-desc');
+                    if (descContainer && volunteerStatusMessages[count]) {
+                        descContainer.textContent = volunteerStatusMessages[count];
+                    }
+                }
+            });
+        }
+
+        function generateAttendanceVisualGrids() {
+            const boxes = document.querySelectorAll('.attendance-tracker-box');
+            boxes.forEach(box => {
+                const dataString = box.getAttribute('data-attendance');
+                if (!dataString) return;
+                
+                const attendanceArray = dataString.split(',');
+                const gridContainer = box.querySelector('.tracker-grid');
+                gridContainer.innerHTML = ''; 
+                
+                attendanceArray.forEach(mark => {
+                    const block = document.createElement('div');
+                    block.className = 'tracker-dot';
+                    if (mark.trim() === "1") {
+                        block.classList.add('visited');
+                    } else {
+                        block.classList.add('missed');
+                    }
+                    gridContainer.appendChild(block);
+                });
+            });
+        }
+
+        function setUpcomingSaturdayDate() {
+            const today = new Date();
+            const nextSaturday = new Date(today.setDate(today.getDate() + (6 - today.getDay()) % 7));
+            document.getElementById('event-date-picker').value = nextSaturday.toISOString().split('T')[0];
+        }
+
+        function syncLiveKPIValues() {
+            const totalElements = document.querySelectorAll('#view-schedule .card-container').length;
+            const counterElement = document.getElementById('visible-counter');
+            if(counterElement) counterElement.innerText = `${totalElements} Events Scheduled`;
+            
+            // Update KPI values using ID-based selectors
+            const kpiTotal = document.getElementById('kpi-total');
+            const kpiVolunteers = document.getElementById('kpi-volunteers-count');
+            
+            if (kpiTotal) {
+                kpiTotal.innerText = totalElements < 10 ? `0${totalElements}` : totalElements;
+            }
+            
+            if (kpiVolunteers) {
+                kpiVolunteers.innerText = registeredVolunteersRoster.length;
+            }
+            
+            // Rebuild metric cards with actual design
+            const metricsGrid = document.querySelector('.metrics-grid');
+            if (metricsGrid) {
+                metricsGrid.innerHTML = `
+                    <div class="metric-card color-blue">
+                        <span class="metric-label"><i data-lucide="calendar" size="14"></i> Total Events</span>
+                        <span class="metric-value" id="kpi-total">${totalElements < 10 ? `0${totalElements}` : totalElements}</span>
+                    </div>
+                    <div class="metric-card color-teal">
+                        <span class="metric-label"><i data-lucide="users" size="14"></i> Volunteers</span>
+                        <span class="metric-value" id="kpi-volunteers-count">${registeredVolunteersRoster.length}</span>
+                    </div>
+                `;
+                if (window.lucide) lucide.createIcons();
+            }
+        }
+
+        function runChronologicalReveal() {
+            const containers = document.querySelectorAll('#view-schedule .card-container');
+            containers.forEach((container, index) => {
+                const skeleton = container.querySelector('.nb-skeleton');
+                const card = container.querySelector('.nb-card');
+                setTimeout(() => {
+                    if(skeleton) skeleton.classList.add('fade-out');
+                    if(card) {
+                        card.classList.add('reveal');
+                        setTimeout(() => card.classList.add('loaded'), 400);
+                    }
+                }, 350 + (index * 200));
+            });
+        }
+
+        function runLiveSearchQuery() {
+            const query = document.getElementById('dashboard-search').value.toLowerCase();
+            const cards = document.querySelectorAll('#view-schedule .nb-card');
+            let matchCounter = 0;
+            
+            cards.forEach(card => {
+                const title = card.querySelector('.nb-title').innerText.toLowerCase();
+                const desc = card.querySelector('.nb-desc').innerText.toLowerCase();
+                const wrapper = card.closest('.card-container');
+
+                if(title.includes(query) || desc.includes(query)) {
+                    wrapper.style.display = 'block';
+                    matchCounter++;
+                } else {
+                    wrapper.style.display = 'none';
+                }
+            });
+            const counterElement = document.getElementById('visible-counter');
+            if(counterElement) counterElement.innerText = `${matchCounter} Events Scheduled`;
+        }
+    </script>
+</body>
+</html>
