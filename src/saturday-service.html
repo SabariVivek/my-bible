@@ -1526,44 +1526,9 @@
             </div>
 
             <div id="service-timeline-container">
-                <div class="nb-section">
-                    <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 16px;">June 2026</span>
-                    <div class="card-container" onclick="loadWeeklyReportSummaryPage('2026-06-27', 'Sat, Jun 27, 2026')">
-                        <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc-1"></div></div>
-                        <div class="nb-card" data-volunteers="4" data-rawdate="2026-06-27">
-                            <div class="nb-meta"><span>Saturday Sequence 04</span><span class="status-badge active-count">4 Present</span></div>
-                            <h3 class="nb-title">Sat, Jun 27, 2026</h3>
-                            <p class="nb-desc"></p>
-                        </div>
-                    </div>
-                    <div class="card-container" onclick="loadWeeklyReportSummaryPage('2026-06-20', 'Sat, Jun 20, 2026')">
-                        <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc-1"></div></div>
-                        <div class="nb-card" data-volunteers="7" data-rawdate="2026-06-20">
-                            <div class="nb-meta"><span>Saturday Sequence 03</span><span class="status-badge active-count">7 Present</span></div>
-                            <h3 class="nb-title">Sat, Jun 20, 2026</h3>
-                            <p class="nb-desc"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nb-section">
-                    <span class="nb-phase" style="transform: rotate(1deg); background: var(--accent-blue); margin-bottom: 16px;">May 2026</span>
-                    <div class="card-container" onclick="loadWeeklyReportSummaryPage('2026-05-23', 'Sat, May 23, 2026')">
-                        <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc-1"></div></div>
-                        <div class="nb-card" data-volunteers="6" data-rawdate="2026-05-23">
-                            <div class="nb-meta"><span>Saturday Sequence 02</span><span class="status-badge active-count">6 Present</span></div>
-                            <h3 class="nb-title">Sat, May 23, 2026</h3>
-                            <p class="nb-desc"></p>
-                        </div>
-                    </div>
-                    <div class="card-container" onclick="loadWeeklyReportSummaryPage('2026-05-16', 'Sat, May 16, 2026')">
-                        <div class="nb-skeleton"><div class="sk-line sk-meta"></div><div class="sk-line sk-title"></div><div class="sk-line sk-desc-1"></div></div>
-                        <div class="nb-card" data-volunteers="9" data-rawdate="2026-05-16">
-                            <div class="nb-meta"><span>Saturday Sequence 01</span><span class="status-badge active-count">9 Present</span></div>
-                            <h3 class="nb-title">Sat, May 16, 2026</h3>
-                            <p class="nb-desc"></p>
-                        </div>
-                    </div>
+                <!-- Skeleton loaders shown initially, replaced with schedules from database -->
+                <div id="schedules-skeleton-loader">
+                    <!-- Skeletons injected by JavaScript -->
                 </div>
             </div>
         </div>
@@ -1698,12 +1663,22 @@
             // Show chart skeleton on home page - overlay style
             const chartContainer = document.getElementById('bar-chart-container');
             if (chartContainer) {
-                const skeletonOverlay = document.createElement('div');
-                skeletonOverlay.className = 'skeleton-chart-overlay';
-                skeletonOverlay.innerHTML = Array(10).fill(0).map(() => '<div class="skeleton-chart-bar"></div>').join('');
-                chartContainer.innerHTML = '';
-                chartContainer.appendChild(skeletonOverlay);
+                chartContainer.innerHTML = Array(10).fill(0).map(() => `
+                    <div class="bar-column-wrapper">
+                        <span class="bar-tooltip-val" style="opacity: 0;">0</span>
+                        <div class="bar-pillar" style="height: 40%; background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite linear;"></div>
+                    </div>
+                `).join('');
                 console.log('✅ Chart skeleton shown');
+            }
+
+            // Show chart axis labels skeleton
+            const axisLabelsContainer = document.getElementById('bar-axis-dates');
+            if (axisLabelsContainer) {
+                axisLabelsContainer.innerHTML = Array(10).fill(0).map(() => `
+                    <span style="height: 12px; background: #e0e0e0; border-radius: 4px; display: inline-block; width: 30px; animation: skeleton-pulse 1.5s ease-in-out infinite;"></span>
+                `).join('');
+                console.log('✅ Chart axis labels skeleton shown');
             }
 
             // Show metrics skeleton on home page - keep card structure and colors
@@ -1725,7 +1700,7 @@
             // Show volunteer skeleton loaders - keep card structure
             const volunteersContainer = document.getElementById('master-volunteers-list-mount');
             if (volunteersContainer) {
-                volunteersContainer.innerHTML = Array(5).fill(0).map(() => `
+                volunteersContainer.innerHTML = Array(10).fill(0).map(() => `
                     <div class="card-container">
                         <div class="nb-skeleton">
                             <div class="sk-line sk-meta"></div>
@@ -1770,6 +1745,36 @@
                 `).join('');
                 console.log('✅ Chore skeletons shown');
             }
+
+            // Show schedule skeleton loaders - keep card structure
+            const schedulesLoader = document.getElementById('schedules-skeleton-loader');
+            if (schedulesLoader) {
+                schedulesLoader.innerHTML = Array(2).fill(0).map(() => `
+                    <div class="nb-section">
+                        <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 16px;">
+                            <span style="height: 20px; background: #e0e0e0; border-radius: 4px; display: inline-block; width: 100px; animation: skeleton-pulse 1.5s ease-in-out infinite;"></span>
+                        </span>
+                        ${Array(2).fill(0).map(() => `
+                            <div class="card-container">
+                                <div class="nb-skeleton">
+                                    <div class="sk-line sk-meta"></div>
+                                    <div class="sk-line sk-title"></div>
+                                    <div class="sk-line sk-desc-1"></div>
+                                </div>
+                                <div class="nb-card reveal loaded">
+                                    <div class="nb-meta">
+                                        <span style="height: 16px; background: #e0e0e0; border-radius: 4px; display: inline-block; width: 120px; animation: skeleton-pulse 1.5s ease-in-out infinite;"></span>
+                                        <span class="status-badge" style="height: 16px; background: #e0e0e0; border-radius: 4px; display: inline-block; width: 80px; animation: skeleton-pulse 1.5s ease-in-out infinite;"></span>
+                                    </div>
+                                    <h3 class="nb-title" style="height: 20px; background: #e0e0e0; border-radius: 4px; animation: skeleton-pulse 1.5s ease-in-out infinite;"></h3>
+                                    <p class="nb-desc" style="height: 16px; background: #e0e0e0; border-radius: 4px; margin-top: 8px; animation: skeleton-pulse 1.5s ease-in-out infinite;"></p>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `).join('');
+                console.log('✅ Schedule skeletons shown');
+            }
             
             // Render lucide icons for skeletons
             if (window.lucide) lucide.createIcons();
@@ -1800,6 +1805,7 @@
             await fetchChores();
             await fetchVolunteers();
             await fetchAttendanceHistory();
+            await loadSchedulesFromDatabase();
             
             // Calculate attendance history dataset for charts
             const weeks = new Map();
@@ -1832,6 +1838,173 @@
             console.log('   - Chores:', defaultChoreRegistryArray.length);
             console.log('   - Volunteers:', registeredVolunteersRoster.length);
             console.log('   - Weeks:', attendanceHistoryDataset.length);
+        }
+
+        async function loadSchedulesFromDatabase() {
+            try {
+                console.log('📋 Loading service schedules from database...');
+                
+                // 1. Load all service schedules in one call
+                const { data: schedules, error: scheduleError } = await supabaseClient
+                    .from('service_schedules')
+                    .select('id, service_date, volunteer_count, status')
+                    .order('service_date', { ascending: false });
+                
+                if (scheduleError) {
+                    console.error('❌ Error loading schedules:', scheduleError);
+                    return;
+                }
+                
+                if (!schedules || schedules.length === 0) {
+                    console.log('ℹ️ No schedules found in database');
+                    return;
+                }
+                
+                // 2. Fetch ALL assignments in bulk for all schedules
+                const scheduleIds = schedules.map(s => s.id);
+                const { data: allAssignments, error: assignmentError } = await supabaseClient
+                    .from('chore_assignments')
+                    .select(`
+                        service_id,
+                        chore_id,
+                        volunteer_id,
+                        chores(name),
+                        volunteers(name)
+                    `)
+                    .in('service_id', scheduleIds);
+                
+                if (assignmentError) {
+                    console.error('❌ Error loading assignments:', assignmentError);
+                    return;
+                }
+                
+                // 3. Group assignments by service_id for quick lookup
+                const assignmentsByService = {};
+                if (allAssignments) {
+                    allAssignments.forEach(assignment => {
+                        if (!assignmentsByService[assignment.service_id]) {
+                            assignmentsByService[assignment.service_id] = [];
+                        }
+                        assignmentsByService[assignment.service_id].push(assignment);
+                    });
+                }
+                
+                console.log('📊 Fetched schedules and assignments in bulk:');
+                console.log(`   - Schedules: ${schedules.length}`);
+                console.log(`   - Total Assignments: ${allAssignments ? allAssignments.length : 0}`);
+                console.log('📝 Sample assignment structure:', allAssignments && allAssignments.length > 0 ? allAssignments[0] : 'No data');
+                
+                // 4. Group schedules by month/year
+                const schedulesByMonth = {};
+                
+                for (const schedule of schedules) {
+                    const dateObj = new Date(schedule.service_date);
+                    const monthYear = dateObj.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                    
+                    if (!schedulesByMonth[monthYear]) {
+                        schedulesByMonth[monthYear] = [];
+                    }
+                    
+                    // Build task map from pre-fetched assignments
+                    const taskMap = {};
+                    const assignments = assignmentsByService[schedule.id] || [];
+                    
+                    console.log(`🔗 Schedule ${schedule.service_date} has ${assignments.length} assignments`);
+                    
+                    assignments.forEach((assignment, idx) => {
+                        const choreName = assignment.chores?.name;
+                        const volunteerName = assignment.volunteers?.name;
+                        
+                        console.log(`   Assignment ${idx}: chore="${choreName}" | volunteer="${volunteerName}" | full:`, assignment);
+                        
+                        if (choreName && volunteerName) {
+                            if (!taskMap[choreName]) {
+                                taskMap[choreName] = [];
+                            }
+                            if (!taskMap[choreName].includes(volunteerName)) {
+                                taskMap[choreName].push(volunteerName);
+                            }
+                        }
+                    });
+                    
+                    console.log(`📋 Task map for ${schedule.service_date}:`, taskMap);
+                    
+                    // Store in persistent logs
+                    persistentWeeklyRegistryLogs[schedule.service_date] = taskMap;
+                    
+                    const formattingOptions = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+                    const localizedDate = dateObj.toLocaleDateString('en-US', formattingOptions);
+                    
+                    const volunteerCount = schedule.volunteer_count;
+                    const statusText = volunteerStatusMessages[volunteerCount] || `Blueprint published with standard tasks allocation.`;
+                    
+                    schedulesByMonth[monthYear].push({
+                        dateObj,
+                        localizedDate,
+                        volunteerCount,
+                        statusText,
+                        service_date: schedule.service_date
+                    });
+                }
+                
+                // Get the container for service timeline
+                const container = document.getElementById('service-timeline-container');
+                
+                // Clear skeleton loader before rendering actual content
+                const skeletonLoader = document.getElementById('schedules-skeleton-loader');
+                if (skeletonLoader) {
+                    skeletonLoader.style.opacity = '0';
+                    skeletonLoader.style.transition = 'opacity 0.3s ease';
+                    setTimeout(() => {
+                        skeletonLoader.remove();
+                        console.log('✅ Schedule skeleton cleared');
+                    }, 300);
+                }
+                
+                let monthIndex = 0;
+                
+                // Create sections for each month
+                for (const [monthYear, scheduleList] of Object.entries(schedulesByMonth)) {
+                    // Create section for this month
+                    const section = document.createElement('div');
+                    section.className = 'nb-section';
+                    
+                    // Rotate styling for alternating months
+                    const rotation = monthIndex % 2 === 0 ? '-1deg' : '1deg';
+                    const bgStyle = monthIndex % 2 === 1 ? 'background: var(--accent-blue);' : '';
+                    
+                    const phaseHTML = `<span class="nb-phase" style="transform: rotate(${rotation}); ${bgStyle} margin-bottom: 16px;">${monthYear}</span>`;
+                    section.innerHTML = phaseHTML;
+                    
+                    // Add schedule cards to this section
+                    for (const schedule of scheduleList) {
+                        const cardHTML = `
+                            <div class="nb-card reveal loaded" data-volunteers="${schedule.volunteerCount}" data-rawdate="${schedule.service_date}">
+                                <div class="nb-meta">
+                                    <span>Saturday Sequence Ad-Hoc</span>
+                                    <span class="status-badge active-count">${schedule.volunteerCount} Present</span>
+                                </div>
+                                <h3 class="nb-title">${schedule.localizedDate}</h3>
+                                <p class="nb-desc">${schedule.statusText}</p>
+                            </div>
+                        `;
+                        
+                        const newCardItem = document.createElement('div');
+                        newCardItem.className = 'card-container';
+                        newCardItem.onclick = () => loadWeeklyReportSummaryPage(schedule.service_date, schedule.localizedDate).catch(err => console.error('Error loading report:', err));
+                        newCardItem.innerHTML = cardHTML;
+                        
+                        section.appendChild(newCardItem);
+                    }
+                    
+                    container.appendChild(section);
+                    monthIndex++;
+                }
+                
+                console.log('✅ Loaded', schedules.length, 'schedule(s) from database');
+            } catch (err) {
+                console.error('❌ Failed to load schedules:', err);
+            }
         }
 
         const volunteerStatusMessages = {
@@ -2104,11 +2277,14 @@
             // Save inside persistent object store references
             persistentWeeklyRegistryLogs[transientSelectedDateString] = singleEventTaskMap;
 
+            // Save to Supabase
+            saveAssignmentsToDatabase(transientSelectedDateString, volunteerCount, singleEventTaskMap);
+
             const targetSection = document.querySelector('#view-schedule .nb-section'); 
             
             const newCardItem = document.createElement('div');
             newCardItem.className = 'card-container';
-            newCardItem.onclick = () => loadWeeklyReportSummaryPage(transientSelectedDateString, localizedDate);
+            newCardItem.onclick = () => loadWeeklyReportSummaryPage(transientSelectedDateString, localizedDate).catch(err => console.error('Error loading report:', err));
             newCardItem.innerHTML = `
                 <div class="nb-card reveal loaded" data-volunteers="${volunteerCount}" data-rawdate="${transientSelectedDateString}">
                     <div class="nb-meta">
@@ -2132,21 +2308,187 @@
             switchMainTab('view-schedule', document.querySelectorAll('.nav-item')[1]);
         }
 
+        // Save assignments to Supabase database
+        async function saveAssignmentsToDatabase(serviceDate, volunteerCount, taskMap) {
+            try {
+                console.log('💾 Saving assignments to database...');
+                
+                // 1. Check if service schedule already exists for this date
+                let serviceId = null;
+                const { data: existingService, error: queryError } = await supabaseClient
+                    .from('service_schedules')
+                    .select('id')
+                    .eq('service_date', serviceDate)
+                    .single();
+                
+                if (queryError && queryError.code !== 'PGRST116') {
+                    console.error('❌ Error querying service schedule:', queryError);
+                    return;
+                }
+                
+                // If exists, use it; otherwise create a new one
+                if (existingService) {
+                    serviceId = existingService.id;
+                    console.log('✅ Using existing service schedule with ID:', serviceId);
+                } else {
+                    const { data: serviceData, error: serviceError } = await supabaseClient
+                        .from('service_schedules')
+                        .insert({
+                            service_date: serviceDate,
+                            volunteer_count: volunteerCount,
+                            status: 'scheduled'
+                        })
+                        .select();
+                    
+                    if (serviceError) {
+                        console.error('❌ Error creating service schedule:', serviceError);
+                        return;
+                    }
+                    
+                    serviceId = serviceData[0].id;
+                    console.log('✅ Service schedule created with ID:', serviceId);
+                }
+                
+                // 2. Create chore assignments for each task and volunteer
+                const assignmentRecords = [];
+                
+                for (const [choreName, volunteerNames] of Object.entries(taskMap)) {
+                    const chore = defaultChoreRegistryArray.find(c => c.name === choreName);
+                    
+                    if (chore && volunteerNames.length > 0) {
+                        for (const volName of volunteerNames) {
+                            const volunteer = registeredVolunteersRoster.find(v => v.name === volName);
+                            
+                            if (volunteer) {
+                                assignmentRecords.push({
+                                    service_id: serviceId,
+                                    chore_id: chore.id,
+                                    volunteer_id: volunteer.id,
+                                    completed: false,
+                                    notes: ''
+                                });
+                            }
+                        }
+                    }
+                }
+                
+                // Batch insert all assignments
+                if (assignmentRecords.length > 0) {
+                    const { data: assignmentData, error: assignmentError } = await supabaseClient
+                        .from('chore_assignments')
+                        .insert(assignmentRecords);
+                    
+                    if (assignmentError) {
+                        console.error('❌ Error creating chore assignments:', assignmentError);
+                        return;
+                    }
+                    
+                    console.log('✅ Chore assignments saved:', assignmentRecords.length, 'records');
+                }
+                
+                console.log('✅ All assignments saved successfully to database');
+            } catch (err) {
+                console.error('❌ Failed to save assignments:', err);
+            }
+        }
+
         /* SCREEN ROUTER: LOADS COMPLETED TASK RECORDS FOR WEEK */
-        function loadWeeklyReportSummaryPage(rawDateString, localizedTitle) {
+        async function loadWeeklyReportSummaryPage(rawDateString, localizedTitle) {
             document.getElementById('report-heading-date').innerText = localizedTitle;
             const reportDisplayArea = document.getElementById('weekly-report-tasks-area');
 
             let currentEventReportData = persistentWeeklyRegistryLogs[rawDateString];
+            console.log('📋 Looking for data for date:', rawDateString);
+            console.log('💾 Data in memory:', currentEventReportData ? 'YES' : 'NO');
 
+            // If data not in memory, fetch from Supabase
             if (!currentEventReportData) {
+                try {
+                    console.log('🔍 Fetching assignment data from Supabase for date:', rawDateString);
+                    
+                    // Get the service schedule for this date
+                    const { data: schedules, error: scheduleError } = await supabaseClient
+                        .from('service_schedules')
+                        .select('id')
+                        .eq('service_date', rawDateString)
+                        .limit(1);
+                    
+                    if (scheduleError) {
+                        console.error('❌ Error querying service_schedules:', scheduleError);
+                        currentEventReportData = {};
+                    } else if (!schedules || schedules.length === 0) {
+                        console.log('ℹ️ No schedule found for this date:', rawDateString);
+                        currentEventReportData = {};
+                    } else {
+                        const serviceId = schedules[0].id;
+                        console.log('✅ Found service schedule with ID:', serviceId);
+                        
+                        // Fetch all assignments for this service
+                        const { data: assignments, error: assignmentError } = await supabaseClient
+                            .from('chore_assignments')
+                            .select(`
+                                chore_id,
+                                volunteer_id,
+                                chores(name),
+                                volunteers(name)
+                            `)
+                            .eq('service_id', serviceId);
+                        
+                        if (assignmentError) {
+                            console.error('❌ Error fetching assignments:', assignmentError);
+                            currentEventReportData = {};
+                        } else {
+                            console.log('✅ Fetched assignments:', assignments ? assignments.length : 0);
+                            console.log('📝 Assignment details:', assignments);
+                            
+                            // Initialize task map with ALL chores
+                            currentEventReportData = {};
+                            defaultChoreRegistryArray.forEach(chore => {
+                                currentEventReportData[chore.name] = [];
+                            });
+                            
+                            // Add volunteers to their assigned chores
+                            if (assignments && assignments.length > 0) {
+                                assignments.forEach(assignment => {
+                                    const choreName = assignment.chores?.name;
+                                    const volunteerName = assignment.volunteers?.name;
+                                    
+                                    console.log(`   Adding ${volunteerName} to ${choreName}`);
+                                    
+                                    if (choreName && volunteerName) {
+                                        if (!currentEventReportData[choreName]) {
+                                            currentEventReportData[choreName] = [];
+                                        }
+                                        if (!currentEventReportData[choreName].includes(volunteerName)) {
+                                            currentEventReportData[choreName].push(volunteerName);
+                                        }
+                                    }
+                                });
+                            }
+                            
+                            // Store in memory for future access
+                            persistentWeeklyRegistryLogs[rawDateString] = currentEventReportData;
+                            console.log('✅ Assignments loaded from Supabase and cached');
+                        }
+                    }
+                } catch (err) {
+                    console.error('❌ Failed to fetch assignments:', err);
+                    currentEventReportData = {};
+                }
+            } else {
+                console.log('✅ Using cached data from memory');
+            }
+
+            // Ensure all chores are in the report data
+            if (!currentEventReportData || Object.keys(currentEventReportData).length === 0) {
+                console.log('⚠️ No assignment data found, creating empty entries for all chores');
                 currentEventReportData = {};
                 defaultChoreRegistryArray.forEach(task => {
-                    let randomShuffle = [...registeredVolunteersRoster].sort(() => 0.5 - Math.random());
-                    let volunteerAllocationCount = Math.random() > 0.4 ? (Math.random() > 0.7 ? 2 : 1) : 0; 
-                    currentEventReportData[task.name] = randomShuffle.slice(0, volunteerAllocationCount).map(v => v.name);
+                    currentEventReportData[task.name] = [];
                 });
             }
+
+            console.log('📊 Final report data:', currentEventReportData);
 
             reportDisplayArea.innerHTML = Object.keys(currentEventReportData).map(taskTitle => {
                 const assignedWorkers = currentEventReportData[taskTitle];

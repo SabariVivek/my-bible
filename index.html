@@ -1784,6 +1784,87 @@
     <script src="src/lib/supabase-pinned-verses.js?cb=20251126003722"></script>
 
     <script src="config/config.js?cb=20251126003722"></script>
+    
+    <!-- Check Saturday Service Visibility Setting -->
+    <script>
+        async function checkSaturdayServiceVisibility() {
+            try {
+                // Get current user ID from localStorage
+                const userId = localStorage.getItem('currentUserId');
+                console.log('[Saturday Service] Current user ID:', userId);
+
+                if (!userId) {
+                    console.log('[Saturday Service] No user logged in, hiding menu');
+                    const menuItem = document.getElementById('right-saturday-service-option');
+                    if (menuItem) {
+                        menuItem.style.display = 'none';
+                    }
+                    return;
+                }
+
+                // Initialize Supabase client if not already initialized
+                if (typeof supabase === 'undefined') {
+                    console.log('[Saturday Service] Supabase not ready, will retry...');
+                    setTimeout(checkSaturdayServiceVisibility, 500);
+                    return;
+                }
+
+                if (!SUPABASE_SATURDAY_SERVICE_CONFIG || !SUPABASE_SATURDAY_SERVICE_CONFIG.url || !SUPABASE_SATURDAY_SERVICE_CONFIG.anonKey) {
+                    console.log('[Saturday Service] Config not loaded, will retry...');
+                    setTimeout(checkSaturdayServiceVisibility, 500);
+                    return;
+                }
+
+                // Create Supabase client
+                const { createClient } = supabase;
+                const supabaseClient = createClient(
+                    SUPABASE_SATURDAY_SERVICE_CONFIG.url,
+                    SUPABASE_SATURDAY_SERVICE_CONFIG.anonKey
+                );
+
+                // Fetch user_settings for the current user
+                const { data, error } = await supabaseClient
+                    .from('user_settings')
+                    .select('saturday_service')
+                    .eq('user_id', userId)
+                    .limit(1);
+
+                if (error) {
+                    console.warn('[Saturday Service] Error fetching settings:', error);
+                    // Default to hiding if error (safer approach)
+                    const menuItem = document.getElementById('right-saturday-service-option');
+                    if (menuItem) {
+                        menuItem.style.display = 'none';
+                    }
+                    return;
+                }
+
+                // Check if saturday_service is true for this user
+                const saturdayServiceEnabled = data && data.length > 0 && data[0].saturday_service === true;
+
+                const menuItem = document.getElementById('right-saturday-service-option');
+                if (menuItem) {
+                    menuItem.style.display = saturdayServiceEnabled ? 'flex' : 'none';
+                    console.log('[Saturday Service] User', userId, ':', saturdayServiceEnabled ? 'Visible' : 'Hidden', '(saturday_service =', saturdayServiceEnabled + ')');
+                }
+            } catch (err) {
+                console.error('[Saturday Service] Unexpected error:', err);
+                // Default to hiding if unexpected error
+                const menuItem = document.getElementById('right-saturday-service-option');
+                if (menuItem) {
+                    menuItem.style.display = 'none';
+                }
+            }
+        }
+
+        // Check when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', checkSaturdayServiceVisibility);
+        } else {
+            checkSaturdayServiceVisibility();
+        }
+    </script>
+
     <script src="src/bible-data-manager.js?cb=20251126003722"></script>
     <script src="src/voice-command.js?cb=20251126003722"></script>
     <script src="src/data/verse-headers-english.js?cb=20260312000619"></script>
