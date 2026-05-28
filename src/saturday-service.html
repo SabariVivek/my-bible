@@ -263,6 +263,28 @@
             cursor: pointer;
         }
 
+        /* --- NEW MULTI-SELECT CHORE ITEM STYLE --- */
+        .chore-selectable-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 2px solid var(--text-primary);
+            padding: 10px 14px;
+            border-radius: 4px;
+            background: var(--bg-primary);
+            cursor: pointer;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .chore-selectable-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--accent-blue);
+            cursor: pointer;
+        }
+
         /* Image-Free Chores Gallery layout */
         .chores-gallery {
             display: flex;
@@ -1345,8 +1367,26 @@
             <div class="sheet-scroll-content">
                 <div class="attendance-selection-list" id="attendance-checkbox-container"></div>
             </div>
-            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0;" onclick="confirmAttendanceAndShowPlanPage()">
+            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0;" onclick="goToChoresSelectionSheet()">
                 <i data-lucide="check-check" size="16"></i> Confirm Attendance
+            </button>
+        </div>
+    </div>
+
+    <div id="sheet-select-chores" class="sheet-overlay" onclick="closeSheetOnOuterClick(event, 'sheet-select-chores')">
+        <div class="bottom-sheet">
+            <div class="sheet-handle"></div>
+            <div class="sheet-header">
+                <span class="sheet-title">Select Active Chores</span>
+                <div class="sheet-close" onclick="closeBottomSheet('sheet-select-chores')">
+                    <i data-lucide="x" size="16"></i>
+                </div>
+            </div>
+            <div class="sheet-scroll-content">
+                <div class="attendance-selection-list" id="chores-checkbox-container"></div>
+            </div>
+            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0; background: var(--wa-teal);" onclick="confirmAttendanceAndShowPlanPage()">
+                <i data-lucide="check-check" size="16"></i> Continue to Workspace
             </button>
         </div>
     </div>
@@ -1446,7 +1486,7 @@
                 <div class="creator-error-msg" id="date-collision-error">
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <i data-lucide="alert-triangle" size="16"></i>
-                        <span>Operational Alert: This Saturday configuration has already been initialized in timeline!</span>
+                        <span>Alert: Date Already Created!</span>
                     </div>
                 </div>
             </div>
@@ -2039,6 +2079,7 @@
             renderGlobalChoresRegistrySheet();
             renderMasterVolunteersRegistryView();
             buildDynamicAttendanceSelectionCheckboxes();
+            buildDynamicChoresSelectionCheckboxes();
             
             // Wait for skeleton fade-out to complete before populating grids
             setTimeout(() => {
@@ -2194,6 +2235,30 @@
             `).join('');
         }
 
+        function buildDynamicChoresSelectionCheckboxes() {
+            const container = document.getElementById('chores-checkbox-container');
+            container.innerHTML = defaultChoreRegistryArray.map(chore => `
+                <label class="chore-selectable-item">
+                    <input type="checkbox" value="${chore.id}" class="chore-tickbox" checked>
+                    <span>${chore.name}</span>
+                </label>
+            `).join('');
+        }
+
+        function goToChoresSelectionSheet() {
+            const checkedBoxes = document.querySelectorAll('.attendance-tickbox:checked');
+            transientPresentVolunteersArray = Array.from(checkedBoxes).map(cb => cb.value);
+            
+            // Close Step 1 Sheet
+            closeBottomSheet('sheet-select-attendance');
+            
+            // Smooth delay before opening Step 2 Sheet
+            setTimeout(() => {
+                buildDynamicChoresSelectionCheckboxes();
+                openBottomSheet('sheet-select-chores');
+            }, 300);
+        }
+
         function handlePlanActionInitiation() {
             const datePicker = document.getElementById('event-date-picker');
             const errorBanner = document.getElementById('date-collision-error');
@@ -2216,10 +2281,7 @@
         }
 
         function confirmAttendanceAndShowPlanPage() {
-            const checkedBoxes = document.querySelectorAll('.attendance-tickbox:checked');
-            transientPresentVolunteersArray = Array.from(checkedBoxes).map(cb => cb.value);
-
-            closeBottomSheet('sheet-select-attendance');
+            closeBottomSheet('sheet-select-chores');
 
             const dateObj = new Date(transientSelectedDateString);
             const formattingOptions = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
@@ -2237,19 +2299,31 @@
                         No volunteers checked in! Please assign chores to a roster that includes team members.
                     </div>`;
             } else {
+                // Filter out any chores unchecked by the user in Step 2
+                const activeChoreIds = Array.from(document.querySelectorAll('.chore-tickbox:checked')).map(cb => cb.value);
+                const activeChores = defaultChoreRegistryArray.filter(chore => activeChoreIds.includes(chore.id));
+
                 const selectOptionsHTML = transientPresentVolunteersArray.map(name => 
                     `<option value="${name}">${name}</option>`
                 ).join('');
 
-                assignmentArea.innerHTML = defaultChoreRegistryArray.map(task => `
-                    <div class="task-assign-card">
-                        <div class="task-main-title">${task.name}</div>
-                        <select class="assignee-select" data-task-name="${task.name}" multiple>
-                            ${selectOptionsHTML}
-                        </select>
-                        <span class="multi-hint-caption">Hold Ctrl/Cmd to select multiple</span>
-                    </div>
-                `).join('');
+                if (activeChores.length === 0) {
+                    assignmentArea.innerHTML = `
+                        <div class="task-assign-card" style="text-align:center; padding: 20px; color: var(--accent-red); font-weight:800;">
+                            No active chores chosen in layout checklist config!
+                        </div>`;
+                } else {
+                    // Render only selected chores on the assignments page
+                    assignmentArea.innerHTML = activeChores.map(task => `
+                        <div class="task-assign-card">
+                            <div class="task-main-title">${task.name}</div>
+                            <select class="assignee-select" data-task-name="${task.name}" multiple>
+                                ${selectOptionsHTML}
+                            </select>
+                            <span class="multi-hint-caption">Hold Ctrl/Cmd to select multiple</span>
+                        </div>
+                    `).join('');
+                }
             }
 
             document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
@@ -2268,8 +2342,8 @@
             // Capture chosen multi-select fields live
             let singleEventTaskMap = {};
             document.querySelectorAll('#assignment-tasks-load-area .task-assign-card').forEach(card => {
-                const taskName = card.querySelector('.task-main-title').innerText;
                 const selectElement = card.querySelector('.assignee-select');
+                const taskName = selectElement.getAttribute('data-task-name');  // ✅ Get original name from data attribute
                 const selectedNames = Array.from(selectElement.selectedOptions).map(opt => opt.value);
                 singleEventTaskMap[taskName] = selectedNames;
             });
@@ -2312,6 +2386,7 @@
         async function saveAssignmentsToDatabase(serviceDate, volunteerCount, taskMap) {
             try {
                 console.log('💾 Saving assignments to database...');
+                console.log('📝 Task Map received:', taskMap);
                 
                 // 1. Check if service schedule already exists for this date
                 let serviceId = null;
@@ -2319,18 +2394,18 @@
                     .from('service_schedules')
                     .select('id')
                     .eq('service_date', serviceDate)
-                    .single();
+                    .maybeSingle();
                 
-                if (queryError && queryError.code !== 'PGRST116') {
+                if (queryError) {
                     console.error('❌ Error querying service schedule:', queryError);
-                    return;
-                }
-                
-                // If exists, use it; otherwise create a new one
-                if (existingService) {
+                    // Try to create a new one anyway
+                } else if (existingService) {
                     serviceId = existingService.id;
                     console.log('✅ Using existing service schedule with ID:', serviceId);
-                } else {
+                }
+                
+                // If doesn't exist or query failed, create a new one
+                if (!serviceId) {
                     const { data: serviceData, error: serviceError } = await supabaseClient
                         .from('service_schedules')
                         .insert({
@@ -2352,38 +2427,57 @@
                 // 2. Create chore assignments for each task and volunteer
                 const assignmentRecords = [];
                 
+                console.log('🔍 Processing', Object.keys(taskMap).length, 'chores');
+                
                 for (const [choreName, volunteerNames] of Object.entries(taskMap)) {
+                    console.log(`   📌 Chore: "${choreName}", Volunteers selected:`, volunteerNames);
+                    
                     const chore = defaultChoreRegistryArray.find(c => c.name === choreName);
+                    console.log(`   ✓ Found chore object:`, chore ? `ID=${chore.id}` : 'NOT FOUND');
                     
                     if (chore && volunteerNames.length > 0) {
                         for (const volName of volunteerNames) {
                             const volunteer = registeredVolunteersRoster.find(v => v.name === volName);
+                            console.log(`     👤 Volunteer: "${volName}", Found:`, volunteer ? `ID=${volunteer.id}` : 'NOT FOUND');
                             
                             if (volunteer) {
-                                assignmentRecords.push({
+                                const record = {
                                     service_id: serviceId,
                                     chore_id: chore.id,
                                     volunteer_id: volunteer.id,
                                     completed: false,
                                     notes: ''
-                                });
+                                };
+                                console.log(`     📦 Creating assignment record:`, record);
+                                assignmentRecords.push(record);
                             }
                         }
+                    } else {
+                        console.log(`   ⚠️  Skipping - either chore not found or no volunteers selected`);
                     }
                 }
                 
+                console.log(`✅ Total assignment records to save: ${assignmentRecords.length}`);
+                
                 // Batch insert all assignments
                 if (assignmentRecords.length > 0) {
+                    console.log('💾 Inserting into chore_assignments table:', assignmentRecords);
+                    
                     const { data: assignmentData, error: assignmentError } = await supabaseClient
                         .from('chore_assignments')
                         .insert(assignmentRecords);
                     
                     if (assignmentError) {
-                        console.error('❌ Error creating chore assignments:', assignmentError);
+                        console.error('❌ ERROR inserting assignments:', assignmentError);
+                        console.error('   Error message:', assignmentError.message);
+                        console.error('   Error code:', assignmentError.code);
+                        console.error('   Error details:', assignmentError.details);
                         return;
                     }
                     
                     console.log('✅ Chore assignments saved:', assignmentRecords.length, 'records');
+                } else {
+                    console.warn('⚠️  No assignment records to save - check if volunteers are selected in the form');
                 }
                 
                 console.log('✅ All assignments saved successfully to database');
@@ -2411,27 +2505,22 @@
                         .from('service_schedules')
                         .select('id')
                         .eq('service_date', rawDateString)
-                        .limit(1);
+                        .maybeSingle();
                     
                     if (scheduleError) {
                         console.error('❌ Error querying service_schedules:', scheduleError);
                         currentEventReportData = {};
-                    } else if (!schedules || schedules.length === 0) {
+                    } else if (!schedules) {
                         console.log('ℹ️ No schedule found for this date:', rawDateString);
                         currentEventReportData = {};
                     } else {
-                        const serviceId = schedules[0].id;
+                        const serviceId = schedules.id;
                         console.log('✅ Found service schedule with ID:', serviceId);
                         
-                        // Fetch all assignments for this service
+                        // Fetch all assignments for this service (without relationships first)
                         const { data: assignments, error: assignmentError } = await supabaseClient
                             .from('chore_assignments')
-                            .select(`
-                                chore_id,
-                                volunteer_id,
-                                chores(name),
-                                volunteers(name)
-                            `)
+                            .select('chore_id, volunteer_id')
                             .eq('service_id', serviceId);
                         
                         if (assignmentError) {
@@ -2439,7 +2528,6 @@
                             currentEventReportData = {};
                         } else {
                             console.log('✅ Fetched assignments:', assignments ? assignments.length : 0);
-                            console.log('📝 Assignment details:', assignments);
                             
                             // Initialize task map with ALL chores
                             currentEventReportData = {};
@@ -2447,20 +2535,16 @@
                                 currentEventReportData[chore.name] = [];
                             });
                             
-                            // Add volunteers to their assigned chores
+                            // Map chore_id and volunteer_id to names using local arrays
                             if (assignments && assignments.length > 0) {
                                 assignments.forEach(assignment => {
-                                    const choreName = assignment.chores?.name;
-                                    const volunteerName = assignment.volunteers?.name;
+                                    const chore = defaultChoreRegistryArray.find(c => c.id === assignment.chore_id);
+                                    const volunteer = registeredVolunteersRoster.find(v => v.id === assignment.volunteer_id);
                                     
-                                    console.log(`   Adding ${volunteerName} to ${choreName}`);
-                                    
-                                    if (choreName && volunteerName) {
-                                        if (!currentEventReportData[choreName]) {
-                                            currentEventReportData[choreName] = [];
-                                        }
-                                        if (!currentEventReportData[choreName].includes(volunteerName)) {
-                                            currentEventReportData[choreName].push(volunteerName);
+                                    if (chore && volunteer) {
+                                        console.log(`   Adding ${volunteer.name} to ${chore.name}`);
+                                        if (!currentEventReportData[chore.name].includes(volunteer.name)) {
+                                            currentEventReportData[chore.name].push(volunteer.name);
                                         }
                                     }
                                 });
