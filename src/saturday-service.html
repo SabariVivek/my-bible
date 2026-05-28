@@ -1038,6 +1038,113 @@
             border-color: #d1d5db;
         }
 
+        /* --- PORTFOLIO TIMELINE MATRIX STYLES --- */
+        .timeline-wrapper {
+            position: relative;
+            padding-left: 24px;
+            margin-top: 16px;
+        }
+
+        .timeline-wrapper::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--text-primary);
+        }
+
+        .timeline-node-block {
+            position: relative;
+            margin-bottom: 28px;
+        }
+
+        .timeline-node-block::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            background: var(--accent-yellow);
+            border: 3px solid var(--text-primary);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .timeline-date-header {
+            font-size: 0.85rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            background: var(--text-primary);
+            color: white;
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 2px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .portfolio-chore-box {
+            background: var(--bg-card);
+            border: 3px solid var(--text-primary);
+            box-shadow: 4px 4px 0px var(--text-primary);
+            border-radius: 4px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .portfolio-chore-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .portfolio-badge {
+            font-size: 0.6rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 3px 6px;
+            border: 2px solid var(--text-primary);
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .badge-assigned { 
+            background: var(--accent-purple); 
+            box-shadow: 2px 2px 0px var(--text-primary); 
+        }
+
+        .badge-empty { 
+            background: #fca5a5; 
+            border-style: dashed; 
+        }
+
+        .chore-tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 4px;
+        }
+
+        .chore-pill {
+            background: var(--bg-primary);
+            border: 2px solid var(--text-primary);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
         /* --- NEO-BRUTALIST VERTICAL TIMELINE ARCHITECTURE --- */
         .chore-timeline-track {
             position: relative;
@@ -2694,67 +2801,82 @@
             document.getElementById('user-report-ratio').innerText = `${participationPercentage}% (${schedulesParticipated}/${totalSchedules} Schedules)`;
 
             const profileTasksContainer = document.getElementById('user-report-tasks-area');
-            let profileTimelineHTML = "";
+            let portfolioTimelineHTML = "";
             
-            // DEBUG: Log what's in the registry
-            console.log('🔍 DEBUG: persistentWeeklyRegistryLogs keys:', Object.keys(persistentWeeklyRegistryLogs));
-            console.log('🔍 DEBUG: All registry data:', persistentWeeklyRegistryLogs);
-            
-            defaultChoreRegistryArray.forEach((task, taskIndex) => {
-                let timelineWeeksHTML = "";
-
-                // Generate status badges for each of the last 10 dates matching the layout dataset
-                attendanceHistoryDataset.forEach((weekData, weekIndex) => {
-                    // Check if user was actually assigned to this chore this week from database records
-                    let wasAssignedToChore = false;
-
-                    // Try to find the date in persistentWeeklyRegistryLogs
-                    // Search through all keys to find matches
-                    const allRegistryKeys = Object.keys(persistentWeeklyRegistryLogs);
-                    console.log(`🔍 Week ${weekIndex} (${weekData.date}): Searching in ${allRegistryKeys.length} keys`);
+            // Build timeline of actual schedules where volunteer participated
+            if (allRegistryKeys.length === 0) {
+                portfolioTimelineHTML = `<div style="font-weight:800; font-size:0.8rem; color:var(--accent-red);">No schedules logged yet for this volunteer.</div>`;
+            } else {
+                // Get all schedule dates sorted in reverse (newest first)
+                const scheduleDates = allRegistryKeys.sort().reverse();
+                
+                portfolioTimelineHTML = scheduleDates.map(dateKey => {
+                    const registryData = persistentWeeklyRegistryLogs[dateKey];
                     
-                    for (const dateKey of allRegistryKeys) {
-                        const registryData = persistentWeeklyRegistryLogs[dateKey];
-                        console.log(`   Checking date key: "${dateKey}":`, registryData);
-                        
-                        if (registryData && registryData[task.name]) {
-                            const volunteersForChore = registryData[task.name];
-                            console.log(`     Chore "${task.name}" has volunteers:`, volunteersForChore);
-                            
-                            if (volunteersForChore.includes(volunteerName)) {
-                                console.log(`     ✅ ${volunteerName} is in this chore!`);
-                                wasAssignedToChore = true;
-                                break;
-                            }
+                    // Get chores for this volunteer in this schedule
+                    const assignedChores = [];
+                    Object.entries(registryData).forEach(([choreName, volunteers]) => {
+                        if (volunteers && volunteers.includes(volunteerName)) {
+                            assignedChores.push(choreName);
                         }
-                    }
-
-                    if (wasAssignedToChore) {
-                        timelineWeeksHTML += `<span class="chore-week-badge worked" title="Worked on ${weekData.date}">${weekData.date}</span>`;
+                    });
+                    
+                    // Format date for display
+                    const dateObj = new Date(dateKey);
+                    const dateLabel = `${dateObj.getMonth() + 1}/${dateObj.getDate()}`;
+                    
+                    let choresContentHTML = '';
+                    if (assignedChores.length > 0) {
+                        choresContentHTML = `
+                            <div class="portfolio-chore-box">
+                                <div class="portfolio-chore-header">
+                                    <span style="font-size:0.7rem; font-weight:900; text-transform:uppercase; color:var(--text-secondary)">Assigned Duties</span>
+                                    <span class="portfolio-badge badge-assigned">Active logs</span>
+                                </div>
+                                <div class="chore-tag-list">
+                                    ${assignedChores.map(chore => `
+                                        <div class="chore-pill">
+                                            <i data-lucide="check-square" size="12" style="color:var(--wa-teal); stroke-width:3;"></i>
+                                            <span>${chore}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>`;
                     } else {
-                        timelineWeeksHTML += `<span class="chore-week-badge skipped" title="Not assigned on ${weekData.date}">${weekData.date}</span>`;
+                        choresContentHTML = `
+                            <div class="portfolio-chore-box" style="border-style: dashed; background: #fff5f5;">
+                                <div class="portfolio-chore-header">
+                                    <span style="font-size:0.7rem; font-weight:900; text-transform:uppercase; color:var(--accent-red)">No Allocations</span>
+                                    <span class="portfolio-badge badge-empty">No Work</span>
+                                </div>
+                                <p style="font-size:0.75rem; font-weight:700; color:var(--text-secondary); text-transform:uppercase;">
+                                    No assignments for this schedule.
+                                </p>
+                            </div>`;
                     }
-                });
 
-                profileTimelineHTML += `
-                    <div class="report-task-row">
-                        <div class="report-task-head">
-                            ${task.name}
-                        </div>
-                        <div class="chore-timeline-container">
-                            ${timelineWeeksHTML}
-                        </div>
-                    </div>
-                `;
-            });
+                    return `
+                        <div class="timeline-node-block">
+                            <div class="timeline-date-header">${dateLabel}</div>
+                            ${choresContentHTML}
+                        </div>`;
+                }).join('');
+            }
 
-            profileTasksContainer.innerHTML = profileTimelineHTML;
+            profileTasksContainer.innerHTML = portfolioTimelineHTML;
+
+            // Add timeline wrapper styles if not present
+            const reportTasksArea = document.getElementById('user-report-tasks-area');
+            if (reportTasksArea && !reportTasksArea.classList.contains('timeline-wrapper')) {
+                reportTasksArea.classList.add('timeline-wrapper');
+            }
 
             // Switch layout views cleanly
             document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
             document.getElementById('view-user-report').classList.add('active-view');
             document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
 
+            if (window.lucide) lucide.createIcons();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
