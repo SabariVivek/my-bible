@@ -2513,7 +2513,34 @@
             generateBarDistributionGrid();
             syncLiveKPIValues();
             
+            // Refresh all content with new data
+            refreshAllContentViews();
+            
             switchMainTab('view-schedule', document.querySelectorAll('.nav-item')[1]);
+        }
+
+        // Refresh all content views with updated data
+        function refreshAllContentViews() {
+            console.log('🔄 Refreshing all content views with new data...');
+            
+            // Refresh volunteer directory
+            renderMasterVolunteersRegistryView();
+            
+            // Refresh chores registry
+            renderGlobalChoresRegistrySheet();
+            
+            // Refresh the volunteer list on the left side
+            const volunteerList = document.getElementById('master-volunteers-list-mount');
+            if (volunteerList) {
+                renderMasterVolunteersRegistryView();
+            }
+            
+            // Recreate Lucide icons for any newly rendered elements
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+            
+            console.log('✅ All content views refreshed successfully');
         }
 
         // Save assignments to Supabase database
@@ -2633,15 +2660,16 @@
                 }).filter(rec => rec.volunteer_id); // Only include valid records
                 
                 if (attendanceRecords.length > 0) {
+                    // Use upsert to avoid duplicate key conflicts - insert or update if exists
                     const { data: attendanceData, error: attendanceError } = await supabaseClient
                         .from('attendance_history')
-                        .insert(attendanceRecords);
+                        .upsert(attendanceRecords, { onConflict: 'volunteer_id,week_number' });
                     
                     if (attendanceError) {
-                        console.error('❌ ERROR inserting attendance:', attendanceError);
+                        console.error('❌ ERROR upserting attendance:', attendanceError);
                         console.error('   Error message:', attendanceError.message);
                     } else {
-                        console.log('✅ Attendance history saved:', attendanceRecords.length, 'records');
+                        console.log('✅ Attendance history saved/updated:', attendanceRecords.length, 'records');
                     }
                 }
                 
