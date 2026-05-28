@@ -2181,15 +2181,21 @@
             const container = document.getElementById('global-chores-blueprint-gallery');
             if (!container) return;
             
-            container.innerHTML = defaultChoreRegistryArray.map(task => `
+            container.innerHTML = defaultChoreRegistryArray.map(task => {
+                // Use task icon if available, otherwise fallback to a default
+                const iconName = task.icon || 'circle-check';
+                console.log(`🔍 Chore: ${task.name}, Icon: ${iconName}`);
+                
+                return `
                 <div class="brutal-chore-tile" onclick="loadChoreAssignmentPage('${task.name.replace(/'/g, "\\'")}', '${task.area.replace(/'/g, "\\'")}')">
                     <div class="tile-icon-row">
-                        <i data-lucide="${task.icon}" size="16" style="stroke-width: 2.5; color: var(--text-primary);"></i>
+                        <i data-lucide="${iconName}" size="16" style="stroke-width: 2.5; color: var(--text-primary);"></i>
                         <span class="tile-badge">${task.area.split(' ')[0]}</span>
                     </div>
                     <div class="tile-label">${task.name}</div>
                 </div>
-            `).join('');
+            `;
+            }).join('');
             
             if (window.lucide) lucide.createIcons();
         }
@@ -2749,19 +2755,29 @@
 
             let timelineNodesHTML = "";
 
+            // DEBUG: Log what's in the registry for this chore
+            console.log('🔍 DEBUG: Looking for chore:', choreName);
+            console.log('🔍 DEBUG: persistentWeeklyRegistryLogs keys:', Object.keys(persistentWeeklyRegistryLogs));
+            
             // Evaluate every single step of our active 10-week history
             attendanceHistoryDataset.forEach((weekData, weekIndex) => {
                 let assignedWorkers = [];
 
-                // Find corresponding raw date block matching standard registry structure
-                const rawDateMatch = Array.from(document.querySelectorAll('#view-schedule .nb-card[data-rawdate]'))
-                                          .map(card => card.getAttribute('data-rawdate'))[9 - weekIndex] || "";
-
-                // Look up live custom workflow sessions first - ONLY show actual assignments
-                if (rawDateMatch && persistentWeeklyRegistryLogs[rawDateMatch] && persistentWeeklyRegistryLogs[rawDateMatch][choreName]) {
-                    assignedWorkers = persistentWeeklyRegistryLogs[rawDateMatch][choreName];
+                // Search through all keys in persistentWeeklyRegistryLogs to find actual assignments
+                const allRegistryKeys = Object.keys(persistentWeeklyRegistryLogs);
+                console.log(`🔍 Week ${weekIndex} (${weekData.date}): Searching in ${allRegistryKeys.length} keys for chore "${choreName}"`);
+                
+                for (const dateKey of allRegistryKeys) {
+                    const registryData = persistentWeeklyRegistryLogs[dateKey];
+                    console.log(`   Checking date key: "${dateKey}":`, registryData);
+                    
+                    if (registryData && registryData[choreName]) {
+                        const volunteersForChore = registryData[choreName];
+                        console.log(`     Chore "${choreName}" has volunteers:`, volunteersForChore);
+                        assignedWorkers = volunteersForChore;
+                        break;
+                    }
                 }
-                // If no actual assignment found, leave assignedWorkers empty (don't show simulated data)
 
                 // Determine styling and icon state flags based on work roster presence
                 const hasWorkers = assignedWorkers.length > 0;
