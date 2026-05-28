@@ -2210,6 +2210,13 @@
         let transientSelectedDateString = "";
         let transientPresentVolunteersArray = [];
 
+        // Mobile navigation history tracking for back button support
+        let navigationHistory = { 
+            previousView: null,
+            previousViewId: null,
+            currentViewId: 'view-main-dashboard'
+        };
+
         document.addEventListener("DOMContentLoaded", async () => {
             // Show skeleton loaders
             showSkeletonLoaders();
@@ -2239,6 +2246,16 @@
             document.addEventListener('click', () => {
                 document.getElementById('top-actions-dropdown').style.display = 'none';
             });
+
+            // Mobile back button support via popstate event
+            window.addEventListener('popstate', (event) => {
+                if (event.state && event.state.viewId) {
+                    restorePreviousView(event.state.viewId);
+                }
+            });
+
+            // Initialize history state for main dashboard
+            window.history.replaceState({ viewId: 'view-main-dashboard' }, 'Dashboard');
         });
 
         /* SHORTCUT CALENDAR DATEPRESETS TRANSLATOR HELPER ENGINE */
@@ -2701,6 +2718,9 @@
 
         /* SCREEN ROUTER: LOADS COMPLETED TASK RECORDS FOR WEEK */
         async function loadWeeklyReportSummaryPage(rawDateString, localizedTitle) {
+            // Push navigation state for mobile back button support
+            pushNavigationState('view-weekly-report', `Weekly Report - ${localizedTitle}`);
+            
             document.getElementById('report-heading-date').innerText = localizedTitle;
             const reportDisplayArea = document.getElementById('weekly-report-tasks-area');
 
@@ -2818,6 +2838,8 @@
 
         /* SCREEN ROUTER: LOADS SPECIFIC VOLUNTEER'S CHORE HISTORY BY DATE */
         function loadVolunteerProfilePage(volunteerName) {
+            // Push navigation state for mobile back button support
+            pushNavigationState('view-user-report', `Profile - ${volunteerName}`);
             const userObj = registeredVolunteersRoster.find(v => v.name === volunteerName);
             if (!userObj) return;
 
@@ -2932,6 +2954,8 @@
 
         /* SCREEN ROUTER: LOADS SPECIFIC CHORE'S ASSIGNMENT HISTORY BY WEEK WITH TIMELINE THEME */
         function loadChoreAssignmentPage(choreName, choreArea) {
+            // Push navigation state for mobile back button support
+            pushNavigationState('view-chore-report', `Chore Report - ${choreName}`);
             // Close the bottom registry drawer safely first
             closeBottomSheet('sheet-add-chore');
 
@@ -3017,6 +3041,34 @@
             event.stopPropagation();
             const dropdown = document.getElementById('top-actions-dropdown');
             dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        /* MOBILE NAVIGATION: Push state when navigating to a report page */
+        function pushNavigationState(viewId, pageTitle) {
+            // Store previous view before switching
+            navigationHistory.previousViewId = navigationHistory.currentViewId;
+            navigationHistory.currentViewId = viewId;
+            
+            // Push state onto browser history stack
+            window.history.pushState({ viewId: viewId }, pageTitle);
+        }
+
+        /* MOBILE NAVIGATION: Restore previous view when back button is pressed */
+        function restorePreviousView(previousViewId) {
+            // Determine which view to show and handle navigation
+            if (previousViewId === 'view-main-dashboard') {
+                // Return to main dashboard
+                document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
+                document.getElementById('view-main-dashboard').classList.add('active-view');
+                document.querySelector('.bottom-nav').style.display = 'grid'; // Show bottom nav on return to dashboard
+            } else {
+                // Handle other view transitions
+                document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
+                document.getElementById(previousViewId)?.classList.add('active-view');
+            }
+            
+            navigationHistory.currentViewId = previousViewId;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function openBottomSheet(sheetId) {
