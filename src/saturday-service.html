@@ -2311,12 +2311,28 @@
             const container = document.getElementById('master-volunteers-list-mount');
             const existingCards = container.querySelectorAll('.card-container');
             
+            // Color palette for volunteer cards (asymmetric rotation)
+            const volunteerCardColors = [
+                '#ffedd5', // Warm Sand
+                '#e0f2fe', // Ice Blue
+                '#f3e8ff', // Soft Lavender
+                '#fef9c3', // Banana Cream
+                '#ccfbf1', // Pale Teal
+                '#ffe4e6', // Blush Pink
+                '#dcfce7', // Mint Cream
+                '#fce7f3'  // Thistle Purple
+            ];
+            
             if (existingCards.length > 0) {
                 // Update existing skeleton cards with real data
                 existingCards.forEach((cardContainer, index) => {
                     if (index < registeredVolunteersRoster.length) {
                         const vol = registeredVolunteersRoster[index];
                         const card = cardContainer.querySelector('.nb-card');
+                        
+                        // Apply rotating background color
+                        const bgColor = volunteerCardColors[index % volunteerCardColors.length];
+                        card.style.background = bgColor;
                         
                         // Update card content
                         card.setAttribute('data-username', vol.name);
@@ -2338,9 +2354,11 @@
                 });
             } else {
                 // Fallback for fresh render
-                container.innerHTML = registeredVolunteersRoster.map(vol => `
+                container.innerHTML = registeredVolunteersRoster.map((vol, index) => {
+                    const bgColor = volunteerCardColors[index % volunteerCardColors.length];
+                    return `
                     <div class="card-container" onclick="loadVolunteerProfilePage('${vol.name}')">
-                        <div class="nb-card reveal loaded" data-username="${vol.name}">
+                        <div class="nb-card reveal loaded" data-username="${vol.name}" style="background: ${bgColor};">
                             <div class="user-card-body">
                                 <div class="user-info-side">
                                     <h3 class="nb-title">${vol.name}</h3>
@@ -2354,7 +2372,8 @@
                             </div>
                         </div>
                     </div>
-                `).join('');
+                `;
+                }).join('');
             }
             if (window.lucide) lucide.createIcons();
         }
@@ -2463,6 +2482,7 @@
             document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
             document.getElementById('view-plan-assignments').classList.add('active-view');
             document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
+            document.querySelector('.bottom-nav').style.display = 'none';
         }
 
         function finalizeAndCommitAssignmentsToTimeline() {
@@ -2790,6 +2810,7 @@
             document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
             document.getElementById('view-weekly-report').classList.add('active-view');
             document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
+            document.querySelector('.bottom-nav').style.display = 'none';
             
             if (window.lucide) lucide.createIcons();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2903,6 +2924,7 @@
             document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
             document.getElementById('view-user-report').classList.add('active-view');
             document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
+            document.querySelector('.bottom-nav').style.display = 'none';
 
             if (window.lucide) lucide.createIcons();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2984,6 +3006,7 @@
             document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
             document.getElementById('view-chore-report').classList.add('active-view');
             document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
+            document.querySelector('.bottom-nav').style.display = 'none';
 
             // Refresh vector graphics and scroll to top smoothly
             if (window.lucide) lucide.createIcons();
@@ -3019,6 +3042,9 @@
 
             document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
             document.getElementById(targetViewId).classList.add('active-view');
+            
+            // Show bottom nav when switching to main tabs (use grid since that's its default display)
+            document.querySelector('.bottom-nav').style.display = 'grid';
             
             // Render icons for the current view
             if (window.lucide) lucide.createIcons();
