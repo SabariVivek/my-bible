@@ -2669,11 +2669,29 @@
             document.getElementById('user-report-desc').innerText = userObj.description || 'Dedicated church worker.';
             document.getElementById('user-report-avatar').src = userObj.avatar;
 
-            // Calculate precise attendance percentage matching standard metrics array
-            const checksArray = userObj.attendance.split(',');
-            const presentCount = checksArray.filter(v => v.trim() === "1").length;
-            const ratioPercentage = Math.round((presentCount / checksArray.length) * 100);
-            document.getElementById('user-report-ratio').innerText = `${ratioPercentage}% (${presentCount}/10 Wks)`;
+            // Count schedule participations based on actual assignments
+            let schedulesParticipated = 0;
+            const allRegistryKeys = Object.keys(persistentWeeklyRegistryLogs);
+            
+            // Iterate through all schedules and count how many the volunteer participated in
+            allRegistryKeys.forEach(dateKey => {
+                const registryData = persistentWeeklyRegistryLogs[dateKey];
+                if (registryData) {
+                    // Check if this volunteer is assigned to ANY chore in this schedule
+                    const participated = Object.values(registryData).some(volunteersForChore => 
+                        volunteersForChore && volunteersForChore.includes(volunteerName)
+                    );
+                    if (participated) {
+                        schedulesParticipated++;
+                    }
+                }
+            });
+
+            // Calculate percentage based on total schedules
+            const totalSchedules = allRegistryKeys.length;
+            const participationPercentage = totalSchedules > 0 ? Math.round((schedulesParticipated / totalSchedules) * 100) : 0;
+            
+            document.getElementById('user-report-ratio').innerText = `${participationPercentage}% (${schedulesParticipated}/${totalSchedules} Schedules)`;
 
             const profileTasksContainer = document.getElementById('user-report-tasks-area');
             let profileTimelineHTML = "";
