@@ -39,6 +39,20 @@
             align-items: center;
             min-height: 100vh;
             overflow-x: hidden;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-touch-callout: none;
+            touch-action: manipulation;
+        }
+
+        /* Allow text selection in inputs, textareas, and selects */
+        input, textarea, select {
+            user-select: text;
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
         }
 
         /* --- FLUSH TOP NAVIGATION WITH DROPDOWN MANAGEMENT --- */
@@ -469,6 +483,12 @@
             background: var(--text-primary);
         }
 
+        .bar-pillar-placeholder {
+            background: #e5e7eb;
+            opacity: 0.4;
+            border-style: dashed;
+        }
+
         .bar-tooltip-val {
             position: absolute;
             top: -16px;
@@ -788,6 +808,18 @@
             transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
         }
 
+        .nb-card.newly-created {
+            background: var(--accent-yellow) !important;
+            box-shadow: 0 0 0 3px var(--accent-yellow), 4px 4px 0px var(--text-primary) !important;
+            animation: pulse-highlight 0.6s ease-in-out;
+        }
+
+        @keyframes pulse-highlight {
+            0% { box-shadow: 0 0 0 3px var(--accent-yellow), 0 0 20px rgba(254, 240, 138, 0.8); }
+            50% { box-shadow: 0 0 0 6px var(--accent-yellow), 0 0 30px rgba(254, 240, 138, 0.5); }
+            100% { box-shadow: 0 0 0 3px var(--accent-yellow), 4px 4px 0px var(--text-primary); }
+        }
+
         /* --- WORK ASSIGNMENT SCREEN --- */
         .plan-summary-header {
             background: var(--accent-yellow);
@@ -818,6 +850,7 @@
             padding: 14px 12px;
             margin-bottom: 12px;
             box-shadow: 3px 3px 0px var(--text-primary);
+            position: relative;
         }
 
         .task-main-title {
@@ -826,6 +859,38 @@
             text-transform: uppercase;
             margin-bottom: 10px;
             letter-spacing: -0.2px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .task-delete-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent-red);
+            border: 3px solid var(--text-primary);
+            border-radius: 4px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0;
+            color: white;
+            font-weight: bold;
+            box-shadow: 2px 2px 0px var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .task-delete-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 3px 3px 0px var(--text-primary);
+        }
+
+        .task-delete-btn:active {
+            transform: scale(0.95);
         }
 
         /* Multi-Select Styled Component */
@@ -850,8 +915,20 @@
         }
 
         .assignee-select option:checked {
-            background-color: var(--wa-teal) !important;
+            background: linear-gradient(var(--accent-green), var(--accent-green)) !important;
+            background-color: var(--accent-green) !important;
             color: #ffffff !important;
+        }
+
+        /* Style for multi-select better visibility */
+        .assignee-select:focus {
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2), inset 0 0 0 2px var(--accent-green);
+            border-color: var(--accent-green);
+        }
+
+        .assignee-select option {
+            background: white !important;
+            color: var(--text-primary) !important;
         }
 
         .multi-hint-caption {
@@ -861,6 +938,21 @@
             text-transform: uppercase;
             margin-top: 4px;
             display: block;
+            user-select: none;
+        }
+
+        /* Disable copy on long press */
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        /* Allow text selection only in input fields */
+        input, textarea, select, .nb-card, .report-task-row {
+            user-select: text;
+            -webkit-user-select: text;
         }
 
         /* --- USER CARD GRAPHICS LAYOUT --- */
@@ -935,6 +1027,23 @@
             border-radius: 2px;
             font-size: 0.65rem;
             font-weight: 800;
+        }
+
+        .nb-meta .status-badge.status-completed {
+            background: #6b7280;
+            color: #f3f4f6;
+        }
+
+        .nb-meta .status-badge.status-inprogress {
+            background: var(--accent-blue);
+            color: white;
+            box-shadow: 0 0 0 2px var(--accent-blue), 0 0 8px rgba(37, 99, 235, 0.4);
+        }
+
+        .nb-card.inprogress-schedule {
+            background: var(--accent-yellow) !important;
+            border: 3px solid var(--text-primary);
+            box-shadow: 4px 4px 0px var(--text-primary) !important;
         }
 
         .nb-title {
@@ -1116,7 +1225,7 @@
         }
 
         .badge-assigned { 
-            background: var(--accent-purple); 
+            background: var(--accent-yellow); 
             box-shadow: 2px 2px 0px var(--text-primary); 
         }
 
@@ -1137,7 +1246,7 @@
             border: 2px solid var(--text-primary);
             padding: 4px 8px;
             border-radius: 4px;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             font-weight: 800;
             text-transform: uppercase;
             display: inline-flex;
@@ -1544,10 +1653,14 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Profile Description</label>
-                    <input type="text" class="form-input" placeholder="e.g. Dedicated to altar orchestration...">
+                    <input type="text" class="form-input" id="new-user-description" placeholder="e.g. Dedicated to altar orchestration...">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Avatar URL</label>
+                    <input type="text" class="form-input" id="new-user-avatar" placeholder="https://example.com/avatar.jpg">
                 </div>
             </div>
-            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0;" onclick="closeBottomSheet('sheet-add-user')">Save Volunteer</button>
+            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0;" onclick="saveNewVolunteerToDatabase()">Save Volunteer</button>
         </div>
     </div>
 
@@ -1720,6 +1833,20 @@
             <div class="nb-section">
                 <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 16px;">Volunteer Roster</span>
                 <div id="master-volunteers-list-mount"></div>
+            </div>
+        </div>
+
+        <div id="view-edit-schedule" class="tab-content">
+            <div class="report-back-btn" onclick="document.getElementById('view-edit-schedule').classList.remove('active-view'); document.getElementById('view-schedule').classList.add('active-view'); document.querySelector('.bottom-nav').style.display = 'grid';">
+                <i data-lucide="arrow-left" size="14"></i> Back to Schedule
+            </div>
+            <div class="plan-summary-header" style="background: var(--accent-yellow);">
+                <h4 id="edit-schedule-heading">Edit Schedule</h4>
+                <p style="margin-top: 4px;">Modify chore assignments</p>
+            </div>
+            <div class="nb-section">
+                <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 20px;">Edit Assignments</span>
+                <div id="edit-schedule-container"></div>
             </div>
         </div>
     </div>
@@ -1992,30 +2119,45 @@
             
             // Calculate attendance history dataset for charts
             const weeks = new Map();
+            
+            // Get all schedules first
+            const { data: allSchedules } = await supabaseClient
+                .from('service_schedules')
+                .select('service_date, volunteer_count')
+                .order('service_date', { ascending: true });
+            
+            // Populate from schedules
+            if (allSchedules) {
+                allSchedules.forEach((schedule, idx) => {
+                    const weekNum = idx + 1;
+                    const dateObj = new Date(schedule.service_date);
+                    const dateStr = dateObj.toLocaleDateString('en-US', {month:'numeric', day:'numeric'});
+                    weeks.set(weekNum, {
+                        label: `W${weekNum}`,
+                        date: dateStr,
+                        count: schedule.volunteer_count || 0
+                    });
+                });
+            }
+            
+            // Also get attendance history to count present volunteers per week
             const { data: attendanceData } = await supabaseClient
                 .from('attendance_history')
                 .select('week_number, week_date, present');
             
             if (attendanceData) {
                 attendanceData.forEach(record => {
-                    if (!weeks.has(record.week_number)) {
-                        weeks.set(record.week_number, {
-                            label: `W${record.week_number}`,
-                            date: record.week_date ? new Date(record.week_date).toLocaleDateString('en-US', {month:'numeric', day:'numeric'}) : '',
-                            count: 0
-                        });
+                    if (weeks.has(record.week_number) && record.present) {
+                        weeks.get(record.week_number).presentCount = (weeks.get(record.week_number).presentCount || 0) + 1;
                     }
-                    if (record.present) {
-                        weeks.get(record.week_number).count++;
-                    }
-                });
-                
-                attendanceHistoryDataset = Array.from(weeks.values()).sort((a, b) => {
-                    const weekNumA = parseInt(a.label.replace('W', ''));
-                    const weekNumB = parseInt(b.label.replace('W', ''));
-                    return weekNumA - weekNumB;
                 });
             }
+            
+            attendanceHistoryDataset = Array.from(weeks.values()).sort((a, b) => {
+                const weekNumA = parseInt(a.label.replace('W', ''));
+                const weekNumB = parseInt(b.label.replace('W', ''));
+                return weekNumA - weekNumB;
+            });
             
             console.log('✅ All data initialized:');
             console.log('   - Chores:', defaultChoreRegistryArray.length);
@@ -2146,6 +2288,18 @@
                 
                 let monthIndex = 0;
                 
+                // Find the most recent schedule (latest created)
+                let latestScheduleDate = null;
+                for (const [monthYear, scheduleList] of Object.entries(schedulesByMonth)) {
+                    if (scheduleList.length > 0) {
+                        const dates = scheduleList.map(s => new Date(s.service_date));
+                        const maxDate = new Date(Math.max(...dates));
+                        if (!latestScheduleDate || maxDate > latestScheduleDate) {
+                            latestScheduleDate = maxDate.toISOString().split('T')[0];
+                        }
+                    }
+                }
+                
                 // Create sections for each month
                 for (const [monthYear, scheduleList] of Object.entries(schedulesByMonth)) {
                     // Create section for this month
@@ -2161,11 +2315,22 @@
                     
                     // Add schedule cards to this section
                     for (const schedule of scheduleList) {
+                        // Only mark the latest schedule as in-progress
+                        let statusLabel = `${schedule.volunteerCount} Present`;
+                        let statusClass = 'active-count';
+                        let cardClass = '';
+                        
+                        if (schedule.service_date === latestScheduleDate) {
+                            statusLabel = 'In Progress';
+                            statusClass = 'status-inprogress';
+                            cardClass = ' inprogress-schedule';
+                        }
+                        
                         const cardHTML = `
-                            <div class="nb-card reveal loaded" data-volunteers="${schedule.volunteerCount}" data-rawdate="${schedule.service_date}">
+                            <div class="nb-card reveal loaded${cardClass}" data-volunteers="${schedule.volunteerCount}" data-rawdate="${schedule.service_date}">
                                 <div class="nb-meta">
                                     <span>Saturday Sequence Ad-Hoc</span>
-                                    <span class="status-badge active-count">${schedule.volunteerCount} Present</span>
+                                    <span class="status-badge ${statusClass}">${statusLabel}</span>
                                 </div>
                                 <h3 class="nb-title">${schedule.localizedDate}</h3>
                                 <p class="nb-desc">${schedule.statusText}</p>
@@ -2174,9 +2339,13 @@
                         
                         const newCardItem = document.createElement('div');
                         newCardItem.className = 'card-container';
-                        newCardItem.onclick = () => loadWeeklyReportSummaryPage(schedule.service_date, schedule.localizedDate).catch(err => console.error('Error loading report:', err));
                         newCardItem.innerHTML = cardHTML;
-                        
+                        newCardItem.onclick = () => loadWeeklyReportSummaryPage(schedule.service_date, schedule.localizedDate).catch(err => console.error('Error loading report:', err));
+                        newCardItem.oncontextmenu = (e) => {
+                            e.preventDefault();
+                            loadEditSchedulePage(schedule.service_date, schedule.localizedDate);
+                            return false;
+                        };
                         section.appendChild(newCardItem);
                     }
                     
@@ -2218,6 +2387,13 @@
         };
 
         document.addEventListener("DOMContentLoaded", async () => {
+            // Prevent text selection on long press/touch
+            document.addEventListener('selectstart', (e) => {
+                if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA' && e.target.tagName !== 'SELECT') {
+                    e.preventDefault();
+                }
+            });
+
             // Show skeleton loaders
             showSkeletonLoaders();
             
@@ -2255,7 +2431,7 @@
             });
 
             // Initialize history state for main dashboard
-            window.history.replaceState({ viewId: 'view-main-dashboard' }, 'Dashboard');
+            window.history.replaceState({ viewId: 'view-home' }, 'Dashboard');
         });
 
         /* SHORTCUT CALENDAR DATEPRESETS TRANSLATOR HELPER ENGINE */
@@ -2284,7 +2460,10 @@
             let gridHTML = "";
             let axisHTML = "";
             const maxVal = 10;
+            const currentDataCount = attendanceHistoryDataset.length;
+            const weeksNeeded = Math.max(7, currentDataCount); // Show all data + min 7 weeks
 
+            // Render existing data
             attendanceHistoryDataset.forEach(data => {
                 const heightPercentage = (data.count / maxVal) * 100;
                 gridHTML += `
@@ -2295,6 +2474,20 @@
                 `;
                 axisHTML += `<span>${data.date}</span>`;
             });
+
+            // Add placeholder bars for future weeks (until we have at least 7)
+            if (currentDataCount < weeksNeeded) {
+                const placeholdersNeeded = weeksNeeded - currentDataCount;
+                for (let i = 0; i < placeholdersNeeded; i++) {
+                    gridHTML += `
+                        <div class="bar-column-wrapper">
+                            <span class="bar-tooltip-val" style="opacity: 0;">0</span>
+                            <div class="bar-pillar bar-pillar-placeholder" style="height: 20%"></div>
+                        </div>
+                    `;
+                    axisHTML += `<span style="opacity: 0.5;">--</span>`;
+                }
+            }
 
             container.innerHTML = gridHTML;
             labelsContainer.innerHTML = axisHTML;
@@ -2326,7 +2519,6 @@
 
         function renderMasterVolunteersRegistryView() {
             const container = document.getElementById('master-volunteers-list-mount');
-            const existingCards = container.querySelectorAll('.card-container');
             
             // Color palette for volunteer cards (asymmetric rotation)
             const volunteerCardColors = [
@@ -2340,40 +2532,10 @@
                 '#fce7f3'  // Thistle Purple
             ];
             
-            if (existingCards.length > 0) {
-                // Update existing skeleton cards with real data
-                existingCards.forEach((cardContainer, index) => {
-                    if (index < registeredVolunteersRoster.length) {
-                        const vol = registeredVolunteersRoster[index];
-                        const card = cardContainer.querySelector('.nb-card');
-                        
-                        // Apply rotating background color
-                        const bgColor = volunteerCardColors[index % volunteerCardColors.length];
-                        card.style.background = bgColor;
-                        
-                        // Update card content
-                        card.setAttribute('data-username', vol.name);
-                        const userInfoSide = card.querySelector('.user-info-side');
-                        userInfoSide.querySelector('.nb-title').innerText = vol.name;
-                        userInfoSide.querySelector('.nb-desc').innerText = vol.description || '';
-                        
-                        // Update avatar
-                        card.querySelector('img').src = vol.avatar;
-                        card.querySelector('img').alt = vol.name;
-                        
-                        // Setup onclick
-                        cardContainer.onclick = () => loadVolunteerProfilePage(vol.name);
-                        
-                        // Update attendance tracker
-                        const trackerBox = card.querySelector('.attendance-tracker-box');
-                        trackerBox.setAttribute('data-attendance', vol.attendance);
-                    }
-                });
-            } else {
-                // Fallback for fresh render
-                container.innerHTML = registeredVolunteersRoster.map((vol, index) => {
-                    const bgColor = volunteerCardColors[index % volunteerCardColors.length];
-                    return `
+            // Always re-render the entire list to include newly added volunteers
+            container.innerHTML = registeredVolunteersRoster.map((vol, index) => {
+                const bgColor = volunteerCardColors[index % volunteerCardColors.length];
+                return `
                     <div class="card-container" onclick="loadVolunteerProfilePage('${vol.name}')">
                         <div class="nb-card reveal loaded" data-username="${vol.name}" style="background: ${bgColor};">
                             <div class="user-card-body">
@@ -2390,8 +2552,8 @@
                         </div>
                     </div>
                 `;
-                }).join('');
-            }
+            }).join('');
+            
             if (window.lucide) lucide.createIcons();
         }
 
@@ -2415,9 +2577,78 @@
             `).join('');
         }
 
+        function showValidationModal(message) {
+            const modal = document.createElement('div');
+            modal.id = 'validation-modal';
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+                padding: 20px;
+                animation: fadeIn 0.2s ease-out;
+            `;
+            modal.innerHTML = `
+                <div style="
+                    background: white;
+                    border: 3px solid #000;
+                    border-radius: 8px;
+                    padding: 24px;
+                    max-width: 90%;
+                    width: 100%;
+                    text-align: center;
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                    animation: slideUp 0.3s ease-out;
+                ">
+                    <div style="margin-bottom: 16px; font-size: 2rem;">⚠️</div>
+                    <p style="
+                        font-size: 1rem;
+                        font-weight: bold;
+                        color: var(--text-primary);
+                        margin-bottom: 16px;
+                        line-height: 1.6;
+                        white-space: pre-wrap;
+                        word-break: break-word;
+                    ">${message}</p>
+                    <button onclick="this.closest('#validation-modal').remove()" style="
+                        background: var(--accent-blue);
+                        color: white;
+                        border: 2px solid var(--text-primary);
+                        padding: 12px 24px;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        box-shadow: 2px 2px 0px var(--text-primary);
+                        transition: all 0.2s ease;
+                    " onmouseover="this.style.boxShadow='3px 3px 0px var(--text-primary)'" onmouseout="this.style.boxShadow='2px 2px 0px var(--text-primary)'">Got it</button>
+                </div>
+                <style>
+                    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+                    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+                </style>
+            `;
+            document.body.appendChild(modal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) modal.remove();
+            });
+        }
+
         function goToChoresSelectionSheet() {
             const checkedBoxes = document.querySelectorAll('.attendance-tickbox:checked');
             transientPresentVolunteersArray = Array.from(checkedBoxes).map(cb => cb.value);
+            
+            // Validate at least one volunteer is selected
+            if (transientPresentVolunteersArray.length === 0) {
+                showValidationModal('Please select at least one volunteer before proceeding.');
+                return;
+            }
             
             // Close Step 1 Sheet
             closeBottomSheet('sheet-select-attendance');
@@ -2427,6 +2658,240 @@
                 buildDynamicChoresSelectionCheckboxes();
                 openBottomSheet('sheet-select-chores');
             }, 300);
+        }
+
+        function handlePlanActionInitiation() {
+            const datePicker = document.getElementById('event-date-picker');
+            const errorBanner = document.getElementById('date-collision-error');
+            const selectedDate = datePicker.value;
+
+            if (!selectedDate) return;
+            errorBanner.style.display = "none";
+
+            const existingDates = Array.from(document.querySelectorAll('#view-schedule .nb-card[data-rawdate]'))
+                                      .map(card => card.getAttribute('data-rawdate'));
+
+            if (existingDates.includes(selectedDate)) {
+                errorBanner.style.display = "block";
+                return;
+            }
+
+            transientSelectedDateString = selectedDate;
+            document.querySelectorAll('.attendance-tickbox').forEach(cb => cb.checked = false);
+            openBottomSheet('sheet-select-attendance');
+        }
+
+        async function saveNewVolunteerToDatabase() {
+            const fullName = document.getElementById('new-user-fullname').value.trim();
+            const description = document.getElementById('new-user-description').value.trim();
+            const avatar = document.getElementById('new-user-avatar').value.trim();
+
+            if (!fullName) {
+                showValidationModal('Please enter a volunteer name.');
+                return;
+            }
+
+            if (!avatar) {
+                showValidationModal('Please provide an avatar URL.');
+                return;
+            }
+
+            try {
+                const { data, error } = await supabaseClient
+                    .from('volunteers')
+                    .insert({
+                        name: fullName,
+                        description: description || 'Church volunteer',
+                        avatar: avatar
+                    })
+                    .select();
+
+                if (error) {
+                    console.error('Insert error:', error);
+                    showValidationModal(`Error adding volunteer: ${error.message}`);
+                    return;
+                }
+
+                const newVolunteer = data[0];
+                registeredVolunteersRoster.push({
+                    id: newVolunteer.id,
+                    name: newVolunteer.name,
+                    avatar: newVolunteer.avatar,
+                    description: newVolunteer.description,
+                    attendance: ""
+                });
+
+                buildDynamicAttendanceSelectionCheckboxes();
+                renderMasterVolunteersRegistryView();
+                syncLiveKPIValues();
+
+                document.getElementById('new-user-fullname').value = '';
+                document.getElementById('new-user-description').value = '';
+                document.getElementById('new-user-avatar').value = '';
+                closeBottomSheet('sheet-add-user');
+
+                showValidationModal(`✅ ${fullName} added successfully!`);
+                if (window.lucide) lucide.createIcons();
+            } catch (err) {
+                console.error('Error saving volunteer:', err);
+                showValidationModal(`Error: ${err.message}`);
+            }
+        }
+
+        function loadEditSchedulePage(rawDateString, localizedTitle) {
+            pushNavigationState('view-edit-schedule', `Edit Schedule - ${localizedTitle}`);
+            
+            document.getElementById('edit-schedule-heading').innerText = localizedTitle;
+            const editContainer = document.getElementById('edit-schedule-container');
+            
+            let scheduleData = persistentWeeklyRegistryLogs[rawDateString] || {};
+            console.log(`📝 Loading edit schedule for ${rawDateString}:`, scheduleData);
+            
+            editContainer.innerHTML = defaultChoreRegistryArray.map(task => {
+                const assignedVolunteers = scheduleData[task.name] || [];
+                console.log(`   Chore: ${task.name}, Assigned: ${JSON.stringify(assignedVolunteers)}`);
+                return `
+                    <div class="task-assign-card" data-chore-id="${task.id}">
+                        <button class="task-delete-btn" onclick="deleteTaskCard(this)" title="Delete this task">×</button>
+                        <div class="task-main-title">
+                            <i data-lucide="${task.icon || 'circle-check'}" size="16" style="flex-shrink: 0;"></i>
+                            <span>${task.name}</span>
+                        </div>
+                        <select class="assignee-select" data-task-name="${task.name}" multiple>
+                            ${registeredVolunteersRoster.map(vol => {
+                                const isSelected = assignedVolunteers.includes(vol.name);
+                                return `<option value="${vol.name}" ${isSelected ? 'selected' : ''}>${vol.name}</option>`;
+                            }).join('')}
+                        </select>
+                        <span class="multi-hint-caption">Multiple selection is allowed</span>
+                    </div>
+                `;
+            }).join('');
+            
+            // Ensure selections are properly applied via JavaScript
+            setTimeout(() => {
+                document.querySelectorAll('#edit-schedule-container .assignee-select').forEach((select) => {
+                    const taskName = select.getAttribute('data-task-name');
+                    const assignedVolunteers = scheduleData[taskName] || [];
+                    console.log(`🔧 Setting selections for ${taskName}:`, assignedVolunteers);
+                    
+                    Array.from(select.options).forEach(option => {
+                        const shouldBeSelected = assignedVolunteers.includes(option.value);
+                        option.selected = shouldBeSelected;
+                        if (shouldBeSelected) {
+                            console.log(`   ✓ Selected: ${option.value}`);
+                        }
+                    });
+                });
+            }, 50);
+            
+            const actionButtons = document.createElement('div');
+            actionButtons.style.cssText = 'display: flex; gap: 12px; margin-top: 16px; margin-bottom: 20px;';
+            actionButtons.innerHTML = `
+                <button onclick="updateScheduleAssignments('${rawDateString}')" style="flex: 1; background: var(--accent-green); color: white; border: 2px solid var(--text-primary); padding: 12px; font-weight: bold; border-radius: 4px; cursor: pointer; box-shadow: 2px 2px 0px var(--text-primary);">Save Changes</button>
+                <button onclick="document.getElementById('view-edit-schedule').classList.remove('active-view'); document.getElementById('view-schedule').classList.add('active-view'); document.querySelector('.bottom-nav').style.display = 'grid';" style="flex: 1; background: var(--accent-red); color: white; border: 2px solid var(--text-primary); padding: 12px; font-weight: bold; border-radius: 4px; cursor: pointer; box-shadow: 2px 2px 0px var(--text-primary);">Cancel</button>
+            `;
+            editContainer.appendChild(actionButtons);
+            
+            document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
+            document.getElementById('view-edit-schedule').classList.add('active-view');
+            document.querySelector('.bottom-nav').style.display = 'none';
+            
+            if (window.lucide) lucide.createIcons();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function updateScheduleAssignments(rawDateString) {
+            let updatedTaskMap = {};
+            let unassignedChores = [];
+            
+            document.querySelectorAll('#edit-schedule-container .task-assign-card').forEach(card => {
+                const selectElement = card.querySelector('.assignee-select');
+                const taskName = selectElement.getAttribute('data-task-name');
+                const selectedNames = Array.from(selectElement.selectedOptions).map(opt => opt.value);
+                updatedTaskMap[taskName] = selectedNames;
+                
+                if (selectedNames.length === 0) {
+                    unassignedChores.push(taskName);
+                }
+            });
+            
+            if (unassignedChores.length > 0) {
+                showValidationModal(`The following chores have no volunteers assigned:\\n\\n${unassignedChores.join('\\n')}`);
+                return;
+            }
+            
+            persistentWeeklyRegistryLogs[rawDateString] = updatedTaskMap;
+            saveAssignmentsToDatabase(rawDateString, Object.values(updatedTaskMap).reduce((sum, arr) => sum + arr.length, 0), updatedTaskMap);
+            
+            showValidationModal('✅ Schedule updated successfully!');
+            
+            setTimeout(() => {
+                document.getElementById('view-edit-schedule').classList.remove('active-view');
+                document.getElementById('view-schedule').classList.add('active-view');
+                document.querySelector('.bottom-nav').style.display = 'grid';
+            }, 800);
+        }
+
+        async function saveNewVolunteerToDatabase() {
+            const fullName = document.getElementById('new-user-fullname').value.trim();
+            const description = document.getElementById('new-user-description').value.trim();
+            const avatar = document.getElementById('new-user-avatar').value.trim();
+
+            // Validation
+            if (!fullName) {
+                showValidationModal('Please enter a volunteer name.');
+                return;
+            }
+
+            if (!avatar) {
+                showValidationModal('Please provide an avatar URL.');
+                return;
+            }
+
+            try {
+                // Insert into Supabase
+                const { data, error } = await supabaseClient
+                    .from('volunteers')
+                    .insert({
+                        name: fullName,
+                        description: description || 'Church volunteer',
+                        avatar: avatar
+                    })
+                    .select();
+
+                if (error) {
+                    showValidationModal(`Error adding volunteer: ${error.message}`);
+                    return;
+                }
+
+                // Add to local roster
+                const newVolunteer = data[0];
+                registeredVolunteersRoster.push({
+                    id: newVolunteer.id,
+                    name: newVolunteer.name,
+                    avatar: newVolunteer.avatar,
+                    description: newVolunteer.description,
+                    attendance: ""
+                });
+
+                // Refresh UI
+                buildDynamicAttendanceSelectionCheckboxes();
+                renderMasterVolunteersRegistryView();
+                syncLiveKPIValues();
+
+                // Clear form and close
+                document.getElementById('new-user-fullname').value = '';
+                document.getElementById('new-user-description').value = '';
+                document.getElementById('new-user-avatar').value = '';
+                closeBottomSheet('sheet-add-user');
+
+                showValidationModal(`✅ ${fullName} added successfully!`);
+                if (window.lucide) lucide.createIcons();
+            } catch (err) {
+                console.error('Error saving volunteer:', err);
+                showValidationModal(`Error: ${err.message}`);
+            }
         }
 
         function handlePlanActionInitiation() {
@@ -2485,14 +2950,19 @@
                 } else {
                     // Render only selected chores on the assignments page
                     assignmentArea.innerHTML = activeChores.map(task => `
-                        <div class="task-assign-card">
-                            <div class="task-main-title">${task.name}</div>
+                        <div class="task-assign-card" data-chore-id="${task.id}">
+                            <button class="task-delete-btn" onclick="deleteTaskCard(this)" title="Delete this task">✕</button>
+                            <div class="task-main-title">
+                                <i data-lucide="${task.icon || 'circle-check'}" size="16" style="flex-shrink: 0;"></i>
+                                <span>${task.name}</span>
+                            </div>
                             <select class="assignee-select" data-task-name="${task.name}" multiple>
                                 ${selectOptionsHTML}
                             </select>
-                            <span class="multi-hint-caption">Hold Ctrl/Cmd to select multiple</span>
+                            <span class="multi-hint-caption">Multiple selection is allowed</span>
                         </div>
                     `).join('');
+                    if (window.lucide) lucide.createIcons();
                 }
             }
 
@@ -2500,6 +2970,14 @@
             document.getElementById('view-plan-assignments').classList.add('active-view');
             document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
             document.querySelector('.bottom-nav').style.display = 'none';
+        }
+
+        function deleteTaskCard(button) {
+            const card = button.closest('.task-assign-card');
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+            card.style.transition = 'all 0.2s ease';
+            setTimeout(() => card.remove(), 200);
         }
 
         function finalizeAndCommitAssignmentsToTimeline() {
@@ -2512,18 +2990,78 @@
 
             // Capture chosen multi-select fields live
             let singleEventTaskMap = {};
+            let unassignedChores = [];
             document.querySelectorAll('#assignment-tasks-load-area .task-assign-card').forEach(card => {
                 const selectElement = card.querySelector('.assignee-select');
-                const taskName = selectElement.getAttribute('data-task-name');  // ✅ Get original name from data attribute
+                const taskName = selectElement.getAttribute('data-task-name');
                 const selectedNames = Array.from(selectElement.selectedOptions).map(opt => opt.value);
                 singleEventTaskMap[taskName] = selectedNames;
+                
+                // Check if any chore is unassigned
+                if (selectedNames.length === 0) {
+                    unassignedChores.push(taskName);
+                }
             });
+            
+            // Validate all chores have at least one assignment
+            if (unassignedChores.length > 0) {
+                showValidationModal(`The following chores have no volunteers assigned:\n\n${unassignedChores.join('\n')}\n\nPlease assign at least one volunteer to each chore.`);
+                return;
+            }
 
             // Save inside persistent object store references
             persistentWeeklyRegistryLogs[transientSelectedDateString] = singleEventTaskMap;
 
+            // Show loading indicator
+            const loadingOverlay = document.createElement('div');
+            loadingOverlay.id = 'save-loader-overlay';
+            loadingOverlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+            `;
+            loadingOverlay.innerHTML = `
+                <div style="
+                    background: white;
+                    padding: 20px;
+                    border-radius: 8px;
+                    border: 3px solid #000;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 12px;
+                ">
+                    <div style="
+                        width: 40px;
+                        height: 40px;
+                        border: 3px solid #ddd;
+                        border-top-color: var(--accent-blue);
+                        border-radius: 50%;
+                        animation: spin 0.6s linear infinite;
+                    "></div>
+                    <span style="font-weight: bold; color: var(--text-primary);">Saving assignments...</span>
+                </div>
+                <style>
+                    @keyframes spin {
+                        to { transform: rotate(360deg); }
+                    }
+                </style>
+            `;
+            document.body.appendChild(loadingOverlay);
+            
             // Save to Supabase
-            saveAssignmentsToDatabase(transientSelectedDateString, volunteerCount, singleEventTaskMap);
+            saveAssignmentsToDatabase(transientSelectedDateString, volunteerCount, singleEventTaskMap).finally(() => {
+                // Remove loader
+                const loader = document.getElementById('save-loader-overlay');
+                if (loader) loader.remove();
+            });
 
             const targetSection = document.querySelector('#view-schedule .nb-section'); 
             
@@ -2531,10 +3069,10 @@
             newCardItem.className = 'card-container';
             newCardItem.onclick = () => loadWeeklyReportSummaryPage(transientSelectedDateString, localizedDate).catch(err => console.error('Error loading report:', err));
             newCardItem.innerHTML = `
-                <div class="nb-card reveal loaded" data-volunteers="${volunteerCount}" data-rawdate="${transientSelectedDateString}">
+                <div class="nb-card reveal loaded inprogress-schedule" data-volunteers="${volunteerCount}" data-rawdate="${transientSelectedDateString}">
                     <div class="nb-meta">
                         <span>Saturday Sequence Ad-Hoc</span>
-                        <span class="status-badge active-count">${volunteerCount} Present</span>
+                        <span class="status-badge status-inprogress">In Progress</span>
                     </div>
                     <h3 class="nb-title">${localizedDate}</h3>
                     <p class="nb-desc">${statusText}</p>
@@ -2543,9 +3081,19 @@
 
             targetSection.insertBefore(newCardItem, targetSection.querySelector('.card-container'));
             
+            // Add yellow highlight to new card
+            const newCard = newCardItem.querySelector('.nb-card');
+            newCard.classList.add('newly-created');
+            
+            // Remove highlight from previous cards after 3 seconds
+            setTimeout(() => {
+                document.querySelectorAll('.nb-card.newly-created').forEach(card => {
+                    card.classList.remove('newly-created');
+                });
+            }, 3000);
+            
             const miniDateLabel = `${dateObj.getMonth() + 1}/${dateObj.getDate()}`;
-            attendanceHistoryDataset.shift(); 
-            attendanceHistoryDataset.push({ label: "New", date: miniDateLabel, count: volunteerCount });
+            attendanceHistoryDataset.push({ label: `W${attendanceHistoryDataset.length + 1}`, date: miniDateLabel, count: volunteerCount });
             
             generateBarDistributionGrid();
             syncLiveKPIValues();
@@ -2582,6 +3130,7 @@
 
         // Save assignments to Supabase database
         async function saveAssignmentsToDatabase(serviceDate, volunteerCount, taskMap) {
+            return new Promise(async (resolve, reject) => {
             try {
                 console.log('💾 Saving assignments to database...');
                 console.log('📝 Task Map received:', taskMap);
@@ -2711,9 +3260,12 @@
                 }
                 
                 console.log('✅ All assignments saved successfully to database');
+                resolve();
             } catch (err) {
                 console.error('❌ Failed to save assignments:', err);
+                reject(err);
             }
+            });
         }
 
         /* SCREEN ROUTER: LOADS COMPLETED TASK RECORDS FOR WEEK */
@@ -2810,6 +3362,10 @@
             reportDisplayArea.innerHTML = Object.keys(currentEventReportData).map(taskTitle => {
                 const assignedWorkers = currentEventReportData[taskTitle];
                 let tagsHTML = "";
+                
+                // Find the chore to get its icon
+                const chore = defaultChoreRegistryArray.find(c => c.name === taskTitle);
+                const iconName = chore?.icon || 'circle-check';
 
                 if (assignedWorkers.length === 0) {
                     tagsHTML = `<span class="report-tag empty">No Assignee</span>`;
@@ -2819,7 +3375,10 @@
 
                 return `
                     <div class="report-task-row">
-                        <div class="report-task-head">${taskTitle}</div>
+                        <div class="report-task-head">
+                            <i data-lucide="${iconName}" size="16" style="flex-shrink: 0;"></i>
+                            <span>${taskTitle}</span>
+                        </div>
                         <div class="report-assignee-tags">
                             ${tagsHTML}
                         </div>
@@ -2983,11 +3542,13 @@
                 
                 for (const dateKey of allRegistryKeys) {
                     const registryData = persistentWeeklyRegistryLogs[dateKey];
-                    console.log(`   Checking date key: "${dateKey}":`, registryData);
+                    const weekDataDate = new Date(dateKey);
+                    const weekDataDateLabel = `${weekDataDate.getMonth() + 1}/${weekDataDate.getDate()}`;
                     
-                    if (registryData && registryData[choreName]) {
+                    // Check if this dateKey corresponds to the current week we're displaying
+                    if (weekDataDateLabel === weekData.date && registryData && registryData[choreName]) {
                         const volunteersForChore = registryData[choreName];
-                        console.log(`     Chore "${choreName}" has volunteers:`, volunteersForChore);
+                        console.log(`   ✓ Found chore "${choreName}" for week ${weekData.date}:`, volunteersForChore);
                         assignedWorkers = volunteersForChore;
                         break;
                     }
@@ -3049,22 +3610,27 @@
             navigationHistory.previousViewId = navigationHistory.currentViewId;
             navigationHistory.currentViewId = viewId;
             
-            // Push state onto browser history stack
-            window.history.pushState({ viewId: viewId }, pageTitle);
+            // Push state onto browser history stack for back button support
+            window.history.pushState({ viewId: navigationHistory.previousViewId }, pageTitle);
         }
 
         /* MOBILE NAVIGATION: Restore previous view when back button is pressed */
         function restorePreviousView(previousViewId) {
             // Determine which view to show and handle navigation
-            if (previousViewId === 'view-main-dashboard') {
-                // Return to main dashboard
+            if (previousViewId === 'view-main-dashboard' || previousViewId === 'view-home') {
+                // Return to main dashboard/home
                 document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
-                document.getElementById('view-main-dashboard').classList.add('active-view');
+                const homeView = document.getElementById('view-home') || document.getElementById('view-main-dashboard');
+                if (homeView) homeView.classList.add('active-view');
                 document.querySelector('.bottom-nav').style.display = 'grid'; // Show bottom nav on return to dashboard
             } else {
                 // Handle other view transitions
                 document.querySelectorAll('.tab-content').forEach(view => view.classList.remove('active-view'));
-                document.getElementById(previousViewId)?.classList.add('active-view');
+                const viewElement = document.getElementById(previousViewId);
+                if (viewElement) {
+                    viewElement.classList.add('active-view');
+                    document.querySelector('.bottom-nav').style.display = 'none';
+                }
             }
             
             navigationHistory.currentViewId = previousViewId;
