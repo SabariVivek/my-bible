@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#075e54">
     <title>Saturday Service Manager - Dashboard</title>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -1446,92 +1447,152 @@
             visibility: hidden;
         }
 
-        /* --- FLOATING ACTION BUTTON (FAB) --- */
-        .fab-create-event {
+        /* --- NEO-BRUTALIST FAB ARCHITECTURE TOKENS --- */
+        :root {
+            --nb-yellow: #fef08a;
+            --nb-blue: #bfdbfe;
+            --nb-teal: #99f6e4;
+            --nb-red: #ef4444;
+            --nb-black: #000000;
+        }
+
+        /* Base Wrapper Fixed Anchoring */
+        .nb-fab-wrapper {
             position: fixed;
-            bottom: 80px;
-            right: calc(50% - 200px);
-            background: var(--accent-blue);
-            color: #ffffff;
-            border: var(--border-width) solid var(--text-primary);
+            bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            z-index: 99999;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Main Trigger Core Graphic Styling */
+        .nb-fab-main-trigger {
             width: 56px;
             height: 56px;
+            background-color: var(--chart-blue);
+            border: 3px solid var(--nb-black);
+            border-radius: 50%;
+            color: var(--nb-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 4px 0px var(--nb-black);
+            cursor: pointer;
+            outline: none;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease, background-color 0.2s ease;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Rigid Press Dynamic Feedback State */
+        .nb-fab-main-trigger:active {
+            transform: scale(0.95) translate(3px, 3px);
+            box-shadow: 1px 1px 0px var(--nb-black);
+        }
+
+        .nb-fab-icon {
+            width: 24px;
+            height: 24px;
+            stroke-width: 2.5;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Open Active Transformation Overrides */
+        .nb-fab-wrapper.fab-active .nb-fab-icon {
+            transform: rotate(135deg);
+        }
+
+        .nb-fab-wrapper.fab-active .nb-fab-main-trigger {
+            background-color: var(--nb-red);
+            color: #ffffff;
+        }
+
+        /* Hidden Drawer Expansion Layout Sheet */
+        .nb-fab-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.85);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, visibility 0.2s ease;
+            pointer-events: none;
+        }
+
+        .nb-fab-wrapper.fab-active .nb-fab-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        /* Individual Stack Sub Actions */
+        .nb-fab-sub-item {
+            width: 44px;
+            height: 44px;
+            border: 2px solid var(--nb-black);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 4px 4px 0px var(--text-primary);
             cursor: pointer;
-            z-index: 90;
-            transition: all 0.1s ease;
+            box-shadow: 3px 3px 0px var(--nb-black);
+            outline: none;
+            position: relative;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        @media (max-width: 440px) {
-            .fab-create-event {
-                right: 20px;
-            }
+        .nb-fab-sub-item i {
+            width: 18px;
+            height: 18px;
+            stroke-width: 2.2;
         }
 
-        .fab-create-event:hover {
-            background: #1d4ed8;
-            transform: translate(-1px, -1px);
-            box-shadow: 5px 5px 0px var(--text-primary);
+        .nb-fab-sub-item.btn-user { background-color: var(--nb-blue); color: var(--nb-black); }
+        .nb-fab-sub-item.btn-chore { background-color: var(--nb-teal); color: var(--nb-black); }
+        .nb-fab-sub-item.btn-event { background-color: var(--accent-blue); color: #ffffff; }
+
+        .nb-fab-sub-item:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px var(--nb-black);
         }
 
-        .fab-create-event:active {
-            transform: translate(3px, 3px);
-            box-shadow: 1px 1px 0px var(--text-primary);
-        }
-
-        /* FAB Dropdown Menu */
-        .fab-menu {
-            display: none;
+        /* Hard-Edge Tooltip Flag Overlays */
+        .nb-fab-sub-item::after {
+            content: attr(data-tooltip);
             position: absolute;
-            bottom: 60px;
-            right: 0;
-            background: var(--bg-card);
-            border: var(--border-width) solid var(--text-primary);
-            border-radius: 8px;
-            box-shadow: 4px 4px 0px var(--text-primary);
-            z-index: 95;
-            overflow: hidden;
-            flex-direction: column;
-            min-width: 160px;
-        }
-
-        .fab-menu.menu-open {
-            display: flex;
-        }
-
-        .fab-menu-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 16px;
-            border-bottom: 2px solid var(--text-primary);
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 0.85rem;
+            right: 56px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--nb-black);
+            color: #ffffff;
+            font-size: 0.65rem;
+            font-weight: 800;
             text-transform: uppercase;
-            color: var(--text-primary);
-            transition: all 0.1s ease;
+            padding: 4px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.15s ease;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+            pointer-events: none;
         }
 
-        .fab-menu-item:last-child {
-            border-bottom: none;
-        }
-
-        .fab-menu-item:active {
-            background: var(--accent-yellow);
-            transform: translateX(2px);
-        }
-
-        .fab-menu-item i {
-            flex-shrink: 0;
+        .nb-fab-wrapper.fab-active .nb-fab-sub-item::after {
+            opacity: 1;
+            visibility: visible;
         }
 
         /* Hide FAB on non-home tabs */
-        .fab-create-event.hidden {
+        .nb-fab-wrapper.hidden {
             display: none !important;
         }
 
@@ -2014,23 +2075,28 @@
         </div>
     </div>
 
-    <!-- FLOATING ACTION BUTTON WITH DROPDOWN MENU -->
-    <div class="fab-create-event" id="fab-main-button" onclick="toggleFabMenu(event)">
-        <i data-lucide="plus" size="28" style="stroke-width: 3;"></i>
-        <div class="fab-menu" id="fab-menu-dropdown">
-            <div class="fab-menu-item" onclick="handleFabMenuOption('new-event')">
-                <i data-lucide="calendar-plus" size="16"></i>
-                <span>New Event</span>
-            </div>
-            <div class="fab-menu-item" onclick="handleFabMenuOption('add-user')">
-                <i data-lucide="user-plus" size="16"></i>
-                <span>Add User</span>
-            </div>
-            <div class="fab-menu-item" onclick="handleFabMenuOption('chores-list')">
-                <i data-lucide="sparkles" size="16"></i>
-                <span>Chores List</span>
-            </div>
+    <!-- NEO-BRUTALIST FLOATING HUB UTILITY -->
+    <div class="nb-fab-wrapper">
+        <!-- SUB-ACTIONS RADIAL POPUP MENU -->
+        <div id="nb-fab-menu" class="nb-fab-menu">
+            <!-- Sub-item 1: New Event -->
+            <button class="nb-fab-sub-item btn-event" onclick="handleFabAction('event')" data-tooltip="New Event">
+                <i data-lucide="calendar-plus"></i>
+            </button>
+            <!-- Sub-item 2: Add User -->
+            <button class="nb-fab-sub-item btn-user" onclick="handleFabAction('user')" data-tooltip="Add User">
+                <i data-lucide="user-plus"></i>
+            </button>
+            <!-- Sub-item 3: Chores List -->
+            <button class="nb-fab-sub-item btn-chore" onclick="handleFabAction('chore')" data-tooltip="Chores List">
+                <i data-lucide="sparkles"></i>
+            </button>
         </div>
+        
+        <!-- CORE TRIGGER BUTTON -->
+        <button id="nb-fab-trigger" class="nb-fab-main-trigger" onclick="toggleNeoFabMenu(event)">
+            <i data-lucide="plus" class="nb-fab-icon"></i>
+        </button>
     </div>
 
     <nav class="bottom-nav">
@@ -2646,10 +2712,10 @@
             setUpcomingSaturdayDate();
             
             // Initialize FAB visibility - should start visible on home tab
-            const fab = document.getElementById('fab-main-button');
+            const fabWrapper = document.querySelector('.nb-fab-wrapper');
             const currentActiveView = document.querySelector('.tab-content.active-view');
-            if (fab && currentActiveView && currentActiveView.id !== 'view-home') {
-                fab.classList.add('hidden');
+            if (fabWrapper && currentActiveView && currentActiveView.id !== 'view-home') {
+                fabWrapper.classList.add('hidden');
             }
 
             document.getElementById('dashboard-search').addEventListener('input', runLiveSearchQuery);
@@ -3321,8 +3387,8 @@
             document.querySelector('.bottom-nav').style.display = 'none';
             
             // Hide FAB when leaving home view
-            const fab = document.getElementById('fab-main-button');
-            if (fab) fab.classList.add('hidden');
+            const fabWrapper = document.querySelector('.nb-fab-wrapper');
+            if (fabWrapper) fabWrapper.classList.add('hidden');
         }
 
         function deleteTaskCard(button) {
@@ -3819,8 +3885,8 @@
             document.querySelector('.bottom-nav').style.display = 'none';
             
             // Hide FAB when leaving home view
-            const fab = document.getElementById('fab-main-button');
-            if (fab) fab.classList.add('hidden');
+            const fabWrapper = document.querySelector('.nb-fab-wrapper');
+            if (fabWrapper) fabWrapper.classList.add('hidden');
             
             if (window.lucide) lucide.createIcons();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -3952,8 +4018,8 @@
             closeBottomSheet('sheet-add-chore');
 
             // Hide FAB when leaving home view
-            const fab = document.getElementById('fab-main-button');
-            if (fab) fab.classList.add('hidden');
+            const fabWrapper = document.querySelector('.nb-fab-wrapper');
+            if (fabWrapper) fabWrapper.classList.add('hidden');
             
             // Track current chore index for navigation
             currentChoreIndex = defaultChoreRegistryArray.findIndex(c => c.name === choreName);
@@ -4076,32 +4142,36 @@
             // Placeholder for existing function
         }
 
-        // FAB Menu Functions
-        function toggleFabMenu(event) {
-            event.stopPropagation();
-            const fabMenu = document.getElementById('fab-menu-dropdown');
-            fabMenu.classList.toggle('menu-open');
+        // Neo-Brutalist FAB Functions
+        function toggleNeoFabMenu(event) {
+            if (event) event.stopPropagation();
+            const wrapper = document.querySelector('.nb-fab-wrapper');
+            if (wrapper) wrapper.classList.toggle('fab-active');
         }
 
-        function handleFabMenuOption(option) {
-            const fabMenu = document.getElementById('fab-menu-dropdown');
-            fabMenu.classList.remove('menu-open');
+        function handleFabAction(actionType) {
+            // Close menu instantly upon execution tap
+            toggleNeoFabMenu();
             
-            if (option === 'new-event') {
+            if (actionType === 'event') {
+                console.log("New Event Triggered");
                 openBottomSheet('sheet-select-date');
-            } else if (option === 'add-user') {
+            } else if (actionType === 'user') {
+                console.log("Add User Triggered");
                 openBottomSheet('sheet-add-user');
-            } else if (option === 'chores-list') {
+            } else if (actionType === 'chore') {
+                console.log("Chores List Triggered");
                 openBottomSheet('sheet-add-chore');
             }
         }
 
-        // Close FAB menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const fabMenu = document.getElementById('fab-menu-dropdown');
-            const fab = document.getElementById('fab-main-button');
-            if (fab && !fab.contains(event.target)) {
-                fabMenu.classList.remove('menu-open');
+        // Tap Outside Dismissal Engine Configuration
+        document.addEventListener('click', function(e) {
+            const fabWrapper = document.querySelector('.nb-fab-wrapper');
+            if (fabWrapper && fabWrapper.classList.contains('fab-active')) {
+                if (!fabWrapper.contains(e.target)) {
+                    fabWrapper.classList.remove('fab-active');
+                }
             }
         });
 
@@ -4144,6 +4214,10 @@
         }
 
         function openBottomSheet(sheetId) {
+            // Hide FAB when opening sheets
+            const fabWrapper = document.querySelector('.nb-fab-wrapper');
+            if (fabWrapper) fabWrapper.classList.add('hidden');
+            
             // Close FAB menu if it's open
             const fabMenu = document.getElementById('fab-menu-dropdown');
             if (fabMenu) fabMenu.classList.remove('menu-open');
@@ -4161,7 +4235,14 @@
 
         function closeBottomSheet(sheetId) {
             document.getElementById(sheetId).classList.remove('sheet-open');
-            document.body.style.overflow = ''; 
+            document.body.style.overflow = '';
+            
+            // Show FAB again if we're on home view
+            const currentActiveView = document.querySelector('.tab-content.active-view');
+            const fabWrapper = document.querySelector('.nb-fab-wrapper');
+            if (fabWrapper && currentActiveView && currentActiveView.id === 'view-home') {
+                fabWrapper.classList.remove('hidden');
+            }
         }
 
         function closeSheetOnOuterClick(event, sheetId) {
@@ -4181,13 +4262,14 @@
             document.querySelector('.bottom-nav').style.display = 'grid';
             
             // Show FAB only on home tab
-            const fab = document.getElementById('fab-main-button');
-            const fabMenu = document.getElementById('fab-menu-dropdown');
+            const fabWrapper = document.querySelector('.nb-fab-wrapper');
             if (targetViewId === 'view-home') {
-                fab.classList.remove('hidden');
+                if (fabWrapper) fabWrapper.classList.remove('hidden');
             } else {
-                fab.classList.add('hidden');
-                fabMenu.classList.remove('menu-open');
+                if (fabWrapper) {
+                    fabWrapper.classList.add('hidden');
+                    fabWrapper.classList.remove('fab-active');
+                }
             }
             
             // Render icons for the current view
