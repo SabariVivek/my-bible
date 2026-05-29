@@ -1748,7 +1748,7 @@
             <div class="sheet-scroll-content">
                 <div class="attendance-selection-list" id="attendance-checkbox-container"></div>
             </div>
-            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0;" onclick="goToChoresSelectionSheet()">
+            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0;" onclick="handleAttendanceSheetConfirm()">
                 <i data-lucide="check-check" size="16"></i> Confirm Attendance
             </button>
         </div>
@@ -1766,7 +1766,7 @@
             <div class="sheet-scroll-content">
                 <div class="attendance-selection-list" id="chores-checkbox-container"></div>
             </div>
-            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0; background: var(--wa-teal);" onclick="confirmAttendanceAndShowPlanPage()">
+            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0; background: var(--wa-teal);" onclick="handleChoresSheetConfirm()">
                 <i data-lucide="check-check" size="16"></i> Continue to Workspace
             </button>
         </div>
@@ -1890,6 +1890,14 @@
                 <h4 id="assignment-heading-date">Sat, Jun 27, 2026</h4>
                 <p id="assignment-heading-attendance">0 Volunteers Present</p>
             </div>
+            <div class="quick-add-buttons" style="display: flex; gap: 8px; margin-bottom: 16px;">
+                <button onclick="showAddVolunteersSheet()" style="flex: 1; background: var(--accent-green); color: white; border: 3px solid var(--text-primary); padding: 12px; font-weight: 800; border-radius: 4px; cursor: pointer; box-shadow: 3px 3px 0px var(--text-primary); font-size: 0.75rem; text-transform: uppercase; transition: all 0.1s ease;">
+                    <i data-lucide="user-plus" size="14"></i> Add Volunteer
+                </button>
+                <button onclick="showAddChoresSheet()" style="flex: 1; background: var(--accent-yellow); color: var(--text-primary); border: 3px solid var(--text-primary); padding: 12px; font-weight: 800; border-radius: 4px; cursor: pointer; box-shadow: 3px 3px 0px var(--text-primary); font-size: 0.75rem; text-transform: uppercase; transition: all 0.1s ease;">
+                    <i data-lucide="sparkles" size="14"></i> Add Chore
+                </button>
+            </div>
             <div class="nb-section">
                 <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 16px;">Assign Chores Workspace</span>
                 <div id="assignment-tasks-load-area"></div>
@@ -1990,6 +1998,14 @@
             <div class="plan-summary-header" style="background: var(--accent-yellow);">
                 <h4 id="edit-schedule-heading">Edit Schedule</h4>
                 <p style="margin-top: 4px;">Modify chore assignments</p>
+            </div>
+            <div class="quick-add-buttons" id="edit-quick-add-buttons" style="display: flex; gap: 8px; margin-bottom: 16px;">
+                <button onclick="showAddVolunteersSheet()" style="flex: 1; background: var(--accent-green); color: white; border: 3px solid var(--text-primary); padding: 12px; font-weight: 800; border-radius: 4px; cursor: pointer; box-shadow: 3px 3px 0px var(--text-primary); font-size: 0.75rem; text-transform: uppercase; transition: all 0.1s ease;">
+                    <i data-lucide="user-plus" size="14"></i> Add Volunteer
+                </button>
+                <button onclick="showAddChoresSheet()" style="flex: 1; background: var(--accent-yellow); color: var(--text-primary); border: 3px solid var(--text-primary); padding: 12px; font-weight: 800; border-radius: 4px; cursor: pointer; box-shadow: 3px 3px 0px var(--text-primary); font-size: 0.75rem; text-transform: uppercase; transition: all 0.1s ease;">
+                    <i data-lucide="sparkles" size="14"></i> Add Chore
+                </button>
             </div>
             <div class="nb-section">
                 <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 20px;">Edit Assignments</span>
@@ -2957,29 +2973,82 @@
             document.getElementById('edit-schedule-heading').innerText = localizedTitle;
             const editContainer = document.getElementById('edit-schedule-container');
             
-            let scheduleData = persistentWeeklyRegistryLogs[rawDateString] || {};
-            console.log(`📝 Loading edit schedule for ${rawDateString}:`, scheduleData);
+            // ALWAYS fetch fresh data from database for edit page (don't use cache)
+            console.log('📡 Fetching FRESH schedule data from database for:', rawDateString);
             
-            editContainer.innerHTML = defaultChoreRegistryArray.map(task => {
-                const assignedVolunteers = scheduleData[task.name] || [];
-                console.log(`   Chore: ${task.name}, Assigned: ${JSON.stringify(assignedVolunteers)}`);
-                return `
-                    <div class="task-assign-card" data-chore-id="${task.id}">
-                        <button class="task-delete-btn" onclick="deleteTaskCard(this)" title="Delete this task">×</button>
-                        <div class="task-main-title">
-                            <i data-lucide="${task.icon || 'circle-check'}" size="16" style="flex-shrink: 0;"></i>
-                            <span>${task.name}</span>
+            supabaseClient
+                .from('service_schedules')
+                .select('id')
+                .eq('service_date', rawDateString)
+                .maybeSingle()
+                .then(async ({ data: scheduleRecord }) => {
+                    if (scheduleRecord) {
+                        // Get all chore assignments for this service
+                        const { data: assignments } = await supabaseClient
+                            .from('chore_assignments')
+                            .select('chore_id, volunteer_id')
+                            .eq('service_id', scheduleRecord.id);
+                        
+                        if (assignments) {
+                            // Rebuild taskMap from assignments
+                            let reconstructedTaskMap = {};
+                            assignments.forEach(assignment => {
+                                const chore = defaultChoreRegistryArray.find(c => c.id === assignment.chore_id);
+                                const volunteer = registeredVolunteersRoster.find(v => v.id === assignment.volunteer_id);
+                                
+                                if (chore && volunteer) {
+                                    if (!reconstructedTaskMap[chore.name]) {
+                                        reconstructedTaskMap[chore.name] = [];
+                                    }
+                                    reconstructedTaskMap[chore.name].push(volunteer.name);
+                                }
+                            });
+                            
+                            console.log('✅ Fetched FRESH from DB:', reconstructedTaskMap);
+                            renderEditPage(editContainer, reconstructedTaskMap, rawDateString);
+                        } else {
+                            console.log('ℹ️ No assignments found for this date');
+                            renderEditPage(editContainer, {}, rawDateString);
+                        }
+                    } else {
+                        console.log('ℹ️ No schedule found for this date');
+                        renderEditPage(editContainer, {}, rawDateString);
+                    }
+                })
+                .catch(err => {
+                    console.error('❌ Error fetching schedule:', err);
+                    editContainer.innerHTML = '<div style="padding: 20px; text-align: center; color: var(--accent-red);">Error loading schedule. Please try again.</div>';
+                });
+            
+            // Show loading state while fetching
+            editContainer.innerHTML = '<div style="padding: 20px; text-align: center; color: var(--text-secondary);">Loading schedule...</div>';
+        }
+        
+        function renderEditPage(editContainer, scheduleData, rawDateString) {
+            console.log(`📝 Loading edit schedule with data:`, scheduleData);
+            
+            editContainer.innerHTML = defaultChoreRegistryArray
+                .filter(task => scheduleData[task.name] && scheduleData[task.name].length > 0)
+                .map(task => {
+                    const assignedVolunteers = scheduleData[task.name] || [];
+                    console.log(`   Chore: ${task.name}, Assigned: ${JSON.stringify(assignedVolunteers)}`);
+                    return `
+                        <div class="task-assign-card" data-chore-id="${task.id}">
+                            <button class="task-delete-btn" onclick="deleteTaskCard(this)" title="Delete this task">×</button>
+                            <div class="task-main-title">
+                                <i data-lucide="${task.icon || 'circle-check'}" size="16" style="flex-shrink: 0;"></i>
+                                <span>${task.name}</span>
+                            </div>
+                            <select class="assignee-select" data-task-name="${task.name}" multiple>
+                                ${registeredVolunteersRoster.map(vol => {
+                                    const isSelected = assignedVolunteers.includes(vol.name);
+                                    return `<option value="${vol.name}" ${isSelected ? 'selected' : ''}>${vol.name}</option>`;
+                                }).join('')}
+                            </select>
+                            <span class="multi-hint-caption">Multiple selection is allowed</span>
                         </div>
-                        <select class="assignee-select" data-task-name="${task.name}" multiple>
-                            ${registeredVolunteersRoster.map(vol => {
-                                const isSelected = assignedVolunteers.includes(vol.name);
-                                return `<option value="${vol.name}" ${isSelected ? 'selected' : ''}>${vol.name}</option>`;
-                            }).join('')}
-                        </select>
-                        <span class="multi-hint-caption">Multiple selection is allowed</span>
-                    </div>
-                `;
-            }).join('');
+                    `;
+                }).join('');
             
             // Ensure selections are properly applied via JavaScript
             setTimeout(() => {
@@ -3010,18 +3079,32 @@
             document.getElementById('view-edit-schedule').classList.add('active-view');
             document.querySelector('.bottom-nav').style.display = 'none';
             
+            // Hide "Add Volunteer" button and make "Add Chore" full width on edit page
+            const editQuickAddButtons = document.getElementById('edit-quick-add-buttons');
+            if (editQuickAddButtons) {
+                const addVolBtn = editQuickAddButtons.querySelector('button:first-child');
+                const addChoreBtn = editQuickAddButtons.querySelector('button:last-child');
+                if (addVolBtn) addVolBtn.style.display = 'none';
+                if (addChoreBtn) addChoreBtn.style.flex = '0 0 100%';
+            }
+            
             if (window.lucide) lucide.createIcons();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function updateScheduleAssignments(rawDateString) {
+        async function updateScheduleAssignments(rawDateString) {
             let updatedTaskMap = {};
             let unassignedChores = [];
             
-            document.querySelectorAll('#edit-schedule-container .task-assign-card').forEach(card => {
+            const remainingCards = document.querySelectorAll('#edit-schedule-container .task-assign-card');
+            console.log(`📋 Found ${remainingCards.length} chore cards remaining after deletions`);
+            
+            remainingCards.forEach(card => {
                 const selectElement = card.querySelector('.assignee-select');
                 const taskName = selectElement.getAttribute('data-task-name');
                 const selectedNames = Array.from(selectElement.selectedOptions).map(opt => opt.value);
+                console.log(`   Chore: ${taskName}, Volunteers: ${selectedNames.length}`);
+                
                 updatedTaskMap[taskName] = selectedNames;
                 
                 if (selectedNames.length === 0) {
@@ -3029,21 +3112,29 @@
                 }
             });
             
+            console.log(`📊 Task map to save:`, updatedTaskMap);
+            
             if (unassignedChores.length > 0) {
                 showValidationModal(`The following chores have no volunteers assigned:\\n\\n${unassignedChores.join('\\n')}`);
                 return;
             }
             
             persistentWeeklyRegistryLogs[rawDateString] = updatedTaskMap;
-            saveAssignmentsToDatabase(rawDateString, Object.values(updatedTaskMap).reduce((sum, arr) => sum + arr.length, 0), updatedTaskMap);
             
-            showValidationModal('✅ Schedule updated successfully!');
-            
-            setTimeout(() => {
-                document.getElementById('view-edit-schedule').classList.remove('active-view');
-                document.getElementById('view-schedule').classList.add('active-view');
-                document.querySelector('.bottom-nav').style.display = 'grid';
-            }, 800);
+            // Await the database save before showing success
+            try {
+                await saveAssignmentsToDatabase(rawDateString, Object.values(updatedTaskMap).reduce((sum, arr) => sum + arr.length, 0), updatedTaskMap);
+                showValidationModal('✅ Schedule updated successfully!');
+                
+                setTimeout(() => {
+                    document.getElementById('view-edit-schedule').classList.remove('active-view');
+                    document.getElementById('view-schedule').classList.add('active-view');
+                    document.querySelector('.bottom-nav').style.display = 'grid';
+                }, 800);
+            } catch (err) {
+                console.error('❌ Error updating schedule:', err);
+                showValidationModal(`Error updating schedule: ${err.message}`);
+            }
         }
 
         async function saveNewVolunteerToDatabase() {
@@ -3191,10 +3282,9 @@
 
         function deleteTaskCard(button) {
             const card = button.closest('.task-assign-card');
-            card.style.opacity = '0';
-            card.style.transform = 'scale(0.95)';
-            card.style.transition = 'all 0.2s ease';
-            setTimeout(() => card.remove(), 200);
+            // Remove immediately from DOM (don't wait for animation)
+            card.remove();
+            console.log('🗑️  Task card removed from DOM immediately');
         }
 
         function finalizeAndCommitAssignmentsToTimeline() {
@@ -3366,6 +3456,52 @@
                 } else if (existingService) {
                     serviceId = existingService.id;
                     console.log('✅ Using existing service schedule with ID:', serviceId);
+                    
+                    // FIRST: Get ALL assignment IDs for this service
+                    const { data: assignmentsToDelete, error: getError } = await supabaseClient
+                        .from('chore_assignments')
+                        .select('id')
+                        .eq('service_id', serviceId);
+                    
+                    const countBefore = assignmentsToDelete ? assignmentsToDelete.length : 0;
+                    console.log(`🗑️  STEP 1A: Found ${countBefore} existing assignments to delete for service ID: ${serviceId}`);
+                    
+                    if (countBefore > 0) {
+                        // Delete using .in() filter (sometimes bypasses RLS better than .eq())
+                        console.log('🗑️  STEP 1B: Attempting deletion using .in() filter...');
+                        const assignmentIds = assignmentsToDelete.map(a => a.id);
+                        
+                        const { error: deleteError } = await supabaseClient
+                            .from('chore_assignments')
+                            .delete()
+                            .in('id', assignmentIds);
+                        
+                        if (deleteError) {
+                            console.error('❌ ERROR deleting assignments:', deleteError);
+                            console.error('   Message:', deleteError.message);
+                            console.error('   Hint:', deleteError.hint);
+                            reject(new Error(`Failed to delete old assignments: ${deleteError.message}`));
+                            return;
+                        }
+                        
+                        // VERIFY deletion worked
+                        console.log('🗑️  STEP 1C: Verifying deletion...');
+                        const { data: afterDelete, error: afterError } = await supabaseClient
+                            .from('chore_assignments')
+                            .select('id')
+                            .eq('service_id', serviceId);
+                        
+                        const countAfter = afterDelete ? afterDelete.length : 0;
+                        console.log(`✅ STEP 1 COMPLETE: Deleted ${countBefore - countAfter} assignments (${countBefore} before → ${countAfter} after)`);
+                        
+                        if (countAfter > 0) {
+                            console.warn(`❌ RLS BLOCKING: ${countAfter} assignments still remain! Row Level Security policy may be blocking deletes.`);
+                            console.warn('   Solution: Check Supabase → chore_assignments table → RLS Policies');
+                            console.warn('   The DELETE policy must allow your authenticated user to delete rows.');
+                        }
+                    } else {
+                        console.log('ℹ️  STEP 1: No assignments to delete (clean slate)');
+                    }
                 }
                 
                 // If doesn't exist or query failed, create a new one
@@ -3425,27 +3561,28 @@
                 
                 // Batch insert all assignments
                 if (assignmentRecords.length > 0) {
-                    console.log('💾 Inserting into chore_assignments table:', assignmentRecords);
+                    console.log('💾 STEP 2: Inserting into chore_assignments table:', assignmentRecords);
                     
                     const { data: assignmentData, error: assignmentError } = await supabaseClient
                         .from('chore_assignments')
                         .insert(assignmentRecords);
                     
                     if (assignmentError) {
-                        console.error('❌ ERROR inserting assignments:', assignmentError);
+                        console.error('❌ STEP 2 FAILED: ERROR inserting assignments:', assignmentError);
                         console.error('   Error message:', assignmentError.message);
                         console.error('   Error code:', assignmentError.code);
                         console.error('   Error details:', assignmentError.details);
+                        reject(new Error(`Failed to insert assignments: ${assignmentError.message}`));
                         return;
                     }
                     
-                    console.log('✅ Chore assignments saved:', assignmentRecords.length, 'records');
+                    console.log('✅ STEP 2 COMPLETE: Chore assignments saved:', assignmentRecords.length, 'records');
                 } else {
-                    console.warn('⚠️  No assignment records to save - check if volunteers are selected in the form');
+                    console.log('ℹ️  STEP 2: No assignment records to insert - all chores may have been deleted');
                 }
                 
                 // 3. Save attendance history for all present volunteers
-                console.log('📝 Saving attendance history for', transientPresentVolunteersArray.length, 'volunteers');
+                console.log('📝 STEP 3: Saving attendance history for', transientPresentVolunteersArray.length, 'volunteers');
                 
                 // Calculate week number for this date
                 const serviceDate_obj = new Date(serviceDate);
@@ -3463,23 +3600,26 @@
                 }).filter(rec => rec.volunteer_id); // Only include valid records
                 
                 if (attendanceRecords.length > 0) {
+                    console.log('   Upserting', attendanceRecords.length, 'attendance records');
                     // Use upsert to avoid duplicate key conflicts - insert or update if exists
                     const { data: attendanceData, error: attendanceError } = await supabaseClient
                         .from('attendance_history')
                         .upsert(attendanceRecords, { onConflict: 'volunteer_id,week_number' });
                     
                     if (attendanceError) {
-                        console.error('❌ ERROR upserting attendance:', attendanceError);
+                        console.error('❌ STEP 3 WARNING: Error upserting attendance:', attendanceError);
                         console.error('   Error message:', attendanceError.message);
                     } else {
-                        console.log('✅ Attendance history saved/updated:', attendanceRecords.length, 'records');
+                        console.log('✅ STEP 3 COMPLETE: Attendance history saved/updated:', attendanceRecords.length, 'records');
                     }
+                } else {
+                    console.log('ℹ️  STEP 3: No attendance records to save');
                 }
                 
-                console.log('✅ All assignments saved successfully to database');
+                console.log('✅✅✅ ALL STEPS COMPLETE: Assignments saved successfully to database');
                 resolve();
             } catch (err) {
-                console.error('❌ Failed to save assignments:', err);
+                console.error('❌ CRITICAL ERROR: Failed to save assignments:', err);
                 reject(err);
             }
             });
@@ -4101,6 +4241,180 @@
             });
             const counterElement = document.getElementById('visible-counter');
             if(counterElement) counterElement.innerText = `${matchCounter} Events Scheduled`;
+        }
+
+        /* CONTEXT FLAG FOR ADD-ONLY MODE */
+        let addOnlyMode = null; // 'volunteers', 'chores', or null for full flow
+
+        /* QUICK ADD VOLUNTEER/CHORE FUNCTIONS */
+        function showAddVolunteersSheet() {
+            addOnlyMode = 'volunteers';
+            const container = document.getElementById('attendance-checkbox-container');
+            
+            // Prefill with currently selected volunteers from the page
+            let currentVolunteers = [];
+            if (document.getElementById('view-plan-assignments').classList.contains('active-view')) {
+                // In Assign Chores Workspace - use transient array
+                currentVolunteers = transientPresentVolunteersArray || [];
+            } else if (document.getElementById('view-edit-schedule').classList.contains('active-view')) {
+                // In Edit Schedule - get from current form selections
+                currentVolunteers = Array.from(document.querySelectorAll('#edit-schedule-container .assignee-select')).flatMap(select => 
+                    Array.from(select.selectedOptions).map(opt => opt.value)
+                ).filter((v, i, a) => a.indexOf(v) === i); // unique values
+            }
+            
+            container.innerHTML = registeredVolunteersRoster.map(vol => `
+                <label class="attendance-select-item">
+                    <input type="checkbox" value="${vol.name}" class="attendance-tickbox" ${currentVolunteers.includes(vol.name) ? 'checked' : ''}>
+                    <span>${vol.name}</span>
+                </label>
+            `).join('');
+            
+            openBottomSheet('sheet-select-attendance');
+        }
+
+        function showAddChoresSheet() {
+            addOnlyMode = 'chores';
+            const container = document.getElementById('chores-checkbox-container');
+            
+            // Get currently selected chores
+            let currentChoreIds = [];
+            if (document.getElementById('view-plan-assignments').classList.contains('active-view')) {
+                // In Assign Chores Workspace
+                currentChoreIds = Array.from(document.querySelectorAll('#assignment-tasks-load-area .task-assign-card')).map(card => card.getAttribute('data-chore-id')).filter(Boolean);
+            } else if (document.getElementById('view-edit-schedule').classList.contains('active-view')) {
+                // In Edit Schedule
+                currentChoreIds = Array.from(document.querySelectorAll('#edit-schedule-container .task-assign-card')).map(card => card.getAttribute('data-chore-id')).filter(Boolean);
+            }
+            
+            // Pre-select all chores that are currently on the form
+            container.innerHTML = defaultChoreRegistryArray.map(chore => `
+                <label class="chore-selectable-item">
+                    <input type="checkbox" value="${chore.id}" class="chore-tickbox" ${currentChoreIds.includes(chore.id) ? 'checked' : ''}>
+                    <span>${chore.name}</span>
+                </label>
+            `).join('');
+            
+            openBottomSheet('sheet-select-chores');
+        }
+
+        /* HANDLER FOR ATTENDANCE SHEET BUTTON - CONTEXT AWARE */
+        function handleAttendanceSheetConfirm() {
+            if (addOnlyMode === 'volunteers') {
+                // Just adding volunteers - save and close
+                const checkedBoxes = document.querySelectorAll('.attendance-tickbox:checked');
+                const selectedVolunteers = Array.from(checkedBoxes).map(cb => cb.value);
+                
+                if (selectedVolunteers.length === 0) {
+                    showValidationModal('Please select at least one volunteer.');
+                    return;
+                }
+                
+                transientPresentVolunteersArray = selectedVolunteers;
+                
+                // Update the assignment view if we're on that page
+                if (document.getElementById('view-plan-assignments').classList.contains('active-view')) {
+                    confirmAttendanceAndShowPlanPage();
+                }
+                // Update edit page if on that page - sync selections back to the form
+                else if (document.getElementById('view-edit-schedule').classList.contains('active-view')) {
+                    document.querySelectorAll('#edit-schedule-container .assignee-select').forEach(select => {
+                        Array.from(select.options).forEach(option => {
+                            option.selected = selectedVolunteers.includes(option.value);
+                        });
+                    });
+                }
+                
+                closeBottomSheet('sheet-select-attendance');
+                addOnlyMode = null;
+            } else {
+                // Full flow - go to chores
+                goToChoresSelectionSheet();
+            }
+        }
+
+        /* HANDLER FOR CHORES SHEET BUTTON - CONTEXT AWARE */
+        function handleChoresSheetConfirm() {
+            if (addOnlyMode === 'chores') {
+                // Just adding chores - save and close
+                const checkedBoxes = document.querySelectorAll('.chore-tickbox:checked');
+                const selectedChoreIds = Array.from(checkedBoxes).map(cb => cb.value);
+                
+                if (selectedChoreIds.length === 0) {
+                    showValidationModal('Please select at least one chore.');
+                    return;
+                }
+                
+                // Determine which container we're on
+                const isEditPage = document.getElementById('view-edit-schedule').classList.contains('active-view');
+                const isCreatePage = document.getElementById('view-plan-assignments').classList.contains('active-view');
+                const targetContainer = isEditPage ? '#edit-schedule-container' : '#assignment-tasks-load-area';
+                
+                // Get volunteers for building new cards
+                let volunteersHTML = '';
+                if (isCreatePage) {
+                    // On create page, use transientPresentVolunteersArray
+                    volunteersHTML = transientPresentVolunteersArray.map(name => 
+                        `<option value="${name}">${name}</option>`
+                    ).join('');
+                } else if (isEditPage) {
+                    // On edit page, get from existing selects or all volunteers
+                    const existingSelect = document.querySelector(`${targetContainer} .assignee-select`);
+                    if (existingSelect) {
+                        volunteersHTML = Array.from(existingSelect.options).map(opt => 
+                            `<option value="${opt.value}">${opt.value}</option>`
+                        ).join('');
+                    } else {
+                        volunteersHTML = registeredVolunteersRoster.map(vol =>
+                            `<option value="${vol.name}">${vol.name}</option>`
+                        ).join('');
+                    }
+                }
+                
+                // Get currently displayed chore IDs
+                const currentChoreIds = Array.from(document.querySelectorAll(`${targetContainer} .task-assign-card`))
+                    .map(card => card.getAttribute('data-chore-id'));
+                
+                // ADD new chores that were selected but not yet on the form
+                selectedChoreIds.forEach(choreId => {
+                    if (!currentChoreIds.includes(choreId)) {
+                        const choreData = defaultChoreRegistryArray.find(c => c.id === choreId);
+                        if (choreData) {
+                            const newCard = document.createElement('div');
+                            newCard.className = 'task-assign-card';
+                            newCard.setAttribute('data-chore-id', choreId);
+                            newCard.innerHTML = `
+                                <button class="task-delete-btn" onclick="deleteTaskCard(this)" title="Delete this task">×</button>
+                                <div class="task-main-title">
+                                    <i data-lucide="${choreData.icon || 'circle-check'}" size="16" style="flex-shrink: 0;"></i>
+                                    <span>${choreData.name}</span>
+                                </div>
+                                <select class="assignee-select" data-task-name="${choreData.name}" multiple>
+                                    ${volunteersHTML}
+                                </select>
+                                <span class="multi-hint-caption">Multiple selection is allowed</span>
+                            `;
+                            const container = document.querySelector(targetContainer);
+                            container.appendChild(newCard);
+                        }
+                    }
+                });
+                
+                // REMOVE chores that were unselected
+                document.querySelectorAll(`${targetContainer} .task-assign-card`).forEach(card => {
+                    const choreId = card.getAttribute('data-chore-id');
+                    if (!selectedChoreIds.includes(choreId)) {
+                        card.remove();
+                    }
+                });
+                
+                if (window.lucide) lucide.createIcons();
+                closeBottomSheet('sheet-select-chores');
+                addOnlyMode = null;
+            } else {
+                // Full flow - just confirm and continue
+                confirmAttendanceAndShowPlanPage();
+            }
         }
     </script>
 </body>
