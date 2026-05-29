@@ -559,22 +559,24 @@
             box-shadow: 6px 6px 0px var(--text-primary);
             margin-bottom: 32px;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         /* Diagonal Accent Flag background indicator */
         .creator-card::after {
             content: "SCHEDULER";
             position: absolute;
-            top: 12px;
-            right: -25px;
+            top: 8px;
+            right: -20px;
             background: var(--text-primary);
             color: var(--bg-card);
             font-size: 0.55rem;
             font-weight: 900;
-            padding: 2px 24px;
+            padding: 2px 20px;
             transform: rotate(45deg);
             letter-spacing: 1px;
+            white-space: nowrap;
+            z-index: 1;
         }
 
         .creator-label {
@@ -644,19 +646,22 @@
         .datepicker-quick-links {
             display: flex;
             gap: 8px;
-            margin-bottom: 4px;
+            margin-top: 16px;
+            margin-bottom: 16px;
         }
 
         .quick-date-pill {
+            flex: 1;
             background: var(--bg-card);
             border: 2px solid var(--text-primary);
             border-radius: 4px;
-            padding: 4px 10px;
-            font-size: 0.65rem;
+            padding: 8px 12px;
+            font-size: 0.7rem;
             font-weight: 800;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.1s ease;
+            text-align: center;
         }
 
         .quick-date-pill:active {
@@ -705,6 +710,21 @@
             font-weight: 800;
             border-radius: 6px;
             margin-top: 14px;
+            text-transform: uppercase;
+            box-shadow: 3px 3px 0px var(--text-primary);
+        }
+
+        /* Unique error alert styling for date collision */
+        .date-error-alert {
+            display: none;
+            background: #fef3c7;
+            border: var(--border-width) solid #f59e0b;
+            color: #92400e;
+            padding: 12px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            border-radius: 6px;
+            margin-top: 8px;
             text-transform: uppercase;
             box-shadow: 3px 3px 0px var(--text-primary);
         }
@@ -1078,6 +1098,43 @@
             margin-bottom: 16px;
         }
 
+        .report-header-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .chore-nav-buttons-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .chore-nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent-blue);
+            color: white;
+            border: var(--border-width) solid var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 800;
+            box-shadow: 2px 2px 0px var(--text-primary);
+            transition: opacity 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+            height: 32px;
+            min-width: 32px;
+        }
+
+        .chore-nav-btn:hover:not([style*="pointer-events: none"]) {
+            box-shadow: 3px 3px 0px var(--text-primary);
+            transform: translate(-1px, -1px);
+        }
+
         .report-task-row {
             background: var(--bg-card);
             border: 2px solid var(--text-primary);
@@ -1389,6 +1446,95 @@
             visibility: hidden;
         }
 
+        /* --- FLOATING ACTION BUTTON (FAB) --- */
+        .fab-create-event {
+            position: fixed;
+            bottom: 80px;
+            right: calc(50% - 200px);
+            background: var(--accent-blue);
+            color: #ffffff;
+            border: var(--border-width) solid var(--text-primary);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 4px 0px var(--text-primary);
+            cursor: pointer;
+            z-index: 90;
+            transition: all 0.1s ease;
+        }
+
+        @media (max-width: 440px) {
+            .fab-create-event {
+                right: 20px;
+            }
+        }
+
+        .fab-create-event:hover {
+            background: #1d4ed8;
+            transform: translate(-1px, -1px);
+            box-shadow: 5px 5px 0px var(--text-primary);
+        }
+
+        .fab-create-event:active {
+            transform: translate(3px, 3px);
+            box-shadow: 1px 1px 0px var(--text-primary);
+        }
+
+        /* FAB Dropdown Menu */
+        .fab-menu {
+            display: none;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+            background: var(--bg-card);
+            border: var(--border-width) solid var(--text-primary);
+            border-radius: 8px;
+            box-shadow: 4px 4px 0px var(--text-primary);
+            z-index: 95;
+            overflow: hidden;
+            flex-direction: column;
+            min-width: 160px;
+        }
+
+        .fab-menu.menu-open {
+            display: flex;
+        }
+
+        .fab-menu-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border-bottom: 2px solid var(--text-primary);
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            transition: all 0.1s ease;
+        }
+
+        .fab-menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .fab-menu-item:active {
+            background: var(--accent-yellow);
+            transform: translateX(2px);
+        }
+
+        .fab-menu-item i {
+            flex-shrink: 0;
+        }
+
+        /* Hide FAB on non-home tabs */
+        .fab-create-event.hidden {
+            display: none !important;
+        }
+
         /* --- FIXED BOTTOM NAVIGATION --- */
         .bottom-nav {
             position: fixed;
@@ -1588,17 +1734,6 @@
             <h1 class="nav-title">Church Ledger</h1>
             <span class="nav-subtitle">Saturday Clean &amp; Setup Registry</span>
         </div>
-        <div class="nav-actions">
-            <i data-lucide="more-vertical" size="20" onclick="toggleActionsDropdown(event)"></i>
-            <div id="top-actions-dropdown" class="actions-dropdown">
-                <div class="dropdown-item" onclick="openBottomSheet('sheet-add-user')">
-                    <i data-lucide="user-plus" size="12"></i> Add User
-                </div>
-                <div class="dropdown-item" onclick="openBottomSheet('sheet-add-chore')">
-                    <i data-lucide="sparkles" size="12"></i> Chores List
-                </div>
-            </div>
-        </div>
     </nav>
 
     <div id="sheet-select-attendance" class="sheet-overlay" onclick="closeSheetOnOuterClick(event, 'sheet-select-attendance')">
@@ -1687,6 +1822,40 @@
         </div>
     </div>
 
+    <!-- NEW DATE SELECTION BOTTOM SHEET -->
+    <div id="sheet-select-date" class="sheet-overlay" onclick="closeSheetOnOuterClick(event, 'sheet-select-date')">
+        <div class="bottom-sheet">
+            <div class="sheet-handle"></div>
+            <div class="sheet-header">
+                <span class="sheet-title">Select Event Date</span>
+                <div class="sheet-close" onclick="closeBottomSheet('sheet-select-date')">
+                    <i data-lucide="x" size="16"></i>
+                </div>
+            </div>
+            <div class="sheet-scroll-content">
+                <div class="datepicker-interactive-dock">
+                    <div class="datepicker-dock-side-badge">
+                        <i data-lucide="calendar" size="18"></i>
+                    </div>
+                    <input type="date" id="event-date-picker-sheet" class="modern-datepicker">
+                </div>
+                <div class="datepicker-quick-links">
+                    <div class="quick-date-pill" onclick="shiftDatePickerPresetDays(0, 'event-date-picker-sheet')">This Week</div>
+                    <div class="quick-date-pill" onclick="shiftDatePickerPresetDays(7, 'event-date-picker-sheet')">Next Week</div>
+                </div>
+                <div class="date-error-alert" id="date-collision-error-sheet">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <i data-lucide="alert-circle" size="16"></i>
+                        <span>Alert: Date is already created</span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-confirm" style="width: 100%; justify-content: center; padding: 12px 0;" onclick="handleDateSelectionContinue()">
+                Continue <i data-lucide="arrow-right" size="16"></i>
+            </button>
+        </div>
+    </div>
+
     <div class="dashboard-wrapper">
 
         <div id="view-home" class="tab-content active-view">
@@ -1703,7 +1872,7 @@
                     <div class="chart-axis-labels" id="bar-axis-dates"></div>
                 </div>
             </div>
-            
+
             <div class="metrics-grid">
                 <div class="metric-card color-blue">
                     <span class="metric-label"><i data-lucide="calendar" size="14"></i> Total Events</span>
@@ -1712,38 +1881,6 @@
                 <div class="metric-card color-teal">
                     <span class="metric-label"><i data-lucide="users" size="14"></i> Volunteers</span>
                     <span class="metric-value" id="kpi-volunteers-count">10</span>
-                </div>
-            </div>
-
-            <div class="creator-card">
-                <label class="creator-label">
-                    <i data-lucide="layers" size="18" style="color: var(--accent-blue); stroke-width: 2.5;"></i> 
-                    Initialize Scheduled Event
-                </label>
-                
-                <div class="date-input-wrapper">
-                    <div class="datepicker-interactive-dock">
-                        <div class="datepicker-dock-side-badge">
-                            <i data-lucide="calendar" size="18"></i>
-                        </div>
-                        <input type="date" id="event-date-picker" class="modern-datepicker">
-                    </div>
-
-                    <div class="datepicker-quick-links">
-                        <div class="quick-date-pill" onclick="shiftDatePickerPresetDays(0)">Target Saturday</div>
-                        <div class="quick-date-pill" onclick="shiftDatePickerPresetDays(7)">Next Week (+7d)</div>
-                    </div>
-
-                    <button class="btn-plan-action" onclick="handlePlanActionInitiation()">
-                        <i data-lucide="plus-square" size="18"></i> Open Service Roster
-                    </button>
-                </div>
-
-                <div class="creator-error-msg" id="date-collision-error">
-                    <div style="display: flex; align-items: center; gap: 8px;">
-                        <i data-lucide="alert-triangle" size="16"></i>
-                        <span>Alert: Date Already Created!</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1802,8 +1939,18 @@
         </div>
 
         <div id="view-chore-report" class="tab-content">
-            <div class="report-back-btn" onclick="openBottomSheet('sheet-add-chore')">
-                <i data-lucide="arrow-left" size="14"></i> Back to Registry
+            <div class="report-header-controls">
+                <div class="report-back-btn" onclick="switchMainTab('view-home', document.querySelectorAll('.nav-item')[0])">
+                    <i data-lucide="arrow-left" size="14"></i> Back to Home
+                </div>
+                <div class="chore-nav-buttons-group">
+                    <button class="chore-nav-btn prev-btn" id="prev-chore-btn" onclick="navigateToPreviousChore()">
+                        <i data-lucide="chevron-left" size="16" style="stroke-width: 3;"></i>
+                    </button>
+                    <button class="chore-nav-btn next-btn" id="next-chore-btn" onclick="navigateToNextChore()">
+                        <i data-lucide="chevron-right" size="16" style="stroke-width: 3;"></i>
+                    </button>
+                </div>
             </div>
             <div class="plan-summary-header" style="background: var(--accent-yellow);">
                 <h4 id="chore-report-name">Chore Name</h4>
@@ -1847,6 +1994,25 @@
             <div class="nb-section">
                 <span class="nb-phase" style="transform: rotate(-1deg); margin-bottom: 20px;">Edit Assignments</span>
                 <div id="edit-schedule-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING ACTION BUTTON WITH DROPDOWN MENU -->
+    <div class="fab-create-event" id="fab-main-button" onclick="toggleFabMenu(event)">
+        <i data-lucide="plus" size="28" style="stroke-width: 3;"></i>
+        <div class="fab-menu" id="fab-menu-dropdown">
+            <div class="fab-menu-item" onclick="handleFabMenuOption('new-event')">
+                <i data-lucide="calendar-plus" size="16"></i>
+                <span>New Event</span>
+            </div>
+            <div class="fab-menu-item" onclick="handleFabMenuOption('add-user')">
+                <i data-lucide="user-plus" size="16"></i>
+                <span>Add User</span>
+            </div>
+            <div class="fab-menu-item" onclick="handleFabMenuOption('chores-list')">
+                <i data-lucide="sparkles" size="16"></i>
+                <span>Chores List</span>
             </div>
         </div>
     </div>
@@ -2417,10 +2583,18 @@
             
             runChronologicalReveal();
             setUpcomingSaturdayDate();
+            
+            // Initialize FAB visibility - should start visible on home tab
+            const fab = document.getElementById('fab-main-button');
+            const currentActiveView = document.querySelector('.tab-content.active-view');
+            if (fab && currentActiveView && currentActiveView.id !== 'view-home') {
+                fab.classList.add('hidden');
+            }
 
             document.getElementById('dashboard-search').addEventListener('input', runLiveSearchQuery);
             document.addEventListener('click', () => {
-                document.getElementById('top-actions-dropdown').style.display = 'none';
+                const fabMenu = document.getElementById('fab-menu-dropdown');
+                if (fabMenu) fabMenu.classList.remove('menu-open');
             });
 
             // Mobile back button support via popstate event
@@ -2435,21 +2609,60 @@
         });
 
         /* SHORTCUT CALENDAR DATEPRESETS TRANSLATOR HELPER ENGINE */
-        function shiftDatePickerPresetDays(daysOffset) {
-            const dateInput = document.getElementById('event-date-picker');
+        function shiftDatePickerPresetDays(daysOffset, datePickerId = 'event-date-picker') {
+            const dateInput = document.getElementById(datePickerId);
             const calculationBaseDate = new Date();
             
             // Re-evaluate matching dynamic target Saturday computation
             const targetSaturday = new Date(calculationBaseDate.setDate(calculationBaseDate.getDate() + (6 - calculationBaseDate.getDay()) % 7 + daysOffset));
             dateInput.value = targetSaturday.toISOString().split('T')[0];
             
-            // Reset error banners visibility state automatically
-            document.getElementById('date-collision-error').style.display = "none";
+            // Reset error banner visibility state automatically
+            const errorElement = document.getElementById('date-collision-error-sheet');
+            if (errorElement) errorElement.style.display = "none";
             
             // Micro tactile haptic visual animation feedback loop
             const dock = document.querySelector('.datepicker-interactive-dock');
             dock.style.backgroundColor = 'var(--accent-teal)';
             setTimeout(() => { dock.style.backgroundColor = ''; }, 150);
+        }
+
+        // Handle date selection continuation to attendance sheet
+        function handleDateSelectionContinue() {
+            const datePicker = document.getElementById('event-date-picker-sheet');
+            const errorBanner = document.getElementById('date-collision-error-sheet');
+            const selectedDate = datePicker.value;
+
+            if (!selectedDate) {
+                // Show validation message if no date selected
+                errorBanner.innerHTML = '<div style="display: flex; align-items: center; gap: 8px;"><i data-lucide="alert-circle" size="16"></i><span>Please select a date to continue</span></div>';
+                errorBanner.style.display = "block";
+                lucide.createIcons();
+                return;
+            }
+            errorBanner.style.display = "none";
+
+            // Stop duplication if date card exists in workspace
+            const existingDates = Array.from(document.querySelectorAll('#view-schedule .nb-card[data-rawdate]'))
+                                      .map(card => card.getAttribute('data-rawdate'));
+
+            if (existingDates.includes(selectedDate)) {
+                errorBanner.innerHTML = '<div style="display: flex; align-items: center; gap: 8px;"><i data-lucide="alert-circle" size="16"></i><span>Alert: Date is already created</span></div>';
+                errorBanner.style.display = "block";
+                lucide.createIcons();
+                return;
+            }
+
+            transientSelectedDateString = selectedDate;
+            document.querySelectorAll('.attendance-tickbox').forEach(cb => cb.checked = false);
+            
+            // Transition sheets seamlessly
+            closeBottomSheet('sheet-select-date');
+            setTimeout(() => {
+                openBottomSheet('sheet-select-attendance');
+                // Render lucide icons in the attendance sheet
+                if (window.lucide) lucide.createIcons();
+            }, 200);
         }
 
         function generateBarDistributionGrid() {
@@ -2970,6 +3183,10 @@
             document.getElementById('view-plan-assignments').classList.add('active-view');
             document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
             document.querySelector('.bottom-nav').style.display = 'none';
+            
+            // Hide FAB when leaving home view
+            const fab = document.getElementById('fab-main-button');
+            if (fab) fab.classList.add('hidden');
         }
 
         function deleteTaskCard(button) {
@@ -3391,6 +3608,10 @@
             document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
             document.querySelector('.bottom-nav').style.display = 'none';
             
+            // Hide FAB when leaving home view
+            const fab = document.getElementById('fab-main-button');
+            if (fab) fab.classList.add('hidden');
+            
             if (window.lucide) lucide.createIcons();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -3512,11 +3733,20 @@
         }
 
         /* SCREEN ROUTER: LOADS SPECIFIC CHORE'S ASSIGNMENT HISTORY BY WEEK WITH TIMELINE THEME */
+        let currentChoreIndex = 0; // Track which chore is currently displayed
+        
         function loadChoreAssignmentPage(choreName, choreArea) {
             // Push navigation state for mobile back button support
             pushNavigationState('view-chore-report', `Chore Report - ${choreName}`);
             // Close the bottom registry drawer safely first
             closeBottomSheet('sheet-add-chore');
+
+            // Hide FAB when leaving home view
+            const fab = document.getElementById('fab-main-button');
+            if (fab) fab.classList.add('hidden');
+            
+            // Track current chore index for navigation
+            currentChoreIndex = defaultChoreRegistryArray.findIndex(c => c.name === choreName);
 
             document.getElementById('chore-report-name').innerText = choreName;
             document.getElementById('chore-report-area').innerText = choreArea;
@@ -3592,16 +3822,82 @@
             document.getElementById('view-chore-report').classList.add('active-view');
             document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-nav'));
             document.querySelector('.bottom-nav').style.display = 'none';
+            
+            // Update nav button states
+            updateChoreNavButtons();
 
             // Refresh vector graphics and scroll to top smoothly
             if (window.lucide) lucide.createIcons();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function toggleActionsDropdown(event) {
+        /* Update the state of chore navigation buttons */
+        function updateChoreNavButtons() {
+            const prevBtn = document.getElementById('prev-chore-btn');
+            const nextBtn = document.getElementById('next-chore-btn');
+            
+            if (prevBtn) {
+                prevBtn.style.opacity = currentChoreIndex === 0 ? '0.5' : '1';
+                prevBtn.style.pointerEvents = currentChoreIndex === 0 ? 'none' : 'auto';
+            }
+            if (nextBtn) {
+                nextBtn.style.opacity = currentChoreIndex >= defaultChoreRegistryArray.length - 1 ? '0.5' : '1';
+                nextBtn.style.pointerEvents = currentChoreIndex >= defaultChoreRegistryArray.length - 1 ? 'none' : 'auto';
+            }
+        }
+
+        /* Navigate to previous chore in the timeline */
+        function navigateToPreviousChore() {
+            if (currentChoreIndex > 0) {
+                const chore = defaultChoreRegistryArray[currentChoreIndex - 1];
+                loadChoreAssignmentPage(chore.name, chore.area);
+            }
+        }
+
+        /* Navigate to next chore in the timeline */
+        function navigateToNextChore() {
+            if (currentChoreIndex < defaultChoreRegistryArray.length - 1) {
+                const chore = defaultChoreRegistryArray[currentChoreIndex + 1];
+                loadChoreAssignmentPage(chore.name, chore.area);
+            }
+        }
+
+        function handlePlanActionInitiation() {
+            // Placeholder for existing function
+        }
+
+        // FAB Menu Functions
+        function toggleFabMenu(event) {
             event.stopPropagation();
-            const dropdown = document.getElementById('top-actions-dropdown');
-            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+            const fabMenu = document.getElementById('fab-menu-dropdown');
+            fabMenu.classList.toggle('menu-open');
+        }
+
+        function handleFabMenuOption(option) {
+            const fabMenu = document.getElementById('fab-menu-dropdown');
+            fabMenu.classList.remove('menu-open');
+            
+            if (option === 'new-event') {
+                openBottomSheet('sheet-select-date');
+            } else if (option === 'add-user') {
+                openBottomSheet('sheet-add-user');
+            } else if (option === 'chores-list') {
+                openBottomSheet('sheet-add-chore');
+            }
+        }
+
+        // Close FAB menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const fabMenu = document.getElementById('fab-menu-dropdown');
+            const fab = document.getElementById('fab-main-button');
+            if (fab && !fab.contains(event.target)) {
+                fabMenu.classList.remove('menu-open');
+            }
+        });
+
+        function toggleActionsDropdown(event) {
+            // Deprecated - FAB menu is now used instead
+            // This function is kept for backward compatibility
         }
 
         /* MOBILE NAVIGATION: Push state when navigating to a report page */
@@ -3638,9 +3934,19 @@
         }
 
         function openBottomSheet(sheetId) {
-            document.getElementById('top-actions-dropdown').style.display = 'none';
-            document.getElementById(sheetId).classList.add('sheet-open');
-            document.body.style.overflow = 'hidden'; 
+            // Close FAB menu if it's open
+            const fabMenu = document.getElementById('fab-menu-dropdown');
+            if (fabMenu) fabMenu.classList.remove('menu-open');
+            
+            // Close any old dropdown menu that might exist
+            const topDropdown = document.getElementById('top-actions-dropdown');
+            if (topDropdown) topDropdown.style.display = 'none';
+            
+            const sheet = document.getElementById(sheetId);
+            if (sheet) {
+                sheet.classList.add('sheet-open');
+                document.body.style.overflow = 'hidden';
+            }
         }
 
         function closeBottomSheet(sheetId) {
@@ -3663,6 +3969,16 @@
             
             // Show bottom nav when switching to main tabs (use grid since that's its default display)
             document.querySelector('.bottom-nav').style.display = 'grid';
+            
+            // Show FAB only on home tab
+            const fab = document.getElementById('fab-main-button');
+            const fabMenu = document.getElementById('fab-menu-dropdown');
+            if (targetViewId === 'view-home') {
+                fab.classList.remove('hidden');
+            } else {
+                fab.classList.add('hidden');
+                fabMenu.classList.remove('menu-open');
+            }
             
             // Render icons for the current view
             if (window.lucide) lucide.createIcons();
@@ -3708,7 +4024,13 @@
         function setUpcomingSaturdayDate() {
             const today = new Date();
             const nextSaturday = new Date(today.setDate(today.getDate() + (6 - today.getDay()) % 7));
-            document.getElementById('event-date-picker').value = nextSaturday.toISOString().split('T')[0];
+            const dateValue = nextSaturday.toISOString().split('T')[0];
+            
+            // Set value on bottom sheet date picker if it exists
+            const datePickerSheet = document.getElementById('event-date-picker-sheet');
+            if (datePickerSheet) {
+                datePickerSheet.value = dateValue;
+            }
         }
 
         function syncLiveKPIValues() {
