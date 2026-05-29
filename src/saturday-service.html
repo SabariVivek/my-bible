@@ -2129,19 +2129,60 @@
                 
                 if (error) throw error;
                 
-                // Build attendance strings for each volunteer
-                if (data) {
-                    registeredVolunteersRoster.forEach(volunteer => {
-                        const attendance = data
-                            .filter(a => a.volunteer_id === volunteer.id)
-                            .sort((a, b) => a.week_number - b.week_number)
-                            .map(a => a.present ? '1' : '0')
-                            .join(',');
-                        volunteer.attendance = attendance;
+                console.log('🔍 DEBUG: Fetched', data?.length || 0, 'attendance records from DB');
+                if (data && data.length > 0) {
+                    console.log('📋 RAW ATTENDANCE DATA (first 3):');
+                    data.slice(0, 3).forEach((r, i) => {
+                        console.log(`   Record ${i}: volunteer_id=${r.volunteer_id} (type: ${typeof r.volunteer_id}), week_number=${r.week_number}, present=${r.present}`);
                     });
                 }
                 
-                console.log('✅ Attendance history loaded:', data?.length || 0, 'records');
+                // First, get all possible week numbers
+                const { data: allSchedules } = await supabaseClient
+                    .from('service_schedules')
+                    .select('id')
+                    .order('id');
+                
+                const totalWeeks = allSchedules ? allSchedules.length : 0;
+                console.log('📅 Total weeks (schedules):', totalWeeks);
+                
+                // Build attendance strings for each volunteer (LAST 10 WEEKS ONLY)
+                if (totalWeeks > 0) {
+                    registeredVolunteersRoster.forEach(volunteer => {
+                        console.log(`\n👤 Processing ${volunteer.name} (ID: ${volunteer.id}, type: ${typeof volunteer.id}):`);
+                        
+                        // Create array for ALL weeks: 1 for present, 0 for absent/no record
+                        const allWeeksArray = [];
+                        
+                        for (let week = 1; week <= totalWeeks; week++) {
+                            const record = data && data.find(a => {
+                                const match = a.volunteer_id === volunteer.id && a.week_number === week;
+                                if (match) {
+                                    console.log(`    ✓ Week ${week}: FOUND matching record (volunteer_id: ${a.volunteer_id}, week: ${a.week_number}, present: ${a.present})`);
+                                }
+                                return match;
+                            });
+                            
+                            const mark = record && record.present === true ? '1' : '0';
+                            allWeeksArray.push(mark);
+                            
+                            if (!record) {
+                                console.log(`    ✗ Week ${week}: No match found`);
+                            }
+                        }
+                        
+                        // Get only the last 10 weeks
+                        const last10Weeks = allWeeksArray.slice(-10);
+                        
+                        const attendance = last10Weeks.join(',');
+                        volunteer.attendance = attendance;
+                        console.log(`  📊 Final: ${volunteer.name}: ${attendance}`);
+                    });
+                } else {
+                    console.log('⚠️  No schedules found - setting all attendance to empty');
+                }
+                
+                console.log('✅ Attendance history fetch complete');
                 return registeredVolunteersRoster;
             } catch (err) {
                 console.error('❌ Failed to load attendance history:', err);
@@ -2299,7 +2340,7 @@
             await fetchAttendanceHistory();
             await loadSchedulesFromDatabase();
             
-            // Calculate attendance history dataset for charts
+            // Calculate attendance history dataset for charts (LAST 10 WEEKS ONLY)
             const weeks = new Map();
             
             // Get all schedules first
@@ -2335,16 +2376,20 @@
                 });
             }
             
-            attendanceHistoryDataset = Array.from(weeks.values()).sort((a, b) => {
+            let allWeeks = Array.from(weeks.values()).sort((a, b) => {
                 const weekNumA = parseInt(a.label.replace('W', ''));
                 const weekNumB = parseInt(b.label.replace('W', ''));
                 return weekNumA - weekNumB;
             });
             
+            // Keep only LAST 10 WEEKS for the chart
+            attendanceHistoryDataset = allWeeks.slice(-10);
+            
             console.log('✅ All data initialized:');
             console.log('   - Chores:', defaultChoreRegistryArray.length);
             console.log('   - Volunteers:', registeredVolunteersRoster.length);
-            console.log('   - Weeks:', attendanceHistoryDataset.length);
+            console.log('   - Weeks (all):', allWeeks.length);
+            console.log('   - Weeks (last 10 for chart):', attendanceHistoryDataset.length);
         }
 
         async function loadSchedulesFromDatabase() {
@@ -3582,14 +3627,34 @@
                 }
                 
                 // 3. Save attendance history for all present volunteers
-                console.log('📝 STEP 3: Saving attendance history for', transientPresentVolunteersArray.length, 'volunteers');
+                console.log('📝 STEP 3: Saving attendance history for', transientPresentVolunteersArray.length, 'volunteers from attendance sheet');
                 
-                // Calculate week number for this date
-                const serviceDate_obj = new Date(serviceDate);
-                const year = serviceDate_obj.getFullYear();
-                const weekNumber = Math.ceil((serviceDate_obj - new Date(year, 0, 1)) / (7 * 24 * 60 * 60 * 1000));
+                // Get week number by counting how many schedules exist BEFORE this date
+                const { data: schedulesBefore } = await supabaseClient
+                    .from('service_schedules')
+                    .select('id, service_date')
+                    .lt('service_date', serviceDate)
+                    .order('service_date');
                 
-                const attendanceRecords = transientPresentVolunteersArray.map(volunteerName => {
+                const weekNumber = (schedulesBefore ? schedulesBefore.length : 0) + 1;
+                console.log('📅 Calculated week_number:', weekNumber, 'for service_date:', serviceDate, '(found', schedulesBefore?.length || 0, 'earlier schedules)');
+                
+                // Start with volunteers from attendance sheet
+                const attendanceSet = new Set(transientPresentVolunteersArray);
+                
+                // Also add all volunteers assigned to chores (they were there if they were assigned)
+                if (assignmentRecords && assignmentRecords.length > 0) {
+                    assignmentRecords.forEach(record => {
+                        const volunteer = registeredVolunteersRoster.find(v => v.id === record.volunteer_id);
+                        if (volunteer) {
+                            attendanceSet.add(volunteer.name);
+                        }
+                    });
+                }
+                
+                console.log('   Total volunteers to mark as present:', attendanceSet.size, '(from attendance sheet + chore assignments)');
+                
+                const attendanceRecords = Array.from(attendanceSet).map(volunteerName => {
                     const volunteer = registeredVolunteersRoster.find(v => v.name === volunteerName);
                     return {
                         volunteer_id: volunteer?.id,
@@ -3599,21 +3664,26 @@
                     };
                 }).filter(rec => rec.volunteer_id); // Only include valid records
                 
+                console.log('🔍 DEBUG: Attendance records to upsert:', JSON.stringify(attendanceRecords, null, 2));
+                
                 if (attendanceRecords.length > 0) {
-                    console.log('   Upserting', attendanceRecords.length, 'attendance records');
+                    console.log('   Upserting', attendanceRecords.length, 'attendance records with week_number:', weekNumber);
                     // Use upsert to avoid duplicate key conflicts - insert or update if exists
                     const { data: attendanceData, error: attendanceError } = await supabaseClient
                         .from('attendance_history')
                         .upsert(attendanceRecords, { onConflict: 'volunteer_id,week_number' });
                     
                     if (attendanceError) {
-                        console.error('❌ STEP 3 WARNING: Error upserting attendance:', attendanceError);
+                        console.error('❌ STEP 3 FAILED: Error upserting attendance:', attendanceError);
                         console.error('   Error message:', attendanceError.message);
+                        console.error('   Error code:', attendanceError.code);
+                        console.error('   Error details:', attendanceError.details);
                     } else {
-                        console.log('✅ STEP 3 COMPLETE: Attendance history saved/updated:', attendanceRecords.length, 'records');
+                        console.log('✅ STEP 3 COMPLETE: Attendance history saved/updated:', attendanceData?.length || attendanceRecords.length, 'records');
+                        console.log('   Upserted data:', attendanceData);
                     }
                 } else {
-                    console.log('ℹ️  STEP 3: No attendance records to save');
+                    console.log('⚠️  STEP 3: No attendance records to save (no volunteers matched)');
                 }
                 
                 console.log('✅✅✅ ALL STEPS COMPLETE: Assignments saved successfully to database');
@@ -4145,10 +4215,14 @@
                 if (!dataString) return;
                 
                 const attendanceArray = dataString.split(',');
+                
+                // Keep only LAST 10 weeks
+                const last10 = attendanceArray.slice(-10);
+                
                 const gridContainer = box.querySelector('.tracker-grid');
                 gridContainer.innerHTML = ''; 
                 
-                attendanceArray.forEach(mark => {
+                last10.forEach(mark => {
                     const block = document.createElement('div');
                     block.className = 'tracker-dot';
                     if (mark.trim() === "1") {
