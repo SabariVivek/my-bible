@@ -33,6 +33,14 @@
     cursor: pointer;
     z-index: 11;
     pointer-events: all;
+    transition: bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+    opacity: 1;
+}
+
+.chapter-summary-arc-trigger.hidden-on-scroll {
+    bottom: -15px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 .chapter-summary-arc-shape {

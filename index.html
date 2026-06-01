@@ -2301,6 +2301,80 @@
     <div class="profile-preview-overlay" id="profile-preview-overlay">
         <img class="profile-preview-img" id="profile-preview-img" alt="Profile preview">
     </div>
+
+    <!-- Scroll-Hide Functionality for Top Bar and Bottom Nav -->
+    <script>
+        // ============================================
+        // SCROLL-HIDE FUNCTIONALITY
+        // Hide navigation bars while scrolling verses
+        // ============================================
+        let lastScrollTop = 0;
+        let scrollTimeout;
+        const scrollHideDelay = 200; // ms before showing bars after scroll stops
+
+        function handleScrollHideShow(scrollValue) {
+            const topBar = document.querySelector('.top-bar');
+            const bottomNav = document.querySelector('.bottom-nav');
+            const arcTrigger = document.querySelector('.chapter-summary-arc-trigger');
+            
+            if (!topBar || !bottomNav) return;
+            
+            // Only hide if scrolling down AND we've scrolled a bit
+            if (scrollValue > lastScrollTop && scrollValue > 100) {
+                // Scrolling DOWN - hide bars
+                topBar.classList.add('hidden-on-scroll');
+                bottomNav.classList.add('hidden-on-scroll');
+                if (arcTrigger) arcTrigger.classList.add('hidden-on-scroll');
+            } else if (scrollValue <= lastScrollTop || scrollValue <= 100) {
+                // Scrolling UP or at top - show bars
+                topBar.classList.remove('hidden-on-scroll');
+                bottomNav.classList.remove('hidden-on-scroll');
+                if (arcTrigger) arcTrigger.classList.remove('hidden-on-scroll');
+            }
+            
+            lastScrollTop = scrollValue <= 0 ? 0 : scrollValue;
+        }
+
+        // Initialize scroll listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            const contentArea = document.querySelector('.content-area');
+            
+            // Try content-area if it's scrollable
+            if (contentArea && contentArea.scrollHeight > contentArea.clientHeight) {
+                contentArea.addEventListener('scroll', () => {
+                    handleScrollHideShow(contentArea.scrollTop);
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        const topBar = document.querySelector('.top-bar');
+                        const bottomNav = document.querySelector('.bottom-nav');
+                        const arcTrigger = document.querySelector('.chapter-summary-arc-trigger');
+                        if (topBar && bottomNav && lastScrollTop <= 100) {
+                            topBar.classList.remove('hidden-on-scroll');
+                            bottomNav.classList.remove('hidden-on-scroll');
+                            if (arcTrigger) arcTrigger.classList.remove('hidden-on-scroll');
+                        }
+                    }, scrollHideDelay);
+                }, { passive: true });
+            }
+            
+            // Also listen to window scroll as fallback
+            window.addEventListener('scroll', () => {
+                const scrollVal = window.pageYOffset || document.documentElement.scrollTop;
+                handleScrollHideShow(scrollVal);
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    const topBar = document.querySelector('.top-bar');
+                    const bottomNav = document.querySelector('.bottom-nav');
+                    const arcTrigger = document.querySelector('.chapter-summary-arc-trigger');
+                    if (topBar && bottomNav && lastScrollTop <= 100) {
+                        topBar.classList.remove('hidden-on-scroll');
+                        bottomNav.classList.remove('hidden-on-scroll');
+                        if (arcTrigger) arcTrigger.classList.remove('hidden-on-scroll');
+                    }
+                }, scrollHideDelay);
+            }, { passive: true });
+        });
+    </script>
 </body>
 
 </html>

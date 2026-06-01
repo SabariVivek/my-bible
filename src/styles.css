@@ -69,6 +69,39 @@ body,
     }
 }
 
+/* ============================================
+   SCROLL-HIDE ANIMATIONS
+   Hide top and bottom bars while scrolling
+   ============================================ */
+.top-bar {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.top-bar.hidden-on-scroll {
+    transform: translateY(-100%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.bottom-nav {
+    transition: bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+    opacity: 1;
+}
+
+.bottom-nav.hidden-on-scroll {
+    bottom: -75px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Ensure dark theme doesn't override */
+body.dark-theme .bottom-nav.hidden-on-scroll {
+    bottom: -100px !important;
+    opacity: 0 !important;
+}
+
 /* Verse Count Bookmark - Right side top bookmark design */
 .verse-count-banner-container {
     display: none !important;

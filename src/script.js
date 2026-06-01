@@ -5582,9 +5582,10 @@ document.addEventListener('click', (e) => {
                     setTimeout(() => {
                         const contentArea = document.querySelector('.content-area');
                         if (contentArea) {
-                            contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                            contentArea.scrollTop = 0;
                         }
-                    }, 100);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 300);
                 });
             }
         } else if (currentChapter > 1) {
@@ -5595,9 +5596,10 @@ document.addEventListener('click', (e) => {
             setTimeout(() => {
                 const contentArea = document.querySelector('.content-area');
                 if (contentArea) {
-                    contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                    contentArea.scrollTop = 0;
                 }
-            }, 100);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 300);
         } else if (currentChapter === 1) {
             // At chapter 1, check if current book has intro
             const book = bibleBooks[currentBook];
@@ -5611,9 +5613,10 @@ document.addEventListener('click', (e) => {
                 setTimeout(() => {
                     const contentArea = document.querySelector('.content-area');
                     if (contentArea) {
-                        contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                        contentArea.scrollTop = 0;
                     }
-                }, 100);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 300);
             } else if (currentBook > 0) {
                 // No intro, go to previous book's last chapter
                 currentBook--;
@@ -5623,9 +5626,10 @@ document.addEventListener('click', (e) => {
                     setTimeout(() => {
                         const contentArea = document.querySelector('.content-area');
                         if (contentArea) {
-                            contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                            contentArea.scrollTop = 0;
                         }
-                    }, 100);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 300);
                 });
             }
         }
@@ -5646,9 +5650,10 @@ document.addEventListener('click', (e) => {
             setTimeout(() => {
                 const contentArea = document.querySelector('.content-area');
                 if (contentArea) {
-                    contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                    contentArea.scrollTop = 0;
                 }
-            }, 100);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 300);
         } else {
             const book = bibleBooks[currentBook];
             if (currentChapter < book.chapters) {
@@ -5659,9 +5664,10 @@ document.addEventListener('click', (e) => {
                 setTimeout(() => {
                     const contentArea = document.querySelector('.content-area');
                     if (contentArea) {
-                        contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                        contentArea.scrollTop = 0;
                     }
-                }, 100);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 300);
             } else if (currentBook < bibleBooks.length - 1) {
                 // At last chapter, go to next book's introduction
                 currentBook++;
@@ -5680,9 +5686,10 @@ document.addEventListener('click', (e) => {
                         setTimeout(() => {
                             const contentArea = document.querySelector('.content-area');
                             if (contentArea) {
-                                contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                                contentArea.scrollTop = 0;
                             }
-                        }, 100);
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }, 300);
                     });
                 } else {
                     // No intro, go to chapter 1
@@ -5692,9 +5699,10 @@ document.addEventListener('click', (e) => {
                         setTimeout(() => {
                             const contentArea = document.querySelector('.content-area');
                             if (contentArea) {
-                                contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                                contentArea.scrollTop = 0;
                             }
-                        }, 100);
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }, 300);
                     });
                 }
             }
