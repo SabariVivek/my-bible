@@ -2614,6 +2614,11 @@ async function updateUI() {
 
     // Preload all referenced verse data in background (so references display instantly when clicked)
     preloadReferencedVerseData();
+
+    // Notify the reading-progress banner that the displayed chapter has changed
+    window.dispatchEvent(new CustomEvent('bibleChapterChanged', {
+        detail: { bookIndex: currentBook, chapter: currentChapter }
+    }));
 }
 // Update book selection
 function updateBookSelection() {

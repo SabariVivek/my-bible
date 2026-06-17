@@ -2316,6 +2316,7 @@
             const topBar = document.querySelector('.top-bar');
             const bottomNav = document.querySelector('.bottom-nav');
             const arcTrigger = document.querySelector('.chapter-summary-arc-trigger');
+            const readingBanner = document.getElementById('from-bible-reading-banner');
             
             if (!topBar || !bottomNav) return;
             
@@ -2325,11 +2326,13 @@
                 topBar.classList.add('hidden-on-scroll');
                 bottomNav.classList.add('hidden-on-scroll');
                 if (arcTrigger) arcTrigger.classList.add('hidden-on-scroll');
+                if (readingBanner) readingBanner.classList.add('hidden-on-scroll');
             } else if (scrollValue <= lastScrollTop || scrollValue <= 100) {
                 // Scrolling UP or at top - show bars
                 topBar.classList.remove('hidden-on-scroll');
                 bottomNav.classList.remove('hidden-on-scroll');
                 if (arcTrigger) arcTrigger.classList.remove('hidden-on-scroll');
+                if (readingBanner) readingBanner.classList.remove('hidden-on-scroll');
             }
             
             lastScrollTop = scrollValue <= 0 ? 0 : scrollValue;
@@ -2352,6 +2355,8 @@
                             topBar.classList.remove('hidden-on-scroll');
                             bottomNav.classList.remove('hidden-on-scroll');
                             if (arcTrigger) arcTrigger.classList.remove('hidden-on-scroll');
+                            const rb = document.getElementById('from-bible-reading-banner');
+                            if (rb) rb.classList.remove('hidden-on-scroll');
                         }
                     }, scrollHideDelay);
                 }, { passive: true });
@@ -2370,10 +2375,255 @@
                         topBar.classList.remove('hidden-on-scroll');
                         bottomNav.classList.remove('hidden-on-scroll');
                         if (arcTrigger) arcTrigger.classList.remove('hidden-on-scroll');
+                        const rb = document.getElementById('from-bible-reading-banner');
+                        if (rb) rb.classList.remove('hidden-on-scroll');
                     }
                 }, scrollHideDelay);
             }, { passive: true });
         });
+    </script>
+
+    <!-- From Bible Reading - Mark Chapter Banner -->
+    <style>
+        #from-bible-reading-banner {
+            position: fixed;
+            bottom: calc(env(safe-area-inset-bottom, 0px) + 76px);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px 10px 16px;
+            border-radius: 28px;
+            max-width: calc(100vw - 32px);
+            width: max-content;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+            font-family: 'DM Sans', 'Lato', sans-serif;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .dark-theme #from-bible-reading-banner {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #e2e8f0;
+        }
+        body:not(.dark-theme) #from-bible-reading-banner {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #e2e8f0;
+        }
+        #from-bible-reading-banner.show {
+            display: flex;
+        }
+        #from-br-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #e2e8f0;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        #from-br-mark-btn {
+            background: #10b981;
+            border: none;
+            border-radius: 18px;
+            padding: 6px 13px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-shrink: 0;
+            transition: background 0.2s;
+            white-space: nowrap;
+            font-family: inherit;
+        }
+        #from-br-mark-btn:hover { background: #059669; }
+        #from-br-mark-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        #from-br-mark-btn.already-read {
+            background: #334155;
+            color: #94a3b8;
+            cursor: default;
+        }
+        #from-br-dismiss-btn {
+            background: none;
+            border: none;
+            color: #64748b;
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+            transition: background 0.15s;
+        }
+        #from-br-dismiss-btn:hover { background: rgba(255,255,255,0.08); color: #94a3b8; }
+    </style>
+
+    <div id="from-bible-reading-banner">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" style="flex-shrink:0;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span id="from-br-label"></span>
+        <button id="from-br-mark-btn" aria-label="Mark chapter as read">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span id="from-br-btn-text">Mark Read</span>
+        </button>
+        <button id="from-br-dismiss-btn" aria-label="Dismiss">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+    </div>
+
+    <script>
+        // From Bible Reading — show "Mark as Read" banner when navigated here from bible-reading.html.
+        // Also reacts to chapter navigation within index.html so all portions in today's plan
+        // show the banner without needing to go back to the reading tracker.
+        (function () {
+            const banner = document.getElementById('from-bible-reading-banner');
+            const label = document.getElementById('from-br-label');
+            const markBtn = document.getElementById('from-br-mark-btn');
+            const dismissBtn = document.getElementById('from-br-dismiss-btn');
+            if (!banner || !label || !markBtn || !dismissBtn) return;
+
+            // Session context — all today's portions; persists until dismissed
+            let sessionContext = null;
+            // portionIdx values marked read during this page session
+            const markedInSession = new Set();
+            // Timeout handle for the "Marked!" auto-hide
+            let markHideTimer = null;
+
+            function loadSessionContext() {
+                try {
+                    const raw = localStorage.getItem('fromBibleReadingSession');
+                    if (!raw) return null;
+                    const ctx = JSON.parse(raw);
+                    return (ctx && ctx.userId && Array.isArray(ctx.portions)) ? ctx : null;
+                } catch (e) { return null; }
+            }
+
+            function renderMarkBtn(isRead) {
+                const checkSvg = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>';
+                markBtn.style.background = '';
+                markBtn.classList.remove('already-read');
+                markBtn.disabled = false;
+                if (isRead) {
+                    markBtn.innerHTML = checkSvg + '<span>Already Read</span>';
+                    markBtn.classList.add('already-read');
+                    markBtn.disabled = true;
+                } else {
+                    markBtn.innerHTML = checkSvg + '<span id="from-br-btn-text">Mark Read</span>';
+                }
+            }
+
+            function showBannerForPortion(portion) {
+                const isRead = portion.isAlreadyRead || markedInSession.has(portion.portionIdx);
+                label.textContent = portion.bookName + ' ' + portion.chapterNum;
+                renderMarkBtn(isRead);
+                // Refresh the single-chapter context so the mark button works for this chapter
+                localStorage.setItem('fromBibleReading', JSON.stringify({
+                    userId: sessionContext.userId,
+                    portionIdx: portion.portionIdx,
+                    dateKey: sessionContext.dateKey,
+                    bookName: portion.bookName,
+                    chapterNum: portion.chapterNum,
+                    bookIndex: portion.bookIndex,
+                    isAlreadyRead: isRead
+                }));
+                banner.classList.add('show');
+            }
+
+            function checkAndUpdateBanner(bookIndex, chapter) {
+                if (!sessionContext) return;
+                // Cancel any pending auto-hide so it doesn't clobber the new chapter's banner
+                if (markHideTimer) { clearTimeout(markHideTimer); markHideTimer = null; }
+                const match = sessionContext.portions.find(
+                    p => p.bookIndex === bookIndex && p.chapterNum === chapter
+                );
+                if (match) {
+                    showBannerForPortion(match);
+                } else {
+                    banner.classList.remove('show');
+                    localStorage.removeItem('fromBibleReading');
+                }
+            }
+
+            // ── Initial page load ──────────────────────────────────────────
+            sessionContext = loadSessionContext();
+            if (!sessionContext) return; // Not in a reading session — nothing to do
+
+            // Show banner for the chapter we just navigated to
+            const initialRaw = localStorage.getItem('fromBibleReading');
+            if (initialRaw) {
+                try {
+                    const ctx = JSON.parse(initialRaw);
+                    if (ctx && ctx.userId) {
+                        label.textContent = ctx.bookName + ' ' + ctx.chapterNum;
+                        renderMarkBtn(!!ctx.isAlreadyRead);
+                        banner.classList.add('show');
+                    }
+                } catch (e) {}
+            }
+
+            // ── React to chapter navigation inside index.html ──────────────
+            window.addEventListener('bibleChapterChanged', function (e) {
+                checkAndUpdateBanner(e.detail.bookIndex, e.detail.chapter);
+            });
+
+            // ── Mark as Read ───────────────────────────────────────────────
+            markBtn.addEventListener('click', async function () {
+                if (markBtn.disabled) return;
+                const raw = localStorage.getItem('fromBibleReading');
+                if (!raw) return;
+                let cur;
+                try { cur = JSON.parse(raw); } catch (e) { return; }
+                if (!cur || !cur.userId) return;
+
+                markBtn.disabled = true;
+                const btnText = document.getElementById('from-br-btn-text');
+                if (btnText) btnText.textContent = '...';
+
+                try {
+                    const client = typeof getSupabaseClient === 'function' ? getSupabaseClient() : null;
+                    if (client && cur.userId) {
+                        await client.from('daily_portions').upsert([{
+                            user_id: cur.userId,
+                            reading_date: cur.dateKey,
+                            portion_index: cur.portionIdx,
+                            completed: true,
+                            completed_at: new Date().toISOString()
+                        }], { onConflict: 'user_id,reading_date,portion_index' }).select();
+                    }
+                    // Track locally so next visit to this chapter shows "Already Read"
+                    markedInSession.add(cur.portionIdx);
+                    const p = sessionContext.portions.find(x => x.portionIdx === cur.portionIdx);
+                    if (p) p.isAlreadyRead = true;
+
+                    markBtn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>Marked!</span>';
+                    markBtn.style.background = '#059669';
+                    localStorage.removeItem('fromBibleReading');
+
+                    // Auto-hide after 1.8s; cancelled if user navigates to next chapter first
+                    if (markHideTimer) clearTimeout(markHideTimer);
+                    markHideTimer = setTimeout(function () {
+                        markHideTimer = null;
+                        banner.classList.remove('show');
+                    }, 1800);
+                } catch (err) {
+                    console.error('Failed to mark reading portion:', err);
+                    markBtn.disabled = false;
+                    const btnText2 = document.getElementById('from-br-btn-text');
+                    if (btnText2) btnText2.textContent = 'Mark Read';
+                }
+            });
+
+            // ── Dismiss (ends the session) ─────────────────────────────────
+            dismissBtn.addEventListener('click', function () {
+                if (markHideTimer) { clearTimeout(markHideTimer); markHideTimer = null; }
+                banner.classList.remove('show');
+                localStorage.removeItem('fromBibleReading');
+                localStorage.removeItem('fromBibleReadingSession');
+                sessionContext = null;
+            });
+        })();
     </script>
 </body>
 

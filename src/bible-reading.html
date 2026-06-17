@@ -3375,6 +3375,85 @@
             // Swipe navigation removed
         }
 
+        // Navigate from Bible Reading dashboard to the main Bible app at a specific chapter.
+        // Sets fromBibleReading context so index.html shows a "Mark as Read" banner.
+        function navigateToBibleFromReading(bookName, chapterStr, portionIdx, dateKey, isAlreadyRead) {
+            if (!state.currentUser) {
+                window.location.href = '../index.html';
+                return;
+            }
+            // Map reading-plan book names (e.g. "1 Samuel") to bibleBooks[] index in script.js (e.g. 8)
+            const BOOK_INDEX_MAP = {
+                'Genesis': 0, 'Exodus': 1, 'Leviticus': 2, 'Numbers': 3, 'Deuteronomy': 4,
+                'Joshua': 5, 'Judges': 6, 'Ruth': 7,
+                '1 Samuel': 8, '2 Samuel': 9, '1 Kings': 10, '2 Kings': 11,
+                '1 Chronicles': 12, '2 Chronicles': 13,
+                'Ezra': 14, 'Nehemiah': 15, 'Esther': 16, 'Job': 17, 'Psalms': 18,
+                'Proverbs': 19, 'Ecclesiastes': 20, 'Song of Solomon': 21,
+                'Isaiah': 22, 'Jeremiah': 23, 'Lamentations': 24, 'Ezekiel': 25,
+                'Daniel': 26, 'Hosea': 27, 'Joel': 28, 'Amos': 29, 'Obadiah': 30,
+                'Jonah': 31, 'Micah': 32, 'Nahum': 33, 'Habakkuk': 34,
+                'Zephaniah': 35, 'Haggai': 36, 'Zechariah': 37, 'Malachi': 38,
+                'Matthew': 39, 'Mark': 40, 'Luke': 41, 'John': 42, 'Acts': 43,
+                'Romans': 44, '1 Corinthians': 45, '2 Corinthians': 46,
+                'Galatians': 47, 'Ephesians': 48, 'Philippians': 49, 'Colossians': 50,
+                '1 Thessalonians': 51, '2 Thessalonians': 52,
+                '1 Timothy': 53, '2 Timothy': 54, 'Titus': 55, 'Philemon': 56,
+                'Hebrews': 57, 'James': 58,
+                '1 Peter': 59, '2 Peter': 60,
+                '1 John': 61, '2 John': 62, '3 John': 63, 'Jude': 64,
+                'Revelation': 65
+            };
+            const bookIndex = BOOK_INDEX_MAP[bookName];
+            if (bookIndex === undefined) {
+                window.location.href = '../index.html';
+                return;
+            }
+            // Handle verse-range chapters like "119:1-88" → chapter 119
+            const chStr = String(chapterStr).trim();
+            const chapterNum = chStr.includes(':') ? parseInt(chStr.split(':')[0], 10) : parseInt(chStr, 10);
+            // Set the current book/chapter so index.html opens at the right place
+            localStorage.setItem('currentBook', bookIndex);
+            localStorage.setItem('currentChapter', chapterNum);
+            // Store context so index.html can show the "Mark as Read" banner
+            localStorage.setItem('fromBibleReading', JSON.stringify({
+                userId: state.currentUser.id,
+                portionIdx: portionIdx,
+                dateKey: dateKey,
+                bookName: bookName,
+                chapterNum: chapterNum,
+                bookIndex: bookIndex,
+                isAlreadyRead: !!isAlreadyRead
+            }));
+            // Store ALL today's portions so index.html can track the full session
+            // (enables banner to appear on next/prev chapter navigation within index.html)
+            try {
+                const todayPortions = getTodayReading(state.selectedDate);
+                if (todayPortions && todayPortions.portions) {
+                    const expanded = expandChapterRanges(todayPortions.portions);
+                    const sessionPortions = expanded.map((p, i) => {
+                        const bIdx = BOOK_INDEX_MAP[p.book];
+                        const cs = String(p.chapters).trim();
+                        const cn = cs.includes(':') ? parseInt(cs.split(':')[0], 10) : parseInt(cs, 10);
+                        const pk = `${dateKey}-${i}`;
+                        return {
+                            portionIdx: i,
+                            bookIndex: bIdx,
+                            chapterNum: cn,
+                            bookName: p.book,
+                            isAlreadyRead: completedPortions.has(pk)
+                        };
+                    });
+                    localStorage.setItem('fromBibleReadingSession', JSON.stringify({
+                        userId: state.currentUser.id,
+                        dateKey: dateKey,
+                        portions: sessionPortions
+                    }));
+                }
+            } catch (_e) {}
+            window.location.href = '../index.html';
+        }
+
         async function togglePortionComplete(portionIndex) {
             console.log('togglePortionComplete called with portionIndex:', portionIndex);
             console.log('state.selectedDate:', state.selectedDate);
@@ -7131,7 +7210,7 @@
                                                 const isPortionChecked = isDateCompleted || completedPortions.has(portionKey);
                                                 const tamilName = getTamilName(portion.book);
                                                 return `
-                                                <div class="${theme.card} border ${theme.border} rounded-lg p-3 flex items-center justify-between gap-3">
+                                                <div class="${theme.card} border ${theme.border} rounded-lg p-3 flex items-center justify-between gap-3" style="cursor:pointer;" onclick="navigateToBibleFromReading('${portion.book}', '${portion.chapters}', ${idx}, '${dateKey}', ${isPortionChecked})">
                                                     <div class="flex items-center gap-3 flex-1 min-w-0">
                                                         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center">${idx + 1}</span>
                                                         <div class="min-w-0 flex-1">
@@ -7140,7 +7219,7 @@
                                                         </div>
                                                     </div>
                                                     ${!isLastYearDate ? `
-                                                    <div class="portion-checkbox ${isPortionChecked ? 'checked' : ''} ${isDateCompleted || isFutureDate ? 'disabled' : ''}" onclick="${!isDateCompleted && !isFutureDate ? `togglePortionComplete(${idx})` : ''}">
+                                                    <div class="portion-checkbox ${isPortionChecked ? 'checked' : ''} ${isDateCompleted || isFutureDate ? 'disabled' : ''}" onclick="event.stopPropagation(); ${!isDateCompleted && !isFutureDate ? `togglePortionComplete(${idx})` : ''}">
                                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                                                             <polyline points="20 6 9 17 4 12"/>
                                                         </svg>

@@ -323,13 +323,35 @@
 
         /* Pause icon: two vertical bars via element + box-shadow */
         .track-item.playing.media-paused .play-indicator::after {
-            display: block;
+            display: none;
+        }
+
+        .pause-icon {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .track-item.playing.media-paused .play-indicator .pause-icon {
+            display: flex;
+        }
+
+        .pause-bar {
             width: 3px;
             height: 13px;
             background-color: var(--raw-black);
-            box-shadow: 7px 0 0 var(--raw-black);
-            border: none;
-            margin-left: -3px;
+            display: inline-block;
+        }
+
+        .pause-bars {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Hide equalizer when paused */
@@ -1038,6 +1060,7 @@
             </div>
             <div class="track-action-column">
                 <div class="play-indicator">
+                    <div class="pause-icon"><div class="pause-bars"><div class="pause-bar"></div><div class="pause-bar"></div></div></div>
                     <div class="equalizer-wave">
                         <div class="eq-bar"></div>
                         <div class="eq-bar"></div>

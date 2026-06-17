@@ -96,6 +96,16 @@ body,
     pointer-events: none !important;
 }
 
+#from-bible-reading-banner {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#from-bible-reading-banner.hidden-on-scroll {
+    opacity: 0 !important;
+    transform: translateX(-50%) translateY(12px) !important;
+    pointer-events: none !important;
+}
+
 /* Ensure dark theme doesn't override */
 body.dark-theme .bottom-nav.hidden-on-scroll {
     bottom: -100px !important;
