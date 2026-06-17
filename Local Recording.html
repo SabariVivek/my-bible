@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Bible Study Series</title>
+    <style>
+        /* ── Password Gate ─────────────────────────────────────────────────── */
+        #passwordGate {
+            position: fixed;
+            inset: 0;
+            background-color: #f3f0ea;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        #passwordGate.hidden {
+            display: none;
+        }
+
+        .gate-box {
+            background: #ffffff;
+            border: 4px solid #000000;
+            box-shadow: 8px 8px 0px #000000;
+            padding: 32px 28px;
+            width: 100%;
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .gate-title-block {
+            background-color: #fde047;
+            border: 3px solid #000000;
+            padding: 6px 18px;
+            transform: rotate(-2deg);
+            box-shadow: 4px 4px 0px #000000;
+        }
+
+        .gate-title-block h2 {
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: #000000;
+            letter-spacing: -0.5px;
+        }
+
+        .gate-label {
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #4b5563;
+            align-self: flex-start;
+        }
+
+        .gate-input-wrap {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border: 3px solid #000000;
+            box-shadow: 4px 4px 0px #000000;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        #pwdInput {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 12px 14px;
+            font-size: 1.2rem;
+            font-family: inherit;
+            font-weight: 900;
+            letter-spacing: 4px;
+            background: transparent;
+            color: #000000;
+            user-select: text;
+            -webkit-user-select: text;
+        }
+
+        .gate-submit {
+            width: 100%;
+            background-color: #000000;
+            color: #ffffff;
+            border: 3px solid #000000;
+            box-shadow: 4px 4px 0px #60a5fa;
+            padding: 14px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+
+        .gate-submit:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px #60a5fa;
+        }
+
+        .gate-error {
+            font-size: 0.8rem;
+            font-weight: 900;
+            color: #ef4444;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: none;
+        }
+
+        .gate-error.visible {
+            display: block;
+        }
+
+        /* Neo-Brutalist High-Contrast Light Palette */
+        :root {
+            --bg-canvas: #f3f0ea;      /* Warm industrial concrete white */
+            --bg-card: #ffffff;        /* Stark card background */
+            --raw-black: #000000;      /* Absolute black for strokes & harsh shadows */
+            --brutal-yellow: #fde047;  /* High-visibility yellow accent */
+            --brutal-blue: #60a5fa;    /* Electric industrial blue */
+            --brutal-red: #ef4444;     /* Warning destructive red */
+            --text-main: #000000;
+            --text-muted: #4b5563;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-canvas);
+            color: var(--text-main);
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 40px 16px 140px 16px;
+            background-color: #ede9e0;
+            min-height: 100vh;
+        }
+
+        /* Balanced Flexbox Header Layout */
+        header {
+            margin-bottom: 32px;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brutal-title-block {
+            background-color: var(--brutal-yellow);
+            color: var(--raw-black);
+            border: 3px solid var(--raw-black);
+            padding: 6px 16px;
+            display: inline-block;
+            transform: rotate(-2.5deg);
+            box-shadow: 4px 4px 0px var(--raw-black);
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            margin: 0;
+        }
+
+        /* Global Stop Context Button Asset */
+        .global-stop-btn {
+            background-color: var(--raw-black);
+            color: #ffffff;
+            border: 2px solid var(--raw-black);
+            font-family: inherit;
+            font-size: 0.75rem;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px var(--brutal-red);
+            transition: transform 0.1s, box-shadow 0.1s;
+            display: none; 
+        }
+
+        .global-stop-btn.active {
+            display: inline-block;
+        }
+
+        .global-stop-btn.active:active {
+            transform: translate(1px, 1px);
+            box-shadow: 2px 2px 0px var(--brutal-red);
+        }
+
+        /* Playlist Structural Architecture */
+        .playlist {
+            list-style: none;
+        }
+
+        .track-item {
+            background-color: var(--bg-card);
+            padding: 18px;
+            margin-bottom: 20px;
+            border: 3px solid var(--raw-black);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 4px 4px 0px var(--raw-black);
+            transition: all 0.15s ease-in-out;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .track-item:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px var(--raw-black);
+        }
+
+        .track-item.playing {
+            background-color: #fef08a;
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--raw-black);
+        }
+
+        .track-content {
+            flex: 1;
+            padding-right: 16px;
+        }
+
+        .track-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .track-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .day-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 900;
+            background-color: var(--raw-black);
+            color: #ffffff;
+            padding: 2px 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .track-item.playing .day-badge {
+            background-color: var(--brutal-blue);
+            color: var(--raw-black);
+        }
+
+        .track-action-column {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 6px;
+            flex-shrink: 0;
+            min-width: 80px;
+        }
+
+        .track-duration-stamp {
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            text-align: center;
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+        }
+
+        .track-item.playing .track-duration-stamp {
+            color: var(--raw-black);
+        }
+
+        .play-indicator {
+            width: 36px;
+            height: 36px;
+            background-color: #ffffff;
+            border: 2px solid var(--raw-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-indicator::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 10px solid var(--raw-black);
+            margin-left: 2px;
+            display: block;
+        }
+
+        .track-item.playing .play-indicator::after {
+            display: none;
+        }
+
+        /* Pause icon: two vertical bars via element + box-shadow */
+        .track-item.playing.media-paused .play-indicator::after {
+            display: block;
+            width: 3px;
+            height: 13px;
+            background-color: var(--raw-black);
+            box-shadow: 7px 0 0 var(--raw-black);
+            border: none;
+            margin-left: -3px;
+        }
+
+        /* Hide equalizer when paused */
+        .track-item.playing.media-paused .equalizer-wave {
+            display: none;
+        }
+
+        .equalizer-wave {
+            display: none;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 16px;
+            height: 16px;
+        }
+
+        .track-item.playing .equalizer-wave {
+            display: flex;
+        }
+
+        .eq-bar {
+            width: 3px;
+            height: 100%;
+            background-color: var(--raw-black);
+            transform-origin: bottom;
+            animation: bounceWave 0s ease-in-out infinite alternate;
+        }
+
+        .eq-bar:nth-child(1) { animation-duration: 0.4s; animation-delay: 0.1s; }
+        .eq-bar:nth-child(2) { animation-duration: 0.5s; animation-delay: 0.3s; }
+        .eq-bar:nth-child(3) { animation-duration: 0.35s; animation-delay: 0.0s; }
+
+        @keyframes bounceWave {
+            0% { transform: scaleY(0.2); }
+            100% { transform: scaleY(1.0); }
+        }
+
+        .track-item.playing.media-active .eq-bar {
+            animation-name: bounceWave;
+        }
+        .track-item.playing.media-paused .eq-bar {
+            animation-name: none;
+            transform: scaleY(0.3);
+        }
+
+        /* Floating Request Trigger Pill */
+        .player-toggle-pill {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(150%);
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            padding: 10px 20px;
+            font-size: 0.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
+            transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .player-toggle-pill.active {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .pill-indicator-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--brutal-yellow);
+            border-radius: 50%;
+        }
+
+        /* Stark Block-Panel Floating Player Controls */
+        .sticky-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-card);
+            border-top: 4px solid var(--raw-black);
+            padding: 16px 16px 28px 16px;
+            box-shadow: 0px -4px 0px rgba(0,0,0,0.05);
+            z-index: 1000;
+            transform: translateY(105%);
+            transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .sticky-player.visible {
+            transform: translateY(0);
+        }
+
+        .close-panel-row {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 4px;
+        }
+
+        .close-panel-btn {
+            background-color: #ffffff;
+            color: var(--raw-black);
+            border: 2px solid var(--raw-black);
+            font-size: 0.95rem;
+            font-weight: 900;
+            cursor: pointer;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 0px var(--raw-black);
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+
+        .close-panel-btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--raw-black);
+        }
+
+        .player-inner {
+            max-width: 440px;
+            margin: 0 auto;
+        }
+
+        .player-header {
+            margin-bottom: 16px;
+            border-bottom: 2px dashed var(--raw-black);
+            padding-bottom: 12px;
+        }
+
+        .current-track-title {
+            font-size: 1.1rem;
+            font-weight: 900;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .now-playing-label {
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .timeline-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 0.75rem;
+            font-weight: 900;
+        }
+
+        .progress-bar-wrapper {
+            flex: 1;
+            position: relative;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .progress-bg {
+            width: 100%;
+            height: 10px;
+            background-color: #ffffff;
+            border: 2px solid var(--raw-black);
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background-color: var(--brutal-blue);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .ctrl-btn {
+            background: #ffffff;
+            border: 2px solid var(--raw-black);
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 3px 3px 0px var(--raw-black);
+            font-weight: 900;
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+
+        .ctrl-btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 2px 2px 0px var(--raw-black);
+        }
+
+        .skip-btn {
+            width: 54px;
+            height: 40px;
+            font-size: 0.85rem;
+            font-family: inherit;
+        }
+
+        .master-play-btn {
+            width: 56px;
+            height: 56px;
+            background-color: var(--brutal-yellow);
+            box-shadow: 4px 4px 0px var(--raw-black);
+        }
+
+        .master-play-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--raw-black);
+        }
+
+        /* Super Simplified Custom Modal with Blur Effect */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease-in-out;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .brutal-modal-box {
+            background-color: var(--bg-card);
+            border: 4px solid var(--raw-black);
+            width: 100%;
+            max-width: 320px;
+            padding: 24px;
+            box-shadow: 6px 6px 0px var(--raw-black);
+            transform: scale(0.95);
+            transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .modal-overlay.active .brutal-modal-box {
+            transform: scale(1);
+        }
+
+        .modal-message {
+            font-size: 1rem;
+            font-weight: 800;
+            line-height: 1.4;
+            color: var(--raw-black);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .modal-action-row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .modal-btn {
+            flex: 1;
+            padding: 10px;
+            font-family: inherit;
+            font-size: 0.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 2px solid var(--raw-black);
+            box-shadow: 2px 2px 0px var(--raw-black);
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+
+        .modal-btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--raw-black);
+        }
+
+        .modal-btn-cancel {
+            background-color: #ffffff;
+            color: var(--raw-black);
+        }
+
+        .modal-btn-confirm {
+            background-color: var(--brutal-yellow);
+            color: var(--raw-black);
+        }
+
+        .loading-state {
+            text-align: center;
+            padding: 32px 16px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ── Skeleton Cards ───────────────────────────────────────────────── */
+        .skeleton-item {
+            background-color: var(--bg-card);
+            padding: 18px;
+            margin-bottom: 20px;
+            border: 3px solid var(--raw-black);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 4px 4px 0px var(--raw-black);
+        }
+
+        .skeleton-block {
+            background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.4s infinite;
+        }
+
+        @keyframes shimmer {
+            0%   { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* mirrors .track-title */
+        .sk-title  { width: 65%; height: 17px; margin-bottom: 14px; }
+        /* mirrors .day-badge */
+        .sk-badge  { width: 44px; height: 20px; }
+        /* mirrors .track-duration-stamp */
+        .sk-duration { width: 52px; height: 11px; margin-top: 6px; }
+        /* mirrors .play-indicator box */
+        .sk-play {
+            width: 36px;
+            height: 36px;
+            border: 2px solid var(--raw-black);
+            background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.4s infinite;
+            flex-shrink: 0;
+        }
+        /* mirrors .track-content */
+        .sk-content { flex: 1; padding-right: 16px; }
+        /* mirrors .track-action-column */
+        .sk-action  { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; min-width: 80px; }
+    </style>
+</head>
+<body>
+
+<!-- ── Password Gate Overlay ──────────────────────────────────────────── -->
+<div id="passwordGate">
+    <div class="gate-box">
+        <div class="gate-title-block"><h2>Bible Audio</h2></div>
+        <span class="gate-label">Enter Password to Continue</span>
+        <div class="gate-input-wrap">
+            <input id="pwdInput" type="password" placeholder="••••••" maxlength="20"
+                   autocomplete="off" autocorrect="off" spellcheck="false"
+                   onkeydown="if(event.key==='Enter') unlockPage()">
+        </div>
+        <span class="gate-error" id="gateError">Incorrect password. Try again.</span>
+        <button class="gate-submit" onclick="unlockPage()">Unlock</button>
+    </div>
+</div>
+
+<div class="app-container">
+
+    <header>
+        <div class="brutal-title-block">
+            <h1>Bible Audio</h1>
+        </div>
+        <button class="global-stop-btn" id="headerStopBtn" onclick="terminatePlayback()">Stop</button>
+    </header>
+
+    <ul class="playlist" id="playlistContainer">
+        <li class="loading-state" id="loadingMsg">Scanning recordings…</li>
+    </ul>
+
+</div>
+
+<!-- On-Demand Prompt Hook -->
+<button class="player-toggle-pill" id="pillTrigger" onclick="openPlayerPanel()">
+    <div class="pill-indicator-dot"></div>
+    <span>Open Player</span>
+</button>
+
+<!-- Media Core Native Hook -->
+<audio id="nativeAudio" preload="none"></audio>
+
+<!-- Solid Boundary Fixed Terminal Player Panel -->
+<div class="sticky-player" id="customPlayerPanel">
+    <div class="player-inner">
+        <div class="close-panel-row">
+            <button class="close-panel-btn" onclick="closePlayerPanel()">×</button>
+        </div>
+        
+        <div class="player-header">
+            <div class="current-track-title" id="playerTitleLabel">Lesson Title</div>
+            <div class="now-playing-label" id="playerDayLabel">STATUS // IDLE</div>
+        </div>
+
+        <div class="timeline-container">
+            <span id="timeCurrent">0:00</span>
+            <div class="progress-bar-wrapper" id="scrubArea">
+                <div class="progress-bg">
+                    <div class="progress-fill" id="scrubFill"></div>
+                </div>
+            </div>
+            <span id="timeDuration">0:00</span>
+        </div>
+
+        <div class="audio-controls">
+            <button class="ctrl-btn skip-btn" onclick="jumpAudio(-3)">-3s</button>
+            <button class="ctrl-btn master-play-btn" onclick="togglePlayback()">
+                <div id="playBtnIcon">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+            </button>
+            <button class="ctrl-btn skip-btn" onclick="jumpAudio(3)">+3s</button>
+        </div>
+    </div>
+</div>
+
+<!-- Simplified Custom Warning Frame with Blur Context -->
+<div class="modal-overlay" id="customAlertModal">
+    <div class="brutal-modal-box">
+        <div class="modal-message">Switch to another sermon?</div>
+        <div class="modal-action-row">
+            <button class="modal-btn modal-btn-cancel" onclick="handleModalCancel()">Cancel</button>
+            <button class="modal-btn modal-btn-confirm" onclick="handleModalConfirm()">Switch</button>
+        </div>
+    </div>
+</div>
+
+<script src="resources/audio/bible-teaching/tracks.js"></script>
+<script>
+    // ─── CONFIG ──────────────────────────────────────────────────────────────────
+    // Track titles and files are managed in:
+    //   resources/audio/bible-teaching/tracks.js
+    // Edit that file to rename tracks or add new ones.
+
+    const AUDIO_BASE = 'resources/audio/bible-teaching/';
+    // ─────────────────────────────────────────────────────────────────────────────
+
+    const audio = document.getElementById('nativeAudio');
+    const panel = document.getElementById('customPlayerPanel');
+    const pill = document.getElementById('pillTrigger');
+    const titleLabel = document.getElementById('playerTitleLabel');
+    const dayLabel = document.getElementById('playerDayLabel');
+    const playIconContainer = document.getElementById('playBtnIcon');
+    const globalStopBtn = document.getElementById('headerStopBtn');
+
+    const scrubArea = document.getElementById('scrubArea');
+    const scrubFill = document.getElementById('scrubFill');
+    const timeCurrent = document.getElementById('timeCurrent');
+    const timeDuration = document.getElementById('timeDuration');
+
+    const customModal = document.getElementById('customAlertModal');
+
+    let activeTrackElementId = null;
+    let isCurrentlyPlaying = false;
+    let pendingTrackData = null;
+
+    const playSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black; margin-left:2px;"><path d="M8 5v14l11-7z"/></svg>`;
+    const pauseSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+
+    function selectTrack(fileUrl, title, dayText, elementId) {
+        if (activeTrackElementId === elementId) {
+            togglePlayback();
+            return;
+        }
+
+        if (activeTrackElementId) {
+            panel.classList.remove('visible');
+            pendingTrackData = { fileUrl, title, dayText, elementId };
+            customModal.classList.add('active');
+        } else {
+            executeTrackLoad(fileUrl, title, dayText, elementId);
+        }
+    }
+
+    function handleModalConfirm() {
+        customModal.classList.remove('active');
+        if (pendingTrackData) {
+            executeTrackLoad(
+                pendingTrackData.fileUrl, 
+                pendingTrackData.title, 
+                pendingTrackData.dayText, 
+                pendingTrackData.elementId
+            );
+            pendingTrackData = null;
+        }
+    }
+
+    function handleModalCancel() {
+        customModal.classList.remove('active');
+        pendingTrackData = null;
+        panel.classList.add('visible');
+    }
+
+    function executeTrackLoad(fileUrl, title, dayText, elementId) {
+        document.querySelectorAll('.track-item').forEach(item => {
+            item.classList.remove('playing', 'media-active', 'media-paused');
+        });
+        
+        activeTrackElementId = elementId;
+        const targetCard = document.getElementById(elementId);
+        targetCard.classList.add('playing', 'media-active');
+
+        titleLabel.innerText = title;
+        dayLabel.innerText = "NOW PLAYING // " + dayText;
+        
+        audio.src = fileUrl;
+        
+        pill.classList.add('active');
+        
+        globalStopBtn.classList.add('active');
+
+        audio.load();
+        audio.play();
+        isCurrentlyPlaying = true;
+        updatePlayButtonUI(true);
+    }
+
+    function togglePlayback() {
+        if (!audio.src) return;
+        
+        const targetCard = activeTrackElementId ? document.getElementById(activeTrackElementId) : null;
+        
+        if (audio.paused) {
+            audio.play();
+            isCurrentlyPlaying = true;
+            updatePlayButtonUI(true);
+            if(targetCard) {
+                targetCard.classList.add('playing', 'media-active');
+                targetCard.classList.remove('media-paused');
+            }
+        } else {
+            audio.pause();
+            isCurrentlyPlaying = false;
+            updatePlayButtonUI(false);
+            if(targetCard) {
+                targetCard.classList.remove('media-active');
+                targetCard.classList.add('media-paused');
+            }
+        }
+    }
+
+    function terminatePlayback() {
+        audio.pause();
+        audio.src = "";
+        
+        isCurrentlyPlaying = false;
+        updatePlayButtonUI(false);
+
+        if (activeTrackElementId) {
+            document.getElementById(activeTrackElementId).classList.remove('playing', 'media-active', 'media-paused');
+            activeTrackElementId = null;
+        }
+        
+        pendingTrackData = null;
+
+        titleLabel.innerText = "Lesson Title";
+        dayLabel.innerText = "STATUS // IDLE";
+        scrubFill.style.width = "0%";
+        timeCurrent.innerText = "0:00";
+        timeDuration.innerText = "0:00";
+
+        panel.classList.remove('visible');
+        pill.classList.remove('active');
+        customModal.classList.remove('active');
+
+        globalStopBtn.classList.remove('active');
+    }
+
+    function openPlayerPanel() {
+        panel.classList.add('visible');
+        pill.classList.remove('active'); 
+    }
+
+    function closePlayerPanel() {
+        panel.classList.remove('visible');
+        if (audio.src && !audio.ended) {
+            pill.classList.add('active'); 
+        }
+    }
+
+    function updatePlayButtonUI(isPlaying) {
+        playIconContainer.innerHTML = isPlaying ? pauseSVG : playSVG;
+    }
+
+    function jumpAudio(seconds) {
+        if (!audio.src) return;
+        let targetTime = audio.currentTime + seconds;
+        if (targetTime < 0) targetTime = 0;
+        if (targetTime > audio.duration) targetTime = audio.duration;
+        audio.currentTime = targetTime;
+    }
+
+    function formatTime(secs) {
+        if (isNaN(secs)) return "0:00";
+        const m = Math.floor(secs / 60);
+        const s = Math.floor(secs % 60);
+        return m + ":" + (s < 10 ? "0" : "") + s;
+    }
+
+    audio.addEventListener('timeupdate', () => {
+        timeCurrent.innerText = formatTime(audio.currentTime);
+        if (audio.duration) {
+            const percent = (audio.currentTime / audio.duration) * 100;
+            scrubFill.style.width = percent + "%";
+        }
+    });
+
+    audio.addEventListener('durationchange', () => {
+        timeDuration.innerText = formatTime(audio.duration);
+    });
+
+    audio.addEventListener('ended', () => {
+        terminatePlayback();
+    });
+
+    scrubArea.addEventListener('click', (e) => {
+        if (!audio.src || !audio.duration) return;
+        const width = scrubArea.offsetWidth;
+        const clickX = e.offsetX;
+        audio.currentTime = (clickX / width) * audio.duration;
+    });
+
+    // ── Auto-discover MP3 files and build track cards ──────────────────────────
+    function probeAudioFile(url) {
+        return new Promise((resolve) => {
+            // Try fetch HEAD first (works when served via HTTP)
+            fetch(url, { method: 'HEAD' })
+                .then(res => {
+                    if (res.ok) {
+                        // File exists — get duration via Audio element
+                        getDuration(url, dur => resolve({ exists: true, duration: dur }));
+                    } else {
+                        resolve({ exists: false, duration: 0 });
+                    }
+                })
+                .catch(() => {
+                    // Fallback for file:// protocol — probe via Audio element
+                    const a = new Audio();
+                    let done = false;
+                    const finish = (exists, dur = 0) => {
+                        if (done) return;
+                        done = true;
+                        a.src = '';
+                        resolve({ exists, duration: dur });
+                    };
+                    a.addEventListener('loadedmetadata', () => finish(true, a.duration));
+                    a.addEventListener('error', () => finish(false));
+                    a.src = url;
+                    a.load();
+                    setTimeout(() => finish(false), 4000);
+                });
+        });
+    }
+
+    function getDuration(url, cb) {
+        const a = new Audio();
+        let done = false;
+        const finish = (dur) => { if (done) return; done = true; a.src = ''; cb(dur); };
+        a.addEventListener('loadedmetadata', () => finish(a.duration));
+        a.addEventListener('error', () => finish(0));
+        a.src = url;
+        a.load();
+        setTimeout(() => finish(0), 4000);
+    }
+
+    function buildTrackCard(dayNum, filePath, title, trackId, duration) {
+        const li = document.createElement('li');
+        li.className = 'track-item';
+        li.id = trackId;
+        li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
+        const durStr = duration ? formatTime(duration) + ' min' : '--:--';
+        li.innerHTML = `
+            <div class="track-content">
+                <div class="track-title">${title}</div>
+                <div class="track-meta-row">
+                    <div class="day-badge">Day ${dayNum}</div>
+                </div>
+            </div>
+            <div class="track-action-column">
+                <div class="play-indicator">
+                    <div class="equalizer-wave">
+                        <div class="eq-bar"></div>
+                        <div class="eq-bar"></div>
+                        <div class="eq-bar"></div>
+                    </div>
+                </div>
+                <div class="track-duration-stamp">${durStr}</div>
+            </div>`;
+        return li;
+    }
+
+    function buildSkeleton(trackId) {
+        const li = document.createElement('li');
+        li.className = 'skeleton-item';
+        li.id = 'skel-' + trackId;
+        li.innerHTML = `
+            <div class="sk-content">
+                <div class="skeleton-block sk-title"></div>
+                <div class="skeleton-block sk-badge"></div>
+            </div>
+            <div class="sk-action">
+                <div class="sk-play"></div>
+                <div class="skeleton-block sk-duration"></div>
+            </div>`;
+        return li;
+    }
+
+    async function discoverAndBuildPlaylist() {
+        const container = document.getElementById('playlistContainer');
+
+        // Remove loading text and render a skeleton for every track immediately
+        const msg = document.getElementById('loadingMsg');
+        if (msg) msg.remove();
+
+        for (const track of BIBLE_TRACKS) {
+            container.appendChild(buildSkeleton('track' + track.day));
+        }
+
+        // Probe all files in parallel but wait at least 1 second before swapping
+        const minDelay = new Promise(resolve => setTimeout(resolve, 1000));
+        const results = await Promise.all(
+            BIBLE_TRACKS.map(track => probeAudioFile(AUDIO_BASE + track.file))
+        );
+        await minDelay;
+
+        // Swap each skeleton with the real card
+        BIBLE_TRACKS.forEach((track, i) => {
+            const skelEl = document.getElementById('skel-track' + track.day);
+            if (results[i].exists) {
+                const card = buildTrackCard(track.day, AUDIO_BASE + track.file, track.title, 'track' + track.day, results[i].duration);
+                skelEl.replaceWith(card);
+            } else {
+                skelEl.remove();
+            }
+        });
+    }
+
+    // ── Password Gate ──────────────────────────────────────────────────────────
+    const CORRECT_HASH = '007ac4200b49a365708b5c1032ebda275ceb56a5c1114751da2c1ffd707ed689'; // SHA-256 of 666999
+
+    async function sha256(str) {
+        const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+        return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function unlockPage() {
+        const input = document.getElementById('pwdInput').value;
+        const hash = await sha256(input);
+        if (hash === CORRECT_HASH) {
+            sessionStorage.setItem('bible_audio_unlocked', '1');
+            document.getElementById('passwordGate').classList.add('hidden');
+            discoverAndBuildPlaylist();
+        } else {
+            const err = document.getElementById('gateError');
+            err.classList.add('visible');
+            document.getElementById('pwdInput').value = '';
+            document.getElementById('pwdInput').focus();
+            setTimeout(() => err.classList.remove('visible'), 3000);
+        }
+    }
+
+    // Skip gate if already unlocked this session
+    if (sessionStorage.getItem('bible_audio_unlocked') === '1') {
+        document.getElementById('passwordGate').classList.add('hidden');
+        discoverAndBuildPlaylist();
+    }
+
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+
+    // Disable Ctrl+scroll zoom and Ctrl +/- keyboard zoom
+    document.addEventListener('wheel', e => { if (e.ctrlKey) e.preventDefault(); }, { passive: false });
+    document.addEventListener('keydown', e => {
+        if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+            e.preventDefault();
+        }
+    });
+    // Disable pinch-to-zoom on touch devices
+    document.addEventListener('touchmove', e => { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
+    document.addEventListener('gesturestart', e => e.preventDefault());
+</script>
+
+</body>
+</html>
