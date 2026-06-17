@@ -186,28 +186,23 @@
 
         /* Global Stop Context Button Asset */
         .global-stop-btn {
-            background-color: var(--raw-black);
+            background-color: var(--brutal-red);
             color: #ffffff;
-            border: 2px solid var(--raw-black);
+            border: 2px solid #ffffff;
             font-family: inherit;
-            font-size: 0.75rem;
+            font-size: 1.3rem;
             font-weight: 900;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            padding: 6px 12px;
             cursor: pointer;
-            box-shadow: 3px 3px 0px var(--brutal-red);
-            transition: transform 0.1s, box-shadow 0.1s;
-            display: none; 
+            box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            flex-shrink: 0;
         }
 
         .global-stop-btn.active {
-            display: inline-block;
-        }
-
-        .global-stop-btn.active:active {
-            transform: translate(1px, 1px);
-            box-shadow: 2px 2px 0px var(--brutal-red);
+            display: flex;
         }
 
         /* Playlist Structural Architecture */
@@ -396,31 +391,43 @@
             transform: scaleY(0.3);
         }
 
-        /* Floating Request Trigger Pill */
-        .player-toggle-pill {
+        /* Floating pill + stop button group */
+        .bottom-pill-group {
             position: fixed;
             bottom: 24px;
             left: 50%;
             transform: translateX(-50%) translateY(150%);
+            display: flex;
+            align-items: stretch;
+            gap: 10px;
+            transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+            z-index: 999;
+        }
+
+        .bottom-pill-group.active {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .player-toggle-pill {
             background-color: #000000;
             color: #ffffff;
             border: 2px solid #ffffff;
-            padding: 10px 20px;
+            padding: 12px 20px;
             font-size: 0.8rem;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1px;
             cursor: pointer;
             box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
-            transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-            z-index: 999;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
+            white-space: nowrap;
         }
 
         .player-toggle-pill.active {
-            transform: translateX(-50%) translateY(0);
+            /* active state now handled by parent group */
         }
 
         .pill-indicator-dot {
@@ -688,6 +695,32 @@
             box-shadow: 4px 4px 0px var(--raw-black);
         }
 
+        .back-btn {
+            background: #ffffff;
+            border: 2px solid var(--raw-black);
+            box-shadow: 3px 3px 0px var(--raw-black);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: transform 0.1s, box-shadow 0.1s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .back-btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 2px 2px 0px var(--raw-black);
+        }
+
+        .back-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--raw-black);
+        }
+
         .skeleton-block {
             background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
             background-size: 200% 100%;
@@ -741,10 +774,13 @@
 <div class="app-container">
 
     <header>
+        <button class="back-btn" onclick="window.location.href='index.html'" aria-label="Back">
+            <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        </button>
         <div class="brutal-title-block">
             <h1>Bible Audio</h1>
         </div>
-        <button class="global-stop-btn" id="headerStopBtn" onclick="terminatePlayback()">Stop</button>
+        <div style="width:36px;"></div>
     </header>
 
     <ul class="playlist" id="playlistContainer">
@@ -754,10 +790,13 @@
 </div>
 
 <!-- On-Demand Prompt Hook -->
-<button class="player-toggle-pill" id="pillTrigger" onclick="openPlayerPanel()">
-    <div class="pill-indicator-dot"></div>
-    <span>Open Player</span>
-</button>
+<div class="bottom-pill-group" id="pillGroup">
+    <button class="player-toggle-pill" id="pillTrigger" onclick="openPlayerPanel()">
+        <div class="pill-indicator-dot"></div>
+        <span>Open Player</span>
+    </button>
+    <button class="global-stop-btn" id="headerStopBtn" onclick="terminatePlayback()">&#x2715;</button>
+</div>
 
 <!-- Media Core Native Hook -->
 <audio id="nativeAudio" preload="none"></audio>
@@ -820,6 +859,7 @@
     const audio = document.getElementById('nativeAudio');
     const panel = document.getElementById('customPlayerPanel');
     const pill = document.getElementById('pillTrigger');
+    const pillGroup = document.getElementById('pillGroup');
     const titleLabel = document.getElementById('playerTitleLabel');
     const dayLabel = document.getElementById('playerDayLabel');
     const playIconContainer = document.getElementById('playBtnIcon');
@@ -887,7 +927,7 @@
         
         audio.src = fileUrl;
         
-        pill.classList.add('active');
+        pillGroup.classList.add('active');
         
         globalStopBtn.classList.add('active');
 
@@ -942,7 +982,7 @@
         timeDuration.innerText = "0:00";
 
         panel.classList.remove('visible');
-        pill.classList.remove('active');
+        pillGroup.classList.remove('active');
         customModal.classList.remove('active');
 
         globalStopBtn.classList.remove('active');
@@ -950,13 +990,13 @@
 
     function openPlayerPanel() {
         panel.classList.add('visible');
-        pill.classList.remove('active'); 
+        pillGroup.classList.remove('active');
     }
 
     function closePlayerPanel() {
         panel.classList.remove('visible');
         if (audio.src && !audio.ended) {
-            pill.classList.add('active'); 
+            pillGroup.classList.add('active');
         }
     }
 
@@ -1002,47 +1042,18 @@
         audio.currentTime = (clickX / width) * audio.duration;
     });
 
-    // ── Auto-discover MP3 files and build track cards ──────────────────────────
-    function probeAudioFile(url) {
+    // ── Build playlist from BIBLE_TRACKS (no fetch — works on file:// too) ─────
+    function getDuration(url) {
         return new Promise((resolve) => {
-            // Try fetch HEAD first (works when served via HTTP)
-            fetch(url, { method: 'HEAD' })
-                .then(res => {
-                    if (res.ok) {
-                        // File exists — get duration via Audio element
-                        getDuration(url, dur => resolve({ exists: true, duration: dur }));
-                    } else {
-                        resolve({ exists: false, duration: 0 });
-                    }
-                })
-                .catch(() => {
-                    // Fallback for file:// protocol — probe via Audio element
-                    const a = new Audio();
-                    let done = false;
-                    const finish = (exists, dur = 0) => {
-                        if (done) return;
-                        done = true;
-                        a.src = '';
-                        resolve({ exists, duration: dur });
-                    };
-                    a.addEventListener('loadedmetadata', () => finish(true, a.duration));
-                    a.addEventListener('error', () => finish(false));
-                    a.src = url;
-                    a.load();
-                    setTimeout(() => finish(false), 4000);
-                });
+            const a = new Audio();
+            let done = false;
+            const finish = (dur) => { if (done) return; done = true; a.src = ''; resolve(dur); };
+            a.addEventListener('loadedmetadata', () => finish(a.duration));
+            a.addEventListener('error', () => finish(0));
+            a.src = url;
+            a.load();
+            setTimeout(() => finish(0), 5000);
         });
-    }
-
-    function getDuration(url, cb) {
-        const a = new Audio();
-        let done = false;
-        const finish = (dur) => { if (done) return; done = true; a.src = ''; cb(dur); };
-        a.addEventListener('loadedmetadata', () => finish(a.duration));
-        a.addEventListener('error', () => finish(0));
-        a.src = url;
-        a.load();
-        setTimeout(() => finish(0), 4000);
     }
 
     function buildTrackCard(dayNum, filePath, title, trackId, duration) {
@@ -1091,7 +1102,7 @@
     async function discoverAndBuildPlaylist() {
         const container = document.getElementById('playlistContainer');
 
-        // Remove loading text and render a skeleton for every track immediately
+        // Remove loading text and show skeletons immediately
         const msg = document.getElementById('loadingMsg');
         if (msg) msg.remove();
 
@@ -1099,22 +1110,18 @@
             container.appendChild(buildSkeleton('track' + track.day));
         }
 
-        // Probe all files in parallel but wait at least 1 second before swapping
+        // Get durations via Audio element (works on file:// — no fetch needed)
         const minDelay = new Promise(resolve => setTimeout(resolve, 1000));
-        const results = await Promise.all(
-            BIBLE_TRACKS.map(track => probeAudioFile(AUDIO_BASE + track.file))
+        const durations = await Promise.all(
+            BIBLE_TRACKS.map(track => getDuration(AUDIO_BASE + track.file))
         );
         await minDelay;
 
         // Swap each skeleton with the real card
         BIBLE_TRACKS.forEach((track, i) => {
             const skelEl = document.getElementById('skel-track' + track.day);
-            if (results[i].exists) {
-                const card = buildTrackCard(track.day, AUDIO_BASE + track.file, track.title, 'track' + track.day, results[i].duration);
-                skelEl.replaceWith(card);
-            } else {
-                skelEl.remove();
-            }
+            const card = buildTrackCard(track.day, AUDIO_BASE + track.file, track.title, 'track' + track.day, durations[i]);
+            skelEl.replaceWith(card);
         });
     }
 
@@ -1162,6 +1169,22 @@
     // Disable pinch-to-zoom on touch devices
     document.addEventListener('touchmove', e => { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
     document.addEventListener('gesturestart', e => e.preventDefault());
+
+    // ── Swipe-right to go back ─────────────────────────────────────────────────
+    let swipeStartX = 0;
+    let swipeStartY = 0;
+    document.addEventListener('touchstart', e => {
+        swipeStartX = e.touches[0].clientX;
+        swipeStartY = e.touches[0].clientY;
+    }, { passive: true });
+    document.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - swipeStartX;
+        const dy = Math.abs(e.changedTouches[0].clientY - swipeStartY);
+        // Swipe right: > 80px horizontal, starting from left edge (< 40px), and mostly horizontal
+        if (dx > 80 && dy < 60 && swipeStartX < 40) {
+            window.location.href = 'index.html';
+        }
+    }, { passive: true });
 </script>
 
 </body>
