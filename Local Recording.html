@@ -9,12 +9,59 @@
         #passwordGate {
             position: fixed;
             inset: 0;
-            background-color: #f3f0ea;
+            background-color: #ede9e0;
             z-index: 9999;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .gate-verse-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 24px;
+            padding: 40px 28px 20px 28px;
+            text-align: center;
+            gap: 14px;
+            max-width: 480px;
+            width: 100%;
+        }
+
+        .gate-verse-label {
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #000000;
+            background: #fde047;
+            border: 2px solid #000000;
+            padding: 3px 10px;
+            box-shadow: 3px 3px 0px #000000;
+        }
+
+        .gate-verse-text {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #000000;
+            line-height: 1.45;
+            letter-spacing: -0.3px;
+            margin: 0;
+        }
+
+        .gate-verse-text em {
+            font-style: normal;
+            background: #fde047;
+            padding: 0 3px;
+        }
+
+        .gate-verse-ref {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #4b5563;
+            letter-spacing: 0.5px;
         }
 
         #passwordGate.hidden {
@@ -23,15 +70,24 @@
 
         .gate-box {
             background: #ffffff;
-            border: 4px solid #000000;
-            box-shadow: 8px 8px 0px #000000;
-            padding: 32px 28px;
+            border-top: 4px solid #000000;
+            border-left: 4px solid #000000;
+            border-right: 4px solid #000000;
+            box-shadow: 0px -6px 0px #000000;
+            padding: 28px 24px 40px 24px;
             width: 100%;
-            max-width: 320px;
+            max-width: 480px;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 20px;
+            border-radius: 0;
+            animation: slideUp 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to   { transform: translateY(0); }
         }
 
         .gate-title-block {
@@ -49,59 +105,63 @@
             letter-spacing: -0.5px;
         }
 
-        .gate-label {
-            font-size: 0.75rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #4b5563;
-            align-self: flex-start;
-        }
-
-        .gate-input-wrap {
-            width: 100%;
+        /* PIN dots display */
+        .pin-display {
             display: flex;
+            gap: 12px;
             align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
             border: 3px solid #000000;
             box-shadow: 4px 4px 0px #000000;
-            background: #ffffff;
-            overflow: hidden;
-        }
-
-        #pwdInput {
-            flex: 1;
-            border: none;
-            outline: none;
-            padding: 12px 14px;
-            font-size: 1.2rem;
-            font-family: inherit;
-            font-weight: 900;
-            letter-spacing: 4px;
-            background: transparent;
-            color: #000000;
-            user-select: text;
-            -webkit-user-select: text;
-        }
-
-        .gate-submit {
             width: 100%;
-            background-color: #000000;
-            color: #ffffff;
-            border: 3px solid #000000;
-            box-shadow: 4px 4px 0px #60a5fa;
-            padding: 14px;
-            font-family: inherit;
-            font-size: 0.9rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: transform 0.1s, box-shadow 0.1s;
+            background: #f3f0ea;
         }
 
-        .gate-submit:active {
+        .pin-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid #000000;
+            background: transparent;
+            transition: background 0.15s;
+        }
+
+        .pin-dot.filled {
+            background: #000000;
+        }
+
+        /* Keypad grid */
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 100%;
+        }
+
+        .key-btn {
+            background: #ffffff;
+            border: 2px solid #000000;
+            box-shadow: 3px 3px 0px #000000;
+            font-family: inherit;
+            font-size: 1.3rem;
+            font-weight: 900;
+            padding: 16px 8px;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.1s, box-shadow 0.1s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .key-btn:active {
             transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0px #60a5fa;
+            box-shadow: 1px 1px 0px #000000;
+        }
+
+        .key-btn.key-del {
+            background: #fde047;
+            font-size: 1.3rem;
+            color: #000000;
         }
 
         .gate-error {
@@ -111,6 +171,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             display: none;
+            text-align: center;
         }
 
         .gate-error.visible {
@@ -771,16 +832,42 @@
 
 <!-- ── Password Gate Overlay ──────────────────────────────────────────── -->
 <div id="passwordGate">
+    <div class="gate-verse-area">
+        <span class="gate-verse-label">Today&#39;s Verse</span>
+        <p class="gate-verse-text" id="gateVerseText"></p>
+        <span class="gate-verse-ref" id="gateVerseRef"></span>
+    </div>
     <div class="gate-box">
         <div class="gate-title-block"><h2>Bible Audio</h2></div>
-        <span class="gate-label">Enter Password to Continue</span>
-        <div class="gate-input-wrap">
-            <input id="pwdInput" type="password" placeholder="••••••" maxlength="20"
-                   autocomplete="off" autocorrect="off" spellcheck="false"
-                   onkeydown="if(event.key==='Enter') unlockPage()">
+
+        <!-- PIN dots -->
+        <div class="pin-display" id="pinDisplay">
+            <div class="pin-dot" id="dot0"></div>
+            <div class="pin-dot" id="dot1"></div>
+            <div class="pin-dot" id="dot2"></div>
+            <div class="pin-dot" id="dot3"></div>
+            <div class="pin-dot" id="dot4"></div>
+            <div class="pin-dot" id="dot5"></div>
         </div>
-        <span class="gate-error" id="gateError">Incorrect password. Try again.</span>
-        <button class="gate-submit" onclick="unlockPage()">Unlock</button>
+
+        <span class="gate-error" id="gateError">Incorrect PIN. Try again.</span>
+
+        <!-- Numeric keypad -->
+        <div class="keypad">
+            <button class="key-btn" onclick="keyPress('1')">1</button>
+            <button class="key-btn" onclick="keyPress('2')">2</button>
+            <button class="key-btn" onclick="keyPress('3')">3</button>
+            <button class="key-btn" onclick="keyPress('4')">4</button>
+            <button class="key-btn" onclick="keyPress('5')">5</button>
+            <button class="key-btn" onclick="keyPress('6')">6</button>
+            <button class="key-btn" onclick="keyPress('7')">7</button>
+            <button class="key-btn" onclick="keyPress('8')">8</button>
+            <button class="key-btn" onclick="keyPress('9')">9</button>
+            <button class="key-btn key-del" onclick="keyDel()">
+                <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:#000;display:block;margin:auto;"><path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3.41 13L15 12.41 11.41 16 10 14.59 13.59 11 10 7.41 11.41 6 15 9.59 18.59 6 20 7.41 16.41 11 20 14.59 18.59 16z"/></svg>
+            </button>
+            <button class="key-btn" style="grid-column: span 2;" onclick="keyPress('0')">0</button>
+        </div>
     </div>
 </div>
 
@@ -1139,8 +1226,49 @@
         });
     }
 
-    // ── Password Gate ──────────────────────────────────────────────────────────
+    // ── Gate Verses ────────────────────────────────────────────────────────────
+    const GATE_VERSES = [
+        { text: "Your word is a lamp to <em>my feet</em> and a light to my path.", ref: "Psalm 119:105" },
+        { text: "In the beginning was the <em>Word</em>, and the Word was with God.", ref: "John 1:1" },
+        { text: "The Lord is my shepherd; <em>I shall not want</em>.", ref: "Psalm 23:1" },
+        { text: "Trust in the Lord with all your heart and lean not on <em>your own understanding</em>.", ref: "Proverbs 3:5" },
+        { text: "I can do all things through <em>Christ</em> who strengthens me.", ref: "Philippians 4:13" },
+        { text: "For God so loved the world that He gave His <em>one and only Son</em>.", ref: "John 3:16" },
+        { text: "Be still, and <em>know</em> that I am God.", ref: "Psalm 46:10" },
+        { text: "The joy of the Lord is <em>your strength</em>.", ref: "Nehemiah 8:10" },
+    ];
+    (function showGateVerse() {
+        const v = GATE_VERSES[Math.floor(Math.random() * GATE_VERSES.length)];
+        document.getElementById('gateVerseText').innerHTML = v.text;
+        document.getElementById('gateVerseRef').textContent = '— ' + v.ref;
+    })();
+
+    // ── Password Gate (Keypad) ─────────────────────────────────────────────────
     const CORRECT_HASH = '007ac4200b49a365708b5c1032ebda275ceb56a5c1114751da2c1ffd707ed689'; // SHA-256 of 666999
+    let pinValue = '';
+    const PIN_LENGTH = 6;
+
+    function updatePinDots() {
+        for (let i = 0; i < PIN_LENGTH; i++) {
+            const dot = document.getElementById('dot' + i);
+            dot.classList.toggle('filled', i < pinValue.length);
+        }
+    }
+
+    function keyPress(num) {
+        if (pinValue.length >= PIN_LENGTH) return;
+        pinValue += num;
+        updatePinDots();
+        // Auto-submit when all dots filled
+        if (pinValue.length === PIN_LENGTH) {
+            setTimeout(() => unlockPage(), 150);
+        }
+    }
+
+    function keyDel() {
+        pinValue = pinValue.slice(0, -1);
+        updatePinDots();
+    }
 
     async function sha256(str) {
         const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
@@ -1148,8 +1276,7 @@
     }
 
     async function unlockPage() {
-        const input = document.getElementById('pwdInput').value;
-        const hash = await sha256(input);
+        const hash = await sha256(pinValue);
         if (hash === CORRECT_HASH) {
             sessionStorage.setItem('bible_audio_unlocked', '1');
             document.getElementById('passwordGate').classList.add('hidden');
@@ -1157,9 +1284,16 @@
         } else {
             const err = document.getElementById('gateError');
             err.classList.add('visible');
-            document.getElementById('pwdInput').value = '';
-            document.getElementById('pwdInput').focus();
-            setTimeout(() => err.classList.remove('visible'), 3000);
+            // Shake the pin display
+            const display = document.getElementById('pinDisplay');
+            display.style.animation = 'none';
+            display.style.borderColor = '#ef4444';
+            pinValue = '';
+            updatePinDots();
+            setTimeout(() => {
+                err.classList.remove('visible');
+                display.style.borderColor = '#000000';
+            }, 2000);
         }
     }
 
