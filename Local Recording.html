@@ -949,11 +949,22 @@
 <script src="resources/audio/bible-teaching/tracks.js"></script>
 <script>
     // ─── CONFIG ──────────────────────────────────────────────────────────────────
-    // Track titles and files are managed in:
+    // Track titles are managed in:
     //   resources/audio/bible-teaching/tracks.js
-    // Edit that file to rename tracks or add new ones.
+    // Audio files are auto-discovered by title (.m4a preferred, .mp3 fallback).
 
     const AUDIO_BASE = 'resources/audio/bible-teaching/';
+
+    // Resolve audio file path from title (auto-detect .m4a or .mp3)
+    function getAudioFilePath(title) {
+        // Try .m4a first, then .mp3
+        return AUDIO_BASE + title + '.m4a';
+    }
+
+    // For fallback, we also provide a way to check .mp3
+    function getAudioFilePathFallback(title) {
+        return AUDIO_BASE + title + '.mp3';
+    }
     // ─────────────────────────────────────────────────────────────────────────────
 
     const audio = document.getElementById('nativeAudio');
@@ -1214,14 +1225,14 @@
         // Get durations via Audio element (works on file:// — no fetch needed)
         const minDelay = new Promise(resolve => setTimeout(resolve, 1000));
         const durations = await Promise.all(
-            BIBLE_TRACKS.map(track => getDuration(AUDIO_BASE + track.file))
+            BIBLE_TRACKS.map(track => getDuration(getAudioFilePath(track.title)))
         );
         await minDelay;
 
         // Swap each skeleton with the real card
         BIBLE_TRACKS.forEach((track, i) => {
             const skelEl = document.getElementById('skel-track' + track.day);
-            const card = buildTrackCard(track.day, AUDIO_BASE + track.file, track.title, 'track' + track.day, durations[i], track.desc);
+            const card = buildTrackCard(track.day, getAudioFilePath(track.title), track.title, 'track' + track.day, durations[i], track.desc);
             skelEl.replaceWith(card);
         });
     }
