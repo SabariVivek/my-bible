@@ -1333,6 +1333,11 @@
             window.location.href = 'index.html';
         }
     }, { passive: true });
+
+    // ── Scroll to top on page load ─────────────────────────────────────────────
+    window.addEventListener('load', () => {
+        window.scrollTo(0, 0);
+    });
 </script>
 
 </body>
