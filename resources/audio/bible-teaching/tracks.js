@@ -17,4 +17,5 @@ const BIBLE_TRACKS = [
     { day: 5, title: "Rahab", desc: "A Canaanite woman's faith that placed her in the messianic line." },
     { day: 6, title: "Mephibosheth", desc: "A picture of grace — restored to the king's table despite weakness." },
     { day: 7, title: "Daniel - Chapter 1", desc: "Daniel's faithfulness and God's provision in a foreign land." },
+    { day: 8, title: "Burnt Offering", desc: "The significance of sacrificial offerings in the Old Testament." },
 ];
