@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#e8e0d0">
     <title>Bible Study Series</title>
     <style>
         /* ── Password Gate ─────────────────────────────────────────────────── */
         #passwordGate {
             position: fixed;
             inset: 0;
-            background-color: #ede9e0;
+            background-color: var(--bg-canvas);
             z-index: 9999;
             display: flex;
             flex-direction: column;
@@ -180,8 +181,8 @@
 
         /* Neo-Brutalist High-Contrast Light Palette */
         :root {
-            --bg-canvas: #f3f0ea;      /* Warm industrial concrete white */
-            --bg-card: #ffffff;        /* Stark card background */
+            --bg-canvas: #e8e0d0;      /* Warm tan parchment */
+            --bg-card: #fef9ee;        /* Warm cream card */
             --raw-black: #000000;      /* Absolute black for strokes & harsh shadows */
             --brutal-yellow: #fde047;  /* High-visibility yellow accent */
             --brutal-blue: #60a5fa;    /* Electric industrial blue */
@@ -216,7 +217,7 @@
             max-width: 480px;
             margin: 0 auto;
             padding: 40px 16px 140px 16px;
-            background-color: #ede9e0;
+            background-color: var(--bg-canvas);
             min-height: 100vh;
         }
 
@@ -292,7 +293,7 @@
         }
 
         .track-item.playing {
-            background-color: #fef08a;
+            background-color: #fde047;
             transform: translate(-2px, -2px);
             box-shadow: 6px 6px 0px var(--raw-black);
         }
@@ -331,16 +332,16 @@
             display: inline-block;
             font-size: 0.75rem;
             font-weight: 900;
-            background-color: var(--brutal-blue);
-            color: var(--raw-black);
+            background-color: #fca5a5;
+            color: #000000;
             padding: 2px 8px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .track-item.playing .day-badge {
-            background-color: var(--brutal-blue);
-            color: var(--raw-black);
+            background-color: #fca5a5;
+            color: #000000;
         }
 
         .track-action-column {
