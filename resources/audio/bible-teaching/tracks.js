@@ -18,4 +18,5 @@ const BIBLE_TRACKS = [
     { day: 6, title: "Mephibosheth", desc: "A picture of grace — restored to the king's table despite weakness." },
     { day: 7, title: "Daniel - Chapter 1", desc: "Daniel's faithfulness and God's provision in a foreign land." },
     { day: 8, title: "Burnt Offering", desc: "The significance of sacrificial offerings in the Old Testament." },
+    { day: 9, title: "Jonah", desc: "God's mercy and the prophet's struggle with obedience and compassion." },
 ];
