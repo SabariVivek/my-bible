@@ -329,19 +329,54 @@
         }
 
         .day-badge {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 900;
-            background-color: #fca5a5;
-            color: #000000;
-            padding: 2px 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            background-color: #fecaca;
+            color: #b91c1c;
+            border: 1.5px solid #fca5a5;
+            padding: 2px 9px;
+            letter-spacing: 0.4px;
+            white-space: nowrap;
+            border-radius: 20px;
         }
 
         .track-item.playing .day-badge {
             background-color: #fca5a5;
-            color: #000000;
+            color: #7f1d1d;
+            border-color: #ef4444;
+        }
+
+        .day-number-badge {
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+            background-color: #000000;
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 2px 9px;
+            letter-spacing: 0.4px;
+            white-space: nowrap;
+        }
+
+        .track-item.playing .day-number-badge {
+            background-color: #000000;
+            color: #fde047;
+        }
+
+        .verse-ref {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+
+        .track-item.playing .verse-ref {
+            color: var(--raw-black);
         }
 
         .track-action-column {
@@ -1168,7 +1203,7 @@
         });
     }
 
-    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc) {
+    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse) {
         const li = document.createElement('li');
         li.className = 'track-item';
         li.id = trackId;
@@ -1179,7 +1214,8 @@
                 <div class="track-title">${title}</div>
                 ${desc ? `<div class="track-desc">${desc}</div>` : ''}
                 <div class="track-meta-row">
-                    <div class="day-badge">Day ${dayNum}</div>
+                    <div class="day-number-badge">Day ${dayNum}</div>
+                    <div class="day-badge">${verse || ''}</div>
                 </div>
             </div>
             <div class="track-action-column">
@@ -1233,7 +1269,7 @@
         // Swap each skeleton with the real card
         BIBLE_TRACKS.forEach((track, i) => {
             const skelEl = document.getElementById('skel-track' + track.day);
-            const card = buildTrackCard(track.day, getAudioFilePath(track.title), track.title, 'track' + track.day, durations[i], track.desc);
+            const card = buildTrackCard(track.day, getAudioFilePath(track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse);
             skelEl.replaceWith(card);
         });
     }
