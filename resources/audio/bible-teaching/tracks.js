@@ -20,5 +20,5 @@ const BIBLE_TRACKS = [
     { day: 7,  title: "Daniel - Chapter 1",    duration: "67:02 min", verse: "Daniel 1",       desc: "Daniel's faithfulness and God's provision in a foreign land." },
     { day: 8,  title: "Burnt Offering",        duration: "74:27 min", verse: "Leviticus 1",    desc: "The significance of sacrificial offerings in the Old Testament." },
     { day: 9,  title: "Jonah",                 duration: "84:24 min", verse: "Jonah 1–4",      desc: "God's mercy and the prophet's struggle with obedience and compassion." },
-    { day: 10, title: "Who is Antichrist",     duration: "35:04 min", verse: "1 John 4:1-3",   desc: "Understanding the spirit of the antichrist and its manifestation in the world." },
+    { day: 10, title: "Who is Antichrist?",     file: "Who is Antichrist", duration: "35:04 min", verse: "1 John 4:1-3",   desc: "Understanding the spirit of the antichrist and its manifestation in the world." },
 ];

@@ -1267,7 +1267,7 @@
             BIBLE_TRACKS.map(track =>
                 track.duration != null
                     ? Promise.resolve(track.duration)
-                    : getDuration(getAudioFilePath(track.title))
+                    : getDuration(getAudioFilePath(track.file || track.title))
             )
         );
         await minDelay;
@@ -1275,7 +1275,7 @@
         // Swap each skeleton with the real card
         BIBLE_TRACKS.forEach((track, i) => {
             const skelEl = document.getElementById('skel-track' + track.day);
-            const card = buildTrackCard(track.day, getAudioFilePath(track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse);
+            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse);
             skelEl.replaceWith(card);
         });
     }
