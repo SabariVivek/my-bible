@@ -268,6 +268,237 @@
             display: flex;
         }
 
+        .notes-pill-btn {
+            background-color: #fde047;
+            border: 2px solid #000000;
+            width: 48px;
+            flex-shrink: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
+        }
+
+        /* ── Notes Bottom Sheet ────────────────────────────────────────────── */
+        .notes-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 9998;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+        }
+
+        .notes-overlay.hidden {
+            display: none;
+        }
+
+        .notes-box {
+            background: #fef9ee;
+            border-top: 4px solid #000000;
+            border-left: 4px solid #000000;
+            border-right: 4px solid #000000;
+            box-shadow: 0px -6px 0px #000000;
+            width: 100%;
+            max-width: 480px;
+            max-height: 82vh;
+            display: flex;
+            flex-direction: column;
+            animation: slideUp 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .notes-drag-handle {
+            width: 40px;
+            height: 4px;
+            background: #d1d5db;
+            border-radius: 2px;
+            margin: 12px auto 0 auto;
+            flex-shrink: 0;
+        }
+
+        .notes-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px 0 20px;
+            flex-shrink: 0;
+        }
+
+        .notes-title-pill {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .notes-tag {
+            font-size: 0.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: #000000;
+            color: #fde047;
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+
+        .notes-close-btn {
+            background-color: #ff6060;
+            color: var(--raw-black);
+            border: 2px solid var(--raw-black);
+            font-size: 0.95rem;
+            font-weight: 900;
+            cursor: pointer;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 0px var(--raw-black);
+            transition: transform 0.1s, box-shadow 0.1s;
+            flex-shrink: 0;
+        }
+
+        .notes-close-btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--raw-black);
+        }
+
+        .notes-track-title {
+            font-size: 1.15rem;
+            font-weight: 900;
+            padding: 8px 20px 14px 20px;
+            border-bottom: 2px solid #000000;
+            flex-shrink: 0;
+            letter-spacing: -0.3px;
+        }
+
+        .notes-scroll-area {
+            overflow-y: auto;
+            padding: 20px 20px 36px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .notes-section-label {
+            font-size: 0.6rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .notes-summary-text {
+            position: relative;
+            font-size: 0.85rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: #1c1c1c;
+            padding: 10px 14px 10px 44px;
+            background: #fffbea;
+            border: 2px solid #000;
+            box-shadow: 3px 3px 0px #000;
+        }
+
+        .notes-summary-text::before {
+            content: '\201C';
+            position: absolute;
+            left: 10px;
+            top: 2px;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 900;
+            color: #fde047;
+            line-height: 1;
+            -webkit-text-stroke: 1.5px #000;
+        }
+
+        .notes-passage-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .notes-passage-item {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            background: #ffffff;
+            border: 2px solid #000000;
+            box-shadow: 3px 3px 0px #000000;
+            overflow: hidden;
+        }
+
+        .notes-passage-num {
+            background: #000000;
+            color: #ffffff;
+            font-size: 0.65rem;
+            font-weight: 900;
+            width: 28px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.5px;
+        }
+
+        .notes-passage-accent {
+            width: 4px;
+            background: #fca5a5;
+            flex-shrink: 0;
+        }
+
+        .notes-passage-body {
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            flex: 1;
+        }
+
+        .notes-passage-ref {
+            font-size: 0.78rem;
+            font-weight: 900;
+            color: #000000;
+            line-height: 1.2;
+        }
+
+        .notes-passage-summary {
+            font-size: 0.73rem;
+            color: #4b5563;
+            line-height: 1.45;
+        }
+
+        .notes-principle-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .notes-principle-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: #1c1c1c;
+        }
+
+        .notes-principle-dot {
+            width: 8px;
+            height: 8px;
+            background: #fca5a5;
+            border: 1.5px solid #000;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+
         /* Playlist Structural Architecture */
         .playlist {
             list-style: none;
@@ -931,7 +1162,23 @@
         <div class="pill-indicator-dot"></div>
         <span>Open Player</span>
     </button>
+    <button class="notes-pill-btn" id="notesPillBtn" onclick="openNotesSheet()" style="display:none;">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#000;flex-shrink:0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8 17h8v1.5H8V17zm0-3h8v1.5H8V14zm0-3h5v1.5H8V11z"/></svg>
+    </button>
     <button class="global-stop-btn" id="headerStopBtn" onclick="terminatePlayback()">&#x2715;</button>
+</div>
+
+<!-- Notes Bottom Sheet -->
+<div id="notesSheet" class="notes-overlay hidden" onclick="closeNotesSheet(event)">
+    <div class="notes-box">
+        <div class="notes-drag-handle"></div>
+        <div class="notes-header">
+            <div class="notes-title-pill" id="notesSheetTags"></div>
+            <button class="notes-close-btn" onclick="document.getElementById('notesSheet').classList.add('hidden'); document.body.style.overflow='';">&#x2715;</button>
+        </div>
+        <h2 class="notes-track-title" id="notesSheetTitle"></h2>
+        <div class="notes-scroll-area" id="notesSheetContent"></div>
+    </div>
 </div>
 
 <!-- Media Core Native Hook -->
@@ -1011,6 +1258,67 @@
     const dayLabel = document.getElementById('playerDayLabel');
     const playIconContainer = document.getElementById('playBtnIcon');
     const globalStopBtn = document.getElementById('headerStopBtn');
+    const notesPillBtn  = document.getElementById('notesPillBtn');
+
+    // ── Notes Sheet ────────────────────────────────────────────────────────────
+    function findNoteForTitle(title) {
+        if (typeof BIBLE_STUDY_NOTES === 'undefined') return null;
+        return BIBLE_STUDY_NOTES.find(n => n.title.toLowerCase() === title.toLowerCase()) || null;
+    }
+
+    function openNotesSheet() {
+        document.getElementById('notesSheet').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeNotesSheet(e) {
+        if (e && e.target !== document.getElementById('notesSheet')) return;
+        document.getElementById('notesSheet').classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    function populateNotesSheet(note) {
+        document.getElementById('notesSheetTitle').textContent = note.title;
+        document.getElementById('notesSheetTags').innerHTML = (note.tags || [])
+            .map(t => `<span class="notes-tag">${t}</span>`).join('');
+
+        let html = '';
+        if (note.summary) {
+            html += `<div>
+                <div class="notes-section-label">Summary</div>
+                <p class="notes-summary-text">${note.summary}</p>
+            </div>`;
+        }
+        if (note.scripturePassages && note.scripturePassages.length) {
+            html += `<div>
+                <div class="notes-section-label">Scripture Passages</div>
+                <div class="notes-passage-list">
+                    ${note.scripturePassages.map((p, idx) => `
+                    <div class="notes-passage-item">
+                        <div class="notes-passage-num">${String(idx + 1).padStart(2, '0')}</div>
+                        <div class="notes-passage-accent"></div>
+                        <div class="notes-passage-body">
+                            <div class="notes-passage-ref">${p.reference}</div>
+                            <div class="notes-passage-summary">${p.summary}</div>
+                        </div>
+                    </div>`).join('')}
+                </div>
+            </div>`;
+        }
+        if (note.corePrinciples && note.corePrinciples.length) {
+            html += `<div>
+                <div class="notes-section-label">Core Principles</div>
+                <div class="notes-principle-list">
+                    ${note.corePrinciples.map(p => `
+                    <div class="notes-principle-item">
+                        <div class="notes-principle-dot"></div>
+                        <span>${p}</span>
+                    </div>`).join('')}
+                </div>
+            </div>`;
+        }
+        document.getElementById('notesSheetContent').innerHTML = html;
+    }
 
     const scrubArea = document.getElementById('scrubArea');
     const scrubFill = document.getElementById('scrubFill');
@@ -1075,8 +1383,17 @@
         audio.src = fileUrl;
         
         pillGroup.classList.add('active');
-        
         globalStopBtn.classList.add('active');
+
+        // Show notes button only if this track has study notes
+        const note = findNoteForTitle(title);
+        if (note) {
+            populateNotesSheet(note);
+            notesPillBtn.style.display = 'flex';
+        } else {
+            notesPillBtn.style.display = 'none';
+            document.getElementById('notesSheet').classList.add('hidden');
+        }
 
         audio.load();
         audio.play();
@@ -1133,6 +1450,8 @@
         customModal.classList.remove('active');
 
         globalStopBtn.classList.remove('active');
+        notesPillBtn.style.display = 'none';
+        document.getElementById('notesSheet').classList.add('hidden');
     }
 
     function openPlayerPanel() {
