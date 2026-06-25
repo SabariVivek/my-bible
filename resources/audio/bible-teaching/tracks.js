@@ -21,13 +21,15 @@ const BIBLE_TRACKS = [
     { day: 8,  title: "Burnt Offering",        duration: "74:27 min", verse: "Leviticus 1",    desc: "The significance of sacrificial offerings in the Old Testament." },
     { day: 9,  title: "Jonah",                 duration: "84:24 min", verse: "Jonah 1-4",      desc: "God's mercy and the prophet's struggle with obedience and compassion." },
     { day: 10, title: "Who is Antichrist?",    file: "Who is Antichrist", duration: "35:04 min", verse: "1 John 4:1-3",   desc: "Understanding the spirit of the antichrist and its manifestation in the world." },
-];
+    { day: 11, title: "Passover",              duration: "63:05 min", verse: "Exodus 12",     desc: "The significance of the Passover in God's plan of redemption." },
+  ];
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Bible Study Notes — keyed by track title (case-insensitive match)
 // Add a new object here for each track that has study notes.
 // ─────────────────────────────────────────────────────────────────────────────
 const BIBLE_STUDY_NOTES = [
+  // Who is Antichrist?
   {
     title: "Who is Antichrist?",
     tags: ["Discernment Study"],
@@ -50,6 +52,122 @@ const BIBLE_STUDY_NOTES = [
       "The ultimate test is whether a teaching agrees with Jesus Christ and the Scriptures.",
       "Believers are called to be discerning, test everything, and remain faithful to the true gospel."
     ]
+  },
+  // Passover...
+  {
+    title: "Passover - The Lamb Who Was Slain",
+    tags: ["Old Testament", "Jesus in the Old Testament", "Passover", "Exodus"],
+    summary:
+      "The Passover was God's appointed way of delivering Israel from judgment and slavery in Egypt. Every part of the Passover points to Jesus Christ, the true Passover Lamb, whose blood saves believers from God's judgment and brings them into a new covenant.",
+
+    scripturePassages: [
+      { reference: "Genesis 22:7-8", summary: "God Himself Will Provide the Lamb" },
+      { reference: "Exodus 12:1-30", summary: "Institution of the First Passover" },
+      { reference: "Exodus 12:43-51", summary: "Rules for Eating the Passover" },
+      { reference: "Exodus 13:3-10", summary: "Remember the Lord's Deliverance" },
+      { reference: "Leviticus 23:4-8", summary: "Passover Becomes an Annual Feast" },
+      { reference: "Isaiah 53:4-7", summary: "The Promised Suffering Lamb" },
+      { reference: "John 1:29", summary: "Jesus Is the Lamb of God" },
+      { reference: "Luke 22:7-20", summary: "Jesus Celebrates the Final Passover" },
+      { reference: "John 19:14-36", summary: "Jesus Dies as the Passover Lamb" },
+      { reference: "1 Corinthians 5:7-8", summary: "Christ Our Passover Is Sacrificed" },
+      { reference: "1 Peter 1:18-21", summary: "Redeemed by the Precious Blood of Christ" },
+      { reference: "Revelation 5:6-14", summary: "The Lamb Is Worthy Forever" }
+    ],
+
+    sermonSections: [
+      {
+        title: "1. Israel Needed Deliverance",
+        points: [
+          "Israel lived in slavery under Pharaoh for about 400 years.",
+          "God raised Moses to deliver His people.",
+          "Nine plagues did not change Pharaoh's heart.",
+          "The final plague was the death of every firstborn in Egypt."
+        ]
+      },
+      {
+        title: "2. God Provided One Way of Salvation",
+        points: [
+          "Every family had to select a spotless male lamb.",
+          "The lamb was examined before sacrifice.",
+          "Its blood was placed on the doorposts and lintel.",
+          "God promised that when He saw the blood, judgment would pass over that house.",
+          "No amount of good works could replace the blood."
+        ]
+      },
+      {
+        title: "3. The Meaning of the Passover Meal",
+        points: [
+          "The roasted lamb represented complete sacrifice.",
+          "Unleavened bread symbolized leaving behind sin and the old life.",
+          "Bitter herbs reminded Israel of their slavery in Egypt.",
+          "The meal was eaten in readiness to leave immediately.",
+          "God's people were delivered by faith and obedience."
+        ]
+      },
+      {
+        title: "4. How the Passover Points to Jesus",
+        points: [
+          "Jesus is the true Lamb provided by God.",
+          "Like the Passover lamb, Jesus was without blemish or sin.",
+          "Jesus was examined but found innocent.",
+          "His blood protects believers from God's judgment.",
+          "Not one of His bones was broken, fulfilling the Passover requirement.",
+          "Jesus died during Passover.",
+          "The Last Supper transformed the Passover into the New Covenant."
+        ]
+      },
+      {
+        title: "5. What the Passover Teaches Believers",
+        points: [
+          "Salvation comes only through the blood of Christ.",
+          "Faith must be demonstrated through obedience.",
+          "Believers are delivered from slavery to sin.",
+          "Christians should live holy lives, removing the 'leaven' of sin.",
+          "The Lord's Supper reminds believers of the true Passover Lamb."
+        ]
+      }
+    ],
+
+    jesusFulfillment: [
+      {
+        passover: "A spotless male lamb",
+        fulfillment: "Jesus lived a completely sinless life."
+      },
+      {
+        passover: "The lamb was chosen before sacrifice",
+        fulfillment: "Jesus was chosen before the foundation of the world."
+      },
+      {
+        passover: "The lamb's blood saved from judgment",
+        fulfillment: "Jesus' blood saves believers from God's wrath."
+      },
+      {
+        passover: "The lamb had no broken bones",
+        fulfillment: "Jesus' bones were not broken on the cross."
+      },
+      {
+        passover: "Judgment passed over homes marked by blood",
+        fulfillment: "Those covered by Christ's blood escape eternal judgment."
+      },
+      {
+        passover: "Israel was delivered from Egypt",
+        fulfillment: "Believers are delivered from slavery to sin."
+      },
+      {
+        passover: "The Passover meal began a new life",
+        fulfillment: "The Lord's Supper celebrates the New Covenant in Christ."
+      }
+    ],
+
+    corePrinciples: [
+      "God always provides the way of salvation.",
+      "Salvation is by God's grace through faith, not human effort.",
+      "Without the shedding of blood there is no forgiveness of sins.",
+      "Jesus Christ is the fulfillment of the entire Passover.",
+      "The Old Testament Passover was a shadow; Jesus is the reality.",
+      "Believers are called to remember Christ's sacrifice and walk in holiness.",
+      "The Lamb who delivered Israel from Egypt is the same Lamb who delivers the world from sin."
+    ]
   }
-  // Add more note objects here for other tracks
 ];
