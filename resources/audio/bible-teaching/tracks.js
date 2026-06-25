@@ -55,8 +55,8 @@ const BIBLE_STUDY_NOTES = [
   },
   // Passover...
   {
-    title: "Passover - The Lamb Who Was Slain",
-    tags: ["Old Testament", "Jesus in the Old Testament", "Passover", "Exodus"],
+    title: "Passover",
+    tags: ["Jesus in the Old Testament"],
     summary:
       "The Passover was God's appointed way of delivering Israel from judgment and slavery in Egypt. Every part of the Passover points to Jesus Christ, the true Passover Lamb, whose blood saves believers from God's judgment and brings them into a new covenant.",
 

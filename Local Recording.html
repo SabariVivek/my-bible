@@ -499,6 +499,146 @@
             margin-top: 5px;
         }
 
+        /* ── Sermon Sections ─────────────────────────────────────────────── */
+        .notes-sermon-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .notes-sermon-section {
+            border: 2px solid #000;
+            box-shadow: 3px 3px 0px #000;
+            overflow: hidden;
+        }
+
+        .notes-sermon-title {
+            background: #000000;
+            color: #fde047;
+            font-size: 0.72rem;
+            font-weight: 900;
+            padding: 6px 12px;
+            letter-spacing: 0.3px;
+        }
+
+        .notes-sermon-points {
+            list-style: none;
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: #ffffff;
+        }
+
+        .notes-sermon-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.78rem;
+            line-height: 1.45;
+            color: #1c1c1c;
+        }
+
+        .notes-sermon-bullet {
+            width: 6px;
+            height: 6px;
+            background: #fde047;
+            border: 1.5px solid #000;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+
+        /* ── Jesus Fulfillment ───────────────────────────────────────────── */
+        .notes-fulfillment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .notes-fulfillment-item {
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0px #000;
+            overflow: hidden;
+        }
+
+        .notes-fulfillment-ot {
+            display: flex;
+            align-items: stretch;
+            background: #fffbea;
+        }
+
+        .notes-fulfillment-nt {
+            display: flex;
+            align-items: stretch;
+            background: #f0fdf4;
+        }
+
+        .notes-fulfillment-strip {
+            width: 5px;
+            flex-shrink: 0;
+        }
+
+        .notes-fulfillment-ot .notes-fulfillment-strip {
+            background: #f59e0b;
+        }
+
+        .notes-fulfillment-nt .notes-fulfillment-strip {
+            background: #22c55e;
+        }
+
+        .notes-fulfillment-body {
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            flex: 1;
+        }
+
+        .notes-fulfillment-label {
+            font-size: 0.58rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .notes-fulfillment-ot .notes-fulfillment-label {
+            color: #92400e;
+        }
+
+        .notes-fulfillment-nt .notes-fulfillment-label {
+            color: #14532d;
+        }
+
+        .notes-fulfillment-text {
+            font-size: 0.78rem;
+            line-height: 1.45;
+            color: #1c1c1c;
+        }
+
+        .notes-fulfillment-connector {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0 12px;
+            background: #000000;
+        }
+
+        .notes-fulfillment-connector-line {
+            flex: 1;
+            height: 1px;
+            background: #444;
+        }
+
+        .notes-fulfillment-connector-text {
+            font-size: 0.58rem;
+            font-weight: 900;
+            color: #fde047;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            padding: 4px 0;
+        }
+
         /* Playlist Structural Architecture */
         .playlist {
             list-style: none;
@@ -1163,7 +1303,7 @@
         <span>Open Player</span>
     </button>
     <button class="notes-pill-btn" id="notesPillBtn" onclick="openNotesSheet()" style="display:none;">
-        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#000;flex-shrink:0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8 17h8v1.5H8V17zm0-3h8v1.5H8V14zm0-3h5v1.5H8V11z"/></svg>
+        <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:#000;flex-shrink:0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8 17h8v1.5H8V17zm0-3h8v1.5H8V14zm0-3h5v1.5H8V11z"/></svg>
     </button>
     <button class="global-stop-btn" id="headerStopBtn" onclick="terminatePlayback()">&#x2715;</button>
 </div>
@@ -1263,7 +1403,11 @@
     // ── Notes Sheet ────────────────────────────────────────────────────────────
     function findNoteForTitle(title) {
         if (typeof BIBLE_STUDY_NOTES === 'undefined') return null;
-        return BIBLE_STUDY_NOTES.find(n => n.title.toLowerCase() === title.toLowerCase()) || null;
+        const t = title.toLowerCase();
+        return BIBLE_STUDY_NOTES.find(n => {
+            const nt = n.title.toLowerCase();
+            return nt === t || nt.startsWith(t) || t.startsWith(nt);
+        }) || null;
     }
 
     function openNotesSheet() {
@@ -1300,6 +1444,49 @@
                         <div class="notes-passage-body">
                             <div class="notes-passage-ref">${p.reference}</div>
                             <div class="notes-passage-summary">${p.summary}</div>
+                        </div>
+                    </div>`).join('')}
+                </div>
+            </div>`;
+        }
+        if (note.sermonSections && note.sermonSections.length) {
+            html += `<div>
+                <div class="notes-section-label">Sermon Outline</div>
+                <div class="notes-sermon-list">
+                    ${note.sermonSections.map(s => `
+                    <div class="notes-sermon-section">
+                        <div class="notes-sermon-title">${s.title}</div>
+                        <ul class="notes-sermon-points">
+                            ${s.points.map(p => `<li class="notes-sermon-point"><span class="notes-sermon-bullet"></span>${p}</li>`).join('')}
+                        </ul>
+                    </div>`).join('')}
+                </div>
+            </div>`;
+        }
+        if (note.jesusFulfillment && note.jesusFulfillment.length) {
+            html += `<div>
+                <div class="notes-section-label">Passover → Fulfilled in Jesus</div>
+                <div class="notes-fulfillment-list">
+                    ${note.jesusFulfillment.map(f => `
+                    <div class="notes-fulfillment-item">
+                        <div class="notes-fulfillment-ot">
+                            <div class="notes-fulfillment-strip"></div>
+                            <div class="notes-fulfillment-body">
+                                <div class="notes-fulfillment-label">Passover</div>
+                                <div class="notes-fulfillment-text">${f.passover}</div>
+                            </div>
+                        </div>
+                        <div class="notes-fulfillment-connector">
+                            <div class="notes-fulfillment-connector-line"></div>
+                            <div class="notes-fulfillment-connector-text">&#x2193; Fulfilled in Jesus</div>
+                            <div class="notes-fulfillment-connector-line"></div>
+                        </div>
+                        <div class="notes-fulfillment-nt">
+                            <div class="notes-fulfillment-strip"></div>
+                            <div class="notes-fulfillment-body">
+                                <div class="notes-fulfillment-label">Jesus</div>
+                                <div class="notes-fulfillment-text">${f.fulfillment}</div>
+                            </div>
                         </div>
                     </div>`).join('')}
                 </div>
