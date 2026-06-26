@@ -11,18 +11,19 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 const BIBLE_TRACKS = [
-    { day: 1,  title: "Psalm 23",              duration: "71:25 min", verse: "Psalm 23",       desc: "The Lord as shepherd — comfort, provision, and eternal dwelling." },
-    { day: 2,  title: "Why 400 years wait",    duration: "40:58 min", verse: "Galatians 4:4",  desc: "The 400 years of prophetic silence and God's perfect timing to send His Son." },
-    { day: 3,  title: "Judges 19",             duration: "84:15 min", verse: "Judges 19",      desc: "A dark chapter revealing Israel's moral collapse without a king." },
-    { day: 4,  title: "Parable of Samaritan",  duration: "70:16 min", verse: "Luke 10:30-37",  desc: "What true neighbourly love looks like across every boundary." },
-    { day: 5,  title: "Rahab",                 duration: "88:15 min", verse: "Joshua 2",       desc: "A Canaanite woman's faith that placed her in the messianic line." },
-    { day: 6,  title: "Mephibosheth",          duration: "82:21 min", verse: "2 Samuel 9:7",   desc: "A picture of grace — restored to the king's table despite weakness." },
-    { day: 7,  title: "Daniel - Chapter 1",    duration: "67:02 min", verse: "Daniel 1",       desc: "Daniel's faithfulness and God's provision in a foreign land." },
-    { day: 8,  title: "Burnt Offering",        duration: "74:27 min", verse: "Leviticus 1",    desc: "The significance of sacrificial offerings in the Old Testament." },
-    { day: 9,  title: "Jonah",                 duration: "84:24 min", verse: "Jonah 1-4",      desc: "God's mercy and the prophet's struggle with obedience and compassion." },
-    { day: 10, title: "Who is Antichrist?",    file: "Who is Antichrist", duration: "35:04 min", verse: "1 John 4:1-3",   desc: "Understanding the spirit of the antichrist and its manifestation in the world." },
-    { day: 11, title: "Passover",              duration: "63:05 min", verse: "Exodus 12",     desc: "The significance of the Passover in God's plan of redemption." },
-  ];
+  { day: 1, title: "Psalm 23", duration: "71:25 min", verse: "Psalm 23", desc: "The Lord as shepherd — comfort, provision, and eternal dwelling." },
+  { day: 2, title: "Why 400 years wait", duration: "40:58 min", verse: "Galatians 4:4", desc: "The 400 years of prophetic silence and God's perfect timing to send His Son." },
+  { day: 3, title: "Judges 19", duration: "84:15 min", verse: "Judges 19", desc: "A dark chapter revealing Israel's moral collapse without a king." },
+  { day: 4, title: "Parable of Samaritan", duration: "70:16 min", verse: "Luke 10:30-37", desc: "What true neighbourly love looks like across every boundary." },
+  { day: 5, title: "Rahab", duration: "88:15 min", verse: "Joshua 2", desc: "A Canaanite woman's faith that placed her in the messianic line." },
+  { day: 6, title: "Mephibosheth", duration: "82:21 min", verse: "2 Samuel 9:7", desc: "A picture of grace — restored to the king's table despite weakness." },
+  { day: 7, title: "Daniel - Chapter 1", duration: "67:02 min", verse: "Daniel 1", desc: "Daniel's faithfulness and God's provision in a foreign land." },
+  { day: 8, title: "Burnt Offering", duration: "74:27 min", verse: "Leviticus 1", desc: "The significance of sacrificial offerings in the Old Testament." },
+  { day: 9, title: "Jonah", duration: "84:24 min", verse: "Jonah 1-4", desc: "God's mercy and the prophet's struggle with obedience and compassion." },
+  { day: 10, title: "Who is Antichrist?", file: "Who is Antichrist", duration: "35:04 min", verse: "1 John 4:1-3", desc: "Understanding the spirit of the antichrist and its manifestation in the world." },
+  { day: 11, title: "Passover", duration: "63:05 min", verse: "Exodus 12", desc: "The significance of the Passover in God's plan of redemption." },
+  { day: 12, title: "The Bronze Serpent", duration: "63:08 min", verse: "Numbers 21:4-9", desc: "A foreshadowing of Christ's crucifixion and the power of faith." }
+];
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Bible Study Notes — keyed by track title (case-insensitive match)
@@ -35,14 +36,14 @@ const BIBLE_STUDY_NOTES = [
     tags: ["Discernment Study"],
     summary: "As Paul says in 2 Timothy 4:3-4, a time would come when people would not endure sound doctrine but would gather teachers who tell them what they want to hear. Therefore, Christians must continually return to Scripture and make Christ the center of their faith.",
     scripturePassages: [
-      { reference: "Matthew 7:15-23",        summary: "Not Everyone Who Claims Christ Belongs to Christ" },
+      { reference: "Matthew 7:15-23", summary: "Not Everyone Who Claims Christ Belongs to Christ" },
       { reference: "Matthew 24:4-5, 11, 24", summary: "False Christs and False Prophets" },
-      { reference: "Acts 20:29-30",           summary: "False Teachers Can Arise from Within" },
-      { reference: "2 Corinthians 11:13-15",  summary: "Satan's Deception Can Look Good" },
-      { reference: "Galatians 1:8-9",         summary: "There Is Only One True Gospel" },
-      { reference: "1 John 4:1-3",            summary: "Test the Spirits" },
-      { reference: "2 Peter 2:1-3",           summary: "False Teachers Secretly Introduce Error" },
-      { reference: "Jude 3-4",                summary: "Contend for the Faith" }
+      { reference: "Acts 20:29-30", summary: "False Teachers Can Arise from Within" },
+      { reference: "2 Corinthians 11:13-15", summary: "Satan's Deception Can Look Good" },
+      { reference: "Galatians 1:8-9", summary: "There Is Only One True Gospel" },
+      { reference: "1 John 4:1-3", summary: "Test the Spirits" },
+      { reference: "2 Peter 2:1-3", summary: "False Teachers Secretly Introduce Error" },
+      { reference: "Jude 3-4", summary: "Contend for the Faith" }
     ],
     corePrinciples: [
       "Not everyone who claims to be Christian truly follows Christ.",
@@ -131,31 +132,31 @@ const BIBLE_STUDY_NOTES = [
 
     jesusFulfillment: [
       {
-        passover: "A spotless male lamb",
+        ot: "A spotless male lamb",
         fulfillment: "Jesus lived a completely sinless life."
       },
       {
-        passover: "The lamb was chosen before sacrifice",
+        ot: "The lamb was chosen before sacrifice",
         fulfillment: "Jesus was chosen before the foundation of the world."
       },
       {
-        passover: "The lamb's blood saved from judgment",
+        ot: "The lamb's blood saved from judgment",
         fulfillment: "Jesus' blood saves believers from God's wrath."
       },
       {
-        passover: "The lamb had no broken bones",
+        ot: "The lamb had no broken bones",
         fulfillment: "Jesus' bones were not broken on the cross."
       },
       {
-        passover: "Judgment passed over homes marked by blood",
+        ot: "Judgment passed over homes marked by blood",
         fulfillment: "Those covered by Christ's blood escape eternal judgment."
       },
       {
-        passover: "Israel was delivered from Egypt",
+        ot: "Israel was delivered from Egypt",
         fulfillment: "Believers are delivered from slavery to sin."
       },
       {
-        passover: "The Passover meal began a new life",
+        ot: "The Passover meal began a new life",
         fulfillment: "The Lord's Supper celebrates the New Covenant in Christ."
       }
     ],
@@ -168,6 +169,121 @@ const BIBLE_STUDY_NOTES = [
       "The Old Testament Passover was a shadow; Jesus is the reality.",
       "Believers are called to remember Christ's sacrifice and walk in holiness.",
       "The Lamb who delivered Israel from Egypt is the same Lamb who delivers the world from sin."
+    ]
+  },
+  // The Bronze Serpent...
+  {
+    title: "The Bronze Serpent",
+    tags: ["Jesus in the Old Testament"],
+
+    summary:
+      "When Israel sinned against God in the wilderness, He sent fiery serpents as judgment. God then provided a bronze serpent lifted up on a pole so that everyone who looked at it in faith would live. Jesus declared that this event pointed directly to His death on the cross, where everyone who believes in Him receives eternal life.",
+
+    scripturePassages: [
+      { reference: "Numbers 21:4-9", summary: "The Bronze Serpent in the Wilderness" },
+      { reference: "Deuteronomy 8:15-16", summary: "God Led Israel Through the Wilderness" },
+      { reference: "2 Kings 18:4", summary: "Hezekiah Destroys the Bronze Serpent" },
+      { reference: "Psalm 78:17-22", summary: "Israel's Rebellion Against God" },
+      { reference: "Isaiah 45:22", summary: "Look to the Lord and Be Saved" },
+      { reference: "John 3:14-18", summary: "Jesus Explains the Bronze Serpent" },
+      { reference: "John 12:32-33", summary: "Jesus Would Be Lifted Up" },
+      { reference: "Romans 5:8-10", summary: "Christ Died for Sinners" },
+      { reference: "2 Corinthians 5:21", summary: "Christ Became Sin for Us" },
+      { reference: "Galatians 3:13", summary: "Christ Bore the Curse" },
+      { reference: "Hebrews 12:2", summary: "Looking to Jesus" },
+      { reference: "1 Peter 2:24", summary: "He Bore Our Sins on the Tree" }
+    ],
+
+    sermonSections: [
+      {
+        title: "1. Israel Rebelled Against God",
+        points: [
+          "The Israelites became impatient during their journey.",
+          "They complained against God and Moses.",
+          "They despised God's provision of manna.",
+          "Their unbelief revealed hearts that rejected God's goodness."
+        ]
+      },
+      {
+        title: "2. God's Judgment Came",
+        points: [
+          "God sent fiery serpents among the people.",
+          "Many Israelites were bitten and died.",
+          "The people recognized that they had sinned.",
+          "They confessed their sin and asked Moses to pray for them."
+        ]
+      },
+      {
+        title: "3. God Provided One Way of Salvation",
+        points: [
+          "God instructed Moses to make a bronze serpent.",
+          "The serpent was lifted high on a pole.",
+          "Anyone who looked at it in faith would live.",
+          "Healing came by trusting God's promise, not by human effort."
+        ]
+      },
+      {
+        title: "4. How the Bronze Serpent Points to Jesus",
+        points: [
+          "Jesus said the bronze serpent was a picture of Himself.",
+          "Just as the serpent was lifted up, Jesus was lifted up on the cross.",
+          "The serpent represented the judgment of sin.",
+          "Jesus bore our sins and our curse in our place.",
+          "Everyone who believes in Christ receives eternal life.",
+          "Salvation comes through faith, not works."
+        ]
+      },
+      {
+        title: "5. What the Bronze Serpent Teaches Believers",
+        points: [
+          "Sin brings death.",
+          "God alone provides the remedy for sin.",
+          "Faith is trusting God's provision.",
+          "Looking to Jesus brings eternal life.",
+          "Believers should never turn God's gifts into idols."
+        ]
+      }
+    ],
+
+    jesusFulfillment: [
+      {
+        ot: "Israel sinned against God",
+        fulfillment: "All people have sinned against God."
+      },
+      {
+        ot: "Fiery serpents brought death",
+        fulfillment: "Sin brings spiritual and eternal death."
+      },
+      {
+        ot: "God provided the bronze serpent",
+        fulfillment: "God provided His Son as the only Savior."
+      },
+      {
+        ot: "The serpent was lifted up",
+        fulfillment: "Jesus was lifted up on the cross."
+      },
+      {
+        ot: "Looking at the serpent brought life",
+        fulfillment: "Believing in Jesus brings eternal life."
+      },
+      {
+        ot: "Healing was received by faith",
+        fulfillment: "Salvation is received through faith in Christ."
+      },
+      {
+        ot: "The bronze serpent later became an idol",
+        fulfillment: "People must worship Christ, not religious symbols."
+      }
+    ],
+
+    corePrinciples: [
+      "Sin always brings death and judgment.",
+      "God always provides the only way of salvation.",
+      "Salvation is received by faith, not by human effort.",
+      "Jesus Christ fulfilled the meaning of the bronze serpent.",
+      "Everyone who looks to Christ in faith receives eternal life.",
+      "God's gifts must never become objects of worship.",
+      "The bronze serpent was a shadow; Jesus Christ is the reality."
     ]
   }
 ];
