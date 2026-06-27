@@ -22,7 +22,8 @@ const BIBLE_TRACKS = [
   { day: 9, title: "Jonah", duration: "84:24 min", verse: "Jonah 1-4", desc: "God's mercy and the prophet's struggle with obedience and compassion." },
   { day: 10, title: "Who is Antichrist?", file: "Who is Antichrist", duration: "35:04 min", verse: "1 John 4:1-3", desc: "Understanding the spirit of the antichrist and its manifestation in the world." },
   { day: 11, title: "Passover", duration: "63:05 min", verse: "Exodus 12", desc: "The significance of the Passover in God's plan of redemption." },
-  { day: 12, title: "The Bronze Serpent", duration: "63:08 min", verse: "Numbers 21:4-9", desc: "A foreshadowing of Christ's crucifixion and the power of faith." }
+  { day: 12, title: "The Bronze Serpent", duration: "63:08 min", verse: "Numbers 21:4-9", desc: "A foreshadowing of Christ's crucifixion and the power of faith." },
+  { day: 13, title: "Why 1<sup>st</sup> king not from Judah?", file: "Why first king not from Judah", duration: "40:36 min", verse: "Matthew 1", desc: "Exploring the reasons behind the selection of the first king outside of Judah." },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
