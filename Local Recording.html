@@ -644,6 +644,35 @@
             list-style: none;
         }
 
+        .track-item.important {
+            background-color: #e0f2fe;
+            border-color: #0284c7;
+            box-shadow: 4px 4px 0px #0284c7;
+        }
+
+        .track-item.important.playing {
+            background-color: #fde047;
+            border-color: var(--raw-black);
+            box-shadow: 6px 6px 0px var(--raw-black);
+        }
+
+        .important-badge {
+            position: absolute;
+            top: -12px;
+            right: 15px;
+            background: #ff5757;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            padding: 3px 10px;
+            border: 2px solid #000000;
+            box-shadow: 2px 2px 0px #000000;
+            border-radius: 4px;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
         .track-item {
             background-color: var(--bg-card);
             padding: 18px;
@@ -1713,9 +1742,9 @@
         });
     }
 
-    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse) {
+    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important) {
         const li = document.createElement('li');
-        li.className = 'track-item';
+        li.className = 'track-item' + (important ? ' important' : '');
         li.id = trackId;
         li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
         const durStr = duration
@@ -1785,7 +1814,7 @@
         // Swap each skeleton with the real card
         BIBLE_TRACKS.forEach((track, i) => {
             const skelEl = document.getElementById('skel-track' + track.day);
-            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse);
+            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important);
             skelEl.replaceWith(card);
         });
     }
