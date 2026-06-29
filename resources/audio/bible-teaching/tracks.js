@@ -24,6 +24,7 @@ const BIBLE_TRACKS = [
   { day: 11, title: "Passover", duration: "63:05 min", verse: "Exodus 12", desc: "The significance of the Passover in God's plan of redemption." },
   { day: 12, title: "The Bronze Serpent", duration: "63:08 min", verse: "Numbers 21:4-9", desc: "A foreshadowing of Christ's crucifixion and the power of faith." },
   { day: 13, title: "Why 1<sup>st</sup> king not from Judah?", file: "Why first king not from Judah", duration: "40:36 min", verse: "Matthew 1", desc: "Exploring the reasons behind the selection of the first king outside of Judah." },
+  { day: 14, title: "The Spirit & The Bride", duration: "48:06 min", verse: "Revelation 22:17", desc: "An invitation to receive the Spirit and the Bride's call to eternal life." }
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────

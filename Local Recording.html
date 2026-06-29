@@ -1564,7 +1564,7 @@
         const targetCard = document.getElementById(elementId);
         targetCard.classList.add('playing', 'media-active');
 
-        titleLabel.innerText = title;
+        titleLabel.innerHTML = title;
         dayLabel.innerText = "NOW PLAYING // " + dayText;
         
         audio.src = fileUrl;
@@ -1626,7 +1626,7 @@
         
         pendingTrackData = null;
 
-        titleLabel.innerText = "Lesson Title";
+        titleLabel.innerHTML = "Lesson Title";
         dayLabel.innerText = "STATUS // IDLE";
         scrubFill.style.width = "0%";
         timeCurrent.innerText = "0:00";
