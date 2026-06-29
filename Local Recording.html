@@ -651,7 +651,7 @@
             border: 3px solid var(--raw-black);
             cursor: pointer;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
             box-shadow: 4px 4px 0px var(--raw-black);
             transition: all 0.15s ease-in-out;
@@ -671,7 +671,8 @@
 
         .track-content {
             flex: 1;
-            padding-right: 16px;
+            min-width: 0;
+            padding-right: 12px;
         }
 
         .track-meta-row {
@@ -682,9 +683,11 @@
         }
 
         .track-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 800;
             line-height: 1.3;
+            white-space: normal;
+            word-break: break-word;
         }
 
         .track-desc {
@@ -756,7 +759,8 @@
             align-items: end;
             gap: 6px;
             flex-shrink: 0;
-            min-width: 80px;
+            min-width: 60px;
+            padding-top: 28px;
         }
 
         .track-duration-stamp {
