@@ -223,7 +223,7 @@
 
         /* Balanced Flexbox Header Layout */
         header {
-            margin-bottom: 32px;
+            margin-bottom: 16px;
             padding: 0;
             display: flex;
             justify-content: space-between;
@@ -245,6 +245,45 @@
             font-weight: 900;
             letter-spacing: -0.5px;
             margin: 0;
+        }
+
+        .top-folders-container {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            padding-bottom: 16px;
+            padding-top: 16px;
+        }
+
+        .top-folders-container::-webkit-scrollbar { display: none; }
+
+        .small-folder-chip {
+            background: #fff;
+            border: 2px solid var(--raw-black);
+            box-shadow: 2px 2px 0px var(--raw-black);
+            border-radius: 4px;
+            padding: 5px 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            white-space: nowrap;
+            flex-shrink: 0;
+            font-weight: 800;
+            font-size: 12px;
+            font-family: inherit;
+            transition: transform 0.05s, box-shadow 0.05s;
+        }
+
+        .small-folder-chip.active {
+            background: var(--raw-black);
+            color: #fff;
+        }
+
+        .small-folder-chip:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--raw-black);
         }
 
         /* Global Stop Context Button Asset */
@@ -1323,6 +1362,8 @@
         <div style="width:36px;"></div>
     </header>
 
+    <div class="top-folders-container" id="folderChips"></div>
+
     <ul class="playlist" id="playlistContainer">
         <li class="loading-state" id="loadingMsg">Scanning recordings…</li>
     </ul>
@@ -1815,7 +1856,34 @@
         BIBLE_TRACKS.forEach((track, i) => {
             const skelEl = document.getElementById('skel-track' + track.day);
             const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important);
+            card.dataset.category = track.category || '';
+            card.dataset.day = track.day;
             skelEl.replaceWith(card);
+        });
+
+        // ── Build folder chips from BIBLE_FOLDERS ──────────────────────────
+        const chipsContainer = document.getElementById('folderChips');
+        (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : [{ name: 'All Items', type: 'all' }]).forEach((folder, idx) => {
+            const chip = document.createElement('div');
+            chip.className = 'small-folder-chip' + (idx === 0 ? ' active' : '');
+            chip.textContent = '\uD83D\uDCC1 ' + folder.name;
+            chip.dataset.folderIdx = idx;
+            chip.addEventListener('click', () => {
+                document.querySelectorAll('.small-folder-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                document.querySelectorAll('.track-item').forEach(cardEl => {
+                    let show = false;
+                    if (folder.type === 'all') {
+                        show = true;
+                    } else if (folder.type === 'category') {
+                        show = cardEl.dataset.category === folder.value;
+                    } else if (folder.type === 'days') {
+                        show = folder.value.includes(Number(cardEl.dataset.day));
+                    }
+                    cardEl.style.display = show ? '' : 'none';
+                });
+            });
+            chipsContainer.appendChild(chip);
         });
     }
 

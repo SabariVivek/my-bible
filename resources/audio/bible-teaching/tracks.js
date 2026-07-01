@@ -11,22 +11,155 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 const BIBLE_TRACKS = [
-  { day: 1, title: "Psalm 23", duration: "71:25 min", verse: "Psalm 23", desc: "The Lord as shepherd — comfort, provision, and eternal dwelling." },
-  { day: 2, title: "Why 400 years wait", duration: "40:58 min", verse: "Galatians 4:4", desc: "The 400 years of prophetic silence and God's perfect timing to send His Son." },
-  { day: 3, title: "Judges 19", duration: "84:15 min", verse: "Judges 19", desc: "A dark chapter revealing Israel's moral collapse without a king." },
-  { day: 4, title: "Parable of Samaritan", duration: "70:16 min", verse: "Luke 10:30-37", desc: "What true neighbourly love looks like across every boundary." },
-  { day: 5, title: "Rahab", duration: "88:15 min", verse: "Joshua 2", desc: "A Canaanite woman's faith that placed her in the messianic line." },
-  { day: 6, title: "Mephibosheth", duration: "82:21 min", verse: "2 Samuel 9:7", desc: "A picture of grace — restored to the king's table despite weakness." },
-  { day: 7, title: "Daniel - Chapter 1", duration: "67:02 min", verse: "Daniel 1", desc: "Daniel's faithfulness and God's provision in a foreign land." },
-  { day: 8, title: "Burnt Offering", duration: "74:27 min", verse: "Leviticus 1", desc: "The significance of sacrificial offerings in the Old Testament." },
-  { day: 9, title: "Jonah", duration: "84:24 min", verse: "Jonah 1-4", desc: "God's mercy and the prophet's struggle with obedience and compassion." },
-  { day: 10, title: "Who is Antichrist?", file: "Who is Antichrist", duration: "35:04 min", verse: "1 John 4:1-3", desc: "Understanding the spirit of the antichrist and its manifestation in the world." },
-  { day: 11, title: "Passover", duration: "63:05 min", verse: "Exodus 12", desc: "The significance of the Passover in God's plan of redemption." },
-  { day: 12, title: "The Bronze Serpent", duration: "63:08 min", verse: "Numbers 21:4-9", desc: "A foreshadowing of Christ's crucifixion and the power of faith." },
-  { day: 13, title: "Why 1<sup>st</sup> king not from Judah?", file: "Why first king not from Judah", duration: "40:36 min", verse: "Matthew 1", desc: "Exploring the reasons behind the selection of the first king outside of Judah." },
-  { day: 14, title: "The Spirit & The Bride", duration: "48:06 min", verse: "Revelation 22:17", desc: "An invitation to receive the Spirit and the Bride's call to eternal life.", important: true },
-  { day: 15, title: "How Levi Tribe was Chosen?", file: "How Levi Tribe was Chosen", duration: "64:58 min", verse: "Numbers 3:5-13", desc: "The selection of the Levites and their role in serving God." }
-];  
+  {
+    day: 1,
+    title: "Psalm 23",
+    duration: "71:25 min",
+    verse: "Psalm 23",
+    desc: "The Lord as shepherd — comfort, provision, and eternal dwelling.",
+    category: "Psalms"
+  },
+  {
+    day: 2,
+    title: "Why 400 years wait?",
+    file: "Why 400 years wait",
+    duration: "40:58 min",
+    verse: "Galatians 4:4",
+    desc: "The 400 years of prophetic silence and God's perfect timing to send His Son.",
+    category: "Do You Know?"
+  },
+  {
+    day: 3,
+    title: "Judges 19",
+    duration: "84:15 min",
+    verse: "Judges 19",
+    desc: "A dark chapter revealing Israel's moral collapse without a king.",
+    category: "Do You Know?"
+  },
+  {
+    day: 4,
+    title: "Parable of Samaritan",
+    duration: "70:16 min",
+    verse: "Luke 10:30-37",
+    desc: "What true neighbourly love looks like across every boundary.",
+    category: "Christophany"
+  },
+  {
+    day: 5,
+    title: "Rahab",
+    duration: "88:15 min",
+    verse: "Joshua 2",
+    desc: "A Canaanite woman's faith that placed her in the messianic line.",
+    category: "Christophany"
+  },
+  {
+    day: 6,
+    title: "Mephibosheth",
+    duration: "82:21 min",
+    verse: "2 Samuel 9:7",
+    desc: "A picture of grace — restored to the king's table despite weakness.",
+    category: "Christophany"
+  },
+  {
+    day: 7,
+    title: "Daniel - Chapter 1",
+    duration: "67:02 min",
+    verse: "Daniel 1",
+    desc: "Daniel's faithfulness and God's provision in a foreign land.",
+    category: "Prophets"
+  },
+  {
+    day: 8,
+    title: "Burnt Offering",
+    duration: "74:27 min",
+    verse: "Leviticus 1",
+    desc: "The significance of sacrificial offerings in the Old Testament.",
+    category: "Leviticus"
+  },
+  {
+    day: 9,
+    title: "Jonah",
+    duration: "84:24 min",
+    verse: "Jonah 1-4",
+    desc: "God's mercy and the prophet's struggle with obedience and compassion.",
+    category: "Prophets"
+  },
+  {
+    day: 10,
+    title: "Who is Antichrist?",
+    file: "Who is Antichrist",
+    duration: "35:04 min",
+    verse: "1 John 4:1-3",
+    desc: "Understanding the spirit of the antichrist and its manifestation in the world.",
+    category: "False Teaching"
+  },
+  {
+    day: 11,
+    title: "Passover",
+    duration: "63:05 min",
+    verse: "Exodus 12",
+    desc: "The significance of the Passover in God's plan of redemption.",
+    category: "Festivals"
+  },
+  {
+    day: 12,
+    title: "The Bronze Serpent",
+    duration: "63:08 min",
+    verse: "Numbers 21:4-9",
+    desc: "A foreshadowing of Christ's crucifixion and the power of faith.",
+    category: "Christophany"
+  },
+  {
+    day: 13,
+    title: "Why 1<sup>st</sup> king not from Judah?",
+    file: "Why first king not from Judah",
+    duration: "40:36 min",
+    verse: "Matthew 1",
+    desc: "Exploring the reasons behind the selection of the first king outside of Judah.",
+    category: "Melkishedhek"
+  },
+  {
+    day: 14,
+    title: "The Spirit & The Bride",
+    duration: "48:06 min",
+    verse: "Revelation 22:17",
+    desc: "An invitation to receive the Spirit and the Bride's call to eternal life.",
+    important: true,
+    category: "False Teaching"
+  },
+  {
+    day: 15,
+    title: "How Levi Tribe was Chosen?",
+    file: "How Levi Tribe was Chosen",
+    duration: "64:58 min",
+    verse: "Numbers 3:5-13",
+    desc: "The selection of the Levites and their role in serving God.",
+    category: "Melkishedhek"
+  },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Bible Folder Groups
+//
+// Each folder appears as a chip in the filter row at the top of the page.
+// Filter types:
+//   { type: "all" }                      → shows every track
+//   { type: "category", value: "..." }   → filters by track.category
+//   { type: "days", value: [1, 2, 3] }   → filters by specific day numbers
+//
+// To add a new folder: add a new entry below following the same format.
+// ─────────────────────────────────────────────────────────────────────────────
+const BIBLE_FOLDERS = [
+  { name: "All",     type: "all" },                                   
+  { name: "Melkishedhek",  type: "category", value: "Melkishedhek" },        
+  { name: "Christophany",  type: "category", value: "Christophany" },        
+  { name: "Do You Know?",  type: "category", value: "Do You Know?" },        
+  { name: "False Teaching",type: "category", value: "False Teaching" },      
+  { name: "Psalms",        type: "category", value: "Psalms" },              
+  { name: "Festivals",     type: "category", value: "Festivals" },           
+  { name: "Leviticus",     type: "category", value: "Leviticus" },           
+  { name: "Prophets",      type: "category", value: "Prophets" },            
+];
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Bible Study Notes — keyed by track title (case-insensitive match)
