@@ -1582,13 +1582,11 @@
 
     const AUDIO_BASE = 'resources/audio/bible-teaching/';
 
-    // Resolve audio file path from title (auto-detect .m4a or .mp3)
+    // Resolve audio file path — .m4a preferred, .mp3 as fallback (handled at runtime)
     function getAudioFilePath(title) {
-        // Try .m4a first, then .mp3
         return AUDIO_BASE + title + '.m4a';
     }
 
-    // For fallback, we also provide a way to check .mp3
     function getAudioFilePathFallback(title) {
         return AUDIO_BASE + title + '.mp3';
     }
@@ -1797,6 +1795,15 @@
         audio.play();
         isCurrentlyPlaying = true;
         updatePlayButtonUI(true);
+
+        // Fallback: if .m4a fails, retry with .mp3
+        audio.onerror = () => {
+            if (audio.src.endsWith('.m4a')) {
+                audio.src = audio.src.replace('.m4a', '.mp3');
+                audio.load();
+                audio.play();
+            }
+        };
     }
 
     function setSpeed(speedVal, el) {
