@@ -1014,7 +1014,7 @@
             justify-content: flex-end;
             align-items: center;
             gap: 8px;
-            margin-bottom: 4px;
+            margin-bottom: 10px;
         }
 
         .close-panel-btn {
@@ -1960,7 +1960,7 @@
                 ${desc ? `<div class="track-desc">${desc}</div>` : ''}
                 <div class="track-meta-row">
                     <div class="day-number-badge">Day ${dayNum}</div>
-                    <div class="day-badge">${verse || ''}</div>
+                    ${(verse || '').split(';').map(v => `<div class="day-badge">${v.trim()}</div>`).join('')}
                 </div>
             </div>
             <div class="track-action-column">

@@ -136,6 +136,14 @@ const BIBLE_TRACKS = [
     desc: "The selection of the Levites and their role in serving God.",
     category: "Melkishedhek"
   },
+  {
+    day: 16,
+    title: "The 7,000-Year Plan of Christ",
+    duration: "49:55 min",
+    verse: "Num 19; 1 Thes 4:13-18",
+    desc: "An exploration of the 7,000-year timeline of human history and its relation to Christ's return.",
+    category: "Do You Know?"
+  }
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -150,15 +158,15 @@ const BIBLE_TRACKS = [
 // To add a new folder: add a new entry below following the same format.
 // ─────────────────────────────────────────────────────────────────────────────
 const BIBLE_FOLDERS = [
-  { name: "All",     type: "all" },                                   
-  { name: "Melkishedhek",  type: "category", value: "Melkishedhek" },        
-  { name: "Christophany",  type: "category", value: "Christophany" },        
-  { name: "Do You Know?",  type: "category", value: "Do You Know?" },        
-  { name: "False Teaching",type: "category", value: "False Teaching" },      
-  { name: "Psalms",        type: "category", value: "Psalms" },              
-  { name: "Festivals",     type: "category", value: "Festivals" },           
-  { name: "Leviticus",     type: "category", value: "Leviticus" },           
-  { name: "Prophets",      type: "category", value: "Prophets" },            
+  { name: "All", type: "all" },
+  { name: "Melkishedhek", type: "category", value: "Melkishedhek" },
+  { name: "Christophany", type: "category", value: "Christophany" },
+  { name: "Do You Know?", type: "category", value: "Do You Know?" },
+  { name: "False Teaching", type: "category", value: "False Teaching" },
+  { name: "Psalms", type: "category", value: "Psalms" },
+  { name: "Festivals", type: "category", value: "Festivals" },
+  { name: "Leviticus", type: "category", value: "Leviticus" },
+  { name: "Prophets", type: "category", value: "Prophets" },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
