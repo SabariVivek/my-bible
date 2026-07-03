@@ -17,7 +17,8 @@ const BIBLE_TRACKS = [
     duration: "71:25 min",
     verse: "Psalm 23",
     desc: "The Lord as shepherd — comfort, provision, and eternal dwelling.",
-    category: "Psalms"
+    category: "Psalms",
+    cardBg: "resources/images/grass.png"
   },
   {
     day: 2,
@@ -102,7 +103,6 @@ const BIBLE_TRACKS = [
     verse: "Exodus 12",
     desc: "The significance of the Passover in God's plan of redemption.",
     category: "Festivals",
-     cardBg: "resources/images/passover.png"
   },
   {
     day: 12,
