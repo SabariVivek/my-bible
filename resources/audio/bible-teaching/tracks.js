@@ -154,7 +154,15 @@ const BIBLE_TRACKS = [
     desc: "The Day of Atonement in the Old and New Testaments.",
     category: "Festivals",
     cardBg: "resources/images/blood.png"
-  }
+  },
+  // {
+  //   day: 18,
+  //   title: "God Covenant with Abraham",
+  //   duration: "37:05 min",
+  //   verse: "Genesis 15",
+  //   desc: "God's covenant with Abraham and its significance for believers.",
+  //   category: "Do You Know?"
+  // }
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
