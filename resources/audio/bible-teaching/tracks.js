@@ -143,6 +143,14 @@ const BIBLE_TRACKS = [
     verse: "Num 19; 1 Thes 4:13-18",
     desc: "An exploration of the 7,000-year timeline of human history and its relation to Christ's return.",
     category: "Do You Know?"
+  },
+  {
+    day: 17,
+    title: "Yom Kippur",
+    duration: "61:12 min",
+    verse: "Leviticus 16",
+    desc: "The Day of Atonement and its significance in the Old Testament and for believers today.",
+    category: "Festivals"
   }
 ];
 
