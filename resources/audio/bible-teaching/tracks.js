@@ -147,7 +147,7 @@ const BIBLE_TRACKS = [
   {
     day: 17,
     title: "Yom Kippur",
-    duration: "61:12 min",
+    duration: "58:28 min",
     verse: "Leviticus 16",
     desc: "The Day of Atonement and its significance in the Old Testament and for believers today.",
     category: "Festivals"
