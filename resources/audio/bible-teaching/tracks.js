@@ -17,8 +17,7 @@ const BIBLE_TRACKS = [
     duration: "71:25 min",
     verse: "Psalm 23",
     desc: "The Lord as shepherd — comfort, provision, and eternal dwelling.",
-    category: "Psalms",
-    cardBg: "resources/images/grass.png"
+    category: "Psalms"
   },
   {
     day: 2,
