@@ -76,6 +76,7 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 1",
     desc: "The significance of sacrificial offerings in the Old Testament.",
     category: "Leviticus",
+    cardBg: "resources/images/fire.png"
   },
   {
     day: 9,
@@ -100,7 +101,8 @@ const BIBLE_TRACKS = [
     duration: "63:05 min",
     verse: "Exodus 12",
     desc: "The significance of the Passover in God's plan of redemption.",
-    category: "Festivals"
+    category: "Festivals",
+     cardBg: "resources/images/passover.png"
   },
   {
     day: 12,
