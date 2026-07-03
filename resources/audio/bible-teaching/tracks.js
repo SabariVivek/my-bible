@@ -90,7 +90,7 @@ const BIBLE_TRACKS = [
     file: "Who is Antichrist",
     duration: "35:04 min",
     verse: "1 John 4:1-3",
-    desc: "Understanding the spirit of the antichrist and its manifestation in the world.",
+    desc: "Understanding the false teachings in the last days.",
     category: "False Teaching"
   },
   {
@@ -115,7 +115,7 @@ const BIBLE_TRACKS = [
     file: "Why first king not from Judah",
     duration: "40:36 min",
     verse: "Matthew 1",
-    desc: "Exploring the reasons behind the selection of the first king outside of Judah.",
+    desc: "Why Israel's first king wasn't from Judah.",
     category: "Melkishedhek"
   },
   {
@@ -123,7 +123,7 @@ const BIBLE_TRACKS = [
     title: "The Spirit & The Bride",
     duration: "48:06 min",
     verse: "Revelation 22:17",
-    desc: "An invitation to receive the Spirit and the Bride's call to eternal life.",
+    desc: "The Spirit and the Bride invite all to eternal life.",
     important: true,
     category: "False Teaching"
   },
@@ -141,7 +141,7 @@ const BIBLE_TRACKS = [
     title: "The 7,000-Year Plan of Christ",
     duration: "49:55 min",
     verse: "Num 19; 1 Thes 4:13-18",
-    desc: "An exploration of the 7,000-year timeline of human history and its relation to Christ's return.",
+    desc: "How the 7,000-year pattern points to Christ's return.",
     category: "Do You Know?"
   },
   {
@@ -149,7 +149,7 @@ const BIBLE_TRACKS = [
     title: "Yom Kippur",
     duration: "58:28 min",
     verse: "Leviticus 16",
-    desc: "The Day of Atonement and its significance in the Old Testament and for believers today.",
+    desc: "The Day of Atonement in the Old and New Testaments.",
     category: "Festivals",
     cardBg: "resources/images/blood.png"
   }
