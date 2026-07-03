@@ -74,7 +74,7 @@ const BIBLE_TRACKS = [
     duration: "74:27 min",
     verse: "Leviticus 1",
     desc: "The significance of sacrificial offerings in the Old Testament.",
-    category: "Leviticus"
+    category: "Leviticus",
   },
   {
     day: 9,
@@ -150,7 +150,8 @@ const BIBLE_TRACKS = [
     duration: "58:28 min",
     verse: "Leviticus 16",
     desc: "The Day of Atonement and its significance in the Old Testament and for believers today.",
-    category: "Festivals"
+    category: "Festivals",
+    cardBg: "resources/images/blood.png"
   }
 ];
 

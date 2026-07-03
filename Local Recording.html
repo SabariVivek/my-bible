@@ -869,6 +869,23 @@
             display: none;
         }
 
+        /* Loading spinner */
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .track-item.media-loading .play-indicator::after { display: none; }
+        .track-item.media-loading .equalizer-wave { display: none !important; }
+        .track-item.media-loading .pause-icon { display: none !important; }
+        .track-item.media-loading .play-indicator::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border: 2.5px solid #ccc;
+            border-top-color: var(--raw-black);
+            border-radius: 50%;
+            display: block;
+            animation: spin 0.7s linear infinite;
+        }
+
         /* Pause icon: two vertical bars via element + box-shadow */
         .track-item.playing.media-paused .play-indicator::after {
             display: none;
@@ -1791,10 +1808,25 @@
             document.getElementById('notesSheet').classList.add('hidden');
         }
 
+        // Reset progress bar immediately before audio loads
+        scrubFill.style.width = '0%';
+        timeCurrent.innerText = '0:00';
+        timeDuration.innerText = '0:00';
+
         audio.load();
         audio.play();
         isCurrentlyPlaying = true;
         updatePlayButtonUI(true);
+
+        // Show loading state on card
+        targetCard.classList.add('media-loading');
+        const clearLoading = () => {
+            targetCard.classList.remove('media-loading');
+            audio.removeEventListener('canplay', clearLoading);
+            audio.removeEventListener('error', clearLoading);
+        };
+        audio.addEventListener('canplay', clearLoading);
+        audio.addEventListener('error', clearLoading);
 
         // Fallback: if .m4a fails, retry with .mp3
         audio.onerror = () => {
@@ -1946,9 +1978,19 @@
         });
     }
 
-    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important) {
+    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important, importantColor, cardBg) {
         const li = document.createElement('li');
         li.className = 'track-item' + (important ? ' important' : '');
+        if (important && importantColor) {
+            li.style.backgroundColor = importantColor.bg;
+            li.style.borderColor = importantColor.border;
+            li.style.boxShadow = `4px 4px 0px ${importantColor.shadow}`;
+        }
+        if (cardBg) {
+            li.style.backgroundImage = `url('${cardBg}')`;
+            li.style.backgroundSize = 'cover';
+            li.style.backgroundPosition = 'center';
+        }
         li.id = trackId;
         li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
         const durStr = duration
@@ -2018,7 +2060,7 @@
         // Swap each skeleton with the real card
         BIBLE_TRACKS.forEach((track, i) => {
             const skelEl = document.getElementById('skel-track' + track.day);
-            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important);
+            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important, track.importantColor, track.cardBg);
             card.dataset.category = track.category || '';
             card.dataset.day = track.day;
             skelEl.replaceWith(card);
