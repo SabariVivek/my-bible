@@ -50,7 +50,8 @@ const BIBLE_TRACKS = [
     duration: "88:15 min",
     verse: "Joshua 2",
     desc: "A Canaanite woman's faith that placed her in the messianic line.",
-    category: "Christophany"
+    category: "Christophany",
+    cardBg: "resources/images/ribbon.png"
   },
   {
     day: 6,
@@ -107,7 +108,7 @@ const BIBLE_TRACKS = [
     duration: "63:08 min",
     verse: "Numbers 21:4-9",
     desc: "A foreshadowing of Christ's crucifixion and the power of faith.",
-    category: "Christophany"
+    category: "Christophany",
   },
   {
     day: 13,
