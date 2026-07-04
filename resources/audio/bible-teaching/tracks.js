@@ -126,7 +126,7 @@ const BIBLE_TRACKS = [
     duration: "48:06 min",
     verse: "Revelation 22:17",
     desc: "The Spirit and the Bride invite all to eternal life.",
-    important: true,
+    cardBg: "resources/images/water.png",
     category: "False Teaching"
   },
   {
