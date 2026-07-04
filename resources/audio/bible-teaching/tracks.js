@@ -156,8 +156,17 @@ const BIBLE_TRACKS = [
     cardBg: "resources/images/blood.png",
     category: "Festivals"
   },
+  {
+    day: 18,
+    title: "Who is Melkishedhek?",
+    file: "Who is Melkishedhek",
+    duration: "47:16 min",
+    verse: "Genesis 14:18-20",
+    desc: "Melkishedhek's role and significance in the Bible.",
+    category: "Melkishedhek"
+  },
   // {
-  //   day: 18,
+  //   day: 19,
   //   title: "God Covenant with Abraham",
   //   duration: "37:05 min",
   //   verse: "Genesis 15",
