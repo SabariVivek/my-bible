@@ -2081,7 +2081,11 @@
                     if (folder.type === 'all') {
                         show = true;
                     } else if (folder.type === 'category') {
-                        show = cardEl.dataset.category === folder.value;
+                        const categories = (cardEl.dataset.category || '')
+                            .split(',')
+                            .map(c => c.trim())
+                            .filter(Boolean);
+                        show = categories.includes(folder.value);
                     } else if (folder.type === 'days') {
                         show = folder.value.includes(Number(cardEl.dataset.day));
                     }

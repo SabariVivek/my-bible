@@ -94,6 +94,7 @@ const BIBLE_TRACKS = [
     duration: "35:04 min",
     verse: "1 John 4:1-3",
     desc: "Understanding the false teachings in the last days.",
+    cardBg: "resources/images/antichrist.png",
     category: "False Teaching"
   },
   {
@@ -154,7 +155,7 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 16",
     desc: "The Day of Atonement in the Old and New Testaments.",
     cardBg: "resources/images/blood.png",
-    category: "Festivals"
+    category: "Melkishedhek, Festivals"
   },
   {
     day: 18,
@@ -189,11 +190,11 @@ const BIBLE_TRACKS = [
 const BIBLE_FOLDERS = [
   { name: "All", type: "all" },
   { name: "Melkishedhek", type: "category", value: "Melkishedhek" },
-  { name: "Christophany", type: "category", value: "Christophany" },
+  { name: "Festivals", type: "category", value: "Festivals" },
   { name: "Do You Know?", type: "category", value: "Do You Know?" },
+  { name: "Christophany", type: "category", value: "Christophany" },
   { name: "False Teaching", type: "category", value: "False Teaching" },
   { name: "Psalms", type: "category", value: "Psalms" },
-  { name: "Festivals", type: "category", value: "Festivals" },
   { name: "Leviticus", type: "category", value: "Leviticus" },
   { name: "Prophets", type: "category", value: "Prophets" },
 ];
