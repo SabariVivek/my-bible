@@ -17,6 +17,7 @@ const BIBLE_TRACKS = [
     duration: "71:25 min",
     verse: "Psalm 23",
     desc: "The Lord as shepherd — comfort, provision, and eternal dwelling.",
+    cardBg: "resources/images/grass.png",
     category: "Psalms"
   },
   {
@@ -50,8 +51,8 @@ const BIBLE_TRACKS = [
     duration: "88:15 min",
     verse: "Joshua 2",
     desc: "A Canaanite woman's faith that placed her in the messianic line.",
-    category: "Christophany",
-    cardBg: "resources/images/ribbon.png"
+    cardBg: "resources/images/ribbon.png",
+    category: "Christophany"
   },
   {
     day: 6,
@@ -75,8 +76,8 @@ const BIBLE_TRACKS = [
     duration: "74:27 min",
     verse: "Leviticus 1",
     desc: "The significance of sacrificial offerings in the Old Testament.",
-    category: "Leviticus",
-    cardBg: "resources/images/fire.png"
+    cardBg: "resources/images/fire.png",
+    category: "Leviticus"
   },
   {
     day: 9,
@@ -101,7 +102,7 @@ const BIBLE_TRACKS = [
     duration: "63:05 min",
     verse: "Exodus 12",
     desc: "The significance of the Passover in God's plan of redemption.",
-    category: "Festivals",
+    category: "Festivals"
   },
   {
     day: 12,
@@ -109,7 +110,7 @@ const BIBLE_TRACKS = [
     duration: "63:08 min",
     verse: "Numbers 21:4-9",
     desc: "A foreshadowing of Christ's crucifixion and the power of faith.",
-    category: "Christophany",
+    category: "Christophany"
   },
   {
     day: 13,
@@ -152,8 +153,8 @@ const BIBLE_TRACKS = [
     duration: "58:28 min",
     verse: "Leviticus 16",
     desc: "The Day of Atonement in the Old and New Testaments.",
-    category: "Festivals",
-    cardBg: "resources/images/blood.png"
+    cardBg: "resources/images/blood.png",
+    category: "Festivals"
   },
   // {
   //   day: 18,
