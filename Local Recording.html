@@ -1151,36 +1151,57 @@
         .timeline-container {
             display: flex;
             align-items: center;
-            gap: 10px;
             margin-bottom: 20px;
-            font-size: 0.75rem;
-            font-weight: 900;
-        }
-
-        .progress-bar-wrapper {
-            flex: 1;
-            position: relative;
-            height: 20px;
-            display: flex;
-            align-items: center;
             cursor: pointer;
+            touch-action: none;
+            padding: 10px 0;
         }
 
-        .progress-bg {
-            width: 100%;
-            height: 10px;
-            background-color: #ffffff;
-            border: 2px solid var(--raw-black);
+        .time-display {
+            font-weight: 900;
+            font-size: 0.75rem;
+            color: var(--raw-black);
+            width: 50px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .track-bar-bg {
+            flex: 1;
+            height: 12px;
+            background-color: #e2e2e2;
+            border: 3px solid var(--raw-black);
+            border-radius: 30px;
+            margin: 0 12px;
             position: relative;
         }
 
-        .progress-fill {
+        .track-bar-fill {
             height: 100%;
             width: 0%;
             background-color: var(--brutal-blue);
+            border-radius: 30px 0 0 30px;
+        }
+
+        .track-handle {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 0%;
+            width: 24px;
+            height: 24px;
+            background-color: #ffffff;
+            border: 3px solid var(--raw-black);
+            border-radius: 50%;
+            box-shadow: 2px 2px 0px var(--raw-black);
+            transform: translate(-50%, -50%) scale(0.8);
+            pointer-events: none;
+            transition: transform 0.1s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .timeline-container:hover .track-handle,
+        .timeline-container.dragging .track-handle {
+            transform: translate(-50%, -50%) scale(1.1);
+            background-color: var(--brutal-yellow);
         }
 
         .audio-controls {
@@ -1270,6 +1291,13 @@
             width: 24px;
             height: 24px;
             fill: var(--raw-black);
+        }
+
+        .master-play-btn img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            display: block;
         }
 
         /* Super Simplified Custom Modal with Blur Effect */
@@ -1547,14 +1575,13 @@
             <div class="now-playing-label" id="playerDayLabel">STATUS // IDLE</div>
         </div>
 
-        <div class="timeline-container">
-            <span id="timeCurrent">0:00</span>
-            <div class="progress-bar-wrapper" id="scrubArea">
-                <div class="progress-bg">
-                    <div class="progress-fill" id="scrubFill"></div>
-                </div>
+        <div class="timeline-container" id="timelineContainer">
+            <span class="time-display" id="timeCurrent">0:00</span>
+            <div class="track-bar-bg" id="scrubArea">
+                <div class="track-bar-fill" id="scrubFill"></div>
+                <div class="track-handle" id="scrubHandle"></div>
             </div>
-            <span id="timeDuration">0:00</span>
+            <span class="time-display" id="timeDuration">0:00</span>
         </div>
 
         <div class="speed-control-container" style="display:none;">
@@ -1726,8 +1753,10 @@
         document.getElementById('notesSheetContent').innerHTML = html;
     }
 
+    const timelineContainer = document.getElementById('timelineContainer');
     const scrubArea = document.getElementById('scrubArea');
     const scrubFill = document.getElementById('scrubFill');
+    const scrubHandle = document.getElementById('scrubHandle');
     const timeCurrent = document.getElementById('timeCurrent');
     const timeDuration = document.getElementById('timeDuration');
 
@@ -1736,9 +1765,80 @@
     let activeTrackElementId = null;
     let isCurrentlyPlaying = false;
     let pendingTrackData = null;
+    let isScrubbingTimeline = false;
+    let hasPlaybackCompleted = false;
 
     const playSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black; margin-left:2px;"><path d="M8 5v14l11-7z"/></svg>`;
     const pauseSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+    const reloadSVG = '<img src="resources/icons/reload.png" alt="Reload">';
+
+    function updateTimelineProgress(current, duration) {
+        const safeDuration = Number.isFinite(duration) && duration > 0 ? duration : 0;
+        const safeCurrent = Number.isFinite(current) && current > 0 ? current : 0;
+        const percent = safeDuration ? (safeCurrent / safeDuration) * 100 : 0;
+        scrubFill.style.width = percent + '%';
+        scrubHandle.style.left = percent + '%';
+    }
+
+    function processScrub(clientX) {
+        if (!audio.src || !audio.duration) return;
+        const rect = scrubArea.getBoundingClientRect();
+        let offset = (clientX - rect.left) / rect.width;
+        offset = Math.max(0, Math.min(1, offset));
+        hasPlaybackCompleted = false;
+        audio.currentTime = offset * audio.duration;
+        updateTimelineProgress(audio.currentTime, audio.duration);
+        timeCurrent.innerText = formatTime(audio.currentTime);
+
+        if (offset >= 1) {
+            handlePlaybackCompleted();
+        } else {
+            updatePlayButtonUI(!audio.paused);
+        }
+    }
+
+    function handlePlaybackCompleted() {
+        audio.pause();
+        hasPlaybackCompleted = true;
+        isCurrentlyPlaying = false;
+        updateTimelineProgress(audio.duration, audio.duration);
+        timeCurrent.innerText = formatTime(audio.duration);
+        updatePlayButtonUI(false);
+        panel.classList.add('visible');
+        pillGroup.classList.remove('active');
+
+        if (activeTrackElementId) {
+            const targetCard = document.getElementById(activeTrackElementId);
+            targetCard.classList.add('playing');
+            targetCard.classList.remove('media-active', 'media-paused');
+        }
+    }
+
+    function restartCompletedPlayback() {
+        const targetCard = activeTrackElementId ? document.getElementById(activeTrackElementId) : null;
+
+        hasPlaybackCompleted = false;
+        isCurrentlyPlaying = true;
+        audio.pause();
+        audio.currentTime = 0;
+        timeCurrent.innerText = '0:00';
+        updateTimelineProgress(0, audio.duration);
+        updatePlayButtonUI(true);
+
+        if (targetCard) {
+            targetCard.classList.add('playing', 'media-active');
+            targetCard.classList.remove('media-paused');
+        }
+
+        const playAttempt = audio.play();
+        if (playAttempt && typeof playAttempt.catch === 'function') {
+            playAttempt.catch(() => {
+                isCurrentlyPlaying = false;
+                hasPlaybackCompleted = true;
+                updatePlayButtonUI(false);
+            });
+        }
+    }
 
     function selectTrack(fileUrl, title, dayText, elementId) {
         if (activeTrackElementId === elementId) {
@@ -1787,6 +1887,7 @@
         dayLabel.innerText = "NOW PLAYING // " + dayText;
         
         audio.src = fileUrl;
+        hasPlaybackCompleted = false;
 
         // Reset speed to 1.0x on every new track
         audio.playbackRate = 1.0;
@@ -1809,7 +1910,7 @@
         }
 
         // Reset progress bar immediately before audio loads
-        scrubFill.style.width = '0%';
+        updateTimelineProgress(0, 0);
         timeCurrent.innerText = '0:00';
         timeDuration.innerText = '0:00';
 
@@ -1861,6 +1962,11 @@
         if (!audio.src) return;
         
         const targetCard = activeTrackElementId ? document.getElementById(activeTrackElementId) : null;
+
+        if (hasPlaybackCompleted) {
+            restartCompletedPlayback();
+            return;
+        }
         
         if (audio.paused) {
             audio.play();
@@ -1884,6 +1990,7 @@
     function terminatePlayback() {
         audio.pause();
         audio.src = "";
+        hasPlaybackCompleted = false;
         
         isCurrentlyPlaying = false;
         updatePlayButtonUI(false);
@@ -1897,7 +2004,7 @@
 
         titleLabel.innerHTML = "Lesson Title";
         dayLabel.innerText = "STATUS // IDLE";
-        scrubFill.style.width = "0%";
+        updateTimelineProgress(0, 0);
         timeCurrent.innerText = "0:00";
         timeDuration.innerText = "0:00";
 
@@ -1923,6 +2030,11 @@
     }
 
     function updatePlayButtonUI(isPlaying) {
+        if (hasPlaybackCompleted) {
+            playIconContainer.innerHTML = reloadSVG;
+            return;
+        }
+
         playIconContainer.innerHTML = isPlaying ? pauseSVG : playSVG;
     }
 
@@ -1931,7 +2043,14 @@
         let targetTime = audio.currentTime + seconds;
         if (targetTime < 0) targetTime = 0;
         if (targetTime > audio.duration) targetTime = audio.duration;
+        hasPlaybackCompleted = false;
         audio.currentTime = targetTime;
+
+        if (audio.duration && targetTime >= audio.duration) {
+            handlePlaybackCompleted();
+        } else {
+            updatePlayButtonUI(!audio.paused);
+        }
     }
 
     function formatTime(secs) {
@@ -1943,25 +2062,37 @@
 
     audio.addEventListener('timeupdate', () => {
         timeCurrent.innerText = formatTime(audio.currentTime);
-        if (audio.duration) {
-            const percent = (audio.currentTime / audio.duration) * 100;
-            scrubFill.style.width = percent + "%";
-        }
+        updateTimelineProgress(audio.currentTime, audio.duration);
     });
 
     audio.addEventListener('durationchange', () => {
         timeDuration.innerText = formatTime(audio.duration);
+        updateTimelineProgress(audio.currentTime, audio.duration);
     });
 
     audio.addEventListener('ended', () => {
-        terminatePlayback();
+        handlePlaybackCompleted();
     });
 
-    scrubArea.addEventListener('click', (e) => {
-        if (!audio.src || !audio.duration) return;
-        const width = scrubArea.offsetWidth;
-        const clickX = e.offsetX;
-        audio.currentTime = (clickX / width) * audio.duration;
+    timelineContainer.addEventListener('pointerdown', (e) => {
+        isScrubbingTimeline = true;
+        timelineContainer.classList.add('dragging');
+        processScrub(e.clientX);
+    });
+
+    window.addEventListener('pointermove', (e) => {
+        if (!isScrubbingTimeline) return;
+        processScrub(e.clientX);
+    });
+
+    window.addEventListener('pointerup', () => {
+        isScrubbingTimeline = false;
+        timelineContainer.classList.remove('dragging');
+    });
+
+    window.addEventListener('pointercancel', () => {
+        isScrubbingTimeline = false;
+        timelineContainer.classList.remove('dragging');
     });
 
     // ── Build playlist from BIBLE_TRACKS (no fetch — works on file:// too) ─────
