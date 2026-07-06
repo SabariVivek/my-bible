@@ -166,14 +166,14 @@ const BIBLE_TRACKS = [
     desc: "Melkishedhek's role and significance in the Bible.",
     category: "Melkishedhek"
   },
-  // {
-  //   day: 19,
-  //   title: "God Covenant with Abraham",
-  //   duration: "37:05 min",
-  //   verse: "Genesis 15",
-  //   desc: "God's covenant with Abraham and its significance for believers.",
-  //   category: "Do You Know?"
-  // }
+  {
+    day: 19,
+    title: "God Covenant with Abraham",
+    duration: "37:05 min",
+    verse: "Genesis 15",
+    desc: "God's covenant with Abraham and its significance for believers.",
+    category: "Do You Know?"
+  }
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
