@@ -43,6 +43,7 @@ const BIBLE_TRACKS = [
     duration: "70:16 min",
     verse: "Luke 10:30-37",
     desc: "What true neighbourly love looks like across every boundary.",
+    youtubeLink: "https://youtu.be/axtM79oa7bw",
     category: "Christophany"
   },
   {
@@ -68,6 +69,7 @@ const BIBLE_TRACKS = [
     duration: "67:02 min",
     verse: "Daniel 1",
     desc: "Daniel's faithfulness and God's provision in a foreign land.",
+    youtubeLink: "https://youtu.be/L0uC7cUX1As",
     category: "Prophets"
   },
   {
@@ -77,6 +79,7 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 1",
     desc: "The significance of sacrificial offerings in the Old Testament.",
     cardBg: "resources/images/fire.png",
+    youtubeLink: "https://youtu.be/6Tl6a6_O_q4",
     category: "Leviticus"
   },
   {
@@ -103,6 +106,7 @@ const BIBLE_TRACKS = [
     duration: "63:05 min",
     verse: "Exodus 12",
     desc: "The significance of the Passover in God's plan of redemption.",
+    youtubeLink: "https://youtu.be/rFaIrTRbdcY",
     category: "Festivals"
   },
   {
@@ -138,6 +142,7 @@ const BIBLE_TRACKS = [
     duration: "64:58 min",
     verse: "Numbers 3:5-13",
     desc: "The selection of the Levites and their role in serving God.",
+    youtubeLink: "https://youtu.be/Tz6gPmXtoY8",
     category: "Melkishedhek"
   },
   {
@@ -172,6 +177,7 @@ const BIBLE_TRACKS = [
     duration: "37:05 min",
     verse: "Genesis 15",
     desc: "God's covenant with Abraham and its implications for believers.",
+    youtubeLink: "https://youtu.be/jvAi4ed_pRI",
     category: "Do You Know?"
   }
 ];

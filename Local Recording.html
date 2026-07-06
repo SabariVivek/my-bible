@@ -1382,6 +1382,23 @@
             color: var(--raw-black);
         }
 
+        .youtube-link-box {
+            border: 2px solid var(--raw-black);
+            background: #ffffff;
+            box-shadow: 3px 3px 0px var(--raw-black);
+            padding: 12px;
+            margin-bottom: 14px;
+        }
+
+        .youtube-link-box a {
+            display: block;
+            color: #0f172a;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-decoration: underline;
+            overflow-wrap: anywhere;
+        }
+
         .loading-state {
             text-align: center;
             padding: 32px 16px;
@@ -1617,6 +1634,19 @@
     </div>
 </div>
 
+<div class="modal-overlay" id="youtubeLinkModal">
+    <div class="brutal-modal-box" onclick="event.stopPropagation()">
+        <div class="modal-message" id="youtubeLinkTitle">Open YouTube link?</div>
+        <div class="youtube-link-box">
+            <a id="youtubeLinkAnchor" href="#" target="_blank" rel="noopener noreferrer">Open link</a>
+        </div>
+        <div class="modal-action-row">
+            <button class="modal-btn modal-btn-cancel" onclick="closeYouTubeLinkModal()">Close</button>
+            <button class="modal-btn modal-btn-confirm" id="youtubeLinkOpenBtn" onclick="openYouTubeLinkNow()">Open YouTube</button>
+        </div>
+    </div>
+</div>
+
 <script src="resources/audio/bible-teaching/tracks.js"></script>
 <script>
     // ─── CONFIG ──────────────────────────────────────────────────────────────────
@@ -1761,6 +1791,10 @@
     const timeDuration = document.getElementById('timeDuration');
 
     const customModal = document.getElementById('customAlertModal');
+    const youtubeLinkModal = document.getElementById('youtubeLinkModal');
+    const youtubeLinkTitle = document.getElementById('youtubeLinkTitle');
+    const youtubeLinkAnchor = document.getElementById('youtubeLinkAnchor');
+    const youtubeLinkOpenBtn = document.getElementById('youtubeLinkOpenBtn');
 
     let activeTrackElementId = null;
     let isCurrentlyPlaying = false;
@@ -1771,6 +1805,27 @@
     const playSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black; margin-left:2px;"><path d="M8 5v14l11-7z"/></svg>`;
     const pauseSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
     const reloadSVG = '<img src="resources/icons/reload.png" alt="Reload">';
+    const LONG_PRESS_MS = 5000;
+    let activeYouTubeLink = '';
+
+    function showYouTubeLinkModal(title, link) {
+        activeYouTubeLink = link;
+        youtubeLinkTitle.textContent = title;
+        youtubeLinkAnchor.href = link;
+        youtubeLinkAnchor.textContent = link;
+        youtubeLinkOpenBtn.disabled = false;
+        youtubeLinkModal.classList.add('active');
+    }
+
+    function closeYouTubeLinkModal() {
+        youtubeLinkModal.classList.remove('active');
+        activeYouTubeLink = '';
+    }
+
+    function openYouTubeLinkNow() {
+        if (!activeYouTubeLink) return;
+        window.open(activeYouTubeLink, '_blank', 'noopener');
+    }
 
     function updateTimelineProgress(current, duration) {
         const safeDuration = Number.isFinite(duration) && duration > 0 ? duration : 0;
@@ -1873,6 +1928,10 @@
         pendingTrackData = null;
         panel.classList.add('visible');
     }
+
+    youtubeLinkModal.addEventListener('click', (e) => {
+        if (e.target === youtubeLinkModal) closeYouTubeLinkModal();
+    });
 
     function executeTrackLoad(fileUrl, title, dayText, elementId) {
         document.querySelectorAll('.track-item').forEach(item => {
@@ -2109,7 +2168,7 @@
         });
     }
 
-    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important, importantColor, cardBg) {
+    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important, importantColor, cardBg, youtubeLink) {
         const li = document.createElement('li');
         li.className = 'track-item' + (important ? ' important' : '');
         if (important && importantColor) {
@@ -2123,7 +2182,45 @@
             li.style.backgroundPosition = 'center';
         }
         li.id = trackId;
-        li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
+
+        let longPressTimer = null;
+        let longPressTriggered = false;
+
+        const clearLongPress = () => {
+            if (longPressTimer) {
+                clearTimeout(longPressTimer);
+                longPressTimer = null;
+            }
+        };
+
+        li.addEventListener('pointerdown', (e) => {
+            if (e.pointerType === 'mouse' && e.button !== 0) return;
+            longPressTriggered = false;
+            clearLongPress();
+
+            if (youtubeLink) {
+                longPressTimer = setTimeout(() => {
+                    longPressTriggered = true;
+                    showYouTubeLinkModal(title, youtubeLink);
+                }, LONG_PRESS_MS);
+            }
+        });
+
+        li.addEventListener('pointerup', () => {
+            clearLongPress();
+        });
+
+        li.addEventListener('pointerleave', clearLongPress);
+        li.addEventListener('pointercancel', clearLongPress);
+
+        li.addEventListener('click', () => {
+            if (longPressTriggered) {
+                longPressTriggered = false;
+                return;
+            }
+            selectTrack(filePath, title, 'Day ' + dayNum, trackId);
+        });
+
         const durStr = duration
             ? (typeof duration === 'string' ? duration : formatTime(duration) + ' min')
             : '--:--';
@@ -2191,7 +2288,7 @@
         // Swap each skeleton with the real card
         BIBLE_TRACKS.forEach((track, i) => {
             const skelEl = document.getElementById('skel-track' + track.day);
-            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important, track.importantColor, track.cardBg);
+            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important, track.importantColor, track.cardBg, track.youtubeLink);
             card.dataset.category = track.category || '';
             card.dataset.day = track.day;
             skelEl.replaceWith(card);
