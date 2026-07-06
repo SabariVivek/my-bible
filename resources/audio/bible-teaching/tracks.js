@@ -61,6 +61,7 @@ const BIBLE_TRACKS = [
     duration: "82:21 min",
     verse: "2 Samuel 9:7",
     desc: "A picture of grace — restored to the king's table despite weakness.",
+    youtubeLink: "https://youtu.be/p3tm2-yT4R8",
     category: "Christophany"
   },
   {
@@ -88,6 +89,7 @@ const BIBLE_TRACKS = [
     duration: "84:24 min",
     verse: "Jonah 1-4",
     desc: "God's mercy and the prophet's struggle with obedience and compassion.",
+    youtubeLink: "https://youtu.be/G9yQ1n9uWE4",
     category: "Prophets"
   },
   {
@@ -160,6 +162,7 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 16",
     desc: "The Day of Atonement in the Old and New Testaments.",
     cardBg: "resources/images/blood.png",
+    youtubeLink: "https://youtu.be/QkAKqO8f89Q",
     category: "Melkishedhek, Festivals"
   },
   {
