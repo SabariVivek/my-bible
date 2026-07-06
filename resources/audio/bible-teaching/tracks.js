@@ -171,7 +171,7 @@ const BIBLE_TRACKS = [
     title: "God Covenant with Abraham",
     duration: "37:05 min",
     verse: "Genesis 15",
-    desc: "God's covenant with Abraham and its significance for believers.",
+    desc: "God's covenant with Abraham and its implications for believers.",
     category: "Do You Know?"
   }
 ];
