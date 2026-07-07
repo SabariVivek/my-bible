@@ -18,6 +18,7 @@ const BIBLE_TRACKS = [
     verse: "Psalm 23",
     desc: "The Lord as shepherd — comfort, provision, and eternal dwelling.",
     cardBg: "resources/images/grass.png",
+    youtubeLink: "https://youtu.be/oVzGm2Q5UWw",
     category: "Psalms"
   },
   {
@@ -27,6 +28,7 @@ const BIBLE_TRACKS = [
     duration: "40:58 min",
     verse: "Galatians 4:4",
     desc: "The 400 years of prophetic silence and God's perfect timing to send His Son.",
+    youtubeLink: "https://youtu.be/Xy_0FoDp6bE",
     category: "Do You Know?"
   },
   {
@@ -35,6 +37,7 @@ const BIBLE_TRACKS = [
     duration: "84:15 min",
     verse: "Judges 19",
     desc: "A dark chapter revealing Israel's moral collapse without a king.",
+    youtubeLink: "https://youtu.be/GyCXHAkfxBI",
     category: "Do You Know?"
   },
   {
@@ -53,6 +56,7 @@ const BIBLE_TRACKS = [
     verse: "Joshua 2",
     desc: "A Canaanite woman's faith that placed her in the messianic line.",
     cardBg: "resources/images/ribbon.png",
+    youtubeLink: "https://youtu.be/R2uPKiXI9xs",
     category: "Christophany"
   },
   {
@@ -100,6 +104,7 @@ const BIBLE_TRACKS = [
     verse: "1 John 4:1-3",
     desc: "Understanding the false teachings in the last days.",
     cardBg: "resources/images/antichrist.png",
+    youtubeLink: "https://youtu.be/UTtyzN2k4lg",
     category: "False Teaching"
   },
   {
@@ -162,7 +167,7 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 16",
     desc: "The Day of Atonement in the Old and New Testaments.",
     cardBg: "resources/images/blood.png",
-    youtubeLink: "https://youtu.be/QkAKqO8f89Q",
+    youtubeLink: "https://youtu.be/uPlYLFFIuwk",
     category: "Melkishedhek, Festivals"
   },
   {
@@ -172,6 +177,7 @@ const BIBLE_TRACKS = [
     duration: "47:16 min",
     verse: "Genesis 14:18-20",
     desc: "Melkishedhek's role and significance in the Bible.",
+    youtubeLink: "https://youtu.be/0i032LLugYc",
     category: "Melkishedhek"
   },
   {
