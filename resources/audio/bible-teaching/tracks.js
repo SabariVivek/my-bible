@@ -182,6 +182,14 @@ const BIBLE_TRACKS = [
     desc: "God's covenant with Abraham and its implications for believers.",
     youtubeLink: "https://youtu.be/jvAi4ed_pRI",
     category: "Do You Know?"
+  },
+  {
+    day: 20,
+    title: "Family-Redeemer",
+    duration: "45:53 min",
+    verse: "Deuteronomy 25:5-10",
+    desc: "The concept of the family redeemer and its fulfillment in Christ.",
+    category: "Christophany"
   }
 ];
 
