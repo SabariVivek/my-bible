@@ -196,6 +196,14 @@ const BIBLE_TRACKS = [
     verse: "Deuteronomy 25:5-10",
     desc: "The concept of the family redeemer and its fulfillment in Christ.",
     category: "Christophany"
+  },
+  {
+    day: 21,
+    title: "The Seven Tabernacles",
+    duration: "72:21 min",
+    verse: "Multiple",
+    desc: "Explore the seven tabernacles found throughout the Bible",
+    category: "Do You Know?"
   }
 ];
 
@@ -481,6 +489,92 @@ const BIBLE_STUDY_NOTES = [
       "Everyone who looks to Christ in faith receives eternal life.",
       "God's gifts must never become objects of worship.",
       "The bronze serpent was a shadow; Jesus Christ is the reality."
+    ]
+  },
+  // The Seven Tabernacles...
+  {
+    title: "The Seven Tabernacles in the Bible",
+    tags: ["Jesus in the Old Testament"],
+    summary:
+      "Throughout Scripture, God progressively revealed His dwelling place among mankind. From the Tabernacle in the wilderness to the future heavenly dwelling, each tabernacle reveals another stage in God's redemptive plan and ultimately points to Jesus Christ, through whom believers become God's temple forever.",
+
+    scripturePassages: [
+      { reference: "Exodus 25:8-9", summary: "The Tabernacle in the Wilderness" },
+      { reference: "1 Kings 6:1-38; 8:10-13", summary: "Solomon's Temple" },
+      { reference: "Ezra 3:8-13; 6:14-18", summary: "Zerubbabel's Temple" },
+      { reference: "John 2:20; Matthew 24:1-2", summary: "Herod's Temple" },
+      { reference: "Ezekiel 40-48", summary: "Israel's Future Temple" },
+      { reference: "Hebrews 8:1-5; 9:11-12, 24", summary: "The Heavenly Tabernacle" },
+      { reference: "1 Corinthians 3:16; 6:19; Ephesians 2:19-22", summary: "Believers Are God's Temple" }
+    ],
+
+    sermonSections: [
+      {
+        title: "1. The Tabernacle in the Wilderness",
+        points: [
+          "Built under Moses according to God's heavenly pattern.",
+          "God dwelt among Israel through the tabernacle.",
+          "Every furnishing pointed to Christ and His work of redemption."
+        ]
+      },
+      {
+        title: "2. Solomon's Temple",
+        points: [
+          "The first permanent temple in Jerusalem.",
+          "God's glory filled the house at its dedication.",
+          "It became the center of Israel's worship until its destruction by Babylon."
+        ]
+      },
+      {
+        title: "3. Zerubbabel's Temple",
+        points: [
+          "Rebuilt after the Babylonian exile.",
+          "A symbol of God's restoration and covenant faithfulness.",
+          "Prepared the way for the coming Messiah."
+        ]
+      },
+      {
+        title: "4. Herod's Temple",
+        points: [
+          "A greatly expanded renovation of Zerubbabel's Temple.",
+          "Jesus taught, healed, and cleansed this temple.",
+          "Destroyed in AD 70 as Jesus foretold."
+        ]
+      },
+      {
+        title: "5. Israel's Future Temple",
+        points: [
+          "Described in detail by Ezekiel.",
+          "Associated with God's future dealings with Israel.",
+          "Demonstrates God's faithfulness to His promises."
+        ]
+      },
+      {
+        title: "6. The Heavenly Tabernacle",
+        points: [
+          "The true sanctuary not made with human hands.",
+          "Jesus entered once for all with His own blood.",
+          "It is the reality of which the earthly tabernacle was only a shadow."
+        ]
+      },
+      {
+        title: "7. Believers as God's Temple",
+        points: [
+          "Through the Holy Spirit, God now dwells within believers.",
+          "The Church is God's spiritual temple.",
+          "Believers are called to holiness because they are God's dwelling place."
+        ]
+      }
+    ],
+
+    corePrinciples: [
+      "Every earthly tabernacle was temporary; Christ is eternal.",
+      "The earthly sanctuaries were shadows of heavenly realities.",
+      "Jesus is both the true Temple and the true High Priest.",
+      "God's desire has always been to dwell among His people.",
+      "Believers today are the temple of the Holy Spirit.",
+      "The heavenly sanctuary is the fulfillment toward which every earthly temple pointed.",
+      "The history of the tabernacles reveals God's complete plan of redemption."
     ]
   }
 ];
