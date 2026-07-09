@@ -1382,23 +1382,6 @@
             color: var(--raw-black);
         }
 
-        .youtube-link-box {
-            border: 2px solid var(--raw-black);
-            background: #ffffff;
-            box-shadow: 3px 3px 0px var(--raw-black);
-            padding: 12px;
-            margin-bottom: 14px;
-        }
-
-        .youtube-link-box a {
-            display: block;
-            color: #0f172a;
-            font-size: 0.78rem;
-            font-weight: 800;
-            text-decoration: underline;
-            overflow-wrap: anywhere;
-        }
-
         .loading-state {
             text-align: center;
             padding: 32px 16px;
@@ -1446,6 +1429,27 @@
             height: 18px;
             fill: var(--raw-black);
         }
+
+        .yt-btn {
+            background: #ffffff;
+            border: 2px solid var(--raw-black);
+            box-shadow: 3px 3px 0px var(--raw-black);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: transform 0.1s, box-shadow 0.1s;
+            -webkit-tap-highlight-color: transparent;
+            text-decoration: none;
+        }
+        .yt-btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 2px 2px 0px var(--raw-black);
+        }
+        .yt-btn svg { width: 18px; height: 18px; display: block; }
 
         .skeleton-block {
             background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
@@ -1532,7 +1536,9 @@
         <div class="brutal-title-block">
             <h1>Bible Audio</h1>
         </div>
-        <div style="width:36px;"></div>
+        <a class="yt-btn" href="https://www.youtube.com/playlist?list=PLDPnamzse1mQ" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube playlist">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FF0000"/></svg>
+        </a>
     </header>
 
     <div class="top-folders-container" id="folderChips"></div>
@@ -1630,19 +1636,6 @@
         <div class="modal-action-row">
             <button class="modal-btn modal-btn-cancel" onclick="handleModalCancel()">Cancel</button>
             <button class="modal-btn modal-btn-confirm" onclick="handleModalConfirm()">Switch</button>
-        </div>
-    </div>
-</div>
-
-<div class="modal-overlay" id="youtubeLinkModal">
-    <div class="brutal-modal-box" onclick="event.stopPropagation()">
-        <div class="modal-message" id="youtubeLinkTitle">Open YouTube link?</div>
-        <div class="youtube-link-box">
-            <a id="youtubeLinkAnchor" href="#" target="_blank" rel="noopener noreferrer">Open link</a>
-        </div>
-        <div class="modal-action-row">
-            <button class="modal-btn modal-btn-cancel" onclick="closeYouTubeLinkModal()">Close</button>
-            <button class="modal-btn modal-btn-confirm" id="youtubeLinkOpenBtn" onclick="openYouTubeLinkNow()">Open YouTube</button>
         </div>
     </div>
 </div>
@@ -1791,10 +1784,6 @@
     const timeDuration = document.getElementById('timeDuration');
 
     const customModal = document.getElementById('customAlertModal');
-    const youtubeLinkModal = document.getElementById('youtubeLinkModal');
-    const youtubeLinkTitle = document.getElementById('youtubeLinkTitle');
-    const youtubeLinkAnchor = document.getElementById('youtubeLinkAnchor');
-    const youtubeLinkOpenBtn = document.getElementById('youtubeLinkOpenBtn');
 
     let activeTrackElementId = null;
     let isCurrentlyPlaying = false;
@@ -1805,27 +1794,6 @@
     const playSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black; margin-left:2px;"><path d="M8 5v14l11-7z"/></svg>`;
     const pauseSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
     const reloadSVG = '<img src="resources/icons/reload.png" alt="Reload">';
-    const LONG_PRESS_MS = 5000;
-    let activeYouTubeLink = '';
-
-    function showYouTubeLinkModal(title, link) {
-        activeYouTubeLink = link;
-        youtubeLinkTitle.textContent = title;
-        youtubeLinkAnchor.href = link;
-        youtubeLinkAnchor.textContent = link;
-        youtubeLinkOpenBtn.disabled = false;
-        youtubeLinkModal.classList.add('active');
-    }
-
-    function closeYouTubeLinkModal() {
-        youtubeLinkModal.classList.remove('active');
-        activeYouTubeLink = '';
-    }
-
-    function openYouTubeLinkNow() {
-        if (!activeYouTubeLink) return;
-        window.open(activeYouTubeLink, '_blank', 'noopener');
-    }
 
     function updateTimelineProgress(current, duration) {
         const safeDuration = Number.isFinite(duration) && duration > 0 ? duration : 0;
@@ -1928,10 +1896,6 @@
         pendingTrackData = null;
         panel.classList.add('visible');
     }
-
-    youtubeLinkModal.addEventListener('click', (e) => {
-        if (e.target === youtubeLinkModal) closeYouTubeLinkModal();
-    });
 
     function executeTrackLoad(fileUrl, title, dayText, elementId) {
         document.querySelectorAll('.track-item').forEach(item => {
@@ -2168,7 +2132,7 @@
         });
     }
 
-    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important, importantColor, cardBg, youtubeLink) {
+    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important, importantColor, cardBg) {
         const li = document.createElement('li');
         li.className = 'track-item' + (important ? ' important' : '');
         if (important && importantColor) {
@@ -2182,44 +2146,7 @@
             li.style.backgroundPosition = 'center';
         }
         li.id = trackId;
-
-        let longPressTimer = null;
-        let longPressTriggered = false;
-
-        const clearLongPress = () => {
-            if (longPressTimer) {
-                clearTimeout(longPressTimer);
-                longPressTimer = null;
-            }
-        };
-
-        li.addEventListener('pointerdown', (e) => {
-            if (e.pointerType === 'mouse' && e.button !== 0) return;
-            longPressTriggered = false;
-            clearLongPress();
-
-            if (youtubeLink) {
-                longPressTimer = setTimeout(() => {
-                    longPressTriggered = true;
-                    showYouTubeLinkModal(title, youtubeLink);
-                }, LONG_PRESS_MS);
-            }
-        });
-
-        li.addEventListener('pointerup', () => {
-            clearLongPress();
-        });
-
-        li.addEventListener('pointerleave', clearLongPress);
-        li.addEventListener('pointercancel', clearLongPress);
-
-        li.addEventListener('click', () => {
-            if (longPressTriggered) {
-                longPressTriggered = false;
-                return;
-            }
-            selectTrack(filePath, title, 'Day ' + dayNum, trackId);
-        });
+        li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
 
         const durStr = duration
             ? (typeof duration === 'string' ? duration : formatTime(duration) + ' min')
@@ -2288,7 +2215,7 @@
         // Swap each skeleton with the real card
         BIBLE_TRACKS.forEach((track, i) => {
             const skelEl = document.getElementById('skel-track' + track.day);
-            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important, track.importantColor, track.cardBg, track.youtubeLink);
+            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important, track.importantColor, track.cardBg);
             card.dataset.category = track.category || '';
             card.dataset.day = track.day;
             skelEl.replaceWith(card);

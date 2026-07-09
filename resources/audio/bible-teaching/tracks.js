@@ -18,7 +18,6 @@ const BIBLE_TRACKS = [
     verse: "Psalm 23",
     desc: "The Lord as shepherd — comfort, provision, and eternal dwelling.",
     cardBg: "resources/images/grass.png",
-    youtubeLink: "https://youtu.be/oVzGm2Q5UWw",
     category: "Psalms"
   },
   {
@@ -28,7 +27,6 @@ const BIBLE_TRACKS = [
     duration: "40:58 min",
     verse: "Galatians 4:4",
     desc: "The 400 years of prophetic silence and God's perfect timing to send His Son.",
-    youtubeLink: "https://youtu.be/Xy_0FoDp6bE",
     category: "Do You Know?"
   },
   {
@@ -37,7 +35,6 @@ const BIBLE_TRACKS = [
     duration: "84:15 min",
     verse: "Judges 19",
     desc: "A dark chapter revealing Israel's moral collapse without a king.",
-    youtubeLink: "https://youtu.be/GyCXHAkfxBI",
     category: "Do You Know?"
   },
   {
@@ -46,7 +43,6 @@ const BIBLE_TRACKS = [
     duration: "70:16 min",
     verse: "Luke 10:30-37",
     desc: "What true neighbourly love looks like across every boundary.",
-    youtubeLink: "https://youtu.be/axtM79oa7bw",
     category: "Christophany"
   },
   {
@@ -56,7 +52,6 @@ const BIBLE_TRACKS = [
     verse: "Joshua 2",
     desc: "A Canaanite woman's faith that placed her in the messianic line.",
     cardBg: "resources/images/ribbon.png",
-    youtubeLink: "https://youtu.be/R2uPKiXI9xs",
     category: "Christophany"
   },
   {
@@ -65,7 +60,6 @@ const BIBLE_TRACKS = [
     duration: "82:21 min",
     verse: "2 Samuel 9:7",
     desc: "A picture of grace — restored to the king's table despite weakness.",
-    youtubeLink: "https://youtu.be/p3tm2-yT4R8",
     category: "Christophany"
   },
   {
@@ -74,7 +68,6 @@ const BIBLE_TRACKS = [
     duration: "67:02 min",
     verse: "Daniel 1",
     desc: "Daniel's faithfulness and God's provision in a foreign land.",
-    youtubeLink: "https://youtu.be/L0uC7cUX1As",
     category: "Prophets"
   },
   {
@@ -84,7 +77,6 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 1",
     desc: "The significance of sacrificial offerings in the Old Testament.",
     cardBg: "resources/images/fire.png",
-    youtubeLink: "https://youtu.be/6Tl6a6_O_q4",
     category: "Leviticus"
   },
   {
@@ -93,7 +85,6 @@ const BIBLE_TRACKS = [
     duration: "84:24 min",
     verse: "Jonah 1-4",
     desc: "God's mercy and the prophet's struggle with obedience and compassion.",
-    youtubeLink: "https://youtu.be/G9yQ1n9uWE4",
     category: "Prophets"
   },
   {
@@ -104,7 +95,6 @@ const BIBLE_TRACKS = [
     verse: "1 John 4:1-3",
     desc: "Understanding the false teachings in the last days.",
     cardBg: "resources/images/antichrist.png",
-    youtubeLink: "https://youtu.be/UTtyzN2k4lg",
     category: "False Teaching"
   },
   {
@@ -113,7 +103,6 @@ const BIBLE_TRACKS = [
     duration: "63:05 min",
     verse: "Exodus 12",
     desc: "The significance of the Passover in God's plan of redemption.",
-    youtubeLink: "https://youtu.be/rFaIrTRbdcY",
     category: "Festivals"
   },
   {
@@ -149,7 +138,6 @@ const BIBLE_TRACKS = [
     duration: "64:58 min",
     verse: "Numbers 3:5-13",
     desc: "The selection of the Levites and their role in serving God.",
-    youtubeLink: "https://youtu.be/Tz6gPmXtoY8",
     category: "Melkishedhek"
   },
   {
@@ -167,7 +155,6 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 16",
     desc: "The Day of Atonement in the Old and New Testaments.",
     cardBg: "resources/images/blood.png",
-    youtubeLink: "https://youtu.be/uPlYLFFIuwk",
     category: "Melkishedhek, Festivals"
   },
   {
@@ -177,7 +164,6 @@ const BIBLE_TRACKS = [
     duration: "47:16 min",
     verse: "Genesis 14:18-20",
     desc: "Melkishedhek's role and significance in the Bible.",
-    youtubeLink: "https://youtu.be/0i032LLugYc",
     category: "Melkishedhek"
   },
   {
@@ -186,7 +172,6 @@ const BIBLE_TRACKS = [
     duration: "37:05 min",
     verse: "Genesis 15",
     desc: "God's covenant with Abraham and its implications for believers.",
-    youtubeLink: "https://youtu.be/jvAi4ed_pRI",
     category: "Do You Know?"
   },
   {
