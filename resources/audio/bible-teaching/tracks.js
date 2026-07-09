@@ -204,6 +204,14 @@ const BIBLE_TRACKS = [
     verse: "Multiple",
     desc: "Explore the seven tabernacles found throughout the Bible",
     category: "Do You Know?"
+  },
+  {
+    day: 22,
+    title: "Grain Offering",
+    duration: "57:43 min",
+    verse: "Leviticus 2",
+    desc: "The significance of the grain offering in the Old Testament.",
+    category: "Leviticus"
   }
 ];
 
