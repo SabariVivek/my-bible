@@ -211,6 +211,7 @@ const BIBLE_TRACKS = [
     duration: "57:43 min",
     verse: "Leviticus 2",
     desc: "The significance of the grain offering in the Old Testament.",
+    cardBg: "resources/images/grain.png",
     category: "Leviticus"
   }
 ];
