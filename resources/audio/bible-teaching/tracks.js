@@ -155,7 +155,7 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 16",
     desc: "The Day of Atonement in the Old and New Testaments.",
     cardBg: "resources/images/blood.png",
-    category: "Melkishedhek, Festivals"
+    category: "Melkishedhek, Festivals, Leviticus"
   },
   {
     day: 18,
@@ -198,6 +198,15 @@ const BIBLE_TRACKS = [
     desc: "The significance of the grain offering in the Old Testament.",
     cardBg: "resources/images/grain.png",
     category: "Leviticus"
+  },
+  {
+    day: 23,
+    title: "Who are Jannes & Jambres?",
+    file: "Who are Jannes & Jambres",
+    duration: "39:52 min",
+    verse: "2 Timothy 3:8",
+    desc: "Jannes and Jambres, the magicians who opposed Moses, and their role in biblical history.",
+    category: "Do You Know?"
   }
 ];
 
