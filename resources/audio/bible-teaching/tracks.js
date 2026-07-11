@@ -207,6 +207,14 @@ const BIBLE_TRACKS = [
     verse: "2 Timothy 3:8",
     desc: "Jannes and Jambres, the magicians who opposed Moses, and their role in biblical history.",
     category: "Do You Know?"
+  },
+  {
+    day: 24,
+    title: "Peace Offering",
+    duration: "32:03 min",
+    verse: "Leviticus 3",
+    desc: "The significance of the peace offering in the Old Testament.",
+    category: "Leviticus"
   }
 ];
 
