@@ -215,6 +215,14 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 3",
     desc: "The significance of the peace offering in the Old Testament.",
     category: "Leviticus"
+  },
+  {
+    day: 25,
+    title: "The Baptism",
+    duration: "61:23 min",
+    verse: "Rom 6:3-11; Gal 2:20",
+    desc: "The baptism of Jesus and its significance for believers.",
+    category: "Foundation"
   }
 ];
 
@@ -234,6 +242,7 @@ const BIBLE_FOLDERS = [
   { name: "Melkishedhek", type: "category", value: "Melkishedhek" },
   { name: "Festivals", type: "category", value: "Festivals" },
   { name: "Do You Know?", type: "category", value: "Do You Know?" },
+  { name: "Foundation", type: "category", value: "Foundation" },
   { name: "Christophany", type: "category", value: "Christophany" },
   { name: "False Teaching", type: "category", value: "False Teaching" },
   { name: "Psalms", type: "category", value: "Psalms" },
@@ -587,5 +596,163 @@ const BIBLE_STUDY_NOTES = [
       "The heavenly sanctuary is the fulfillment toward which every earthly temple pointed.",
       "The history of the tabernacles reveals God's complete plan of redemption."
     ]
-  }
+  },
+  // The Baptism...
+  {
+    title: "Baptism",
+    tags: ["Basic Bible Doctrines"],
+    summary:
+      "Baptism is an outward act of obedience that publicly identifies a believer with Jesus Christ. It symbolizes the believer's union with Christ in His death, burial, and resurrection. Baptism does not save; it is the public testimony of the salvation already received by grace through faith.",
+
+    scripturePassages: [
+      { reference: "Matthew 3:13-17", summary: "Jesus Is Baptized" },
+      { reference: "Matthew 28:18-20", summary: "The Great Commission" },
+      { reference: "Mark 16:16", summary: "Believe and Be Baptized" },
+      { reference: "Acts 2:37-41", summary: "Three Thousand Are Baptized" },
+      { reference: "Acts 8:36-39", summary: "The Ethiopian Eunuch Is Baptized" },
+      { reference: "Acts 10:44-48", summary: "Cornelius' Household Is Baptized" },
+      { reference: "Acts 16:30-33", summary: "The Philippian Jailer Is Baptized" },
+      { reference: "Acts 19:1-5", summary: "John's Baptism and Christian Baptism" },
+      { reference: "Romans 6:3-6", summary: "United with Christ in His Death and Resurrection" },
+      { reference: "Galatians 2:20", summary: "Crucified with Christ" },
+      { reference: "Colossians 2:11-13", summary: "Buried and Raised with Christ" },
+      { reference: "Ephesians 2:8-9", summary: "Salvation by Grace Through Faith" },
+      { reference: "Ephesians 4:4-6", summary: "One Lord, One Faith, One Baptism" },
+      { reference: "1 Peter 3:21", summary: "The Meaning of Baptism" }
+    ],
+
+    sermonSections: [
+      {
+        title: "1. What Is Baptism?",
+        points: [
+          "Baptism is an outward act of obedience to Jesus Christ.",
+          "It publicly identifies a believer with Christ.",
+          "It symbolizes Christ's death, burial, and resurrection.",
+          "It is the testimony of a person already saved by faith."
+        ]
+      },
+      {
+        title: "2. The Meaning of Baptism",
+        points: [
+          "The Greek word 'baptizo' means to immerse or submerge.",
+          "Going into the water pictures dying to sin.",
+          "Being under the water pictures burial with Christ.",
+          "Coming out of the water pictures resurrection to a new life.",
+          "The believer now walks in newness of life."
+        ]
+      },
+      {
+        title: "3. Why Should We Be Baptized?",
+        points: [
+          "Jesus commanded every disciple to be baptized.",
+          "Jesus Himself was baptized as our example.",
+          "The apostles baptized every new believer.",
+          "Baptism is an act of love and obedience to Christ."
+        ]
+      },
+      {
+        title: "4. Who Should Be Baptized?",
+        points: [
+          "Those who have heard the Gospel.",
+          "Those who believe in Jesus Christ.",
+          "Those who have repented of their sins.",
+          "Faith always comes before baptism."
+        ]
+      },
+      {
+        title: "5. Does Baptism Save?",
+        points: [
+          "Salvation is by grace through faith alone.",
+          "Water baptism does not remove sin.",
+          "Baptism is the public confession of an inward faith.",
+          "It demonstrates the salvation already received."
+        ]
+      },
+      {
+        title: "6. Why Was Jesus Baptized?",
+        points: [
+          "Jesus had no sin to repent of.",
+          "He fulfilled all righteousness.",
+          "He identified Himself with sinners.",
+          "He began His public ministry.",
+          "He gave believers an example to follow."
+        ]
+      },
+      {
+        title: "7. How Should Baptism Be Performed?",
+        points: [
+          "The New Testament pattern is baptism by immersion.",
+          "Immersion best pictures death, burial, and resurrection.",
+          "Jesus came up out of the water.",
+          "The Ethiopian eunuch went down into the water."
+        ]
+      },
+      {
+        title: "8. Baptism in the Name of Jesus or the Trinity?",
+        points: [
+          "Jesus commanded baptism in the name of the Father, Son, and Holy Spirit.",
+          "Acts emphasizes baptism in the name of Jesus Christ.",
+          "Acts highlights Jesus' authority rather than recording the exact spoken words.",
+          "Both passages complement each other and do not contradict."
+        ]
+      },
+      {
+        title: "9. What Happens Spiritually?",
+        points: [
+          "The old life has been crucified with Christ.",
+          "The believer is united with Christ by faith.",
+          "Christ now lives in the believer.",
+          "Baptism declares a lifelong commitment to follow Jesus."
+        ]
+      },
+      {
+        title: "10. One Baptism",
+        points: [
+          "There is one Lord, one faith, and one baptism.",
+          "Christian baptism is normally received once after conversion.",
+          "It marks the beginning of a life of discipleship."
+        ]
+      }
+    ],
+
+    jesusFulfillment: [
+      {
+        ot: "Israel passed through the Red Sea",
+        fulfillment: "Believers leave the bondage of sin and begin a new life in Christ."
+      },
+      {
+        ot: "The priests were washed before ministry",
+        fulfillment: "Jesus sanctifies believers for His service."
+      },
+      {
+        ot: "Naaman was cleansed in the Jordan",
+        fulfillment: "Christ alone provides true cleansing from sin."
+      },
+      {
+        ot: "The ceremonial washings under the Law",
+        fulfillment: "Jesus brings complete spiritual cleansing through His sacrifice."
+      },
+      {
+        ot: "Crossing the Jordan into the Promised Land",
+        fulfillment: "Believers enter a new life through faith in Christ."
+      },
+      {
+        ot: "Noah passed safely through the flood",
+        fulfillment: "Baptism symbolizes salvation through Christ, not by water itself."
+      }
+    ],
+
+    corePrinciples: [
+      "Baptism is commanded by Jesus Christ.",
+      "Baptism follows repentance and faith.",
+      "Salvation is by grace through faith, not by baptism.",
+      "Baptism symbolizes Christ's death, burial, and resurrection.",
+      "The believer's old life is crucified with Christ.",
+      "Baptism is a public confession of faith.",
+      "Christian baptism identifies believers with Jesus Christ.",
+      "Matthew 28:19 gives Christ's command; Acts emphasizes Christ's authority.",
+      "Every believer should obey Christ by being baptized.",
+      "Baptism marks the beginning of a life of discipleship and obedience."
+    ]
+  },
 ];
