@@ -222,6 +222,7 @@ const BIBLE_TRACKS = [
     duration: "61:23 min",
     verse: "Rom 6:3-11; Gal 2:20",
     desc: "The baptism of Jesus and its significance for believers.",
+    cardBg: "resources/images/baptism.png",
     category: "Foundation"
   }
 ];
