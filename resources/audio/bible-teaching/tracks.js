@@ -599,7 +599,7 @@ const BIBLE_STUDY_NOTES = [
   },
   // The Baptism...
   {
-    title: "Baptism",
+    title: "The Baptism",
     tags: ["Basic Bible Doctrines"],
     summary:
       "Baptism is an outward act of obedience that publicly identifies a believer with Jesus Christ. It symbolizes the believer's union with Christ in His death, burial, and resurrection. Baptism does not save; it is the public testimony of the salvation already received by grace through faith.",
