@@ -218,11 +218,19 @@ const BIBLE_TRACKS = [
   },
   {
     day: 25,
-    title: "The Baptism",
+    title: "Baptism",
     duration: "61:23 min",
     verse: "Rom 6:3-11; Gal 2:20",
     desc: "The baptism of Jesus and its significance for believers.",
     cardBg: "resources/images/baptism.png",
+    category: "Foundation"
+  },
+  {
+    day: 26,
+    title: "Rapture",
+    duration: "70:02 min",
+    verse: "1 Thessalonians 4:16-17",
+    desc: "The rapture of the church and its significance for believers.",
     category: "Foundation"
   }
 ];
@@ -600,7 +608,7 @@ const BIBLE_STUDY_NOTES = [
   },
   // The Baptism...
   {
-    title: "The Baptism",
+    title: "Baptism",
     tags: ["Basic Bible Doctrines"],
     summary:
       "Baptism is an outward act of obedience that publicly identifies a believer with Jesus Christ. It symbolizes the believer's union with Christ in His death, burial, and resurrection. Baptism does not save; it is the public testimony of the salvation already received by grace through faith.",
