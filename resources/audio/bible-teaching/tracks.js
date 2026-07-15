@@ -232,6 +232,15 @@ const BIBLE_TRACKS = [
     verse: "1 Thessalonians 4:16-17",
     desc: "The rapture of the church and its significance for believers.",
     category: "Foundation"
+  },
+  {
+    day: 27,
+    title: "Why Jesus born in Bethlehem?",
+    file: "Why Jesus born in Bethlehem",
+    duration: "30:18 min",
+    verse: "Micah 5:2",
+    desc: "The prophecy of the Messiah's birthplace and its fulfillment in Jesus.",
+    category: "Do You Know?"
   }
 ];
 
@@ -248,10 +257,10 @@ const BIBLE_TRACKS = [
 // ─────────────────────────────────────────────────────────────────────────────
 const BIBLE_FOLDERS = [
   { name: "All", type: "all" },
+  { name: "Foundation", type: "category", value: "Foundation" },
   { name: "Melkishedhek", type: "category", value: "Melkishedhek" },
   { name: "Festivals", type: "category", value: "Festivals" },
   { name: "Do You Know?", type: "category", value: "Do You Know?" },
-  { name: "Foundation", type: "category", value: "Foundation" },
   { name: "Christophany", type: "category", value: "Christophany" },
   { name: "False Teaching", type: "category", value: "False Teaching" },
   { name: "Psalms", type: "category", value: "Psalms" },
