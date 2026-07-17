@@ -246,7 +246,7 @@ const BIBLE_TRACKS = [
     day: 28,
     title: "The City of Refuge",
     duration: "38:31 min",
-    verse: "Deut 19:1-13; Joshua 20",
+    verse: "Deut 19; Joshua 20",
     desc: "The cities of refuge in the Old Testament and their significance for believers.",
     category: "Christophany"
   },
