@@ -43,7 +43,7 @@ const BIBLE_TRACKS = [
     duration: "70:16 min",
     verse: "Luke 10:30-37",
     desc: "What true neighbourly love looks like across every boundary.",
-    category: "Characters"
+    category: "Christophany"
   },
   {
     day: 5,
