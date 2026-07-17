@@ -43,7 +43,7 @@ const BIBLE_TRACKS = [
     duration: "70:16 min",
     verse: "Luke 10:30-37",
     desc: "What true neighbourly love looks like across every boundary.",
-    category: "Christophany"
+    category: "Characters"
   },
   {
     day: 5,
@@ -52,7 +52,7 @@ const BIBLE_TRACKS = [
     verse: "Joshua 2",
     desc: "A Canaanite woman's faith that placed her in the messianic line.",
     cardBg: "resources/images/ribbon.png",
-    category: "Christophany"
+    category: "Characters"
   },
   {
     day: 6,
@@ -60,7 +60,7 @@ const BIBLE_TRACKS = [
     duration: "82:21 min",
     verse: "2 Samuel 9:7",
     desc: "A picture of grace — restored to the king's table despite weakness.",
-    category: "Christophany"
+    category: "Characters"
   },
   {
     day: 7,
@@ -85,7 +85,7 @@ const BIBLE_TRACKS = [
     duration: "84:24 min",
     verse: "Jonah 1-4",
     desc: "God's mercy and the prophet's struggle with obedience and compassion.",
-    category: "Prophets"
+    category: "Characters"
   },
   {
     day: 10,
@@ -164,7 +164,7 @@ const BIBLE_TRACKS = [
     duration: "47:16 min",
     verse: "Genesis 14:18-20",
     desc: "Melkishedhek's role and significance in the Bible.",
-    category: "Melkishedhek"
+    category: "Melkishedhek; Characters"
   },
   {
     day: 19,
@@ -188,7 +188,7 @@ const BIBLE_TRACKS = [
     duration: "72:21 min",
     verse: "Multiple",
     desc: "Explore the seven tabernacles found throughout the Bible",
-    category: "Do You Know?"
+    category: "7's"
   },
   {
     day: 22,
@@ -206,7 +206,7 @@ const BIBLE_TRACKS = [
     duration: "39:52 min",
     verse: "2 Timothy 3:8",
     desc: "Jannes and Jambres, the magicians who opposed Moses, and their role in biblical history.",
-    category: "Do You Know?"
+    category: "Characters"
   },
   {
     day: 24,
@@ -256,7 +256,7 @@ const BIBLE_TRACKS = [
     duration: "63:20 min",
     verse: "Matthew 3:1-12",
     desc: "The life and ministry of John the Baptist.",
-    category: "Do You Know?"
+    category: "Characters"
   }
 ];
 
@@ -282,6 +282,8 @@ const BIBLE_FOLDERS = [
   { name: "Psalms", type: "category", value: "Psalms" },
   { name: "Leviticus", type: "category", value: "Leviticus" },
   { name: "Prophets", type: "category", value: "Prophets" },
+  { name: "Characters", type: "category", value: "Characters" },
+  { name: "7's", type: "category", value: "7's" }
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
