@@ -249,6 +249,14 @@ const BIBLE_TRACKS = [
     verse: "Deut 19:1-13; Joshua 20",
     desc: "The cities of refuge in the Old Testament and their significance for believers.",
     category: "Christophany"
+  },
+  {
+    day: 29,
+    title: "John the Baptist",
+    duration: "63:20 min",
+    verse: "Matthew 3:1-12",
+    desc: "The life and ministry of John the Baptist.",
+    category: "Do You Know?"
   }
 ];
 
