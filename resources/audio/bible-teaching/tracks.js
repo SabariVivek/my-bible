@@ -257,6 +257,14 @@ const BIBLE_TRACKS = [
     verse: "Matthew 3:1-12",
     desc: "The life and ministry of John the Baptist.",
     category: "Characters"
+  },
+  {
+    day: 30,
+    title: "Pharisees, Sadducees & Scribes",
+    duration: "78:13 min",
+    verse: "Acts 23:6-10",
+    desc: "The religious leaders of Jesus' time and their opposition to Him.",
+    category: "Characters"
   }
 ];
 
