@@ -265,6 +265,15 @@ const BIBLE_TRACKS = [
     verse: "Acts 23:6-10",
     desc: "The religious leaders of Jesus' time and their opposition to Him.",
     category: "Characters"
+  },
+  {
+    day: 31,
+    title: "What is Gospel?",
+    file: "What is Gospel",
+    duration: "42:19 min",
+    verse: "1 Corinthians 15:1-4",
+    desc: "An explanation of the gospel message and its importance for believers.",
+    category: "Foundation"
   }
 ];
 
