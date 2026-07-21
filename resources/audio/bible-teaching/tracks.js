@@ -274,6 +274,15 @@ const BIBLE_TRACKS = [
     verse: "1 Corinthians 15:1-4",
     desc: "An explanation of the gospel message and its importance for believers.",
     category: "Foundation"
+  },
+  {
+    day: 32,
+    title: "Can dead people return as spirits?",
+    file: "Can dead people return as spirits",
+    duration: "62:46 min",
+    verse: "1 Samuel 28:3-25",
+    desc: "A biblical perspective on the question of whether dead people can return as spirits.",
+    category: "Foundation "
   }
 ];
 
