@@ -283,6 +283,15 @@ const BIBLE_TRACKS = [
     verse: "1 Samuel 28:3-25",
     desc: "A biblical perspective on the question of whether dead people can return as spirits.",
     category: "Foundation "
+  },
+  {
+    day: 33,
+    title: "🪙 The Coin in the Fish's Mouth",
+    file: "The Coin in the Fish's Mouth",
+    duration: "52:02 min",
+    verse: "Matthew 17:24-27",
+    desc: "The story of how a fish paid Jesus' tax and its significance for believers.",
+    category: "Do You Know?"
   }
 ];
 
