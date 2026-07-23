@@ -291,6 +291,15 @@ const BIBLE_TRACKS = [
     verse: "Matthew 17:24-27",
     desc: "The story of how a fish paid Jesus' tax and its significance for believers.",
     category: "Do You Know?"
+  },
+  {
+    day: 34,
+    title: "Contradiction in Jesus' Genealogy?",
+    file: "Contradiction in Jesus' Genealogy",
+    duration: "36:15 min",
+    verse: "Matthew 1:1-17; Luke 3:23-38",
+    desc: "An examination of the apparent differences in the genealogies of Jesus in Matthew and Luke.",
+    category: "Do You Know?"
   }
 ];
 
