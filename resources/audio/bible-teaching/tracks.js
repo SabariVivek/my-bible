@@ -297,7 +297,7 @@ const BIBLE_TRACKS = [
     title: "Contradiction in Jesus' Genealogy?",
     file: "Contradiction in Jesus' Genealogy",
     duration: "36:15 min",
-    verse: "Matthew 1:1-17; Luke 3:23-38",
+    verse: "Mat 1:1-17; Luke 3:23-38",
     desc: "An examination of the apparent differences in the genealogies of Jesus in Matthew and Luke.",
     category: "Do You Know?"
   },
