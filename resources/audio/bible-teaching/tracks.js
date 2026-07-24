@@ -164,7 +164,7 @@ const BIBLE_TRACKS = [
     duration: "47:16 min",
     verse: "Genesis 14:18-20",
     desc: "Melkishedhek's role and significance in the Bible.",
-    category: "Melkishedhek; Characters"
+    category: "Melkishedhek, Characters"
   },
   {
     day: 19,
@@ -325,15 +325,15 @@ const BIBLE_TRACKS = [
 const BIBLE_FOLDERS = [
   { name: "All", type: "all" },
   { name: "Foundation", type: "category", value: "Foundation" },
+  { name: "Characters", type: "category", value: "Characters" },
+  { name: "Do You Know?", type: "category", value: "Do You Know?" },
   { name: "Melkishedhek", type: "category", value: "Melkishedhek" },
   { name: "Festivals", type: "category", value: "Festivals" },
-  { name: "Do You Know?", type: "category", value: "Do You Know?" },
   { name: "Christophany", type: "category", value: "Christophany" },
   { name: "False Teaching", type: "category", value: "False Teaching" },
   { name: "Psalms", type: "category", value: "Psalms" },
   { name: "Leviticus", type: "category", value: "Leviticus" },
   { name: "Prophets", type: "category", value: "Prophets" },
-  { name: "Characters", type: "category", value: "Characters" },
   { name: "7's", type: "category", value: "7's" }
 ];
 
