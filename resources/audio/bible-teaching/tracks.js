@@ -300,6 +300,14 @@ const BIBLE_TRACKS = [
     verse: "Matthew 1:1-17; Luke 3:23-38",
     desc: "An examination of the apparent differences in the genealogies of Jesus in Matthew and Luke.",
     category: "Do You Know?"
+  },
+  {
+    day: 35,
+    title: "Joseph - Mary's Husband",
+    duration: "55:31 min",
+    verse: "Matthew 1:18-25",
+    desc: "The life and role of Joseph, the husband of Mary, in the story of Jesus' birth.",
+    category: "Characters"
   }
 ];
 
