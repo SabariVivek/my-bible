@@ -308,7 +308,24 @@ const BIBLE_TRACKS = [
     verse: "Matthew 1:18-25",
     desc: "The life and role of Joseph, the husband of Mary, in the story of Jesus' birth.",
     category: "Characters"
-  }
+  },
+  {
+    day: 36,
+    title: "Mary - Mother of Jesus",
+    duration: "34:14 min",
+    verse: "Luke 1:26-38",
+    desc: "The life and role of Mary, the mother of Jesus, in the story of His birth.",
+    category: "Characters"
+  },
+  // {
+  //   day: 37,
+  //   title: "Why Angels Announce Jesus' Birth to Shepherds?",
+  //   file: "Why Angels Announce Jesus' Birth to Shepherds",
+  //   duration: "17:30 min",
+  //   verse: "Luke 2:8-20",
+  //   desc: "The reason why angels announced the birth of Jesus to shepherds and its significance.",
+  //   category: "Do You Know?"
+  // }
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
