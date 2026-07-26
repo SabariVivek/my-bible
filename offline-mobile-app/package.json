@@ -1,0 +1,19 @@
+{
+  "name": "my-bible-offline",
+  "version": "1.0.0",
+  "description": "Standalone Offline Bible Mobile Application",
+  "main": "www/index.html",
+  "scripts": {
+    "build": "echo Web assets ready in www/",
+    "cap:add": "cap add android",
+    "cap:sync": "cap sync android",
+    "cap:open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0"
+  }
+}
