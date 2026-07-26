@@ -768,10 +768,11 @@ function applyUiSettingsToDocument() {
     verseHeaders.forEach(el => {
         el.style.display = uiSettings.verseHeading ? '' : 'none';
     });
-    // Verse Heading Only: hide verse-container when enabled (show only headers)
+    // Verse Heading Only: disabled (verses always shown)
+    uiSettings.verseHeadingOnly = false;
     const verseContainers = document.querySelectorAll('.verse-container');
     verseContainers.forEach(el => {
-        el.style.display = (uiSettings.verseHeading && uiSettings.verseHeadingOnly) ? 'none' : '';
+        el.style.display = '';
     });
     // Author Details: show/hide author-banner
     const authorBanner = document.getElementById('author-banner');
