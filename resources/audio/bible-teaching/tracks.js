@@ -317,6 +317,14 @@ const BIBLE_TRACKS = [
     desc: "The life and role of Mary, the mother of Jesus, in the story of His birth.",
     category: "Characters"
   },
+  {
+    day: 37,
+    title: "Simeon & Anna - Waiting for the Messiah",
+    duration: "60:00 min",
+    verse: "Luke 2:25-38",
+    desc: "The story of Simeon and Anna, who waited for the Messiah.",
+    category: "Characters"
+  }
   // {
   //   day: 37,
   //   title: "Why Angels Announce Jesus' Birth to Shepherds?",

@@ -219,188 +219,18 @@ function closeSettingsDiscardDialog() {
     }
 }
 
-// Supabase configuration for user_settings (same project as other Supabase usage)
-const SUPABASE_SETTINGS_CONFIG = {
-    url: 'https://encjogfdbrfcatvytpir.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck'
-};
-
-async function saveUserSettingsToSupabase() {
-    try {
-        const userId = localStorage.getItem('currentUserId');
-        if (!userId || !window.fetch) {
-            return;
-        }
-
-        const themeVal =
-            localStorage.getItem('settingsTheme') ||
-            (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
-        const langSegVal =
-            localStorage.getItem('settingsLanguage') ||
-            (currentLanguage === 'both'
-                ? 'both'
-                : currentLanguage === 'english'
-                    ? 'en'
-                    : 'ta');
-        const colorVal =
-            localStorage.getItem('settingsEnglishColor') ||
-            (typeof englishTextColor !== 'undefined' ? englishTextColor : 'default');
-        const verseHeadingLangVal =
-            localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
-        const verseHeadingColorVal =
-            localStorage.getItem('verseHeadingColor') || 'green';
-        const selectorStyleVal =
-            localStorage.getItem('selectorStyle') || 'old';
-
-        const payload = {
-            user_id: userId,
-            theme: themeVal,
-            language: langSegVal,
-            english_text_color: colorVal,
-            images: !!uiSettings.images,
-            short_summary: !!uiSettings.shortSummary,
-            bible_reading: !!uiSettings.bibleReading,
-            verse_heading: !!uiSettings.verseHeading,
-            verse_heading_language: verseHeadingLangVal,
-            only_headers: !!uiSettings.verseHeadingOnly,
-            author_details: !!uiSettings.authorDetails,
-            memory_verse: !!uiSettings.memoryVerse,
-            bookmark: !!uiSettings.bookmark,
-            notes_feature: !!uiSettings.notesFeature,
-            verse_heading_color: verseHeadingColorVal,
-            selector_style: selectorStyleVal
-        };
-
-        // Upsert by user_id so both existing and new users are handled
-        await fetch(
-            `${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings?on_conflict=user_id`,
-            {
-                method: 'POST',
-                headers: {
-                    'apikey': SUPABASE_SETTINGS_CONFIG.anonKey,
-                    'Authorization': `Bearer ${SUPABASE_SETTINGS_CONFIG.anonKey}`,
-                    'Content-Type': 'application/json',
-                    'Prefer': 'resolution=merge-duplicates'
-                },
-                body: JSON.stringify(payload)
-            }
-        );
-    } catch (e) {
-        // Fail silently – localStorage still keeps settings
-    }
+// Offline app: settings are stored only in localStorage — no Supabase sync needed.
+function saveUserSettingsToSupabase() {
+    // No-op in offline mode. All settings are persisted to localStorage immediately
+    // when each setting is changed. Network calls to Supabase would cause UI hangs.
+    return Promise.resolve();
 }
 
-async function loadUserSettingsFromSupabase() {
-    try {
-        const userId = localStorage.getItem('currentUserId');
-        if (!userId || !window.fetch) {
-            return;
-        }
-
-        const response = await fetch(
-            `${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings?user_id=eq.${encodeURIComponent(
-                userId
-            )}&select=*`,
-            {
-                headers: {
-                    'apikey': SUPABASE_SETTINGS_CONFIG.anonKey,
-                    'Authorization': `Bearer ${SUPABASE_SETTINGS_CONFIG.anonKey}`,
-                    'Content-Type': 'application/json'
-                }
-            }
-        );
-
-        if (!response.ok) {
-            return;
-        }
-
-        const rows = await response.json();
-        if (!rows || rows.length === 0) {
-            // No row yet for this user – create one from current local settings
-            await saveUserSettingsToSupabase();
-            return;
-        }
-
-        const row = rows[0];
-
-        // Language
-        if (row.language) {
-            const langVal = row.language; // 'ta' | 'en' | 'both'
-            const selectedLang =
-                langVal === 'en' ? 'english' : langVal === 'ta' ? 'tamil' : 'both';
-            currentLanguage = selectedLang;
-            localStorage.setItem('currentLanguage', selectedLang);
-            localStorage.setItem('settingsLanguage', langVal);
-        }
-
-        // Theme
-        if (row.theme === 'dark' || row.theme === 'light') {
-            const wantDark = row.theme === 'dark';
-            if (wantDark) {
-                document.body.classList.add('dark-theme');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.body.classList.remove('dark-theme');
-                localStorage.setItem('theme', 'light');
-            }
-            localStorage.setItem('settingsTheme', row.theme);
-        }
-
-        // English text color
-        if (row.english_text_color) {
-            englishTextColor = row.english_text_color;
-            localStorage.setItem('englishTextColor', englishTextColor);
-            localStorage.setItem('settingsEnglishColor', englishTextColor);
-        }
-
-        // Verse heading language
-        if (row.verse_heading_language) {
-            localStorage.setItem('settingsVerseHeadingLanguage', row.verse_heading_language);
-        }
-
-        // Verse heading color
-        if (row.verse_heading_color) {
-            localStorage.setItem('verseHeadingColor', row.verse_heading_color);
-            if (typeof applyVerseHeadingColor === 'function') {
-                applyVerseHeadingColor(row.verse_heading_color);
-            }
-        }
-
-        // Selector style (old / new)
-        if (row.selector_style) {
-            localStorage.setItem('selectorStyle', row.selector_style);
-        }
-
-        // Boolean display / feature options
-        const mapping = [
-            ['images', 'images'],
-            ['shortSummary', 'short_summary'],
-            ['bibleReading', 'bible_reading'],
-            ['verseHeading', 'verse_heading'],
-            ['verseHeadingOnly', 'only_headers'],
-            ['authorDetails', 'author_details'],
-            ['memoryVerse', 'memory_verse'],
-            ['bookmark', 'bookmark'],
-            ['notesFeature', 'notes_feature']
-        ];
-
-        mapping.forEach(([key, col]) => {
-            if (Object.prototype.hasOwnProperty.call(row, col)) {
-                uiSettings[key] = !!row[col];
-            }
-        });
-
-        localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
-
-        if (typeof applyUiSettingsToDocument === 'function') {
-            applyUiSettingsToDocument();
-        }
-        if (typeof updateBookNames === 'function') {
-            updateBookNames();
-        }
-    } catch (e) {
-        // Silent failure – app still works with local settings
-    }
+// Offline app: settings are loaded only from localStorage — no Supabase fetch on startup.
+function loadUserSettingsFromSupabase() {
+    // No-op in offline mode. Settings are always read directly from localStorage.
+    // A live Supabase fetch on startup would cause a noticeable delay/hang on slow connections.
+    return Promise.resolve();
 }
 
 function openAdminPasswordModal(onSuccess) {
@@ -947,16 +777,21 @@ function settingsSelectLang(btn) {
     const selectedLang = val === 'en' ? 'english' : (val === 'ta' ? 'tamil' : 'both');
     currentLanguage = selectedLang;
     localStorage.setItem('currentLanguage', selectedLang);
-    if (typeof updateBookNames === 'function') {
-        updateBookNames();
-    }
-    // Reload current book/chapter so language change fully reflects (including 'both')
-    if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
-        loadBook(currentBook, currentChapter);
-    }
     // Persist language segment value (locally) and mark panel as dirty
     localStorage.setItem('settingsLanguage', btn.dataset.val);
     updateSettingsFooterVisibility();
+    if (typeof updateBookNames === 'function') {
+        updateBookNames();
+    }
+    // Defer the heavy chapter re-render so the UI stays responsive.
+    // Using setTimeout(0) yields back to the browser event loop first,
+    // allowing button animations and state updates to paint before the
+    // expensive loadBook() DOM rebuild runs.
+    if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+        setTimeout(function () {
+            loadBook(currentBook, currentChapter);
+        }, 0);
+    }
 }
 function settingsSelectColor(el) {
     const container = el.closest('.settings-color-swatches');
@@ -968,23 +803,19 @@ function settingsSelectColor(el) {
         el.classList.contains('red') ? 'red' : 'default';
     englishTextColor = color;
     localStorage.setItem('englishTextColor', color);
+    localStorage.setItem('settingsEnglishColor', color);
     if (typeof updateBookNames === 'function') {
         updateBookNames();
     }
-    localStorage.setItem('settingsEnglishColor', color);
-    // Apply immediately (update rendered verses)
-    if (currentLanguage === 'both') {
-        if (typeof displayChapter === 'function') {
-            displayChapter();
-        }
-        if (typeof applyAllNoteDisplays === 'function') {
-            applyAllNoteDisplays();
-        }
-        if (typeof applyUiSettingsToDocument === 'function') {
-            applyUiSettingsToDocument();
-        }
-    }
     updateSettingsFooterVisibility();
+    // Defer heavy DOM re-renders so the color swatch tap feels instant.
+    if (currentLanguage === 'both') {
+        setTimeout(function () {
+            if (typeof displayChapter === 'function') displayChapter();
+            if (typeof applyAllNoteDisplays === 'function') applyAllNoteDisplays();
+            if (typeof applyUiSettingsToDocument === 'function') applyUiSettingsToDocument();
+        }, 0);
+    }
 }
 function settingsToggleVerseHeading(event, toggleEl) {
     event.stopPropagation();
