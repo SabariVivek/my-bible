@@ -319,11 +319,20 @@ const BIBLE_TRACKS = [
   },
   {
     day: 37,
-    title: "Simeon & Anna - Waiting for the Messiah",
+    title: "Simeon & Anna",
     duration: "60:00 min",
     verse: "Luke 2:25-38",
     desc: "The story of Simeon and Anna, who waited for the Messiah.",
     category: "Characters"
+  },
+  {
+    day: 38,
+    title: "What is Sin?",
+    file: "What is Sin",
+    duration: "53:16 min",
+    verse: "Multiple",
+    desc: "An explanation of the concept of sin and its significance for believers.",
+    category: "Foundation"
   }
   // {
   //   day: 37,
