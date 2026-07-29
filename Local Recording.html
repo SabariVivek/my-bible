@@ -830,6 +830,30 @@
             color: #fde047;
         }
 
+        .track-item.coming-soon {
+            position: relative;
+            border-style: dashed;
+            cursor: default !important;
+            opacity: 0.95;
+            padding-right: 70px;
+        }
+
+        .track-item.coming-soon:active {
+            transform: none !important;
+            box-shadow: 4px 4px 0px var(--raw-black) !important;
+        }
+
+        .coming-soon-card-icon {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            pointer-events: none;
+            filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.15));
+        }
+
         .verse-ref {
             font-size: 0.68rem;
             font-weight: 700;
@@ -2162,9 +2186,10 @@
         });
     }
 
-    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important, importantColor, cardBg) {
+    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important, importantColor, cardBg, comingSoon) {
+        const isComingSoon = comingSoon || (typeof duration === 'string' && duration.toLowerCase().includes('coming soon'));
         const li = document.createElement('li');
-        li.className = 'track-item' + (important ? ' important' : '');
+        li.className = 'track-item' + (isComingSoon ? ' coming-soon' : '') + (important ? ' important' : '');
         if (important && importantColor) {
             li.style.backgroundColor = importantColor.bg;
             li.style.borderColor = importantColor.border;
@@ -2176,31 +2201,49 @@
             li.style.backgroundPosition = 'center';
         }
         li.id = trackId;
-        li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
+
+        if (isComingSoon) {
+            li.onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            };
+        } else {
+            li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
+        }
 
         const durStr = duration
             ? (typeof duration === 'string' ? duration : formatTime(duration) + ' min')
             : '--:--';
-        li.innerHTML = `
-            <div class="track-content">
-                <div class="track-title">${title}</div>
-                ${desc ? `<div class="track-desc">${desc}</div>` : ''}
-                <div class="track-meta-row">
-                    <div class="day-number-badge">Day ${dayNum}</div>
-                    ${(verse || '').split(';').map(v => `<div class="day-badge">${v.trim()}</div>`).join('')}
+
+        if (isComingSoon) {
+            li.innerHTML = `
+                <div class="track-content">
+                    <div class="track-title">${title}</div>
+                    ${desc ? `<div class="track-desc">${desc}</div>` : ''}
                 </div>
-            </div>
-            <div class="track-action-column">
-                <div class="play-indicator">
-                    <div class="pause-icon"><div class="pause-bars"><div class="pause-bar"></div><div class="pause-bar"></div></div></div>
-                    <div class="equalizer-wave">
-                        <div class="eq-bar"></div>
-                        <div class="eq-bar"></div>
-                        <div class="eq-bar"></div>
+                <img src="resources/images/coming-soon.png" alt="Coming Soon" class="coming-soon-card-icon" />`;
+        } else {
+            li.innerHTML = `
+                <div class="track-content">
+                    <div class="track-title">${title}</div>
+                    ${desc ? `<div class="track-desc">${desc}</div>` : ''}
+                    <div class="track-meta-row">
+                        <div class="day-number-badge">Day ${dayNum}</div>
+                        ${(verse || '').split(';').map(v => `<div class="day-badge">${v.trim()}</div>`).join('')}
                     </div>
                 </div>
-                <div class="track-duration-stamp">${durStr}</div>
-            </div>`;
+                <div class="track-action-column">
+                    <div class="play-indicator">
+                        <div class="pause-icon"><div class="pause-bars"><div class="pause-bar"></div><div class="pause-bar"></div></div></div>
+                        <div class="equalizer-wave">
+                            <div class="eq-bar"></div>
+                            <div class="eq-bar"></div>
+                            <div class="eq-bar"></div>
+                        </div>
+                    </div>
+                    <div class="track-duration-stamp">${durStr}</div>
+                </div>`;
+        }
         return li;
     }
 
@@ -2245,7 +2288,7 @@
         // Swap each skeleton with the real card
         BIBLE_TRACKS.forEach((track, i) => {
             const skelEl = document.getElementById('skel-track' + track.day);
-            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important, track.importantColor, track.cardBg);
+            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important, track.importantColor, track.cardBg, track.comingSoon);
             card.dataset.category = track.category || '';
             card.dataset.day = track.day;
             skelEl.replaceWith(card);

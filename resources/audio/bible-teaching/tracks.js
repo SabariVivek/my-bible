@@ -333,6 +333,22 @@ const BIBLE_TRACKS = [
     verse: "Multiple",
     desc: "An explanation of the concept of sin and its significance for believers.",
     category: "Foundation"
+  },
+  {
+    day: 39,
+    title: "Blood of Jesus - Part 1",
+    duration: "54:19",
+    verse: "Heb 9:22",
+    desc: "The significance of the blood of Jesus in the Christian faith.",
+    category: "Foundation"
+  },
+  {
+    day: 40,
+    title: "Blood of Jesus - Part 2",
+    duration: "Coming soon",
+    comingSoon: true,
+    desc: "The significance of the blood of Jesus in the Christian faith.",
+    category: "Foundation"
   }
   // {
   //   day: 37,
