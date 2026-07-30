@@ -96,7 +96,7 @@ const DEFAULT_UI_SETTINGS = {
     shortSummary: true,
     bibleReading: true,
     verseHeading: true,
-    verseHeadingOnly: true,
+    verseHeadingOnly: false,
     authorDetails: true,
     memoryVerse: true,
     bookmark: true,
@@ -5483,7 +5483,7 @@ function initializeTheme() {
     const themeToggle = document.querySelector('.theme-toggle');
     const drawerThemeToggle = document.querySelector('.drawer-theme-toggle');
     const hasVisited = localStorage.getItem('hasVisited');
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    const currentTheme = localStorage.getItem('theme') || 'dark';
 
     // Function to update meta theme colors
     function updateMetaTheme(isDark) {
@@ -9219,39 +9219,9 @@ async function saveNote() {
             const crossRefKey = `${bibleBooks[currentBook].name} ${chapter}:${verse}`;
             const crossRefs = crossReferences[crossRefKey] || [];
 
-            // Use Supabase client's upsert method
-            const { data, error } = await bibleDataManager.supabaseClient
-                .from('bible_verse_notes')
-                .upsert({
-                    book_file: bookFile,
-                    chapter: chapter,
-                    verse: verse,
-                    text: noteText,
-                    cross_references: crossRefs,
-                    updated_at: new Date().toISOString()
-                }, {
-                    onConflict: 'book_file,chapter,verse'
-                });
-
-            if (error) {
-                console.error('❌ Failed to save note:', error);
-            } else {
-            }
         } else {
             // Delete note if text is empty
             delete verseNotes[noteKey];
-
-            const { error } = await bibleDataManager.supabaseClient
-                .from('bible_verse_notes')
-                .delete()
-                .eq('book_file', bookFile)
-                .eq('chapter', chapter)
-                .eq('verse', verse);
-
-            if (error) {
-                console.error('❌ Failed to delete note:', error);
-            } else {
-            }
         }
 
         updateVerseNoteDisplay(currentNoteVerse);
@@ -9278,19 +9248,7 @@ async function deleteNote() {
         const verse = parseInt(noteKey.substring(lastUnderscoreIndex + 1));
 
 
-        if (bookFile && chapter && verse) {
-            const { error } = await bibleDataManager.supabaseClient
-                .from('bible_verse_notes')
-                .delete()
-                .eq('book_file', bookFile)
-                .eq('chapter', chapter)
-                .eq('verse', verse);
 
-            if (error) {
-                console.error('❌ Failed to delete note from Supabase:', error);
-            } else {
-            }
-        }
         updateVerseNoteDisplay(currentNoteVerse);
         closeNotesModal();
     } finally {
@@ -9343,56 +9301,9 @@ function applyAllNoteDisplays() {
     });
 }
 
-// Preload all notes and references for current chapter from Supabase
+// Preload all notes and references for current chapter from Supabase (disabled)
 async function preloadChapterNotesAndReferences() {
-    try {
-        const book = bibleBooks[currentBook];
-        const bookFile = book.file;
-
-        // Fetch all notes/references for this book and chapter from Supabase
-        const { data, error } = await bibleDataManager.supabaseClient
-            .from('bible_verse_notes')
-            .select('*')
-            .eq('book_file', bookFile)
-            .eq('chapter', currentChapter);
-
-        if (error) {
-            console.error('❌ Error preloading notes:', error);
-            return;
-        }
-
-        if (data && data.length > 0) {
-
-            // Update verseNotes and crossReferences objects
-            data.forEach(note => {
-                const noteKey = `${bookFile}_${note.chapter}_${note.verse}`;
-
-                // Update or create note entry
-                if (!verseNotes[noteKey]) {
-                    verseNotes[noteKey] = {};
-                }
-
-                // Store note text if exists
-                if (note.text) {
-                    verseNotes[noteKey].text = note.text;
-                    verseNotes[noteKey].chapter = note.chapter;
-                    verseNotes[noteKey].verse = note.verse;
-                }
-
-                // Store cross-references if exist
-                if (note.cross_references && note.cross_references.length > 0) {
-                    const crossRefKey = `${book.name} ${note.chapter}:${note.verse}`;
-                    crossReferences[crossRefKey] = note.cross_references;
-                }
-            });
-
-            // Refresh note displays with newly loaded data
-            applyAllNoteDisplays();
-        }
-    }
-    catch (error) {
-        console.error('❌ Error preloading chapter notes and references:', error);
-    }
+    return;
 }
 
 // Preload all referenced verse data for the current chapter (background task)
@@ -11530,12 +11441,76 @@ document.addEventListener('DOMContentLoaded', () => {
         rightMenuBtn.style.display = 'none';
         return;
     }
+    // Network connectivity checker for Right Menu
+    function updateRightMenuConnectivity() {
+        const isOnline = navigator.onLine;
+        const onlineOptions = [
+            'daily-prayers-option',
+            'right-notes-option',
+            'right-prayers-option',
+            'right-saturday-service-option',
+            'right-local-recording-option',
+            'right-kings-option',
+            'right-prophets-option',
+            'right-timeline-option',
+            'right-character-option',
+            'right-bible-characters-option',
+            'right-life-of-jesus-option',
+            'right-sermon-option',
+            'right-cult-option'
+        ];
+
+        const isAdminMode = localStorage.getItem('isAdmin') === 'true';
+
+        onlineOptions.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) {
+                if (!isOnline) {
+                    el.style.display = 'none';
+                } else {
+                    if (id === 'right-notes-option' || id === 'right-cult-option' || id === 'right-prayers-option') {
+                        el.style.display = isAdminMode ? 'flex' : 'none';
+                    } else {
+                        el.style.display = 'flex';
+                    }
+                }
+            }
+        });
+
+        // Always show Settings option locally
+        const settingsOpt = document.getElementById('right-settings-option');
+        if (settingsOpt) {
+            settingsOpt.style.display = 'flex';
+        }
+
+        // Show offline notice banner inside right menu when offline
+        let notice = document.getElementById('right-menu-offline-notice');
+        if (!isOnline) {
+            if (!notice) {
+                notice = document.createElement('div');
+                notice.id = 'right-menu-offline-notice';
+                notice.className = 'right-menu-offline-notice';
+                notice.innerHTML = '<span>⚠️ Offline Mode</span><small>Connect to internet for online features</small>';
+                if (rightSidebar) rightSidebar.insertBefore(notice, rightSidebar.firstChild);
+            }
+            notice.style.display = 'block';
+        } else if (notice) {
+            notice.style.display = 'none';
+        }
+    }
+
+    // Call connectivity check on toggle and network state changes
+    window.addEventListener('online', updateRightMenuConnectivity);
+    window.addEventListener('offline', updateRightMenuConnectivity);
+    updateRightMenuConnectivity();
+
     // Toggle right sidebar
     if (rightMenuBtn && rightSidebar) {
         rightMenuBtn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
             closeBottomSheet();
+            updateRightMenuConnectivity();
             if (window.innerWidth <= 768) {
                 // Mobile: use drawer behavior
                 const isOpen = rightSidebar.classList.contains('drawer-open');
@@ -11643,7 +11618,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'config/secret.html';
         });
     }
-    // Logout option - clear user and go back to login
+    // Logout option - clear user and go back to login (if login enabled)
     if (rightLogoutOption) {
         rightLogoutOption.addEventListener('click', () => {
             closeRightSidebar();
@@ -11653,7 +11628,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.removeItem('currentUserIsGuest');
                 localStorage.removeItem('isAdmin');
             } catch (e) { }
-            window.location.href = 'src/pages/login.html';
+
+            // To re-enable login page redirect on logout, change LOGIN_ENABLED to true
+            const LOGIN_ENABLED = false;
+            if (LOGIN_ENABLED) {
+                window.location.href = 'src/pages/login.html';
+            } else {
+                window.location.reload();
+            }
         });
     }
 
@@ -12240,28 +12222,7 @@ function initializePinnedVerses() {
         pinnedVerses = [];
     }
 
-    // Load from Supabase immediately (no delay)
-    if (window.loadPinnedVersesFromSupabase) {
-        try {
-            loadPinnedVersesFromSupabase().then(supabaseVerses => {
-                if (supabaseVerses && supabaseVerses.length > 0) {
-                    pinnedVerses = supabaseVerses.map(v => ({
-                        verse: v.verse,
-                        book: v.book,
-                        chapter: v.chapter
-                    }));
-                    // Also save to localStorage for faster loading next time
-                    localStorage.setItem('pinnedVerses', JSON.stringify(pinnedVerses));
-                    // Refresh the current chapter display to show pinned icons
-                    refreshPinnedVerseDisplay();
-                }
-            }).catch(err => {
-                console.warn('Failed to load from Supabase:', err);
-            });
-        } catch (e) {
-            console.error('Error calling loadPinnedVersesFromSupabase:', e);
-        }
-    }
+
 }
 
 /**
@@ -12338,12 +12299,7 @@ function pinVerse(verseNum) {
         pinnedVerses.push(pinnedVerse);
         savePinnedVersesToStorage();
 
-        // Sync to Supabase if user is authenticated
-        if (window.addPinnedVerseToSupabase) {
-            addPinnedVerseToSupabase(verseNum, currentBook, currentChapter).catch(err => {
-                console.warn('Failed to sync to Supabase:', err);
-            });
-        }
+
 
     }
 }
@@ -12357,13 +12313,6 @@ function unpinVerseFromCurrentChapter(verseNum) {
         !(v.verse === verseNum && v.book === currentBook && v.chapter === currentChapter)
     );
     savePinnedVersesToStorage();
-
-    // Sync to Supabase if user is authenticated
-    if (window.removePinnedVerseFromSupabase) {
-        removePinnedVerseFromSupabase(verseNum, currentBook, currentChapter).catch(err => {
-            console.warn('Failed to sync to Supabase:', err);
-        });
-    }
 }
 
 /**
@@ -12941,28 +12890,7 @@ async function saveReference() {
     });
 
 
-    // Save to Supabase
-    try {
-        const bookFile = bibleBooks[currentBook].file;
-        const { data, error } = await bibleDataManager.supabaseClient
-            .from('bible_verse_notes')
-            .upsert({
-                book_file: bookFile,
-                chapter: currentChapter,
-                verse: currentAddRefVerseNum,
-                cross_references: crossReferences[crossRefKey],
-                updated_at: new Date().toISOString()
-            }, {
-                onConflict: 'book_file,chapter,verse'
-            });
 
-        if (error) {
-            console.error('❌ Failed to save cross-reference:', error);
-        } else {
-        }
-    } catch (error) {
-        console.error('❌ Error saving cross-reference:', error);
-    }
 
     // Update display: add cross-ref icon if not already present
     updateCrossRefDisplay(currentAddRefVerseNum);
@@ -13182,23 +13110,19 @@ async function fetchReferenceVerseData(ref) {
 
     if (!data.english) {
         for (const fileVariant of bookFileAlternatives) {
-            const { data: result, error } = await bibleDataManager.supabaseClient
-                .from('bible_verses')
-                .select('verse, text')
-                .eq('book_file', fileVariant)
-                .eq('chapter', parseInt(chapter))
-                .eq('language', 'english')
-                .gte('verse', startVerse)
-                .lte('verse', endVerse)
-                .order('verse', { ascending: true });
-
-            if (error) {
-            }
-
-            if (result && result.length > 0) {
-                data.english = result;
-                bookFile = fileVariant;
-                break;
+            const chData = await bibleDataManager.getChapterData(fileVariant, parseInt(chapter), 'english');
+            if (chData) {
+                const res = [];
+                for (let v = startVerse; v <= endVerse; v++) {
+                    if (chData[`verse_${v}`]) {
+                        res.push({ verse: v, text: chData[`verse_${v}`] });
+                    }
+                }
+                if (res.length > 0) {
+                    data.english = res;
+                    bookFile = fileVariant;
+                    break;
+                }
             }
         }
     }
@@ -13230,22 +13154,18 @@ async function fetchReferenceVerseData(ref) {
 
     if (!data.tamil) {
         for (const fileVariant of bookFileAlternatives) {
-            const { data: result, error } = await bibleDataManager.supabaseClient
-                .from('bible_verses')
-                .select('verse, text')
-                .eq('book_file', fileVariant)
-                .eq('chapter', parseInt(chapter))
-                .eq('language', 'tamil')
-                .gte('verse', startVerse)
-                .lte('verse', endVerse)
-                .order('verse', { ascending: true });
-
-            if (error) {
-            }
-
-            if (result && result.length > 0) {
-                data.tamil = result;
-                break;
+            const chData = await bibleDataManager.getChapterData(fileVariant, parseInt(chapter), 'tamil');
+            if (chData) {
+                const res = [];
+                for (let v = startVerse; v <= endVerse; v++) {
+                    if (chData[`verse_${v}`]) {
+                        res.push({ verse: v, text: chData[`verse_${v}`] });
+                    }
+                }
+                if (res.length > 0) {
+                    data.tamil = res;
+                    break;
+                }
             }
         }
     }

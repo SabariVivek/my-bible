@@ -52,8 +52,12 @@
 <body>
     <script>
         // Redirect first-time visitors to login page until a user is chosen
+        // To re-enable login page requirement, set LOGIN_ENABLED to true
         (function redirectToLoginIfNoUser() {
             try {
+                const LOGIN_ENABLED = false;
+                if (!LOGIN_ENABLED) return;
+
                 const hasUser = !!(localStorage.getItem('currentUserId') || localStorage.getItem('currentUserIsGuest'));
                 const isLoginPage = location.pathname.endsWith('/login.html') || location.pathname.endsWith('login.html');
                 if (!hasUser && !isLoginPage) {
@@ -68,7 +72,7 @@
         // Apply dark theme class immediately to body for CSS to work
         const savedThemes = localStorage.getItem('theme');
         const prefersDarks = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const isDarkThemes = savedThemes === 'dark' || (savedThemes === null && prefersDarks);
+        const isDarkThemes = savedThemes === 'dark' || savedThemes === null;
 
         if (isDarkThemes) {
             document.body.classList.add('dark-theme');
@@ -157,12 +161,12 @@
     <!-- Author Banner (docked under top bar, full-width) -->
     <div class="author-banner" id="author-banner">
         <div class="ab-cap">
-            <span class="ab-name" id="author-name">Paul</span>
+            <span class="ab-name" id="author-name"></span>
         </div>
         <div class="ab-sep"></div>
         <span class="ab-meta" id="author-verses"></span>
         <div class="ab-sep"></div>
-        <span class="ab-era" id="author-era">~62 AD</span>
+        <span class="ab-era" id="author-era"></span>
     </div>
 
     <!-- Search Bar (shown below header when active) -->
@@ -1412,7 +1416,7 @@
                             <div class="settings-row-sub-left">
                                 <span class="settings-row-sub-label">Only Headers</span>
                             </div>
-                            <button class="settings-toggle on" onclick="settingsToggleOnlyHeaders(event, this)"></button>
+                            <button class="settings-toggle" onclick="settingsToggleOnlyHeaders(event, this)"></button>
                         </div>
 
                         <!-- VERSE HEADING COLOR -->

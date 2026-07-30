@@ -7,6 +7,15 @@
 <title>My Bible – Sign In</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <script>
+// If login mechanism is temporarily disabled, redirect straight to main app
+// To re-enable login page, set LOGIN_ENABLED to true
+(function checkLoginStatus() {
+  const LOGIN_ENABLED = false;
+  if (!LOGIN_ENABLED) {
+    window.location.replace('../../index.html');
+  }
+})();
+
 // Keep login page theme in sync with main app preference
 (function syncThemeFromMainApp() {
   try {
