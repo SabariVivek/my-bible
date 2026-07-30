@@ -6303,16 +6303,26 @@ function initializeSearch() {
                 for (const chKey of chapters) {
                     if (results.length >= maxResults) break;
 
-                    const chNum = parseInt(chKey.replace('chapter_', '')) || parseInt(chKey);
+                    // After loadEntireBook, chapter keys are plain numbers: "1", "2", etc.
+                    const chNum = parseInt(chKey);
+                    if (isNaN(chNum)) continue;
                     if (targetChapter !== null && chNum !== targetChapter) continue;
 
-                    const versesObj = bookData[chKey] || bookData[`chapter_${chNum}`] || {};
-                    const verseKeys = Object.keys(versesObj).sort((a, b) => parseInt(a) - parseInt(b));
+                    const versesObj = bookData[chKey] || {};
+                    // Verse keys are "verse_1", "verse_2", etc.
+                    const verseKeys = Object.keys(versesObj).sort((a, b) => {
+                        const aNum = parseInt(a.replace('verse_', ''));
+                        const bNum = parseInt(b.replace('verse_', ''));
+                        return aNum - bNum;
+                    });
 
                     for (const vKey of verseKeys) {
                         if (results.length >= maxResults) break;
 
-                        const verseNum = parseInt(vKey);
+                        // Strip "verse_" prefix to get actual verse number
+                        const verseNum = parseInt(vKey.replace('verse_', ''));
+                        if (isNaN(verseNum)) continue;
+
                         const verseText = versesObj[vKey];
                         if (!verseText || typeof verseText !== 'string') continue;
 
@@ -11479,7 +11489,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const onlineOptions = [
             'daily-prayers-option',
             'right-notes-option',
-            'right-prayers-option',
             'right-local-recording-option',
             'right-kings-option',
             'right-prophets-option',
@@ -11517,7 +11526,7 @@ document.addEventListener('DOMContentLoaded', () => {
             onlineOptions.forEach(id => {
                 const el = document.getElementById(id);
                 if (el) {
-                    if (id === 'right-notes-option' || id === 'right-cult-option' || id === 'right-prayers-option') {
+                    if (id === 'right-notes-option' || id === 'right-cult-option') {
                         el.style.display = isAdminMode ? 'flex' : 'none';
                     } else {
                         el.style.display = 'flex';
@@ -11592,13 +11601,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Helper: navigate to a subpage with history push so Android back returns to Bible
+    function navigateToSubpage(url) {
+        // Push the current page into browser history so back button returns here
+        history.pushState({ page: 'bible-main' }, '', window.location.href);
+        window.location.href = url;
+    }
+
     // Bible Reading option - navigate to Bible Reading page
     if (bibleReadingOption) {
         bibleReadingOption.addEventListener('click', () => {
             closeRightSidebar();
-            // Navigate to the Bible Reading HTML file with cache-busting parameter
             const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
-            window.location.href = `src/pages/bible-reading.html?cb=${cacheBuster}`;
+            navigateToSubpage(`src/pages/bible-reading.html?cb=${cacheBuster}`);
         });
     }
     // Daily Prayers option - navigate to Daily Prayers page
@@ -11606,7 +11621,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dailyPrayersOption) {
         dailyPrayersOption.addEventListener('click', () => {
             closeRightSidebar();
-            window.location.href = 'src/pages/daily-bible-prayers.html';
+            navigateToSubpage('src/pages/daily-bible-prayers.html');
         });
     }
     // Exit Bible Reading page
@@ -11624,7 +11639,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rightNotesOption) {
         rightNotesOption.addEventListener('click', () => {
             closeRightSidebar();
-            window.location.href = 'src/pages/docs.html';
+            navigateToSubpage('src/pages/docs.html');
         });
     }
     // Local Recordings option - navigate to Local Recording page
@@ -11632,7 +11647,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rightLocalRecordingOption) {
         rightLocalRecordingOption.addEventListener('click', () => {
             closeRightSidebar();
-            window.location.href = 'src/pages/Local Recording.html';
+            navigateToSubpage('src/pages/Local Recording.html');
         });
     }
     // Bible Characters option - navigate to bible-characters page
