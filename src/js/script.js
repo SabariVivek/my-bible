@@ -11441,61 +11441,70 @@ document.addEventListener('DOMContentLoaded', () => {
         rightMenuBtn.style.display = 'none';
         return;
     }
-    // Network connectivity checker for Right Menu
+    const directSettingsBtn = document.getElementById('direct-settings-btn');
+
+    // Bind direct settings icon in header (shown when offline)
+    if (directSettingsBtn) {
+        directSettingsBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeBottomSheet();
+            const settingsOpt = document.getElementById('right-settings-option');
+            if (settingsOpt) {
+                settingsOpt.click();
+            }
+        });
+    }
+
+    // Network connectivity checker for Header & Right Menu
     function updateRightMenuConnectivity() {
         const isOnline = navigator.onLine;
-        const onlineOptions = [
-            'daily-prayers-option',
-            'right-notes-option',
-            'right-prayers-option',
-            'right-saturday-service-option',
-            'right-local-recording-option',
-            'right-kings-option',
-            'right-prophets-option',
-            'right-timeline-option',
-            'right-character-option',
-            'right-bible-characters-option',
-            'right-life-of-jesus-option',
-            'right-sermon-option',
-            'right-cult-option'
-        ];
-
         const isAdminMode = localStorage.getItem('isAdmin') === 'true';
 
-        onlineOptions.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) {
-                if (!isOnline) {
-                    el.style.display = 'none';
-                } else {
+        if (!isOnline) {
+            // OFFLINE: Hide menu grid button & popup sidebar completely; show direct Settings gear icon in header
+            if (rightMenuBtn) rightMenuBtn.style.display = 'none';
+            if (directSettingsBtn) directSettingsBtn.style.display = 'inline-flex';
+            if (rightSidebar) {
+                rightSidebar.classList.add('hidden');
+                rightSidebar.classList.remove('drawer-open');
+            }
+        } else {
+            // ONLINE: Show menu grid button in header; hide direct Settings gear icon; enable sidebar
+            if (rightMenuBtn) rightMenuBtn.style.display = 'inline-flex';
+            if (directSettingsBtn) directSettingsBtn.style.display = 'none';
+
+            const onlineOptions = [
+                'daily-prayers-option',
+                'right-notes-option',
+                'right-prayers-option',
+                'right-saturday-service-option',
+                'right-local-recording-option',
+                'right-kings-option',
+                'right-prophets-option',
+                'right-timeline-option',
+                'right-character-option',
+                'right-bible-characters-option',
+                'right-life-of-jesus-option',
+                'right-sermon-option',
+                'right-cult-option'
+            ];
+
+            onlineOptions.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
                     if (id === 'right-notes-option' || id === 'right-cult-option' || id === 'right-prayers-option') {
                         el.style.display = isAdminMode ? 'flex' : 'none';
                     } else {
                         el.style.display = 'flex';
                     }
                 }
-            }
-        });
+            });
 
-        // Always show Settings option locally
-        const settingsOpt = document.getElementById('right-settings-option');
-        if (settingsOpt) {
-            settingsOpt.style.display = 'flex';
-        }
-
-        // Show offline notice banner inside right menu when offline
-        let notice = document.getElementById('right-menu-offline-notice');
-        if (!isOnline) {
-            if (!notice) {
-                notice = document.createElement('div');
-                notice.id = 'right-menu-offline-notice';
-                notice.className = 'right-menu-offline-notice';
-                notice.innerHTML = '<span>⚠️ Offline Mode</span><small>Connect to internet for online features</small>';
-                if (rightSidebar) rightSidebar.insertBefore(notice, rightSidebar.firstChild);
+            const settingsOpt = document.getElementById('right-settings-option');
+            if (settingsOpt) {
+                settingsOpt.style.display = 'flex';
             }
-            notice.style.display = 'block';
-        } else if (notice) {
-            notice.style.display = 'none';
         }
     }
 

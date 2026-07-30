@@ -26,3 +26,5 @@ Thumbs.db
 **/android/
 **/node_modules/
 
+*.apk
+My Bible.apk
