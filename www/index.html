@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <!-- Default meta tags - will be overridden by script if needed -->
+    <meta name="theme-color" content="#1e1f22">
+    <meta name="color-scheme" content="dark">
+    <script>
+        // Override meta tags based on saved theme or system preference
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDarkTheme = savedTheme === 'dark' || (savedTheme === null && prefersDark);
+
+        // Update meta tags to match theme
+        if (!isDarkTheme) {
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff');
+            document.querySelector('meta[name="color-scheme"]').setAttribute('content', 'light');
+        }
+    </script>
+
+    <script>
+        // Cache busting - get version from localStorage if available, otherwise use timestamp
+        window.CACHE_BUSTER = localStorage.getItem('appVersion') || new Date().getTime();
+
+        // Only load manifest on http/https, not file://
+        if (window.location.protocol !== 'file:') {
+            document.write('<link rel="manifest" href="manifest.json?cb=' + window.CACHE_BUSTER + '">');
+        }
+    </script>
+    <meta name="description" content="Read the Bible in Tamil and Easy English">
+    <title>My Bible</title>
+    <link rel="icon" type="image/png" href="resources/icons/bible.png?cb=20251126003722">
+    <link rel="apple-touch-icon" href="resources/icons/bible.png?cb=20251126003722">
+    <link rel="stylesheet" href="src/styles/styles.css?cb=20251210006000">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20260301210232">
+    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20260423000000">
+    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20260419000000">
+    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20260508000000">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Cropper.js for profile image cropping -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css?cb=20260418170421">
+    <!-- Cache Management -->
+    <script src="src/js/cache-manager.js?cb=20251126003722"></script>
+</head>
+
+<body>
+    <script>
+        // Redirect first-time visitors to login page until a user is chosen
+        // To re-enable login page requirement, set LOGIN_ENABLED to true
+        (function redirectToLoginIfNoUser() {
+            try {
+                const LOGIN_ENABLED = false;
+                if (!LOGIN_ENABLED) return;
+
+                const hasUser = !!(localStorage.getItem('currentUserId') || localStorage.getItem('currentUserIsGuest'));
+                const isLoginPage = location.pathname.endsWith('/login.html') || location.pathname.endsWith('login.html');
+                if (!hasUser && !isLoginPage) {
+                    window.location.replace('src/pages/login.html');
+                }
+            } catch (e) {
+                // If anything goes wrong, continue loading main app
+            }
+        })();
+    </script>
+    <script>
+        // Apply dark theme class immediately to body for CSS to work
+        const savedThemes = localStorage.getItem('theme');
+        const prefersDarks = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDarkThemes = savedThemes === 'dark' || savedThemes === null;
+
+        if (isDarkThemes) {
+            document.body.classList.add('dark-theme');
+        }
+    </script>
+    <header class="top-bar" id="main-header">
+        <div class="logo-container">
+            <button class="icon-btn menu-btn mobile-only" aria-label="Menu">
+                <svg class="hamburger-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="close-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h1 class="site-title">My Bible</h1>
+        </div>
+        <div class="header-controls">
+            <!-- Right Menu button -->
+            <button id="right-menu-btn" class="icon-btn right-menu-btn" aria-label="Menu">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+            </button>
+            <!-- Notes icon (hidden by default) -->
+            <button id="notes-icon" class="icon-btn notes-icon" aria-label="Notes" style="display: none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <line x1="10" y1="9" x2="8" y2="9" />
+                </svg>
+            </button>
+            <!-- Admin toggle button (hidden by default) -->
+            <button id="admin-toggle" class="icon-btn admin-toggle" aria-label="Admin Mode" style="display: none;"
+                title="Admin Mode">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <path class="admin-check" d="M9 12l2 2 4-4" style="display: none;" />
+                </svg>
+            </button>
+            <!-- Preload Progress Indicator -->
+            <div id="preload-indicator"
+                style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.85); color: white; padding: 12px 24px; border-radius: 8px; z-index: 10000; font-size: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div
+                        style="width: 20px; height: 20px; border: 3px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 1s linear infinite;">
+                    </div>
+                    <span id="preload-text">Downloading Bible...</span>
+                    <span id="preload-progress">0/66</span>
+                </div>
+            </div>
+            <!-- Read Bible button (desktop only, shown on home page) -->
+            <button id="read-bible-nav-btn" class="icon-btn read-bible-nav-btn desktop-only" aria-label="Read Bible"
+                title="Read Bible">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+            </button>
+            <!-- Search button -->
+            <button id="search-btn" class="icon-btn search-btn" aria-label="Search">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <!-- Current User Avatar -->
+            <div id="current-user-avatar" class="current-user-avatar" style="display: none;" title="Current user"></div>
+        </div>
+    </header>
+
+    <!-- Author Banner (docked under top bar, full-width) -->
+    <div class="author-banner" id="author-banner">
+        <div class="ab-cap">
+            <span class="ab-name" id="author-name"></span>
+        </div>
+        <div class="ab-sep"></div>
+        <span class="ab-meta" id="author-verses"></span>
+        <div class="ab-sep"></div>
+        <span class="ab-era" id="author-era"></span>
+    </div>
+
+    <!-- Search Bar (shown below header when active) -->
+    <div id="search-bar" class="search-bar" style="display: none;">
+        <button id="back-from-search" class="icon-btn back-btn" aria-label="Back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </button>
+        <div class="search-input-wrapper">
+            <svg class="search-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input id="search-input" type="text" class="search-input" placeholder="Search Bible" autocomplete="off">
+            <button id="clear-search" class="icon-btn clear-search-btn" aria-label="Clear" style="display: none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="filter-btn-wrapper">
+            <button id="filter-btn" class="icon-btn filter-btn" aria-label="Filter">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+            </button>
+
+            <!-- Advanced Filter Popup -->
+            <div id="advanced-filter" class="filter-popup" style="display: none;">
+                <div class="filter-popup-content">
+                    <div class="filter-popup-header">
+                        <h3>Filter Search</h3>
+                        <button id="close-filter" class="icon-btn" aria-label="Close">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="filter-fields">
+                        <div class="filter-field">
+                            <label for="filter-book">Book</label>
+                            <select id="filter-book" class="filter-select">
+                                <option value="">All Books</option>
+                            </select>
+                        </div>
+                        <div class="filter-field">
+                            <label for="filter-chapter">Chapter</label>
+                            <input id="filter-chapter" type="number" class="filter-input" placeholder="Any" min="1">
+                        </div>
+                    </div>
+                    <div class="filter-actions">
+                        <button id="clear-filter" class="filter-btn-secondary">Clear</button>
+                        <button id="apply-filter" class="filter-btn-primary">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Language Modal for Mobile -->
+    <div class="language-modal-overlay">
+        <div class="language-modal">
+            <div class="language-modal-header">
+                <h3>Select Language</h3>
+                <button class="modal-close-btn" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="language-modal-options">
+                <button class="language-modal-option" data-lang="english">English</button>
+                <button class="language-modal-option" data-lang="tamil">Tamil</button>
+                <button class="language-modal-option" data-lang="both">Both</button>
+            </div>
+            <div class="color-palette-section">
+                <div class="color-palette-header">
+                    <h4>English Text Color</h4>
+                </div>
+                <div class="color-palette-options">
+                    <button class="color-option" data-color="default" aria-label="Default">
+                        <div class="color-circle default"></div>
+                    </button>
+                    <button class="color-option" data-color="blue" aria-label="Blue">
+                        <div class="color-circle blue"></div>
+                    </button>
+                    <button class="color-option" data-color="red" aria-label="Red">
+                        <div class="color-circle red"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Language Selection Bottom Sheet (Mobile Only) -->
+    <div class="language-backdrop" id="language-bottom-sheet-overlay"></div>
+    <div class="language-bottom-sheet" id="language-bottom-sheet">
+        <div class="language-sheet-handle-bar">
+            <div class="language-sheet-handle"></div>
+        </div>
+        <div class="language-sheet-header">
+            <h3>Select Language</h3>
+        </div>
+        <div class="language-sheet-options">
+            <button class="language-sheet-option" data-lang="english">
+                <span>English</span>
+            </button>
+            <button class="language-sheet-option" data-lang="tamil">
+                <span>Tamil</span>
+            </button>
+            <button class="language-sheet-option" data-lang="both">
+                <span>Both</span>
+            </button>
+        </div>
+        <div class="language-sheet-color-palette" id="language-sheet-color-palette" style="display: none;">
+            <div class="language-sheet-color-header">
+                <h4>English Text Color</h4>
+            </div>
+            <div class="language-sheet-color-options">
+                <button class="language-sheet-color-option" data-color="default" aria-label="Default">
+                    <div class="color-circle default"></div>
+                </button>
+                <button class="language-sheet-color-option" data-color="blue" aria-label="Blue">
+                    <div class="color-circle blue"></div>
+                </button>
+                <button class="language-sheet-color-option" data-color="red" aria-label="Red">
+                    <div class="color-circle red"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Meaning Bottom Sheet -->
+    <div class="book-meaning-backdrop" id="book-meaning-backdrop"></div>
+    <div class="book-meaning-bottom-sheet" id="book-meaning-bottom-sheet">
+        <div class="book-meaning-drag-handle">
+            <div class="book-meaning-handle-pill"></div>
+        </div>
+        <div class="book-meaning-header">
+            <div class="book-meaning-name-block">
+                <p class="book-meaning-title" id="book-meaning-title"></p>
+                <p class="book-meaning-tamil" id="book-meaning-tamil"></p>
+            </div>
+            <span class="book-meaning-testament-badge" id="book-meaning-testament-badge"></span>
+        </div>
+        <div class="book-meaning-info-card">
+            <div class="book-meaning-row">
+                <div class="book-meaning-icon-box book-meaning-icon-amber">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#633806" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/>
+                        <path d="M5 9c0 2.144 2.952 3.908 6.7 4"/>
+                        <path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="book-meaning-row-label">Hebrew / Greek</p>
+                    <p class="book-meaning-row-value"><span id="book-meaning-hebrew-name"></span><span class="book-meaning-script" id="book-meaning-hebrew-script"></span></p>
+                </div>
+            </div>
+            <div class="book-meaning-row">
+                <div class="book-meaning-icon-box book-meaning-icon-purple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3C3489" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3l1.912 5.813h6.088l-4.944 3.574 1.912 5.813-4.968-3.574-4.968 3.574 1.912-5.813-4.944-3.574h6.088z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="book-meaning-row-label">Meaning</p>
+                    <p class="book-meaning-row-value" id="book-meaning-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Note Viewer Modal -->
+    <div class="note-viewer-overlay" id="note-viewer-popup" style="display: none;">
+        <div class="note-viewer-modal">
+            <div class="note-viewer-handle">
+                <div class="note-viewer-handle-bar"></div>
+            </div>
+            <div class="note-viewer-header">
+                <span class="note-viewer-ref" id="note-viewer-ref"></span>
+
+                <!-- Single Title (shown when tabs are hidden) -->
+                <div class="note-viewer-single-title" id="note-viewer-single-title" style="display: none;"></div>
+
+                <!-- Segmented Control in Header -->
+                <div class="note-viewer-tabs">
+                    <button class="note-viewer-tab active" data-tab="note" onclick="switchNoteViewerTab('note')"
+                        title="Note">
+                        <img src="resources/icons/note.png" alt="Note" class="note-viewer-tab-icon">
+                    </button>
+                    <button class="note-viewer-tab" data-tab="references" onclick="switchNoteViewerTab('references')"
+                        style="display: none;" title="References">
+                        <svg class="note-viewer-tab-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <button class="note-viewer-close-btn" id="note-viewer-close-btn" title="Close">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="note-viewer-tab-content active" id="note-tab-content">
+                <div class="note-viewer-section">
+                    <div class="note-viewer-content" id="note-viewer-content"></div>
+                </div>
+                <button class="note-viewer-edit-btn" id="note-viewer-edit-btn" title="Edit Note">
+                    Edit
+                </button>
+            </div>
+
+            <div class="note-viewer-tab-content" id="references-tab-content">
+                <div class="note-viewer-references-content" id="note-viewer-references-content"></div>
+                <button class="note-viewer-add-ref-btn" id="note-viewer-add-ref-btn" title="Add Reference"
+                    onclick="showAddReferenceDialog()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="note-viewer-footer">
+            </div>
+        </div>
+    </div>
+
+    <!-- Passage Popup for Note Viewer -->
+    <div class="passage-popup" id="notePassagePopup" onclick="handleNotePassagePopupClick(event)">
+        <div class="passage-modal-card" onclick="event.stopPropagation()">
+            <div class="passage-header-handle-container">
+                <div class="passage-header-handle"></div>
+            </div>
+            <div class="passage-modal-header">
+                <h2 class="passage-modal-title">
+                    <span class="passage-modal-badge" id="notePassageBadge">Loading...</span>
+                </h2>
+                <button class="passage-modal-close-btn" onclick="closeNotePassageModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="passage-modal-lang-buttons">
+                <button class="passage-lang-btn active" data-lang="english"
+                    onclick="switchNotePassageLanguage('english')">English</button>
+                <button class="passage-lang-btn" data-lang="tamil"
+                    onclick="switchNotePassageLanguage('tamil')">Tamil</button>
+                <button class="passage-lang-btn" data-lang="dual"
+                    onclick="switchNotePassageLanguage('dual')">Both</button>
+            </div>
+            <div class="passage-modal-content" id="notePassageContent">
+                <p>Loading passage...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Reference Bottom Sheet -->
+    <div class="add-ref-sheet-overlay" id="add-ref-sheet-overlay"></div>
+    <div class="add-ref-sheet" id="add-ref-sheet">
+        <div class="add-ref-sheet-handle"></div>
+        <div class="add-ref-sheet-header">
+            <h2 class="add-ref-sheet-title">Add Reference</h2>
+            <button class="add-ref-close-btn" id="add-ref-close-btn" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="add-ref-sheet-content">
+            <div class="add-ref-input-group">
+                <div class="add-ref-dropdowns-container">
+                    <div class="add-ref-dropdowns-row">
+                        <div class="add-ref-dropdown-group">
+                            <label class="add-ref-dropdown-label">Book</label>
+                            <select class="add-ref-dropdown-select" id="add-ref-book-select">
+                                <option value="">Select Book</option>
+                            </select>
+                        </div>
+                        <div class="add-ref-dropdown-group">
+                            <label class="add-ref-dropdown-label">Chapter</label>
+                            <select class="add-ref-dropdown-select" id="add-ref-chapter-select" disabled>
+                                <option value="">Select Chapter</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="add-ref-verses-row">
+                        <div class="add-ref-dropdown-group">
+                            <label class="add-ref-dropdown-label">Verses</label>
+                            <select class="add-ref-dropdown-select" id="add-ref-verses-select" multiple disabled>
+                                <option value="" disabled>Select Verse</option>
+                            </select>
+                        </div>
+                        <button class="add-ref-add-verse-btn" id="add-ref-add-verse-btn" type="button" disabled>Add
+                            Verse</button>
+                    </div>
+                </div>
+                <div class="add-ref-verses-chips" id="add-ref-verses-chips"></div>
+            </div>
+
+            <!-- Section showing existing references -->
+            <div class="add-ref-existing-refs" id="add-ref-existing-refs">
+                <div class="add-ref-existing-label">Current References:</div>
+                <div class="add-ref-existing-list" id="add-ref-existing-list"></div>
+            </div>
+        </div>
+        <div class="add-ref-sheet-buttons">
+            <button class="add-ref-btn add-ref-btn-cancel" id="add-ref-btn-cancel">Cancel</button>
+            <button class="add-ref-btn add-ref-btn-save" id="add-ref-btn-save">Save</button>
+        </div>
+    </div>
+
+    <!-- Notes Modal with Android-style Bottom Sheet -->
+    <div class="notes-modal-overlay" id="notes-modal-overlay" style="display: none;">
+        <div class="notes-modal" id="notes-modal">
+            <!-- Handle bar for drag gesture (Android-style) -->
+            <div class="notes-sheet-handle" id="notes-sheet-drag-handle">
+                <div class="notes-handle-bar"></div>
+            </div>
+
+            <div class="notes-modal-header">
+                <h3>Add Note</h3>
+                <button class="notes-modal-close-btn" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="notes-modal-content" id="notes-modal-content">
+                <div class="notes-verse-ref-wrapper">
+                    <div class="notes-verse-ref" id="notes-verse-ref"></div>
+                </div>
+                <div id="notes-textarea" class="notes-textarea" contenteditable="true"
+                    data-placeholder="Type your note here..."></div>
+                <div class="notes-modal-actions">
+                    <button id="delete-note-btn" class="notes-btn-delete" style="display: none;">Delete</button>
+                    <button id="save-note-btn" class="notes-btn-save">Save Note</button>
+                </div>
+            </div>
+
+            <!-- Loading Overlay -->
+            <div class="notes-loading" id="notes-loading">
+                <div class="notes-spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Modal -->
+    <div class="pdf-modal-overlay" id="pdf-modal-overlay" style="display: none;">
+        <div class="pdf-modal" id="pdf-modal">
+            <div class="pdf-modal-header">
+                <h3 id="pdf-modal-title">PDF</h3>
+                <button class="pdf-modal-close-btn" id="pdf-modal-close-btn" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="pdf-modal-content">
+                <iframe id="pdf-iframe" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bookmark Color Picker Bottom Sheet -->
+    <div class="bookmark-color-picker-overlay" id="bookmark-color-picker-overlay">
+        <div class="bookmark-color-picker-sheet">
+            <!-- Handle bar for drag gesture -->
+            <div class="bookmark-color-sheet-handle" id="bookmark-color-sheet-handle">
+                <div class="bookmark-color-handle-bar"></div>
+            </div>
+
+            <div class="bookmark-color-sheet-header">
+                <h3>Select Bookmark Color</h3>
+                <button class="bookmark-color-close-btn" id="bookmark-color-close-btn" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="bookmark-color-sheet-content" id="bookmark-color-sheet-content">
+                <div class="bookmark-color-options-grid">
+                    <button class="bookmark-color-option" data-color="burgundy" style="background: #78aaff !important;"
+                        title="Blue"></button>
+                    <button class="bookmark-color-option" data-color="forest" style="background: #e6c45a !important;"
+                        title="Gold"></button>
+                    <button class="bookmark-color-option" data-color="navy" style="background: #72e6a4 !important;"
+                        title="Mint"></button>
+                    <button class="bookmark-color-option" data-color="amber" style="background: #ff8fc1 !important;"
+                        title="Rose"></button>
+                    <button class="bookmark-color-option" data-color="violet" style="background: #ff9a54 !important;"
+                        title="Orange"></button>
+                    <button class="bookmark-color-option" data-color="teal" style="background: #b38aff !important;"
+                        title="Purple"></button>
+                    <button class="bookmark-color-option" data-color="rust" style="background: #5ed0d9 !important;"
+                        title="Teal"></button>
+                    <button class="bookmark-color-option" data-color="olive" style="background: #ff7a7a !important;"
+                        title="Red"></button>
+                    <button class="bookmark-color-option" data-color="indigo" style="background: #b4c76f !important;"
+                        title="Olive"></button>
+                    <button class="bookmark-color-option" data-color="slate" style="background: #9d9d9d !important;"
+                        title="Grey"></button>
+                    <button class="bookmark-color-option" data-color="yellow" style="background: #78aaff !important;"
+                        title="Blue"></button>
+                    <button class="bookmark-color-option" data-color="green" style="background: #e6c45a !important;"
+                        title="Gold"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Voice Command Status -->
+    <div id="voice-status" class="voice-status" style="display: none;">
+        <div class="voice-status-content">
+            <svg class="voice-status-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+            <span class="voice-status-text">Listening...</span>
+        </div>
+    </div>
+
+    <div class="main-layout">
+        <!-- Mobile Drawer Overlay -->
+        <div class="drawer-overlay"></div>
+
+        <!-- Mobile Drawer Header -->
+        <div class="drawer-header">
+            <button class="drawer-close-btn" aria-label="Close">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <span class="drawer-title">My Bible</span>
+            <div class="drawer-header-controls">
+                <button class="icon-btn drawer-search-btn" aria-label="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                </button>
+                <button class="icon-btn drawer-theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <style>
+            .u-glow {
+                border-left: 3px solid #f59e0b;
+                padding-left: 8px;
+            }
+
+            /* Author Banner — Design 5 */
+            .author-banner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding: 9px 18px;
+                background: var(--author-banner-bg, #292a2d);
+                border-top: none;
+                border-bottom: 1px solid var(--author-banner-border, #3c4043);
+                background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, transparent 100%);
+            }
+
+            .author-banner .ab-cap {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                background: var(--author-cap-bg, #202124);
+                border: 1px solid var(--author-cap-border, #3c4043);
+                border-radius: 20px;
+                padding: 6px 12px 6px 12px;
+            }
+
+            .author-banner .ab-dot {
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                background: #b45309;
+                /* dark theme dot */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 11px;
+                font-weight: 700;
+                color: #fff;
+                flex-shrink: 0;
+                font-family: sans-serif;
+            }
+
+            .author-banner .ab-name {
+                font-size: 12px;
+                font-weight: 600;
+                color: var(--author-name-color, #afb2b8);
+                font-family: sans-serif;
+            }
+
+            .author-banner .ab-sep {
+                width: 1px;
+                height: 16px;
+                background: var(--author-sep-color, #3c4043);
+                flex-shrink: 0;
+            }
+
+            .author-banner .ab-era {
+                font-size: 11px;
+                color: var(--author-era-color, #9aa0a6);
+                font-family: sans-serif;
+            }
+
+            .author-banner .ab-meta {
+                font-size: 11px;
+                color: #bfa573;
+                font-family: sans-serif;
+                white-space: nowrap;
+            }
+
+            .author-banner .ab-dot-sep {
+                font-size: 11px;
+                color: var(--author-era-color, #9aa0a6);
+                opacity: 0.9;
+                margin: 0 -2px;
+                user-select: none;
+            }
+
+            /* Light theme overrides */
+            body:not(.dark-theme) .author-banner {
+                --author-banner-bg: #f2f2f2;
+                --author-banner-border: #e0e0e0;
+                --author-cap-bg: #fff;
+                --author-cap-border: #ddd;
+                --author-name-color: #333;
+                --author-sep-color: #ddd;
+                --author-era-color: #777;
+            }
+
+            body:not(.dark-theme) .author-banner .ab-dot {
+                background: #92400e;
+                /* light theme dot */
+            }
+
+            /* Desktop-only alignment to match bottom nav/content area */
+            @media (min-width: 769px) {
+                .author-banner {
+                    margin-left: 0px;
+                    /* same offset as bottom-nav left */
+                    margin-right: 0;
+                }
+            }
+        </style>
+
+        <!-- New Bible Selector (mobile only, toggled via settings) -->
+        <div class="bible-selector-new" id="bible-selector-new">
+            <div class="bs-tab-bar">
+                <div class="bs-tab-buttons">
+                    <button class="bs-tab-btn active" id="bs-tab-ot">Old Testament</button>
+                    <button class="bs-tab-btn" id="bs-tab-nt">New Testament</button>
+                </div>
+            </div>
+            <div class="bs-cat-wrap">
+                <div class="bs-cat-row" id="bs-cat-row"></div>
+            </div>
+            <div class="bs-swipe-outer" id="bs-swipe-outer">
+                <div class="bs-swipe-track" id="bs-swipe-track">
+                    <div class="bs-swipe-page" id="bs-page-ot">
+                        <div class="bs-left">
+                            <div class="bs-book-list" id="bs-books-ot"></div>
+                        </div>
+                        <div class="bs-right" id="bs-right-ot">
+                            <div class="bs-sec-label">Chapter</div>
+                            <div class="bs-num-grid" id="bs-ch-ot"></div>
+                            <div class="bs-sec-label">Verse</div>
+                            <div class="bs-num-grid" id="bs-vs-ot"></div>
+                        </div>
+                    </div>
+                    <div class="bs-swipe-page" id="bs-page-nt">
+                        <div class="bs-left">
+                            <div class="bs-book-list" id="bs-books-nt"></div>
+                        </div>
+                        <div class="bs-right" id="bs-right-nt">
+                            <div class="bs-sec-label">Chapter</div>
+                            <div class="bs-num-grid" id="bs-ch-nt"></div>
+                            <div class="bs-sec-label">Verse</div>
+                            <div class="bs-num-grid" id="bs-vs-nt"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left Sidebar - Books -->
+        <aside class="books-sidebar">
+            <div class="book-item active">
+                <span class="book-name">Genesis</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Exodus</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Leviticus</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Numbers</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Deuteronomy</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Joshua</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Judges</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Ruth</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Samuel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Samuel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Kings</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Kings</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Chronicles</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Chronicles</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Ezra</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Nehemiah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Esther</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Job</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Psalms</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Proverbs</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Ecclesiastes</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Song of Solomon</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Isaiah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Jeremiah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Lamentations</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Ezekiel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Daniel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Hosea</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Joel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Amos</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Obadiah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Jonah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Micah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Nahum</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Habakkuk</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Zephaniah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Haggai</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Zechariah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Malachi</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name u-glow">Matthew</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Mark</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Luke</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">John</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Acts</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Romans</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Corinthians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Corinthians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Galatians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Ephesians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Philippians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Colossians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Thessalonians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Thessalonians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Timothy</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Timothy</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Titus</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Philemon</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Hebrews</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">James</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Peter</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Peter</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I John</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II John</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">III John</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Jude</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Revelation</span>
+            </div>
+        </aside>
+
+        <!-- Middle Column - Chapters -->
+        <aside class="chapters-column">
+            <div class="number-item active">1</div>
+            <div class="number-item">2</div>
+            <div class="number-item">3</div>
+            <div class="number-item">4</div>
+            <div class="number-item">5</div>
+            <div class="number-item">6</div>
+            <div class="number-item">7</div>
+            <div class="number-item">8</div>
+            <div class="number-item">9</div>
+            <div class="number-item">10</div>
+            <div class="number-item">11</div>
+            <div class="number-item">12</div>
+            <div class="number-item">13</div>
+            <div class="number-item">14</div>
+            <div class="number-item">15</div>
+            <div class="number-item">16</div>
+            <div class="number-item">17</div>
+            <div class="number-item">18</div>
+            <div class="number-item">19</div>
+            <div class="number-item">20</div>
+            <div class="number-item">21</div>
+            <div class="number-item">22</div>
+        </aside>
+
+        <!-- Verses Column -->
+        <aside class="verses-column">
+            <div class="number-item active">1</div>
+            <div class="number-item">2</div>
+            <div class="number-item">3</div>
+            <div class="number-item">4</div>
+            <div class="number-item">5</div>
+            <div class="number-item">6</div>
+            <div class="number-item">7</div>
+            <div class="number-item">8</div>
+            <div class="number-item">9</div>
+            <div class="number-item">10</div>
+            <div class="number-item">11</div>
+            <div class="number-item">12</div>
+            <div class="number-item">13</div>
+            <div class="number-item">14</div>
+            <div class="number-item">15</div>
+            <div class="number-item">16</div>
+            <div class="number-item">17</div>
+            <div class="number-item">18</div>
+            <div class="number-item">19</div>
+            <div class="number-item">20</div>
+            <div class="number-item">21</div>
+            <div class="number-item">22</div>
+        </aside>
+
+        <!-- Verse Count Bookmark -->
+        <div class="verse-count-banner-container" id="verse-count-banner">
+            <span class="verse-count-text"></span>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <!-- Loading Spinner -->
+            <div class="loader-overlay" id="loader">
+                <div class="loader-container">
+                    <div class="book-loader"></div>
+                    <p class="loader-text">Loading...</p>
+                </div>
+            </div>
+
+            <!-- Search Results Info -->
+            <div id="search-results-info" class="search-results-info" style="display: none;">
+                Found <span id="results-count">0</span> results
+            </div>
+
+            <!-- Search Results -->
+            <div id="search-results" class="search-results" style="display: none;">
+                <div class="search-empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <p>Search for verses in Tamil or English</p>
+                </div>
+            </div>
+
+            <!-- Scripture Text (Bible Content) -->
+            <!-- Mobile Chapter Header -->
+            <div class="mobile-chapter-header" id="mobile-chapter-header">
+                <div class="mobile-chapter-title-wrap">
+                    <span class="mobile-chapter-title"></span>
+                </div>
+                <div class="mobile-chapter-number-wrapper">
+                    <div class="mobile-chapter-number"></div>
+                    <span class="mobile-verse-count-badge" id="mobile-verse-count-badge"></span>
+                    <button class="expand-all-headers-btn" id="expand-all-headers-btn"
+                        title="Expand/collapse all headers">
+                        <span class="expand-all-icon">⇅</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="scripture-text" id="scripture-text"></div>
+        </main>
+    </div>
+
+    <!-- Right Sidebar - Menu Options -->
+    <aside class="right-sidebar">
+        <div class="right-menu-item" id="bible-reading-option">
+            <span class="option-icon" style="font-size: 20px;">📚</span>
+            <span class="option-name">Bible Reading</span>
+        </div>
+        <div class="right-menu-item" id="daily-prayers-option">
+            <span class="option-icon" style="font-size: 20px;">🙏</span>
+            <span class="option-name">Daily Prayers</span>
+        </div>
+        <div class="right-menu-item" id="right-notes-option">
+            <span class="option-icon" style="font-size: 20px;">📝</span>
+            <span class="option-name">Bible Notes</span>
+        </div>
+        <div class="right-menu-item" id="right-prayers-option">
+            <span class="option-icon" style="font-size: 20px;">🙏</span>
+            <span class="option-name">Prayers</span>
+        </div>
+        <div class="right-menu-item" id="right-saturday-service-option" onclick="window.location.href='src/pages/saturday-service.html'">
+            <span class="option-icon" style="font-size: 20px;">⛪</span>
+            <span class="option-name">Saturday Service</span>
+        </div>
+        <div class="right-menu-item" id="right-local-recording-option" onclick="window.location.href='src/pages/Local Recording.html'">
+            <span class="option-icon" style="font-size: 20px;">🎧</span>
+            <span class="option-name">Local Recordings</span>
+        </div>
+        <div class="right-menu-item" id="right-settings-option">
+            <span class="option-icon" style="font-size: 20px;">⚙️</span>
+            <span class="option-name">Settings</span>
+        </div>
+        <div class="right-menu-item" id="right-logout-option" style="display: none;">
+            <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="10" height="16" rx="1.5"></rect>
+                <path d="M15 12H7"></path>
+                <path d="M19 12l-4-3"></path>
+                <path d="M19 12l-4 3"></path>
+            </svg>
+            <span class="option-name">Logout</span>
+        </div>
+    </aside>
+
+    <!-- Right Sidebar Settings Panel -->
+    <aside class="right-settings-panel" id="right-settings-panel" aria-hidden="true">
+        <div class="settings-phone-wrap">
+            <div class="settings-header">
+                <button class="settings-header-back" id="right-settings-back-btn" aria-label="Close settings">
+                    <svg viewBox="0 0 24 24">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </button>
+                <div class="settings-header-title">
+                    Settings
+                    <span></span>
+                </div>
+                <div class="settings-header-actions">
+                    <button id="settings-cancel-icon-btn" class="settings-header-icon-btn" aria-label="Cancel changes"
+                        title="Cancel">
+                        <svg viewBox="0 0 24 24">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <button id="settings-save-icon-btn" class="settings-header-icon-btn primary"
+                        aria-label="Save changes" title="Save">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="settings-body">
+                <!-- PROFILE IMAGE -->
+                <div class="settings-section" id="settings-profile-section" style="display:none;">
+                    <div class="settings-section-label">Profile Image</div>
+                    <div class="settings-card">
+                        <div class="settings-profile-row">
+                            <div class="settings-profile-avatar" id="settings-profile-avatar"></div>
+                            <div class="settings-profile-info">
+                                <div class="settings-profile-name" id="settings-profile-name"></div>
+                                <button class="settings-profile-change-btn" id="settings-profile-change-btn">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="17 8 12 3 7 8"/>
+                                        <line x1="12" y1="3" x2="12" y2="15"/>
+                                    </svg>
+                                    Change Photo
+                                </button>
+                                <input type="file" id="settings-profile-file-input" accept="image/png,image/jpeg,image/webp" style="display:none;">
+                            </div>
+                        </div>
+                        <div class="settings-profile-upload-status" id="settings-profile-upload-status" style="display:none;"></div>
+                    </div>
+                </div>
+
+                <!-- Profile Image Crop Modal -->
+                <div class="profile-crop-overlay" id="profile-crop-overlay">
+                    <div class="profile-crop-modal">
+                        <div class="profile-crop-header">
+                            <span class="profile-crop-title">Crop Photo</span>
+                            <button class="profile-crop-close-btn" id="profile-crop-cancel-btn" aria-label="Cancel">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="profile-crop-body">
+                            <img id="profile-crop-image" alt="Crop preview">
+                        </div>
+                        <div class="profile-crop-actions">
+                            <button class="profile-crop-btn secondary" id="profile-crop-rotate-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="1 4 1 10 7 10"></polyline>
+                                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                                </svg>
+                            </button>
+                            <button class="profile-crop-btn primary" id="profile-crop-confirm-btn">Upload</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- THEME -->
+                <div class="settings-section">
+                    <div class="settings-section-label">Theme</div>
+                    <div class="settings-segment" id="settings-theme-segment">
+                        <button class="settings-seg-btn active" data-val="dark"
+                            onclick="settingsSelectSeg('settings-theme-segment', this)">Dark</button>
+                        <button class="settings-seg-btn" data-val="light"
+                            onclick="settingsSelectSeg('settings-theme-segment', this)">Light</button>
+                    </div>
+                </div>
+
+                <!-- LANGUAGE -->
+                <div class="settings-section">
+                    <div class="settings-section-label">Language</div>
+                    <div class="settings-segment settings-lang" id="settings-lang-segment">
+                        <button class="settings-seg-btn active" data-val="en"
+                            onclick="settingsSelectLang(this)">English</button>
+                        <button class="settings-seg-btn" data-val="ta" onclick="settingsSelectLang(this)">Tamil</button>
+                        <button class="settings-seg-btn" data-val="both"
+                            onclick="settingsSelectLang(this)">Both</button>
+                    </div>
+
+                    <!-- English text color — shown only when Both is selected -->
+                    <div class="settings-color-panel" id="settings-color-panel">
+                        <div class="settings-card settings-color-card">
+                            <div class="settings-color-row">
+                                <span class="settings-color-row-label">English Text Color</span>
+                                <div class="settings-color-swatches">
+                                    <div class="settings-swatch grey selected" onclick="settingsSelectColor(this)">
+                                    </div>
+                                    <div class="settings-swatch blue" onclick="settingsSelectColor(this)"></div>
+                                    <div class="settings-swatch red" onclick="settingsSelectColor(this)"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DISPLAY OPTIONS -->
+                <div class="settings-section">
+                    <div class="settings-section-label">Display Options</div>
+                    <div class="settings-card">
+                        <div class="settings-row" id="settings-selector-style-row">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-selector">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                    </svg>
+                                </div>
+                                <span class="settings-row-text">Drawyer</span>
+                            </div>
+                            <div class="settings-radio-group" id="settings-selector-style-radio">
+                                <label class="settings-radio-label">
+                                    <input type="radio" name="selectorStyle" value="old" checked>
+                                    <span class="settings-radio-dot"></span>
+                                    Old
+                                </label>
+                                <label class="settings-radio-label">
+                                    <input type="radio" name="selectorStyle" value="new">
+                                    <span class="settings-radio-dot"></span>
+                                    New
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-row" data-setting="shortSummary" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-summary">
+                                    <svg viewBox="0 0 24 24">
+                                        <line x1="21" y1="10" x2="7" y2="10" />
+                                        <line x1="21" y1="6" x2="3" y2="6" />
+                                        <line x1="21" y1="14" x2="3" y2="14" />
+                                        <line x1="21" y1="18" x2="7" y2="18" />
+                                    </svg>
+                                </div>
+                                <span class="settings-row-text">Short Summary</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
+
+                        <div class="settings-row" data-setting="authorDetails" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-author">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg>
+                                </div>
+                                <span class="settings-row-text">Author Details</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
+
+                        <div class="settings-row" data-setting="memoryVerse" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-memory">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z" />
+                                        <circle cx="12" cy="9" r="2.5" />
+                                    </svg>
+                                </div>
+                                <span class="settings-row-text">Memory Verse</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FEATURES -->
+                <div class="settings-section">
+                    <div class="settings-section-label">Features</div>
+                    <div class="settings-card">
+                        <div class="settings-row" data-setting="bibleReading" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-bible">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                </div>
+                                <span class="settings-row-text">Bible Reading</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
+
+                        <div class="settings-row" id="settingsAdminRow" onclick="settingsHandleAdminToggle(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-admin">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    </svg>
+                                </div>
+                                <div class="settings-row-text">Admin Mode</div>
+                            </div>
+                            <div class="settings-admin-actions">
+                                <span class="settings-admin-badge" id="settingsAdminBadge">OFF</span>
+                                <button class="settings-toggle" id="settingsAdminToggle"
+                                    onclick="event.stopPropagation();settingsHandleAdminToggle(document.getElementById('settingsAdminRow'))"></button>
+                            </div>
+                        </div>
+
+                        <div class="settings-row" data-setting="verseHeading" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-verse">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M3 6h18M3 12h12M3 18h8" />
+                                        <path d="M18 14l3 3-3 3" />
+                                    </svg>
+                                </div>
+                                <span class="settings-row-text">Verse Heading</span>
+                            </div>
+                            <button class="settings-toggle on"
+                                onclick="settingsToggleVerseHeading(event, this)"></button>
+                        </div>
+
+                        <!-- VERSE HEADING LANGUAGE - Sub-option, shown only when Verse Heading is enabled -->
+                        <div class="settings-row-sub" id="verse-heading-language-sub">
+                            <div class="settings-row-sub-left">
+                                <span class="settings-row-sub-label">Language</span>
+                            </div>
+                            <div class="settings-segment settings-segment-compact"
+                                id="settings-verse-heading-language-segment">
+                                <button class="settings-seg-btn active" data-val="ta"
+                                    onclick="settingsSelectVerseHeadingLanguage(event, this)">தமிழ்</button>
+                                <button class="settings-seg-btn" data-val="en"
+                                    onclick="settingsSelectVerseHeadingLanguage(event, this)">English</button>
+                            </div>
+                        </div>
+
+                        <div class="settings-row-sub" id="verse-heading-only-sub" data-setting="verseHeadingOnly">
+                            <div class="settings-row-sub-left">
+                                <span class="settings-row-sub-label">Only Headers</span>
+                            </div>
+                            <button class="settings-toggle" onclick="settingsToggleOnlyHeaders(event, this)"></button>
+                        </div>
+
+                        <!-- VERSE HEADING COLOR -->
+                        <div class="settings-row-sub" id="verse-heading-color-sub">
+                            <div class="settings-row-sub-left">
+                                <span class="settings-row-sub-label">Color</span>
+                            </div>
+                            <div class="vh-picker-wrap">
+                                <div class="vh-picker-trigger" id="vh-picker-trigger" onclick="toggleVhColorPicker(event)">
+                                    <span class="vh-picker-preview" id="vh-picker-preview" style="background:#4caf50;"></span>
+                                    <span class="vh-picker-arrow">▾</span>
+                                </div>
+                                <div class="vh-picker-dropdown" id="vh-picker-dropdown">
+                                    <div class="vh-color-picker" id="verse-heading-color-swatches">
+                                        <div class="vh-swatch selected" data-vh-color="green" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#4caf50;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                        <div class="vh-swatch" data-vh-color="blue" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#4a72aa;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                        <div class="vh-swatch" data-vh-color="crimson" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#8b2a2a;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                        <div class="vh-swatch" data-vh-color="lavender" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#7a6aaa;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                        <div class="vh-swatch" data-vh-color="teal" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#2a8a8a;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                        <div class="vh-swatch" data-vh-color="mauve" onclick="selectVerseHeadingColor(this)">
+                                            <span class="vh-dot" style="background:#8a5a6a;"></span>
+                                            <span class="vh-check">✓</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Unsaved changes confirmation for settings -->
+            <div class="settings-discard-overlay" id="settings-discard-overlay">
+                <div class="settings-discard-modal">
+                    <div class="settings-discard-title">Discard changes?</div>
+                    <div class="settings-discard-text">
+                        You have unsaved changes in Settings. If you go back now, those changes will be lost.
+                    </div>
+                    <div class="settings-discard-actions">
+                        <button id="settings-discard-cancel-btn" class="settings-discard-btn secondary">Keep
+                            Editing</button>
+                        <button id="settings-discard-confirm-btn" class="settings-discard-btn primary">Discard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Summary Drawer -->
+    <div class="summary-drawer" id="summary-drawer">
+        <div class="summary-drawer-header">
+            <h3 class="summary-drawer-title">Chapter Summary</h3>
+            <button class="close-summary-btn" id="close-summary-btn" aria-label="Close">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="summary-drawer-content" id="summary-drawer-content">
+        </div>
+    </div>
+    <div class="summary-drawer-overlay" id="summary-drawer-overlay"></div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <button class="nav-btn" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+        </button>
+
+        <div class="current-chapter">Genesis 1</div>
+
+        <div class="home-wrapper">
+            <!-- Home Options Card -->
+            <div class="home-options-card" id="home-options-card">
+                <div class="home-option" data-action="summary">
+                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
+                    </svg>
+                    <span>Chapter Summary</span>
+                </div>
+                <div class="home-option" data-action="timeline">
+                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <span>Chapter Timeline</span>
+                </div>
+                <div class="home-option" data-action="characters">
+                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span>Chapter Characters</span>
+                </div>
+            </div>
+
+            <button class="nav-btn home-btn" aria-label="Home" style="display: none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+            </button>
+        </div>
+
+        <button id="search-btn-mobile" class="nav-btn mobile-only" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+
+        <button id="voice-btn" class="nav-btn voice-btn" aria-label="Voice Command" title="Voice Command">
+            <svg class="mic-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+            <svg class="mic-listening-icon" width="20" height="20" viewBox="0 0 24 24" fill="#ff4444" stroke="#ff4444"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+        </button>
+
+        <button class="nav-btn" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Gesture Navigation Area (for mobile devices with gesture navigation) -->
+    <div class="gesture-nav-area"></div>
+
+    <!-- Bible Reading Page -->
+    <div id="bible-reading-page" class="bible-reading-page" style="display: none;">
+        <header class="bible-reading-header">
+            <button id="exit-bible-reading" class="icon-btn exit-btn" aria-label="Exit">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </button>
+            <h2 class="bible-reading-title">Bible Reading</h2>
+        </header>
+        <div class="bible-reading-content">
+            <!-- Content will be added here in the future -->
+        </div>
+    </div>
+
+    <!-- Cross Reference Bottom Sheet -->
+    <div class="cross-ref-sheet-overlay" id="cross-ref-sheet-overlay"></div>
+    <div class="cross-ref-detail-sheet" id="cross-ref-detail-sheet">
+        <div class="cross-ref-sheet-handle"></div>
+        <div class="cross-ref-sheet-header detail-header" id="cross-ref-detail-header">
+            <h2 class="cross-ref-sheet-title">Cross References</h2>
+            <button class="cross-ref-detail-close-btn" id="cross-ref-detail-close-btn" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="width: 100%; height: 100%;">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="cross-ref-language-buttons">
+            <button class="cross-ref-lang-btn" data-lang="tamil"
+                onclick="switchCrossRefLanguage('tamil')">Tamil</button>
+            <button class="cross-ref-lang-btn active" data-lang="english"
+                onclick="switchCrossRefLanguage('english')">English</button>
+            <button class="cross-ref-lang-btn" data-lang="dual" onclick="switchCrossRefLanguage('dual')">Both</button>
+        </div>
+
+        <div class="cross-ref-sheet-content" id="cross-ref-detail-content"></div>
+    </div>
+
+    <!-- Bundled Bible Data (loads all books) -->
+    <script src="data/bible/bible-data-loader.js?cb=20251126003722"></script>
+
+    <!-- Supabase Client Library (Local for Offline Support) -->
+    <script src="src/lib/supabase.js?cb=20251126003722"></script>
+    <!-- Cropper.js for profile image cropping -->
+    <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js?cb=20260418170421"></script>
+
+
+    <script src="config/config.js?cb=20251126003722"></script>
+    
+    <!-- Check Saturday Service Visibility Setting -->
+    <script>
+        async function checkSaturdayServiceVisibility() {
+            try {
+                // Get current user ID from localStorage
+                const userId = localStorage.getItem('currentUserId');
+
+                if (!userId) {
+                    const menuItem = document.getElementById('right-saturday-service-option');
+                    if (menuItem) {
+                        menuItem.style.display = 'none';
+                    }
+                    return;
+                }
+
+                // Initialize Supabase client if not already initialized
+                if (typeof supabase === 'undefined') {
+                    setTimeout(checkSaturdayServiceVisibility, 500);
+                    return;
+                }
+
+                if (!SUPABASE_SATURDAY_SERVICE_CONFIG || !SUPABASE_SATURDAY_SERVICE_CONFIG.url || !SUPABASE_SATURDAY_SERVICE_CONFIG.anonKey) {
+                    setTimeout(checkSaturdayServiceVisibility, 500);
+                    return;
+                }
+
+                // Create Supabase client
+                const { createClient } = supabase;
+                const supabaseClient = createClient(
+                    SUPABASE_SATURDAY_SERVICE_CONFIG.url,
+                    SUPABASE_SATURDAY_SERVICE_CONFIG.anonKey
+                );
+
+                // Fetch user_settings for the current user
+                const { data, error } = await supabaseClient
+                    .from('user_settings')
+                    .select('saturday_service')
+                    .eq('user_id', userId)
+                    .limit(1);
+
+                if (error) {
+                    console.warn('[Saturday Service] Error fetching settings:', error);
+                    // Default to hiding if error (safer approach)
+                    const menuItem = document.getElementById('right-saturday-service-option');
+                    if (menuItem) {
+                        menuItem.style.display = 'none';
+                    }
+                    return;
+                }
+
+                // Check if saturday_service is true for this user
+                const saturdayServiceEnabled = data && data.length > 0 && data[0].saturday_service === true;
+
+                const menuItem = document.getElementById('right-saturday-service-option');
+                if (menuItem) {
+                    menuItem.style.display = saturdayServiceEnabled ? 'flex' : 'none';
+                }
+            } catch (err) {
+                console.error('[Saturday Service] Unexpected error:', err);
+                // Default to hiding if unexpected error
+                const menuItem = document.getElementById('right-saturday-service-option');
+                if (menuItem) {
+                    menuItem.style.display = 'none';
+                }
+            }
+        }
+
+        // Check when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', checkSaturdayServiceVisibility);
+        } else {
+            checkSaturdayServiceVisibility();
+        }
+    </script>
+
+    <script src="src/js/bible-data-manager.js?cb=20251126003722"></script>
+    <script src="src/js/voice-command.js?cb=20251126003722"></script>
+    <script src="src/data/verse-headers-english.js?cb=20260312000619"></script>
+    <script src="src/data/verse-headers-tamil.js?cb=20260312000619"></script>
+    <script src="src/data/bible-meta.js?cb=20251210006100"></script>
+    <script src="src/data/bibleAuthors.js?cb=20260309000100"></script>
+    <script src="src/data/short-summary.js?cb=20260301210232"></script>
+    <script src="src/data/book-intro.js?cb=20260317000100"></script>
+    <script src="src/data/bible-popups.js?cb=20260402000000"></script>
+    <script src="src/data/king-transition-data.js?cb=20260508000000"></script>
+    <script src="src/js/script.js?cb=20251210007400"></script>
+    <script src="src/js/bible-selector.js?cb=20260419000000"></script>
+    <script src="src/js/chapter-summary-pullout.js?cb=20260301210232"></script>
+    <script src="src/js/ai-summary.js?cb=20260423000000"></script>
+
+    <!-- Image Viewer Modal -->
+    <style>
+        #viewer {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .95);
+            z-index: 9999;
+            display: none;
+            flex-direction: column;
+            overscroll-behavior: contain;
+            touch-action: none;
+        }
+
+        #viewer.open {
+            display: flex;
+        }
+
+        /* Hide zoom control buttons - zoom available via keyboard/mouse wheel only */
+        .viewer-zoom-btn,
+        .viewer-zoom-info,
+        .viewer-controls-divider {
+            display: none !important;
+        }
+
+        .viewer-topbar {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            padding: 0 14px;
+            color: #fff;
+            font-size: 18px;
+            user-select: none;
+            order: 2;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+            pointer-events: auto;
+            z-index: 10001;
+        }
+
+        .viewer-btn {
+            cursor: pointer;
+            opacity: .8;
+            transition: opacity 0.2s ease;
+        }
+
+        .viewer-btn:hover {
+            opacity: 1;
+        }
+
+        .viewer-stage {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            touch-action: none;
+            user-select: none;
+            -webkit-user-select: none;
+            order: 1;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+
+        .viewer-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            transform-origin: center;
+            max-width: 100%;
+            max-height: 100%;
+            user-select: none;
+            cursor: grab;
+            pointer-events: auto;
+        }
+
+        .viewer-img:active {
+            cursor: grabbing;
+        }
+
+        .viewer-zoom-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .viewer-zoom-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .viewer-zoom-btn:active {
+            transform: scale(0.95);
+        }
+
+        .viewer-zoom-info {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .viewer-zoom-info.show {
+            opacity: 1;
+        }
+
+        .viewer-controls-divider {
+            width: 1px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .viewer-close-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 100, 100, 0.2);
+            border: 1.5px solid rgba(255, 100, 100, 0.4);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            user-select: none;
+            pointer-events: auto;
+            z-index: 10001;
+        }
+
+        .viewer-close-btn:hover {
+            background: rgba(255, 100, 100, 0.35);
+            border-color: rgba(255, 100, 100, 0.6);
+        }
+
+        .viewer-close-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+
+    <div id="viewer">
+        <div class="viewer-stage" id="stage">
+            <img id="viewerImg" class="viewer-img">
+        </div>
+        <div class="viewer-topbar">
+            <span class="viewer-close-btn" onclick="closeViewer()">✕</span>
+        </div>
+    </div>
+
+    <script>
+        let scale = 1;
+        let posX = 0, posY = 0;
+        let startX = 0, startY = 0;
+        let isDragging = false;
+        let lastTouchDist = 0;
+        let touchStartX = 0, touchStartY = 0;
+        let scrollPosition = 0;
+        const img = document.getElementById('viewerImg');
+        const stage = document.getElementById('stage');
+        const viewer = document.getElementById('viewer');
+        let viewerIsOpen = false;
+
+        function openViewer(imageSrc) {
+            // Save current scroll position
+            scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+            img.src = imageSrc;
+            viewer.classList.add('open');
+            viewerIsOpen = true;
+            // Reset zoom to 100%
+            resetZoom();
+            // Disable background scrolling
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+
+            // Push a history state for the image viewer
+            // This way, back button will close the image first
+            history.pushState({ type: 'imageViewer', open: true }, '', window.location.href);
+        }
+
+        function closeViewer() {
+            viewer.classList.remove('open');
+            viewerIsOpen = false;
+            // Re-enable background scrolling
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+            // Restore scroll position
+            window.scrollTo(0, scrollPosition);
+
+            // Pop the history state if viewer was open
+            if (history.state && history.state.type === 'imageViewer') {
+                history.back();
+            }
+        }
+
+        function updateTransform() {
+            img.style.transform = `translate(calc(-50% + ${posX}px), calc(-50% + ${posY}px)) scale(${scale})`;
+        }
+
+        function zoomIn() {
+            scale *= 1.2;
+            updateTransform();
+        }
+
+        function zoomOut() {
+            scale = Math.max(1, scale / 1.2);
+            updateTransform();
+        }
+
+        function resetZoom() {
+            scale = 1;
+            posX = 0;
+            posY = 0;
+            updateTransform();
+        }
+
+        // Close when clicking outside the image
+        stage.addEventListener('click', e => {
+            // Don't close if clicking on the image itself
+            if (e.target === img) {
+                return;
+            }
+            // Close if clicking anywhere else on the stage (dark background)
+            closeViewer();
+        });
+
+        // Additional handler for clicks directly on viewer div
+        viewer.addEventListener('click', e => {
+            // Close if clicking on the viewer container itself (dark background)
+            // But not on the close button (handled separately by onclick)
+            if (e.target === viewer && viewerIsOpen) {
+                closeViewer();
+            }
+        }, true);
+
+        // Handle back button/swipe - close image first, then allow app navigation
+        window.addEventListener('popstate', e => {
+            // If image viewer is open, close it instead of going back
+            if (viewerIsOpen) {
+                // Close image without popping history again
+                viewer.classList.remove('open');
+                viewerIsOpen = false;
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+                window.scrollTo(0, scrollPosition);
+                // Push state back so back button can work again after image closes
+                history.pushState({ type: 'imageViewer', open: true }, '', window.location.href);
+            }
+        }, false);
+
+        // Block back swipe gesture when viewer is open
+        document.addEventListener('touchstart', e => {
+            if (viewerIsOpen && e.touches.length === 1) {
+                const touchX = e.touches[0].clientX;
+                // Block swipes from left edge (back swipe) when viewer is open
+                if (touchX < 50) {
+                    e.preventDefault();
+                }
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchmove', e => {
+            if (viewerIsOpen && e.touches.length === 1) {
+                const touchX = e.touches[0].clientX;
+                // Continue blocking left edge swipes
+                if (touchX < 50) {
+                    e.preventDefault();
+                }
+            }
+        }, { passive: false });
+
+        // Keyboard shortcuts for zoom (hidden UI, accessible via keyboard)
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeViewer();
+            if (e.key === '+' || e.key === '=') zoomIn();
+            if (e.key === '-') zoomOut();
+            if (e.key === '0') resetZoom();
+        });
+
+        // Mouse wheel zoom
+        stage.addEventListener('wheel', e => {
+            e.preventDefault();
+            if (e.deltaY < 0) zoomIn();
+            else zoomOut();
+        }, { passive: false });
+
+        // Double-click to toggle zoom
+        stage.addEventListener('dblclick', e => {
+            if (e.target !== img) return;
+            if (scale === 1) scale = 2.5;
+            else resetZoom();
+            updateTransform();
+        });
+
+        // Mouse drag when zoomed
+        stage.addEventListener('mousedown', e => {
+            if (scale <= 1) return;
+            isDragging = true;
+            startX = e.clientX - posX;
+            startY = e.clientY - posY;
+            e.preventDefault();
+        });
+
+        window.addEventListener('mousemove', e => {
+            if (!isDragging) return;
+            posX = e.clientX - startX;
+            posY = e.clientY - startY;
+            updateTransform();
+        });
+
+        window.addEventListener('mouseup', () => isDragging = false);
+
+        // Touch support: pinch-to-zoom and drag-to-pan
+        stage.addEventListener('touchstart', e => {
+            if (e.touches.length === 2) {
+                // Pinch zoom start
+                lastTouchDist = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+                e.preventDefault();
+            } else if (e.touches.length === 1 && scale > 1) {
+                // Single finger drag when zoomed
+                isDragging = true;
+                touchStartX = e.touches[0].clientX - posX;
+                touchStartY = e.touches[0].clientY - posY;
+                e.preventDefault();
+            } else if (e.touches.length === 1) {
+                // Block swipe-back at left edge even when not zoomed
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        stage.addEventListener('touchmove', e => {
+            // Only prevent default if we're doing something with the image (pinch or drag)
+            if (e.touches.length === 2 || (e.touches.length === 1 && isDragging && scale > 1)) {
+                e.preventDefault();
+            }
+
+            if (e.touches.length === 2) {
+                // Pinch zoom
+                const newDist = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+                if (lastTouchDist > 0) {
+                    scale *= newDist / lastTouchDist;
+                    scale = Math.max(1, Math.min(scale, 5)); // Limit zoom between 1x and 5x
+                    updateTransform();
+                }
+                lastTouchDist = newDist;
+            } else if (e.touches.length === 1 && isDragging && scale > 1) {
+                // Single finger drag when zoomed
+                posX = e.touches[0].clientX - touchStartX;
+                posY = e.touches[0].clientY - touchStartY;
+                updateTransform();
+            }
+        }, { passive: false });
+
+        stage.addEventListener('touchend', e => {
+            isDragging = false;
+            lastTouchDist = 0;
+            if (e.touches.length === 0) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        // Only intercept specific swipe gestures when viewer is open to prevent app navigation
+        document.addEventListener('touchstart', e => {
+            // Only prevent default for potential swipe-back gestures at left edge
+            if (viewerIsOpen && e.touches.length === 1) {
+                const touchX = e.touches[0].clientX;
+                if (touchX < 30) {
+                    e.preventDefault();
+                }
+            }
+        }, { passive: false });
+
+        // Prevent scrolling gestures that aren't on the viewer stage
+        document.addEventListener('touchmove', e => {
+            // Only prevent if viewer is open and touch is not within stage
+            if (viewerIsOpen && !stage.contains(e.target)) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    </script>
+
+    <script>
+        // Mobile search button handler
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchBtnMobile = document.getElementById('search-btn-mobile');
+            const searchBtn = document.getElementById('search-btn');
+            if (searchBtnMobile && searchBtn) {
+                searchBtnMobile.addEventListener('click', () => {
+                    searchBtn.click();
+                });
+            }
+        });
+    </script>
+
+    <!-- Profile Image Full Preview (must be at body level for z-index to work) -->
+    <div class="profile-preview-overlay" id="profile-preview-overlay">
+        <img class="profile-preview-img" id="profile-preview-img" alt="Profile preview">
+    </div>
+
+    <!-- Scroll-Hide Functionality for Top Bar and Bottom Nav -->
+    <script>
+        // ============================================
+        // SCROLL-HIDE FUNCTIONALITY
+        // Hide navigation bars while scrolling verses
+        // ============================================
+        let lastScrollTop = 0;
+        let scrollTimeout;
+        const scrollHideDelay = 200; // ms before showing bars after scroll stops
+
+        function handleScrollHideShow(scrollValue) {
+            const topBar = document.querySelector('.top-bar');
+            const bottomNav = document.querySelector('.bottom-nav');
+            const arcTrigger = document.querySelector('.chapter-summary-arc-trigger');
+            const readingBanner = document.getElementById('from-bible-reading-banner');
+            
+            if (!topBar || !bottomNav) return;
+            
+            // Only hide if scrolling down AND we've scrolled a bit
+            if (scrollValue > lastScrollTop && scrollValue > 100) {
+                // Scrolling DOWN - hide bars
+                topBar.classList.add('hidden-on-scroll');
+                bottomNav.classList.add('hidden-on-scroll');
+                if (arcTrigger) arcTrigger.classList.add('hidden-on-scroll');
+                if (readingBanner) readingBanner.classList.add('hidden-on-scroll');
+            } else if (scrollValue <= lastScrollTop || scrollValue <= 100) {
+                // Scrolling UP or at top - show bars
+                topBar.classList.remove('hidden-on-scroll');
+                bottomNav.classList.remove('hidden-on-scroll');
+                if (arcTrigger) arcTrigger.classList.remove('hidden-on-scroll');
+                if (readingBanner) readingBanner.classList.remove('hidden-on-scroll');
+            }
+            
+            lastScrollTop = scrollValue <= 0 ? 0 : scrollValue;
+        }
+
+        // Initialize scroll listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            const contentArea = document.querySelector('.content-area');
+            
+            // Try content-area if it's scrollable
+            if (contentArea && contentArea.scrollHeight > contentArea.clientHeight) {
+                contentArea.addEventListener('scroll', () => {
+                    handleScrollHideShow(contentArea.scrollTop);
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        const topBar = document.querySelector('.top-bar');
+                        const bottomNav = document.querySelector('.bottom-nav');
+                        const arcTrigger = document.querySelector('.chapter-summary-arc-trigger');
+                        if (topBar && bottomNav && lastScrollTop <= 100) {
+                            topBar.classList.remove('hidden-on-scroll');
+                            bottomNav.classList.remove('hidden-on-scroll');
+                            if (arcTrigger) arcTrigger.classList.remove('hidden-on-scroll');
+                            const rb = document.getElementById('from-bible-reading-banner');
+                            if (rb) rb.classList.remove('hidden-on-scroll');
+                        }
+                    }, scrollHideDelay);
+                }, { passive: true });
+            }
+            
+            // Also listen to window scroll as fallback
+            window.addEventListener('scroll', () => {
+                const scrollVal = window.pageYOffset || document.documentElement.scrollTop;
+                handleScrollHideShow(scrollVal);
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    const topBar = document.querySelector('.top-bar');
+                    const bottomNav = document.querySelector('.bottom-nav');
+                    const arcTrigger = document.querySelector('.chapter-summary-arc-trigger');
+                    if (topBar && bottomNav && lastScrollTop <= 100) {
+                        topBar.classList.remove('hidden-on-scroll');
+                        bottomNav.classList.remove('hidden-on-scroll');
+                        if (arcTrigger) arcTrigger.classList.remove('hidden-on-scroll');
+                        const rb = document.getElementById('from-bible-reading-banner');
+                        if (rb) rb.classList.remove('hidden-on-scroll');
+                    }
+                }, scrollHideDelay);
+            }, { passive: true });
+        });
+    </script>
+
+    <!-- From Bible Reading - Mark Chapter Banner -->
+    <style>
+        #from-bible-reading-banner {
+            position: fixed;
+            bottom: calc(env(safe-area-inset-bottom, 0px) + 76px);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px 10px 16px;
+            border-radius: 28px;
+            max-width: calc(100vw - 32px);
+            width: max-content;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+            font-family: 'DM Sans', 'Lato', sans-serif;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .dark-theme #from-bible-reading-banner {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #e2e8f0;
+        }
+        body:not(.dark-theme) #from-bible-reading-banner {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #e2e8f0;
+        }
+        #from-bible-reading-banner.show {
+            display: flex;
+        }
+        #from-br-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #e2e8f0;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        #from-br-mark-btn {
+            background: #10b981;
+            border: none;
+            border-radius: 18px;
+            padding: 6px 13px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-shrink: 0;
+            transition: background 0.2s;
+            white-space: nowrap;
+            font-family: inherit;
+        }
+        #from-br-mark-btn:hover { background: #059669; }
+        #from-br-mark-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        #from-br-mark-btn.already-read {
+            background: #334155;
+            color: #94a3b8;
+            cursor: default;
+        }
+        #from-br-dismiss-btn {
+            background: none;
+            border: none;
+            color: #64748b;
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+            transition: background 0.15s;
+        }
+        #from-br-dismiss-btn:hover { background: rgba(255,255,255,0.08); color: #94a3b8; }
+    </style>
+
+    <div id="from-bible-reading-banner">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" style="flex-shrink:0;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span id="from-br-label"></span>
+        <button id="from-br-mark-btn" aria-label="Mark chapter as read">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span id="from-br-btn-text">Mark Read</span>
+        </button>
+        <button id="from-br-dismiss-btn" aria-label="Dismiss">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+    </div>
+
+    <script>
+        // From Bible Reading — show "Mark as Read" banner when navigated here from bible-reading.html.
+        // Also reacts to chapter navigation within index.html so all portions in today's plan
+        // show the banner without needing to go back to the reading tracker.
+        (function () {
+            const banner = document.getElementById('from-bible-reading-banner');
+            const label = document.getElementById('from-br-label');
+            const markBtn = document.getElementById('from-br-mark-btn');
+            const dismissBtn = document.getElementById('from-br-dismiss-btn');
+            if (!banner || !label || !markBtn || !dismissBtn) return;
+
+            // Session context — all today's portions; persists until dismissed
+            let sessionContext = null;
+            // portionIdx values marked read during this page session
+            const markedInSession = new Set();
+            // Timeout handle for the "Marked!" auto-hide
+            let markHideTimer = null;
+
+            function loadSessionContext() {
+                try {
+                    const raw = localStorage.getItem('fromBibleReadingSession');
+                    if (!raw) return null;
+                    const ctx = JSON.parse(raw);
+                    return (ctx && ctx.userId && Array.isArray(ctx.portions)) ? ctx : null;
+                } catch (e) { return null; }
+            }
+
+            function renderMarkBtn(isRead) {
+                const checkSvg = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>';
+                markBtn.style.background = '';
+                markBtn.classList.remove('already-read');
+                markBtn.disabled = false;
+                if (isRead) {
+                    markBtn.innerHTML = checkSvg + '<span>Already Read</span>';
+                    markBtn.classList.add('already-read');
+                    markBtn.disabled = true;
+                } else {
+                    markBtn.innerHTML = checkSvg + '<span id="from-br-btn-text">Mark Read</span>';
+                }
+            }
+
+            function showBannerForPortion(portion) {
+                const isRead = portion.isAlreadyRead || markedInSession.has(portion.portionIdx);
+                label.textContent = portion.bookName + ' ' + portion.chapterNum;
+                renderMarkBtn(isRead);
+                // Refresh the single-chapter context so the mark button works for this chapter
+                localStorage.setItem('fromBibleReading', JSON.stringify({
+                    userId: sessionContext.userId,
+                    portionIdx: portion.portionIdx,
+                    dateKey: sessionContext.dateKey,
+                    bookName: portion.bookName,
+                    chapterNum: portion.chapterNum,
+                    bookIndex: portion.bookIndex,
+                    isAlreadyRead: isRead
+                }));
+                banner.classList.add('show');
+            }
+
+            function checkAndUpdateBanner(bookIndex, chapter) {
+                if (!sessionContext) return;
+                // Cancel any pending auto-hide so it doesn't clobber the new chapter's banner
+                if (markHideTimer) { clearTimeout(markHideTimer); markHideTimer = null; }
+                const match = sessionContext.portions.find(
+                    p => p.bookIndex === bookIndex && p.chapterNum === chapter
+                );
+                if (match) {
+                    showBannerForPortion(match);
+                } else {
+                    banner.classList.remove('show');
+                    localStorage.removeItem('fromBibleReading');
+                }
+            }
+
+            // ── Initial page load ──────────────────────────────────────────
+            sessionContext = loadSessionContext();
+            if (!sessionContext) return; // Not in a reading session — nothing to do
+
+            // Show banner for the chapter we just navigated to
+            const initialRaw = localStorage.getItem('fromBibleReading');
+            if (initialRaw) {
+                try {
+                    const ctx = JSON.parse(initialRaw);
+                    if (ctx && ctx.userId) {
+                        label.textContent = ctx.bookName + ' ' + ctx.chapterNum;
+                        renderMarkBtn(!!ctx.isAlreadyRead);
+                        banner.classList.add('show');
+                    }
+                } catch (e) {}
+            }
+
+            // ── React to chapter navigation inside index.html ──────────────
+            window.addEventListener('bibleChapterChanged', function (e) {
+                checkAndUpdateBanner(e.detail.bookIndex, e.detail.chapter);
+            });
+
+            // ── Mark as Read ───────────────────────────────────────────────
+            markBtn.addEventListener('click', async function () {
+                if (markBtn.disabled) return;
+                const raw = localStorage.getItem('fromBibleReading');
+                if (!raw) return;
+                let cur;
+                try { cur = JSON.parse(raw); } catch (e) { return; }
+                if (!cur || !cur.userId) return;
+
+                markBtn.disabled = true;
+                const btnText = document.getElementById('from-br-btn-text');
+                if (btnText) btnText.textContent = '...';
+
+                try {
+                    const client = typeof getSupabaseClient === 'function' ? getSupabaseClient() : null;
+                    if (client && cur.userId) {
+                        await client.from('daily_portions').upsert([{
+                            user_id: cur.userId,
+                            reading_date: cur.dateKey,
+                            portion_index: cur.portionIdx,
+                            completed: true,
+                            completed_at: new Date().toISOString()
+                        }], { onConflict: 'user_id,reading_date,portion_index' }).select();
+                    }
+                    // Track locally so next visit to this chapter shows "Already Read"
+                    markedInSession.add(cur.portionIdx);
+                    const p = sessionContext.portions.find(x => x.portionIdx === cur.portionIdx);
+                    if (p) p.isAlreadyRead = true;
+
+                    markBtn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>Marked!</span>';
+                    markBtn.style.background = '#059669';
+                    localStorage.removeItem('fromBibleReading');
+
+                    // Auto-hide after 1.8s; cancelled if user navigates to next chapter first
+                    if (markHideTimer) clearTimeout(markHideTimer);
+                    markHideTimer = setTimeout(function () {
+                        markHideTimer = null;
+                        banner.classList.remove('show');
+                    }, 1800);
+                } catch (err) {
+                    console.error('Failed to mark reading portion:', err);
+                    markBtn.disabled = false;
+                    const btnText2 = document.getElementById('from-br-btn-text');
+                    if (btnText2) btnText2.textContent = 'Mark Read';
+                }
+            });
+
+            // ── Dismiss (ends the session) ─────────────────────────────────
+            dismissBtn.addEventListener('click', function () {
+                if (markHideTimer) { clearTimeout(markHideTimer); markHideTimer = null; }
+                banner.classList.remove('show');
+                localStorage.removeItem('fromBibleReading');
+                localStorage.removeItem('fromBibleReadingSession');
+                sessionContext = null;
+            });
+        })();
+    </script>
+</body>
+
+</html>

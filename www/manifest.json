@@ -1,0 +1,33 @@
+{
+  "name": "My Bible",
+  "short_name": "My Bible",
+  "description": "Read the Bible in Tamil and Easy English",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1e1f22",
+  "theme_color": "#1e1f22",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "resources/icons/bible.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "resources/icons/bible.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": [
+    "books",
+    "education",
+    "lifestyle"
+  ],
+  "screenshots": [],
+  "version": "20260730173337",
+  "last_updated": "2026-07-30T12:03:37.625Z"
+}

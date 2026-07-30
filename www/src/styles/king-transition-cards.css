@@ -1,0 +1,251 @@
+/* ═══════════════════════════════════════════════════════════════
+   King Transition Cards - Inline pill cards for Kings of Israel & Judah
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Card wrapper — max width for desktop ── */
+.king-transition-card {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* ── Pill Row (collapsed state) ── */
+.king-transition-pill-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 6px 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.king-transition-pill-row .ktc-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ktc-border, #E2D8C8) 40%, var(--ktc-border, #E2D8C8) 60%, transparent);
+    opacity: 0.4;
+}
+
+.king-transition-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background: var(--ktc-surface, #FFFFFF);
+    border: 1px solid var(--ktc-pill-border, #7A9B6A);
+    border-radius: 20px;
+    box-shadow: 0 1px 4px var(--ktc-shadow, rgba(0, 0, 0, 0.06));
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.king-transition-pill:active {
+    transform: scale(0.97);
+}
+
+.king-transition-pill .ktc-icon {
+    font-size: 11px;
+    line-height: 1;
+}
+
+.king-transition-pill .ktc-name {
+    font-size: 12px;
+    font-weight: 700;
+    font-family: Georgia, serif;
+    color: var(--ktc-accent, #3D6B2C);
+}
+
+.king-transition-pill .ktc-divider {
+    width: 1px;
+    height: 12px;
+    background: var(--ktc-border, #E2D8C8);
+    display: inline-block;
+}
+
+.king-transition-pill .ktc-kingdom {
+    font-size: 10px;
+    color: var(--ktc-subtext, #7A6A54);
+    font-family: Georgia, serif;
+}
+
+.king-transition-pill .ktc-arrow {
+    font-size: 9px;
+    color: var(--ktc-accent, #3D6B2C);
+    display: inline-block;
+    transition: transform 0.18s ease;
+}
+
+.king-transition-pill .ktc-arrow.open {
+    transform: rotate(180deg);
+}
+
+/* ── Expanded Card ── */
+.king-transition-expanded {
+    margin: 6px 4px 8px;
+    background: var(--ktc-card-bg, #F0F5ED);
+    border: 1px solid var(--ktc-card-border, rgba(122, 155, 106, 0.27));
+    border-left: 3px solid var(--ktc-pill-border, #7A9B6A);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 12px;
+    box-shadow: 0 2px 8px var(--ktc-shadow, rgba(0, 0, 0, 0.06));
+    display: none;
+    animation: ktcSlideDown 0.2s ease-out;
+}
+
+.king-transition-expanded.visible {
+    display: block;
+}
+
+@keyframes ktcSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header row inside expanded card */
+.king-transition-expanded .ktc-header {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.king-transition-expanded .ktc-king-name {
+    font-size: 12px;
+    font-weight: 700;
+    font-family: Georgia, serif;
+    color: var(--ktc-accent, #3D6B2C);
+}
+
+.king-transition-expanded .ktc-succeeds {
+    font-size: 10px;
+    color: var(--ktc-subtext, #7A6A54);
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+/* Footer row - kingdom badge, year, reign */
+.king-transition-expanded .ktc-footer {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px solid var(--ktc-card-border, rgba(122, 155, 106, 0.2));
+}
+
+.king-transition-expanded .ktc-kingdom-badge {
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--ktc-accent, #3D6B2C);
+    background: var(--ktc-badge-bg, #E8F2E4);
+    border: 1px solid var(--ktc-card-border, rgba(122, 155, 106, 0.27));
+    border-radius: 3px;
+    padding: 1px 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.king-transition-expanded .ktc-year {
+    font-size: 10px;
+    color: var(--ktc-accent, #3D6B2C);
+    font-weight: 600;
+}
+
+.king-transition-expanded .ktc-reign {
+    font-size: 10px;
+    color: var(--ktc-subtext, #7A6A54);
+}
+
+/* Context paragraph */
+.king-transition-expanded .ktc-context {
+    margin: 0 0 6px;
+    font-size: 12px;
+    color: var(--ktc-text, #1A1208);
+    font-family: Georgia, serif;
+    line-height: 1.6;
+}
+
+/* Note paragraph */
+.king-transition-expanded .ktc-note {
+    margin: 0;
+    font-size: 11px;
+    color: var(--ktc-subtext, #7A6A54);
+    font-family: Georgia, serif;
+    line-height: 1.55;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   JUDAH kingdom colors (light theme)
+   ═══════════════════════════════════════════════════════════════ */
+.king-transition-card.judah {
+    --ktc-pill-border: #7A9B6A;
+    --ktc-accent: #3D6B2C;
+    --ktc-card-bg: #F0F5ED;
+    --ktc-card-border: rgba(122, 155, 106, 0.27);
+    --ktc-badge-bg: #E8F2E4;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ISRAEL kingdom colors (light theme)
+   ═══════════════════════════════════════════════════════════════ */
+.king-transition-card.israel {
+    --ktc-pill-border: #6A85A8;
+    --ktc-accent: #2C4E7A;
+    --ktc-card-bg: #EDF2F8;
+    --ktc-card-border: rgba(106, 133, 168, 0.27);
+    --ktc-badge-bg: #E4EDF7;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Light theme variables (default)
+   ═══════════════════════════════════════════════════════════════ */
+.king-transition-card {
+    --ktc-surface: #FFFFFF;
+    --ktc-text: #1A1208;
+    --ktc-subtext: #7A6A54;
+    --ktc-border: #E2D8C8;
+    --ktc-shadow: rgba(0, 0, 0, 0.06);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK THEME
+   ═══════════════════════════════════════════════════════════════ */
+body.dark-theme .king-transition-card {
+    --ktc-surface: #1A1710;
+    --ktc-text: #EAE2D0;
+    --ktc-subtext: #80705A;
+    --ktc-border: #6A5A44;
+    --ktc-shadow: rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .king-transition-pill-row .ktc-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #6A5A44 40%, #6A5A44 60%, transparent);
+    opacity: 0.35;
+}
+
+body.dark-theme .king-transition-card.judah {
+    --ktc-pill-border: #3A5A2A;
+    --ktc-accent: #7ABD5A;
+    --ktc-card-bg: #101508;
+    --ktc-card-border: rgba(58, 90, 42, 0.4);
+    --ktc-badge-bg: #162010;
+}
+
+body.dark-theme .king-transition-card.israel {
+    --ktc-pill-border: #2A3E58;
+    --ktc-accent: #6A9ED0;
+    --ktc-card-bg: #080E18;
+    --ktc-card-border: rgba(42, 62, 88, 0.4);
+    --ktc-badge-bg: #0C1520;
+}
