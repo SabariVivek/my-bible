@@ -1637,17 +1637,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const isGuestUser = localStorage.getItem('currentUserIsGuest') === 'true';
 
-    // Show/hide right-menu-btn (the button that opens right sidebar)
-    if (rightMenuBtn) {
-        rightMenuBtn.style.display = isGuestUser ? 'none' : 'flex';
+    if (typeof updateRightMenuConnectivity === 'function') {
+        updateRightMenuConnectivity();
     }
-
-    // Always show public menu items (not admin-only)
-    if (bibleReadingOption) bibleReadingOption.style.display = 'flex';
-    const dailyPrayersOptionEl = document.getElementById('daily-prayers-option');
-    if (dailyPrayersOptionEl) dailyPrayersOptionEl.style.display = 'flex';
-    if (rightSermonOption) rightSermonOption.style.display = 'flex';
-    if (rightBibleCharactersOption) rightBibleCharactersOption.style.display = 'flex';
 
     // Show/hide admin-only menu items based on admin status
 
@@ -6258,9 +6250,10 @@ function initializeSearch() {
             </div>
         `;
     }
-    // Perform search
+    // Perform search locally using bundled Bible data
     async function performSearch(query) {
-        if (!query.trim()) {
+        const cleanQuery = query.trim();
+        if (!cleanQuery) {
             searchResults.innerHTML = `
                 <div class="search-empty-state">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -6274,65 +6267,77 @@ function initializeSearch() {
             searchResultsInfo.style.display = 'none';
             return;
         }
-        const isTamil = isTamilText(query);
+
+        const isTamil = isTamilText(cleanQuery);
+        const searchLanguage = isTamil ? 'tamil' : 'english';
         const results = [];
-        // Get filter values
         const selectedBookIndex = filterBook.value;
-        const selectedChapter = filterChapter.value.trim();
+        const selectedChapterStr = filterChapter.value.trim();
+        const targetChapter = selectedChapterStr !== '' ? parseInt(selectedChapterStr) : null;
+        const lowerQuery = cleanQuery.toLowerCase();
+        const maxResults = 250;
+
+        // Filter which books to search
+        let booksToSearch = [];
+        if (selectedBookIndex !== '' && selectedBookIndex !== undefined) {
+            const bookIdx = parseInt(selectedBookIndex);
+            if (!isNaN(bookIdx) && bibleBooks[bookIdx]) {
+                booksToSearch.push({ book: bibleBooks[bookIdx], bookIndex: bookIdx });
+            }
+        } else {
+            booksToSearch = bibleBooks.map((b, idx) => ({ book: b, bookIndex: idx }));
+        }
+
         try {
-            // Build Supabase query
-            let supabaseQuery = bibleDataManager.supabaseClient
-                .from('bible_verses')
-                .select('book_file, chapter, verse, text, language')
-                .order('book_file')
-                .order('chapter')
-                .order('verse');
-            // Apply language filter
-            const searchLanguage = isTamil ? 'tamil' : 'english';
-            supabaseQuery = supabaseQuery.eq('language', searchLanguage);
-            // Apply text search
-            supabaseQuery = supabaseQuery.ilike('text', `%${query}%`);
-            // Apply book filter if specified
-            if (selectedBookIndex !== '') {
-                const selectedBook = bibleBooks[parseInt(selectedBookIndex)];
-                supabaseQuery = supabaseQuery.eq('book_file', selectedBook.file);
+            for (const { book, bookIndex } of booksToSearch) {
+                if (results.length >= maxResults) break;
+
+                const bookFile = typeof getBookFileForLanguage === 'function' 
+                    ? getBookFileForLanguage(book.file, searchLanguage) 
+                    : book.file;
+
+                const bookData = await bibleDataManager.loadEntireBook(bookFile, searchLanguage);
+                if (!bookData) continue;
+
+                const chapters = Object.keys(bookData);
+                for (const chKey of chapters) {
+                    if (results.length >= maxResults) break;
+
+                    const chNum = parseInt(chKey.replace('chapter_', '')) || parseInt(chKey);
+                    if (targetChapter !== null && chNum !== targetChapter) continue;
+
+                    const versesObj = bookData[chKey] || bookData[`chapter_${chNum}`] || {};
+                    const verseKeys = Object.keys(versesObj).sort((a, b) => parseInt(a) - parseInt(b));
+
+                    for (const vKey of verseKeys) {
+                        if (results.length >= maxResults) break;
+
+                        const verseNum = parseInt(vKey);
+                        const verseText = versesObj[vKey];
+                        if (!verseText || typeof verseText !== 'string') continue;
+
+                        if (verseText.toLowerCase().includes(lowerQuery)) {
+                            const bookName = isTamil ? book.tamilName : book.name;
+                            const regex = new RegExp(`(${escapeRegExp(cleanQuery)})`, 'gi');
+                            const highlightedText = verseText.replace(regex, '<span class="search-highlight">$1</span>');
+
+                            results.push({
+                                bookIndex,
+                                bookName,
+                                chapter: chNum,
+                                verse: verseNum,
+                                text: highlightedText,
+                                originalText: verseText
+                            });
+                        }
+                    }
+                }
             }
-            // Apply chapter filter if specified
-            if (selectedChapter !== '') {
-                supabaseQuery = supabaseQuery.eq('chapter', parseInt(selectedChapter));
-            }
-            // Limit results to prevent overwhelming
-            supabaseQuery = supabaseQuery.limit(200);
-            const { data, error } = await supabaseQuery;
-            if (error) {
-                throw error;
-            }
-            // Process results
-            if (data && data.length > 0) {
-                data.forEach(verse => {
-                    // Find the book info
-                    const book = bibleBooks.find(b => b.file === verse.book_file);
-                    if (!book) return;
-                    const verseText = verse.text;
-                    const bookName = isTamil ? book.tamilName : book.name;
-                    const bookIndex = bibleBooks.indexOf(book);
-                    // Create highlighted text - highlight all occurrences (case-insensitive)
-                    let highlightedText = verseText;
-                    const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
-                    highlightedText = verseText.replace(regex, '<span class="search-highlight">$1</span>');
-                    results.push({
-                        bookIndex,
-                        bookName,
-                        chapter: verse.chapter,
-                        verse: verse.verse,
-                        text: highlightedText,
-                        originalText: verseText
-                    });
-                });
-            }
-            // Display results
-            displaySearchResults(results, query);
+
+            // Display search results
+            displaySearchResults(results, cleanQuery);
         } catch (error) {
+            console.error('❌ Error performing local search:', error);
             searchResults.innerHTML = `
                 <div class="search-empty-state">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -6340,7 +6345,7 @@ function initializeSearch() {
                         <circle cx="11" cy="11" r="8"></circle>
                         <path d="m21 21-4.35-4.35"></path>
                     </svg>
-                    <p>Error searching verses. Please try again.</p>
+                    <p>Error searching verses locally. Please try again.</p>
                 </div>
             `;
             searchResultsInfo.style.display = 'none';
@@ -9631,19 +9636,8 @@ function updateAdminUI() {
     }
     // Right menu button should always be visible (removed admin check)
 
-    // Show/hide admin-only menu items in right sidebar
-    if (rightNotesOption) {
-        rightNotesOption.style.display = isAdminMode ? 'flex' : 'none';
-    }
-    if (rightCultOption) {
-        rightCultOption.style.display = isAdminMode ? 'flex' : 'none';
-    }
-
-    if (rightPrayersOption) {
-        rightPrayersOption.style.display = isAdminMode ? 'flex' : 'none';
-    }
-    if (rightLogoutOption) {
-        rightLogoutOption.style.display = isAdminMode ? 'flex' : 'none';
+    if (typeof updateRightMenuConnectivity === 'function') {
+        updateRightMenuConnectivity();
     }
 
     // Update admin toggle button state
@@ -11456,40 +11450,70 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Network connectivity checker for Header & Right Menu
-    function updateRightMenuConnectivity() {
-        const isOnline = navigator.onLine;
+    // Network connectivity checker for Header & Right Menu (supports Android Mobile WebViews)
+    async function updateRightMenuConnectivity() {
+        let isOnline = navigator.onLine;
+
+        // On mobile devices / Android WebViews, navigator.onLine can falsely report true.
+        // Perform a fast 1.5s network ping check to verify true internet connectivity!
+        if (isOnline) {
+            try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 1500);
+                await fetch('https://dns.google/resolve?name=google.com', {
+                    method: 'HEAD',
+                    mode: 'no-cors',
+                    cache: 'no-store',
+                    signal: controller.signal
+                });
+                clearTimeout(timeoutId);
+                isOnline = true;
+            } catch (e) {
+                isOnline = false;
+            }
+        }
+
         const isAdminMode = localStorage.getItem('isAdmin') === 'true';
+        const isGuestUser = localStorage.getItem('currentUserIsGuest') === 'true';
+
+        const onlineOptions = [
+            'daily-prayers-option',
+            'right-notes-option',
+            'right-prayers-option',
+            'right-local-recording-option',
+            'right-kings-option',
+            'right-prophets-option',
+            'right-timeline-option',
+            'right-character-option',
+            'right-bible-characters-option',
+            'right-life-of-jesus-option',
+            'right-sermon-option',
+            'right-cult-option'
+        ];
 
         if (!isOnline) {
-            // OFFLINE: Hide menu grid button & popup sidebar completely; show direct Settings gear icon in header
+            // OFFLINE:
+            // 1. Hide the right menu grid button from top header
             if (rightMenuBtn) rightMenuBtn.style.display = 'none';
-            if (directSettingsBtn) directSettingsBtn.style.display = 'inline-flex';
+            // 2. Show direct Settings gear icon in top header
+            if (directSettingsBtn && !isGuestUser) directSettingsBtn.style.display = 'inline-flex';
+            // 3. Hide right sidebar drawer completely
             if (rightSidebar) {
                 rightSidebar.classList.add('hidden');
                 rightSidebar.classList.remove('drawer-open');
             }
+            // 4. Force hide ALL online options inside right sidebar
+            onlineOptions.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = 'none';
+            });
         } else {
-            // ONLINE: Show menu grid button in header; hide direct Settings gear icon; enable sidebar
-            if (rightMenuBtn) rightMenuBtn.style.display = 'inline-flex';
+            // ONLINE:
+            // 1. Show right menu grid button in header
+            if (rightMenuBtn && !isGuestUser) rightMenuBtn.style.display = 'inline-flex';
+            // 2. Hide direct Settings gear icon
             if (directSettingsBtn) directSettingsBtn.style.display = 'none';
-
-            const onlineOptions = [
-                'daily-prayers-option',
-                'right-notes-option',
-                'right-prayers-option',
-                'right-saturday-service-option',
-                'right-local-recording-option',
-                'right-kings-option',
-                'right-prophets-option',
-                'right-timeline-option',
-                'right-character-option',
-                'right-bible-characters-option',
-                'right-life-of-jesus-option',
-                'right-sermon-option',
-                'right-cult-option'
-            ];
-
+            // 3. Restore online options based on admin/public status
             onlineOptions.forEach(id => {
                 const el = document.getElementById(id);
                 if (el) {
@@ -11500,17 +11524,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             });
+        }
 
-            const settingsOpt = document.getElementById('right-settings-option');
-            if (settingsOpt) {
-                settingsOpt.style.display = 'flex';
-            }
+        // Always keep local Settings option visible in right sidebar
+        const settingsOpt = document.getElementById('right-settings-option');
+        if (settingsOpt) {
+            settingsOpt.style.display = 'flex';
         }
     }
 
-    // Call connectivity check on toggle and network state changes
+    window.updateRightMenuConnectivity = updateRightMenuConnectivity;
+
+    // Call connectivity check on toggle, network state changes, app focus, and periodic interval
     window.addEventListener('online', updateRightMenuConnectivity);
     window.addEventListener('offline', updateRightMenuConnectivity);
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') updateRightMenuConnectivity();
+    });
+    setInterval(updateRightMenuConnectivity, 8000);
     updateRightMenuConnectivity();
 
     // Toggle right sidebar
@@ -11594,6 +11625,14 @@ document.addEventListener('DOMContentLoaded', () => {
         rightNotesOption.addEventListener('click', () => {
             closeRightSidebar();
             window.location.href = 'src/pages/docs.html';
+        });
+    }
+    // Local Recordings option - navigate to Local Recording page
+    const rightLocalRecordingOption = document.getElementById('right-local-recording-option');
+    if (rightLocalRecordingOption) {
+        rightLocalRecordingOption.addEventListener('click', () => {
+            closeRightSidebar();
+            window.location.href = 'src/pages/Local Recording.html';
         });
     }
     // Bible Characters option - navigate to bible-characters page
