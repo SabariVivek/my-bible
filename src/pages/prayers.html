@@ -2263,7 +2263,6 @@
                                 badge: badge || null,
                                 members: sheetCategory === 'Family' ? [...currentMembers] : null
                             }).then(() => {
-                                console.log('Prayer updated in Supabase');
                             }).catch(error => {
                                 console.error('Error updating prayer in Supabase:', error);
                             });
@@ -2321,7 +2320,6 @@
                             localStorage.setItem('prayers', JSON.stringify(prayers));
                             // Re-render to update the DOM with the correct ID
                             renderPrayersList();
-                            console.log('Prayer saved to Supabase with ID:', supabasePrayer.id);
                         }).catch(error => {
                             console.error('Error saving prayer to Supabase:', error);
                             // Continue anyway - localStorage has the data
@@ -2979,7 +2977,6 @@
                     // Delete from Supabase in background (don't await)
                     if (window.PrayerDB) {
                         window.PrayerDB.deletePrayer(selectedPrayerId).then(() => {
-                            console.log('Prayer deleted from Supabase');
                         }).catch(error => {
                             console.error('Error deleting prayer from Supabase:', error);
                         });
@@ -3087,10 +3084,8 @@
                         if (user) {
                             currentUserId = user.id;
                             useSupabase = true;
-                            console.log('Supabase user authenticated:', user.id);
                         }
                     } catch (authError) {
-                        console.log('Not authenticated, will use unauthenticated access');
                     }
                     
                     // Load all prayers from Supabase (works for both authenticated and unauthenticated users)
@@ -3112,10 +3107,8 @@
                         
                         prayers = mergedPrayers;
                         localStorage.setItem('prayers', JSON.stringify(prayers));
-                        console.log('Loaded', supabasePrayers.length, 'prayers from Supabase');
                         useSupabase = true; // Enable Supabase syncing if we successfully loaded
                     } else {
-                        console.log('No prayers found in Supabase');
                     }
                 } catch (error) {
                     console.warn('Error loading from Supabase:', error);
@@ -3128,7 +3121,6 @@
             // Hide loader after content is loaded
             hideLoader();
             
-            console.log('Prayers page loaded');
         });
     </script>
 </body>

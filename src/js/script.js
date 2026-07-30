@@ -1496,7 +1496,6 @@ function navigateToPage(pageName) {
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('[MyBible] DOMContentLoaded main init');
     // Check online status on load (silent)
     updateOnlineStatus();
     // Request persistent storage to prevent data deletion
@@ -1604,7 +1603,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScrollbarBehavior();
     initializeNotesModal();
     initializePopupHighlights(); // Initialize dynamic highlighting for popup content
-    console.log('[MyBible] Initializing right settings panel');
     initializeRightSettingsPanel();
     // Apply persisted UI settings to initial document
     applyUiSettingsToDocument();
@@ -2507,7 +2505,6 @@ function updatePdfIconVisibility() {
 
     // Check if this book has PDF chapters and if current chapter is available
     if (BOOKS_WITH_PDF[bookName] && BOOKS_WITH_PDF[bookName].includes(currentChapter)) {
-        console.log(`[PDF Debug] ✓ ${bookName} Chapter ${currentChapter} has PDF - SHOWING`);
 
         const testament = book.testament === 'new' ? 'new-testament' : 'old-testament';
         const bookNameConverted = convertRomanNumeralsInName(bookName);
@@ -2517,7 +2514,6 @@ function updatePdfIconVisibility() {
         pdfIcon.style.display = 'flex';
         pdfIcon.dataset.pdfPath = pdfPath;
     } else {
-        console.log(`[PDF Debug] ✗ ${bookName} Chapter ${currentChapter} no PDF - HIDING`);
         pdfIcon.style.display = 'none';
     }
 }
@@ -2535,7 +2531,6 @@ function openPdfModal() {
     // Open PDF in a new window/tab
     window.open(pdfPath, windowName, 'width=1000,height=800,resizable=yes,scrollbars=yes');
 
-    console.log(`[PDF Debug] Opening PDF in new window: ${pdfPath}`);
 }
 
 // Update UI with loaded data
@@ -3227,11 +3222,9 @@ function showPopupInfoBottomSheet(item) {
 
     // Apply light theme inline styles if needed
     const isLightTheme = !document.body.classList.contains('dark-theme');
-    console.log('Light theme check:', isLightTheme, 'Body classes:', document.body.className);
     if (isLightTheme) {
         const content = bottomSheet.querySelector('.verse-actions-content');
         if (content) {
-            console.log('Applying light theme to content element');
             content.style.background = '#f5f5f5 !important';
             content.style.border = '2px solid #c9a227 !important';
             content.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.15) !important';
@@ -3425,7 +3418,6 @@ function addPopupEntry(bookName, chapterNum, contentText, description, reference
     initializePopupHighlights();
 
     // Re-render the current view to show the new highlighting
-    console.log(`Added new popup: ${bookName} ${chapterNum} - "${contentText}"`);
 }
 
 // Utility function to reload highlights on existing content
@@ -3435,7 +3427,6 @@ function reloadPopupHighlights() {
     if (versesColumn && typeof highlightSpecialText === 'function') {
         // Re-initialize the popup highlights
         initializePopupHighlights();
-        console.log('Popup highlights reloaded');
     }
 }
 
@@ -3856,7 +3847,6 @@ function displayChapter() {
     updatePinButtonBar();
 
     // Initialize chapter summary pullout (only if summary exists)
-    console.log(`[DISPLAY-CHAPTER] Calling pullout init for ${bibleBooks[currentBook].name} ${currentChapter}`);
     if (typeof initializeChapterSummaryPullout === 'function') {
         initializeChapterSummaryPullout(bibleBooks[currentBook].name, String(currentChapter));
     }
@@ -3947,7 +3937,6 @@ function initializeCrossReferenceSwipe() {
     // Cross-reference icons are now just visual indicators
     // References are accessed through the note viewer's Ref tab
     const crossRefIcons = document.querySelectorAll('.cross-ref-icon');
-    console.log('Cross-reference icons found (visual only):', crossRefIcons.length);
 }
 
 // Update mobile chapter header
@@ -4109,7 +4098,6 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             // Save changes
             localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
             try {
-                console.log('💾 Saving bookmark from color picker:', { noteKey, verseNotes: verseNotes[noteKey] });
                 await saveSingleBookmarkToSupabase(noteKey, verseNotes[noteKey]);
             } catch (error) {
                 console.error('❌ Error saving bookmark:', error);
@@ -6518,16 +6506,10 @@ function initializeRightSettingsPanel() {
     const backBtn = document.getElementById('right-settings-back-btn');
     const saveIconBtn = document.getElementById('settings-save-icon-btn');
     const cancelIconBtn = document.getElementById('settings-cancel-icon-btn');
-    console.log('[MyBible] initializeRightSettingsPanel called', {
-        hasSettingsOption: !!settingsOption,
-        hasSettingsPanel: !!settingsPanel,
-        hasCloseBtn: !!closeBtn
-    });
     if (!settingsOption || !settingsPanel) return;
     // Open settings panel when clicking the right settings option
     settingsOption.addEventListener('click', (event) => {
         event.stopPropagation();
-        console.log('[MyBible] right-settings-option clicked');
         // Add to history so Android back returns to Bible instead of closing app
         try {
             navigateToPage('settings');
@@ -6658,7 +6640,6 @@ function initializeRightSettingsPanel() {
         syncSettingsProfileSection();
         // When first opened, buttons should be hidden until something changes
         updateSettingsFooterVisibility();
-        console.log('[MyBible] settings panel opened, classes:', settingsPanel.className);
     });
     // Close button
     if (closeBtn) {
@@ -6667,7 +6648,6 @@ function initializeRightSettingsPanel() {
             openSettingsDiscardDialog(() => {
                 // Treat Discard as full cancel (revert changes then close)
                 handleSettingsCancel();
-                console.log('[MyBible] settings panel closed via close button (discard)');
             });
         });
     }
@@ -6677,7 +6657,6 @@ function initializeRightSettingsPanel() {
             openSettingsDiscardDialog(() => {
                 // Treat Discard as full cancel (revert changes then close)
                 handleSettingsCancel();
-                console.log('[MyBible] settings panel closed via back button (discard)');
             });
         });
     }
@@ -6695,7 +6674,6 @@ function initializeRightSettingsPanel() {
         settingsPanel.classList.remove('active');
         settingsPanel.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
-        console.log('[MyBible] settings panel closed via Save');
     }
 
     // Shared Cancel handler: reverts to snapshot and closes panel
@@ -6805,7 +6783,6 @@ function initializeRightSettingsPanel() {
         settingsPanel.classList.remove('active');
         settingsPanel.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
-        console.log('[MyBible] settings panel closed via Cancel (reverted changes)');
     }
 
     // Attach handlers to header icon buttons
@@ -6868,7 +6845,6 @@ function initializeRightSettingsPanel() {
             settingsPanel.classList.remove('active');
             settingsPanel.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
-            console.log('[MyBible] settings panel closed via outside click');
         }
     });
 }
@@ -8256,7 +8232,6 @@ async function loadNotesFromSupabase() {
             if (bookmarksResponse.ok) {
                 const bookmarks = await bookmarksResponse.json();
                 if (bookmarks && bookmarks.length > 0) {
-                    console.log('📌 Loaded', bookmarks.length, 'bookmarks from Supabase');
                     // Convert bookmarks to verseNotes format
                     bookmarks.forEach(bookmark => {
                         const noteKey = `${bookmark.book_file}_${bookmark.chapter}_${bookmark.verse}`;
@@ -8271,7 +8246,6 @@ async function loadNotesFromSupabase() {
                 }
             }
         } catch (error) {
-            console.log('ℹ️ Could not load bookmarks from Supabase:', error.message);
         }
 
         // Load notes from bible_verse_notes table
@@ -8287,7 +8261,6 @@ async function loadNotesFromSupabase() {
             if (notesResponse.ok) {
                 const notes = await notesResponse.json();
                 if (notes && notes.length > 0) {
-                    console.log('📝 Loaded', notes.length, 'verse notes from Supabase');
                     // Convert notes to verseNotes format
                     notes.forEach(note => {
                         const noteKey = `${note.book_file}_${note.chapter}_${note.verse}`;
@@ -8311,7 +8284,6 @@ async function loadNotesFromSupabase() {
                 }
             }
         } catch (error) {
-            console.log('ℹ️ Could not load verse notes from Supabase:', error.message);
         }
 
         // Load documentation/notes structure from bible_notes_pages table (separate feature)
@@ -8328,13 +8300,11 @@ async function loadNotesFromSupabase() {
             if (docsResponse.ok) {
                 const rows = await docsResponse.json();
                 if (rows && rows.length > 0) {
-                    console.log('📚 Loaded', rows.length, 'documentation notes from Supabase');
                     const treeStructure = rebuildTreeFromRows(rows);
                     window.NOTES_TREE = treeStructure;
                 }
             }
         } catch (error) {
-            console.log('ℹ️ Could not load documentation notes:', error.message);
         }
 
         applyAllNoteDisplays();
@@ -8393,7 +8363,6 @@ function rebuildTreeFromRows(rows) {
 // Save a single bookmark to Supabase (optimized for individual verse updates)
 async function saveSingleBookmarkToSupabase(noteKey, note) {
     if (!note || !note.color) {
-        console.log('⏭️ Skipping save - no note or color:', { note });
         return true;
     }
 
@@ -8417,7 +8386,6 @@ async function saveSingleBookmarkToSupabase(noteKey, note) {
             timestamp: note.timestamp || new Date().toISOString()
         };
 
-        console.log('📤 Attempting to save bookmark:', { noteKey, bookFile, chapter, verse, bookmark });
 
         // Try to update existing bookmark first (PATCH)
         const updateResponse = await fetch(
@@ -8434,18 +8402,14 @@ async function saveSingleBookmarkToSupabase(noteKey, note) {
             }
         );
 
-        console.log('PATCH Response:', { status: updateResponse.status, ok: updateResponse.ok });
 
         // 204 means success but may not have matched any rows, so always try POST
         if (updateResponse.status === 204) {
             // 204 = No Content (could mean no rows matched), try POST
-            console.log('⚠️ PATCH returned 204, attempting POST...');
         } else if (updateResponse.ok) {
             // Other success status, assume it worked
-            console.log('✅ Bookmark updated:', `${bookFile} ${chapter}:${verse}`);
             return true;
         } else {
-            console.log('⚠️ PATCH failed, attempting POST...');
         }
 
         // Always try POST (either PATCH failed or returned 204)
@@ -8470,7 +8434,6 @@ async function saveSingleBookmarkToSupabase(noteKey, note) {
                 }
             );
 
-            console.log('POST Response:', { status: insertResponse.status, ok: insertResponse.ok });
 
             if (!insertResponse.ok) {
                 const error = await insertResponse.text();
@@ -8478,7 +8441,6 @@ async function saveSingleBookmarkToSupabase(noteKey, note) {
                 return false;
             }
 
-            console.log('✅ Bookmark created:', `${bookFile} ${chapter}:${verse}`);
             return true;
         }
     } catch (error) {
@@ -8560,7 +8522,6 @@ async function saveNotesToSupabase() {
                 }
             }
 
-            console.log('✅ Bookmarks synced to Supabase:', bookmarks.length);
             return true;
         }
 
@@ -9258,7 +9219,6 @@ async function saveNote() {
         const chapter = parseInt(noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex));
         const verse = parseInt(noteKey.substring(lastUnderscoreIndex + 1));
 
-        console.log('💾 Saving note:', { noteKey, bookFile, chapter, verse, noteText });
 
         if (noteText) {
             // Create or update note entry
@@ -9290,11 +9250,9 @@ async function saveNote() {
             if (error) {
                 console.error('❌ Failed to save note:', error);
             } else {
-                console.log('✅ Note saved:', `${bookFile} ${chapter}:${verse}`);
             }
         } else {
             // Delete note if text is empty
-            console.log('🗑️ Deleting note (empty text)');
             delete verseNotes[noteKey];
 
             const { error } = await bibleDataManager.supabaseClient
@@ -9307,7 +9265,6 @@ async function saveNote() {
             if (error) {
                 console.error('❌ Failed to delete note:', error);
             } else {
-                console.log('✅ Note deleted:', `${bookFile} ${chapter}:${verse}`);
             }
         }
 
@@ -9334,7 +9291,6 @@ async function deleteNote() {
         const chapter = parseInt(noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex));
         const verse = parseInt(noteKey.substring(lastUnderscoreIndex + 1));
 
-        console.log('🗑️ Deleting note from Supabase:', { bookFile, chapter, verse });
 
         if (bookFile && chapter && verse) {
             const { error } = await bibleDataManager.supabaseClient
@@ -9347,7 +9303,6 @@ async function deleteNote() {
             if (error) {
                 console.error('❌ Failed to delete note from Supabase:', error);
             } else {
-                console.log('✅ Note deleted from Supabase:', `${bookFile} ${chapter}:${verse}`);
             }
         }
         updateVerseNoteDisplay(currentNoteVerse);
@@ -9362,7 +9317,6 @@ function updateVerseNoteDisplay(verseNum) {
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     if (!verseLine) return;
 
-    console.log('Updating verse note display:', { verseNum, noteKey, noteExists: !!verseNotes[noteKey] });
 
     // Remove all note classes
     verseLine.classList.remove('has-note', 'has-text', 'note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate');
@@ -9422,7 +9376,6 @@ async function preloadChapterNotesAndReferences() {
         }
 
         if (data && data.length > 0) {
-            console.log(`📚 Preloaded ${data.length} notes/references for ${bookFile} chapter ${currentChapter}`);
 
             // Update verseNotes and crossReferences objects
             data.forEach(note => {
@@ -9444,7 +9397,6 @@ async function preloadChapterNotesAndReferences() {
                 if (note.cross_references && note.cross_references.length > 0) {
                     const crossRefKey = `${book.name} ${note.chapter}:${note.verse}`;
                     crossReferences[crossRefKey] = note.cross_references;
-                    console.log(`📖 Loaded ${note.cross_references.length} references for ${crossRefKey}`);
                 }
             });
 
@@ -9486,11 +9438,9 @@ async function preloadReferencedVerseData() {
         }
 
         if (allReferencesToPreload.size === 0) {
-            console.log('📚 No references to preload for current chapter');
             return;
         }
 
-        console.log(`🔄 Starting to preload ${allReferencesToPreload.size} referenced verses...`);
 
         // For each reference, preload both English and Tamil verse data
         for (const reference of allReferencesToPreload) {
@@ -9501,7 +9451,6 @@ async function preloadReferencedVerseData() {
             const bookMeta = bibleBooks.find(b => b.name === bookName);
 
             if (!bookMeta) {
-                console.log(`⚠️ Book not found: ${bookName}`);
                 continue;
             }
 
@@ -9512,7 +9461,6 @@ async function preloadReferencedVerseData() {
             await preloadVerseDataForLanguage(bookMeta.file, chapter, startVerse, endVerse, 'tamil');
         }
 
-        console.log('✅ Finished preloading referenced verse data');
     } catch (error) {
         console.error('❌ Error preloading referenced verse data:', error);
     }
@@ -9542,12 +9490,10 @@ async function preloadVerseDataForLanguage(bookFile, chapter, startVerse, endVer
                 // Store in cache object based on language
                 const cacheKey = `${fileVariant}_${chapter}_${language}`;
                 verseDataCache[cacheKey] = data;
-                console.log(`📦 Preloaded ${data.length} ${language} verses for ${fileVariant} ${chapter}:${startVerse}-${endVerse}`);
                 return;
             }
         }
     } catch (error) {
-        console.log(`⚠️ Could not preload ${language} verses for ${bookFile} ${chapter}:${startVerse}-${endVerse}`);
     }
 }
 
@@ -12303,7 +12249,6 @@ function initializePinnedVerses() {
     try {
         const stored = localStorage.getItem('pinnedVerses');
         pinnedVerses = stored ? JSON.parse(stored) : [];
-        console.log('Pinned verses loaded from localStorage:', pinnedVerses.length);
     } catch (e) {
         console.error('Error loading pinned verses:', e);
         pinnedVerses = [];
@@ -12321,7 +12266,6 @@ function initializePinnedVerses() {
                     }));
                     // Also save to localStorage for faster loading next time
                     localStorage.setItem('pinnedVerses', JSON.stringify(pinnedVerses));
-                    console.log('Pinned verses loaded from Supabase:', pinnedVerses.length);
                     updatePinButtonBar();
                     // Refresh the current chapter display to show pinned icons
                     refreshPinnedVerseDisplay();
@@ -12543,14 +12487,12 @@ function setupExpandAllButton() {
 
 // Cross Reference in Note Viewer Tab Functions
 function openNoteViewerWithReferences(verseNum, crossRefs) {
-    console.log('openNoteViewerWithReferences called:', { verseNum, crossRefs });
 
     const overlay = document.getElementById('note-viewer-popup');
     const refElement = document.getElementById('note-viewer-ref');
     const editBtn = document.getElementById('note-viewer-edit-btn');
     const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
 
-    console.log('Elements found:', { overlay: !!overlay, refElement: !!refElement, refTab: !!refTab });
 
     if (!overlay || !refElement) {
         console.error('Missing overlay or refElement');
@@ -12567,7 +12509,6 @@ function openNoteViewerWithReferences(verseNum, crossRefs) {
     // Show references tab
     if (refTab) {
         refTab.style.display = 'block';
-        console.log('References tab shown');
     }
 
     // Switch to references tab
@@ -12582,7 +12523,6 @@ function openNoteViewerWithReferences(verseNum, crossRefs) {
     window.currentNoteRefs = { refs: crossRefs, verseNum };
 
     // Load references
-    console.log('About to load references with noteRefCurrentLang:', noteRefCurrentLang);
     loadNoteReferences(crossRefs);
 
     // Show modal
@@ -12616,7 +12556,6 @@ function switchNoteViewerTab(tabName) {
 
         // Show loader on first load, not on subsequent tab switches
         const showLoader = !referencesLoadedInViewer;
-        console.log('Loading references on tab switch with lang:', noteRefCurrentLang, 'showLoader:', showLoader);
         loadNoteReferences(window.currentNoteRefs.refs, showLoader);
         referencesLoadedInViewer = true; // Mark as loaded after first time
     }
@@ -12637,13 +12576,11 @@ function switchNoteRefLanguage(lang) {
 
         const cacheKey = JSON.stringify(window.currentNoteRefs.refs.sort());
         if (renderedReferencesCache[cacheKey]) {
-            console.log('🎨 Re-rendering references in', lang, 'mode from cache');
             const allHtml = window.currentNoteRefs.refs.map(ref =>
                 renderReference(renderedReferencesCache[cacheKey][ref], lang)
             ).join('');
             content.innerHTML = allHtml || '<p style="text-align:center;color:#999;">No verses found</p>';
         } else {
-            console.log('⚠️ Cache not found for language switch, reloading...');
             loadNoteReferences(window.currentNoteRefs.refs, false);
         }
     }
@@ -12660,12 +12597,10 @@ function showAddReferenceDialog() {
     if (!refElement) return;
 
     const refText = refElement.textContent; // e.g., "Matthew 1:1"
-    console.log('🔍 showAddReferenceDialog - refText:', refText);
     const match = refText.match(/(\d+):(\d+)/);
     if (!match) return;
 
     currentAddRefVerseNum = parseInt(match[2]);
-    console.log('🔍 showAddReferenceDialog - currentAddRefVerseNum:', currentAddRefVerseNum);
     selectedRefVerses = [];
 
     // Open bottom sheet
@@ -12757,7 +12692,6 @@ function displayExistingReferences() {
 }
 
 function removeExistingReference(ref, crossRefKey) {
-    console.log('Removing reference:', ref, 'from', crossRefKey);
 
     if (!crossReferences[crossRefKey]) return;
 
@@ -12783,7 +12717,6 @@ function removeExistingReference(ref, crossRefKey) {
             const crossRefIcon = verseLine.querySelector('.cross-ref-icon');
             if (crossRefIcon) {
                 crossRefIcon.remove();
-                console.log('🗑️ Cross-ref icon removed from verse', currentAddRefVerseNum);
             }
         }
     } else {
@@ -12791,7 +12724,6 @@ function removeExistingReference(ref, crossRefKey) {
         updateCrossRefDisplay(currentAddRefVerseNum);
     }
 
-    console.log('✅ Reference removed and saved');
 }
 
 function populateRefBookDropdown() {
@@ -13013,9 +12945,6 @@ async function saveReference() {
         return;
     }
 
-    console.log('🔍 saveReference - Saving for verse:', crossRefKey);
-    console.log('🔍 saveReference - currentBook:', currentBook, 'currentChapter:', currentChapter, 'currentAddRefVerseNum:', currentAddRefVerseNum);
-    console.log('🔍 saveReference - selectedRefVerses:', selectedRefVerses);
 
     // Add or update cross-reference
     if (!crossReferences[crossRefKey]) {
@@ -13029,7 +12958,6 @@ async function saveReference() {
         }
     });
 
-    console.log('✅ Cross-reference saved:', crossRefKey, '→', crossReferences[crossRefKey]);
 
     // Save to Supabase
     try {
@@ -13049,14 +12977,12 @@ async function saveReference() {
         if (error) {
             console.error('❌ Failed to save cross-reference:', error);
         } else {
-            console.log('✅ Cross-reference saved to Supabase:', `${bookFile} ${currentChapter}:${currentAddRefVerseNum}`);
         }
     } catch (error) {
         console.error('❌ Error saving cross-reference:', error);
     }
 
     // Update display: add cross-ref icon if not already present
-    console.log('🔍 updateCrossRefDisplay - verseNum:', currentAddRefVerseNum, 'currentChapter:', currentChapter, 'currentBook:', currentBook);
     updateCrossRefDisplay(currentAddRefVerseNum);
 
     // Refresh note viewer if it's open
@@ -13101,26 +13027,21 @@ async function saveReference() {
 }
 
 function updateCrossRefDisplay(verseNum) {
-    console.log('🔍 updateCrossRefDisplay called - verseNum:', verseNum, 'currentBook:', currentBook, 'currentChapter:', currentChapter);
 
     // Get the cross-references for this verse
     const bookName = bibleBooks[currentBook].name;
     const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
     const crossRefs = crossReferences[crossRefKey];
 
-    console.log('🔍 crossRefKey:', crossRefKey, 'crossRefs:', crossRefs);
 
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
-    console.log('🔍 verseLine found:', !!verseLine, 'HTML:', verseLine?.outerHTML?.substring(0, 100));
 
     if (!verseLine) {
-        console.log(`❌ Verse ${verseNum} not found in current view`);
         return;
     }
 
     // Check if cross-ref icon already exists
     let crossRefIcon = verseLine.querySelector('.cross-ref-icon');
-    console.log('🔍 Existing cross-ref icon:', !!crossRefIcon);
 
     if (!crossRefIcon && crossRefs && crossRefs.length > 0) {
         // Create and add cross-ref icon
@@ -13133,11 +13054,9 @@ function updateCrossRefDisplay(verseNum) {
 
         // Append at the end of the verse line (like the initial render does)
         verseLine.appendChild(crossRefIcon);
-        console.log(`✅ Added cross-ref icon to verse ${verseNum}`, crossRefs);
     } else if (crossRefIcon && crossRefs && crossRefs.length > 0) {
         // Update existing icon's data
         crossRefIcon.dataset.crossRefs = JSON.stringify(crossRefs);
-        console.log(`✅ Updated cross-ref icon for verse ${verseNum}`, crossRefs);
     }
 }
 
@@ -13206,7 +13125,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Fetch verse data for a single reference (used only on first load)
 async function fetchReferenceVerseData(ref) {
-    console.log('🔍 fetchReferenceVerseData called with:', ref);
 
     const match = ref.match(/^(.+?)\s+(\d+):(\d+)(?:[-–](\d+))?$/);
     if (!match) {
@@ -13219,7 +13137,6 @@ async function fetchReferenceVerseData(ref) {
     const verseStart = match[3];
     const verseEnd = match[4];
 
-    console.log('📖 Parsed - bookName:', bookName, 'chapter:', chapter, 'verseStart:', verseStart, 'verseEnd:', verseEnd);
 
     // Normalize book name - convert "1", "2", "3" to "I", "II", "III"
     const normalizedName = bookName
@@ -13227,7 +13144,6 @@ async function fetchReferenceVerseData(ref) {
         .replace(/^2\s+/, 'II ')
         .replace(/^3\s+/, 'III ');
 
-    console.log('🔄 Normalized name:', normalizedName);
 
     // Find book in bibleBooks
     const book = bibleBooks.find(b =>
@@ -13239,11 +13155,9 @@ async function fetchReferenceVerseData(ref) {
 
     if (!book) {
         console.error('❌ Book not found:', bookName, 'or normalized:', normalizedName);
-        console.log('📚 First 10 books:', bibleBooks.slice(0, 10).map(b => ({ name: b.name, shortName: b.shortName })));
         return null;
     }
 
-    console.log('✅ Found book:', book.name, 'file:', book.file);
 
     let bookFile = book.file;
     const bookFileAlternatives = [
@@ -13252,7 +13166,6 @@ async function fetchReferenceVerseData(ref) {
         bookFile.replace(/^i_/, '1_').replace(/^ii_/, '2_').replace(/^iii_/, '3_')
     ];
 
-    console.log('🔗 Book file alternatives:', bookFileAlternatives);
 
     const startVerse = parseInt(verseStart);
     const endVerse = verseEnd ? parseInt(verseEnd) : startVerse;
@@ -13280,7 +13193,6 @@ async function fetchReferenceVerseData(ref) {
             if (verseDataCache[cacheKey]) {
                 data.english = verseDataCache[cacheKey];
                 bookFile = fileVariant;
-                console.log('✅ Found English data in cache:', data.english.length, 'verses');
                 break;
             }
         }
@@ -13288,7 +13200,6 @@ async function fetchReferenceVerseData(ref) {
 
     if (!data.english) {
         for (const fileVariant of bookFileAlternatives) {
-            console.log(`   Trying to fetch from database with fileVariant: ${fileVariant}`);
             const { data: result, error } = await bibleDataManager.supabaseClient
                 .from('bible_verses')
                 .select('verse, text')
@@ -13300,13 +13211,11 @@ async function fetchReferenceVerseData(ref) {
                 .order('verse', { ascending: true });
 
             if (error) {
-                console.log(`   Error fetching from ${fileVariant}:`, error.message);
             }
 
             if (result && result.length > 0) {
                 data.english = result;
                 bookFile = fileVariant;
-                console.log('✅ Fetched English data from DB:', result.length, 'verses');
                 break;
             }
         }
@@ -13332,7 +13241,6 @@ async function fetchReferenceVerseData(ref) {
             const cacheKey = `${fileVariant}_${chapter}_tamil`;
             if (verseDataCache[cacheKey]) {
                 data.tamil = verseDataCache[cacheKey];
-                console.log('✅ Found Tamil data in cache:', data.tamil.length, 'verses');
                 break;
             }
         }
@@ -13351,19 +13259,16 @@ async function fetchReferenceVerseData(ref) {
                 .order('verse', { ascending: true });
 
             if (error) {
-                console.log(`   Error fetching Tamil from ${fileVariant}:`, error.message);
             }
 
             if (result && result.length > 0) {
                 data.tamil = result;
-                console.log('✅ Fetched Tamil data from DB:', result.length, 'verses');
                 break;
             }
         }
     }
 
     const returnValue = { ref, data };
-    console.log('📤 Returning from fetchReferenceVerseData:', returnValue);
     return returnValue;
 }
 
@@ -13415,7 +13320,6 @@ function renderReference(cachedData, language) {
 
 // Main function: Load and cache references, then display in current language
 async function loadNoteReferences(crossRefs, showLoader = true) {
-    console.log('loadNoteReferences called with:', crossRefs);
 
     const content = document.getElementById('note-viewer-references-content');
     if (!content) {
@@ -13437,12 +13341,10 @@ async function loadNoteReferences(crossRefs, showLoader = true) {
     const fetchPromises = crossRefs.map(ref => fetchReferenceVerseData(ref));
     const results = await Promise.all(fetchPromises);
 
-    console.log('📊 Fetched results in background:', results);
 
     // Store results for later use when clicking badges
     window.noteViewerVerseData = results;
 
-    console.log('✅ References loaded with badges');
 }
 
 function parseVerseReference(ref) {
@@ -13465,7 +13367,6 @@ function parseVerseReference(ref) {
         .replace(/^2\s+/, 'II ')
         .replace(/^3\s+/, 'III ');
 
-    console.log('🔍 Parsing - original:', match[1], 'normalized:', bookName);
 
     // Find book file name - try both original and normalized
     let book = bibleBooks.find(b =>
@@ -13477,16 +13378,13 @@ function parseVerseReference(ref) {
 
     if (!book) {
         console.error('Book not found for:', match[1], 'or normalized:', bookName);
-        console.log('📚 Looking for match in bibleBooks...');
         bibleBooks.forEach((b, idx) => {
             if (b.name.includes('Samuel') || match[1].includes('Samuel')) {
-                console.log(`  [${idx}]`, b.name, b.shortName);
             }
         });
         return null;
     }
 
-    console.log('✅ Found book:', book.name);
 
     return {
         book: book.file,
@@ -13499,7 +13397,6 @@ function parseVerseReference(ref) {
 
 // Load verse data when clicking on badge and open modal
 async function loadAndOpenNotePassageModal(verseRef) {
-    console.log('Loading and opening passage modal for:', verseRef);
 
     // Check if data is already cached
     let verseDataItem = window.noteViewerVerseData?.find(v => v && (v.reference || v.ref) === verseRef);
@@ -13524,14 +13421,12 @@ async function loadAndOpenNotePassageModal(verseRef) {
 }
 
 function openNotePassageModalWithData(verseRef, verseDataItem) {
-    console.log('Opening passage modal with data for:', verseRef);
 
     if (!verseDataItem || !verseDataItem.data) {
         console.error('Verse data not found:', verseRef);
         return;
     }
 
-    console.log('🔍 Found verse data:', verseDataItem);
 
     // Update passage modal with verse data
     const passageBadge = document.getElementById('notePassageBadge');
@@ -13606,7 +13501,6 @@ function openNotePassageModalWithData(verseRef, verseDataItem) {
 }
 
 function switchNotePassageLanguage(lang) {
-    console.log('Switching passage language to:', lang);
 
     if (!window.currentNotePassageData) return;
 
@@ -13886,7 +13780,6 @@ async function uploadProfileBlob(blob) {
             return;
         }
 
-        console.log('Profile image uploaded successfully:', data);
         const ts = Date.now().toString();
         localStorage.setItem('profileImageTimestamp', ts);
 

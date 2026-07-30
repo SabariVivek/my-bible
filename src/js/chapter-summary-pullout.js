@@ -3,8 +3,6 @@
  * Displays chapter summaries in a bottom-right corner pullout panel for main Bible page
  */
 
-console.log('[PULLOUT SCRIPT] Script loaded successfully');
-console.log('[PULLOUT SCRIPT] chapterSummaries available:', typeof chapterSummaries !== 'undefined');
 
 /**
  * Get summary for current chapter
@@ -15,20 +13,15 @@ console.log('[PULLOUT SCRIPT] chapterSummaries available:', typeof chapterSummar
 function getChapterSummary(bookName, chapter) {
     const summaryKey = `${bookName} ${chapter}`;
     
-    console.log(`[SUMMARY] Looking for summary key: "${summaryKey}"`);
-    console.log(`[SUMMARY] chapterSummaries available:`, typeof chapterSummaries !== 'undefined');
     
     if (typeof chapterSummaries !== 'undefined') {
-        console.log(`[SUMMARY] Available keys:`, Object.keys(chapterSummaries).slice(0, 10));
     }
     
     // Check if chapterSummaries (from short-summary.js) contains the summary
     if (typeof chapterSummaries !== 'undefined' && chapterSummaries[summaryKey]) {
-        console.log(`[SUMMARY] Found summary for: ${summaryKey}`);
         return chapterSummaries[summaryKey];
     }
     
-    console.log(`[SUMMARY] No summary found for: ${summaryKey}`);
     return null;
 }
 
@@ -38,7 +31,6 @@ function getChapterSummary(bookName, chapter) {
  * @param {number} chapter - The chapter number
  */
 function initializeChapterSummaryPullout(bookName, chapter) {
-    console.log(`[PULLOUT] Initializing for: ${bookName} ${chapter}`);
     
     const summary = getChapterSummary(bookName, chapter);
     
@@ -50,11 +42,9 @@ function initializeChapterSummaryPullout(bookName, chapter) {
     
     // Only show if summary exists
     if (!summary) {
-        console.log(`[PULLOUT] No summary exists, not showing pullout`);
         return;
     }
     
-    console.log(`[PULLOUT] Summary found, creating pullout UI`);
     
     const scriptureText = document.getElementById('scripture-text');
     if (!scriptureText) {
@@ -92,18 +82,15 @@ function initializeChapterSummaryPullout(bookName, chapter) {
     
     // Append to body so it's relative to viewport
     document.body.appendChild(pulloutContainer);
-    console.log(`[PULLOUT] Pullout container added to DOM`);
     
     // Attach event listeners
     const trigger = document.getElementById('chapterSummaryTrigger');
     const overlay = document.getElementById('chapterSummaryOverlay');
     const panel = document.getElementById('chapterSummaryPanel');
     
-    console.log(`[PULLOUT] Elements found - trigger:`, !!trigger, `overlay:`, !!overlay, `panel:`, !!panel);
     
     if (trigger) {
         trigger.addEventListener('click', () => toggleChapterSummaryPanel());
-        console.log(`[PULLOUT] Click listener attached to trigger`);
     }
     
     if (overlay) {

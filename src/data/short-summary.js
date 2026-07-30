@@ -1238,5 +1238,3 @@ const chapterSummaries = {
     "Ezekiel 48": "கோத்திரங்களின் பங்கீடு: பன்னிரண்டு கோத்திரங்களுக்கும் நிலம் சமமாகப் பிரிக்கப்பட்டது. நகரத்திற்கு 12 வாசல்கள் இருந்தன. அந்த நகரத்தின் பெயர்: 'யெகோவா ஷம்மா' (கர்த்தர் அங்கே இருக்கிறார்)."
 };
 
-console.log('[SHORT-SUMMARY] Script loaded successfully');
-console.log('[SHORT-SUMMARY] chapterSummaries keys:', Object.keys(chapterSummaries));

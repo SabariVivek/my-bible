@@ -752,8 +752,6 @@ const MobileQuiz = (() => {
         const ntBooksHtml = buildBooksHtml(ntBooks);
         
         // Debug: log book counts
-        console.log('OT Books:', otBooks.length, otBooks);
-        console.log('NT Books:', ntBooks.length, ntBooks);
 
         overlay.innerHTML = `
             <div class="mq-header">

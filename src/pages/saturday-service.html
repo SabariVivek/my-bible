@@ -2126,7 +2126,6 @@
         // Fetch chores from database
         async function fetchChores() {
             try {
-                console.log('📍 Fetching chores from Supabase...');
                 const { data, error } = await supabaseClient
                     .from('chores')
                     .select('id, name, area, icon')
@@ -2142,7 +2141,6 @@
                     defaultChoreRegistryArray = [];
                 } else {
                     defaultChoreRegistryArray = data;
-                    console.log('✅ Chores loaded:', defaultChoreRegistryArray.length, 'records', defaultChoreRegistryArray);
                 }
                 return defaultChoreRegistryArray;
             } catch (err) {
@@ -2154,7 +2152,6 @@
         // Fetch volunteers from database
         async function fetchVolunteers() {
             try {
-                console.log('📍 Fetching volunteers from Supabase...');
                 const { data, error } = await supabaseClient
                     .from('volunteers')
                     .select('id, name, avatar, description')
@@ -2176,7 +2173,6 @@
                         description: vol.description,
                         attendance: ""
                     })) || [];
-                    console.log('✅ Volunteers loaded:', registeredVolunteersRoster.length, 'records', registeredVolunteersRoster);
                 }
                 return registeredVolunteersRoster;
             } catch (err) {
@@ -2195,11 +2191,8 @@
                 
                 if (error) throw error;
                 
-                console.log('🔍 DEBUG: Fetched', data?.length || 0, 'attendance records from DB');
                 if (data && data.length > 0) {
-                    console.log('📋 RAW ATTENDANCE DATA (first 3):');
                     data.slice(0, 3).forEach((r, i) => {
-                        console.log(`   Record ${i}: volunteer_id=${r.volunteer_id} (type: ${typeof r.volunteer_id}), week_number=${r.week_number}, present=${r.present}`);
                     });
                 }
                 
@@ -2210,12 +2203,10 @@
                     .order('id');
                 
                 const totalWeeks = allSchedules ? allSchedules.length : 0;
-                console.log('📅 Total weeks (schedules):', totalWeeks);
                 
                 // Build attendance strings for each volunteer (LAST 10 WEEKS ONLY)
                 if (totalWeeks > 0) {
                     registeredVolunteersRoster.forEach(volunteer => {
-                        console.log(`\n👤 Processing ${volunteer.name} (ID: ${volunteer.id}, type: ${typeof volunteer.id}):`);
                         
                         // Create array for ALL weeks: 1 for present, 0 for absent/no record
                         const allWeeksArray = [];
@@ -2224,7 +2215,6 @@
                             const record = data && data.find(a => {
                                 const match = a.volunteer_id === volunteer.id && a.week_number === week;
                                 if (match) {
-                                    console.log(`    ✓ Week ${week}: FOUND matching record (volunteer_id: ${a.volunteer_id}, week: ${a.week_number}, present: ${a.present})`);
                                 }
                                 return match;
                             });
@@ -2233,7 +2223,6 @@
                             allWeeksArray.push(mark);
                             
                             if (!record) {
-                                console.log(`    ✗ Week ${week}: No match found`);
                             }
                         }
                         
@@ -2242,13 +2231,10 @@
                         
                         const attendance = last10Weeks.join(',');
                         volunteer.attendance = attendance;
-                        console.log(`  📊 Final: ${volunteer.name}: ${attendance}`);
                     });
                 } else {
-                    console.log('⚠️  No schedules found - setting all attendance to empty');
                 }
                 
-                console.log('✅ Attendance history fetch complete');
                 return registeredVolunteersRoster;
             } catch (err) {
                 console.error('❌ Failed to load attendance history:', err);
@@ -2257,7 +2243,6 @@
 
         // Show skeleton loaders while data is loading
         function showSkeletonLoaders() {
-            console.log('⏳ Showing skeleton loaders...');
             
             // Show chart skeleton on home page - overlay style
             const chartContainer = document.getElementById('bar-chart-container');
@@ -2268,7 +2253,6 @@
                         <div class="bar-pillar" style="height: 40%; background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite linear;"></div>
                     </div>
                 `).join('');
-                console.log('✅ Chart skeleton shown');
             }
 
             // Show chart axis labels skeleton
@@ -2277,7 +2261,6 @@
                 axisLabelsContainer.innerHTML = Array(10).fill(0).map(() => `
                     <span style="height: 12px; background: #e0e0e0; border-radius: 4px; display: inline-block; width: 30px; animation: skeleton-pulse 1.5s ease-in-out infinite;"></span>
                 `).join('');
-                console.log('✅ Chart axis labels skeleton shown');
             }
 
             // Show metrics skeleton on home page - keep card structure and colors
@@ -2293,7 +2276,6 @@
                     `;
                     card.className = cardClasses;
                 });
-                console.log('✅ Metrics skeletons shown');
             }
 
             // Show volunteer skeleton loaders - keep card structure
@@ -2321,7 +2303,6 @@
                         </div>
                     </div>
                 `).join('');
-                console.log('✅ Volunteer skeletons shown');
             }
 
             // Show chore skeleton loaders - keep card structure
@@ -2342,7 +2323,6 @@
                         </div>
                     </div>
                 `).join('');
-                console.log('✅ Chore skeletons shown');
             }
 
             // Show schedule skeleton loaders - keep card structure
@@ -2372,7 +2352,6 @@
                         `).join('')}
                     </div>
                 `).join('');
-                console.log('✅ Schedule skeletons shown');
             }
             
             // Render lucide icons for skeletons
@@ -2381,7 +2360,6 @@
 
         // Hide skeleton loaders after data loads
         function hideSkeletonLoaders() {
-            console.log('👻 Hiding skeleton loaders...');
             
             // Fade out all skeleton overlay elements
             const allSkeletons = document.querySelectorAll('.nb-skeleton, .skeleton-chart-overlay');
@@ -2394,13 +2372,11 @@
             // Clear after fade
             setTimeout(() => {
                 allSkeletons.forEach(el => el.remove());
-                console.log('✅ Skeletons cleared');
             }, 300);
         }
 
         // Initialize all data from Supabase
         async function initializeDataFromSupabase() {
-            console.log('🔄 Starting data initialization from Supabase...');
             await fetchChores();
             await fetchVolunteers();
             await fetchAttendanceHistory();
@@ -2451,16 +2427,10 @@
             // Keep only LAST 10 WEEKS for the chart
             attendanceHistoryDataset = allWeeks.slice(-10);
             
-            console.log('✅ All data initialized:');
-            console.log('   - Chores:', defaultChoreRegistryArray.length);
-            console.log('   - Volunteers:', registeredVolunteersRoster.length);
-            console.log('   - Weeks (all):', allWeeks.length);
-            console.log('   - Weeks (last 10 for chart):', attendanceHistoryDataset.length);
         }
 
         async function loadSchedulesFromDatabase() {
             try {
-                console.log('📋 Loading service schedules from database...');
                 
                 // 1. Load all service schedules in one call
                 const { data: schedules, error: scheduleError } = await supabaseClient
@@ -2474,7 +2444,6 @@
                 }
                 
                 if (!schedules || schedules.length === 0) {
-                    console.log('ℹ️ No schedules found in database');
                     return;
                 }
                 
@@ -2507,10 +2476,6 @@
                     });
                 }
                 
-                console.log('📊 Fetched schedules and assignments in bulk:');
-                console.log(`   - Schedules: ${schedules.length}`);
-                console.log(`   - Total Assignments: ${allAssignments ? allAssignments.length : 0}`);
-                console.log('📝 Sample assignment structure:', allAssignments && allAssignments.length > 0 ? allAssignments[0] : 'No data');
                 
                 // 4. Group schedules by month/year
                 const schedulesByMonth = {};
@@ -2527,13 +2492,11 @@
                     const taskMap = {};
                     const assignments = assignmentsByService[schedule.id] || [];
                     
-                    console.log(`🔗 Schedule ${schedule.service_date} has ${assignments.length} assignments`);
                     
                     assignments.forEach((assignment, idx) => {
                         const choreName = assignment.chores?.name;
                         const volunteerName = assignment.volunteers?.name;
                         
-                        console.log(`   Assignment ${idx}: chore="${choreName}" | volunteer="${volunteerName}" | full:`, assignment);
                         
                         if (choreName && volunteerName) {
                             if (!taskMap[choreName]) {
@@ -2545,7 +2508,6 @@
                         }
                     });
                     
-                    console.log(`📋 Task map for ${schedule.service_date}:`, taskMap);
                     
                     // Store in persistent logs
                     persistentWeeklyRegistryLogs[schedule.service_date] = taskMap;
@@ -2575,7 +2537,6 @@
                     skeletonLoader.style.transition = 'opacity 0.3s ease';
                     setTimeout(() => {
                         skeletonLoader.remove();
-                        console.log('✅ Schedule skeleton cleared');
                     }, 300);
                 }
                 
@@ -2646,7 +2607,6 @@
                     monthIndex++;
                 }
                 
-                console.log('✅ Loaded', schedules.length, 'schedule(s) from database');
             } catch (err) {
                 console.error('❌ Failed to load schedules:', err);
             }
@@ -2841,7 +2801,6 @@
             container.innerHTML = defaultChoreRegistryArray.map(task => {
                 // Use task icon if available, otherwise fallback to a default
                 const iconName = task.icon || 'circle-check';
-                console.log(`🔍 Chore: ${task.name}, Icon: ${iconName}`);
                 
                 return `
                 <div class="brutal-chore-tile" onclick="loadChoreAssignmentPage('${task.name.replace(/'/g, "\\'")}', '${task.area.replace(/'/g, "\\'")}')">
@@ -3085,7 +3044,6 @@
             const editContainer = document.getElementById('edit-schedule-container');
             
             // ALWAYS fetch fresh data from database for edit page (don't use cache)
-            console.log('📡 Fetching FRESH schedule data from database for:', rawDateString);
             
             supabaseClient
                 .from('service_schedules')
@@ -3115,14 +3073,11 @@
                                 }
                             });
                             
-                            console.log('✅ Fetched FRESH from DB:', reconstructedTaskMap);
                             renderEditPage(editContainer, reconstructedTaskMap, rawDateString);
                         } else {
-                            console.log('ℹ️ No assignments found for this date');
                             renderEditPage(editContainer, {}, rawDateString);
                         }
                     } else {
-                        console.log('ℹ️ No schedule found for this date');
                         renderEditPage(editContainer, {}, rawDateString);
                     }
                 })
@@ -3136,13 +3091,11 @@
         }
         
         function renderEditPage(editContainer, scheduleData, rawDateString) {
-            console.log(`📝 Loading edit schedule with data:`, scheduleData);
             
             editContainer.innerHTML = defaultChoreRegistryArray
                 .filter(task => scheduleData[task.name] && scheduleData[task.name].length > 0)
                 .map(task => {
                     const assignedVolunteers = scheduleData[task.name] || [];
-                    console.log(`   Chore: ${task.name}, Assigned: ${JSON.stringify(assignedVolunteers)}`);
                     return `
                         <div class="task-assign-card" data-chore-id="${task.id}">
                             <button class="task-delete-btn" onclick="deleteTaskCard(this)" title="Delete this task">×</button>
@@ -3166,13 +3119,11 @@
                 document.querySelectorAll('#edit-schedule-container .assignee-select').forEach((select) => {
                     const taskName = select.getAttribute('data-task-name');
                     const assignedVolunteers = scheduleData[taskName] || [];
-                    console.log(`🔧 Setting selections for ${taskName}:`, assignedVolunteers);
                     
                     Array.from(select.options).forEach(option => {
                         const shouldBeSelected = assignedVolunteers.includes(option.value);
                         option.selected = shouldBeSelected;
                         if (shouldBeSelected) {
-                            console.log(`   ✓ Selected: ${option.value}`);
                         }
                     });
                 });
@@ -3208,13 +3159,11 @@
             let unassignedChores = [];
             
             const remainingCards = document.querySelectorAll('#edit-schedule-container .task-assign-card');
-            console.log(`📋 Found ${remainingCards.length} chore cards remaining after deletions`);
             
             remainingCards.forEach(card => {
                 const selectElement = card.querySelector('.assignee-select');
                 const taskName = selectElement.getAttribute('data-task-name');
                 const selectedNames = Array.from(selectElement.selectedOptions).map(opt => opt.value);
-                console.log(`   Chore: ${taskName}, Volunteers: ${selectedNames.length}`);
                 
                 updatedTaskMap[taskName] = selectedNames;
                 
@@ -3223,7 +3172,6 @@
                 }
             });
             
-            console.log(`📊 Task map to save:`, updatedTaskMap);
             
             if (unassignedChores.length > 0) {
                 showValidationModal(`The following chores have no volunteers assigned:\\n\\n${unassignedChores.join('\\n')}`);
@@ -3395,7 +3343,6 @@
             const card = button.closest('.task-assign-card');
             // Remove immediately from DOM (don't wait for animation)
             card.remove();
-            console.log('🗑️  Task card removed from DOM immediately');
         }
 
         function finalizeAndCommitAssignmentsToTimeline() {
@@ -3524,7 +3471,6 @@
 
         // Refresh all content views with updated data
         function refreshAllContentViews() {
-            console.log('🔄 Refreshing all content views with new data...');
             
             // Refresh volunteer directory
             renderMasterVolunteersRegistryView();
@@ -3543,15 +3489,12 @@
                 lucide.createIcons();
             }
             
-            console.log('✅ All content views refreshed successfully');
         }
 
         // Save assignments to Supabase database
         async function saveAssignmentsToDatabase(serviceDate, volunteerCount, taskMap) {
             return new Promise(async (resolve, reject) => {
             try {
-                console.log('💾 Saving assignments to database...');
-                console.log('📝 Task Map received:', taskMap);
                 
                 // 1. Check if service schedule already exists for this date
                 let serviceId = null;
@@ -3566,7 +3509,6 @@
                     // Try to create a new one anyway
                 } else if (existingService) {
                     serviceId = existingService.id;
-                    console.log('✅ Using existing service schedule with ID:', serviceId);
                     
                     // FIRST: Get ALL assignment IDs for this service
                     const { data: assignmentsToDelete, error: getError } = await supabaseClient
@@ -3575,11 +3517,9 @@
                         .eq('service_id', serviceId);
                     
                     const countBefore = assignmentsToDelete ? assignmentsToDelete.length : 0;
-                    console.log(`🗑️  STEP 1A: Found ${countBefore} existing assignments to delete for service ID: ${serviceId}`);
                     
                     if (countBefore > 0) {
                         // Delete using .in() filter (sometimes bypasses RLS better than .eq())
-                        console.log('🗑️  STEP 1B: Attempting deletion using .in() filter...');
                         const assignmentIds = assignmentsToDelete.map(a => a.id);
                         
                         const { error: deleteError } = await supabaseClient
@@ -3596,14 +3536,12 @@
                         }
                         
                         // VERIFY deletion worked
-                        console.log('🗑️  STEP 1C: Verifying deletion...');
                         const { data: afterDelete, error: afterError } = await supabaseClient
                             .from('chore_assignments')
                             .select('id')
                             .eq('service_id', serviceId);
                         
                         const countAfter = afterDelete ? afterDelete.length : 0;
-                        console.log(`✅ STEP 1 COMPLETE: Deleted ${countBefore - countAfter} assignments (${countBefore} before → ${countAfter} after)`);
                         
                         if (countAfter > 0) {
                             console.warn(`❌ RLS BLOCKING: ${countAfter} assignments still remain! Row Level Security policy may be blocking deletes.`);
@@ -3611,7 +3549,6 @@
                             console.warn('   The DELETE policy must allow your authenticated user to delete rows.');
                         }
                     } else {
-                        console.log('ℹ️  STEP 1: No assignments to delete (clean slate)');
                     }
                 }
                 
@@ -3632,24 +3569,19 @@
                     }
                     
                     serviceId = serviceData[0].id;
-                    console.log('✅ Service schedule created with ID:', serviceId);
                 }
                 
                 // 2. Create chore assignments for each task and volunteer
                 const assignmentRecords = [];
                 
-                console.log('🔍 Processing', Object.keys(taskMap).length, 'chores');
                 
                 for (const [choreName, volunteerNames] of Object.entries(taskMap)) {
-                    console.log(`   📌 Chore: "${choreName}", Volunteers selected:`, volunteerNames);
                     
                     const chore = defaultChoreRegistryArray.find(c => c.name === choreName);
-                    console.log(`   ✓ Found chore object:`, chore ? `ID=${chore.id}` : 'NOT FOUND');
                     
                     if (chore && volunteerNames.length > 0) {
                         for (const volName of volunteerNames) {
                             const volunteer = registeredVolunteersRoster.find(v => v.name === volName);
-                            console.log(`     👤 Volunteer: "${volName}", Found:`, volunteer ? `ID=${volunteer.id}` : 'NOT FOUND');
                             
                             if (volunteer) {
                                 const record = {
@@ -3659,20 +3591,16 @@
                                     completed: false,
                                     notes: ''
                                 };
-                                console.log(`     📦 Creating assignment record:`, record);
                                 assignmentRecords.push(record);
                             }
                         }
                     } else {
-                        console.log(`   ⚠️  Skipping - either chore not found or no volunteers selected`);
                     }
                 }
                 
-                console.log(`✅ Total assignment records to save: ${assignmentRecords.length}`);
                 
                 // Batch insert all assignments
                 if (assignmentRecords.length > 0) {
-                    console.log('💾 STEP 2: Inserting into chore_assignments table:', assignmentRecords);
                     
                     const { data: assignmentData, error: assignmentError } = await supabaseClient
                         .from('chore_assignments')
@@ -3687,13 +3615,10 @@
                         return;
                     }
                     
-                    console.log('✅ STEP 2 COMPLETE: Chore assignments saved:', assignmentRecords.length, 'records');
                 } else {
-                    console.log('ℹ️  STEP 2: No assignment records to insert - all chores may have been deleted');
                 }
                 
                 // 3. Save attendance history for all present volunteers
-                console.log('📝 STEP 3: Saving attendance history for', transientPresentVolunteersArray.length, 'volunteers from attendance sheet');
                 
                 // Get week number by counting how many schedules exist BEFORE this date
                 const { data: schedulesBefore } = await supabaseClient
@@ -3703,7 +3628,6 @@
                     .order('service_date');
                 
                 const weekNumber = (schedulesBefore ? schedulesBefore.length : 0) + 1;
-                console.log('📅 Calculated week_number:', weekNumber, 'for service_date:', serviceDate, '(found', schedulesBefore?.length || 0, 'earlier schedules)');
                 
                 // Start with volunteers from attendance sheet
                 const attendanceSet = new Set(transientPresentVolunteersArray);
@@ -3718,7 +3642,6 @@
                     });
                 }
                 
-                console.log('   Total volunteers to mark as present:', attendanceSet.size, '(from attendance sheet + chore assignments)');
                 
                 const attendanceRecords = Array.from(attendanceSet).map(volunteerName => {
                     const volunteer = registeredVolunteersRoster.find(v => v.name === volunteerName);
@@ -3730,10 +3653,8 @@
                     };
                 }).filter(rec => rec.volunteer_id); // Only include valid records
                 
-                console.log('🔍 DEBUG: Attendance records to upsert:', JSON.stringify(attendanceRecords, null, 2));
                 
                 if (attendanceRecords.length > 0) {
-                    console.log('   Upserting', attendanceRecords.length, 'attendance records with week_number:', weekNumber);
                     // Use upsert to avoid duplicate key conflicts - insert or update if exists
                     const { data: attendanceData, error: attendanceError } = await supabaseClient
                         .from('attendance_history')
@@ -3745,14 +3666,10 @@
                         console.error('   Error code:', attendanceError.code);
                         console.error('   Error details:', attendanceError.details);
                     } else {
-                        console.log('✅ STEP 3 COMPLETE: Attendance history saved/updated:', attendanceData?.length || attendanceRecords.length, 'records');
-                        console.log('   Upserted data:', attendanceData);
                     }
                 } else {
-                    console.log('⚠️  STEP 3: No attendance records to save (no volunteers matched)');
                 }
                 
-                console.log('✅✅✅ ALL STEPS COMPLETE: Assignments saved successfully to database');
                 resolve();
             } catch (err) {
                 console.error('❌ CRITICAL ERROR: Failed to save assignments:', err);
@@ -3770,13 +3687,10 @@
             const reportDisplayArea = document.getElementById('weekly-report-tasks-area');
 
             let currentEventReportData = persistentWeeklyRegistryLogs[rawDateString];
-            console.log('📋 Looking for data for date:', rawDateString);
-            console.log('💾 Data in memory:', currentEventReportData ? 'YES' : 'NO');
 
             // If data not in memory, fetch from Supabase
             if (!currentEventReportData) {
                 try {
-                    console.log('🔍 Fetching assignment data from Supabase for date:', rawDateString);
                     
                     // Get the service schedule for this date
                     const { data: schedules, error: scheduleError } = await supabaseClient
@@ -3789,11 +3703,9 @@
                         console.error('❌ Error querying service_schedules:', scheduleError);
                         currentEventReportData = {};
                     } else if (!schedules) {
-                        console.log('ℹ️ No schedule found for this date:', rawDateString);
                         currentEventReportData = {};
                     } else {
                         const serviceId = schedules.id;
-                        console.log('✅ Found service schedule with ID:', serviceId);
                         
                         // Fetch all assignments for this service (without relationships first)
                         const { data: assignments, error: assignmentError } = await supabaseClient
@@ -3805,7 +3717,6 @@
                             console.error('❌ Error fetching assignments:', assignmentError);
                             currentEventReportData = {};
                         } else {
-                            console.log('✅ Fetched assignments:', assignments ? assignments.length : 0);
                             
                             // Initialize task map with ALL chores
                             currentEventReportData = {};
@@ -3820,7 +3731,6 @@
                                     const volunteer = registeredVolunteersRoster.find(v => v.id === assignment.volunteer_id);
                                     
                                     if (chore && volunteer) {
-                                        console.log(`   Adding ${volunteer.name} to ${chore.name}`);
                                         if (!currentEventReportData[chore.name].includes(volunteer.name)) {
                                             currentEventReportData[chore.name].push(volunteer.name);
                                         }
@@ -3830,7 +3740,6 @@
                             
                             // Store in memory for future access
                             persistentWeeklyRegistryLogs[rawDateString] = currentEventReportData;
-                            console.log('✅ Assignments loaded from Supabase and cached');
                         }
                     }
                 } catch (err) {
@@ -3838,19 +3747,16 @@
                     currentEventReportData = {};
                 }
             } else {
-                console.log('✅ Using cached data from memory');
             }
 
             // Ensure all chores are in the report data
             if (!currentEventReportData || Object.keys(currentEventReportData).length === 0) {
-                console.log('⚠️ No assignment data found, creating empty entries for all chores');
                 currentEventReportData = {};
                 defaultChoreRegistryArray.forEach(task => {
                     currentEventReportData[task.name] = [];
                 });
             }
 
-            console.log('📊 Final report data:', currentEventReportData);
 
             reportDisplayArea.innerHTML = Object.keys(currentEventReportData).map(taskTitle => {
                 const assignedWorkers = currentEventReportData[taskTitle];
@@ -4035,8 +3941,6 @@
             let timelineNodesHTML = "";
 
             // DEBUG: Log what's in the registry for this chore
-            console.log('🔍 DEBUG: Looking for chore:', choreName);
-            console.log('🔍 DEBUG: persistentWeeklyRegistryLogs keys:', Object.keys(persistentWeeklyRegistryLogs));
             
             // Evaluate every single step of our active 10-week history
             attendanceHistoryDataset.forEach((weekData, weekIndex) => {
@@ -4044,7 +3948,6 @@
 
                 // Search through all keys in persistentWeeklyRegistryLogs to find actual assignments
                 const allRegistryKeys = Object.keys(persistentWeeklyRegistryLogs);
-                console.log(`🔍 Week ${weekIndex} (${weekData.date}): Searching in ${allRegistryKeys.length} keys for chore "${choreName}"`);
                 
                 for (const dateKey of allRegistryKeys) {
                     const registryData = persistentWeeklyRegistryLogs[dateKey];
@@ -4054,7 +3957,6 @@
                     // Check if this dateKey corresponds to the current week we're displaying
                     if (weekDataDateLabel === weekData.date && registryData && registryData[choreName]) {
                         const volunteersForChore = registryData[choreName];
-                        console.log(`   ✓ Found chore "${choreName}" for week ${weekData.date}:`, volunteersForChore);
                         assignedWorkers = volunteersForChore;
                         break;
                     }
@@ -4154,13 +4056,10 @@
             toggleNeoFabMenu();
             
             if (actionType === 'event') {
-                console.log("New Event Triggered");
                 openBottomSheet('sheet-select-date');
             } else if (actionType === 'user') {
-                console.log("Add User Triggered");
                 openBottomSheet('sheet-add-user');
             } else if (actionType === 'chore') {
-                console.log("Chores List Triggered");
                 openBottomSheet('sheet-add-chore');
             }
         }

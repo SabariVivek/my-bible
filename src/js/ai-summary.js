@@ -6,7 +6,6 @@
  * Folder structure in Supabase: AI Summary / {BookName} / Chapter - {N}
  */
 
-console.log('[AI-SUMMARY] Script loaded');
 
 // ── STATE ──
 let aiSummaryAvailability = {}; // { "Genesis": { "1": pageId, "2": pageId }, ... }
@@ -36,7 +35,6 @@ async function fetchAISummaryAvailability() {
     if (aiSummaryLoaded) return aiSummaryAvailability;
 
     try {
-        console.log('[AI-SUMMARY] Fetching availability from Supabase...');
 
         const response = await fetch(
             `${AI_SUMMARY_CONFIG.url}/rest/v1/${AI_SUMMARY_CONFIG.tableName}?select=id,title,type,parent_id`,
@@ -64,11 +62,9 @@ async function fetchAISummaryAvailability() {
         );
 
         if (!aiFolder) {
-            console.log('[AI-SUMMARY] No "AI Summary" folder found');
             return {};
         }
 
-        console.log('[AI-SUMMARY] Found AI Summary folder:', aiFolder.id);
 
         const bookFolders = rows.filter(r => r.parent_id === aiFolder.id && r.type === 'folder');
 
@@ -86,7 +82,6 @@ async function fetchAISummaryAvailability() {
 
         aiSummaryAvailability = map;
         aiSummaryLoaded = true;
-        console.log('[AI-SUMMARY] Availability map:', JSON.stringify(Object.keys(map)));
         return map;
     } catch (err) {
         console.error('[AI-SUMMARY] Error fetching availability:', err);
@@ -109,7 +104,6 @@ function getAISummaryPageId(bookName, chapter) {
 
 async function fetchAISummaryContent(pageId) {
     try {
-        console.log('[AI-SUMMARY] Fetching content for page:', pageId);
 
         const response = await fetch(
             `${AI_SUMMARY_CONFIG.url}/rest/v1/${AI_SUMMARY_CONFIG.tableName}?id=eq.${encodeURIComponent(pageId)}&select=content,title`,
@@ -128,7 +122,6 @@ async function fetchAISummaryContent(pageId) {
 
         const data = await response.json();
         if (data && data.length > 0) {
-            console.log('[AI-SUMMARY] Content loaded, length:', data[0].content?.length);
             return data[0].content;
         }
         return null;
@@ -271,17 +264,14 @@ function parseAISummaryContent(htmlContent, bookName, chapter) {
 // ─────────────────────────────────────
 
 function initializeAISummaryButton(bookName, chapter) {
-    console.log(`[AI-SUMMARY] Init button for: ${bookName} ${chapter}`);
 
     const existing = document.getElementById('ai-summary-trigger');
     if (existing) existing.remove();
 
     if (!hasAISummary(bookName, chapter)) {
-        console.log(`[AI-SUMMARY] No summary for ${bookName} ${chapter}`);
         return;
     }
 
-    console.log(`[AI-SUMMARY] Summary available for ${bookName} ${chapter}, showing button`);
 
     const trigger = document.createElement('div');
     trigger.id = 'ai-summary-trigger';
@@ -455,7 +445,6 @@ async function prefetchAISummaryData(bookName, chapter) {
     const content = await fetchAISummaryContent(pageId);
     if (content) {
         aiPrefetchedSections = parseAISummaryContent(content, bookName, chapter);
-        console.log(`[AI-SUMMARY] Pre-fetched ${aiPrefetchedSections.length} sections`);
     }
 }
 
@@ -705,16 +694,12 @@ function closeAISummaryTerminal() {
 // ─────────────────────────────────────
 
 async function initAISummarySystem() {
-    console.log('[AI-SUMMARY] Initializing system...');
     await fetchAISummaryAvailability();
-    console.log('[AI-SUMMARY] System ready. Available books:',
-        Object.keys(aiSummaryAvailability).join(', ') || 'none');
 
     // Retroactively show AI button for the currently displayed chapter
     if (typeof bibleBooks !== 'undefined' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
         const bookName = bibleBooks[currentBook]?.name;
         if (bookName) {
-            console.log(`[AI-SUMMARY] Retroactive check for: ${bookName} ${currentChapter}`);
             initializeAISummaryButton(bookName, currentChapter);
         }
     }

@@ -1644,10 +1644,8 @@
             try {
                 // Get current user ID from localStorage
                 const userId = localStorage.getItem('currentUserId');
-                console.log('[Saturday Service] Current user ID:', userId);
 
                 if (!userId) {
-                    console.log('[Saturday Service] No user logged in, hiding menu');
                     const menuItem = document.getElementById('right-saturday-service-option');
                     if (menuItem) {
                         menuItem.style.display = 'none';
@@ -1657,13 +1655,11 @@
 
                 // Initialize Supabase client if not already initialized
                 if (typeof supabase === 'undefined') {
-                    console.log('[Saturday Service] Supabase not ready, will retry...');
                     setTimeout(checkSaturdayServiceVisibility, 500);
                     return;
                 }
 
                 if (!SUPABASE_SATURDAY_SERVICE_CONFIG || !SUPABASE_SATURDAY_SERVICE_CONFIG.url || !SUPABASE_SATURDAY_SERVICE_CONFIG.anonKey) {
-                    console.log('[Saturday Service] Config not loaded, will retry...');
                     setTimeout(checkSaturdayServiceVisibility, 500);
                     return;
                 }
@@ -1698,7 +1694,6 @@
                 const menuItem = document.getElementById('right-saturday-service-option');
                 if (menuItem) {
                     menuItem.style.display = saturdayServiceEnabled ? 'flex' : 'none';
-                    console.log('[Saturday Service] User', userId, ':', saturdayServiceEnabled ? 'Visible' : 'Hidden', '(saturday_service =', saturdayServiceEnabled + ')');
                 }
             } catch (err) {
                 console.error('[Saturday Service] Unexpected error:', err);

@@ -3207,7 +3207,6 @@
         }
 
         function selectDateAndNavigate(year, month, day) {
-            console.log(`Navigating to ${year}-${month}-${day}`);
             // Close the bottom sheet
             closeReadingPlanSheet();
             
@@ -3455,15 +3454,8 @@
         }
 
         async function togglePortionComplete(portionIndex) {
-            console.log('togglePortionComplete called with portionIndex:', portionIndex);
-            console.log('state.selectedDate:', state.selectedDate);
-            console.log('state.selectedDate.toDateString():', state.selectedDate.toDateString());
-            console.log('Year:', state.selectedDate.getFullYear(), 'Month:', state.selectedDate.getMonth() + 1, 'Date:', state.selectedDate.getDate());
-            console.log('state.currentUser:', state.currentUser);
-            console.log('state.isInitializing:', state.isInitializing);
             
             if (!state.currentUser) {
-                console.log('No current user');
                 return;
             }
             
@@ -3476,24 +3468,16 @@
             const dateKey = `${state.selectedDate.getFullYear()}-${String(state.selectedDate.getMonth() + 1).padStart(2, '0')}-${String(state.selectedDate.getDate()).padStart(2, '0')}`;
             const portionKey = `${dateKey}-${portionIndex}`;
             
-            console.log('dateKey:', dateKey);
-            console.log('portionKey:', portionKey);
-            console.log('completedPortions before:', completedPortions);
             
             try {
                 if (completedPortions.has(portionKey)) {
-                    console.log('Unmarking portion as completed');
                     completedPortions.delete(portionKey);
                     const result = await BibleReadingDB.unmarkPortionAsCompleted(state.currentUser.id, state.selectedDate, portionIndex);
-                    console.log('Unmark result:', result);
                 } else {
-                    console.log('Marking portion as completed');
                     completedPortions.add(portionKey);
                     const result = await BibleReadingDB.markPortionAsCompleted(state.currentUser.id, state.selectedDate, portionIndex);
-                    console.log('Mark result:', result);
                 }
                 
-                console.log('completedPortions after:', completedPortions);
                 
                 // Update both current view and dashboard if visible
                 if (state.showDashboard) {
@@ -4136,7 +4120,6 @@
                             completed_at: new Date().toISOString()
                         };
                         
-                        console.log('Saving chapter result:', chapterResultData);
                         
                         const { data, error } = await supabase
                             .from('quiz_chapter_results')
@@ -4147,7 +4130,6 @@
                             throw error;
                         }
                         
-                        console.log('Chapter result saved successfully:', data);
                     } catch (supabaseError) {
                         console.error('Error saving to Supabase:', supabaseError.message);
                         console.error('Error status:', supabaseError.status);
@@ -4258,7 +4240,6 @@
                         state.chapterScores[dateKey][user.id][bookName][chapterNum] = { score: result.score, total: result.total_questions || 0 };
                     });
 
-                    console.log('Quiz progress loaded for user', user.id, 'on', dateKey);
                 }
             } catch (error) {
                 console.error('Error loading quiz progress:', error);
@@ -4750,11 +4731,9 @@
                     cachedVerses.lastUserId === currentUserId;
                 
                 if (isCacheValid) {
-                    console.log('Using cached verses for user', currentUserId);
                     return cachedVerses;
                 }
                 
-                console.log('Fetching verses from Supabase for', currentYear, 'month', currentMonth, 'user', currentUserId);
                 
                 // Fetch both yearly/monthly verses and user-specific promise/command verses in parallel
                 const fetchPromises = [
@@ -4786,12 +4765,6 @@
 
                 const [yearlyVerse, monthlyVerse, userPromiseVerse, userCommandVerse] = await Promise.all(fetchPromises);
                 
-                console.log('Supabase verses fetched for user', currentUserId, ':', { 
-                    yearly: yearlyVerse ? { reference: yearlyVerse.reference, hasText: !!yearlyVerse.verse_text } : null,
-                    monthly: monthlyVerse ? { reference: monthlyVerse.reference, hasText: !!monthlyVerse.verse_text } : null,
-                    userPromise: userPromiseVerse ? { reference: userPromiseVerse.reference, hasText: !!userPromiseVerse.verse_text } : null,
-                    userCommand: userCommandVerse ? { reference: userCommandVerse.reference, hasText: !!userCommandVerse.verse_text } : null
-                });
                 
                 cachedVerses = {
                     yearly: yearlyVerse,
@@ -4802,12 +4775,6 @@
                     lastUserId: currentUserId
                 };
                 
-                console.log('Verses loaded and cached for user', currentUserId, ':', { 
-                    yearly: !!yearlyVerse, 
-                    monthly: !!monthlyVerse,
-                    userPromise: !!userPromiseVerse,
-                    userCommand: !!userCommandVerse
-                });
                 
                 // Trigger re-render if dashboard is visible
                 if (state.showDashboard && state.dashboardTab === 'home') {
@@ -4824,12 +4791,10 @@
         // Call this in DOMContentLoaded to preload verses
         const initialLoadVerses = async () => {
             try {
-                console.log('Starting background verse loading...');
                 // Only load if we have a current user
                 if (state.currentUser && state.currentUser.id) {
                     await loadYearlyMonthlyVerses();
                 }
-                console.log('Background verse loading completed');
             } catch (error) {
                 console.warn('Background verse loading failed, will use fallback:', error);
             }
@@ -4845,26 +4810,21 @@
         // Function to ensure verses are loaded for current user
         async function ensureVersesLoaded() {
             if (!state.currentUser || !state.currentUser.id) {
-                console.log('No current user, skipping verse load');
                 return;
             }
             
             const userId = state.currentUser.id;
-            console.log('Ensuring verses loaded for user', userId);
             
             // Clear cache for this user to force fresh load
             if (cachedVerses.lastUserId !== userId) {
-                console.log('User changed (was', cachedVerses.lastUserId, 'now', userId, ') - clearing cache');
                 cachedVerses.lastFetch = 0;
                 cachedVerses.lastUserId = null;
             }
             
             // Load verses if not already loaded for this user
             if (!cachedVerses.userPromise || !cachedVerses.userCommand || cachedVerses.lastUserId !== userId) {
-                console.log('Verses not loaded for user', userId, '- loading now');
                 await loadYearlyMonthlyVerses();
             } else {
-                console.log('Verses already loaded for user', userId);
             }
         }
 
@@ -4892,7 +4852,6 @@
             
             // Subscribe to completed dates changes
             BibleReadingDB.subscribeToCompletedDates((payload) => {
-                console.log('Completed dates changed:', payload);
                 
                 // Update affected user's completedDates in state
                 const user = state.users.find(u => u.id === payload.new?.user_id || payload.old?.user_id);
@@ -4910,7 +4869,6 @@
             
             // Subscribe to reading progress changes
             BibleReadingDB.subscribeToReadingProgress((payload) => {
-                console.log('Reading progress changed:', payload);
                 
                 // Update affected user's progress in state
                 const user = state.users.find(u => u.id === payload.new?.user_id || payload.old?.user_id);
@@ -4932,7 +4890,6 @@
             
             // Subscribe to daily portions changes
             BibleReadingDB.subscribeToDailyPortions((payload) => {
-                console.log('Daily portions changed:', payload);
                 
                 // This would trigger reload of portions for affected user
                 const user = state.users.find(u => u.id === payload.new?.user_id || payload.old?.user_id);
@@ -5062,7 +5019,6 @@
                         state.chapterScores[dateKey][userId][bookName][chapterNum] = { score: record.score, total: record.total_questions || 0 };
                     });
 
-                    console.log('Quiz chapters loaded from new table');
                     
                     // Build all-time leaderboard from the new data
                     const userScoreTotals = {};
@@ -5368,19 +5324,6 @@
                     return newTestamentBooks.some(b => b.name === ch.book);
                 });
 
-                console.log('Preparing to mark:', {
-                    totalChapters: chaptersToMark.length,
-                    uniqueChapters: uniqueChapters.length,
-                    otChapters: otChapters.length,
-                    ntChapters: ntChapters.length,
-                    duplicatesRemoved: chaptersToMark.length - uniqueChapters.length,
-                    totalDates: datesToMark.length,
-                    todayDate: `${todayMonth}/${todayDay}/${year}`,
-                    isLeapYear: isLeapYear,
-                    sampleOTChapters: otChapters.slice(0, 5),
-                    sampleNTChapters: ntChapters.slice(0, 5),
-                    sampleDates: datesToMark.slice(0, 5)
-                });
 
                 // Batch insert chapters (do in chunks to avoid too large requests)
                 const chunkSize = 100;
@@ -5390,10 +5333,6 @@
                     try {
                         const result = await BibleReadingDB.markChaptersAsReadBatch(userId, chunk);
                         chaptersInserted += chunk.length;
-                        console.log(`Chapters inserted: ${chaptersInserted}/${uniqueChapters.length}`, {
-                            chunkSample: chunk.slice(0, 3),
-                            resultCount: result?.length
-                        });
                     } catch (error) {
                         console.error('Error inserting chapter batch:', error, {
                             chunkSample: chunk.slice(0, 5)
@@ -5409,35 +5348,22 @@
                     try {
                         await BibleReadingDB.markDatesAsCompletedBatch(userId, chunk);
                         datesInserted += chunk.length;
-                        console.log(`Dates inserted: ${datesInserted}/${datesToMark.length}`);
                     } catch (error) {
                         console.error('Error inserting date batch:', error);
                         // Continue with next batch even if this one fails
                     }
                 }
 
-                console.log('Mark up to date completed:', {
-                    chaptersMarked: chaptersInserted,
-                    chaptersUnique: uniqueChapters.length,
-                    datesMarked: datesInserted,
-                    otChaptersMarked: otChapters.length,
-                    ntChaptersMarked: ntChapters.length
-                });
 
                 // Small delay to ensure database consistency
                 await new Promise(resolve => setTimeout(resolve, 500));
 
                 // Force reload user progress from database to ensure consistency
-                console.log('Reloading user progress from database...');
                 state.loadedUserData.delete(userId);
                 user.progress = {};  // Clear existing progress to force fresh load
                 user.completedDates = {};
                 await loadUserProgress(user);
                 
-                console.log('Progress reloaded:', {
-                    totalProgressKeys: Object.keys(user.progress).length,
-                    sampleKeys: Object.keys(user.progress).slice(0, 10)
-                });
                         
                         saveData();
                         render();
@@ -5727,7 +5653,7 @@
                                 </div>
                                 <div class="flex items-center gap-2">
                                     ${state.isAdmin ? `
-                                        <button onclick="console.log('Dashboard settings clicked'); state.showAdminView = true; console.log('showAdminView set to:', state.showAdminView); render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Manage Profiles">
+                                        <button onclick=" state.showAdminView = true;  render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Manage Profiles">
                                             ${icons.settings}
                                         </button>
                                     ` : `
@@ -7737,7 +7663,6 @@
                 setTimeout(() => _pageLoader.remove(), 260);
             }
             const app = document.getElementById('app');
-            console.log('render() called - showAdminView:', state.showAdminView, 'currentUser:', state.currentUser?.name, 'users count:', state.users.length, 'isAdmin:', state.isAdmin);
 
             // Update Android notification bar color based on active tab
             const metaThemeColor = document.getElementById('theme-color-meta');
@@ -7751,11 +7676,9 @@
             }
 
             if (state.showAdminView) {
-                console.log('Rendering profile management view');
                 // Show profile management view with delete and mark up to date buttons
                 // Ensure users are loaded
                 if (state.users.length === 0 && !state.isLoadingProfiles) {
-                    console.log('Loading users data...');
                     state.isLoadingProfiles = true;
                     await loadData();
                     state.isLoadingProfiles = false;
@@ -7807,11 +7730,8 @@
                 hideLoading();
                 }
                 
-                console.log('Calling renderProfileManagement()');
                 app.innerHTML = renderProfileManagement();
-                console.log('Profile management rendered');
             } else if (!state.currentUser) {
-                console.log('No current user - showing user selection');
                 // No current user - show appropriate user selection view
                 // Only reload users if the list is empty
                 if (state.users.length === 0 && !state.isLoadingProfiles) {
@@ -8267,7 +8187,6 @@
                         const savedUser = state.users.find(u => u.id === userId);
                         
                         if (savedUser) {
-                            console.log('Auto-loading previously selected user:', savedUser.name);
                             state.currentUser = savedUser;
                             state.showDashboard = true;
                             state.skipLoadingScreen = true;
