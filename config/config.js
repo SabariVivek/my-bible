@@ -1,3 +1,6 @@
+// Global Profile Image Storage Base URL
+const PROFILE_IMAGE_BASE_URL = 'https://encjogfdbrfcatvytpir.supabase.co/storage/v1/object/public/Profile_Images';
+
 // Supabase Configuration for Verse Notes Backend
 const SUPABASE_NOTES_CONFIG = {
     url: 'https://encjogfdbrfcatvytpir.supabase.co',

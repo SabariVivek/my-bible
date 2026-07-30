@@ -1535,17 +1535,30 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isGuest) {
                 avatarEl.style.display = 'none';
                 if (rightMenuBtn) rightMenuBtn.style.display = 'none';
-            } else if (userId) {
-                avatarEl.style.display = 'block';
+            } else if (userId || userName) {
+                avatarEl.style.display = 'flex';
                 avatarEl.title = userName || 'Current user';
+                const initial = userName ? userName.trim().charAt(0).toUpperCase() : '👤';
+                avatarEl.textContent = initial;
+
                 if (userName) {
                     const fileKey = userName.trim().toLowerCase();
                     const ts = localStorage.getItem('profileImageTimestamp') || '';
-                    avatarEl.style.backgroundImage = `url('${PROFILE_IMAGE_BASE_URL}/${fileKey}.png${ts ? '?t=' + ts : ''}')`;
-                    avatarEl.style.backgroundSize = 'cover';
-                    avatarEl.style.backgroundPosition = 'center';
-                } else {
-                    avatarEl.style.backgroundImage = '';
+                    const baseUrl = typeof PROFILE_IMAGE_BASE_URL !== 'undefined' ? PROFILE_IMAGE_BASE_URL : 'https://encjogfdbrfcatvytpir.supabase.co/storage/v1/object/public/Profile_Images';
+                    const imgUrl = `${baseUrl}/${fileKey}.png${ts ? '?t=' + ts : ''}`;
+
+                    const testImg = new Image();
+                    testImg.onload = () => {
+                        avatarEl.style.backgroundImage = `url('${imgUrl}')`;
+                        avatarEl.style.backgroundSize = 'cover';
+                        avatarEl.style.backgroundPosition = 'center';
+                        avatarEl.textContent = '';
+                    };
+                    testImg.onerror = () => {
+                        avatarEl.style.backgroundImage = '';
+                        avatarEl.textContent = initial;
+                    };
+                    testImg.src = imgUrl;
                 }
                 if (rightMenuBtn) rightMenuBtn.style.display = '';
             } else {
@@ -1881,13 +1894,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize voice command functionality
     initializeVoiceCommand();
 
-    // Initialize pinned verses button
-    const pinnedVersesBtn = document.getElementById('pinned-verses-btn');
-    if (pinnedVersesBtn) {
-        pinnedVersesBtn.addEventListener('click', () => {
-            showPinnedVersesBottomSheet();
-        });
-    }
 
     // Always load Bible directly on all devices (mobile, tablet, desktop)
     loadBook(currentBook, currentChapter);
@@ -3783,25 +3789,10 @@ function displayChapter() {
             const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
             const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
             const tooltip = ''; // Removed Memory Verse tooltip to show only popup-highlight tooltips
-            const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
-            const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
-
-            // Check for cross-references (admin only)
-            let crossRefIcon = '';
-            if (isAdmin()) {
-                const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
-                const crossRefs = crossReferences[crossRefKey];
-                if (bookName === 'Matthew' && currentChapter === 1 && verseNum === '1') {
-                    console.log('Cross-ref debug (both mode):', { crossRefKey, crossRefs, allKeys: Object.keys(crossReferences) });
-                }
-                const hasCrossRef = crossRefs && crossRefs.length > 0;
-                crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
-            }
-
-            html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
+            html += `<div class="verse-container" data-verse="${verseNum}">
                 <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}>
                     <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
-                    <span class="english-text ${englishTextColor}">${englishText}</span>${crossRefIcon}
+                    <span class="english-text ${englishTextColor}">${englishText}</span>
                 </p>
             </div>`;
         });
@@ -3843,23 +3834,9 @@ function displayChapter() {
             const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
             const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
             const tooltip = ''; // Removed Memory Verse tooltip to show only popup-highlight tooltips
-            const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
-            const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
 
-            // Check for cross-references (admin only)
-            let crossRefIcon = '';
-            if (isAdmin()) {
-                const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
-                const crossRefs = crossReferences[crossRefKey];
-                if (bookName === 'Matthew' && currentChapter === 1 && verseNum === '1') {
-                    console.log('Cross-ref debug (single mode):', { crossRefKey, crossRefs, allKeys: Object.keys(crossReferences) });
-                }
-                const hasCrossRef = crossRefs && crossRefs.length > 0;
-                crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
-            }
-
-            html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
-                <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}${crossRefIcon}</p>
+            html += `<div class="verse-container" data-verse="${verseNum}">
+                <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}</p>
             </div>`;
         });
     }
@@ -3870,12 +3847,6 @@ function displayChapter() {
 
     // Setup event listeners for collapsible verse headers
     setupVerseHeaderToggle();
-
-    // Update pin button visibility for current chapter
-    updatePinButtonBar();
-
-    // Refresh pinned verse display (in case data was loaded after initial render)
-    refreshPinnedVerseDisplay();
 
     // Add click handlers to verse containers to show bottom sheet
     contentArea.querySelectorAll('.verse-container').forEach(container => {
@@ -4018,26 +3989,6 @@ function displayChapter() {
                 }, 300);
             } else if (tapCount === 2) {
                 clearTimeout(tapTimeout);
-                // Double tap - show note viewer for this verse
-                const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
-                const note = verseNotes[noteKey];
-
-                // Check if this verse has cross-references
-                const bookName = bibleBooks[currentBook].name;
-                const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
-                const crossRefs = crossReferences[crossRefKey];
-                const hasCrossRefs = crossRefs && crossRefs.length > 0;
-
-                // Show the note viewer if note exists with text OR if verse has cross-references
-                if ((note && note.text && note.text.trim()) || hasCrossRefs) {
-                    if (hasCrossRefs && (!note || !note.text || !note.text.trim())) {
-                        // If only has cross-refs, show note viewer with refs tab active
-                        showNoteViewer(verseNum, note || {});
-                    } else {
-                        // Has note text, show normally
-                        showNoteViewer(verseNum, note);
-                    }
-                }
                 tapCount = 0;
             }
         });
@@ -4657,24 +4608,6 @@ function showVerseActionsBottomSheet(verseNum) {
                     <span>Copy</span>
                 </button>
                 ${isAdmin() ? `
-                <button class="verse-bottom-action add-note-action" data-verse="${verseNum}">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                    <span>Note</span>
-                </button>
-                ` : ''}
-                ${isAdmin() ? `
-                <button class="verse-bottom-action add-reference-action" data-verse="${verseNum}">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-                    </svg>
-                    <span>Reference</span>
-                </button>
-                ` : ''}
-                ${isAdmin() ? `
                 <button class="verse-bottom-action add-sermon-action" data-verse="${verseNum}">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
@@ -5067,15 +5000,6 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                     <span>Copy</span>
                 </button>
                 ${isAdmin() ? `
-                <button class="verse-bottom-action add-note-action">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                    <span>Note</span>
-                </button>
-                ` : ''}
-                ${isAdmin() ? `
                 <button class="verse-bottom-action add-sermon-action">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
@@ -5105,13 +5029,6 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                         <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                     </svg>
                     <span>Share</span>
-                </button>
-                <button class="verse-bottom-action pin-multi-verses-action">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2L8 6L8 14C8 18.4 10 20 12 21C14 20 16 18.4 16 14L16 6L12 2Z"></path>
-                        <line x1="12" y1="6" x2="12" y2="13"></line>
-                    </svg>
-                    <span>Pin</span>
                 </button>
             </div>
         </div>
@@ -11937,7 +11854,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rightNotesOption) {
         rightNotesOption.addEventListener('click', () => {
             closeRightSidebar();
-            window.location.href = 'docs/docs.html';
+            window.location.href = 'src/pages/docs.html';
         });
     }
     // Bible Characters option - navigate to bible-characters page
@@ -12799,401 +12716,7 @@ function setupExpandAllButton() {
  * Update the pin button visibility in bottom nav
  * Show only if: (1) Admin, (2) Current chapter has pinned verses
  */
-function updatePinButtonBar() {
-    const pinnedVersesBtn = document.getElementById('pinned-verses-btn');
-    if (!pinnedVersesBtn) return;
 
-    const isAdminMode = isAdmin();
-    const currentChapterPinned = getPinnedVersesForCurrentChapter();
-
-    // Show button only if admin AND there are pinned verses in current chapter
-    if (isAdminMode && currentChapterPinned.length > 0) {
-        pinnedVersesBtn.style.display = 'flex';
-        const badge = document.getElementById('pinned-verses-badge');
-        if (badge) {
-            badge.textContent = currentChapterPinned.length;
-            badge.style.display = 'flex';
-        }
-    } else {
-        pinnedVersesBtn.style.display = 'none';
-    }
-}
-
-/**
- * Update pin button appearance in bottom sheet (📌 or ✏️)
- * @param {HTMLElement} btn - The pin button element
- * @param {boolean} isPinned - Whether the verse is pinned
- */
-function updatePinButtonAppearance(btn, isPinned) {
-    const emoji = btn.querySelector('.pin-icon-emoji');
-    if (emoji) {
-        if (isPinned) {
-            btn.classList.add('pinned-active');
-            emoji.textContent = '📌';
-        } else {
-            btn.classList.remove('pinned-active');
-            emoji.textContent = '✏️';
-        }
-    }
-}
-
-// Scroll to a specific verse and highlight it with gradient color
-function scrollToVerseWithHighlight(verseNum) {
-    const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
-    if (verseElement) {
-        // Get the top bar height and add padding
-        const topBar = document.querySelector('.top-bar');
-        const offset = topBar ? topBar.offsetHeight + 20 : 100; // 20px extra padding
-
-        // Scroll with offset to account for top nav
-        const elementPosition = verseElement.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({
-            top: elementPosition,
-            behavior: 'smooth'
-        });
-
-        // Apply the same highlight style as left-pane selection (permanent)
-        verseElement.classList.add('left-pane-selected');
-    }
-}
-
-// Scroll to a specific verse in the scripture text
-function scrollToVerseWithHighlight(verseNum) {
-    const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
-    if (verseElement) {
-        // Add padding to prevent scrolling behind top nav
-        const topNavHeight = 80; // height of top bar with padding
-        const extraPadding = 20; // additional padding
-        const totalOffset = topNavHeight + extraPadding;
-
-        const versePosition = verseElement.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = versePosition - totalOffset;
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-
-        // Highlight the verse briefly
-        verseElement.classList.add('verse-scroll-highlight');
-        setTimeout(() => {
-            verseElement.classList.remove('verse-scroll-highlight');
-        }, 1500);
-    }
-}
-
-// Show pinned verses as bottom sheet
-function showPinnedVersesBottomSheet() {
-    // Create or get the bottom sheet modal
-    let bottomSheet = document.getElementById('pinned-verses-modal-overlay');
-    if (!bottomSheet) {
-        bottomSheet = document.createElement('div');
-        bottomSheet.id = 'pinned-verses-modal-overlay';
-        bottomSheet.className = 'pinned-verses-modal-overlay';
-        document.body.appendChild(bottomSheet);
-    }
-
-    // Get only pinned verses for the CURRENT chapter
-    const currentChapterPinned = getPinnedVersesForCurrentChapter();
-
-    if (currentChapterPinned.length === 0) {
-        showToast('No pinned verses in this chapter', 'info');
-        return;
-    }
-
-    // Build the content - only for current chapter verses
-    let versesHtml = '';
-    currentChapterPinned.forEach(pinnedVerse => {
-        const verseNum = pinnedVerse.verse;
-        const savedBook = pinnedVerse.book;
-        const savedChapter = pinnedVerse.chapter;
-
-        // Get verse text from current view
-        const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
-        let verseText = '';
-
-        if (verseElement) {
-            verseText = verseElement.textContent.trim().replace(/^\d+/, '').trim();
-        } else {
-            verseText = '(Verse text not available)';
-        }
-
-        // Get the book name from the saved book index
-        const book = bibleBooks[savedBook];
-        if (!book) {
-            console.warn(`Book index ${savedBook} not found in bibleBooks array`);
-            return; // Skip this verse if book data is invalid
-        }
-        const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
-
-        versesHtml += `
-            <div class="pinned-verse-list-item" data-verse="${verseNum}">
-                <div class="pinned-verse-list-header">
-                    <div class="pinned-verse-list-ref">${bookName} ${savedChapter}:${verseNum}</div>
-                    <button class="pinned-verse-list-unpin" title="Unpin verse" data-verse="${verseNum}">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
-                <div class="pinned-verse-list-text">${verseText}</div>
-            </div>
-        `;
-    });
-
-    // Set up the bottom sheet content - matching sermon modal structure
-    bottomSheet.innerHTML = `
-        <div class="pinned-verses-backdrop"></div>
-        <div class="pinned-verses-content">
-            <div class="pinned-verses-handle">
-                <div class="pinned-verses-handle-bar"></div>
-            </div>
-            <div class="pinned-verses-header">
-                <h3><span style="margin-right: 8px;">📌</span>Pinned Verses</h3>
-                <button class="pinned-verses-close-btn" aria-label="Close">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-            <div class="pinned-verses-body">
-                ${versesHtml}
-            </div>
-        </div>
-    `;
-
-    // Show the bottom sheet
-    bottomSheet.classList.add('visible');
-    document.body.classList.add('pinned-verses-sheet-open');
-    document.body.style.overflow = 'hidden';
-
-    // Add event listeners
-    const closeBtn = bottomSheet.querySelector('.pinned-verses-close-btn');
-    const backdrop = bottomSheet.querySelector('.pinned-verses-backdrop');
-    const content = bottomSheet.querySelector('.pinned-verses-content');
-    const body = bottomSheet.querySelector('.pinned-verses-body');
-
-    const closePinnedSheet = (isDragClose = false) => {
-        if (isDragClose) {
-            // When closing via drag, we need to animate from current position to off-screen
-            // The dragging class is still on, so we remove it and set transform in same frame
-            content.classList.remove('dragging');
-
-            // Use requestAnimationFrame to ensure transition is enabled before animating
-            requestAnimationFrame(() => {
-                content.style.transform = 'translateY(100%)';
-
-                // After animation completes, clean up
-                setTimeout(() => {
-                    bottomSheet.classList.remove('visible');
-                    document.body.classList.remove('pinned-verses-sheet-open');
-                    document.body.style.overflow = '';
-                    content.style.transform = '';
-                }, 300);
-            });
-        } else {
-            // Normal close (button/backdrop) - let CSS handle animation
-            bottomSheet.classList.remove('visible');
-            document.body.classList.remove('pinned-verses-sheet-open');
-            document.body.style.overflow = '';
-
-            // Clear inline transform after transition completes
-            setTimeout(() => {
-                content.style.transform = '';
-            }, 300);
-        }
-    };
-
-    closeBtn.addEventListener('click', () => closePinnedSheet(false));
-    backdrop.addEventListener('click', () => closePinnedSheet(false));
-
-    // Add drag-to-close functionality
-    let startY = 0;
-    let currentY = 0;
-    let isDragging = false;
-    let velocityY = 0;
-    let lastY = 0;
-    let lastTime = 0;
-    let startScrollTop = 0;
-
-    function handleStart(clientY) {
-        const scrollTop = body.scrollTop;
-
-        // Only allow dragging if at the top of scroll
-        if (scrollTop > 5) {
-            isDragging = false;
-            return;
-        }
-
-        isDragging = true;
-        startY = clientY;
-        currentY = 0;
-        lastY = clientY;
-        lastTime = Date.now();
-        startScrollTop = scrollTop;
-        velocityY = 0;
-
-        content.classList.add('dragging');
-    }
-
-    function handleMove(clientY) {
-        if (!isDragging) return;
-
-        const deltaY = clientY - startY;
-        const scrollTop = body.scrollTop;
-        const scrollChanged = scrollTop !== startScrollTop;
-
-        // Calculate velocity
-        const now = Date.now();
-        const timeDiff = now - lastTime;
-        if (timeDiff > 0) {
-            velocityY = (clientY - lastY) / timeDiff;
-            lastY = clientY;
-            lastTime = now;
-        }
-
-        // If content scrolled (scroll position changed), stop dragging
-        if (scrollChanged) {
-            isDragging = false;
-            content.classList.remove('dragging');
-            return;
-        }
-
-        // If content is scrolled down, allow normal scrolling
-        if (scrollTop > 5) {
-            isDragging = false;
-            content.classList.remove('dragging');
-            return;
-        }
-
-        // If trying to drag up when at top, allow content to scroll
-        if (deltaY < 0) {
-            isDragging = false;
-            content.classList.remove('dragging');
-            return;
-        }
-
-        // Move sheet down only when at top and dragging down
-        currentY = deltaY;
-        content.style.transform = `translateY(${currentY}px)`;
-    }
-
-    function handleEnd() {
-        if (!isDragging) return;
-
-        isDragging = false;
-
-        // Close if dragged down enough or velocity is high
-        const shouldClose = currentY > 150 || velocityY > 0.3;
-
-        if (shouldClose) {
-            // Don't remove dragging class here - closePinnedSheet will handle it
-            closePinnedSheet(true);
-        } else {
-            // Snap back - remove dragging class to enable transition
-            content.classList.remove('dragging');
-            content.style.transform = '';
-        }
-    }
-
-    // Touch events
-    content.addEventListener('touchstart', (e) => {
-        handleStart(e.touches[0].clientY);
-    }, { passive: true });
-
-    content.addEventListener('touchmove', (e) => {
-        const scrollTop = body.scrollTop;
-        const deltaY = e.touches[0].clientY - startY;
-
-        // Only prevent default when actually dragging the sheet (at top and dragging down)
-        if (isDragging && scrollTop <= 5 && deltaY > 0) {
-            e.preventDefault();
-        }
-        handleMove(e.touches[0].clientY);
-    }, { passive: false });
-
-    content.addEventListener('touchend', () => {
-        handleEnd();
-    });
-
-    // Mouse events
-    content.addEventListener('mousedown', (e) => {
-        handleStart(e.clientY);
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (isDragging) {
-            e.preventDefault();
-            handleMove(e.clientY);
-        }
-    });
-
-    document.addEventListener('mouseup', () => {
-        if (isDragging) {
-            handleEnd();
-        }
-    });
-
-    // Add event listeners to unpin buttons
-    const unpinBtns = bottomSheet.querySelectorAll('.pinned-verse-list-unpin');
-    unpinBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const verseNum = parseInt(btn.dataset.verse);
-            const verseItem = btn.closest('.pinned-verse-list-item');
-
-            // Add animation class
-            verseItem.classList.add('pinned-verse-removing');
-
-            // Wait for animation to complete before unpinning (matches CSS animation duration)
-            setTimeout(() => {
-                unpinVerseFromCurrentChapter(verseNum);
-                showToast('Verse unpinned', 'info');
-                // Remove the card from DOM smoothly
-                verseItem.remove();
-            }, 600);
-        });
-    });
-
-    // Add event listeners to verse items
-    const verseItems = bottomSheet.querySelectorAll('.pinned-verse-list-item');
-    verseItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            if (!e.target.closest('.pinned-verse-list-unpin')) {
-                const verseNum = parseInt(item.dataset.verse);
-                // Close sheet immediately
-                closePinnedSheet();
-
-                // Clear any previous selections
-                const contentArea = document.querySelector('.scripture-text');
-                if (contentArea) {
-                    contentArea.querySelectorAll('.verse-line').forEach(v => {
-                        v.classList.remove('left-pane-selected');
-                        v.style.backgroundColor = '';
-                    });
-                    contentArea.querySelectorAll('.verse-container').forEach(v => {
-                        v.classList.remove('left-pane-selected');
-                        v.style.backgroundColor = '';
-                    });
-
-                    // Add highlight to the selected verse (same as left pane)
-                    const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
-                    const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
-                    if (verseLine) {
-                        verseLine.classList.add('left-pane-selected');
-                    }
-                    if (verseContainer) {
-                        verseContainer.classList.add('left-pane-selected');
-                    }
-                }
-
-                // Scroll to verse (same as left pane)
-                scrollToVerse(verseNum);
-            }
-        });
-    });
-}
 
 // Cross Reference in Note Viewer Tab Functions
 function openNoteViewerWithReferences(verseNum, crossRefs) {
@@ -14575,7 +14098,23 @@ function refreshTopBarAvatar() {
     if (!avatarEl) return;
     const userName = localStorage.getItem('currentUserName') || '';
     if (!userName) return;
+    const initial = userName.trim().charAt(0).toUpperCase();
+    avatarEl.textContent = initial;
     const fileKey = userName.trim().toLowerCase();
     const ts = localStorage.getItem('profileImageTimestamp') || '';
-    avatarEl.style.backgroundImage = `url('${PROFILE_IMAGE_BASE_URL}/${fileKey}.png${ts ? '?t=' + ts : ''}')`;
+    const baseUrl = typeof PROFILE_IMAGE_BASE_URL !== 'undefined' ? PROFILE_IMAGE_BASE_URL : 'https://encjogfdbrfcatvytpir.supabase.co/storage/v1/object/public/Profile_Images';
+    const imgUrl = `${baseUrl}/${fileKey}.png${ts ? '?t=' + ts : ''}`;
+
+    const testImg = new Image();
+    testImg.onload = () => {
+        avatarEl.style.backgroundImage = `url('${imgUrl}')`;
+        avatarEl.style.backgroundSize = 'cover';
+        avatarEl.style.backgroundPosition = 'center';
+        avatarEl.textContent = '';
+    };
+    testImg.onerror = () => {
+        avatarEl.style.backgroundImage = '';
+        avatarEl.textContent = initial;
+    };
+    testImg.src = imgUrl;
 }

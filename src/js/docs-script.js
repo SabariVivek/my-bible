@@ -1305,7 +1305,7 @@ function viewPage(pageId) {
             
             // Create and add new icon
             const icon = document.createElement('img');
-            icon.src = '../resources/icons/heading.png';
+            icon.src = '../../resources/icons/heading.png';
             icon.alt = 'Heading icon';
             icon.style.width = '25px';
             icon.style.height = '25px';
