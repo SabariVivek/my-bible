@@ -3842,9 +3842,8 @@ function displayChapter() {
     // Note: Scroll to top is now handled by updateUI() and navigation buttons only
     // Don't scroll here to prevent jumping when interacting with verses or adding notes
 
-    // Initialize pinned verses and update button visibility
+    // Initialize pinned verses
     initializePinnedVerses();
-    updatePinButtonBar();
 
     // Initialize chapter summary pullout (only if summary exists)
     if (typeof initializeChapterSummaryPullout === 'function') {
@@ -4766,8 +4765,6 @@ function showVerseActionsBottomSheet(verseNum) {
                 updatePinButtonAppearance(pinBtn, true);
                 showToast(`Verse pinned`, 'success');
             }
-            // Update pin button visibility
-            updatePinButtonBar();
         });
     }
 }
@@ -5013,18 +5010,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
         });
     }
 
-    // Pin button for multiple verses
-    const pinBtn = bottomSheet.querySelector('.pin-multi-verses-action');
-    if (pinBtn) {
-        pinBtn.addEventListener('click', () => {
-            // Pin all selected verses
-            selectedVerses.forEach(verseNum => {
-                pinVerse(verseNum);
-            });
-            showToast(`${selectedVerses.length} verse${selectedVerses.length > 1 ? 's' : ''} pinned`, 'success');
-            updatePinButtonBar();
-        });
-    }
+
 }
 
 // Show color picker for multiple bookmark selection
@@ -12266,7 +12252,6 @@ function initializePinnedVerses() {
                     }));
                     // Also save to localStorage for faster loading next time
                     localStorage.setItem('pinnedVerses', JSON.stringify(pinnedVerses));
-                    updatePinButtonBar();
                     // Refresh the current chapter display to show pinned icons
                     refreshPinnedVerseDisplay();
                 }
@@ -12360,7 +12345,6 @@ function pinVerse(verseNum) {
             });
         }
 
-        updatePinButtonBar();
     }
 }
 
@@ -12380,8 +12364,6 @@ function unpinVerseFromCurrentChapter(verseNum) {
             console.warn('Failed to sync to Supabase:', err);
         });
     }
-
-    updatePinButtonBar();
 }
 
 /**
