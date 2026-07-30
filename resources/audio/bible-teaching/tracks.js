@@ -345,8 +345,8 @@ const BIBLE_TRACKS = [
   {
     day: 40,
     title: "Blood of Jesus - Part 2",
-    duration: "Coming soon",
-    comingSoon: true,
+    duration: "58:44",
+    verse: "Mark 15:33-34",
     desc: "The significance of the blood of Jesus in the Christian faith.",
     category: "Foundation"
   }
