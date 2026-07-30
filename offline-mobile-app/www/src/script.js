@@ -11416,49 +11416,12 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'docs/docs.html';
         });
     }
-    // Kings option - navigate to Bible-Study Kings page
-    if (rightKingsOption) {
-        rightKingsOption.addEventListener('click', () => {
-            closeRightSidebar();
-            window.location.href = `Bible-Study/index.html#/kings`;
-        });
-    }
-    // Prophets option - navigate to Bible-Study Prophets page
-    if (rightProphetsOption) {
-        rightProphetsOption.addEventListener('click', () => {
-            closeRightSidebar();
-            window.location.href = `Bible-Study/index.html#/prophets`;
-        });
-    }
-    // Timeline option - navigate to Bible-Study Timeline page
-    if (rightTimelineOption) {
-        rightTimelineOption.addEventListener('click', () => {
-            closeRightSidebar();
-            window.location.href = `Bible-Study/index.html#/timeline`;
-        });
-    }
-    // Character Study option - navigate to Bible-Study Character Study page
-    if (rightCharacterOption) {
-        rightCharacterOption.addEventListener('click', () => {
-            closeRightSidebar();
-            // Navigate directly with hash
-            window.location.href = `Bible-Study/index.html#/genealogy`;
-        });
-    }
-    // Bible Characters option - navigate to characters-in-bible page
+    // Bible Characters option - navigate to bible-characters page
     if (rightBibleCharactersOption) {
         rightBibleCharactersOption.addEventListener('click', () => {
             closeRightSidebar();
             const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
-            window.location.href = `src/characters-in-bible.html.html?cb=${cacheBuster}`;
-        });
-    }
-    // Life of Jesus option - navigate to Bible-Study Life of Christ page
-    if (rightLifeOfJesusOption) {
-        rightLifeOfJesusOption.addEventListener('click', () => {
-            closeRightSidebar();
-            // Navigate directly with hash
-            window.location.href = `Bible-Study/index.html#/life-of-christ`;
+            window.location.href = `src/bible-characters.html?cb=${cacheBuster}`;
         });
     }
     // Sermon option - navigate to Sermon page
