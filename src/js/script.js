@@ -2900,67 +2900,12 @@ function getPopupHighlightClass(bookName, chapter, contentText) {
     return `popup-highlight-${sanitizedBook}-ch${chapter}-${contentHash}`;
 }
 
-// Initialize dynamic popup highlight styles
+// Initialize dynamic popup highlight styles (Disabled per user request)
 function initializePopupHighlights() {
-    if (!biblePopups || typeof biblePopups !== 'object') return;
-
-    let styleContent = '';
-
-    // Iterate through all books and chapters in biblePopups
-    for (const bookKey in biblePopups) {
-        const book = biblePopups[bookKey];
-        const normalizedBookName = bookKey.charAt(0).toUpperCase() + bookKey.slice(1);
-
-        for (const chapterKey in book) {
-            const chapterNum = chapterKey.replace(/chapter/i, '');
-            const verses = book[chapterKey];
-
-            if (Array.isArray(verses)) {
-                verses.forEach((item, index) => {
-                    if (item.content) {
-                        const className = getPopupHighlightClass(normalizedBookName, chapterNum, item.content);
-                        styleContent += `.${className} {
-    background: rgba(255, 220, 100, 0.25) !important;
-    color: inherit !important;
-    border-bottom: 1.5px dashed #f5d547 !important;
-    padding-bottom: 1px !important;
-    cursor: pointer !important;
-    transition: background-color 0.2s ease;
-}
-.${className}:hover {
-    background: rgba(255, 220, 100, 0.35) !important;
-}
-body.dark-theme .${className} {
-    background: rgb(98 96 89 / 15%) !important;
-    color: #b8b8b8 !important;
-    border-bottom: 1.5px dashed rgba(255, 248, 220, 0.5) !important;
-}
-body.dark-theme .${className}:hover {
-    background: rgb(98 96 89 / 15%) !important;
-}
-`;
-                    }
-                });
-            }
-        }
-    }
-
-    // Remove existing styles if any
     const existingStyle = document.getElementById('popup-highlight-dynamic-styles');
     if (existingStyle) {
         existingStyle.remove();
     }
-
-    // Inject the generated styles into the page
-    if (styleContent) {
-        const styleEl = document.createElement('style');
-        styleEl.id = 'popup-highlight-dynamic-styles';
-        styleEl.textContent = styleContent;
-        document.head.appendChild(styleEl);
-    }
-
-    // Attach event listeners to all popup highlights
-    attachPopupHighlightListeners();
 }
 
 // Check if device is mobile
@@ -3190,11 +3135,7 @@ function highlightSpecialText(text, language, bookName = null, chapter = null, v
         text = text.replace(/\bJesus\b/g, '<span class="jesus-name">Jesus</span>');
     }
 
-    // Apply dynamic highlighting for all popup entries in Tamil
-    if ((language === 'tamil' || language === 'both-tamil') && bookName && chapter) {
-        text = applyPopupHighlights(text, bookName, chapter);
-    }
-
+    // Dynamic popup highlights disabled per user request
     return text;
 }
 
