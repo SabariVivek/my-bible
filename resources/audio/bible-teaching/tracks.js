@@ -337,7 +337,7 @@ const BIBLE_TRACKS = [
   {
     day: 39,
     title: "Blood of Jesus - Part 1",
-    duration: "54:19",
+    duration: "54:19 min",
     verse: "Heb 9:22",
     desc: "The significance of the blood of Jesus in the Christian faith.",
     category: "Foundation"
@@ -345,7 +345,7 @@ const BIBLE_TRACKS = [
   {
     day: 40,
     title: "Blood of Jesus - Part 2",
-    duration: "58:44",
+    duration: "58:44 min",
     verse: "Mark 15:33-34",
     desc: "The significance of the blood of Jesus in the Christian faith.",
     category: "Foundation"
