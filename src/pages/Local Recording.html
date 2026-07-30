@@ -1695,17 +1695,18 @@
     // ─── CONFIG ──────────────────────────────────────────────────────────────────
     // Track titles are managed in:
     //   resources/audio/bible-teaching/tracks.js
-    // Audio files are auto-discovered by title (.m4a preferred, .mp3 fallback).
+    // Audio files are served from the bible-media GitHub repo:
+    //   https://github.com/SabariVivek/bible-media/tree/main/assests
 
-    const AUDIO_BASE = '../../resources/audio/bible-teaching/';
+    const AUDIO_BASE = 'https://raw.githubusercontent.com/SabariVivek/bible-media/main/assests/';
 
     // Resolve audio file path — .m4a preferred, .mp3 as fallback (handled at runtime)
     function getAudioFilePath(title) {
-        return AUDIO_BASE + title + '.m4a';
+        return AUDIO_BASE + encodeURIComponent(title) + '.m4a';
     }
 
     function getAudioFilePathFallback(title) {
-        return AUDIO_BASE + title + '.mp3';
+        return AUDIO_BASE + encodeURIComponent(title) + '.mp3';
     }
     // ─────────────────────────────────────────────────────────────────────────────
 
