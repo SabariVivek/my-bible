@@ -11609,11 +11609,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Bible Reading option - navigate to Bible Reading page
+    // NOTE: bible-reading.html manages its own popstate history stack internally,
+    // so we do NOT push a state here — it already handles back-navigation on its own.
     if (bibleReadingOption) {
         bibleReadingOption.addEventListener('click', () => {
             closeRightSidebar();
             const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
-            navigateToSubpage(`src/pages/bible-reading.html?cb=${cacheBuster}`);
+            window.location.href = `src/pages/bible-reading.html?cb=${cacheBuster}`;
         });
     }
     // Daily Prayers option - navigate to Daily Prayers page
