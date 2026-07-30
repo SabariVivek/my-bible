@@ -2,7 +2,7 @@
   "name": "My Bible",
   "short_name": "My Bible",
   "description": "Read the Bible in Tamil and Easy English",
-  "start_url": "./login.html",
+  "start_url": "./src/pages/login.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#1e1f22",
@@ -28,6 +28,6 @@
     "lifestyle"
   ],
   "screenshots": [],
-  "version": "20260730120616",
-  "last_updated": "2026-07-30T06:36:16.771Z"
+  "version": "20260730122044",
+  "last_updated": "2026-07-30T06:50:44.374Z"
 }

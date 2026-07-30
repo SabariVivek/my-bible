@@ -34,19 +34,19 @@
     <title>My Bible</title>
     <link rel="icon" type="image/png" href="resources/icons/bible.png?cb=20251126003722">
     <link rel="apple-touch-icon" href="resources/icons/bible.png?cb=20251126003722">
-    <link rel="stylesheet" href="src/styles.css?cb=20251210006000">
+    <link rel="stylesheet" href="src/styles/styles.css?cb=20251210006000">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="src/chapter-summary-pullout.css?cb=20260301210232">
-    <link rel="stylesheet" href="src/ai-summary.css?cb=20260423000000">
-    <link rel="stylesheet" href="src/bible-selector.css?cb=20260419000000">
-    <link rel="stylesheet" href="src/king-transition-cards.css?cb=20260508000000">
+    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20260301210232">
+    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20260423000000">
+    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20260419000000">
+    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20260508000000">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Cropper.js for profile image cropping -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css?cb=20260418170421">
     <!-- Cache Management -->
-    <script src="src/cache-manager.js?cb=20251126003722"></script>
+    <script src="src/js/cache-manager.js?cb=20251126003722"></script>
 </head>
 
 <body>
@@ -57,7 +57,7 @@
                 const hasUser = !!(localStorage.getItem('currentUserId') || localStorage.getItem('currentUserIsGuest'));
                 const isLoginPage = location.pathname.endsWith('/login.html') || location.pathname.endsWith('login.html');
                 if (!hasUser && !isLoginPage) {
-                    window.location.replace('login.html');
+                    window.location.replace('src/pages/login.html');
                 }
             } catch (e) {
                 // If anything goes wrong, continue loading main app
@@ -111,13 +111,6 @@
                     <line x1="16" y1="13" x2="8" y2="13" />
                     <line x1="16" y1="17" x2="8" y2="17" />
                     <line x1="10" y1="9" x2="8" y2="9" />
-                </svg>
-            </button>
-            <!-- Secret icon (hidden by default) -->
-            <button id="secret-icon" class="icon-btn secret-icon" aria-label="Secret" style="display: none;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="none">
-                    <path d="M12 2 L15 9 L22 10 L17 15 L18 22 L12 18 L6 22 L7 15 L2 10 L9 9 Z" fill="#FFD700"
-                        stroke="#b28b46" stroke-width="1" />
                 </svg>
             </button>
             <!-- Admin toggle button (hidden by default) -->
@@ -1133,27 +1126,15 @@
             <span class="option-icon" style="font-size: 20px;">📝</span>
             <span class="option-name">Bible Notes</span>
         </div>
-        <div class="right-menu-item" id="right-cult-option">
-            <span class="option-icon" style="font-size: 20px;">⚠️</span>
-            <span class="option-name">WMSCOG Cult</span>
-        </div>
-        <div class="right-menu-item" id="right-bible-characters-option">
-            <span class="option-icon" style="font-size: 20px;">🐑</span>
-            <span class="option-name">Characters</span>
-        </div>
-        <div class="right-menu-item" id="right-sermon-option">
-            <span class="option-icon" style="font-size: 20px;">🎙️</span>
-            <span class="option-name">Sermons</span>
-        </div>
         <div class="right-menu-item" id="right-prayers-option">
             <span class="option-icon" style="font-size: 20px;">🙏</span>
             <span class="option-name">Prayers</span>
         </div>
-        <div class="right-menu-item" id="right-saturday-service-option" onclick="window.location.href='src/saturday-service.html'">
+        <div class="right-menu-item" id="right-saturday-service-option" onclick="window.location.href='src/pages/saturday-service.html'">
             <span class="option-icon" style="font-size: 20px;">⛪</span>
             <span class="option-name">Saturday Service</span>
         </div>
-        <div class="right-menu-item" id="right-local-recording-option" onclick="window.location.href='Local Recording.html'">
+        <div class="right-menu-item" id="right-local-recording-option" onclick="window.location.href='src/pages/Local Recording.html'">
             <span class="option-icon" style="font-size: 20px;">🎧</span>
             <span class="option-name">Local Recordings</span>
         </div>
@@ -1756,8 +1737,8 @@
         }
     </script>
 
-    <script src="src/bible-data-manager.js?cb=20251126003722"></script>
-    <script src="src/voice-command.js?cb=20251126003722"></script>
+    <script src="src/js/bible-data-manager.js?cb=20251126003722"></script>
+    <script src="src/js/voice-command.js?cb=20251126003722"></script>
     <script src="src/data/verse-headers-english.js?cb=20260312000619"></script>
     <script src="src/data/verse-headers-tamil.js?cb=20260312000619"></script>
     <script src="src/data/bible-meta.js?cb=20251210006100"></script>
@@ -1766,10 +1747,10 @@
     <script src="src/data/book-intro.js?cb=20260317000100"></script>
     <script src="src/data/bible-popups.js?cb=20260402000000"></script>
     <script src="src/data/king-transition-data.js?cb=20260508000000"></script>
-    <script src="src/script.js?cb=20251210007400"></script>
-    <script src="src/bible-selector.js?cb=20260419000000"></script>
-    <script src="src/chapter-summary-pullout.js?cb=20260301210232"></script>
-    <script src="src/ai-summary.js?cb=20260423000000"></script>
+    <script src="src/js/script.js?cb=20251210007400"></script>
+    <script src="src/js/bible-selector.js?cb=20260419000000"></script>
+    <script src="src/js/chapter-summary-pullout.js?cb=20260301210232"></script>
+    <script src="src/js/ai-summary.js?cb=20260423000000"></script>
 
     <!-- Image Viewer Modal -->
     <style>

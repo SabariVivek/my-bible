@@ -1,0 +1,14581 @@
+// Bible book configuration
+const bibleBooks = [
+    // Old Testament
+    { name: 'Genesis', shortName: 'Gen', tamilName: 'ஆதியாகமம்', tamilShortName: 'ஆதி', file: 'genesis', testament: 'old', chapters: 50, hebrew: 'Bereshit (בְּרֵאשִׁית)', meaning: 'In the beginning / start of everything' },
+    { name: 'Exodus', shortName: 'Exod', tamilName: 'யாத்திராகமம்', tamilShortName: 'யாத்', file: 'exodus', testament: 'old', chapters: 40, hebrew: 'Shemot (שְׁמוֹת)', meaning: 'Going out / leaving Egypt' },
+    { name: 'Leviticus', shortName: 'Lev', tamilName: 'லேவியராகமம்', tamilShortName: 'லேவி', file: 'leviticus', testament: 'old', chapters: 27, hebrew: 'Vayikra (וַיִּקְרָא)', meaning: 'About priests / worship rules' },
+    { name: 'Numbers', shortName: 'Num', tamilName: 'எண்ணாகமம்', tamilShortName: 'எண்', file: 'numbers', testament: 'old', chapters: 36, hebrew: 'Bamidbar (בְּמִדְבַּר)', meaning: 'In the desert / counting people' },
+    { name: 'Deuteronomy', shortName: 'Deut', tamilName: 'உபாகமம்', tamilShortName: 'உபா', file: 'deuteronomy', testament: 'old', chapters: 34, hebrew: 'Devarim (דְּבָרִים)', meaning: 'Words / repeating God\'s law' },
+    { name: 'Joshua', shortName: 'Josh', tamilName: 'யோசுவா', tamilShortName: 'யோசு', file: 'joshua', testament: 'old', chapters: 24, hebrew: 'Yehoshua (יְהוֹשֻׁעַ)', meaning: 'God saves / God is salvation' },
+    { name: 'Judges', shortName: 'Judg', tamilName: 'நியாயாதிபதிகள்', tamilShortName: 'நியா', file: 'judges', testament: 'old', chapters: 21, hebrew: 'Shoftim (שֹׁפְטִים)', meaning: 'Leaders who judge and save Israel' },
+    { name: 'Ruth', shortName: 'Ruth', tamilName: 'ரூத்', tamilShortName: 'ரூத்', file: 'ruth', testament: 'old', chapters: 4, hebrew: 'Rut (רוּת)', meaning: 'Friend / loyal woman' },
+    { name: 'I Samuel', shortName: '1 Sam', tamilName: '1 சாமுவேல்', tamilShortName: '1 சாமு', file: 'i_samuel', testament: 'old', chapters: 31, hebrew: 'Shmuel (שְׁמוּאֵל)', meaning: 'God has heard' },
+    { name: 'II Samuel', shortName: '2 Sam', tamilName: '2 சாமுவேல்', tamilShortName: '2 சாமு', file: 'ii_samuel', testament: 'old', chapters: 24, hebrew: 'Shmuel (שְׁמוּאֵל)', meaning: 'Story of King David\'s rule' },
+    { name: 'I Kings', shortName: '1 Kgs', tamilName: '1 இராஜாக்கள்', tamilShortName: '1 இரா', file: 'i_kings', testament: 'old', chapters: 22, hebrew: 'Melakhim (מְלָכִים)', meaning: 'Stories of kings' },
+    { name: 'II Kings', shortName: '2 Kgs', tamilName: '2 இராஜாக்கள்', tamilShortName: '2 இரா', file: 'ii_kings', testament: 'old', chapters: 25, hebrew: 'Melakhim (מְלָכִים)', meaning: 'Continuation of kings\' stories' },
+    { name: 'I Chronicles', shortName: '1 Chr', tamilName: '1 நாளாகமம்', tamilShortName: '1 நாளா', file: 'i_chronicles', testament: 'old', chapters: 29, hebrew: 'Divrei HaYamim (דִּבְרֵי הַיָּמִים)', meaning: 'Events of history' },
+    { name: 'II Chronicles', shortName: '2 Chr', tamilName: '2 நாளாகமம்', tamilShortName: '2 நாளா', file: 'ii_chronicles', testament: 'old', chapters: 36, hebrew: 'Divrei HaYamim (דִּבְרֵי הַיָּמִים)', meaning: 'More history records' },
+    { name: 'Ezra', shortName: 'Ezra', tamilName: 'எஸ்றா', tamilShortName: 'எஸ்றா', file: 'ezra', testament: 'old', chapters: 10, hebrew: 'Ezra (עֶזְרָא)', meaning: 'Helper / one who helps' },
+    { name: 'Nehemiah', shortName: 'Neh', tamilName: 'நெகேமியா', tamilShortName: 'நெகே', file: 'nehemiah', testament: 'old', chapters: 13, hebrew: 'Nechemyah (נְחֶמְיָה)', meaning: 'God comforts' },
+    { name: 'Esther', shortName: 'Esth', tamilName: 'எஸ்தர்', tamilShortName: 'எஸ்தர்', file: 'esther', testament: 'old', chapters: 10, hebrew: 'Ester (אֶסְתֵּר)', meaning: 'Hidden / star' },
+    { name: 'Job', shortName: 'Job', tamilName: 'யோபு', tamilShortName: 'யோபு', file: 'job', testament: 'old', chapters: 42, hebrew: 'Iyov (אִיּוֹב)', meaning: 'Suffering man / tested one' },
+    { name: 'Psalms', shortName: 'Ps', tamilName: 'சங்கீதம்', tamilShortName: 'சங்கீ', file: 'psalms', testament: 'old', chapters: 150, hebrew: 'Tehillim (תְּהִלִּים)', meaning: 'Praises / songs' },
+    { name: 'Proverbs', shortName: 'Prov', tamilName: 'நீதிமொழிகள்', tamilShortName: 'நீதி', file: 'proverbs', testament: 'old', chapters: 31, hebrew: 'Mishlei (מִשְׁלֵי)', meaning: 'Wisdom sayings' },
+    { name: 'Ecclesiastes', shortName: 'Eccl', tamilName: 'பிரசங்கி', tamilShortName: 'பிர', file: 'ecclesiastes', testament: 'old', chapters: 12, hebrew: 'Kohelet (קֹהֶלֶת)', meaning: 'Teacher / preacher' },
+    { name: 'Song of Solomon', shortName: 'Song', tamilName: 'உன்னதப்பாட்டு', tamilShortName: 'உன்ன', file: 'song_of_solomon', testament: 'old', chapters: 8, hebrew: 'Shir HaShirim (שִׁיר הַשִּׁירִים)', meaning: 'Song of love' },
+    { name: 'Isaiah', shortName: 'Isa', tamilName: 'ஏசாயா', tamilShortName: 'ஏசா', file: 'isaiah', testament: 'old', chapters: 66, hebrew: 'Yeshayahu (יְשַׁעְיָהוּ)', meaning: 'God is salvation' },
+    { name: 'Jeremiah', shortName: 'Jer', tamilName: 'எரேமியா', tamilShortName: 'எரே', file: 'jeremiah', testament: 'old', chapters: 52, hebrew: 'Yirmiyahu (יִרְמְיָהוּ)', meaning: 'God appoints' },
+    { name: 'Lamentations', shortName: 'Lam', tamilName: 'புலம்பல்', tamilShortName: 'புல', file: 'lamentations', testament: 'old', chapters: 5, hebrew: 'Eikhah (אֵיכָה)', meaning: 'Weeping / sorrow' },
+    { name: 'Ezekiel', shortName: 'Ezek', tamilName: 'எசேக்கியேல்', tamilShortName: 'எசே', file: 'ezekiel', testament: 'old', chapters: 48, hebrew: 'Yechezkel (יְחֶזְקֵאל)', meaning: 'God strengthens' },
+    { name: 'Daniel', shortName: 'Dan', tamilName: 'தானியேல்', tamilShortName: 'தானி', file: 'daniel', testament: 'old', chapters: 12, hebrew: 'Daniel (דָּנִיֵּאל)', meaning: 'God is my judge' },
+    { name: 'Hosea', shortName: 'Hos', tamilName: 'ஓசியா', tamilShortName: 'ஓசி', file: 'hosea', testament: 'old', chapters: 14, hebrew: 'Hoshea (הוֹשֵׁעַ)', meaning: 'Salvation' },
+    { name: 'Joel', shortName: 'Joel', tamilName: 'யோவேல்', tamilShortName: 'யோவே', file: 'joel', testament: 'old', chapters: 3, hebrew: 'Yoel (יוֹאֵל)', meaning: 'The Lord is God' },
+    { name: 'Amos', shortName: 'Amos', tamilName: 'ஆமோஸ்', tamilShortName: 'ஆமோ', file: 'amos', testament: 'old', chapters: 9, hebrew: 'Amos (עָמוֹס)', meaning: 'Burden bearer' },
+    { name: 'Obadiah', shortName: 'Obad', tamilName: 'ஒபதியா', tamilShortName: 'ஒபதி', file: 'obadiah', testament: 'old', chapters: 1, hebrew: 'Ovadyah (עֹבַדְיָה)', meaning: 'Servant of God' },
+    { name: 'Jonah', shortName: 'Jonah', tamilName: 'யோனா', tamilShortName: 'யோனா', file: 'jonah', testament: 'old', chapters: 4, hebrew: 'Yonah (יוֹנָה)', meaning: 'Dove / peaceful bird' },
+    { name: 'Micah', shortName: 'Mic', tamilName: 'மீகா', tamilShortName: 'மீகா', file: 'micah', testament: 'old', chapters: 7, hebrew: 'Mikhah (מִיכָה)', meaning: 'Who is like God?' },
+    { name: 'Nahum', shortName: 'Nah', tamilName: 'நாகூம்', tamilShortName: 'நாகூ', file: 'nahum', testament: 'old', chapters: 3, hebrew: 'Nachum (נַחוּם)', meaning: 'Comfort' },
+    { name: 'Habakkuk', shortName: 'Hab', tamilName: 'ஆபகூக்', tamilShortName: 'ஆப', file: 'habakkuk', testament: 'old', chapters: 3, hebrew: 'Chavakuk (חֲבַקּוּק)', meaning: 'Embrace / wrestling' },
+    { name: 'Zephaniah', shortName: 'Zeph', tamilName: 'செப்பனியா', tamilShortName: 'செப்', file: 'zephaniah', testament: 'old', chapters: 3, hebrew: 'Tzefanyah (צְפַנְיָה)', meaning: 'God hides / protects' },
+    { name: 'Haggai', shortName: 'Hag', tamilName: 'ஆகாய்', tamilShortName: 'ஆகாய்', file: 'haggai', testament: 'old', chapters: 2, hebrew: 'Chaggai (חַגַּי)', meaning: 'Festival / feast' },
+    { name: 'Zechariah', shortName: 'Zech', tamilName: 'சகரியா', tamilShortName: 'சகரி', file: 'zechariah', testament: 'old', chapters: 14, hebrew: 'Zekharyah (זְכַרְיָה)', meaning: 'God remembers' },
+    { name: 'Malachi', shortName: 'Mal', tamilName: 'மல்கியா', tamilShortName: 'மல்கி', file: 'malachi', testament: 'old', chapters: 4, hebrew: 'Malakhi (מַלְאָכִי)', meaning: 'My messenger' },
+    // New Testament
+    { name: 'Matthew', shortName: 'Matt', tamilName: 'மத்தேயு', tamilShortName: 'மத்', file: 'matthew', testament: 'new', chapters: 28, hebrew: 'Mattityahu (מַתִּתְיָהוּ)', meaning: 'Gift of God' },
+    { name: 'Mark', shortName: 'Mark', tamilName: 'மாற்கு', tamilShortName: 'மாற்', file: 'mark', testament: 'new', chapters: 16, hebrew: 'Markos', meaning: 'Messenger / follower' },
+    { name: 'Luke', shortName: 'Luke', tamilName: 'லூக்கா', tamilShortName: 'லூக்', file: 'luke', testament: 'new', chapters: 24, hebrew: 'Loukas', meaning: 'Bringer of light' },
+    { name: 'John', shortName: 'John', tamilName: 'யோவான்', tamilShortName: 'யோ', file: 'john', testament: 'new', chapters: 21, hebrew: 'Yochanan (יוֹחָנָן)', meaning: 'God is gracious' },
+    { name: 'Acts', shortName: 'Acts', tamilName: 'அப்போஸ்தலர்', tamilShortName: 'அப்போ', file: 'acts', testament: 'new', chapters: 28, hebrew: 'Maasei HaShlichim', meaning: 'Acts of apostles' },
+    { name: 'Romans', shortName: 'Rom', tamilName: 'ரோமர்', tamilShortName: 'ரோமர்', file: 'romans', testament: 'new', chapters: 16, hebrew: 'Romiyim', meaning: 'People of Rome' },
+    { name: 'I Corinthians', shortName: '1 Cor', tamilName: '1 கொரிந்தியர்', tamilShortName: '1 கொரி', file: 'i_corinthians', testament: 'new', chapters: 16, hebrew: 'Korinthiyim', meaning: 'Letter to Corinth church' },
+    { name: 'II Corinthians', shortName: '2 Cor', tamilName: '2 கொரிந்தியர்', tamilShortName: '2 கொரி', file: 'ii_corinthians', testament: 'new', chapters: 13, hebrew: 'Korinthiyim', meaning: 'Second letter to Corinth' },
+    { name: 'Galatians', shortName: 'Gal', tamilName: 'கலாத்தியர்', tamilShortName: 'கலா', file: 'galatians', testament: 'new', chapters: 6, hebrew: 'Galatiyim', meaning: 'People of Galatia' },
+    { name: 'Ephesians', shortName: 'Eph', tamilName: 'எபேசியர்', tamilShortName: 'எபே', file: 'ephesians', testament: 'new', chapters: 6, hebrew: 'Ephesiyim', meaning: 'People of Ephesus' },
+    { name: 'Philippians', shortName: 'Phil', tamilName: 'பிலிப்பியர்', tamilShortName: 'பிலி', file: 'philippians', testament: 'new', chapters: 4, hebrew: 'Pilippiyim', meaning: 'People of Philippi' },
+    { name: 'Colossians', shortName: 'Col', tamilName: 'கொலோசெயர்', tamilShortName: 'கொலோ', file: 'colossians', testament: 'new', chapters: 4, hebrew: 'Kolossiyim', meaning: 'People of Colossae' },
+    { name: 'I Thessalonians', shortName: '1 Thess', tamilName: '1 தெசலோனிக்கேயர்', tamilShortName: '1 தெச', file: 'i_thessalonians', testament: 'new', chapters: 5, hebrew: 'Thessalonikiyim', meaning: 'First letter to Thessalonica' },
+    { name: 'II Thessalonians', shortName: '2 Thess', tamilName: '2 தெசலோனிக்கேயர்', tamilShortName: '2 தெச', file: 'ii_thessalonians', testament: 'new', chapters: 3, hebrew: 'Thessalonikiyim', meaning: 'Second letter to Thessalonica' },
+    { name: 'I Timothy', shortName: '1 Tim', tamilName: '1 தீமோத்தேயு', tamilShortName: '1 தீமோ', file: 'i_timothy', testament: 'new', chapters: 6, hebrew: 'Timotiyos', meaning: 'Honoring God' },
+    { name: 'II Timothy', shortName: '2 Tim', tamilName: '2 தீமோத்தேயு', tamilShortName: '2 தீமோ', file: 'ii_timothy', testament: 'new', chapters: 4, hebrew: 'Timotiyos', meaning: 'Second letter to Timothy' },
+    { name: 'Titus', shortName: 'Titus', tamilName: 'தீத்து', tamilShortName: 'தீத்து', file: 'titus', testament: 'new', chapters: 3, hebrew: 'Titos', meaning: 'Name of person Titus' },
+    { name: 'Philemon', shortName: 'Phlm', tamilName: 'பிலேமோன்', tamilShortName: 'பிலே', file: 'philemon', testament: 'new', chapters: 1, hebrew: 'Filemon', meaning: 'Loving / affectionate' },
+    { name: 'Hebrews', shortName: 'Heb', tamilName: 'எபிரெயர்', tamilShortName: 'எபி', file: 'hebrews', testament: 'new', chapters: 13, hebrew: 'Ivritim', meaning: 'Hebrew people' },
+    { name: 'James', shortName: 'Jas', tamilName: 'யாக்கோபு', tamilShortName: 'யாக்', file: 'james', testament: 'new', chapters: 5, hebrew: 'Yaakov (יַעֲקֹב)', meaning: 'Supplanter / follower of God' },
+    { name: 'I Peter', shortName: '1 Pet', tamilName: '1 பேதுரு', tamilShortName: '1 பேதுரு', file: 'i_peter', testament: 'new', chapters: 5, hebrew: 'Kefa (כֵּיפָא)', meaning: 'Rock / stone' },
+    { name: 'II Peter', shortName: '2 Pet', tamilName: '2 பேதுரு', tamilShortName: '2 பேதுரு', file: 'ii_peter', testament: 'new', chapters: 3, hebrew: 'Kefa', meaning: 'Second letter of Peter' },
+    { name: 'I John', shortName: '1 John', tamilName: '1 யோவான்', tamilShortName: '1 யோ', file: 'i_john', testament: 'new', chapters: 5, hebrew: 'Yochanan', meaning: 'God is gracious' },
+    { name: 'II John', shortName: '2 John', tamilName: '2 யோவான்', tamilShortName: '2 யோ', file: 'ii_john', testament: 'new', chapters: 1, hebrew: 'Yochanan', meaning: 'Second letter of John' },
+    { name: 'III John', shortName: '3 John', tamilName: '3 யோவான்', tamilShortName: '3 யோ', file: 'iii_john', testament: 'new', chapters: 1, hebrew: 'Yochanan', meaning: 'Third letter of John' },
+    { name: 'Jude', shortName: 'Jude', tamilName: 'யூதா', tamilShortName: 'யூதா', file: 'jude', testament: 'new', chapters: 1, hebrew: 'Yehuda (יְהוּדָה)', meaning: 'Praise / thanks' },
+    { name: 'Revelation', shortName: 'Rev', tamilName: 'வெளிப்படுத்தல்', tamilShortName: 'வெளி', file: 'revelation', testament: 'new', chapters: 22, hebrew: 'Hitgalut (הִתְגַּלּוּת)', meaning: 'Revelation / unveiling' }
+];
+// Current state
+let currentBook = parseInt(localStorage.getItem('currentBook')) || 39; // Matthew (New Testament starts at index 39)
+let currentChapter = parseInt(localStorage.getItem('currentChapter')) || 1;
+
+// Validate that currentBook is valid (between 0 and total number of books)
+if (currentBook < 0 || currentBook >= bibleBooks.length) {
+    currentBook = 39; // Default to Matthew
+    localStorage.setItem('currentBook', 39);
+}
+
+// Validate that currentChapter is valid for currentBook (important for data consistency on page reload)
+const currentBookData = bibleBooks[currentBook];
+if (currentBookData && currentChapter > currentBookData.chapters) {
+    currentChapter = 1;
+    localStorage.setItem('currentChapter', 1);
+}
+
+let currentData = null;
+let currentTamilData = null; // For storing Tamil data when "Both" is selected
+let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'english' or 'tamil' or 'both'
+// UI settings for settings panel (persisted)
+const ADMIN_PASSWORD = '030593'; // 6-digit password
+const DEFAULT_UI_SETTINGS = {
+    images: true,
+    shortSummary: true,
+    bibleReading: true,
+    verseHeading: true,
+    verseHeadingOnly: true,
+    authorDetails: true,
+    memoryVerse: true,
+    bookmark: true,
+    notesFeature: true
+};
+let uiSettings = (() => {
+    try {
+        const raw = localStorage.getItem('uiSettings');
+        if (!raw) return { ...DEFAULT_UI_SETTINGS };
+        const parsed = JSON.parse(raw);
+        return { ...DEFAULT_UI_SETTINGS, ...parsed };
+    } catch (e) {
+        return { ...DEFAULT_UI_SETTINGS };
+    }
+})();
+
+// Snapshot of settings when the right settings panel is opened
+let settingsPanelOriginalState = null;
+
+function getCurrentSettingsSnapshot() {
+    try {
+        const themeSegVal = localStorage.getItem('settingsTheme') || (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+        const langSegVal = localStorage.getItem('settingsLanguage') || (currentLanguage === 'both' ? 'both' : currentLanguage === 'english' ? 'en' : 'ta');
+        const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
+        const verseHeadingLangVal = localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
+        const selectorStyleVal = localStorage.getItem('selectorStyle') || 'old';
+        const verseHeadingColorVal = localStorage.getItem('verseHeadingColor') || 'green';
+        return {
+            theme: themeSegVal,
+            language: langSegVal,
+            englishColor: colorVal,
+            verseHeadingLanguage: verseHeadingLangVal,
+            selectorStyle: selectorStyleVal,
+            verseHeadingColor: verseHeadingColorVal,
+            uiSettings: { ...uiSettings },
+            isAdmin: typeof isAdmin === 'function' ? isAdmin() : false
+        };
+    } catch (e) {
+        return null;
+    }
+}
+
+function areSettingsEqual(a, b) {
+    if (!a || !b) return true;
+    if (a.theme !== b.theme) return false;
+    if (a.language !== b.language) return false;
+    if (a.englishColor !== b.englishColor) return false;
+    if (a.verseHeadingLanguage !== b.verseHeadingLanguage) return false;
+    if ((a.selectorStyle || 'old') !== (b.selectorStyle || 'old')) return false;
+    if ((a.verseHeadingColor || 'green') !== (b.verseHeadingColor || 'green')) return false;
+    if (!!a.isAdmin !== !!b.isAdmin) return false;
+    const keys = Object.keys(DEFAULT_UI_SETTINGS);
+    for (const key of keys) {
+        if (!!(a.uiSettings && a.uiSettings[key]) !== !!(b.uiSettings && b.uiSettings[key])) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function updateSettingsFooterVisibility() {
+    const panel = document.getElementById('right-settings-panel');
+    if (!panel) return;
+    const footer = panel.querySelector('.settings-footer');
+    const headerSaveIcon = document.getElementById('settings-save-icon-btn');
+    const headerCancelIcon = document.getElementById('settings-cancel-icon-btn');
+
+    if (!settingsPanelOriginalState) {
+        if (footer) footer.style.display = 'none';
+        if (headerSaveIcon) headerSaveIcon.style.display = 'none';
+        if (headerCancelIcon) headerCancelIcon.style.display = 'none';
+        return;
+    }
+
+    const current = getCurrentSettingsSnapshot();
+    const changed = !areSettingsEqual(settingsPanelOriginalState, current);
+
+    if (footer) {
+        footer.style.display = changed ? 'flex' : 'none';
+    }
+    if (headerSaveIcon) {
+        headerSaveIcon.style.display = changed ? 'flex' : 'none';
+    }
+    if (headerCancelIcon) {
+        headerCancelIcon.style.display = changed ? 'flex' : 'none';
+    }
+}
+
+function settingsHasUnsavedChanges() {
+    if (!settingsPanelOriginalState) return false;
+    const current = getCurrentSettingsSnapshot();
+    return !areSettingsEqual(settingsPanelOriginalState, current);
+}
+
+let pendingSettingsDiscardConfirm = null;
+let pendingSettingsDiscardCancel = null;
+
+function openSettingsDiscardDialog(onConfirm, onCancel) {
+    if (!settingsHasUnsavedChanges()) {
+        if (typeof onConfirm === 'function') onConfirm();
+        return;
+    }
+    const overlay = document.getElementById('settings-discard-overlay');
+    const confirmBtn = document.getElementById('settings-discard-confirm-btn');
+    const cancelBtn = document.getElementById('settings-discard-cancel-btn');
+    if (!overlay || !confirmBtn || !cancelBtn) {
+        // Fallback: just confirm immediately if dialog is missing
+        if (typeof onConfirm === 'function') onConfirm();
+        return;
+    }
+    pendingSettingsDiscardConfirm = onConfirm || null;
+    pendingSettingsDiscardCancel = onCancel || null;
+    overlay.style.display = 'flex';
+}
+
+function closeSettingsDiscardDialog() {
+    const overlay = document.getElementById('settings-discard-overlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+    }
+}
+
+// Supabase configuration for user_settings (same project as other Supabase usage)
+const SUPABASE_SETTINGS_CONFIG = {
+    url: 'https://encjogfdbrfcatvytpir.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck'
+};
+
+async function saveUserSettingsToSupabase() {
+    try {
+        const userId = localStorage.getItem('currentUserId');
+        if (!userId || !window.fetch) {
+            return;
+        }
+
+        const themeVal =
+            localStorage.getItem('settingsTheme') ||
+            (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+        const langSegVal =
+            localStorage.getItem('settingsLanguage') ||
+            (currentLanguage === 'both'
+                ? 'both'
+                : currentLanguage === 'english'
+                    ? 'en'
+                    : 'ta');
+        const colorVal =
+            localStorage.getItem('settingsEnglishColor') ||
+            (typeof englishTextColor !== 'undefined' ? englishTextColor : 'default');
+        const verseHeadingLangVal =
+            localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
+        const verseHeadingColorVal =
+            localStorage.getItem('verseHeadingColor') || 'green';
+        const selectorStyleVal =
+            localStorage.getItem('selectorStyle') || 'old';
+
+        const payload = {
+            user_id: userId,
+            theme: themeVal,
+            language: langSegVal,
+            english_text_color: colorVal,
+            images: !!uiSettings.images,
+            short_summary: !!uiSettings.shortSummary,
+            bible_reading: !!uiSettings.bibleReading,
+            verse_heading: !!uiSettings.verseHeading,
+            verse_heading_language: verseHeadingLangVal,
+            only_headers: !!uiSettings.verseHeadingOnly,
+            author_details: !!uiSettings.authorDetails,
+            memory_verse: !!uiSettings.memoryVerse,
+            bookmark: !!uiSettings.bookmark,
+            notes_feature: !!uiSettings.notesFeature,
+            verse_heading_color: verseHeadingColorVal,
+            selector_style: selectorStyleVal
+        };
+
+        // Upsert by user_id so both existing and new users are handled
+        await fetch(
+            `${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings?on_conflict=user_id`,
+            {
+                method: 'POST',
+                headers: {
+                    'apikey': SUPABASE_SETTINGS_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_SETTINGS_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json',
+                    'Prefer': 'resolution=merge-duplicates'
+                },
+                body: JSON.stringify(payload)
+            }
+        );
+    } catch (e) {
+        // Fail silently – localStorage still keeps settings
+    }
+}
+
+async function loadUserSettingsFromSupabase() {
+    try {
+        const userId = localStorage.getItem('currentUserId');
+        if (!userId || !window.fetch) {
+            return;
+        }
+
+        const response = await fetch(
+            `${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings?user_id=eq.${encodeURIComponent(
+                userId
+            )}&select=*`,
+            {
+                headers: {
+                    'apikey': SUPABASE_SETTINGS_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_SETTINGS_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
+
+        if (!response.ok) {
+            return;
+        }
+
+        const rows = await response.json();
+        if (!rows || rows.length === 0) {
+            // No row yet for this user – create one from current local settings
+            await saveUserSettingsToSupabase();
+            return;
+        }
+
+        const row = rows[0];
+
+        // Language
+        if (row.language) {
+            const langVal = row.language; // 'ta' | 'en' | 'both'
+            const selectedLang =
+                langVal === 'en' ? 'english' : langVal === 'ta' ? 'tamil' : 'both';
+            currentLanguage = selectedLang;
+            localStorage.setItem('currentLanguage', selectedLang);
+            localStorage.setItem('settingsLanguage', langVal);
+        }
+
+        // Theme
+        if (row.theme === 'dark' || row.theme === 'light') {
+            const wantDark = row.theme === 'dark';
+            if (wantDark) {
+                document.body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light');
+            }
+            localStorage.setItem('settingsTheme', row.theme);
+        }
+
+        // English text color
+        if (row.english_text_color) {
+            englishTextColor = row.english_text_color;
+            localStorage.setItem('englishTextColor', englishTextColor);
+            localStorage.setItem('settingsEnglishColor', englishTextColor);
+        }
+
+        // Verse heading language
+        if (row.verse_heading_language) {
+            localStorage.setItem('settingsVerseHeadingLanguage', row.verse_heading_language);
+        }
+
+        // Verse heading color
+        if (row.verse_heading_color) {
+            localStorage.setItem('verseHeadingColor', row.verse_heading_color);
+            if (typeof applyVerseHeadingColor === 'function') {
+                applyVerseHeadingColor(row.verse_heading_color);
+            }
+        }
+
+        // Selector style (old / new)
+        if (row.selector_style) {
+            localStorage.setItem('selectorStyle', row.selector_style);
+        }
+
+        // Boolean display / feature options
+        const mapping = [
+            ['images', 'images'],
+            ['shortSummary', 'short_summary'],
+            ['bibleReading', 'bible_reading'],
+            ['verseHeading', 'verse_heading'],
+            ['verseHeadingOnly', 'only_headers'],
+            ['authorDetails', 'author_details'],
+            ['memoryVerse', 'memory_verse'],
+            ['bookmark', 'bookmark'],
+            ['notesFeature', 'notes_feature']
+        ];
+
+        mapping.forEach(([key, col]) => {
+            if (Object.prototype.hasOwnProperty.call(row, col)) {
+                uiSettings[key] = !!row[col];
+            }
+        });
+
+        localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
+
+        if (typeof applyUiSettingsToDocument === 'function') {
+            applyUiSettingsToDocument();
+        }
+        if (typeof updateBookNames === 'function') {
+            updateBookNames();
+        }
+    } catch (e) {
+        // Silent failure – app still works with local settings
+    }
+}
+
+function openAdminPasswordModal(onSuccess) {
+    const ATTEMPTS_KEY = 'adminPinAttempts';
+    const LOCK_UNTIL_KEY = 'adminPinLockUntil';
+    const MAX_ATTEMPTS = 3;
+    const LOCK_DURATION_MS = 24 * 60 * 60 * 1000; // 24 hours
+
+    function showLockoutSheet(lockUntilTs) {
+        // Remove any existing modal instance
+        const existing = document.getElementById('admin-password-modal');
+        if (existing) existing.remove();
+
+        const modal = document.createElement('div');
+        modal.className = 'admin-password-modal';
+        modal.id = 'admin-password-modal';
+        modal.innerHTML = `
+            <div class="admin-lock-sheet">
+                <div class="admin-lock-warning-stripe"></div>
+                <div class="admin-lock-handle"></div>
+
+                <div class="admin-lock-header">
+                    <div class="admin-lock-header-left">
+                        <div class="admin-lock-badge">Security Alert</div>
+                    </div>
+                    <button class="admin-lock-close-btn" aria-label="Close">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="admin-lock-icon-zone">
+                    <div class="admin-lock-ring">
+                        <svg class="admin-lock-ring-svg" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="44" cy="44" r="40" stroke="#ff6b35" stroke-width="1.5" stroke-dasharray="6 6" stroke-opacity="0.4"></circle>
+                        </svg>
+                        <div class="admin-lock-icon-wrap">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                                <rect x="5" y="11" width="14" height="10" rx="2.5" fill="#ff6b35" opacity="0.9"></rect>
+                                <path d="M8 11V7.5a4 4 0 1 1 8 0V11" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"></path>
+                                <circle cx="12" cy="16" r="1.5" fill="#16161e"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-lock-content">
+                    <div class="admin-lock-title">Admin Locked</div>
+                    <div class="admin-lock-subtitle">
+                        Access has locked after <strong>3 failed attempts</strong>.<br>
+                        Please wait for the timer to reset.
+                    </div>
+                </div>
+
+                <div class="admin-lock-attempts-row">
+                    <div class="admin-lock-attempt-pip used"></div>
+                    <div class="admin-lock-attempt-pip used"></div>
+                    <div class="admin-lock-attempt-pip used"></div>
+                    <span class="admin-lock-attempt-label">3 / 3 attempts used</span>
+                </div>
+
+                <div class="admin-lock-divider"></div>
+
+                <div class="admin-lock-timer-block">
+                    <div class="admin-lock-timer-label">
+                        <div class="admin-lock-timer-label-text">Lockout ends in</div>
+                        <div class="admin-lock-timer-sublabel">Auto-resets when done</div>
+                    </div>
+                    <div class="admin-lock-timer-display" id="admin-lockout-timer">24:00:00</div>
+                </div>
+            </div>
+            <div class="admin-password-overlay"></div>
+        `;
+        document.body.appendChild(modal);
+
+        const iconCloseBtn = modal.querySelector('.admin-lock-close-btn');
+        const dismissBtn = modal.querySelector('.admin-lock-close-full-btn');
+        const overlay = modal.querySelector('.admin-password-overlay');
+        const timerEl = modal.querySelector('#admin-lockout-timer');
+
+        function formatRemaining(ms) {
+            if (ms <= 0) return '00:00:00';
+            const totalSeconds = Math.floor(ms / 1000);
+            const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+            const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+            const seconds = String(totalSeconds % 60).padStart(2, '0');
+            return `${hours}:${minutes}:${seconds}`;
+        }
+
+        function updateTimer() {
+            const now = Date.now();
+            const remaining = lockUntilTs - now;
+            if (remaining <= 0) {
+                clearInterval(intervalId);
+                localStorage.removeItem(LOCK_UNTIL_KEY);
+                localStorage.removeItem(ATTEMPTS_KEY);
+                timerEl.textContent = 'You can now try again.';
+                return;
+            }
+            timerEl.textContent = formatRemaining(remaining);
+        }
+
+        const intervalId = setInterval(updateTimer, 1000);
+        updateTimer();
+
+        function closeModal() {
+            clearInterval(intervalId);
+            const sheet = modal.querySelector('.admin-lock-sheet');
+            if (sheet) {
+                sheet.style.animation = 'slideDownSheet 0.3s ease forwards';
+                modal.style.opacity = '1';
+                setTimeout(() => {
+                    modal.remove();
+                }, 300);
+            } else {
+                modal.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => modal.remove(), 300);
+            }
+        }
+
+        if (iconCloseBtn) iconCloseBtn.addEventListener('click', closeModal);
+        if (dismissBtn) dismissBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+    }
+
+    // Check for lockout before showing PIN sheet
+    const lockUntilRaw = localStorage.getItem(LOCK_UNTIL_KEY);
+    const lockUntil = lockUntilRaw ? parseInt(lockUntilRaw, 10) : 0;
+    if (lockUntil && Date.now() < lockUntil) {
+        showLockoutSheet(lockUntil);
+        return;
+    }
+
+    // Remove any existing modal instance
+    const existing = document.getElementById('admin-password-modal');
+    if (existing) existing.remove();
+
+    const modal = document.createElement('div');
+    modal.className = 'admin-password-modal';
+    modal.id = 'admin-password-modal';
+    modal.innerHTML = `
+        <div class="admin-password-modal-content">
+            <div class="admin-password-header">
+                <h2>Admin Access</h2>
+                <button class="admin-password-close" aria-label="Close">&times;</button>
+            </div>
+            <div class="admin-password-body">
+                <p>Enter 6-digit password to enable admin mode</p>
+                <div class="pin-dots">
+                    <div class="pin-dot" data-index="0"></div>
+                    <div class="pin-dot" data-index="1"></div>
+                    <div class="pin-dot" data-index="2"></div>
+                    <div class="pin-dot" data-index="3"></div>
+                    <div class="pin-dot" data-index="4"></div>
+                    <div class="pin-dot" data-index="5"></div>
+                </div>
+                <div class="numpad">
+                    <button class="key" data-key="1"><span class="key-num">1</span><span class="key-letters"></span></button>
+                    <button class="key" data-key="2"><span class="key-num">2</span><span class="key-letters">ABC</span></button>
+                    <button class="key" data-key="3"><span class="key-num">3</span><span class="key-letters">DEF</span></button>
+
+                    <button class="key" data-key="4"><span class="key-num">4</span><span class="key-letters">GHI</span></button>
+                    <button class="key" data-key="5"><span class="key-num">5</span><span class="key-letters">JKL</span></button>
+                    <button class="key" data-key="6"><span class="key-num">6</span><span class="key-letters">MNO</span></button>
+
+                    <button class="key" data-key="7"><span class="key-num">7</span><span class="key-letters">PQRS</span></button>
+                    <button class="key" data-key="8"><span class="key-num">8</span><span class="key-letters">TUV</span></button>
+                    <button class="key" data-key="9"><span class="key-num">9</span><span class="key-letters">WXYZ</span></button>
+
+                    <div class="key empty"></div>
+                    <button class="key" data-key="0"><span class="key-num">0</span><span class="key-letters">+</span></button>
+                    <button class="key delete" data-delete="1">⌫</button>
+                </div>
+                <div class="admin-password-error" id="admin-password-error" style="display: none;">Incorrect password</div>
+            </div>
+            <div class="admin-password-footer">
+                <button class="admin-password-cancel-btn">Cancel</button>
+            </div>
+        </div>
+        <div class="admin-password-overlay"></div>
+    `;
+    document.body.appendChild(modal);
+
+    let pin = '';
+    const dots = Array.from(modal.querySelectorAll('.pin-dot'));
+    const errorDiv = modal.querySelector('#admin-password-error');
+    const closeBtn = modal.querySelector('.admin-password-close');
+    const cancelBtn = modal.querySelector('.admin-password-cancel-btn');
+    const overlay = modal.querySelector('.admin-password-overlay');
+    const keys = Array.from(modal.querySelectorAll('.key'));
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('filled', index < pin.length);
+            dot.classList.remove('error');
+        });
+    }
+
+    function lockOut() {
+        const until = Date.now() + LOCK_DURATION_MS;
+        localStorage.setItem(LOCK_UNTIL_KEY, String(until));
+        localStorage.removeItem(ATTEMPTS_KEY);
+        // Close current PIN modal and immediately show lockout sheet
+        const content = modal.querySelector('.admin-password-modal-content');
+        if (content) {
+            content.style.animation = 'slideDownSheet 0.3s ease forwards';
+            setTimeout(() => {
+                modal.remove();
+                showLockoutSheet(until);
+            }, 300);
+        } else {
+            modal.style.animation = 'fadeOut 0.3s ease';
+            setTimeout(() => {
+                modal.remove();
+                showLockoutSheet(until);
+            }, 300);
+        }
+    }
+
+    function showErrorAndReset() {
+        dots.forEach(dot => {
+            dot.classList.remove('filled');
+            dot.classList.add('error');
+        });
+        errorDiv.style.display = 'block';
+
+        // Track attempts and apply lockout after 3 failures
+        let attempts = parseInt(localStorage.getItem(ATTEMPTS_KEY) || '0', 10);
+        if (Number.isNaN(attempts)) attempts = 0;
+        attempts += 1;
+
+        if (attempts >= MAX_ATTEMPTS) {
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+                pin = '';
+                updateDots();
+                lockOut();
+            }, 600);
+        } else {
+            localStorage.setItem(ATTEMPTS_KEY, String(attempts));
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+                pin = '';
+                updateDots();
+            }, 600);
+        }
+    }
+
+    function pressKey(num, btn) {
+        if (pin.length >= 6) return;
+
+        if (btn) {
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            btn.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 500);
+        }
+
+        pin += num;
+        updateDots();
+
+        if (pin.length === 6) {
+            if (pin === ADMIN_PASSWORD) {
+                // Successful entry clears attempts/lock
+                localStorage.removeItem(ATTEMPTS_KEY);
+                localStorage.removeItem(LOCK_UNTIL_KEY);
+                closeModal();
+                try {
+                    if (typeof onSuccess === 'function') onSuccess();
+                } catch (e) { }
+            } else {
+                showErrorAndReset();
+            }
+        }
+    }
+
+    function deleteKey(btn) {
+        if (!pin.length) return;
+
+        if (btn) {
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            btn.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 500);
+        }
+
+        pin = pin.slice(0, -1);
+        updateDots();
+    }
+
+    function handleKeyDown(e) {
+        if (e.key >= '0' && e.key <= '9') {
+            pressKey(e.key);
+        } else if (e.key === 'Backspace') {
+            deleteKey();
+        } else if (e.key === 'Escape') {
+            closeModal();
+        }
+    }
+
+    function closeModal() {
+        document.removeEventListener('keydown', handleKeyDown);
+        const content = modal.querySelector('.admin-password-modal-content');
+        if (content) {
+            content.style.animation = 'slideDownSheet 0.3s ease forwards';
+            setTimeout(() => modal.remove(), 300);
+        } else {
+            modal.style.animation = 'fadeOut 0.3s ease';
+            setTimeout(() => modal.remove(), 300);
+        }
+    }
+
+    // Attach button handlers
+    keys.forEach(key => {
+        const num = key.getAttribute('data-key');
+        const isDelete = key.hasAttribute('data-delete');
+        if (num) {
+            key.addEventListener('click', () => pressKey(num, key));
+        } else if (isDelete) {
+            key.addEventListener('click', () => deleteKey(key));
+        }
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', handleKeyDown);
+}
+
+function setSettingsAdminUiFromState() {
+    const badge = document.getElementById('settingsAdminBadge');
+    const toggle = document.getElementById('settingsAdminToggle');
+    const enabled = isAdmin();
+    if (badge) {
+        badge.textContent = enabled ? 'ON' : 'OFF';
+        badge.classList.toggle('enabled', enabled);
+    }
+    if (toggle) {
+        toggle.classList.toggle('on', enabled);
+    }
+}
+
+function applyUiSettingsToDocument() {
+    // CSS-driven toggles so async inserts are also covered
+    document.body.classList.toggle('hide-verse-images', !uiSettings.images);
+    document.body.classList.toggle('hide-short-summary', !uiSettings.shortSummary);
+    document.body.classList.toggle('hide-verse-heading', !uiSettings.verseHeading);
+    document.body.classList.toggle('hide-author-details', !uiSettings.authorDetails);
+    document.body.classList.toggle('hide-memory-verse', !uiSettings.memoryVerse);
+
+    // Images: show/hide verse-image-container
+    const imageContainers = document.querySelectorAll('.verse-image-container');
+    imageContainers.forEach(el => {
+        el.style.display = uiSettings.images ? '' : 'none';
+    });
+    // Short Summary: show/hide chapter-summary-arc-trigger
+    const summaryTrigger = document.querySelector('.chapter-summary-arc-trigger');
+    if (summaryTrigger) {
+        summaryTrigger.style.display = uiSettings.shortSummary ? '' : 'none';
+    }
+    // Verse Heading: show/hide all verse-header elements
+    const verseHeaders = document.querySelectorAll('.verse-header');
+    verseHeaders.forEach(el => {
+        el.style.display = uiSettings.verseHeading ? '' : 'none';
+    });
+    // Verse Heading Only: hide verse-container when enabled (show only headers)
+    const verseContainers = document.querySelectorAll('.verse-container');
+    verseContainers.forEach(el => {
+        el.style.display = (uiSettings.verseHeading && uiSettings.verseHeadingOnly) ? 'none' : '';
+    });
+    // Author Details: show/hide author-banner
+    const authorBanner = document.getElementById('author-banner');
+    if (authorBanner) {
+        // Keep layout space reserved: hide visually but don't collapse
+        authorBanner.style.visibility = uiSettings.authorDetails ? '' : 'hidden';
+        authorBanner.style.pointerEvents = uiSettings.authorDetails ? '' : 'none';
+    }
+    // Bible Reading: show/hide Bible Reading option in right sidebar
+    const bibleReadingOption = document.getElementById('bible-reading-option');
+    if (bibleReadingOption) {
+        bibleReadingOption.style.display = uiSettings.bibleReading ? 'flex' : 'none';
+    }
+}
+let englishTextColor = localStorage.getItem('englishTextColor') || 'default'; // 'default', 'blue' or 'red'
+let hasUserInteracted = localStorage.getItem('hasUserInteracted') === 'true'; // Track if user has selected a verse
+// Preloaded verse data cache for references
+let verseDataCache = {};
+// Cache for rendered references (key: reference string, value: {english, tamil, dual} objects)
+let renderedReferencesCache = {};
+// Notes storage
+let verseNotes = {};
+let currentNoteVerse = null;
+let currentNoteColor = null;
+let githubNotesLoaded = false;
+let notesSha = null; // Required for updating GitHub file
+let referencesLoadedInViewer = false; // Track if references have been loaded in current note viewer session
+
+// Cross References - Format: "Book Chapter:Verse": ["Reference 1", "Reference 2"]
+const crossReferences = {
+    "Matthew 1:1": ["Genesis 12:3", "2 Samuel 7:12–16"]
+    // Add more cross-references as needed
+};
+// Helper function to normalize book names for comparison
+function normalizeBookName(bookName) {
+    if (!bookName || typeof bookName !== 'string') return '';
+    // Convert roman numerals to numbers for consistency
+    return bookName
+        .replace(/^I\s+/, '1 ')
+        .replace(/^II\s+/, '2 ')
+        .replace(/^III\s+/, '3 ')
+        .replace(/^Psalms$/, 'Psalm'); // Handle Psalm/Psalms difference
+}
+// Helper function to check if a book has any memory verses
+function bookHasMemoryVerses(bookName) {
+    if (typeof window.memoryVerses === 'undefined') return false;
+    const normalizedBookName = normalizeBookName(bookName);
+    return window.memoryVerses.some(memVerse => {
+        const [book] = memVerse.split(/\s+(?=\d)/);
+        const normalizedMemBook = normalizeBookName(book);
+        return normalizedMemBook === normalizedBookName;
+    });
+}
+// Settings panel UI helpers (local only, no app state changes yet)
+function settingsSelectSeg(groupId, btn) {
+    const group = document.getElementById(groupId);
+    if (!group) return;
+    group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Apply theme with same transition behavior as main toggle, without closing settings
+    if (groupId === 'settings-theme-segment') {
+        const desired = btn.dataset.val === 'dark' ? 'dark' : 'light';
+        const wantDark = desired === 'dark';
+        const currentlyDark = document.body.classList.contains('dark-theme');
+        if (wantDark === currentlyDark) {
+            localStorage.setItem('settingsTheme', btn.dataset.val);
+            return;
+        }
+        // Use View Transition API if available, similar to initializeTheme
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!document.startViewTransition || prefersReduced) {
+            // Fallback without animation
+            if (wantDark) {
+                document.body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light');
+            }
+            const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+            const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+            if (metaThemeColor) {
+                metaThemeColor.setAttribute('content', wantDark ? '#1e1f22' : '#ffffff');
+            }
+            if (metaColorScheme) {
+                metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
+            }
+        } else {
+            const clickedButton = btn;
+            const transition = document.startViewTransition(() => {
+                if (wantDark) {
+                    document.body.classList.add('dark-theme');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.body.classList.remove('dark-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+                const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+                const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+                if (metaThemeColor) {
+                    metaThemeColor.setAttribute('content', wantDark ? '#1e1f22' : '#ffffff');
+                }
+                if (metaColorScheme) {
+                    metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
+                }
+            });
+            transition.ready.then(() => {
+                const { top, left, width, height } = clickedButton.getBoundingClientRect();
+                const x = left + width / 2;
+                const y = top + height / 2;
+                const right = window.innerWidth - left;
+                const bottom = window.innerHeight - top;
+                const maxRadius = Math.hypot(
+                    Math.max(left, right),
+                    Math.max(top, bottom)
+                );
+                const isMobile = window.innerWidth <= 768;
+                document.documentElement.animate(
+                    {
+                        clipPath: [
+                            `circle(0px at ${x}px ${y}px)`,
+                            `circle(${maxRadius}px at ${x}px ${y}px)`
+                        ]
+                    },
+                    {
+                        duration: isMobile ? 260 : 500,
+                        easing: 'ease-in-out',
+                        pseudoElement: '::view-transition-new(root)'
+                    }
+                );
+            }).catch(() => { });
+        }
+    }
+    // Persist segment state (locally) and mark panel as dirty
+    localStorage.setItem('settingsTheme', btn.dataset.val);
+    updateSettingsFooterVisibility();
+}
+
+// Initialize selector style radio buttons
+(function initSelectorStyleRadio() {
+    function setup() {
+        var radios = document.querySelectorAll('input[name="selectorStyle"]');
+        radios.forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                localStorage.setItem('selectorStyle', this.value);
+                updateSettingsFooterVisibility();
+            });
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setup);
+    } else {
+        setup();
+    }
+})();
+
+function settingsSelectLang(btn) {
+    const group = document.getElementById('settings-lang-segment');
+    if (!group) return;
+    group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const panel = document.getElementById('settings-color-panel');
+    if (panel) {
+        if (btn.dataset.val === 'both') {
+            panel.classList.add('visible');
+        } else {
+            panel.classList.remove('visible');
+        }
+    }
+    // Sync language with existing language bottom sheet behavior
+    const val = btn.dataset.val;
+    const selectedLang = val === 'en' ? 'english' : (val === 'ta' ? 'tamil' : 'both');
+    currentLanguage = selectedLang;
+    localStorage.setItem('currentLanguage', selectedLang);
+    if (typeof updateBookNames === 'function') {
+        updateBookNames();
+    }
+    // Reload current book/chapter so language change fully reflects (including 'both')
+    if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+        loadBook(currentBook, currentChapter);
+    }
+    // Persist language segment value (locally) and mark panel as dirty
+    localStorage.setItem('settingsLanguage', btn.dataset.val);
+    updateSettingsFooterVisibility();
+}
+function settingsSelectColor(el) {
+    const container = el.closest('.settings-color-swatches');
+    if (!container) return;
+    container.querySelectorAll('.settings-swatch').forEach(d => d.classList.remove('selected'));
+    el.classList.add('selected');
+    // Mirror bottom sheet color behavior
+    const color = el.classList.contains('blue') ? 'blue' :
+        el.classList.contains('red') ? 'red' : 'default';
+    englishTextColor = color;
+    localStorage.setItem('englishTextColor', color);
+    if (typeof updateBookNames === 'function') {
+        updateBookNames();
+    }
+    localStorage.setItem('settingsEnglishColor', color);
+    // Apply immediately (update rendered verses)
+    if (currentLanguage === 'both') {
+        if (typeof displayChapter === 'function') {
+            displayChapter();
+        }
+        if (typeof applyAllNoteDisplays === 'function') {
+            applyAllNoteDisplays();
+        }
+        if (typeof applyUiSettingsToDocument === 'function') {
+            applyUiSettingsToDocument();
+        }
+    }
+    updateSettingsFooterVisibility();
+}
+function settingsToggleVerseHeading(event, toggleEl) {
+    event.stopPropagation();
+    toggleEl.classList.toggle('on');
+    const row = toggleEl.closest('.settings-row');
+    if (row) {
+        // Call settingsToggleRow with skipToggleClass to use the shared logic
+        settingsToggleRow(row, { skipToggleClass: true });
+    }
+}
+function settingsToggleOnlyHeaders(event, toggleEl) {
+    event.stopPropagation();
+    toggleEl.classList.toggle('on');
+    const isOn = toggleEl.classList.contains('on');
+
+    // Update uiSettings
+    uiSettings.verseHeadingOnly = isOn;
+    localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
+
+    // Apply the changes to hide/show verse-container
+    if (typeof applyUiSettingsToDocument === 'function') {
+        applyUiSettingsToDocument();
+    }
+    updateSettingsFooterVisibility();
+}
+
+function selectVerseHeadingColor(swatchEl) {
+    const color = swatchEl.dataset.vhColor;
+    if (!color) return;
+    // Update swatch selection
+    document.querySelectorAll('#verse-heading-color-swatches .vh-swatch').forEach(s => s.classList.remove('selected'));
+    swatchEl.classList.add('selected');
+    // Update preview dot color
+    var dot = swatchEl.querySelector('.vh-dot');
+    var preview = document.getElementById('vh-picker-preview');
+    if (dot && preview) {
+        preview.style.background = dot.style.background;
+    }
+    // Close dropdown
+    closeVhColorPicker();
+    // Apply color class to body
+    applyVerseHeadingColor(color);
+    // Persist
+    localStorage.setItem('verseHeadingColor', color);
+    updateSettingsFooterVisibility();
+}
+
+function toggleVhColorPicker(e) {
+    e.stopPropagation();
+    var dropdown = document.getElementById('vh-picker-dropdown');
+    var trigger = document.getElementById('vh-picker-trigger');
+    var wrap = dropdown ? dropdown.closest('.vh-picker-wrap') : null;
+    if (!dropdown || !wrap || !trigger) return;
+    var isOpen = dropdown.classList.contains('open');
+    if (isOpen) {
+        closeVhColorPicker();
+    } else {
+        // Position dropdown below trigger
+        var rect = trigger.getBoundingClientRect();
+        dropdown.style.top = (rect.bottom + 6) + 'px';
+        dropdown.style.right = (window.innerWidth - rect.right) + 'px';
+        dropdown.style.left = 'auto';
+        dropdown.classList.add('open');
+        wrap.classList.add('open');
+        // Close on outside click
+        setTimeout(function() {
+            document.addEventListener('click', _vhOutsideClick, { once: true });
+        }, 0);
+    }
+}
+
+function _vhOutsideClick(e) {
+    var wrap = document.querySelector('.vh-picker-wrap');
+    if (wrap && !wrap.contains(e.target)) {
+        closeVhColorPicker();
+    } else if (wrap) {
+        document.addEventListener('click', _vhOutsideClick, { once: true });
+    }
+}
+
+function closeVhColorPicker() {
+    var dropdown = document.getElementById('vh-picker-dropdown');
+    var wrap = dropdown ? dropdown.closest('.vh-picker-wrap') : null;
+    if (dropdown) dropdown.classList.remove('open');
+    if (wrap) wrap.classList.remove('open');
+}
+
+function applyVerseHeadingColor(color) {
+    // Remove all vh-color-* classes
+    var toRemove = [];
+    document.body.classList.forEach(function(cls) {
+        if (cls.startsWith('vh-color-')) toRemove.push(cls);
+    });
+    toRemove.forEach(function(cls) {
+        document.body.classList.remove(cls);
+    });
+    // Add new one (green = default, no class needed)
+    if (color && color !== 'green') {
+        document.body.classList.add('vh-color-' + color);
+    }
+}
+
+// Initialize verse heading color on page load
+(function initVerseHeadingColor() {
+    function apply() {
+        var saved = localStorage.getItem('verseHeadingColor') || 'green';
+        applyVerseHeadingColor(saved);
+        // Sync swatch selection and preview
+        var swatches = document.querySelectorAll('#verse-heading-color-swatches .vh-swatch');
+        var preview = document.getElementById('vh-picker-preview');
+        swatches.forEach(function(s) {
+            var isSelected = s.dataset.vhColor === saved;
+            s.classList.toggle('selected', isSelected);
+            if (isSelected && preview) {
+                var dot = s.querySelector('.vh-dot');
+                if (dot) preview.style.background = dot.style.background;
+            }
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', apply);
+    } else {
+        apply();
+    }
+})();
+function settingsSelectVerseHeadingLanguage(event, btn) {
+    event.stopPropagation();
+    const group = document.getElementById('settings-verse-heading-language-segment');
+    if (!group) return;
+    group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Persist verse heading language value
+    localStorage.setItem('settingsVerseHeadingLanguage', btn.dataset.val);
+    // Refresh the Bible display to show verse headings in the selected language
+    if (typeof displayChapter === 'function') {
+        displayChapter();
+    }
+    updateSettingsFooterVisibility();
+}
+function settingsSelectHeadingLanguage(btn) {
+    const group = document.getElementById('settings-heading-language-segment');
+    if (!group) return;
+    group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Persist heading language value (locally) and mark panel as dirty
+    localStorage.setItem('settingsHeadingLanguage', btn.dataset.val);
+    updateSettingsFooterVisibility();
+}
+function settingsToggleRow(row, options = {}) {
+    const toggle = row.querySelector('.settings-toggle');
+    if (toggle) {
+        if (!options.skipToggleClass) {
+            toggle.classList.toggle('on');
+        }
+        const isOn = toggle.classList.contains('on');
+        const key = row.dataset.setting;
+        if (key && Object.prototype.hasOwnProperty.call(uiSettings, key)) {
+            uiSettings[key] = isOn;
+        }
+
+        // Handle verse heading language sub-option visibility
+        if (key === 'verseHeading') {
+            const subOption = document.getElementById('verse-heading-language-sub');
+            if (subOption) {
+                if (isOn) {
+                    subOption.classList.remove('hidden');
+                } else {
+                    subOption.classList.add('hidden');
+                }
+            }
+            // Also handle verse-heading-only-sub visibility
+            const onlyHeadersSub = document.getElementById('verse-heading-only-sub');
+            if (onlyHeadersSub) {
+                if (isOn) {
+                    onlyHeadersSub.classList.remove('hidden');
+                } else {
+                    onlyHeadersSub.classList.add('hidden');
+                }
+            }
+            // Also handle verse-heading-color-sub visibility
+            const colorSub = document.getElementById('verse-heading-color-sub');
+            if (colorSub) {
+                if (isOn) {
+                    colorSub.classList.remove('hidden');
+                } else {
+                    colorSub.classList.add('hidden');
+                }
+            }
+        }
+
+        localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
+        if (typeof applyUiSettingsToDocument === 'function') {
+            applyUiSettingsToDocument();
+        }
+        updateSettingsFooterVisibility();
+    }
+}
+
+function settingsToggleSwitch(event, toggleEl) {
+    event.stopPropagation();
+    toggleEl.classList.toggle('on');
+    const row = toggleEl.closest('.settings-row');
+    if (row) {
+        settingsToggleRow(row, { skipToggleClass: true });
+    }
+}
+
+// Settings: Administrator
+function settingsHandleAdminToggle() {
+    // Always start OFF; enabling requires password
+    if (isAdmin()) {
+        // Disable without password
+        localStorage.setItem('isAdmin', 'false');
+        updateAdminUI();
+        setSettingsAdminUiFromState();
+        updateSettingsFooterVisibility();
+        return;
+    }
+    openAdminPasswordModal(() => {
+        // Enable admin mode (same effect as existing activateAdminMode)
+        const adminToggle = document.getElementById('admin-toggle');
+        const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
+        const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+            if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+            if (adminToggle) adminToggle.style.display = 'flex';
+        } else {
+            if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+            if (adminToggle) adminToggle.style.display = 'flex';
+        }
+        localStorage.setItem('isAdmin', 'true');
+        updateAdminUI();
+        if (typeof showAdminNotification === 'function') showAdminNotification();
+        setSettingsAdminUiFromState();
+        updateSettingsFooterVisibility();
+    });
+}
+// Unused stubs from previous admin modal (kept for markup safety)
+function settingsCloseAdminModal() { }
+function settingsOnAdminPinInput() { }
+function settingsOnAdminPinKey() { }
+function settingsSubmitAdminPin() { }
+// Helper function to check if a chapter has any memory verses
+function chapterHasMemoryVerses(bookName, chapter) {
+    if (typeof window.memoryVerses === 'undefined') return false;
+    const normalizedBookName = normalizeBookName(bookName);
+    return window.memoryVerses.some(memVerse => {
+        const [book, range] = memVerse.split(/\s+(?=\d)/);
+        if (!range) return false;
+        const normalizedMemBook = normalizeBookName(book);
+        const [chapterPart] = range.split(':');
+        return normalizedMemBook === normalizedBookName && parseInt(chapterPart) === chapter;
+    });
+}
+// Helper function to check if a specific verse is a memory verse (for verse column indicators)
+function verseHasMemoryVerse(bookName, chapter, verse) {
+    if (typeof window.memoryVerses === 'undefined') return false;
+    const normalizedBookName = normalizeBookName(bookName);
+    return window.memoryVerses.some(memVerse => {
+        const [book, range] = memVerse.split(/\s+(?=\d)/);
+        if (!range) return false;
+        const normalizedMemBook = normalizeBookName(book);
+        // Check if it's a range or single verse
+        if (range.includes(':')) {
+            const [chapterPart, versePart] = range.split(':');
+            if (versePart.includes('–') || versePart.includes('-')) {
+                // Range like "12:1-6"
+                const [startVerse, endVerse] = versePart.split(/[–-]/);
+                return normalizedMemBook === normalizedBookName &&
+                    parseInt(chapterPart) === chapter &&
+                    verse >= parseInt(startVerse) &&
+                    verse <= parseInt(endVerse);
+            } else {
+                // Single verse like "3:16"
+                return normalizedMemBook === normalizedBookName &&
+                    parseInt(chapterPart) === chapter &&
+                    parseInt(versePart) === verse;
+            }
+        }
+        return false;
+    });
+}
+// Helper function to check if a verse is a memory verse
+function isMemoryVerse(bookName, chapter, verse) {
+    if (typeof window.memoryVerses === 'undefined') return false;
+    const normalizedBookName = normalizeBookName(bookName);
+    return window.memoryVerses.some(memVerse => {
+        // Handle verse ranges like "Isaiah 12:1–6" or "Ephesians 2:8–9"
+        if (memVerse.includes('–') || memVerse.includes('-')) {
+            const [book, range] = memVerse.split(/\s+(?=\d)/);
+            const normalizedMemBook = normalizeBookName(book);
+            const [chapterPart, versePart] = range.split(':');
+            const verseRange = versePart.split(/[–-]/);
+            const startVerse = parseInt(verseRange[0]);
+            const endVerse = parseInt(verseRange[1]);
+            return normalizedMemBook === normalizedBookName && parseInt(chapterPart) === chapter && verse >= startVerse && verse <= endVerse;
+        }
+        // Handle single verse like "John 3:16"
+        const [book, range] = memVerse.split(/\s+(?=\d)/);
+        if (!range) return false; // Invalid format
+        const normalizedMemBook = normalizeBookName(book);
+        const [chapterPart, versePart] = range.split(':');
+        return normalizedMemBook === normalizedBookName && parseInt(chapterPart) === chapter && parseInt(versePart) === verse;
+    });
+}
+// Helper function to convert book file name based on language
+// Tamil uses i_samuel, english uses 1-samuel
+function getBookFileForLanguage(bookFile, language) {
+    if (language === 'english') {
+        return bookFile
+            .replace(/^i_/, '1-')
+            .replace(/^ii_/, '2-')
+            .replace(/^iii_/, '3-')
+            .replace(/_/g, '-');
+    }
+    return bookFile;
+}
+// Initialize
+// Register service worker for PWA (only on http/https, not file://)
+if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+    window.addEventListener('load', () => {
+        // Use relative path for service worker to work both locally and on GitHub Pages
+        const swPath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+            ? 'src/service-worker.js'
+            : '/my-bible/src/service-worker.js';
+        navigator.serviceWorker.register(swPath)
+            .then(registration => {
+            })
+            .catch(err => {
+            });
+    });
+}
+// Network status detection (silent - no UI indicator)
+let isOnline = navigator.onLine;
+function updateOnlineStatus() {
+    isOnline = navigator.onLine;
+    if (!isOnline) {
+    } else {
+    }
+}
+// Listen for online/offline events
+window.addEventListener('online', updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
+// History and back button management
+let currentPage = 'bible'; // 'bible', 'search', or other pages
+let isOnBiblePage = true;
+function initializeHistoryManagement() {
+    // Initialize with bible page state
+    history.replaceState({ page: 'bible' }, '', window.location.href);
+    // Handle browser back button
+    window.addEventListener('popstate', (event) => {
+        // If settings panel is open, confirm before closing instead of exiting app
+        const settingsPanel = document.getElementById('right-settings-panel');
+        if (settingsPanel && settingsPanel.classList.contains('active')) {
+            openSettingsDiscardDialog(
+                () => {
+                    // Revert changes, then close panel and go back to bible page
+                    try {
+                        const snap = settingsPanelOriginalState;
+                        if (snap) {
+                            // Theme
+                            if (snap.theme === 'dark' || snap.theme === 'light') {
+                                const wantDark = snap.theme === 'dark';
+                                const currentlyDark = document.body.classList.contains('dark-theme');
+                                if (wantDark && !currentlyDark) {
+                                    document.body.classList.add('dark-theme');
+                                    localStorage.setItem('theme', 'dark');
+                                } else if (!wantDark && currentlyDark) {
+                                    document.body.classList.remove('dark-theme');
+                                    localStorage.setItem('theme', 'light');
+                                }
+                                localStorage.setItem('settingsTheme', snap.theme);
+                                const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+                                const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+                                if (metaThemeColor) {
+                                    metaThemeColor.setAttribute('content', wantDark ? '#1e1f22' : '#ffffff');
+                                }
+                                if (metaColorScheme) {
+                                    metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
+                                }
+                            }
+                            // Language
+                            if (snap.language) {
+                                const langVal = snap.language;
+                                const selectedLang = langVal === 'en' ? 'english' : (langVal === 'ta' ? 'tamil' : 'both');
+                                currentLanguage = selectedLang;
+                                localStorage.setItem('currentLanguage', selectedLang);
+                                localStorage.setItem('settingsLanguage', langVal);
+                                if (typeof updateBookNames === 'function') {
+                                    updateBookNames();
+                                }
+                                if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+                                    loadBook(currentBook, currentChapter);
+                                }
+                            }
+                            // English text color
+                            if (snap.englishColor) {
+                                englishTextColor = snap.englishColor;
+                                localStorage.setItem('englishTextColor', englishTextColor);
+                                localStorage.setItem('settingsEnglishColor', englishTextColor);
+                                if (currentLanguage === 'both') {
+                                    if (typeof displayChapter === 'function') {
+                                        displayChapter();
+                                    }
+                                    if (typeof applyAllNoteDisplays === 'function') {
+                                        applyAllNoteDisplays();
+                                    }
+                                }
+                            }
+                            // UI toggles
+                            if (snap.uiSettings) {
+                                uiSettings = { ...DEFAULT_UI_SETTINGS, ...snap.uiSettings };
+                                localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
+                                if (typeof applyUiSettingsToDocument === 'function') {
+                                    applyUiSettingsToDocument();
+                                }
+                            }
+                            // Admin mode
+                            if (Object.prototype.hasOwnProperty.call(snap, 'isAdmin')) {
+                                localStorage.setItem('isAdmin', snap.isAdmin ? 'true' : 'false');
+                                if (typeof updateAdminUI === 'function') {
+                                    updateAdminUI();
+                                }
+                                setSettingsAdminUiFromState();
+                            }
+                            // Persist reverted settings to Supabase
+                            if (typeof saveUserSettingsToSupabase === 'function') {
+                                saveUserSettingsToSupabase().catch(() => { });
+                            }
+                        }
+                    } catch (e) {
+                    }
+                    settingsPanelOriginalState = null;
+                    updateSettingsFooterVisibility();
+                    settingsPanel.classList.remove('active');
+                    settingsPanel.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                    isOnBiblePage = true;
+                    currentPage = 'bible';
+                    history.replaceState({ page: 'bible' }, '', window.location.href);
+                },
+                () => {
+                    // User chose to stay; immediately push state back so history remains consistent
+                    history.pushState({ page: 'settings' }, '', window.location.href);
+                }
+            );
+            return;
+        }
+        // Check if prayers sheet is open
+        const prayersFrame = document.querySelector('iframe[src="src/prayers.html"]');
+        if (prayersFrame) {
+            try {
+                const prayersDoc = prayersFrame.contentDocument || prayersFrame.contentWindow.document;
+                const bottomSheet = prayersDoc.querySelector('.prayers-bottom-sheet');
+                const sheetOverlay = prayersDoc.querySelector('.prayers-bottom-sheet-overlay');
+
+                // If sheet is open, close it and prevent back navigation
+                if (bottomSheet && bottomSheet.classList.contains('active')) {
+                    bottomSheet.classList.remove('active');
+                    sheetOverlay.classList.remove('active');
+                    return;
+                }
+            } catch (e) {
+                // Frame access denied, continue with normal navigation
+            }
+        }
+
+        // Skip admin pages in history
+        if (event.state && event.state.adminPage) {
+            history.back();
+            return;
+        }
+        if (event.state && event.state.page === 'bible') {
+            // Navigate back to bible page or do nothing if already there
+            if (!isOnBiblePage) {
+                navigateToBiblePage();
+            }
+        }
+    });
+}
+function navigateToBiblePage() {
+    // Close any open modals or pages
+    const searchModal = document.querySelector('.search-modal');
+    const summaryDrawer = document.querySelector('.summary-drawer');
+    const notesModal = document.querySelector('.notes-modal');
+    const settingsPanel = document.getElementById('right-settings-panel');
+    if (searchModal && searchModal.classList.contains('active')) {
+        searchModal.classList.remove('active');
+    }
+    if (summaryDrawer && summaryDrawer.classList.contains('active')) {
+        summaryDrawer.classList.remove('active');
+    }
+    if (notesModal && notesModal.style.display === 'flex') {
+        notesModal.style.display = 'none';
+    }
+    if (settingsPanel && settingsPanel.classList.contains('active')) {
+        settingsPanel.classList.remove('active');
+        settingsPanel.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+    isOnBiblePage = true;
+    currentPage = 'bible';
+}
+function navigateToPage(pageName) {
+    if (pageName !== 'bible') {
+        isOnBiblePage = false;
+        currentPage = pageName;
+        history.pushState({ page: pageName }, '', window.location.href);
+    }
+}
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('[MyBible] DOMContentLoaded main init');
+    // Check online status on load (silent)
+    updateOnlineStatus();
+    // Request persistent storage to prevent data deletion
+    if (navigator.storage && navigator.storage.persist) {
+        navigator.storage.persist().then(persistent => {
+            if (persistent) {
+            } else {
+            }
+        });
+    }
+    // Check current storage status and estimate quota
+    if (navigator.storage && navigator.storage.estimate) {
+        navigator.storage.estimate().then(estimate => {
+            const usedMB = (estimate.usage / (1024 * 1024)).toFixed(2);
+            const quotaMB = (estimate.quota / (1024 * 1024)).toFixed(2);
+            const percentUsed = ((estimate.usage / estimate.quota) * 100).toFixed(1);
+        });
+    }
+    // Check if storage is already persistent
+    if (navigator.storage && navigator.storage.persisted) {
+        navigator.storage.persisted().then(isPersisted => {
+            if (!isPersisted) {
+            }
+        });
+    }
+    // Set current user avatar in the top bar if available
+    try {
+        const avatarEl = document.getElementById('current-user-avatar');
+        const rightMenuBtn = document.getElementById('right-menu-btn');
+        if (avatarEl) {
+            const userId = localStorage.getItem('currentUserId');
+            const userName = localStorage.getItem('currentUserName') || '';
+            const isGuest = localStorage.getItem('currentUserIsGuest') === 'true';
+
+            // For guest users: hide avatar and right menu button
+            if (isGuest) {
+                avatarEl.style.display = 'none';
+                if (rightMenuBtn) rightMenuBtn.style.display = 'none';
+            } else if (userId) {
+                avatarEl.style.display = 'block';
+                avatarEl.title = userName || 'Current user';
+                if (userName) {
+                    const fileKey = userName.trim().toLowerCase();
+                    const ts = localStorage.getItem('profileImageTimestamp') || '';
+                    avatarEl.style.backgroundImage = `url('${PROFILE_IMAGE_BASE_URL}/${fileKey}.png${ts ? '?t=' + ts : ''}')`;
+                    avatarEl.style.backgroundSize = 'cover';
+                    avatarEl.style.backgroundPosition = 'center';
+                } else {
+                    avatarEl.style.backgroundImage = '';
+                }
+                if (rightMenuBtn) rightMenuBtn.style.display = '';
+            } else {
+                avatarEl.style.display = 'none';
+                if (rightMenuBtn) rightMenuBtn.style.display = '';
+            }
+        } else if (rightMenuBtn) {
+            // Ensure right menu is visible by default when avatar not present
+            rightMenuBtn.style.display = '';
+        }
+    } catch (e) {
+        // Fail silently if anything goes wrong
+    }
+    // Force close any drawers immediately on page load
+    const summaryDrawer = document.getElementById('summary-drawer');
+    if (summaryDrawer) {
+        summaryDrawer.classList.remove('active');
+        // Remove any inline styles that might interfere
+        summaryDrawer.style.right = '';
+    }
+    document.body.classList.remove('summary-drawer-open');
+    // Reset content area margin and bottom nav positioning
+    const contentArea = document.querySelector('.content-area');
+    if (contentArea) {
+        contentArea.style.marginRight = '';
+    }
+    const bottomNav = document.querySelector('.bottom-nav');
+    if (bottomNav) {
+        bottomNav.style.right = '';
+    }
+    // Initialize history management
+    initializeHistoryManagement();
+    initializeScrollbar();
+    initializeTheme();
+    initializeBookList();
+    updateBookNames(); // Update book names based on saved language preference
+    initializeMobileDrawer();
+    initializeMobileLanguageModal(); // Initialize language modal/bottom sheet
+    initializeSearch();
+    initializeSiteTitle();
+    initializeHomeOptions();
+    initializeSummaryDrawer();
+    initializeScrollbarBehavior();
+    initializeNotesModal();
+    initializePopupHighlights(); // Initialize dynamic highlighting for popup content
+    console.log('[MyBible] Initializing right settings panel');
+    initializeRightSettingsPanel();
+    // Apply persisted UI settings to initial document
+    applyUiSettingsToDocument();
+    if (typeof loadUserSettingsFromSupabase === 'function') {
+        loadUserSettingsFromSupabase();
+    }
+    loadNotesFromSupabase(); // Load shared notes from Supabase
+    // Load memory verses from Supabase
+    loadMemoryVersesFromSupabase();
+    updateAdminUI(); // Initialize admin UI based on saved state
+    // Show admin toggle and admin menu wrapper if admin mode was previously activated
+    const adminToggle = document.getElementById('admin-toggle');
+    const secretIcon = document.getElementById('secret-icon');
+    const notesIcon = document.getElementById('notes-icon');
+    const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
+    const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
+    const rightMenuBtn = document.getElementById('right-menu-btn');
+    const bibleReadingOption = document.getElementById('bible-reading-option');
+    const rightSermonOption = document.getElementById('right-sermon-option');
+    const rightNotesOption = document.getElementById('right-notes-option');
+    const rightKingsOption = document.getElementById('right-kings-option');
+    const rightProphetsOption = document.getElementById('right-prophets-option');
+    const rightTimelineOption = document.getElementById('right-timeline-option');
+    const rightCharacterOption = document.getElementById('right-character-option');
+    const rightBibleCharactersOption = document.getElementById('right-bible-characters-option');
+    const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
+    const rightCultOption = document.getElementById('right-cult-option');
+    const rightPrayersOption = document.getElementById('right-prayers-option');
+    const rightLogoutOption = document.getElementById('right-logout-option');
+    const isMobile = window.innerWidth <= 768;
+    let isFadingOut = false; // Flag to prevent re-showing during fade
+
+    const isGuestUser = localStorage.getItem('currentUserIsGuest') === 'true';
+
+    // Show/hide right-menu-btn (the button that opens right sidebar)
+    if (rightMenuBtn) {
+        rightMenuBtn.style.display = isGuestUser ? 'none' : 'flex';
+    }
+
+    // Always show public menu items (not admin-only)
+    if (bibleReadingOption) bibleReadingOption.style.display = 'flex';
+    const dailyPrayersOptionEl = document.getElementById('daily-prayers-option');
+    if (dailyPrayersOptionEl) dailyPrayersOptionEl.style.display = 'flex';
+    if (rightSermonOption) rightSermonOption.style.display = 'flex';
+    if (rightBibleCharactersOption) rightBibleCharactersOption.style.display = 'flex';
+
+    // Show/hide admin-only menu items based on admin status
+
+    if (isAdmin()) {
+        if (isMobile) {
+            // On mobile, show admin menu wrapper and toggle
+            if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+            if (adminToggle) adminToggle.style.display = 'flex';
+        } else {
+            // On desktop, show admin menu wrapper and toggle
+            if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+            if (adminToggle) adminToggle.style.display = 'flex';
+        }
+        // Show admin-only menu items
+        if (rightNotesOption) rightNotesOption.style.display = 'flex';
+        if (rightCultOption) rightCultOption.style.display = 'flex';
+        if (rightPrayersOption) rightPrayersOption.style.display = 'flex';
+    } else {
+        // Hide admin-only menu items
+        if (rightNotesOption) rightNotesOption.style.display = 'none';
+        if (rightCultOption) rightCultOption.style.display = 'none';
+        if (rightPrayersOption) rightPrayersOption.style.display = 'none';
+    }
+    // Admin toggle button click handler
+    if (adminToggle) {
+        adminToggle.addEventListener('click', () => {
+            const currentState = isAdmin();
+            const newState = !currentState;
+            // Show notification
+            const message = newState ? 'Admin mode activated' : 'Admin mode ended';
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                showToast(message, 'success');
+            } else {
+                showDesktopNotification(message);
+            }
+            // If turning off admin mode, hide icons with fade animation
+            if (!newState) {
+                // Set fading flag and update localStorage immediately
+                isFadingOut = true;
+                localStorage.setItem('isAdmin', 'false');
+                // Fade out animations with pointer-events disabled
+                if (adminToggle) {
+                    adminToggle.style.pointerEvents = 'none';
+                    adminToggle.style.opacity = '0';
+                    adminToggle.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        adminToggle.style.display = 'none';
+                        adminToggle.style.opacity = '1';
+                        adminToggle.style.transition = '';
+                        adminToggle.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (notesIcon) {
+                    notesIcon.style.pointerEvents = 'none';
+                    notesIcon.style.opacity = '0';
+                    notesIcon.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        notesIcon.style.display = 'none';
+                        notesIcon.style.opacity = '1';
+                        notesIcon.style.transition = '';
+                        notesIcon.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (secretIcon) {
+                    secretIcon.style.pointerEvents = 'none';
+                    secretIcon.style.opacity = '0';
+                    secretIcon.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        secretIcon.style.display = 'none';
+                        secretIcon.style.opacity = '1';
+                        secretIcon.style.transition = '';
+                        secretIcon.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (mobileAdminMenuWrapper) {
+                    mobileAdminMenuWrapper.style.pointerEvents = 'none';
+                    mobileAdminMenuWrapper.style.opacity = '0';
+                    mobileAdminMenuWrapper.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        mobileAdminMenuWrapper.style.setProperty('display', 'none', 'important');
+                        mobileAdminMenuWrapper.style.opacity = '1';
+                        mobileAdminMenuWrapper.style.transition = '';
+                        mobileAdminMenuWrapper.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (desktopAdminMenuWrapper) {
+                    desktopAdminMenuWrapper.style.pointerEvents = 'none';
+                    desktopAdminMenuWrapper.style.opacity = '0';
+                    desktopAdminMenuWrapper.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        desktopAdminMenuWrapper.style.setProperty('display', 'none', 'important');
+                        desktopAdminMenuWrapper.style.opacity = '1';
+                        desktopAdminMenuWrapper.style.transition = '';
+                        desktopAdminMenuWrapper.style.pointerEvents = '';
+                    }, 2000);
+                }
+                // Hide admin-only menu items with fade
+                if (rightNotesOption) {
+                    rightNotesOption.style.pointerEvents = 'none';
+                    rightNotesOption.style.opacity = '0';
+                    rightNotesOption.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        rightNotesOption.style.display = 'none';
+                        rightNotesOption.style.opacity = '1';
+                        rightNotesOption.style.transition = '';
+                        rightNotesOption.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (rightCultOption) {
+                    rightCultOption.style.pointerEvents = 'none';
+                    rightCultOption.style.opacity = '0';
+                    rightCultOption.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        rightCultOption.style.display = 'none';
+                        rightCultOption.style.opacity = '1';
+                        rightCultOption.style.transition = '';
+                        rightCultOption.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (rightPrayersOption) {
+                    rightPrayersOption.style.pointerEvents = 'none';
+                    rightPrayersOption.style.opacity = '0';
+                    rightPrayersOption.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        rightPrayersOption.style.display = 'none';
+                        rightPrayersOption.style.opacity = '1';
+                        rightPrayersOption.style.transition = '';
+                        rightPrayersOption.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (rightCharacterOption) {
+                    rightCharacterOption.style.pointerEvents = 'none';
+                    rightCharacterOption.style.opacity = '0';
+                    rightCharacterOption.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        rightCharacterOption.style.display = 'none';
+                        rightCharacterOption.style.opacity = '1';
+                        rightCharacterOption.style.transition = '';
+                        rightCharacterOption.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (rightLifeOfJesusOption) {
+                    rightLifeOfJesusOption.style.pointerEvents = 'none';
+                    rightLifeOfJesusOption.style.opacity = '0';
+                    rightLifeOfJesusOption.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        rightLifeOfJesusOption.style.display = 'none';
+                        rightLifeOfJesusOption.style.opacity = '1';
+                        rightLifeOfJesusOption.style.transition = '';
+                        rightLifeOfJesusOption.style.pointerEvents = '';
+                    }, 2000);
+                }
+                // Close right sidebar if open
+                const rightSidebar = document.querySelector('.right-sidebar');
+                if (rightSidebar && !rightSidebar.classList.contains('hidden')) {
+                    rightSidebar.classList.add('hidden');
+                    rightSidebar.classList.remove('drawer-open');
+                }
+                // Update UI and reset flag after fade completes
+                setTimeout(() => {
+                    updateAdminUI();
+                    displayChapter(); // Refresh to hide cross-ref icons for non-admin
+                    isFadingOut = false;
+                }, 2000);
+            } else {
+                // If activating admin mode, show admin menu items immediately
+                isFadingOut = false;
+                localStorage.setItem('isAdmin', 'true');
+
+                // Show admin-only menu items - clear any conflicting styles
+                if (rightNotesOption) {
+                    rightNotesOption.style.display = 'flex';
+                    rightNotesOption.style.opacity = '';
+                    rightNotesOption.style.transition = '';
+                    rightNotesOption.style.pointerEvents = '';
+                }
+                if (rightCultOption) {
+                    rightCultOption.style.display = 'flex';
+                    rightCultOption.style.opacity = '';
+                    rightCultOption.style.transition = '';
+                    rightCultOption.style.pointerEvents = '';
+                }
+                if (rightPrayersOption) {
+                    rightPrayersOption.style.display = 'flex';
+                    rightPrayersOption.style.opacity = '';
+                    rightPrayersOption.style.transition = '';
+                    rightPrayersOption.style.pointerEvents = '';
+                }
+                if (rightCharacterOption) {
+                    rightCharacterOption.style.display = 'flex';
+                    rightCharacterOption.style.opacity = '';
+                    rightCharacterOption.style.transition = '';
+                    rightCharacterOption.style.pointerEvents = '';
+                }
+                if (rightLifeOfJesusOption) {
+                    rightLifeOfJesusOption.style.display = 'flex';
+                    rightLifeOfJesusOption.style.opacity = '';
+                    rightLifeOfJesusOption.style.transition = '';
+                    rightLifeOfJesusOption.style.pointerEvents = '';
+                }
+
+                updateAdminUI();
+                // Slight delay to ensure localStorage is set before refresh
+                setTimeout(() => {
+                    displayChapter(); // Refresh to show cross-ref icons for admin
+                }, 50);
+            }
+        });
+    }
+    // Desktop admin menu handlers
+    const desktopAdminMenuBtn = document.getElementById('desktop-admin-menu-btn');
+    const desktopAdminDropdown = document.getElementById('desktop-admin-dropdown');
+    const desktopCultOption = document.getElementById('desktop-cult-option');
+    const desktopNotesOption = document.getElementById('desktop-notes-option');
+    if (desktopAdminMenuBtn && desktopAdminDropdown) {
+        desktopAdminMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            desktopAdminDropdown.classList.toggle('active');
+            desktopAdminMenuBtn.classList.toggle('active');
+        });
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (desktopAdminMenuWrapper && !desktopAdminMenuWrapper.contains(e.target)) {
+                desktopAdminDropdown.classList.remove('active');
+                desktopAdminMenuBtn.classList.remove('active');
+            }
+        });
+        // Handle cult option click
+        if (desktopCultOption) {
+            desktopCultOption.addEventListener('click', () => {
+                window.location.href = 'config/secret.html';
+            });
+        }
+        // Handle notes option click
+        if (desktopNotesOption) {
+            desktopNotesOption.addEventListener('click', () => {
+                window.location.href = 'docs/docs.html';
+            });
+        }
+    }
+    // Initialize voice command functionality
+    initializeVoiceCommand();
+
+    // Initialize pinned verses button
+    const pinnedVersesBtn = document.getElementById('pinned-verses-btn');
+    if (pinnedVersesBtn) {
+        pinnedVersesBtn.addEventListener('click', () => {
+            showPinnedVersesBottomSheet();
+        });
+    }
+
+    // Always load Bible directly on all devices (mobile, tablet, desktop)
+    loadBook(currentBook, currentChapter);
+
+    // Initialize PDF icon event listeners
+    const pdfIcon = document.getElementById('pdf-icon');
+
+    if (pdfIcon) {
+        pdfIcon.addEventListener('click', () => {
+            openPdfModal();
+        });
+    }
+
+    // Book Meaning Bottom Sheet Functionality
+    setupBookMeaningBottomSheet();
+
+    // Start background preload after initial load (non-blocking, silent)
+    setTimeout(() => {
+        startBackgroundPreload();
+    }, 3000); // Wait 3 seconds after page load to start preloading
+});
+
+// ========================================
+// Book Meaning Bottom Sheet Functions
+// ========================================
+
+function setupBookMeaningBottomSheet() {
+    const mobileChapterTitle = document.querySelector('.mobile-chapter-title');
+    const backdrop = document.getElementById('book-meaning-backdrop');
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
+
+    if (!mobileChapterTitle) return;
+
+    // Open bottom sheet when clicking on book title
+    mobileChapterTitle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openBookMeaningSheet();
+    });
+
+    // Close when clicking backdrop
+    if (backdrop) {
+        backdrop.addEventListener('click', closeBookMeaningSheet);
+    }
+
+    // Close when pressing Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sheet && sheet.classList.contains('active')) {
+            closeBookMeaningSheet();
+        }
+    });
+}
+
+function openBookMeaningSheet() {
+    const backdrop = document.getElementById('book-meaning-backdrop');
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
+    const book = bibleBooks[currentBook];
+
+    if (!sheet || !backdrop) return;
+
+    const titleEl = document.getElementById('book-meaning-title');
+    const tamilEl = document.getElementById('book-meaning-tamil');
+    const hebrewNameEl = document.getElementById('book-meaning-hebrew-name');
+    const hebrewScriptEl = document.getElementById('book-meaning-hebrew-script');
+    const descriptionEl = document.getElementById('book-meaning-description');
+    const badgeEl = document.getElementById('book-meaning-testament-badge');
+
+    const isNT = book.testament === 'new';
+
+    if (titleEl) titleEl.textContent = book.name;
+    if (tamilEl) tamilEl.textContent = book.tamilName;
+    if (descriptionEl) descriptionEl.textContent = book.meaning || '';
+    if (badgeEl) {
+        badgeEl.textContent = isNT ? 'New' : 'Old';
+        badgeEl.classList.toggle('ot-badge', !isNT);
+    }
+
+    // Split "Mattityahu (מַתִּתְיָהוּ)" into name + script
+    const hebrewRaw = book.hebrew || '';
+    const parenIdx = hebrewRaw.indexOf(' (');
+    if (hebrewNameEl) hebrewNameEl.textContent = parenIdx !== -1 ? hebrewRaw.slice(0, parenIdx) : hebrewRaw;
+    if (hebrewScriptEl) hebrewScriptEl.textContent = parenIdx !== -1 ? hebrewRaw.slice(parenIdx + 2, -1) : '';
+
+    sheet.classList.add('active');
+    backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    const authorBanner = document.getElementById('author-banner');
+    if (authorBanner) authorBanner.classList.add('book-meaning-blurred');
+}
+
+function closeBookMeaningSheet() {
+    const backdrop = document.getElementById('book-meaning-backdrop');
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
+
+    if (!sheet || !backdrop) return;
+
+    sheet.classList.remove('active');
+    backdrop.classList.remove('active');
+    document.body.style.overflow = '';
+
+    const authorBanner = document.getElementById('author-banner');
+    if (authorBanner) authorBanner.classList.remove('book-meaning-blurred');
+}
+
+// ========================================
+// End Book Meaning Bottom Sheet Functions
+// ========================================
+// Initialize mobile drawer
+function initializeMobileDrawer() {
+    const menuBtn = document.querySelector('.mobile-only');
+    const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
+    const closeIcon = menuBtn.querySelector('.close-icon');
+    const drawerOverlay = document.querySelector('.drawer-overlay');
+    const booksSidebar = document.querySelector('.books-sidebar');
+    const chaptersColumn = document.querySelector('.chapters-column');
+    const versesColumn = document.querySelector('.verses-column');
+    const bottomNav = document.querySelector('.bottom-nav');
+    if (!menuBtn || !drawerOverlay) return;
+
+    // ── Helper: open/close drawer ──
+    function openDrawer() {
+        closeSummaryDrawer();
+        // Check if new selector style is active
+        if (localStorage.getItem('selectorStyle') === 'new' && typeof openBibleSelectorNew === 'function') {
+            drawerOverlay.classList.add('active');
+            hamburgerIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            openBibleSelectorNew();
+            return;
+        }
+        drawerOverlay.classList.add('active');
+        booksSidebar.classList.add('drawer-open');
+        chaptersColumn.classList.add('drawer-open');
+        versesColumn.classList.add('drawer-open');
+        hamburgerIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+        drawerOverlay.classList.remove('active');
+        booksSidebar.classList.remove('drawer-open');
+        chaptersColumn.classList.remove('drawer-open');
+        versesColumn.classList.remove('drawer-open');
+        // Also close new selector if open
+        var newSelector = document.getElementById('bible-selector-new');
+        if (newSelector) {
+            newSelector.classList.remove('active');
+            newSelector.style.transform = '';
+            newSelector.style.display = '';
+            newSelector.style.transition = '';
+        }
+        hamburgerIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    function isDrawerOpen() {
+        return drawerOverlay.classList.contains('active');
+    }
+
+    // ── Hamburger / close button ──
+    menuBtn.addEventListener('click', () => {
+        closeBottomSheet();
+        if (window.innerWidth <= 768) {
+            isDrawerOpen() ? closeDrawer() : openDrawer();
+        } else {
+            // Desktop: toggle sidebar visibility
+            const isHidden = booksSidebar.classList.toggle('hidden');
+            chaptersColumn.classList.toggle('hidden');
+            versesColumn.classList.toggle('hidden');
+            if (bottomNav) {
+                bottomNav.classList.toggle('expanded', isHidden);
+            }
+        }
+    });
+
+    // Close on overlay tap
+    drawerOverlay.addEventListener('click', closeDrawer);
+
+    // Close button in drawer header
+    const drawerCloseBtn = document.querySelector('.drawer-close-btn');
+    if (drawerCloseBtn) {
+        drawerCloseBtn.addEventListener('click', closeDrawer);
+    }
+
+    // ── Touch-tracking swipe (open + close) ──
+    const EDGE_ZONE = 30;        // px from left edge to start open-swipe
+    const DRAG_THRESHOLD = 10;   // px to decide horizontal vs vertical
+    const VELOCITY_THRESHOLD = 0.3; // px/ms — fast flick completes action
+    const SNAP_RATIO = 0.3;      // if dragged past 30% of drawer width, commit
+
+    let touchId = null;
+    let startX = 0;
+    let startY = 0;
+    let startTime = 0;
+    let tracking = false;        // are we in a tracked horizontal drag?
+    let direction = '';          // 'open' | 'close'
+    let drawerWidth = 0;        // total width of the 3-panel drawer (100vw)
+    let decided = false;         // have we decided horizontal vs vertical?
+
+    function isSwipeBlocked() {
+        const viewer = document.getElementById('viewer');
+        if (viewer && viewer.classList.contains('open')) return true;
+        const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
+        const notesModal = document.getElementById('notes-modal');
+        const bookmarkColorPicker = document.getElementById('bookmark-color-picker-overlay');
+        const languageSheet = document.getElementById('language-bottom-sheet-overlay');
+        return (
+            (verseActionsSheet && verseActionsSheet.classList.contains('visible')) ||
+            (notesModal && notesModal.classList.contains('visible')) ||
+            (bookmarkColorPicker && bookmarkColorPicker.classList.contains('active')) ||
+            (languageSheet && languageSheet.classList.contains('active'))
+        );
+    }
+
+    // Check if new selector style is active
+    function isNewSelectorActive() {
+        return localStorage.getItem('selectorStyle') === 'new';
+    }
+
+    // Disable CSS transitions during drag for instant response
+    function setDrawerTransition(on) {
+        const val = on ? '' : 'none';
+        if (!isNewSelectorActive()) {
+            booksSidebar.style.transition = val;
+            chaptersColumn.style.transition = val;
+            versesColumn.style.transition = val;
+        } else {
+            const newSelector = document.getElementById('bible-selector-new');
+            if (newSelector) newSelector.style.transition = on ? 'transform 0.3s ease' : 'none';
+        }
+        drawerOverlay.style.transition = val;
+    }
+
+    // Set drawer position by progress (0 = fully closed, 1 = fully open)
+    function setDrawerProgress(progress) {
+        const p = Math.max(0, Math.min(1, progress));
+        if (!isNewSelectorActive()) {
+            // All panels slide from translateX(-100vw) to translateX(0)
+            const offset = -(1 - p) * window.innerWidth;
+            booksSidebar.style.transform = `translateX(${offset}px)`;
+            chaptersColumn.style.transform = `translateX(${offset}px)`;
+            versesColumn.style.transform = `translateX(${offset}px)`;
+        } else {
+            // Animate the new selector panel sliding in
+            const newSelector = document.getElementById('bible-selector-new');
+            if (newSelector) {
+                newSelector.style.display = 'flex';
+                const offset = -(1 - p) * window.innerWidth;
+                newSelector.style.transform = `translateX(${offset}px)`;
+            }
+        }
+        drawerOverlay.style.opacity = p;
+        drawerOverlay.style.visibility = p > 0 ? 'visible' : 'hidden';
+    }
+
+    function clearInlineStyles() {
+        booksSidebar.style.transform = '';
+        chaptersColumn.style.transform = '';
+        versesColumn.style.transform = '';
+        drawerOverlay.style.opacity = '';
+        drawerOverlay.style.visibility = '';
+        // Also clear new selector inline styles
+        const newSelector = document.getElementById('bible-selector-new');
+        if (newSelector) {
+            newSelector.style.transform = '';
+            // Only reset display if not active (let CSS handle it)
+            if (!newSelector.classList.contains('active')) {
+                newSelector.style.display = '';
+            }
+        }
+        setDrawerTransition(true);
+    }
+
+    document.addEventListener('touchstart', (e) => {
+        if (window.innerWidth > 768) return;
+        if (isSwipeBlocked()) return;
+        // When new bible selector is open, only allow close-swipe from outside the swipe area
+        const newSelector = document.getElementById('bible-selector-new');
+        if (newSelector && newSelector.classList.contains('active')) {
+            // Let the internal OT/NT swipe handler manage touches inside bs-swipe-outer
+            const swipeOuter = document.getElementById('bs-swipe-outer');
+            if (swipeOuter && swipeOuter.contains(e.target)) return;
+        }
+
+        const touch = e.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+        startTime = Date.now();
+        decided = false;
+        tracking = false;
+        direction = '';
+        drawerWidth = window.innerWidth;
+
+        // Decide if this could be an open-swipe or close-swipe
+        if (!isDrawerOpen()) {
+            direction = 'open';
+            // Pre-initialize new selector content so it's ready during swipe animation
+            if (isNewSelectorActive() && typeof openBibleSelectorNew === 'function') {
+                openBibleSelectorNew(true); // true = prepare only, don't fully open
+            }
+        } else if (isDrawerOpen()) {
+            direction = 'close';
+        }
+    }, { passive: true });
+
+    document.addEventListener('touchmove', (e) => {
+        if (window.innerWidth > 768 || !direction) return;
+
+        const touch = e.touches[0];
+        const dx = touch.clientX - startX;
+        const dy = touch.clientY - startY;
+
+        // First movement: decide horizontal vs vertical
+        if (!decided) {
+            if (Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+            decided = true;
+            if (Math.abs(dy) > Math.abs(dx)) {
+                // Vertical scroll — bail out
+                direction = '';
+                return;
+            }
+            // Confirm correct swipe direction
+            if (direction === 'open' && dx <= 0) { direction = ''; return; }
+            if (direction === 'close' && dx >= 0) { direction = ''; return; }
+            tracking = true;
+            setDrawerTransition(false);
+        }
+
+        if (!tracking) return;
+
+        // Calculate progress
+        let progress;
+        if (direction === 'open') {
+            progress = Math.max(0, Math.min(1, dx / drawerWidth));
+        } else {
+            progress = Math.max(0, Math.min(1, 1 + dx / drawerWidth));
+        }
+        setDrawerProgress(progress);
+    }, { passive: true });
+
+    document.addEventListener('touchend', (e) => {
+        if (!tracking) {
+            direction = '';
+            return;
+        }
+
+        const touch = e.changedTouches[0];
+        const dx = touch.clientX - startX;
+        const elapsed = Date.now() - startTime;
+        const velocity = Math.abs(dx) / elapsed; // px/ms
+
+        let progress;
+        if (direction === 'open') {
+            progress = Math.max(0, Math.min(1, dx / drawerWidth));
+        } else {
+            progress = Math.max(0, Math.min(1, 1 + dx / drawerWidth));
+        }
+
+        // Decide: commit open or close
+        let shouldOpen;
+        if (velocity > VELOCITY_THRESHOLD) {
+            // Fast flick — honour direction
+            shouldOpen = direction === 'open' ? dx > 0 : dx > 0;
+        } else {
+            shouldOpen = progress >= SNAP_RATIO;
+        }
+
+        // For new selector: animate smoothly to final position
+        if (isNewSelectorActive()) {
+            const newSelector = document.getElementById('bible-selector-new');
+            if (newSelector) {
+                newSelector.style.transition = 'transform 0.3s ease';
+                drawerOverlay.style.transition = 'opacity 0.3s ease';
+                if (shouldOpen) {
+                    newSelector.style.transform = 'translateX(0)';
+                    drawerOverlay.style.opacity = '1';
+                    // After animation, finalize open state
+                    setTimeout(() => {
+                        newSelector.style.transition = '';
+                        newSelector.style.transform = '';
+                        newSelector.classList.add('active');
+                        drawerOverlay.classList.add('active');
+                        drawerOverlay.style.opacity = '';
+                        drawerOverlay.style.visibility = '';
+                        drawerOverlay.style.transition = '';
+                        hamburgerIcon.style.display = 'none';
+                        closeIcon.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }, 310);
+                } else {
+                    newSelector.style.transform = 'translateX(-100%)';
+                    drawerOverlay.style.opacity = '0';
+                    // After animation, clean up
+                    setTimeout(() => {
+                        newSelector.style.transition = '';
+                        newSelector.style.transform = '';
+                        newSelector.style.display = '';
+                        newSelector.classList.remove('active');
+                        drawerOverlay.classList.remove('active');
+                        drawerOverlay.style.opacity = '';
+                        drawerOverlay.style.visibility = '';
+                        drawerOverlay.style.transition = '';
+                        hamburgerIcon.style.display = 'block';
+                        closeIcon.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }, 310);
+                }
+            }
+        } else {
+            // Old selector: clear inline styles and open/close
+            clearInlineStyles();
+            if (shouldOpen) {
+                openDrawer();
+            } else {
+                closeDrawer();
+            }
+        }
+
+        tracking = false;
+        direction = '';
+    }, { passive: true });
+}
+// Initialize book list with click handlers
+function initializeBookList() {
+    const bookItems = document.querySelectorAll('.book-item');
+    bookItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            // Always load chapter 1 for newly selected book
+            loadBook(index, 1);
+        });
+    });
+    // Add has-memory-verse class to books with memory verses
+    markBooksWithMemoryVerses();
+}
+// Mark books that contain memory verses
+function markBooksWithMemoryVerses() {
+    const bookItems = document.querySelectorAll('.book-item');
+    bookItems.forEach((item, index) => {
+        const book = bibleBooks[index];
+        if (book && bookHasMemoryVerses(book.name)) {
+            item.classList.add('has-memory-verse');
+        } else {
+            item.classList.remove('has-memory-verse');
+        }
+    });
+    // Also update chapter and verse indicators if we're in a book view
+    if (typeof currentBook !== 'undefined') {
+        updateChapterMemoryVerseIndicators();
+        updateVerseMemoryVerseIndicators();
+    }
+}
+// Update chapter memory verse indicators
+function updateChapterMemoryVerseIndicators() {
+    const chapterItems = document.querySelectorAll('.chapters-column .number-item');
+    chapterItems.forEach(item => {
+        const chapter = parseInt(item.dataset.chapter);
+        if (chapterHasMemoryVerses(bibleBooks[currentBook].name, chapter)) {
+            item.classList.add('has-memory-verse');
+        } else {
+            item.classList.remove('has-memory-verse');
+        }
+    });
+}
+// Update verse memory verse indicators
+function updateVerseMemoryVerseIndicators() {
+    const verseItems = document.querySelectorAll('.verses-column .number-item');
+    const bookName = bibleBooks[currentBook].name;
+    const memoryVersesInChapter = [];
+
+    verseItems.forEach(item => {
+        const verse = parseInt(item.dataset.verse);
+        if (verseHasMemoryVerse(bookName, currentChapter, verse)) {
+            item.classList.add('has-memory-verse');
+            memoryVersesInChapter.push(verse);
+        } else {
+            item.classList.remove('has-memory-verse');
+        }
+    });
+
+    if (memoryVersesInChapter.length > 0) {
+    }
+}
+// Update book names based on language
+function updateBookNames() {
+    const bookItems = document.querySelectorAll('.book-item');
+    bookItems.forEach((item, index) => {
+        const book = bibleBooks[index];
+        const bookNameSpan = item.querySelector('.book-name');
+        if (bookNameSpan && book) {
+            if (currentLanguage === 'tamil') {
+                bookNameSpan.innerHTML = `${book.tamilName}`;
+                bookNameSpan.classList.add('tamil-only');
+            } else if (currentLanguage === 'english') {
+                // Show only English name
+                bookNameSpan.innerHTML = `${book.name}`;
+                bookNameSpan.classList.remove('tamil-only');
+            } else {
+                // 'both' mode - Show English name with Tamil name in smaller text below
+                bookNameSpan.innerHTML = `<span class="english-name">${book.name}</span><span class="tamil-name">${book.tamilName}</span>`;
+                bookNameSpan.classList.remove('tamil-only');
+            }
+        }
+    });
+    // Ensure correct book selection is maintained
+    updateBookSelection();
+}
+// Show/hide loader
+let loaderStartTime = 0;
+function showLoader() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.classList.add('active');
+        loaderStartTime = Date.now();
+    }
+}
+function hideLoader() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.classList.remove('active');
+    }
+}
+// Load a book
+async function loadBook(bookIndex, chapter) {
+    showLoader();
+    // Restore UI elements if coming from home page
+    restoreUIFromHomePage();
+    currentBook = bookIndex;
+    currentChapter = chapter;
+    // Save to localStorage
+    localStorage.setItem('currentBook', bookIndex);
+    localStorage.setItem('currentChapter', chapter);
+    localStorage.removeItem('isOnHomePage');
+    const book = bibleBooks[bookIndex];
+    try {
+        if (currentLanguage === 'both') {
+            // Load entire book for both languages
+            const englishBookFile = getBookFileForLanguage(book.file, 'english');
+            await Promise.all([
+                bibleDataManager.loadEntireBook(book.file, 'tamil'),
+                bibleDataManager.loadEntireBook(englishBookFile, 'english')
+            ]);
+            // Get current chapter data from cache
+            const [tamilData, englishData] = await Promise.all([
+                bibleDataManager.getChapterData(book.file, chapter, 'tamil'),
+                bibleDataManager.getChapterData(englishBookFile, chapter, 'english')
+            ]);
+            if (tamilData && englishData) {
+                currentTamilData = { [`chapter_${chapter}`]: tamilData };
+                currentData = { [`chapter_${chapter}`]: englishData };
+                updateUI();
+            } else {
+                hideLoader();
+            }
+        } else {
+            // Single language mode - load entire book
+            const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+            const bookFile = getBookFileForLanguage(book.file, language);
+            const bookData = await bibleDataManager.loadEntireBook(bookFile, language);
+            if (!bookData) {
+                hideLoader();
+                return;
+            }
+            // Get current chapter data from cache
+            const chapterData = await bibleDataManager.getChapterData(bookFile, chapter, language);
+            if (chapterData) {
+                currentData = { [`chapter_${chapter}`]: chapterData };
+                currentTamilData = null;
+                updateUI();
+            } else {
+                hideLoader();
+            }
+        }
+    } catch (error) {
+    } finally {
+        hideLoader();
+    }
+}
+
+// Check if PDF exists for current chapter and update icon visibility
+// PDF Configuration - List available chapter PDFs for each book
+// To add more: books must match exact names from bibleBooks array
+// When you add a new PDF file, add its chapter number to this list
+// Example: 'Genesis': [1, 2, 3] means chapters 1, 2, 3 have PDFs
+const BOOKS_WITH_PDF = {
+    'Genesis': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
+    'Ezra': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "Nehemiah": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+    "Esther": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    'Job': [1],
+    'I Chronicles': [1, 2],
+    'I Samuel': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+};
+
+// Convert Roman numerals to digits for PDF folder matching
+function convertRomanNumeralsInName(name) {
+    return name
+        .replace(/^I\s+/, '1 ')   // I Samuel, I Kings, I Chronicles, etc.
+        .replace(/^II\s+/, '2 ')  // II Samuel, II Kings, II Chronicles, etc.
+        .replace(/^III\s+/, '3 '); // III John
+}
+
+function updatePdfIconVisibility() {
+    const pdfIcon = document.getElementById('pdf-icon');
+    if (!pdfIcon) return;
+
+    const book = bibleBooks[currentBook];
+    const bookName = book.name;
+
+    // Check if this book has PDF chapters and if current chapter is available
+    if (BOOKS_WITH_PDF[bookName] && BOOKS_WITH_PDF[bookName].includes(currentChapter)) {
+        console.log(`[PDF Debug] ✓ ${bookName} Chapter ${currentChapter} has PDF - SHOWING`);
+
+        const testament = book.testament === 'new' ? 'new-testament' : 'old-testament';
+        const bookNameConverted = convertRomanNumeralsInName(bookName);
+        const bookNameWithHyphens = bookNameConverted.replace(/\s+/g, '-');
+        const pdfPath = `resources/pdf/${testament}/${bookNameWithHyphens}/${bookNameWithHyphens}-${currentChapter}.pdf`;
+
+        pdfIcon.style.display = 'flex';
+        pdfIcon.dataset.pdfPath = pdfPath;
+    } else {
+        console.log(`[PDF Debug] ✗ ${bookName} Chapter ${currentChapter} no PDF - HIDING`);
+        pdfIcon.style.display = 'none';
+    }
+}
+
+// Open PDF in a new window
+function openPdfModal() {
+    const pdfIcon = document.getElementById('pdf-icon');
+    const pdfPath = pdfIcon?.dataset.pdfPath;
+
+    if (!pdfPath) return;
+
+    const book = bibleBooks[currentBook];
+    const windowName = `pdf-${book.name.toLowerCase().replace(/\s+/g, '-')}-${currentChapter}`;
+
+    // Open PDF in a new window/tab
+    window.open(pdfPath, windowName, 'width=1000,height=800,resizable=yes,scrollbars=yes');
+
+    console.log(`[PDF Debug] Opening PDF in new window: ${pdfPath}`);
+}
+
+// Update UI with loaded data
+async function updateUI() {
+    const book = bibleBooks[currentBook];
+    // Check if we need to load new chapter data
+    const needsDataLoad = !currentData || !currentData[`chapter_${currentChapter}`];
+    if (needsDataLoad) {
+        showLoader();
+        try {
+            if (currentLanguage === 'both') {
+                const englishBookFile = getBookFileForLanguage(book.file, 'english');
+                const [tamilData, englishData] = await Promise.all([
+                    bibleDataManager.getChapterData(book.file, currentChapter, 'tamil'),
+                    bibleDataManager.getChapterData(englishBookFile, currentChapter, 'english')
+                ]);
+                if (tamilData && englishData) {
+                    currentTamilData = { [`chapter_${currentChapter}`]: tamilData };
+                    currentData = { [`chapter_${currentChapter}`]: englishData };
+                    // Preload adjacent chapters
+                    bibleDataManager.preloadAdjacentChapters(book.file, currentChapter, 'tamil', book.chapters);
+                    bibleDataManager.preloadAdjacentChapters(englishBookFile, currentChapter, 'english', book.chapters);
+                }
+            } else {
+                const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+                const bookFile = getBookFileForLanguage(book.file, language);
+                const chapterData = await bibleDataManager.getChapterData(bookFile, currentChapter, language);
+                if (chapterData) {
+                    currentData = { [`chapter_${currentChapter}`]: chapterData };
+                    currentTamilData = null;
+                    // Preload adjacent chapters
+                    bibleDataManager.preloadAdjacentChapters(bookFile, currentChapter, language, book.chapters);
+                }
+            }
+        } catch (error) {
+        } finally {
+            hideLoader();
+        }
+    }
+    updateBookSelection();
+    updateChapters();
+    updateVerses();
+    displayChapter();
+    applyAllNoteDisplays();
+    updateDrawerContent();
+    // Apply persisted UI settings (images, headings, summary, author banner)
+    applyUiSettingsToDocument();
+
+    // Preload notes and references for current chapter in background
+    preloadChapterNotesAndReferences();
+
+    // Update PDF icon visibility based on current chapter
+    updatePdfIconVisibility();
+
+    // Preload all referenced verse data in background (so references display instantly when clicked)
+    preloadReferencedVerseData();
+
+    // Notify the reading-progress banner that the displayed chapter has changed
+    window.dispatchEvent(new CustomEvent('bibleChapterChanged', {
+        detail: { bookIndex: currentBook, chapter: currentChapter }
+    }));
+}
+// Update book selection
+function updateBookSelection() {
+    const bookItems = document.querySelectorAll('.book-item');
+    bookItems.forEach((item, index) => {
+        if (index === currentBook) {
+            item.classList.add('active');
+            // Scroll the active book into view
+            setTimeout(() => {
+                item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        } else {
+            item.classList.remove('active');
+        }
+    });
+}
+// Update chapters list
+function updateChapters() {
+    const chaptersColumn = document.querySelector('.chapters-column');
+    const book = bibleBooks[currentBook];
+    const bookName = book.name;
+    let html = '';
+
+    // Add book intro button at the top
+    const hasIntro = bookIntroductions && bookIntroductions[bookName] && bookIntroductions[bookName].trim() !== '';
+    if (hasIntro) {
+        html += `<div class="book-intro-item" data-book-intro="true"><img src="resources/icons/info.png" alt="Intro" class="intro-icon"></div>`;
+    }
+
+    for (let i = 1; i <= book.chapters; i++) {
+        const activeClass = i === currentChapter ? 'active' : '';
+        const hasMemVerse = chapterHasMemoryVerses(bookName, i);
+        const hasMemoryVerse = hasMemVerse ? ' has-memory-verse' : '';
+        html += `<div class="number-item ${activeClass}${hasMemoryVerse}" data-chapter="${i}">${i}</div>`;
+    }
+    chaptersColumn.innerHTML = html;
+
+    // Add click handler for book intro button
+    const bookIntroItem = chaptersColumn.querySelector('.book-intro-item');
+    if (bookIntroItem) {
+        bookIntroItem.addEventListener('click', () => {
+            displayBookIntro();
+
+            // Auto-close the drawer on mobile
+            if (window.innerWidth <= 768) {
+                const drawerOverlay = document.querySelector('.drawer-overlay');
+                const booksSidebar = document.querySelector('.books-sidebar');
+                const chaptersColumn = document.querySelector('.chapters-column');
+                const versesColumn = document.querySelector('.verses-column');
+                const menuBtn = document.querySelector('.mobile-only');
+
+                if (drawerOverlay) {
+                    drawerOverlay.classList.remove('active');
+                }
+                if (booksSidebar) {
+                    booksSidebar.classList.remove('drawer-open');
+                }
+                if (chaptersColumn) {
+                    chaptersColumn.classList.remove('drawer-open');
+                }
+                if (versesColumn) {
+                    versesColumn.classList.remove('drawer-open');
+                }
+                if (menuBtn) {
+                    const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
+                    const closeIcon = menuBtn.querySelector('.close-icon');
+                    if (hamburgerIcon) hamburgerIcon.style.display = 'block';
+                    if (closeIcon) closeIcon.style.display = 'none';
+                }
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // Scroll to active chapter
+    setTimeout(() => {
+        const activeChapter = chaptersColumn.querySelector('.number-item.active');
+        if (activeChapter) {
+            activeChapter.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }, 100);
+    // Add click handlers
+    chaptersColumn.querySelectorAll('.number-item').forEach(item => {
+        item.addEventListener('click', async () => {
+            // Restore UI elements if coming from home page
+            restoreUIFromHomePage();
+            localStorage.removeItem('isOnHomePage');
+            const chapter = parseInt(item.dataset.chapter);
+            currentChapter = chapter;
+            localStorage.setItem('currentChapter', chapter);
+            // Remove active class from all chapter items
+            chaptersColumn.querySelectorAll('.number-item').forEach(c => c.classList.remove('active'));
+            // Add active class to clicked chapter
+            item.classList.add('active');
+            // Get chapter data from cache (already loaded)
+            const book = bibleBooks[currentBook];
+            if (currentLanguage === 'both') {
+                const englishBookFile = getBookFileForLanguage(book.file, 'english');
+                const [tamilData, englishData] = await Promise.all([
+                    bibleDataManager.getChapterData(book.file, chapter, 'tamil'),
+                    bibleDataManager.getChapterData(englishBookFile, chapter, 'english')
+                ]);
+                if (tamilData && englishData) {
+                    currentTamilData = { [`chapter_${chapter}`]: tamilData };
+                    currentData = { [`chapter_${chapter}`]: englishData };
+                }
+            } else {
+                const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+                const bookFile = getBookFileForLanguage(book.file, language);
+                const chapterData = await bibleDataManager.getChapterData(bookFile, chapter, language);
+                if (chapterData) {
+                    currentData = { [`chapter_${chapter}`]: chapterData };
+                    currentTamilData = null;
+                }
+            }
+            updateUI();
+            // Scroll to top of content
+            const contentArea = document.querySelector('.content-area');
+            if (contentArea) {
+                contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            // Only scroll window on desktop (tablets and mobile have fixed headers)
+            if (window.innerWidth > 1024) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    });
+}
+// Update verses list
+function updateVerses() {
+    const versesColumn = document.querySelector('.verses-column');
+    if (!versesColumn) {
+        return;
+    }
+    // Safety check: if currentData is not loaded yet, skip update
+    if (!currentData) {
+        versesColumn.innerHTML = '';
+        return;
+    }
+    const chapterKey = `chapter_${currentChapter}`;
+    const chapterData = currentData[chapterKey];
+    if (!chapterData) {
+        versesColumn.innerHTML = '';
+        return;
+    }
+    const verseCount = Object.keys(chapterData).length;
+    const bookName = bibleBooks[currentBook].name;
+    let html = '';
+    for (let i = 1; i <= verseCount; i++) {
+        const isMemVerse = isMemoryVerse(bookName, currentChapter, i);
+        const hasMemoryVerse = isMemVerse ? ' has-memory-verse' : '';
+        html += `<div class="number-item${hasMemoryVerse}" data-verse="${i}">${i}</div>`;
+    }
+    versesColumn.innerHTML = html;
+    // Add click handlers for scrolling to verse
+    versesColumn.querySelectorAll('.number-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            // Restore UI elements if coming from home page
+            restoreUIFromHomePage();
+            localStorage.removeItem('isOnHomePage');
+            hasUserInteracted = true;
+            localStorage.setItem('hasUserInteracted', 'true');
+            const verse = parseInt(item.dataset.verse);
+
+            // Check if bottom sheet is visible
+            const existingBottomSheet = document.getElementById('verse-actions-bottom-sheet');
+            const isBottomSheetVisible = existingBottomSheet && existingBottomSheet.classList.contains('visible');
+
+            if (isBottomSheetVisible) {
+                // Bottom sheet is open - close it and clear multi-highlights
+                const wasSelected = item.classList.contains('active');
+                const contentArea = document.querySelector('.scripture-text');
+
+                // Close the bottom sheet
+                existingBottomSheet.classList.remove('visible');
+                document.body.classList.remove('bottom-sheet-open');
+
+                // IMMEDIATELY remove or add highlight in the UI (using left-pane-selected grey color)
+                if (wasSelected) {
+                    // Remove highlight immediately from this verse
+                    const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
+                    if (verseLine) {
+                        verseLine.classList.remove('left-pane-selected');
+                        verseLine.classList.remove('multi-highlighted');
+                        verseLine.style.backgroundColor = '';
+                    }
+                } else {
+                    // Add left-pane-selected color for newly selected verse
+                    const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
+                    if (verseLine) {
+                        verseLine.classList.add('left-pane-selected');
+                        verseLine.classList.remove('multi-highlighted');
+                    }
+                }
+
+                // Now toggle the verse selection state
+                item.classList.toggle('active');
+
+                // Get updated selected verses
+                const updatedSelectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(v => parseInt(v.dataset.verse));
+                if (wasSelected) {
+                } else {
+                }
+
+                // Update all selected verses with left-pane-selected grey color and remove underline
+                if (updatedSelectedVerses.length > 0) {
+                    updatedSelectedVerses.forEach(vNum => {
+                        const vLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
+                        if (vLine) {
+                            vLine.classList.add('left-pane-selected');
+                            vLine.classList.remove('multi-highlighted');
+                        }
+                    });
+                } else {
+                    // No verses selected, remove all highlights
+                    contentArea.querySelectorAll('.verse-line').forEach(v => {
+                        v.classList.remove('left-pane-selected');
+                        v.classList.remove('multi-highlighted');
+                        v.style.backgroundColor = '';
+                    });
+                }
+
+            } else {
+                // Bottom sheet not open - just select this verse, don't open bottom sheet
+                versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
+                item.classList.add('active');
+
+                const contentArea = document.querySelector('.scripture-text');
+                contentArea.querySelectorAll('.verse-line').forEach(v => {
+                    v.classList.remove('left-pane-selected');
+                    v.style.backgroundColor = '';
+                });
+                contentArea.querySelectorAll('.verse-container').forEach(v => {
+                    v.classList.remove('left-pane-selected');
+                    v.style.backgroundColor = '';
+                });
+                const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
+                const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verse}"]`);
+                if (verseLine) {
+                    verseLine.classList.add('left-pane-selected');
+                }
+                if (verseContainer) {
+                    verseContainer.classList.add('left-pane-selected');
+                }
+            }
+
+            // Close drawer on mobile after selecting verse
+            if (window.innerWidth <= 768) {
+                const drawerOverlay = document.querySelector('.drawer-overlay');
+                const booksSidebar = document.querySelector('.books-sidebar');
+                const chaptersColumn = document.querySelector('.chapters-column');
+                const versesCol = document.querySelector('.verses-column');
+                const menuBtn = document.querySelector('.mobile-only');
+                if (drawerOverlay && menuBtn) {
+                    const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
+                    const closeIcon = menuBtn.querySelector('.close-icon');
+                    drawerOverlay.classList.remove('active');
+                    booksSidebar.classList.remove('drawer-open');
+                    chaptersColumn.classList.remove('drawer-open');
+                    versesCol.classList.remove('drawer-open');
+                    hamburgerIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            }
+            // Always scroll to verse, even if already selected
+            scrollToVerse(verse);
+        });
+    });
+}
+// ════════════════════════════════════════════════════════════════════════════════
+// POPUP HIGHLIGHT SYSTEM - Dynamic Bible Text Highlighting
+// ════════════════════════════════════════════════════════════════════════════════
+// 
+// HOW TO USE:
+// 1. Add entries to biblePopups in src/data/bible-popups.js
+//    Example:
+//    {
+//        content: "தமிழ்வார்த்தை",
+//        description: "Description of the term",
+//        references: ["Book Chapter:Verse"]
+//    }
+// 2. The system automatically:
+//    - Generates unique CSS classes for each entry
+//    - Highlights the text when it appears in the Bible
+//    - Handles click events to show the popup information
+// 3. To add entries dynamically, use:
+//    addPopupEntry("Matthew", 1, "தமிழ்வார்த்தை", "Description", ["Reference"])
+// ════════════════════════════════════════════════════════════════════════════════
+
+// Initialize biblePopups as empty object if not defined
+if (typeof biblePopups === 'undefined') {
+    window.biblePopups = {};
+}
+
+// Generate a unique CSS class name for popup highlights
+function getPopupHighlightClass(bookName, chapter, contentText) {
+    // Create a hash-based unique identifier
+    const sanitizedBook = bookName.toLowerCase().replace(/\s+/g, '-');
+    const contentHash = contentText.substring(0, 10).replace(/\s+/g, '-');
+    return `popup-highlight-${sanitizedBook}-ch${chapter}-${contentHash}`;
+}
+
+// Initialize dynamic popup highlight styles
+function initializePopupHighlights() {
+    if (!biblePopups || typeof biblePopups !== 'object') return;
+
+    let styleContent = '';
+
+    // Iterate through all books and chapters in biblePopups
+    for (const bookKey in biblePopups) {
+        const book = biblePopups[bookKey];
+        const normalizedBookName = bookKey.charAt(0).toUpperCase() + bookKey.slice(1);
+
+        for (const chapterKey in book) {
+            const chapterNum = chapterKey.replace(/chapter/i, '');
+            const verses = book[chapterKey];
+
+            if (Array.isArray(verses)) {
+                verses.forEach((item, index) => {
+                    if (item.content) {
+                        const className = getPopupHighlightClass(normalizedBookName, chapterNum, item.content);
+                        styleContent += `.${className} {
+    background: rgba(255, 220, 100, 0.25) !important;
+    color: inherit !important;
+    border-bottom: 1.5px dashed #f5d547 !important;
+    padding-bottom: 1px !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease;
+}
+.${className}:hover {
+    background: rgba(255, 220, 100, 0.35) !important;
+}
+body.dark-theme .${className} {
+    background: rgb(98 96 89 / 15%) !important;
+    color: #b8b8b8 !important;
+    border-bottom: 1.5px dashed rgba(255, 248, 220, 0.5) !important;
+}
+body.dark-theme .${className}:hover {
+    background: rgb(98 96 89 / 15%) !important;
+}
+`;
+                    }
+                });
+            }
+        }
+    }
+
+    // Remove existing styles if any
+    const existingStyle = document.getElementById('popup-highlight-dynamic-styles');
+    if (existingStyle) {
+        existingStyle.remove();
+    }
+
+    // Inject the generated styles into the page
+    if (styleContent) {
+        const styleEl = document.createElement('style');
+        styleEl.id = 'popup-highlight-dynamic-styles';
+        styleEl.textContent = styleContent;
+        document.head.appendChild(styleEl);
+    }
+
+    // Attach event listeners to all popup highlights
+    attachPopupHighlightListeners();
+}
+
+// Check if device is mobile
+function isMobileDevice() {
+    return window.innerWidth <= 768;
+}
+
+// Show small tooltip popup for desktop hover
+function showPopupTooltip(contentText, x, y) {
+    if (!biblePopups || typeof biblePopups !== 'object') return;
+
+    let matchingItem = null;
+    for (const bookKey in biblePopups) {
+        const book = biblePopups[bookKey];
+        for (const chapterKey in book) {
+            const verses = book[chapterKey];
+            if (Array.isArray(verses)) {
+                for (const item of verses) {
+                    if (item.content === contentText) {
+                        matchingItem = item;
+                        break;
+                    }
+                }
+            }
+            if (matchingItem) break;
+        }
+        if (matchingItem) break;
+    }
+
+    if (!matchingItem) return;
+
+    // Remove existing tooltip
+    const existingTooltip = document.getElementById('popup-tooltip');
+    if (existingTooltip) {
+        existingTooltip.remove();
+    }
+
+    // Create references HTML if available
+    const referencesHtml = matchingItem.references && matchingItem.references.length > 0
+        ? matchingItem.references.map(ref => `<button class="ref-pill" data-ref="${ref}">${ref}</button>`).join('')
+        : '';
+
+    const referencesSection = matchingItem.references && matchingItem.references.length > 0
+        ? `<div class="popup-tooltip-refs">
+                <div class="ref-label">Ref : </div>
+                <div class="ref-row">${referencesHtml}</div>
+            </div>`
+        : '';
+
+    // Create tooltip
+    const tooltip = document.createElement('div');
+    tooltip.id = 'popup-tooltip';
+    tooltip.className = 'popup-tooltip';
+
+    const isLightTheme = !document.body.classList.contains('dark-theme');
+
+    tooltip.innerHTML = `
+        <div class="popup-tooltip-content">
+            <div class="popup-tooltip-title">${matchingItem.content}</div>
+            <div class="popup-tooltip-description">${matchingItem.description || 'No description available.'}</div>
+            ${referencesSection}
+        </div>
+    `;
+
+    document.body.appendChild(tooltip);
+
+    // Apply light theme styles if needed
+    if (isLightTheme) {
+        tooltip.style.backgroundColor = '#f5f5f5';
+        tooltip.style.borderColor = '#c9a227';
+        const title = tooltip.querySelector('.popup-tooltip-title');
+        if (title) title.style.color = '#1a1a1a';
+        const desc = tooltip.querySelector('.popup-tooltip-description');
+        if (desc) desc.style.color = 'rgba(0, 0, 0, 0.7)';
+        const refLabel = tooltip.querySelector('.ref-label');
+        if (refLabel) refLabel.style.color = 'rgba(0, 0, 0, 0.45)';
+        const refPills = tooltip.querySelectorAll('.ref-pill');
+        refPills.forEach(pill => {
+            pill.style.border = '0.5px solid rgba(0, 0, 0, 0.14)';
+            pill.style.backgroundColor = 'rgba(0, 0, 0, 0.03)';
+            pill.style.color = 'rgba(0, 0, 0, 0.7)';
+        });
+    }
+
+    // Position tooltip near cursor, keep it within viewport
+    const tooltipWidth = 320;
+    const tooltipHeight = tooltip.offsetHeight;
+    let tooltipX = x + 15;
+    let tooltipY = y + 15;
+
+    // Check if tooltip goes out of bounds and adjust
+    if (tooltipX + tooltipWidth > window.innerWidth) {
+        tooltipX = x - tooltipWidth - 15;
+    }
+    if (tooltipY + tooltipHeight > window.innerHeight) {
+        tooltipY = y - tooltipHeight - 15;
+    }
+
+    tooltip.style.left = Math.max(10, tooltipX) + 'px';
+    tooltip.style.top = Math.max(10, tooltipY) + 'px';
+
+    // Fade in animation
+    tooltip.style.opacity = '0';
+    tooltip.offsetHeight; // Trigger reflow
+    tooltip.style.opacity = '1';
+}
+
+// Hide tooltip popup
+function hidePopupTooltip() {
+    const tooltip = document.getElementById('popup-tooltip');
+    if (tooltip) {
+        tooltip.style.opacity = '0';
+        setTimeout(() => {
+            tooltip.remove();
+        }, 200);
+    }
+}
+
+// Attach click/hover listeners to popup highlight elements
+function attachPopupHighlightListeners() {
+    const isMobile = isMobileDevice();
+    let hoveredElement = null;
+    let tooltipHideTimer = null;
+    let tooltipShowTimer = null;
+
+    if (isMobile) {
+        // Mobile: use click listeners
+        document.addEventListener('click', function (e) {
+            // Don't open popup if one is already visible
+            const existingPopup = document.getElementById('popup-info-bottom-sheet');
+            if (existingPopup && existingPopup.classList.contains('visible')) {
+                return;
+            }
+
+            // Don't open popup if verse-actions-bottom-sheet is open
+            const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
+            if (verseActionsSheet && verseActionsSheet.classList.contains('visible')) {
+                return;
+            }
+
+            // Check if the clicked element has a popup-highlight class and data-popup-content attribute
+            if (e.target.hasAttribute('data-popup-content') && e.target.className.includes('popup-highlight-')) {
+                const contentText = e.target.getAttribute('data-popup-content');
+                if (contentText) {
+                    e.stopPropagation();
+                    showPopupInfo(contentText);
+                }
+            }
+        }, true); // Use capture phase to ensure we catch clicks on dynamically added content
+    } else {
+        // Desktop: use hover listeners for tooltip
+        document.addEventListener('mouseover', function (e) {
+            // Check if the hovered element has a popup-highlight class and data-popup-content attribute
+            if (e.target.hasAttribute('data-popup-content') && e.target.className.includes('popup-highlight-')) {
+                const contentText = e.target.getAttribute('data-popup-content');
+                if (contentText) {
+                    hoveredElement = e.target;
+
+                    // Clear any pending timers
+                    if (tooltipHideTimer) {
+                        clearTimeout(tooltipHideTimer);
+                        tooltipHideTimer = null;
+                    }
+                    if (tooltipShowTimer) {
+                        clearTimeout(tooltipShowTimer);
+                    }
+
+                    // Show tooltip with a light delay for smooth experience
+                    tooltipShowTimer = setTimeout(() => {
+                        showPopupTooltip(contentText, e.clientX, e.clientY);
+                    }, 150);
+                }
+            }
+        }, true);
+
+        // Update tooltip position on mouse move
+        document.addEventListener('mousemove', function (e) {
+            const tooltip = document.getElementById('popup-tooltip');
+            if (tooltip && hoveredElement) {
+                const tooltipWidth = 280;
+                const tooltipHeight = tooltip.offsetHeight;
+                let tooltipX = e.clientX + 15;
+                let tooltipY = e.clientY + 15;
+
+                // Check if tooltip goes out of bounds and adjust
+                if (tooltipX + tooltipWidth > window.innerWidth) {
+                    tooltipX = e.clientX - tooltipWidth - 15;
+                }
+                if (tooltipY + tooltipHeight > window.innerHeight) {
+                    tooltipY = e.clientY - tooltipHeight - 15;
+                }
+
+                tooltip.style.left = Math.max(10, tooltipX) + 'px';
+                tooltip.style.top = Math.max(10, tooltipY) + 'px';
+            }
+        }, true);
+
+        // Close tooltip on mouse leave from highlighted text
+        document.addEventListener('mouseout', function (e) {
+            if (e.target.hasAttribute('data-popup-content') &&
+                e.target.className.includes('popup-highlight-')) {
+
+                // Clear any pending show timer
+                if (tooltipShowTimer) {
+                    clearTimeout(tooltipShowTimer);
+                    tooltipShowTimer = null;
+                }
+
+                // Clear previous hide timer if exists
+                if (tooltipHideTimer) {
+                    clearTimeout(tooltipHideTimer);
+                }
+
+                // Hide tooltip immediately for smooth experience
+                hidePopupTooltip();
+                hoveredElement = null;
+            }
+        }, true);
+    }
+}
+
+// Highlight special text (Jesus names in English, and popup highlights in Tamil)
+function highlightSpecialText(text, language, bookName = null, chapter = null, verseNum = null) {
+    if (language === 'english' || language === 'both-english') {
+        // Highlight "Jesus Christ" and "Jesus" in soft red
+        text = text.replace(/\bJesus Christ\b/g, '<span class="jesus-name">Jesus Christ</span>');
+        text = text.replace(/\bJesus\b/g, '<span class="jesus-name">Jesus</span>');
+    }
+
+    // Apply dynamic highlighting for all popup entries in Tamil
+    if ((language === 'tamil' || language === 'both-tamil') && bookName && chapter) {
+        text = applyPopupHighlights(text, bookName, chapter);
+    }
+
+    return text;
+}
+
+// Show popup info when a highlighted text is clicked
+function showPopupInfo(contentText) {
+    if (!biblePopups || typeof biblePopups !== 'object') return;
+
+    let matchingItem = null;
+    for (const bookKey in biblePopups) {
+        const book = biblePopups[bookKey];
+        for (const chapterKey in book) {
+            const verses = book[chapterKey];
+            if (Array.isArray(verses)) {
+                for (const item of verses) {
+                    if (item.content === contentText) {
+                        matchingItem = item;
+                        break;
+                    }
+                }
+            }
+            if (matchingItem) break;
+        }
+        if (matchingItem) break;
+    }
+
+    if (!matchingItem) {
+        console.warn(`No popup entry found for "${contentText}".`);
+        return;
+    }
+
+    showPopupInfoBottomSheet(matchingItem);
+}
+
+function showPopupInfoBottomSheet(item) {
+    if (!item || !item.content) return;
+
+    // Close existing bottom sheets (verse actions + popup info)
+    document.querySelectorAll('#verse-actions-bottom-sheet.visible, #popup-info-bottom-sheet.visible').forEach(sheet => {
+        sheet.classList.remove('visible');
+    });
+    document.body.classList.remove('bottom-sheet-open');
+
+    let bottomSheet = document.getElementById('popup-info-bottom-sheet');
+    if (!bottomSheet) {
+        bottomSheet = document.createElement('div');
+        bottomSheet.id = 'popup-info-bottom-sheet';
+        bottomSheet.className = 'verse-actions-bottom-sheet popup-info-bottom-sheet';
+        document.body.appendChild(bottomSheet);
+    }
+
+    const referencesHtml = item.references && item.references.length > 0
+        ? item.references.map(ref => `<button class="ref-pill" data-ref="${ref}">${ref}</button>`).join('')
+        : '';
+
+    const referencesSection = item.references && item.references.length > 0
+        ? `<div class="refs-container">
+                <div class="ref-label">Ref : </div>
+                <div class="ref-row">${referencesHtml}</div>
+            </div>`
+        : '';
+
+    bottomSheet.innerHTML = `
+        <div class="verse-actions-backdrop"></div>
+        <div class="verse-actions-content popup-info-content">
+            <div class="handle-container">
+                <div class="handle"></div>
+            </div>
+            <div class="popup-content">
+                <div class="popup-header">
+                    <div class="popup-title">${item.content}</div>
+                    <button class="close-bottom-sheet" aria-label="Close">
+                        <div class="x-curved-thin"></div>
+                    </button>
+                </div>
+                <div class="popup-description">${item.description || 'No description available.'}</div>
+                ${referencesSection}
+                <div class="verse-box" id="verse-box">
+                    <div class="verse-inner" id="verse-inner">
+                        <div class="verse-ref-label" id="verse-ref-label"></div>
+                        <div class="verse-text" id="verse-text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    bottomSheet.classList.add('visible');
+    document.body.classList.add('bottom-sheet-open');
+
+    // Apply light theme inline styles if needed
+    const isLightTheme = !document.body.classList.contains('dark-theme');
+    console.log('Light theme check:', isLightTheme, 'Body classes:', document.body.className);
+    if (isLightTheme) {
+        const content = bottomSheet.querySelector('.verse-actions-content');
+        if (content) {
+            console.log('Applying light theme to content element');
+            content.style.background = '#f5f5f5 !important';
+            content.style.border = '2px solid #c9a227 !important';
+            content.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.15) !important';
+        }
+        const title = bottomSheet.querySelector('.popup-title');
+        if (title) title.style.color = '#1a1a1a !important';
+        const desc = bottomSheet.querySelector('.popup-description');
+        if (desc) {
+            desc.style.color = 'rgba(0, 0, 0, 0.7) !important';
+            desc.style.fontFamily = "Georgia, 'Times New Roman', serif";
+        }
+        const handle = bottomSheet.querySelector('.handle');
+        if (handle) handle.style.backgroundColor = 'rgba(0, 0, 0, 0.15) !important';
+        const refLabel = bottomSheet.querySelector('.ref-label');
+        if (refLabel) refLabel.style.color = 'rgba(0, 0, 0, 0.45) !important';
+        const refPills = bottomSheet.querySelectorAll('.ref-pill');
+        refPills.forEach(pill => {
+            pill.style.border = '0.5px solid rgba(0, 0, 0, 0.14) !important';
+            pill.style.backgroundColor = 'rgba(0, 0, 0, 0.03) !important';
+            pill.style.color = 'rgba(0, 0, 0, 0.7) !important';
+        });
+    }
+
+    // Add drag functionality
+    addDragFunctionality(bottomSheet);
+
+    // Add reference pill click handlers
+    addReferenceHandlers(bottomSheet, item);
+
+    const closeBtn = bottomSheet.querySelector('.close-bottom-sheet');
+    const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
+
+    const closeThisSheet = (e) => {
+        if (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
+        bottomSheet.classList.remove('visible');
+        document.body.classList.remove('bottom-sheet-open');
+        collapseVerse();
+    };
+
+    closeBtn?.addEventListener('click', closeThisSheet);
+    backdrop?.addEventListener('click', closeThisSheet);
+}
+
+function addDragFunctionality(bottomSheet) {
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+
+    const content = bottomSheet.querySelector('.verse-actions-content');
+    const handle = bottomSheet.querySelector('.handle');
+
+    const startDrag = (e) => {
+        isDragging = true;
+        startY = e.touches ? e.touches[0].clientY : e.clientY;
+        content.style.transition = 'none';
+    };
+
+    const moveDrag = (e) => {
+        if (!isDragging) return;
+        currentY = e.touches ? e.touches[0].clientY : e.clientY;
+        const deltaY = currentY - startY;
+
+        if (deltaY > 0) {
+            content.style.transform = `translateY(${deltaY}px)`;
+        }
+    };
+
+    const endDrag = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        content.style.transition = 'transform 0.3s cubic-bezier(0.2, 0, 0, 1)';
+
+        const deltaY = currentY - startY;
+        if (deltaY > 70) {
+            // Dismiss sheet
+            content.style.transform = `translateY(100vh)`;
+            setTimeout(() => {
+                bottomSheet.classList.remove('visible');
+                document.body.classList.remove('bottom-sheet-open');
+                collapseVerse();
+            }, 300);
+        } else {
+            // Snap back
+            content.style.transform = 'translateY(0)';
+        }
+    };
+
+    // Mouse events
+    handle.addEventListener('mousedown', startDrag);
+    document.addEventListener('mousemove', moveDrag);
+    document.addEventListener('mouseup', endDrag);
+
+    // Touch events
+    handle.addEventListener('touchstart', startDrag, { passive: true });
+    document.addEventListener('touchmove', moveDrag, { passive: true });
+    document.addEventListener('touchend', endDrag, { passive: true });
+}
+
+function addReferenceHandlers(bottomSheet, item) {
+    const refPills = bottomSheet.querySelectorAll('.ref-pill');
+    const verseBox = bottomSheet.querySelector('#verse-box');
+    const verseInner = bottomSheet.querySelector('#verse-inner');
+    const verseRefLabel = bottomSheet.querySelector('#verse-ref-label');
+    const verseTextDiv = bottomSheet.querySelector('#verse-text');
+
+    // Ref pills no longer expand/collapse verse - just maintain the functionality for styling if needed
+    refPills.forEach(pill => {
+        pill.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // Do nothing - don't show verse-inner
+        });
+    });
+
+    function expandVerse(ref, item) {
+        const verseText = item.verses && item.verses[ref] ? item.verses[ref] : `Verse text for ${ref} would be loaded here. This is a placeholder for the actual verse content.`;
+
+        verseRefLabel.textContent = ref;
+        verseTextDiv.textContent = verseText;
+
+        verseBox.style.maxHeight = '160px';
+        verseBox.style.opacity = '1';
+        verseInner.style.display = 'block';
+    }
+
+    function collapseVerse() {
+        verseBox.style.maxHeight = '0';
+        verseBox.style.opacity = '0';
+        setTimeout(() => {
+            verseInner.style.display = 'none';
+        }, 300);
+    }
+}
+
+
+// Apply highlighting for all popup entries matching the book and chapter
+function applyPopupHighlights(text, bookName, chapter) {
+    if (!biblePopups || typeof biblePopups !== 'object') return text;
+
+    const bookLower = bookName.toLowerCase();
+    const book = biblePopups[bookLower];
+
+    if (!book) return text;
+
+    const chapterKey = `chapter${chapter}`;
+    const verses = book[chapterKey];
+
+    if (!Array.isArray(verses)) return text;
+
+    // Apply highlighting for each popup entry content
+    verses.forEach((item) => {
+        if (item.content && item.content.trim()) {
+            // Escape special regex characters and create a case-sensitive regex
+            const escapedContent = item.content.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(escapedContent, 'g');
+
+            const className = getPopupHighlightClass(bookName, chapter, item.content);
+            text = text.replace(regex, `<span class="${className}" data-popup-content="${item.content}">${item.content}</span>`);
+        }
+    });
+
+    return text;
+}
+
+// Utility function to add a new popup entry
+function addPopupEntry(bookName, chapterNum, contentText, description, references = []) {
+    const bookLower = bookName.toLowerCase();
+
+    // Create book entry if it doesn't exist
+    if (!biblePopups[bookLower]) {
+        biblePopups[bookLower] = {};
+    }
+
+    const chapterKey = `chapter${chapterNum}`;
+
+    // Create chapter array if it doesn't exist
+    if (!biblePopups[bookLower][chapterKey]) {
+        biblePopups[bookLower][chapterKey] = [];
+    }
+
+    // Add the new entry
+    biblePopups[bookLower][chapterKey].push({
+        content: contentText,
+        description: description,
+        references: references
+    });
+
+    // Re-initialize highlights to apply the new entry
+    initializePopupHighlights();
+
+    // Re-render the current view to show the new highlighting
+    console.log(`Added new popup: ${bookName} ${chapterNum} - "${contentText}"`);
+}
+
+// Utility function to reload highlights on existing content
+function reloadPopupHighlights() {
+    // This can be called when the content is updated or refreshed
+    const versesColumn = document.getElementById('verses-column');
+    if (versesColumn && typeof highlightSpecialText === 'function') {
+        // Re-initialize the popup highlights
+        initializePopupHighlights();
+        console.log('Popup highlights reloaded');
+    }
+}
+
+// Verse Images Manager
+/**
+ * Convert book name to verse image filename format
+ * Examples: "Genesis" -> "genesis", "I Samuel" -> "i-samuel", "II Corinthians" -> "ii-corinthians"
+ */
+function getVerseImageFilename(bookName, chapter, verse) {
+    const normalized = bookName
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/ï»¿/g, ''); // Remove BOM if present
+    return `${normalized}-${chapter}-${verse}.png`;
+}
+
+/**
+ * Get the full path to a verse image
+ */
+function getVerseImagePath(bookName, chapter, verse) {
+    const normalized = bookName
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/ï»¿/g, ''); // Remove BOM if present
+    return `resources/verse-images/${normalized}/${chapter}-${verse}.png`;
+}
+
+/**
+ * Check if a verse image exists and return HTML to render it
+ * Returns a Promise that resolves to HTML string (empty if image doesn't exist)
+ */
+function getVerseImageHTML(bookName, chapter, verse) {
+    return new Promise((resolve) => {
+        const imagePath = getVerseImagePath(bookName, chapter, verse);
+        const img = new Image();
+
+        img.onload = () => {
+            const html = `<div class="verse-image-container">
+                <img src="${imagePath}" alt="Verse illustration for ${bookName} ${chapter}:${verse}" class="verse-image" />
+            </div>`;
+            resolve(html);
+        };
+
+        img.onerror = () => {
+            resolve(''); // Return empty string if image doesn't exist
+        };
+
+        img.src = imagePath;
+    });
+}
+
+/**
+ * Batch check multiple verse images and return a map of results
+ * Used during chapter rendering for performance
+ */
+async function getVerseImagesForChapter(bookName, chapterData, chapterNum) {
+    const verseImageCache = {};
+    const verseKeys = Object.keys(chapterData).filter(key => key.startsWith('verse_'));
+
+    // Create promises for all verses in parallel
+    const promises = verseKeys.map(verseKey => {
+        const verseNum = verseKey.replace('verse_', '');
+        return getVerseImageHTML(bookName, chapterNum, verseNum)
+            .then(html => {
+                verseImageCache[verseNum] = html;
+            });
+    });
+
+    await Promise.all(promises);
+    return verseImageCache;
+}
+
+/**
+ * Load and insert verse images into the rendered chapter content
+ * Only renders containers for images that actually exist
+ */
+function loadVerseImages(bookName, chapterNum, contentArea) {
+    // Get all verse containers that were just rendered
+    const verseContainers = contentArea.querySelectorAll('.verse-container');
+
+    verseContainers.forEach(container => {
+        const verseNum = container.dataset.verse;
+        const imagePath = getVerseImagePath(bookName, chapterNum, verseNum);
+        const uniqueId = `image-${bookName}-${chapterNum}-${verseNum}`.replace(/\s+/g, '-');
+        const verseLine = container.querySelector('.verse-line');
+
+        if (!verseLine) return;
+
+        // First check if image actually exists - use a silent fetch (no-cors mode to prevent CORS errors)
+        const checkImage = document.createElement('img');
+        let imageExists = false;
+
+        const onImageCheck = () => {
+            if (!imageExists) return; // Already handled as not existing
+
+            // Image confirmed to exist, now show the loading skeleton
+            const skeletonHTML = `<div class="verse-image-container" id="${uniqueId}">
+                <div class="image-skeleton"></div>
+            </div>`;
+            verseLine.insertAdjacentHTML('afterbegin', skeletonHTML);
+
+            // Load the actual image
+            const img = new Image();
+            img.onload = () => {
+                const container = document.getElementById(uniqueId);
+                if (container) {
+                    container.innerHTML = `<img src="${imagePath}" alt="Verse illustration for ${bookName} ${chapterNum}:${verseNum}" class="verse-image" />`;
+
+                    // Add click handler to open viewer
+                    const verseImg = container.querySelector('.verse-image');
+                    if (verseImg) {
+                        verseImg.style.cursor = 'pointer';
+                        verseImg.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            openViewer(imagePath);
+                        });
+                    }
+                }
+            };
+
+            img.onerror = () => {
+                // Silently remove skeleton if load fails
+                const container = document.getElementById(uniqueId);
+                if (container) {
+                    container.remove();
+                }
+            };
+
+            img.src = imagePath;
+        };
+
+        // Check if image exists by attempting to load it
+        checkImage.onload = () => {
+            imageExists = true;
+            onImageCheck();
+        };
+
+        checkImage.onerror = () => {
+            imageExists = false;
+            // Do nothing - don't render container if image doesn't exist
+        };
+
+        // Start the check (using a data URL to avoid cors issues)
+        checkImage.src = imagePath;
+    });
+}
+
+// Generate king transition card HTML for a verse
+function getKingTransitionCardHTML(bookName, chapter, verseNum) {
+    if (typeof getKingTransitionCard !== 'function') return '';
+    const king = getKingTransitionCard(bookName, chapter, verseNum, currentLanguage);
+    if (!king) return '';
+    const isJudah = king.kingdom === 'Judah' || king.kingdom === 'யூதா';
+    const kingdomClass = isJudah ? 'judah' : 'israel';
+    const icon = isJudah ? '🦁' : '⚡';
+    const cardId = `ktc-${king.id}-${chapter}-${verseNum}`;
+    
+    // Build the "succeeds" text based on language
+    let succeedsText;
+    if (currentLanguage === 'tamil') {
+        succeedsText = `முன்பு: ${king.prevKing}`;
+    } else {
+        succeedsText = `Succeeds: ${king.prevKing}`;
+    }
+    
+    return `<div class="king-transition-card ${kingdomClass}" data-ktc-id="${cardId}">
+        <div class="king-transition-pill-row" onclick="toggleKingCard('${cardId}')">
+            <div class="ktc-line"></div>
+            <div class="king-transition-pill">
+                <span class="ktc-icon">${icon}</span>
+                <span class="ktc-name">${king.name}</span>
+                <span class="ktc-divider"></span>
+                <span class="ktc-kingdom">${king.kingdom}</span>
+                <span class="ktc-arrow" id="arrow-${cardId}">▾</span>
+            </div>
+            <div class="ktc-line"></div>
+        </div>
+        <div class="king-transition-expanded" id="expanded-${cardId}">
+            <div class="ktc-header">
+                <span class="ktc-king-name">${king.name}</span>
+                <span class="ktc-succeeds">${succeedsText}</span>
+            </div>
+            <p class="ktc-context">${king.context}</p>
+            <p class="ktc-note">${king.note}</p>
+            <div class="ktc-footer">
+                <span class="ktc-kingdom-badge">${king.kingdom}</span>
+                <span class="ktc-year">${king.year}</span>
+                <span class="ktc-reign">· ${king.reignYears}</span>
+            </div>
+        </div>
+    </div>`;
+}
+
+// Toggle king transition card expanded state
+function toggleKingCard(cardId) {
+    const expanded = document.getElementById('expanded-' + cardId);
+    const arrow = document.getElementById('arrow-' + cardId);
+    if (expanded) {
+        expanded.classList.toggle('visible');
+    }
+    if (arrow) {
+        arrow.classList.toggle('open');
+    }
+}
+
+// Display chapter content
+function displayChapter() {
+    const contentArea = document.querySelector('.scripture-text');
+
+    // Clear intro flag since we're displaying a chapter
+    window.isViewingIntro = false;
+
+    // Show mobile chapter header when displaying a chapter
+    const mobileChapterHeader = document.getElementById('mobile-chapter-header');
+    if (mobileChapterHeader) {
+        mobileChapterHeader.style.display = 'block';
+    }
+
+    // Update mobile chapter header
+    updateMobileChapterHeader();
+    // Safety check: if currentData is not loaded yet, skip display
+    if (!currentData) {
+        contentArea.innerHTML = '<p>Loading...</p>';
+        return;
+    }
+    const chapterKey = `chapter_${currentChapter}`;
+    const chapterData = currentData[chapterKey];
+    if (!chapterData) {
+        contentArea.innerHTML = '<p>Chapter not found</p>';
+        return;
+    }
+    let html = '';
+    const verses = Object.keys(chapterData).sort((a, b) => {
+        const numA = parseInt(a.replace('verse_', ''));
+        const numB = parseInt(b.replace('verse_', ''));
+        return numA - numB;
+    });
+
+    // Update verse count badge in mobile chapter header
+    const verseCount = verses.length;
+    const verseCountBadge = document.getElementById('mobile-verse-count-badge');
+    if (verseCountBadge) {
+        verseCountBadge.textContent = verseCount;
+        verseCountBadge.style.display = 'inline-block';
+    }
+
+    // Keep old banner hidden
+    const verseCountBanner = document.getElementById('verse-count-banner');
+    if (verseCountBanner) {
+        verseCountBanner.style.display = 'none';
+    }
+
+    const bookName = bibleBooks[currentBook].name;
+    if (currentLanguage === 'both' && currentTamilData) {
+        // Display both Tamil and English
+        const tamilChapterData = currentTamilData[chapterKey];
+        verses.forEach(verseKey => {
+            const verseNum = verseKey.replace('verse_', '');
+
+            // Check for verse header
+            const header = getVerseHeader(bookName, currentChapter, parseInt(verseNum));
+            if (header) {
+                // Handle both array format (title + subtext) and string format (title only)
+                if (Array.isArray(header)) {
+                    const title = header[0];
+                    const subtext = header[1];
+                    const headerId = `header-${bookName.replace(/\s+/g, '-')}-${currentChapter}-${verseNum}`;
+                    html += `<div class="verse-header ${subtext ? 'collapsible' : ''}">
+                        <div class="verse-header-header">
+                            <button class="verse-header-toggle" data-header-id="${headerId}" style="${subtext ? '' : 'display: none;'}">
+                                <span class="toggle-icon">▶</span>
+                            </button>
+                            <div class="verse-header-title">${title}</div>
+                        </div>`;
+                    if (subtext) {
+                        html += `<div class="verse-header-subtext" id="${headerId}">${subtext}</div>`;
+                    }
+                    html += `</div>`;
+                } else {
+                    html += `<div class="verse-header">${header}</div>`;
+                }
+            }
+
+            // Check for king transition card (after verse header)
+            html += getKingTransitionCardHTML(bookName, currentChapter, verseNum);
+
+            let tamilText = tamilChapterData ? tamilChapterData[verseKey] : '';
+            let englishText = chapterData[verseKey];
+            // Apply highlighting
+            tamilText = highlightSpecialText(tamilText, 'both-tamil', bookName, currentChapter, verseNum);
+            englishText = highlightSpecialText(englishText, 'both-english', bookName, currentChapter, verseNum);
+            const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
+            const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
+            const tooltip = ''; // Removed Memory Verse tooltip to show only popup-highlight tooltips
+            const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
+            const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
+
+            // Check for cross-references (admin only)
+            let crossRefIcon = '';
+            if (isAdmin()) {
+                const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+                const crossRefs = crossReferences[crossRefKey];
+                if (bookName === 'Matthew' && currentChapter === 1 && verseNum === '1') {
+                    console.log('Cross-ref debug (both mode):', { crossRefKey, crossRefs, allKeys: Object.keys(crossReferences) });
+                }
+                const hasCrossRef = crossRefs && crossRefs.length > 0;
+                crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
+            }
+
+            html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
+                <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}>
+                    <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
+                    <span class="english-text ${englishTextColor}">${englishText}</span>${crossRefIcon}
+                </p>
+            </div>`;
+        });
+    } else {
+        // Display single language
+        verses.forEach(verseKey => {
+            const verseNum = verseKey.replace('verse_', '');
+
+            // Check for verse header
+            const header = getVerseHeader(bookName, currentChapter, parseInt(verseNum));
+            if (header) {
+                // Handle both array format (title + subtext) and string format (title only)
+                if (Array.isArray(header)) {
+                    const title = header[0];
+                    const subtext = header[1];
+                    const headerId = `header-${bookName.replace(/\s+/g, '-')}-${currentChapter}-${verseNum}`;
+                    html += `<div class="verse-header ${subtext ? 'collapsible' : ''}">
+                        <div class="verse-header-header">
+                            <button class="verse-header-toggle" data-header-id="${headerId}" style="${subtext ? '' : 'display: none;'}">
+                                <span class="toggle-icon">▶</span>
+                            </button>
+                            <div class="verse-header-title">${title}</div>
+                        </div>`;
+                    if (subtext) {
+                        html += `<div class="verse-header-subtext" id="${headerId}">${subtext}</div>`;
+                    }
+                    html += `</div>`;
+                } else {
+                    html += `<div class="verse-header">${header}</div>`;
+                }
+            }
+
+            // Check for king transition card (after verse header)
+            html += getKingTransitionCardHTML(bookName, currentChapter, verseNum);
+
+            let verseText = chapterData[verseKey];
+            // Apply highlighting based on current language
+            verseText = highlightSpecialText(verseText, currentLanguage, bookName, currentChapter, verseNum);
+            const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
+            const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
+            const tooltip = ''; // Removed Memory Verse tooltip to show only popup-highlight tooltips
+            const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
+            const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
+
+            // Check for cross-references (admin only)
+            let crossRefIcon = '';
+            if (isAdmin()) {
+                const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+                const crossRefs = crossReferences[crossRefKey];
+                if (bookName === 'Matthew' && currentChapter === 1 && verseNum === '1') {
+                    console.log('Cross-ref debug (single mode):', { crossRefKey, crossRefs, allKeys: Object.keys(crossReferences) });
+                }
+                const hasCrossRef = crossRefs && crossRefs.length > 0;
+                crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
+            }
+
+            html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
+                <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}${crossRefIcon}</p>
+            </div>`;
+        });
+    }
+    contentArea.innerHTML = html;
+
+    // Load and display verse images asynchronously
+    loadVerseImages(bookName, currentChapter, contentArea);
+
+    // Setup event listeners for collapsible verse headers
+    setupVerseHeaderToggle();
+
+    // Update pin button visibility for current chapter
+    updatePinButtonBar();
+
+    // Refresh pinned verse display (in case data was loaded after initial render)
+    refreshPinnedVerseDisplay();
+
+    // Add click handlers to verse containers to show bottom sheet
+    contentArea.querySelectorAll('.verse-container').forEach(container => {
+        const verseLine = container.querySelector('.verse-line');
+        const verseNum = parseInt(container.dataset.verse);
+
+        // Handle verse line click to show bottom sheet
+        let tapTimeout;
+        let tapCount = 0;
+
+        verseLine.addEventListener('click', (e) => {
+            // Skip verse actions if clicking cross-ref icon
+            if (e.target.classList.contains('cross-ref-icon')) {
+                return;
+            }
+
+            // Skip verse actions if a popup is currently open
+            const existingPopup = document.getElementById('popup-info-bottom-sheet');
+            if (existingPopup && existingPopup.classList.contains('visible')) {
+                return;
+            }
+
+            e.stopPropagation();
+            tapCount++;
+
+            if (tapCount === 1) {
+                tapTimeout = setTimeout(() => {
+                    // Single tap - show or update bottom sheet
+                    const versesColumn = document.querySelector('.verses-column');
+
+                    // Get current selected verses BEFORE making changes
+                    const selectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(item => parseInt(item.dataset.verse));
+
+                    // Check if bottom sheet already exists and is visible
+                    const existingBottomSheet = document.getElementById('verse-actions-bottom-sheet');
+                    const isBottomSheetVisible = existingBottomSheet && existingBottomSheet.classList.contains('visible');
+
+                    // If bottom sheet is open, handle multi-verse selection
+                    if (isBottomSheetVisible) {
+                        const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
+                        const wasSelected = verseItem && verseItem.classList.contains('active');
+                        const contentArea = document.querySelector('.scripture-text');
+
+                        // IMMEDIATELY remove or update highlighting in DOM before doing anything else
+                        if (wasSelected) {
+                            // Remove highlight immediately from this verse
+                            const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+                            const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
+                            if (verseLine) {
+                                verseLine.classList.remove('multi-highlighted');
+                                verseLine.classList.remove('left-pane-selected');
+                                verseLine.style.backgroundColor = '';
+                            }
+                            if (verseContainer) {
+                                verseContainer.classList.remove('multi-highlighted');
+                                verseContainer.classList.remove('left-pane-selected');
+                                verseContainer.style.backgroundColor = '';
+                            }
+                        }
+
+                        // Now toggle the verse selection
+                        if (verseItem) {
+                            verseItem.classList.toggle('active');
+                        }
+
+                        // Get updated selected verses after toggle
+                        const updatedSelectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(item => parseInt(item.dataset.verse));
+
+                        // Update highlighting based on selection count
+                        // For manual selections in main content, use multi-highlighted class
+                        if (updatedSelectedVerses.length > 0) {
+                            // First, remove all highlights
+                            contentArea.querySelectorAll('.verse-line').forEach(v => {
+                                v.classList.remove('highlighted');
+                                v.classList.remove('multi-highlighted');
+                                v.classList.remove('left-pane-selected');
+                            });
+
+                            // Then add multi-highlighted to all selected verses
+                            updatedSelectedVerses.forEach(vNum => {
+                                const verseLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
+                                if (verseLine) {
+                                    verseLine.classList.add('multi-highlighted');
+                                }
+                            });
+                        } else {
+                            // No verses selected: remove all highlights
+                            contentArea.querySelectorAll('.verse-line').forEach(v => {
+                                v.classList.remove('highlighted');
+                                v.classList.remove('multi-highlighted');
+                                v.classList.remove('left-pane-selected');
+                                v.style.backgroundColor = '';
+                            });
+                        }
+
+                        // Debug: Check what verse elements exist
+                        const allVerseElements = contentArea.querySelectorAll('.verse-line');
+                        // Debug: Show all highlighted verses after update
+                        const allHighlighted = contentArea.querySelectorAll('.verse-line.highlighted');
+                        // Update the bottom sheet with current selections
+                        if (updatedSelectedVerses.length > 1) {
+                            // Multiple verses selected - update in place
+                            updateMultiVerseActionsBottomSheet(updatedSelectedVerses);
+                        } else if (updatedSelectedVerses.length === 1) {
+                            // Single verse - update the existing sheet
+                            updateSingleVerseActionsBottomSheet(updatedSelectedVerses[0]);
+                        } else {
+                            // No verses selected, close bottom sheet
+                            existingBottomSheet.classList.remove('visible');
+                            document.body.classList.remove('bottom-sheet-open');
+                        }
+                    } else {
+                        // Bottom sheet not open yet - select the first verse and show bottom sheet
+                        // Remove all other active classes
+                        versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
+                        const contentArea = document.querySelector('.scripture-text');
+                        contentArea.querySelectorAll('.verse-line').forEach(v => {
+                            if (v.classList.contains('highlighted')) {
+                                v.classList.remove('highlighted');
+                                v.style.backgroundColor = '';
+                            }
+                        });
+
+                        // Select only the clicked verse
+                        const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
+                        if (verseItem) {
+                            verseItem.classList.add('active');
+                        }
+
+                        // Add highlight to clicked verse only
+                        const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+                        if (verseLine) {
+                            verseLine.classList.add('multi-highlighted');
+                        }
+                        // Show bottom sheet for single verse
+                        showVerseActionsBottomSheet(verseNum);
+                    }
+
+                    tapCount = 0;
+                }, 300);
+            } else if (tapCount === 2) {
+                clearTimeout(tapTimeout);
+                // Double tap - show note viewer for this verse
+                const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+                const note = verseNotes[noteKey];
+
+                // Check if this verse has cross-references
+                const bookName = bibleBooks[currentBook].name;
+                const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+                const crossRefs = crossReferences[crossRefKey];
+                const hasCrossRefs = crossRefs && crossRefs.length > 0;
+
+                // Show the note viewer if note exists with text OR if verse has cross-references
+                if ((note && note.text && note.text.trim()) || hasCrossRefs) {
+                    if (hasCrossRefs && (!note || !note.text || !note.text.trim())) {
+                        // If only has cross-refs, show note viewer with refs tab active
+                        showNoteViewer(verseNum, note || {});
+                    } else {
+                        // Has note text, show normally
+                        showNoteViewer(verseNum, note);
+                    }
+                }
+                tapCount = 0;
+            }
+        });
+
+        // Note: Right-click/long-press context menu removed
+    });
+
+    // Apply note displays to verses
+    applyAllNoteDisplays();
+
+    // Initialize swipe gestures for cross-references
+    initializeCrossReferenceSwipe();
+
+    // Update mobile chapter header
+    updateMobileChapterHeader();
+    // Update navigation text
+    const currentChapterText = document.querySelector('.current-chapter');
+    if (currentChapterText) {
+        const book = bibleBooks[currentBook];
+        let bookName;
+        if (currentLanguage === 'tamil') {
+            // Use short Tamil name on mobile if available
+            bookName = window.innerWidth <= 768 ? (book.tamilShortName || book.tamilName) : book.tamilName;
+        } else if (currentLanguage === 'both') {
+            // On mobile, use short English name for space
+            if (window.innerWidth <= 768) {
+                bookName = book.shortName || book.name;
+            } else {
+                bookName = `${book.name} / ${book.tamilName}`;
+            }
+        } else {
+            // Use short name on mobile, full name on desktop
+            bookName = window.innerWidth <= 768 ? (book.shortName || book.name) : book.name;
+        }
+        currentChapterText.textContent = `${bookName} ${currentChapter}`;
+    }
+    // Note: Scroll to top is now handled by updateUI() and navigation buttons only
+    // Don't scroll here to prevent jumping when interacting with verses or adding notes
+
+    // Initialize pinned verses and update button visibility
+    initializePinnedVerses();
+    updatePinButtonBar();
+
+    // Initialize chapter summary pullout (only if summary exists)
+    console.log(`[DISPLAY-CHAPTER] Calling pullout init for ${bibleBooks[currentBook].name} ${currentChapter}`);
+    if (typeof initializeChapterSummaryPullout === 'function') {
+        initializeChapterSummaryPullout(bibleBooks[currentBook].name, String(currentChapter));
+    }
+
+    // Initialize AI Summary button (only if AI summary exists for this chapter)
+    if (typeof initializeAISummaryButton === 'function') {
+        initializeAISummaryButton(bibleBooks[currentBook].name, currentChapter);
+    }
+}
+
+// Display book introduction
+function displayBookIntro() {
+    const contentArea = document.querySelector('.scripture-text');
+    const book = bibleBooks[currentBook];
+    const bookName = book.name;
+
+    // Check if book intro exists
+    if (!bookIntroductions || !bookIntroductions[bookName] || bookIntroductions[bookName].trim() === '') {
+        contentArea.innerHTML = '<p>No introduction available for this book.</p>';
+        return;
+    }
+
+    const intro = bookIntroductions[bookName];
+
+    // Convert \n to <br> for proper line breaks
+    // Split by actual newline character and wrap each paragraph in <p> tags
+    const paragraphs = intro.split(/\n+/).filter(p => p.trim() !== '');
+    const formattedIntro = paragraphs.map(p => `<p>${p.trim()}</p>`).join('');
+
+    // Create HTML for book intro
+    let html = `
+        <div class="book-intro-content">
+            <h2 class="book-intro-title">Introduction to ${bookName}</h2>
+            <div class="book-intro-text">
+                ${formattedIntro}
+            </div>
+        </div>
+    `;
+
+    contentArea.innerHTML = html;
+
+    // Set flag to track that we're viewing intro
+    window.isViewingIntro = true;
+
+    // Hide mobile chapter header when displaying intro
+    const mobileChapterHeader = document.getElementById('mobile-chapter-header');
+    if (mobileChapterHeader) {
+        mobileChapterHeader.style.display = 'none';
+    }
+
+    // Update navigation text
+    const currentChapterText = document.querySelector('.current-chapter');
+    if (currentChapterText) {
+        currentChapterText.textContent = `Intro`;
+    }
+
+    // Scroll to top of content
+    contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+    if (window.innerWidth > 1024) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Clear verses column since we're not showing a chapter
+    const versesColumn = document.querySelector('.verses-column');
+    if (versesColumn) {
+        versesColumn.innerHTML = '';
+    }
+
+    // Remove active class from all chapter items
+    const chaptersColumn = document.querySelector('.chapters-column');
+    if (chaptersColumn) {
+        chaptersColumn.querySelectorAll('.number-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Add active class to intro button
+        const introButton = chaptersColumn.querySelector('.book-intro-item');
+        if (introButton) {
+            introButton.classList.add('active');
+        }
+    }
+}
+
+// Initialize cross-reference display with click handler
+let noteRefCurrentLang = 'tamil';
+
+function initializeCrossReferenceSwipe() {
+    // Cross-reference icons are now just visual indicators
+    // References are accessed through the note viewer's Ref tab
+    const crossRefIcons = document.querySelectorAll('.cross-ref-icon');
+    console.log('Cross-reference icons found (visual only):', crossRefIcons.length);
+}
+
+// Update mobile chapter header
+function updateMobileChapterHeader() {
+    const mobileHeader = document.getElementById('mobile-chapter-header');
+    const authorBanner = document.getElementById('author-banner');
+    if (!mobileHeader) return;
+    const book = bibleBooks[currentBook];
+    const titleElement = mobileHeader.querySelector('.mobile-chapter-title');
+    const numberElement = mobileHeader.querySelector('.mobile-chapter-number');
+    if (titleElement && numberElement) {
+        // Set book name based on language
+        let bookName = book.name;
+        if (currentLanguage === 'tamil') {
+            bookName = book.tamilName;
+        } else if (currentLanguage === 'both') {
+            bookName = book.name; // Use English for "both" mode
+        }
+        titleElement.textContent = bookName;
+        numberElement.textContent = currentChapter;
+
+        // Update author banner if present
+        if (authorBanner && window.bibleAuthors) {
+            const authorNameEl = document.getElementById('author-name');
+            const authorInitialEl = document.getElementById('author-initial'); // optional
+            const authorEraEl = document.getElementById('author-era');
+            const authorVersesEl = document.getElementById('author-verses');
+
+            // Normalize book name to match keys in bibleAuthors.js
+            let authorKey = book.name;
+            authorKey = authorKey
+                .replace(/^I\s+/, '1 ')
+                .replace(/^II\s+/, '2 ')
+                .replace(/^III\s+/, '3 ');
+
+            const authorInfo = window.bibleAuthors[authorKey];
+
+            if (authorInfo && typeof authorInfo === 'object') {
+                const authorName = authorInfo.author || 'Unknown';
+                const era = authorInfo.era || '';
+                const verses = Number.isFinite(authorInfo.verses) ? authorInfo.verses : null;
+
+                if (authorNameEl) {
+                    authorNameEl.textContent = authorName;
+                }
+                if (authorInitialEl) {
+                    authorInitialEl.textContent = authorName.charAt(0).toUpperCase();
+                }
+
+                if (authorEraEl && era) {
+                    authorEraEl.textContent = era;
+                }
+                if (authorVersesEl) {
+                    authorVersesEl.textContent = verses ? `${verses} Verses` : '';
+                }
+            } else {
+                const fallbackName = typeof authorInfo === 'string' ? authorInfo : 'Unknown';
+                if (authorNameEl) {
+                    authorNameEl.textContent = fallbackName;
+                }
+                if (authorInitialEl) {
+                    authorInitialEl.textContent = fallbackName.charAt(0).toUpperCase();
+                }
+                if (authorEraEl) {
+                    authorEraEl.textContent = '';
+                }
+                if (authorVersesEl) {
+                    authorVersesEl.textContent = '';
+                }
+            }
+
+        }
+    }
+}
+
+// Handle swipe gesture for verse actions
+// Show color picker for bookmark selection
+async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+    const currentColor = verseNotes[noteKey]?.color;
+
+    // Open bookmark color picker bottom sheet
+    const overlay = document.getElementById('bookmark-color-picker-overlay');
+    const sheet = document.querySelector('.bookmark-color-picker-sheet');
+    const closeBtn = document.getElementById('bookmark-color-close-btn');
+
+    if (!overlay || !sheet) return;
+
+    // Show the overlay and sheet with smooth animation
+    overlay.classList.add('active');
+    sheet.classList.add('visible');
+    sheet.classList.remove('closing');
+    document.body.style.overflow = 'hidden';
+
+    // Set up color option click handlers
+    const colorOptions = sheet.querySelectorAll('.bookmark-color-option');
+
+    // Remove and re-add event listeners to prevent duplicates
+    colorOptions.forEach(option => {
+        const newOption = option.cloneNode(true);
+        option.parentNode.replaceChild(newOption, option);
+    });
+
+    // Re-query after replacing nodes
+    const updatedColorOptions = sheet.querySelectorAll('.bookmark-color-option');
+
+    // Mark currently selected color
+    updatedColorOptions.forEach(option => {
+        if (option.dataset.color === currentColor) {
+            option.classList.add('selected');
+        } else {
+            option.classList.remove('selected');
+        }
+    });
+
+    // Add click handlers
+    updatedColorOptions.forEach(colorBtn => {
+        colorBtn.addEventListener('click', async (e) => {
+            e.stopPropagation();
+            const selectedColor = colorBtn.dataset.color;
+
+            // Show selection animation
+            updatedColorOptions.forEach(option => {
+                option.classList.remove('selected');
+            });
+            colorBtn.classList.add('selected');
+
+            // Create or update note entry with selected color
+            if (!verseNotes[noteKey]) {
+                verseNotes[noteKey] = {
+                    text: '',
+                    color: selectedColor,
+                    book: bibleBooks[currentBook].name,
+                    chapter: currentChapter,
+                    verse: verseNum,
+                    timestamp: new Date().toISOString()
+                };
+            } else {
+                verseNotes[noteKey].color = selectedColor;
+            }
+
+            // Add the color highlight to the verse in the UI
+            const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+            if (verseLine) {
+                // Remove all color classes
+                verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green', 'note-blue', 'note-pink', 'note-orange', 'note-purple');
+                // Add has-note class and new color class
+                verseLine.classList.add('has-note', `note-${selectedColor}`);
+                // Add animation for visual feedback
+                verseLine.style.animation = 'highlightPulse 0.5s ease-out';
+            }
+
+            // Update button state with the color
+            bookmarkBtn.classList.add('bookmarked');
+            bookmarkBtn.setAttribute('data-bookmark-color', selectedColor);
+            const colorHex = colorBtn.style.background;
+            bookmarkBtn.style.setProperty('--bookmark-color', colorHex);
+
+            // Save changes
+            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+            try {
+                console.log('💾 Saving bookmark from color picker:', { noteKey, verseNotes: verseNotes[noteKey] });
+                await saveSingleBookmarkToSupabase(noteKey, verseNotes[noteKey]);
+            } catch (error) {
+                console.error('❌ Error saving bookmark:', error);
+            }
+
+            // Close the bottom sheet after selection with smooth animation
+            setTimeout(() => {
+                closeBookmarkColorPicker();
+            }, 400);
+        });
+    });
+
+    // Add close button handler
+    closeBtn.removeEventListener('click', closeButtonHandler);
+    closeBtn.addEventListener('click', closeButtonHandler);
+
+    // Initialize drag-to-close gestures
+    initializeBookmarkColorPickerGestures();
+}
+
+// Close button handler
+function closeButtonHandler(e) {
+    e.stopPropagation();
+    closeBookmarkColorPicker();
+}
+
+// Close bookmark color picker bottom sheet
+function closeBookmarkColorPicker() {
+    const overlay = document.getElementById('bookmark-color-picker-overlay');
+    const sheet = document.querySelector('.bookmark-color-picker-sheet');
+
+    if (!sheet || !overlay) return;
+
+    sheet.classList.add('closing');
+    sheet.classList.remove('visible');
+    document.body.style.overflow = '';
+
+    setTimeout(() => {
+        overlay.classList.remove('active');
+        sheet.classList.remove('closing');
+        sheet.style.transform = ''; // Clear inline transform
+    }, 300);
+}
+
+// Initialize drag-to-close for bookmark color picker
+function initializeBookmarkColorPickerGestures() {
+    const overlay = document.getElementById('bookmark-color-picker-overlay');
+    const sheet = document.querySelector('.bookmark-color-picker-sheet');
+    const content = document.querySelector('.bookmark-color-sheet-content');
+
+    if (!sheet || !overlay || !content) {
+        console.warn('Bookmark color picker elements not found');
+        return;
+    }
+
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+    let velocityY = 0;
+    let lastY = 0;
+    let lastTime = 0;
+    let startScrollTop = 0;
+
+    function handleStart(clientY) {
+        const scrollTop = content.scrollTop;
+
+        // Only allow dragging if at the top of scroll
+        if (scrollTop > 5) {
+            isDragging = false;
+            return;
+        }
+
+        isDragging = true;
+        startY = clientY;
+        currentY = 0;
+        lastY = clientY;
+        lastTime = Date.now();
+        startScrollTop = scrollTop;
+        velocityY = 0;
+
+        overlay.classList.add('dragging');
+    }
+
+    function handleMove(clientY) {
+        if (!isDragging) return;
+
+        const deltaY = clientY - startY;
+        const scrollTop = content.scrollTop;
+        const scrollChanged = scrollTop !== startScrollTop;
+
+        // Calculate velocity
+        const now = Date.now();
+        const timeDiff = now - lastTime;
+        if (timeDiff > 0) {
+            velocityY = (clientY - lastY) / timeDiff;
+            lastY = clientY;
+            lastTime = now;
+        }
+
+        // If content scrolled (scroll position changed), stop dragging
+        if (scrollChanged) {
+            isDragging = false;
+            overlay.classList.remove('dragging');
+            return;
+        }
+
+        // If content is scrolled down, allow normal scrolling
+        if (scrollTop > 5) {
+            isDragging = false;
+            overlay.classList.remove('dragging');
+            return;
+        }
+
+        // If trying to drag up when at top, allow content to scroll
+        if (deltaY < 0) {
+            isDragging = false;
+            overlay.classList.remove('dragging');
+            return;
+        }
+
+        // Move sheet down only when at top and dragging down
+        currentY = deltaY;
+        sheet.style.transform = `translateY(${currentY}px)`;
+    }
+
+    function handleEnd() {
+        if (!isDragging) return;
+
+        isDragging = false;
+        overlay.classList.remove('dragging');
+
+        // Close if dragged down enough or velocity is high
+        const shouldClose = currentY > 150 || velocityY > 0.3;
+
+        if (shouldClose) {
+            closeBookmarkColorPicker();
+        } else {
+            sheet.style.transform = '';
+        }
+    }
+
+    // Touch events
+    sheet.addEventListener('touchstart', (e) => {
+        handleStart(e.touches[0].clientY);
+    }, { passive: true });
+
+    sheet.addEventListener('touchmove', (e) => {
+        const scrollTop = content.scrollTop;
+        const deltaY = e.touches[0].clientY - startY;
+
+        // Only prevent default when actually dragging the sheet (at top and dragging down)
+        if (isDragging && scrollTop <= 5 && deltaY > 0) {
+            e.preventDefault();
+        }
+        handleMove(e.touches[0].clientY);
+    }, { passive: false });
+
+    sheet.addEventListener('touchend', () => {
+        handleEnd();
+    });
+
+    // Mouse events
+    sheet.addEventListener('mousedown', (e) => {
+        handleStart(e.clientY);
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            e.preventDefault();
+            handleMove(e.clientY);
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (isDragging) {
+            handleEnd();
+        }
+    });
+
+    // Overlay click to close
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeBookmarkColorPicker();
+        }
+    });
+}
+
+// Universal copy handler for both single and multi-verse
+function handleVersesCopy(copyBtn) {
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    const contentArea = document.querySelector('.scripture-text');
+    const book = bibleBooks[currentBook];
+    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+
+    // Determine if it's single or multi-verse based on button class
+    const isSingleVerse = copyBtn.classList.contains('copy-verse-action');
+    const isMultiVerse = copyBtn.classList.contains('copy-multi-verses-action');
+
+    let copyText = '';
+    let versesToCopy = [];
+
+    if (isSingleVerse) {
+        // Single verse - get verse number from data attribute
+        const verseNum = parseInt(copyBtn.getAttribute('data-verse'));
+        const verseElement = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+
+        if (verseElement) {
+            const verseText = verseElement.textContent || '';
+            const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
+            versesToCopy.push({ verseNum, text: cleanVerseText });
+            copyText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
+        }
+    } else if (isMultiVerse) {
+        // Multi-verse - get all multi-highlighted verses
+        const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted'));
+        const verseNumbers = [];
+        highlightedVerses.forEach((verseLine, index) => {
+            const verseNum = verseLine.getAttribute('data-verse');
+            verseNumbers.push(verseNum);
+            const verseText = verseLine.textContent || '';
+            const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
+            versesToCopy.push({ verseNum, text: cleanVerseText });
+            // Add verse reference with text and space between verses
+            if (index > 0) {
+                copyText += '\n'; // Space between verses
+            }
+            copyText += `[${verseNum}] ${cleanVerseText}\n`;
+        });
+
+        // Add book chapter and verse range
+        const verseRange = verseNumbers.length > 1
+            ? `${verseNumbers[0]} - ${verseNumbers[verseNumbers.length - 1]}`
+            : verseNumbers[0];
+        copyText += `\n${bookName} ${currentChapter} : ${verseRange}`;
+    }
+    // Add animation
+    copyBtn.style.transform = 'scale(0.9)';
+    copyBtn.style.opacity = '0.7';
+
+    navigator.clipboard.writeText(copyText).then(() => {
+        showToast(isSingleVerse ? 'Copied...' : 'Verses copied...', 'success');
+        // Restore animation
+        setTimeout(() => {
+            copyBtn.style.transform = 'scale(1)';
+            copyBtn.style.opacity = '1';
+
+            // Remove highlights from selected verses
+            if (isMultiVerse) {
+                const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted'));
+                highlightedVerses.forEach(verseLine => {
+                    verseLine.classList.remove('multi-highlighted');
+                    verseLine.style.backgroundColor = '';
+                });
+
+                // Clear selectedVerses array
+                selectedVerses = [];
+
+                // Update left pane active states
+                const leftPane = document.querySelector('.verses-column');
+                if (leftPane) {
+                    leftPane.querySelectorAll('.verse-number.active').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                }
+            }
+
+            // Close bottom sheet
+            if (bottomSheet) {
+                bottomSheet.classList.remove('visible');
+                document.body.classList.remove('bottom-sheet-open');
+            }
+        }, 300);
+    }).catch((err) => {
+        showToast(isSingleVerse ? 'Failed to copy verse' : 'Failed to copy verses', 'error');
+
+        // Restore animation on error
+        copyBtn.style.transform = 'scale(1)';
+        copyBtn.style.opacity = '1';
+    });
+}
+
+
+// Show verse actions in a bottom sheet modal
+function showVerseActionsBottomSheet(verseNum) {
+    // Create or get the bottom sheet modal
+    let bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (!bottomSheet) {
+        bottomSheet = document.createElement('div');
+        bottomSheet.id = 'verse-actions-bottom-sheet';
+        bottomSheet.className = 'verse-actions-bottom-sheet';
+        document.body.appendChild(bottomSheet);
+    }
+
+    // Build the complete verse reference (e.g., "Matthew 1 : 1")
+    const book = bibleBooks[currentBook];
+    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+    const verseReference = `${bookName} ${currentChapter} : ${verseNum}`;
+
+    // Set up the bottom sheet content
+    bottomSheet.innerHTML = `
+        <div class="verse-actions-backdrop"></div>
+        <div class="verse-actions-content">
+            <div class="grab-handle"></div>
+            <div class="verse-actions-header">
+                <div class="verse-reference">${verseReference}</div>
+                <button class="close-bottom-sheet" aria-label="Close">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="verse-actions-buttons">
+                <button class="verse-bottom-action copy-verse-action" data-verse="${verseNum}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                ${isAdmin() ? `
+                <button class="verse-bottom-action add-note-action" data-verse="${verseNum}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                    <span>Note</span>
+                </button>
+                ` : ''}
+                ${isAdmin() ? `
+                <button class="verse-bottom-action add-reference-action" data-verse="${verseNum}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                    <span>Reference</span>
+                </button>
+                ` : ''}
+                ${isAdmin() ? `
+                <button class="verse-bottom-action add-sermon-action" data-verse="${verseNum}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                    <span>Sermon</span>
+                </button>
+                ` : ''}
+                <button class="verse-bottom-action add-favorite-action" data-verse="${verseNum}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>Bookmark</span>
+                </button>
+                <button class="verse-bottom-action add-memory-action" data-verse="${verseNum}">
+                    <span class="memory-star-icon" style="font-size: 20px;">☆</span>
+                    <span>Memory</span>
+                </button>
+                <button class="verse-bottom-action share-verse-action" data-verse="${verseNum}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                    </svg>
+                    <span>Share</span>
+                </button>
+                ${isAdmin() ? `
+                <button class="verse-bottom-action pin-verse-action" data-verse="${verseNum}">
+                    <span class="pin-icon-emoji">✏️</span>
+                    <span>Pin</span>
+                </button>
+                ` : ''}
+            </div>
+            <div class="verse-actions-footer">
+                <button class="close-verse-selection-btn" aria-label="Close">Close</button>
+            </div>
+        </div>
+    `;
+
+    // Show the bottom sheet
+    bottomSheet.classList.add('visible');
+    document.body.classList.add('bottom-sheet-open');
+
+    // Add event listeners
+    const closeBtn = bottomSheet.querySelector('.close-bottom-sheet');
+    const closeBtnFooter = bottomSheet.querySelector('.close-verse-selection-btn');
+    const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
+
+    const closeBottomSheet = (e) => {
+        if (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
+        // Restore hidden buttons if color picker was active
+        const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
+        if (buttonsContainer) {
+            const hiddenButtons = buttonsContainer.querySelectorAll('.verse-bottom-action[style*="opacity: 0"]');
+            if (hiddenButtons.length > 0) {
+                hiddenButtons.forEach(btn => {
+                    btn.style.animation = '';
+                    btn.style.opacity = '1';
+                    btn.style.pointerEvents = 'auto';
+                });
+            }
+        }
+
+        bottomSheet.classList.remove('visible');
+        document.body.classList.remove('bottom-sheet-open');
+
+        // Deselect all verses when closing bottom sheet
+        const versesColumn = document.querySelector('.verses');
+        if (versesColumn) {
+            versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
+        }
+
+        const contentArea = document.querySelector('.scripture-text');
+        if (contentArea) {
+            contentArea.querySelectorAll('.verse-line').forEach(v => {
+                v.classList.remove('multi-highlighted');
+            });
+        }
+    };
+
+    closeBtn?.addEventListener('click', closeBottomSheet);
+    if (closeBtnFooter) {
+        closeBtnFooter.addEventListener('click', closeBottomSheet);
+    }
+    backdrop.addEventListener('click', closeBottomSheet);
+
+    // Setup scrollbar visibility for action buttons
+    const setupScrollbarVisibility = () => {
+        const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
+        if (!buttonsContainer) return;
+
+        let scrollbarTimeout;
+
+        const showScrollbar = () => {
+            buttonsContainer.classList.add('show-scrollbar');
+            clearTimeout(scrollbarTimeout);
+            scrollbarTimeout = setTimeout(() => {
+                buttonsContainer.classList.remove('show-scrollbar');
+            }, 500);
+        };
+
+        buttonsContainer.addEventListener('scroll', showScrollbar, { passive: true });
+    };
+
+    setupScrollbarVisibility();
+
+    // Copy verse button
+    bottomSheet.querySelector('.copy-verse-action').addEventListener('click', function () {
+        handleVersesCopy(this);
+
+        // Clear verse selection for single-verse copy
+        const versesColumn = document.querySelector('.verses-column');
+        if (versesColumn) {
+            versesColumn.querySelectorAll('.number-item.active').forEach(item => item.classList.remove('active'));
+        }
+    });
+
+    // Add note button (only if admin access enabled)
+    const noteBtn = bottomSheet.querySelector('.add-note-action');
+    if (noteBtn) {
+        noteBtn.addEventListener('click', () => {
+            openNotesModal(verseNum);
+            closeBottomSheet();
+        });
+    }
+
+    // Add reference button (only if admin access enabled)
+    const refBtn = bottomSheet.querySelector('.add-reference-action');
+    if (refBtn) {
+        refBtn.addEventListener('click', () => {
+            closeBottomSheet();
+            // Set the current verse for the reference dialog
+            currentAddRefVerseNum = verseNum;
+            openAddRefSheet();
+        });
+    }
+
+    // Add sermon button (only if admin access enabled)
+    const sermonBtn = bottomSheet.querySelector('.add-sermon-action');
+    if (sermonBtn) {
+        sermonBtn.addEventListener('click', () => {
+            closeBottomSheet();
+
+            // Get all selected verses from the verses column
+            const versesColumn = document.querySelector('.verses-column');
+            const selectedVerseElements = versesColumn.querySelectorAll('.number-item.active');
+            const selectedVerses = Array.from(selectedVerseElements).map(item => {
+                const verseNum = parseInt(item.dataset.verse);
+                return {
+                    book: bibleBooks[currentBook].name,
+                    chapter: currentChapter,
+                    verse: verseNum,
+                    display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
+                };
+            });
+
+            // If no verses are selected, add the current verse only
+            const versesToAdd = selectedVerses.length > 0 ? selectedVerses : [{
+                book: bibleBooks[currentBook].name,
+                chapter: currentChapter,
+                verse: verseNum,
+                display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
+            }];
+
+            // Show sermon selection sheet
+            showSermonSelectionSheet(versesToAdd);
+        });
+    }
+
+    // Add bookmark button
+    const bookmarkBtn = bottomSheet.querySelector('.add-favorite-action');
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+
+    // Check if verse has a color and update button appearance
+    if (verseNotes[noteKey] && verseNotes[noteKey].color) {
+        bookmarkBtn.classList.add('bookmarked');
+        const color = verseNotes[noteKey].color;
+        bookmarkBtn.setAttribute('data-bookmark-color', color);
+        // Set the bookmark color - will be updated when color picker is shown
+        const colorMap = {
+            'burgundy': '#78aaff',
+            'forest': '#e6c45a',
+            'navy': '#72e6a4',
+            'amber': '#ff8fc1',
+            'violet': '#ff9a54',
+            'teal': '#b38aff',
+            'rust': '#5ed0d9',
+            'olive': '#ff7a7a',
+            'indigo': '#b4c76f',
+            'slate': '#9d9d9d',
+            'yellow': '#78aaff',
+            'green': '#e6c45a'
+        };
+        const colorHex = colorMap[color] || '#d4a04c';
+        bookmarkBtn.style.setProperty('--bookmark-color', colorHex);
+    } else {
+        bookmarkBtn.classList.remove('bookmarked');
+        bookmarkBtn.removeAttribute('data-bookmark-color');
+    }
+
+    bookmarkBtn.addEventListener('click', async () => {
+        // If already bookmarked (has color), remove the bookmark
+        if (verseNotes[noteKey] && verseNotes[noteKey].color) {
+            const oldColor = verseNotes[noteKey].color;
+            verseNotes[noteKey].color = null;
+
+            // Remove the color highlight from the verse in the UI
+            const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+            if (verseLine) {
+                // Add fade out animation first
+                verseLine.style.animation = 'fadeOutHighlight 0.4s ease-out forwards';
+
+                // After animation, remove the classes
+                setTimeout(() => {
+                    verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green', 'note-blue', 'note-pink', 'note-orange', 'note-purple');
+
+                    // If no text, remove the note entirely and remove the has-note class
+                    if (!verseNotes[noteKey].text) {
+                        delete verseNotes[noteKey];
+                        verseLine.classList.remove('has-note', 'has-text');
+                    }
+
+                    // Clear animation after removal
+                    verseLine.style.animation = '';
+                }, 400);
+            }
+
+            bookmarkBtn.classList.remove('bookmarked');
+            bookmarkBtn.removeAttribute('data-bookmark-color');
+            bookmarkBtn.style.removeProperty('--bookmark-color');
+
+            // Save changes
+            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+            try {
+                // Delete bookmark from Supabase
+                const parts = noteKey.split('_');
+                if (parts.length === 3) {
+                    await fetch(
+                        `${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}?book_file=eq.${parts[0]}&chapter=eq.${parts[1]}&verse=eq.${parts[2]}`,
+                        {
+                            method: 'DELETE',
+                            headers: {
+                                'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                                'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                                'Content-Type': 'application/json'
+                            }
+                        }
+                    );
+                }
+            } catch (error) {
+            }
+        } else {
+            // Show color picker for new bookmark
+            showColorPickerForBookmark(verseNum, bookmarkBtn);
+        }
+    });
+
+    // Add memory verse button
+    // Add memory verse button with dynamic state
+    const memoryBtn = bottomSheet.querySelector('.add-memory-action');
+
+    // Function to update memory verse button appearance
+    const updateMemoryButtonAppearance = (isMemory) => {
+        const starIcon = memoryBtn.querySelector('.memory-star-icon');
+
+        if (isMemory) {
+            memoryBtn.classList.add('memory-verse-active');
+            // Show filled star emoji
+            if (starIcon) {
+                starIcon.textContent = '⭐';
+            }
+        } else {
+            memoryBtn.classList.remove('memory-verse-active');
+            // Show outline star
+            if (starIcon) {
+                starIcon.textContent = '☆';
+            }
+        }
+    };
+
+    // Check if this verse is a memory verse and update button appearance
+    const memoryVerseRef = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
+    const isMemory = isMemoryVerse(bibleBooks[currentBook].name, currentChapter, verseNum);
+    updateMemoryButtonAppearance(isMemory);
+
+    memoryBtn.addEventListener('click', async () => {
+        currentNoteVerse = verseNum;
+        await toggleMemoryVerse();
+
+        // Update button appearance after toggling
+        const isNowMemory = isMemoryVerse(bibleBooks[currentBook].name, currentChapter, verseNum);
+        updateMemoryButtonAppearance(isNowMemory);
+    });
+
+    // Share verse button
+    bottomSheet.querySelector('.share-verse-action').addEventListener('click', () => {
+        const book = bibleBooks[currentBook];
+        const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+        const verseText = document.querySelector(`.verse-line[data-verse="${verseNum}"]`)?.textContent || '';
+        const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
+        const shareText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
+
+        if (navigator.share) {
+            navigator.share({
+                title: `${bookName} ${currentChapter} : ${verseNum}`,
+                text: shareText
+            }).catch(() => {
+                // User cancelled share
+            });
+        } else {
+            // Fallback: copy to clipboard if share API not available
+            navigator.clipboard.writeText(shareText).then(() => {
+                showToast('Verse copied to clipboard!', 'success');
+                closeBottomSheet();
+            }).catch(() => {
+                showToast('Share not available on this device', 'error');
+            });
+        }
+    });
+
+    // Pin verse button
+    const pinBtn = bottomSheet.querySelector('.pin-verse-action');
+    if (pinBtn) {
+        // Check if verse is already pinned and update button appearance
+        const pinState = isPinnedInCurrentChapter(verseNum);
+        updatePinButtonAppearance(pinBtn, pinState);
+
+        pinBtn.addEventListener('click', () => {
+            const isCurrentlyPinned = isPinnedInCurrentChapter(verseNum);
+            if (isCurrentlyPinned) {
+                // Unpin verse
+                unpinVerseFromCurrentChapter(verseNum);
+                updatePinButtonAppearance(pinBtn, false);
+                showToast(`Verse unpinned`, 'info');
+            } else {
+                // Pin verse
+                pinVerse(verseNum);
+                updatePinButtonAppearance(pinBtn, true);
+                showToast(`Verse pinned`, 'success');
+            }
+            // Update pin button visibility
+            updatePinButtonBar();
+        });
+    }
+}
+
+// Show bottom sheet for multiple selected verses
+function showMultiVerseActionsBottomSheet(selectedVerses) {
+    // Create or get the bottom sheet modal
+    let bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (!bottomSheet) {
+        bottomSheet = document.createElement('div');
+        bottomSheet.id = 'verse-actions-bottom-sheet';
+        bottomSheet.className = 'verse-actions-bottom-sheet';
+        document.body.appendChild(bottomSheet);
+    }
+
+    // Build the verse reference (only book and chapter for multi-verse, no verse numbers)
+    const book = bibleBooks[currentBook];
+    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+    const verseReference = `${bookName} ${currentChapter}`;
+
+    // Set up the bottom sheet content with all actions
+    bottomSheet.innerHTML = `
+        <div class="verse-actions-backdrop"></div>
+        <div class="verse-actions-content">
+            <div class="grab-handle"></div>
+            <div class="verse-actions-header">
+                <div class="verse-reference">${verseReference}</div>
+                <button class="close-bottom-sheet" aria-label="Close">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="verse-actions-buttons">
+                <button class="verse-bottom-action copy-multi-verses-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                ${isAdmin() ? `
+                <button class="verse-bottom-action add-note-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                    <span>Note</span>
+                </button>
+                ` : ''}
+                ${isAdmin() ? `
+                <button class="verse-bottom-action add-sermon-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                    <span>Sermon</span>
+                </button>
+                ` : ''}
+                <button class="verse-bottom-action add-favorite-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>Bookmark</span>
+                </button>
+                <button class="verse-bottom-action add-memory-action">
+                    <span class="memory-star-icon" style="font-size: 20px;">☆</span>
+                    <span>Memory</span>
+                </button>
+                <button class="verse-bottom-action share-verses-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                    </svg>
+                    <span>Share</span>
+                </button>
+                <button class="verse-bottom-action pin-multi-verses-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L8 6L8 14C8 18.4 10 20 12 21C14 20 16 18.4 16 14L16 6L12 2Z"></path>
+                        <line x1="12" y1="6" x2="12" y2="13"></line>
+                    </svg>
+                    <span>Pin</span>
+                </button>
+            </div>
+        </div>
+    `;
+
+    // Show the bottom sheet
+    bottomSheet.classList.add('visible');
+    document.body.classList.add('bottom-sheet-open');
+
+    // Add event listeners
+    const closeBtn = bottomSheet.querySelector('.close-bottom-sheet');
+    const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
+
+    const closeBottomSheet = (e) => {
+        if (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
+        bottomSheet.classList.remove('visible');
+        document.body.classList.remove('bottom-sheet-open');
+
+        // Deselect all verses when closing bottom sheet
+        const versesColumn = document.querySelector('.verses');
+        if (versesColumn) {
+            versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
+        }
+
+        const contentArea = document.querySelector('.scripture-text');
+        if (contentArea) {
+            contentArea.querySelectorAll('.verse-line').forEach(v => {
+                v.classList.remove('multi-highlighted');
+            });
+        }
+    };
+
+    closeBtn.addEventListener('click', closeBottomSheet);
+    backdrop.addEventListener('click', closeBottomSheet);
+
+    // Setup scrollbar visibility for action buttons
+    const setupScrollbarVisibility = () => {
+        const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
+        if (!buttonsContainer) return;
+
+        let scrollbarTimeout;
+
+        const showScrollbar = () => {
+            buttonsContainer.classList.add('show-scrollbar');
+            clearTimeout(scrollbarTimeout);
+            scrollbarTimeout = setTimeout(() => {
+                buttonsContainer.classList.remove('show-scrollbar');
+            }, 500);
+        };
+
+        buttonsContainer.addEventListener('scroll', showScrollbar, { passive: true });
+    };
+
+    setupScrollbarVisibility();
+
+    // Copy multiple verses button
+    const copyBtn = bottomSheet.querySelector('.copy-multi-verses-action');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', function () {
+            handleVersesCopy(this);
+        });
+    }
+
+    // Add note button
+    const noteBtn = bottomSheet.querySelector('.add-note-action');
+    if (noteBtn) {
+        // Disable for multi-verse
+        noteBtn.disabled = true;
+        noteBtn.style.opacity = '0.5';
+        noteBtn.style.cursor = 'not-allowed';
+        noteBtn.addEventListener('click', () => {
+            // For multi-verse, open note for first verse
+            currentNoteVerse = selectedVerses[0];
+            openNotesModal(selectedVerses[0]);
+            closeBottomSheet();
+        });
+    }
+
+    // Add memory verse button
+    const memoryBtn = bottomSheet.querySelector('.add-memory-action');
+    if (memoryBtn) {
+        // Disable for multi-verse - show as active/filled star
+        memoryBtn.disabled = true;
+        memoryBtn.style.opacity = '0.5';
+        memoryBtn.style.cursor = 'not-allowed';
+
+        // Update to show filled star emoji (active state)
+        const starIcon = memoryBtn.querySelector('.memory-star-icon');
+        if (starIcon) {
+            starIcon.textContent = '⭐';
+        }
+
+        memoryBtn.addEventListener('click', async () => {
+            // For multi-verse, toggle memory for first verse
+            currentNoteVerse = selectedVerses[0];
+            await toggleMemoryVerse();
+            closeBottomSheet();
+        });
+    }
+
+    // Add sermon button (only if admin access enabled)
+    const multiSermonBtn = bottomSheet.querySelector('.add-sermon-action');
+    if (multiSermonBtn) {
+        multiSermonBtn.addEventListener('click', () => {
+            closeBottomSheet();
+
+            // For multi-select, use the selectedVerses array
+            const versesToAdd = selectedVerses.map(verseNum => ({
+                book: bibleBooks[currentBook].name,
+                chapter: currentChapter,
+                verse: verseNum,
+                display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
+            }));
+
+            // Show sermon selection sheet
+            showSermonSelectionSheet(versesToAdd);
+        });
+    }
+
+    // Add bookmark button (color picker for all selected verses)
+    const bookmarkBtn = bottomSheet.querySelector('.add-favorite-action');
+    const firstVerse = selectedVerses[0];
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${firstVerse}`;
+
+    // Check if first verse has a color
+    if (verseNotes[noteKey] && verseNotes[noteKey].color) {
+        bookmarkBtn.classList.add('bookmarked');
+    }
+
+    bookmarkBtn.addEventListener('click', async () => {
+        showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn);
+    });
+
+    // Share button
+    const shareBtn = bottomSheet.querySelector('.share-verses-action');
+    if (shareBtn) {
+        shareBtn.addEventListener('click', () => {
+            const book = bibleBooks[currentBook];
+            const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+
+            // Get all highlighted verses from the text area
+            const contentArea = document.querySelector('.scripture-text');
+            const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.highlighted'));
+
+            let shareText = '';
+            highlightedVerses.forEach(verseLine => {
+                const verseText = verseLine.textContent || '';
+                const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
+                shareText += `${cleanVerseText}\n`;
+            });
+            shareText += `\n${bookName} ${currentChapter}`;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: `${bookName} ${currentChapter}`,
+                    text: shareText
+                }).catch(() => {
+                    // User cancelled share
+                });
+            } else {
+                navigator.clipboard.writeText(shareText).then(() => {
+                    showToast('Verses copied to clipboard!', 'success');
+                    closeBottomSheet();
+                }).catch(() => {
+                    showToast('Share not available on this device', 'error');
+                });
+            }
+        });
+    }
+
+    // Pin button for multiple verses
+    const pinBtn = bottomSheet.querySelector('.pin-multi-verses-action');
+    if (pinBtn) {
+        pinBtn.addEventListener('click', () => {
+            // Pin all selected verses
+            selectedVerses.forEach(verseNum => {
+                pinVerse(verseNum);
+            });
+            showToast(`${selectedVerses.length} verse${selectedVerses.length > 1 ? 's' : ''} pinned`, 'success');
+            updatePinButtonBar();
+        });
+    }
+}
+
+// Show color picker for multiple bookmark selection
+async function showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn) {
+    // Open bookmark color picker bottom sheet
+    const overlay = document.getElementById('bookmark-color-picker-overlay');
+    const sheet = document.querySelector('.bookmark-color-picker-sheet');
+
+    if (!overlay || !sheet) return;
+
+    // Show the overlay and sheet
+    overlay.classList.add('active');
+    sheet.classList.add('visible');
+    sheet.classList.remove('closing');
+
+    // Set up color option click handlers
+    const colorOptions = sheet.querySelectorAll('.bookmark-color-option');
+
+    // Remove and re-add event listeners to prevent duplicates
+    colorOptions.forEach(option => {
+        const newOption = option.cloneNode(true);
+        option.parentNode.replaceChild(newOption, option);
+    });
+
+    // Re-query after replacing nodes
+    const updatedColorOptions = sheet.querySelectorAll('.bookmark-color-option');
+
+    // Add click handlers
+    updatedColorOptions.forEach(colorBtn => {
+        colorBtn.addEventListener('click', async (e) => {
+            e.stopPropagation();
+            const selectedColor = colorBtn.dataset.color;
+
+            // Update selected state
+            updatedColorOptions.forEach(option => {
+                option.classList.remove('selected');
+            });
+            colorBtn.classList.add('selected');
+
+            // Update all selected verses with the color
+            for (const verseNum of selectedVerses) {
+                const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+
+                // Create or update note entry
+                if (!verseNotes[noteKey]) {
+                    verseNotes[noteKey] = {
+                        text: '',
+                        color: selectedColor,
+                        book: bibleBooks[currentBook].name,
+                        chapter: currentChapter,
+                        verse: verseNum,
+                        timestamp: new Date().toISOString()
+                    };
+                } else {
+                    // Update existing note with new color
+                    verseNotes[noteKey].color = selectedColor;
+                }
+
+                // Update UI
+                const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+                if (verseLine) {
+                    // Remove all existing note color classes
+                    const colorClasses = Array.from(verseLine.classList).filter(cls => cls.startsWith('note-'));
+                    colorClasses.forEach(cls => verseLine.classList.remove(cls));
+
+                    // Add has-note and new color class
+                    verseLine.classList.add('has-note', `note-${selectedColor}`);
+
+                    // Apply fade-in animation
+                    verseLine.style.animation = 'fadeInHighlight 0.4s ease-out forwards';
+                }
+            }
+
+            // Save all changes to localStorage and Supabase
+            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+            try {
+                await saveNotesToSupabase();
+            } catch (error) {
+            }
+
+            // Update bookmark button appearance
+            bookmarkBtn.classList.add('bookmarked');
+
+            // Close the bottom sheet after selection
+            setTimeout(() => {
+                closeBookmarkColorPicker();
+            }, 300);
+        });
+    });
+
+    // Initialize drag-to-close gestures
+    initializeBookmarkColorPickerGestures();
+}
+
+// Update single verse bottom sheet in place
+function updateSingleVerseActionsBottomSheet(verseNum) {
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (!bottomSheet) return;
+
+    const book = bibleBooks[currentBook];
+    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+    const verseReference = `${bookName} ${currentChapter} : ${verseNum}`;
+
+    // Update only the header and reference
+    const headerRef = bottomSheet.querySelector('.verse-reference');
+    if (headerRef) {
+        headerRef.textContent = verseReference;
+    }
+
+    // Enable note button for single verse
+    const noteBtn = bottomSheet.querySelector('.add-note-action');
+    if (noteBtn) {
+        noteBtn.disabled = false;
+        noteBtn.style.opacity = '1';
+        noteBtn.style.cursor = 'pointer';
+    }
+
+    // Enable memory button for single verse
+    const memoryBtn = bottomSheet.querySelector('.add-memory-action');
+    if (memoryBtn) {
+        memoryBtn.disabled = false;
+        memoryBtn.style.opacity = '1';
+        memoryBtn.style.cursor = 'pointer';
+    }
+}
+
+// Update multi-verse bottom sheet in place
+function updateMultiVerseActionsBottomSheet(selectedVerses) {
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (!bottomSheet) return;
+
+    const book = bibleBooks[currentBook];
+    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+    const verseReference = `${bookName} ${currentChapter}`;
+
+    // Update only the header and reference
+    const headerRef = bottomSheet.querySelector('.verse-reference');
+    if (headerRef) {
+        headerRef.textContent = verseReference;
+    }
+
+    // Disable note button for multi-verse
+    const noteBtn = bottomSheet.querySelector('.add-note-action');
+    if (noteBtn) {
+        noteBtn.disabled = true;
+        noteBtn.style.opacity = '0.5';
+        noteBtn.style.cursor = 'not-allowed';
+    }
+
+    // Disable memory button for multi-verse
+    const memoryBtn = bottomSheet.querySelector('.add-memory-action');
+    if (memoryBtn) {
+        memoryBtn.disabled = true;
+        memoryBtn.style.opacity = '0.5';
+        memoryBtn.style.cursor = 'not-allowed';
+    }
+}
+
+// Update verse line highlighting based on selected verses
+function updateVerseHighlighting(selectedVerses) {
+    // Only highlight verses if bottom sheet is open
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (!bottomSheet || !bottomSheet.classList.contains('visible')) {
+        return;
+    }
+
+    const contentArea = document.querySelector('.scripture-text');
+    if (!contentArea) return;
+
+    // Remove highlighted class from all verses
+    contentArea.querySelectorAll('.verse-line').forEach(v => {
+        if (v.classList.contains('multi-highlighted')) {
+            v.classList.remove('multi-highlighted');
+            v.style.backgroundColor = '';
+        }
+    });
+    contentArea.querySelectorAll('.verse-container').forEach(v => {
+        if (v.classList.contains('multi-highlighted')) {
+            v.classList.remove('multi-highlighted');
+            v.style.backgroundColor = '';
+        }
+    });
+
+    // Add multi-highlighted class to all selected verses
+    selectedVerses.forEach(verseNum => {
+        const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+        if (verseLine) {
+            verseLine.classList.add('multi-highlighted');
+        }
+    });
+}
+
+// Scroll to specific verse
+function scrollToVerse(verseNum) {
+    const contentArea = document.querySelector('.scripture-text');
+    const contentAreaContainer = document.querySelector('.content-area');
+
+    // Don't add highlight here - let the click handlers manage highlighting
+    // Just scroll to the verse
+
+    const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+    if (verseLine) {
+        // Use scrollIntoView for proper scrolling behavior
+        // block: 'center' will center the verse in the viewport
+        verseLine.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    } else {
+        // Verse doesn't exist in this chapter - silently ignore
+    }
+}
+// Navigation buttons
+document.addEventListener('click', (e) => {
+    // Close popup-info-bottom-sheet when clicking outside
+    const popupSheet = document.getElementById('popup-info-bottom-sheet');
+    if (popupSheet && popupSheet.classList.contains('visible')) {
+        const content = popupSheet.querySelector('.verse-actions-content');
+        if (content && !content.contains(e.target)) {
+            popupSheet.classList.remove('visible');
+            document.body.classList.remove('bottom-sheet-open');
+        }
+    }
+
+    // Current chapter text - open drawer on mobile
+    if (e.target.closest('.current-chapter')) {
+        if (window.innerWidth <= 768) {
+            const drawerOverlay = document.querySelector('.drawer-overlay');
+            const booksSidebar = document.querySelector('.books-sidebar');
+            const chaptersColumn = document.querySelector('.chapters-column');
+            const versesColumn = document.querySelector('.verses-column');
+            const menuBtn = document.querySelector('.mobile-only');
+            drawerOverlay.classList.add('active');
+            // Use new selector if enabled
+            if (localStorage.getItem('selectorStyle') === 'new' && typeof openBibleSelectorNew === 'function') {
+                openBibleSelectorNew();
+            } else {
+                booksSidebar.classList.add('drawer-open');
+                chaptersColumn.classList.add('drawer-open');
+                versesColumn.classList.add('drawer-open');
+            }
+            menuBtn.classList.add('drawer-active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    // Previous chapter (disabled if note viewer is open)
+    if (e.target.closest('.nav-btn[aria-label="Previous"]')) {
+        const noteViewerPopup = document.getElementById('note-viewer-popup');
+        if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
+            return; // Don't navigate if note viewer is open
+        }
+
+        // If viewing intro, go to last chapter of previous book
+        if (window.isViewingIntro) {
+            if (currentBook > 0) {
+                currentBook--;
+                currentChapter = bibleBooks[currentBook].chapters;
+                loadBook(currentBook, currentChapter).then(() => {
+                    refreshOpenSummaryDrawer();
+                    setTimeout(() => {
+                        const contentArea = document.querySelector('.content-area');
+                        if (contentArea) {
+                            contentArea.scrollTop = 0;
+                        }
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 300);
+                });
+            }
+        } else if (currentChapter > 1) {
+            currentChapter--;
+            localStorage.setItem('currentChapter', currentChapter);
+            updateUI();
+            refreshOpenSummaryDrawer();
+            setTimeout(() => {
+                const contentArea = document.querySelector('.content-area');
+                if (contentArea) {
+                    contentArea.scrollTop = 0;
+                }
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 300);
+        } else if (currentChapter === 1) {
+            // At chapter 1, check if current book has intro
+            const book = bibleBooks[currentBook];
+            const bookName = book.name;
+            const hasIntro = bookIntroductions && bookIntroductions[bookName] && bookIntroductions[bookName].trim() !== '';
+
+            if (hasIntro) {
+                // Go to current book's introduction
+                displayBookIntro();
+                refreshOpenSummaryDrawer();
+                setTimeout(() => {
+                    const contentArea = document.querySelector('.content-area');
+                    if (contentArea) {
+                        contentArea.scrollTop = 0;
+                    }
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 300);
+            } else if (currentBook > 0) {
+                // No intro, go to previous book's last chapter
+                currentBook--;
+                currentChapter = bibleBooks[currentBook].chapters;
+                loadBook(currentBook, currentChapter).then(() => {
+                    refreshOpenSummaryDrawer();
+                    setTimeout(() => {
+                        const contentArea = document.querySelector('.content-area');
+                        if (contentArea) {
+                            contentArea.scrollTop = 0;
+                        }
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 300);
+                });
+            }
+        }
+    }
+    // Next chapter (disabled if note viewer is open)
+    if (e.target.closest('.nav-btn[aria-label="Next"]')) {
+        const noteViewerPopup = document.getElementById('note-viewer-popup');
+        if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
+            return; // Don't navigate if note viewer is open
+        }
+
+        // If viewing intro, go to first chapter of current book
+        if (window.isViewingIntro) {
+            currentChapter = 1;
+            localStorage.setItem('currentChapter', currentChapter);
+            updateUI();
+            refreshOpenSummaryDrawer();
+            setTimeout(() => {
+                const contentArea = document.querySelector('.content-area');
+                if (contentArea) {
+                    contentArea.scrollTop = 0;
+                }
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 300);
+        } else {
+            const book = bibleBooks[currentBook];
+            if (currentChapter < book.chapters) {
+                currentChapter++;
+                localStorage.setItem('currentChapter', currentChapter);
+                updateUI();
+                refreshOpenSummaryDrawer();
+                setTimeout(() => {
+                    const contentArea = document.querySelector('.content-area');
+                    if (contentArea) {
+                        contentArea.scrollTop = 0;
+                    }
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 300);
+            } else if (currentBook < bibleBooks.length - 1) {
+                // At last chapter, go to next book's introduction
+                currentBook++;
+                const nextBook = bibleBooks[currentBook];
+                const nextBookName = nextBook.name;
+
+                // Check if next book has an intro
+                const hasIntro = bookIntroductions && bookIntroductions[nextBookName] && bookIntroductions[nextBookName].trim() !== '';
+
+                if (hasIntro) {
+                    // Load the book and display its introduction
+                    currentChapter = 1; // Set to chapter 1 for loading purposes
+                    loadBook(currentBook, currentChapter).then(() => {
+                        displayBookIntro();
+                        refreshOpenSummaryDrawer();
+                        setTimeout(() => {
+                            const contentArea = document.querySelector('.content-area');
+                            if (contentArea) {
+                                contentArea.scrollTop = 0;
+                            }
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }, 300);
+                    });
+                } else {
+                    // No intro, go to chapter 1
+                    currentChapter = 1;
+                    loadBook(currentBook, currentChapter).then(() => {
+                        refreshOpenSummaryDrawer();
+                        setTimeout(() => {
+                            const contentArea = document.querySelector('.content-area');
+                            if (contentArea) {
+                                contentArea.scrollTop = 0;
+                            }
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }, 300);
+                    });
+                }
+            }
+        }
+    }
+});
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    // Disable arrow key navigation if note viewer or notes editor is open
+    const noteViewerPopup = document.getElementById('note-viewer-popup');
+    const notesModal = document.getElementById('notes-modal');
+
+    // Check if note viewer popup is open
+    if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
+        return; // Don't navigate if note viewer is open
+    }
+
+    // Check if notes editing modal is open
+    if (notesModal && notesModal.classList.contains('visible')) {
+        return; // Don't navigate if notes editor is open
+    }
+
+    // Check if notes-textarea is focused
+    const notesTextarea = document.getElementById('notes-textarea');
+    if (notesTextarea && document.activeElement === notesTextarea) {
+        return; // Don't navigate if notes-textarea is focused
+    }
+
+    if (e.key === 'ArrowLeft') {
+        document.querySelector('.nav-btn[aria-label="Previous"]').click();
+    } else if (e.key === 'ArrowRight') {
+        document.querySelector('.nav-btn[aria-label="Next"]').click();
+    }
+});
+// Auto-hide scrollbar after 1 second of inactivity
+function initializeScrollbar() {
+    const scrollableElements = [
+        document.querySelector('.books-sidebar'),
+        document.querySelector('.chapters-column'),
+        document.querySelector('.verses-column'),
+        document.querySelector('.content-area')
+    ];
+    scrollableElements.forEach(element => {
+        if (element) {
+            let scrollTimeout;
+            element.addEventListener('scroll', function () {
+                this.classList.add('scrolling');
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    this.classList.remove('scrolling');
+                }, 1000);
+            });
+            element.addEventListener('mouseenter', function () {
+                clearTimeout(scrollTimeout);
+            });
+            element.addEventListener('mouseleave', function () {
+                scrollTimeout = setTimeout(() => {
+                    this.classList.remove('scrolling');
+                }, 1000);
+            });
+        }
+    });
+}
+
+// Helper function to close bottom sheet
+function closeBottomSheet() {
+    const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
+    const popupInfoSheet = document.getElementById('popup-info-bottom-sheet');
+
+    if (verseActionsSheet && verseActionsSheet.classList.contains('visible')) {
+        verseActionsSheet.classList.remove('visible');
+    }
+
+    if (popupInfoSheet && popupInfoSheet.classList.contains('visible')) {
+        popupInfoSheet.classList.remove('visible');
+    }
+
+    if ((verseActionsSheet && verseActionsSheet.classList.contains('visible')) || (popupInfoSheet && popupInfoSheet.classList.contains('visible'))) {
+        // If still visible in one of them, keep body flag; otherwise remove.
+    } else {
+        document.body.classList.remove('bottom-sheet-open');
+    }
+}
+
+// Dark theme toggle with animation
+function initializeTheme() {
+    const themeToggle = document.querySelector('.theme-toggle');
+    const drawerThemeToggle = document.querySelector('.drawer-theme-toggle');
+    const hasVisited = localStorage.getItem('hasVisited');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    // Function to update meta theme colors
+    function updateMetaTheme(isDark) {
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute('content', isDark ? '#1e1f22' : '#ffffff');
+        }
+        if (metaColorScheme) {
+            metaColorScheme.setAttribute('content', isDark ? 'dark' : 'light');
+        }
+    }
+
+    // On first visit, keep light theme as default
+    if (!hasVisited) {
+        // Apply light theme
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+        updateMetaTheme(false);
+        localStorage.setItem('hasVisited', 'true');
+    } else {
+        // On subsequent visits, apply saved theme
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+            updateMetaTheme(true);
+        } else {
+            document.body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+            updateMetaTheme(false);
+        }
+    }
+    async function toggleTheme(event) {
+        const clickedButton = event.currentTarget;
+        // Check if View Transition API is supported and user doesn't prefer reduced motion
+        if (
+            !document.startViewTransition ||
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ) {
+            // Fallback: toggle without animation
+            document.body.classList.toggle('dark-theme');
+            const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+            // Update theme color meta tags
+            const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+            const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+            if (metaThemeColor) {
+                metaThemeColor.setAttribute('content', theme === 'dark' ? '#1e1f22' : '#ffffff');
+            }
+            if (metaColorScheme) {
+                metaColorScheme.setAttribute('content', theme);
+            }
+            return;
+        }
+        // Start view transition
+        const transition = document.startViewTransition(() => {
+            document.body.classList.toggle('dark-theme');
+            const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+            // Update theme color meta tags
+            const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+            const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+            if (metaThemeColor) {
+                metaThemeColor.setAttribute('content', theme === 'dark' ? '#1e1f22' : '#ffffff');
+            }
+            if (metaColorScheme) {
+                metaColorScheme.setAttribute('content', theme);
+            }
+        });
+        // Wait for transition to be ready
+        await transition.ready;
+        // Get button position for circular reveal effect
+        const { top, left, width, height } = clickedButton.getBoundingClientRect();
+        const x = left + width / 2;
+        const y = top + height / 2;
+        const right = window.innerWidth - left;
+        const bottom = window.innerHeight - top;
+        const maxRadius = Math.hypot(
+            Math.max(left, right),
+            Math.max(top, bottom)
+        );
+        // Animate the circular reveal
+        const isMobile = window.innerWidth <= 768;
+        document.documentElement.animate(
+            {
+                clipPath: [
+                    `circle(0px at ${x}px ${y}px)`,
+                    `circle(${maxRadius}px at ${x}px ${y}px)`
+                ]
+            },
+            {
+                duration: isMobile ? 260 : 500,
+                easing: 'ease-in-out',
+                pseudoElement: '::view-transition-new(root)'
+            }
+        );
+    }
+    if (themeToggle) {
+        themeToggle.addEventListener('click', (event) => {
+            closeBottomSheet();
+            toggleTheme(event);
+        });
+    }
+    if (drawerThemeToggle) {
+        drawerThemeToggle.addEventListener('click', (event) => {
+            closeBottomSheet();
+            toggleTheme(event);
+        });
+    }
+}
+// Initialize mobile language modal
+function initializeMobileLanguageModal() {
+    const langBtn = document.querySelector('.lang-btn');
+    const modalOverlay = document.querySelector('.language-modal-overlay');
+    const modalCloseBtn = document.querySelector('.modal-close-btn');
+    const modalOptions = document.querySelectorAll('.language-modal-option');
+    const colorPaletteSection = document.querySelector('.color-palette-section');
+    const colorOptions = document.querySelectorAll('.color-option');
+    const languageBottomSheetOverlay = document.getElementById('language-bottom-sheet-overlay');
+    const sheetOptions = document.querySelectorAll('.language-sheet-option');
+    const sheetColorPalette = document.getElementById('language-sheet-color-palette');
+    const sheetColorOptions = document.querySelectorAll('.language-sheet-color-option');
+
+    if (!langBtn || !modalOverlay) return;
+
+    // Ensure currentLanguage is properly initialized
+    if (!currentLanguage || !['english', 'tamil', 'both'].includes(currentLanguage)) {
+        currentLanguage = 'tamil';
+        localStorage.setItem('currentLanguage', 'tamil');
+    }
+
+    // Ensure englishTextColor is properly initialized
+    if (!englishTextColor || !['default', 'blue', 'red'].includes(englishTextColor)) {
+        englishTextColor = 'default';
+        localStorage.setItem('englishTextColor', 'default');
+    }
+
+    // Check if mobile
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    // Update active state based on current language
+    function updateModalActiveState() {
+        modalOptions.forEach(option => {
+            if (option.dataset.lang === currentLanguage) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
+        // Show/hide color palette based on 'both' selection
+        if (currentLanguage === 'both') {
+            colorPaletteSection.classList.add('visible');
+        } else {
+            colorPaletteSection.classList.remove('visible');
+        }
+    }
+
+    // Update sheet active state
+    function updateSheetActiveState() {
+        sheetOptions.forEach(option => {
+            if (option.dataset.lang === currentLanguage) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
+        // Show/hide color palette based on 'both' selection
+        if (currentLanguage === 'both') {
+            sheetColorPalette.style.display = 'block';
+        } else {
+            sheetColorPalette.style.display = 'none';
+        }
+    }
+
+    // Update sheet color active state
+    function updateSheetColorActiveState() {
+        sheetColorOptions.forEach(option => {
+            if (option.dataset.color === englishTextColor) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
+    }
+
+    // Update color option active state
+    function updateColorActiveState() {
+        colorOptions.forEach(option => {
+            if (option.dataset.color === englishTextColor) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
+    }
+    // Open modal/sheet based on device
+    langBtn.addEventListener('click', (e) => {
+        closeBottomSheet();
+        e.stopPropagation();
+
+        if (isMobile()) {
+            // Mobile: Show bottom sheet
+            updateSheetActiveState();
+            updateSheetColorActiveState();
+            openLanguageSheet();
+        } else {
+            // Desktop: Show modal
+            updateModalActiveState();
+            updateColorActiveState();
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    // Close modal
+    function closeModal() {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Close bottom sheet
+    function closeLanguageSheet() {
+        languageBottomSheetOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    modalCloseBtn.addEventListener('click', closeModal);
+
+    // Close when clicking overlay
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            closeModal();
+        }
+    });
+
+    // Language bottom sheet variables
+    const languageBackdrop = document.getElementById('language-bottom-sheet-overlay');
+    const languageBottomSheet = document.getElementById('language-bottom-sheet');
+
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+    let startScrollTop = 0;
+    let velocityY = 0;
+    let lastY = 0;
+    let lastTime = 0;
+
+    function openLanguageSheet() {
+        languageBackdrop.classList.add('active');
+        languageBottomSheet.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLanguageSheet() {
+        languageBackdrop.classList.remove('active');
+        languageBottomSheet.classList.remove('active');
+        document.body.style.overflow = '';
+
+        // Clear inline transform after transition completes
+        setTimeout(() => {
+            languageBottomSheet.style.transform = '';
+        }, 300); // Match the 0.3s transition duration
+    }
+
+    function handleStart(clientY) {
+        const scrollTop = languageBottomSheet.scrollTop;
+
+        // Only allow dragging if at the top of scroll
+        if (scrollTop > 5) {
+            isDragging = false;
+            return;
+        }
+
+        isDragging = true;
+        startY = clientY;
+        currentY = 0;
+        startScrollTop = scrollTop;
+        lastY = clientY;
+        lastTime = Date.now();
+        velocityY = 0;
+
+        languageBottomSheet.classList.add('dragging');
+    }
+
+    function handleMove(clientY) {
+        if (!isDragging) return;
+
+        const deltaY = clientY - startY;
+        const scrollTop = languageBottomSheet.scrollTop;
+        const scrollChanged = scrollTop !== startScrollTop;
+
+        // Calculate velocity
+        const now = Date.now();
+        const timeDiff = now - lastTime;
+        if (timeDiff > 0) {
+            velocityY = (clientY - lastY) / timeDiff;
+            lastY = clientY;
+            lastTime = now;
+        }
+
+        // If content scrolled (scroll position changed), stop dragging
+        if (scrollChanged) {
+            isDragging = false;
+            languageBottomSheet.classList.remove('dragging');
+            return;
+        }
+
+        // If content is scrolled down, allow normal scrolling
+        if (scrollTop > 5) {
+            isDragging = false;
+            languageBottomSheet.classList.remove('dragging');
+            return;
+        }
+
+        // If trying to drag up when at top, allow content to scroll
+        if (deltaY < 0) {
+            isDragging = false;
+            languageBottomSheet.classList.remove('dragging');
+            return;
+        }
+
+        // Move sheet down only when at top and dragging down
+        currentY = deltaY;
+        languageBottomSheet.style.transform = `translateY(${currentY}px)`;
+    }
+
+    function handleEnd() {
+        if (!isDragging) return;
+
+        isDragging = false;
+        languageBottomSheet.classList.remove('dragging');
+
+        // Close if dragged down enough or velocity is high
+        const shouldClose = currentY > 150 || velocityY > 0.3;
+
+        if (shouldClose) {
+            closeLanguageSheet();
+        } else {
+            languageBottomSheet.style.transform = '';
+        }
+    }
+
+    // Touch events
+    if (languageBottomSheet) {
+        languageBottomSheet.addEventListener('touchstart', (e) => {
+            handleStart(e.touches[0].clientY);
+        }, { passive: true });
+
+        languageBottomSheet.addEventListener('touchmove', (e) => {
+            const scrollTop = languageBottomSheet.scrollTop;
+            const deltaY = e.touches[0].clientY - startY;
+
+            // Only prevent default when actually dragging the sheet (at top and dragging down)
+            if (isDragging && scrollTop <= 5 && deltaY > 0) {
+                e.preventDefault();
+            }
+            handleMove(e.touches[0].clientY);
+        }, { passive: false });
+
+        languageBottomSheet.addEventListener('touchend', () => {
+            handleEnd();
+        });
+
+        // Mouse events
+        languageBottomSheet.addEventListener('mousedown', (e) => {
+            handleStart(e.clientY);
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                e.preventDefault();
+                handleMove(e.clientY);
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isDragging) {
+                handleEnd();
+            }
+        });
+    }
+
+    // Close sheet when clicking backdrop
+    languageBackdrop.addEventListener('click', (e) => {
+        if (e.target === languageBackdrop) {
+            closeLanguageSheet();
+        }
+    });
+
+    // Handle language selection from modal
+    modalOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const selectedLang = option.dataset.lang;
+            currentLanguage = selectedLang;
+            localStorage.setItem('currentLanguage', selectedLang);
+            // Update active state
+            updateModalActiveState();
+            // Close modal and reload for all language selections
+            // Color palette shows but doesn't block - user can close modal anytime
+            updateBookNames();
+            // If 'both' is selected and color already chosen, close immediately
+            if (selectedLang === 'both' && localStorage.getItem('englishTextColor')) {
+                closeModal();
+                loadBook(currentBook, currentChapter);
+            } else if (selectedLang !== 'both') {
+                closeModal();
+                loadBook(currentBook, currentChapter);
+            }
+            // If 'both' selected but no color chosen yet, keep modal open for first-time selection
+        });
+    });
+
+    // Handle language selection from bottom sheet (mobile)
+    sheetOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const selectedLang = option.dataset.lang;
+            currentLanguage = selectedLang;
+            localStorage.setItem('currentLanguage', selectedLang);
+
+            // Update active state
+            updateSheetActiveState();
+            updateBookNames();
+
+            // If 'both' is selected, show color palette and don't close
+            if (selectedLang === 'both') {
+                // Wait for animation to complete
+                return;
+            }
+
+            // For other languages, close sheet and reload
+            closeLanguageSheet();
+            loadBook(currentBook, currentChapter);
+        });
+    });
+
+    // Handle color selection in bottom sheet
+    sheetColorOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const selectedColor = option.dataset.color;
+            englishTextColor = selectedColor;
+            localStorage.setItem('englishTextColor', selectedColor);
+
+            // Update active state
+            updateSheetColorActiveState();
+            updateBookNames();
+
+            // Close sheet and reload
+            closeLanguageSheet();
+            loadBook(currentBook, currentChapter);
+        });
+    });
+
+    // Handle color selection
+    colorOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const selectedColor = option.dataset.color;
+            englishTextColor = selectedColor;
+            localStorage.setItem('englishTextColor', selectedColor);
+            // Update active state
+            updateColorActiveState();
+            // Update book names in sidebar
+            updateBookNames();
+            // Close modal
+            closeModal();
+            // Reload current book with new color
+            loadBook(currentBook, currentChapter);
+        });
+    });
+    // Initialize active states
+    updateModalActiveState();
+    updateColorActiveState();
+}
+
+// Language Bottom Sheet (Mobile Only)
+// Search functionality
+function initializeSearch() {
+    const searchBtn = document.getElementById('search-btn');
+    const searchBtnMobile = document.getElementById('search-btn-mobile');
+    const backBtn = document.getElementById('back-from-search');
+    const clearBtn = document.getElementById('clear-search');
+    const filterBtn = document.getElementById('filter-btn');
+    const closeFilterBtn = document.getElementById('close-filter');
+    const applyFilterBtn = document.getElementById('apply-filter');
+    const clearFilterBtn = document.getElementById('clear-filter');
+    const searchBar = document.getElementById('search-bar');
+    const advancedFilter = document.getElementById('advanced-filter');
+    const filterBook = document.getElementById('filter-book');
+    const filterChapter = document.getElementById('filter-chapter');
+    const scriptureText = document.getElementById('scripture-text');
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchResultsInfo = document.getElementById('search-results-info');
+    const resultsCount = document.getElementById('results-count');
+    let searchTimeout = null;
+    let saveRecentTimeout = null;
+    const MIN_SEARCH_LENGTH = 3; // Avoid overly short partial matches and reduce flicker
+
+    // Default suggestions (if no recent searches)
+    const defaultSuggestions = [
+        'Abraham',
+        'Jesus',
+        'Mighty',
+        'அப்பம்',
+        'தேவாலய'
+    ];
+
+    // Get recent searches from localStorage
+    function getRecentSearches() {
+        try {
+            const recent = localStorage.getItem('recentSearches');
+            return recent ? JSON.parse(recent) : [];
+        } catch (e) {
+            return [];
+        }
+    }
+
+    // Save recent searches to localStorage
+    function saveRecentSearch(term) {
+        term = term.trim();
+        if (term.length < MIN_SEARCH_LENGTH) {
+            return; // Prevent short tokens like J, Je from being saved
+        }
+        try {
+            const recent = getRecentSearches();
+            // Remove duplicates and add new term at the beginning
+            const filtered = recent.filter(s => s !== term);
+            const updated = [term, ...filtered].slice(0, 5); // Keep only top 5
+            localStorage.setItem('recentSearches', JSON.stringify(updated));
+        } catch (e) {
+            console.error('Failed to save recent search:', e);
+        }
+    }
+
+    // Get suggestions (recent or default)
+    function getSuggestions() {
+        const recent = getRecentSearches();
+        return recent.length > 0 ? recent : defaultSuggestions;
+    }
+    let isSearchActive = false;
+    let isFilterVisible = false;
+    // Populate book dropdown
+    function populateBookDropdown() {
+        filterBook.innerHTML = '<option value="">All Books</option>';
+        bibleBooks.forEach((book, index) => {
+            const option = document.createElement('option');
+            option.value = index;
+            option.textContent = book.name;
+            filterBook.appendChild(option);
+        });
+    }
+    // Toggle filter visibility
+    function toggleFilter() {
+        isFilterVisible = !isFilterVisible;
+        advancedFilter.style.display = isFilterVisible ? 'block' : 'none';
+        if (isFilterVisible && filterBook.options.length === 1) {
+            populateBookDropdown();
+        }
+    }
+    // Close filter popup
+    function closeFilter() {
+        isFilterVisible = false;
+        advancedFilter.style.display = 'none';
+    }
+    // Apply filter and trigger search
+    function applyFilter() {
+        closeFilter();
+        // Update filter button active state
+        if (filterBook.value !== '' || filterChapter.value !== '') {
+            filterBtn.classList.add('active');
+        } else {
+            filterBtn.classList.remove('active');
+        }
+        const query = searchInput.value.trim();
+        if (query.length >= MIN_SEARCH_LENGTH) {
+            showLoadingState();
+            clearTimeout(searchTimeout);
+            performSearch(query);
+        } else {
+            searchResultsInfo.style.display = 'none';
+            showEmptyState();
+        }
+    }
+    // Clear filter values
+    function clearFilterValues() {
+        filterBook.value = '';
+        filterChapter.value = '';
+        filterBtn.classList.remove('active');
+        applyFilter();
+    }
+    // Detect if text is Tamil or English
+    function isTamilText(text) {
+        // Tamil Unicode range: \u0B80-\u0BFF
+        const tamilRegex = /[\u0B80-\u0BFF]/;
+        return tamilRegex.test(text);
+    }
+    // Toggle search view
+    function openSearch() {
+        isSearchActive = true;
+        const booksSidebar = document.querySelector('.books-sidebar');
+        const chaptersColumn = document.querySelector('.chapters-column');
+        const versesColumn = document.querySelector('.verses-column');
+        const bottomNav = document.querySelector('.bottom-nav');
+        const chapterHeader = document.getElementById('mobile-chapter-header');
+        const chapterSummaryPullout = document.getElementById('chapter-summary-pullout-container');
+        // Add active class to search buttons
+        if (searchBtn) searchBtn.classList.add('active');
+        if (searchBtnMobile) searchBtnMobile.classList.add('active');
+        // Track navigation
+        navigateToPage('search');
+        // Show search bar
+        searchBar.style.display = 'flex';
+        // Show search results area, hide only sidebars and scripture
+        scriptureText.style.display = 'none';
+        searchResults.style.display = 'block';
+        searchResults.classList.add('active');
+        booksSidebar.style.display = 'none';
+        chaptersColumn.style.display = 'none';
+        versesColumn.style.display = 'none';
+        if (bottomNav) bottomNav.style.display = 'none';
+        if (chapterHeader) chapterHeader.style.display = 'none';
+        // Hide chapter summary arc shape on search page
+        if (chapterSummaryPullout) chapterSummaryPullout.style.display = 'none';
+        // Clear search input and results
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        searchResults.innerHTML = '';
+        searchResultsInfo.style.display = 'none';
+        showEmptyState();
+        searchInput.focus();
+    }
+    function closeSearch() {
+        isSearchActive = false;
+        const booksSidebar = document.querySelector('.books-sidebar');
+        const chaptersColumn = document.querySelector('.chapters-column');
+        const versesColumn = document.querySelector('.verses-column');
+        const bottomNav = document.querySelector('.bottom-nav');
+        const chapterHeader = document.getElementById('mobile-chapter-header');
+        const chapterSummaryPullout = document.getElementById('chapter-summary-pullout-container');
+        // Remove active class from search buttons
+        if (searchBtn) searchBtn.classList.remove('active');
+        if (searchBtnMobile) searchBtnMobile.classList.remove('active');
+        // Hide search bar
+        searchBar.style.display = 'none';
+        advancedFilter.style.display = 'none';
+        isFilterVisible = false;
+        // Hide search, show everything
+        searchResults.style.display = 'none';
+        searchResults.classList.remove('active');
+        searchResultsInfo.style.display = 'none';
+        scriptureText.style.display = 'block';
+        booksSidebar.style.display = 'flex';
+        chaptersColumn.style.display = 'flex';
+        versesColumn.style.display = 'flex';
+        if (bottomNav) bottomNav.style.display = 'flex';
+        if (chapterHeader) chapterHeader.style.display = 'block';
+        // Show chapter summary arc shape when returning to bible page
+        if (chapterSummaryPullout) chapterSummaryPullout.style.display = '';
+        // Don't clear search input, filters, or results - preserve them
+        // Track navigation back to bible page
+        navigateToBiblePage();
+        // Force refresh book names display after sidebar is visible
+        setTimeout(() => {
+            updateBookNames();
+        }, 0);
+    }
+    function clearSearch() {
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        searchResultsInfo.style.display = 'none';
+        showEmptyState();
+        searchInput.focus();
+    }
+    searchBtn.addEventListener('click', () => {
+        closeBottomSheet();
+        if (isSearchActive) {
+            closeSearch();
+        } else {
+            openSearch();
+        }
+    });
+    backBtn.addEventListener('click', closeSearch);
+    clearBtn.addEventListener('click', clearSearch);
+    filterBtn.addEventListener('click', toggleFilter);
+    closeFilterBtn.addEventListener('click', closeFilter);
+    applyFilterBtn.addEventListener('click', applyFilter);
+    clearFilterBtn.addEventListener('click', clearFilterValues);
+    // Close filter when clicking outside
+    document.addEventListener('click', (e) => {
+        if (isFilterVisible &&
+            !advancedFilter.contains(e.target) &&
+            !filterBtn.contains(e.target)) {
+            closeFilter();
+        }
+    });
+    // Show/hide clear button based on input
+    searchInput.addEventListener('input', (e) => {
+        const value = e.target.value.trim();
+        // Show/hide clear button
+        clearBtn.style.display = value ? 'flex' : 'none';
+        // Debounce search
+        clearTimeout(searchTimeout);
+        clearTimeout(saveRecentTimeout);
+
+        if (!value || value.length < MIN_SEARCH_LENGTH) {
+            searchResultsInfo.style.display = 'none';
+            showEmptyState();
+            return;
+        }
+        showLoadingState();
+        searchTimeout = setTimeout(() => {
+            performSearch(value);
+        }, 500);
+
+        // Only save recent search after user stops typing for a moment
+        saveRecentTimeout = setTimeout(() => {
+            saveRecentSearch(value);
+        }, 1200);
+    });
+    // Show empty state
+    function showEmptyState() {
+        const suggestions = getSuggestions();
+        const isRecentSearches = getRecentSearches().length > 0;
+        const title = isRecentSearches ? 'Recent Searches' : 'Top Suggestions';
+
+        let suggestionsHtml = suggestions.map(suggestion => `
+            <div class="search-suggestion-item" data-suggestion="${suggestion}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <span>${suggestion}</span>
+            </div>
+        `).join('');
+
+        searchResults.innerHTML = `
+            <div class="search-suggestions">
+                <div class="search-suggestions-title">${title}</div>
+                <div class="search-suggestions-list">
+                    ${suggestionsHtml}
+                </div>
+            </div>
+        `;
+
+        // Add click handlers to suggestions
+        document.querySelectorAll('.search-suggestion-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const suggestion = item.dataset.suggestion;
+                searchInput.value = suggestion;
+                clearBtn.style.display = 'block';
+                performSearch(suggestion);
+                saveRecentSearch(suggestion);
+            });
+        });
+    }
+    // Show loading state
+    function showLoadingState() {
+        searchResultsInfo.style.display = 'none';
+        searchResults.innerHTML = `
+            <div class="search-loading">
+                <div class="book-loader"></div>
+                <p>Searching...</p>
+            </div>
+        `;
+    }
+    // Show no results state
+    function showNoResults() {
+        searchResults.innerHTML = `
+            <div class="search-no-results">
+                <p>No verses found</p>
+            </div>
+        `;
+    }
+    // Perform search
+    async function performSearch(query) {
+        if (!query.trim()) {
+            searchResults.innerHTML = `
+                <div class="search-empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <p>Search for verses in Tamil or English</p>
+                </div>
+            `;
+            searchResultsInfo.style.display = 'none';
+            return;
+        }
+        const isTamil = isTamilText(query);
+        const results = [];
+        // Get filter values
+        const selectedBookIndex = filterBook.value;
+        const selectedChapter = filterChapter.value.trim();
+        try {
+            // Build Supabase query
+            let supabaseQuery = bibleDataManager.supabaseClient
+                .from('bible_verses')
+                .select('book_file, chapter, verse, text, language')
+                .order('book_file')
+                .order('chapter')
+                .order('verse');
+            // Apply language filter
+            const searchLanguage = isTamil ? 'tamil' : 'english';
+            supabaseQuery = supabaseQuery.eq('language', searchLanguage);
+            // Apply text search
+            supabaseQuery = supabaseQuery.ilike('text', `%${query}%`);
+            // Apply book filter if specified
+            if (selectedBookIndex !== '') {
+                const selectedBook = bibleBooks[parseInt(selectedBookIndex)];
+                supabaseQuery = supabaseQuery.eq('book_file', selectedBook.file);
+            }
+            // Apply chapter filter if specified
+            if (selectedChapter !== '') {
+                supabaseQuery = supabaseQuery.eq('chapter', parseInt(selectedChapter));
+            }
+            // Limit results to prevent overwhelming
+            supabaseQuery = supabaseQuery.limit(200);
+            const { data, error } = await supabaseQuery;
+            if (error) {
+                throw error;
+            }
+            // Process results
+            if (data && data.length > 0) {
+                data.forEach(verse => {
+                    // Find the book info
+                    const book = bibleBooks.find(b => b.file === verse.book_file);
+                    if (!book) return;
+                    const verseText = verse.text;
+                    const bookName = isTamil ? book.tamilName : book.name;
+                    const bookIndex = bibleBooks.indexOf(book);
+                    // Create highlighted text - highlight all occurrences (case-insensitive)
+                    let highlightedText = verseText;
+                    const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+                    highlightedText = verseText.replace(regex, '<span class="search-highlight">$1</span>');
+                    results.push({
+                        bookIndex,
+                        bookName,
+                        chapter: verse.chapter,
+                        verse: verse.verse,
+                        text: highlightedText,
+                        originalText: verseText
+                    });
+                });
+            }
+            // Display results
+            displaySearchResults(results, query);
+        } catch (error) {
+            searchResults.innerHTML = `
+                <div class="search-empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <p>Error searching verses. Please try again.</p>
+                </div>
+            `;
+            searchResultsInfo.style.display = 'none';
+        }
+    }
+    // Display search results
+    function displaySearchResults(results, query) {
+        if (results.length === 0) {
+            searchResultsInfo.style.display = 'none';
+            searchResults.innerHTML = `
+                <div class="search-empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <p>No verses found for "${query}"</p>
+                </div>
+            `;
+            return;
+        }
+        // Show results count
+        searchResultsInfo.style.display = 'block';
+        resultsCount.textContent = results.length >= 200 ? '200+' : results.length;
+        let html = '';
+        results.forEach(result => {
+            html += `
+                <div class="search-result-item" data-book="${result.bookIndex}" data-chapter="${result.chapter}" data-verse="${result.verse}">
+                    <div class="search-result-reference">${result.bookName} ${result.chapter}:${result.verse}</div>
+                    <div class="search-result-text">${result.text}</div>
+                </div>
+            `;
+        });
+        searchResults.innerHTML = html;
+        // Add click listeners to results
+        document.querySelectorAll('.search-result-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const bookIndex = parseInt(item.getAttribute('data-book'));
+                const chapter = parseInt(item.getAttribute('data-chapter'));
+                const verse = parseInt(item.getAttribute('data-verse'));
+                // Close search and navigate to verse
+                closeSearch();
+                loadBook(bookIndex, chapter).then(() => {
+                    // Scroll to verse after loading
+                    setTimeout(() => {
+                        const versesColumn = document.querySelector('.verses-column');
+                        const verseItem = versesColumn ? versesColumn.querySelector(`[data-verse="${verse}"]`) : null;
+                        if (verseItem) {
+                            verseItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
+                            verseItem.classList.add('active');
+                        }
+                        const verseElement = document.querySelector(`.verse-line[data-verse="${verse}"]`);
+                        if (verseElement) {
+                            verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            document.querySelectorAll('.verse-line').forEach(v => {
+                                if (v.classList.contains('highlighted')) {
+                                    v.classList.remove('highlighted');
+                                    v.style.backgroundColor = '';
+                                }
+                            });
+                            document.querySelectorAll('.verse-container').forEach(v => {
+                                if (v.classList.contains('multi-highlighted')) {
+                                    v.classList.remove('multi-highlighted');
+                                    v.style.backgroundColor = '';
+                                }
+                            });
+                            verseElement.classList.add('multi-highlighted');
+                        }
+                    }, 300);
+                });
+            });
+        });
+    }
+    // Helper function for escaping regex
+    function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+}
+// Site title click detection for admin mode (5 clicks required)
+function initializeSiteTitle() {
+    const siteTitle = document.querySelector('.site-title');
+    const secretIcon = document.getElementById('secret-icon');
+    // Disable old 5-click admin activation on site title.
+
+    // Add click handler for secret icon
+    if (secretIcon) {
+        secretIcon.addEventListener('click', () => {
+            window.location.href = 'config/secret.html';
+        });
+    }
+}
+// Initialize home options card
+function initializeHomeOptions() {
+    const homeBtn = document.querySelector('.home-btn');
+    const homeOptionsCard = document.getElementById('home-options-card');
+    const homeOptions = document.querySelectorAll('.home-option');
+    if (!homeBtn || !homeOptionsCard) return;
+    // Toggle home options card and update available options
+    homeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        // Show loader
+        const loader = document.createElement('div');
+        loader.className = 'home-options-loader';
+        loader.innerHTML = '<div class="spinner"></div>';
+        homeBtn.parentElement.insertBefore(loader, homeBtn);
+        // Update options and show card
+        updateAvailableHomeOptions().then(() => {
+            // Remove loader
+            if (loader && loader.parentElement) {
+                loader.remove();
+            }
+            homeOptionsCard.classList.toggle('active');
+        });
+    });
+    // Close card when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!homeOptionsCard.contains(e.target) && !homeBtn.contains(e.target)) {
+            homeOptionsCard.classList.remove('active');
+        }
+    });
+    // Handle option clicks
+    homeOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const action = option.getAttribute('data-action');
+            homeOptionsCard.classList.remove('active');
+            switch (action) {
+                case 'summary':
+                    // Show Chapter Summary
+                    showChapterSummary();
+                    break;
+                case 'timeline':
+                    // Show Chapter Timeline
+                    showChapterTimeline();
+                    break;
+                case 'characters':
+                    // Show Chapter Characters
+                    showChapterCharacters();
+                    break;
+            }
+        });
+    });
+}
+// Initialize right sidebar settings panel
+function initializeRightSettingsPanel() {
+    const settingsOption = document.getElementById('right-settings-option');
+    const settingsPanel = document.getElementById('right-settings-panel');
+    const closeBtn = document.getElementById('right-settings-close-btn');
+    const backBtn = document.getElementById('right-settings-back-btn');
+    const saveIconBtn = document.getElementById('settings-save-icon-btn');
+    const cancelIconBtn = document.getElementById('settings-cancel-icon-btn');
+    console.log('[MyBible] initializeRightSettingsPanel called', {
+        hasSettingsOption: !!settingsOption,
+        hasSettingsPanel: !!settingsPanel,
+        hasCloseBtn: !!closeBtn
+    });
+    if (!settingsOption || !settingsPanel) return;
+    // Open settings panel when clicking the right settings option
+    settingsOption.addEventListener('click', (event) => {
+        event.stopPropagation();
+        console.log('[MyBible] right-settings-option clicked');
+        // Add to history so Android back returns to Bible instead of closing app
+        try {
+            navigateToPage('settings');
+        } catch (e) { }
+        // Capture original state so Cancel can revert
+        try {
+            settingsPanelOriginalState = getCurrentSettingsSnapshot();
+        } catch (e) {
+            settingsPanelOriginalState = null;
+        }
+
+        // Sync theme segment
+        const themeSegVal = localStorage.getItem('settingsTheme') || (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+        const themeSegBtns = document.querySelectorAll('#settings-theme-segment .settings-seg-btn');
+        themeSegBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.val === themeSegVal);
+        });
+        // Sync language segment
+        const langSegVal = localStorage.getItem('settingsLanguage') || (currentLanguage === 'both' ? 'both' : currentLanguage === 'english' ? 'en' : 'ta');
+        const langSegBtns = document.querySelectorAll('#settings-lang-segment .settings-seg-btn');
+        langSegBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.val === langSegVal);
+        });
+        // Sync English color swatch
+        const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
+        const colorSwatches = document.querySelectorAll('#settings-color-panel .settings-swatch');
+        colorSwatches.forEach(sw => {
+            const swColor = sw.classList.contains('blue') ? 'blue' :
+                sw.classList.contains('red') ? 'red' : 'default';
+            sw.classList.toggle('selected', swColor === colorVal);
+        });
+        // Show/hide color panel based on current language val
+        const colorPanel = document.getElementById('settings-color-panel');
+        if (colorPanel) {
+            if (langSegVal === 'both') {
+                colorPanel.classList.add('visible');
+            } else {
+                colorPanel.classList.remove('visible');
+            }
+        }
+        // Sync selector style radio
+        const selectorStyleVal = localStorage.getItem('selectorStyle') || 'old';
+        const selectorRadios = document.querySelectorAll('input[name="selectorStyle"]');
+        selectorRadios.forEach(r => {
+            r.checked = r.value === selectorStyleVal;
+        });
+
+        // Sync verse heading language segment
+        const verseHeadingLangVal = localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
+        const verseHeadingLangSegBtns = document.querySelectorAll('#settings-verse-heading-language-segment .settings-seg-btn');
+        verseHeadingLangSegBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.val === verseHeadingLangVal);
+        });
+        // Sync verse heading toggle and show/hide language sub-option
+        const verseHeadingRow = document.querySelector('[data-setting="verseHeading"]');
+        const verseHeadingToggle = verseHeadingRow ? verseHeadingRow.querySelector('.settings-toggle') : null;
+        const verseHeadingLanguageSub = document.getElementById('verse-heading-language-sub');
+        const verseHeadingOnlySub = document.getElementById('verse-heading-only-sub');
+        const verseHeadingColorSub = document.getElementById('verse-heading-color-sub');
+        if (verseHeadingToggle && verseHeadingLanguageSub) {
+            if (uiSettings.verseHeading) {
+                verseHeadingToggle.classList.add('on');
+                verseHeadingLanguageSub.classList.remove('hidden');
+                if (verseHeadingOnlySub) {
+                    verseHeadingOnlySub.classList.remove('hidden');
+                }
+                if (verseHeadingColorSub) {
+                    verseHeadingColorSub.classList.remove('hidden');
+                }
+            } else {
+                verseHeadingToggle.classList.remove('on');
+                verseHeadingLanguageSub.classList.add('hidden');
+                if (verseHeadingOnlySub) {
+                    verseHeadingOnlySub.classList.add('hidden');
+                }
+                if (verseHeadingColorSub) {
+                    verseHeadingColorSub.classList.add('hidden');
+                }
+            }
+        }
+        // Sync verse heading color swatch and preview
+        const savedVhColor = localStorage.getItem('verseHeadingColor') || 'green';
+        const vhPreview = document.getElementById('vh-picker-preview');
+        document.querySelectorAll('#verse-heading-color-swatches .vh-swatch').forEach(s => {
+            const isSelected = s.dataset.vhColor === savedVhColor;
+            s.classList.toggle('selected', isSelected);
+            if (isSelected && vhPreview) {
+                const dot = s.querySelector('.vh-dot');
+                if (dot) vhPreview.style.background = dot.style.background;
+            }
+        });
+        // Close dropdown if open
+        closeVhColorPicker();
+        // Sync verse heading only toggle state
+        if (verseHeadingOnlySub) {
+            const onlyHeadersToggle = verseHeadingOnlySub.querySelector('.settings-toggle');
+            if (onlyHeadersToggle) {
+                onlyHeadersToggle.classList.toggle('on', !!uiSettings.verseHeadingOnly);
+            }
+        }
+        // Sync toggle rows from uiSettings
+        const rows = settingsPanel.querySelectorAll('.settings-row');
+        rows.forEach(row => {
+            const toggle = row.querySelector('.settings-toggle');
+            if (!toggle) return;
+            const key = row.dataset.setting;
+            const shouldBeOn = key && Object.prototype.hasOwnProperty.call(uiSettings, key) ? !!uiSettings[key] : true;
+            toggle.classList.toggle('on', shouldBeOn);
+        });
+        // Sync admin toggle UI
+        setSettingsAdminUiFromState();
+        // Close right sidebar drawer if open
+        const rightSidebar = document.querySelector('.right-sidebar');
+        if (rightSidebar) {
+            rightSidebar.classList.add('hidden');
+            rightSidebar.classList.remove('drawer-open');
+        }
+        // Always scroll settings page to top when opening
+        const settingsBody = settingsPanel.querySelector('.settings-body');
+        if (settingsBody) {
+            settingsBody.scrollTop = 0;
+        }
+        settingsPanel.classList.add('active');
+        settingsPanel.setAttribute('aria-hidden', 'false');
+        // Disable background page scroll while settings is open
+        document.body.style.overflow = 'hidden';
+        // Sync profile image section
+        syncSettingsProfileSection();
+        // When first opened, buttons should be hidden until something changes
+        updateSettingsFooterVisibility();
+        console.log('[MyBible] settings panel opened, classes:', settingsPanel.className);
+    });
+    // Close button
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            openSettingsDiscardDialog(() => {
+                // Treat Discard as full cancel (revert changes then close)
+                handleSettingsCancel();
+                console.log('[MyBible] settings panel closed via close button (discard)');
+            });
+        });
+    }
+    if (backBtn) {
+        backBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            openSettingsDiscardDialog(() => {
+                // Treat Discard as full cancel (revert changes then close)
+                handleSettingsCancel();
+                console.log('[MyBible] settings panel closed via back button (discard)');
+            });
+        });
+    }
+
+    // Shared Save handler: persists current settings and closes panel
+    function handleSettingsSave(event) {
+        if (event) event.stopPropagation();
+        try {
+            if (typeof saveUserSettingsToSupabase === 'function') {
+                saveUserSettingsToSupabase().catch(() => { });
+            }
+        } catch (e) { }
+        settingsPanelOriginalState = null;
+        updateSettingsFooterVisibility();
+        settingsPanel.classList.remove('active');
+        settingsPanel.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        console.log('[MyBible] settings panel closed via Save');
+    }
+
+    // Shared Cancel handler: reverts to snapshot and closes panel
+    function handleSettingsCancel(event) {
+        if (event) event.stopPropagation();
+        if (settingsPanelOriginalState) {
+            try {
+                const snap = settingsPanelOriginalState;
+                // Theme
+                if (snap.theme === 'dark' || snap.theme === 'light') {
+                    const wantDark = snap.theme === 'dark';
+                    const currentlyDark = document.body.classList.contains('dark-theme');
+                    if (wantDark && !currentlyDark) {
+                        document.body.classList.add('dark-theme');
+                        localStorage.setItem('theme', 'dark');
+                    } else if (!wantDark && currentlyDark) {
+                        document.body.classList.remove('dark-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                    localStorage.setItem('settingsTheme', snap.theme);
+                    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+                    const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+                    if (metaThemeColor) {
+                        metaThemeColor.setAttribute('content', wantDark ? '#1e1f22' : '#ffffff');
+                    }
+                    if (metaColorScheme) {
+                        metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
+                    }
+                }
+
+                // Language
+                if (snap.language) {
+                    const langVal = snap.language;
+                    const selectedLang = langVal === 'en' ? 'english' : (langVal === 'ta' ? 'tamil' : 'both');
+                    currentLanguage = selectedLang;
+                    localStorage.setItem('currentLanguage', selectedLang);
+                    localStorage.setItem('settingsLanguage', langVal);
+                    if (typeof updateBookNames === 'function') {
+                        updateBookNames();
+                    }
+                    if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+                        loadBook(currentBook, currentChapter);
+                    }
+                }
+
+                // English text color
+                if (snap.englishColor) {
+                    englishTextColor = snap.englishColor;
+                    localStorage.setItem('englishTextColor', englishTextColor);
+                    localStorage.setItem('settingsEnglishColor', englishTextColor);
+                    if (currentLanguage === 'both') {
+                        if (typeof displayChapter === 'function') {
+                            displayChapter();
+                        }
+                        if (typeof applyAllNoteDisplays === 'function') {
+                            applyAllNoteDisplays();
+                        }
+                    }
+                }
+
+                // Verse heading language
+                if (snap.verseHeadingLanguage) {
+                    localStorage.setItem('settingsVerseHeadingLanguage', snap.verseHeadingLanguage);
+                }
+
+                // Selector style
+                if (snap.selectorStyle) {
+                    localStorage.setItem('selectorStyle', snap.selectorStyle);
+                }
+
+                // Verse heading color
+                if (snap.verseHeadingColor) {
+                    localStorage.setItem('verseHeadingColor', snap.verseHeadingColor);
+                    applyVerseHeadingColor(snap.verseHeadingColor);
+                    document.querySelectorAll('#verse-heading-color-swatches .vh-swatch').forEach(s => {
+                        s.classList.toggle('selected', s.dataset.vhColor === snap.verseHeadingColor);
+                    });
+                }
+
+                // UI toggles
+                if (snap.uiSettings) {
+                    uiSettings = { ...DEFAULT_UI_SETTINGS, ...snap.uiSettings };
+                    localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
+                    if (typeof applyUiSettingsToDocument === 'function') {
+                        applyUiSettingsToDocument();
+                    }
+                }
+
+                // Admin mode
+                if (Object.prototype.hasOwnProperty.call(snap, 'isAdmin')) {
+                    localStorage.setItem('isAdmin', snap.isAdmin ? 'true' : 'false');
+                    if (typeof updateAdminUI === 'function') {
+                        updateAdminUI();
+                    }
+                    setSettingsAdminUiFromState();
+                }
+
+                // Persist reverted settings to Supabase so remote matches local
+                if (typeof saveUserSettingsToSupabase === 'function') {
+                    saveUserSettingsToSupabase().catch(() => { });
+                }
+            } catch (e) {
+            }
+        }
+        settingsPanelOriginalState = null;
+        updateSettingsFooterVisibility();
+        settingsPanel.classList.remove('active');
+        settingsPanel.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        console.log('[MyBible] settings panel closed via Cancel (reverted changes)');
+    }
+
+    // Attach handlers to header icon buttons
+    if (saveIconBtn) {
+        saveIconBtn.addEventListener('click', handleSettingsSave);
+    }
+    if (cancelIconBtn) {
+        cancelIconBtn.addEventListener('click', handleSettingsCancel);
+    }
+
+    // Attach handlers for discard confirmation modal
+    const discardOverlay = document.getElementById('settings-discard-overlay');
+    const discardConfirmBtn = document.getElementById('settings-discard-confirm-btn');
+    const discardCancelBtn = document.getElementById('settings-discard-cancel-btn');
+    if (discardOverlay && discardConfirmBtn && discardCancelBtn) {
+        discardConfirmBtn.addEventListener('click', () => {
+            closeSettingsDiscardDialog();
+            if (typeof pendingSettingsDiscardConfirm === 'function') {
+                const fn = pendingSettingsDiscardConfirm;
+                pendingSettingsDiscardConfirm = null;
+                pendingSettingsDiscardCancel = null;
+                fn();
+            }
+        });
+        discardCancelBtn.addEventListener('click', () => {
+            closeSettingsDiscardDialog();
+            if (typeof pendingSettingsDiscardCancel === 'function') {
+                const fn = pendingSettingsDiscardCancel;
+                pendingSettingsDiscardConfirm = null;
+                pendingSettingsDiscardCancel = null;
+                fn();
+            }
+        });
+        // Clicking outside modal closes dialog but keeps editing
+        discardOverlay.addEventListener('click', (event) => {
+            if (event.target === discardOverlay) {
+                closeSettingsDiscardDialog();
+                if (typeof pendingSettingsDiscardCancel === 'function') {
+                    const fn = pendingSettingsDiscardCancel;
+                    pendingSettingsDiscardConfirm = null;
+                    pendingSettingsDiscardCancel = null;
+                    fn();
+                }
+            }
+        });
+    }
+    // --- Profile Image Upload ---
+    initSettingsProfileUpload();
+
+    // Close when clicking outside the panel
+    document.addEventListener('click', (event) => {
+        if (!settingsPanel.classList.contains('active')) return;
+        const rightSidebar = document.querySelector('.right-sidebar');
+        const clickedInsideSidebar = rightSidebar && rightSidebar.contains(event.target);
+        const clickedInsidePanel = settingsPanel.contains(event.target);
+        // If admin password modal is open, ignore clicks inside it so settings stays open
+        const adminModal = document.querySelector('.admin-password-modal');
+        const clickedInsideAdminModal = adminModal && adminModal.contains(event.target);
+        if (!clickedInsidePanel && !clickedInsideSidebar && !clickedInsideAdminModal) {
+            settingsPanel.classList.remove('active');
+            settingsPanel.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            console.log('[MyBible] settings panel closed via outside click');
+        }
+    });
+}
+// Restore UI elements after leaving home page
+function restoreUIFromHomePage() {
+    // Show all sidebars and columns
+    document.querySelector('.books-sidebar').style.display = '';
+    document.querySelector('.chapters-column').style.display = '';
+    document.querySelector('.verses-column').style.display = '';
+    // Show language and search buttons in header
+    const langBtn = document.querySelector('.lang-btn');
+    const searchBtn = document.getElementById('search-btn');
+    if (langBtn) langBtn.style.display = '';
+    if (searchBtn) searchBtn.style.display = '';
+    // Show bottom navigation
+    const bottomNav = document.querySelector('.bottom-nav');
+    if (bottomNav) bottomNav.style.display = '';
+    // Restore menu button (remove bible image if exists)
+    const menuBtn = document.querySelector('.menu-btn');
+    const logoContainer = document.querySelector('.logo-container');
+    const existingBibleImg = logoContainer?.querySelector('.home-bible-img');
+    if (existingBibleImg) existingBibleImg.remove();
+    if (menuBtn) menuBtn.style.display = '';
+}
+// Load summary data for home preloading
+async function loadSummaryData() {
+    try {
+        // Preload summary for current book/chapter if available
+        if (currentBook && currentChapter) {
+            await showChapterSummary();
+        }
+    } catch (error) {
+    }
+}
+// Load timeline data for home preloading  
+async function loadTimelineData() {
+    try {
+        // Preload timeline for current book/chapter if available
+        if (currentBook && currentChapter) {
+            await showChapterTimeline();
+        }
+    } catch (error) {
+    }
+}
+// Load character data for home preloading
+async function loadCharacterData() {
+    try {
+        // Preload character data if available
+        if (typeof loadCharacters === 'function') {
+            await loadCharacters();
+        }
+    } catch (error) {
+    }
+}
+// Show home page with just the title
+function showHomePage() {
+    // Show loader immediately
+    const loader = document.getElementById('loader');
+    if (loader) loader.classList.add('active');
+    // Preload all data immediately when home is first shown
+    const dataLoadingPromise = !window.homeDataPreloaded
+        ? Promise.all([
+            loadSummaryData(),
+            loadTimelineData(),
+            loadCharacterData()
+        ]).then(() => {
+            window.homeDataPreloaded = true;
+        }).catch(error => {
+        })
+        : Promise.resolve(); // If already preloaded, resolve immediately
+    // Hide all sidebars and columns
+    document.querySelector('.books-sidebar').style.display = 'none';
+    document.querySelector('.chapters-column').style.display = 'none';
+    document.querySelector('.verses-column').style.display = 'none';
+    // Hide search bar if visible
+    const searchBar = document.getElementById('search-bar');
+    if (searchBar) searchBar.style.display = 'none';
+    // Hide search results
+    const searchResults = document.getElementById('search-results');
+    if (searchResults) searchResults.style.display = 'none';
+    const searchResultsInfo = document.getElementById('search-results-info');
+    if (searchResultsInfo) searchResultsInfo.style.display = 'none';
+    // Hide language and search buttons in header
+    const langBtn = document.querySelector('.lang-btn');
+    const searchBtn = document.getElementById('search-btn');
+    if (langBtn) langBtn.style.display = 'none';
+    if (searchBtn) searchBtn.style.display = 'none';
+    // Hide bottom navigation
+    const bottomNav = document.querySelector('.bottom-nav');
+    if (bottomNav) bottomNav.style.display = 'none';
+    // Close any open summary drawers (Timeline, Characters, Summary)
+    const summaryDrawer = document.getElementById('summary-drawer');
+    if (summaryDrawer && summaryDrawer.classList.contains('active')) {
+        summaryDrawer.classList.remove('active');
+        document.body.classList.remove('summary-drawer-open');
+    }
+    // Replace menu button with bible.png
+    const menuBtn = document.querySelector('.menu-btn');
+    const logoContainer = document.querySelector('.logo-container');
+    if (logoContainer) {
+        // Force hide menu button with !important via style attribute
+        if (menuBtn) {
+            menuBtn.style.cssText = 'display: none !important;';
+        }
+        // Check if bible image already exists
+        let bibleImg = logoContainer.querySelector('.home-bible-img');
+        if (!bibleImg) {
+            bibleImg = document.createElement('img');
+            bibleImg.src = 'resources/icons/bible.png';
+            bibleImg.alt = 'Bible';
+            bibleImg.className = 'home-bible-img';
+            bibleImg.style.cssText = 'width: 25px; height: 25px; margin-right: 4px; display: block;';
+            logoContainer.insertBefore(bibleImg, logoContainer.firstChild);
+        } else {
+            bibleImg.style.cssText = 'width: 25px; height: 25px; margin-right: 4px; display: block;';
+        }
+    }
+    // Load and display a random memory verse
+    // Wait for both data preloading and verse loading before hiding loader
+    const verseLoadingPromise = (typeof window.memoryVerses !== 'undefined' && window.memoryVerses.length > 0)
+        ? Promise.resolve().then(() => loadRandomMemoryVerse())
+        : loadMemoryVersesFromSupabase().then(() => {
+            if (typeof window.memoryVerses !== 'undefined' && window.memoryVerses.length > 0) {
+                loadRandomMemoryVerse();
+            }
+        });
+    // Hide loader only after both data preloading and verse loading are complete
+    Promise.all([dataLoadingPromise, verseLoadingPromise]).then(() => {
+        if (loader) loader.classList.remove('active');
+    }).catch(error => {
+        if (loader) loader.classList.remove('active');
+    });
+    // Store home state
+    localStorage.setItem('isOnHomePage', 'true');
+}
+// Function to get today's date as a string (YYYY-MM-DD)
+function getTodayDateString() {
+    const today = new Date();
+    return `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+}
+// Function to get verse index for today (deterministic based on date)
+function getTodayVerseIndex() {
+    const today = getTodayDateString();
+    const savedDate = localStorage.getItem('verseOfTheDayDate');
+    const savedIndex = localStorage.getItem('verseOfTheDayIndex');
+    // If it's the same day and we have a saved index, use it
+    if (savedDate === today && savedIndex !== null) {
+        return parseInt(savedIndex);
+    }
+    // Generate a consistent index based on the date
+    const dateHash = today.split('-').reduce((hash, part) => hash + parseInt(part), 0);
+    const verseIndex = dateHash % memoryVerses.length;
+    // Save for today
+    localStorage.setItem('verseOfTheDayDate', today);
+    localStorage.setItem('verseOfTheDayIndex', verseIndex.toString());
+    return verseIndex;
+}
+// Function to load and display a random memory verse
+function loadRandomMemoryVerse() {
+    const scriptureText = document.getElementById('scripture-text');
+    if (!scriptureText) {
+        return;
+    }
+    // Keep scripture text hidden while loading (page loader handles the loading state)
+    scriptureText.style.display = 'none';
+    if (typeof window.memoryVerses === 'undefined' || window.memoryVerses.length === 0) {
+        scriptureText.style.display = 'block';
+        scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 2rem; color: var(--text-secondary);">Welcome to My Bible</div>';
+        return;
+    }
+    // Get today's verse (same verse throughout the day)
+    const verseIndex = getTodayVerseIndex();
+    const verseReference = window.memoryVerses[verseIndex];
+    // Parse the verse reference (e.g., "John 3:16" or "Isaiah 12:1–6")
+    const verseData = parseVerseReference(verseReference);
+    if (!verseData) {
+        scriptureText.style.display = 'block';
+        scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Welcome to My Bible</div>';
+        return;
+    }
+    // Find the book index - normalize book names for comparison
+    const bookIndex = bibleBooks.findIndex(book => {
+        const normalizedBookName = verseData.bookName.toLowerCase()
+            .replace(/^1\s+/, 'i ')
+            .replace(/^2\s+/, 'ii ')
+            .replace(/^3\s+/, 'iii ')
+            .replace(/^psalm$/, 'psalms'); // Handle Psalm -> Psalms
+        const normalizedName = book.name.toLowerCase();
+        const normalizedShortName = book.shortName.toLowerCase();
+        return normalizedName === normalizedBookName ||
+            normalizedShortName === normalizedBookName ||
+            normalizedName === verseData.bookName.toLowerCase() ||
+            normalizedShortName === verseData.bookName.toLowerCase() ||
+            (normalizedName === 'psalms' && verseData.bookName.toLowerCase() === 'psalm');
+    });
+    if (bookIndex === -1) {
+        scriptureText.style.display = 'block';
+        scriptureText.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Book not found: ${verseData.bookName}</div>`;
+        return;
+    }
+    const book = bibleBooks[bookIndex];
+    // Load verse data from Supabase using BibleDataManager
+    loadVerseFromSupabase(book, verseData, verseReference, scriptureText);
+}
+// Load verse from Supabase and display
+async function loadVerseFromSupabase(book, verseData, verseReference, scriptureText) {
+    try {
+        // Get language
+        const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+        // Convert book file name based on language
+        const bookFile = getBookFileForLanguage(book.file, language);
+        // Load chapter data from BibleDataManager
+        const chapterData = await bibleDataManager.getChapterData(bookFile, verseData.chapter, language);
+        if (!chapterData) {
+            scriptureText.style.display = 'block';
+            scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Failed to load verse</div>';
+            return;
+        }
+        // Convert to the old format expected by displayVerseContent
+        const bookData = {
+            [`chapter_${verseData.chapter}`]: chapterData
+        };
+        displayVerseContent(bookData, verseData, verseReference, scriptureText);
+    } catch (error) {
+        scriptureText.style.display = 'block';
+        scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Failed to load verse</div>';
+    }
+}
+// Helper function to display verse content
+function displayVerseContent(bookData, verseData, verseReference, scriptureText) {
+    // Try both formats: numeric keys and string keys with "chapter_" prefix
+    const chapterKey = `chapter_${verseData.chapter}`;
+    const chapterData = bookData[verseData.chapter] || bookData[chapterKey];
+    if (bookData && chapterData) {
+        let verseText = '';
+        if (verseData.verseEnd) {
+            // Range of verses
+            for (let v = verseData.verseStart; v <= verseData.verseEnd; v++) {
+                const verseKey = `verse_${v}`;
+                const verse = chapterData[v] || chapterData[verseKey];
+                if (verse) {
+                    verseText += `<sup>${v}</sup> ${verse} `;
+                }
+            }
+        } else {
+            // Single verse
+            const verseKey = `verse_${verseData.verseStart}`;
+            const verse = chapterData[verseData.verseStart] || chapterData[verseKey];
+            if (verse) {
+                verseText = `<sup>${verseData.verseStart}</sup> ${verse}`;
+            }
+        }
+        if (verseText) {
+            scriptureText.style.display = 'block';
+            scriptureText.innerHTML = `
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100%; padding: 20px; gap: 20px;">
+                    <div class="verse-card" style="border-radius: 16px; padding: 32px 28px; max-width: 700px; width: 100%;">
+                        <div class="verse-label" style="font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-bottom: 24px; text-align: center;">
+                            Verse of the Day
+                        </div>
+                        <div class="verse-text" style="font-size: 1.2rem; line-height: 1.8; text-align: center; margin-bottom: 20px; position: relative; padding: 0 20px;">
+                            ${verseText}
+                        </div>
+                        <div class="verse-reference" style="font-size: 1rem; font-weight: 600; text-align: center;">
+                            — ${verseReference}
+                        </div>
+                    </div>
+                    <button id="read-bible-btn" class="read-bible-button">
+                        <span class="button-shimmer"></span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 10px;">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span>Read Bible</span>
+                    </button>
+                </div>
+            `;
+            // Add click handler for read bible button
+            setTimeout(() => {
+                const readBibleBtn = document.getElementById('read-bible-btn');
+                if (readBibleBtn) {
+                    readBibleBtn.addEventListener('click', () => {
+                        loadBook(currentBook, currentChapter);
+                    });
+                }
+            }, 0);
+        } else {
+            scriptureText.style.display = 'block';
+            scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Verse not found</div>';
+        }
+    } else {
+        scriptureText.style.display = 'block';
+        scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Chapter not found</div>';
+    }
+}
+// Helper function to parse verse reference
+function parseVerseReference(reference) {
+    // Handle formats like "John 3:16", "Isaiah 12:1–6", "Genesis 1:1", "1 John 3:16", "2 Timothy 1:7"
+    // Match book name (can include numbers and spaces), chapter:verse or chapter:verse–verse
+    const match = reference.match(/^([\d\s\w]+?)\s+(\d+):(\d+)(?:[–—-](\d+))?$/);
+    if (!match) return null;
+    return {
+        bookName: match[1].trim(),
+        chapter: parseInt(match[2]),
+        verseStart: parseInt(match[3]),
+        verseEnd: match[4] ? parseInt(match[4]) : null
+    };
+}
+// Check and update available home options based on data availability
+function updateAvailableHomeOptions() {
+    return new Promise((mainResolve) => {
+        const bookName = bibleBooks[currentBook].name;
+        const chapterNum = currentChapter;
+        const fileName = bookName.toLowerCase().replace(/ /g, '_');
+        // Get file paths
+        const summaryPath = getSummaryPath(bookName);
+        const timelinePath = getTimelinePath(bookName);
+        // Get option elements
+        const summaryOption = document.querySelector('.home-option[data-action="summary"]');
+        const timelineOption = document.querySelector('.home-option[data-action="timeline"]');
+        const charactersOption = document.querySelector('.home-option[data-action="characters"]');
+        // If admin mode, show all options
+        if (isAdmin()) {
+            if (summaryOption) summaryOption.style.display = 'flex';
+            if (timelineOption) timelineOption.style.display = 'flex';
+            if (charactersOption) charactersOption.style.display = 'flex';
+            mainResolve();
+            return;
+        }
+        // Check availability for each type (non-admin mode)
+        const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
+        const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+        // Load scripts and check data availability
+        const checkPromises = [];
+        // Check summary
+        if (summaryPath) {
+            const promise = new Promise((resolve) => {
+                if (window[summaryVarName] && window[summaryVarName][chapterNum]) {
+                    resolve(true);
+                } else if (!document.querySelector(`script[src="${summaryPath}"]`)) {
+                    const script = document.createElement('script');
+                    script.src = summaryPath;
+                    script.onload = () => {
+                        resolve(window[summaryVarName] && window[summaryVarName][chapterNum]);
+                    };
+                    script.onerror = () => resolve(false);
+                    document.body.appendChild(script);
+                } else {
+                    resolve(window[summaryVarName] && window[summaryVarName][chapterNum]);
+                }
+            });
+            checkPromises.push(promise.then(hasSummary => {
+                if (summaryOption) summaryOption.style.display = hasSummary ? 'flex' : 'none';
+            }));
+        } else {
+            if (summaryOption) summaryOption.style.display = 'none';
+        }
+        // Check timeline
+        if (timelinePath) {
+            const promise = new Promise((resolve) => {
+                if (window[timelineVarName] && window[timelineVarName][chapterNum]) {
+                    resolve(true);
+                } else if (!document.querySelector(`script[src="${timelinePath}"]`)) {
+                    const script = document.createElement('script');
+                    script.src = timelinePath;
+                    script.onload = () => {
+                        resolve(window[timelineVarName] && window[timelineVarName][chapterNum]);
+                    };
+                    script.onerror = () => resolve(false);
+                    document.body.appendChild(script);
+                } else {
+                    resolve(window[timelineVarName] && window[timelineVarName][chapterNum]);
+                }
+            });
+            checkPromises.push(promise.then(hasTimeline => {
+                if (timelineOption) timelineOption.style.display = hasTimeline ? 'flex' : 'none';
+            }));
+        } else {
+            if (timelineOption) timelineOption.style.display = 'none';
+        }
+        // Check characters from Supabase
+        const charactersPromise = (async () => {
+            try {
+                const { data, error, count } = await bibleDataManager.supabaseClient
+                    .from('bible_characters')
+                    .select('id', { count: 'exact', head: true })
+                    .eq('book_file', bibleBooks[currentBook].file)
+                    .eq('chapter', chapterNum);
+                return !error && count > 0;
+            } catch (error) {
+                return false;
+            }
+        })();
+        checkPromises.push(charactersPromise.then(hasCharacters => {
+            if (charactersOption) charactersOption.style.display = hasCharacters ? 'flex' : 'none';
+        }));
+        // Wait for all checks to complete
+        Promise.all(checkPromises).then(() => {
+            mainResolve();
+        });
+    });
+}
+// Show chapter summary
+function showChapterSummary() {
+    // Close mobile drawer if open
+    const drawerOverlay = document.querySelector('.drawer-overlay');
+    const booksSidebar = document.querySelector('.books-sidebar');
+    const chaptersColumn = document.querySelector('.chapters-column');
+    const versesColumn = document.querySelector('.verses-column');
+    if (drawerOverlay && drawerOverlay.classList.contains('active')) {
+        drawerOverlay.classList.remove('active');
+        booksSidebar.classList.remove('drawer-open');
+        chaptersColumn.classList.remove('drawer-open');
+        versesColumn.classList.remove('drawer-open');
+        document.body.style.overflow = '';
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        if (hamburgerIcon) hamburgerIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+    }
+    const bookName = bibleBooks[currentBook].name;
+    const chapterNum = currentChapter;
+    // Load summary from database
+    loadSummaryFromSupabase(bibleBooks[currentBook].file, chapterNum);
+}
+// Get summary file path based on book name
+function getSummaryPath(bookName) {
+    // New Testament books
+    const newTestamentBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans',
+        'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians', 'Philippians',
+        'Colossians', 'I Thessalonians', 'II Thessalonians', 'I Timothy', 'II Timothy',
+        'Titus', 'Philemon', 'Hebrews', 'James', 'I Peter', 'II Peter', 'I John',
+        'II John', 'III John', 'Jude', 'Revelation'];
+    // Old Testament books
+    const oldTestamentBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy',
+        'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings',
+        'I Chronicles', 'II Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms',
+        'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations',
+        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah',
+        'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    if (newTestamentBooks.includes(bookName)) {
+        return `resources/summary/new-testament/${fileName}.js`;
+    } else if (oldTestamentBooks.includes(bookName)) {
+        return `resources/summary/old-testament/${fileName}.js`;
+    }
+    return null;
+}
+// Load and display summary
+function loadSummaryScript(path, bookName, chapterNum) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
+    // Check if summary is already loaded
+    if (window[summaryVarName]) {
+        displaySummary(bookName, chapterNum);
+        return;
+    }
+    const script = document.createElement('script');
+    script.src = path;
+    script.onload = () => {
+        displaySummary(bookName, chapterNum);
+    };
+    script.onerror = () => {
+        alert(`Summary not available for ${bookName} ${chapterNum} yet.`);
+    };
+    document.body.appendChild(script);
+}
+// Display the summary in the drawer
+function displaySummary(bookName, chapterNum) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
+    // Try to access the summary object
+    const summaryData = window[summaryVarName];
+    if (summaryData && summaryData[chapterNum]) {
+        const summaryDrawer = document.getElementById('summary-drawer');
+        const summaryDrawerContent = document.getElementById('summary-drawer-content');
+        const summary = summaryData[chapterNum];
+        // Format the summary with proper styling and highlight verses
+        const formattedSummary = summary
+            .split('\n\n')
+            .map(para => {
+                // Replace quoted verses with card format
+                const processed = para.replace(/"([^"]+)"/g, '<span class="verse-card">$1</span>');
+                return `<p class="summary-paragraph">${processed}</p>`;
+            })
+            .join('');
+        summaryDrawerContent.innerHTML = formattedSummary;
+        // Track navigation
+        navigateToPage('summary');
+        // Show the drawer
+        summaryDrawer.classList.add('active');
+        document.body.classList.add('summary-drawer-open');
+    } else {
+        alert(`Summary not available for ${bookName} ${chapterNum} yet.`);
+    }
+}
+// Initialize summary drawer close handlers
+function initializeSummaryDrawer() {
+    const closeSummaryBtn = document.getElementById('close-summary-btn');
+    if (closeSummaryBtn) {
+        closeSummaryBtn.addEventListener('click', closeSummaryDrawer);
+    }
+}
+function closeSummaryDrawer() {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    summaryDrawer.classList.remove('active');
+    document.body.classList.remove('summary-drawer-open');
+    // Track navigation back to bible page
+    navigateToBiblePage();
+}
+// Refresh the content of an open summary drawer when chapter changes
+function refreshOpenSummaryDrawer() {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    if (!summaryDrawer || !summaryDrawer.classList.contains('active')) {
+        return; // Drawer not open, nothing to refresh
+    }
+    // Check which type of drawer is open by examining the title
+    const drawerTitle = document.querySelector('.summary-drawer-title');
+    if (!drawerTitle) return;
+    const titleText = drawerTitle.textContent;
+    // Refresh based on the exact drawer type
+    if (titleText === 'Chapter Summary') {
+        showChapterSummary();
+    } else if (titleText === 'Chapter Timeline') {
+        showChapterTimeline();
+    } else if (titleText === 'Chapter Characters') {
+        showChapterCharacters();
+    }
+}
+// Update drawer content when chapter changes
+function updateDrawerContent() {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    // Only update if drawer is open
+    if (!summaryDrawer.classList.contains('active')) {
+        return;
+    }
+    const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+    const currentDrawerType = summaryDrawerTitle.textContent;
+    const bookName = bibleBooks[currentBook].name;
+    const chapterNum = currentChapter;
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    // Refresh content based on current drawer type
+    if (currentDrawerType === 'Chapter Summary') {
+        const summaryPath = getSummaryPath(bookName);
+        const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
+        if (summaryPath) {
+            // Load script and check if data exists for this chapter
+            loadSummaryScriptAndCheck(summaryPath, bookName, chapterNum, summaryVarName);
+        } else {
+            closeSummaryDrawer();
+        }
+    } else if (currentDrawerType === 'Chapter Timeline') {
+        const timelinePath = getTimelinePath(bookName);
+        const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+        if (timelinePath) {
+            // Load script and check if data exists for this chapter
+            loadTimelineScriptAndCheck(timelinePath, bookName, chapterNum, timelineVarName);
+        } else {
+            closeSummaryDrawer();
+        }
+    } else if (currentDrawerType === 'Chapter Characters') {
+        const charactersPath = getCharactersPath(bookName);
+        const charactersVarName = `${fileName.replace(/_/g, '')}Characters`;
+        if (charactersPath) {
+            // Load script and check if data exists for this chapter
+            loadCharactersScriptAndCheck(charactersPath, bookName, chapterNum, charactersVarName);
+        } else {
+            closeSummaryDrawer();
+        }
+    }
+}
+// Load summary script and check if chapter data exists
+function loadSummaryScriptAndCheck(path, bookName, chapterNum, varName) {
+    if (window[varName]) {
+        // Already loaded, check if chapter data exists
+        if (window[varName][chapterNum]) {
+            displaySummary(bookName, chapterNum);
+        } else {
+            closeSummaryDrawer();
+        }
+    } else {
+        // Load the script
+        const script = document.createElement('script');
+        script.src = path;
+        script.onload = () => {
+            if (window[varName] && window[varName][chapterNum]) {
+                displaySummary(bookName, chapterNum);
+            } else {
+                closeSummaryDrawer();
+            }
+        };
+        script.onerror = () => {
+            closeSummaryDrawer();
+        };
+        document.body.appendChild(script);
+    }
+}
+// Load timeline script and check if chapter data exists
+function loadTimelineScriptAndCheck(path, bookName, chapterNum, varName) {
+    if (window[varName]) {
+        // Already loaded, check if chapter data exists
+        if (window[varName][chapterNum]) {
+            displayTimeline(bookName, chapterNum);
+        } else {
+            closeSummaryDrawer();
+        }
+    } else {
+        // Load the script
+        const script = document.createElement('script');
+        script.src = path;
+        script.onload = () => {
+            if (window[varName] && window[varName][chapterNum]) {
+                displayTimeline(bookName, chapterNum);
+            } else {
+                closeSummaryDrawer();
+            }
+        };
+        script.onerror = () => {
+            closeSummaryDrawer();
+        };
+        document.body.appendChild(script);
+    }
+}
+// Load characters script and check if chapter data exists
+function loadCharactersScriptAndCheck(path, bookName, chapterNum, varName) {
+    if (window[varName]) {
+        // Already loaded, check if chapter data exists
+        if (window[varName][chapterNum]) {
+            displayCharacters(bookName, chapterNum);
+        } else {
+            closeSummaryDrawer();
+        }
+    } else {
+        // Load the script
+        const script = document.createElement('script');
+        script.src = path;
+        script.onload = () => {
+            if (window[varName] && window[varName][chapterNum]) {
+                displayCharacters(bookName, chapterNum);
+            } else {
+                closeSummaryDrawer();
+            }
+        };
+        script.onerror = () => {
+            closeSummaryDrawer();
+        };
+        document.body.appendChild(script);
+    }
+}
+// Initialize scrollbar auto-hide behavior
+function initializeScrollbarBehavior() {
+    const scrollableElements = [
+        document.querySelector('.books-sidebar'),
+        document.querySelector('.chapters-column'),
+        document.querySelector('.verses-column'),
+        document.querySelector('.content-area')
+    ];
+    scrollableElements.forEach(element => {
+        if (element) {
+            let hideTimeout;
+            // Handle scroll events
+            element.addEventListener('scroll', function () {
+                element.classList.add('scrolling');
+                clearTimeout(hideTimeout);
+                hideTimeout = setTimeout(() => {
+                    element.classList.remove('scrolling');
+                }, 1000);
+            });
+            // Handle mouse hover events
+            element.addEventListener('mouseenter', function () {
+                element.classList.add('scrolling');
+                clearTimeout(hideTimeout);
+            });
+            element.addEventListener('mouseleave', function () {
+                clearTimeout(hideTimeout);
+                hideTimeout = setTimeout(() => {
+                    element.classList.remove('scrolling');
+                }, 1000);
+            });
+        }
+    });
+}
+// Show chapter timeline
+function showChapterTimeline() {
+    // Close mobile drawer if open
+    const drawerOverlay = document.querySelector('.drawer-overlay');
+    const booksSidebar = document.querySelector('.books-sidebar');
+    const chaptersColumn = document.querySelector('.chapters-column');
+    const versesColumn = document.querySelector('.verses-column');
+    if (drawerOverlay && drawerOverlay.classList.contains('active')) {
+        drawerOverlay.classList.remove('active');
+        booksSidebar.classList.remove('drawer-open');
+        chaptersColumn.classList.remove('drawer-open');
+        versesColumn.classList.remove('drawer-open');
+        document.body.style.overflow = '';
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        if (hamburgerIcon) hamburgerIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+    }
+    const bookName = bibleBooks[currentBook].name;
+    const chapterNum = currentChapter;
+    // Try to load from existing timeline files first, then fallback to database
+    const timelinePath = getTimelinePath(bookName);
+    if (timelinePath) {
+        // Load the timeline dynamically and check for database content
+        loadTimelineScriptWithDatabase(timelinePath, bookName, chapterNum);
+    } else {
+        // If no timeline file, load directly from database
+        loadTimelineFromSupabase(bibleBooks[currentBook].file, chapterNum);
+    }
+}
+// Load timeline script with database integration
+async function loadTimelineScriptWithDatabase(path, bookName, chapterNum) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+    // Load database events first
+    let databaseEvents = [];
+    try {
+        const bookFile = bibleBooks[currentBook].file;
+        // First check if table exists and test connection
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('id, book_file, chapter, event_description, verse_reference, testament, order_index')
+            .eq('book_file', bookFile)
+            .eq('chapter', chapterNum)
+            .order('order_index', { ascending: true })
+            .order('id', { ascending: true });
+        if (error) {
+            // If table doesn't exist or has permission issues, continue with file data only
+        } else {
+            databaseEvents = data || [];
+            // Uncomment the line below to push Matthew 1 data (run once as admin)
+            // pushMatthew1TimelineData();
+        }
+    } catch (error) {
+    }
+    // Check if timeline is already loaded
+    if (window[timelineVarName]) {
+        displayTimeline(bookName, chapterNum, databaseEvents);
+        return;
+    }
+    // Load the timeline script
+    const script = document.createElement('script');
+    script.src = path;
+    script.onload = () => {
+        displayTimeline(bookName, chapterNum, databaseEvents);
+    };
+    script.onerror = () => {
+        // If script fails to load, just show database events
+        displayTimeline(bookName, chapterNum, databaseEvents);
+    };
+    document.head.appendChild(script);
+}
+// Get timeline file path based on book name
+function getTimelinePath(bookName) {
+    // New Testament books
+    const newTestamentBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans',
+        'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians', 'Philippians',
+        'Colossians', 'I Thessalonians', 'II Thessalonians', 'I Timothy', 'II Timothy',
+        'Titus', 'Philemon', 'Hebrews', 'James', 'I Peter', 'II Peter', 'I John',
+        'II John', 'III John', 'Jude', 'Revelation'];
+    // Old Testament books
+    const oldTestamentBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy',
+        'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings',
+        'I Chronicles', 'II Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms',
+        'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations',
+        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah',
+        'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    if (newTestamentBooks.includes(bookName)) {
+        return `resources/timeline/new-testament/${fileName}.js`;
+    } else if (oldTestamentBooks.includes(bookName)) {
+        return `resources/timeline/old-testament/${fileName}.js`;
+    }
+    return null;
+}
+// Load and display timeline
+function loadTimelineScript(path, bookName, chapterNum) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+    // Check if timeline is already loaded
+    if (window[timelineVarName]) {
+        displayTimeline(bookName, chapterNum);
+        return;
+    }
+    const script = document.createElement('script');
+    script.src = path;
+    script.onload = () => {
+        displayTimeline(bookName, chapterNum);
+    };
+    script.onerror = () => {
+        alert(`Timeline not available for ${bookName} ${chapterNum} yet.`);
+    };
+    document.body.appendChild(script);
+}
+// Display the timeline in the drawer
+function displayTimeline(bookName, chapterNum, databaseEvents = []) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+    // Try to access the timeline object from JS files
+    const timelineData = window[timelineVarName];
+    let timelineEvents = [];
+    // Combine file-based timeline with database events
+    if (timelineData && timelineData[chapterNum]) {
+        timelineEvents = timelineData[chapterNum].map(event => ({
+            id: `file_${Math.random()}`,
+            event_description: event,
+            verse_reference: '',
+            isFromFile: true
+        }));
+    }
+    // Add database events
+    if (databaseEvents && databaseEvents.length > 0) {
+        const dbEvents = databaseEvents.map(event => ({
+            ...event,
+            isFromFile: false
+        }));
+        timelineEvents = [...dbEvents]; // Only use database events, not both
+    }
+    if (timelineEvents.length > 0) {
+        // Normalize all events to have consistent structure
+        timelineEvents = timelineEvents.map(event => ({
+            id: event.id,
+            description: event.event_description || event.description || event,
+            verse_reference: event.verse_reference || '',
+            isFromFile: event.isFromFile || false,
+            order_index: event.order_index || 0
+        }));
+        const summaryDrawer = document.getElementById('summary-drawer');
+        const summaryDrawerContent = document.getElementById('summary-drawer-content');
+        const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+        // Update drawer title
+        summaryDrawerTitle.textContent = 'Chapter Timeline';
+        // Format the timeline with proper styling and admin controls
+        const formattedTimeline = timelineEvents
+            .map((event, index) => {
+                const verseDisplay = event.verse_reference ? `<div class="timeline-verse">${event.verse_reference}</div>` : '';
+                const eventClass = event.isFromFile ? 'timeline-event-file' : 'timeline-event-db';
+                return `
+                    <li class="timeline-item ${eventClass}" data-event-id="${event.id || ''}" data-is-file="${event.isFromFile}">
+                        <div class="timeline-content">
+                            ${verseDisplay}
+                            <div class="timeline-event">${event.description}</div>
+                            ${!event.isFromFile && isAdmin() ? `
+                                <button class="delete-timeline-item-btn" onclick="markTimelineForDeletion('${event.id}')" title="Mark this timeline entry for deletion" style="display: none;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="3,6 5,6 21,6"></polyline>
+                                        <path d="m19,6v14a2,2 0 0,1-2,2H7a2,2 0 0,1-2-2V6m3,0V4a2,2 0 0,1,2,2v2"></path>
+                                    </svg>
+                                </button>
+                            ` : ''}
+                        </div>
+                    </li>
+                `;
+            })
+            .join('');
+        const timelineBottomButtons = isAdmin() ? `
+            <div class="timeline-bottom-section">
+                <div class="timeline-bottom-buttons">
+                    <button class="edit-mode-btn" id="timeline-edit-btn" onclick="toggleTimelineEditMode()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m18 2 4 4L12 16l-4 4-4-4L14 6z"></path>
+                        </svg>
+                        <span class="edit-mode-text">Edit</span>
+                    </button>
+                    <button class="add-timeline-btn" id="timeline-add-btn" onclick="addTimelineInline()" style="display: none;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        Add
+                    </button>
+                </div>
+            </div>
+        ` : '';
+        // Use the scrollable structure for consistency
+        summaryDrawerContent.innerHTML = `
+            <div class="timeline-scroll-area">
+                <ul class="timeline-list">${formattedTimeline}</ul>
+            </div>
+            ${timelineBottomButtons}
+        `;
+        // Add event listeners for timeline buttons (since we're using data attributes instead of onclick)
+        setTimeout(() => {
+            document.querySelectorAll('.edit-timeline-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const eventId = e.currentTarget.getAttribute('data-event-id');
+                    const description = e.currentTarget.getAttribute('data-description');
+                    const verse = e.currentTarget.getAttribute('data-verse') || '';
+                    editTimelineEvent(eventId, description, verse);
+                });
+            });
+            document.querySelectorAll('.delete-timeline-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const eventId = e.currentTarget.getAttribute('data-event-id');
+                    const description = e.currentTarget.getAttribute('data-description');
+                    deleteTimelineEvent(eventId, description);
+                });
+            });
+        }, 100);
+        // Track navigation
+        navigateToPage('timeline');
+        // Show the drawer
+        summaryDrawer.classList.add('active');
+        document.body.classList.add('summary-drawer-open');
+    } else {
+        // Show empty state with add button for admins
+        if (isAdmin()) {
+            displayEmptyTimelineForAdmin(bookName, chapterNum);
+        } else {
+            alert(`Timeline not available for ${bookName} ${chapterNum} yet.`);
+        }
+    }
+}
+// Display empty timeline state for admin users
+function displayEmptyTimelineForAdmin(bookName, chapterNum) {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    const summaryDrawerContent = document.getElementById('summary-drawer-content');
+    const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+    // Update drawer title
+    summaryDrawerTitle.textContent = 'Chapter Timeline';
+    // Show empty state with add button
+    summaryDrawerContent.innerHTML = `
+        <div class="timeline-scroll-area">
+            <div class="no-timeline">
+                <div class="no-timeline-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"></path>
+                    </svg>
+                </div>
+                <h3>No Timeline Events</h3>
+                <p>No timeline events available for ${bookName} Chapter ${chapterNum} yet.</p>
+            </div>
+        </div>
+        <div class="timeline-bottom-section">
+            <div class="add-timeline-container">
+                <button class="add-timeline-btn" onclick="showAddTimelineModal()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Timeline Event
+                </button>
+            </div>
+        </div>
+    `;
+    // Track navigation
+    navigateToPage('timeline');
+    // Show the drawer
+    summaryDrawer.classList.add('active');
+    document.body.classList.add('summary-drawer-open');
+}
+// Show chapter characters
+async function showChapterCharacters() {
+    // Close mobile drawer if open
+    const drawerOverlay = document.querySelector('.drawer-overlay');
+    const booksSidebar = document.querySelector('.books-sidebar');
+    const chaptersColumn = document.querySelector('.chapters-column');
+    const versesColumn = document.querySelector('.verses-column');
+    if (drawerOverlay && drawerOverlay.classList.contains('active')) {
+        drawerOverlay.classList.remove('active');
+        booksSidebar.classList.remove('drawer-open');
+        chaptersColumn.classList.remove('drawer-open');
+        versesColumn.classList.remove('drawer-open');
+        document.body.style.overflow = '';
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        if (hamburgerIcon) hamburgerIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+    }
+    const book = bibleBooks[currentBook];
+    const chapterNum = currentChapter;
+    // Load characters from Supabase
+    await loadCharactersFromSupabase(book.file, chapterNum);
+}
+// Load characters from Supabase
+async function loadCharactersFromSupabase(bookFile, chapter) {
+    try {
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('bible_characters')
+            .select('id, name, description')
+            .eq('book_file', bookFile)
+            .eq('chapter', chapter)
+            .order('id', { ascending: true });
+        if (error) {
+            showToast('Failed to load characters. Please try again.', 'error');
+            return;
+        }
+        if (!data || data.length === 0) {
+            if (isAdmin()) {
+                // Show empty state with add button for admins
+                displayCharacters([]);
+            } else {
+                showToast('Characters not available for this chapter yet.', 'info');
+            }
+            return;
+        }
+        displayCharacters(data);
+    } catch (error) {
+        showToast('Failed to load characters. Please try again.', 'error');
+    }
+}
+// Display characters in the drawer
+function displayCharacters(characters) {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    const summaryDrawerContent = document.getElementById('summary-drawer-content');
+    const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+    // Update drawer title
+    summaryDrawerTitle.textContent = 'Chapter Characters';
+    // Format the characters with proper styling and admin action buttons
+    const formattedCharacters = characters
+        .map((character, index) => {
+            const actionButtons = isAdmin() ? `
+                <div class="character-actions">
+                    <button class="edit-character-btn" onclick="editCharacter(${character.id}, '${character.name.replace(/'/g, "\\'")}', '${character.description.replace(/'/g, "\\'")}')"
+                        title="Edit character">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m18 2 4 4L12 16l-4 4-4-4L14 6z"></path>
+                        </svg>
+                    </button>
+                    <button class="delete-character-btn" onclick="deleteCharacter(${character.id}, '${character.name.replace(/'/g, "\\'")}')"
+                        title="Delete character">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3,6 5,6 21,6"></polyline>
+                            <path d="m19,6v14a2,2 0 0,1-2,2H7a2,2 0 0,1-2-2V6m3,0V4a2,2 0 0,1,2-2h4a2,2 0 0,1,2,2v2"></path>
+                        </svg>
+                    </button>
+                </div>
+            ` : '';
+            return `
+                <div class="character-item">
+                    <div class="character-content">
+                        <div class="character-number">${index + 1}. ${character.name}</div>
+                        <div class="character-description">${character.description}</div>
+                    </div>
+                    ${actionButtons}
+                </div>
+            `;
+        })
+        .join('');
+    const addCharacterButton = isAdmin() ? `
+        <div class="add-character-container">
+            <button class="add-character-btn" onclick="showAddCharacterModal()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Add Character
+            </button>
+        </div>
+    ` : '';
+    // Restructure with scrollable content area and fixed bottom button
+    summaryDrawerContent.innerHTML = `
+        <div class="characters-scroll-area">
+            <div class="characters-list">
+                ${formattedCharacters || '<div class="no-characters">No characters available for this chapter yet.</div>'}
+            </div>
+        </div>
+        <div class="characters-bottom-section">
+            ${addCharacterButton}
+        </div>
+    `;
+    // Track navigation
+    navigateToPage('characters');
+    // Show the drawer
+    summaryDrawer.classList.add('active');
+    document.body.classList.add('summary-drawer-open');
+}
+// Show modal to add new character
+function showAddCharacterModal() {
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Add New Character</h3>
+                <button class="close-character-modal" onclick="closeAddCharacterModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="add-character-form">
+                    <div class="form-group">
+                        <label for="character-name">Character Name *</label>
+                        <input type="text" id="character-name" name="name" required maxlength="100" placeholder="Enter character name">
+                    </div>
+                    <div class="form-group">
+                        <label for="character-description">Description *</label>
+                        <textarea id="character-description" name="description" required maxlength="500" placeholder="Enter character description..." rows="4"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn" onclick="closeAddCharacterModal()">Cancel</button>
+                        <button type="submit" class="save-btn">Save Character</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    modal.classList.add('active');
+    // Handle form submission
+    document.getElementById('add-character-form').addEventListener('submit', handleAddCharacter);
+    // Focus on name input
+    setTimeout(() => document.getElementById('character-name').focus(), 100);
+}
+// Close character modal
+function closeAddCharacterModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+// Edit character function
+async function editCharacter(characterId, currentName, currentDescription) {
+    if (!isAdmin()) {
+        showToast('Admin privileges required to edit characters.', 'error');
+        return;
+    }
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay active';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Edit Character</h3>
+                <button class="close-character-modal" onclick="closeEditCharacterModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="edit-character-form">
+                    <div class="form-group">
+                        <label for="edit-character-name">Character Name *</label>
+                        <input type="text" id="edit-character-name" name="name" required maxlength="100" value="${currentName}" placeholder="Enter character name">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-character-description">Character Description *</label>
+                        <textarea id="edit-character-description" name="description" required maxlength="500" rows="4" placeholder="Describe the character...">${currentDescription}</textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" onclick="closeEditCharacterModal()" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Update Character</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    // Handle form submission
+    const form = document.getElementById('edit-character-form');
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const name = formData.get('name').trim();
+        const description = formData.get('description').trim();
+        if (!name || !description) {
+            showToast('Please fill in all required fields.', 'error');
+            return;
+        }
+        try {
+            await updateCharacterInSupabase(characterId, name, description);
+            closeEditCharacterModal();
+            // Reload characters
+            const book = bibleBooks[currentBook];
+            await loadCharactersFromSupabase(book.file, currentChapter);
+            const isMobile = window.innerWidth <= 768;
+            showToast(isMobile ? 'Updated!' : 'Character updated successfully!', 'success');
+        } catch (error) {
+            showToast('Error updating character: ' + error.message, 'error');
+        }
+    });
+}
+// Delete character function
+async function deleteCharacter(characterId, characterName) {
+    if (!isAdmin()) {
+        showToast('Admin privileges required to delete characters.', 'error');
+        return;
+    }
+    // Show custom delete confirmation popup
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay active';
+    modal.innerHTML = `
+        <div class="character-modal delete-modal">
+            <div class="character-modal-header">
+                <h3>Delete Character</h3>
+            </div>
+            <div class="character-modal-body">
+                <p class="delete-message">Are you sure you want to delete "${characterName}"?</p>
+                <div class="form-buttons">
+                    <button type="button" onclick="closeDeleteModal()" class="cancel-btn">Cancel</button>
+                    <button type="button" onclick="confirmDeleteCharacter(${characterId})" class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    // Store modal reference globally for cleanup
+    window.currentDeleteModal = modal;
+}
+// Close delete modal
+function closeDeleteModal() {
+    const modal = window.currentDeleteModal;
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+        window.currentDeleteModal = null;
+    }
+}
+// Confirm delete character
+async function confirmDeleteCharacter(characterId) {
+    try {
+        await deleteCharacterFromSupabase(characterId);
+        // Close modal
+        closeDeleteModal();
+        // Reload characters
+        const book = bibleBooks[currentBook];
+        await loadCharactersFromSupabase(book.file, currentChapter);
+        const isMobile = window.innerWidth <= 768;
+        showToast(isMobile ? 'Deleted!' : 'Character deleted successfully!', 'success');
+    } catch (error) {
+        showToast('Error deleting character: ' + error.message, 'error');
+    }
+}
+// Close edit modal
+function closeEditCharacterModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+// Update character in Supabase
+async function updateCharacterInSupabase(characterId, name, description) {
+    const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/bible_characters?id=eq.${characterId}`, {
+        method: 'PATCH',
+        headers: {
+            'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+            'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+            name: name,
+            description: description
+        })
+    });
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Failed to update character: ${errorText}`);
+    }
+}
+// Delete character from Supabase
+async function deleteCharacterFromSupabase(characterId) {
+    const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/bible_characters?id=eq.${characterId}`, {
+        method: 'DELETE',
+        headers: {
+            'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+            'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
+            'Content-Type': 'application/json'
+        }
+    });
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Failed to delete character: ${errorText}`);
+    }
+}
+// Handle adding new character
+async function handleAddCharacter(e) {
+    e.preventDefault();
+    const name = document.getElementById('character-name').value.trim();
+    const description = document.getElementById('character-description').value.trim();
+    if (!name || !description) {
+        showToast('Please fill in all required fields.', 'error');
+        return;
+    } const saveBtn = document.querySelector('.save-btn');
+    saveBtn.disabled = true;
+    saveBtn.textContent = 'Saving...';
+    try {
+        const book = bibleBooks[currentBook];
+        const success = await saveCharacterToSupabase(book.file, currentChapter, name, description);
+        if (success) {
+            closeAddCharacterModal();
+            // Reload characters to show the new one
+            await loadCharactersFromSupabase(book.file, currentChapter);
+            // Show success message
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                showToast('Added!', 'success');
+            } else {
+                showDesktopNotification('Character added successfully!');
+            }
+        }
+    } catch (error) {
+        // Show specific error message for RLS issues
+        if (error.message && error.message.includes('Permission denied')) {
+            showToast(error.message, 'error');
+        } else {
+            showToast('Failed to add character. Please try again.', 'error');
+        }
+    } finally {
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Save Character';
+    }
+}
+// Save character to Supabase
+// Save character to Supabase
+async function saveCharacterToSupabase(bookFile, chapter, name, description) {
+    try {
+        // Check if user is in admin mode
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to add characters.');
+        }
+        // Find the book to get testament information
+        const book = bibleBooks.find(b => b.file === bookFile);
+        if (!book) {
+            throw new Error('Book not found');
+        }
+        // Use the testament format that matches the database constraint
+        const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
+        // Use direct fetch approach to create the character
+        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/bible_characters`, {
+            method: 'POST',
+            headers: {
+                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify({
+                book_file: bookFile,
+                chapter: chapter,
+                name: name,
+                description: description,
+                testament: testament,
+                created_at: new Date().toISOString()
+            })
+        });
+        if (response.ok) {
+            return true;
+        } else {
+            const errorText = await response.text();
+            if (response.status === 401 || response.status === 403) {
+                throw new Error('Permission denied. The RLS policy may not be working correctly.');
+            } else if (response.status === 400 && errorText.includes('testament')) {
+                throw new Error('Invalid testament value. Please check the database constraints.');
+            } else {
+                throw new Error(`Database error (${response.status}): ${errorText}`);
+            }
+        }
+    } catch (error) {
+        throw error;
+    }
+}
+// Load Notes and Bookmarks from Supabase
+async function loadNotesFromSupabase() {
+    try {
+        // First, always load from localStorage as fallback
+        const localNotes = localStorage.getItem('verseNotes');
+        if (localNotes) {
+            try {
+                verseNotes = JSON.parse(localNotes);
+            } catch (e) {
+                verseNotes = {};
+            }
+        }
+
+        // Load bookmarks from bible_verse_bookmarks table
+        try {
+            const bookmarksResponse = await fetch(`${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}?select=*`, {
+                headers: {
+                    'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (bookmarksResponse.ok) {
+                const bookmarks = await bookmarksResponse.json();
+                if (bookmarks && bookmarks.length > 0) {
+                    console.log('📌 Loaded', bookmarks.length, 'bookmarks from Supabase');
+                    // Convert bookmarks to verseNotes format
+                    bookmarks.forEach(bookmark => {
+                        const noteKey = `${bookmark.book_file}_${bookmark.chapter}_${bookmark.verse}`;
+                        if (!verseNotes[noteKey]) {
+                            verseNotes[noteKey] = {};
+                        }
+                        // Only update color from bookmarks table
+                        verseNotes[noteKey].color = bookmark.color;
+                        verseNotes[noteKey].chapter = bookmark.chapter;
+                        verseNotes[noteKey].verse = bookmark.verse;
+                    });
+                }
+            }
+        } catch (error) {
+            console.log('ℹ️ Could not load bookmarks from Supabase:', error.message);
+        }
+
+        // Load notes from bible_verse_notes table
+        try {
+            const notesResponse = await fetch(`${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}?select=*`, {
+                headers: {
+                    'apikey': SUPABASE_VERSE_NOTES_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_VERSE_NOTES_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (notesResponse.ok) {
+                const notes = await notesResponse.json();
+                if (notes && notes.length > 0) {
+                    console.log('📝 Loaded', notes.length, 'verse notes from Supabase');
+                    // Convert notes to verseNotes format
+                    notes.forEach(note => {
+                        const noteKey = `${note.book_file}_${note.chapter}_${note.verse}`;
+                        if (!verseNotes[noteKey]) {
+                            verseNotes[noteKey] = {};
+                        }
+                        // Only update text from notes table
+                        verseNotes[noteKey].text = note.text;
+                        verseNotes[noteKey].chapter = note.chapter;
+                        verseNotes[noteKey].verse = note.verse;
+
+                        // Load cross-references and populate crossReferences object
+                        if (note.cross_references && note.cross_references.length > 0) {
+                            const bookMeta = bibleBooks.find(b => b.file === note.book_file);
+                            if (bookMeta) {
+                                const crossRefKey = `${bookMeta.name} ${note.chapter}:${note.verse}`;
+                                crossReferences[crossRefKey] = note.cross_references;
+                            }
+                        }
+                    });
+                }
+            }
+        } catch (error) {
+            console.log('ℹ️ Could not load verse notes from Supabase:', error.message);
+        }
+
+        // Load documentation/notes structure from bible_notes_pages table (separate feature)
+        try {
+            const serviceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzU0MzYzOSwiZXhwIjoyMDc5MTE5NjM5fQ.WGtQxBTBcJh96Y4ppTiHGQygztdJduf5O4-JNTZBP90';
+
+            const docsResponse = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?select=id,title,type,content,parent_id,folder_path&order=id.asc`, {
+                headers: {
+                    'apikey': serviceKey,
+                    'Authorization': `Bearer ${serviceKey}`
+                }
+            });
+
+            if (docsResponse.ok) {
+                const rows = await docsResponse.json();
+                if (rows && rows.length > 0) {
+                    console.log('📚 Loaded', rows.length, 'documentation notes from Supabase');
+                    const treeStructure = rebuildTreeFromRows(rows);
+                    window.NOTES_TREE = treeStructure;
+                }
+            }
+        } catch (error) {
+            console.log('ℹ️ Could not load documentation notes:', error.message);
+        }
+
+        applyAllNoteDisplays();
+        return Object.keys(verseNotes).length > 0;
+    } catch (error) {
+        console.error('Error loading from Supabase:', error);
+        if (Object.keys(verseNotes).length === 0) {
+            verseNotes = {};
+        }
+        applyAllNoteDisplays();
+        return false;
+    }
+}
+
+/**
+ * Rebuild tree structure from flat rows
+ * Converts multiple Supabase rows back into nested structure
+ */
+function rebuildTreeFromRows(rows) {
+    const itemsById = new Map();
+    const rootItems = [];
+
+    // First pass: create items map
+    rows.forEach(row => {
+        const item = {
+            id: row.id,
+            title: row.title,
+            type: row.type,
+            content: row.content,
+            children: [],
+            createdAt: row.created_at,
+            updatedAt: row.updated_at
+        };
+        itemsById.set(row.id, item);
+    });
+
+    // Second pass: build parent-child relationships
+    rows.forEach(row => {
+        const item = itemsById.get(row.id);
+        if (row.parent_id) {
+            const parent = itemsById.get(row.parent_id);
+            if (parent) {
+                parent.children.push(item);
+            } else {
+                // Orphaned item, add to root
+                rootItems.push(item);
+            }
+        } else {
+            // Root item
+            rootItems.push(item);
+        }
+    });
+
+    return rootItems;
+}
+// Save a single bookmark to Supabase (optimized for individual verse updates)
+async function saveSingleBookmarkToSupabase(noteKey, note) {
+    if (!note || !note.color) {
+        console.log('⏭️ Skipping save - no note or color:', { note });
+        return true;
+    }
+
+    try {
+        // noteKey format: "bookFile_chapter_verse" where bookFile might contain underscores
+        // Extract chapter and verse (last two numbers)
+        const lastUnderscoreIndex = noteKey.lastIndexOf('_');
+        const secondLastUnderscoreIndex = noteKey.lastIndexOf('_', lastUnderscoreIndex - 1);
+
+        const bookFile = noteKey.substring(0, secondLastUnderscoreIndex);
+        const chapter = noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex);
+        const verse = noteKey.substring(lastUnderscoreIndex + 1);
+
+        if (!bookFile || !chapter || !verse) {
+            console.error('❌ Invalid noteKey format:', noteKey);
+            return false;
+        }
+
+        const bookmark = {
+            color: note.color,
+            timestamp: note.timestamp || new Date().toISOString()
+        };
+
+        console.log('📤 Attempting to save bookmark:', { noteKey, bookFile, chapter, verse, bookmark });
+
+        // Try to update existing bookmark first (PATCH)
+        const updateResponse = await fetch(
+            `${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}?book_file=eq.${bookFile}&chapter=eq.${parseInt(chapter)}&verse=eq.${parseInt(verse)}`,
+            {
+                method: 'PATCH',
+                headers: {
+                    'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json',
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify(bookmark)
+            }
+        );
+
+        console.log('PATCH Response:', { status: updateResponse.status, ok: updateResponse.ok });
+
+        // 204 means success but may not have matched any rows, so always try POST
+        if (updateResponse.status === 204) {
+            // 204 = No Content (could mean no rows matched), try POST
+            console.log('⚠️ PATCH returned 204, attempting POST...');
+        } else if (updateResponse.ok) {
+            // Other success status, assume it worked
+            console.log('✅ Bookmark updated:', `${bookFile} ${chapter}:${verse}`);
+            return true;
+        } else {
+            console.log('⚠️ PATCH failed, attempting POST...');
+        }
+
+        // Always try POST (either PATCH failed or returned 204)
+        if (updateResponse.status === 204 || !updateResponse.ok) {
+            // If update fails (row doesn't exist), insert new bookmark
+            const insertResponse = await fetch(
+                `${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                        'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                        'Content-Type': 'application/json',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        ...bookmark,
+                        book_file: bookFile,
+                        chapter: parseInt(chapter),
+                        verse: parseInt(verse)
+                    })
+                }
+            );
+
+            console.log('POST Response:', { status: insertResponse.status, ok: insertResponse.ok });
+
+            if (!insertResponse.ok) {
+                const error = await insertResponse.text();
+                console.error('❌ Failed to save bookmark:', error, insertResponse.status);
+                return false;
+            }
+
+            console.log('✅ Bookmark created:', `${bookFile} ${chapter}:${verse}`);
+            return true;
+        }
+    } catch (error) {
+        console.error('❌ Error syncing bookmark to Supabase:', error);
+        return true; // Return true since it's saved in localStorage
+    }
+}
+async function saveNotesToSupabase() {
+    // Save to localStorage immediately so notes appear right away
+    localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+
+    // Save bookmarks to Supabase table (one row per verse)
+    try {
+        // Get all bookmarks from verseNotes
+        const bookmarks = [];
+        Object.keys(verseNotes).forEach(noteKey => {
+            const note = verseNotes[noteKey];
+            if (note && note.color) {
+                // noteKey format: "bookFile_chapter_verse"
+                const parts = noteKey.split('_');
+                if (parts.length === 3) {
+                    bookmarks.push({
+                        book_file: parts[0],
+                        book: note.book || '',
+                        chapter: parseInt(parts[1]),
+                        verse: parseInt(parts[2]),
+                        color: note.color,
+                        text: note.text || null,
+                        timestamp: note.timestamp || new Date().toISOString()
+                    });
+                }
+            }
+        });
+
+        // If there are bookmarks to save
+        if (bookmarks.length > 0) {
+            // First, delete existing bookmarks to avoid conflicts
+            // Then insert the new ones
+            for (const bookmark of bookmarks) {
+                try {
+                    // Delete existing bookmark if it exists
+                    await fetch(
+                        `${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}?book_file=eq.${bookmark.book_file}&chapter=eq.${bookmark.chapter}&verse=eq.${bookmark.verse}`,
+                        {
+                            method: 'DELETE',
+                            headers: {
+                                'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                                'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                                'Content-Type': 'application/json'
+                            }
+                        }
+                    );
+                } catch (e) {
+                    // Ignore delete errors
+                }
+
+                // Insert the bookmark
+                try {
+                    const response = await fetch(
+                        `${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}`,
+                        {
+                            method: 'POST',
+                            headers: {
+                                'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                                'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                                'Content-Type': 'application/json',
+                                'Prefer': 'return=minimal'
+                            },
+                            body: JSON.stringify(bookmark)
+                        }
+                    );
+
+                    if (!response.ok) {
+                        const error = await response.text();
+                        console.error('Failed to save bookmark:', error);
+                    }
+                } catch (e) {
+                    console.error('Error inserting bookmark:', e);
+                }
+            }
+
+            console.log('✅ Bookmarks synced to Supabase:', bookmarks.length);
+            return true;
+        }
+
+        return true;
+    } catch (error) {
+        console.error('Error syncing bookmarks to Supabase:', error);
+        // Fail silently - bookmarks are still saved in localStorage
+        return true;
+    }
+}
+// Memory Verses - Load from Supabase
+async function loadMemoryVersesFromSupabase() {
+    // Initialize memoryVerses if undefined
+    if (typeof window.memoryVerses === 'undefined') {
+        window.memoryVerses = [];
+    }
+
+    // Load from localStorage first (instant, offline-safe)
+    const localVerses = localStorage.getItem('memoryVerses');
+    if (localVerses) {
+        try {
+            window.memoryVerses = JSON.parse(localVerses);
+            markBooksWithMemoryVerses();
+            updateVerseMemoryVerseIndicators();
+            displayChapter(); // Refresh chapter display to show memory verse styling
+        } catch (e) {
+        }
+    }
+
+    // Async sync from Supabase (don't block UI)
+    try {
+        // Fetch all rows - each row contains one verse_reference
+        const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}?select=verse_reference&order=id.asc`, {
+            method: 'GET',
+            headers: {
+                'apikey': SUPABASE_MEMORY_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_MEMORY_CONFIG.anonKey}`,
+                'Content-Type': 'application/json'
+            }
+        });
+        if (response.ok) {
+            const data = await response.json();
+            if (data && data.length > 0) {
+                // Extract verse_reference from each row to create array of strings
+                const supabaseVerses = data.map(row => row.verse_reference).filter(ref => ref);
+                // Update if Supabase has different data
+                if (JSON.stringify(supabaseVerses) !== JSON.stringify(window.memoryVerses)) {
+                    window.memoryVerses = supabaseVerses;
+                    localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
+                    markBooksWithMemoryVerses();
+                    updateVerseMemoryVerseIndicators();
+                    displayChapter();
+                } else {
+                }
+                return true;
+            } else {
+            }
+        } else {
+        }
+        return false;
+    } catch (error) {
+        return false;
+    }
+}
+
+// Toggle memory verse status
+async function toggleMemoryVerse() {
+    if (!currentNoteVerse) return;
+    const verseReference = `${bibleBooks[currentBook].name} ${currentChapter}:${currentNoteVerse}`;
+
+    // Initialize memoryVerses if it doesn't exist
+    if (typeof window.memoryVerses === 'undefined') {
+        window.memoryVerses = [];
+    }
+
+    // Toggle memory verse status
+    const isMemoryVerse = window.memoryVerses.includes(verseReference);
+    if (isMemoryVerse) {
+        // Remove from memory verses
+        window.memoryVerses = window.memoryVerses.filter(v => v !== verseReference);
+    } else {
+        // Add to memory verses
+        window.memoryVerses.push(verseReference);
+    }
+
+    // Save to localStorage immediately (for instant UI update)
+    localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
+
+    // Update UI indicators immediately
+    markBooksWithMemoryVerses();
+    updateVerseMemoryVerseIndicators();
+
+    // Update the verse line class
+    const verseLine = document.querySelector(`.verse-line[data-verse="${currentNoteVerse}"]`);
+    if (verseLine) {
+        if (isMemoryVerse) {
+            verseLine.classList.remove('memory-verse');
+        } else {
+            verseLine.classList.add('memory-verse');
+        }
+    }
+
+    // Async save to Supabase (non-blocking) - don't await
+    saveMemoryVersesToSupabase().catch(error => {
+    });
+}
+
+async function saveMemoryVersesToSupabase() {
+    // Save to localStorage immediately
+    localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
+    try {
+        // Delete all existing rows first
+        // Using id>=0 to match all rows (since id is auto-increment starting from 1)
+        const deleteResponse = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}?id=gte.0`, {
+            method: 'DELETE',
+            headers: {
+                'apikey': SUPABASE_MEMORY_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_MEMORY_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+            }
+        });
+        if (!deleteResponse.ok) {
+            const errorText = await deleteResponse.text();
+        } else {
+        }
+        // Only insert if we have verses to save
+        if (window.memoryVerses && window.memoryVerses.length > 0) {
+            // Insert all verses as individual rows
+            const rows = window.memoryVerses.map(verse => ({
+                verse_reference: verse
+            }));
+            const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}`, {
+                method: 'POST',
+                headers: {
+                    'apikey': SUPABASE_MEMORY_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_MEMORY_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json',
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify(rows)
+            });
+            if (response.ok) {
+                return true;
+            } else {
+                const error = await response.text();
+                return false;
+            }
+        } else {
+            return true;
+        }
+    } catch (error) {
+        return false;
+    }
+}
+// Clean up duplicate memory verses in Supabase
+async function cleanupDuplicateMemoryVerses() {
+    try {
+        // Fetch all rows from Supabase
+        const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}?select=verse_reference&order=id.asc`, {
+            method: 'GET',
+            headers: {
+                'apikey': SUPABASE_MEMORY_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_MEMORY_CONFIG.anonKey}`,
+                'Content-Type': 'application/json'
+            }
+        });
+        if (response.ok) {
+            const data = await response.json();
+            // Extract verse references and remove duplicates
+            const allVerses = data.map(row => row.verse_reference).filter(ref => ref);
+            const uniqueVerses = [...new Set(allVerses)];
+            // Update global memoryVerses with unique list
+            window.memoryVerses = uniqueVerses;
+            // Save back to Supabase (this will delete all and re-insert unique ones)
+            await saveMemoryVersesToSupabase();
+            showToast(`Cleaned up ${allVerses.length - uniqueVerses.length} duplicate verses`, 3000);
+            // Update UI
+            markBooksWithMemoryVerses();
+            updateVerseMemoryVerseIndicators();
+            displayChapter(); // Refresh chapter display to update memory verse styling
+            return true;
+        } else {
+            return false;
+        }
+    } catch (error) {
+        return false;
+    }
+}
+
+// Notes functionality - Android-style bottom sheet
+function openNotesModal(verseNum = null) {
+    // Check admin mode
+    if (!isAdmin()) {
+        return; // Silently prevent opening in non-admin mode
+    }
+
+    const overlay = document.getElementById('notes-modal-overlay');
+    const modal = document.getElementById('notes-modal');
+    const textarea = document.getElementById('notes-textarea');
+    const verseRef = document.getElementById('notes-verse-ref');
+    const deleteBtn = document.getElementById('delete-note-btn');
+    const loadingEl = document.getElementById('notes-loading');
+
+    if (!overlay || !modal) return;
+
+    // Reset modal state before opening (in case it was previously open)
+    modal.classList.remove('closing');
+    modal.classList.remove('dragging');
+    modal.style.transform = 'translateY(0)';
+    modal.style.transition = '';
+    overlay.classList.remove('visible');
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.32)';
+    overlay.style.transition = '';
+
+    // Clear loading state
+    if (loadingEl) {
+        loadingEl.classList.remove('active');
+    }
+
+    // If verseNum provided, use it, otherwise check for highlighted verse
+    if (verseNum === null) {
+        const highlightedVerse = document.querySelector('.verse-line.highlighted');
+        if (highlightedVerse) {
+            verseNum = parseInt(highlightedVerse.dataset.verse);
+        } else {
+            alert('Please select a verse first');
+            return;
+        }
+    }
+
+    currentNoteVerse = verseNum;
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+    const existingNote = verseNotes[noteKey];
+
+    // Set verse reference
+    verseRef.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
+
+    // Load existing note if available
+    if (existingNote) {
+        textarea.innerHTML = existingNote.text || '';
+        currentNoteColor = existingNote.color || null;
+        deleteBtn.style.display = existingNote.text ? 'block' : 'none';
+    } else {
+        textarea.innerHTML = '';
+        currentNoteColor = null;
+        deleteBtn.style.display = 'none';
+    }
+
+    // Save current scroll position before preventing body scroll
+    const scrollY = window.scrollY;
+    document.body.style.top = `-${scrollY}px`;
+    document.body.classList.add('modal-open');
+    document.body.style.overflow = 'hidden';
+
+    // Track navigation
+    navigateToPage('notes');
+
+    // Show overlay with fade-in animation
+    overlay.style.display = 'flex';
+
+    // Trigger animation on next frame
+    requestAnimationFrame(() => {
+        overlay.classList.add('visible');
+        initializeAndroidBottomSheetGestures();
+
+        // Focus textarea after modal is visible
+        setTimeout(() => {
+            if (textarea) {
+                textarea.focus();
+                // Move cursor to end of content
+                const range = document.createRange();
+                const sel = window.getSelection();
+                if (textarea.childNodes.length > 0) {
+                    range.selectNodeContents(textarea);
+                    range.collapse(false);
+                    sel.removeAllRanges();
+                    sel.addRange(range);
+                }
+            }
+        }, 300);
+    });
+}
+
+function closeNotesModal() {
+    const overlay = document.getElementById('notes-modal-overlay');
+    const modal = document.getElementById('notes-modal');
+
+    if (!overlay || !modal) return;
+
+    // Trigger close animation on mobile
+    if (window.innerWidth <= 768) {
+        modal.classList.add('closing');
+        overlay.classList.remove('visible');
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            finishClosing();
+        }, 300);
+    } else {
+        overlay.classList.remove('visible');
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            finishClosing();
+        }, 300);
+    }
+}
+
+function finishClosing() {
+    const modal = document.getElementById('notes-modal');
+    const overlay = document.getElementById('notes-modal-overlay');
+
+    // Restore scroll position
+    const scrollYStyle = document.body.style.top;
+    document.body.classList.remove('modal-open');
+    document.body.style.top = '';
+    document.body.style.overflow = '';
+
+    if (scrollYStyle) {
+        const scrollY = Math.abs(parseInt(scrollYStyle));
+        window.scrollTo(0, scrollY);
+    }
+
+    // Reset modal state for next open
+    if (modal) {
+        modal.classList.remove('closing');
+        modal.classList.remove('dragging');
+        modal.style.transform = '';
+        modal.style.transition = '';
+    }
+
+    // Reset overlay state
+    if (overlay) {
+        overlay.style.backgroundColor = '';
+        overlay.style.transition = '';
+        overlay.classList.remove('visible');
+    }
+
+    // Track navigation back to bible page
+    navigateToBiblePage();
+}
+
+/**
+ * Android-style bottom sheet drag and swipe gestures
+ * Uses pointer events for better support (mouse, touch, pen)
+ * GPU-accelerated with transform: translateY
+ * Snap behavior with spring easing
+ */
+function initializeAndroidBottomSheetGestures() {
+    if (window.innerWidth > 768) return; // Desktop doesn't need drag
+
+    const overlay = document.getElementById('notes-modal-overlay');
+    const sheet = document.getElementById('notes-modal');
+    const contentArea = document.getElementById('notes-modal-content');
+    const textarea = document.getElementById('notes-textarea');
+
+    if (!overlay || !sheet || !contentArea) return;
+
+    // Ensure textarea is always clickable and editable
+    if (textarea) {
+        textarea.style.pointerEvents = 'auto';
+        textarea.addEventListener('click', (e) => {
+            e.stopPropagation();
+            textarea.focus();
+        });
+    }
+
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+    let velocityY = 0;
+    let lastY = 0;
+    let lastTime = 0;
+    let startScrollTop = 0;
+
+    function handleStart(clientY) {
+        const scrollTop = contentArea.scrollTop;
+
+        // Only allow dragging if at the top of scroll
+        if (scrollTop > 5) {
+            isDragging = false;
+            return;
+        }
+
+        isDragging = true;
+        startY = clientY;
+        currentY = 0;
+        lastY = clientY;
+        lastTime = Date.now();
+        startScrollTop = scrollTop;
+        velocityY = 0;
+
+        sheet.classList.add('dragging');
+    }
+
+    function handleMove(clientY) {
+        if (!isDragging) return;
+
+        const deltaY = clientY - startY;
+        const scrollTop = contentArea.scrollTop;
+        const scrollChanged = scrollTop !== startScrollTop;
+
+        // Calculate velocity
+        const now = Date.now();
+        const timeDiff = now - lastTime;
+        if (timeDiff > 0) {
+            velocityY = (clientY - lastY) / timeDiff;
+            lastY = clientY;
+            lastTime = now;
+        }
+
+        // If content scrolled (scroll position changed), stop dragging
+        if (scrollChanged) {
+            isDragging = false;
+            sheet.classList.remove('dragging');
+            return;
+        }
+
+        // If content is scrolled down, allow normal scrolling
+        if (scrollTop > 5) {
+            isDragging = false;
+            sheet.classList.remove('dragging');
+            return;
+        }
+
+        // If trying to drag up when at top, allow content to scroll
+        if (deltaY < 0) {
+            isDragging = false;
+            sheet.classList.remove('dragging');
+            return;
+        }
+
+        // Move sheet down only when at top and dragging down
+        currentY = deltaY;
+        sheet.style.transform = `translateY(${currentY}px)`;
+    }
+
+    function handleEnd() {
+        if (!isDragging) return;
+
+        isDragging = false;
+        sheet.classList.remove('dragging');
+
+        // Close if dragged down enough or velocity is high
+        const shouldClose = currentY > 150 || velocityY > 0.3;
+
+        if (shouldClose) {
+            closeNotesModal();
+        } else {
+            sheet.style.transform = '';
+        }
+    }
+
+    // Touch events
+    sheet.addEventListener('touchstart', (e) => {
+        handleStart(e.touches[0].clientY);
+    }, { passive: true });
+
+    sheet.addEventListener('touchmove', (e) => {
+        const scrollTop = contentArea.scrollTop;
+        const deltaY = e.touches[0].clientY - startY;
+
+        // Only prevent default when actually dragging the sheet (at top and dragging down)
+        if (isDragging && scrollTop <= 5 && deltaY > 0) {
+            e.preventDefault();
+        }
+        handleMove(e.touches[0].clientY);
+    }, { passive: false });
+
+    sheet.addEventListener('touchend', () => {
+        handleEnd();
+    });
+
+    // Mouse events
+    sheet.addEventListener('mousedown', (e) => {
+        // Don't interfere with text selection in textarea
+        if (textarea && (e.target === textarea || textarea.contains(e.target))) {
+            return; // Allow normal selection behavior in textarea
+        }
+        handleStart(e.clientY);
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            e.preventDefault();
+            handleMove(e.clientY);
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (isDragging) {
+            handleEnd();
+        }
+    });
+}
+
+// Handle paste events for notes textarea - preserves formatting like docs.html
+function handleNotesPaste(e) {
+    e.preventDefault();
+    const clipboardData = e.clipboardData || window.clipboardData;
+    const htmlData = clipboardData.getData('text/html');
+    const textData = clipboardData.getData('text/plain');
+
+    if (htmlData) {
+        const cleaned = cleanPastedHtml(htmlData);
+        // Use insertHTML for better contenteditable support
+        document.execCommand('insertHTML', false, cleaned);
+    } else if (textData) {
+        // Better handling of plain text - preserve multiple lines and formatting
+        let formattedText = textData
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/\n\n+/g, '</p><p>')
+            .replace(/\n/g, '<br>');
+        document.execCommand('insertHTML', false, formattedText);
+    }
+}
+
+// Clean pasted HTML to preserve formatting but remove dangerous elements
+function cleanPastedHtml(html) {
+    const div = document.createElement('div');
+    div.innerHTML = html;
+
+    // Remove only dangerous elements
+    div.querySelectorAll('script, style, meta, link, form, input, button').forEach(el => el.remove());
+
+    // Allowed block and inline tags for rich formatting
+    const allowedTags = ['P', 'DIV', 'BR', 'STRONG', 'B', 'EM', 'I', 'U', 'S', 'STRIKE',
+        'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'UL', 'OL', 'LI', 'BLOCKQUOTE',
+        'CODE', 'PRE', 'SPAN', 'A', 'IMG', 'ARTICLE', 'SECTION', 'FIGURE', 'HR'];
+
+    // Allowed attributes for each tag type
+    const allowedAttrs = {
+        'A': ['href', 'title', 'style'],
+        'IMG': ['src', 'alt', 'title', 'style', 'width', 'height'],
+        '*': ['style', 'class'] // Default for all other tags
+    };
+
+    // Safe CSS properties to preserve
+    const safeCssProps = [
+        'color', 'background-color', 'font-weight', 'font-style', 'text-decoration',
+        'text-align', 'line-height', 'margin', 'padding', 'font-size', 'font-family'
+    ];
+
+    // Recursively clean elements
+    function cleanElement(el) {
+        // Remove element if not in allowed list
+        if (!allowedTags.includes(el.tagName)) {
+            // Unwrap - move children to parent
+            while (el.firstChild) {
+                el.parentNode.insertBefore(el.firstChild, el);
+            }
+            el.remove();
+            return;
+        }
+
+        // Clean attributes based on tag type
+        const allowedForTag = allowedAttrs[el.tagName] || allowedAttrs['*'];
+        Array.from(el.attributes).forEach(attr => {
+            if (!allowedForTag.includes(attr.name)) {
+                el.removeAttribute(attr.name);
+            }
+        });
+
+        // Clean style attribute - only keep safe CSS properties
+        if (el.style && el.style.cssText) {
+            const style = el.style.cssText;
+            const cleanedStyles = [];
+
+            safeCssProps.forEach(prop => {
+                const regex = new RegExp(`${prop}\\s*:\\s*([^;]+)`, 'i');
+                const match = style.match(regex);
+                if (match) {
+                    cleanedStyles.push(`${prop}: ${match[1]}`);
+                }
+            });
+
+            if (cleanedStyles.length > 0) {
+                el.style.cssText = cleanedStyles.join('; ');
+            } else {
+                el.removeAttribute('style');
+            }
+        }
+
+        // Remove empty or unnecessary spans
+        if (el.tagName === 'SPAN' && !el.style.cssText && !el.className) {
+            while (el.firstChild) {
+                el.parentNode.insertBefore(el.firstChild, el);
+            }
+            el.remove();
+            return;
+        }
+
+        // Clean children
+        Array.from(el.children).forEach(cleanElement);
+    }
+
+    // After cleaning, remove empty list items and unnecessary elements
+    function removeEmptyElements(el) {
+        let changed = true;
+
+        // Keep removing empty elements until no more are found
+        while (changed) {
+            changed = false;
+            const childrenToRemove = [];
+
+            Array.from(el.childNodes).forEach(node => {
+                // For elements
+                if (node.nodeType === 1) {
+                    // First, recursively clean nested empty elements
+                    removeEmptyElements(node);
+
+                    // Check if element is actually empty
+                    const hasContent = hasTextContent(node);
+
+                    // Remove empty list items
+                    if (node.tagName === 'LI' && !hasContent) {
+                        childrenToRemove.push(node);
+                        changed = true;
+                    }
+                    // Remove empty paragraphs
+                    else if (node.tagName === 'P' && !hasContent) {
+                        childrenToRemove.push(node);
+                    }
+                    // Remove empty DIVs
+                    else if (node.tagName === 'DIV' && !hasContent) {
+                        childrenToRemove.push(node);
+                    }
+                    // Remove empty lists
+                    else if ((node.tagName === 'UL' || node.tagName === 'OL') && node.children.length === 0) {
+                        childrenToRemove.push(node);
+                        changed = true;
+                    }
+                }
+                // Remove text nodes that are only whitespace
+                else if (node.nodeType === 3) {
+                    if (!node.textContent.trim()) {
+                        childrenToRemove.push(node);
+                    }
+                }
+            });
+
+            childrenToRemove.forEach(node => node.remove());
+        }
+    }
+
+    // Helper function to check if element has actual text content (not just whitespace)
+    function hasTextContent(el) {
+        // Check for text nodes with content
+        for (let node of el.childNodes) {
+            if (node.nodeType === 3) { // Text node
+                if (node.textContent.trim() !== '') {
+                    return true;
+                }
+            } else if (node.nodeType === 1) { // Element node
+                // Check for images, links, or other content-bearing elements
+                if (node.tagName === 'IMG' || node.tagName === 'BR') {
+                    return true;
+                }
+                // Recursively check nested elements
+                if (hasTextContent(node)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    Array.from(div.children).forEach(child => {
+        if (child.tagName === 'UL' || child.tagName === 'OL') {
+            removeEmptyElements(child);
+        }
+    });
+    removeEmptyElements(div);
+
+    Array.from(div.children).forEach(cleanElement);
+
+    return div.innerHTML;
+}
+
+async function saveNote() {
+    const textarea = document.getElementById('notes-textarea');
+    const noteText = textarea.innerHTML.trim();
+    const loadingEl = document.getElementById('notes-loading');
+    if (!currentNoteVerse) return;
+    // Show loading
+    if (loadingEl) loadingEl.classList.add('active');
+    try {
+        const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
+        const lastUnderscoreIndex = noteKey.lastIndexOf('_');
+        const secondLastUnderscoreIndex = noteKey.lastIndexOf('_', lastUnderscoreIndex - 1);
+
+        const bookFile = noteKey.substring(0, secondLastUnderscoreIndex);
+        const chapter = parseInt(noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex));
+        const verse = parseInt(noteKey.substring(lastUnderscoreIndex + 1));
+
+        console.log('💾 Saving note:', { noteKey, bookFile, chapter, verse, noteText });
+
+        if (noteText) {
+            // Create or update note entry
+            if (!verseNotes[noteKey]) {
+                verseNotes[noteKey] = {};
+            }
+            verseNotes[noteKey].text = noteText;
+            verseNotes[noteKey].chapter = chapter;
+            verseNotes[noteKey].verse = verse;
+
+            // Get cross-references for this verse
+            const crossRefKey = `${bibleBooks[currentBook].name} ${chapter}:${verse}`;
+            const crossRefs = crossReferences[crossRefKey] || [];
+
+            // Use Supabase client's upsert method
+            const { data, error } = await bibleDataManager.supabaseClient
+                .from('bible_verse_notes')
+                .upsert({
+                    book_file: bookFile,
+                    chapter: chapter,
+                    verse: verse,
+                    text: noteText,
+                    cross_references: crossRefs,
+                    updated_at: new Date().toISOString()
+                }, {
+                    onConflict: 'book_file,chapter,verse'
+                });
+
+            if (error) {
+                console.error('❌ Failed to save note:', error);
+            } else {
+                console.log('✅ Note saved:', `${bookFile} ${chapter}:${verse}`);
+            }
+        } else {
+            // Delete note if text is empty
+            console.log('🗑️ Deleting note (empty text)');
+            delete verseNotes[noteKey];
+
+            const { error } = await bibleDataManager.supabaseClient
+                .from('bible_verse_notes')
+                .delete()
+                .eq('book_file', bookFile)
+                .eq('chapter', chapter)
+                .eq('verse', verse);
+
+            if (error) {
+                console.error('❌ Failed to delete note:', error);
+            } else {
+                console.log('✅ Note deleted:', `${bookFile} ${chapter}:${verse}`);
+            }
+        }
+
+        updateVerseNoteDisplay(currentNoteVerse);
+        closeNotesModal();
+    } finally {
+        // Hide loading
+        if (loadingEl) loadingEl.classList.remove('active');
+    }
+}
+async function deleteNote() {
+    if (!currentNoteVerse) return;
+    const loadingEl = document.getElementById('notes-loading');
+    // Show loading
+    if (loadingEl) loadingEl.classList.add('active');
+    try {
+        const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
+        delete verseNotes[noteKey];
+        // Delete from Supabase notes table (not bookmarks)
+        const lastUnderscoreIndex = noteKey.lastIndexOf('_');
+        const secondLastUnderscoreIndex = noteKey.lastIndexOf('_', lastUnderscoreIndex - 1);
+
+        const bookFile = noteKey.substring(0, secondLastUnderscoreIndex);
+        const chapter = parseInt(noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex));
+        const verse = parseInt(noteKey.substring(lastUnderscoreIndex + 1));
+
+        console.log('🗑️ Deleting note from Supabase:', { bookFile, chapter, verse });
+
+        if (bookFile && chapter && verse) {
+            const { error } = await bibleDataManager.supabaseClient
+                .from('bible_verse_notes')
+                .delete()
+                .eq('book_file', bookFile)
+                .eq('chapter', chapter)
+                .eq('verse', verse);
+
+            if (error) {
+                console.error('❌ Failed to delete note from Supabase:', error);
+            } else {
+                console.log('✅ Note deleted from Supabase:', `${bookFile} ${chapter}:${verse}`);
+            }
+        }
+        updateVerseNoteDisplay(currentNoteVerse);
+        closeNotesModal();
+    } finally {
+        // Hide loading
+        if (loadingEl) loadingEl.classList.remove('active');
+    }
+}
+function updateVerseNoteDisplay(verseNum) {
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+    const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+    if (!verseLine) return;
+
+    console.log('Updating verse note display:', { verseNum, noteKey, noteExists: !!verseNotes[noteKey] });
+
+    // Remove all note classes
+    verseLine.classList.remove('has-note', 'has-text', 'note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate');
+
+    // Remove note indicator if it exists
+    const noteIndicator = verseLine.querySelector('.note-indicator');
+    if (noteIndicator) {
+        noteIndicator.remove();
+    }
+
+    // Add note classes if note exists
+    if (verseNotes[noteKey]) {
+        verseLine.classList.add('has-note');
+        // Add has-text class only if note has text content
+        if (verseNotes[noteKey].text && verseNotes[noteKey].text.trim()) {
+            verseLine.classList.add('has-text');
+        }
+        if (verseNotes[noteKey].color) {
+            verseLine.classList.add(`note-${verseNotes[noteKey].color}`);
+        }
+    }
+}
+function applyAllNoteDisplays() {
+    const verses = document.querySelectorAll('.verse-line');
+    verses.forEach(verseLine => {
+        const verseNum = parseInt(verseLine.dataset.verse);
+        const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+        if (verseNotes[noteKey]) {
+            verseLine.classList.add('has-note');
+            // Add has-text class only if note has text content
+            if (verseNotes[noteKey].text && verseNotes[noteKey].text.trim()) {
+                verseLine.classList.add('has-text');
+            }
+            if (verseNotes[noteKey].color) {
+                verseLine.classList.add(`note-${verseNotes[noteKey].color}`);
+            }
+        }
+    });
+}
+
+// Preload all notes and references for current chapter from Supabase
+async function preloadChapterNotesAndReferences() {
+    try {
+        const book = bibleBooks[currentBook];
+        const bookFile = book.file;
+
+        // Fetch all notes/references for this book and chapter from Supabase
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('bible_verse_notes')
+            .select('*')
+            .eq('book_file', bookFile)
+            .eq('chapter', currentChapter);
+
+        if (error) {
+            console.error('❌ Error preloading notes:', error);
+            return;
+        }
+
+        if (data && data.length > 0) {
+            console.log(`📚 Preloaded ${data.length} notes/references for ${bookFile} chapter ${currentChapter}`);
+
+            // Update verseNotes and crossReferences objects
+            data.forEach(note => {
+                const noteKey = `${bookFile}_${note.chapter}_${note.verse}`;
+
+                // Update or create note entry
+                if (!verseNotes[noteKey]) {
+                    verseNotes[noteKey] = {};
+                }
+
+                // Store note text if exists
+                if (note.text) {
+                    verseNotes[noteKey].text = note.text;
+                    verseNotes[noteKey].chapter = note.chapter;
+                    verseNotes[noteKey].verse = note.verse;
+                }
+
+                // Store cross-references if exist
+                if (note.cross_references && note.cross_references.length > 0) {
+                    const crossRefKey = `${book.name} ${note.chapter}:${note.verse}`;
+                    crossReferences[crossRefKey] = note.cross_references;
+                    console.log(`📖 Loaded ${note.cross_references.length} references for ${crossRefKey}`);
+                }
+            });
+
+            // Refresh note displays with newly loaded data
+            applyAllNoteDisplays();
+        }
+    }
+    catch (error) {
+        console.error('❌ Error preloading chapter notes and references:', error);
+    }
+}
+
+// Preload all referenced verse data for the current chapter (background task)
+async function preloadReferencedVerseData() {
+    try {
+        // Collect all unique references from current chapter
+        const book = bibleBooks[currentBook];
+        const bookFile = book.file;
+        const allReferencesToPreload = new Set();
+
+        // Go through all cross-references in current chapter
+        for (const [crossRefKey, references] of Object.entries(crossReferences)) {
+            // Only process references from current chapter (format: "BookName Chapter:Verse")
+            const matches = crossRefKey.match(/^(.+?)\s+(\d+):(\d+)$/);
+            if (matches) {
+                const refBook = matches[1];
+                const refChapter = parseInt(matches[2]);
+                const refVerse = parseInt(matches[3]);
+
+                // Check if this reference is from current chapter
+                if (refBook === book.name) {
+                    if (references && Array.isArray(references)) {
+                        references.forEach(ref => {
+                            allReferencesToPreload.add(ref);
+                        });
+                    }
+                }
+            }
+        }
+
+        if (allReferencesToPreload.size === 0) {
+            console.log('📚 No references to preload for current chapter');
+            return;
+        }
+
+        console.log(`🔄 Starting to preload ${allReferencesToPreload.size} referenced verses...`);
+
+        // For each reference, preload both English and Tamil verse data
+        for (const reference of allReferencesToPreload) {
+            const parsed = parseReference(reference);
+            if (!parsed) continue;
+
+            const { bookName, chapter, startVerse, endVerse } = parsed;
+            const bookMeta = bibleBooks.find(b => b.name === bookName);
+
+            if (!bookMeta) {
+                console.log(`⚠️ Book not found: ${bookName}`);
+                continue;
+            }
+
+            // Preload English verse data
+            await preloadVerseDataForLanguage(bookMeta.file, chapter, startVerse, endVerse, 'english');
+
+            // Preload Tamil verse data
+            await preloadVerseDataForLanguage(bookMeta.file, chapter, startVerse, endVerse, 'tamil');
+        }
+
+        console.log('✅ Finished preloading referenced verse data');
+    } catch (error) {
+        console.error('❌ Error preloading referenced verse data:', error);
+    }
+}
+
+// Helper function to preload verse data for a specific language
+async function preloadVerseDataForLanguage(bookFile, chapter, startVerse, endVerse, language) {
+    try {
+        // Try multiple book file alternatives
+        const bookFileAlternatives = [
+            bookFile,
+            bookFile.replace('-', '_'),
+            bookFile.replace('_', '-')
+        ];
+
+        for (const fileVariant of bookFileAlternatives) {
+            const { data } = await bibleDataManager.supabaseClient
+                .from('bible_verses')
+                .select('verse, text')
+                .eq('book_file', fileVariant)
+                .eq('chapter', parseInt(chapter))
+                .eq('language', language)
+                .gte('verse', startVerse)
+                .lte('verse', endVerse);
+
+            if (data && data.length > 0) {
+                // Store in cache object based on language
+                const cacheKey = `${fileVariant}_${chapter}_${language}`;
+                verseDataCache[cacheKey] = data;
+                console.log(`📦 Preloaded ${data.length} ${language} verses for ${fileVariant} ${chapter}:${startVerse}-${endVerse}`);
+                return;
+            }
+        }
+    } catch (error) {
+        console.log(`⚠️ Could not preload ${language} verses for ${bookFile} ${chapter}:${startVerse}-${endVerse}`);
+    }
+}
+
+// Helper function to parse reference strings like "Genesis 12:3" or "Exodus 2:23-24"
+function parseReference(reference) {
+    try {
+        const match = reference.match(/^(.+?)\s+(\d+):(\d+)(?:-(\d+))?$/);
+        if (!match) return null;
+
+        const bookName = match[1];
+        const chapter = parseInt(match[2]);
+        const startVerse = parseInt(match[3]);
+        const endVerse = match[4] ? parseInt(match[4]) : startVerse;
+
+        return { bookName, chapter, startVerse, endVerse };
+    } catch (error) {
+        console.error('Error parsing reference:', reference, error);
+        return null;
+    }
+}
+
+// Show note viewer for a verse if it has a note
+function showNoteViewerIfExists(verseNum) {
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+    const note = verseNotes[noteKey];
+    // Only show viewer if note exists AND has text content
+    if (note && note.text && note.text.trim()) {
+        showNoteViewer(verseNum, note);
+    } else {
+        hideNoteViewer();
+    }
+}
+
+// Format note content: style chapter:verse headings and **highlighted** text
+function formatNoteContent(text) {
+    if (!text) return '';
+
+    // Return the formatted HTML content as-is without adding bullet points
+    // The content already contains proper HTML formatting from the paste handler
+    return text;
+}
+function showNoteViewer(verseNum, note) {
+    const popup = document.getElementById('note-viewer-popup');
+    const ref = document.getElementById('note-viewer-ref');
+    const content = document.getElementById('note-viewer-content');
+    const modal = document.querySelector('.note-viewer-modal');
+    const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
+    const noteTab = document.querySelector('.note-viewer-tab[data-tab="note"]');
+    const tabsContainer = document.querySelector('.note-viewer-tabs');
+    const singleTitle = document.getElementById('note-viewer-single-title');
+
+    if (!popup) return;
+
+    ref.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
+    content.innerHTML = formatNoteContent(note.text || '');
+
+    // Check if this verse has cross-references
+    const bookName = bibleBooks[currentBook].name;
+    const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+    const crossRefs = crossReferences[crossRefKey];
+    const hasRefs = crossRefs && crossRefs.length > 0;
+    const hasNote = note && note.text && note.text.trim();
+    const isAdminMode = isAdmin();
+
+    // Handle tab visibility based on admin mode and content
+    if (isAdminMode) {
+        // Admin mode: Always show both tabs UNLESS there's only references and no note
+        if (hasNote && hasRefs) {
+            // Both note and references - show both tabs
+            if (noteTab) noteTab.style.display = 'block';
+            if (refTab) refTab.style.display = 'block';
+            if (tabsContainer) tabsContainer.style.display = 'flex';
+            if (singleTitle) singleTitle.style.display = 'none';
+            window.currentNoteRefs = { refs: crossRefs, verseNum };
+            switchNoteViewerTab('note');
+        } else if (hasRefs && !hasNote) {
+            // Only references - hide tabs, show title "References"
+            if (noteTab) noteTab.style.display = 'none';
+            if (refTab) refTab.style.display = 'none';
+            if (tabsContainer) tabsContainer.style.display = 'none';
+            if (singleTitle) {
+                singleTitle.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>';
+                singleTitle.style.display = 'flex';
+            }
+            window.currentNoteRefs = { refs: crossRefs, verseNum };
+            switchNoteViewerTab('references');
+        } else if (hasNote && !hasRefs) {
+            // Only note - hide tabs, show title "Note"
+            if (noteTab) noteTab.style.display = 'none';
+            if (refTab) refTab.style.display = 'none';
+            if (tabsContainer) tabsContainer.style.display = 'none';
+            if (singleTitle) {
+                singleTitle.innerHTML = '<img src="resources/icons/note.png" alt="Note">';
+                singleTitle.style.display = 'flex';
+            }
+            switchNoteViewerTab('note');
+        } else {
+            // No content - shouldn't happen in admin mode when opening
+            if (noteTab) noteTab.style.display = 'block';
+            if (refTab) refTab.style.display = 'block';
+            if (tabsContainer) tabsContainer.style.display = 'flex';
+            if (singleTitle) singleTitle.style.display = 'none';
+            switchNoteViewerTab('note');
+        }
+    } else {
+        // Non-admin mode: Hide all references, show only notes
+        // References are admin-only feature
+        window.currentNoteRefs = null; // Clear any reference data
+
+        if (hasNote) {
+            // Show only note
+            if (noteTab) noteTab.style.display = 'none';
+            if (refTab) refTab.style.display = 'none';
+            if (tabsContainer) tabsContainer.style.display = 'none';
+            if (singleTitle) {
+                singleTitle.innerHTML = '<img src="resources/icons/note.png" alt="Note">';
+                singleTitle.style.display = 'flex';
+            }
+            switchNoteViewerTab('note');
+        } else {
+            // No note and references hidden - shouldn't show modal
+            // but keep minimal display just in case
+            if (noteTab) noteTab.style.display = 'block';
+            if (refTab) refTab.style.display = 'none';
+            if (tabsContainer) tabsContainer.style.display = 'flex';
+            if (singleTitle) singleTitle.style.display = 'none';
+            switchNoteViewerTab('note');
+        }
+    }
+
+    // Reset modal transform and height
+    if (modal) {
+        modal.style.transform = '';
+        modal.style.height = '';
+        modal.style.transition = '';
+    }
+
+    // Save current scroll position before hiding overflow
+    const scrollY = window.scrollY;
+
+    // First set display to flex (required for visibility)
+    popup.style.display = 'flex';
+
+    // Show the bottom sheet with visible class
+    popup.classList.add('visible');
+    document.body.classList.add('modal-open');
+
+    // Preserve scroll position when setting overflow hidden
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
+
+    // Update admin UI to show/hide edit button
+    updateAdminUI();
+    // Store current viewing verse for edit button
+    popup.dataset.verse = verseNum;
+}
+function hideNoteViewer() {
+    const popup = document.getElementById('note-viewer-popup');
+    const modal = document.querySelector('.note-viewer-modal');
+
+    if (!popup) return;
+
+    // Hide language wrapper when closing
+    const langWrapper = document.querySelector('.note-viewer-ref-lang-wrapper');
+    if (langWrapper) {
+        langWrapper.classList.remove('active');
+    }
+
+    // Remove visible class to trigger slide down animation
+    popup.classList.remove('visible');
+    document.body.classList.remove('modal-open');
+
+    // Restore scroll position
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
+
+    // Hide after animation completes
+    setTimeout(() => {
+        popup.style.display = 'none';
+        if (modal) {
+            modal.style.transform = '';
+        }
+        // Reset flag so next note viewer shows loader on first references load
+        referencesLoadedInViewer = false;
+    }, 300);
+}
+// Admin Mode Functions
+function isAdmin() {
+    // If isAdmin hasn't been set, default to false
+    const adminStatus = localStorage.getItem('isAdmin');
+    if (adminStatus === null) {
+        localStorage.setItem('isAdmin', 'false');
+        return false;
+    }
+    return adminStatus === 'true';
+}
+function updateAdminUI() {
+    const editButtons = document.querySelectorAll('.note-viewer-edit-btn');
+    const addRefButton = document.getElementById('note-viewer-add-ref-btn');
+    const isAdminMode = isAdmin();
+    const adminToggle = document.getElementById('admin-toggle');
+    const adminCheck = adminToggle?.querySelector('.admin-check');
+    const voiceBtn = document.getElementById('voice-btn');
+    const pinnedVersesBtn = document.getElementById('pinned-verses-btn');
+    const rightMenuBtn = document.getElementById('right-menu-btn');
+    const rightNotesOption = document.getElementById('right-notes-option');
+    const rightKingsOption = document.getElementById('right-kings-option');
+    const rightProphetsOption = document.getElementById('right-prophets-option');
+    const rightTimelineOption = document.getElementById('right-timeline-option');
+    const rightCharacterOption = document.getElementById('right-character-option');
+    const rightBibleCharactersOption = document.getElementById('right-bible-characters-option');
+    const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
+    const rightCultOption = document.getElementById('right-cult-option');
+    const rightPrayersOption = document.getElementById('right-prayers-option');
+    const rightLogoutOption = document.getElementById('right-logout-option');
+
+    editButtons.forEach(btn => {
+        btn.style.display = isAdminMode ? 'flex' : 'none';
+    });
+
+    // Show/hide Add Reference button for admin
+    if (addRefButton) {
+        addRefButton.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    // Update voice button visibility
+    if (voiceBtn) {
+        voiceBtn.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    // Show/hide pinned verses button (admin only AND has pinned verses)
+    if (pinnedVersesBtn) {
+        pinnedVersesBtn.style.display = (isAdminMode && pinnedVerses.length > 0) ? 'flex' : 'none';
+    }
+    // Right menu button should always be visible (removed admin check)
+
+    // Show/hide admin-only menu items in right sidebar
+    if (rightNotesOption) {
+        rightNotesOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    if (rightCultOption) {
+        rightCultOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+
+    if (rightPrayersOption) {
+        rightPrayersOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    if (rightLogoutOption) {
+        rightLogoutOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+
+    // Update admin toggle button state
+    if (adminToggle) {
+        if (isAdminMode) {
+            adminToggle.classList.add('active');
+            if (adminCheck) adminCheck.style.display = 'block';
+        } else {
+            adminToggle.classList.remove('active');
+            if (adminCheck) adminCheck.style.display = 'none';
+        }
+    }
+}
+function showAdminNotification() {
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+        // Show toast message on mobile
+        showToast('You are admin now', 'success');
+    } else {
+        // Show Jira-style popup on desktop
+        showDesktopNotification('You are admin now');
+    }
+}
+function showToast(message, type = 'success') {
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    // Trigger animation
+    setTimeout(() => toast.classList.add('show'), 10);
+    // Remove after 2 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+    }, 2000);
+}
+function showDesktopNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'admin-notification';
+    notification.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <span>${message}</span>
+    `;
+    document.body.appendChild(notification);
+    // Trigger animation
+    setTimeout(() => notification.classList.add('show'), 10);
+    // Remove after 2 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    }, 2000);
+}
+// Initialize notes modal
+function initializeNotesModal() {
+    const modal = document.querySelector('.notes-modal-overlay');
+    const closeBtn = document.querySelector('.notes-modal-close-btn');
+    const saveBtn = document.getElementById('save-note-btn');
+    const deleteBtn = document.getElementById('delete-note-btn');
+    const textarea = document.getElementById('notes-textarea');
+
+    if (!modal) return;
+
+    // Add paste event listener to preserve formatting
+    if (textarea) {
+        textarea.addEventListener('paste', handleNotesPaste);
+
+        // Add keyboard handler for text selection and editing
+        textarea.addEventListener('keydown', (e) => {
+            // Allow Ctrl+A (or Cmd+A on Mac) to select all text
+            if ((e.ctrlKey || e.metaKey) && e.key === 'a') {
+                e.preventDefault();
+                // Select all content in textarea
+                const range = document.createRange();
+                const sel = window.getSelection();
+                range.selectNodeContents(textarea);
+                sel.removeAllRanges();
+                sel.addRange(range);
+                return;
+            }
+
+            // Allow Ctrl+C for copy
+            if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+                return true; // Allow browser default behavior
+            }
+
+            // Allow Ctrl+X for cut
+            if ((e.ctrlKey || e.metaKey) && e.key === 'x') {
+                return true; // Allow browser default behavior
+            }
+
+            // Allow keyboard selection with Shift+Arrow keys
+            if (e.shiftKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
+                return true; // Allow browser default selection behavior
+            }
+        });
+    }
+
+    // Close modal handlers
+    closeBtn?.addEventListener('click', closeNotesModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeNotesModal();
+        }
+    });
+    // Save note
+    saveBtn?.addEventListener('click', saveNote);
+    // Delete note
+    deleteBtn?.addEventListener('click', () => {
+        if (confirm('Are you sure you want to delete this note?')) {
+            deleteNote();
+        }
+    });
+
+    // Color selection removed - note colors no longer available
+
+    // Color navigation buttons
+    const colorPrev = document.querySelector('.notes-color-prev');
+    const colorNext = document.querySelector('.notes-color-next');
+    const colorOptions = document.querySelector('.notes-color-options');
+    if (colorPrev && colorNext && colorOptions) {
+        colorPrev.addEventListener('click', () => {
+            colorOptions.scrollBy({ left: -200, behavior: 'smooth' });
+        });
+        colorNext.addEventListener('click', () => {
+            colorOptions.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+    }
+    // Note viewer buttons
+    const noteViewerEditBtn = document.getElementById('note-viewer-edit-btn');
+    const noteViewerCloseBtn = document.getElementById('note-viewer-close-btn');
+    noteViewerEditBtn?.addEventListener('click', () => {
+        const popup = document.getElementById('note-viewer-popup');
+        const verseNum = parseInt(popup.dataset.verse);
+        if (verseNum) {
+            hideNoteViewer();
+            openNotesModal(verseNum);
+        }
+    });
+    noteViewerCloseBtn?.addEventListener('click', hideNoteViewer);
+    // Mobile drag functionality - expand/collapse bottom sheet
+    const noteViewerModal = document.querySelector('.note-viewer-modal');
+    const noteViewerHeader = document.querySelector('.note-viewer-header');
+
+    // Prevent clicks inside modal from closing it (must be set first)
+    noteViewerModal?.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    // Close note viewer when clicking on overlay background only
+    const noteViewerOverlay = document.getElementById('note-viewer-popup');
+    noteViewerOverlay?.addEventListener('click', (e) => {
+        // Only close if clicking directly on overlay, not on modal or its children
+        if (e.target.classList.contains('note-viewer-overlay')) {
+            hideNoteViewer();
+        }
+    });
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+    let initialHeight = 0;
+    // Reset modal height to default when opening
+    function resetModalHeight() {
+        if (noteViewerModal && window.innerWidth <= 768) {
+            noteViewerModal.style.height = '';
+            noteViewerModal.style.transform = '';
+        }
+    }
+    if (noteViewerHeader && window.innerWidth <= 768) {
+        let dragThreshold = 5; // pixels
+        noteViewerHeader.addEventListener('touchstart', (e) => {
+            // Only start dragging if not clicking on an interactive element
+            const target = e.target;
+            if (target.tagName === 'BUTTON' || target.closest('button')) {
+                isDragging = false;
+                return;
+            }
+            startY = e.touches[0].clientY;
+            isDragging = true;
+            initialHeight = noteViewerModal.offsetHeight;
+            noteViewerModal.style.transition = 'none';
+        });
+        noteViewerHeader.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            currentY = e.touches[0].clientY;
+            const deltaY = currentY - startY;
+            // Only start applying drag styles if threshold is exceeded
+            if (Math.abs(deltaY) < dragThreshold) return;
+            // Calculate new height based on drag direction
+            const newHeight = initialHeight - deltaY;
+            const maxHeight = window.innerHeight * 0.95;
+            const minHeight = window.innerHeight * 0.3;
+            // Allow dragging in both directions within bounds
+            if (newHeight >= minHeight && newHeight <= maxHeight) {
+                noteViewerModal.style.height = `${newHeight}px`;
+            } else if (deltaY > 0 && newHeight < minHeight) {
+                // Dragging down below minimum - prepare to close
+                const excess = minHeight - newHeight;
+                noteViewerModal.style.transform = `translateY(${excess}px)`;
+            }
+        });
+        noteViewerHeader.addEventListener('touchend', () => {
+            if (!isDragging) return;
+            isDragging = false;
+            noteViewerModal.style.transition = 'transform 0.3s ease, height 0.2s ease';
+            const deltaY = currentY - startY;
+            const newHeight = initialHeight - deltaY;
+            const minHeight = window.innerHeight * 0.3;
+            // If dragged down significantly below minimum, close the modal
+            if (newHeight < minHeight - 50) {
+                noteViewerModal.classList.add('closing');
+                setTimeout(() => {
+                    hideNoteViewer();
+                    noteViewerModal.classList.remove('closing');
+                    noteViewerModal.style.transform = '';
+                    noteViewerModal.style.transition = '';
+                    noteViewerModal.style.height = '';
+                }, 300);
+            } else {
+                // Snap back to valid height
+                noteViewerModal.style.transform = '';
+                noteViewerModal.style.height = '';
+                // Remove transition after snap-back completes
+                setTimeout(() => {
+                    noteViewerModal.style.transition = '';
+                }, 300);
+            }
+        });
+    }
+    // Call resetModalHeight when note viewer is shown
+    const originalShowNoteViewer = window.showNoteViewer;
+}
+// ========================= SUMMARY MANAGEMENT =========================
+async function loadSummaryFromSupabase(bookFile, chapter) {
+    try {
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('chapter_summaries')
+            .select('id, content')
+            .eq('book_file', bookFile)
+            .eq('chapter', chapter)
+            .single();
+        if (error && error.code !== 'PGRST116') { // PGRST116 means no rows returned
+            showToast('Failed to load summary. Please try again.', 'error');
+            return;
+        }
+        displaySummary(data ? [data] : []);
+    } catch (error) {
+        showToast('Failed to load summary. Please try again.', 'error');
+    }
+}
+function displaySummary(summaryData) {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    const summaryDrawerContent = document.getElementById('summary-drawer-content');
+    const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+    // Update drawer title
+    summaryDrawerTitle.textContent = 'Chapter Summary';
+    const summary = summaryData.length > 0 ? summaryData[0] : null;
+    const summaryContent = summary ? `
+        <div class="summary-content">
+            <div class="summary-text">${summary.content}</div>
+            ${isAdmin() ? `
+                <div class="summary-actions">
+                    <button class="edit-summary-btn" onclick="editSummary(${summary.id}, '${summary.content.replace(/'/g, "\\'")}')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m18 2 4 4L12 16l-4 4-4-4L14 6z"></path>
+                        </svg>
+                        Edit
+                    </button>
+                </div>
+            ` : ''}
+        </div>
+    ` : `
+        <div class="no-summary">
+            <div class="no-summary-message">No summary available for this chapter yet.</div>
+        </div>
+    `;
+    const addSummaryButton = isAdmin() && !summary ? `
+        <div class="summary-bottom-section">
+            <div class="add-summary-container">
+                <button class="add-summary-btn" onclick="showAddSummaryModal()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Summary
+                </button>
+            </div>
+        </div>
+    ` : '';
+    // Restructure with scrollable content area and fixed bottom button
+    summaryDrawerContent.innerHTML = `
+        <div class="summary-scroll-area">
+            ${summaryContent}
+        </div>
+        ${addSummaryButton}
+    `;
+    // Track navigation
+    navigateToPage('summary');
+    // Show the drawer
+    summaryDrawer.classList.add('active');
+    document.body.classList.add('summary-drawer-open');
+}
+// Summary CRUD Functions
+function showAddSummaryModal() {
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Add Chapter Summary</h3>
+                <button class="close-character-modal" onclick="closeAddSummaryModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="add-summary-form">
+                    <div class="form-group">
+                        <label for="summary-content">Summary Content *</label>
+                        <textarea id="summary-content" name="content" required maxlength="2000" rows="8" placeholder="Enter chapter summary..."></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" onclick="closeAddSummaryModal()" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Save Summary</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    modal.classList.add('active');
+    // Handle form submission
+    document.getElementById('add-summary-form').addEventListener('submit', handleAddSummary);
+    // Focus on content input
+    setTimeout(() => document.getElementById('summary-content').focus(), 100);
+}
+async function saveSummaryToSupabase(bookFile, chapter, content) {
+    try {
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to add summary.');
+        }
+        const book = bibleBooks.find(b => b.file === bookFile);
+        if (!book) {
+            throw new Error('Book not found');
+        }
+        const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
+        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/chapter_summaries`, {
+            method: 'POST',
+            headers: {
+                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify({
+                book_file: bookFile,
+                chapter: chapter,
+                content: content,
+                testament: testament,
+                created_at: new Date().toISOString()
+            })
+        });
+        if (!response.ok) {
+            const errorData = await response.text();
+            throw new Error(`Failed to save summary: ${response.status} ${errorData}`);
+        }
+        return true;
+    } catch (error) {
+        throw error;
+    }
+}
+function closeAddSummaryModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+async function handleAddSummary(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const content = formData.get('content').trim();
+    if (!content) {
+        showToast('Summary content is required.', 'error');
+        return;
+    }
+    try {
+        const book = bibleBooks[currentBook];
+        const success = await saveSummaryToSupabase(book.file, currentChapter, content);
+        if (success) {
+            closeAddSummaryModal();
+            await loadSummaryFromSupabase(book.file, currentChapter);
+            const isMobile = window.innerWidth <= 768;
+            showToast(isMobile ? 'Summary added!' : 'Summary added successfully!', 'success');
+        }
+    } catch (error) {
+        showToast('Error adding summary: ' + error.message, 'error');
+    }
+}
+async function editSummary(summaryId, currentContent) {
+    if (!isAdmin()) {
+        showToast('Admin privileges required to edit summary.', 'error');
+        return;
+    }
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay active';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Edit Summary</h3>
+                <button class="close-character-modal" onclick="closeEditSummaryModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="edit-summary-form">
+                    <div class="form-group">
+                        <label for="edit-summary-content">Summary Content *</label>
+                        <textarea id="edit-summary-content" name="content" required maxlength="2000" rows="8" placeholder="Enter chapter summary...">${currentContent}</textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" onclick="closeEditSummaryModal()" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Update Summary</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    // Handle form submission
+    document.getElementById('edit-summary-form').addEventListener('submit', async (event) => {
+        await handleEditSummary(event, summaryId);
+    });
+    // Focus and select content
+    setTimeout(() => {
+        const textarea = document.getElementById('edit-summary-content');
+        textarea.focus();
+        textarea.select();
+    }, 100);
+}
+function closeEditSummaryModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+async function handleEditSummary(event, summaryId) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const content = formData.get('content').trim();
+    if (!content) {
+        showToast('Summary content is required.', 'error');
+        return;
+    }
+    try {
+        const success = await updateSummaryInSupabase(summaryId, content);
+        if (success) {
+            closeEditSummaryModal();
+            const book = bibleBooks[currentBook];
+            await loadSummaryFromSupabase(book.file, currentChapter);
+            const isMobile = window.innerWidth <= 768;
+            showToast(isMobile ? 'Summary updated!' : 'Summary updated successfully!', 'success');
+        }
+    } catch (error) {
+        showToast('Error updating summary: ' + error.message, 'error');
+    }
+}
+async function updateSummaryInSupabase(summaryId, content) {
+    try {
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to update summary.');
+        }
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_summaries')
+            .update({
+                content: content,
+                updated_at: new Date().toISOString()
+            })
+            .eq('id', summaryId);
+        if (error) {
+            throw new Error(`Failed to update summary: ${error.message}`);
+        }
+        return true;
+    } catch (error) {
+        throw error;
+    }
+}
+// ========================= TIMELINE CRUD FUNCTIONS =========================
+function showAddTimelineModal() {
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Add Timeline Event</h3>
+                <button class="close-character-modal" onclick="closeAddTimelineModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="add-timeline-form">
+                    <div class="form-group">
+                        <label for="timeline-verse">Verse Reference *</label>
+                        <input type="text" id="timeline-verse" name="verse" required maxlength="50" placeholder="e.g., v. 1-5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline-description">Event Description *</label>
+                        <textarea id="timeline-description" name="description" required maxlength="500" rows="4" placeholder="Describe the timeline event..."></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" onclick="closeAddTimelineModal()" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Save Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    modal.classList.add('active');
+    // Handle form submission
+    document.getElementById('add-timeline-form').addEventListener('submit', handleAddTimeline);
+    // Focus on verse input
+    setTimeout(() => document.getElementById('timeline-verse').focus(), 100);
+}
+function closeAddTimelineModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+async function handleAddTimeline(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const verse = formData.get('verse').trim();
+    const description = formData.get('description').trim();
+    if (!verse || !description) {
+        showToast('All fields are required.', 'error');
+        return;
+    }
+    try {
+        const book = bibleBooks[currentBook];
+        const success = await saveTimelineToSupabase(book.file, currentChapter, verse, description);
+        if (success) {
+            closeAddTimelineModal();
+            await loadTimelineFromSupabase(book.file, currentChapter);
+            const isMobile = window.innerWidth <= 768;
+            showToast(isMobile ? 'Event added!' : 'Timeline event added successfully!', 'success');
+        }
+    } catch (error) {
+        showToast('Error adding timeline event: ' + error.message, 'error');
+    }
+}
+async function editTimelineEvent(eventId, currentDescription, currentVerse) {
+    if (!isAdmin()) {
+        showToast('Admin privileges required to edit timeline events.', 'error');
+        return;
+    }
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay active';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Edit Timeline Event</h3>
+                <button class="close-character-modal" onclick="closeEditTimelineModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="edit-timeline-form">
+                    <div class="form-group">
+                        <label for="edit-timeline-verse">Verse Reference *</label>
+                        <input type="text" id="edit-timeline-verse" name="verse" required maxlength="50" value="${currentVerse}" placeholder="e.g., v. 1-5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-timeline-description">Event Description *</label>
+                        <textarea id="edit-timeline-description" name="description" required maxlength="500" rows="4" placeholder="Describe the timeline event...">${currentDescription}</textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" onclick="closeEditTimelineModal()" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Update Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    // Handle form submission
+    document.getElementById('edit-timeline-form').addEventListener('submit', async (event) => {
+        await handleEditTimeline(event, eventId);
+    });
+    // Focus on verse input
+    setTimeout(() => {
+        const input = document.getElementById('edit-timeline-verse');
+        input.focus();
+        input.select();
+    }, 100);
+}
+function closeEditTimelineModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+async function handleEditTimeline(event, eventId) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const verse = formData.get('verse').trim();
+    const description = formData.get('description').trim();
+    if (!verse || !description) {
+        showToast('All fields are required.', 'error');
+        return;
+    }
+    try {
+        const success = await updateTimelineInSupabase(eventId, verse, description);
+        if (success) {
+            closeEditTimelineModal();
+            const book = bibleBooks[currentBook];
+            await loadTimelineFromSupabase(book.file, currentChapter);
+            const isMobile = window.innerWidth <= 768;
+            showToast(isMobile ? 'Event updated!' : 'Timeline event updated successfully!', 'success');
+        }
+    } catch (error) {
+        showToast('Error updating timeline event: ' + error.message, 'error');
+    }
+}
+async function deleteTimelineEvent(eventId, eventDescription) {
+    if (!isAdmin()) {
+        showToast('Admin privileges required to delete timeline events.', 'error');
+        return;
+    }
+    // Show custom delete confirmation popup
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay active';
+    modal.innerHTML = `
+        <div class="character-modal delete-modal">
+            <div class="character-modal-header">
+                <h3>Delete Timeline Event</h3>
+            </div>
+            <div class="character-modal-body">
+                <p class="delete-message">Are you sure you want to delete this timeline event?</p>
+                <div class="form-buttons">
+                    <button type="button" onclick="closeDeleteTimelineModal()" class="cancel-btn">Cancel</button>
+                    <button type="button" onclick="confirmDeleteTimelineEvent(${eventId})" class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    // Store modal reference globally for cleanup
+    window.currentDeleteTimelineModal = modal;
+}
+function closeDeleteTimelineModal() {
+    const modal = window.currentDeleteTimelineModal;
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+        window.currentDeleteTimelineModal = null;
+    }
+}
+async function confirmDeleteTimelineEvent(eventId) {
+    try {
+        await deleteTimelineFromSupabase(eventId);
+        // Close modal
+        closeDeleteTimelineModal();
+        // Reload timeline
+        const book = bibleBooks[currentBook];
+        await loadTimelineFromSupabase(book.file, currentChapter);
+        const isMobile = window.innerWidth <= 768;
+        showToast(isMobile ? 'Deleted!' : 'Timeline event deleted successfully!', 'success');
+    } catch (error) {
+        showToast('Error deleting timeline event: ' + error.message, 'error');
+    }
+}
+async function saveTimelineToSupabase(bookFile, chapter, verse, description) {
+    try {
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to add timeline events.');
+        }
+        const book = bibleBooks.find(b => b.file === bookFile);
+        if (!book) {
+            throw new Error('Book not found');
+        }
+        const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
+        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/chapter_timeline`, {
+            method: 'POST',
+            headers: {
+                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify({
+                book_file: bookFile,
+                chapter: chapter,
+                description: description,
+                verse_reference: verse,
+                testament: testament,
+                created_at: new Date().toISOString()
+            })
+        });
+        if (!response.ok) {
+            const errorData = await response.text();
+            throw new Error(`Failed to save timeline event: ${response.status} ${errorData}`);
+        }
+        return true;
+    } catch (error) {
+        throw error;
+    }
+}
+async function updateTimelineInSupabase(eventId, verse, description) {
+    try {
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to update timeline events.');
+        }
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .update({
+                event_description: description,
+                verse_reference: verse,
+                updated_at: new Date().toISOString()
+            })
+            .eq('id', eventId);
+        if (error) {
+            throw new Error(`Failed to update timeline event: ${error.message}`);
+        }
+        return true;
+    } catch (error) {
+        throw error;
+    }
+}
+async function deleteTimelineFromSupabase(eventId) {
+    try {
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to delete timeline events.');
+        }
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .delete()
+            .eq('id', eventId);
+        if (error) {
+            throw new Error(`Failed to delete timeline event: ${error.message}`);
+        }
+        return true;
+    } catch (error) {
+        throw error;
+    }
+}
+function setupTimelineDragAndDrop() {
+    const timelineItems = document.querySelectorAll('.draggable-timeline');
+    timelineItems.forEach(item => {
+        item.addEventListener('dragstart', handleTimelineDragStart);
+        item.addEventListener('dragover', handleTimelineDragOver);
+        item.addEventListener('drop', handleTimelineDrop);
+        item.addEventListener('dragend', handleTimelineDragEnd);
+    });
+}
+function handleTimelineDragStart(e) {
+    draggedElement = e.target.closest('.timeline-item');
+    draggedPosition = parseInt(draggedElement.dataset.position);
+    // Add visual feedback
+    draggedElement.classList.add('character-dragging');
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', draggedElement.outerHTML);
+}
+function handleTimelineDragOver(e) {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    const targetElement = e.target.closest('.timeline-item');
+    if (!targetElement || targetElement === draggedElement) return;
+    // Add drop indicator
+    targetElement.classList.add('drop-target');
+    // Remove drop indicator from other elements
+    document.querySelectorAll('.drop-target').forEach(el => {
+        if (el !== targetElement) {
+            el.classList.remove('drop-target');
+        }
+    });
+}
+function handleTimelineDrop(e) {
+    e.preventDefault();
+    const targetElement = e.target.closest('.timeline-item');
+    if (!targetElement || targetElement === draggedElement) return;
+    const targetPosition = parseInt(targetElement.dataset.position);
+    const container = targetElement.parentNode;
+    // Remove drop indicators
+    document.querySelectorAll('.drop-target').forEach(el => el.classList.remove('drop-target'));
+    // Determine drop position
+    if (draggedPosition < targetPosition) {
+        // Moving down - insert after target
+        container.insertBefore(draggedElement, targetElement.nextSibling);
+    } else {
+        // Moving up - insert before target
+        container.insertBefore(draggedElement, targetElement);
+    }
+    // Update timeline positions (using localStorage like characters)
+    updateTimelinePositions();
+}
+function handleTimelineDragEnd(e) {
+    // Clean up visual feedback
+    document.querySelectorAll('.character-dragging, .drop-target').forEach(el => {
+        el.classList.remove('character-dragging', 'drop-target');
+    });
+    draggedElement = null;
+    draggedPosition = null;
+}
+async function updateTimelinePositions() {
+    const timelineItems = document.querySelectorAll('.draggable-timeline');
+    const timelineIds = [];
+    // Get the new order of timeline IDs
+    timelineItems.forEach((item, index) => {
+        const timelineId = parseInt(item.dataset.timelineId);
+        timelineIds.push(timelineId);
+        // Update dataset
+        item.dataset.position = index;
+    });
+    // Store the custom order in localStorage for this session
+    const book = bibleBooks[currentBook];
+    const orderKey = `timeline_order_${book.file}_${currentChapter}`;
+    localStorage.setItem(orderKey, JSON.stringify(timelineIds));
+    const isMobile = window.innerWidth <= 768;
+    showToast(isMobile ? 'Order updated!' : 'Timeline order updated for this session!', 'success');
+}
+// ========================= TIMELINE MANAGEMENT =========================
+async function loadTimelineFromSupabase(bookFile, chapter) {
+    try {
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('id, book_file, chapter, event_description, verse_reference, testament, order_index')
+            .eq('book_file', bookFile)
+            .eq('chapter', chapter)
+            .order('order_index', { ascending: true })
+            .order('id', { ascending: true });
+        if (error) {
+            showToast('Failed to load timeline. Please try again.', 'error');
+            return;
+        }
+        displayTimelineFromDB(data || []);
+    } catch (error) {
+        showToast('Failed to load timeline. Please try again.', 'error');
+    }
+}
+function displayTimelineFromDB(timelineData) {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    const summaryDrawerContent = document.getElementById('summary-drawer-content');
+    const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+    // Update drawer title
+    summaryDrawerTitle.textContent = 'Chapter Timeline';
+    // Format the timeline events with proper styling and admin action buttons
+    const formattedTimeline = timelineData
+        .map((event, index) => {
+            const actionButtons = isAdmin() ? `
+                <div class="timeline-actions">
+                    <button class="edit-timeline-btn" onclick="editTimelineEvent(${event.id}, '${event.description.replace(/'/g, "\\'")}', '${event.verse_reference.replace(/'/g, "\\'")}')"
+                        title="Edit event">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m18 2 4 4L12 16l-4 4-4-4L14 6z"></path>
+                        </svg>
+                    </button>
+                    <button class="delete-timeline-btn" onclick="deleteTimelineEvent(${event.id}, '${event.description.replace(/'/g, "\\'")}')"
+                        title="Delete event">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3,6 5,6 21,6"></polyline>
+                            <path d="m19,6v14a2,2 0 0,1-2,2H7a2,2 0 0,1-2-2V6m3,0V4a2,2 0 0,1,2,2v2"></path>
+                        </svg>
+                    </button>
+                </div>
+            ` : '';
+            const dragAttributes = isAdmin() ? `draggable="true" data-timeline-id="${event.id}" data-position="${index}"` : '';
+            const dragClass = isAdmin() ? ' draggable-timeline' : '';
+            return `
+                <div class="timeline-item${dragClass}" ${dragAttributes}>
+                    <div class="timeline-content">
+                        <div class="timeline-verse">${event.verse_reference}</div>
+                        <div class="timeline-description">${event.event_description}</div>
+                    </div>
+                    ${actionButtons}
+                </div>
+            `;
+        })
+        .join('');
+    const addTimelineButton = isAdmin() ? `
+        <div class="timeline-bottom-section">
+            <div class="add-timeline-container">
+                <button class="add-timeline-btn" onclick="showAddTimelineModal()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Timeline Event
+                </button>
+            </div>
+        </div>
+    ` : '';
+    // Restructure with scrollable content area and fixed bottom button
+    summaryDrawerContent.innerHTML = `
+        <div class="timeline-scroll-area">
+            <div class="timeline-list">
+                ${formattedTimeline || '<div class="no-timeline">No timeline events available for this chapter yet.</div>'}
+            </div>
+        </div>
+        ${addTimelineButton}
+    `;
+    // Add event listeners for timeline buttons (since we're using data attributes instead of onclick)
+    setTimeout(() => {
+        document.querySelectorAll('.edit-timeline-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const eventId = e.currentTarget.getAttribute('data-event-id');
+                const description = e.currentTarget.getAttribute('data-description');
+                const verse = e.currentTarget.getAttribute('data-verse') || '';
+                editTimelineEvent(eventId, description, verse);
+            });
+        });
+        document.querySelectorAll('.delete-timeline-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const eventId = e.currentTarget.getAttribute('data-event-id');
+                const description = e.currentTarget.getAttribute('data-description');
+                deleteTimelineEvent(eventId, description);
+            });
+        });
+    }, 100);
+    // Add drag and drop event listeners for admin users
+    if (isAdmin() && timelineData.length > 0) {
+        setupTimelineDragAndDrop();
+    }
+    // Track navigation
+    navigateToPage('timeline');
+    // Show the drawer
+    summaryDrawer.classList.add('active');
+    document.body.classList.add('summary-drawer-open');
+}
+// ========================= TIMELINE EDITING FUNCTIONS =========================
+let timelineEditMode = false;
+let deletedTimelineItems = []; // Track items marked for deletion
+// Toggle timeline edit mode
+function toggleTimelineEditMode() {
+    timelineEditMode = !timelineEditMode;
+    const editBtn = document.getElementById('timeline-edit-btn');
+    const editText = editBtn.querySelector('.edit-mode-text');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    if (timelineEditMode) {
+        editText.textContent = 'Save';
+        editBtn.classList.add('edit-mode-active');
+        editBtn.style.background = '#007bff'; // Blue for save (different from green Add)
+        // Show Add button during edit mode
+        const addBtn = document.getElementById('timeline-add-btn');
+        if (addBtn) {
+            addBtn.style.display = 'flex';
+        }
+        // Show delete buttons for all timeline items
+        const deleteButtons = document.querySelectorAll('.delete-timeline-item-btn');
+        deleteButtons.forEach(btn => {
+            btn.style.display = 'block';
+        });
+        // Convert ALL timeline items to editable textboxes
+        timelineItems.forEach(item => {
+            const eventElement = item.querySelector('.timeline-event');
+            if (eventElement) {
+                const currentText = eventElement.textContent.trim();
+                const isFromFile = item.getAttribute('data-is-file') === 'true';
+                const eventId = item.getAttribute('data-event-id');
+                eventElement.innerHTML = `
+                    <textarea class="timeline-edit-textarea" 
+                              data-original-text="${currentText}"
+                              data-event-id="${eventId || ''}"
+                              data-is-file="${isFromFile}"
+                              placeholder="Enter timeline event..."
+                              rows="3">${currentText}</textarea>
+                `;
+            }
+        });
+    } else {
+        editText.textContent = 'Edit';
+        editBtn.classList.remove('edit-mode-active');
+        editBtn.style.background = '#007bff'; // Blue for edit
+        // Hide Add button when exiting edit mode
+        const addBtn = document.getElementById('timeline-add-btn');
+        if (addBtn) {
+            addBtn.style.display = 'none';
+        }
+        // Hide delete buttons
+        const deleteButtons = document.querySelectorAll('.delete-timeline-item-btn');
+        deleteButtons.forEach(btn => {
+            btn.style.display = 'none';
+        });
+        // Save ALL changes and convert back to normal display
+        const savePromises = [];
+        // Process deleted items
+        if (deletedTimelineItems.length > 0) {
+            deletedTimelineItems.forEach(eventId => {
+                savePromises.push(deleteTimelineFromDatabase(eventId));
+            });
+            deletedTimelineItems = []; // Clear the deletion list
+        }
+        // Process new timeline items
+        const newItems = document.querySelectorAll('.timeline-item[data-is-new="true"]');
+        newItems.forEach(item => {
+            const textarea = item.querySelector('.timeline-add-textarea');
+            if (textarea && textarea.value.trim() !== '') {
+                const description = textarea.value.trim();
+                // Add to save promises
+                savePromises.push(saveNewTimelineToDatabase(description));
+                // Remove the new item from DOM since it will be reloaded
+                item.remove();
+            } else {
+                // Remove empty new items
+                item.remove();
+            }
+        });
+        timelineItems.forEach(item => {
+            const textarea = item.querySelector('.timeline-edit-textarea');
+            if (textarea) {
+                const newText = textarea.value.trim();
+                const originalText = textarea.getAttribute('data-original-text');
+                const eventId = textarea.getAttribute('data-event-id');
+                const isFromFile = textarea.getAttribute('data-is-file') === 'true';
+                const eventElement = item.querySelector('.timeline-event');
+                // Only save if text changed and it's not empty
+                if (newText !== originalText && newText !== '') {
+                    if (eventId && !isFromFile && eventId !== '') {
+                        // Save database events
+                        savePromises.push(updateTimelineEvent(eventId, newText));
+                    }
+                    // File-based events would need different handling
+                }
+                // Restore normal display
+                eventElement.textContent = newText || originalText;
+            }
+        });
+        // Wait for all saves to complete
+        if (savePromises.length > 0) {
+            showLoader(); // Show loading during save
+            Promise.all(savePromises).then(() => {
+                const deletedCount = deletedTimelineItems.length;
+                const editCount = savePromises.length - deletedCount;
+                if (deletedCount > 0 && editCount > 0) {
+                    showToast('Timeline updated', 'success');
+                } else if (deletedCount > 0) {
+                    showToast('Timeline updated', 'success');
+                } else if (editCount > 0) {
+                    showToast('Timeline updated', 'success');
+                }
+                // Refresh the timeline to show updated data
+                showChapterTimeline();
+                hideLoader(); // Hide loading after save
+            }).catch(error => {
+                showToast('Save failed', 'error');
+                hideLoader(); // Hide loading on error
+            });
+        } else {
+        }
+    }
+}
+// Update timeline event in database
+async function updateTimelineEvent(eventId, newDescription) {
+    try {
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .update({ event_description: newDescription })
+            .eq('id', eventId);
+        if (error) {
+            showToast('Failed to update timeline event. Please try again.', 'error');
+        } else {
+            showToast('Timeline event updated successfully!', 'success');
+        }
+    } catch (error) {
+        showToast('Failed to update timeline event. Please try again.', 'error');
+    }
+}
+// Show add timeline modal
+function showAddTimelineModal() {
+    const book = bibleBooks[currentBook];
+    const chapterNum = currentChapter;
+    const modalHtml = `
+        <div class="modal-overlay" id="add-timeline-modal">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3>Add Timeline Event</h3>
+                    <button class="modal-close-btn" onclick="closeAddTimelineModal()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-field">
+                        <label for="timeline-event-description">Timeline Event</label>
+                        <textarea id="timeline-event-description" 
+                                  placeholder="Describe what happened in this chapter..." 
+                                  rows="4"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label for="timeline-verse-reference">Verse Reference (Optional)</label>
+                        <input type="text" 
+                               id="timeline-verse-reference" 
+                               placeholder="e.g., Matthew 1:1-17">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeAddTimelineModal()">Cancel</button>
+                    <button class="btn btn-primary" onclick="addTimelineEvent()">Add Event</button>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+    document.body.classList.add('modal-open');
+    // Focus on description field
+    setTimeout(() => {
+        document.getElementById('timeline-event-description').focus();
+    }, 100);
+}
+// Close add timeline modal
+function closeAddTimelineModal() {
+    const modal = document.getElementById('add-timeline-modal');
+    if (modal) {
+        modal.remove();
+        document.body.classList.remove('modal-open');
+    }
+}
+// Add timeline event to database
+async function addTimelineEvent() {
+    const description = document.getElementById('timeline-event-description').value.trim();
+    const verseReference = document.getElementById('timeline-verse-reference').value.trim();
+    if (!description) {
+        showToast('Please enter a timeline event description.', 'error');
+        return;
+    }
+    const book = bibleBooks[currentBook];
+    const chapterNum = currentChapter;
+    // Map testament
+    const testament = currentBook < 39 ? 'old' : 'new';
+    try {
+        // Get the maximum order_index for this chapter to append at the end
+        const { data: maxOrderData } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('order_index')
+            .eq('book_file', book.file)
+            .eq('chapter', chapterNum)
+            .order('order_index', { ascending: false })
+            .limit(1);
+        const nextOrderIndex = maxOrderData && maxOrderData.length > 0
+            ? maxOrderData[0].order_index + 10
+            : 10;
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .insert([{
+                book_file: book.file,
+                chapter: chapterNum,
+                event_description: description,
+                verse_reference: verseReference,
+                testament: testament,
+                order_index: nextOrderIndex
+            }]);
+        if (error) {
+            showToast('Failed to add timeline event. Please try again.', 'error');
+        } else {
+            showToast('Timeline event added successfully!', 'success');
+            closeAddTimelineModal();
+            // Refresh timeline display
+            showChapterTimeline();
+        }
+    } catch (error) {
+        showToast('Failed to add timeline event. Please try again.', 'error');
+    }
+}
+// ========================= PUSH MATTHEW 1 TIMELINE DATA =========================
+// Function to push Matthew 1 timeline data to Supabase
+async function pushMatthew1TimelineData() {
+    if (!isAdmin()) {
+        return;
+    }
+    const matthew1Timeline = [
+        "Matthew begins with the genealogy of Jesus, tracing His family history to show He is the promised Messiah.",
+        "The lineage starts with Abraham, the man through whom God began His covenant nation.",
+        "From Abraham it continues to Isaac, then to Jacob.",
+        "Jacob becomes the father of Judah, beginning the royal tribe.",
+        "The family line moves through generations until it reaches King David, confirming Jesus' royal right.",
+        "From David, the genealogy continues through Solomon and the kings of Judah, showing the royal line God preserved.",
+        "The timeline reaches the period of the Babylonian exile, marking a major turning point in Israel's history.",
+        "After the exile, the line continues through several generations until it reaches Jacob, the father of Joseph.",
+        "Joseph is introduced as the husband of Mary, through whom Jesus was born, completing the genealogy.",
+        "Matthew then explains how the birth of Jesus took place, shifting from genealogy to the story.",
+        "Mary is found to be pregnant, though she and Joseph had not come together.",
+        "Her pregnancy is from the Holy Spirit, a miraculous act of God.",
+        "Joseph, being righteous, does not want to make Mary a public example.",
+        "He plans to quietly end the engagement, trying to protect her from shame.",
+        "An angel appears to Joseph in a dream, interrupting his plan.",
+        "The angel tells him not to fear taking Mary as his wife, because the child is from the Holy Spirit.",
+        "Joseph is instructed to name the child \"Jesus\", because He will save His people from their sins.",
+        "Matthew explains that this fulfills Isaiah's prophecy about a virgin conceiving and giving birth to a son.",
+        "The prophecy states that the virgin will give birth to Immanuel, meaning \"God with us\".",
+        "Joseph obeys the angel's command and takes Mary as his wife.",
+        "He does not have relations with her until after Jesus is born, preserving her virginity.",
+        "When Jesus is born, Joseph names Him \"Jesus\" as the angel commanded, completing the chapter."
+    ];
+    try {
+        // First check if data already exists
+        const { data: existingData, error: checkError } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('id')
+            .eq('book_file', 'matthew')
+            .eq('chapter', 1);
+        if (checkError) {
+            return;
+        }
+        if (existingData && existingData.length > 0) {
+            showToast('Matthew 1 timeline data already exists!', 'info');
+            return;
+        }
+        // Prepare timeline events for insertion
+        const timelineEvents = matthew1Timeline.map((event, index) => ({
+            book_file: 'matthew',
+            chapter: 1,
+            event_description: event,
+            verse_reference: '', // No specific verse references in the original data
+            testament: 'new',
+            order_index: (index + 1) * 10 // Use increments of 10 for easy insertion
+        }));
+        // Insert data
+        const { error: insertError } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .insert(timelineEvents);
+        if (insertError) {
+            showToast('Failed to push timeline data. Please try again.', 'error');
+        } else {
+            showToast(`Successfully added ${matthew1Timeline.length} timeline events for Matthew 1!`, 'success');
+        }
+    } catch (error) {
+        showToast('Failed to push timeline data. Please try again.', 'error');
+    }
+}
+// ========================= TIMELINE ORDERING FUNCTIONS =========================
+// Insert timeline event at specific position
+async function insertTimelineEventAt(position, description, verseReference = '') {
+    if (!isAdmin()) {
+        return;
+    }
+    try {
+        const book = bibleBooks[currentBook];
+        const chapterNum = parseInt(document.getElementById('chapter-selector').value);
+        const testament = book.testament || 'new';
+        // Get all events for this chapter ordered by order_index
+        const { data: existingEvents } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('id, order_index')
+            .eq('book_file', book.file)
+            .eq('chapter', chapterNum)
+            .order('order_index', { ascending: true });
+        let newOrderIndex;
+        if (position === 0) {
+            // Insert at beginning
+            newOrderIndex = existingEvents.length > 0 ? existingEvents[0].order_index - 10 : 10;
+        } else if (position >= existingEvents.length) {
+            // Insert at end
+            newOrderIndex = existingEvents.length > 0
+                ? existingEvents[existingEvents.length - 1].order_index + 10
+                : 10;
+        } else {
+            // Insert between existing items
+            const prevOrderIndex = existingEvents[position - 1].order_index;
+            const nextOrderIndex = existingEvents[position].order_index;
+            newOrderIndex = Math.floor((prevOrderIndex + nextOrderIndex) / 2);
+            // If there's no space between orders, reindex the timeline
+            if (newOrderIndex <= prevOrderIndex) {
+                await reindexTimeline(book.file, chapterNum);
+                // Recalculate after reindexing
+                newOrderIndex = (position * 10) + 5;
+            }
+        }
+        // Insert the new event
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .insert([{
+                book_file: book.file,
+                chapter: chapterNum,
+                event_description: description,
+                verse_reference: verseReference,
+                testament: testament,
+                order_index: newOrderIndex
+            }]);
+        if (error) {
+            return false;
+        }
+        showToast('Timeline event inserted successfully!', 'success');
+        showChapterTimeline(); // Refresh display
+        return true;
+    } catch (error) {
+        return false;
+    }
+}
+// Reindex timeline order_index values to create proper spacing
+async function reindexTimeline(bookFile, chapter) {
+    try {
+        const { data: events } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('id')
+            .eq('book_file', bookFile)
+            .eq('chapter', chapter)
+            .order('order_index', { ascending: true })
+            .order('id', { ascending: true });
+        if (!events || events.length === 0) return;
+        // Update each event with new order_index (increments of 10)
+        const updates = events.map((event, index) =>
+            bibleDataManager.supabaseClient
+                .from('chapter_timeline')
+                .update({ order_index: (index + 1) * 10 })
+                .eq('id', event.id)
+        );
+        await Promise.all(updates);
+    } catch (error) {
+    }
+}
+// ========================= INLINE TIMELINE FUNCTIONS =========================
+// Add timeline entry inline (no modal)
+function addTimelineInline() {
+    if (!isAdmin()) {
+        return;
+    }
+    // Check if there's already a new item being added
+    const existingNew = document.querySelector('.timeline-item-new');
+    if (existingNew) {
+        showToast('Complete current addition first', 'warning');
+        return;
+    }
+    const timelineContainer = document.querySelector('.timeline-list');
+    if (!timelineContainer) return;
+    // Disable the Add button during creation
+    const addBtn = document.getElementById('timeline-add-btn');
+    if (addBtn) {
+        addBtn.disabled = true;
+        addBtn.style.opacity = '0.6';
+    }
+    // Create new inline timeline item with textarea and normal timeline styling
+    const newItemHtml = `
+        <li class="timeline-item" data-is-new="true" style="border-color: #28a745;">
+            <div class="timeline-content">
+                <div class="timeline-event">
+                    <textarea class="timeline-add-textarea" 
+                              placeholder="Enter new timeline event..." 
+                              rows="3"
+                              oninput="checkTimelineInput(this)"></textarea>
+                </div>
+                <div class="timeline-add-actions">
+                    <button class="timeline-cancel-btn" onclick="cancelNewTimelineItem(this)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </li>
+    `;
+    // Add to the end of timeline
+    timelineContainer.insertAdjacentHTML('beforeend', newItemHtml);
+    // Scroll to the new item and focus on textarea
+    const newItem = timelineContainer.lastElementChild;
+    newItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const textarea = newItem.querySelector('.timeline-add-textarea');
+    setTimeout(() => textarea.focus(), 300); // Wait for scroll to complete
+}
+// Check timeline input and enable Add button when text is entered
+function checkTimelineInput(textarea) {
+    const addBtn = document.getElementById('timeline-add-btn');
+    if (textarea.value.trim().length > 0) {
+        // Re-enable add button since user has started typing
+        if (addBtn) {
+            addBtn.disabled = false;
+            addBtn.style.opacity = '1';
+        }
+    } else {
+        // Keep add button disabled until text is entered
+        if (addBtn) {
+            addBtn.disabled = true;
+            addBtn.style.opacity = '0.6';
+        }
+    }
+}
+// Save new timeline item
+async function saveNewTimelineItem(button) {
+    const item = button.closest('.timeline-item');
+    const textarea = item.querySelector('.timeline-add-textarea');
+    const description = textarea.value.trim();
+    if (!description) {
+        showToast('Please enter a timeline event', 'error');
+        return;
+    }
+    try {
+        const book = bibleBooks[currentBook];
+        const chapterNum = parseInt(document.getElementById('chapter-selector').value);
+        const testament = book.testament || 'new';
+        // Get the maximum order_index for this chapter to append at the end
+        const { data: maxOrderData } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('order_index')
+            .eq('book_file', book.file)
+            .eq('chapter', chapterNum)
+            .order('order_index', { ascending: false })
+            .limit(1);
+        const nextOrderIndex = maxOrderData && maxOrderData.length > 0
+            ? maxOrderData[0].order_index + 10
+            : 10;
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .insert([{
+                book_file: book.file,
+                chapter: chapterNum,
+                event_description: description,
+                verse_reference: '',
+                testament: testament,
+                order_index: nextOrderIndex
+            }]);
+        if (error) {
+            showToast('Failed to add timeline event. Please try again.', 'error');
+        } else {
+            showToast('Timeline event added successfully!', 'success');
+            // Re-enable the Add button
+            const addBtn = document.getElementById('timeline-add-btn');
+            if (addBtn) {
+                addBtn.disabled = false;
+                addBtn.style.opacity = '1';
+            }
+            // Refresh timeline display
+            showChapterTimeline();
+        }
+    } catch (error) {
+        showToast('Failed to add timeline event. Please try again.', 'error');
+        // Re-enable the Add button on error
+        const addBtn = document.getElementById('timeline-add-btn');
+        if (addBtn) {
+            addBtn.disabled = false;
+            addBtn.style.opacity = '1';
+        }
+    }
+}
+// Cancel new timeline item
+function cancelNewTimelineItem(button) {
+    const item = button.closest('.timeline-item');
+    item.remove();
+    // Re-enable the Add button
+    const addBtn = document.getElementById('timeline-add-btn');
+    if (addBtn) {
+        addBtn.disabled = false;
+        addBtn.style.opacity = '1';
+    }
+}
+// Mark timeline item for deletion with animation
+function markTimelineForDeletion(eventId) {
+    if (!isAdmin()) {
+        return;
+    }
+    // Find the timeline item and mark it for deletion
+    const timelineItem = document.querySelector(`[data-event-id="${eventId}"]`);
+    if (!timelineItem) return;
+    // Add to deleted items list
+    if (!deletedTimelineItems.includes(eventId)) {
+        deletedTimelineItems.push(eventId);
+    }
+    // Style the item like the add card but in red
+    timelineItem.style.borderColor = '#dc3545'; // Red border like green add card
+    timelineItem.style.transition = 'all 0.3s ease';
+    // Replace the timeline content with deletion interface (similar to add interface)
+    const timelineContent = timelineItem.querySelector('.timeline-content');
+    const originalContent = timelineContent.innerHTML;
+    timelineContent.innerHTML = `
+        <div class="timeline-event">
+            <div class="timeline-delete-message">This timeline event will be deleted when you save.</div>
+        </div>
+        <div class="timeline-add-actions">
+            <button class="timeline-cancel-btn" onclick="undoTimelineDeletion('${eventId}')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                Undo
+            </button>
+        </div>
+    `;
+    // Store original content for restoration
+    timelineItem.setAttribute('data-original-content', originalContent);
+    // Disable the delete button for this item
+    const deleteBtn = timelineItem.querySelector('.delete-timeline-item-btn');
+    if (deleteBtn) {
+        deleteBtn.style.display = 'none';
+    }
+}
+// Undo timeline deletion
+function undoTimelineDeletion(eventId) {
+    if (!isAdmin()) {
+        return;
+    }
+    // Find the timeline item
+    const timelineItem = document.querySelector(`[data-event-id="${eventId}"]`);
+    if (!timelineItem) return;
+    // Remove from deleted items list
+    const index = deletedTimelineItems.indexOf(eventId);
+    if (index > -1) {
+        deletedTimelineItems.splice(index, 1);
+    }
+    // Restore original styling
+    timelineItem.style.borderColor = '';
+    // Restore original content
+    const originalContent = timelineItem.getAttribute('data-original-content');
+    if (originalContent) {
+        const timelineContent = timelineItem.querySelector('.timeline-content');
+        timelineContent.innerHTML = originalContent;
+        timelineItem.removeAttribute('data-original-content');
+    }
+    // Show the delete button again
+    const deleteBtn = timelineItem.querySelector('.delete-timeline-item-btn');
+    if (deleteBtn && timelineEditMode) {
+        deleteBtn.style.display = 'block';
+    }
+}
+// Actually delete timeline item from database
+async function deleteTimelineFromDatabase(eventId) {
+    try {
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .delete()
+            .eq('id', eventId);
+        if (error) {
+            throw error;
+        }
+    } catch (error) {
+        throw error;
+    }
+}
+// Save new timeline item to database
+async function saveNewTimelineToDatabase(description) {
+    try {
+        const book = bibleBooks[currentBook];
+        const chapterNum = currentChapter;
+        // Get the highest order_index for this chapter
+        const { data: existingEvents } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('order_index')
+            .eq('book_file', book.file)
+            .eq('chapter', chapterNum)
+            .order('order_index', { ascending: false })
+            .limit(1);
+        let newOrderIndex = 10; // Default starting index
+        if (existingEvents && existingEvents.length > 0) {
+            newOrderIndex = existingEvents[0].order_index + 10;
+        }
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .insert({
+                book_file: book.file,
+                chapter: chapterNum,
+                event_description: description,
+                verse_reference: '',
+                testament: book.testament,
+                order_index: newOrderIndex
+            });
+        if (error) {
+            throw error;
+        }
+        showToast('Timeline updated', 'success');
+    } catch (error) {
+        throw error;
+    }
+}
+// ========================================
+// Voice Command Integration
+// ========================================
+let voiceCommandManager = null;
+/**
+ * Initialize voice command functionality
+ */
+function initializeVoiceCommand() {
+    // Check if VoiceCommandManager is available
+    if (typeof VoiceCommandManager === 'undefined') {
+        return;
+    }
+    // Initialize the voice command manager
+    voiceCommandManager = new VoiceCommandManager(bibleBooks);
+    // Get UI elements
+    const voiceBtn = document.getElementById('voice-btn');
+    const voiceStatus = document.getElementById('voice-status');
+    const voiceStatusText = voiceStatus.querySelector('.voice-status-text');
+    if (!voiceBtn) {
+        return;
+    }
+    // Hide voice button by default, show only in admin mode
+    voiceBtn.style.display = isAdmin() ? 'flex' : 'none';
+    // Set up callbacks
+    voiceCommandManager.onListeningChange = (isListening) => {
+        if (isListening) {
+            voiceBtn.classList.add('listening');
+            showVoiceStatus('🎤 Listening... Speak clearly and loud enough', 'listening');
+        } else {
+            voiceBtn.classList.remove('listening');
+            hideVoiceStatus();
+        }
+    };
+    voiceCommandManager.onInterimResult = (transcript) => {
+        // Show what's being heard in real-time
+        showVoiceStatus(`Hearing: "${transcript}"`, 'listening');
+    };
+    voiceCommandManager.onCommandParsed = async (command) => {
+        // Validate and auto-correct the command
+        const validation = voiceCommandManager.validateCommand(command);
+        if (!validation.valid) {
+            showVoiceStatus(validation.error, 'error');
+            setTimeout(() => hideVoiceStatus(), 3000);
+            return;
+        }
+        // Get the display name based on current UI language (independent of voice command language)
+        let displayBookName = command.book; // Default to English
+        if (command.bookObject) {
+            if (currentLanguage === 'tamil') {
+                displayBookName = command.bookObject.tamilName || command.book;
+            } else if (currentLanguage === 'both') {
+                // For 'both' mode, show both names
+                displayBookName = `${command.book} / ${command.bookObject.tamilName}`;
+            }
+            // For 'english', use command.book (English name)
+        }
+        // Show success status and start navigation immediately
+        showVoiceStatus(`Opening ${displayBookName} ${command.chapter}${command.verse ? ':' + command.verse : ''}...`, 'success');
+        // Navigate to the book and chapter immediately
+        try {
+            await navigateViaVoice(command);
+            // Update status to show completion
+            showVoiceStatus(`✓ ${displayBookName} ${command.chapter}${command.verse ? ':' + command.verse : ''}`, 'success');
+            // Hide status after successful navigation
+            setTimeout(() => {
+                hideVoiceStatus();
+            }, 1500);
+        } catch (error) {
+            showVoiceStatus('Error navigating to verse', 'error');
+            setTimeout(() => hideVoiceStatus(), 3000);
+        }
+    };
+    voiceCommandManager.onError = (errorMessage) => {
+        showVoiceStatus(errorMessage, 'error');
+        // Hide error after 3 seconds
+        setTimeout(() => {
+            hideVoiceStatus();
+        }, 3000);
+    };
+    // Voice button click handler
+    voiceBtn.addEventListener('click', () => {
+        if (voiceCommandManager.isListening) {
+            voiceCommandManager.stopListening();
+        } else {
+            // Match voice recognition language to UI language setting
+            // Tamil UI → Tamil voice only
+            // English UI → English voice only
+            // Both UI → English voice only (for now)
+            let voiceLang = 'en'; // default
+            if (currentLanguage === 'tamil') {
+                voiceLang = 'ta';
+            } else if (currentLanguage === 'english') {
+                voiceLang = 'en';
+            } else { // 'both'
+                voiceLang = 'en'; // Use English for 'both' mode
+            }
+            voiceCommandManager.startListening(voiceLang);
+        }
+    });
+}
+/**
+ * Navigate to book/chapter/verse based on voice command
+ */
+async function navigateViaVoice(command) {
+    const { bookIndex, chapter, verse } = command;
+    // If we're not already on the right book or chapter, load it
+    if (currentBook !== bookIndex || currentChapter !== chapter) {
+        await loadBook(bookIndex, chapter);
+    } else {
+    }
+    // If verse is specified, scroll to it after a short delay to ensure rendering
+    if (verse) {
+        // Use shorter delay for faster response
+        setTimeout(() => {
+            scrollToVerse(verse);
+        }, 300);
+    }
+}
+/**
+ * Show voice status notification
+ */
+function showVoiceStatus(message, type = 'listening') {
+    const voiceStatus = document.getElementById('voice-status');
+    const voiceStatusText = voiceStatus.querySelector('.voice-status-text');
+    if (!voiceStatus || !voiceStatusText) return;
+    // Update text
+    voiceStatusText.textContent = message;
+    // Remove previous type classes
+    voiceStatus.classList.remove('error', 'success', 'listening');
+    // Add current type class
+    if (type !== 'listening') {
+        voiceStatus.classList.add(type);
+    }
+    // Show the status
+    voiceStatus.style.display = 'block';
+    setTimeout(() => {
+        voiceStatus.classList.add('show');
+    }, 10);
+}
+/**
+ * Hide voice status notification
+ */
+function hideVoiceStatus() {
+    const voiceStatus = document.getElementById('voice-status');
+    if (!voiceStatus) return;
+    voiceStatus.classList.remove('show');
+    setTimeout(() => {
+        voiceStatus.style.display = 'none';
+    }, 300);
+}
+/**
+ * Start background preload of all Bible books
+ * This runs silently in the background without blocking the UI
+ */
+async function startBackgroundPreload() {
+    // Always preload BOTH Tamil and English on first load for complete offline access
+    const languagesToPreload = ['tamil', 'english'];
+    // Preload all books for each language
+    // Always verify and re-download if needed (preloadAllBooks will check integrity)
+    for (const language of languagesToPreload) {
+        const isComplete = localStorage.getItem(`preload_complete_${language}`) === 'true';
+        if (isComplete) {
+            // Data should be available, preloadAllBooks will verify if needed
+        } else if (navigator.onLine) {
+            // Not complete and online - start download
+            bibleDataManager.preloadAllBooks(bibleBooks, language);
+        } else {
+        }
+    }
+}
+// Debug helper - expose to console for troubleshooting
+window.debugBible = {
+    checkPreloadStatus: () => {
+    },
+    forceReload: async (language = 'tamil') => {
+        bibleDataManager.resetPreloadFlag(language);
+        await startBackgroundPreload();
+    },
+    clearCache: async () => {
+        await bibleDataManager.clearCache();
+    },
+    verifyBook: async (bookFile, language = 'tamil') => {
+        const bookCacheKey = bibleDataManager.getBookCacheKey(bookFile, language);
+        const data = await bibleDataManager.loadBookFromLocalStorage(bookCacheKey);
+        return data;
+    }
+};
+// Right Sidebar Menu Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const rightMenuBtn = document.getElementById('right-menu-btn');
+    const rightSidebar = document.querySelector('.right-sidebar');
+    const bibleReadingPage = document.getElementById('bible-reading-page');
+    const exitBibleReading = document.getElementById('exit-bible-reading');
+    // Right menu options
+    const bibleReadingOption = document.getElementById('bible-reading-option');
+    const rightNotesOption = document.getElementById('right-notes-option');
+    const rightKingsOption = document.getElementById('right-kings-option');
+    const rightProphetsOption = document.getElementById('right-prophets-option');
+    const rightTimelineOption = document.getElementById('right-timeline-option');
+    const rightCharacterOption = document.getElementById('right-character-option');
+    const rightBibleCharactersOption = document.getElementById('right-bible-characters-option');
+    const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
+    const rightSermonOption = document.getElementById('right-sermon-option');
+    const rightPrayersOption = document.getElementById('right-prayers-option');
+    const rightCultOption = document.getElementById('right-cult-option');
+    const rightLogoutOption = document.getElementById('right-logout-option');
+    const isGuestUser = localStorage.getItem('currentUserIsGuest') === 'true';
+    // Initialize right sidebar (hidden by default)
+    if (rightSidebar) {
+        rightSidebar.classList.add('hidden');
+    }
+    // Hide right menu completely for guest users
+    if (isGuestUser && rightMenuBtn) {
+        rightMenuBtn.style.display = 'none';
+        return;
+    }
+    // Toggle right sidebar
+    if (rightMenuBtn && rightSidebar) {
+        rightMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeBottomSheet();
+            if (window.innerWidth <= 768) {
+                // Mobile: use drawer behavior
+                const isOpen = rightSidebar.classList.contains('drawer-open');
+                if (isOpen) {
+                    rightSidebar.classList.remove('drawer-open');
+                    rightSidebar.classList.add('hidden');
+                } else {
+                    rightSidebar.classList.remove('hidden');
+                    rightSidebar.classList.add('drawer-open');
+                }
+            } else {
+                // Desktop: simple toggle
+                const isHidden = rightSidebar.classList.contains('hidden');
+                rightSidebar.classList.toggle('hidden');
+            }
+        }, true);
+    } else {
+    }
+    // Close right sidebar when clicking outside (both mobile and desktop)
+    document.addEventListener('click', (e) => {
+        if (rightSidebar && rightMenuBtn) {
+            const isSidebarOpen = window.innerWidth <= 768
+                ? rightSidebar.classList.contains('drawer-open')
+                : !rightSidebar.classList.contains('hidden');
+            if (isSidebarOpen &&
+                !rightSidebar.contains(e.target) &&
+                !rightMenuBtn.contains(e.target)) {
+                rightSidebar.classList.add('hidden');
+                rightSidebar.classList.remove('drawer-open');
+            }
+        }
+    });
+
+    // Helper function to close right sidebar drawer
+    function closeRightSidebar() {
+        if (rightSidebar) {
+            rightSidebar.classList.add('hidden');
+            rightSidebar.classList.remove('drawer-open');
+        }
+    }
+
+    // Bible Reading option - navigate to Bible Reading page
+    if (bibleReadingOption) {
+        bibleReadingOption.addEventListener('click', () => {
+            closeRightSidebar();
+            // Navigate to the Bible Reading HTML file with cache-busting parameter
+            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
+            window.location.href = `src/pages/bible-reading.html?cb=${cacheBuster}`;
+        });
+    }
+    // Daily Prayers option - navigate to Daily Prayers page
+    const dailyPrayersOption = document.getElementById('daily-prayers-option');
+    if (dailyPrayersOption) {
+        dailyPrayersOption.addEventListener('click', () => {
+            closeRightSidebar();
+            window.location.href = 'src/pages/daily-bible-prayers.html';
+        });
+    }
+    // Exit Bible Reading page
+    if (exitBibleReading && bibleReadingPage) {
+        exitBibleReading.addEventListener('click', () => {
+            // Hide Bible Reading page
+            bibleReadingPage.style.display = 'none';
+            // Show main content
+            document.querySelector('.main-layout').style.display = 'flex';
+            document.querySelector('header').style.display = 'flex';
+            document.querySelector('.bottom-nav').style.display = 'flex';
+        });
+    }
+    // Bible Notes option - navigate to docs
+    if (rightNotesOption) {
+        rightNotesOption.addEventListener('click', () => {
+            closeRightSidebar();
+            window.location.href = 'docs/docs.html';
+        });
+    }
+    // Bible Characters option - navigate to bible-characters page
+    if (rightBibleCharactersOption) {
+        rightBibleCharactersOption.addEventListener('click', () => {
+            closeRightSidebar();
+            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
+            window.location.href = `src/bible-characters.html?cb=${cacheBuster}`;
+        });
+    }
+    // Sermon option - navigate to Sermon page
+    if (rightSermonOption) {
+        rightSermonOption.addEventListener('click', () => {
+            closeRightSidebar();
+            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
+            window.location.href = `src/pages/sermon.html?cb=${cacheBuster}`;
+        });
+    }
+    // Prayers option - navigate to Prayers page
+    if (rightPrayersOption) {
+        rightPrayersOption.addEventListener('click', () => {
+            closeRightSidebar();
+            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
+            window.location.href = `src/pages/prayers.html?cb=${cacheBuster}`;
+        });
+    }
+    // WMSCOG Cult option - navigate to secret page
+    if (rightCultOption) {
+        rightCultOption.addEventListener('click', () => {
+            closeRightSidebar();
+            window.location.href = 'config/secret.html';
+        });
+    }
+    // Logout option - clear user and go back to login
+    if (rightLogoutOption) {
+        rightLogoutOption.addEventListener('click', () => {
+            closeRightSidebar();
+            try {
+                localStorage.removeItem('currentUserId');
+                localStorage.removeItem('currentUserName');
+                localStorage.removeItem('currentUserIsGuest');
+                localStorage.removeItem('isAdmin');
+            } catch (e) { }
+            window.location.href = 'src/pages/login.html';
+        });
+    }
+
+    // Disable copy functionality on the entire document (except notes-textarea)
+    document.addEventListener('copy', (e) => {
+        const notesTextarea = document.getElementById('notes-textarea');
+        if (notesTextarea && (e.target === notesTextarea || notesTextarea.contains(e.target))) {
+            // Allow copy in notes-textarea - use default copy behavior
+            return true;
+        }
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable context menu (right-click) except in notes-textarea
+    document.addEventListener('contextmenu', (e) => {
+        const notesTextarea = document.getElementById('notes-textarea');
+        if (notesTextarea && (e.target === notesTextarea || notesTextarea.contains(e.target))) {
+            // Allow context menu in notes-textarea for copy/paste options
+            return true;
+        }
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable text selection on the main scripture content
+    const scriptureText = document.querySelector('.scripture-text');
+    if (scriptureText) {
+        scriptureText.style.userSelect = 'none';
+        scriptureText.style.webkitUserSelect = 'none';
+        scriptureText.style.mozUserSelect = 'none';
+        scriptureText.style.msUserSelect = 'none';
+    }
+
+    // Disable selection on mobile with touch events (except in notes-textarea)
+    document.addEventListener('selectstart', (e) => {
+        // Allow selection in notes-textarea
+        const notesTextarea = document.getElementById('notes-textarea');
+        if (notesTextarea && (e.target === notesTextarea || notesTextarea.contains(e.target))) {
+            return true; // Allow selection in notes-textarea
+        }
+        e.preventDefault();
+        return false;
+    });
+
+    // Prevent drag and drop for copying text (except in notes-textarea)
+    document.addEventListener('dragstart', (e) => {
+        const notesTextarea = document.getElementById('notes-textarea');
+        if (notesTextarea && (e.target === notesTextarea || notesTextarea.contains(e.target))) {
+            return true; // Allow drag in notes-textarea
+        }
+        e.preventDefault();
+        return false;
+    });
+
+    // Handle copy in notes-textarea for selected text
+    const notesTextarea = document.getElementById('notes-textarea');
+    if (notesTextarea) {
+        notesTextarea.addEventListener('copy', (e) => {
+            // Get selected text from contenteditable div
+            const selection = window.getSelection();
+            if (selection.toString()) {
+                // Get the selected HTML content
+                const selectedHTML = selection.toString();
+
+                // Copy to clipboard using both methods for better compatibility
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    e.preventDefault(); // Prevent default to use our handler
+                    navigator.clipboard.writeText(selectedHTML).then(() => {
+                        // Copy successful - Ctrl+C/Cmd+C will show native browser feedback
+                    }).catch(err => {
+                        console.error('Copy failed:', err);
+                    });
+                }
+                // If navigator.clipboard is not available, let browser handle it naturally
+            }
+        });
+    }
+});
+
+/**
+ * Convert an array of verses into consolidated verse ranges
+ * E.g., [1, 2, 3, 5, 6] becomes ranges: [{start: 1, end: 3}, {start: 5, end: 6}]
+ * @param {Array} verses - Array of verse numbers
+ * @returns {Array} Array of {start, end} objects representing ranges
+ */
+function getVerseRanges(verses) {
+    if (!verses || verses.length === 0) return [];
+
+    // Sort and deduplicate
+    const uniqueVerses = [...new Set(verses)].sort((a, b) => a - b);
+
+    const ranges = [];
+    let rangeStart = uniqueVerses[0];
+    let rangeEnd = uniqueVerses[0];
+
+    for (let i = 1; i < uniqueVerses.length; i++) {
+        if (uniqueVerses[i] === rangeEnd + 1) {
+            // Consecutive verse, extend the range
+            rangeEnd = uniqueVerses[i];
+        } else {
+            // Gap found, save the current range and start a new one
+            ranges.push({ start: rangeStart, end: rangeEnd });
+            rangeStart = uniqueVerses[i];
+            rangeEnd = uniqueVerses[i];
+        }
+    }
+
+    // Add the last range
+    ranges.push({ start: rangeStart, end: rangeEnd });
+
+    return ranges;
+}
+
+/**
+ * Format verse ranges for display
+ * E.g., ranges for verses 1-3 and 5-6 becomes "1 - 3, 5 - 6"
+ * @param {Array} ranges - Array of {start, end} range objects
+ * @returns {string} Formatted verse range string
+ */
+function formatVerseRanges(ranges) {
+    return ranges.map(range => {
+        if (range.start === range.end) {
+            return range.start.toString();
+        } else {
+            return `${range.start} - ${range.end}`;
+        }
+    }).join(', ');
+}
+
+/**
+ * Convert multiple verses into verse objects with consolidated ranges
+ * Instead of {book, chapter, verse: 1}, {book, chapter, verse: 2}, {book, chapter, verse: 3}
+ * Returns {book, chapter, verses: [1, 2, 3], display: "John 3:1 - 3"}
+ * @param {Array} versesToAdd - Array of verse objects
+ * @returns {Array} Consolidated verse objects with ranges
+ */
+function consolidateVerses(versesToAdd) {
+    if (!versesToAdd || versesToAdd.length === 0) return [];
+
+    // Group verses by book and chapter
+    const grouped = {};
+
+    versesToAdd.forEach(verse => {
+        const key = `${verse.book}:${verse.chapter}`;
+        if (!grouped[key]) {
+            grouped[key] = {
+                book: verse.book,
+                chapter: verse.chapter,
+                verses: []
+            };
+        }
+        grouped[key].verses.push(verse.verse);
+    });
+
+    // Convert to consolidated format
+    const consolidated = [];
+    for (const key in grouped) {
+        const group = grouped[key];
+        const ranges = getVerseRanges(group.verses);
+        const rangeStr = formatVerseRanges(ranges);
+
+        consolidated.push({
+            book: group.book,
+            chapter: group.chapter,
+            verses: group.verses,
+            ranges: ranges,
+            display: `${group.book} ${group.chapter} : ${rangeStr}`
+        });
+    }
+
+    return consolidated;
+}
+
+/**
+ * Fetch recently created sermons from Supabase
+ * @returns {Promise<Array>} Array of recent sermons
+ */
+async function getRecentSermons() {
+    try {
+        // Check if supabase is available
+        if (!window.supabase) {
+            return [];
+        }
+
+        const supabase = window.supabase.createClient(
+            'https://encjogfdbrfcatvytpir.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck'
+        );
+
+        const { data, error } = await supabase
+            .from('sermons')
+            .select('id, title, tamil_title, description, sermon_date, verses')
+            .order('sermon_date', { ascending: false })
+            .limit(10);
+
+        if (error) {
+            return [];
+        }
+
+        return data || [];
+    } catch (error) {
+        return [];
+    }
+}
+
+/**
+ * Show sermon selection bottom sheet with recently created sermons
+ * @param {Array} versesToAdd - Array of verse objects to add {book, chapter, verse, display}
+ */
+async function showSermonSelectionSheet(versesToAdd) {
+    // Create or get the sermon selection modal
+    let sermonModal = document.getElementById('sermon-selection-modal');
+    if (!sermonModal) {
+        sermonModal = document.createElement('div');
+        sermonModal.id = 'sermon-selection-modal';
+        sermonModal.className = 'sermon-selection-modal';
+        document.body.appendChild(sermonModal);
+    }
+
+    // Show loading state
+    const consolidatedVerses = consolidateVerses(versesToAdd);
+    const verseDisplayText = consolidatedVerses.map(v => v.display).join(', ');
+
+    sermonModal.innerHTML = `
+        <div class="sermon-modal-backdrop"></div>
+        <div class="sermon-modal-content">
+            <div class="sermon-modal-handle"></div>
+            <div class="sermon-modal-header">
+                <h3 class="sermon-modal-title">Select Sermon</h3>
+                <button class="sermon-modal-close" aria-label="Close">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="sermon-selected-verses">
+                <small>Adding: ${verseDisplayText}</small>
+            </div>
+            <div class="sermon-modal-body">
+                <div class="sermon-loader">Loading sermons...</div>
+            </div>
+            <div class="sermon-modal-footer">
+                <button class="sermon-modal-btn sermon-modal-cancel">Cancel</button>
+                <button class="sermon-modal-btn sermon-modal-save" disabled>Add</button>
+            </div>
+        </div>
+    `;
+
+    sermonModal.classList.add('visible');
+    document.body.classList.add('sermon-modal-open');
+    document.body.style.overflow = 'hidden';
+
+    // Fetch recent sermons
+    const sermons = await getRecentSermons();
+
+    // Render sermons
+    const sermonBody = sermonModal.querySelector('.sermon-modal-body');
+    if (sermons.length === 0) {
+        sermonBody.innerHTML = '<div class="sermon-empty-state">No sermons found. Create one in the Sermon page first.</div>';
+    } else {
+        // Show only the most recent sermon by default
+        const renderSermons = (sermonList, showAll = false) => {
+            const displaySermons = showAll ? sermonList : [sermonList[0]];
+
+            let sermonListHTML = '<div class="sermon-list">';
+            displaySermons.forEach((sermon) => {
+                const dateStr = new Date(sermon.sermon_date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+                const displayTitle = sermon.tamil_title && sermon.tamil_title.trim()
+                    ? `${sermon.title} (${sermon.tamil_title})`
+                    : sermon.title;
+
+                // Preselect the first sermon when showing default view
+                const isPreselected = !showAll;
+
+                sermonListHTML += `
+                    <div class="sermon-item ${isPreselected ? 'selected' : ''}" data-sermon-id="${sermon.id}">
+                        <div class="sermon-item-header">
+                            <div class="sermon-item-title">${displayTitle}</div>
+                            <div class="sermon-item-date">${dateStr}</div>
+                        </div>
+                        ${sermon.verses && sermon.verses.length > 0 ? `
+                            <div class="sermon-item-verses">${sermon.verses.length} verses</div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+
+            // Add "Any Other Sermon?" link if not showing all
+            if (!showAll && sermons.length > 1) {
+                sermonListHTML += `
+                    <div class="sermon-view-all-link">
+                        <a href="#" class="sermon-view-all-btn">Looking for others?</a>
+                    </div>
+                `;
+            }
+
+            sermonListHTML += '</div>';
+            sermonBody.innerHTML = sermonListHTML;
+
+            // Enable button if showing default view (first sermon is preselected)
+            if (!showAll) {
+                sermonModal.querySelector('.sermon-modal-save').disabled = false;
+            } else {
+                sermonModal.querySelector('.sermon-modal-save').disabled = true;
+            }
+
+            // Add click handlers to sermon items
+            sermonBody.querySelectorAll('.sermon-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    sermonBody.querySelectorAll('.sermon-item').forEach(i => i.classList.remove('selected'));
+                    item.classList.add('selected');
+                    sermonModal.querySelector('.sermon-modal-save').disabled = false;
+                });
+            });
+
+            // Add click handler for "Any Other Sermon?" link
+            const viewAllBtn = sermonBody.querySelector('.sermon-view-all-btn');
+            if (viewAllBtn) {
+                viewAllBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    renderSermons(sermonList, true);
+                });
+            }
+        };
+
+        // Initial render with only the most recent sermon
+        renderSermons(sermons, false);
+    }
+
+    // Close modal
+    const closeModal = () => {
+        sermonModal.classList.remove('visible');
+        document.body.classList.remove('sermon-modal-open');
+        document.body.style.overflow = '';
+
+        // Clear inline transform after transition completes
+        setTimeout(() => {
+            sermonModal.querySelector('.sermon-modal-content').style.transform = '';
+        }, 300); // Match the 0.3s transition duration
+    };
+
+    sermonModal.querySelector('.sermon-modal-close').addEventListener('click', closeModal);
+    sermonModal.querySelector('.sermon-modal-backdrop').addEventListener('click', closeModal);
+    sermonModal.querySelector('.sermon-modal-cancel').addEventListener('click', closeModal);
+
+    // Add drag-to-close functionality
+    const content = sermonModal.querySelector('.sermon-modal-content');
+    const modalBody = sermonModal.querySelector('.sermon-modal-body');
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+    let velocityY = 0;
+    let lastY = 0;
+    let lastTime = 0;
+    let startScrollTop = 0;
+
+    function handleStart(clientY) {
+        const scrollTop = modalBody.scrollTop;
+
+        // Only allow dragging if at the top of scroll
+        if (scrollTop > 5) {
+            isDragging = false;
+            return;
+        }
+
+        isDragging = true;
+        startY = clientY;
+        currentY = 0;
+        lastY = clientY;
+        lastTime = Date.now();
+        startScrollTop = scrollTop;
+        velocityY = 0;
+
+        content.classList.add('dragging');
+    }
+
+    function handleMove(clientY) {
+        if (!isDragging) return;
+
+        const deltaY = clientY - startY;
+        const scrollTop = modalBody.scrollTop;
+        const scrollChanged = scrollTop !== startScrollTop;
+
+        // Calculate velocity
+        const now = Date.now();
+        const timeDiff = now - lastTime;
+        if (timeDiff > 0) {
+            velocityY = (clientY - lastY) / timeDiff;
+            lastY = clientY;
+            lastTime = now;
+        }
+
+        // If content scrolled (scroll position changed), stop dragging
+        if (scrollChanged) {
+            isDragging = false;
+            content.classList.remove('dragging');
+            return;
+        }
+
+        // If content is scrolled down, allow normal scrolling
+        if (scrollTop > 5) {
+            isDragging = false;
+            content.classList.remove('dragging');
+            return;
+        }
+
+        // If trying to drag up when at top, allow content to scroll
+        if (deltaY < 0) {
+            isDragging = false;
+            content.classList.remove('dragging');
+            return;
+        }
+
+        // Move sheet down only when at top and dragging down
+        currentY = deltaY;
+        content.style.transform = `translateY(${currentY}px)`;
+    }
+
+    function handleEnd() {
+        if (!isDragging) return;
+
+        isDragging = false;
+        content.classList.remove('dragging');
+
+        // Close if dragged down enough or velocity is high
+        const shouldClose = currentY > 150 || velocityY > 0.3;
+
+        if (shouldClose) {
+            closeModal();
+        } else {
+            content.style.transform = '';
+        }
+    }
+
+    // Touch events
+    content.addEventListener('touchstart', (e) => {
+        handleStart(e.touches[0].clientY);
+    }, { passive: true });
+
+    content.addEventListener('touchmove', (e) => {
+        const scrollTop = modalBody.scrollTop;
+        const deltaY = e.touches[0].clientY - startY;
+
+        // Only prevent default when actually dragging the sheet (at top and dragging down)
+        if (isDragging && scrollTop <= 5 && deltaY > 0) {
+            e.preventDefault();
+        }
+        handleMove(e.touches[0].clientY);
+    }, { passive: false });
+
+    content.addEventListener('touchend', () => {
+        handleEnd();
+    });
+
+    // Mouse events
+    content.addEventListener('mousedown', (e) => {
+        handleStart(e.clientY);
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            e.preventDefault();
+            handleMove(e.clientY);
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (isDragging) {
+            handleEnd();
+        }
+    });
+
+    // Save to sermon
+    sermonModal.querySelector('.sermon-modal-save').addEventListener('click', async () => {
+        const selectedSermon = sermonBody.querySelector('.sermon-item.selected');
+        if (!selectedSermon) return;
+
+        const sermonId = parseInt(selectedSermon.dataset.sermonId);
+
+        try {
+            // Find the sermon from the list
+            const sermon = sermons.find(s => s.id === sermonId);
+            if (!sermon) {
+                showToast('Sermon not found', 'error');
+                return;
+            }
+
+            // Consolidate verses into ranges
+            const consolidatedVersesToAdd = consolidateVerses(versesToAdd);
+
+            // Merge verses
+            const existingVerses = sermon.verses || [];
+            const newVerses = [...existingVerses];
+
+            // Add new verse ranges if not already in the sermon
+            consolidatedVersesToAdd.forEach(newVerseRange => {
+                const verseRangeKey = `${newVerseRange.book}:${newVerseRange.chapter}:${newVerseRange.ranges.map(r => r.start === r.end ? r.start : `${r.start}-${r.end}`).join(',')}`;
+
+                const alreadyExists = newVerses.some(v => {
+                    if (v.book !== newVerseRange.book || v.chapter !== newVerseRange.chapter) {
+                        return false;
+                    }
+
+                    // Check if all verses in the new range already exist
+                    const existingVersesInChapter = Array.isArray(v.verses) ? v.verses : [v.verse];
+                    return newVerseRange.verses.every(verse => existingVersesInChapter.includes(verse));
+                });
+
+                if (!alreadyExists) {
+                    newVerses.push(newVerseRange);
+                }
+            });
+
+            // Update sermon with new verses
+            await updateSermon(sermonId, { verses: newVerses });
+
+            closeModal();
+            showToast('Added...', 'success');
+        } catch (error) {
+            showToast('Failed to add verses to sermon', 'error');
+        }
+    });
+}
+
+/**
+ * Update a sermon in Supabase
+ * @param {number} sermonId - Sermon ID
+ * @param {Object} updates - Object with fields to update
+ * @returns {Promise<Object>} Updated sermon
+ */
+async function updateSermon(sermonId, updates) {
+    try {
+        if (!window.supabase) {
+            throw new Error('Supabase not available');
+        }
+
+        const supabase = window.supabase.createClient(
+            'https://encjogfdbrfcatvytpir.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck'
+        );
+
+        const { data, error } = await supabase
+            .from('sermons')
+            .update(updates)
+            .eq('id', sermonId)
+            .select()
+            .single();
+
+        if (error) {
+            throw error;
+        }
+
+        return data;
+    } catch (error) {
+        throw error;
+    }
+}
+
+// ===== PIN VERSES FUNCTIONALITY =====
+
+// ============================================
+// PIN VERSES FEATURE - Complete Rewrite
+// ============================================
+
+// Storage for pinned verses
+let pinnedVerses = [];
+
+/**
+ * Initialize pinned verses from localStorage
+ * Data structure: Array of {verse, book, chapter}
+ */
+function initializePinnedVerses() {
+    try {
+        const stored = localStorage.getItem('pinnedVerses');
+        pinnedVerses = stored ? JSON.parse(stored) : [];
+        console.log('Pinned verses loaded from localStorage:', pinnedVerses.length);
+    } catch (e) {
+        console.error('Error loading pinned verses:', e);
+        pinnedVerses = [];
+    }
+
+    // Load from Supabase immediately (no delay)
+    if (window.loadPinnedVersesFromSupabase) {
+        try {
+            loadPinnedVersesFromSupabase().then(supabaseVerses => {
+                if (supabaseVerses && supabaseVerses.length > 0) {
+                    pinnedVerses = supabaseVerses.map(v => ({
+                        verse: v.verse,
+                        book: v.book,
+                        chapter: v.chapter
+                    }));
+                    // Also save to localStorage for faster loading next time
+                    localStorage.setItem('pinnedVerses', JSON.stringify(pinnedVerses));
+                    console.log('Pinned verses loaded from Supabase:', pinnedVerses.length);
+                    updatePinButtonBar();
+                    // Refresh the current chapter display to show pinned icons
+                    refreshPinnedVerseDisplay();
+                }
+            }).catch(err => {
+                console.warn('Failed to load from Supabase:', err);
+            });
+        } catch (e) {
+            console.error('Error calling loadPinnedVersesFromSupabase:', e);
+        }
+    }
+}
+
+/**
+ * Check if a specific verse is pinned in the CURRENT chapter
+ * @param {number} verseNum - The verse number to check
+ * @returns {boolean} - True if verse is pinned in current book/chapter
+ */
+function isPinnedInCurrentChapter(verseNum) {
+    return pinnedVerses.some(v =>
+        v.verse === verseNum &&
+        v.book === currentBook &&
+        v.chapter === currentChapter
+    );
+}
+
+/**
+ * Refresh the pinned verse display for the current chapter
+ * This updates the styling of verses that are pinned after data is loaded
+ */
+function refreshPinnedVerseDisplay() {
+    const contentArea = document.querySelector('.scripture-text');
+    if (!contentArea) return;
+
+    // Get all verse containers in the current chapter
+    contentArea.querySelectorAll('.verse-container').forEach(container => {
+        const verseNum = parseInt(container.dataset.verse);
+
+        // Check if this verse is pinned
+        const isPinned = isPinnedInCurrentChapter(verseNum);
+
+        if (isPinned) {
+            // Add the pinned-verse-highlight class if not already present
+            if (!container.classList.contains('pinned-verse-highlight')) {
+                container.classList.add('pinned-verse-highlight');
+            }
+        } else {
+            // Remove the class if the verse is not pinned
+            container.classList.remove('pinned-verse-highlight');
+        }
+    });
+}
+
+
+/**
+ * Get all pinned verses for the current chapter
+ * @returns {Array} - Array of pinned verse objects for current book/chapter
+ */
+function getPinnedVersesForCurrentChapter() {
+    return pinnedVerses.filter(v =>
+        v.book === currentBook &&
+        v.chapter === currentChapter
+    );
+}
+
+/**
+ * Pin a verse with full context (book, chapter)
+ * @param {number} verseNum - The verse number to pin
+ */
+function pinVerse(verseNum) {
+    const pinnedVerse = {
+        verse: verseNum,
+        book: currentBook,
+        chapter: currentChapter
+    };
+
+    // Check if already pinned in this chapter
+    const exists = pinnedVerses.some(v =>
+        v.verse === verseNum &&
+        v.book === currentBook &&
+        v.chapter === currentChapter
+    );
+
+    if (!exists) {
+        pinnedVerses.push(pinnedVerse);
+        savePinnedVersesToStorage();
+
+        // Sync to Supabase if user is authenticated
+        if (window.addPinnedVerseToSupabase) {
+            addPinnedVerseToSupabase(verseNum, currentBook, currentChapter).catch(err => {
+                console.warn('Failed to sync to Supabase:', err);
+            });
+        }
+
+        updatePinButtonBar();
+    }
+}
+
+/**
+ * Unpin a verse from a specific book/chapter
+ * @param {number} verseNum - The verse number to unpin
+ */
+function unpinVerseFromCurrentChapter(verseNum) {
+    pinnedVerses = pinnedVerses.filter(v =>
+        !(v.verse === verseNum && v.book === currentBook && v.chapter === currentChapter)
+    );
+    savePinnedVersesToStorage();
+
+    // Sync to Supabase if user is authenticated
+    if (window.removePinnedVerseFromSupabase) {
+        removePinnedVerseFromSupabase(verseNum, currentBook, currentChapter).catch(err => {
+            console.warn('Failed to sync to Supabase:', err);
+        });
+    }
+
+    updatePinButtonBar();
+}
+
+/**
+ * Save pinned verses to localStorage
+ */
+function savePinnedVersesToStorage() {
+    localStorage.setItem('pinnedVerses', JSON.stringify(pinnedVerses));
+}
+
+/**
+ * Setup event listeners for verse header collapsible toggles
+ */
+function setupVerseHeaderToggle() {
+    const contentArea = document.querySelector('.scripture-text');
+    if (!contentArea) return;
+
+    // Get all collapsible headers
+    const collapsibleHeaders = contentArea.querySelectorAll('.verse-header.collapsible');
+
+    collapsibleHeaders.forEach(header => {
+        const toggleBtn = header.querySelector('.verse-header-toggle');
+
+        if (!toggleBtn) return;
+
+        // Add click listener to entire header section (including subtext)
+        header.addEventListener('click', function (e) {
+            // Don't trigger if clicking on other interactive elements
+            if (e.target.closest('.verse-actions') || e.target.closest('.cross-ref-icon')) {
+                return;
+            }
+
+            const headerId = toggleBtn.dataset.headerId;
+            const subtextElement = document.getElementById(headerId);
+
+            if (!subtextElement) return;
+
+            const isExpanded = subtextElement.classList.contains('visible');
+            const toggleIcon = toggleBtn.querySelector('.toggle-icon');
+
+            if (isExpanded) {
+                // Collapse
+                subtextElement.classList.remove('visible');
+                toggleIcon.textContent = '▶';
+            } else {
+                // Expand
+                subtextElement.classList.add('visible');
+                toggleIcon.textContent = '▼';
+            }
+        });
+    });
+
+    // Setup expand all button
+    setupExpandAllButton();
+}
+
+/**
+ * Setup expand all headers button
+ */
+function setupExpandAllButton() {
+    const expandAllBtn = document.getElementById('expand-all-headers-btn');
+    if (!expandAllBtn) return;
+
+    expandAllBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const contentArea = document.querySelector('.scripture-text');
+        if (!contentArea) return;
+
+        const subtexts = contentArea.querySelectorAll('.verse-header-subtext');
+
+        // Check if all are expanded
+        const allExpanded = Array.from(subtexts).every(subtext =>
+            subtext.classList.contains('visible')
+        );
+
+        subtexts.forEach(subtext => {
+            const headerId = subtext.id;
+            const toggleBtn = contentArea.querySelector(`[data-header-id="${headerId}"]`);
+
+            if (toggleBtn) {
+                const toggleIcon = toggleBtn.querySelector('.toggle-icon');
+
+                if (allExpanded) {
+                    // Collapse all
+                    subtext.classList.remove('visible');
+                    toggleIcon.textContent = '▶';
+                } else {
+                    // Expand all
+                    subtext.classList.add('visible');
+                    toggleIcon.textContent = '▼';
+                }
+            }
+        });
+    });
+}
+
+/**
+ * Update the pin button visibility in bottom nav
+ * Show only if: (1) Admin, (2) Current chapter has pinned verses
+ */
+function updatePinButtonBar() {
+    const pinnedVersesBtn = document.getElementById('pinned-verses-btn');
+    if (!pinnedVersesBtn) return;
+
+    const isAdminMode = isAdmin();
+    const currentChapterPinned = getPinnedVersesForCurrentChapter();
+
+    // Show button only if admin AND there are pinned verses in current chapter
+    if (isAdminMode && currentChapterPinned.length > 0) {
+        pinnedVersesBtn.style.display = 'flex';
+        const badge = document.getElementById('pinned-verses-badge');
+        if (badge) {
+            badge.textContent = currentChapterPinned.length;
+            badge.style.display = 'flex';
+        }
+    } else {
+        pinnedVersesBtn.style.display = 'none';
+    }
+}
+
+/**
+ * Update pin button appearance in bottom sheet (📌 or ✏️)
+ * @param {HTMLElement} btn - The pin button element
+ * @param {boolean} isPinned - Whether the verse is pinned
+ */
+function updatePinButtonAppearance(btn, isPinned) {
+    const emoji = btn.querySelector('.pin-icon-emoji');
+    if (emoji) {
+        if (isPinned) {
+            btn.classList.add('pinned-active');
+            emoji.textContent = '📌';
+        } else {
+            btn.classList.remove('pinned-active');
+            emoji.textContent = '✏️';
+        }
+    }
+}
+
+// Scroll to a specific verse and highlight it with gradient color
+function scrollToVerseWithHighlight(verseNum) {
+    const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+    if (verseElement) {
+        // Get the top bar height and add padding
+        const topBar = document.querySelector('.top-bar');
+        const offset = topBar ? topBar.offsetHeight + 20 : 100; // 20px extra padding
+
+        // Scroll with offset to account for top nav
+        const elementPosition = verseElement.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+        });
+
+        // Apply the same highlight style as left-pane selection (permanent)
+        verseElement.classList.add('left-pane-selected');
+    }
+}
+
+// Scroll to a specific verse in the scripture text
+function scrollToVerseWithHighlight(verseNum) {
+    const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+    if (verseElement) {
+        // Add padding to prevent scrolling behind top nav
+        const topNavHeight = 80; // height of top bar with padding
+        const extraPadding = 20; // additional padding
+        const totalOffset = topNavHeight + extraPadding;
+
+        const versePosition = verseElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = versePosition - totalOffset;
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+
+        // Highlight the verse briefly
+        verseElement.classList.add('verse-scroll-highlight');
+        setTimeout(() => {
+            verseElement.classList.remove('verse-scroll-highlight');
+        }, 1500);
+    }
+}
+
+// Show pinned verses as bottom sheet
+function showPinnedVersesBottomSheet() {
+    // Create or get the bottom sheet modal
+    let bottomSheet = document.getElementById('pinned-verses-modal-overlay');
+    if (!bottomSheet) {
+        bottomSheet = document.createElement('div');
+        bottomSheet.id = 'pinned-verses-modal-overlay';
+        bottomSheet.className = 'pinned-verses-modal-overlay';
+        document.body.appendChild(bottomSheet);
+    }
+
+    // Get only pinned verses for the CURRENT chapter
+    const currentChapterPinned = getPinnedVersesForCurrentChapter();
+
+    if (currentChapterPinned.length === 0) {
+        showToast('No pinned verses in this chapter', 'info');
+        return;
+    }
+
+    // Build the content - only for current chapter verses
+    let versesHtml = '';
+    currentChapterPinned.forEach(pinnedVerse => {
+        const verseNum = pinnedVerse.verse;
+        const savedBook = pinnedVerse.book;
+        const savedChapter = pinnedVerse.chapter;
+
+        // Get verse text from current view
+        const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+        let verseText = '';
+
+        if (verseElement) {
+            verseText = verseElement.textContent.trim().replace(/^\d+/, '').trim();
+        } else {
+            verseText = '(Verse text not available)';
+        }
+
+        // Get the book name from the saved book index
+        const book = bibleBooks[savedBook];
+        if (!book) {
+            console.warn(`Book index ${savedBook} not found in bibleBooks array`);
+            return; // Skip this verse if book data is invalid
+        }
+        const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+
+        versesHtml += `
+            <div class="pinned-verse-list-item" data-verse="${verseNum}">
+                <div class="pinned-verse-list-header">
+                    <div class="pinned-verse-list-ref">${bookName} ${savedChapter}:${verseNum}</div>
+                    <button class="pinned-verse-list-unpin" title="Unpin verse" data-verse="${verseNum}">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="pinned-verse-list-text">${verseText}</div>
+            </div>
+        `;
+    });
+
+    // Set up the bottom sheet content - matching sermon modal structure
+    bottomSheet.innerHTML = `
+        <div class="pinned-verses-backdrop"></div>
+        <div class="pinned-verses-content">
+            <div class="pinned-verses-handle">
+                <div class="pinned-verses-handle-bar"></div>
+            </div>
+            <div class="pinned-verses-header">
+                <h3><span style="margin-right: 8px;">📌</span>Pinned Verses</h3>
+                <button class="pinned-verses-close-btn" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="pinned-verses-body">
+                ${versesHtml}
+            </div>
+        </div>
+    `;
+
+    // Show the bottom sheet
+    bottomSheet.classList.add('visible');
+    document.body.classList.add('pinned-verses-sheet-open');
+    document.body.style.overflow = 'hidden';
+
+    // Add event listeners
+    const closeBtn = bottomSheet.querySelector('.pinned-verses-close-btn');
+    const backdrop = bottomSheet.querySelector('.pinned-verses-backdrop');
+    const content = bottomSheet.querySelector('.pinned-verses-content');
+    const body = bottomSheet.querySelector('.pinned-verses-body');
+
+    const closePinnedSheet = (isDragClose = false) => {
+        if (isDragClose) {
+            // When closing via drag, we need to animate from current position to off-screen
+            // The dragging class is still on, so we remove it and set transform in same frame
+            content.classList.remove('dragging');
+
+            // Use requestAnimationFrame to ensure transition is enabled before animating
+            requestAnimationFrame(() => {
+                content.style.transform = 'translateY(100%)';
+
+                // After animation completes, clean up
+                setTimeout(() => {
+                    bottomSheet.classList.remove('visible');
+                    document.body.classList.remove('pinned-verses-sheet-open');
+                    document.body.style.overflow = '';
+                    content.style.transform = '';
+                }, 300);
+            });
+        } else {
+            // Normal close (button/backdrop) - let CSS handle animation
+            bottomSheet.classList.remove('visible');
+            document.body.classList.remove('pinned-verses-sheet-open');
+            document.body.style.overflow = '';
+
+            // Clear inline transform after transition completes
+            setTimeout(() => {
+                content.style.transform = '';
+            }, 300);
+        }
+    };
+
+    closeBtn.addEventListener('click', () => closePinnedSheet(false));
+    backdrop.addEventListener('click', () => closePinnedSheet(false));
+
+    // Add drag-to-close functionality
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+    let velocityY = 0;
+    let lastY = 0;
+    let lastTime = 0;
+    let startScrollTop = 0;
+
+    function handleStart(clientY) {
+        const scrollTop = body.scrollTop;
+
+        // Only allow dragging if at the top of scroll
+        if (scrollTop > 5) {
+            isDragging = false;
+            return;
+        }
+
+        isDragging = true;
+        startY = clientY;
+        currentY = 0;
+        lastY = clientY;
+        lastTime = Date.now();
+        startScrollTop = scrollTop;
+        velocityY = 0;
+
+        content.classList.add('dragging');
+    }
+
+    function handleMove(clientY) {
+        if (!isDragging) return;
+
+        const deltaY = clientY - startY;
+        const scrollTop = body.scrollTop;
+        const scrollChanged = scrollTop !== startScrollTop;
+
+        // Calculate velocity
+        const now = Date.now();
+        const timeDiff = now - lastTime;
+        if (timeDiff > 0) {
+            velocityY = (clientY - lastY) / timeDiff;
+            lastY = clientY;
+            lastTime = now;
+        }
+
+        // If content scrolled (scroll position changed), stop dragging
+        if (scrollChanged) {
+            isDragging = false;
+            content.classList.remove('dragging');
+            return;
+        }
+
+        // If content is scrolled down, allow normal scrolling
+        if (scrollTop > 5) {
+            isDragging = false;
+            content.classList.remove('dragging');
+            return;
+        }
+
+        // If trying to drag up when at top, allow content to scroll
+        if (deltaY < 0) {
+            isDragging = false;
+            content.classList.remove('dragging');
+            return;
+        }
+
+        // Move sheet down only when at top and dragging down
+        currentY = deltaY;
+        content.style.transform = `translateY(${currentY}px)`;
+    }
+
+    function handleEnd() {
+        if (!isDragging) return;
+
+        isDragging = false;
+
+        // Close if dragged down enough or velocity is high
+        const shouldClose = currentY > 150 || velocityY > 0.3;
+
+        if (shouldClose) {
+            // Don't remove dragging class here - closePinnedSheet will handle it
+            closePinnedSheet(true);
+        } else {
+            // Snap back - remove dragging class to enable transition
+            content.classList.remove('dragging');
+            content.style.transform = '';
+        }
+    }
+
+    // Touch events
+    content.addEventListener('touchstart', (e) => {
+        handleStart(e.touches[0].clientY);
+    }, { passive: true });
+
+    content.addEventListener('touchmove', (e) => {
+        const scrollTop = body.scrollTop;
+        const deltaY = e.touches[0].clientY - startY;
+
+        // Only prevent default when actually dragging the sheet (at top and dragging down)
+        if (isDragging && scrollTop <= 5 && deltaY > 0) {
+            e.preventDefault();
+        }
+        handleMove(e.touches[0].clientY);
+    }, { passive: false });
+
+    content.addEventListener('touchend', () => {
+        handleEnd();
+    });
+
+    // Mouse events
+    content.addEventListener('mousedown', (e) => {
+        handleStart(e.clientY);
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            e.preventDefault();
+            handleMove(e.clientY);
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (isDragging) {
+            handleEnd();
+        }
+    });
+
+    // Add event listeners to unpin buttons
+    const unpinBtns = bottomSheet.querySelectorAll('.pinned-verse-list-unpin');
+    unpinBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const verseNum = parseInt(btn.dataset.verse);
+            const verseItem = btn.closest('.pinned-verse-list-item');
+
+            // Add animation class
+            verseItem.classList.add('pinned-verse-removing');
+
+            // Wait for animation to complete before unpinning (matches CSS animation duration)
+            setTimeout(() => {
+                unpinVerseFromCurrentChapter(verseNum);
+                showToast('Verse unpinned', 'info');
+                // Remove the card from DOM smoothly
+                verseItem.remove();
+            }, 600);
+        });
+    });
+
+    // Add event listeners to verse items
+    const verseItems = bottomSheet.querySelectorAll('.pinned-verse-list-item');
+    verseItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            if (!e.target.closest('.pinned-verse-list-unpin')) {
+                const verseNum = parseInt(item.dataset.verse);
+                // Close sheet immediately
+                closePinnedSheet();
+
+                // Clear any previous selections
+                const contentArea = document.querySelector('.scripture-text');
+                if (contentArea) {
+                    contentArea.querySelectorAll('.verse-line').forEach(v => {
+                        v.classList.remove('left-pane-selected');
+                        v.style.backgroundColor = '';
+                    });
+                    contentArea.querySelectorAll('.verse-container').forEach(v => {
+                        v.classList.remove('left-pane-selected');
+                        v.style.backgroundColor = '';
+                    });
+
+                    // Add highlight to the selected verse (same as left pane)
+                    const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+                    const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
+                    if (verseLine) {
+                        verseLine.classList.add('left-pane-selected');
+                    }
+                    if (verseContainer) {
+                        verseContainer.classList.add('left-pane-selected');
+                    }
+                }
+
+                // Scroll to verse (same as left pane)
+                scrollToVerse(verseNum);
+            }
+        });
+    });
+}
+
+// Cross Reference in Note Viewer Tab Functions
+function openNoteViewerWithReferences(verseNum, crossRefs) {
+    console.log('openNoteViewerWithReferences called:', { verseNum, crossRefs });
+
+    const overlay = document.getElementById('note-viewer-popup');
+    const refElement = document.getElementById('note-viewer-ref');
+    const editBtn = document.getElementById('note-viewer-edit-btn');
+    const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
+
+    console.log('Elements found:', { overlay: !!overlay, refElement: !!refElement, refTab: !!refTab });
+
+    if (!overlay || !refElement) {
+        console.error('Missing overlay or refElement');
+        return;
+    }
+
+    // Update verse reference
+    const bookName = bibleBooks[currentBook].name;
+    refElement.textContent = `${bookName} ${currentChapter}:${verseNum}`;
+
+    // Hide edit button (no note to edit)
+    if (editBtn) editBtn.style.display = 'none';
+
+    // Show references tab
+    if (refTab) {
+        refTab.style.display = 'block';
+        console.log('References tab shown');
+    }
+
+    // Switch to references tab
+    switchNoteViewerTab('references');
+
+    // Ensure language button states match current language
+    document.querySelectorAll('.note-viewer-ref-lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === noteRefCurrentLang);
+    });
+
+    // Store current refs for language switching
+    window.currentNoteRefs = { refs: crossRefs, verseNum };
+
+    // Load references
+    console.log('About to load references with noteRefCurrentLang:', noteRefCurrentLang);
+    loadNoteReferences(crossRefs);
+
+    // Show modal
+    overlay.style.display = 'flex';
+    setTimeout(() => overlay.classList.add('show'), 10);
+}
+
+function switchNoteViewerTab(tabName) {
+    // Update tab buttons
+    document.querySelectorAll('.note-viewer-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.tab === tabName);
+    });
+
+    // Update tab content
+    document.querySelectorAll('.note-viewer-tab-content').forEach(content => {
+        content.classList.toggle('active', content.id === `${tabName}-tab-content`);
+    });
+
+    // Hide language wrapper when switching away from references tab
+    const langWrapper = document.querySelector('.note-viewer-ref-lang-wrapper');
+    if (tabName !== 'references' && langWrapper) {
+        langWrapper.classList.remove('active');
+    }
+
+    // Load references when switching to references tab
+    if (tabName === 'references' && window.currentNoteRefs) {
+        // Ensure language button states match current language
+        document.querySelectorAll('.note-viewer-ref-lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === noteRefCurrentLang);
+        });
+
+        // Show loader on first load, not on subsequent tab switches
+        const showLoader = !referencesLoadedInViewer;
+        console.log('Loading references on tab switch with lang:', noteRefCurrentLang, 'showLoader:', showLoader);
+        loadNoteReferences(window.currentNoteRefs.refs, showLoader);
+        referencesLoadedInViewer = true; // Mark as loaded after first time
+    }
+}
+
+function switchNoteRefLanguage(lang) {
+    noteRefCurrentLang = lang;
+
+    // Update button states
+    document.querySelectorAll('.note-viewer-ref-lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // Re-render from cache without fetching or showing loader
+    if (window.currentNoteRefs) {
+        const content = document.getElementById('note-viewer-references-content');
+        if (!content) return;
+
+        const cacheKey = JSON.stringify(window.currentNoteRefs.refs.sort());
+        if (renderedReferencesCache[cacheKey]) {
+            console.log('🎨 Re-rendering references in', lang, 'mode from cache');
+            const allHtml = window.currentNoteRefs.refs.map(ref =>
+                renderReference(renderedReferencesCache[cacheKey][ref], lang)
+            ).join('');
+            content.innerHTML = allHtml || '<p style="text-align:center;color:#999;">No verses found</p>';
+        } else {
+            console.log('⚠️ Cache not found for language switch, reloading...');
+            loadNoteReferences(window.currentNoteRefs.refs, false);
+        }
+    }
+}
+
+// === Add Reference Bottom Sheet Functions ===
+
+let currentAddRefVerseNum = null;
+let selectedRefVerses = [];
+
+function showAddReferenceDialog() {
+    // Get current verse from note viewer
+    const refElement = document.getElementById('note-viewer-ref');
+    if (!refElement) return;
+
+    const refText = refElement.textContent; // e.g., "Matthew 1:1"
+    console.log('🔍 showAddReferenceDialog - refText:', refText);
+    const match = refText.match(/(\d+):(\d+)/);
+    if (!match) return;
+
+    currentAddRefVerseNum = parseInt(match[2]);
+    console.log('🔍 showAddReferenceDialog - currentAddRefVerseNum:', currentAddRefVerseNum);
+    selectedRefVerses = [];
+
+    // Open bottom sheet
+    openAddRefSheet();
+}
+
+function openAddRefSheet() {
+    const overlay = document.getElementById('add-ref-sheet-overlay');
+    const sheet = document.getElementById('add-ref-sheet');
+    const bookSelect = document.getElementById('add-ref-book-select');
+    const chapterSelect = document.getElementById('add-ref-chapter-select');
+    const versesSelect = document.getElementById('add-ref-verses-select');
+    const addVerseBtn = document.getElementById('add-ref-add-verse-btn');
+
+    if (!overlay || !sheet) return;
+
+    // Reset form
+    bookSelect.value = '';
+    chapterSelect.value = '';
+    chapterSelect.disabled = true;
+    versesSelect.value = '';
+    versesSelect.disabled = true;
+    addVerseBtn.disabled = true;
+    selectedRefVerses = [];
+    renderRefVersesChips();
+
+    // Populate book dropdown
+    populateRefBookDropdown();
+
+    // Show existing references
+    displayExistingReferences();
+
+    // Show overlay and sheet
+    overlay.classList.add('active');
+    sheet.classList.add('active');
+}
+
+function closeAddRefSheet() {
+    const overlay = document.getElementById('add-ref-sheet-overlay');
+    const sheet = document.getElementById('add-ref-sheet');
+
+    if (!overlay || !sheet) return;
+
+    overlay.classList.remove('active');
+    sheet.classList.remove('active');
+
+    // Reset state
+    currentAddRefVerseNum = null;
+    selectedRefVerses = [];
+    window.refsWhenSheetOpened = null; // Clear tracking variable
+}
+
+function displayExistingReferences() {
+    const existingRefsSection = document.getElementById('add-ref-existing-refs');
+    const existingList = document.getElementById('add-ref-existing-list');
+
+    if (!existingRefsSection || !existingList) return;
+
+    // Get current verse cross-reference key
+    const book = bibleBooks[currentBook];
+    const crossRefKey = `${book.name} ${currentChapter}:${currentAddRefVerseNum}`;
+
+    const existingRefs = crossReferences[crossRefKey] || [];
+
+    // Store the initial refs when sheet opens (for validation)
+    if (!window.refsWhenSheetOpened) {
+        window.refsWhenSheetOpened = [...existingRefs];
+    }
+
+    if (existingRefs.length === 0) {
+        existingRefsSection.classList.remove('active');
+        return;
+    }
+
+    // Populate existing references list
+    existingList.innerHTML = existingRefs.map(ref => `
+        <div class="add-ref-existing-item">
+            <span class="add-ref-existing-text">${ref}</span>
+            <button class="add-ref-existing-remove" onclick="removeExistingReference('${ref.replace(/'/g, "\\'")}', '${crossRefKey.replace(/'/g, "\\'")}')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    `).join('');
+
+    existingRefsSection.classList.add('active');
+}
+
+function removeExistingReference(ref, crossRefKey) {
+    console.log('Removing reference:', ref, 'from', crossRefKey);
+
+    if (!crossReferences[crossRefKey]) return;
+
+    // Remove from crossReferences object
+    crossReferences[crossRefKey] = crossReferences[crossRefKey].filter(r => r !== ref);
+
+    // If no more references, delete the key
+    const hasReferencesLeft = crossReferences[crossRefKey].length > 0;
+    if (!hasReferencesLeft) {
+        delete crossReferences[crossRefKey];
+    }
+
+    // Save to Supabase
+    saveNote();
+
+    // Refresh display
+    displayExistingReferences();
+
+    // Remove the cross-ref icon if no references remain
+    if (!hasReferencesLeft) {
+        const verseLine = document.querySelector(`.verse-line[data-verse="${currentAddRefVerseNum}"]`);
+        if (verseLine) {
+            const crossRefIcon = verseLine.querySelector('.cross-ref-icon');
+            if (crossRefIcon) {
+                crossRefIcon.remove();
+                console.log('🗑️ Cross-ref icon removed from verse', currentAddRefVerseNum);
+            }
+        }
+    } else {
+        // If some references still exist, just update the display
+        updateCrossRefDisplay(currentAddRefVerseNum);
+    }
+
+    console.log('✅ Reference removed and saved');
+}
+
+function populateRefBookDropdown() {
+    const bookSelect = document.getElementById('add-ref-book-select');
+    if (!bookSelect) return;
+
+    // Clear existing options except placeholder
+    bookSelect.innerHTML = '<option value="">Select Book</option>';
+
+    // Add all books from bibleBooks array
+    bibleBooks.forEach((book, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = book.name;
+        bookSelect.appendChild(option);
+    });
+}
+
+function onRefBookChange() {
+    const bookSelect = document.getElementById('add-ref-book-select');
+    const chapterSelect = document.getElementById('add-ref-chapter-select');
+    const versesSelect = document.getElementById('add-ref-verses-select');
+    const addVerseBtn = document.getElementById('add-ref-add-verse-btn');
+
+    const bookIndex = parseInt(bookSelect.value);
+
+    if (isNaN(bookIndex)) {
+        chapterSelect.disabled = true;
+        chapterSelect.value = '';
+        versesSelect.disabled = true;
+        versesSelect.value = '';
+        addVerseBtn.disabled = true;
+        return;
+    }
+
+    const book = bibleBooks[bookIndex];
+
+    // Populate chapter dropdown
+    chapterSelect.innerHTML = '<option value="">Select Chapter</option>';
+    for (let i = 1; i <= book.chapters; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        chapterSelect.appendChild(option);
+    }
+
+    chapterSelect.disabled = false;
+    versesSelect.disabled = true;
+    versesSelect.value = '';
+    versesSelect.innerHTML = '<option value="" disabled>Select Verse</option>';
+    addVerseBtn.disabled = true;
+}
+
+function onRefChapterChange() {
+    const bookSelect = document.getElementById('add-ref-book-select');
+    const chapterSelect = document.getElementById('add-ref-chapter-select');
+    const versesSelect = document.getElementById('add-ref-verses-select');
+    const addVerseBtn = document.getElementById('add-ref-add-verse-btn');
+
+    const bookIndex = parseInt(bookSelect.value);
+    const chapter = parseInt(chapterSelect.value);
+
+    if (isNaN(bookIndex) || isNaN(chapter)) {
+        versesSelect.disabled = true;
+        versesSelect.value = '';
+        addVerseBtn.disabled = true;
+        return;
+    }
+
+    const book = bibleBooks[bookIndex];
+
+    // Map book name to match bible-meta.js format (I Samuel -> 1 Samuel, etc.)
+    let bookName = book.name;
+    if (bookName.startsWith('I ')) {
+        bookName = bookName.replace('I ', '1 ');
+    } else if (bookName.startsWith('II ')) {
+        bookName = bookName.replace('II ', '2 ');
+    } else if (bookName.startsWith('III ')) {
+        bookName = bookName.replace('III ', '3 ');
+    }
+
+    // Get verse count from bible-meta.js or fallback to bibleBooks chapters count
+    let verseCount = 0;
+
+    if (window.bibleMeta) {
+        const bookMeta = window.bibleMeta.find(b => b.book === bookName);
+        if (bookMeta && bookMeta.chapters[chapter - 1]) {
+            verseCount = bookMeta.chapters[chapter - 1];
+        }
+    }
+
+    // Fallback: estimate max verses as 180 (safe upper limit for any chapter)
+    if (verseCount === 0) {
+        console.warn('bible-meta.js not loaded, using fallback verse count');
+        verseCount = 180; // Maximum verses in any Bible chapter
+    }
+
+    // Populate verses dropdown
+    versesSelect.innerHTML = '';
+    for (let i = 1; i <= verseCount; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        versesSelect.appendChild(option);
+    }
+
+    versesSelect.disabled = false;
+    addVerseBtn.disabled = false;
+}
+
+function addRefVerse() {
+    const bookSelect = document.getElementById('add-ref-book-select');
+    const chapterSelect = document.getElementById('add-ref-chapter-select');
+    const versesSelect = document.getElementById('add-ref-verses-select');
+
+    const bookIndex = parseInt(bookSelect.value);
+    const chapter = parseInt(chapterSelect.value);
+
+    if (isNaN(bookIndex) || isNaN(chapter)) return;
+
+    const book = bibleBooks[bookIndex];
+    const selectedOptions = Array.from(versesSelect.selectedOptions);
+
+    if (selectedOptions.length === 0) return;
+
+    // Sort verses numerically
+    const verses = selectedOptions.map(opt => parseInt(opt.value)).sort((a, b) => a - b);
+
+    // Create verse ranges for consecutive verses
+    let refString = '';
+    if (verses.length === 1) {
+        refString = `${book.name} ${chapter}:${verses[0]}`;
+    } else {
+        // Check if verses are consecutive
+        let isConsecutive = true;
+        for (let i = 1; i < verses.length; i++) {
+            if (verses[i] !== verses[i - 1] + 1) {
+                isConsecutive = false;
+                break;
+            }
+        }
+
+        if (isConsecutive) {
+            // Create range format: "Book Chapter:Start-End"
+            refString = `${book.name} ${chapter}:${verses[0]}-${verses[verses.length - 1]}`;
+        } else {
+            // Non-consecutive verses, create individual references
+            verses.forEach(verse => {
+                const ref = `${book.name} ${chapter}:${verse}`;
+                if (!selectedRefVerses.includes(ref)) {
+                    selectedRefVerses.push(ref);
+                }
+            });
+            versesSelect.value = '';
+            renderRefVersesChips();
+            return;
+        }
+    }
+
+    // Check if already added
+    if (!selectedRefVerses.includes(refString)) {
+        selectedRefVerses.push(refString);
+    }
+
+    // Clear verse selection
+    versesSelect.value = '';
+
+    // Render chips
+    renderRefVersesChips();
+}
+
+function removeRefChip(index) {
+    selectedRefVerses.splice(index, 1);
+    renderRefVersesChips();
+}
+
+function renderRefVersesChips() {
+    const chipsContainer = document.getElementById('add-ref-verses-chips');
+    if (!chipsContainer) return;
+
+    if (selectedRefVerses.length === 0) {
+        chipsContainer.innerHTML = '';
+        return;
+    }
+
+    chipsContainer.innerHTML = selectedRefVerses.map((verse, index) => `
+        <div class="add-ref-verse-chip">
+            <span>${verse}</span>
+            <button class="add-ref-verse-chip-remove" onclick="removeRefChip(${index})" type="button">×</button>
+        </div>
+    `).join('');
+}
+
+async function saveReference() {
+    const bookName = bibleBooks[currentBook].name;
+    const crossRefKey = `${bookName} ${currentChapter}:${currentAddRefVerseNum}`;
+    const currentRefs = crossReferences[crossRefKey] || [];
+
+    // Allow save if user hasn't made any changes (no new verses added AND no deletion attempts)
+    // If both are empty and no deletion button was clicked, ask user to add at least one
+    // But if references existed before and user deleted them all via X buttons, that's allowed
+
+    // Only show alert if user opens sheet WITHOUT any existing references and tries to save without adding any
+    if (selectedRefVerses.length === 0 && currentRefs.length === 0) {
+        // Check if there were references when sheet opened
+        // If deleteCount or user clicked X, allow save (currentRefs will be empty)
+        // Only block if truly nothing was done
+        const refsWhenOpened = window.refsWhenSheetOpened || [];
+        const userDeletedAll = refsWhenOpened.length > 0 && currentRefs.length === 0;
+
+        if (!userDeletedAll) {
+            alert('Please add at least one verse reference.');
+            return;
+        }
+    }
+
+    if (currentAddRefVerseNum === null) {
+        alert('Unable to determine current verse.');
+        return;
+    }
+
+    console.log('🔍 saveReference - Saving for verse:', crossRefKey);
+    console.log('🔍 saveReference - currentBook:', currentBook, 'currentChapter:', currentChapter, 'currentAddRefVerseNum:', currentAddRefVerseNum);
+    console.log('🔍 saveReference - selectedRefVerses:', selectedRefVerses);
+
+    // Add or update cross-reference
+    if (!crossReferences[crossRefKey]) {
+        crossReferences[crossRefKey] = [];
+    }
+
+    // Merge new references with existing ones (avoid duplicates)
+    selectedRefVerses.forEach(ref => {
+        if (!crossReferences[crossRefKey].includes(ref)) {
+            crossReferences[crossRefKey].push(ref);
+        }
+    });
+
+    console.log('✅ Cross-reference saved:', crossRefKey, '→', crossReferences[crossRefKey]);
+
+    // Save to Supabase
+    try {
+        const bookFile = bibleBooks[currentBook].file;
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('bible_verse_notes')
+            .upsert({
+                book_file: bookFile,
+                chapter: currentChapter,
+                verse: currentAddRefVerseNum,
+                cross_references: crossReferences[crossRefKey],
+                updated_at: new Date().toISOString()
+            }, {
+                onConflict: 'book_file,chapter,verse'
+            });
+
+        if (error) {
+            console.error('❌ Failed to save cross-reference:', error);
+        } else {
+            console.log('✅ Cross-reference saved to Supabase:', `${bookFile} ${currentChapter}:${currentAddRefVerseNum}`);
+        }
+    } catch (error) {
+        console.error('❌ Error saving cross-reference:', error);
+    }
+
+    // Update display: add cross-ref icon if not already present
+    console.log('🔍 updateCrossRefDisplay - verseNum:', currentAddRefVerseNum, 'currentChapter:', currentChapter, 'currentBook:', currentBook);
+    updateCrossRefDisplay(currentAddRefVerseNum);
+
+    // Refresh note viewer if it's open
+    const noteViewerPopup = document.getElementById('note-viewer-popup');
+    if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
+        // Update the stored references
+        window.currentNoteRefs = { refs: crossReferences[crossRefKey], verseNum: currentAddRefVerseNum };
+
+        // Update header to show both tabs
+        const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentAddRefVerseNum}`;
+        const note = verseNotes[noteKey];
+        const hasNote = note && note.text && note.text.trim();
+        const isAdminMode = isAdmin();
+
+        const noteTab = document.querySelector('.note-viewer-tab[data-tab="note"]');
+        const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
+        const tabsContainer = document.querySelector('.note-viewer-tabs');
+        const singleTitle = document.getElementById('note-viewer-single-title');
+
+        if (isAdminMode) {
+            // Admin: Always show both tabs
+            if (noteTab) noteTab.style.display = 'block';
+            if (refTab) refTab.style.display = 'block';
+            if (tabsContainer) tabsContainer.style.display = 'flex';
+            if (singleTitle) singleTitle.style.display = 'none';
+        } else if (hasNote) {
+            // Non-admin with note: Show both tabs
+            if (noteTab) noteTab.style.display = 'block';
+            if (refTab) refTab.style.display = 'block';
+            if (tabsContainer) tabsContainer.style.display = 'flex';
+            if (singleTitle) singleTitle.style.display = 'none';
+        }
+        // If non-admin with no note, keep single title mode
+
+        // Switch to references tab and load the new references
+        switchNoteViewerTab('references');
+        loadNoteReferences(crossReferences[crossRefKey]);
+    }
+
+    // Close sheet
+    closeAddRefSheet();
+}
+
+function updateCrossRefDisplay(verseNum) {
+    console.log('🔍 updateCrossRefDisplay called - verseNum:', verseNum, 'currentBook:', currentBook, 'currentChapter:', currentChapter);
+
+    // Get the cross-references for this verse
+    const bookName = bibleBooks[currentBook].name;
+    const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+    const crossRefs = crossReferences[crossRefKey];
+
+    console.log('🔍 crossRefKey:', crossRefKey, 'crossRefs:', crossRefs);
+
+    const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+    console.log('🔍 verseLine found:', !!verseLine, 'HTML:', verseLine?.outerHTML?.substring(0, 100));
+
+    if (!verseLine) {
+        console.log(`❌ Verse ${verseNum} not found in current view`);
+        return;
+    }
+
+    // Check if cross-ref icon already exists
+    let crossRefIcon = verseLine.querySelector('.cross-ref-icon');
+    console.log('🔍 Existing cross-ref icon:', !!crossRefIcon);
+
+    if (!crossRefIcon && crossRefs && crossRefs.length > 0) {
+        // Create and add cross-ref icon
+        crossRefIcon = document.createElement('span');
+        crossRefIcon.className = 'cross-ref-icon';
+        crossRefIcon.textContent = '🔗';
+        crossRefIcon.title = 'This verse has cross-references';
+        crossRefIcon.dataset.verse = verseNum;
+        crossRefIcon.dataset.crossRefs = JSON.stringify(crossRefs);
+
+        // Append at the end of the verse line (like the initial render does)
+        verseLine.appendChild(crossRefIcon);
+        console.log(`✅ Added cross-ref icon to verse ${verseNum}`, crossRefs);
+    } else if (crossRefIcon && crossRefs && crossRefs.length > 0) {
+        // Update existing icon's data
+        crossRefIcon.dataset.crossRefs = JSON.stringify(crossRefs);
+        console.log(`✅ Updated cross-ref icon for verse ${verseNum}`, crossRefs);
+    }
+}
+
+// Wire up event listeners for Add Reference bottom sheet
+document.addEventListener('DOMContentLoaded', () => {
+    // Close overlay click
+    const addRefOverlay = document.getElementById('add-ref-sheet-overlay');
+    if (addRefOverlay) {
+        addRefOverlay.addEventListener('click', closeAddRefSheet);
+    }
+
+    // Close button
+    const addRefCloseBtn = document.getElementById('add-ref-close-btn');
+    if (addRefCloseBtn) {
+        addRefCloseBtn.addEventListener('click', closeAddRefSheet);
+    }
+
+    // Book dropdown change
+    const addRefBookSelect = document.getElementById('add-ref-book-select');
+    if (addRefBookSelect) {
+        addRefBookSelect.addEventListener('change', onRefBookChange);
+    }
+
+    // Chapter dropdown change
+    const addRefChapterSelect = document.getElementById('add-ref-chapter-select');
+    if (addRefChapterSelect) {
+        addRefChapterSelect.addEventListener('change', onRefChapterChange);
+    }
+
+    // Add Verse button
+    const addRefAddVerseBtn = document.getElementById('add-ref-add-verse-btn');
+    if (addRefAddVerseBtn) {
+        addRefAddVerseBtn.addEventListener('click', addRefVerse);
+    }
+
+    // Cancel button
+    const addRefCancelBtn = document.getElementById('add-ref-btn-cancel');
+    if (addRefCancelBtn) {
+        addRefCancelBtn.addEventListener('click', closeAddRefSheet);
+    }
+
+    // Save button
+    const addRefSaveBtn = document.getElementById('add-ref-btn-save');
+    if (addRefSaveBtn) {
+        addRefSaveBtn.addEventListener('click', saveReference);
+    }
+
+    // Verses multi-select - enable single-click selection
+    const addRefVersesSelect = document.getElementById('add-ref-verses-select');
+    if (addRefVersesSelect) {
+        addRefVersesSelect.addEventListener('mousedown', function (e) {
+            e.preventDefault();
+            const option = e.target;
+            if (option.tagName === 'OPTION') {
+                option.selected = !option.selected;
+                this.focus();
+            }
+        });
+
+        // Prevent default click behavior
+        addRefVersesSelect.addEventListener('click', function (e) {
+            e.preventDefault();
+        });
+    }
+});
+
+// Fetch verse data for a single reference (used only on first load)
+async function fetchReferenceVerseData(ref) {
+    console.log('🔍 fetchReferenceVerseData called with:', ref);
+
+    const match = ref.match(/^(.+?)\s+(\d+):(\d+)(?:[-–](\d+))?$/);
+    if (!match) {
+        console.error('❌ Failed to parse reference:', ref);
+        return null;
+    }
+
+    let bookName = match[1].trim();
+    const chapter = match[2];
+    const verseStart = match[3];
+    const verseEnd = match[4];
+
+    console.log('📖 Parsed - bookName:', bookName, 'chapter:', chapter, 'verseStart:', verseStart, 'verseEnd:', verseEnd);
+
+    // Normalize book name - convert "1", "2", "3" to "I", "II", "III"
+    const normalizedName = bookName
+        .replace(/^1\s+/, 'I ')
+        .replace(/^2\s+/, 'II ')
+        .replace(/^3\s+/, 'III ');
+
+    console.log('🔄 Normalized name:', normalizedName);
+
+    // Find book in bibleBooks
+    const book = bibleBooks.find(b =>
+        b.name === bookName ||
+        b.shortName === bookName ||
+        b.name === normalizedName ||
+        b.shortName === normalizedName
+    );
+
+    if (!book) {
+        console.error('❌ Book not found:', bookName, 'or normalized:', normalizedName);
+        console.log('📚 First 10 books:', bibleBooks.slice(0, 10).map(b => ({ name: b.name, shortName: b.shortName })));
+        return null;
+    }
+
+    console.log('✅ Found book:', book.name, 'file:', book.file);
+
+    let bookFile = book.file;
+    const bookFileAlternatives = [
+        bookFile,
+        bookFile.replace(/^i_/, '1-').replace(/^ii_/, '2-').replace(/^iii_/, '3-'),
+        bookFile.replace(/^i_/, '1_').replace(/^ii_/, '2_').replace(/^iii_/, '3_')
+    ];
+
+    console.log('🔗 Book file alternatives:', bookFileAlternatives);
+
+    const startVerse = parseInt(verseStart);
+    const endVerse = verseEnd ? parseInt(verseEnd) : startVerse;
+
+    const data = { english: null, tamil: null };
+
+    // Fetch English data
+    if (!data.english) {
+        if (currentBook === bibleBooks.findIndex(b => b.file === bookFile) && parseInt(chapter) === currentChapter && currentData) {
+            const chapterData = currentData[`chapter_${chapter}`];
+            if (chapterData) {
+                data.english = [];
+                for (let v = startVerse; v <= endVerse; v++) {
+                    if (chapterData[`verse_${v}`]) {
+                        data.english.push({ verse: v, text: chapterData[`verse_${v}`] });
+                    }
+                }
+            }
+        }
+    }
+
+    if (!data.english) {
+        for (const fileVariant of bookFileAlternatives) {
+            const cacheKey = `${fileVariant}_${chapter}_english`;
+            if (verseDataCache[cacheKey]) {
+                data.english = verseDataCache[cacheKey];
+                bookFile = fileVariant;
+                console.log('✅ Found English data in cache:', data.english.length, 'verses');
+                break;
+            }
+        }
+    }
+
+    if (!data.english) {
+        for (const fileVariant of bookFileAlternatives) {
+            console.log(`   Trying to fetch from database with fileVariant: ${fileVariant}`);
+            const { data: result, error } = await bibleDataManager.supabaseClient
+                .from('bible_verses')
+                .select('verse, text')
+                .eq('book_file', fileVariant)
+                .eq('chapter', parseInt(chapter))
+                .eq('language', 'english')
+                .gte('verse', startVerse)
+                .lte('verse', endVerse)
+                .order('verse', { ascending: true });
+
+            if (error) {
+                console.log(`   Error fetching from ${fileVariant}:`, error.message);
+            }
+
+            if (result && result.length > 0) {
+                data.english = result;
+                bookFile = fileVariant;
+                console.log('✅ Fetched English data from DB:', result.length, 'verses');
+                break;
+            }
+        }
+    }
+
+    // Fetch Tamil data
+    if (!data.tamil) {
+        if (currentBook === bibleBooks.findIndex(b => b.file === bookFile) && parseInt(chapter) === currentChapter && currentTamilData) {
+            const chapterData = currentTamilData[`chapter_${chapter}`];
+            if (chapterData) {
+                data.tamil = [];
+                for (let v = startVerse; v <= endVerse; v++) {
+                    if (chapterData[`verse_${v}`]) {
+                        data.tamil.push({ verse: v, text: chapterData[`verse_${v}`] });
+                    }
+                }
+            }
+        }
+    }
+
+    if (!data.tamil) {
+        for (const fileVariant of bookFileAlternatives) {
+            const cacheKey = `${fileVariant}_${chapter}_tamil`;
+            if (verseDataCache[cacheKey]) {
+                data.tamil = verseDataCache[cacheKey];
+                console.log('✅ Found Tamil data in cache:', data.tamil.length, 'verses');
+                break;
+            }
+        }
+    }
+
+    if (!data.tamil) {
+        for (const fileVariant of bookFileAlternatives) {
+            const { data: result, error } = await bibleDataManager.supabaseClient
+                .from('bible_verses')
+                .select('verse, text')
+                .eq('book_file', fileVariant)
+                .eq('chapter', parseInt(chapter))
+                .eq('language', 'tamil')
+                .gte('verse', startVerse)
+                .lte('verse', endVerse)
+                .order('verse', { ascending: true });
+
+            if (error) {
+                console.log(`   Error fetching Tamil from ${fileVariant}:`, error.message);
+            }
+
+            if (result && result.length > 0) {
+                data.tamil = result;
+                console.log('✅ Fetched Tamil data from DB:', result.length, 'verses');
+                break;
+            }
+        }
+    }
+
+    const returnValue = { ref, data };
+    console.log('📤 Returning from fetchReferenceVerseData:', returnValue);
+    return returnValue;
+}
+
+// Render a reference in a specific language using cached data
+function renderReference(cachedData, language) {
+    if (!cachedData || !cachedData.data) return '';
+
+    const { ref, data } = cachedData;
+
+    if (language === 'english') {
+        if (!data.english || data.english.length === 0) return '';
+        const englishText = data.english.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>');
+        return `
+            <div class="note-ref-item">
+                <div class="note-ref-title">${ref}</div>
+                <div class="note-ref-text">${englishText}</div>
+            </div>
+        `;
+    }
+
+    if (language === 'tamil') {
+        if (!data.tamil || data.tamil.length === 0) return '';
+        const tamilText = data.tamil.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>');
+        return `
+            <div class="note-ref-item">
+                <div class="note-ref-title">${ref}</div>
+                <div class="note-ref-text">${tamilText}</div>
+            </div>
+        `;
+    }
+
+    if (language === 'dual') {
+        if ((!data.english || data.english.length === 0) && (!data.tamil || data.tamil.length === 0)) return '';
+        const englishText = data.english?.length > 0 ? data.english.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>') : '';
+        const tamilText = data.tamil?.length > 0 ? data.tamil.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>') : '';
+        return `
+            <div class="note-ref-item">
+                <div class="note-ref-title">${ref}</div>
+                <div class="note-ref-text">
+                    <span class="tamil-text">${tamilText}</span>
+                    <span class="english-text">${englishText}</span>
+                </div>
+            </div>
+        `;
+    }
+
+    return '';
+}
+
+// Main function: Load and cache references, then display in current language
+async function loadNoteReferences(crossRefs, showLoader = true) {
+    console.log('loadNoteReferences called with:', crossRefs);
+
+    const content = document.getElementById('note-viewer-references-content');
+    if (!content) {
+        console.error('note-viewer-references-content not found');
+        return;
+    }
+
+    // Create badges immediately without waiting for data fetch
+    let badgesHtml = '<div style="padding: 12px; text-align: left;">';
+
+    crossRefs.forEach((ref) => {
+        badgesHtml += `<span class="note-viewer-verse-badge" onclick="loadAndOpenNotePassageModal('${ref}')">${ref}</span>`;
+    });
+
+    badgesHtml += '</div>';
+    content.innerHTML = badgesHtml;
+
+    // Fetch data in background without blocking UI
+    const fetchPromises = crossRefs.map(ref => fetchReferenceVerseData(ref));
+    const results = await Promise.all(fetchPromises);
+
+    console.log('📊 Fetched results in background:', results);
+
+    // Store results for later use when clicking badges
+    window.noteViewerVerseData = results;
+
+    console.log('✅ References loaded with badges');
+}
+
+function parseVerseReference(ref) {
+    // Parse "Book Chapter:Verse" format (e.g., "Matthew 5:7" or "Matthew 5:7-10" or "2 Samuel 7:12–16")
+    // Handle both hyphen (-) and en-dash (–)
+    const match = ref.match(/^(.+?)\s+(\d+):(\d+)(?:[\-–](\d+))?$/);
+    if (!match) {
+        console.error('Failed to parse verse reference:', ref);
+        return null;
+    }
+
+    let bookName = match[1].trim();
+    const chapter = parseInt(match[2]);
+    const verseStart = parseInt(match[3]);
+    const verseEnd = match[4] ? parseInt(match[4]) : verseStart;
+
+    // Normalize book name - convert "1", "2", "3" to "I", "II", "III"
+    bookName = bookName
+        .replace(/^1\s+/, 'I ')
+        .replace(/^2\s+/, 'II ')
+        .replace(/^3\s+/, 'III ');
+
+    console.log('🔍 Parsing - original:', match[1], 'normalized:', bookName);
+
+    // Find book file name - try both original and normalized
+    let book = bibleBooks.find(b =>
+        b.name === match[1] ||
+        b.shortName === match[1] ||
+        b.name === bookName ||
+        b.shortName === bookName
+    );
+
+    if (!book) {
+        console.error('Book not found for:', match[1], 'or normalized:', bookName);
+        console.log('📚 Looking for match in bibleBooks...');
+        bibleBooks.forEach((b, idx) => {
+            if (b.name.includes('Samuel') || match[1].includes('Samuel')) {
+                console.log(`  [${idx}]`, b.name, b.shortName);
+            }
+        });
+        return null;
+    }
+
+    console.log('✅ Found book:', book.name);
+
+    return {
+        book: book.file,
+        bookName: book.name,
+        chapter: chapter,
+        verseStart: verseStart,
+        verseEnd: verseEnd
+    };
+}
+
+// Load verse data when clicking on badge and open modal
+async function loadAndOpenNotePassageModal(verseRef) {
+    console.log('Loading and opening passage modal for:', verseRef);
+
+    // Check if data is already cached
+    let verseDataItem = window.noteViewerVerseData?.find(v => v && (v.reference || v.ref) === verseRef);
+
+    // If not cached, fetch it
+    if (!verseDataItem) {
+        verseDataItem = await fetchReferenceVerseData(verseRef);
+
+        // Store in cache for future use
+        if (!window.noteViewerVerseData) {
+            window.noteViewerVerseData = [];
+        }
+        window.noteViewerVerseData.push(verseDataItem);
+    }
+
+    // Now open the modal with the data
+    if (verseDataItem && verseDataItem.data) {
+        openNotePassageModalWithData(verseRef, verseDataItem);
+    } else {
+        console.error('Failed to load verse data for:', verseRef);
+    }
+}
+
+function openNotePassageModalWithData(verseRef, verseDataItem) {
+    console.log('Opening passage modal with data for:', verseRef);
+
+    if (!verseDataItem || !verseDataItem.data) {
+        console.error('Verse data not found:', verseRef);
+        return;
+    }
+
+    console.log('🔍 Found verse data:', verseDataItem);
+
+    // Update passage modal with verse data
+    const passageBadge = document.getElementById('notePassageBadge');
+    const passageContent = document.getElementById('notePassageContent');
+
+    if (passageBadge) {
+        passageBadge.textContent = verseRef;
+    }
+
+    // Build passage content in both languages
+    let englishHtml = '';
+    let tamilHtml = '';
+
+    const verseData = verseDataItem.data;
+
+    // English verses
+    if (verseData.english && Array.isArray(verseData.english)) {
+        verseData.english.forEach(v => {
+            englishHtml += `<p style="margin: 8px 0; line-height: 1.8; color: #5f6368;">
+                <sup style="color: #7ac97a; font-weight: 600; margin-right: 4px;">${v.verse}</sup>${v.text}
+            </p>`;
+        });
+    }
+
+    // Tamil verses
+    if (verseData.tamil && Array.isArray(verseData.tamil)) {
+        verseData.tamil.forEach(v => {
+            tamilHtml += `<p style="margin: 8px 0; line-height: 1.8; color: #5f6368;">
+                <sup style="color: #7ac97a; font-weight: 600; margin-right: 4px;">${v.verse}</sup>${v.text}
+            </p>`;
+        });
+    }
+
+    // Store verse data in window for language switching
+    window.currentNotePassageData = {
+        english: englishHtml,
+        tamil: tamilHtml,
+        dual: `<div style="display: flex; flex-direction: column; gap: 16px;">
+            <div>
+                <h3 style="font-size: 13px; font-weight: 600; color: #7ac97a; margin: 0 0 12px 0;">English</h3>
+                <div>${englishHtml}</div>
+            </div>
+            <div>
+                <h3 style="font-size: 13px; font-weight: 600; color: #7ac97a; margin: 0 0 12px 0;">Tamil</h3>
+                <div>${tamilHtml}</div>
+            </div>
+        </div>`
+    };
+
+    // Display English by default
+    if (passageContent) {
+        passageContent.innerHTML = window.currentNotePassageData.english;
+    }
+
+    // Reset language buttons
+    document.querySelectorAll('#notePassagePopup .passage-lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector('#notePassagePopup [data-lang="english"]')?.classList.add('active');
+
+    // Show the language wrapper when verse is clicked
+    const langWrapper = document.querySelector('.note-viewer-ref-lang-wrapper');
+    if (langWrapper) {
+        langWrapper.classList.add('active');
+    }
+
+    // Show passage modal
+    const passagePopup = document.getElementById('notePassagePopup');
+    if (passagePopup) {
+        passagePopup.classList.add('show');
+    }
+}
+
+function switchNotePassageLanguage(lang) {
+    console.log('Switching passage language to:', lang);
+
+    if (!window.currentNotePassageData) return;
+
+    const passageContent = document.getElementById('notePassageContent');
+    if (passageContent) {
+        passageContent.innerHTML = window.currentNotePassageData[lang] || '';
+    }
+
+    // Update button states
+    document.querySelectorAll('#notePassagePopup .passage-lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+}
+
+function closeNotePassageModal() {
+    const passagePopup = document.getElementById('notePassagePopup');
+    if (passagePopup) {
+        passagePopup.classList.remove('show');
+    }
+}
+
+function handleNotePassagePopupClick(event) {
+    // Close when clicking on the overlay background
+    if (event.target.id === 'notePassagePopup') {
+        closeNotePassageModal();
+    }
+}
+
+function navigateToRef(bookFile, chapter, verse) {
+    // Find book index
+    const bookIndex = bibleBooks.findIndex(b => b.file === bookFile);
+    if (bookIndex === -1) return;
+
+    // Close note viewer
+    const overlay = document.getElementById('note-viewer-popup');
+    if (overlay) {
+        overlay.classList.remove('show');
+        setTimeout(() => overlay.style.display = 'none', 300);
+    }
+
+    // Navigate to the verse
+    currentBook = bookIndex;
+    currentChapter = chapter;
+    loadChapterData();
+
+    // Scroll to verse after a short delay
+    setTimeout(() => {
+        scrollToVerse(verse);
+    }, 300);
+}
+
+// ========== Profile Image Upload for Settings ==========
+
+function syncSettingsProfileSection() {
+    const section = document.getElementById('settings-profile-section');
+    const avatar = document.getElementById('settings-profile-avatar');
+    const nameEl = document.getElementById('settings-profile-name');
+    const userName = localStorage.getItem('currentUserName') || '';
+    const isGuest = localStorage.getItem('currentUserIsGuest') === 'true';
+
+    if (!section) return;
+
+    if (isGuest || !userName) {
+        section.style.display = 'none';
+        return;
+    }
+    section.style.display = '';
+
+    if (nameEl) nameEl.textContent = userName;
+    if (avatar) {
+        const fileKey = userName.trim().toLowerCase();
+        const ts = localStorage.getItem('profileImageTimestamp') || '';
+        const imgUrl = `${PROFILE_IMAGE_BASE_URL}/${fileKey}.png${ts ? '?t=' + ts : ''}`;
+        avatar.style.backgroundImage = `url('${imgUrl}')`;
+        avatar.textContent = '';
+        // Fallback if image fails
+        const testImg = new Image();
+        testImg.src = imgUrl;
+        testImg.onerror = () => {
+            avatar.style.backgroundImage = '';
+            avatar.textContent = userName.charAt(0).toUpperCase();
+        };
+    }
+}
+
+function initSettingsProfileUpload() {
+    const changeBtn = document.getElementById('settings-profile-change-btn');
+    const fileInput = document.getElementById('settings-profile-file-input');
+    const avatarEl = document.getElementById('settings-profile-avatar');
+    if (!changeBtn || !fileInput) return;
+
+    // Click avatar to preview full size
+    if (avatarEl) {
+        avatarEl.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const bg = avatarEl.style.backgroundImage;
+            if (!bg || bg === 'none') return;
+            const url = bg.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+            if (!url) return;
+            const overlay = document.getElementById('profile-preview-overlay');
+            const previewImg = document.getElementById('profile-preview-img');
+            if (!overlay || !previewImg) return;
+            previewImg.src = url;
+            overlay.classList.add('active');
+        });
+    }
+
+    // Close preview on click
+    const previewOverlay = document.getElementById('profile-preview-overlay');
+    if (previewOverlay) {
+        previewOverlay.addEventListener('click', (e) => {
+            e.stopPropagation();
+            previewOverlay.classList.remove('active');
+            const img = document.getElementById('profile-preview-img');
+            if (img) img.src = '';
+        });
+    }
+
+    changeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fileInput.click();
+    });
+
+    fileInput.addEventListener('change', () => {
+        const file = fileInput.files[0];
+        if (!file) return;
+
+        // Validate file
+        const MAX_SIZE = 5 * 1024 * 1024; // 5 MB (before crop)
+        const ALLOWED_TYPES = ['image/png', 'image/jpeg', 'image/webp'];
+        if (!ALLOWED_TYPES.includes(file.type)) {
+            showProfileUploadStatus('Please select a PNG, JPEG, or WebP image.', 'error');
+            fileInput.value = '';
+            return;
+        }
+        if (file.size > MAX_SIZE) {
+            showProfileUploadStatus('Image must be under 5 MB.', 'error');
+            fileInput.value = '';
+            return;
+        }
+
+        // Open crop modal
+        openProfileCropModal(file);
+        fileInput.value = '';
+    });
+}
+
+// --- Profile Crop Modal ---
+let _profileCropper = null;
+
+function openProfileCropModal(file) {
+    const overlay = document.getElementById('profile-crop-overlay');
+    const imgEl = document.getElementById('profile-crop-image');
+    if (!overlay || !imgEl) return;
+
+    // Load file into the image element
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        imgEl.src = e.target.result;
+        overlay.classList.add('active');
+
+        // Destroy previous cropper instance
+        if (_profileCropper) {
+            _profileCropper.destroy();
+            _profileCropper = null;
+        }
+
+        // Initialize Cropper.js
+        _profileCropper = new Cropper(imgEl, {
+            aspectRatio: 1,
+            viewMode: 1,
+            dragMode: 'move',
+            autoCropArea: 0.85,
+            cropBoxResizable: true,
+            cropBoxMovable: true,
+            background: false,
+            guides: false,
+            center: true,
+            highlight: false,
+            responsive: true,
+            restore: false,
+        });
+    };
+    reader.readAsDataURL(file);
+
+    // Wire up buttons (use one-time listeners to avoid stacking)
+    const cancelBtn = document.getElementById('profile-crop-cancel-btn');
+    const confirmBtn = document.getElementById('profile-crop-confirm-btn');
+    const rotateBtn = document.getElementById('profile-crop-rotate-btn');
+
+    const cleanup = () => {
+        if (_profileCropper) {
+            _profileCropper.destroy();
+            _profileCropper = null;
+        }
+        overlay.classList.remove('active');
+        imgEl.src = '';
+        cancelBtn.removeEventListener('click', handleCancel);
+        confirmBtn.removeEventListener('click', handleConfirm);
+        rotateBtn.removeEventListener('click', handleRotate);
+    };
+
+    const handleCancel = () => cleanup();
+
+    const handleRotate = () => {
+        if (_profileCropper) _profileCropper.rotate(-90);
+    };
+
+    const handleConfirm = async () => {
+        if (!_profileCropper) return;
+        confirmBtn.disabled = true;
+        confirmBtn.textContent = 'Uploading…';
+
+        try {
+            const canvas = _profileCropper.getCroppedCanvas({
+                width: 256,
+                height: 256,
+                imageSmoothingEnabled: true,
+                imageSmoothingQuality: 'high',
+            });
+
+            const blob = await new Promise((resolve) =>
+                canvas.toBlob(resolve, 'image/png', 0.92)
+            );
+
+            cleanup();
+            await uploadProfileBlob(blob);
+        } catch (err) {
+            console.error('Crop error:', err);
+            showProfileUploadStatus('Crop failed. Please try again.', 'error');
+            cleanup();
+        }
+        confirmBtn.disabled = false;
+        confirmBtn.textContent = 'Upload';
+    };
+
+    cancelBtn.addEventListener('click', handleCancel);
+    confirmBtn.addEventListener('click', handleConfirm);
+    rotateBtn.addEventListener('click', handleRotate);
+}
+
+async function uploadProfileBlob(blob) {
+    const userName = localStorage.getItem('currentUserName') || '';
+    if (!userName) {
+        showProfileUploadStatus('No user signed in.', 'error');
+        return;
+    }
+
+    const fileKey = userName.trim().toLowerCase();
+    const filePath = `${fileKey}.png`;
+
+    showProfileUploadStatus('Uploading…', 'info');
+
+    try {
+        const client = typeof getSupabaseClient === 'function' ? getSupabaseClient() : null;
+        if (!client) {
+            showProfileUploadStatus('Unable to connect to storage.', 'error');
+            return;
+        }
+
+        // Remove old file first (ignore errors — file may not exist yet)
+        await client.storage
+            .from('Profile_Images')
+            .remove([filePath]);
+
+        // Upload the new file
+        const { data, error } = await client.storage
+            .from('Profile_Images')
+            .upload(filePath, blob, {
+                cacheControl: '0',
+                contentType: 'image/png'
+            });
+
+        if (error) {
+            console.error('Profile upload error:', error);
+            showProfileUploadStatus('Upload failed: ' + error.message, 'error');
+            return;
+        }
+
+        console.log('Profile image uploaded successfully:', data);
+        const ts = Date.now().toString();
+        localStorage.setItem('profileImageTimestamp', ts);
+
+        showProfileUploadStatus('Photo updated!', 'success');
+        syncSettingsProfileSection();
+        refreshTopBarAvatar();
+
+        setTimeout(() => {
+            showProfileUploadStatus('', 'hide');
+        }, 3000);
+    } catch (err) {
+        console.error('Profile upload exception:', err);
+        showProfileUploadStatus('Upload failed. Please try again.', 'error');
+    }
+}
+
+function showProfileUploadStatus(message, type) {
+    const el = document.getElementById('settings-profile-upload-status');
+    if (!el) return;
+    if (type === 'hide' || !message) {
+        el.style.display = 'none';
+        el.textContent = '';
+        return;
+    }
+    el.textContent = message;
+    el.className = 'settings-profile-upload-status status-' + type;
+    el.style.display = 'block';
+}
+
+function refreshTopBarAvatar() {
+    const avatarEl = document.getElementById('current-user-avatar');
+    if (!avatarEl) return;
+    const userName = localStorage.getItem('currentUserName') || '';
+    if (!userName) return;
+    const fileKey = userName.trim().toLowerCase();
+    const ts = localStorage.getItem('profileImageTimestamp') || '';
+    avatarEl.style.backgroundImage = `url('${PROFILE_IMAGE_BASE_URL}/${fileKey}.png${ts ? '?t=' + ts : ''}')`;
+}

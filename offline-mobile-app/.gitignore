@@ -1,7 +1,0 @@
-node_modules/
-package-lock.json
-
-# Android native project and build outputs
-android/
-*.apk
-
