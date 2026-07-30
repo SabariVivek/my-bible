@@ -3,7 +3,7 @@ Add-Type -AssemblyName System.Drawing
 $srcPath = "C:\Users\SabariDornalVivekana\.gemini\antigravity-ide\brain\46a96842-57ab-4535-afbd-d1160bfc189f\media__1785414163138.png"
 $img = [System.Drawing.Image]::FromFile($srcPath)
 
-function Resize-Image($width, $height, $destPath, $paddingPercent = 0.05, $isTransparent = $true) {
+function Resize-Image($width, $height, $destPath, $paddingPercent = 0.25, $isTransparent = $true) {
     $dir = [System.IO.Path]::GetDirectoryName($destPath)
     if (!(Test-Path $dir)) { New-Item -ItemType Directory -Force -Path $dir | Out-Null }
     
@@ -35,11 +35,11 @@ function Resize-Image($width, $height, $destPath, $paddingPercent = 0.05, $isTra
 }
 
 # 1. Update web resources icons
-Resize-Image 512 512 "resources/icons/bible.png" 0.02 $true
-Resize-Image 512 512 "resources/icons/icon-512.png" 0.05 $true
-Resize-Image 192 192 "resources/icons/icon-192.png" 0.05 $true
+Resize-Image 512 512 "resources/icons/bible.png" 0.12 $true
+Resize-Image 512 512 "resources/icons/icon-512.png" 0.15 $true
+Resize-Image 192 192 "resources/icons/icon-192.png" 0.15 $true
 
-# 2. Update Android launcher icons
+# 2. Update Android launcher icons (25% padding so Android adaptive mask safe-zone won't zoom in)
 $mipmaps = @(
     @{ name = "mipmap-mdpi"; size = 48 },
     @{ name = "mipmap-hdpi"; size = 72 },
@@ -51,12 +51,12 @@ $mipmaps = @(
 foreach ($m in $mipmaps) {
     $folder = "android/app/src/main/res/$($m.name)"
     # Standard launcher icon
-    Resize-Image $m.size $m.size "$folder/ic_launcher.png" 0.08 $false
+    Resize-Image $m.size $m.size "$folder/ic_launcher.png" 0.22 $false
     # Round icon
-    Resize-Image $m.size $m.size "$folder/ic_launcher_round.png" 0.10 $false
+    Resize-Image $m.size $m.size "$folder/ic_launcher_round.png" 0.22 $false
     # Adaptive foreground icon
-    Resize-Image $m.size $m.size "$folder/ic_launcher_foreground.png" 0.12 $true
+    Resize-Image $m.size $m.size "$folder/ic_launcher_foreground.png" 0.26 $true
 }
 
 $img.Dispose()
-Write-Host "✅ New Bible icon updated across web and Android launcher icons!"
+Write-Host "✅ Icons scaled down with 25% margin padding to prevent Android adaptive launcher zoom-in!"
