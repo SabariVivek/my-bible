@@ -354,7 +354,7 @@ const BIBLE_TRACKS = [
     day: 41,
     title: "Parable of Old Cloth & Wineskins",
     duration: "41:18 min",
-    verse: "Matt 9:14-17; Mark 2:18-22; Luke 5:33-39",
+    verse: "Luke 5:33-39",
     desc: "An explanation of the parable of old cloth and wineskins and its significance for believers.",
     category: "Parables"
   },
