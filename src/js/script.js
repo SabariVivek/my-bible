@@ -11601,16 +11601,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const ONLINE_BASE_URL = 'https://sabarivivek.github.io/my-bible/';
-
     // Helper: navigate to a subpage with history push so Android back returns to Bible
-    function navigateToSubpage(relativePath) {
+    function navigateToSubpage(url) {
         history.pushState({ page: 'bible-main' }, '', window.location.href);
         const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
-        const targetUrl = navigator.onLine 
-            ? `${ONLINE_BASE_URL}${relativePath}${relativePath.includes('?') ? '&' : '?'}cb=${cacheBuster}` 
-            : `${relativePath}${relativePath.includes('?') ? '&' : '?'}cb=${cacheBuster}`;
-        window.location.href = targetUrl;
+        window.location.href = `${url}${url.includes('?') ? '&' : '?'}cb=${cacheBuster}`;
     }
 
     // Bible Reading option - navigate to Bible Reading page

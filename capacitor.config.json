@@ -1,11 +1,5 @@
 {
   "appId": "com.sabari.mybible",
   "appName": "My Bible",
-  "webDir": "www",
-  "server": {
-    "allowNavigation": [
-      "sabarivivek.github.io",
-      "*.github.io"
-    ]
-  }
+  "webDir": "www"
 }
