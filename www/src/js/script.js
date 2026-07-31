@@ -11526,7 +11526,7 @@ document.addEventListener('DOMContentLoaded', () => {
             onlineOptions.forEach(id => {
                 const el = document.getElementById(id);
                 if (el) {
-                    if (id === 'right-notes-option' || id === 'right-cult-option') {
+                    if (id === 'right-cult-option') {
                         el.style.display = isAdminMode ? 'flex' : 'none';
                     } else {
                         el.style.display = 'flex';
@@ -11660,12 +11660,11 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = `src/bible-characters.html?cb=${cacheBuster}`;
         });
     }
-    // Sermon option - navigate to Sermon page
+    // Sermon option - navigate to Sermon Notes page
     if (rightSermonOption) {
         rightSermonOption.addEventListener('click', () => {
             closeRightSidebar();
-            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
-            window.location.href = `src/pages/sermon.html?cb=${cacheBuster}`;
+            navigateToSubpage('src/pages/docs.html');
         });
     }
     // Prayers option - navigate to Prayers page

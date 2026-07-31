@@ -1700,6 +1700,26 @@
 
     const AUDIO_BASE = 'https://raw.githubusercontent.com/SabariVivek/bible-media/main/assests/';
 
+    // Fetch live tracks.js dynamically from GitHub when online so APK doesn't need re-building
+    async function loadDynamicTracks() {
+        if (window.hasFetchedRemoteTracks) return;
+        const REMOTE_URL = 'https://raw.githubusercontent.com/SabariVivek/my-bible/main/resources/audio/bible-teaching/tracks.js?v=' + Date.now();
+        if (navigator.onLine) {
+            try {
+                await new Promise((resolve, reject) => {
+                    const s = document.createElement('script');
+                    s.src = REMOTE_URL;
+                    s.onload = resolve;
+                    s.onerror = reject;
+                    document.head.appendChild(s);
+                });
+                window.hasFetchedRemoteTracks = true;
+            } catch (e) {
+                console.warn('Could not fetch remote tracks.js, using local fallback.');
+            }
+        }
+    }
+
     // Resolve audio file path — .m4a preferred, .mp3 as fallback (handled at runtime)
     function getAudioFilePath(title) {
         return AUDIO_BASE + encodeURIComponent(title) + '.m4a';
@@ -2266,6 +2286,7 @@
     }
 
     async function discoverAndBuildPlaylist() {
+        await loadDynamicTracks();
         const container = document.getElementById('playlistContainer');
 
         const msg = document.getElementById('loadingMsg');
