@@ -4,7 +4,9 @@
   "description": "Read the Bible in Tamil and Easy English",
   "scripts": {
     "update-cache": "node update-cache-version.js",
-    "build": "npm run update-cache",
+    "build:web": "node build-app.js",
+    "build": "npm run update-cache && node build-app.js",
+    "cap:sync": "npm run build && npx cap sync android",
     "deploy": "npm run build && git add . && git commit -m 'chore: update cache version' || true"
   },
   "dependencies": {

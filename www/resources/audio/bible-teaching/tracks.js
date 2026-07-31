@@ -43,7 +43,7 @@ const BIBLE_TRACKS = [
     duration: "70:16 min",
     verse: "Luke 10:30-37",
     desc: "What true neighbourly love looks like across every boundary.",
-    category: "Christophany"
+    category: "Christophany, Parables"
   },
   {
     day: 5,
@@ -337,7 +337,7 @@ const BIBLE_TRACKS = [
   {
     day: 39,
     title: "Blood of Jesus - Part 1",
-    duration: "54:19",
+    duration: "54:19 min",
     verse: "Heb 9:22",
     desc: "The significance of the blood of Jesus in the Christian faith.",
     category: "Foundation"
@@ -345,20 +345,28 @@ const BIBLE_TRACKS = [
   {
     day: 40,
     title: "Blood of Jesus - Part 2",
-    duration: "58:44",
+    duration: "58:44 min",
     verse: "Mark 15:33-34",
     desc: "The significance of the blood of Jesus in the Christian faith.",
     category: "Foundation"
+  },
+  {
+    day: 41,
+    title: "Parable of Old Cloth & Wineskins",
+    duration: "41:18 min",
+    verse: "Luke 5:33-39",
+    desc: "An explanation of the parable of old cloth and wineskins and its significance for believers.",
+    category: "Parables"
+  },
+  {
+    day: 42,
+    title: "Why Angels Announce Jesus' Birth to Shepherds?",
+    file: "Why Angels Announce Jesus' Birth to Shepherds",
+    duration: "17:30 min",
+    verse: "Luke 2:8-20",
+    desc: "The reason why angels announced the birth of Jesus to shepherds and its significance.",
+    category: "Do You Know?"
   }
-  // {
-  //   day: 37,
-  //   title: "Why Angels Announce Jesus' Birth to Shepherds?",
-  //   file: "Why Angels Announce Jesus' Birth to Shepherds",
-  //   duration: "17:30 min",
-  //   verse: "Luke 2:8-20",
-  //   desc: "The reason why angels announced the birth of Jesus to shepherds and its significance.",
-  //   category: "Do You Know?"
-  // }
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -383,6 +391,7 @@ const BIBLE_FOLDERS = [
   { name: "False Teaching", type: "category", value: "False Teaching" },
   { name: "Psalms", type: "category", value: "Psalms" },
   { name: "Leviticus", type: "category", value: "Leviticus" },
+  { name: "Parables", type: "category", value: "Parables" },
   { name: "Prophets", type: "category", value: "Prophets" },
   { name: "7's", type: "category", value: "7's" }
 ];
