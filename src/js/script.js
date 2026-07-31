@@ -11601,21 +11601,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const ONLINE_BASE_URL = 'https://sabarivivek.github.io/my-bible/';
+
     // Helper: navigate to a subpage with history push so Android back returns to Bible
-    function navigateToSubpage(url) {
-        // Push the current page into browser history so back button returns here
+    function navigateToSubpage(relativePath) {
         history.pushState({ page: 'bible-main' }, '', window.location.href);
-        window.location.href = url;
+        const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
+        const targetUrl = navigator.onLine 
+            ? `${ONLINE_BASE_URL}${relativePath}${relativePath.includes('?') ? '&' : '?'}cb=${cacheBuster}` 
+            : `${relativePath}${relativePath.includes('?') ? '&' : '?'}cb=${cacheBuster}`;
+        window.location.href = targetUrl;
     }
 
     // Bible Reading option - navigate to Bible Reading page
-    // NOTE: bible-reading.html manages its own popstate history stack internally,
-    // so we do NOT push a state here — it already handles back-navigation on its own.
     if (bibleReadingOption) {
         bibleReadingOption.addEventListener('click', () => {
             closeRightSidebar();
-            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
-            window.location.href = `src/pages/bible-reading.html?cb=${cacheBuster}`;
+            navigateToSubpage('src/pages/bible-reading.html');
         });
     }
     // Daily Prayers option - navigate to Daily Prayers page
@@ -11656,8 +11658,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rightBibleCharactersOption) {
         rightBibleCharactersOption.addEventListener('click', () => {
             closeRightSidebar();
-            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
-            window.location.href = `src/bible-characters.html?cb=${cacheBuster}`;
+            navigateToSubpage('src/bible-characters.html');
         });
     }
     // Sermon option - navigate to Sermon page
@@ -11671,8 +11672,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rightPrayersOption) {
         rightPrayersOption.addEventListener('click', () => {
             closeRightSidebar();
-            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
-            window.location.href = `src/pages/prayers.html?cb=${cacheBuster}`;
+            navigateToSubpage('src/pages/prayers.html');
         });
     }
     // WMSCOG Cult option - navigate to secret page
