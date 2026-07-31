@@ -49,8 +49,13 @@
         // Handle back button - skip this page and go to index
         window.addEventListener('popstate', function(event) {
             event.preventDefault();
-            window.location.replace('../index.html');
+            window.location.replace('../../index.html');
         });
+        if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.App) {
+            window.Capacitor.Plugins.App.addListener('backButton', function() {
+                window.location.href = '../../index.html';
+            });
+        }
     </script>
     <!-- Top Bar -->
     <header class="top-bar">

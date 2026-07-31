@@ -2439,6 +2439,13 @@
     document.addEventListener('touchmove', e => { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
     document.addEventListener('gesturestart', e => e.preventDefault());
 
+    // Android Hardware Back Button listener
+    if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.App) {
+        window.Capacitor.Plugins.App.addListener('backButton', () => {
+            window.location.href = '../../index.html';
+        });
+    }
+
     // ── Swipe-right to go back ─────────────────────────────────────────────────
     let swipeStartX = 0;
     let swipeStartY = 0;
