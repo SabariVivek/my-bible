@@ -11660,11 +11660,11 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = `src/bible-characters.html?cb=${cacheBuster}`;
         });
     }
-    // Sermon option - navigate to Sermon Notes page
+    // Sermon option - navigate to Sermon page
     if (rightSermonOption) {
         rightSermonOption.addEventListener('click', () => {
             closeRightSidebar();
-            navigateToSubpage('src/pages/docs.html');
+            navigateToSubpage('src/pages/sermon.html');
         });
     }
     // Prayers option - navigate to Prayers page
