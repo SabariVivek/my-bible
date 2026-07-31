@@ -1088,7 +1088,7 @@
         }
 
         .sermon-custom-dropdown-checkbox::after {
-            content: 'Γ£ô';
+            content: '✓';
             color: #ffffff;
             font-size: 12px;
             font-weight: bold;
@@ -2693,7 +2693,7 @@
         <div class="sermon-sheet-header">
             <h2 class="sermon-sheet-title">Add Sermon</h2>
             <button class="sermon-form-favorite-btn" id="sermon-form-favorite-btn" title="Add to favorites" style="display: none;">
-                <span class="heart-empty">≡ƒñì</span><span class="heart-filled">Γ¥ñ∩╕Å</span>
+                <span class="heart-empty">🤍</span><span class="heart-filled">❤️</span>
             </button>
         </div>
         <div class="sermon-sheet-content">
@@ -3109,7 +3109,7 @@
             if (book && chapter && verses.length > 0) {
                 const verseStart = verses[0];
                 const verseEnd = verses[verses.length - 1];
-                const verseRange = verseStart === verseEnd ? verseStart : `${verseStart} ΓÇô ${verseEnd}`;
+                const verseRange = verseStart === verseEnd ? verseStart : `${verseStart} – ${verseEnd}`;
 
                 const verseRef = {
                     book,
@@ -3138,7 +3138,7 @@
             chipsContainer.innerHTML = selectedSermonVerses.map((verse, index) => `
                 <div class="sermon-verse-chip">
                     ${verse.display}
-                    <button type="button" class="sermon-verse-chip-remove" onclick="removeVerseReference(${index})">├ù</button>
+                    <button type="button" class="sermon-verse-chip-remove" onclick="removeVerseReference(${index})">×</button>
                 </div>
             `).join('');
         }
@@ -3181,7 +3181,7 @@
                 if (normalized.verseStart && normalized.verseEnd) {
                     const verseRange = normalized.verseStart === normalized.verseEnd 
                         ? normalized.verseStart 
-                        : `${normalized.verseStart} ΓÇô ${normalized.verseEnd}`;
+                        : `${normalized.verseStart} – ${normalized.verseEnd}`;
                     normalized.display = `${normalized.book} ${normalized.chapter}:${verseRange}`;
                 }
                 
@@ -3373,12 +3373,12 @@
                 const specialDecorations = specialType === 'christmas'
                     ? `
                         <div class="star-glow"></div>
-                        <div class="pine-l">≡ƒî▓</div>
-                        <div class="pine-r">≡ƒÄä</div>
-                        <span class="snowflake" style="left:15%;top:10%;animation-delay:0s">Γ¥ä</span>
-                        <span class="snowflake" style="left:40%;top:5%;animation-delay:0.8s;font-size:7px">Γ¥ä</span>
-                        <span class="snowflake" style="left:70%;top:15%;animation-delay:1.6s">Γ¥ä</span>
-                        <span class="snowflake" style="left:85%;top:8%;animation-delay:2.4s;font-size:8px">Γ¥ä</span>
+                        <div class="pine-l">🌲</div>
+                        <div class="pine-r">🎄</div>
+                        <span class="snowflake" style="left:15%;top:10%;animation-delay:0s">❄</span>
+                        <span class="snowflake" style="left:40%;top:5%;animation-delay:0.8s;font-size:7px">❄</span>
+                        <span class="snowflake" style="left:70%;top:15%;animation-delay:1.6s">❄</span>
+                        <span class="snowflake" style="left:85%;top:8%;animation-delay:2.4s;font-size:8px">❄</span>
                     `
                     : specialType === 'newyear'
                         ? `
@@ -3431,14 +3431,14 @@
                                 </div>
                                 <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
                                     ${isFirstOfMonth ? `<img src="../../resources/icons/month.png" class="sermon-month-icon ${sermon.is_favorite ? 'favorite-badge' : ''}" alt="First of month">` : ''}
-                                    ${sermon.is_favorite ? `<span class="sermon-favorite-icon">Γ¥ñ∩╕Å</span>` : ''}
+                                    ${sermon.is_favorite ? `<span class="sermon-favorite-icon">❤️</span>` : ''}
                                 </div>
                             </div>
                         ` : `
                             ${(sermon.is_favorite || isFirstOfMonth) ? `
                                 <div class="sermon-item-verses" style="position:relative;z-index:2; display:flex; justify-content:flex-end; gap:6px;">
                                     ${isFirstOfMonth ? `<img src="../../resources/icons/month.png" class="sermon-month-icon ${sermon.is_favorite ? 'favorite-badge' : ''}" alt="First of month">` : ''}
-                                    ${sermon.is_favorite ? `<span class="sermon-favorite-icon">Γ¥ñ∩╕Å</span>` : ''}
+                                    ${sermon.is_favorite ? `<span class="sermon-favorite-icon">❤️</span>` : ''}
                                 </div>
                             ` : ''}
                         `}
@@ -5245,12 +5245,12 @@
                     const specialDecorations = specialType === 'christmas'
                         ? `
                             <div class="star-glow"></div>
-                            <div class="pine-l">≡ƒî▓</div>
-                            <div class="pine-r">≡ƒÄä</div>
-                            <span class="snowflake" style="left:15%;top:10%;animation-delay:0s">Γ¥ä</span>
-                            <span class="snowflake" style="left:40%;top:5%;animation-delay:0.8s;font-size:7px">Γ¥ä</span>
-                            <span class="snowflake" style="left:70%;top:15%;animation-delay:1.6s">Γ¥ä</span>
-                            <span class="snowflake" style="left:85%;top:8%;animation-delay:2.4s;font-size:8px">Γ¥ä</span>
+                            <div class="pine-l">🌲</div>
+                            <div class="pine-r">🎄</div>
+                            <span class="snowflake" style="left:15%;top:10%;animation-delay:0s">❄</span>
+                            <span class="snowflake" style="left:40%;top:5%;animation-delay:0.8s;font-size:7px">❄</span>
+                            <span class="snowflake" style="left:70%;top:15%;animation-delay:1.6s">❄</span>
+                            <span class="snowflake" style="left:85%;top:8%;animation-delay:2.4s;font-size:8px">❄</span>
                         `
                         : specialType === 'newyear'
                             ? `
@@ -5313,7 +5313,7 @@
                             </div>
                             ${versesHtml ? `<div class="sermon-item-verses" style="position:relative;z-index:2">${versesHtml}</div>` : ''}
                             ${sermon.is_favorite && isFirstOfMonth ? `<img src="../../resources/icons/month.png" class="sermon-month-icon favorite-badge" alt="First of month">` : ''}
-                            ${sermon.is_favorite ? `<span class="sermon-favorite-icon">Γ¥ñ∩╕Å</span>` : ''}
+                            ${sermon.is_favorite ? `<span class="sermon-favorite-icon">❤️</span>` : ''}
                             ${!sermon.is_favorite && isFirstOfMonth ? `<img src="../../resources/icons/month.png" class="sermon-month-icon" alt="First of month">` : ''}
                         </div>
                     `;
