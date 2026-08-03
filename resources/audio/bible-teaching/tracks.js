@@ -366,6 +366,14 @@ const BIBLE_TRACKS = [
     verse: "Luke 2:8-20",
     desc: "The reason why angels announced the birth of Jesus to shepherds and its significance.",
     category: "Do You Know?"
+  },
+  {
+    day: 43,
+    title: "Lot - Abraham's Nephew",
+    duration: "66:02",
+    verse: "Gen 12-14, 18-19",
+    desc: "The story of Lot, Abraham's nephew, and his role in the story of Abraham.",
+    category: "Characters"
   }
 ];
 
