@@ -2,7 +2,7 @@
 
 /**
  * Cache Buster Script
- * Automatically updates BUILD_TIMESTAMP in service-worker.js and index.html
+ * Automatically updates BUILD_TIMESTAMP in service-worker.js, index.html, and pages in src/pages/
  * Run this before deploying or as part of your build pipeline
  */
 
@@ -21,9 +21,8 @@ function getTimestamp() {
   return `${year}${month}${day}${hours}${minutes}${seconds}`;
 }
 
-function updateServiceWorker() {
+function updateServiceWorker(timestamp) {
   const swPath = path.join(__dirname, 'src', 'service-worker.js');
-  const timestamp = getTimestamp();
   
   let content = fs.readFileSync(swPath, 'utf8');
   
@@ -37,28 +36,45 @@ function updateServiceWorker() {
   return timestamp;
 }
 
-function updateIndexHTML(timestamp) {
-  const indexPath = path.join(__dirname, 'index.html');
-  let content = fs.readFileSync(indexPath, 'utf8');
-  
-  // Update cache-bust parameter in script and style links
-  // Pattern: href/src="path.js/css" -> href/src="path.js/css?cb=timestamp"
+function updateHTMLFile(filePath, timestamp) {
+  if (!fs.existsSync(filePath)) return;
+  let content = fs.readFileSync(filePath, 'utf8');
+
+  // Pattern: href/src="path.js/css" or href/src="path.js/css?cb=oldtimestamp"
   content = content.replace(
-    /(?<=href|src)="([^"]+\.(css|js))"(?!\?cb)/g,
-    (match, path, ext) => {
-      // Skip if it already has a cache-bust parameter
-      if (path.includes('?cb=')) {
-        return `="${path.replace(/\?cb=[^"]*/, `?cb=${timestamp}`)}"`;
+    /(?<=href|src)="([^"]+\.(css|js))(?:\?cb=[^"]*)?"/g,
+    (match, pathUrl) => {
+      // Skip external links
+      if (pathUrl.startsWith('http://') || pathUrl.startsWith('https://') || pathUrl.startsWith('//')) {
+        return match;
       }
-      return `="${path}?cb=${timestamp}"`;
+      const cleanPath = pathUrl.split('?')[0];
+      return `="${cleanPath}?cb=${timestamp}"`;
     }
   );
-  
-  fs.writeFileSync(indexPath, content, 'utf8');
+
+  fs.writeFileSync(filePath, content, 'utf8');
+}
+
+function updateHTMLFiles(timestamp) {
+  // Update root index.html
+  updateHTMLFile(path.join(__dirname, 'index.html'), timestamp);
+
+  // Update all HTML files in src/pages directory
+  const pagesDir = path.join(__dirname, 'src', 'pages');
+  if (fs.existsSync(pagesDir)) {
+    const files = fs.readdirSync(pagesDir);
+    for (const file of files) {
+      if (file.endsWith('.html')) {
+        updateHTMLFile(path.join(pagesDir, file), timestamp);
+      }
+    }
+  }
 }
 
 function updateManifest(timestamp) {
   const manifestPath = path.join(__dirname, 'manifest.json');
+  if (!fs.existsSync(manifestPath)) return;
   let manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
   
   // Add version metadata
@@ -70,9 +86,13 @@ function updateManifest(timestamp) {
 
 // Main execution
 try {
-  const timestamp = updateServiceWorker();
-  updateIndexHTML(timestamp);
+  const timestamp = getTimestamp();
+  updateServiceWorker(timestamp);
+  updateHTMLFiles(timestamp);
   updateManifest(timestamp);
+  console.log(`Successfully updated cache versions to timestamp: ${timestamp}`);
 } catch (error) {
+  console.error('Error updating cache version:', error);
   process.exit(1);
 }
+
