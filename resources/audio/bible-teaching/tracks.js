@@ -374,6 +374,14 @@ const BIBLE_TRACKS = [
     verse: "Gen 12-14, 18-19",
     desc: "The story of Lot, Abraham's nephew, and his role in the story of Abraham.",
     category: "Characters"
+  },
+  {
+    day: 44,
+    title: "Jesus sent another 70",
+    duration: "51:36",
+    verse: "Luke 10:1-24",
+    desc: "Jesus sends out seventy-two disciples to preach the gospel and heal the sick.",
+    category: "Do You Know?"
   }
 ];
 
