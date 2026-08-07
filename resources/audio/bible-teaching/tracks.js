@@ -370,7 +370,7 @@ const BIBLE_TRACKS = [
   {
     day: 43,
     title: "Lot - Abraham's Nephew",
-    duration: "66:02",
+    duration: "66:02 min",
     verse: "Gen 12-14, 18-19",
     desc: "The story of Lot, Abraham's nephew, and his role in the story of Abraham.",
     category: "Characters"
@@ -378,10 +378,18 @@ const BIBLE_TRACKS = [
   {
     day: 44,
     title: "Jesus sent another 70",
-    duration: "51:36",
+    duration: "51:36 min",
     verse: "Luke 10:1-24",
     desc: "Jesus sends out seventy-two disciples to preach the gospel and heal the sick.",
     category: "Do You Know?"
+  },
+  {
+    day: 45,
+    title: "Naaman - The Syrian Leper",
+    duration: "49:34 min",
+    verse: "2 Kings 5",
+    desc: "The story of Naaman, the Syrian leper, and his healing through the prophet Elisha.",
+    category: "Characters"
   }
 ];
 
