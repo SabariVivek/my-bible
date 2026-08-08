@@ -393,7 +393,7 @@ const BIBLE_TRACKS = [
   },
   {
     day: 46,
-    title: "The Vineyard Workers",
+    title: "Parable of Vineyard Workers",
     duration: "51:43 min",
     verse: "Matthew 20:1-16",
     desc: "The parable of the vineyard workers and its significance for believers.",
