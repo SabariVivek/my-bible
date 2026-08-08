@@ -390,6 +390,14 @@ const BIBLE_TRACKS = [
     verse: "2 Kings 5",
     desc: "The story of Naaman, the Syrian leper, and his healing through the prophet Elisha.",
     category: "Characters"
+  },
+  {
+    day: 46,
+    title: "The Vineyard Workers",
+    duration: "51:43 min",
+    verse: "Matthew 20:1-16",
+    desc: "The parable of the vineyard workers and its significance for believers.",
+    category: "Parables"
   }
 ];
 
