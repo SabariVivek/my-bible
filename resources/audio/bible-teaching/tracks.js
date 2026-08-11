@@ -398,6 +398,14 @@ const BIBLE_TRACKS = [
     verse: "Matthew 20:1-16",
     desc: "The parable of the vineyard workers and its significance for believers.",
     category: "Parables"
+  },
+  {
+    day: 47,
+    title: "Achan - The Sin Under the Tent",
+    duration: "51:46 min",
+    verse: "Joshua 7",
+    desc: "Achan took forbidden spoils from Jericho, causing Israel's defeat and bringing God's judgment.",
+    category: "Characters"
   }
 ];
 
