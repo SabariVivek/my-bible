@@ -406,6 +406,14 @@ const BIBLE_TRACKS = [
     verse: "Joshua 7",
     desc: "Achan took forbidden spoils from Jericho, causing Israel's defeat and bringing God's judgment.",
     category: "Characters"
+  },
+  {
+    day: 48,
+    title: "The 7 Rapture's",
+    duration: "60:50 min",
+    verse: "1 Thes 4:16-17",
+    desc: "A study of seven biblical raptures and those who were caught up into God's presence.",
+    category: "Do You Know?"
   }
 ];
 
