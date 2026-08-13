@@ -700,6 +700,31 @@
             color: #9f1239;
         }
 
+        .chip-play-icon {
+            display: inline-block;
+            transition: all 0.1s;
+        }
+
+        .checkpoint-chip-btn.loading .chip-play-icon {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border: 2px solid currentColor;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: chipSpin 0.6s linear infinite;
+            font-size: 0;
+            line-height: 0;
+            vertical-align: middle;
+            margin-right: 3px;
+        }
+
+        @keyframes chipSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
         /* Checkpoints in Study Notes Sheet */
         .notes-checkpoints-grid {
             display: grid;
@@ -2086,8 +2111,8 @@
                 const sec = ts.seconds != null ? ts.seconds : parseTimeToSeconds(ts.time);
                 const timeStr = ts.time || formatTime(sec);
                 const labelStr = ts.label || ts.title || `Section ${idx + 1}`;
-                return `<button class="checkpoint-chip-btn" data-sec="${sec}" data-idx="${idx}" onclick="seekToTimestamp(${sec}, '${labelStr.replace(/'/g, "\\'")}')">
-                <span class="checkpoint-chip-time">▶ ${timeStr}</span>
+                return `<button class="checkpoint-chip-btn" data-sec="${sec}" data-idx="${idx}" onclick="seekToTimestamp(${sec}, '${labelStr.replace(/'/g, "\\'")}', this)">
+                <span class="checkpoint-chip-time"><span class="chip-play-icon">▶</span> ${timeStr}</span>
                 <span>${labelStr}</span>
             </button>`;
             }).join('');
@@ -2119,8 +2144,23 @@
             });
         }
 
-        function seekToTimestamp(seconds, label) {
+        function clearChipLoaders() {
+            document.querySelectorAll('.checkpoint-chip-btn.loading').forEach(el => el.classList.remove('loading'));
+        }
+
+        function seekToTimestamp(seconds, label, btnEl) {
             if (!audio.src) return;
+            clearChipLoaders();
+            if (btnEl) {
+                btnEl.classList.add('loading');
+            } else {
+                document.querySelectorAll('.checkpoint-chip-btn').forEach(chip => {
+                    if (Number(chip.dataset.sec) === seconds) {
+                        chip.classList.add('loading');
+                    }
+                });
+            }
+
             const targetTime = Math.max(0, Math.min(seconds, audio.duration || seconds));
             hasPlaybackCompleted = false;
             audio.currentTime = targetTime;
@@ -2131,6 +2171,7 @@
                     playPromise.catch(() => {
                         isCurrentlyPlaying = false;
                         updatePlayButtonUI(false);
+                        clearChipLoaders();
                     });
                 }
                 isCurrentlyPlaying = true;
@@ -2549,11 +2590,18 @@
             return m + ":" + (s < 10 ? "0" : "") + s;
         }
 
+        audio.addEventListener('playing', clearChipLoaders);
+        audio.addEventListener('seeked', clearChipLoaders);
+
         audio.addEventListener('timeupdate', () => {
             timeCurrent.innerText = formatTime(audio.currentTime);
             updateTimelineProgress(audio.currentTime, audio.duration);
             updateActiveCheckpointHighlight(audio.currentTime);
+            clearChipLoaders();
         });
+
+        audio.addEventListener('pause', clearChipLoaders);
+        audio.addEventListener('error', clearChipLoaders);
 
         audio.addEventListener('durationchange', () => {
             timeDuration.innerText = formatTime(audio.duration);
