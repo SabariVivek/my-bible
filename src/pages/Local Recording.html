@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#e8e0d0">
     <title>Bible Study Series</title>
     <style>
@@ -87,8 +89,13 @@
         }
 
         @keyframes slideUp {
-            from { transform: translateY(100%); }
-            to   { transform: translateY(0); }
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
         }
 
         .gate-title-block {
@@ -181,12 +188,18 @@
 
         /* Neo-Brutalist High-Contrast Light Palette */
         :root {
-            --bg-canvas: #e8e0d0;      /* Warm tan parchment */
-            --bg-card: #fef9ee;        /* Warm cream card */
-            --raw-black: #000000;      /* Absolute black for strokes & harsh shadows */
-            --brutal-yellow: #fde047;  /* High-visibility yellow accent */
-            --brutal-blue: #60a5fa;    /* Electric industrial blue */
-            --brutal-red: #ef4444;     /* Warning destructive red */
+            --bg-canvas: #e8e0d0;
+            /* Warm tan parchment */
+            --bg-card: #fef9ee;
+            /* Warm cream card */
+            --raw-black: #000000;
+            /* Absolute black for strokes & harsh shadows */
+            --brutal-yellow: #fde047;
+            /* High-visibility yellow accent */
+            --brutal-blue: #60a5fa;
+            /* Electric industrial blue */
+            --brutal-red: #ef4444;
+            /* Warning destructive red */
             --text-main: #000000;
             --text-muted: #4b5563;
         }
@@ -273,7 +286,9 @@
             padding-top: 8px;
         }
 
-        .top-folders-container::-webkit-scrollbar { display: none; }
+        .top-folders-container::-webkit-scrollbar {
+            display: none;
+        }
 
         .small-folder-chip {
             background: #fff;
@@ -312,7 +327,7 @@
             font-size: 1.3rem;
             font-weight: 900;
             cursor: pointer;
-            box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
             display: none;
             align-items: center;
             justify-content: center;
@@ -333,14 +348,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
         }
 
         /* ── Notes Bottom Sheet ────────────────────────────────────────────── */
         .notes-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 9998;
             display: flex;
             align-items: flex-end;
@@ -607,7 +622,7 @@
         /* ── Checkpoints & Timestamps Styling ──────────────────────────────────── */
         .player-checkpoints-container {
             margin-top: 12px;
-            margin-bottom: 6px;
+            margin-bottom: 15px;
             padding-top: 8px;
             border-top: 2px dashed rgba(0, 0, 0, 0.2);
         }
@@ -634,7 +649,8 @@
         }
 
         .checkpoint-chip-btn {
-            background: #ffffff;
+            background: #ffe4e6;
+            color: #be123c;
             border: 2px solid var(--raw-black);
             box-shadow: 2px 2px 0px var(--raw-black);
             padding: 5px 10px;
@@ -651,13 +667,20 @@
             -webkit-tap-highlight-color: transparent;
         }
 
+        .checkpoint-chip-btn:hover {
+            background: #fecdd3;
+            transform: translateY(-1px);
+            box-shadow: 3px 3px 0px var(--raw-black);
+        }
+
         .checkpoint-chip-btn:active {
             transform: translate(1px, 1px);
             box-shadow: 1px 1px 0px var(--raw-black);
         }
 
         .checkpoint-chip-btn.active {
-            background: var(--brutal-yellow);
+            background: #e11d48;
+            color: #ffffff;
             border-color: var(--raw-black);
             box-shadow: 3px 3px 0px var(--raw-black);
         }
@@ -673,8 +696,8 @@
         }
 
         .checkpoint-chip-btn.active .checkpoint-chip-time {
-            background: var(--raw-black);
-            color: var(--brutal-yellow);
+            background: #ffffff;
+            color: #9f1239;
         }
 
         /* Checkpoints in Study Notes Sheet */
@@ -1023,7 +1046,7 @@
             height: 52px;
             object-fit: contain;
             pointer-events: none;
-            filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.15));
+            filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.15));
         }
 
         .verse-ref {
@@ -1091,11 +1114,24 @@
         }
 
         /* Loading spinner */
-        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
-        .track-item.media-loading .play-indicator::after { display: none; }
-        .track-item.media-loading .equalizer-wave { display: none !important; }
-        .track-item.media-loading .pause-icon { display: none !important; }
+        .track-item.media-loading .play-indicator::after {
+            display: none;
+        }
+
+        .track-item.media-loading .equalizer-wave {
+            display: none !important;
+        }
+
+        .track-item.media-loading .pause-icon {
+            display: none !important;
+        }
+
         .track-item.media-loading .play-indicator::before {
             content: '';
             width: 16px;
@@ -1165,18 +1201,35 @@
             animation: bounceWave 0s ease-in-out infinite alternate;
         }
 
-        .eq-bar:nth-child(1) { animation-duration: 0.4s; animation-delay: 0.1s; }
-        .eq-bar:nth-child(2) { animation-duration: 0.5s; animation-delay: 0.3s; }
-        .eq-bar:nth-child(3) { animation-duration: 0.35s; animation-delay: 0.0s; }
+        .eq-bar:nth-child(1) {
+            animation-duration: 0.4s;
+            animation-delay: 0.1s;
+        }
+
+        .eq-bar:nth-child(2) {
+            animation-duration: 0.5s;
+            animation-delay: 0.3s;
+        }
+
+        .eq-bar:nth-child(3) {
+            animation-duration: 0.35s;
+            animation-delay: 0.0s;
+        }
 
         @keyframes bounceWave {
-            0% { transform: scaleY(0.2); }
-            100% { transform: scaleY(1.0); }
+            0% {
+                transform: scaleY(0.2);
+            }
+
+            100% {
+                transform: scaleY(1.0);
+            }
         }
 
         .track-item.playing.media-active .eq-bar {
             animation-name: bounceWave;
         }
+
         .track-item.playing.media-paused .eq-bar {
             animation-name: none;
             transform: scaleY(0.3);
@@ -1209,7 +1262,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             cursor: pointer;
-            box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1237,7 +1290,7 @@
             background: #fef9ee;
             border-top: 4px solid var(--raw-black);
             padding: 16px 16px 28px 16px;
-            box-shadow: 0px -4px 0px rgba(0,0,0,0.05);
+            box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             transform: translateY(105%);
             transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
@@ -1472,7 +1525,7 @@
 
         .speed-btn.active {
             background: #F4DF4B;
-            box-shadow: inset 2px 2px 0px rgba(0,0,0,0.25);
+            box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.25);
         }
 
         .ctrl-btn {
@@ -1666,11 +1719,17 @@
             -webkit-tap-highlight-color: transparent;
             text-decoration: none;
         }
+
         .yt-btn:active {
             transform: translate(1px, 1px);
             box-shadow: 2px 2px 0px var(--raw-black);
         }
-        .yt-btn svg { width: 18px; height: 18px; display: block; }
+
+        .yt-btn svg {
+            width: 18px;
+            height: 18px;
+            display: block;
+        }
 
         .skeleton-block {
             background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
@@ -1679,16 +1738,35 @@
         }
 
         @keyframes shimmer {
-            0%   { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
         }
 
         /* mirrors .track-title */
-        .sk-title  { width: 65%; height: 17px; margin-bottom: 14px; }
+        .sk-title {
+            width: 65%;
+            height: 17px;
+            margin-bottom: 14px;
+        }
+
         /* mirrors .day-badge */
-        .sk-badge  { width: 44px; height: 20px; }
+        .sk-badge {
+            width: 44px;
+            height: 20px;
+        }
+
         /* mirrors .track-duration-stamp */
-        .sk-duration { width: 52px; height: 11px; margin-top: 6px; }
+        .sk-duration {
+            width: 52px;
+            height: 11px;
+            margin-top: 6px;
+        }
+
         /* mirrors .play-indicator box */
         .sk-play {
             width: 36px;
@@ -1699,355 +1777,389 @@
             animation: shimmer 1.4s infinite;
             flex-shrink: 0;
         }
+
         /* mirrors .track-content */
-        .sk-content { flex: 1; padding-right: 16px; }
+        .sk-content {
+            flex: 1;
+            padding-right: 16px;
+        }
+
         /* mirrors .track-action-column */
-        .sk-action  { display: none; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; min-width: 80px; }
-        body.show-actions .sk-action { display: flex; }
+        .sk-action {
+            display: none;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+            flex-shrink: 0;
+            min-width: 80px;
+        }
+
+        body.show-actions .sk-action {
+            display: flex;
+        }
     </style>
 </head>
+
 <body>
 
-<!-- ── Password Gate Overlay ──────────────────────────────────────────── -->
-<div id="passwordGate">
-    <div class="gate-verse-area">
-        <span class="gate-verse-label">Today&#39;s Verse</span>
-        <p class="gate-verse-text" id="gateVerseText"></p>
-        <span class="gate-verse-ref" id="gateVerseRef"></span>
-    </div>
-    <div class="gate-box">
-        <div class="gate-title-block"><h2>Bible Audio</h2></div>
-
-        <!-- PIN dots -->
-        <div class="pin-display" id="pinDisplay">
-            <div class="pin-dot" id="dot0"></div>
-            <div class="pin-dot" id="dot1"></div>
-            <div class="pin-dot" id="dot2"></div>
-            <div class="pin-dot" id="dot3"></div>
-            <div class="pin-dot" id="dot4"></div>
-            <div class="pin-dot" id="dot5"></div>
+    <!-- ── Password Gate Overlay ──────────────────────────────────────────── -->
+    <div id="passwordGate">
+        <div class="gate-verse-area">
+            <span class="gate-verse-label">Today&#39;s Verse</span>
+            <p class="gate-verse-text" id="gateVerseText"></p>
+            <span class="gate-verse-ref" id="gateVerseRef"></span>
         </div>
+        <div class="gate-box">
+            <div class="gate-title-block">
+                <h2>Bible Audio</h2>
+            </div>
 
-        <span class="gate-error" id="gateError">Incorrect PIN. Try again.</span>
+            <!-- PIN dots -->
+            <div class="pin-display" id="pinDisplay">
+                <div class="pin-dot" id="dot0"></div>
+                <div class="pin-dot" id="dot1"></div>
+                <div class="pin-dot" id="dot2"></div>
+                <div class="pin-dot" id="dot3"></div>
+                <div class="pin-dot" id="dot4"></div>
+                <div class="pin-dot" id="dot5"></div>
+            </div>
 
-        <!-- Numeric keypad -->
-        <div class="keypad">
-            <button class="key-btn" onclick="keyPress('1')">1</button>
-            <button class="key-btn" onclick="keyPress('2')">2</button>
-            <button class="key-btn" onclick="keyPress('3')">3</button>
-            <button class="key-btn" onclick="keyPress('4')">4</button>
-            <button class="key-btn" onclick="keyPress('5')">5</button>
-            <button class="key-btn" onclick="keyPress('6')">6</button>
-            <button class="key-btn" onclick="keyPress('7')">7</button>
-            <button class="key-btn" onclick="keyPress('8')">8</button>
-            <button class="key-btn" onclick="keyPress('9')">9</button>
-            <button class="key-btn key-del" onclick="keyDel()">
-                <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:#000;display:block;margin:auto;"><path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3.41 13L15 12.41 11.41 16 10 14.59 13.59 11 10 7.41 11.41 6 15 9.59 18.59 6 20 7.41 16.41 11 20 14.59 18.59 16z"/></svg>
+            <span class="gate-error" id="gateError">Incorrect PIN. Try again.</span>
+
+            <!-- Numeric keypad -->
+            <div class="keypad">
+                <button class="key-btn" onclick="keyPress('1')">1</button>
+                <button class="key-btn" onclick="keyPress('2')">2</button>
+                <button class="key-btn" onclick="keyPress('3')">3</button>
+                <button class="key-btn" onclick="keyPress('4')">4</button>
+                <button class="key-btn" onclick="keyPress('5')">5</button>
+                <button class="key-btn" onclick="keyPress('6')">6</button>
+                <button class="key-btn" onclick="keyPress('7')">7</button>
+                <button class="key-btn" onclick="keyPress('8')">8</button>
+                <button class="key-btn" onclick="keyPress('9')">9</button>
+                <button class="key-btn key-del" onclick="keyDel()">
+                    <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:#000;display:block;margin:auto;">
+                        <path
+                            d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3.41 13L15 12.41 11.41 16 10 14.59 13.59 11 10 7.41 11.41 6 15 9.59 18.59 6 20 7.41 16.41 11 20 14.59 18.59 16z" />
+                    </svg>
+                </button>
+                <button class="key-btn" style="grid-column: span 2;" onclick="keyPress('0')">0</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-container">
+
+        <header>
+            <button class="back-btn" onclick="window.location.href='index.html'" aria-label="Back">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                </svg>
             </button>
-            <button class="key-btn" style="grid-column: span 2;" onclick="keyPress('0')">0</button>
-        </div>
+            <div class="brutal-title-block" style="cursor: pointer;">
+                <h1>Bible Audio</h1>
+            </div>
+            <a class="yt-btn" href="https://www.youtube.com/playlist?list=PLDPnamzse1mQ" target="_blank"
+                rel="noopener noreferrer" aria-label="Open YouTube playlist">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                        fill="#FF0000" />
+                </svg>
+            </a>
+        </header>
+
+        <div class="top-folders-container" id="folderChips"></div>
+
+        <ul class="playlist" id="playlistContainer">
+            <li class="loading-state" id="loadingMsg">Scanning recordings…</li>
+        </ul>
+
     </div>
-</div>
 
-<div class="app-container">
-
-    <header>
-        <button class="back-btn" onclick="window.location.href='index.html'" aria-label="Back">
-            <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    <!-- On-Demand Prompt Hook -->
+    <div class="bottom-pill-group" id="pillGroup">
+        <button class="player-toggle-pill" id="pillTrigger" onclick="openPlayerPanel()">
+            <div class="pill-indicator-dot"></div>
+            <span>Open Player</span>
         </button>
-        <div class="brutal-title-block" style="cursor: pointer;">
-            <h1>Bible Audio</h1>
-        </div>
-        <a class="yt-btn" href="https://www.youtube.com/playlist?list=PLDPnamzse1mQ" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube playlist">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FF0000"/></svg>
-        </a>
-    </header>
-
-    <div class="top-folders-container" id="folderChips"></div>
-
-    <ul class="playlist" id="playlistContainer">
-        <li class="loading-state" id="loadingMsg">Scanning recordings…</li>
-    </ul>
-
-</div>
-
-<!-- On-Demand Prompt Hook -->
-<div class="bottom-pill-group" id="pillGroup">
-    <button class="player-toggle-pill" id="pillTrigger" onclick="openPlayerPanel()">
-        <div class="pill-indicator-dot"></div>
-        <span>Open Player</span>
-    </button>
-    <button class="notes-pill-btn" id="notesPillBtn" onclick="openNotesSheet()" style="display:none;">
-        <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:#000;flex-shrink:0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8 17h8v1.5H8V17zm0-3h8v1.5H8V14zm0-3h5v1.5H8V11z"/></svg>
-    </button>
-    <button class="global-stop-btn" id="headerStopBtn" onclick="terminatePlayback()">&#x2715;</button>
-</div>
-
-<!-- Notes Bottom Sheet -->
-<div id="notesSheet" class="notes-overlay hidden" onclick="closeNotesSheet(event)">
-    <div class="notes-box">
-        <div class="notes-drag-handle"></div>
-        <div class="notes-header">
-            <div class="notes-title-pill" id="notesSheetTags"></div>
-            <button class="notes-close-btn" onclick="document.getElementById('notesSheet').classList.add('hidden'); document.body.style.overflow='';">&#x2715;</button>
-        </div>
-        <h2 class="notes-track-title" id="notesSheetTitle"></h2>
-        <div class="notes-scroll-area" id="notesSheetContent"></div>
+        <button class="notes-pill-btn" id="notesPillBtn" onclick="openNotesSheet()" style="display:none;">
+            <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:#000;flex-shrink:0;">
+                <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8 17h8v1.5H8V17zm0-3h8v1.5H8V14zm0-3h5v1.5H8V11z" />
+            </svg>
+        </button>
+        <button class="global-stop-btn" id="headerStopBtn" onclick="terminatePlayback()">&#x2715;</button>
     </div>
-</div>
 
-<!-- Media Core Native Hook -->
-<audio id="nativeAudio" preload="none"></audio>
+    <!-- Notes Bottom Sheet -->
+    <div id="notesSheet" class="notes-overlay hidden" onclick="closeNotesSheet(event)">
+        <div class="notes-box">
+            <div class="notes-drag-handle"></div>
+            <div class="notes-header">
+                <div class="notes-title-pill" id="notesSheetTags"></div>
+                <button class="notes-close-btn"
+                    onclick="document.getElementById('notesSheet').classList.add('hidden'); document.body.style.overflow='';">&#x2715;</button>
+            </div>
+            <h2 class="notes-track-title" id="notesSheetTitle"></h2>
+            <div class="notes-scroll-area" id="notesSheetContent"></div>
+        </div>
+    </div>
 
-<!-- Solid Boundary Fixed Terminal Player Panel -->
-<div class="sticky-player" id="customPlayerPanel">
-    <div class="player-inner">
-        <div class="close-panel-row">
-            <div style="position:relative;">
-                <button class="speed-toggle-btn" id="speedToggleBtn" onclick="toggleSpeedDropdown()">1.0x ▾</button>
-                <div class="speed-dropdown" id="speedDropdown">
-                    <button class="speed-dropdown-item" onclick="setSpeed(0.8, this)">0.8x — Slow</button>
-                    <button class="speed-dropdown-item active" onclick="setSpeed(1.0, this)">1.0x — Normal</button>
-                    <button class="speed-dropdown-item" onclick="setSpeed(1.2, this)">1.2x — Fast</button>
-                    <button class="speed-dropdown-item" onclick="setSpeed(1.5, this)">1.5x — Faster</button>
+    <!-- Media Core Native Hook -->
+    <audio id="nativeAudio" preload="none"></audio>
+
+    <!-- Solid Boundary Fixed Terminal Player Panel -->
+    <div class="sticky-player" id="customPlayerPanel">
+        <div class="player-inner">
+            <div class="close-panel-row">
+                <div style="position:relative;">
+                    <button class="speed-toggle-btn" id="speedToggleBtn" onclick="toggleSpeedDropdown()">1.0x ▾</button>
+                    <div class="speed-dropdown" id="speedDropdown">
+                        <button class="speed-dropdown-item" onclick="setSpeed(0.8, this)">0.8x — Slow</button>
+                        <button class="speed-dropdown-item active" onclick="setSpeed(1.0, this)">1.0x — Normal</button>
+                        <button class="speed-dropdown-item" onclick="setSpeed(1.2, this)">1.2x — Fast</button>
+                        <button class="speed-dropdown-item" onclick="setSpeed(1.5, this)">1.5x — Faster</button>
+                    </div>
+                </div>
+                <button class="close-panel-btn" onclick="closePlayerPanel()">×</button>
+            </div>
+
+            <div class="player-header">
+                <div class="current-track-title" id="playerTitleLabel">Lesson Title</div>
+                <div class="now-playing-label" id="playerDayLabel">STATUS // IDLE</div>
+            </div>
+
+            <div class="timeline-container" id="timelineContainer">
+                <span class="time-display" id="timeCurrent">0:00</span>
+                <div class="track-bar-bg" id="scrubArea">
+                    <div class="track-bar-fill" id="scrubFill"></div>
+                    <div class="track-handle" id="scrubHandle"></div>
+                </div>
+                <span class="time-display" id="timeDuration">0:00</span>
+            </div>
+
+            <div class="player-checkpoints-container" id="playerCheckpointsContainer" style="display:none;">
+                <div class="checkpoints-header-label">📍 Checkpoints / Sections</div>
+                <div class="checkpoints-scroll-row" id="playerCheckpointsScroll"></div>
+            </div>
+
+            <div class="speed-control-container" style="display:none;">
+                <span class="speed-label">Speed:</span>
+                <div class="speed-options">
+                    <button class="speed-btn" onclick="setSpeed(0.8, this)">0.8x</button>
+                    <button class="speed-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                    <button class="speed-btn" onclick="setSpeed(1.2, this)">1.2x</button>
+                    <button class="speed-btn" onclick="setSpeed(1.5, this)">1.5x</button>
                 </div>
             </div>
-            <button class="close-panel-btn" onclick="closePlayerPanel()">×</button>
-        </div>
-        
-        <div class="player-header">
-            <div class="current-track-title" id="playerTitleLabel">Lesson Title</div>
-            <div class="now-playing-label" id="playerDayLabel">STATUS // IDLE</div>
-        </div>
 
-        <div class="timeline-container" id="timelineContainer">
-            <span class="time-display" id="timeCurrent">0:00</span>
-            <div class="track-bar-bg" id="scrubArea">
-                <div class="track-bar-fill" id="scrubFill"></div>
-                <div class="track-handle" id="scrubHandle"></div>
-            </div>
-            <span class="time-display" id="timeDuration">0:00</span>
-        </div>
-
-        <div class="player-checkpoints-container" id="playerCheckpointsContainer" style="display:none;">
-            <div class="checkpoints-header-label">📍 Checkpoints / Sections</div>
-            <div class="checkpoints-scroll-row" id="playerCheckpointsScroll"></div>
-        </div>
-
-        <div class="speed-control-container" style="display:none;">
-            <span class="speed-label">Speed:</span>
-            <div class="speed-options">
-                <button class="speed-btn" onclick="setSpeed(0.8, this)">0.8x</button>
-                <button class="speed-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
-                <button class="speed-btn" onclick="setSpeed(1.2, this)">1.2x</button>
-                <button class="speed-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+            <div class="audio-controls">
+                <button class="ctrl-btn skip-btn" onclick="jumpAudio(-3)">-3s</button>
+                <button class="ctrl-btn master-play-btn" onclick="togglePlayback()">
+                    <div id="playBtnIcon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </button>
+                <button class="ctrl-btn skip-btn" onclick="jumpAudio(3)">+3s</button>
             </div>
         </div>
+    </div>
 
-        <div class="audio-controls">
-            <button class="ctrl-btn skip-btn" onclick="jumpAudio(-3)">-3s</button>
-            <button class="ctrl-btn master-play-btn" onclick="togglePlayback()">
-                <div id="playBtnIcon">
-                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-            </button>
-            <button class="ctrl-btn skip-btn" onclick="jumpAudio(3)">+3s</button>
+    <!-- Simplified Custom Warning Frame with Blur Context -->
+    <div class="modal-overlay" id="customAlertModal">
+        <div class="brutal-modal-box">
+            <div class="modal-message">Switch to another sermon?</div>
+            <div class="modal-action-row">
+                <button class="modal-btn modal-btn-cancel" onclick="handleModalCancel()">Cancel</button>
+                <button class="modal-btn modal-btn-confirm" onclick="handleModalConfirm()">Switch</button>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Simplified Custom Warning Frame with Blur Context -->
-<div class="modal-overlay" id="customAlertModal">
-    <div class="brutal-modal-box">
-        <div class="modal-message">Switch to another sermon?</div>
-        <div class="modal-action-row">
-            <button class="modal-btn modal-btn-cancel" onclick="handleModalCancel()">Cancel</button>
-            <button class="modal-btn modal-btn-confirm" onclick="handleModalConfirm()">Switch</button>
-        </div>
-    </div>
-</div>
+    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20260813150548"></script>
+    <script>
+        // ─── CONFIG ──────────────────────────────────────────────────────────────────
+        // Track titles are managed in:
+        //   resources/audio/bible-teaching/tracks.js
+        // Audio files are served from the bible-media GitHub repo:
+        //   https://github.com/SabariVivek/bible-media/tree/main/assests
 
-<script src="../../resources/audio/bible-teaching/tracks.js?cb=20260813150548"></script>
-<script>
-    // ─── CONFIG ──────────────────────────────────────────────────────────────────
-    // Track titles are managed in:
-    //   resources/audio/bible-teaching/tracks.js
-    // Audio files are served from the bible-media GitHub repo:
-    //   https://github.com/SabariVivek/bible-media/tree/main/assests
+        const AUDIO_BASE = 'https://raw.githubusercontent.com/SabariVivek/bible-media/main/assests/';
 
-    const AUDIO_BASE = 'https://raw.githubusercontent.com/SabariVivek/bible-media/main/assests/';
-
-    // Resolve audio file path — .m4a preferred, .mp3 as fallback (handled at runtime)
-    function getAudioFilePath(title) {
-        return AUDIO_BASE + encodeURIComponent(title) + '.m4a';
-    }
-
-    function getAudioFilePathFallback(title) {
-        return AUDIO_BASE + encodeURIComponent(title) + '.mp3';
-    }
-    // ─────────────────────────────────────────────────────────────────────────────
-
-    const audio = document.getElementById('nativeAudio');
-    const panel = document.getElementById('customPlayerPanel');
-    const pill = document.getElementById('pillTrigger');
-    const pillGroup = document.getElementById('pillGroup');
-    const titleLabel = document.getElementById('playerTitleLabel');
-    const dayLabel = document.getElementById('playerDayLabel');
-    const playIconContainer = document.getElementById('playBtnIcon');
-    const globalStopBtn = document.getElementById('headerStopBtn');
-    const notesPillBtn  = document.getElementById('notesPillBtn');
-
-    // ── Notes Sheet ────────────────────────────────────────────────────────────
-    function findNoteForTitle(title) {
-        if (typeof BIBLE_STUDY_NOTES === 'undefined') return null;
-        const t = title.toLowerCase();
-        return BIBLE_STUDY_NOTES.find(n => {
-            const nt = n.title.toLowerCase();
-            return nt === t || nt.startsWith(t) || t.startsWith(nt);
-        }) || null;
-    }
-
-    function openNotesSheet() {
-        document.getElementById('notesSheet').classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeNotesSheet(e) {
-        if (e && e.target !== document.getElementById('notesSheet')) return;
-        document.getElementById('notesSheet').classList.add('hidden');
-        document.body.style.overflow = '';
-    }
-
-    let currentTrackTimestamps = [];
-
-    function parseTimeToSeconds(val) {
-        if (typeof val === 'number') return val;
-        if (!val) return 0;
-        const parts = String(val).trim().split(':').map(Number);
-        if (parts.length === 2) {
-            return (parts[0] || 0) * 60 + (parts[1] || 0);
-        } else if (parts.length === 3) {
-            return (parts[0] || 0) * 3600 + (parts[1] || 0) * 60 + (parts[2] || 0);
+        // Resolve audio file path — .m4a preferred, .mp3 as fallback (handled at runtime)
+        function getAudioFilePath(title) {
+            return AUDIO_BASE + encodeURIComponent(title) + '.m4a';
         }
-        return 0;
-    }
 
-    function getTrackTimestamps(trackTitle) {
-        if (!trackTitle) return [];
-        const tLower = trackTitle.toLowerCase();
-        if (typeof BIBLE_TRACKS !== 'undefined') {
-            const trackObj = BIBLE_TRACKS.find(t => t.title.toLowerCase() === tLower);
-            if (trackObj && trackObj.timestamps && trackObj.timestamps.length) {
-                return trackObj.timestamps;
+        function getAudioFilePathFallback(title) {
+            return AUDIO_BASE + encodeURIComponent(title) + '.mp3';
+        }
+        // ─────────────────────────────────────────────────────────────────────────────
+
+        const audio = document.getElementById('nativeAudio');
+        const panel = document.getElementById('customPlayerPanel');
+        const pill = document.getElementById('pillTrigger');
+        const pillGroup = document.getElementById('pillGroup');
+        const titleLabel = document.getElementById('playerTitleLabel');
+        const dayLabel = document.getElementById('playerDayLabel');
+        const playIconContainer = document.getElementById('playBtnIcon');
+        const globalStopBtn = document.getElementById('headerStopBtn');
+        const notesPillBtn = document.getElementById('notesPillBtn');
+
+        // ── Notes Sheet ────────────────────────────────────────────────────────────
+        function findNoteForTitle(title) {
+            if (typeof BIBLE_STUDY_NOTES === 'undefined') return null;
+            const t = title.toLowerCase();
+            return BIBLE_STUDY_NOTES.find(n => {
+                const nt = n.title.toLowerCase();
+                return nt === t || nt.startsWith(t) || t.startsWith(nt);
+            }) || null;
+        }
+
+        function openNotesSheet() {
+            document.getElementById('notesSheet').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeNotesSheet(e) {
+            if (e && e.target !== document.getElementById('notesSheet')) return;
+            document.getElementById('notesSheet').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        let currentTrackTimestamps = [];
+
+        function parseTimeToSeconds(val) {
+            if (typeof val === 'number') return val;
+            if (!val) return 0;
+            const parts = String(val).trim().split(':').map(Number);
+            if (parts.length === 2) {
+                return (parts[0] || 0) * 60 + (parts[1] || 0);
+            } else if (parts.length === 3) {
+                return (parts[0] || 0) * 3600 + (parts[1] || 0) * 60 + (parts[2] || 0);
             }
+            return 0;
         }
-        const note = findNoteForTitle(trackTitle);
-        if (note) {
-            if (note.timestamps && note.timestamps.length) {
-                return note.timestamps;
-            }
-            if (note.sermonSections && note.sermonSections.length) {
-                const secTimestamps = note.sermonSections
-                    .filter(s => s.time || s.seconds != null)
-                    .map(s => ({
-                        time: s.time || formatTime(s.seconds),
-                        label: s.title,
-                        seconds: s.seconds != null ? s.seconds : parseTimeToSeconds(s.time)
-                    }));
-                if (secTimestamps.length) return secTimestamps;
-            }
-        }
-        return [];
-    }
 
-    function renderPlayerCheckpoints(timestamps) {
-        const container = document.getElementById('playerCheckpointsContainer');
-        const scrollRow = document.getElementById('playerCheckpointsScroll');
-        if (!container || !scrollRow) return;
-        if (!timestamps || !timestamps.length) {
-            container.style.display = 'none';
-            scrollRow.innerHTML = '';
-            return;
+        function getTrackTimestamps(trackTitle) {
+            if (!trackTitle) return [];
+            const tLower = trackTitle.toLowerCase();
+            if (typeof BIBLE_TRACKS !== 'undefined') {
+                const trackObj = BIBLE_TRACKS.find(t => t.title.toLowerCase() === tLower);
+                if (trackObj && trackObj.timestamps && trackObj.timestamps.length) {
+                    return trackObj.timestamps;
+                }
+            }
+            const note = findNoteForTitle(trackTitle);
+            if (note) {
+                if (note.timestamps && note.timestamps.length) {
+                    return note.timestamps;
+                }
+                if (note.sermonSections && note.sermonSections.length) {
+                    const secTimestamps = note.sermonSections
+                        .filter(s => s.time || s.seconds != null)
+                        .map(s => ({
+                            time: s.time || formatTime(s.seconds),
+                            label: s.title,
+                            seconds: s.seconds != null ? s.seconds : parseTimeToSeconds(s.time)
+                        }));
+                    if (secTimestamps.length) return secTimestamps;
+                }
+            }
+            return [];
         }
-        container.style.display = 'block';
-        scrollRow.innerHTML = timestamps.map((ts, idx) => {
-            const sec = ts.seconds != null ? ts.seconds : parseTimeToSeconds(ts.time);
-            const timeStr = ts.time || formatTime(sec);
-            const labelStr = ts.label || ts.title || `Section ${idx + 1}`;
-            return `<button class="checkpoint-chip-btn" data-sec="${sec}" data-idx="${idx}" onclick="seekToTimestamp(${sec}, '${labelStr.replace(/'/g, "\\'")}')">
+
+        function renderPlayerCheckpoints(timestamps) {
+            const container = document.getElementById('playerCheckpointsContainer');
+            const scrollRow = document.getElementById('playerCheckpointsScroll');
+            if (!container || !scrollRow) return;
+            if (!timestamps || !timestamps.length) {
+                container.style.display = 'none';
+                scrollRow.innerHTML = '';
+                return;
+            }
+            container.style.display = 'block';
+            scrollRow.innerHTML = timestamps.map((ts, idx) => {
+                const sec = ts.seconds != null ? ts.seconds : parseTimeToSeconds(ts.time);
+                const timeStr = ts.time || formatTime(sec);
+                const labelStr = ts.label || ts.title || `Section ${idx + 1}`;
+                return `<button class="checkpoint-chip-btn" data-sec="${sec}" data-idx="${idx}" onclick="seekToTimestamp(${sec}, '${labelStr.replace(/'/g, "\\'")}')">
                 <span class="checkpoint-chip-time">▶ ${timeStr}</span>
                 <span>${labelStr}</span>
             </button>`;
-        }).join('');
-    }
-
-    function updateActiveCheckpointHighlight(currentTime) {
-        if (!currentTrackTimestamps || !currentTrackTimestamps.length) return;
-        let activeIdx = -1;
-        for (let i = 0; i < currentTrackTimestamps.length; i++) {
-            const sec = currentTrackTimestamps[i].seconds != null
-                ? currentTrackTimestamps[i].seconds
-                : parseTimeToSeconds(currentTrackTimestamps[i].time);
-            if (currentTime >= sec - 1) {
-                activeIdx = i;
-            } else {
-                break;
-            }
+            }).join('');
         }
-        const chips = document.querySelectorAll('.checkpoint-chip-btn');
-        chips.forEach((chip, idx) => {
-            if (idx === activeIdx) {
-                if (!chip.classList.contains('active')) {
-                    chip.classList.add('active');
-                    chip.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+        function updateActiveCheckpointHighlight(currentTime) {
+            if (!currentTrackTimestamps || !currentTrackTimestamps.length) return;
+            let activeIdx = -1;
+            for (let i = 0; i < currentTrackTimestamps.length; i++) {
+                const sec = currentTrackTimestamps[i].seconds != null
+                    ? currentTrackTimestamps[i].seconds
+                    : parseTimeToSeconds(currentTrackTimestamps[i].time);
+                if (currentTime >= sec - 1) {
+                    activeIdx = i;
+                } else {
+                    break;
                 }
-            } else {
-                chip.classList.remove('active');
             }
-        });
-    }
-
-    function seekToTimestamp(seconds, label) {
-        if (!audio.src) return;
-        const targetTime = Math.max(0, Math.min(seconds, audio.duration || seconds));
-        hasPlaybackCompleted = false;
-        audio.currentTime = targetTime;
-
-        if (audio.paused) {
-            const playPromise = audio.play();
-            if (playPromise && typeof playPromise.catch === 'function') {
-                playPromise.catch(() => {
-                    isCurrentlyPlaying = false;
-                    updatePlayButtonUI(false);
-                });
-            }
-            isCurrentlyPlaying = true;
-            updatePlayButtonUI(true);
-            const targetCard = activeTrackElementId ? document.getElementById(activeTrackElementId) : null;
-            if (targetCard) {
-                targetCard.classList.add('playing', 'media-active');
-                targetCard.classList.remove('media-paused');
-            }
+            const chips = document.querySelectorAll('.checkpoint-chip-btn');
+            chips.forEach((chip, idx) => {
+                if (idx === activeIdx) {
+                    if (!chip.classList.contains('active')) {
+                        chip.classList.add('active');
+                        chip.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    }
+                } else {
+                    chip.classList.remove('active');
+                }
+            });
         }
-        updateTimelineProgress(targetTime, audio.duration);
-        timeCurrent.innerText = formatTime(targetTime);
-        updateActiveCheckpointHighlight(targetTime);
-    }
 
-    function populateNotesSheet(note) {
-        document.getElementById('notesSheetTitle').textContent = note.title;
-        document.getElementById('notesSheetTags').innerHTML = (note.tags || [])
-            .map(t => `<span class="notes-tag">${t}</span>`).join('');
+        function seekToTimestamp(seconds, label) {
+            if (!audio.src) return;
+            const targetTime = Math.max(0, Math.min(seconds, audio.duration || seconds));
+            hasPlaybackCompleted = false;
+            audio.currentTime = targetTime;
 
-        let html = '';
-        if (note.summary) {
-            html += `<div>
+            if (audio.paused) {
+                const playPromise = audio.play();
+                if (playPromise && typeof playPromise.catch === 'function') {
+                    playPromise.catch(() => {
+                        isCurrentlyPlaying = false;
+                        updatePlayButtonUI(false);
+                    });
+                }
+                isCurrentlyPlaying = true;
+                updatePlayButtonUI(true);
+                const targetCard = activeTrackElementId ? document.getElementById(activeTrackElementId) : null;
+                if (targetCard) {
+                    targetCard.classList.add('playing', 'media-active');
+                    targetCard.classList.remove('media-paused');
+                }
+            }
+            updateTimelineProgress(targetTime, audio.duration);
+            timeCurrent.innerText = formatTime(targetTime);
+            updateActiveCheckpointHighlight(targetTime);
+        }
+
+        function populateNotesSheet(note) {
+            document.getElementById('notesSheetTitle').textContent = note.title;
+            document.getElementById('notesSheetTags').innerHTML = (note.tags || [])
+                .map(t => `<span class="notes-tag">${t}</span>`).join('');
+
+            let html = '';
+            if (note.summary) {
+                html += `<div>
                 <div class="notes-section-label">Summary</div>
                 <p class="notes-summary-text">${note.summary}</p>
             </div>`;
-        }
-        if (note.scripturePassages && note.scripturePassages.length) {
-            html += `<div>
+            }
+            if (note.scripturePassages && note.scripturePassages.length) {
+                html += `<div>
                 <div class="notes-section-label">Scripture Passages</div>
                 <div class="notes-passage-list">
                     ${note.scripturePassages.map((p, idx) => `
@@ -2061,9 +2173,9 @@
                     </div>`).join('')}
                 </div>
             </div>`;
-        }
-        if (note.sermonSections && note.sermonSections.length) {
-            html += `<div>
+            }
+            if (note.sermonSections && note.sermonSections.length) {
+                html += `<div>
                 <div class="notes-section-label">Sermon Outline</div>
                 <div class="notes-sermon-list">
                     ${note.sermonSections.map(s => `
@@ -2075,9 +2187,9 @@
                     </div>`).join('')}
                 </div>
             </div>`;
-        }
-        if (note.jesusFulfillment && note.jesusFulfillment.length) {
-            html += `<div>
+            }
+            if (note.jesusFulfillment && note.jesusFulfillment.length) {
+                html += `<div>
                 <div class="notes-section-label">Passover → Fulfilled in Jesus</div>
                 <div class="notes-fulfillment-list">
                     ${note.jesusFulfillment.map(f => `
@@ -2104,9 +2216,9 @@
                     </div>`).join('')}
                 </div>
             </div>`;
-        }
-        if (note.corePrinciples && note.corePrinciples.length) {
-            html += `<div>
+            }
+            if (note.corePrinciples && note.corePrinciples.length) {
+                html += `<div>
                 <div class="notes-section-label">Core Principles</div>
                 <div class="notes-principle-list">
                     ${note.corePrinciples.map(p => `
@@ -2116,417 +2228,417 @@
                     </div>`).join('')}
                 </div>
             </div>`;
-        }
-        document.getElementById('notesSheetContent').innerHTML = html;
-    }
-
-    const timelineContainer = document.getElementById('timelineContainer');
-    const scrubArea = document.getElementById('scrubArea');
-    const scrubFill = document.getElementById('scrubFill');
-    const scrubHandle = document.getElementById('scrubHandle');
-    const timeCurrent = document.getElementById('timeCurrent');
-    const timeDuration = document.getElementById('timeDuration');
-
-    const customModal = document.getElementById('customAlertModal');
-
-    let activeTrackElementId = null;
-    let isCurrentlyPlaying = false;
-    let pendingTrackData = null;
-    let isScrubbingTimeline = false;
-    let hasPlaybackCompleted = false;
-
-    const playSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black; margin-left:2px;"><path d="M8 5v14l11-7z"/></svg>`;
-    const pauseSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
-    const reloadSVG = '<img src="../../resources/icons/reload.png" alt="Reload">';
-
-    function updateTimelineProgress(current, duration) {
-        const safeDuration = Number.isFinite(duration) && duration > 0 ? duration : 0;
-        const safeCurrent = Number.isFinite(current) && current > 0 ? current : 0;
-        const percent = safeDuration ? (safeCurrent / safeDuration) * 100 : 0;
-        scrubFill.style.width = percent + '%';
-        scrubHandle.style.left = percent + '%';
-    }
-
-    function processScrub(clientX) {
-        if (!audio.src || !audio.duration) return;
-        const rect = scrubArea.getBoundingClientRect();
-        let offset = (clientX - rect.left) / rect.width;
-        offset = Math.max(0, Math.min(1, offset));
-        hasPlaybackCompleted = false;
-        audio.currentTime = offset * audio.duration;
-        updateTimelineProgress(audio.currentTime, audio.duration);
-        timeCurrent.innerText = formatTime(audio.currentTime);
-
-        if (offset >= 1) {
-            handlePlaybackCompleted();
-        } else {
-            updatePlayButtonUI(!audio.paused);
-        }
-    }
-
-    function handlePlaybackCompleted() {
-        audio.pause();
-        hasPlaybackCompleted = true;
-        isCurrentlyPlaying = false;
-        updateTimelineProgress(audio.duration, audio.duration);
-        timeCurrent.innerText = formatTime(audio.duration);
-        updatePlayButtonUI(false);
-        panel.classList.add('visible');
-        pillGroup.classList.remove('active');
-
-        if (activeTrackElementId) {
-            const targetCard = document.getElementById(activeTrackElementId);
-            targetCard.classList.add('playing');
-            targetCard.classList.remove('media-active', 'media-paused');
-        }
-    }
-
-    function restartCompletedPlayback() {
-        const targetCard = activeTrackElementId ? document.getElementById(activeTrackElementId) : null;
-
-        hasPlaybackCompleted = false;
-        isCurrentlyPlaying = true;
-        audio.pause();
-        audio.currentTime = 0;
-        timeCurrent.innerText = '0:00';
-        updateTimelineProgress(0, audio.duration);
-        updatePlayButtonUI(true);
-
-        if (targetCard) {
-            targetCard.classList.add('playing', 'media-active');
-            targetCard.classList.remove('media-paused');
+            }
+            document.getElementById('notesSheetContent').innerHTML = html;
         }
 
-        const playAttempt = audio.play();
-        if (playAttempt && typeof playAttempt.catch === 'function') {
-            playAttempt.catch(() => {
-                isCurrentlyPlaying = false;
-                hasPlaybackCompleted = true;
-                updatePlayButtonUI(false);
-            });
-        }
-    }
+        const timelineContainer = document.getElementById('timelineContainer');
+        const scrubArea = document.getElementById('scrubArea');
+        const scrubFill = document.getElementById('scrubFill');
+        const scrubHandle = document.getElementById('scrubHandle');
+        const timeCurrent = document.getElementById('timeCurrent');
+        const timeDuration = document.getElementById('timeDuration');
 
-    function selectTrack(fileUrl, title, dayText, elementId) {
-        if (!document.body.classList.contains('show-actions')) {
-            return;
+        const customModal = document.getElementById('customAlertModal');
+
+        let activeTrackElementId = null;
+        let isCurrentlyPlaying = false;
+        let pendingTrackData = null;
+        let isScrubbingTimeline = false;
+        let hasPlaybackCompleted = false;
+
+        const playSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black; margin-left:2px;"><path d="M8 5v14l11-7z"/></svg>`;
+        const pauseSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+        const reloadSVG = '<img src="../../resources/icons/reload.png" alt="Reload">';
+
+        function updateTimelineProgress(current, duration) {
+            const safeDuration = Number.isFinite(duration) && duration > 0 ? duration : 0;
+            const safeCurrent = Number.isFinite(current) && current > 0 ? current : 0;
+            const percent = safeDuration ? (safeCurrent / safeDuration) * 100 : 0;
+            scrubFill.style.width = percent + '%';
+            scrubHandle.style.left = percent + '%';
         }
 
-        if (activeTrackElementId === elementId) {
-            togglePlayback();
-            return;
+        function processScrub(clientX) {
+            if (!audio.src || !audio.duration) return;
+            const rect = scrubArea.getBoundingClientRect();
+            let offset = (clientX - rect.left) / rect.width;
+            offset = Math.max(0, Math.min(1, offset));
+            hasPlaybackCompleted = false;
+            audio.currentTime = offset * audio.duration;
+            updateTimelineProgress(audio.currentTime, audio.duration);
+            timeCurrent.innerText = formatTime(audio.currentTime);
+
+            if (offset >= 1) {
+                handlePlaybackCompleted();
+            } else {
+                updatePlayButtonUI(!audio.paused);
+            }
         }
 
-        if (activeTrackElementId) {
-            panel.classList.remove('visible');
-            pendingTrackData = { fileUrl, title, dayText, elementId };
-            customModal.classList.add('active');
-        } else {
-            executeTrackLoad(fileUrl, title, dayText, elementId);
-        }
-    }
+        function handlePlaybackCompleted() {
+            audio.pause();
+            hasPlaybackCompleted = true;
+            isCurrentlyPlaying = false;
+            updateTimelineProgress(audio.duration, audio.duration);
+            timeCurrent.innerText = formatTime(audio.duration);
+            updatePlayButtonUI(false);
+            panel.classList.add('visible');
+            pillGroup.classList.remove('active');
 
-    function handleModalConfirm() {
-        customModal.classList.remove('active');
-        if (pendingTrackData) {
-            executeTrackLoad(
-                pendingTrackData.fileUrl, 
-                pendingTrackData.title, 
-                pendingTrackData.dayText, 
-                pendingTrackData.elementId
-            );
+            if (activeTrackElementId) {
+                const targetCard = document.getElementById(activeTrackElementId);
+                targetCard.classList.add('playing');
+                targetCard.classList.remove('media-active', 'media-paused');
+            }
+        }
+
+        function restartCompletedPlayback() {
+            const targetCard = activeTrackElementId ? document.getElementById(activeTrackElementId) : null;
+
+            hasPlaybackCompleted = false;
+            isCurrentlyPlaying = true;
+            audio.pause();
+            audio.currentTime = 0;
+            timeCurrent.innerText = '0:00';
+            updateTimelineProgress(0, audio.duration);
+            updatePlayButtonUI(true);
+
+            if (targetCard) {
+                targetCard.classList.add('playing', 'media-active');
+                targetCard.classList.remove('media-paused');
+            }
+
+            const playAttempt = audio.play();
+            if (playAttempt && typeof playAttempt.catch === 'function') {
+                playAttempt.catch(() => {
+                    isCurrentlyPlaying = false;
+                    hasPlaybackCompleted = true;
+                    updatePlayButtonUI(false);
+                });
+            }
+        }
+
+        function selectTrack(fileUrl, title, dayText, elementId) {
+            if (!document.body.classList.contains('show-actions')) {
+                return;
+            }
+
+            if (activeTrackElementId === elementId) {
+                togglePlayback();
+                return;
+            }
+
+            if (activeTrackElementId) {
+                panel.classList.remove('visible');
+                pendingTrackData = { fileUrl, title, dayText, elementId };
+                customModal.classList.add('active');
+            } else {
+                executeTrackLoad(fileUrl, title, dayText, elementId);
+            }
+        }
+
+        function handleModalConfirm() {
+            customModal.classList.remove('active');
+            if (pendingTrackData) {
+                executeTrackLoad(
+                    pendingTrackData.fileUrl,
+                    pendingTrackData.title,
+                    pendingTrackData.dayText,
+                    pendingTrackData.elementId
+                );
+                pendingTrackData = null;
+            }
+        }
+
+        function handleModalCancel() {
+            customModal.classList.remove('active');
             pendingTrackData = null;
+            panel.classList.add('visible');
         }
-    }
 
-    function handleModalCancel() {
-        customModal.classList.remove('active');
-        pendingTrackData = null;
-        panel.classList.add('visible');
-    }
+        function executeTrackLoad(fileUrl, title, dayText, elementId) {
+            document.querySelectorAll('.track-item').forEach(item => {
+                item.classList.remove('playing', 'media-active', 'media-paused');
+            });
 
-    function executeTrackLoad(fileUrl, title, dayText, elementId) {
-        document.querySelectorAll('.track-item').forEach(item => {
-            item.classList.remove('playing', 'media-active', 'media-paused');
+            activeTrackElementId = elementId;
+            const targetCard = document.getElementById(elementId);
+            targetCard.classList.add('playing', 'media-active');
+
+            titleLabel.innerHTML = title;
+            dayLabel.innerText = "NOW PLAYING // " + dayText;
+
+            audio.src = fileUrl;
+            hasPlaybackCompleted = false;
+
+            // Reset speed to 1.0x on every new track
+            audio.playbackRate = 1.0;
+            document.querySelectorAll('.speed-dropdown-item').forEach(b => b.classList.remove('active'));
+            const defaultSpeedBtn = document.querySelector('.speed-dropdown-item[onclick="setSpeed(1.0, this)"]');
+            if (defaultSpeedBtn) defaultSpeedBtn.classList.add('active');
+            document.getElementById('speedToggleBtn').textContent = '1.0x \u25BE';
+
+            pillGroup.classList.add('active');
+            globalStopBtn.classList.add('active');
+
+            // Load timestamps for active track
+            currentTrackTimestamps = getTrackTimestamps(title);
+            renderPlayerCheckpoints(currentTrackTimestamps);
+
+            // Show notes button only if this track has study notes
+            const note = findNoteForTitle(title);
+            if (note) {
+                populateNotesSheet(note);
+                notesPillBtn.style.display = 'flex';
+            } else {
+                notesPillBtn.style.display = 'none';
+                document.getElementById('notesSheet').classList.add('hidden');
+            }
+
+            // Reset progress bar immediately before audio loads
+            updateTimelineProgress(0, 0);
+            timeCurrent.innerText = '0:00';
+            timeDuration.innerText = '0:00';
+
+            audio.load();
+            audio.play();
+            isCurrentlyPlaying = true;
+            updatePlayButtonUI(true);
+
+            // Show loading state on card
+            targetCard.classList.add('media-loading');
+            const clearLoading = () => {
+                targetCard.classList.remove('media-loading');
+                audio.removeEventListener('canplay', clearLoading);
+                audio.removeEventListener('error', clearLoading);
+            };
+            audio.addEventListener('canplay', clearLoading);
+            audio.addEventListener('error', clearLoading);
+
+            // Fallback: if .m4a fails, retry with .mp3
+            audio.onerror = () => {
+                if (audio.src.endsWith('.m4a')) {
+                    audio.src = audio.src.replace('.m4a', '.mp3');
+                    audio.load();
+                    audio.play();
+                }
+            };
+        }
+
+        function setSpeed(speedVal, el) {
+            document.querySelectorAll('.speed-dropdown-item').forEach(b => b.classList.remove('active'));
+            el.classList.add('active');
+            audio.playbackRate = speedVal;
+            document.getElementById('speedToggleBtn').textContent = speedVal.toFixed(1) + 'x \u25BE';
+            document.getElementById('speedDropdown').classList.remove('open');
+        }
+
+        function toggleSpeedDropdown() {
+            document.getElementById('speedDropdown').classList.toggle('open');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', e => {
+            if (!e.target.closest('#speedToggleBtn') && !e.target.closest('#speedDropdown')) {
+                document.getElementById('speedDropdown').classList.remove('open');
+            }
         });
-        
-        activeTrackElementId = elementId;
-        const targetCard = document.getElementById(elementId);
-        targetCard.classList.add('playing', 'media-active');
 
-        titleLabel.innerHTML = title;
-        dayLabel.innerText = "NOW PLAYING // " + dayText;
-        
-        audio.src = fileUrl;
-        hasPlaybackCompleted = false;
+        function togglePlayback() {
+            if (!audio.src) return;
 
-        // Reset speed to 1.0x on every new track
-        audio.playbackRate = 1.0;
-        document.querySelectorAll('.speed-dropdown-item').forEach(b => b.classList.remove('active'));
-        const defaultSpeedBtn = document.querySelector('.speed-dropdown-item[onclick="setSpeed(1.0, this)"]');
-        if (defaultSpeedBtn) defaultSpeedBtn.classList.add('active');
-        document.getElementById('speedToggleBtn').textContent = '1.0x \u25BE';
-        
-        pillGroup.classList.add('active');
-        globalStopBtn.classList.add('active');
+            const targetCard = activeTrackElementId ? document.getElementById(activeTrackElementId) : null;
 
-        // Load timestamps for active track
-        currentTrackTimestamps = getTrackTimestamps(title);
-        renderPlayerCheckpoints(currentTrackTimestamps);
+            if (hasPlaybackCompleted) {
+                restartCompletedPlayback();
+                return;
+            }
 
-        // Show notes button only if this track has study notes
-        const note = findNoteForTitle(title);
-        if (note) {
-            populateNotesSheet(note);
-            notesPillBtn.style.display = 'flex';
-        } else {
+            if (audio.paused) {
+                audio.play();
+                isCurrentlyPlaying = true;
+                updatePlayButtonUI(true);
+                if (targetCard) {
+                    targetCard.classList.add('playing', 'media-active');
+                    targetCard.classList.remove('media-paused');
+                }
+            } else {
+                audio.pause();
+                isCurrentlyPlaying = false;
+                updatePlayButtonUI(false);
+                if (targetCard) {
+                    targetCard.classList.remove('media-active');
+                    targetCard.classList.add('media-paused');
+                }
+            }
+        }
+
+        function terminatePlayback() {
+            audio.pause();
+            audio.src = "";
+            hasPlaybackCompleted = false;
+
+            isCurrentlyPlaying = false;
+            updatePlayButtonUI(false);
+
+            if (activeTrackElementId) {
+                document.getElementById(activeTrackElementId).classList.remove('playing', 'media-active', 'media-paused');
+                activeTrackElementId = null;
+            }
+
+            pendingTrackData = null;
+            currentTrackTimestamps = [];
+            renderPlayerCheckpoints([]);
+
+            titleLabel.innerHTML = "Lesson Title";
+            dayLabel.innerText = "STATUS // IDLE";
+            updateTimelineProgress(0, 0);
+            timeCurrent.innerText = "0:00";
+            timeDuration.innerText = "0:00";
+
+            panel.classList.remove('visible');
+            pillGroup.classList.remove('active');
+            customModal.classList.remove('active');
+
+            globalStopBtn.classList.remove('active');
             notesPillBtn.style.display = 'none';
             document.getElementById('notesSheet').classList.add('hidden');
         }
 
-        // Reset progress bar immediately before audio loads
-        updateTimelineProgress(0, 0);
-        timeCurrent.innerText = '0:00';
-        timeDuration.innerText = '0:00';
-
-        audio.load();
-        audio.play();
-        isCurrentlyPlaying = true;
-        updatePlayButtonUI(true);
-
-        // Show loading state on card
-        targetCard.classList.add('media-loading');
-        const clearLoading = () => {
-            targetCard.classList.remove('media-loading');
-            audio.removeEventListener('canplay', clearLoading);
-            audio.removeEventListener('error', clearLoading);
-        };
-        audio.addEventListener('canplay', clearLoading);
-        audio.addEventListener('error', clearLoading);
-
-        // Fallback: if .m4a fails, retry with .mp3
-        audio.onerror = () => {
-            if (audio.src.endsWith('.m4a')) {
-                audio.src = audio.src.replace('.m4a', '.mp3');
-                audio.load();
-                audio.play();
-            }
-        };
-    }
-
-    function setSpeed(speedVal, el) {
-        document.querySelectorAll('.speed-dropdown-item').forEach(b => b.classList.remove('active'));
-        el.classList.add('active');
-        audio.playbackRate = speedVal;
-        document.getElementById('speedToggleBtn').textContent = speedVal.toFixed(1) + 'x \u25BE';
-        document.getElementById('speedDropdown').classList.remove('open');
-    }
-
-    function toggleSpeedDropdown() {
-        document.getElementById('speedDropdown').classList.toggle('open');
-    }
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', e => {
-        if (!e.target.closest('#speedToggleBtn') && !e.target.closest('#speedDropdown')) {
-            document.getElementById('speedDropdown').classList.remove('open');
+        function openPlayerPanel() {
+            panel.classList.add('visible');
+            pillGroup.classList.remove('active');
         }
-    });
 
-    function togglePlayback() {
-        if (!audio.src) return;
-        
-        const targetCard = activeTrackElementId ? document.getElementById(activeTrackElementId) : null;
-
-        if (hasPlaybackCompleted) {
-            restartCompletedPlayback();
-            return;
-        }
-        
-        if (audio.paused) {
-            audio.play();
-            isCurrentlyPlaying = true;
-            updatePlayButtonUI(true);
-            if(targetCard) {
-                targetCard.classList.add('playing', 'media-active');
-                targetCard.classList.remove('media-paused');
-            }
-        } else {
-            audio.pause();
-            isCurrentlyPlaying = false;
-            updatePlayButtonUI(false);
-            if(targetCard) {
-                targetCard.classList.remove('media-active');
-                targetCard.classList.add('media-paused');
+        function closePlayerPanel() {
+            panel.classList.remove('visible');
+            if (audio.src && !audio.ended) {
+                pillGroup.classList.add('active');
             }
         }
-    }
 
-    function terminatePlayback() {
-        audio.pause();
-        audio.src = "";
-        hasPlaybackCompleted = false;
-        
-        isCurrentlyPlaying = false;
-        updatePlayButtonUI(false);
+        function updatePlayButtonUI(isPlaying) {
+            if (hasPlaybackCompleted) {
+                playIconContainer.innerHTML = reloadSVG;
+                return;
+            }
 
-        if (activeTrackElementId) {
-            document.getElementById(activeTrackElementId).classList.remove('playing', 'media-active', 'media-paused');
-            activeTrackElementId = null;
-        }
-        
-        pendingTrackData = null;
-        currentTrackTimestamps = [];
-        renderPlayerCheckpoints([]);
-
-        titleLabel.innerHTML = "Lesson Title";
-        dayLabel.innerText = "STATUS // IDLE";
-        updateTimelineProgress(0, 0);
-        timeCurrent.innerText = "0:00";
-        timeDuration.innerText = "0:00";
-
-        panel.classList.remove('visible');
-        pillGroup.classList.remove('active');
-        customModal.classList.remove('active');
-
-        globalStopBtn.classList.remove('active');
-        notesPillBtn.style.display = 'none';
-        document.getElementById('notesSheet').classList.add('hidden');
-    }
-
-    function openPlayerPanel() {
-        panel.classList.add('visible');
-        pillGroup.classList.remove('active');
-    }
-
-    function closePlayerPanel() {
-        panel.classList.remove('visible');
-        if (audio.src && !audio.ended) {
-            pillGroup.classList.add('active');
-        }
-    }
-
-    function updatePlayButtonUI(isPlaying) {
-        if (hasPlaybackCompleted) {
-            playIconContainer.innerHTML = reloadSVG;
-            return;
+            playIconContainer.innerHTML = isPlaying ? pauseSVG : playSVG;
         }
 
-        playIconContainer.innerHTML = isPlaying ? pauseSVG : playSVG;
-    }
+        function jumpAudio(seconds) {
+            if (!audio.src) return;
+            let targetTime = audio.currentTime + seconds;
+            if (targetTime < 0) targetTime = 0;
+            if (targetTime > audio.duration) targetTime = audio.duration;
+            hasPlaybackCompleted = false;
+            audio.currentTime = targetTime;
 
-    function jumpAudio(seconds) {
-        if (!audio.src) return;
-        let targetTime = audio.currentTime + seconds;
-        if (targetTime < 0) targetTime = 0;
-        if (targetTime > audio.duration) targetTime = audio.duration;
-        hasPlaybackCompleted = false;
-        audio.currentTime = targetTime;
-
-        if (audio.duration && targetTime >= audio.duration) {
-            handlePlaybackCompleted();
-        } else {
-            updatePlayButtonUI(!audio.paused);
+            if (audio.duration && targetTime >= audio.duration) {
+                handlePlaybackCompleted();
+            } else {
+                updatePlayButtonUI(!audio.paused);
+            }
         }
-    }
 
-    function formatTime(secs) {
-        if (isNaN(secs)) return "0:00";
-        const m = Math.floor(secs / 60);
-        const s = Math.floor(secs % 60);
-        return m + ":" + (s < 10 ? "0" : "") + s;
-    }
+        function formatTime(secs) {
+            if (isNaN(secs)) return "0:00";
+            const m = Math.floor(secs / 60);
+            const s = Math.floor(secs % 60);
+            return m + ":" + (s < 10 ? "0" : "") + s;
+        }
 
-    audio.addEventListener('timeupdate', () => {
-        timeCurrent.innerText = formatTime(audio.currentTime);
-        updateTimelineProgress(audio.currentTime, audio.duration);
-        updateActiveCheckpointHighlight(audio.currentTime);
-    });
-
-    audio.addEventListener('durationchange', () => {
-        timeDuration.innerText = formatTime(audio.duration);
-        updateTimelineProgress(audio.currentTime, audio.duration);
-    });
-
-    audio.addEventListener('ended', () => {
-        handlePlaybackCompleted();
-    });
-
-    timelineContainer.addEventListener('pointerdown', (e) => {
-        isScrubbingTimeline = true;
-        timelineContainer.classList.add('dragging');
-        processScrub(e.clientX);
-    });
-
-    window.addEventListener('pointermove', (e) => {
-        if (!isScrubbingTimeline) return;
-        processScrub(e.clientX);
-    });
-
-    window.addEventListener('pointerup', () => {
-        isScrubbingTimeline = false;
-        timelineContainer.classList.remove('dragging');
-    });
-
-    window.addEventListener('pointercancel', () => {
-        isScrubbingTimeline = false;
-        timelineContainer.classList.remove('dragging');
-    });
-
-    // ── Build playlist from BIBLE_TRACKS (no fetch — works on file:// too) ─────
-    function getDuration(url) {
-        return new Promise((resolve) => {
-            const a = new Audio();
-            let done = false;
-            const finish = (dur) => { if (done) return; done = true; a.src = ''; resolve(dur); };
-            a.addEventListener('loadedmetadata', () => finish(a.duration));
-            a.addEventListener('error', () => finish(0));
-            a.src = url;
-            a.load();
-            setTimeout(() => finish(0), 5000);
+        audio.addEventListener('timeupdate', () => {
+            timeCurrent.innerText = formatTime(audio.currentTime);
+            updateTimelineProgress(audio.currentTime, audio.duration);
+            updateActiveCheckpointHighlight(audio.currentTime);
         });
-    }
 
-    function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important, importantColor, cardBg, comingSoon) {
-        const isComingSoon = comingSoon || (typeof duration === 'string' && duration.toLowerCase().includes('coming soon'));
-        const li = document.createElement('li');
-        li.className = 'track-item' + (isComingSoon ? ' coming-soon' : '') + (important ? ' important' : '');
-        if (important && importantColor) {
-            li.style.backgroundColor = importantColor.bg;
-            li.style.borderColor = importantColor.border;
-            li.style.boxShadow = `4px 4px 0px ${importantColor.shadow}`;
+        audio.addEventListener('durationchange', () => {
+            timeDuration.innerText = formatTime(audio.duration);
+            updateTimelineProgress(audio.currentTime, audio.duration);
+        });
+
+        audio.addEventListener('ended', () => {
+            handlePlaybackCompleted();
+        });
+
+        timelineContainer.addEventListener('pointerdown', (e) => {
+            isScrubbingTimeline = true;
+            timelineContainer.classList.add('dragging');
+            processScrub(e.clientX);
+        });
+
+        window.addEventListener('pointermove', (e) => {
+            if (!isScrubbingTimeline) return;
+            processScrub(e.clientX);
+        });
+
+        window.addEventListener('pointerup', () => {
+            isScrubbingTimeline = false;
+            timelineContainer.classList.remove('dragging');
+        });
+
+        window.addEventListener('pointercancel', () => {
+            isScrubbingTimeline = false;
+            timelineContainer.classList.remove('dragging');
+        });
+
+        // ── Build playlist from BIBLE_TRACKS (no fetch — works on file:// too) ─────
+        function getDuration(url) {
+            return new Promise((resolve) => {
+                const a = new Audio();
+                let done = false;
+                const finish = (dur) => { if (done) return; done = true; a.src = ''; resolve(dur); };
+                a.addEventListener('loadedmetadata', () => finish(a.duration));
+                a.addEventListener('error', () => finish(0));
+                a.src = url;
+                a.load();
+                setTimeout(() => finish(0), 5000);
+            });
         }
-        if (cardBg) {
-            const resolvedBg = cardBg.startsWith('resources/') ? '../../' + cardBg : cardBg;
-            li.style.backgroundImage = `url('${resolvedBg}')`;
-            li.style.backgroundSize = 'cover';
-            li.style.backgroundPosition = 'center';
-        }
-        li.id = trackId;
 
-        if (isComingSoon) {
-            li.onclick = (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-            };
-        } else {
-            li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
-        }
+        function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important, importantColor, cardBg, comingSoon) {
+            const isComingSoon = comingSoon || (typeof duration === 'string' && duration.toLowerCase().includes('coming soon'));
+            const li = document.createElement('li');
+            li.className = 'track-item' + (isComingSoon ? ' coming-soon' : '') + (important ? ' important' : '');
+            if (important && importantColor) {
+                li.style.backgroundColor = importantColor.bg;
+                li.style.borderColor = importantColor.border;
+                li.style.boxShadow = `4px 4px 0px ${importantColor.shadow}`;
+            }
+            if (cardBg) {
+                const resolvedBg = cardBg.startsWith('resources/') ? '../../' + cardBg : cardBg;
+                li.style.backgroundImage = `url('${resolvedBg}')`;
+                li.style.backgroundSize = 'cover';
+                li.style.backgroundPosition = 'center';
+            }
+            li.id = trackId;
 
-        const durStr = duration
-            ? (typeof duration === 'string' ? duration : formatTime(duration) + ' min')
-            : '--:--';
+            if (isComingSoon) {
+                li.onclick = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                };
+            } else {
+                li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
+            }
 
-        const timestamps = getTrackTimestamps(title);
-        if (isComingSoon) {
-            li.innerHTML = `
+            const durStr = duration
+                ? (typeof duration === 'string' ? duration : formatTime(duration) + ' min')
+                : '--:--';
+
+            const timestamps = getTrackTimestamps(title);
+            if (isComingSoon) {
+                li.innerHTML = `
                 <div class="track-content">
                     <div class="track-title">${title}</div>
                     ${desc ? `<div class="track-desc">${desc}</div>` : ''}
                 </div>
                 <img src="../../resources/images/coming-soon.png" alt="Coming Soon" class="coming-soon-card-icon" />`;
-        } else {
-            li.innerHTML = `
+            } else {
+                li.innerHTML = `
                 <div class="track-content">
                     <div class="track-title">${title}</div>
                     ${desc ? `<div class="track-desc">${desc}</div>` : ''}
@@ -2546,15 +2658,15 @@
                     </div>
                     <div class="track-duration-stamp">${durStr}</div>
                 </div>`;
+            }
+            return li;
         }
-        return li;
-    }
 
-    function buildSkeleton(trackId) {
-        const li = document.createElement('li');
-        li.className = 'skeleton-item';
-        li.id = 'skel-' + trackId;
-        li.innerHTML = `
+        function buildSkeleton(trackId) {
+            const li = document.createElement('li');
+            li.className = 'skeleton-item';
+            li.id = 'skel-' + trackId;
+            li.innerHTML = `
             <div class="sk-content">
                 <div class="skeleton-block sk-title"></div>
                 <div class="skeleton-block sk-badge"></div>
@@ -2563,190 +2675,191 @@
                 <div class="sk-play"></div>
                 <div class="skeleton-block sk-duration"></div>
             </div>`;
-        return li;
-    }
-
-    async function discoverAndBuildPlaylist() {
-        const container = document.getElementById('playlistContainer');
-
-        const msg = document.getElementById('loadingMsg');
-        if (msg) msg.remove();
-
-        for (const track of BIBLE_TRACKS) {
-            container.appendChild(buildSkeleton('track' + track.day));
+            return li;
         }
 
-        // Use pre-set durations from tracks.js when available — no file reading needed.
-        // Always wait at least 1s so skeletons are visible.
-        const minDelay = new Promise(resolve => setTimeout(resolve, 1000));
-        const durations = await Promise.all(
-            BIBLE_TRACKS.map(track =>
-                track.duration != null
-                    ? Promise.resolve(track.duration)
-                    : getDuration(getAudioFilePath(track.file || track.title))
-            )
-        );
-        await minDelay;
+        async function discoverAndBuildPlaylist() {
+            const container = document.getElementById('playlistContainer');
 
-        // Swap each skeleton with the real card
-        BIBLE_TRACKS.forEach((track, i) => {
-            const skelEl = document.getElementById('skel-track' + track.day);
-            const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important, track.importantColor, track.cardBg, track.comingSoon);
-            card.dataset.category = track.category || '';
-            card.dataset.day = track.day;
-            skelEl.replaceWith(card);
-        });
+            const msg = document.getElementById('loadingMsg');
+            if (msg) msg.remove();
 
-        // ── Build folder chips from BIBLE_FOLDERS ──────────────────────────
-        const chipsContainer = document.getElementById('folderChips');
-        (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : [{ name: 'All Items', type: 'all' }]).forEach((folder, idx) => {
-            const chip = document.createElement('div');
-            chip.className = 'small-folder-chip' + (idx === 0 ? ' active' : '');
-            chip.textContent = '\uD83D\uDCC1 ' + folder.name;
-            chip.dataset.folderIdx = idx;
-            chip.addEventListener('click', () => {
-                document.querySelectorAll('.small-folder-chip').forEach(c => c.classList.remove('active'));
-                chip.classList.add('active');
-                document.querySelectorAll('.track-item').forEach(cardEl => {
-                    let show = false;
-                    if (folder.type === 'all') {
-                        show = true;
-                    } else if (folder.type === 'category') {
-                        const categories = (cardEl.dataset.category || '')
-                            .split(',')
-                            .map(c => c.trim())
-                            .filter(Boolean);
-                        show = categories.includes(folder.value);
-                    } else if (folder.type === 'days') {
-                        show = folder.value.includes(Number(cardEl.dataset.day));
-                    }
-                    cardEl.style.display = show ? '' : 'none';
-                });
+            for (const track of BIBLE_TRACKS) {
+                container.appendChild(buildSkeleton('track' + track.day));
+            }
+
+            // Use pre-set durations from tracks.js when available — no file reading needed.
+            // Always wait at least 1s so skeletons are visible.
+            const minDelay = new Promise(resolve => setTimeout(resolve, 1000));
+            const durations = await Promise.all(
+                BIBLE_TRACKS.map(track =>
+                    track.duration != null
+                        ? Promise.resolve(track.duration)
+                        : getDuration(getAudioFilePath(track.file || track.title))
+                )
+            );
+            await minDelay;
+
+            // Swap each skeleton with the real card
+            BIBLE_TRACKS.forEach((track, i) => {
+                const skelEl = document.getElementById('skel-track' + track.day);
+                const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important, track.importantColor, track.cardBg, track.comingSoon);
+                card.dataset.category = track.category || '';
+                card.dataset.day = track.day;
+                skelEl.replaceWith(card);
             });
-            chipsContainer.appendChild(chip);
-        });
-    }
 
-    // ── Gate Verses ────────────────────────────────────────────────────────────
-    const GATE_VERSES = [
-        { text: "Your word is a lamp to <em>my feet</em> and a light to my path.", ref: "Psalm 119:105" },
-        { text: "In the beginning was the <em>Word</em>, and the Word was with God.", ref: "John 1:1" },
-        { text: "The Lord is my shepherd; <em>I shall not want</em>.", ref: "Psalm 23:1" },
-        { text: "Trust in the Lord with all your heart and lean not on <em>your own understanding</em>.", ref: "Proverbs 3:5" },
-        { text: "I can do all things through <em>Christ</em> who strengthens me.", ref: "Philippians 4:13" },
-        { text: "For God so loved the world that He gave His <em>one and only Son</em>.", ref: "John 3:16" },
-        { text: "Be still, and <em>know</em> that I am God.", ref: "Psalm 46:10" },
-        { text: "The joy of the Lord is <em>your strength</em>.", ref: "Nehemiah 8:10" },
-    ];
-    (function showGateVerse() {
-        const v = GATE_VERSES[Math.floor(Math.random() * GATE_VERSES.length)];
-        document.getElementById('gateVerseText').innerHTML = v.text;
-        document.getElementById('gateVerseRef').textContent = '— ' + v.ref;
-    })();
-
-    // ── Password Gate (Keypad) ─────────────────────────────────────────────────
-    const CORRECT_HASH = '007ac4200b49a365708b5c1032ebda275ceb56a5c1114751da2c1ffd707ed689'; // SHA-256 of 666999
-    let pinValue = '';
-    const PIN_LENGTH = 6;
-
-    function updatePinDots() {
-        for (let i = 0; i < PIN_LENGTH; i++) {
-            const dot = document.getElementById('dot' + i);
-            dot.classList.toggle('filled', i < pinValue.length);
+            // ── Build folder chips from BIBLE_FOLDERS ──────────────────────────
+            const chipsContainer = document.getElementById('folderChips');
+            (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : [{ name: 'All Items', type: 'all' }]).forEach((folder, idx) => {
+                const chip = document.createElement('div');
+                chip.className = 'small-folder-chip' + (idx === 0 ? ' active' : '');
+                chip.textContent = '\uD83D\uDCC1 ' + folder.name;
+                chip.dataset.folderIdx = idx;
+                chip.addEventListener('click', () => {
+                    document.querySelectorAll('.small-folder-chip').forEach(c => c.classList.remove('active'));
+                    chip.classList.add('active');
+                    document.querySelectorAll('.track-item').forEach(cardEl => {
+                        let show = false;
+                        if (folder.type === 'all') {
+                            show = true;
+                        } else if (folder.type === 'category') {
+                            const categories = (cardEl.dataset.category || '')
+                                .split(',')
+                                .map(c => c.trim())
+                                .filter(Boolean);
+                            show = categories.includes(folder.value);
+                        } else if (folder.type === 'days') {
+                            show = folder.value.includes(Number(cardEl.dataset.day));
+                        }
+                        cardEl.style.display = show ? '' : 'none';
+                    });
+                });
+                chipsContainer.appendChild(chip);
+            });
         }
-    }
 
-    function keyPress(num) {
-        if (pinValue.length >= PIN_LENGTH) return;
-        pinValue += num;
-        updatePinDots();
-        // Auto-submit when all dots filled
-        if (pinValue.length === PIN_LENGTH) {
-            setTimeout(() => unlockPage(), 150);
+        // ── Gate Verses ────────────────────────────────────────────────────────────
+        const GATE_VERSES = [
+            { text: "Your word is a lamp to <em>my feet</em> and a light to my path.", ref: "Psalm 119:105" },
+            { text: "In the beginning was the <em>Word</em>, and the Word was with God.", ref: "John 1:1" },
+            { text: "The Lord is my shepherd; <em>I shall not want</em>.", ref: "Psalm 23:1" },
+            { text: "Trust in the Lord with all your heart and lean not on <em>your own understanding</em>.", ref: "Proverbs 3:5" },
+            { text: "I can do all things through <em>Christ</em> who strengthens me.", ref: "Philippians 4:13" },
+            { text: "For God so loved the world that He gave His <em>one and only Son</em>.", ref: "John 3:16" },
+            { text: "Be still, and <em>know</em> that I am God.", ref: "Psalm 46:10" },
+            { text: "The joy of the Lord is <em>your strength</em>.", ref: "Nehemiah 8:10" },
+        ];
+        (function showGateVerse() {
+            const v = GATE_VERSES[Math.floor(Math.random() * GATE_VERSES.length)];
+            document.getElementById('gateVerseText').innerHTML = v.text;
+            document.getElementById('gateVerseRef').textContent = '— ' + v.ref;
+        })();
+
+        // ── Password Gate (Keypad) ─────────────────────────────────────────────────
+        const CORRECT_HASH = '007ac4200b49a365708b5c1032ebda275ceb56a5c1114751da2c1ffd707ed689'; // SHA-256 of 666999
+        let pinValue = '';
+        const PIN_LENGTH = 6;
+
+        function updatePinDots() {
+            for (let i = 0; i < PIN_LENGTH; i++) {
+                const dot = document.getElementById('dot' + i);
+                dot.classList.toggle('filled', i < pinValue.length);
+            }
         }
-    }
 
-    function keyDel() {
-        pinValue = pinValue.slice(0, -1);
-        updatePinDots();
-    }
+        function keyPress(num) {
+            if (pinValue.length >= PIN_LENGTH) return;
+            pinValue += num;
+            updatePinDots();
+            // Auto-submit when all dots filled
+            if (pinValue.length === PIN_LENGTH) {
+                setTimeout(() => unlockPage(), 150);
+            }
+        }
 
-    async function sha256(str) {
-        const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
-        return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
-    }
+        function keyDel() {
+            pinValue = pinValue.slice(0, -1);
+            updatePinDots();
+        }
 
-    async function unlockPage() {
-        const hash = await sha256(pinValue);
-        if (hash === CORRECT_HASH) {
-            sessionStorage.setItem('bible_audio_unlocked', '1');
+        async function sha256(str) {
+            const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+            return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        async function unlockPage() {
+            const hash = await sha256(pinValue);
+            if (hash === CORRECT_HASH) {
+                sessionStorage.setItem('bible_audio_unlocked', '1');
+                document.getElementById('passwordGate').classList.add('hidden');
+                discoverAndBuildPlaylist();
+            } else {
+                const err = document.getElementById('gateError');
+                err.classList.add('visible');
+                // Shake the pin display
+                const display = document.getElementById('pinDisplay');
+                display.style.animation = 'none';
+                display.style.borderColor = '#ef4444';
+                pinValue = '';
+                updatePinDots();
+                setTimeout(() => {
+                    err.classList.remove('visible');
+                    display.style.borderColor = '#000000';
+                }, 2000);
+            }
+        }
+
+        // Skip gate if already unlocked this session
+        if (sessionStorage.getItem('bible_audio_unlocked') === '1') {
             document.getElementById('passwordGate').classList.add('hidden');
             discoverAndBuildPlaylist();
-        } else {
-            const err = document.getElementById('gateError');
-            err.classList.add('visible');
-            // Shake the pin display
-            const display = document.getElementById('pinDisplay');
-            display.style.animation = 'none';
-            display.style.borderColor = '#ef4444';
-            pinValue = '';
-            updatePinDots();
-            setTimeout(() => {
-                err.classList.remove('visible');
-                display.style.borderColor = '#000000';
-            }, 2000);
         }
-    }
 
-    // Skip gate if already unlocked this session
-    if (sessionStorage.getItem('bible_audio_unlocked') === '1') {
-        document.getElementById('passwordGate').classList.add('hidden');
-        discoverAndBuildPlaylist();
-    }
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('copy', e => e.preventDefault());
+        document.addEventListener('selectstart', e => e.preventDefault());
 
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('copy', e => e.preventDefault());
-    document.addEventListener('selectstart', e => e.preventDefault());
-
-    // Disable Ctrl+scroll zoom and Ctrl +/- keyboard zoom
-    document.addEventListener('wheel', e => { if (e.ctrlKey) e.preventDefault(); }, { passive: false });
-    document.addEventListener('keydown', e => {
-        if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
-            e.preventDefault();
-        }
-    });
-    // Disable pinch-to-zoom on touch devices
-    document.addEventListener('touchmove', e => { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
-    document.addEventListener('gesturestart', e => e.preventDefault());
-
-    // ── Swipe-right to go back ─────────────────────────────────────────────────
-    let swipeStartX = 0;
-    let swipeStartY = 0;
-    document.addEventListener('touchstart', e => {
-        swipeStartX = e.touches[0].clientX;
-        swipeStartY = e.touches[0].clientY;
-    }, { passive: true });
-    document.addEventListener('touchend', e => {
-        const dx = e.changedTouches[0].clientX - swipeStartX;
-        const dy = Math.abs(e.changedTouches[0].clientY - swipeStartY);
-        // Swipe right: > 80px horizontal, starting from left edge (< 40px), and mostly horizontal
-        if (dx > 80 && dy < 60 && swipeStartX < 40) {
-            window.location.href = '../../index.html';
-        }
-    }, { passive: true });
-
-    // ── Toggle track action column on double-clicking title ────────────────────
-    document.querySelectorAll('.brutal-title-block, .gate-title-block').forEach(titleEl => {
-        titleEl.addEventListener('dblclick', () => {
-            document.body.classList.toggle('show-actions');
+        // Disable Ctrl+scroll zoom and Ctrl +/- keyboard zoom
+        document.addEventListener('wheel', e => { if (e.ctrlKey) e.preventDefault(); }, { passive: false });
+        document.addEventListener('keydown', e => {
+            if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+                e.preventDefault();
+            }
         });
-    });
+        // Disable pinch-to-zoom on touch devices
+        document.addEventListener('touchmove', e => { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
+        document.addEventListener('gesturestart', e => e.preventDefault());
 
-    // ── Scroll to top on page load ─────────────────────────────────────────────
-    window.addEventListener('load', () => {
-        window.scrollTo(0, 0);
-    });
-</script>
+        // ── Swipe-right to go back ─────────────────────────────────────────────────
+        let swipeStartX = 0;
+        let swipeStartY = 0;
+        document.addEventListener('touchstart', e => {
+            swipeStartX = e.touches[0].clientX;
+            swipeStartY = e.touches[0].clientY;
+        }, { passive: true });
+        document.addEventListener('touchend', e => {
+            const dx = e.changedTouches[0].clientX - swipeStartX;
+            const dy = Math.abs(e.changedTouches[0].clientY - swipeStartY);
+            // Swipe right: > 80px horizontal, starting from left edge (< 40px), and mostly horizontal
+            if (dx > 80 && dy < 60 && swipeStartX < 40) {
+                window.location.href = '../../index.html';
+            }
+        }, { passive: true });
+
+        // ── Toggle track action column on double-clicking title ────────────────────
+        document.querySelectorAll('.brutal-title-block, .gate-title-block').forEach(titleEl => {
+            titleEl.addEventListener('dblclick', () => {
+                document.body.classList.toggle('show-actions');
+            });
+        });
+
+        // ── Scroll to top on page load ─────────────────────────────────────────────
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+        });
+    </script>
 
 </body>
+
 </html>
