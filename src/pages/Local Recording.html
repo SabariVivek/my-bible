@@ -966,10 +966,22 @@
             border-radius: 20px;
         }
 
+        .day-badge.checkpoint-badge {
+            background-color: #dbeafe;
+            color: #1e40af;
+            border-color: #93c5fd;
+        }
+
         .track-item.playing .day-badge {
             background-color: #fca5a5;
             color: #7f1d1d;
             border-color: #ef4444;
+        }
+
+        .track-item.playing .day-badge.checkpoint-badge {
+            background-color: #bfdbfe;
+            color: #1e3a8a;
+            border-color: #3b82f6;
         }
 
         .day-number-badge {
@@ -1855,7 +1867,7 @@
     </div>
 </div>
 
-<script src="../../resources/audio/bible-teaching/tracks.js?cb=20260813144253"></script>
+<script src="../../resources/audio/bible-teaching/tracks.js?cb=20260813150548"></script>
 <script>
     // ─── CONFIG ──────────────────────────────────────────────────────────────────
     // Track titles are managed in:
@@ -2505,6 +2517,7 @@
             ? (typeof duration === 'string' ? duration : formatTime(duration) + ' min')
             : '--:--';
 
+        const timestamps = getTrackTimestamps(title);
         if (isComingSoon) {
             li.innerHTML = `
                 <div class="track-content">
@@ -2520,7 +2533,6 @@
                     <div class="track-meta-row">
                         <div class="day-number-badge">Day ${dayNum}</div>
                         ${(verse || '').split(';').map(v => `<div class="day-badge">${v.trim()}</div>`).join('')}
-                        ${checkpointBadge}
                     </div>
                 </div>
                 <div class="track-action-column">
