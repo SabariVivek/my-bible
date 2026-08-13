@@ -604,6 +604,166 @@
             margin-top: 5px;
         }
 
+        /* ── Checkpoints & Timestamps Styling ──────────────────────────────────── */
+        .player-checkpoints-container {
+            margin-top: 12px;
+            margin-bottom: 6px;
+            padding-top: 8px;
+            border-top: 2px dashed rgba(0, 0, 0, 0.2);
+        }
+
+        .checkpoints-header-label {
+            font-size: 0.62rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .checkpoints-scroll-row {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 4px 2px 8px 2px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+        }
+
+        .checkpoint-chip-btn {
+            background: #ffffff;
+            border: 2px solid var(--raw-black);
+            box-shadow: 2px 2px 0px var(--raw-black);
+            padding: 5px 10px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            cursor: pointer;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+            font-family: inherit;
+            transition: all 0.1s ease-in-out;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .checkpoint-chip-btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--raw-black);
+        }
+
+        .checkpoint-chip-btn.active {
+            background: var(--brutal-yellow);
+            border-color: var(--raw-black);
+            box-shadow: 3px 3px 0px var(--raw-black);
+        }
+
+        .checkpoint-chip-time {
+            background: var(--raw-black);
+            color: #ffffff;
+            font-size: 0.63rem;
+            font-weight: 900;
+            padding: 2px 6px;
+            border-radius: 4px;
+            letter-spacing: 0.3px;
+        }
+
+        .checkpoint-chip-btn.active .checkpoint-chip-time {
+            background: var(--raw-black);
+            color: var(--brutal-yellow);
+        }
+
+        /* Checkpoints in Study Notes Sheet */
+        .notes-checkpoints-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 8px;
+        }
+
+        .notes-checkpoint-card {
+            background: #ffffff;
+            border: 2px solid #000000;
+            box-shadow: 3px 3px 0px #000000;
+            padding: 8px 10px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            transition: transform 0.1s, box-shadow 0.1s, background 0.15s;
+            font-family: inherit;
+            text-align: left;
+        }
+
+        .notes-checkpoint-card:active,
+        .notes-checkpoint-card.active {
+            background: #fde047;
+            transform: translate(1px, 1px);
+            box-shadow: 2px 2px 0px #000000;
+        }
+
+        .notes-checkpoint-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .notes-checkpoint-time {
+            font-size: 0.65rem;
+            font-weight: 900;
+            background: #000000;
+            color: #fde047;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .notes-checkpoint-card.active .notes-checkpoint-time {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .notes-checkpoint-title {
+            font-size: 0.76rem;
+            font-weight: 800;
+            color: #000000;
+            line-height: 1.3;
+        }
+
+        .notes-sermon-title-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #000000;
+            padding: 6px 12px;
+        }
+
+        .notes-sermon-title-wrapper .notes-sermon-title {
+            padding: 0;
+            background: transparent;
+        }
+
+        .notes-sermon-jump-btn {
+            background: #fde047;
+            color: #000000;
+            border: 1.5px solid #000000;
+            font-size: 0.62rem;
+            font-weight: 900;
+            padding: 2px 8px;
+            cursor: pointer;
+            font-family: inherit;
+            border-radius: 3px;
+            box-shadow: 1px 1px 0px #ffffff;
+            white-space: nowrap;
+            transition: transform 0.05s;
+        }
+
+        .notes-sermon-jump-btn:active {
+            transform: scale(0.95);
+        }
+
         /* ── Jesus Fulfillment ───────────────────────────────────────────── */
         .notes-fulfillment-list {
             display: flex;
@@ -1657,6 +1817,11 @@
             <span class="time-display" id="timeDuration">0:00</span>
         </div>
 
+        <div class="player-checkpoints-container" id="playerCheckpointsContainer" style="display:none;">
+            <div class="checkpoints-header-label">📍 Checkpoints / Sections</div>
+            <div class="checkpoints-scroll-row" id="playerCheckpointsScroll"></div>
+        </div>
+
         <div class="speed-control-container" style="display:none;">
             <span class="speed-label">Speed:</span>
             <div class="speed-options">
@@ -1690,7 +1855,7 @@
     </div>
 </div>
 
-<script src="../../resources/audio/bible-teaching/tracks.js?cb=20260812160659"></script>
+<script src="../../resources/audio/bible-teaching/tracks.js?cb=20260813144253"></script>
 <script>
     // ─── CONFIG ──────────────────────────────────────────────────────────────────
     // Track titles are managed in:
@@ -1739,6 +1904,122 @@
         if (e && e.target !== document.getElementById('notesSheet')) return;
         document.getElementById('notesSheet').classList.add('hidden');
         document.body.style.overflow = '';
+    }
+
+    let currentTrackTimestamps = [];
+
+    function parseTimeToSeconds(val) {
+        if (typeof val === 'number') return val;
+        if (!val) return 0;
+        const parts = String(val).trim().split(':').map(Number);
+        if (parts.length === 2) {
+            return (parts[0] || 0) * 60 + (parts[1] || 0);
+        } else if (parts.length === 3) {
+            return (parts[0] || 0) * 3600 + (parts[1] || 0) * 60 + (parts[2] || 0);
+        }
+        return 0;
+    }
+
+    function getTrackTimestamps(trackTitle) {
+        if (!trackTitle) return [];
+        const tLower = trackTitle.toLowerCase();
+        if (typeof BIBLE_TRACKS !== 'undefined') {
+            const trackObj = BIBLE_TRACKS.find(t => t.title.toLowerCase() === tLower);
+            if (trackObj && trackObj.timestamps && trackObj.timestamps.length) {
+                return trackObj.timestamps;
+            }
+        }
+        const note = findNoteForTitle(trackTitle);
+        if (note) {
+            if (note.timestamps && note.timestamps.length) {
+                return note.timestamps;
+            }
+            if (note.sermonSections && note.sermonSections.length) {
+                const secTimestamps = note.sermonSections
+                    .filter(s => s.time || s.seconds != null)
+                    .map(s => ({
+                        time: s.time || formatTime(s.seconds),
+                        label: s.title,
+                        seconds: s.seconds != null ? s.seconds : parseTimeToSeconds(s.time)
+                    }));
+                if (secTimestamps.length) return secTimestamps;
+            }
+        }
+        return [];
+    }
+
+    function renderPlayerCheckpoints(timestamps) {
+        const container = document.getElementById('playerCheckpointsContainer');
+        const scrollRow = document.getElementById('playerCheckpointsScroll');
+        if (!container || !scrollRow) return;
+        if (!timestamps || !timestamps.length) {
+            container.style.display = 'none';
+            scrollRow.innerHTML = '';
+            return;
+        }
+        container.style.display = 'block';
+        scrollRow.innerHTML = timestamps.map((ts, idx) => {
+            const sec = ts.seconds != null ? ts.seconds : parseTimeToSeconds(ts.time);
+            const timeStr = ts.time || formatTime(sec);
+            const labelStr = ts.label || ts.title || `Section ${idx + 1}`;
+            return `<button class="checkpoint-chip-btn" data-sec="${sec}" data-idx="${idx}" onclick="seekToTimestamp(${sec}, '${labelStr.replace(/'/g, "\\'")}')">
+                <span class="checkpoint-chip-time">▶ ${timeStr}</span>
+                <span>${labelStr}</span>
+            </button>`;
+        }).join('');
+    }
+
+    function updateActiveCheckpointHighlight(currentTime) {
+        if (!currentTrackTimestamps || !currentTrackTimestamps.length) return;
+        let activeIdx = -1;
+        for (let i = 0; i < currentTrackTimestamps.length; i++) {
+            const sec = currentTrackTimestamps[i].seconds != null
+                ? currentTrackTimestamps[i].seconds
+                : parseTimeToSeconds(currentTrackTimestamps[i].time);
+            if (currentTime >= sec - 1) {
+                activeIdx = i;
+            } else {
+                break;
+            }
+        }
+        const chips = document.querySelectorAll('.checkpoint-chip-btn');
+        chips.forEach((chip, idx) => {
+            if (idx === activeIdx) {
+                if (!chip.classList.contains('active')) {
+                    chip.classList.add('active');
+                    chip.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+            } else {
+                chip.classList.remove('active');
+            }
+        });
+    }
+
+    function seekToTimestamp(seconds, label) {
+        if (!audio.src) return;
+        const targetTime = Math.max(0, Math.min(seconds, audio.duration || seconds));
+        hasPlaybackCompleted = false;
+        audio.currentTime = targetTime;
+
+        if (audio.paused) {
+            const playPromise = audio.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+                playPromise.catch(() => {
+                    isCurrentlyPlaying = false;
+                    updatePlayButtonUI(false);
+                });
+            }
+            isCurrentlyPlaying = true;
+            updatePlayButtonUI(true);
+            const targetCard = activeTrackElementId ? document.getElementById(activeTrackElementId) : null;
+            if (targetCard) {
+                targetCard.classList.add('playing', 'media-active');
+                targetCard.classList.remove('media-paused');
+            }
+        }
+        updateTimelineProgress(targetTime, audio.duration);
+        timeCurrent.innerText = formatTime(targetTime);
+        updateActiveCheckpointHighlight(targetTime);
     }
 
     function populateNotesSheet(note) {
@@ -1977,6 +2258,10 @@
         pillGroup.classList.add('active');
         globalStopBtn.classList.add('active');
 
+        // Load timestamps for active track
+        currentTrackTimestamps = getTrackTimestamps(title);
+        renderPlayerCheckpoints(currentTrackTimestamps);
+
         // Show notes button only if this track has study notes
         const note = findNoteForTitle(title);
         if (note) {
@@ -2079,6 +2364,8 @@
         }
         
         pendingTrackData = null;
+        currentTrackTimestamps = [];
+        renderPlayerCheckpoints([]);
 
         titleLabel.innerHTML = "Lesson Title";
         dayLabel.innerText = "STATUS // IDLE";
@@ -2141,6 +2428,7 @@
     audio.addEventListener('timeupdate', () => {
         timeCurrent.innerText = formatTime(audio.currentTime);
         updateTimelineProgress(audio.currentTime, audio.duration);
+        updateActiveCheckpointHighlight(audio.currentTime);
     });
 
     audio.addEventListener('durationchange', () => {
@@ -2232,6 +2520,7 @@
                     <div class="track-meta-row">
                         <div class="day-number-badge">Day ${dayNum}</div>
                         ${(verse || '').split(';').map(v => `<div class="day-badge">${v.trim()}</div>`).join('')}
+                        ${checkpointBadge}
                     </div>
                 </div>
                 <div class="track-action-column">

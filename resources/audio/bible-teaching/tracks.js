@@ -413,7 +413,26 @@ const BIBLE_TRACKS = [
     duration: "60:50 min",
     verse: "1 Thes 4:16-17",
     desc: "A study of seven biblical raptures and those who were caught up into God's presence.",
-    category: "7's"
+    category: "7's",
+    timestamps: [
+      { time: "01:19", label: "Introduction", seconds: 79 },
+      { time: "05:21", label: "Enoch", seconds: 321 },
+      { time: "11:18", label: "Elijah", seconds: 678 },
+      { time: "22:42", label: "Jesus Christ", seconds: 1362 },
+      { time: "27:14", label: "Apostle Paul", seconds: 1634 },
+      { time: "38:03", label: "The Church", seconds: 2283 },
+      { time: "40:17", label: "The 1,44,000", seconds: 2417 },
+      { time: "50:28", label: "Two Witnessess", seconds: 3028 },
+      { time: "58:08", label: "End", seconds: 3488 }
+    ]
+  },
+  {
+    day: 49,
+    title: "The Wedding at Cana",
+    duration: "59:06 min",
+    verse: "John 2:1-11",
+    desc: "Jesus performed His first miracle by turning water into wine, revealing His glory.",
+    category: "Miracles"
   }
 ];
 
@@ -441,7 +460,8 @@ const BIBLE_FOLDERS = [
   { name: "Leviticus", type: "category", value: "Leviticus" },
   { name: "Parables", type: "category", value: "Parables" },
   { name: "Prophets", type: "category", value: "Prophets" },
-  { name: "7's", type: "category", value: "7's" }
+  { name: "7's", type: "category", value: "7's" },
+  { name: "Miracles", type: "category", value: "Miracles" }
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -449,6 +469,120 @@ const BIBLE_FOLDERS = [
 // Add a new object here for each track that has study notes.
 // ─────────────────────────────────────────────────────────────────────────────
 const BIBLE_STUDY_NOTES = [
+  // The Seven Raptures
+  {
+    title: "The Seven Raptures",
+    tags: ["7's", "Prophets", "Rapture"],
+    summary: "A comprehensive biblical study on the seven raptures recorded in Scripture, tracing God's pattern of catching up His servants and believers into His presence across different eras of redemptive history.",
+    timestamps: [
+      { time: "01:19", label: "Introduction", seconds: 79 },
+      { time: "05:21", label: "Enoch (1st Rapture)", seconds: 321 },
+      { time: "11:18", label: "Elijah (2nd Rapture)", seconds: 678 },
+      { time: "22:42", label: "Jesus Christ (3rd Rapture)", seconds: 1362 },
+      { time: "27:14", label: "Apostle Paul (4th Rapture)", seconds: 1634 },
+      { time: "38:03", label: "The Church (5th Rapture)", seconds: 2283 },
+      { time: "40:17", label: "The 144,000 (6th Rapture)", seconds: 2417 },
+      { time: "50:28", label: "Two Witnesses (7th Rapture)", seconds: 3028 },
+      { time: "58:08", label: "End / Conclusion", seconds: 3488 }
+    ],
+    scripturePassages: [
+      { reference: "Genesis 5:24", summary: "Enoch walked with God; then he was no more, because God took him away." },
+      { reference: "2 Kings 2:11", summary: "Elijah went up by a whirlwind into heaven in a chariot of fire." },
+      { reference: "Acts 1:9-11", summary: "Jesus was taken up before their eyes, and a cloud hid Him from their sight." },
+      { reference: "2 Corinthians 12:2-4", summary: "A man in Christ was caught up to the third heaven / Paradise." },
+      { reference: "1 Thessalonians 4:16-17", summary: "Believers caught up together in the clouds to meet the Lord in the air." },
+      { reference: "Revelation 14:1-5", summary: "The 144,000 redeemed from the earth standing with the Lamb on Mt. Zion." },
+      { reference: "Revelation 11:11-12", summary: "The Two Witnesses resurrected and caught up to heaven in a cloud." }
+    ],
+    sermonSections: [
+      {
+        title: "1. Introduction",
+        time: "01:19",
+        seconds: 79,
+        points: [
+          "Meaning of 'Rapture' (Greek: Harpazo - caught up or snatched away).",
+          "Overview of God's pattern of catching up His servants across Biblical history."
+        ]
+      },
+      {
+        title: "2. Enoch — 1st Rapture",
+        time: "05:21",
+        seconds: 321,
+        points: [
+          "The first person raptured before the Genesis flood.",
+          "Walking with God by faith and escaping death."
+        ]
+      },
+      {
+        title: "3. Elijah — 2nd Rapture",
+        time: "11:18",
+        seconds: 678,
+        points: [
+          "Taken up to heaven in a whirlwind and chariot of fire.",
+          "Prophetic shadow of believers raptured before divine judgment."
+        ]
+      },
+      {
+        title: "4. Jesus Christ — 3rd Rapture",
+        time: "22:42",
+        seconds: 1362,
+        points: [
+          "Ascension post-resurrection from Mount of Olives into heaven.",
+          "The forerunner who entered into heaven for us."
+        ]
+      },
+      {
+        title: "5. Apostle Paul — 4th Rapture",
+        time: "27:14",
+        seconds: 1634,
+        points: [
+          "Caught up to the third heaven / Paradise.",
+          "Received revelations of the mysteries of Christ and the Church."
+        ]
+      },
+      {
+        title: "6. The Church — 5th Rapture",
+        time: "38:03",
+        seconds: 2283,
+        points: [
+          "The Blessed Hope: dead in Christ rise first, then living believers caught up.",
+          "Transformed in a moment, in the twinkling of an eye."
+        ]
+      },
+      {
+        title: "7. The 144,000 — 6th Rapture",
+        time: "40:17",
+        seconds: 2417,
+        points: [
+          "Sealed servants of Israel redeemed from among men during the Tribulation.",
+          "Firstfruits standing with the Lamb on Mount Zion."
+        ]
+      },
+      {
+        title: "8. Two Witnesses — 7th Rapture",
+        time: "50:28",
+        seconds: 3028,
+        points: [
+          "Martyred prophets resurrected after 3.5 days in Jerusalem.",
+          "Ascend to heaven in a cloud in full view of their enemies."
+        ]
+      },
+      {
+        title: "9. End / Conclusion",
+        time: "58:08",
+        seconds: 3488,
+        points: [
+          "Summary of the seven raptures and living in readiness for the Lord's return."
+        ]
+      }
+    ],
+    corePrinciples: [
+      "Rapture is a recurring Biblical pattern, not an isolated future event.",
+      "Faith and intimacy with God precede being caught up into His presence.",
+      "Jesus Christ's ascension guarantees the rapture of all who belong to Him.",
+      "Believers are called to live with holy expectation and readiness for Christ's return."
+    ]
+  },
   // Who is Antichrist?
   {
     title: "Who is Antichrist?",
