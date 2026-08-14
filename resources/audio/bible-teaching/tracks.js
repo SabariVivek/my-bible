@@ -432,7 +432,23 @@ const BIBLE_TRACKS = [
     duration: "59:06 min",
     verse: "John 2:1-11",
     desc: "Jesus performed His first miracle by turning water into wine, revealing His glory.",
-    category: "Miracles"
+    category: "Miracles",
+    timestamps: [
+      { time: "02:06", label: "Introduction", seconds: 126 },
+      { time: "03:03", label: "1<sup>st</sup> Verse", seconds: 183 },
+      { time: "17:13", label: "2<sup>nd</sup> Verse", seconds: 1033 },
+      { time: "23:05", label: "3<sup>rd</sup> Verse", seconds: 1386 },
+      { time: "30:13", label: "4<sup>th</sup> Verse", seconds: 1813 },
+      { time: "33:25", label: "5<sup>th</sup> Verse", seconds: 2005 },
+      { time: "37:00", label: "6<sup>th</sup> Verse", seconds: 2220 },
+      { time: "40:13", label: "7<sup>th</sup> Verse", seconds: 2413 },
+      { time: "42:09", label: "8<sup>th</sup> Verse", seconds: 2529 },
+      { time: "44:59", label: "9<sup>th</sup> Verse", seconds: 2699 },
+      { time: "46:48", label: "10<sup>th</sup> Verse", seconds: 2808 },
+      { time: "47:39", label: "11<sup>th</sup> Verse", seconds: 2859 },
+      { time: "52:55", label: "12<sup>th</sup> Verse", seconds: 3175 },
+      { time: "56:21", label: "End", seconds: 3381 }
+    ]
   }
 ];
 
