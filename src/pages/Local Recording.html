@@ -1486,8 +1486,8 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 3px;
-            background: rgba(0, 0, 0, 0.28);
+            width: 1.5px;
+            background: rgba(0, 0, 0, 0.35);
             transform: translateX(-50%);
             transition: background 0.15s ease;
         }
@@ -1580,9 +1580,19 @@
         }
 
         @keyframes partBadgePop {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.22); background-color: #3b82f6; color: #fff; }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.22);
+                background-color: #3b82f6;
+                color: #fff;
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         .scrub-time-label {
@@ -2110,8 +2120,8 @@
         </div>
     </div>
 
-    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20260814142320"></script>
-    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20260814142320"></script>
+    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20260814142950"></script>
+    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20260814142950"></script>
     <script>
         // ─── CONFIG ──────────────────────────────────────────────────────────────────
         // Track titles are managed in:
