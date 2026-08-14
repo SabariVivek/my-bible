@@ -1449,7 +1449,8 @@
             margin-bottom: 20px;
             cursor: pointer;
             touch-action: none;
-            padding: 10px 0;
+            padding: 22px 0 10px 0;
+            position: relative;
         }
 
         .time-display {
@@ -1469,6 +1470,30 @@
             border-radius: 30px;
             margin: 0 12px;
             position: relative;
+            overflow: visible;
+        }
+
+        .track-part-markers {
+            position: absolute;
+            inset: 0;
+            border-radius: 30px;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .track-part-marker {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: rgba(0, 0, 0, 0.28);
+            transform: translateX(-50%);
+            transition: background 0.15s ease;
+        }
+
+        .track-part-marker.passed {
+            background: rgba(255, 255, 255, 0.85);
         }
 
         .track-bar-fill {
@@ -1476,6 +1501,13 @@
             width: 0%;
             background-color: var(--brutal-blue);
             border-radius: 30px 0 0 30px;
+            position: relative;
+            z-index: 2;
+            transition: background-color 0.15s ease;
+        }
+
+        .timeline-container.dragging .track-bar-fill {
+            background-color: #2563eb;
         }
 
         .track-handle {
@@ -1490,13 +1522,86 @@
             box-shadow: 2px 2px 0px var(--raw-black);
             transform: translate(-50%, -50%) scale(0.8);
             pointer-events: none;
-            transition: transform 0.1s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
+            z-index: 4;
+            transition: transform 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.1s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.12s ease;
         }
 
         .timeline-container:hover .track-handle,
         .timeline-container.dragging .track-handle {
-            transform: translate(-50%, -50%) scale(1.1);
+            transform: translate(-50%, -50%) scale(1.25);
             background-color: var(--brutal-yellow);
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15), 3px 3px 0px var(--raw-black);
+        }
+
+        /* ── Scrubbing Preview Bubble ─────────────────────────────────────── */
+        .scrub-preview-bubble {
+            position: absolute;
+            bottom: calc(100% + 10px);
+            left: 0%;
+            transform: translateX(-50%) scale(0);
+            transform-origin: bottom center;
+            background: #ffffff;
+            border: 2.5px solid var(--raw-black);
+            box-shadow: 3px 3px 0px var(--raw-black);
+            padding: 3px 6px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            z-index: 20;
+            white-space: nowrap;
+            opacity: 0;
+            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.15s ease;
+        }
+
+        .timeline-container.dragging .scrub-preview-bubble,
+        .timeline-container:hover .scrub-preview-bubble {
+            transform: translateX(-50%) scale(1);
+            opacity: 1;
+        }
+
+        .scrub-part-badge {
+            background: var(--brutal-yellow);
+            color: var(--raw-black);
+            border: 1.5px solid var(--raw-black);
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 2px 7px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+
+        .scrub-part-badge.pop-anim {
+            animation: partBadgePop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes partBadgePop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.22); background-color: #3b82f6; color: #fff; }
+            100% { transform: scale(1); }
+        }
+
+        .scrub-time-label {
+            font-size: 11px;
+            font-weight: 900;
+            color: var(--raw-black);
+            font-family: inherit;
+        }
+
+        .scrub-bubble-arrow {
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 8px;
+            height: 8px;
+            background: #ffffff;
+            border-right: 2.5px solid var(--raw-black);
+            border-bottom: 2.5px solid var(--raw-black);
         }
 
         .audio-controls {
@@ -1954,8 +2059,13 @@
             <div class="timeline-container" id="timelineContainer">
                 <span class="time-display" id="timeCurrent">0:00</span>
                 <div class="track-bar-bg" id="scrubArea">
+                    <div class="track-part-markers" id="trackPartMarkers"></div>
                     <div class="track-bar-fill" id="scrubFill"></div>
                     <div class="track-handle" id="scrubHandle"></div>
+                    <div class="scrub-preview-bubble" id="scrubPreviewBubble">
+                        <span class="scrub-part-badge" id="scrubPartBadge">Part 1</span>
+                        <div class="scrub-bubble-arrow"></div>
+                    </div>
                 </div>
                 <span class="time-display" id="timeDuration">0:00</span>
             </div>
@@ -2000,8 +2110,8 @@
         </div>
     </div>
 
-    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20260814141054"></script>
-    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20260814141054"></script>
+    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20260814142320"></script>
+    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20260814142320"></script>
     <script>
         // ─── CONFIG ──────────────────────────────────────────────────────────────────
         // Track titles are managed in:
@@ -2289,12 +2399,122 @@
         const pauseSVG = `<svg viewBox="0 0 24 24" style="width:24px; height:24px; fill:black;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
         const reloadSVG = '<img src="../../resources/icons/reload.png" alt="Reload">';
 
+        let lastActivePartIndex = -1;
+
+        function getTrackPartInfo(currentTime, duration) {
+            const safeDuration = Number.isFinite(duration) && duration > 0 ? duration : 0;
+            const safeCurrent = Number.isFinite(currentTime) && currentTime > 0 ? currentTime : 0;
+
+            if (currentTrackTimestamps && currentTrackTimestamps.length > 0) {
+                let activeIdx = 0;
+                for (let i = 0; i < currentTrackTimestamps.length; i++) {
+                    const sec = currentTrackTimestamps[i].seconds != null
+                        ? currentTrackTimestamps[i].seconds
+                        : parseTimeToSeconds(currentTrackTimestamps[i].time);
+                    if (safeCurrent >= sec - 0.5) {
+                        activeIdx = i;
+                    } else {
+                        break;
+                    }
+                }
+                const ts = currentTrackTimestamps[activeIdx];
+                const rawLabel = ts ? (ts.label || ts.title || `Section ${activeIdx + 1}`) : `Part ${activeIdx + 1}`;
+                return {
+                    partIndex: activeIdx,
+                    badgeText: `Part ${activeIdx + 1}`,
+                    fullTitle: rawLabel,
+                    totalParts: currentTrackTimestamps.length
+                };
+            }
+
+            const percent = safeDuration ? (safeCurrent / safeDuration) * 100 : 0;
+            let partIdx = 0;
+            if (percent >= 66.6) {
+                partIdx = 2;
+            } else if (percent >= 33.3) {
+                partIdx = 1;
+            } else {
+                partIdx = 0;
+            }
+
+            return {
+                partIndex: partIdx,
+                badgeText: `Part ${partIdx + 1}`,
+                fullTitle: `Part ${partIdx + 1}`,
+                totalParts: 3
+            };
+        }
+
+        function renderTrackPartMarkers(duration) {
+            const markersContainer = document.getElementById('trackPartMarkers');
+            if (!markersContainer) return;
+            markersContainer.innerHTML = '';
+
+            const safeDuration = Number.isFinite(duration) && duration > 0 ? duration : 0;
+            if (!safeDuration) return;
+
+            let markerPercentages = [];
+            if (currentTrackTimestamps && currentTrackTimestamps.length > 1) {
+                for (let i = 1; i < currentTrackTimestamps.length; i++) {
+                    const sec = currentTrackTimestamps[i].seconds != null
+                        ? currentTrackTimestamps[i].seconds
+                        : parseTimeToSeconds(currentTrackTimestamps[i].time);
+                    const pct = (sec / safeDuration) * 100;
+                    if (pct > 2 && pct < 98) markerPercentages.push(pct);
+                }
+            } else {
+                markerPercentages = [33.33, 66.66];
+            }
+
+            markerPercentages.forEach(pct => {
+                const marker = document.createElement('div');
+                marker.className = 'track-part-marker';
+                marker.style.left = pct + '%';
+                marker.dataset.pct = pct;
+                markersContainer.appendChild(marker);
+            });
+        }
+
+        function updateScrubPreviewBubble(current, duration) {
+            const scrubPreviewBubble = document.getElementById('scrubPreviewBubble');
+            const scrubPartBadge = document.getElementById('scrubPartBadge');
+            if (!scrubPreviewBubble || !scrubPartBadge) return;
+
+            const safeDuration = Number.isFinite(duration) && duration > 0 ? duration : 0;
+            const safeCurrent = Number.isFinite(current) && current > 0 ? current : 0;
+            const percent = safeDuration ? (safeCurrent / safeDuration) * 100 : 0;
+
+            const clampedLeft = Math.max(4, Math.min(96, percent));
+            scrubPreviewBubble.style.left = clampedLeft + '%';
+
+            const partInfo = getTrackPartInfo(safeCurrent, safeDuration);
+
+            if (lastActivePartIndex !== partInfo.partIndex) {
+                lastActivePartIndex = partInfo.partIndex;
+                scrubPartBadge.classList.remove('pop-anim');
+                void scrubPartBadge.offsetWidth;
+                scrubPartBadge.classList.add('pop-anim');
+            }
+
+            scrubPartBadge.innerText = partInfo.badgeText;
+
+            document.querySelectorAll('.track-part-marker').forEach(m => {
+                const pct = parseFloat(m.dataset.pct);
+                if (percent >= pct) {
+                    m.classList.add('passed');
+                } else {
+                    m.classList.remove('passed');
+                }
+            });
+        }
+
         function updateTimelineProgress(current, duration) {
             const safeDuration = Number.isFinite(duration) && duration > 0 ? duration : 0;
             const safeCurrent = Number.isFinite(current) && current > 0 ? current : 0;
             const percent = safeDuration ? (safeCurrent / safeDuration) * 100 : 0;
             scrubFill.style.width = percent + '%';
             scrubHandle.style.left = percent + '%';
+            updateScrubPreviewBubble(safeCurrent, safeDuration);
         }
 
         function processScrub(clientX) {
@@ -2423,6 +2643,7 @@
             // Load timestamps for active track
             currentTrackTimestamps = getTrackTimestamps(title);
             renderPlayerCheckpoints(currentTrackTimestamps);
+            renderTrackPartMarkers(audio.duration);
 
             // Show notes button only if this track has study notes
             const note = findNoteForTitle(title);
@@ -2602,6 +2823,7 @@
 
         audio.addEventListener('durationchange', () => {
             timeDuration.innerText = formatTime(audio.duration);
+            renderTrackPartMarkers(audio.duration);
             updateTimelineProgress(audio.currentTime, audio.duration);
         });
 
