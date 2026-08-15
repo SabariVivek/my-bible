@@ -318,6 +318,117 @@
             box-shadow: 1px 1px 0px var(--raw-black);
         }
 
+        .folder-menu-chip {
+            background: #ffffff;
+            border: 2px solid var(--raw-black);
+            box-shadow: 2px 2px 0px var(--raw-black);
+            border-radius: 4px;
+            padding: 5px 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: transform 0.05s, box-shadow 0.05s, background-color 0.1s;
+        }
+
+        .folder-menu-chip:hover {
+            background: #f8fafc;
+        }
+
+        .folder-menu-chip.active {
+            background: var(--raw-black);
+            color: #ffffff;
+        }
+
+        .folder-menu-chip.active svg rect,
+        .folder-menu-chip.active svg line,
+        .folder-menu-chip.active svg path {
+            stroke: #ffffff;
+        }
+
+        .folder-menu-chip:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--raw-black);
+        }
+
+        .folder-menu-chip svg {
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        /* Folders Grid View */
+        .folders-grid-view {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .folder-grid-card {
+            background-color: var(--bg-card);
+            border: 3px solid var(--raw-black);
+            box-shadow: 4px 4px 0px var(--raw-black);
+            border-radius: 4px;
+            padding: 14px 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            cursor: pointer;
+            transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 95px;
+        }
+
+        .folder-grid-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--raw-black);
+            background-color: #fffdf5;
+        }
+
+        .folder-grid-card:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px var(--raw-black);
+        }
+
+        .folder-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .folder-card-icon {
+            font-size: 1.35rem;
+            line-height: 1;
+        }
+
+        .folder-card-badge {
+            font-size: 10px;
+            font-weight: 800;
+            background: #ffffff;
+            border: 1.5px solid var(--raw-black);
+            padding: 2px 6px;
+            border-radius: 4px;
+            box-shadow: 1px 1px 0px var(--raw-black);
+            color: #212121;
+            letter-spacing: 0.3px;
+        }
+
+        .folder-card-name {
+            font-size: 0.92rem;
+            font-weight: 900;
+            color: var(--raw-black);
+            letter-spacing: -0.3px;
+            line-height: 1.25;
+            word-break: break-word;
+        }
+
         /* Global Stop Context Button Asset */
         .global-stop-btn {
             background-color: var(--brutal-red);
@@ -2019,6 +2130,8 @@
         <div class="top-folders-container" id="folderChips"></div>
         <div class="folder-count-text" id="folderCountText"></div>
 
+        <div class="folders-grid-view" id="foldersGridView" style="display: none;"></div>
+
         <ul class="playlist" id="playlistContainer">
             <li class="loading-state" id="loadingMsg">Scanning recordings…</li>
         </ul>
@@ -2132,8 +2245,8 @@
         </div>
     </div>
 
-    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20260815131209"></script>
-    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20260815131209"></script>
+    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20260815131929"></script>
+    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20260815131929"></script>
     <script>
         // ─── CONFIG ──────────────────────────────────────────────────────────────────
         // Track titles are managed in:
@@ -2988,6 +3101,27 @@
 
             // ── Build folder chips from BIBLE_FOLDERS ──────────────────────────
             const chipsContainer = document.getElementById('folderChips');
+            chipsContainer.innerHTML = '';
+
+            // 1. Menu Icon button as the very first item (matching right-menu-btn from Bible page)
+            const menuBtn = document.createElement('button');
+            menuBtn.id = 'folderMenuBtn';
+            menuBtn.className = 'folder-menu-chip';
+            menuBtn.setAttribute('aria-label', 'Toggle Folders View');
+            menuBtn.innerHTML = `
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+            `;
+            menuBtn.addEventListener('click', () => {
+                toggleFoldersGridView();
+            });
+            chipsContainer.appendChild(menuBtn);
+
+            // 2. Folder chips
             const folders = (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : [{ name: 'All Items', type: 'all' }]);
             folders.forEach((folder, idx) => {
                 const chip = document.createElement('div');
@@ -2995,9 +3129,7 @@
                 chip.textContent = '📁 ' + folder.name;
                 chip.dataset.folderIdx = idx;
                 chip.addEventListener('click', () => {
-                    document.querySelectorAll('.small-folder-chip').forEach(c => c.classList.remove('active'));
-                    chip.classList.add('active');
-                    updateFilteredTrackCount(folder);
+                    selectFolder(idx, folder);
                 });
                 chipsContainer.appendChild(chip);
             });
@@ -3005,6 +3137,97 @@
             if (folders.length > 0) {
                 updateFilteredTrackCount(folders[0]);
             }
+        }
+
+        let isFolderGridOpen = false;
+        let selectedFolderIdx = 0;
+
+        function getFolderAudioCount(folder) {
+            if (folder.type === 'all') {
+                return (typeof BIBLE_TRACKS !== 'undefined') ? BIBLE_TRACKS.length : 0;
+            }
+            if (folder.type === 'category') {
+                return (typeof BIBLE_TRACKS !== 'undefined') ? BIBLE_TRACKS.filter(t => {
+                    const cats = (t.category || '').split(',').map(c => c.trim()).filter(Boolean);
+                    return cats.includes(folder.value);
+                }).length : 0;
+            }
+            if (folder.type === 'days') {
+                return (typeof BIBLE_TRACKS !== 'undefined') ? BIBLE_TRACKS.filter(t => (folder.value || []).includes(Number(t.day))).length : 0;
+            }
+            return 0;
+        }
+
+        function renderFoldersGrid() {
+            const grid = document.getElementById('foldersGridView');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            const folders = (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : [{ name: 'All Items', type: 'all' }]);
+            folders.forEach((folder, idx) => {
+                const count = getFolderAudioCount(folder);
+                const card = document.createElement('div');
+                card.className = 'folder-grid-card';
+                card.innerHTML = `
+                    <div class="folder-card-top">
+                        <span class="folder-card-icon">📁</span>
+                        <span class="folder-card-badge">${count} Audio</span>
+                    </div>
+                    <div class="folder-card-name">${folder.name}</div>
+                `;
+                card.addEventListener('click', () => {
+                    selectFolder(idx, folder);
+                });
+                grid.appendChild(card);
+            });
+        }
+
+        function toggleFoldersGridView(show) {
+            const grid = document.getElementById('foldersGridView');
+            const playlist = document.getElementById('playlistContainer');
+            const menuBtn = document.getElementById('folderMenuBtn');
+            const countEl = document.getElementById('folderCountText');
+            if (!grid || !playlist) return;
+
+            isFolderGridOpen = (typeof show === 'boolean') ? show : !isFolderGridOpen;
+
+            if (isFolderGridOpen) {
+                // Clear active highlight from folder chips while in menu/grid view
+                document.querySelectorAll('.small-folder-chip').forEach(c => c.classList.remove('active'));
+                renderFoldersGrid();
+                grid.style.display = 'grid';
+                playlist.style.display = 'none';
+                if (menuBtn) menuBtn.classList.add('active');
+                const folders = (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : []);
+                if (countEl) countEl.textContent = `${folders.length} Folders`;
+            } else {
+                grid.style.display = 'none';
+                playlist.style.display = '';
+                if (menuBtn) menuBtn.classList.remove('active');
+                const chips = document.querySelectorAll('.small-folder-chip');
+                chips.forEach((c, i) => {
+                    c.classList.toggle('active', i === selectedFolderIdx);
+                });
+                const folders = (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : [{ name: 'All Items', type: 'all' }]);
+                const currentFolder = folders[selectedFolderIdx] || folders[0];
+                updateFilteredTrackCount(currentFolder);
+            }
+        }
+
+        function selectFolder(idx, folder) {
+            selectedFolderIdx = idx;
+            toggleFoldersGridView(false);
+
+            const chips = document.querySelectorAll('.small-folder-chip');
+            chips.forEach((c, i) => {
+                const isActive = (i === idx);
+                c.classList.toggle('active', isActive);
+                if (isActive) {
+                    c.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+            });
+
+            updateFilteredTrackCount(folder);
         }
 
         function updateFilteredTrackCount(folder) {
