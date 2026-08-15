@@ -457,6 +457,14 @@ const BIBLE_TRACKS = [
       { time: "52:55", label: "12<sup>th</sup> Verse", seconds: 3175 },
       { time: "56:21", label: "End", seconds: 3381 }
     ]
+  },
+  {
+    day: 50,
+    title: "Ananias and Sapphira",
+    duration: "30:08 min",
+    verse: "Acts 5:1-11",
+    desc: "Ananias and Sapphira lied to the Holy Spirit and died immediately.",
+    category: "Characters"
   }
 ];
 
