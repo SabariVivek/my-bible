@@ -2437,22 +2437,7 @@
                 };
             }
 
-            const percent = safeDuration ? (safeCurrent / safeDuration) * 100 : 0;
-            let partIdx = 0;
-            if (percent >= 66.6) {
-                partIdx = 2;
-            } else if (percent >= 33.3) {
-                partIdx = 1;
-            } else {
-                partIdx = 0;
-            }
-
-            return {
-                partIndex: partIdx,
-                badgeText: `Part ${partIdx + 1}`,
-                fullTitle: `Part ${partIdx + 1}`,
-                totalParts: 3
-            };
+            return null;
         }
 
         function renderTrackPartMarkers(duration) {
@@ -2472,8 +2457,6 @@
                     const pct = (sec / safeDuration) * 100;
                     if (pct > 2 && pct < 98) markerPercentages.push(pct);
                 }
-            } else {
-                markerPercentages = [33.33, 66.66];
             }
 
             markerPercentages.forEach(pct => {
@@ -2499,14 +2482,18 @@
 
             const partInfo = getTrackPartInfo(safeCurrent, safeDuration);
 
-            if (lastActivePartIndex !== partInfo.partIndex) {
-                lastActivePartIndex = partInfo.partIndex;
-                scrubPartBadge.classList.remove('pop-anim');
-                void scrubPartBadge.offsetWidth;
-                scrubPartBadge.classList.add('pop-anim');
+            if (partInfo) {
+                scrubPartBadge.style.display = 'inline-block';
+                if (lastActivePartIndex !== partInfo.partIndex) {
+                    lastActivePartIndex = partInfo.partIndex;
+                    scrubPartBadge.classList.remove('pop-anim');
+                    void scrubPartBadge.offsetWidth;
+                    scrubPartBadge.classList.add('pop-anim');
+                }
+                scrubPartBadge.innerText = partInfo.badgeText;
+            } else {
+                scrubPartBadge.style.display = 'none';
             }
-
-            scrubPartBadge.innerText = partInfo.badgeText;
 
             document.querySelectorAll('.track-part-marker').forEach(m => {
                 const pct = parseFloat(m.dataset.pct);
