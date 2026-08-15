@@ -2483,6 +2483,7 @@
             const partInfo = getTrackPartInfo(safeCurrent, safeDuration);
 
             if (partInfo) {
+                scrubPreviewBubble.style.display = '';
                 scrubPartBadge.style.display = 'inline-block';
                 if (lastActivePartIndex !== partInfo.partIndex) {
                     lastActivePartIndex = partInfo.partIndex;
@@ -2492,7 +2493,7 @@
                 }
                 scrubPartBadge.innerText = partInfo.badgeText;
             } else {
-                scrubPartBadge.style.display = 'none';
+                scrubPreviewBubble.style.display = 'none';
             }
 
             document.querySelectorAll('.track-part-marker').forEach(m => {
