@@ -27,7 +27,15 @@ const BIBLE_TRACKS = [
     duration: "40:58 min",
     verse: "Galatians 4:4",
     desc: "The 400 years of prophetic silence and God's perfect timing to send His Son.",
-    category: "Do You Know?"
+    category: "Do You Know?",
+    timestamps: [
+      { time: "01:13", label: "Introduction", seconds: 73 },
+      { time: "03:15", label: "Language", seconds: 195 },
+      { time: "18:47", label: "Cross Death", seconds: 1127 },
+      { time: "26:12", label: "Adoption as Son", seconds: 1572 },
+      { time: "31:34", label: "Transportation", seconds: 1894 },
+      { time: "40:05", label: "End", seconds: 2405 }
+    ]
   },
   {
     day: 3,

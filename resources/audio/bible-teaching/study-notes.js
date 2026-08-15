@@ -616,5 +616,65 @@ const BIBLE_STUDY_NOTES = [
       "Every believer should obey Christ by being baptized.",
       "Baptism marks the beginning of a life of discipleship and obedience."
     ]
+  },
+  // Why 400 years wait?
+  {
+    title: "Why 400 years wait?",
+    tags: ["Do You Know?", "Foundation"],
+    summary: "A study on the 400 years of prophetic silence between the Old and New Testaments and God's perfect timing in sending His Son (Galatians 4:4). During this intertestamental era, God actively prepared the world through four major reasons: a universal language (Greek), Christ's cross death, our adoption as sons, and worldwide transportation infrastructure (Roman roads).",
+    scripturePassages: [
+      { reference: "Galatians 4:4-5", summary: "But when the fullness of the time had come, God sent forth His Son, born of a woman, born under the law, to redeem those who were under the law, that we might receive the adoption as sons." },
+      { reference: "Matthew 28:19", summary: "Go therefore and make disciples of all the nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit." }
+    ],
+    sermonSections: [
+      {
+        title: "1. Introduction",
+        points: [
+          "Understanding the 400 years of prophetic silence between Malachi and the coming of Jesus Christ.",
+          "Overview of God's sovereign plan and timing across redemptive history."
+        ]
+      },
+      {
+        title: "2. Reason I: Language",
+        points: [
+          "The rise and establishment of Greek as a common international language during the 400 years.",
+          "Enabled the Gospel message to be written, translated (Septuagint), and understood across diverse nations."
+        ]
+      },
+      {
+        title: "3. Reason II: Cross Death",
+        points: [
+          "The precise historical and spiritual timing for Christ's sacrificial death on the cross.",
+          "God set the stage for redemption through the cross at the perfect moment in history."
+        ]
+      },
+      {
+        title: "4. Reason III: Adoption as Son",
+        points: [
+          "Under Jewish law in ancient Israel, adoption did not confer full legal inheritance rights.",
+          "Under Greco-Roman law (established during the 400-year intertestamental period), adoption was complete and irrevocable, granting full legal status and complete inheritance equal to a natural son.",
+          "God waited for this era so that believers in Christ receive true, complete adoption as sons (Galatians 4:4-5) with full eternal inheritance."
+        ]
+      },
+      {
+        title: "5. Reason IV: Transportation",
+        points: [
+          "Development of Roman road systems and safe travel routes during Pax Romana.",
+          "Directly facilitated the early church and apostles in carrying out the Great Commission (Matthew 28:19)."
+        ]
+      },
+      {
+        title: "6. Conclusion",
+        points: [
+          "God's perfect timing: the 400 years of silence were not inactivity, but active preparation for Christ and His Church."
+        ]
+      }
+    ],
+
+    corePrinciples: [
+      "God's timing is perfect; silence is not absence or inactivity.",
+      "The 400-year intertestamental period prepared language, Christ's cross death, our adoption as sons, and transportation.",
+      "Global preparations (Greek language & Roman roads) enabled the rapid spread of the Gospel under the Great Commission."
+    ]
   }
 ];
