@@ -937,6 +937,17 @@
             z-index: 10;
         }
 
+        .folder-count-text {
+            text-align: right;
+            font-size: 11px;
+            font-weight: 800;
+            color: #212121;
+            letter-spacing: 0.5px;
+            margin-top: -6px;
+            margin-bottom: 12px;
+            padding-right: 4px;
+        }
+
         .track-item {
             background-color: var(--bg-card);
             padding: 18px;
@@ -2006,6 +2017,7 @@
         </header>
 
         <div class="top-folders-container" id="folderChips"></div>
+        <div class="folder-count-text" id="folderCountText"></div>
 
         <ul class="playlist" id="playlistContainer">
             <li class="loading-state" id="loadingMsg">Scanning recordings…</li>
@@ -2120,8 +2132,8 @@
         </div>
     </div>
 
-    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20260815125822"></script>
-    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20260815125822"></script>
+    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20260815131209"></script>
+    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20260815131209"></script>
     <script>
         // ─── CONFIG ──────────────────────────────────────────────────────────────────
         // Track titles are managed in:
@@ -2976,32 +2988,51 @@
 
             // ── Build folder chips from BIBLE_FOLDERS ──────────────────────────
             const chipsContainer = document.getElementById('folderChips');
-            (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : [{ name: 'All Items', type: 'all' }]).forEach((folder, idx) => {
+            const folders = (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : [{ name: 'All Items', type: 'all' }]);
+            folders.forEach((folder, idx) => {
                 const chip = document.createElement('div');
                 chip.className = 'small-folder-chip' + (idx === 0 ? ' active' : '');
-                chip.textContent = '\uD83D\uDCC1 ' + folder.name;
+                chip.textContent = '📁 ' + folder.name;
                 chip.dataset.folderIdx = idx;
                 chip.addEventListener('click', () => {
                     document.querySelectorAll('.small-folder-chip').forEach(c => c.classList.remove('active'));
                     chip.classList.add('active');
-                    document.querySelectorAll('.track-item').forEach(cardEl => {
-                        let show = false;
-                        if (folder.type === 'all') {
-                            show = true;
-                        } else if (folder.type === 'category') {
-                            const categories = (cardEl.dataset.category || '')
-                                .split(',')
-                                .map(c => c.trim())
-                                .filter(Boolean);
-                            show = categories.includes(folder.value);
-                        } else if (folder.type === 'days') {
-                            show = folder.value.includes(Number(cardEl.dataset.day));
-                        }
-                        cardEl.style.display = show ? '' : 'none';
-                    });
+                    updateFilteredTrackCount(folder);
                 });
                 chipsContainer.appendChild(chip);
             });
+
+            if (folders.length > 0) {
+                updateFilteredTrackCount(folders[0]);
+            }
+        }
+
+        function updateFilteredTrackCount(folder) {
+            document.querySelectorAll('.filtered-count-badge').forEach(el => el.remove());
+
+            const visibleCards = [];
+            document.querySelectorAll('.track-item').forEach(cardEl => {
+                let show = false;
+                if (folder.type === 'all') {
+                    show = true;
+                } else if (folder.type === 'category') {
+                    const categories = (cardEl.dataset.category || '')
+                        .split(',')
+                        .map(c => c.trim())
+                        .filter(Boolean);
+                    show = categories.includes(folder.value);
+                } else if (folder.type === 'days') {
+                    show = folder.value.includes(Number(cardEl.dataset.day));
+                }
+                cardEl.style.display = show ? '' : 'none';
+                if (show) visibleCards.push(cardEl);
+            });
+
+            const countEl = document.getElementById('folderCountText');
+            if (countEl) {
+                const count = visibleCards.length;
+                countEl.textContent = `${count} Audio`;
+            }
         }
 
         // ── Gate Verses ────────────────────────────────────────────────────────────
