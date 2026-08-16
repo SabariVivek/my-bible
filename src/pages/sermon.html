@@ -3802,8 +3802,8 @@
 
                 let songsHtml = '';
                 if (sermon.songs && sermon.songs.length > 0) {
-                    const displayedSongs = sermon.songs.slice(0, 2);
-                    const moreSongsCount = sermon.songs.length > 2 ? sermon.songs.length - 2 : 0;
+                    const displayedSongs = sermon.songs.slice(0, 1);
+                    const moreSongsCount = sermon.songs.length > 1 ? sermon.songs.length - 1 : 0;
                     songsHtml = `
                         <div class="sermon-item-songs">
                             <span class="sermon-song-tag-icon" title="Songs">
@@ -5772,8 +5772,8 @@
 
                     let favSongsHtml = '';
                     if (sermon.songs && sermon.songs.length > 0) {
-                        const displayedSongs = sermon.songs.slice(0, 2);
-                        const moreSongsCount = sermon.songs.length > 2 ? sermon.songs.length - 2 : 0;
+                        const displayedSongs = sermon.songs.slice(0, 1);
+                        const moreSongsCount = sermon.songs.length > 1 ? sermon.songs.length - 1 : 0;
                         favSongsHtml = `
                             <div class="sermon-item-songs" style="margin-top: 6px;">
                                 <span class="sermon-song-tag-icon" title="Songs">
