@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2a2a2a">
     <title>Sermon</title>
-    <link rel="stylesheet" href="../styles/styles.css?cb=20260815133038">
+    <link rel="stylesheet" href="../styles/styles.css?cb=20260816114959">
     <!-- Supabase JS Client (UMD Build) -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.26.0/dist/umd/supabase.min.js"></script>
     <style>
@@ -3802,8 +3802,8 @@
 
                 let songsHtml = '';
                 if (sermon.songs && sermon.songs.length > 0) {
-                    const displayedSongs = sermon.songs.slice(0, 3);
-                    const moreSongsCount = sermon.songs.length > 3 ? sermon.songs.length - 3 : 0;
+                    const displayedSongs = sermon.songs.slice(0, 2);
+                    const moreSongsCount = sermon.songs.length > 2 ? sermon.songs.length - 2 : 0;
                     songsHtml = `
                         <div class="sermon-item-songs">
                             <span class="sermon-song-tag-icon" title="Songs">
@@ -4220,11 +4220,11 @@
             });
         }
 
-        // Preload all verses from all sermons on page load
+        // Preload all verses from all sermons on page load (batched to prevent 502 Bad Gateway / rate-limits)
         async function preloadAllSermonsVerses() {
             if (!sermons || sermons.length === 0) return;
 
-            // Collect all unique verse references from all sermons
+            // Collect unique verse references from sermons
             const allVerses = [];
             const verseSet = new Set();
 
@@ -4240,9 +4240,10 @@
                 }
             });
 
-            // Preload all verses in background
+            // Preload a lightweight initial batch (top 6 unique verses) so Supabase isn't overwhelmed with dozens of simultaneous connections
             if (allVerses.length > 0) {
-                preloadVersesInBackground(allVerses);
+                const initialBatch = allVerses.slice(0, 6);
+                preloadVersesInBackground(initialBatch);
             }
         }
 

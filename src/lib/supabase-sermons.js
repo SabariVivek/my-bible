@@ -17,7 +17,7 @@ const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
  * @param {Array} verses - Array of verse objects {book, chapter, verse, display}
  * @returns {Promise<Object>} Created sermon record
  */
-async function createSermon(userId, title, tamilTitle, sermonDate, verses) {
+async function createSermon(userId, title, tamilTitle, sermonDate, verses, songs = [], isFavorite = false) {
     const dateStr = sermonDate instanceof Date 
         ? sermonDate.toISOString().split('T')[0]
         : sermonDate.split('T')[0];
@@ -30,6 +30,8 @@ async function createSermon(userId, title, tamilTitle, sermonDate, verses) {
             tamil_title: tamilTitle || null,
             sermon_date: dateStr,
             verses: verses || [],
+            songs: songs || [],
+            is_favorite: isFavorite || false,
             created_at: new Date().toISOString()
         }])
         .select()
@@ -143,7 +145,9 @@ async function syncSermonsToSupabase(userId, localSermons) {
                         sermon.title,
                         sermon.tamilTitle,
                         sermon.date,
-                        sermon.verses
+                        sermon.verses,
+                        sermon.songs || [],
+                        sermon.is_favorite || false
                     );
                     results.created++;
                 } else if (sermon.id) {
@@ -152,7 +156,9 @@ async function syncSermonsToSupabase(userId, localSermons) {
                         title: sermon.title,
                         tamil_title: sermon.tamilTitle,
                         sermon_date: sermon.date,
-                        verses: sermon.verses
+                        verses: sermon.verses,
+                        songs: sermon.songs || [],
+                        is_favorite: sermon.is_favorite || false
                     });
                     results.updated++;
                 }

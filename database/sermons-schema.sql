@@ -8,6 +8,8 @@ CREATE TABLE sermons (
     tamil_title TEXT,
     sermon_date DATE NOT NULL,
     verses JSONB DEFAULT '[]'::jsonb,
+    songs JSONB DEFAULT '[]'::jsonb,
+    is_favorite BOOLEAN DEFAULT false,
     content TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
@@ -56,4 +58,6 @@ COMMENT ON COLUMN sermons.title IS 'English title of the sermon';
 COMMENT ON COLUMN sermons.tamil_title IS 'Optional Tamil title of the sermon';
 COMMENT ON COLUMN sermons.sermon_date IS 'Date of the sermon';
 COMMENT ON COLUMN sermons.verses IS 'JSON array of verse objects with book, chapter, verse, display properties';
+COMMENT ON COLUMN sermons.songs IS 'JSON array of song title strings associated with the sermon';
+COMMENT ON COLUMN sermons.is_favorite IS 'Boolean flag to mark sermon as favorite';
 COMMENT ON COLUMN sermons.content IS 'Full sermon notes/content (for future use)';
