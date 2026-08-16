@@ -233,6 +233,11 @@
             color: #3b82f6;
         }
 
+        /* Add Songs - Amber/Gold color */
+        #sermon-menu-songs svg {
+            color: #eab308;
+        }
+
         /* Favorites - Red color */
         #sermon-menu-favorites svg {
             color: #ef4444;
@@ -769,6 +774,275 @@
             opacity: 0.7;
         }
 
+        /* Sermon Songs Styles */
+        .sermon-item-songs {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sermon-song-tag-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(234, 179, 8, 0.18);
+            color: #eab308;
+            flex-shrink: 0;
+        }
+
+        body.light-theme .sermon-song-tag-icon {
+            background: rgba(202, 138, 4, 0.15);
+            color: #b45309;
+        }
+
+        .sermon-song-badges-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 4px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .sermon-song-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 2px 8px;
+            background: rgba(234, 179, 8, 0.12);
+            color: #facc15;
+            border: 1px solid rgba(234, 179, 8, 0.25);
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+            line-height: 1.35;
+            max-width: 180px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        body.light-theme .sermon-song-badge {
+            background: rgba(202, 138, 4, 0.1);
+            color: #92400e;
+            border-color: rgba(202, 138, 4, 0.25);
+        }
+
+        .sermon-song-more {
+            font-size: 11px;
+            color: #888;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        /* Festive Card Song Badges */
+        .sermon-item.card-christmas .sermon-song-badge {
+            background: rgba(168, 201, 138, 0.15);
+            color: #c8e6a0;
+            border-color: rgba(168, 201, 138, 0.3);
+        }
+
+        .sermon-item.card-newyear .sermon-song-badge {
+            background: rgba(255, 215, 0, 0.12);
+            color: #ffd700;
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .sermon-item.card-goodfriday .sermon-song-badge {
+            background: rgba(232, 160, 160, 0.15);
+            color: #fca5a5;
+            border-color: rgba(232, 160, 160, 0.3);
+        }
+
+        /* Detail Sheet Songs Section */
+        .sermon-detail-songs {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .sermon-detail-song-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            font-size: 13px;
+            color: #e0e0e0;
+        }
+
+        body.light-theme .sermon-detail-song-row {
+            background: #f8f9fa;
+            border-color: #e9ecef;
+            color: #333;
+        }
+
+        .sermon-detail-song-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: rgba(234, 179, 8, 0.2);
+            color: #facc15;
+            font-size: 11px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        body.light-theme .sermon-detail-song-num {
+            background: rgba(202, 138, 4, 0.15);
+            color: #92400e;
+        }
+
+        .sermon-detail-song-title {
+            flex: 1;
+            font-weight: 500;
+            word-break: break-word;
+        }
+
+        .sermon-detail-add-songs-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: #78aaff;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .sermon-detail-add-songs-btn:hover {
+            color: #5a92ff;
+            text-decoration: underline;
+        }
+
+        body.dark-theme .sermon-detail-add-songs-btn {
+            color: #8ab8ff;
+        }
+
+        /* Songs Bottom Sheet Controls */
+        .sermon-song-input-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .sermon-song-input-row .sermon-input-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .sermon-song-input-row .sermon-add-verse-btn {
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        .sermon-input-hint {
+            font-size: 0.78rem;
+            color: #888;
+            margin-top: -2px;
+        }
+
+        .sermon-songs-chips-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sermon-clear-songs-btn {
+            background: none;
+            border: none;
+            color: #ef4444;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-weight: 500;
+            padding: 2px 6px;
+        }
+
+        .sermon-clear-songs-btn:hover {
+            text-decoration: underline;
+        }
+
+        .sermon-songs-chips-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            min-height: 48px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.15);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            align-items: center;
+        }
+
+        body.light-theme .sermon-songs-chips-container {
+            background: #fbfbfb;
+            border-color: #ddd;
+        }
+
+        .sermon-empty-songs-msg {
+            font-size: 0.85rem;
+            color: #888;
+            font-style: italic;
+            width: 100%;
+            text-align: center;
+            padding: 6px 0;
+        }
+
+        .sermon-song-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: rgba(234, 179, 8, 0.15);
+            color: #facc15;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            animation: fadeIn 0.2s ease-in-out;
+        }
+
+        body.light-theme .sermon-song-chip {
+            background: rgba(202, 138, 4, 0.12);
+            color: #92400e;
+            border-color: rgba(202, 138, 4, 0.3);
+        }
+
+        .sermon-song-chip-remove {
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            font-size: 1.1rem;
+            line-height: 1;
+            padding: 0 0 0 4px;
+            display: inline-flex;
+            align-items: center;
+            opacity: 0.75;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .sermon-song-chip-remove:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
         .sermon-dropdowns-container {
             display: flex;
             flex-direction: column;
@@ -1166,8 +1440,9 @@
             transition: opacity 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
         }
 
-        /* Favorites overlay with blur */
-        #sermon-favorites-overlay {
+        /* Favorites & Songs overlay with blur */
+        #sermon-favorites-overlay,
+        #sermon-songs-overlay {
             position: fixed;
             top: 0;
             left: 0;
@@ -1180,13 +1455,15 @@
             transition: opacity 0.3s cubic-bezier(0.2, 0, 0, 1);
         }
 
-        #sermon-favorites-overlay.active {
+        #sermon-favorites-overlay.active,
+        #sermon-songs-overlay.active {
             display: flex;
             opacity: 1;
             transition: opacity 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
         }
 
-        #sermon-favorites-overlay.active::before {
+        #sermon-favorites-overlay.active::before,
+        #sermon-songs-overlay.active::before {
             content: '';
             position: fixed;
             top: 0;
@@ -2582,6 +2859,12 @@
                     </svg>
                     <span>Add Sermon</span>
                 </button>
+                <button class="sermon-menu-item" id="sermon-menu-songs">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    </svg>
+                    <span>Add Songs</span>
+                </button>
                 <button class="sermon-menu-item" id="sermon-menu-favorites">
                     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
@@ -2757,6 +3040,14 @@
                 </div>
                 <div class="sermon-verses-chips" id="sermon-verses-chips"></div>
             </div>
+            <div class="sermon-input-group">
+                <label class="sermon-input-label">Songs (Optional)</label>
+                <div class="sermon-song-input-row">
+                    <input type="text" class="sermon-input-text" id="sermon-form-song-input" placeholder="Enter song title or number..." autocomplete="off">
+                    <button class="sermon-add-verse-btn" id="sermon-form-add-song-btn" type="button">Add Song</button>
+                </div>
+                <div class="sermon-verses-chips" id="sermon-form-songs-chips"></div>
+            </div>
         </div>
         <div class="sermon-sheet-buttons">
             <button class="sermon-btn sermon-btn-cancel" id="sermon-btn-cancel">Cancel</button>
@@ -2823,6 +3114,55 @@
         </div>
         <div class="sermon-sheet-content" id="sermon-favorites-list">
             <!-- Favorites will be rendered here -->
+        </div>
+    </div>
+
+    <!-- Add Songs Bottom Sheet -->
+    <div class="sermon-sheet-overlay" id="sermon-songs-overlay"></div>
+    <div class="sermon-bottom-sheet" id="sermon-songs-sheet">
+        <div class="sermon-sheet-handle" id="sermon-songs-drag-handle"></div>
+        <div class="sermon-sheet-header detail-header" style="justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <svg viewBox="0 0 24 24" fill="#eab308" style="width: 22px; height: 22px; flex-shrink: 0;">
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                </svg>
+                <h2 class="sermon-sheet-title" style="margin: 0;">Add Songs to Sermon</h2>
+            </div>
+            <button class="sermon-detail-close-btn" id="sermon-songs-close-btn" aria-label="Close" style="opacity: 1; pointer-events: auto; position: static;">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+        <div class="sermon-sheet-content">
+            <div class="sermon-input-group">
+                <label class="sermon-input-label">Select Sermon</label>
+                <select class="sermon-dropdown-select" id="songs-sermon-select">
+                    <option value="">-- Choose a Sermon --</option>
+                </select>
+                <div class="sermon-input-error" id="songs-sermon-select-error">Please select a sermon</div>
+            </div>
+            <div class="sermon-input-group">
+                <label class="sermon-input-label">Enter Song Number or Title</label>
+                <div class="sermon-song-input-row">
+                    <input type="text" class="sermon-input-text" id="songs-modal-input" placeholder="e.g. 124, Amazing Grace, பாடல்..." autocomplete="off">
+                    <button class="sermon-add-verse-btn" id="songs-modal-add-btn" type="button">Add Song</button>
+                </div>
+                <span class="sermon-input-hint">Type song title/number and press Enter or tap Add Song</span>
+            </div>
+            <div class="sermon-input-group">
+                <div class="sermon-songs-chips-header">
+                    <label class="sermon-input-label">Songs List (<span id="songs-modal-count">0</span>)</label>
+                    <button type="button" class="sermon-clear-songs-btn" id="songs-modal-clear-btn" style="display: none;">Clear All</button>
+                </div>
+                <div class="sermon-songs-chips-container" id="songs-modal-chips-container">
+                    <div class="sermon-empty-songs-msg">Select a sermon above to view and add songs</div>
+                </div>
+            </div>
+        </div>
+        <div class="sermon-sheet-buttons">
+            <button class="sermon-btn sermon-btn-cancel" id="songs-modal-cancel-btn">Cancel</button>
+            <button class="sermon-btn sermon-btn-save" id="songs-modal-save-btn">Save Songs</button>
         </div>
     </div>
 
@@ -2905,6 +3245,9 @@
         let currentCalendarDate = new Date();
         let selectedSermonDate = null;
         let selectedSermonVerses = [];
+        let selectedSermonSongs = [];
+        let modalSelectedSermonIndex = null;
+        let modalTempSongs = [];
         let nextSermonId = 10001;  // Starting ID for sermons
         
         // Check if admin is enabled
@@ -3149,6 +3492,53 @@
             renderVersesChips();
         };
 
+        // Render form song chips in Add/Edit Sermon sheet
+        function renderFormSongsChips() {
+            const chipsContainer = document.getElementById('sermon-form-songs-chips');
+            if (!chipsContainer) return;
+            chipsContainer.innerHTML = selectedSermonSongs.map((song, index) => `
+                <div class="sermon-song-chip">
+                    <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;flex-shrink:0;">
+                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    </svg>
+                    <span>${song}</span>
+                    <button type="button" class="sermon-song-chip-remove" onclick="removeFormSong(${index})" aria-label="Remove song">×</button>
+                </div>
+            `).join('');
+        }
+
+        // Remove form song
+        window.removeFormSong = function (index) {
+            selectedSermonSongs.splice(index, 1);
+            renderFormSongsChips();
+        };
+
+        // Add song to Add/Edit Sermon form
+        function addSongToForm() {
+            const input = document.getElementById('sermon-form-song-input');
+            if (!input) return;
+            const songName = input.value.trim();
+            if (songName) {
+                selectedSermonSongs.push(songName);
+                input.value = '';
+                renderFormSongsChips();
+                input.focus();
+            }
+        }
+        window.addSongToForm = addSongToForm;
+
+        // Normalize song data - ensures songs are array of non-empty strings
+        function normalizeSongs(songs) {
+            if (!songs) return [];
+            if (typeof songs === 'string') {
+                return songs.split(',').map(s => s.trim()).filter(Boolean);
+            }
+            if (Array.isArray(songs)) {
+                return songs.map(s => typeof s === 'string' ? s.trim() : (s && s.title ? String(s.title).trim() : String(s).trim())).filter(Boolean);
+            }
+            return [];
+        }
+
         // Normalize verse data - ensure all properties are correct types
         function normalizeVerses(verses) {
             if (!Array.isArray(verses)) {
@@ -3239,6 +3629,7 @@
                         description: item.description || '',
                         date: item.sermon_date,
                         verses: normalizeVerses(item.verses || []),
+                        songs: normalizeSongs(item.songs || []),
                         is_favorite: item.is_favorite || false,
                         _synced: true  // Mark as synced from Supabase
                     }));
@@ -3257,6 +3648,7 @@
                             }).map(s => ({
                                 ...s,
                                 verses: normalizeVerses(s.verses || []),
+                                songs: normalizeSongs(s.songs || []),
                                 description: s.description || ''
                             }));
                         }
@@ -3303,10 +3695,11 @@
             if (saved) {
                 try {
                     const loaded = JSON.parse(saved);
-                    // Normalize verse data for all loaded sermons
+                    // Normalize verse & song data for all loaded sermons
                     sermons = loaded.map(s => ({
                         ...s,
-                        verses: normalizeVerses(s.verses || [])
+                        verses: normalizeVerses(s.verses || []),
+                        songs: normalizeSongs(s.songs || [])
                     }));
                 } catch (e) {
                 }
@@ -3406,6 +3799,26 @@
                                 </div>
                             `
                             : '';
+
+                let songsHtml = '';
+                if (sermon.songs && sermon.songs.length > 0) {
+                    const displayedSongs = sermon.songs.slice(0, 3);
+                    const moreSongsCount = sermon.songs.length > 3 ? sermon.songs.length - 3 : 0;
+                    songsHtml = `
+                        <div class="sermon-item-songs">
+                            <span class="sermon-song-tag-icon" title="Songs">
+                                <svg viewBox="0 0 24 24" fill="currentColor" style="width:11px;height:11px;flex-shrink:0;">
+                                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                                </svg>
+                            </span>
+                            <div class="sermon-song-badges-wrap">
+                                ${displayedSongs.map(song => `<span class="sermon-song-badge" title="${song.replace(/"/g, '&quot;')}">${song}</span>`).join('')}
+                                ${moreSongsCount > 0 ? `<span class="sermon-song-more">+${moreSongsCount} more</span>` : ''}
+                            </div>
+                        </div>
+                    `;
+                }
+
                 return `
                     <div class="sermon-item ${sermon.is_favorite ? 'favorite' : ''} ${cardClass}" data-index="${originalIndex}">
                         ${specialDecorations}
@@ -3430,18 +3843,19 @@
                                     ${versesHtml}
                                 </div>
                                 <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
-                                    ${isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon ${sermon.is_favorite ? 'favorite-badge' : ''}" alt="First of month">` : ''}
+                                    ${isFirstOfMonth ? `<img src="../../resources/icons/month.png" class="sermon-month-icon ${sermon.is_favorite ? 'favorite-badge' : ''}" alt="First of month">` : ''}
                                     ${sermon.is_favorite ? `<span class="sermon-favorite-icon">❤️</span>` : ''}
                                 </div>
                             </div>
                         ` : `
                             ${(sermon.is_favorite || isFirstOfMonth) ? `
                                 <div class="sermon-item-verses" style="position:relative;z-index:2; display:flex; justify-content:flex-end; gap:6px;">
-                                    ${isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon ${sermon.is_favorite ? 'favorite-badge' : ''}" alt="First of month">` : ''}
+                                    ${isFirstOfMonth ? `<img src="../../resources/icons/month.png" class="sermon-month-icon ${sermon.is_favorite ? 'favorite-badge' : ''}" alt="First of month">` : ''}
                                     ${sermon.is_favorite ? `<span class="sermon-favorite-icon">❤️</span>` : ''}
                                 </div>
                             ` : ''}
                         `}
+                        ${songsHtml}
                         ${sermon.description ? `
                             <hr style="border: none; border-top: 1px solid #3b3838; margin: 12px 0;">
                             <div style="display:flex; gap:10px; position:relative; z-index:2;">
@@ -3578,6 +3992,7 @@
                                 description: sermon.description || null,
                                 sermon_date: dateStr,
                                 verses: sermon.verses || [],
+                                songs: sermon.songs || [],
                                 is_favorite: sermon.is_favorite || false
                             }])
                             .select();
@@ -3612,6 +4027,7 @@
                         description: sermon.description || null,
                         sermon_date: dateStr,
                         verses: sermon.verses || [],
+                        songs: sermon.songs || [],
                         is_favorite: sermon.is_favorite || false
                     })
                     .eq('id', sermon.id);
@@ -3841,6 +4257,48 @@
                 ? sermon.verses.map(v => `<span class="sermon-verse-badge sermon-verse-clickable" onclick="openVerseInBible('${v.book}', ${parseInt(v.chapter)}, ${parseInt(v.verseStart)}, ${parseInt(v.verseEnd)})" style="cursor: pointer;">${v.display}</span>`).join('')
                 : 'No verses added';
 
+            // Build songs section
+            let songsSectionHtml = '';
+            if (sermon.songs && sermon.songs.length > 0) {
+                const songRows = sermon.songs.map((s, sIdx) => `
+                    <div class="sermon-detail-song-row">
+                        <span class="sermon-detail-song-num">${sIdx + 1}</span>
+                        <span class="sermon-detail-song-title">${s}</span>
+                    </div>
+                `).join('');
+                songsSectionHtml = `
+                    <hr style="border: none; border-top: 1px solid #3b3838; margin: 10px 0 10px 0;">
+                    <div class="sermon-detail-section">
+                        <div class="sermon-verses-header" style="justify-content: space-between;">
+                            <div style="display: flex; align-items: center; gap: 6px;">
+                                <svg viewBox="0 0 24 24" fill="#eab308" style="width:16px;height:16px;flex-shrink:0;">
+                                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                                </svg>
+                                <h3 style="margin: 0;">Songs (${sermon.songs.length})</h3>
+                            </div>
+                            <button class="sermon-detail-add-songs-btn" onclick="openSongsSheet(${index})">Edit Songs</button>
+                        </div>
+                        <div class="sermon-detail-songs">${songRows}</div>
+                    </div>
+                `;
+            } else {
+                songsSectionHtml = `
+                    <hr style="border: none; border-top: 1px solid #3b3838; margin: 10px 0 10px 0;">
+                    <div class="sermon-detail-section">
+                        <div class="sermon-verses-header" style="justify-content: space-between;">
+                            <div style="display: flex; align-items: center; gap: 6px;">
+                                <svg viewBox="0 0 24 24" fill="#888" style="width:16px;height:16px;flex-shrink:0;">
+                                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                                </svg>
+                                <h3 style="margin: 0; color: #888;">Songs (0)</h3>
+                            </div>
+                            <button class="sermon-detail-add-songs-btn" onclick="openSongsSheet(${index})">+ Add Songs</button>
+                        </div>
+                        <div style="font-size: 0.85rem; color: #888; font-style: italic; padding: 4px 0;">No songs added yet for this sermon</div>
+                    </div>
+                `;
+            }
+
             // Build action buttons based on admin status
             const adminButtons = isAdmin() ? `
                 <button class="sermon-detail-btn sermon-detail-edit" onclick="editSermon(${index})">Edit</button>
@@ -3864,6 +4322,7 @@
                     </div>
                     <div class="sermon-detail-verses">${versesHtml} ${showAllLink}</div>
                 </div>
+                ${songsSectionHtml}
                 ${sermon.description ? `
                     <hr style="border: none; border-top: 1px solid #3b3838; margin: 10px 0 10px 0;">
                     <div style="display:flex; gap:10px;">
@@ -4070,8 +4529,12 @@
             selectedSermonDate = parsedDate;
             document.getElementById('sermon-date-display').textContent = formatSermonDate(parsedDate);
             selectedSermonVerses = [...sermon.verses];
+            selectedSermonSongs = [...(sermon.songs || [])];
             currentEditingIndex = index;
             renderVersesChips();
+            renderFormSongsChips();
+            const formSongInput = document.getElementById('sermon-form-song-input');
+            if (formSongInput) formSongInput.value = '';
             closeSermonDetail();
             
             // Change header title to "Edit Sermon"
@@ -5185,6 +5648,15 @@
             openAddSermonForm();
         });
 
+        // Handle Add Songs from menu
+        const menuSongsBtn = document.getElementById('sermon-menu-songs');
+        if (menuSongsBtn) {
+            menuSongsBtn.addEventListener('click', () => {
+                dropdownMenu.classList.remove('show');
+                openSongsSheet();
+            });
+        }
+
         // Handle Favorites from menu
         menuFavoritesBtn.addEventListener('click', () => {
             dropdownMenu.classList.remove('show');
@@ -5197,6 +5669,7 @@
             document.getElementById('sermon-tamil-title-input').value = '';
             selectedSermonDate = null;
             selectedSermonVerses = [];
+            selectedSermonSongs = [];
             document.getElementById('sermon-date-display').textContent = 'Select date';
             document.getElementById('sermon-date-input').value = '';
             document.getElementById('sermon-book-select').value = '';
@@ -5206,6 +5679,9 @@
             document.getElementById('sermon-verses-select').disabled = true;
             document.getElementById('sermon-add-verse-btn').disabled = true;
             renderVersesChips();
+            renderFormSongsChips();
+            const formSongInput = document.getElementById('sermon-form-song-input');
+            if (formSongInput) formSongInput.value = '';
             
             // Reset title to "Add Sermon"
             document.querySelector('.sermon-sheet-title').textContent = 'Add Sermon';
@@ -5292,6 +5768,25 @@
                             versesHtml = `<span class="sermon-verse-badge">${verseText}</span>`;
                         }
                     }
+
+                    let favSongsHtml = '';
+                    if (sermon.songs && sermon.songs.length > 0) {
+                        const displayedSongs = sermon.songs.slice(0, 2);
+                        const moreSongsCount = sermon.songs.length > 2 ? sermon.songs.length - 2 : 0;
+                        favSongsHtml = `
+                            <div class="sermon-item-songs" style="margin-top: 6px;">
+                                <span class="sermon-song-tag-icon" title="Songs">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" style="width:11px;height:11px;flex-shrink:0;">
+                                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                                    </svg>
+                                </span>
+                                <div class="sermon-song-badges-wrap">
+                                    ${displayedSongs.map(song => `<span class="sermon-song-badge" title="${song.replace(/"/g, '&quot;')}">${song}</span>`).join('')}
+                                    ${moreSongsCount > 0 ? `<span class="sermon-song-more">+${moreSongsCount} more</span>` : ''}
+                                </div>
+                            </div>
+                        `;
+                    }
                     
                     return `
                         <div class="sermon-item ${cardClass}" data-index="${originalIndex}" style="cursor: pointer;" onclick="closeFavoritesSheet(); viewSermonDetail(${originalIndex})">
@@ -5312,9 +5807,10 @@
                                 </span>
                             </div>
                             ${versesHtml ? `<div class="sermon-item-verses" style="position:relative;z-index:2">${versesHtml}</div>` : ''}
-                            ${sermon.is_favorite && isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon favorite-badge" alt="First of month">` : ''}
+                            ${favSongsHtml}
+                            ${sermon.is_favorite && isFirstOfMonth ? `<img src="../../resources/icons/month.png" class="sermon-month-icon favorite-badge" alt="First of month">` : ''}
                             ${sermon.is_favorite ? `<span class="sermon-favorite-icon">❤️</span>` : ''}
-                            ${!sermon.is_favorite && isFirstOfMonth ? `<img src="../resources/icons/month.png" class="sermon-month-icon" alt="First of month">` : ''}
+                            ${!sermon.is_favorite && isFirstOfMonth ? `<img src="../../resources/icons/month.png" class="sermon-month-icon" alt="First of month">` : ''}
                         </div>
                     `;
                 }).join('');
@@ -5427,7 +5923,11 @@
             currentEditingIndex = null;
             selectedSermonDate = null;
             selectedSermonVerses = [];
+            selectedSermonSongs = [];
             renderVersesChips();
+            renderFormSongsChips();
+            const formSongInput = document.getElementById('sermon-form-song-input');
+            if (formSongInput) formSongInput.value = '';
             titleInput.value = '';
             document.getElementById('sermon-tamil-title-input').value = '';
             document.getElementById('sermon-date-display').textContent = 'Select date';
@@ -5671,7 +6171,8 @@
                     tamilTitle: tamilTitle || '',
                     description,
                     date: dateIso,
-                    verses: selectedSermonVerses
+                    verses: selectedSermonVerses,
+                    songs: selectedSermonSongs
                 };
                 sermons[currentEditingIndex] = updatedSermon;
                 
@@ -5691,6 +6192,7 @@
                     description,
                     date: dateIso,
                     verses: selectedSermonVerses,
+                    songs: selectedSermonSongs,
                     content: '', // For future use
                     is_favorite: newSermonIsFavorite,
                     _synced: false  // Mark for syncing
@@ -5749,6 +6251,301 @@
             }
         }
 
+        // ============================================
+        // Sermon Songs Bottom Sheet Management
+        // ============================================
+        const songsSheet = document.getElementById('sermon-songs-sheet');
+        const songsOverlay = document.getElementById('sermon-songs-overlay');
+        const songsSermonSelect = document.getElementById('songs-sermon-select');
+        const songsModalInput = document.getElementById('songs-modal-input');
+        const songsModalAddBtn = document.getElementById('songs-modal-add-btn');
+        const songsModalClearBtn = document.getElementById('songs-modal-clear-btn');
+        const songsModalCancelBtn = document.getElementById('songs-modal-cancel-btn');
+        const songsModalSaveBtn = document.getElementById('songs-modal-save-btn');
+        const songsCloseBtn = document.getElementById('sermon-songs-close-btn');
+
+        // Form Songs Add button in Add/Edit Sermon form
+        const formAddSongBtn = document.getElementById('sermon-form-add-song-btn');
+        const formSongInput = document.getElementById('sermon-form-song-input');
+        if (formAddSongBtn) {
+            formAddSongBtn.addEventListener('click', addSongToForm);
+        }
+        if (formSongInput) {
+            formSongInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    addSongToForm();
+                }
+            });
+        }
+
+        // Populate Sermon dropdown for Songs bottom sheet
+        function populateSongsSermonDropdown(selectedIdx = null) {
+            if (!songsSermonSelect) return;
+            songsSermonSelect.innerHTML = '<option value="">-- Choose a Sermon --</option>';
+
+            sermons.forEach((s, idx) => {
+                const opt = document.createElement('option');
+                opt.value = idx;
+                const dateStr = formatSermonDate(parseSermonDate(s.date));
+                const countStr = s.songs && s.songs.length ? ` (${s.songs.length} song${s.songs.length > 1 ? 's' : ''})` : '';
+                opt.textContent = `${dateStr} - ${s.title}${countStr}`;
+                if (selectedIdx !== null && selectedIdx === idx) {
+                    opt.selected = true;
+                }
+                songsSermonSelect.appendChild(opt);
+            });
+        }
+
+        // Open Songs bottom sheet
+        function openSongsSheet(preselectedSermonIndex = null) {
+            populateSongsSermonDropdown(preselectedSermonIndex);
+
+            if (preselectedSermonIndex !== null && sermons[preselectedSermonIndex]) {
+                modalSelectedSermonIndex = preselectedSermonIndex;
+                modalTempSongs = [...(sermons[preselectedSermonIndex].songs || [])];
+                if (songsSermonSelect) songsSermonSelect.value = preselectedSermonIndex;
+            } else {
+                modalSelectedSermonIndex = null;
+                modalTempSongs = [];
+                if (songsSermonSelect) songsSermonSelect.value = '';
+            }
+
+            renderModalSongsChips();
+
+            if (songsModalInput) songsModalInput.value = '';
+
+            const errorEl = document.getElementById('songs-sermon-select-error');
+            if (errorEl) errorEl.style.display = 'none';
+
+            if (songsOverlay) songsOverlay.classList.add('active');
+            if (songsSheet) songsSheet.classList.add('active');
+            document.querySelector('.sermon-content').style.overflow = 'hidden';
+            if (modalSelectedSermonIndex !== null && songsModalInput) {
+                setTimeout(() => songsModalInput.focus(), 300);
+            }
+        }
+        window.openSongsSheet = openSongsSheet;
+
+        // Close Songs bottom sheet
+        function closeSongsSheet() {
+            if (songsOverlay) songsOverlay.classList.remove('active');
+            if (songsSheet) {
+                songsSheet.classList.remove('active');
+                songsSheet.style.maxHeight = '80vh';
+            }
+            document.querySelector('.sermon-content').style.overflow = 'auto';
+            modalSelectedSermonIndex = null;
+            modalTempSongs = [];
+            if (songsModalInput) songsModalInput.value = '';
+            const errorEl = document.getElementById('songs-sermon-select-error');
+            if (errorEl) errorEl.style.display = 'none';
+        }
+        window.closeSongsSheet = closeSongsSheet;
+
+        // Handle Sermon selection change in Songs sheet
+        function onSermonSelectChange() {
+            if (!songsSermonSelect) return;
+            const val = songsSermonSelect.value;
+            const errorEl = document.getElementById('songs-sermon-select-error');
+            if (errorEl) errorEl.style.display = 'none';
+
+            if (val !== '' && !isNaN(parseInt(val, 10))) {
+                modalSelectedSermonIndex = parseInt(val, 10);
+                const sermon = sermons[modalSelectedSermonIndex];
+                modalTempSongs = sermon && sermon.songs ? [...sermon.songs] : [];
+            } else {
+                modalSelectedSermonIndex = null;
+                modalTempSongs = [];
+            }
+            renderModalSongsChips();
+        }
+
+        // Add song to Songs bottom sheet temp list
+        function addSongToModalList() {
+            if (!songsModalInput) return;
+            const songName = songsModalInput.value.trim();
+            if (!songName) return;
+
+            if (modalSelectedSermonIndex === null) {
+                const errorEl = document.getElementById('songs-sermon-select-error');
+                if (errorEl) errorEl.style.display = 'block';
+                if (songsSermonSelect) songsSermonSelect.focus();
+                return;
+            }
+
+            modalTempSongs.push(songName);
+            songsModalInput.value = '';
+            renderModalSongsChips();
+            songsModalInput.focus();
+        }
+
+        // Remove song from temp list
+        window.removeModalSong = function (idx) {
+            modalTempSongs.splice(idx, 1);
+            renderModalSongsChips();
+        };
+
+        // Clear all temp songs
+        function clearAllModalSongs() {
+            modalTempSongs = [];
+            renderModalSongsChips();
+        }
+
+        // Render modal song chips
+        function renderModalSongsChips() {
+            const container = document.getElementById('songs-modal-chips-container');
+            const countBadge = document.getElementById('songs-modal-count');
+            const clearBtn = document.getElementById('songs-modal-clear-btn');
+            if (!container) return;
+
+            if (countBadge) countBadge.textContent = modalTempSongs.length;
+            if (clearBtn) clearBtn.style.display = modalTempSongs.length > 0 ? 'inline-block' : 'none';
+
+            if (modalSelectedSermonIndex === null) {
+                container.innerHTML = '<div class="sermon-empty-songs-msg">Select a sermon above to view and add songs</div>';
+                return;
+            }
+
+            if (modalTempSongs.length === 0) {
+                container.innerHTML = '<div class="sermon-empty-songs-msg">No songs added yet for this sermon. Type song above and tap "Add Song"</div>';
+                return;
+            }
+
+            container.innerHTML = modalTempSongs.map((song, idx) => `
+                <div class="sermon-song-chip">
+                    <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;flex-shrink:0;">
+                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    </svg>
+                    <span>${song}</span>
+                    <button type="button" class="sermon-song-chip-remove" onclick="removeModalSong(${idx})" aria-label="Remove song">×</button>
+                </div>
+            `).join('');
+        }
+
+        // Save songs to selected sermon
+        function saveSongsToSermon() {
+            if (modalSelectedSermonIndex === null || !sermons[modalSelectedSermonIndex]) {
+                const errorEl = document.getElementById('songs-sermon-select-error');
+                if (errorEl) errorEl.style.display = 'block';
+                if (songsSermonSelect) songsSermonSelect.focus();
+                return;
+            }
+
+            sermons[modalSelectedSermonIndex].songs = [...modalTempSongs];
+            saveSermons();
+            syncSermonUpdateToSupabase(modalSelectedSermonIndex);
+            renderSermons();
+
+            // If sermon detail is currently open for this sermon, refresh it
+            const detailSheet = document.getElementById('sermon-detail-sheet');
+            if (detailSheet && detailSheet.classList.contains('active') && detailSheet.dataset.openSermonIndex == modalSelectedSermonIndex) {
+                showSermonDetails(modalSelectedSermonIndex);
+            }
+
+            closeSongsSheet();
+            showToast('Songs saved...');
+        }
+
+        // Event listeners for Songs bottom sheet
+        if (songsSermonSelect) {
+            songsSermonSelect.addEventListener('change', onSermonSelectChange);
+        }
+        if (songsModalAddBtn) {
+            songsModalAddBtn.addEventListener('click', addSongToModalList);
+        }
+        if (songsModalInput) {
+            songsModalInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    addSongToModalList();
+                }
+            });
+        }
+        if (songsModalClearBtn) {
+            songsModalClearBtn.addEventListener('click', clearAllModalSongs);
+        }
+        if (songsModalCancelBtn) {
+            songsModalCancelBtn.addEventListener('click', closeSongsSheet);
+        }
+        if (songsCloseBtn) {
+            songsCloseBtn.addEventListener('click', closeSongsSheet);
+        }
+        if (songsModalSaveBtn) {
+            songsModalSaveBtn.addEventListener('click', saveSongsToSermon);
+        }
+        if (songsOverlay) {
+            songsOverlay.addEventListener('click', closeSongsSheet);
+        }
+
+        // Drag to expand/collapse functionality for songs sheet
+        let songsDragStartY = 0;
+        let songsDragStartHeight = 0;
+        const songsDragHandle = document.getElementById('sermon-songs-drag-handle');
+
+        if (songsDragHandle && songsSheet) {
+            songsDragHandle.addEventListener('touchstart', (e) => {
+                songsDragStartY = e.touches[0].clientY;
+                songsDragStartHeight = songsSheet.offsetHeight;
+                songsSheet.style.transition = 'none';
+            }, false);
+
+            songsDragHandle.addEventListener('touchmove', (e) => {
+                const currentY = e.touches[0].clientY;
+                const diff = songsDragStartY - currentY;
+                const newHeight = songsDragStartHeight + diff;
+                const maxHeight = window.innerHeight * 0.95;
+                const minHeight = 250;
+
+                if (newHeight >= minHeight && newHeight <= maxHeight) {
+                    songsSheet.style.maxHeight = newHeight + 'px';
+                }
+            }, false);
+
+            songsDragHandle.addEventListener('touchend', (e) => {
+                songsSheet.style.transition = 'transform 0.3s ease';
+                const currentHeight = songsSheet.offsetHeight;
+                const maxHeight = window.innerHeight * 0.95;
+                const threshold = maxHeight * 0.4;
+
+                if (currentHeight < threshold) {
+                    closeSongsSheet();
+                } else {
+                    songsSheet.style.maxHeight = '80vh';
+                }
+            }, false);
+        }
+
+        // Swipe down anywhere on the songs sheet to close
+        let songsSheetStartY = 0;
+        const songsSheetContent = songsSheet ? songsSheet.querySelector('.sermon-sheet-content') : null;
+
+        if (songsSheet) {
+            songsSheet.addEventListener('touchstart', (e) => {
+                if (!e.target.closest('#sermon-songs-drag-handle')) {
+                    songsSheetStartY = e.touches[0].clientY;
+                }
+            }, false);
+
+            songsSheet.addEventListener('touchmove', (e) => {
+                if (!e.target.closest('#sermon-songs-drag-handle')) {
+                    const currentY = e.touches[0].clientY;
+                    const swipeDist = currentY - songsSheetStartY;
+                    if (swipeDist > 20 && songsSheetContent && songsSheetContent.scrollTop === 0) {
+                        e.preventDefault();
+                    }
+                }
+            }, false);
+
+            songsSheet.addEventListener('touchend', (e) => {
+                const sheetEndY = e.changedTouches[0].clientY;
+                const diffY = sheetEndY - songsSheetStartY;
+                if (diffY > 50 && songsSheetContent && songsSheetContent.scrollTop === 0 && !e.target.closest('#sermon-songs-drag-handle')) {
+                    closeSongsSheet();
+                }
+            }, false);
+        }
+
         // Apply theme based on localStorage
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'light') {
@@ -5772,46 +6569,44 @@
             }
         });
 
+        function updateAdminMenuVisibility() {
+            const menuBtn = document.getElementById('sermon-menu-btn');
+            const menuAddBtn = document.getElementById('sermon-menu-add');
+            const menuSongsBtn = document.getElementById('sermon-menu-songs');
+            const isUserAdmin = isAdmin();
+            if (menuBtn) {
+                menuBtn.style.display = isUserAdmin ? 'flex' : 'none';
+            }
+            if (menuAddBtn) {
+                menuAddBtn.style.display = isUserAdmin ? 'flex' : 'none';
+            }
+            if (menuSongsBtn) {
+                menuSongsBtn.style.display = isUserAdmin ? 'flex' : 'none';
+            }
+        }
+
         // Initialize on page load
         window.addEventListener('DOMContentLoaded', () => {
             initSupabase();
             initializeBookDropdown();
             loadSermons();
             attachDoubleTapListener();
-            
-            // Hide/show admin buttons based on admin status
-            const menuBtn = document.getElementById('sermon-menu-btn');
-            const menuAddBtn = document.getElementById('sermon-menu-add');
-            if (menuBtn) {
-                menuBtn.style.display = isAdmin() ? 'flex' : 'none';
-            }
-            if (menuAddBtn) {
-                menuAddBtn.style.display = isAdmin() ? 'flex' : 'none';
-            }
+            updateAdminMenuVisibility();
             
             // Listen for admin status changes
             window.addEventListener('storage', () => {
-                const menuBtn = document.getElementById('sermon-menu-btn');
-                const menuAddBtn = document.getElementById('sermon-menu-add');
-                if (menuBtn) {
-                    menuBtn.style.display = isAdmin() ? 'flex' : 'none';
-                }
-                if (menuAddBtn) {
-                    menuAddBtn.style.display = isAdmin() ? 'flex' : 'none';
-                }
+                updateAdminMenuVisibility();
             });
             
             // Refresh sermon data when page becomes visible again (e.g., returning from Bible page)
             document.addEventListener('visibilitychange', () => {
                 if (!document.hidden) {
-                    // Page became visible, refresh sermons
                     loadSermons();
                 }
             });
             
             // Fallback for browsers that don't support visibilitychange
             window.addEventListener('pageshow', (event) => {
-                // Always reload sermons when returning to this page
                 loadSermons();
             });
         });
@@ -5822,16 +6617,7 @@
                 initSupabase();
                 if (!bibleMeta) initializeBookDropdown();
                 attachDoubleTapListener();
-                
-                // Hide/show admin buttons based on admin status
-                const menuBtn = document.getElementById('sermon-menu-btn');
-                const menuAddBtn = document.getElementById('sermon-menu-add');
-                if (menuBtn) {
-                    menuBtn.style.display = isAdmin() ? 'flex' : 'none';
-                }
-                if (menuAddBtn) {
-                    menuAddBtn.style.display = isAdmin() ? 'flex' : 'none';
-                }
+                updateAdminMenuVisibility();
                 
                 // Refresh sermon data when page becomes visible again
                 document.addEventListener('visibilitychange', () => {
@@ -5850,16 +6636,7 @@
             initializeBookDropdown();
             loadSermons();
             attachDoubleTapListener();
-            
-            // Hide/show admin buttons based on admin status
-            const menuBtn = document.getElementById('sermon-menu-btn');
-            const menuAddBtn = document.getElementById('sermon-menu-add');
-            if (menuBtn) {
-                menuBtn.style.display = isAdmin() ? 'flex' : 'none';
-            }
-            if (menuAddBtn) {
-                menuAddBtn.style.display = isAdmin() ? 'flex' : 'none';
-            }
+            updateAdminMenuVisibility();
             
             // Refresh sermon data when page becomes visible again
             document.addEventListener('visibilitychange', () => {
