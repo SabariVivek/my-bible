@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2a2a2a">
     <title>Sermon</title>
-    <link rel="stylesheet" href="../styles/styles.css?cb=20260816114959">
+    <link rel="stylesheet" href="../styles/styles.css?cb=20260817124756">
     <!-- Supabase JS Client (UMD Build) -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.26.0/dist/umd/supabase.min.js"></script>
     <style>
@@ -4260,6 +4260,7 @@
 
             // Build songs section
             let songsSectionHtml = '';
+            const userIsAdmin = isAdmin();
             if (sermon.songs && sermon.songs.length > 0) {
                 const songRows = sermon.songs.map((s, sIdx) => `
                     <div class="sermon-detail-song-row">
@@ -4267,6 +4268,7 @@
                         <span class="sermon-detail-song-title">${s}</span>
                     </div>
                 `).join('');
+                const editSongsBtn = userIsAdmin ? `<button class="sermon-detail-add-songs-btn" onclick="openSongsSheet(${index})">Edit Songs</button>` : '';
                 songsSectionHtml = `
                     <hr style="border: none; border-top: 1px solid #3b3838; margin: 10px 0 10px 0;">
                     <div class="sermon-detail-section">
@@ -4277,12 +4279,12 @@
                                 </svg>
                                 <h3 style="margin: 0;">Songs (${sermon.songs.length})</h3>
                             </div>
-                            <button class="sermon-detail-add-songs-btn" onclick="openSongsSheet(${index})">Edit Songs</button>
+                            ${editSongsBtn}
                         </div>
                         <div class="sermon-detail-songs">${songRows}</div>
                     </div>
                 `;
-            } else {
+            } else if (userIsAdmin) {
                 songsSectionHtml = `
                     <hr style="border: none; border-top: 1px solid #3b3838; margin: 10px 0 10px 0;">
                     <div class="sermon-detail-section">
@@ -6300,6 +6302,10 @@
 
         // Open Songs bottom sheet
         function openSongsSheet(preselectedSermonIndex = null) {
+            if (!isAdmin()) {
+                showToast('Admin access required');
+                return;
+            }
             populateSongsSermonDropdown(preselectedSermonIndex);
 
             if (preselectedSermonIndex !== null && sermons[preselectedSermonIndex]) {
