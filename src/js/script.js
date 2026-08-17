@@ -11448,7 +11448,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'daily-prayers-option',
             'right-notes-option',
             'right-prayers-option',
-            'right-saturday-service-option',
             'right-local-recording-option',
             'right-kings-option',
             'right-prophets-option',

@@ -34,19 +34,19 @@
     <title>My Bible</title>
     <link rel="icon" type="image/png" href="resources/icons/bible.png?cb=20251126003722">
     <link rel="apple-touch-icon" href="resources/icons/bible.png?cb=20251126003722">
-    <link rel="stylesheet" href="src/styles/styles.css?cb=20260817124756">
+    <link rel="stylesheet" href="src/styles/styles.css?cb=20260817125349">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20260817124756">
-    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20260817124756">
-    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20260817124756">
-    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20260817124756">
+    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20260817125349">
+    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20260817125349">
+    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20260817125349">
+    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20260817125349">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Cropper.js for profile image cropping -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css?cb=20260418170421">
     <!-- Cache Management -->
-    <script src="src/js/cache-manager.js?cb=20260817124756"></script>
+    <script src="src/js/cache-manager.js?cb=20260817125349"></script>
 </head>
 
 <body>
@@ -1134,10 +1134,6 @@
             <span class="option-icon" style="font-size: 20px;">🙏</span>
             <span class="option-name">Prayers</span>
         </div>
-        <div class="right-menu-item" id="right-saturday-service-option" onclick="window.location.href='src/pages/saturday-service.html'">
-            <span class="option-icon" style="font-size: 20px;">⛪</span>
-            <span class="option-name">Saturday Service</span>
-        </div>
         <div class="right-menu-item" id="right-sermon-option" onclick="window.location.href='src/pages/sermon.html'">
             <span class="option-icon" style="font-size: 20px;">🎙️</span>
             <span class="option-name">Sermons</span>
@@ -1634,105 +1630,29 @@
     </div>
 
     <!-- Bundled Bible Data (loads all books) -->
-    <script src="data/bible/bible-data-loader.js?cb=20260817124756"></script>
+    <script src="data/bible/bible-data-loader.js?cb=20260817125349"></script>
 
     <!-- Supabase Client Library (Local for Offline Support) -->
-    <script src="src/lib/supabase.js?cb=20260817124756"></script>
+    <script src="src/lib/supabase.js?cb=20260817125349"></script>
     <!-- Cropper.js for profile image cropping -->
     <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js?cb=20260418170421"></script>
 
 
-    <script src="config/config.js?cb=20260817124756"></script>
-    
-    <!-- Check Saturday Service Visibility Setting -->
-    <script>
-        async function checkSaturdayServiceVisibility() {
-            try {
-                // Get current user ID from localStorage
-                const userId = localStorage.getItem('currentUserId');
-
-                if (!userId) {
-                    const menuItem = document.getElementById('right-saturday-service-option');
-                    if (menuItem) {
-                        menuItem.style.display = 'none';
-                    }
-                    return;
-                }
-
-                // Initialize Supabase client if not already initialized
-                if (typeof supabase === 'undefined') {
-                    setTimeout(checkSaturdayServiceVisibility, 500);
-                    return;
-                }
-
-                if (!SUPABASE_SATURDAY_SERVICE_CONFIG || !SUPABASE_SATURDAY_SERVICE_CONFIG.url || !SUPABASE_SATURDAY_SERVICE_CONFIG.anonKey) {
-                    setTimeout(checkSaturdayServiceVisibility, 500);
-                    return;
-                }
-
-                // Create Supabase client
-                const { createClient } = supabase;
-                const supabaseClient = createClient(
-                    SUPABASE_SATURDAY_SERVICE_CONFIG.url,
-                    SUPABASE_SATURDAY_SERVICE_CONFIG.anonKey
-                );
-
-                // Fetch user_settings for the current user
-                const { data, error } = await supabaseClient
-                    .from('user_settings')
-                    .select('saturday_service')
-                    .eq('user_id', userId)
-                    .limit(1);
-
-                if (error) {
-                    console.warn('[Saturday Service] Error fetching settings:', error);
-                    // Default to hiding if error (safer approach)
-                    const menuItem = document.getElementById('right-saturday-service-option');
-                    if (menuItem) {
-                        menuItem.style.display = 'none';
-                    }
-                    return;
-                }
-
-                // Check if saturday_service is true for this user
-                const saturdayServiceEnabled = data && data.length > 0 && data[0].saturday_service === true;
-
-                const menuItem = document.getElementById('right-saturday-service-option');
-                if (menuItem) {
-                    menuItem.style.display = saturdayServiceEnabled ? 'flex' : 'none';
-                }
-            } catch (err) {
-                console.error('[Saturday Service] Unexpected error:', err);
-                // Default to hiding if unexpected error
-                const menuItem = document.getElementById('right-saturday-service-option');
-                if (menuItem) {
-                    menuItem.style.display = 'none';
-                }
-            }
-        }
-
-        // Check when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', checkSaturdayServiceVisibility);
-        } else {
-            checkSaturdayServiceVisibility();
-        }
-    </script>
-
-    <script src="src/js/bible-data-manager.js?cb=20260817124756"></script>
-    <script src="src/js/voice-command.js?cb=20260817124756"></script>
-    <script src="src/data/verse-headers-english.js?cb=20260817124756"></script>
-    <script src="src/data/verse-headers-tamil.js?cb=20260817124756"></script>
-    <script src="src/data/bible-meta.js?cb=20260817124756"></script>
-    <script src="src/data/bibleAuthors.js?cb=20260817124756"></script>
-    <script src="src/data/short-summary.js?cb=20260817124756"></script>
-    <script src="src/data/book-intro.js?cb=20260817124756"></script>
-    <script src="src/data/bible-popups.js?cb=20260817124756"></script>
-    <script src="src/data/king-transition-data.js?cb=20260817124756"></script>
-    <script src="src/js/script.js?cb=20260817124756"></script>
-    <script src="src/js/bible-selector.js?cb=20260817124756"></script>
-    <script src="src/js/chapter-summary-pullout.js?cb=20260817124756"></script>
-    <script src="src/js/ai-summary.js?cb=20260817124756"></script>
+    <script src="config/config.js?cb=20260817125349"></script>
+    <script src="src/js/bible-data-manager.js?cb=20260817125349"></script>
+    <script src="src/js/voice-command.js?cb=20260817125349"></script>
+    <script src="src/data/verse-headers-english.js?cb=20260817125349"></script>
+    <script src="src/data/verse-headers-tamil.js?cb=20260817125349"></script>
+    <script src="src/data/bible-meta.js?cb=20260817125349"></script>
+    <script src="src/data/bibleAuthors.js?cb=20260817125349"></script>
+    <script src="src/data/short-summary.js?cb=20260817125349"></script>
+    <script src="src/data/book-intro.js?cb=20260817125349"></script>
+    <script src="src/data/bible-popups.js?cb=20260817125349"></script>
+    <script src="src/data/king-transition-data.js?cb=20260817125349"></script>
+    <script src="src/js/script.js?cb=20260817125349"></script>
+    <script src="src/js/bible-selector.js?cb=20260817125349"></script>
+    <script src="src/js/chapter-summary-pullout.js?cb=20260817125349"></script>
+    <script src="src/js/ai-summary.js?cb=20260817125349"></script>
 
     <!-- Image Viewer Modal -->
     <style>
