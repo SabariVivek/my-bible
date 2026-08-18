@@ -470,7 +470,7 @@ const BIBLE_TRACKS = [
     day: 51,
     title: "12 Baskets vs 7 Baskets",
     duration: "38:07 min",
-    verse: "Mat 14:13-21; Mat 15:32-39",
+    verse: "Mat 14; Mat 15",
     desc: "Jesus fed 5,000 and 4,000 people, leaving 12 and 7 baskets respectively.",
     category: "Miracles"
   },
