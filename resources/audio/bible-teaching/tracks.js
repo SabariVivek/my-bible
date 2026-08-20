@@ -474,6 +474,22 @@ const BIBLE_TRACKS = [
     desc: "Jesus fed 5,000 and 4,000 people, leaving 12 and 7 baskets respectively.",
     category: "Miracles"
   },
+  {
+    day: 52,
+    title: "The 10 Plagues - Part 1",
+    duration: "67:01 min",
+    verse: "Exodus 7-10",
+    desc: "The first 5 plagues: water to blood, frogs, gnats, flies, and livestock pestilence.",
+    category: "Exodus"
+  },
+  {
+    day: 53,
+    title: "The 10 Plagues - Part 2",
+    duration: "Coming Soon",
+    verse: "Exodus 10-12",
+    desc: "The last 5 plagues: locusts, darkness, livestock pestilence, boils, and hailstorm.",
+    category: "Exodus"
+  }
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -501,5 +517,6 @@ const BIBLE_FOLDERS = [
   { name: "Parables", type: "category", value: "Parables" },
   { name: "Prophets", type: "category", value: "Prophets" },
   { name: "7's", type: "category", value: "7's" },
-  { name: "Miracles", type: "category", value: "Miracles" }
+  { name: "Miracles", type: "category", value: "Miracles" },
+  { name: "Exodus", type: "category", value: "Exodus" }
 ];
