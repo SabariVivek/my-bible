@@ -496,6 +496,7 @@ const BIBLE_TRACKS = [
     duration: "22:02 min",
     verse: "Genesis 9:8-17",
     desc: "The rainbow is a symbol of God's promise to never flood the earth again.",
+    cardBg: "resources/images/rainbow.png",
     category: "Do You Know?"
   }
 ];
