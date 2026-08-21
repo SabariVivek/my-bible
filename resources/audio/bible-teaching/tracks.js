@@ -483,12 +483,20 @@ const BIBLE_TRACKS = [
     category: "Exodus"
   },
   {
-    day: 53,
+    day: 54,
     title: "The 10 Plagues - Part 2",
     duration: "Coming Soon",
     verse: "Exodus 10-12",
     desc: "The last 5 plagues: locusts, darkness, livestock pestilence, boils, and hailstorm.",
     category: "Exodus"
+  },
+  {
+    day: 53,
+    title: "The Rainbow",
+    duration: "22:02 min",
+    verse: "Genesis 9:8-17",
+    desc: "The rainbow is a symbol of God's promise to never flood the earth again.",
+    category: "Do You Know?"
   }
 ];
 
