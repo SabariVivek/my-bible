@@ -483,15 +483,15 @@ const BIBLE_TRACKS = [
     category: "Exodus"
   },
   {
-    day: 54,
+    day: 53,
     title: "The 10 Plagues - Part 2",
-    duration: "Coming Soon",
+    duration: "37:09 min",
     verse: "Exodus 10-12",
     desc: "The last 5 plagues: locusts, darkness, livestock pestilence, boils, and hailstorm.",
     category: "Exodus"
   },
   {
-    day: 53,
+    day: 54,
     title: "The Rainbow",
     duration: "22:02 min",
     verse: "Genesis 9:8-17",
