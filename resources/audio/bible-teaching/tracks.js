@@ -498,6 +498,14 @@ const BIBLE_TRACKS = [
     desc: "The rainbow is a symbol of God's promise to never flood the earth again.",
     cardBg: "resources/images/rainbow.png",
     category: "Do You Know?"
+  },
+  {
+    day: 55,
+    title: "Psalm 1",
+    duration: "15:28 min",
+    verse: "Psalm 1",
+    desc: "How to live a blessed life through meditation on God's law.",
+    category: "Psalms"
   }
 ];
 
