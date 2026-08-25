@@ -506,6 +506,22 @@ const BIBLE_TRACKS = [
     verse: "Psalm 1",
     desc: "How to live a blessed life through meditation on God's law.",
     category: "Psalms"
+  },
+  {
+    day: 56,
+    title: "The 10 Commandments - Part 1",
+    duration: "58:12 min",
+    verse: "Exodus 20:1-12",
+    desc: "The first five commandments about God, idols, His name, the Sabbath, and honoring parents.",
+    category: "Exodus"
+  },
+  {
+    day: 57,
+    title: "The 10 Commandments - Part 2",
+    duration: "Coming Soon",
+    verse: "Exodus 20:13-17",
+    desc: "The last five commandments about murder, adultery, stealing, lying, and coveting.",
+    category: "Exodus"
   }
 ];
 
