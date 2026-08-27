@@ -515,16 +515,16 @@ const BIBLE_TRACKS = [
     desc: "The first five commandments about God, idols, His name, the Sabbath, and honoring parents.",
     category: "Exodus"
   },
-  // {
-  //   day: 57,
-  //   title: "The 10 Commandments - Part 2",
-  //   duration: "Coming Soon",
-  //   verse: "Exodus 20:13-17",
-  //   desc: "The last five commandments about murder, adultery, stealing, lying, and coveting.",
-  //   category: "Exodus"
-  // },
   {
     day: 57,
+    title: "The 10 Commandments - Part 2",
+    duration: "54:46 min",
+    verse: "Exodus 20:13-17",
+    desc: "The last five commandments about murder, adultery, stealing, lying, and coveting.",
+    category: "Exodus"
+  },
+  {
+    day: 58,
     title: "Parable of Unjust Steward",
     duration: "14:53 min",
     verse: "Luke 16:1-13",
