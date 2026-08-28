@@ -530,6 +530,14 @@ const BIBLE_TRACKS = [
     verse: "Luke 16:1-13",
     desc: "The parable of the unjust steward and its significance for believers.",
     category: "Parables"
+  },
+  {
+    day: 59,
+    title: "Herod - the Great",
+    duration: "48:34 min",
+    verse: "Matthew 2:1-19",
+    desc: "The reign of King Herod the Great and his confrontation with the birth of Christ.",
+    category: "Characters"
   }
 ];
 
