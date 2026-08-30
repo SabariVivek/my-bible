@@ -405,7 +405,21 @@ const BIBLE_TRACKS = [
     duration: "51:43 min",
     verse: "Matthew 20:1-16",
     desc: "The parable of the vineyard workers and its significance for believers.",
-    category: "Parables"
+    category: "Parables",
+    timestamps: [
+      { time: "00:00", label: "தொடக்க ஜெபம்", seconds: 0 },
+      { time: "01:58", label: "திராட்சைத் தோட்ட உவமை", seconds: 118 },
+      { time: "04:06", label: "பேதுருவின் கேள்வி", seconds: 246 },
+      { time: "06:04", label: "உவமை வாசிப்பு", seconds: 364 },
+      { time: "11:46", label: "வேதாகமக் காலக் கணிப்பு", seconds: 706 },
+      { time: "18:33", label: "கூலி & முறுமுறுப்பு", seconds: 1113 },
+      { time: "21:03", label: "எஜமானின் நியாயம்", seconds: 1263 },
+      { time: "23:40", label: "உவமையின் ஆவிக்குரிய அர்த்தம்", seconds: 1420 },
+      { time: "31:00", label: "யூதர்கள் vs புறஜாதிகள்", seconds: 1860 },
+      { time: "38:14", label: "பரலோகப் பொக்கிஷம்", seconds: 2294 },
+      { time: "43:45", label: "இருதய சோதனை & சாட்சி", seconds: 2625 },
+      { time: "47:40", label: "முந்தினோர் பிந்தினோர்", seconds: 2860 }
+    ]
   },
   {
     day: 47,
@@ -413,7 +427,22 @@ const BIBLE_TRACKS = [
     duration: "51:46 min",
     verse: "Joshua 7",
     desc: "Achan took forbidden spoils from Jericho, causing Israel's defeat and bringing God's judgment.",
-    category: "Characters"
+    category: "Characters",
+    timestamps: [
+      { time: "00:00", label: "தொடக்க ஜெபம்", seconds: 0 },
+      { time: "01:19", label: "எரிகோ & சாபப்பொருட்கள்", seconds: 79 },
+      { time: "04:19", label: "எரிகோ மதில் & ராகாப்", seconds: 259 },
+      { time: "13:15", label: "இஸ்ரவேலின் பாவம் & ஆகான்", seconds: 795 },
+      { time: "16:16", label: "ஆயி பட்டணத் தோல்வி", seconds: 976 },
+      { time: "20:54", label: "யோசுவாவின் புலம்பல்", seconds: 1254 },
+      { time: "23:48", label: "தோல்விக்கான காரணம்", seconds: 1428 },
+      { time: "30:30", label: "குற்றவாளியைக் கண்டறிதல்", seconds: 1830 },
+      { time: "35:12", label: "ஆகானின் பாவ அறிக்கை", seconds: 2112 },
+      { time: "41:30", label: "திருடப்பட்ட பொருட்கள்", seconds: 2490 },
+      { time: "43:10", label: "ஆகோர் பள்ளத்தாக்கு நியாயத்தீர்ப்பு", seconds: 2590 },
+      { time: "44:40", label: "இச்சை & பாவத்தின் விளைவு", seconds: 2680 },
+      { time: "50:30", label: "ஆவிக்குரிய பாடங்கள் & முடிவு", seconds: 3030 }
+    ]
   },
   {
     day: 48,
@@ -423,15 +452,15 @@ const BIBLE_TRACKS = [
     desc: "A study of seven biblical raptures and those who were caught up into God's presence.",
     category: "7's",
     timestamps: [
-      { time: "01:19", label: "Introduction", seconds: 79 },
-      { time: "05:21", label: "Enoch", seconds: 321 },
-      { time: "11:18", label: "Elijah", seconds: 678 },
-      { time: "22:42", label: "Jesus Christ", seconds: 1362 },
-      { time: "27:14", label: "Apostle Paul", seconds: 1634 },
-      { time: "38:03", label: "The Church", seconds: 2283 },
-      { time: "40:17", label: "The 1,44,000", seconds: 2417 },
-      { time: "50:28", label: "Two Witnessess", seconds: 3028 },
-      { time: "58:08", label: "End", seconds: 3488 }
+      { time: "01:19", label: "அறிமுகம்", seconds: 79 },
+      { time: "05:21", label: "ஏனோக்கு", seconds: 321 },
+      { time: "11:18", label: "எலியா", seconds: 678 },
+      { time: "22:42", label: "இயேசு கிறிஸ்து", seconds: 1362 },
+      { time: "27:14", label: "அப்போஸ்தலன் பவுல்", seconds: 1634 },
+      { time: "38:03", label: "சபை", seconds: 2283 },
+      { time: "40:17", label: "1,44,000 பேர்", seconds: 2417 },
+      { time: "50:28", label: "இரண்டு சாட்சிகள்", seconds: 3028 },
+      { time: "58:08", label: "முடிவு", seconds: 3488 }
     ]
   },
   {
@@ -442,20 +471,20 @@ const BIBLE_TRACKS = [
     desc: "Jesus performed His first miracle by turning water into wine, revealing His glory.",
     category: "Miracles",
     timestamps: [
-      { time: "02:06", label: "Introduction", seconds: 126 },
-      { time: "03:03", label: "1<sup>st</sup> Verse", seconds: 183 },
-      { time: "17:13", label: "2<sup>nd</sup> Verse", seconds: 1033 },
-      { time: "23:05", label: "3<sup>rd</sup> Verse", seconds: 1386 },
-      { time: "30:13", label: "4<sup>th</sup> Verse", seconds: 1813 },
-      { time: "33:25", label: "5<sup>th</sup> Verse", seconds: 2005 },
-      { time: "37:00", label: "6<sup>th</sup> Verse", seconds: 2220 },
-      { time: "40:13", label: "7<sup>th</sup> Verse", seconds: 2413 },
-      { time: "42:09", label: "8<sup>th</sup> Verse", seconds: 2529 },
-      { time: "44:59", label: "9<sup>th</sup> Verse", seconds: 2699 },
-      { time: "46:48", label: "10<sup>th</sup> Verse", seconds: 2808 },
-      { time: "47:39", label: "11<sup>th</sup> Verse", seconds: 2859 },
-      { time: "52:55", label: "12<sup>th</sup> Verse", seconds: 3175 },
-      { time: "56:21", label: "End", seconds: 3381 }
+      { time: "02:06", label: "அறிமுகம்", seconds: 126 },
+      { time: "03:03", label: "1வது வசனம்", seconds: 183 },
+      { time: "17:13", label: "2வது வசனம்", seconds: 1033 },
+      { time: "23:05", label: "3வது வசனம்", seconds: 1386 },
+      { time: "30:13", label: "4வது வசனம்", seconds: 1813 },
+      { time: "33:25", label: "5வது வசனம்", seconds: 2005 },
+      { time: "37:00", label: "6வது வசனம்", seconds: 2220 },
+      { time: "40:13", label: "7வது வசனம்", seconds: 2413 },
+      { time: "42:09", label: "8வது வசனம்", seconds: 2529 },
+      { time: "44:59", label: "9வது வசனம்", seconds: 2699 },
+      { time: "46:48", label: "10வது வசனம்", seconds: 2808 },
+      { time: "47:39", label: "11வது வசனம்", seconds: 2859 },
+      { time: "52:55", label: "12வது வசனம்", seconds: 3175 },
+      { time: "56:21", label: "முடிவு", seconds: 3381 }
     ]
   },
   {
@@ -464,7 +493,19 @@ const BIBLE_TRACKS = [
     duration: "30:08 min",
     verse: "Acts 5:1-11",
     desc: "Ananias and Sapphira lied to the Holy Spirit and died immediately.",
-    category: "Characters"
+    category: "Characters",
+    timestamps: [
+      { time: "00:00", label: "தொடக்க ஜெபம்", seconds: 0 },
+      { time: "01:10", label: "ஆரம்பகால சபை", seconds: 70 },
+      { time: "04:44", label: "அப்போஸ்தலர்களின் தைரியம்", seconds: 284 },
+      { time: "07:26", label: "விசுவாசிகளின் பகிர்வு", seconds: 446 },
+      { time: "11:50", label: "அனனியா & சப்பீராள்", seconds: 710 },
+      { time: "13:24", label: "அனனியாவின் மரணம்", seconds: 804 },
+      { time: "17:30", label: "சப்பீராளின் நியாயத்தீர்ப்பு", seconds: 1050 },
+      { time: "19:15", label: "பாவத்தின் மூலக் காரணம்", seconds: 1155 },
+      { time: "20:50", label: "உண்மைத்துவம் & போராட்டம்", seconds: 1250 },
+      { time: "26:30", label: "பரிசுத்த ஆவியானவரிடம் பொய்", seconds: 1590 }
+    ]
   },
   {
     day: 51,
@@ -472,7 +513,19 @@ const BIBLE_TRACKS = [
     duration: "38:07 min",
     verse: "Mat 14; Mat 15",
     desc: "Jesus fed 5,000 and 4,000 people, leaving 12 and 7 baskets respectively.",
-    category: "Miracles"
+    category: "Miracles",
+    timestamps: [
+      { time: "00:00", label: "அறிமுகம்", seconds: 0 },
+      { time: "01:07", label: "5000 பேருக்கு போஷித்தல்", seconds: 67 },
+      { time: "05:42", label: "4000 பேருக்கு போஷித்தல்", seconds: 342 },
+      { time: "09:12", label: "சரீரம் & ஆவி", seconds: 552 },
+      { time: "14:00", label: "ஆசீர்வதித்து பெருக்கும் தேவன்", seconds: 840 },
+      { time: "19:05", label: "சீஷர்கள் மறதி & தேவ கிருபை", seconds: 1145 },
+      { time: "21:00", label: "12 & 7 கூடைகள்", seconds: 1260 },
+      { time: "23:01", label: "கிரேக்க வார்த்தை விளக்கம்", seconds: 1381 },
+      { time: "27:02", label: "நிரம்பி வழியும் ஆசீர்வாதம்", seconds: 1622 },
+      { time: "32:45", label: "புளித்த மாவு & நிறைவு", seconds: 1965 }
+    ]
   },
   {
     day: 52,
@@ -480,7 +533,19 @@ const BIBLE_TRACKS = [
     duration: "67:01 min",
     verse: "Exodus 7-10",
     desc: "The first 5 plagues: water to blood, frogs, gnats, flies, and livestock pestilence.",
-    category: "Exodus"
+    category: "Exodus",
+    timestamps: [
+      { time: "00:00", label: "தொடக்க ஜெபம்", seconds: 0 },
+      { time: "01:06", label: "வரலாற்றுப் பின்னணி", seconds: 66 },
+      { time: "08:16", label: "மோசேயின் அழைப்பு", seconds: 496 },
+      { time: "16:15", label: "10 வாதைகளின் நோக்கம்", seconds: 975 },
+      { time: "28:20", label: "1வது வாதை", seconds: 1700 },
+      { time: "40:38", label: "2வது வாதை", seconds: 2438 },
+      { time: "47:01", label: "3வது வாதை", seconds: 2821 },
+      { time: "52:26", label: "4வது வாதை", seconds: 3146 },
+      { time: "57:26", label: "5வது வாதை", seconds: 3446 },
+      { time: "1:04:25", label: "முதல் 5 வாதைகள் சுருக்கம்", seconds: 3865 }
+    ]
   },
   {
     day: 53,
@@ -488,7 +553,17 @@ const BIBLE_TRACKS = [
     duration: "37:09 min",
     verse: "Exodus 10-12",
     desc: "The last 5 plagues: locusts, darkness, livestock pestilence, boils, and hailstorm.",
-    category: "Exodus"
+    category: "Exodus",
+    timestamps: [
+      { time: "00:00", label: "தொடக்க ஜெபம்", seconds: 0 },
+      { time: "01:05", label: "முதல் 5 வாதைகள் சுருக்கம்", seconds: 65 },
+      { time: "04:59", label: "6வது வாதை", seconds: 299 },
+      { time: "09:27", label: "7வது வாதை", seconds: 567 },
+      { time: "18:24", label: "8வது வாதை", seconds: 1104 },
+      { time: "22:38", label: "9வது வாதை", seconds: 1358 },
+      { time: "30:23", label: "10வது வாதை", seconds: 1823 },
+      { time: "35:34", label: "முடிவுரை", seconds: 2134 }
+    ]
   },
   {
     day: 54,
@@ -497,7 +572,17 @@ const BIBLE_TRACKS = [
     verse: "Genesis 9:8-17",
     desc: "The rainbow is a symbol of God's promise to never flood the earth again.",
     cardBg: "resources/images/rainbow.png",
-    category: "Do You Know?"
+    category: "Do You Know?",
+    timestamps: [
+      { time: "00:00", label: "வானவில் அறிமுகம்", seconds: 0 },
+      { time: "00:39", label: "நோவாவின் பின்னணி", seconds: 39 },
+      { time: "04:34", label: "நோவாவின் உடன்படிக்கை", seconds: 274 },
+      { time: "07:15", label: "பலுகிப் பெருகுதல்", seconds: 435 },
+      { time: "10:07", label: "வானவில்லின் தவறான பயன்பாடு", seconds: 607 },
+      { time: "16:14", label: "ஆதி 3:15 தீர்க்கதரிசனம்", seconds: 974 },
+      { time: "18:28", label: "வானவில்லின் உண்மை அர்த்தம்", seconds: 1108 },
+      { time: "21:23", label: "நிறைவு", seconds: 1283 }
+    ]
   },
   {
     day: 55,
@@ -505,7 +590,16 @@ const BIBLE_TRACKS = [
     duration: "15:28 min",
     verse: "Psalm 1",
     desc: "How to live a blessed life through meditation on God's law.",
-    category: "Psalms"
+    category: "Psalms",
+    timestamps: [
+      { time: "00:00", label: "அறிமுகம்", seconds: 0 },
+      { time: "01:54", label: "நடைமுறை சிக்கல்கள்", seconds: 114 },
+      { time: "04:20", label: "பவுலின் விளக்கம்", seconds: 260 },
+      { time: "08:28", label: "உலகத்தில் வாழும் முறை", seconds: 508 },
+      { time: "09:40", label: "இயேசுவின் முன்மாதிரி", seconds: 580 },
+      { time: "11:50", label: "படகு & கடல் உவமை", seconds: 710 },
+      { time: "14:36", label: "ஆசீர்வதிக்கப்பட்ட மனிதன்", seconds: 876 }
+    ]
   },
   {
     day: 56,
@@ -513,7 +607,22 @@ const BIBLE_TRACKS = [
     duration: "58:12 min",
     verse: "Exodus 20:1-12",
     desc: "The first five commandments about God, idols, His name, the Sabbath, and honoring parents.",
-    category: "Exodus"
+    category: "Exodus",
+    timestamps: [
+      { time: "00:00", label: "ஆரம்ப ஜெபம்", seconds: 0 },
+      { time: "01:23", label: "வரலாற்றுப் பின்னணி", seconds: 83 },
+      { time: "07:12", label: "மோசே & கற்பலகைகள்", seconds: 432 },
+      { time: "10:20", label: "10 & 2 கட்டளைகள்", seconds: 620 },
+      { time: "12:04", label: "கற்பலகை அமைப்பு", seconds: 724 },
+      { time: "15:12", label: "கற்பனை 1", seconds: 912 },
+      { time: "18:49", label: "கற்பனை 2", seconds: 1129 },
+      { time: "26:56", label: "கற்பனை 3", seconds: 1616 },
+      { time: "36:20", label: "கற்பனை 4", seconds: 2180 },
+      { time: "44:35", label: "6 நாள் வேலை", seconds: 2675 },
+      { time: "48:14", label: "கற்பனை 5", seconds: 2894 },
+      { time: "52:18", label: "கீழ்ப்படிதல் vs தேவ வார்த்தை", seconds: 3138 },
+      { time: "55:57", label: "சுருக்கம் & நிறைவு", seconds: 3357 }
+    ]
   },
   {
     day: 57,
@@ -521,7 +630,16 @@ const BIBLE_TRACKS = [
     duration: "54:46 min",
     verse: "Exodus 20:13-17",
     desc: "The last five commandments about murder, adultery, stealing, lying, and coveting.",
-    category: "Exodus"
+    category: "Exodus",
+    timestamps: [
+      { time: "00:00", label: "பின்னணி & 1-5 சுருக்கம்", seconds: 0 },
+      { time: "15:15", label: "கற்பனை 6", seconds: 915 },
+      { time: "25:33", label: "கற்பனை 7", seconds: 1533 },
+      { time: "30:49", label: "கற்பனை 8", seconds: 1849 },
+      { time: "40:46", label: "கற்பனை 9", seconds: 2446 },
+      { time: "47:00", label: "கற்பனை 10", seconds: 2820 },
+      { time: "52:01", label: "2 பிரதான கட்டளைகள் & நிறைவு", seconds: 3121 }
+    ]
   },
   {
     day: 58,
@@ -529,7 +647,15 @@ const BIBLE_TRACKS = [
     duration: "14:53 min",
     verse: "Luke 16:1-13",
     desc: "The parable of the unjust steward and its significance for believers.",
-    category: "Parables"
+    category: "Parables",
+    timestamps: [
+      { time: "00:00", label: "அறிமுகம்", seconds: 0 },
+      { time: "00:50", label: "கணக்குக் கேட்டல்", seconds: 50 },
+      { time: "02:45", label: "மேனேஜரின் திட்டம்", seconds: 165 },
+      { time: "04:32", label: "கடனாளிகள் ஒப்பந்தம்", seconds: 272 },
+      { time: "06:33", label: "எஜமானின் பாராட்டு", seconds: 393 },
+      { time: "07:10", label: "ஆவிக்குரிய பாடங்கள்", seconds: 430 }
+    ]
   },
   {
     day: 59,
@@ -537,7 +663,22 @@ const BIBLE_TRACKS = [
     duration: "48:34 min",
     verse: "Matthew 2:1-19",
     desc: "The reign of King Herod the Great and his confrontation with the birth of Christ.",
-    category: "Characters"
+    category: "Characters",
+    timestamps: [
+      { time: "00:00", label: "ஆரம்ப ஜெபம்", seconds: 0 },
+      { time: "01:39", label: "புதிய ஏற்பாடு அறிமுகம்", seconds: 99 },
+      { time: "04:27", label: "4 சுவிசேஷங்கள்", seconds: 267 },
+      { time: "08:06", label: "தானியேல் & வெளிப்படுத்தல்", seconds: 486 },
+      { time: "13:05", label: "ஏரோது ராஜா", seconds: 785 },
+      { time: "14:33", label: "ரோமப் பேரரசு & இஸ்ரவேல்", seconds: 873 },
+      { time: "21:21", label: "ஏதோமியர் & ஏசா வம்சம்", seconds: 1281 },
+      { time: "26:00", label: "பெட்ரா நகரம்", seconds: 1560 },
+      { time: "28:28", label: "ஒபதியா தீர்க்கதரிசனம்", seconds: 1708 },
+      { time: "34:07", label: "ஜூலியஸ் சீசர் & ஏரோது", seconds: 2047 },
+      { time: "38:54", label: "தேவாலயம் & புலம்பல் சுவர்", seconds: 2334 },
+      { time: "42:31", label: "ஏரோது & எருசலேம்", seconds: 2551 },
+      { time: "45:34", label: "அழிவு, இஸ்ரவேல் & நிறைவு", seconds: 2734 }
+    ]
   }
 ];
 
