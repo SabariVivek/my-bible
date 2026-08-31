@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2a2a2a">
     <title>Sermon</title>
-    <link rel="stylesheet" href="../styles/styles.css?cb=20260830182939">
+    <link rel="stylesheet" href="../styles/styles.css?cb=20260831193731">
     <!-- Supabase JS Client (UMD Build) -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.26.0/dist/umd/supabase.min.js"></script>
     <style>
@@ -19,7 +19,8 @@
             -webkit-touch-callout: none;
         }
 
-        html, body {
+        html,
+        body {
             height: 100%;
             overflow: hidden;
         }
@@ -279,7 +280,7 @@
             height: 22px;
             padding: 0;
             border-color: transparent;
-            background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.04) 75%);
             background-size: 200% 100%;
             animation: sermon-shimmer 1.5s infinite;
             color: transparent;
@@ -294,7 +295,8 @@
         .sermon-content {
             flex: 1;
             overflow-y: auto;
-            padding: 2rem 2rem 10rem 2rem; /* extra bottom padding so last card is fully visible */
+            padding: 2rem 2rem 10rem 2rem;
+            /* extra bottom padding so last card is fully visible */
             position: relative;
             scrollbar-width: none;
         }
@@ -360,18 +362,35 @@
             padding: 16px;
             border-radius: 14px;
             background: #2a2a2a;
-            border: 1px solid rgba(255,255,255,0.07);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
             animation: sermon-skeleton-fadein 0.4s ease forwards;
             opacity: 0;
         }
 
-        .sermon-skeleton-item:nth-child(1) { animation-delay: 0s; }
-        .sermon-skeleton-item:nth-child(2) { animation-delay: 0.05s; }
-        .sermon-skeleton-item:nth-child(3) { animation-delay: 0.1s; }
-        .sermon-skeleton-item:nth-child(4) { animation-delay: 0.15s; }
-        .sermon-skeleton-item:nth-child(5) { animation-delay: 0.2s; }
-        .sermon-skeleton-item:nth-child(6) { animation-delay: 0.25s; }
+        .sermon-skeleton-item:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .sermon-skeleton-item:nth-child(2) {
+            animation-delay: 0.05s;
+        }
+
+        .sermon-skeleton-item:nth-child(3) {
+            animation-delay: 0.1s;
+        }
+
+        .sermon-skeleton-item:nth-child(4) {
+            animation-delay: 0.15s;
+        }
+
+        .sermon-skeleton-item:nth-child(5) {
+            animation-delay: 0.2s;
+        }
+
+        .sermon-skeleton-item:nth-child(6) {
+            animation-delay: 0.25s;
+        }
 
         .sermon-skeleton-row {
             display: flex;
@@ -380,7 +399,7 @@
         }
 
         .sermon-skeleton-bone {
-            background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.04) 75%);
             background-size: 200% 100%;
             animation: sermon-shimmer 1.5s infinite;
             border-radius: 6px;
@@ -411,13 +430,25 @@
         }
 
         @keyframes sermon-skeleton-fadein {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes sermon-shimmer {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
         }
 
         .sermon-list {
@@ -430,8 +461,8 @@
             padding: 16px;
             border-radius: 14px;
             background: #2a2a2a;
-            border: 1px solid rgba(255,255,255,0.07);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
             cursor: pointer;
@@ -440,7 +471,7 @@
 
         body.dark-theme .sermon-item {
             background: #2a2a2a;
-            border-color: rgba(255,255,255,0.07);
+            border-color: rgba(255, 255, 255, 0.07);
         }
 
         .sermon-item:hover {
@@ -478,7 +509,8 @@
 
         .sermon-month-icon.favorite-badge {
             bottom: 0px;
-            right: 24px; /* sits left of the heart */
+            right: 24px;
+            /* sits left of the heart */
             width: 18px;
             height: 18px;
             opacity: 0.9;
@@ -488,139 +520,274 @@
         .sermon-item.card-christmas {
             background: linear-gradient(135deg, #1a3a2a 0%, #0d2018 50%, #1a1f0f 100%) !important;
             border: 1px solid rgba(180, 230, 150, 0.18) !important;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
             border-radius: 14px;
             overflow: hidden;
         }
-        .sermon-item.card-christmas .sermon-item-title { font-family: 'Cinzel', serif; color: #e8f5c8 !important; }
-        .sermon-item.card-christmas .sermon-tamil-title { color: #a8c98a !important; font-family: 'Noto Sans Tamil', sans-serif; opacity: 0.65; }
+
+        .sermon-item.card-christmas .sermon-item-title {
+            font-family: 'Cinzel', serif;
+            color: #e8f5c8 !important;
+        }
+
+        .sermon-item.card-christmas .sermon-tamil-title {
+            color: #a8c98a !important;
+            font-family: 'Noto Sans Tamil', sans-serif;
+            opacity: 0.65;
+        }
+
         .sermon-item.card-christmas .sermon-verse-badge {
             background: rgba(220, 60, 60, 0.2) !important;
             color: #f09898 !important;
             border: 1px solid rgba(220, 60, 60, 0.35) !important;
             border-radius: 20px;
         }
-        .sermon-item.card-christmas .sermon-verse-more { color: #a8c98a !important; opacity: 0.6; }
+
+        .sermon-item.card-christmas .sermon-verse-more {
+            color: #a8c98a !important;
+            opacity: 0.6;
+        }
+
         .sermon-item.card-christmas .snowflake {
-            position: absolute; color: rgba(255,255,255,0.35);
-            font-size: 10px; pointer-events: none;
+            position: absolute;
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 10px;
+            pointer-events: none;
             animation: sermon-snowfall 4s linear infinite;
         }
+
         @keyframes sermon-snowfall {
-            0%   { transform: translateY(-10px) rotate(0deg); opacity: 0; }
-            20%  { opacity: 1; }
-            80%  { opacity: 0.5; }
-            100% { transform: translateY(100px) rotate(360deg); opacity: 0; }
+            0% {
+                transform: translateY(-10px) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: translateY(100px) rotate(360deg);
+                opacity: 0;
+            }
         }
+
         .sermon-item.card-christmas .pine-l {
-            position: absolute; bottom: -10px; left: -15px;
-            font-size: 60px; opacity: 0.12; transform: rotate(-10deg);
+            position: absolute;
+            bottom: -10px;
+            left: -15px;
+            font-size: 60px;
+            opacity: 0.12;
+            transform: rotate(-10deg);
             pointer-events: none;
         }
+
         .sermon-item.card-christmas .pine-r {
-            position: absolute; bottom: -5px; right: 30px;
-            font-size: 40px; opacity: 0.1; transform: rotate(8deg);
+            position: absolute;
+            bottom: -5px;
+            right: 30px;
+            font-size: 40px;
+            opacity: 0.1;
+            transform: rotate(8deg);
             pointer-events: none;
         }
+
         .sermon-item.card-christmas .star-glow {
-            position: absolute; top: -30px; right: -20px;
-            width: 100px; height: 100px;
-            background: radial-gradient(circle, rgba(255,220,80,0.12) 0%, transparent 70%);
-            border-radius: 50%; pointer-events: none;
+            position: absolute;
+            top: -30px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255, 220, 80, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
         }
 
         .sermon-item.card-newyear {
             background: linear-gradient(135deg, #0a0a1e 0%, #12103a 50%, #0d0d28 100%) !important;
             border: 1px solid #ffffff33 !important;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
             border-radius: 14px;
             overflow: hidden;
         }
+
         /* New Year title should look like normal cards (no shimmer/glitter) */
         .sermon-item.card-newyear .sermon-item-title {
             font-family: inherit;
             color: #f0f0f0 !important;
         }
-        .sermon-item.card-newyear .sermon-tamil-title { color: #9a88cc !important; font-family: 'Noto Sans Tamil', sans-serif; opacity: 0.65; }
+
+        .sermon-item.card-newyear .sermon-tamil-title {
+            color: #9a88cc !important;
+            font-family: 'Noto Sans Tamil', sans-serif;
+            opacity: 0.65;
+        }
+
         .sermon-item.card-newyear .sermon-verse-badge {
             background: rgba(255, 215, 0, 0.15) !important;
             color: #ffd700 !important;
             border: 1px solid rgba(255, 215, 0, 0.3) !important;
             border-radius: 20px;
         }
-        .sermon-item.card-newyear .sermon-verse-more { color: #9a88cc !important; opacity: 0.6; }
+
+        .sermon-item.card-newyear .sermon-verse-more {
+            color: #9a88cc !important;
+            opacity: 0.6;
+        }
+
         .sermon-item.card-newyear .year-watermark {
-            position: absolute; bottom: -12px; right: 10px;
-            font-family: 'Cinzel', serif; font-size: 56px; font-weight: 700;
-            color: rgba(200,160,255,0.06); pointer-events: none; line-height: 1;
+            position: absolute;
+            bottom: -12px;
+            right: 10px;
+            font-family: 'Cinzel', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: rgba(200, 160, 255, 0.06);
+            pointer-events: none;
+            line-height: 1;
         }
+
         .sermon-item.card-newyear .glow-orb {
-            position: absolute; top: -40px; right: -30px;
-            width: 120px; height: 120px;
-            background: radial-gradient(circle, rgba(200,160,255,0.1) 0%, transparent 70%);
-            border-radius: 50%; pointer-events: none;
-        }
-        .sermon-item.card-newyear .glow-orb2 {
-            position: absolute; bottom: -40px; left: -20px;
-            width: 100px; height: 100px;
-            background: radial-gradient(circle, rgba(255,215,0,0.08) 0%, transparent 70%);
-            border-radius: 50%; pointer-events: none;
-        }
-        .sermon-item.card-newyear .spark {
-            position: absolute; width: 3px; height: 3px;
-            border-radius: 50%; animation: sermon-sparkle 2s ease-in-out infinite;
+            position: absolute;
+            top: -40px;
+            right: -30px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(200, 160, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
             pointer-events: none;
         }
+
+        .sermon-item.card-newyear .glow-orb2 {
+            position: absolute;
+            bottom: -40px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .sermon-item.card-newyear .spark {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            animation: sermon-sparkle 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+
         @keyframes sermon-sparkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50%      { opacity: 1; transform: scale(1); }
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .sermon-item.card-goodfriday {
             background: linear-gradient(135deg, #1a0a0a 0%, #200808 50%, #0f0505 100%) !important;
             border: 1px solid #ffffff33 !important;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
             border-radius: 14px;
             overflow: hidden;
         }
-        .sermon-item.card-goodfriday .sermon-item-title { font-family: 'Cinzel', serif; color: #e8c8c8 !important; }
-        .sermon-item.card-goodfriday .sermon-tamil-title { color: #9a7070 !important; font-family: 'Noto Sans Tamil', sans-serif; opacity: 0.65; }
+
+        .sermon-item.card-goodfriday .sermon-item-title {
+            font-family: 'Cinzel', serif;
+            color: #e8c8c8 !important;
+        }
+
+        .sermon-item.card-goodfriday .sermon-tamil-title {
+            color: #9a7070 !important;
+            font-family: 'Noto Sans Tamil', sans-serif;
+            opacity: 0.65;
+        }
+
         .sermon-item.card-goodfriday .sermon-verse-badge {
             background: rgba(120, 50, 50, 0.3) !important;
             color: #d09090 !important;
             border: 1px solid rgba(160, 80, 80, 0.35) !important;
             border-radius: 20px;
         }
-        .sermon-item.card-goodfriday .sermon-verse-more { color: #9a7070 !important; opacity: 0.6; }
+
+        .sermon-item.card-goodfriday .sermon-verse-more {
+            color: #9a7070 !important;
+            opacity: 0.6;
+        }
+
         .sermon-item.card-goodfriday .cross-watermark {
-            position: absolute; right: 14px; top: 50%;
+            position: absolute;
+            right: 14px;
+            top: 50%;
             transform: translateY(-50%);
-            opacity: 0.08; pointer-events: none; z-index: 1;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 1;
         }
+
         .sermon-item.card-goodfriday .cross-glow {
-            position: absolute; top: 50%; right: 16px;
+            position: absolute;
+            top: 50%;
+            right: 16px;
             transform: translateY(-50%);
-            width: 60px; height: 60px;
-            background: radial-gradient(circle, rgba(180,50,50,0.12) 0%, transparent 70%);
-            border-radius: 50%; pointer-events: none;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, rgba(180, 50, 50, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
         }
+
         .sermon-item.card-goodfriday .blood-drop {
-            position: absolute; top: -20px; left: -10px;
-            width: 80px; height: 80px;
-            background: radial-gradient(circle, rgba(140,20,20,0.15) 0%, transparent 70%);
-            border-radius: 50%; pointer-events: none;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, rgba(140, 20, 20, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
         }
+
         .sermon-item.card-goodfriday .drip {
-            position: absolute; top: 0; width: 2px;
+            position: absolute;
+            top: 0;
+            width: 2px;
             border-radius: 0 0 2px 2px;
-            background: linear-gradient(to bottom, rgba(160,30,30,0.4), rgba(160,30,30,0));
-            animation: sermon-drip-fall 3s ease-in infinite; pointer-events: none;
+            background: linear-gradient(to bottom, rgba(160, 30, 30, 0.4), rgba(160, 30, 30, 0));
+            animation: sermon-drip-fall 3s ease-in infinite;
+            pointer-events: none;
         }
+
         @keyframes sermon-drip-fall {
-            0%   { height: 0; opacity: 0; }
-            20%  { opacity: 0.5; }
-            80%  { opacity: 0.2; }
-            100% { height: 30px; opacity: 0; }
+            0% {
+                height: 0;
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.5;
+            }
+
+            80% {
+                opacity: 0.2;
+            }
+
+            100% {
+                height: 30px;
+                opacity: 0;
+            }
         }
 
 
@@ -633,7 +800,8 @@
 
         .sermon-item-title-wrapper {
             flex: 1;
-            min-width: 0; /* Important for flexbox text truncation */
+            min-width: 0;
+            /* Important for flexbox text truncation */
         }
 
         .sermon-item-title {
@@ -1489,8 +1657,9 @@
             transform: translateY(100%);
             transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
             box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
-            touch-action: none;
-            user-select: none;
+            touch-action: pan-y;
+            user-select: auto;
+            -webkit-user-select: auto;
             will-change: transform;
         }
 
@@ -1509,6 +1678,8 @@
             background: #ccc;
             border-radius: 2px;
             margin: 12px auto 0;
+            touch-action: none;
+            cursor: grab;
         }
 
         body.dark-theme .sermon-sheet-handle {
@@ -1576,6 +1747,10 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            touch-action: pan-y;
+            -webkit-overflow-scrolling: touch;
+            user-select: auto;
+            -webkit-user-select: auto;
         }
 
         .sermon-input-group {
@@ -1617,7 +1792,10 @@
             color: #f0f0f0;
         }
 
-        .sermon-input-text {
+        .sermon-input-text,
+        input.sermon-input-text,
+        textarea.sermon-input-text,
+        select.sermon-dropdown-select {
             padding: 12px;
             border: 2px solid #e0e0e0;
             border-radius: 12px;
@@ -1626,21 +1804,29 @@
             color: #333;
             background: #ffffff;
             transition: all 0.2s;
+            user-select: text !important;
+            -webkit-user-select: text !important;
+            touch-action: auto !important;
         }
 
-        body.dark-theme .sermon-input-text {
+        body.dark-theme .sermon-input-text,
+        body.dark-theme input.sermon-input-text,
+        body.dark-theme textarea.sermon-input-text,
+        body.dark-theme select.sermon-dropdown-select {
             background: #252525;
             border-color: #404040;
             color: #f0f0f0;
         }
 
-        .sermon-input-text:focus {
+        .sermon-input-text:focus,
+        select.sermon-dropdown-select:focus {
             outline: none;
             border-color: #78aaff;
             background-color: #f5f5f5;
         }
 
-        body.dark-theme .sermon-input-text:focus {
+        body.dark-theme .sermon-input-text:focus,
+        body.dark-theme select.sermon-dropdown-select:focus {
             border-color: #78aaff;
             background-color: #252525;
         }
@@ -1706,7 +1892,7 @@
             pointer-events: none;
         }
 
-        .sermon-detail-sheet.active ~ .sermon-detail-overlay,
+        .sermon-detail-sheet.active~.sermon-detail-overlay,
         .sermon-detail-overlay.active {
             display: block;
             opacity: 1;
@@ -1727,6 +1913,9 @@
             transform: translateY(100%);
             transition: transform 0.3s ease;
             box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+            touch-action: pan-y;
+            user-select: auto;
+            -webkit-user-select: auto;
         }
 
         body.dark-theme .sermon-detail-sheet {
@@ -1741,6 +1930,10 @@
             padding: 16px;
             overflow-y: auto;
             position: relative;
+            touch-action: pan-y;
+            -webkit-overflow-scrolling: touch;
+            user-select: auto;
+            -webkit-user-select: auto;
         }
 
         .sermon-favorite-btn {
@@ -1777,16 +1970,21 @@
             0% {
                 transform: scale(1);
             }
+
             10% {
                 transform: scale(1.15);
             }
+
             20% {
                 transform: scale(1);
             }
+
             30% {
                 transform: scale(1.15);
             }
-            40%, 100% {
+
+            40%,
+            100% {
                 transform: scale(1);
             }
         }
@@ -2098,7 +2296,7 @@
             transition: opacity 0.3s ease;
         }
 
-        .sermon-confirm-dialog.active ~ .sermon-confirm-backdrop,
+        .sermon-confirm-dialog.active~.sermon-confirm-backdrop,
         .sermon-confirm-backdrop.active {
             display: block;
             opacity: 1;
@@ -2465,7 +2663,7 @@
         .sermon-description {
             font-size: 0.8rem;
             line-height: 1.5;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255, 255, 255, 0.9);
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -2498,7 +2696,7 @@
         .sermon-summary-header-bar {
             height: 1px;
             flex: 1;
-            background: linear-gradient(to right, rgba(251,191,77,0.7), transparent);
+            background: linear-gradient(to right, rgba(251, 191, 77, 0.7), transparent);
             opacity: 0.9;
         }
 
@@ -2513,15 +2711,15 @@
             gap: 10px;
             padding: 10px 12px;
             border-radius: 10px;
-            background: rgba(0,0,0,0.32);
-            border: 1px solid rgba(251,191,77,0.24);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+            background: rgba(0, 0, 0, 0.32);
+            border: 1px solid rgba(251, 191, 77, 0.24);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
         }
 
         body.light-theme .sermon-summary-card {
-            background: rgba(255,255,255,0.8);
-            border-color: rgba(251,191,77,0.4);
-            box-shadow: 0 6px 18px rgba(15,23,42,0.12);
+            background: rgba(255, 255, 255, 0.8);
+            border-color: rgba(251, 191, 77, 0.4);
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
         }
 
         .sermon-summary-accent {
@@ -2602,6 +2800,7 @@
                 transform: translateY(100%);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -2613,6 +2812,7 @@
                 transform: translateY(0);
                 opacity: 1;
             }
+
             to {
                 transform: translateY(100%);
                 opacity: 0;
@@ -2750,7 +2950,7 @@
         body.dark-theme .passage-lang-btn.active {
             background: #78aaff;
             border-color: #78aaff;
-            color: #ffffff; 
+            color: #ffffff;
         }
 
         .passage-content {
@@ -2854,20 +3054,23 @@
             <div class="sermon-dropdown-menu" id="sermon-dropdown-menu">
                 <button class="sermon-menu-item" id="sermon-menu-add">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                        <path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                        <path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                     <span>Add Sermon</span>
                 </button>
                 <button class="sermon-menu-item" id="sermon-menu-songs">
                     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                        <path
+                            d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
                     </svg>
                     <span>Add Songs</span>
                 </button>
                 <button class="sermon-menu-item" id="sermon-menu-favorites">
                     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                     </svg>
                     <span>Favorites</span>
                 </button>
@@ -2959,7 +3162,7 @@
                     <div class="sermon-skeleton-bone sermon-skeleton-badge" style="width:100px;"></div>
                 </div>
             </div>
-            
+
             <div class="sermon-list" id="sermon-list">
                 <div class="sermon-empty-state">
                     <p>No sermons yet</p>
@@ -2975,7 +3178,8 @@
         <div class="sermon-sheet-handle" id="sermon-sheet-drag-handle"></div>
         <div class="sermon-sheet-header">
             <h2 class="sermon-sheet-title">Add Sermon</h2>
-            <button class="sermon-form-favorite-btn" id="sermon-form-favorite-btn" title="Add to favorites" style="display: none;">
+            <button class="sermon-form-favorite-btn" id="sermon-form-favorite-btn" title="Add to favorites"
+                style="display: none;">
                 <span class="heart-empty">🤍</span><span class="heart-filled">❤️</span>
             </button>
         </div>
@@ -2988,14 +3192,13 @@
             </div>
             <div class="sermon-input-group">
                 <label class="sermon-input-label">Tamil Title (Optional)</label>
-                <input type="text" class="sermon-input-text" id="sermon-tamil-title-input" placeholder="Enter Tamil title..."
-                    autocomplete="off">
+                <input type="text" class="sermon-input-text" id="sermon-tamil-title-input"
+                    placeholder="Enter Tamil title..." autocomplete="off">
             </div>
             <div class="sermon-input-group">
                 <label class="sermon-input-label">Sermon Points / Description (Optional)</label>
                 <textarea class="sermon-input-text" id="sermon-description-input" rows="3"
-                    placeholder="Add key points or a short description of this sermon..."
-                    autocomplete="off"></textarea>
+                    placeholder="Add key points or a short description of this sermon..." autocomplete="off"></textarea>
             </div>
             <div class="sermon-input-group">
                 <label class="sermon-input-label">Sermon Date</label>
@@ -3035,7 +3238,8 @@
                                 <option value="" disabled>Select Verse</option>
                             </select>
                         </div>
-                        <button class="sermon-add-verse-btn" id="sermon-add-verse-btn" type="button" disabled>Add Verse</button>
+                        <button class="sermon-add-verse-btn" id="sermon-add-verse-btn" type="button" disabled>Add
+                            Verse</button>
                     </div>
                 </div>
                 <div class="sermon-verses-chips" id="sermon-verses-chips"></div>
@@ -3043,7 +3247,8 @@
             <div class="sermon-input-group">
                 <label class="sermon-input-label">Songs (Optional)</label>
                 <div class="sermon-song-input-row">
-                    <input type="text" class="sermon-input-text" id="sermon-form-song-input" placeholder="Enter song title or number..." autocomplete="off">
+                    <input type="text" class="sermon-input-text" id="sermon-form-song-input"
+                        placeholder="Enter song title or number..." autocomplete="off">
                     <button class="sermon-add-verse-btn" id="sermon-form-add-song-btn" type="button">Add Song</button>
                 </div>
                 <div class="sermon-verses-chips" id="sermon-form-songs-chips"></div>
@@ -3063,8 +3268,10 @@
         <div class="sermon-sheet-header detail-header" id="sermon-detail-header">
             <h2 class="sermon-sheet-title">Sermon Details</h2>
             <button class="sermon-detail-close-btn" id="sermon-detail-close-btn" aria-label="Close">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
-                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="width: 100%; height: 100%;">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
             </button>
         </div>
@@ -3124,13 +3331,16 @@
         <div class="sermon-sheet-header detail-header" style="justify-content: space-between;">
             <div style="display: flex; align-items: center; gap: 8px;">
                 <svg viewBox="0 0 24 24" fill="#eab308" style="width: 22px; height: 22px; flex-shrink: 0;">
-                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
                 </svg>
                 <h2 class="sermon-sheet-title" style="margin: 0;">Add Songs to Sermon</h2>
             </div>
-            <button class="sermon-detail-close-btn" id="sermon-songs-close-btn" aria-label="Close" style="opacity: 1; pointer-events: auto; position: static;">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
-                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <button class="sermon-detail-close-btn" id="sermon-songs-close-btn" aria-label="Close"
+                style="opacity: 1; pointer-events: auto; position: static;">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="width: 100%; height: 100%;">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
             </button>
         </div>
@@ -3145,7 +3355,8 @@
             <div class="sermon-input-group">
                 <label class="sermon-input-label">Enter Song Number or Title</label>
                 <div class="sermon-song-input-row">
-                    <input type="text" class="sermon-input-text" id="songs-modal-input" placeholder="e.g. 124, Amazing Grace, பாடல்..." autocomplete="off">
+                    <input type="text" class="sermon-input-text" id="songs-modal-input"
+                        placeholder="e.g. 124, Amazing Grace, பாடல்..." autocomplete="off">
                     <button class="sermon-add-verse-btn" id="songs-modal-add-btn" type="button">Add Song</button>
                 </div>
                 <span class="sermon-input-hint">Type song title/number and press Enter or tap Add Song</span>
@@ -3153,7 +3364,8 @@
             <div class="sermon-input-group">
                 <div class="sermon-songs-chips-header">
                     <label class="sermon-input-label">Songs List (<span id="songs-modal-count">0</span>)</label>
-                    <button type="button" class="sermon-clear-songs-btn" id="songs-modal-clear-btn" style="display: none;">Clear All</button>
+                    <button type="button" class="sermon-clear-songs-btn" id="songs-modal-clear-btn"
+                        style="display: none;">Clear All</button>
                 </div>
                 <div class="sermon-songs-chips-container" id="songs-modal-chips-container">
                     <div class="sermon-empty-songs-msg">Select a sermon above to view and add songs</div>
@@ -3249,7 +3461,7 @@
         let modalSelectedSermonIndex = null;
         let modalTempSongs = [];
         let nextSermonId = 10001;  // Starting ID for sermons
-        
+
         // Check if admin is enabled
         function isAdmin() {
             const adminStatus = localStorage.getItem('isAdmin');
@@ -3259,9 +3471,9 @@
             }
             return adminStatus === 'true';
         }
-        
+
         // Disable zoom and copy functionality
-        document.addEventListener('touchmove', function(e) {
+        document.addEventListener('touchmove', function (e) {
             if (e.touches.length > 1) {
                 e.preventDefault();  // Disable pinch zoom
             }
@@ -3315,7 +3527,7 @@
             e.preventDefault();
             return false;
         });
-        
+
         // Generate next sermon ID
         function generateSermonId() {
             const maxId = sermons.reduce((max, sermon) => {
@@ -3325,17 +3537,16 @@
             nextSermonId = maxId + 1;
             return nextSermonId;
         }
-        
+
         // Supabase configuration
         const SUPABASE_URL = 'https://encjogfdbrfcatvytpir.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck';
         let supabase = null;
         let syncEnabled = false;
-        
-        // Initialize Supabase
-        async function initSupabase() {
+
+        // Initialize Supabase (synchronous)
+        function initSupabase() {
             try {
-                // Check if Supabase is available in the global scope
                 if (window.supabase && window.supabase.createClient) {
                     supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
                     syncEnabled = true;
@@ -3346,6 +3557,7 @@
                 syncEnabled = false;
             }
         }
+        initSupabase();
 
         // Initialize book dropdown
         function initializeBookDropdown() {
@@ -3356,7 +3568,7 @@
                 option.textContent = book.book;
                 bookSelect.appendChild(option);
             });
-            
+
             // Add dummy verses (1-5) to verses select initially
             const versesSelect = document.getElementById('sermon-verses-select');
             for (let i = 1; i <= 5; i++) {
@@ -3374,7 +3586,7 @@
             const versesSelect = document.getElementById('sermon-verses-select');
 
             chapterSelect.innerHTML = '<option value="">Select Chapter</option>';
-            
+
             // Reset to dummy verses
             versesSelect.innerHTML = '';
             for (let i = 1; i <= 5; i++) {
@@ -3412,7 +3624,7 @@
             if (selectedChapter) {
                 const book = bibleMeta.find(b => b.book === selectedBook);
                 const verseCount = book.chapters[selectedChapter - 1];
-                
+
                 // Remove dummy verses and add actual verses for the chapter
                 for (let i = 1; i <= verseCount; i++) {
                     const option = document.createElement('option');
@@ -3544,14 +3756,14 @@
             if (!Array.isArray(verses)) {
                 return [];
             }
-            
+
             return verses.map(v => {
                 // Handle both old and new verse formats
                 let normalized = {
                     book: String(v.book || '').trim(),
                     chapter: parseInt(v.chapter, 10) || 1
                 };
-                
+
                 // Handle old format with verseStart/verseEnd
                 if (v.verseStart !== undefined && v.verseEnd !== undefined) {
                     normalized.verseStart = parseInt(v.verseStart, 10) || 1;
@@ -3566,15 +3778,15 @@
                         normalized.verses = verseNums;
                     }
                 }
-                
+
                 // Regenerate display text based on actual verse numbers
                 if (normalized.verseStart && normalized.verseEnd) {
-                    const verseRange = normalized.verseStart === normalized.verseEnd 
-                        ? normalized.verseStart 
+                    const verseRange = normalized.verseStart === normalized.verseEnd
+                        ? normalized.verseStart
                         : `${normalized.verseStart} – ${normalized.verseEnd}`;
                     normalized.display = `${normalized.book} ${normalized.chapter}:${verseRange}`;
                 }
-                
+
                 return normalized;
             }).filter(v => v.book && !isNaN(v.verseStart) && !isNaN(v.verseEnd));
         }
@@ -3586,10 +3798,14 @@
             const skeletonStart = Date.now();
 
             if (!supabase) {
+                initSupabase();
+            }
+
+            if (!supabase) {
                 loadSermonsFromLocalStorage();
                 renderSermons();
                 const elapsed = Date.now() - skeletonStart;
-                if (elapsed < 1000) await new Promise(r => setTimeout(r, 1000 - elapsed));
+                if (elapsed < 400) await new Promise(r => setTimeout(r, 400 - elapsed));
                 if (loader) loader.classList.add('hidden');
                 const countBadgeEl = document.getElementById('sermon-count-badge');
                 if (countBadgeEl) countBadgeEl.classList.remove('skeleton');
@@ -3597,9 +3813,9 @@
             }
 
             try {
-                // Add 10 second timeout to prevent indefinite hanging
-                const timeoutPromise = new Promise((_, reject) => 
-                    setTimeout(() => reject(new Error('Supabase query timeout')), 10000)
+                // Add 8 second timeout to prevent indefinite hanging
+                const timeoutPromise = new Promise((_, reject) =>
+                    setTimeout(() => reject(new Error('Supabase query timeout')), 8000)
                 );
 
                 const queryPromise = supabase
@@ -3613,7 +3829,7 @@
                     loadSermonsFromLocalStorage();
                     renderSermons();
                     const elapsed = Date.now() - skeletonStart;
-                    if (elapsed < 1000) await new Promise(r => setTimeout(r, 1000 - elapsed));
+                    if (elapsed < 400) await new Promise(r => setTimeout(r, 400 - elapsed));
                     if (loader) loader.classList.add('hidden');
                     const countBadgeEl = document.getElementById('sermon-count-badge');
                     if (countBadgeEl) countBadgeEl.classList.remove('skeleton');
@@ -3634,47 +3850,67 @@
                         _synced: true  // Mark as synced from Supabase
                     }));
 
-                    // Merge in any locally created sermons that Supabase doesn't know about yet
-                    // This avoids "losing" a just-created sermon when navigating back to this page
-                    let localOnlySermons = [];
+                    // Load current localStorage to preserve pending local modifications
+                    let localMap = new Map();
                     try {
                         const saved = localStorage.getItem('sermons');
                         if (saved) {
                             const loaded = JSON.parse(saved);
-                            const supabaseIds = new Set(supabaseSermons.map(s => s.id));
-                            localOnlySermons = loaded.filter(s => {
-                                // Keep sermons that don't exist in Supabase yet (e.g., newly created)
-                                return s.id && !supabaseIds.has(s.id);
-                            }).map(s => ({
-                                ...s,
-                                verses: normalizeVerses(s.verses || []),
-                                songs: normalizeSongs(s.songs || []),
-                                description: s.description || ''
-                            }));
+                            loaded.forEach(s => {
+                                if (s && s.id !== undefined && s.id !== null) {
+                                    localMap.set(String(s.id), s);
+                                }
+                            });
                         }
                     } catch (e) {
-                        // If parsing fails, just fall back to Supabase data
-                        localOnlySermons = [];
+                        localMap = new Map();
                     }
 
-                    sermons = [...supabaseSermons, ...localOnlySermons];
+                    // For each sermon from Supabase:
+                    // If local version has pending edits (_needsUpdate: true), PRESERVE the local edit and push to Supabase
+                    let mergedSermons = supabaseSermons.map(remoteSermon => {
+                        const local = localMap.get(String(remoteSermon.id));
+                        if (local && local._needsUpdate) {
+                            // Local edit takes precedence; trigger sync to Supabase
+                            syncSermonUpdateToSupabase(local);
+                            return {
+                                ...local,
+                                verses: normalizeVerses(local.verses || []),
+                                songs: normalizeSongs(local.songs || [])
+                            };
+                        }
+                        return remoteSermon;
+                    });
+
+                    // Add locally created sermons that don't exist in Supabase yet
+                    const remoteIdSet = new Set(supabaseSermons.map(s => String(s.id)));
+                    const localOnlySermons = [];
+                    localMap.forEach(localSermon => {
+                        if (!remoteIdSet.has(String(localSermon.id))) {
+                            localOnlySermons.push({
+                                ...localSermon,
+                                verses: normalizeVerses(localSermon.verses || []),
+                                songs: normalizeSongs(localSermon.songs || [])
+                            });
+                        }
+                    });
+
+                    sermons = [...mergedSermons, ...localOnlySermons];
 
                     // Save merged list to localStorage as backup
                     localStorage.setItem('sermons', JSON.stringify(sermons));
+
+                    // Push any unsynced local-only sermons to Supabase in background
+                    if (localOnlySermons.length > 0) {
+                        syncSermonsToSupabase();
+                    }
                 } else {
                     loadSermonsFromLocalStorage();
-                    renderSermons();
-                    const elapsed = Date.now() - skeletonStart;
-                    if (elapsed < 1000) await new Promise(r => setTimeout(r, 1000 - elapsed));
-                    if (loader) loader.classList.add('hidden');
-                    const countBadgeEl = document.getElementById('sermon-count-badge');
-                    if (countBadgeEl) countBadgeEl.classList.remove('skeleton');
-                    return;
                 }
 
                 renderSermons();
                 const elapsed = Date.now() - skeletonStart;
-                if (elapsed < 1000) await new Promise(r => setTimeout(r, 1000 - elapsed));
+                if (elapsed < 400) await new Promise(r => setTimeout(r, 400 - elapsed));
                 if (loader) loader.classList.add('hidden');
                 const countBadgeEl = document.getElementById('sermon-count-badge');
                 if (countBadgeEl) countBadgeEl.classList.remove('skeleton');
@@ -3682,7 +3918,7 @@
                 loadSermonsFromLocalStorage();
                 renderSermons();
                 const elapsed = Date.now() - skeletonStart;
-                if (elapsed < 1000) await new Promise(r => setTimeout(r, 1000 - elapsed));
+                if (elapsed < 400) await new Promise(r => setTimeout(r, 400 - elapsed));
                 if (loader) loader.classList.add('hidden');
                 const countBadgeEl = document.getElementById('sermon-count-badge');
                 if (countBadgeEl) countBadgeEl.classList.remove('skeleton');
@@ -3708,7 +3944,13 @@
 
         // Load sermons (uses Supabase if available, falls back to localStorage)
         async function loadSermons() {
+            // First load and display from localStorage immediately (zero delay)
+            loadSermonsFromLocalStorage();
+            renderSermons();
+
+            // Then query Supabase and merge in background
             await loadSermonsFromSupabase();
+
             // Preload all verses from all sermons in background (non-blocking)
             preloadAllSermonsVerses();
         }
@@ -3743,7 +3985,7 @@
             sermonList.innerHTML = sortedSermons.map((sermon, sortedIndex) => {
                 // Find the original index in the sermons array for onclick handlers
                 const originalIndex = sermons.findIndex(s => s.id === sermon.id);
-                
+
                 const date = parseSermonDate(sermon.date);
                 const dateStr = formatSermonDate(date);
                 let versesHtml = '';
@@ -3958,31 +4200,27 @@
         // Save sermons to localStorage
         function saveSermons() {
             localStorage.setItem('sermons', JSON.stringify(sermons));
-            
+
             // Sync to Supabase if enabled
             if (syncEnabled && supabase) {
                 syncSermonsToSupabase();
             }
         }
-        
+
         // Sync sermons to Supabase
         async function syncSermonsToSupabase() {
             if (!supabase) {
                 return;
             }
             try {
+                let hasChanges = false;
                 for (const sermon of sermons) {
-                    // Skip if already synced to Supabase
-                    if (sermon._synced) {
-                        continue;
-                    }
-                    
-                    const dateStr = sermon.date instanceof Date 
+                    const dateStr = sermon.date instanceof Date
                         ? sermon.date.toISOString().split('T')[0]
-                        : sermon.date.split('T')[0];
-                    
-                    // Sync new sermons (with sequential IDs like 10001, 10002, etc)
-                    if (sermon.id && sermon.id >= 10001) {
+                        : (sermon.date ? String(sermon.date).split('T')[0] : '');
+
+                    // Sync new unsynced sermons
+                    if (!sermon._synced) {
                         const { data, error } = await supabase
                             .from('sermons')
                             .insert([{
@@ -3990,81 +4228,108 @@
                                 title: sermon.title,
                                 tamil_title: sermon.tamilTitle || null,
                                 description: sermon.description || null,
-                                sermon_date: dateStr,
+                                sermon_date: dateStr || null,
                                 verses: sermon.verses || [],
                                 songs: sermon.songs || [],
                                 is_favorite: sermon.is_favorite || false
                             }])
                             .select();
-                        
-                        if (error) {
-                        } else if (data && data.length > 0) {
-                            sermon._synced = true;  // Mark as synced
+
+                        if (!error && data && data.length > 0) {
+                            sermon._synced = true;
+                            delete sermon._needsUpdate;
+                            hasChanges = true;
+                        }
+                    }
+                    // Sync pending updates for existing sermons
+                    else if (sermon._needsUpdate && sermon.id) {
+                        const { error } = await supabase
+                            .from('sermons')
+                            .update({
+                                title: sermon.title,
+                                tamil_title: sermon.tamilTitle || null,
+                                description: sermon.description || null,
+                                sermon_date: dateStr || null,
+                                verses: sermon.verses || [],
+                                songs: sermon.songs || [],
+                                is_favorite: sermon.is_favorite || false
+                            })
+                            .eq('id', sermon.id);
+
+                        if (!error) {
+                            delete sermon._needsUpdate;
+                            hasChanges = true;
                         }
                     }
                 }
+
+                if (hasChanges) {
+                    localStorage.setItem('sermons', JSON.stringify(sermons));
+                }
             } catch (error) {
+                console.warn('Supabase sync error:', error);
             }
         }
-        
+
         // Sync sermon update to Supabase
-        async function syncSermonUpdateToSupabase(sermonIndex) {
+        async function syncSermonUpdateToSupabase(sermonOrIndex) {
             if (!supabase) return;
-            
-            const sermon = sermons[sermonIndex];
-            if (!sermon || !sermon.id || sermon.id < 10001) return;  // Only update synced sermons
-            
+
+            const sermon = typeof sermonOrIndex === 'number' ? sermons[sermonOrIndex] : sermonOrIndex;
+            if (!sermon || !sermon.id) return;
+
             try {
-                const dateStr = sermon.date instanceof Date 
+                const dateStr = sermon.date instanceof Date
                     ? sermon.date.toISOString().split('T')[0]
-                    : sermon.date.split('T')[0];
-                
+                    : (sermon.date ? String(sermon.date).split('T')[0] : '');
+
                 const { error } = await supabase
                     .from('sermons')
                     .update({
                         title: sermon.title,
                         tamil_title: sermon.tamilTitle || null,
                         description: sermon.description || null,
-                        sermon_date: dateStr,
+                        sermon_date: dateStr || null,
                         verses: sermon.verses || [],
                         songs: sermon.songs || [],
                         is_favorite: sermon.is_favorite || false
                     })
                     .eq('id', sermon.id);
-                
-                if (error) {
+
+                if (!error) {
+                    sermon._synced = true;
+                    delete sermon._needsUpdate;
+                    localStorage.setItem('sermons', JSON.stringify(sermons));
                 } else {
+                    console.warn('Supabase update error:', error);
                 }
             } catch (error) {
+                console.warn('Supabase update exception:', error);
             }
         }
-        
+
         // Sync sermon deletion to Supabase
         async function syncSermonDeleteToSupabase(sermonId) {
             if (!supabase || !sermonId) return;
-            
-            // Only delete from Supabase if it's a synced sermon (sequential IDs starting from 10001)
-            if (sermonId < 10001) {
-                return;
-            }
-            
+
             try {
                 const { error } = await supabase
                     .from('sermons')
                     .delete()
                     .eq('id', sermonId);
-                
+
                 if (error) {
-                } else {
+                    console.warn('Supabase delete error:', error);
                 }
             } catch (error) {
+                console.warn('Supabase delete exception:', error);
             }
         }
 
         // Handle double-tap on sermon card
         let lastTapTime = null;
         let lastTappedElement = null;
-        
+
         function attachDoubleTapListener() {
             // Use event delegation on document for maximum compatibility
             document.addEventListener('click', function doubleTapHandler(e) {
@@ -4104,14 +4369,14 @@
             // Validate inputs - ensure verseStart and verseEnd are valid numbers
             const validStart = parseInt(verseStart, 10);
             const validEnd = parseInt(verseEnd, 10);
-            
+
             // Skip if invalid
             if (isNaN(validStart) || isNaN(validEnd)) {
                 return;
             }
 
             const cacheKey = `${book}|${chapter}|${validStart}|${validEnd}`;
-            
+
             // Check if already cached
             if (verseCache[language][cacheKey]) {
                 return;
@@ -4119,10 +4384,10 @@
 
             try {
                 // Use the proper book identifier functions based on language
-                const bookFile = language === 'english' ? 
-                    getBookFileIdentifierEnglish(book) : 
+                const bookFile = language === 'english' ?
+                    getBookFileIdentifierEnglish(book) :
                     getBookFileIdentifier(book);
-                
+
                 const { data, error } = await supabase
                     .from('bible_verses')
                     .select('verse, text')
@@ -4152,9 +4417,9 @@
                 // Handle both formats:
                 // Old format: {book, chapter, verseStart, verseEnd}
                 // New format: {book, chapter, verses: [], ranges: []}
-                
+
                 let start, end;
-                
+
                 if (v.verseStart !== undefined && v.verseEnd !== undefined) {
                     // Old format
                     start = parseInt(v.verseStart, 10);
@@ -4166,7 +4431,7 @@
                 } else {
                     return false;
                 }
-                
+
                 return !isNaN(start) && !isNaN(end) && v.book && v.chapter;
             }).map(v => {
                 // Normalize to standard format
@@ -4212,7 +4477,7 @@
             Object.values(versesByBookChapter).forEach(group => {
                 const minVerse = Math.min(...group.verseStarts);
                 const maxVerse = Math.max(...group.verseEnds);
-                
+
                 // Preload English
                 preloadVersesCached(group.book, group.chapter, minVerse, maxVerse, 'english');
                 // Preload Tamil
@@ -4358,24 +4623,24 @@
             detailSheet.dataset.openSermonIndex = index;  // Track which sermon is open
             detailSheet.style.maxHeight = '80vh';  // Reset maxHeight to default
             detailSheet.style.transition = 'transform 0.3s ease';  // Re-enable transitions
-            
+
             // Remove active class from all sermon items
             document.querySelectorAll('.sermon-item').forEach(item => {
                 item.classList.remove('active');
             });
-            
+
             // Add active class to clicked sermon item
             const sermonItem = document.querySelector(`[data-index="${index}"]`);
             if (sermonItem) {
                 sermonItem.classList.add('active');
             }
-            
+
             // Show overlay
             const detailOverlay = document.getElementById('sermon-detail-overlay');
             if (detailOverlay) {
                 detailOverlay.classList.add('active');
             }
-            
+
             // Add blur to container
             const container = document.querySelector('.sermon-container');
             if (container) {
@@ -4398,12 +4663,12 @@
                 detailOverlay.classList.remove('active');
             }
             detailSheet.dataset.openSermonIndex = null;  // Clear tracking
-            
+
             // Remove active class from all sermon items
             document.querySelectorAll('.sermon-item').forEach(item => {
                 item.classList.remove('active');
             });
-            
+
             // Remove blur from container
             const container = document.querySelector('.sermon-container');
             if (container) {
@@ -4418,7 +4683,7 @@
 
             try {
                 const newFavoriteStatus = !sermon.is_favorite;
-                
+
                 // Update Supabase if available
                 if (supabase && sermon.id) {
                     const { error } = await supabase
@@ -4431,6 +4696,7 @@
 
                 // Update local data
                 sermon.is_favorite = newFavoriteStatus;
+                saveSermons();
 
                 // Update the sermon item in the list
                 const sermonItem = document.querySelector(`[data-index="${index}"]`);
@@ -4443,7 +4709,7 @@
                 }
 
             } catch (error) {
-                alert('Failed to update favorite status');
+                console.warn('Failed to update favorite status:', error);
             }
         }
 
@@ -4455,7 +4721,7 @@
             try {
                 const newFavoriteStatus = !sermon.is_favorite;
                 let supabaseError = false;
-                
+
                 // Update Supabase if available and sermon has an ID
                 if (supabase && sermon.id) {
                     const { error } = await supabase
@@ -4500,19 +4766,19 @@
                 alert('Failed to update favorite status');
             }
         }
-        
+
         // Add overlay click handler for better cross-browser support
         document.addEventListener('DOMContentLoaded', () => {
             const detailOverlay = document.getElementById('sermon-detail-overlay');
             const detailSheet = document.getElementById('sermon-detail-sheet');
-            
+
             if (detailOverlay) {
                 detailOverlay.addEventListener('click', (e) => {
                     // Close on any click on the overlay
                     closeSermonDetail();
                 });
             }
-            
+
             // Prevent clicks inside the sheet from closing it
             if (detailSheet) {
                 detailSheet.addEventListener('click', (e) => {
@@ -4539,10 +4805,10 @@
             const formSongInput = document.getElementById('sermon-form-song-input');
             if (formSongInput) formSongInput.value = '';
             closeSermonDetail();
-            
+
             // Change header title to "Edit Sermon"
             document.querySelector('.sermon-sheet-title').textContent = 'Edit Sermon';
-            
+
             // Show favorite button and set its state
             const favoriteBtn = document.getElementById('sermon-form-favorite-btn');
             if (favoriteBtn) {
@@ -4554,7 +4820,7 @@
                 }
                 favoriteBtn.onclick = () => toggleSermonFavoriteForm(currentEditingIndex);
             }
-            
+
             document.getElementById('sermon-bottom-sheet').classList.add('active');
             document.getElementById('sermon-sheet-overlay').classList.add('active');
         }
@@ -4579,7 +4845,7 @@
         // Normalize book names - convert "I Chronicles" to "1 Chronicles", etc.
         function normalizeBookName(bookName) {
             if (!bookName) return bookName;
-            
+
             // Convert Roman numerals at the start to Arabic numerals
             const romanToNumMap = {
                 'I ': '1 ',
@@ -4588,7 +4854,7 @@
                 'IV ': '4 ',
                 'V ': '5 '
             };
-            
+
             let normalized = bookName;
             for (const [roman, num] of Object.entries(romanToNumMap)) {
                 if (normalized.startsWith(roman)) {
@@ -4603,7 +4869,7 @@
         function getBookFileIdentifier(bookName) {
             // Normalize the book name first
             const normalizedName = normalizeBookName(bookName);
-            
+
             const bookMapping = {
                 '1 Corinthians': 'i_corinthians',
                 '2 Corinthians': 'ii_corinthians',
@@ -4623,12 +4889,12 @@
                 '2 John': 'ii_john',
                 '3 John': 'iii_john'
             };
-            
+
             // Return mapped value if exists
             if (bookMapping[normalizedName]) {
                 return bookMapping[normalizedName];
             }
-            
+
             // Handle numbered books in fallback by converting number to roman numeral
             const bookLowercase = normalizedName.toLowerCase();
             const numberMatch = bookLowercase.match(/^(\d+)\s+(.+)$/);
@@ -4639,7 +4905,7 @@
                 const romanNum = romanNumerals[number] || number.toString();
                 return `${romanNum}_${restOfName}`;
             }
-            
+
             // Default: convert to lowercase with underscores
             return bookLowercase.replace(/\s+/g, '_');
         }
@@ -4657,13 +4923,13 @@
             // Ensure verseStart and verseEnd are valid numbers
             const start = parseInt(verseStart, 10);
             const end = parseInt(verseEnd, 10);
-            
+
             // If either is invalid, use them as is or set to 1 as fallback
             const validStart = isNaN(start) ? 1 : start;
             const validEnd = isNaN(end) ? validStart : end;
-            
+
             const verseRef = `${book} ${chapter}:${validStart}${validStart !== validEnd ? '-' + validEnd : ''}`;
-            
+
             // Load and display the verse from cache or Supabase
             loadVersesFromSupabaseSermon(book, chapter, validStart, validEnd, verseRef);
         }
@@ -4672,7 +4938,7 @@
         async function loadVersesFromSupabaseSermon(book, chapter, verseStart, verseEnd, verseRef) {
             const badge = document.getElementById('passageBadge');
             const content = document.getElementById('passageContent');
-            
+
             if (!badge || !content) return;
 
             // Validate inputs - ensure verseStart and verseEnd are numbers
@@ -4696,7 +4962,7 @@
 
             // Show loader
             content.innerHTML = '<div class="passage-loader"><div class="passage-loader-spinner"></div></div>';
-            
+
             // Reset language buttons to Tamil (default)
             const buttons = document.querySelectorAll('.passage-lang-btn');
             buttons.forEach(btn => {
@@ -4706,14 +4972,14 @@
                     btn.classList.remove('active');
                 }
             });
-            
+
             try {
                 const bookFile = getBookFileIdentifier(book);
                 const cacheKey = `${book}|${chapter}|${verseStart}|${verseEnd}`;
-                
+
                 // Check cache first for Tamil
                 let data = verseCache.tamil[cacheKey];
-                
+
                 // If not in cache, fetch Tamil from Supabase
                 if (!data) {
                     const { data: fetchedData, error } = await supabase
@@ -4729,7 +4995,7 @@
                     if (error) {
                     }
                     data = fetchedData;
-                    
+
                     // Cache the result for future use
                     if (data && data.length > 0) {
                         verseCache.tamil[cacheKey] = data;
@@ -4739,7 +5005,7 @@
                 if (!data || data.length === 0) {
                     // No Tamil data found, try English
                     let engData = verseCache.english[cacheKey];
-                    
+
                     if (!engData) {
                         const bookFileEnglish = getBookFileIdentifierEnglish(book);
                         const { data: fetchedData, error } = await supabase
@@ -4776,7 +5042,7 @@
                                 btn.classList.remove('active');
                             }
                         });
-                        
+
                         let htmlContent = '';
                         engData.forEach(row => {
                             htmlContent += `<p class="bible-verse">${row.verse}. ${row.text}</p>`;
@@ -4785,7 +5051,7 @@
                         badge.textContent = verseRef;
                         content.innerHTML = htmlContent;
                         content.scrollTop = 0;
-                        
+
                         setTimeout(() => {
                             content.style.opacity = '1';
                         }, 50);
@@ -4800,7 +5066,7 @@
                     badge.textContent = verseRef;
                     content.innerHTML = htmlContent;
                     content.scrollTop = 0;
-                    
+
                     setTimeout(() => {
                         content.style.opacity = '1';
                     }, 50);
@@ -4824,7 +5090,7 @@
             } catch (error) {
                 badge.textContent = verseRef;
                 content.innerHTML = '<p class="passage-no-data">Error loading verse. Please try again.</p>';
-                
+
                 // Open the modal anyway to show error
                 const modal = document.getElementById('passagePopup');
                 const modalCard = document.getElementById('passageModalCard');
@@ -4859,9 +5125,9 @@
                 // Handle both formats:
                 // Old format: {book, chapter, verseStart, verseEnd}
                 // New format: {book, chapter, verses: [], ranges: []}
-                
+
                 let start, end;
-                
+
                 if (v.verseStart !== undefined && v.verseEnd !== undefined) {
                     // Old format
                     start = parseInt(v.verseStart, 10);
@@ -4873,7 +5139,7 @@
                 } else {
                     return false;
                 }
-                
+
                 return !isNaN(start) && !isNaN(end) && v.book && v.chapter;
             }).map(v => {
                 // Normalize to standard format
@@ -5042,7 +5308,7 @@
         function handlePassagePopupClick(event) {
             const modal = document.getElementById('passagePopup');
             const modalCard = document.getElementById('passageModalCard');
-            
+
             // Close if clicking outside the modal card
             if (modal && event.target === modal) {
                 closePassagePopupSermon();
@@ -5056,7 +5322,7 @@
         function initPassageModalDrag() {
             const header = document.getElementById('passageHeaderDrag');
             const modalCard = document.getElementById('passageModalCard');
-            
+
             if (!header) return;
 
             // Remove old event listeners to prevent duplicates
@@ -5150,15 +5416,15 @@
                     // Load each verse with title and separator
                     for (let i = 0; i < currentSermonAllVerses.length; i++) {
                         const verse = currentSermonAllVerses[i];
-                        
+
                         // Validate verse numbers
                         const verseStart = parseInt(verse.verseStart, 10);
                         const verseEnd = parseInt(verse.verseEnd, 10);
-                        
+
                         if (isNaN(verseStart) || isNaN(verseEnd)) {
                             continue;
                         }
-                        
+
                         const verseTitle = `${verse.book} ${verse.chapter}:${verseStart}${verseStart !== verseEnd ? '-' + verseEnd : ''}`;
                         const bookFile = getBookFileIdentifier(verse.book);
                         const cacheKey = `${verse.book}|${verse.chapter}|${verseStart}|${verseEnd}`;
@@ -5237,7 +5503,7 @@
                                     .order('verse', { ascending: true });
                                 data = fetchedData;
                                 if (fetchedData) verseCache[langCode][cacheKey] = fetchedData;
-                                
+
                                 // If English not found and we're looking for English, try fallback to Tamil
                                 if (!data && langCode === 'english') {
                                     const { data: tamData } = await supabase
@@ -5384,7 +5650,7 @@
                     if (!data || data.length === 0) {
                         const fallbackLangCode = langCode === 'tamil' ? 'english' : 'tamil';
                         let fallbackData = verseCache[fallbackLangCode][cacheKey];
-                        
+
                         if (!fallbackData) {
                             const fallbackBookFile = fallbackLangCode === 'english' ? getBookFileIdentifierEnglish(currentSermonBook) : bookFile;
                             const { data: fetchedData } = await supabase
@@ -5414,7 +5680,7 @@
                                     btn.classList.remove('active');
                                 }
                             });
-                            
+
                             let htmlContent = '';
                             const className = fallbackLangCode === 'tamil' ? 'tamil-verse' : 'bible-verse';
                             fallbackData.forEach(row => {
@@ -5471,7 +5737,7 @@
             const toast = document.getElementById('sermon-toast');
             toast.textContent = message;
             toast.classList.add('show');
-            
+
             // Hide after 2 seconds
             setTimeout(() => {
                 toast.classList.remove('show');
@@ -5483,29 +5749,29 @@
             const confirmDialog = document.getElementById('sermon-confirm-dialog');
             const index = parseInt(confirmDialog.dataset.deleteIndex);
             const sermonToDelete = sermons[index];
-            
+
             // Close popup and bottom nav immediately
             cancelConfirmDialog();
             closeSermonDetail();
-            
+
             // Show loader
             const loader = document.getElementById('sermon-loader');
             loader.classList.remove('hidden');
-            
+
             // Simulate delete operation (including Supabase sync)
             try {
                 // Sync deletion to Supabase
                 if (sermonToDelete.id) {
                     await syncSermonDeleteToSupabase(sermonToDelete.id);
                 }
-                
+
                 // Wait a bit for visual feedback
                 await new Promise(resolve => setTimeout(resolve, 500));
-                
+
                 sermons.splice(index, 1);
                 saveSermons();
                 renderSermons();
-                
+
                 // Show success toast
                 showToast('Deleted...');
             } catch (error) {
@@ -5574,13 +5840,13 @@
                     const dateStr = currentDate.toLocaleDateString();
                     document.getElementById('sermon-date-display').textContent = dateStr;
                     document.getElementById('sermon-date-input').value = currentDate.toISOString();
-                    
+
                     // Clear error when date is selected
                     const dateGroup = datePickerBtn.closest('.sermon-input-group');
                     if (dateGroup) {
                         dateGroup.classList.remove('error');
                     }
-                    
+
                     closeSermonCalendar();
                 });
 
@@ -5685,10 +5951,10 @@
             renderFormSongsChips();
             const formSongInput = document.getElementById('sermon-form-song-input');
             if (formSongInput) formSongInput.value = '';
-            
+
             // Reset title to "Add Sermon"
             document.querySelector('.sermon-sheet-title').textContent = 'Add Sermon';
-            
+
             // Show favorite button for new sermons (unfilled by default)
             const favoriteBtn = document.getElementById('sermon-form-favorite-btn');
             if (favoriteBtn) {
@@ -5696,7 +5962,7 @@
                 favoriteBtn.classList.remove('active');
                 favoriteBtn.onclick = () => toggleNewSermonFavorite();
             }
-            
+
             currentEditingIndex = null;
             newSermonIsFavorite = false;
             overlay.classList.add('active');
@@ -5710,7 +5976,7 @@
         function openFavoritesSheet() {
             const favoritesContainer = document.getElementById('sermon-favorites-list');
             const favSermons = sermons.filter(s => s.is_favorite);
-            
+
             if (favSermons.length === 0) {
                 favoritesContainer.innerHTML = '<p style="padding: 2rem; text-align: center; color: #999;">No favorite sermons yet</p>';
             } else {
@@ -5757,14 +6023,14 @@
                                     </div>
                                 `
                                 : '';
-                    
+
                     // Show only first verse with "+X more" if there are more
                     let versesHtml = '';
                     if (sermon.verses && sermon.verses.length > 0) {
                         const firstVerse = sermon.verses[0];
                         const verseText = firstVerse.display || `${firstVerse.book} ${firstVerse.chapter}:${firstVerse.verseStart}`;
                         const moreCount = sermon.verses.length - 1;
-                        
+
                         if (moreCount > 0) {
                             versesHtml = `<span class="sermon-verse-badge">${verseText}</span><span class="sermon-verse-more">+${moreCount} more</span>`;
                         } else {
@@ -5790,7 +6056,7 @@
                             </div>
                         `;
                     }
-                    
+
                     return `
                         <div class="sermon-item ${cardClass}" data-index="${originalIndex}" style="cursor: pointer;" onclick="closeFavoritesSheet(); viewSermonDetail(${originalIndex})">
                             ${specialDecorations}
@@ -5818,7 +6084,7 @@
                     `;
                 }).join('');
             }
-            
+
             const favoritesOverlay = document.getElementById('sermon-favorites-overlay');
             const favoritesSheet = document.getElementById('sermon-favorites-sheet');
             favoritesOverlay.classList.add('active');
@@ -5844,7 +6110,7 @@
         let sheetStartY = 0;
         const favoritesSheet = document.getElementById('sermon-favorites-sheet');
         const favoritesContent = favoritesSheet ? favoritesSheet.querySelector('.sermon-favorites-list') : null;
-        
+
         if (favoritesSheet) {
             favoritesSheet.addEventListener('touchstart', (e) => {
                 sheetStartY = e.touches[0].clientY;
@@ -5853,11 +6119,11 @@
             favoritesSheet.addEventListener('touchmove', (e) => {
                 const currentY = e.touches[0].clientY;
                 const swipeDist = currentY - sheetStartY;
-                
+
                 // Check if content is scrollable
                 const isContentScrollable = favoritesContent && favoritesContent.scrollHeight > favoritesContent.clientHeight;
                 const isAtTop = favoritesContent && favoritesContent.scrollTop === 0;
-                
+
                 // Only prevent default if content is NOT scrollable OR already scrolled to top
                 // AND only if swiping down significantly
                 if (isAtTop && swipeDist > 20) {
@@ -5872,11 +6138,11 @@
             favoritesSheet.addEventListener('touchend', (e) => {
                 const sheetEndY = e.changedTouches[0].clientY;
                 const diffY = sheetEndY - sheetStartY;
-                
+
                 // Check if content is scrollable
                 const isContentScrollable = favoritesContent && favoritesContent.scrollHeight > favoritesContent.clientHeight;
                 const isAtTop = favoritesContent && favoritesContent.scrollTop === 0;
-                
+
                 // Only close if:
                 // 1. Content is not scrollable, OR
                 // 2. Content is scrollable but already at top AND swipe is significant (>100px)
@@ -5937,106 +6203,67 @@
             document.getElementById('sermon-book-select').value = '';
             document.getElementById('sermon-chapter-select').value = '';
             document.getElementById('sermon-verses-select').value = '';
-            
+
             // Hide favorite button
             const favoriteBtn = document.getElementById('sermon-form-favorite-btn');
             if (favoriteBtn) {
                 favoriteBtn.style.display = 'none';
                 favoriteBtn.classList.remove('active');
             }
-            
+
             bottomSheet.style.maxHeight = '80vh';
         }
 
-        // Drag to expand/collapse functionality
+        // Drag to expand/collapse functionality for Add/Edit sheet
         let dragStartY = 0;
         let dragStartHeight = 0;
         const dragHandle = document.getElementById('sermon-sheet-drag-handle');
 
-        dragHandle.addEventListener('touchstart', (e) => {
-            dragStartY = e.touches[0].clientY;
-            dragStartHeight = bottomSheet.offsetHeight;
-            bottomSheet.style.transition = 'none';
-        }, false);
+        if (dragHandle) {
+            dragHandle.addEventListener('touchstart', (e) => {
+                dragStartY = e.touches[0].clientY;
+                dragStartHeight = bottomSheet.offsetHeight;
+                bottomSheet.style.transition = 'none';
+            }, false);
 
-        dragHandle.addEventListener('touchmove', (e) => {
-            const currentY = e.touches[0].clientY;
-            const diff = dragStartY - currentY;
-            const newHeight = dragStartHeight + diff;
-            const maxHeight = window.innerHeight * 0.95;
-            const minHeight = 250;
-
-            if (newHeight >= minHeight && newHeight <= maxHeight) {
-                bottomSheet.style.maxHeight = newHeight + 'px';
-            }
-        }, false);
-
-        dragHandle.addEventListener('touchend', (e) => {
-            bottomSheet.style.transition = 'transform 0.3s ease';
-            const currentHeight = bottomSheet.offsetHeight;
-            const maxHeight = window.innerHeight * 0.95;
-            const threshold = maxHeight * 0.4;
-
-            if (currentHeight < threshold) {
-                closeBottomSheet();
-            } else {
-                bottomSheet.style.maxHeight = '80vh';
-            }
-        }, false);
-
-        // Swipe down anywhere on the sheet to close (complement to drag handle)
-        let addSheetStartY = 0;
-        const addSheetContent = bottomSheet.querySelector('.sermon-sheet-content');
-        
-        bottomSheet.addEventListener('touchstart', (e) => {
-            // Only track if not on drag handle
-            if (!e.target.closest('#sermon-sheet-drag-handle')) {
-                addSheetStartY = e.touches[0].clientY;
-            }
-        }, false);
-
-        bottomSheet.addEventListener('touchmove', (e) => {
-            if (!e.target.closest('#sermon-sheet-drag-handle')) {
+            dragHandle.addEventListener('touchmove', (e) => {
                 const currentY = e.touches[0].clientY;
-                const swipeDist = currentY - addSheetStartY;
-                
-                // Only prevent default if swiping up AND content is at top
-                if (swipeDist < -20 && addSheetContent && addSheetContent.scrollTop === 0) {
-                    e.preventDefault();
-                }
-                // Only prevent default if swiping down AND content is at top
-                else if (swipeDist > 20 && addSheetContent && addSheetContent.scrollTop === 0) {
-                    e.preventDefault();
-                }
-            }
-        }, false);
+                const diff = dragStartY - currentY;
+                const newHeight = dragStartHeight + diff;
+                const maxHeight = window.innerHeight * 0.95;
+                const minHeight = 250;
 
-        bottomSheet.addEventListener('touchend', (e) => {
-            const sheetEndY = e.changedTouches[0].clientY;
-            const diffY = sheetEndY - addSheetStartY;
-            
-            // Only close if swiped down AND content is at top
-            if (diffY > 50 && addSheetContent && addSheetContent.scrollTop === 0 && !e.target.closest('#sermon-sheet-drag-handle')) {
-                closeBottomSheet();
-            }
-            // Only close if trying to scroll up AND content is already at top
-            else if (diffY < -20 && addSheetContent && addSheetContent.scrollTop === 0 && !e.target.closest('#sermon-sheet-drag-handle')) {
-                closeBottomSheet();
-            }
-        }, false);
+                if (newHeight >= minHeight && newHeight <= maxHeight) {
+                    bottomSheet.style.maxHeight = newHeight + 'px';
+                }
+            }, false);
+
+            dragHandle.addEventListener('touchend', (e) => {
+                bottomSheet.style.transition = 'transform 0.3s ease';
+                const currentHeight = bottomSheet.offsetHeight;
+                const maxHeight = window.innerHeight * 0.95;
+                const threshold = maxHeight * 0.4;
+
+                if (currentHeight < threshold) {
+                    closeBottomSheet();
+                } else {
+                    bottomSheet.style.maxHeight = '80vh';
+                }
+            }, false);
+        }
 
         // Drag to expand/collapse functionality for detail sheet
         let detailDragStartY = 0;
         let detailDragStartHeight = 0;
         const detailSheet = document.getElementById('sermon-detail-sheet');
-        const detailSheetHandle = detailSheet.querySelector('.sermon-sheet-handle');
+        const detailSheetHandle = detailSheet ? detailSheet.querySelector('.sermon-sheet-handle') : null;
         const detailSheetHeader = document.getElementById('sermon-detail-header');
 
         // Create a combined touch handler for both handle and header
         function initializeDetailSheetDrag() {
             [detailSheetHandle, detailSheetHeader].forEach(element => {
                 if (!element) return;
-                
+
                 element.addEventListener('touchstart', (e) => {
                     detailDragStartY = e.touches[0].clientY;
                     detailDragStartHeight = detailSheet.offsetHeight;
@@ -6073,47 +6300,6 @@
         // Initialize detail sheet drag
         initializeDetailSheetDrag();
 
-        // Swipe down anywhere on the detail sheet to close (complement to drag handle)
-        let detailSheetStartY = 0;
-        const detailSheetContent = detailSheet.querySelector('.sermon-detail-content');
-        
-        detailSheet.addEventListener('touchstart', (e) => {
-            // Only track if not on drag handle or header
-            if (!e.target.closest('.sermon-sheet-handle') && !e.target.closest('#sermon-detail-header')) {
-                detailSheetStartY = e.touches[0].clientY;
-            }
-        }, false);
-
-        detailSheet.addEventListener('touchmove', (e) => {
-            if (!e.target.closest('.sermon-sheet-handle') && !e.target.closest('#sermon-detail-header')) {
-                const currentY = e.touches[0].clientY;
-                const swipeDist = currentY - detailSheetStartY;
-                
-                // Only prevent default if swiping up AND content is at top
-                if (swipeDist < -20 && detailSheetContent && detailSheetContent.scrollTop === 0) {
-                    e.preventDefault();
-                }
-                // Only prevent default if swiping down AND content is at top
-                else if (swipeDist > 20 && detailSheetContent && detailSheetContent.scrollTop === 0) {
-                    e.preventDefault();
-                }
-            }
-        }, false);
-
-        detailSheet.addEventListener('touchend', (e) => {
-            const sheetEndY = e.changedTouches[0].clientY;
-            const diffY = sheetEndY - detailSheetStartY;
-            
-            // Only close if swiped down AND content is at top
-            if (diffY > 50 && detailSheetContent && detailSheetContent.scrollTop === 0 && !e.target.closest('.sermon-sheet-handle') && !e.target.closest('#sermon-detail-header')) {
-                closeSermonDetail();
-            }
-            // Only close if trying to scroll up AND content is already at top
-            else if (diffY < -20 && detailSheetContent && detailSheetContent.scrollTop === 0 && !e.target.closest('.sermon-sheet-handle') && !e.target.closest('#sermon-detail-header')) {
-                closeSermonDetail();
-            }
-        }, false);
-
         cancelBtn.addEventListener('click', closeBottomSheet);
         overlay.addEventListener('click', closeBottomSheet);
 
@@ -6122,28 +6308,28 @@
             const title = titleInput.value.trim();
             const tamilTitle = document.getElementById('sermon-tamil-title-input').value.trim();
             const description = document.getElementById('sermon-description-input').value.trim();
-            
+
             // Clear previous error states
             document.querySelectorAll('.sermon-input-group').forEach(group => {
                 group.classList.remove('error');
             });
-            
+
             let isValid = true;
-            
+
             // Validate title
             if (!title) {
                 const titleGroup = titleInput.closest('.sermon-input-group');
                 titleGroup.classList.add('error');
                 isValid = false;
             }
-            
+
             // Validate date
             if (!selectedSermonDate) {
                 const dateGroup = datePickerBtn.closest('.sermon-input-group');
                 dateGroup.classList.add('error');
                 isValid = false;
             }
-            
+
             if (!isValid) {
                 return;
             }
@@ -6175,15 +6361,14 @@
                     description,
                     date: dateIso,
                     verses: selectedSermonVerses,
-                    songs: selectedSermonSongs
+                    songs: selectedSermonSongs,
+                    _needsUpdate: true
                 };
                 sermons[currentEditingIndex] = updatedSermon;
-                
-                // Sync update to Supabase for synced sermons (ID >= 10001)
-                if (updatedSermon.id && updatedSermon.id >= 10001) {
-                    syncSermonUpdateToSupabase(currentEditingIndex);
-                }
-                
+
+                // Sync update to Supabase for any valid sermon
+                syncSermonUpdateToSupabase(updatedSermon);
+
                 currentEditingIndex = null;
                 isNewSermon = false;
             } else {
@@ -6439,9 +6624,11 @@
                 return;
             }
 
-            sermons[modalSelectedSermonIndex].songs = [...modalTempSongs];
+            const sermon = sermons[modalSelectedSermonIndex];
+            sermon.songs = [...modalTempSongs];
+            sermon._needsUpdate = true;
             saveSermons();
-            syncSermonUpdateToSupabase(modalSelectedSermonIndex);
+            syncSermonUpdateToSupabase(sermon);
             renderSermons();
 
             // If sermon detail is currently open for this sermon, refresh it
@@ -6523,36 +6710,6 @@
             }, false);
         }
 
-        // Swipe down anywhere on the songs sheet to close
-        let songsSheetStartY = 0;
-        const songsSheetContent = songsSheet ? songsSheet.querySelector('.sermon-sheet-content') : null;
-
-        if (songsSheet) {
-            songsSheet.addEventListener('touchstart', (e) => {
-                if (!e.target.closest('#sermon-songs-drag-handle')) {
-                    songsSheetStartY = e.touches[0].clientY;
-                }
-            }, false);
-
-            songsSheet.addEventListener('touchmove', (e) => {
-                if (!e.target.closest('#sermon-songs-drag-handle')) {
-                    const currentY = e.touches[0].clientY;
-                    const swipeDist = currentY - songsSheetStartY;
-                    if (swipeDist > 20 && songsSheetContent && songsSheetContent.scrollTop === 0) {
-                        e.preventDefault();
-                    }
-                }
-            }, false);
-
-            songsSheet.addEventListener('touchend', (e) => {
-                const sheetEndY = e.changedTouches[0].clientY;
-                const diffY = sheetEndY - songsSheetStartY;
-                if (diffY > 50 && songsSheetContent && songsSheetContent.scrollTop === 0 && !e.target.closest('#sermon-songs-drag-handle')) {
-                    closeSongsSheet();
-                }
-            }, false);
-        }
-
         // Apply theme based on localStorage
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'light') {
@@ -6592,71 +6749,41 @@
             }
         }
 
-        // Initialize on page load
-        window.addEventListener('DOMContentLoaded', () => {
+        // Consolidated clean initialization
+        function initApp() {
             initSupabase();
             initializeBookDropdown();
             loadSermons();
             attachDoubleTapListener();
             updateAdminMenuVisibility();
-            
-            // Listen for admin status changes
-            window.addEventListener('storage', () => {
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initApp);
+        } else {
+            initApp();
+        }
+
+        // Listen for admin status changes across tabs
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'isAdmin') {
                 updateAdminMenuVisibility();
-            });
-            
-            // Refresh sermon data when page becomes visible again (e.g., returning from Bible page)
-            document.addEventListener('visibilitychange', () => {
-                if (!document.hidden) {
-                    loadSermons();
-                }
-            });
-            
-            // Fallback for browsers that don't support visibilitychange
-            window.addEventListener('pageshow', (event) => {
-                loadSermons();
-            });
+            }
         });
 
-        // Initialize if DOM is already ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                initSupabase();
-                if (!bibleMeta) initializeBookDropdown();
-                attachDoubleTapListener();
-                updateAdminMenuVisibility();
-                
-                // Refresh sermon data when page becomes visible again
-                document.addEventListener('visibilitychange', () => {
-                    if (!document.hidden) {
-                        loadSermons();
-                    }
-                });
-                
-                // Fallback for browsers that don't support visibilitychange
-                window.addEventListener('pageshow', (event) => {
-                    loadSermons();
-                });
-            });
-        } else {
-            initSupabase();
-            initializeBookDropdown();
-            loadSermons();
-            attachDoubleTapListener();
-            updateAdminMenuVisibility();
-            
-            // Refresh sermon data when page becomes visible again
-            document.addEventListener('visibilitychange', () => {
-                if (!document.hidden) {
-                    loadSermons();
-                }
-            });
-            
-            // Fallback for browsers that don't support visibilitychange
-            window.addEventListener('pageshow', (event) => {
+        // Refresh sermon data when page becomes visible again (e.g., returning from Bible page)
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
                 loadSermons();
-            });
-        }
+            }
+        });
+
+        // Fallback for page restores
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                loadSermons();
+            }
+        });
     </script>
 
     <!-- Passage Popup Modal for verse display -->
@@ -6668,13 +6795,16 @@
             <div class="passage-header" id="passageHeaderDrag">
                 <h2 id="passageBadge" class="passage-badge"></h2>
             </div>
-            
+
             <div class="passage-language-buttons">
-                <button class="passage-lang-btn" data-lang="tamil" onclick="handlePassageLanguageSwitch('tamil')">Tamil</button>
-                <button class="passage-lang-btn active" data-lang="english" onclick="handlePassageLanguageSwitch('english')">English</button>
-                <button class="passage-lang-btn" data-lang="dual" onclick="handlePassageLanguageSwitch('dual')">Both</button>
+                <button class="passage-lang-btn" data-lang="tamil"
+                    onclick="handlePassageLanguageSwitch('tamil')">Tamil</button>
+                <button class="passage-lang-btn active" data-lang="english"
+                    onclick="handlePassageLanguageSwitch('english')">English</button>
+                <button class="passage-lang-btn" data-lang="dual"
+                    onclick="handlePassageLanguageSwitch('dual')">Both</button>
             </div>
-            
+
             <div class="passage-content" id="passageContent"></div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 // Service worker for PWA with Supabase API caching
 // IMPORTANT: Cache version is automatically updated with build timestamp
-const BUILD_TIMESTAMP = '20260830182939';
+const BUILD_TIMESTAMP = '20260831193731';
 const CACHE_VERSION = `v6-${BUILD_TIMESTAMP}`;
 const CACHE_NAME = `my-bible-${CACHE_VERSION}`;
 const API_CACHE_NAME = `my-bible-api-${CACHE_VERSION}`;
@@ -54,46 +54,79 @@ self.addEventListener('activate', (event) => {
     }).then(() => self.clients.claim())
   );
 });
-// Fetch event - network first for Supabase API, cache first for static assets
+// Fetch event - network first for dynamic Supabase API & static assets
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
-  // Handle Supabase API requests (cache-first with timeout for offline)
+  // Handle Supabase API requests
   if (url.origin.includes('supabase.co')) {
-    event.respondWith(
-      caches.match(event.request).then(cachedResponse => {
-        // If we have cache, return it immediately
-        if (cachedResponse) {
-          // Update cache in background (don't wait)
-          fetch(event.request).then(networkResponse => {
-            if (networkResponse && networkResponse.status === 200) {
-              const responseClone = networkResponse.clone();
-              caches.open(PERSISTENT_API_CACHE).then(cache => {
-                cache.put(event.request, responseClone);
-              });
-            }
-          }).catch(() => {}); // Fail silently if offline
-          return cachedResponse;
-        }
-        // No cache - try network with timeout
-        return Promise.race([
-          fetch(event.request).then(response => {
-            if (response && response.status === 200) {
-              const responseClone = response.clone();
-              caches.open(PERSISTENT_API_CACHE).then(cache => {
-                cache.put(event.request, responseClone);
-              });
-            }
-            return response;
-          }),
-          // Timeout after 5 seconds
-          new Promise((_, reject) => 
-            setTimeout(() => reject(new Error('Network timeout')), 5000)
-          )
-        ]).catch(error => {
-          return new Response(JSON.stringify({ error: 'Offline and no cached data' }), {
-            headers: { 'Content-Type': 'application/json' },
-            status: 503
+    // Non-GET requests (mutations: POST, PATCH, DELETE, PUT) should go straight to network
+    if (event.request.method !== 'GET') {
+      return;
+    }
+
+    // Static immutable Bible verses: Cache-First with background revalidation
+    const isStaticBibleVerse = url.pathname.includes('bible_verses');
+    if (isStaticBibleVerse) {
+      event.respondWith(
+        caches.match(event.request).then(cachedResponse => {
+          if (cachedResponse) {
+            // Revalidate in background
+            fetch(event.request).then(networkResponse => {
+              if (networkResponse && networkResponse.status === 200) {
+                const responseClone = networkResponse.clone();
+                caches.open(PERSISTENT_API_CACHE).then(cache => {
+                  cache.put(event.request, responseClone);
+                });
+              }
+            }).catch(() => {});
+            return cachedResponse;
+          }
+
+          // No cache - fetch from network
+          return Promise.race([
+            fetch(event.request).then(response => {
+              if (response && response.status === 200) {
+                const responseClone = response.clone();
+                caches.open(PERSISTENT_API_CACHE).then(cache => {
+                  cache.put(event.request, responseClone);
+                });
+              }
+              return response;
+            }),
+            new Promise((_, reject) => setTimeout(() => reject(new Error('Network timeout')), 5000))
+          ]).catch(() => {
+            return new Response(JSON.stringify({ error: 'Offline and no cached data' }), {
+              headers: { 'Content-Type': 'application/json' },
+              status: 503
+            });
           });
+        })
+      );
+      return;
+    }
+
+    // Dynamic user data (sermons, prayers, etc.): Network-First with cache fallback
+    event.respondWith(
+      Promise.race([
+        fetch(event.request).then(response => {
+          if (response && response.status === 200) {
+            const responseClone = response.clone();
+            caches.open(PERSISTENT_API_CACHE).then(cache => {
+              cache.put(event.request, responseClone);
+            });
+          }
+          return response;
+        }),
+        new Promise((_, reject) => setTimeout(() => reject(new Error('Network timeout')), 4000))
+      ]).catch(async () => {
+        // Fallback to cache when offline or timeout
+        const cached = await caches.match(event.request);
+        if (cached) {
+          return cached;
+        }
+        return new Response(JSON.stringify({ error: 'Offline and no cached data' }), {
+          headers: { 'Content-Type': 'application/json' },
+          status: 503
         });
       })
     );
