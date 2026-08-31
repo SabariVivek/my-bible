@@ -679,6 +679,14 @@ const BIBLE_TRACKS = [
       { time: "42:31", label: "ஏரோது & எருசலேம்", seconds: 2551 },
       { time: "45:34", label: "அழிவு, இஸ்ரவேல் & நிறைவு", seconds: 2734 }
     ]
+  },
+  {
+    day: 60,
+    title: "The Magi and the Star",
+    duration: "46:22",
+    verse: "Matthew 2:1-12",
+    desc: "The journey of the wise men from the East following the star to worship the newborn King.",
+    category: "Characters"
   }
 ];
 
