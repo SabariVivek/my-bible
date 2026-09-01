@@ -708,7 +708,7 @@ const BIBLE_TRACKS = [
     title: "Tithe (one-tenth, or 10%)",
     file: "Tithe",
     duration: null,
-    verse: "Leviticus 27:30; Malachi 3:10",
+    verse: "Levi 27:30; Malachi 3:10",
     desc: "Understanding the biblical meaning, principles, and practice of tithing.",
     category: "Foundation"
   }
