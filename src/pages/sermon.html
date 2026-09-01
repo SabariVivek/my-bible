@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2a2a2a">
     <title>Sermon</title>
-    <link rel="stylesheet" href="../styles/styles.css?cb=20260901133945">
+    <link rel="stylesheet" href="../styles/styles.css?cb=20260901135843">
     <!-- Supabase JS Client (UMD Build) -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.26.0/dist/umd/supabase.min.js"></script>
     <style>
@@ -4326,35 +4326,31 @@
             }
         }
 
-        // Handle double-tap on sermon card
-        let lastTapTime = null;
-        let lastTappedElement = null;
-
-        function attachDoubleTapListener() {
+        // Handle click on sermon card to show bottom sheet details
+        function attachSermonClickListener() {
             // Use event delegation on document for maximum compatibility
-            document.addEventListener('click', function doubleTapHandler(e) {
-                // Don't handle double-tap for verse badges - allow single click
-                if (e.target.closest('.sermon-verse-clickable')) {
+            document.addEventListener('click', function sermonClickHandler(e) {
+                // Don't handle if clicking on buttons, links, or specific clickable verse spans
+                if (e.target.closest('.sermon-verse-clickable') || e.target.closest('button') || e.target.closest('a')) {
+                    return;
+                }
+
+                // If clicking inside another bottom sheet or modal, skip global delegation
+                if (e.target.closest('.sermon-detail-sheet') || e.target.closest('.sermon-bottom-sheet') || e.target.closest('.passage-popup')) {
                     return;
                 }
 
                 const sermonItem = e.target.closest('.sermon-item');
                 if (!sermonItem) return;
 
-                const currentTime = new Date().getTime();
-                const timeSinceLastTap = lastTapTime !== null ? currentTime - lastTapTime : Infinity;
-                // Check for double tap: within 500ms and on same element
-                if (timeSinceLastTap < 500 && lastTappedElement === sermonItem) {
-                    const index = sermonItem.dataset.index;
-                    showSermonDetails(parseInt(index));
-                    lastTapTime = null;
-                    lastTappedElement = null;
-                } else {
-                    // Single tap - record this as potential first tap of double tap
-                    lastTapTime = currentTime;
-                    lastTappedElement = sermonItem;
+                const index = sermonItem.dataset.index;
+                if (index !== undefined && index !== null && index !== '') {
+                    const parsedIndex = parseInt(index, 10);
+                    if (!isNaN(parsedIndex)) {
+                        showSermonDetails(parsedIndex);
+                    }
                 }
-            }, { passive: true });
+            });
         }
 
         // Cache for preloaded verses
@@ -4612,10 +4608,17 @@
             const detailHeader = document.getElementById('sermon-detail-header');
             const dateStr = formatSermonDate(parseSermonDate(sermon.date));
             detailHeader.innerHTML = `
-                <div style="flex: 1;">
-                    <h2 class="sermon-sheet-title" style="margin: 0; font-size: 1.1rem;">${sermon.title}</h2>
+                <div style="flex: 1; min-width: 0; padding-right: 8px;">
+                    <h2 class="sermon-sheet-title" style="margin: 0; font-size: 1.1rem; line-height: 1.3;">${sermon.title}</h2>
                     ${sermon.tamilTitle ? `<p style="margin: 0.25rem 0 0 0; font-size: 0.75rem; color: #666; font-weight: 500;">${sermon.tamilTitle}</p>` : ''}
                 </div>
+                <button class="sermon-detail-close-btn" id="sermon-detail-close-btn" onclick="closeSermonDetail()" aria-label="Close">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: 100%;">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
             `;
 
             detailSheet.classList.add('active');
@@ -6058,7 +6061,7 @@
                     }
 
                     return `
-                        <div class="sermon-item ${cardClass}" data-index="${originalIndex}" style="cursor: pointer;" onclick="closeFavoritesSheet(); viewSermonDetail(${originalIndex})">
+                        <div class="sermon-item ${cardClass}" data-index="${originalIndex}" style="cursor: pointer;" onclick="closeFavoritesSheet(); showSermonDetails(${originalIndex})">
                             ${specialDecorations}
                             <div class="sermon-item-header" style="position:relative;z-index:2">
                                 <div class="sermon-item-title-wrapper">
@@ -6754,7 +6757,7 @@
             initSupabase();
             initializeBookDropdown();
             loadSermons();
-            attachDoubleTapListener();
+            attachSermonClickListener();
             updateAdminMenuVisibility();
         }
 
