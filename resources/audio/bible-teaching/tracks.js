@@ -702,6 +702,15 @@ const BIBLE_TRACKS = [
       { time: "40:32", label: "Brephos vs Paidion", seconds: 2432 },
       { time: "45:16", label: "சாஸ்திரிகளின் வருகை: சுருக்கம்", seconds: 2716 }
     ]
+  },
+  {
+    day: 61,
+    title: "Tithe (one-tenth, or 10%)",
+    file: "Tithe",
+    duration: null,
+    verse: "Leviticus 27:30; Malachi 3:10",
+    desc: "Understanding the biblical meaning, principles, and practice of tithing.",
+    category: "Foundation"
   }
 ];
 
