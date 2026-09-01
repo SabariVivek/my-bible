@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#e8e0d0">
+    <meta name="theme-color" content="#e8e0d0" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#e8e0d0" media="(prefers-color-scheme: dark)">
+    <meta name="color-scheme" content="light">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <title>Bible Study Series</title>
     <style>
         /* ── Password Gate ─────────────────────────────────────────────────── */
@@ -18,6 +24,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
         }
 
         .gate-verse-area {
@@ -240,7 +248,7 @@
             top: 0;
             z-index: 100;
             background-color: var(--bg-canvas);
-            padding: 20px 16px 14px 16px;
+            padding: max(20px, calc(10px + env(safe-area-inset-top, 0px))) 16px 14px 16px;
             margin-left: -16px;
             margin-right: -16px;
             margin-bottom: 8px;
@@ -2255,8 +2263,8 @@
         </div>
     </div>
 
-    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20260901132336"></script>
-    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20260901132336"></script>
+    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20260901133945"></script>
+    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20260901133945"></script>
     <script>
         // ─── CONFIG ──────────────────────────────────────────────────────────────────
         // Track titles are managed in:
