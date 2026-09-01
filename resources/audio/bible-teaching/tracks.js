@@ -686,7 +686,22 @@ const BIBLE_TRACKS = [
     duration: "46:22",
     verse: "Matthew 2:1-12",
     desc: "The journey of the wise men from the East following the star to worship the newborn King.",
-    category: "Characters"
+    category: "Characters",
+    timestamps: [
+      { time: "00:00", label: "தொடக்க ஜெபம்", seconds: 0 },
+      { time: "00:57", label: "ஏரோது மன்னனும் சாஸ்திரிகளும்", seconds: 57 },
+      { time: "04:26", label: "யூதரின் ராஜா எங்கே? ஏரோதின் கலக்கம்", seconds: 266 },
+      { time: "08:39", label: "சாஸ்திரிகள் மூவர் மட்டுமா?", seconds: 519 },
+      { time: "13:04", label: "வான சாஸ்திரமும் நட்சத்திரங்களும்", seconds: 784 },
+      { time: "18:37", label: "பாபிலோன் கோபுரமும் சாஸ்திரிகளும்", seconds: 1117 },
+      { time: "23:08", label: "90 நாட்கள் அசையாத நட்சத்திரம்", seconds: 1388 },
+      { time: "26:36", label: "தானியேலும் சாஸ்திரிகளும்", seconds: 1596 },
+      { time: "30:51", label: "பொன், தூபவர்க்கம், வெள்ளைப்போளம்", seconds: 1851 },
+      { time: "36:09", label: "நட்சத்திரம் மீண்டும் நகருதல்", seconds: 2169 },
+      { time: "37:25", label: "மாட்டுத் தொழுவமல்ல, வீடு", seconds: 2245 },
+      { time: "40:32", label: "Brephos vs Paidion", seconds: 2432 },
+      { time: "45:16", label: "சாஸ்திரிகளின் வருகை: சுருக்கம்", seconds: 2716 }
+    ]
   }
 ];
 
