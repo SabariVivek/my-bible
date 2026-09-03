@@ -683,7 +683,7 @@ const BIBLE_TRACKS = [
   {
     day: 60,
     title: "The Magi and the Star",
-    duration: "46:22",
+    duration: "46:22 min",
     verse: "Matthew 2:1-12",
     desc: "The journey of the wise men from the East following the star to worship the newborn King.",
     category: "Characters",
@@ -707,10 +707,18 @@ const BIBLE_TRACKS = [
     day: 61,
     title: "Tithe (one-tenth, or 10%)",
     file: "Tithe",
-    duration: null,
+    duration: "43:01 min",
     verse: "Levi 27:30; Malachi 3:10",
     desc: "Understanding the biblical meaning, principles, and practice of tithing.",
     category: "Foundation"
+  },
+  {
+    day: 62,
+    title: "Zacchaeus",
+    duration: "32:57 min",
+    verse: "Luke 19:1-10",
+    desc: "The encounter of Zacchaeus the tax collector with Jesus and how salvation came to his house.",
+    category: "Characters"
   }
 ];
 
