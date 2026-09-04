@@ -719,6 +719,14 @@ const BIBLE_TRACKS = [
     verse: "Luke 19:1-10",
     desc: "The encounter of Zacchaeus the tax collector with Jesus and how salvation came to his house.",
     category: "Characters"
+  },
+  {
+    day: 63,
+    title: "Gideon - Part 1",
+    duration: "64:34 min",
+    verse: "Judges 6, 7",
+    desc: "The call of Gideon, tearing down the altar of Baal, and the sign of the fleece.",
+    category: "Characters"
   }
 ];
 
