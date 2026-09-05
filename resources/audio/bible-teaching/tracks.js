@@ -727,6 +727,14 @@ const BIBLE_TRACKS = [
     verse: "Judges 6, 7",
     desc: "The call of Gideon, tearing down the altar of Baal, and the sign of the fleece.",
     category: "Characters"
+  },
+  {
+    day: 64,
+    title: "Gideon - Part 2",
+    duration: "40:53 min",
+    verse: "Judges 8, 9",
+    desc: "Gideon's foolishness in making the ephod and how it became a snare to Israel.",
+    category: "Characters"
   }
 ];
 
