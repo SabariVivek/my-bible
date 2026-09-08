@@ -735,6 +735,14 @@ const BIBLE_TRACKS = [
     verse: "Judges 8, 9",
     desc: "Gideon's foolishness in making the ephod and how it became a snare to Israel.",
     category: "Characters"
+  },
+  {
+    day: 65,
+    title: "Unleavened Bread & Firstfruits",
+    duration: "45:23 min",
+    verse: "Leviticus 23:6-14",
+    desc: "The prophetic meaning and spiritual significance of the Feast of Unleavened Bread and Firstfruits.",
+    category: "Festivals"
   }
 ];
 
