@@ -743,6 +743,14 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 23:6-14",
     desc: "The prophetic meaning and spiritual significance of the Feast of Unleavened Bread and Firstfruits.",
     category: "Festivals"
+  },
+  {
+    day: 66,
+    title: "Pentecost",
+    duration: "39:20 min",
+    verse: "Leviticus 23:15-22",
+    desc: "The prophetic meaning and spiritual significance of the Feast of Pentecost.",
+    category: "Festivals"
   }
 ];
 
