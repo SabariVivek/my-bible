@@ -751,6 +751,14 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 23:15-22",
     desc: "The prophetic meaning and spiritual significance of the Feast of Pentecost.",
     category: "Festivals"
+  },
+  {
+    day: 67,
+    title: "Feast of Trumpets & Tabernacles",
+    duration: "50:28 min",
+    verse: "Leviticus 23:23-44",
+    desc: "The prophetic meaning of the Feast of Trumpets and the Feast of Tabernacles.",
+    category: "Festivals"
   }
 ];
 
