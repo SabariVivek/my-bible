@@ -767,6 +767,14 @@ const BIBLE_TRACKS = [
     verse: "Matthew 27:15-26",
     desc: "The story of Jesus Barabbas, the prisoner released instead of Jesus Christ.",
     category: "Characters"
+  },
+  {
+    day: 69,
+    title: "The Saints Who Rose from the Tombs",
+    duration: "50:28 min",
+    verse: "Matthew 27:50-53",
+    desc: "The saints raised from the tombs after Jesus Christ's resurrection, revealing His victory over death.",
+    category: "Characters"
   }
 ];
 
