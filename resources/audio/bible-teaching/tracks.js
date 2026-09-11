@@ -759,6 +759,14 @@ const BIBLE_TRACKS = [
     verse: "Leviticus 23:23-44",
     desc: "The prophetic meaning of the Feast of Trumpets and the Feast of Tabernacles.",
     category: "Festivals"
+  },
+  {
+    day: 68,
+    title: "Jesus Barabbas",
+    duration: "24:36 min",
+    verse: "Matthew 27:15-26",
+    desc: "The story of Jesus Barabbas, the prisoner released instead of Jesus Christ.",
+    category: "Characters"
   }
 ];
 
