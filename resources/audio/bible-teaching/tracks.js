@@ -770,7 +770,7 @@ const BIBLE_TRACKS = [
   },
   {
     day: 69,
-    title: "The Saints Who Rose from the Tombs",
+    title: "The Saints who rose from the Tombs",
     duration: "50:28 min",
     verse: "Matthew 27:50-53",
     desc: "The saints raised from the tombs after Jesus Christ's resurrection, revealing His victory over death.",
