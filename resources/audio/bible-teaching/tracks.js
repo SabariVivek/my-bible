@@ -778,7 +778,7 @@ const BIBLE_TRACKS = [
   },
   {
     day: 70,
-    title: "The Feast of Purim",
+    title: "Feast of Purim",
     duration: "45:52 min",
     verse: "Esther 9:20-32",
     desc: "Remembering God's deliverance of the Jews from Haman's evil plan through Esther and Mordecai.",
