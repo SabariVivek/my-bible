@@ -775,6 +775,14 @@ const BIBLE_TRACKS = [
     verse: "Matthew 27:50-53",
     desc: "The saints raised from the tombs after Jesus Christ's resurrection, revealing His victory over death.",
     category: "Characters"
+  },
+  {
+    day: 70,
+    title: "The Feast of Purim",
+    duration: "45:52 min",
+    verse: "Esther 9:20-32",
+    desc: "Remembering God's deliverance of the Jews from Haman's evil plan through Esther and Mordecai.",
+    category: "Festivals"
   }
 ];
 
