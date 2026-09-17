@@ -3859,6 +3859,17 @@ body.dark-theme .book-intro-text {
     color: #9aa0a6;
 }
 
+/* Secondary title in "both" language mode — adds spacing between Tamil and English sections */
+.book-intro-title-secondary {
+    margin-top: 2.5rem;
+    border-top: 1px solid var(--border-color, #e0e0e0);
+    padding-top: 1.5rem;
+}
+
+body.dark-theme .book-intro-title-secondary {
+    border-top-color: #3c4043;
+}
+
 .verse-line {
     margin-bottom: 1.5rem;
     line-height: 2;

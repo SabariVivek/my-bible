@@ -3825,29 +3825,66 @@ function displayBookIntro() {
     const contentArea = document.querySelector('.scripture-text');
     const book = bibleBooks[currentBook];
     const bookName = book.name;
+    const tamilBookName = book.tamilName || bookName;
 
-    // Check if book intro exists
-    if (!bookIntroductions || !bookIntroductions[bookName] || bookIntroductions[bookName].trim() === '') {
+    // Helper: format intro text into paragraphs
+    function formatIntro(text) {
+        return text.split(/\n+/).filter(p => p.trim() !== '').map(p => `<p>${p.trim()}</p>`).join('');
+    }
+
+    const engIntro = bookIntroductions && bookIntroductions[bookName] && bookIntroductions[bookName].trim() !== ''
+        ? bookIntroductions[bookName] : null;
+
+    // Tamil intro lookup: try tamilName as-is, then try converting Arabic numerals → Roman
+    // (bibleBooks uses "1 சாமுவேல்" but Tamil intro keys use "I சாமுவேல்")
+    function getTamilIntro(name) {
+        if (typeof bookIntroductionsTamil === 'undefined') return null;
+        if (bookIntroductionsTamil[name] && bookIntroductionsTamil[name].trim() !== '') return bookIntroductionsTamil[name];
+        const romanized = name.replace(/^1 /, 'I ').replace(/^2 /, 'II ').replace(/^3 /, 'III ');
+        if (romanized !== name && bookIntroductionsTamil[romanized] && bookIntroductionsTamil[romanized].trim() !== '') return bookIntroductionsTamil[romanized];
+        return null;
+    }
+    const tamIntro = getTamilIntro(tamilBookName);
+
+    if (!engIntro && !tamIntro) {
         contentArea.innerHTML = '<p>No introduction available for this book.</p>';
         return;
     }
 
-    const intro = bookIntroductions[bookName];
+    let html = '';
 
-    // Convert \n to <br> for proper line breaks
-    // Split by actual newline character and wrap each paragraph in <p> tags
-    const paragraphs = intro.split(/\n+/).filter(p => p.trim() !== '');
-    const formattedIntro = paragraphs.map(p => `<p>${p.trim()}</p>`).join('');
-
-    // Create HTML for book intro
-    let html = `
-        <div class="book-intro-content">
-            <h2 class="book-intro-title">Introduction to ${bookName}</h2>
-            <div class="book-intro-text">
-                ${formattedIntro}
-            </div>
-        </div>
-    `;
+    if (currentLanguage === 'tamil') {
+        // Tamil only
+        const text = tamIntro || engIntro;
+        const title = tamIntro ? tamilBookName : bookName;
+        html = `
+            <div class="book-intro-content">
+                <h2 class="book-intro-title">${title} - அறிமுகம்</h2>
+                <div class="book-intro-text">${formatIntro(text)}</div>
+            </div>`;
+    } else if (currentLanguage === 'english') {
+        // English only
+        const text = engIntro || tamIntro;
+        html = `
+            <div class="book-intro-content">
+                <h2 class="book-intro-title">Introduction to ${bookName}</h2>
+                <div class="book-intro-text">${formatIntro(text)}</div>
+            </div>`;
+    } else {
+        // Both — show Tamil first, then English
+        html = `<div class="book-intro-content">`;
+        if (tamIntro) {
+            html += `
+                <h2 class="book-intro-title">${tamilBookName} - அறிமுகம்</h2>
+                <div class="book-intro-text">${formatIntro(tamIntro)}</div>`;
+        }
+        if (engIntro) {
+            html += `
+                <h2 class="book-intro-title${tamIntro ? ' book-intro-title-secondary' : ''}">Introduction to ${bookName}</h2>
+                <div class="book-intro-text">${formatIntro(engIntro)}</div>`;
+        }
+        html += `</div>`;
+    }
 
     contentArea.innerHTML = html;
 
