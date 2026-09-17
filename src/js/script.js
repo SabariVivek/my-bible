@@ -92,7 +92,6 @@ let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'en
 // UI settings for settings panel (persisted)
 const ADMIN_PASSWORD = '030593'; // 6-digit password
 const DEFAULT_UI_SETTINGS = {
-    images: true,
     shortSummary: true,
     bibleReading: true,
     verseHeading: true,
@@ -257,7 +256,6 @@ async function saveUserSettingsToSupabase() {
             theme: themeVal,
             language: langSegVal,
             english_text_color: colorVal,
-            images: !!uiSettings.images,
             short_summary: !!uiSettings.shortSummary,
             bible_reading: !!uiSettings.bibleReading,
             verse_heading: !!uiSettings.verseHeading,
@@ -373,7 +371,6 @@ async function loadUserSettingsFromSupabase() {
 
         // Boolean display / feature options
         const mapping = [
-            ['images', 'images'],
             ['shortSummary', 'short_summary'],
             ['bibleReading', 'bible_reading'],
             ['verseHeading', 'verse_heading'],
@@ -747,17 +744,11 @@ function setSettingsAdminUiFromState() {
 
 function applyUiSettingsToDocument() {
     // CSS-driven toggles so async inserts are also covered
-    document.body.classList.toggle('hide-verse-images', !uiSettings.images);
     document.body.classList.toggle('hide-short-summary', !uiSettings.shortSummary);
     document.body.classList.toggle('hide-verse-heading', !uiSettings.verseHeading);
     document.body.classList.toggle('hide-author-details', !uiSettings.authorDetails);
     document.body.classList.toggle('hide-memory-verse', !uiSettings.memoryVerse);
 
-    // Images: show/hide verse-image-container
-    const imageContainers = document.querySelectorAll('.verse-image-container');
-    imageContainers.forEach(el => {
-        el.style.display = uiSettings.images ? '' : 'none';
-    });
     // Short Summary: show/hide chapter-summary-arc-trigger
     const summaryTrigger = document.querySelector('.chapter-summary-arc-trigger');
     if (summaryTrigger) {
@@ -3430,31 +3421,6 @@ function reloadPopupHighlights() {
     }
 }
 
-// Verse Images Manager
-/**
- * Convert book name to verse image filename format
- * Examples: "Genesis" -> "genesis", "I Samuel" -> "i-samuel", "II Corinthians" -> "ii-corinthians"
- */
-function getVerseImageFilename(bookName, chapter, verse) {
-    const normalized = bookName
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/ï»¿/g, ''); // Remove BOM if present
-    return `${normalized}-${chapter}-${verse}.png`;
-}
-
-/**
- * Get the full path to a verse image
- */
-function getVerseImagePath(bookName, chapter, verse) {
-    const normalized = bookName
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/ï»¿/g, ''); // Remove BOM if present
-    return `resources/verse-images/${normalized}/${chapter}-${verse}.png`;
-}
-
-function loadVerseImages() {}
 
 // Generate king transition card HTML for a verse
 function getKingTransitionCardHTML(bookName, chapter, verseNum) {
@@ -3656,8 +3622,6 @@ function displayChapter() {
     }
     contentArea.innerHTML = html;
 
-    // Load and display verse images asynchronously
-    loadVerseImages(bookName, currentChapter, contentArea);
 
     // Setup event listeners for collapsible verse headers
     setupVerseHeaderToggle();
