@@ -783,6 +783,22 @@ const BIBLE_TRACKS = [
     verse: "Esther 9:20-32",
     desc: "Remembering God's deliverance of the Jews from Haman's evil plan through Esther and Mordecai.",
     category: "Festivals"
+  },
+  {
+    day: 71,
+    title: "Touching the Hem of the Garment",
+    duration: "41:13 min",
+    verse: "Matthew 9:20-22",
+    desc: "A suffering woman touches the hem of Jesus' garment in faith and is healed.",
+    category: "Miracles"
+  },
+  {
+    day: 72,
+    title: "Hanukkah Festival",
+    duration: "68:45 min",
+    verse: "John 10:22-30",
+    desc: "The Feast of Dedication, known as Hanukkah, and Jesus teaching in the Temple during the festival.",
+    category: "Festivals"
   }
 ];
 
