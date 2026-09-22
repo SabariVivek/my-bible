@@ -285,8 +285,8 @@ const BIBLE_TRACKS = [
   },
   {
     day: 32,
-    title: "Can dead people return as spirits?",
-    file: "Can dead people return as spirits",
+    title: "Can Dead People Return as Spirits?",
+    file: "Can Dead People Return as Spirits",
     duration: "62:46 min",
     verse: "1 Samuel 28:3-25",
     desc: "A biblical perspective on the question of whether dead people can return as spirits.",
