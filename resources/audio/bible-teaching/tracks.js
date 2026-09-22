@@ -799,7 +799,15 @@ const BIBLE_TRACKS = [
     verse: "John 10:22-30",
     desc: "The Feast of Dedication, known as Hanukkah, and Jesus teaching in the Temple during the festival.",
     category: "Festivals"
-  }
+  },
+  {
+    day: 73,
+    title: "Why Was the Blind Man Healed Twice?",
+    duration: "32:51 min",
+    verse: "Mark 8:22-26",
+    desc: "Jesus healing a blind man in two stages, revealing a deeper lesson for his disciples and for us today",
+    category: "Miracles"
+  },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
