@@ -809,6 +809,14 @@ const BIBLE_TRACKS = [
     desc: "Jesus healing a blind man in two stages, revealing a deeper lesson for his disciples and for us today",
     category: "Miracles"
   },
+  {
+    day: 74,
+    title: "Keturah - Abraham's Wife",
+    duration: "37:48 min",
+    verse: "Genesis 25:1-4",
+    desc: "Who was Keturah, Abraham’s wife, and what happened to her children?",
+    category: "Characters"
+  }
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
