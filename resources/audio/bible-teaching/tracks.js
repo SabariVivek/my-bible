@@ -803,6 +803,7 @@ const BIBLE_TRACKS = [
   {
     day: 73,
     title: "Why Was the Blind Man Healed Twice?",
+    file: "Why Was the Blid Man Healed Twice",
     duration: "32:51 min",
     verse: "Mark 8:22-26",
     desc: "Jesus healing a blind man in two stages, revealing a deeper lesson for his disciples and for us today",
