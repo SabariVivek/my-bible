@@ -814,8 +814,16 @@ const BIBLE_TRACKS = [
     title: "Keturah - Abraham's Wife",
     duration: "37:48 min",
     verse: "Genesis 25:1-4",
-    desc: "Who was Keturah, Abraham’s wife, and what happened to her children?",
+    desc: "Who was Keturah, Abraham's wife, and what happened to her children?",
     category: "Characters"
+  },
+  {
+    day: 75,
+    title: "7 “I AM” Statements of Jesus",
+    duration: "50:32 min",
+    verse: "John 6:35-15:1",
+    desc: "Discover the seven powerful “I AM” statements of Jesus and what each one reveals about who He is.",
+    category: "7's"
   }
 ];
 
