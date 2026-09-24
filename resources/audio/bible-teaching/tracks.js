@@ -830,7 +830,7 @@ const BIBLE_TRACKS = [
     title: "Hagar - Concubine",
     duration: "50:18 min",
     verse: "Genesis 16:1-16",
-    desc: "Who was Hagar, and what was her place in Abraham and Sarah’s story?",
+    desc: "Who was Hagar, and what was her place in Abraham and Sarah's story?",
     category: "Characters"
   }
 ];
