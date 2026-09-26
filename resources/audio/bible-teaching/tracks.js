@@ -833,6 +833,14 @@ const BIBLE_TRACKS = [
     verse: "Genesis 16:1-16",
     desc: "Who was Hagar, and what was her place in Abraham and Sarah's story?",
     category: "Characters"
+  },
+  {
+    day: 77,
+    title: "Jesus Walks on the Sea",
+    duration: "40:13 min",
+    verse: "Mark 6:45-52",
+    desc: "Why did Jesus walk on the sea, and what did this miracle reveal about who He is?",
+    category: "Miracles"
   }
 ];
 
