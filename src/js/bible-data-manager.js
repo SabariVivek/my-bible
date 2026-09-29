@@ -84,7 +84,7 @@ class BibleDataManager {
             `${bookFile.replace(/^i_/, '1_').replace(/^ii_/, '2_').replace(/^iii_/, '3_')}.js`
         ];
         if (bookFile === 'psalms') candidateNames.push('psalm.js');
-        if (bookFile === 'song_of_solomon') candidateNames.push('song-of-solomon.js', 'song-of-songs.js');
+        if (bookFile === 'song_of_solomon') candidateNames.push('song-of-songs.js');
 
         const subfolders = ['old-testament', 'new-testament', ''];
 

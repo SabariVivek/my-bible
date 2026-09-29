@@ -1284,7 +1284,7 @@ function isMemoryVerse(bookName, chapter, verse) {
 // Helper function to convert book file name based on language
 // Tamil uses i_samuel, english uses 1-samuel
 function getBookFileForLanguage(bookFile, language) {
-    if (language === 'english') {
+    if (language === 'english' && bookFile !== 'song_of_solomon') {
         return bookFile
             .replace(/^i_/, '1-')
             .replace(/^ii_/, '2-')
