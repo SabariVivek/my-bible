@@ -841,6 +841,14 @@ const BIBLE_TRACKS = [
     verse: "Mark 6:45-52",
     desc: "Why did Jesus walk on the sea, and what did this miracle reveal about who He is?",
     category: "Miracles"
+  },
+  {
+    day: 78,
+    title: "The Beatitudes",
+    duration: "43:47 min",
+    verse: "Matthew 5:3-12",
+    desc: "What do the Beatitudes teach us about true blessing and living in God's kingdom?",
+    category: "Teachings"
   }
 ];
 
@@ -870,5 +878,6 @@ const BIBLE_FOLDERS = [
   { name: "Prophets", type: "category", value: "Prophets" },
   { name: "7's", type: "category", value: "7's" },
   { name: "Miracles", type: "category", value: "Miracles" },
-  { name: "Exodus", type: "category", value: "Exodus" }
+  { name: "Exodus", type: "category", value: "Exodus" },
+  { name: "Teachings", type: "category", value: "Teachings" }
 ];
