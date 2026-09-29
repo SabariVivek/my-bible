@@ -3460,7 +3460,7 @@ module.exports = {
     },
     {
       "verse": 35,
-      "text": "��Job speaks like a fool who knows nothing. He only says useless things. ” He only says useless things. ”"
+      "text": "“Job speaks like a fool who knows nothing. He only says useless things. ” He only says useless things. ”"
     },
     {
       "verse": 36,

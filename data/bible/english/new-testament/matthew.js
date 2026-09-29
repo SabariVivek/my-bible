@@ -3614,7 +3614,7 @@ module.exports = {
     },
     {
       "verse": 28,
-      "text": "Then the master said to his other servants, ����Take the 1, 000 gold coins from this bad servant. Give them to the man who now has 10, 000 coins."
+      "text": "Then the master said to his other servants, ‘Take the 1, 000 gold coins from this bad servant. Give them to the man who now has 10, 000 coins."
     },
     {
       "verse": 29,

@@ -200,7 +200,7 @@ module.exports = {
     },
     {
       "verse": 21,
-      "text": "They teach, ‘Do not touch things like that! ’ Or, ‘Do not eat that kind of food! �� Or, ‘Keep away from that thing! ’"
+      "text": "They teach, ‘Do not touch things like that! ’ Or, ‘Do not eat that kind of food! ’ Or, ‘Keep away from that thing! ’"
     },
     {
       "verse": 22,

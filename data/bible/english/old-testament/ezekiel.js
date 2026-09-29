@@ -1876,7 +1876,7 @@ module.exports = {
     },
     {
       "verse": 29,
-      "text": "I asked them, ���Why do you go to these high places? ’ ” (That is why people still call them “high places”. )"
+      "text": "I asked them, ‘Why do you go to these high places? ’ ” (That is why people still call them “high places”. )"
     },
     {
       "verse": 30,

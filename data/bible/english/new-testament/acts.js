@@ -1140,7 +1140,7 @@ module.exports = {
     },
     {
       "verse": 29,
-      "text": "The Holy Spirit said to Philip, ‘Go to that chariot and walk beside it. ��"
+      "text": "The Holy Spirit said to Philip, ‘Go to that chariot and walk beside it. ’"
     },
     {
       "verse": 30,
@@ -3882,7 +3882,7 @@ module.exports = {
     },
     {
       "verse": 26,
-      "text": "But the wind will blow the ship so that we hit an island. ���"
+      "text": "But the wind will blow the ship so that we hit an island. ’"
     },
     {
       "verse": 27,

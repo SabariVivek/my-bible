@@ -2106,7 +2106,7 @@ module.exports = {
     },
     {
       "verse": 29,
-      "text": "The king said, ���You have said enough about this. I have decided that you and Ziba will share the fields that belonged to your grandfather, Saul. ’"
+      "text": "The king said, ‘You have said enough about this. I have decided that you and Ziba will share the fields that belonged to your grandfather, Saul. ’"
     },
     {
       "verse": 30,

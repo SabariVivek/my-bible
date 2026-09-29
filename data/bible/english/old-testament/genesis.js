@@ -1856,7 +1856,7 @@ module.exports = {
     },
     {
       "verse": 31,
-      "text": "Abraham said, ‘I have been brave to speak to you, Lord. What will you do if only 20 good people are there? ’ The Lord said, ���Because of 20 good people, I will not destroy the city. ’"
+      "text": "Abraham said, ‘I have been brave to speak to you, Lord. What will you do if only 20 good people are there? ’ The Lord said, ‘Because of 20 good people, I will not destroy the city. ’"
     },
     {
       "verse": 32,

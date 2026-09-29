@@ -3534,7 +3534,7 @@ module.exports = {
     },
     {
       "verse": 5,
-      "text": "Moses told the officers of the Israelites, ��Each of you, kill the men who have worshipped the god, Baal of Peor. ’"
+      "text": "Moses told the officers of the Israelites, ‘Each of you, kill the men who have worshipped the god, Baal of Peor. ’"
     },
     {
       "verse": 6,

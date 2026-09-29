@@ -3874,7 +3874,7 @@ module.exports = {
     },
     {
       "verse": 12,
-      "text": "Moses said to the Lord, ‘You have said to me, ��Lead these people to their new land. ” But you have not told me who my helper will be on the journey. You have told me, “I know you by your name. I am very pleased with you. ”"
+      "text": "Moses said to the Lord, ‘You have said to me, “Lead these people to their new land. ” But you have not told me who my helper will be on the journey. You have told me, “I know you by your name. I am very pleased with you. ”"
     },
     {
       "verse": 13,
