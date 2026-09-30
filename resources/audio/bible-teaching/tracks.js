@@ -849,6 +849,14 @@ const BIBLE_TRACKS = [
     verse: "Matthew 5:3-12",
     desc: "What do the Beatitudes teach us about true blessing and living in God's kingdom?",
     category: "Teachings"
+  },
+  {
+    day: 79,
+    title: "Clean and Unclean Animals",
+    duration: "43:47 min",
+    verse: "Leviticus 11:1-47",
+    desc: "What makes an animal clean or unclean, and what did God teach through these laws?",
+    category: "Leviticus"
   }
 ];
 
