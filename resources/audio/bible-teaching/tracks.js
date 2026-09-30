@@ -853,7 +853,7 @@ const BIBLE_TRACKS = [
   {
     day: 79,
     title: "Clean and Unclean Animals",
-    duration: "43:47 min",
+    duration: "59:44 min",
     verse: "Leviticus 11:1-47",
     desc: "What makes an animal clean or unclean, and what did God teach through these laws?",
     category: "Leviticus"
