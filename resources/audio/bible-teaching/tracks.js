@@ -865,6 +865,14 @@ const BIBLE_TRACKS = [
     verse: "Mat 20:1-16; Mark 15:25",
     desc: "How were hours, watches, and different times of day understood in the Bible?",
     category: "Do You Know?"
+  },
+  {
+    day: 81,
+    title: "Cornelius - Roman Centurion",
+    duration: "37:59 min",
+    verse: "Acts 10:1-48",
+    desc: "Who was Cornelius, and how did God use this Roman centurion to show that the gospel is for all people?",
+    category: "Characters"
   }
 ];
 
