@@ -851,12 +851,12 @@ const BIBLE_TRACKS = [
     category: "Teachings"
   },
   {
-    day: 79,
-    title: "Clean and Unclean Animals",
-    duration: "59:44 min",
-    verse: "Leviticus 11:1-47",
-    desc: "What makes an animal clean or unclean, and what did God teach through these laws?",
-    category: "Leviticus"
+    day: 80,
+    title: "Biblical Timings",
+    duration: "39:34 min",
+    verse: "Matthew 20:1-16; Mark 15:25",
+    desc: "How were hours, watches, and different times of day understood in the Bible?",
+    category: "Do You Know?"
   }
 ];
 
