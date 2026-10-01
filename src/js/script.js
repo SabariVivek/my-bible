@@ -2850,6 +2850,11 @@ function updateVerses() {
             }
             // Always scroll to verse, even if already selected
             scrollToVerse(verse);
+
+            // Record verse navigation in VerseHistoryManager (persists locally up to 30 verses per user)
+            if (window.VerseHistoryManager && typeof window.VerseHistoryManager.recordVerse === 'function') {
+                window.VerseHistoryManager.recordVerse(currentBook, currentChapter, verse);
+            }
         });
     });
 }
@@ -6205,6 +6210,20 @@ function initializeSearch() {
             saveRecentSearch(value);
         }, 1200);
     });
+
+    // Instant search on Enter key
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const value = searchInput.value.trim();
+            if (value.length >= MIN_SEARCH_LENGTH) {
+                clearTimeout(searchTimeout);
+                clearTimeout(saveRecentTimeout);
+                showLoadingState();
+                performSearch(value);
+            }
+        }
+    });
+
     // Show empty state
     function showEmptyState() {
         const suggestions = getSuggestions();

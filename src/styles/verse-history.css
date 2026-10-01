@@ -1,0 +1,756 @@
+/* ==========================================================================
+   Verse Navigation History Styles
+   - Header: "History" in Cinzel serif, Clear All button outside, close "✕"
+   - Filter pills: "All", "Old Testament", "New Testament" (No search bar)
+   - Left badge: 3-letter Bible book code (JHN, ACT, PSA, ROM)
+     * New Testament: dark forest green background (#17261d), green text (#4ade80)
+     * Old Testament: dark amber/brown background (#2a2012), gold text (#e5ad35)
+   - Dynamic Language details:
+     * English mode: English reference (Cinzel) + English verse snippet (Georgia/Lato)
+     * Tamil mode: Tamil reference (Noto Sans Tamil) + Tamil verse snippet
+     * Both mode: English reference (Cinzel) + Tamil verse snippet (mockup style)
+   - Right: Relative timestamp ("12m", "14m", "1h", "1d", "2d")
+   - Theme support: Dark mode & Light mode
+   ========================================================================== */
+
+/* ── Top Bar Header Icon & Counter Badge ── */
+.verse-history-btn {
+    position: relative;
+    color: #5f6368;
+    transition: background 0.2s ease, transform 0.15s ease, color 0.2s ease;
+}
+
+body.dark-theme .verse-history-btn {
+    color: #9aa0a6;
+}
+
+.verse-history-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #e8eaed;
+}
+
+body:not(.dark-theme) .verse-history-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #202124;
+}
+
+.verse-history-btn.active {
+    color: #deb03d !important;
+}
+
+body:not(.dark-theme) .verse-history-btn.active {
+    color: #b45309 !important;
+}
+
+/* Hide mobile bottom history button on desktop */
+#verse-history-btn-mobile {
+    display: none !important;
+}
+
+/* ── Backdrop Overlay ── */
+.verse-history-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 10500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.22s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.22s ease;
+    will-change: opacity;
+}
+
+.verse-history-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ── Modal Container ── */
+.verse-history-modal {
+    position: relative;
+    width: 92%;
+    max-width: 480px;
+    max-height: 84vh;
+    background: #18191c;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.96) translateY(8px);
+    opacity: 0;
+    transition: transform 0.25s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.22s ease;
+    font-family: 'Lato', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
+    color: #f3f4f6;
+}
+
+.verse-history-overlay.active .verse-history-modal {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Light Theme Modal Container */
+body:not(.dark-theme) .verse-history-modal {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.18);
+    color: #111827;
+}
+
+/* ── Handle Bar for Mobile Bottom Sheet ── */
+.verse-history-handle {
+    display: none;
+    width: 38px;
+    height: 4px;
+    background: #555555;
+    border-radius: 2px;
+    margin: 10px auto 2px;
+    flex-shrink: 0;
+}
+
+body:not(.dark-theme) .verse-history-handle {
+    background: #d0d0d0;
+}
+
+/* ── Header Bar ── */
+.verse-history-header {
+    padding: 16px 20px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+body:not(.dark-theme) .verse-history-header {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.verse-history-title {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0;
+    color: #f3f4f6;
+}
+
+body:not(.dark-theme) .verse-history-title {
+    color: #111827;
+}
+
+.verse-history-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Clear All Button Outside (Old Design Style) */
+.verse-history-clear-btn {
+    border-radius: 999px;
+    padding: 5px 12px;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.18s ease;
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    color: #f87171;
+    font-family: inherit;
+}
+
+.verse-history-clear-btn:hover {
+    background: rgba(239, 68, 68, 0.22);
+    border-color: #ef4444;
+    color: #fca5a5;
+}
+
+.verse-history-clear-btn:active {
+    transform: scale(0.96);
+}
+
+body:not(.dark-theme) .verse-history-clear-btn {
+    background: rgba(220, 38, 38, 0.08);
+    border: 1px solid rgba(220, 38, 38, 0.28);
+    color: #dc2626;
+}
+
+body:not(.dark-theme) .verse-history-clear-btn:hover {
+    background: rgba(220, 38, 38, 0.16);
+    border-color: #dc2626;
+    color: #b91c1c;
+}
+
+/* Close Icon Button */
+.verse-history-close-btn {
+    background: transparent;
+    border: none;
+    color: #8b8d93;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.verse-history-close-btn:hover {
+    color: #f3f4f6;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+body:not(.dark-theme) .verse-history-close-btn {
+    color: #6b7280;
+}
+
+body:not(.dark-theme) .verse-history-close-btn:hover {
+    color: #111827;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* ── Testament Filter Pills (All, Old Testament, New Testament) ── */
+.verse-history-filters {
+    padding: 14px 20px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex-shrink: 0;
+}
+
+.verse-history-filters::-webkit-scrollbar {
+    display: none;
+}
+
+.verse-history-filter-pill {
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    font-family: inherit;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #1e2024;
+    color: #9aa0a6;
+}
+
+.verse-history-filter-pill:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #e8eaed;
+}
+
+/* Active Pill (Gold background, dark text) */
+.verse-history-filter-pill.active {
+    background: #deb03d;
+    border-color: #deb03d;
+    color: #121316;
+    font-weight: 600;
+}
+
+body:not(.dark-theme) .verse-history-filter-pill {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    color: #4b5563;
+}
+
+body:not(.dark-theme) .verse-history-filter-pill:hover {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+body:not(.dark-theme) .verse-history-filter-pill.active {
+    background: #deb03d;
+    border-color: #deb03d;
+    color: #121316;
+    font-weight: 600;
+}
+
+/* ── History Body & List ── */
+.verse-history-body {
+    flex: 1;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0;
+    min-height: 240px;
+    max-height: 60vh;
+}
+
+.verse-history-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.verse-history-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.verse-history-body::-webkit-scrollbar-thumb {
+    background: #3c4043;
+    border-radius: 3px;
+}
+
+body:not(.dark-theme) .verse-history-body::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+}
+
+.verse-history-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── History Row Item ── */
+.verse-history-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 13px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.verse-history-item:last-child {
+    border-bottom: none;
+}
+
+.verse-history-item:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+body:not(.dark-theme) .verse-history-item {
+    border-bottom: 1px solid #f3f4f6;
+}
+
+body:not(.dark-theme) .verse-history-item:hover {
+    background-color: #f9fafb;
+}
+
+/* ── Left Book Code Badge (JHN, ACT, PSA, ROM) ── */
+.verse-history-item-badge {
+    width: 44px;
+    height: 36px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* New Testament Badge: Dark Forest Green Background, Green Text */
+.verse-history-item-badge.badge-nt {
+    background: #17261d;
+    color: #4ade80;
+}
+
+/* Old Testament Badge: Dark Amber Background, Amber/Gold Text */
+.verse-history-item-badge.badge-ot {
+    background: #2a2012;
+    color: #e5ad35;
+}
+
+body:not(.dark-theme) .verse-history-item-badge.badge-nt {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+
+body:not(.dark-theme) .verse-history-item-badge.badge-ot {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+/* ── Center: Reference & Verse Snippet ── */
+.verse-history-item-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.verse-history-item-ref {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #f3f4f6;
+    letter-spacing: 0.03em;
+    margin-bottom: 3px;
+}
+
+.verse-history-item-ref.ref-english {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 13.5px;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.verse-history-item-ref.ref-tamil {
+    font-family: 'Noto Sans Tamil', -apple-system, sans-serif;
+    font-size: 14px;
+}
+
+body:not(.dark-theme) .verse-history-item-ref {
+    color: #111827;
+}
+
+.verse-history-item-snippet {
+    font-size: 13px;
+    color: #9ca3af;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.verse-history-item-snippet.snippet-english {
+    font-family: 'Lato', Georgia, 'Times New Roman', serif;
+}
+
+.verse-history-item-snippet.snippet-tamil {
+    font-family: 'Noto Sans Tamil', -apple-system, sans-serif;
+}
+
+body:not(.dark-theme) .verse-history-item-snippet {
+    color: #4b5563;
+}
+
+/* ── Right: Timestamp & Hover Delete Action ── */
+.verse-history-item-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.verse-history-item-time {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, sans-serif;
+    white-space: nowrap;
+}
+
+.verse-history-del-btn {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.verse-history-item:hover .verse-history-del-btn {
+    opacity: 0.7;
+}
+
+.verse-history-del-btn:hover {
+    opacity: 1 !important;
+    background: rgba(239, 68, 68, 0.16);
+    color: #ef4444;
+}
+
+/* ── Empty State ── */
+.verse-history-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 24px;
+    color: #6b7280;
+}
+
+.verse-history-empty h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #f3f4f6;
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+}
+
+body:not(.dark-theme) .verse-history-empty h4 {
+    color: #111827;
+}
+
+.verse-history-empty p {
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 320px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+body:not(.dark-theme) .verse-history-empty p {
+    color: #6b7280;
+}
+
+/* ── Custom Confirmation Dialog ── */
+.verse-history-confirm-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.68);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: inherit;
+    z-index: 60;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.verse-history-confirm-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.verse-history-confirm-card {
+    width: 100%;
+    max-width: 310px;
+    background: #1b1c20;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 22px 20px 18px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65);
+    transform: scale(0.92);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.verse-history-confirm-overlay.active .verse-history-confirm-card {
+    transform: scale(1);
+}
+
+body:not(.dark-theme) .verse-history-confirm-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.verse-history-confirm-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(239, 68, 68, 0.14);
+    color: #f87171;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+body:not(.dark-theme) .verse-history-confirm-icon {
+    background: rgba(220, 38, 38, 0.1);
+    color: #dc2626;
+}
+
+.verse-history-confirm-title {
+    font-size: 15.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #f3f4f6;
+    margin: 0 0 6px 0;
+}
+
+body:not(.dark-theme) .verse-history-confirm-title {
+    color: #111827;
+}
+
+.verse-history-confirm-msg {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #9ca3af;
+    margin: 0 0 18px 0;
+}
+
+body:not(.dark-theme) .verse-history-confirm-msg {
+    color: #4b5563;
+}
+
+.verse-history-confirm-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.verse-history-confirm-btn {
+    flex: 1;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+.verse-history-confirm-btn.cancel {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #e5e7eb;
+}
+
+.verse-history-confirm-btn.cancel:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+}
+
+body:not(.dark-theme) .verse-history-confirm-btn.cancel {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+}
+
+body:not(.dark-theme) .verse-history-confirm-btn.cancel:hover {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.verse-history-confirm-btn.delete {
+    background: #dc2626;
+    border: 1px solid #ef4444;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.35);
+}
+
+.verse-history-confirm-btn.delete:hover {
+    background: #b91c1c;
+    border-color: #dc2626;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.45);
+}
+
+.verse-history-confirm-btn:active {
+    transform: scale(0.96);
+}
+
+/* ── Mobile Bottom Sheet Behavior (≤768px) ── */
+@media (max-width: 768px) {
+    /* Hide top header history button on mobile */
+    #verse-history-btn {
+        display: none !important;
+    }
+
+    /* Hide voice button on mobile in bottom bar */
+    #voice-btn {
+        display: none !important;
+    }
+
+    /* Show verse history button in bottom bar on mobile in place of voice-btn */
+    #verse-history-btn-mobile {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #verse-history-btn-mobile.active {
+        color: #b45309 !important;
+    }
+
+    body.dark-theme #verse-history-btn-mobile.active {
+        color: #deb03d !important;
+    }
+
+    #verse-history-btn-mobile.active::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 2px;
+        background-color: #b45309;
+        border-radius: 2px;
+        opacity: 0.8;
+    }
+
+    body.dark-theme #verse-history-btn-mobile.active::after {
+        background-color: #deb03d;
+    }
+
+    .verse-history-overlay {
+        align-items: flex-end;
+    }
+
+    .verse-history-modal {
+        width: 100%;
+        max-width: 100%;
+        max-height: 86vh;
+        border-radius: 18px 18px 0 0;
+        border-bottom: none;
+        transform: translateY(100%);
+        box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.65);
+    }
+
+    .verse-history-overlay.active .verse-history-modal {
+        transform: translateY(0);
+    }
+
+    .verse-history-handle {
+        display: block;
+    }
+
+    .verse-history-header {
+        padding: 12px 18px 12px;
+    }
+
+    /* On mobile, Clear All button is icon-only */
+    .verse-history-clear-btn {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    .verse-history-clear-btn span {
+        display: none !important;
+    }
+
+    .verse-history-clear-btn svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .verse-history-filters {
+        padding: 12px 18px 10px;
+    }
+
+    .verse-history-item {
+        padding: 12px 18px;
+    }
+
+    .verse-history-del-btn {
+        opacity: 0.6; /* visible on touch devices */
+    }
+}

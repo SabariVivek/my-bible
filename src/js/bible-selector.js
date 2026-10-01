@@ -248,6 +248,10 @@
         }, 500);
       }
     }
+    // Record in Verse Navigation History
+    if (verse && window.VerseHistoryManager && typeof window.VerseHistoryManager.recordVerse === 'function') {
+      window.VerseHistoryManager.recordVerse(bookIndex, chapter, verse);
+    }
     // Close the new selector and the drawer
     closeBibleSelector();
   }
