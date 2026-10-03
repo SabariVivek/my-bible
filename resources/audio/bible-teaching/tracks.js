@@ -873,6 +873,14 @@ const BIBLE_TRACKS = [
     verse: "Acts 10:1-48",
     desc: "Who was Cornelius, and how did God use this Roman centurion to show that the gospel is for all people?",
     category: "Characters"
+  },
+  {
+    day: 82,
+    title: "Mystery of the Grave Cloths of Jesus",
+    duration: "67:28 min",
+    verse: "John 20:1-8",
+    desc: "What was the mystery behind the grave cloths of Jesus, and what did they reveal about His resurrection?",
+    category: "Miracles"
   }
 ];
 
