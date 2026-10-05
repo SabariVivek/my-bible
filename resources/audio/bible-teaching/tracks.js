@@ -884,8 +884,8 @@ const BIBLE_TRACKS = [
   },
   {
     day: 83,
-    title: "The Second Passover",
-    duration: "67:28 min",
+    title: "Second Passover",
+    duration: "45:55 min",
     verse: "Numbers 9:1-14",
     desc: "God's kindness in allowing those who could not celebrate the Passover to celebrate it the following month.",
     category: "Do You Know?"
