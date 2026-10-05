@@ -881,6 +881,14 @@ const BIBLE_TRACKS = [
     verse: "John 20:1-8",
     desc: "What was the mystery behind the grave cloths of Jesus, and what did they reveal about His resurrection?",
     category: "Miracles"
+  },
+  {
+    day: 83,
+    title: "The Second Passover",
+    duration: "67:28 min",
+    verse: "Numbers 9:1-14",
+    desc: "God's kindness in allowing those who could not celebrate the Passover to celebrate it the following month.",
+    category: "Do You Know?"
   }
 ];
 
