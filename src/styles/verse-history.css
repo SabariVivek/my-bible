@@ -42,41 +42,11 @@ body:not(.dark-theme) .verse-history-btn.active {
     color: #b45309 !important;
 }
 
-/* Desktop view: Hide top header history button, show bottom bar button */
-#verse-history-btn {
+/* Hide mobile bottom history button on desktop */
+#verse-history-btn-mobile {
     display: none !important;
 }
 
-#verse-history-btn-mobile {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-}
-
-#verse-history-btn-mobile.active {
-    color: #b45309 !important;
-}
-
-body.dark-theme #verse-history-btn-mobile.active {
-    color: #deb03d !important;
-}
-
-#verse-history-btn-mobile.active::after {
-    content: '';
-    position: absolute;
-    bottom: 2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 2px;
-    background-color: #b45309;
-    border-radius: 2px;
-    opacity: 0.8;
-}
-
-body.dark-theme #verse-history-btn-mobile.active::after {
-    background-color: #deb03d;
-}
 
 /* ── Backdrop Overlay ── */
 .verse-history-overlay {
@@ -683,18 +653,48 @@ body:not(.dark-theme) .verse-history-confirm-btn.cancel:hover {
     transform: scale(0.96);
 }
 
-/* ── Mobile Behavior (≤768px): Show at top header, hide from bottom bar ── */
+/* ── Mobile Bottom Sheet Behavior (≤768px) ── */
 @media (max-width: 768px) {
-    /* Show top header history button on mobile */
+    /* Hide top header history button on mobile */
     #verse-history-btn {
+        display: none !important;
+    }
+
+    /* Hide voice button on mobile in bottom bar */
+    #voice-btn {
+        display: none !important;
+    }
+
+    /* Show verse history button in bottom bar on mobile in place of voice-btn */
+    #verse-history-btn-mobile {
         display: flex !important;
         align-items: center;
         justify-content: center;
     }
 
-    /* Hide bottom history button on mobile */
-    #verse-history-btn-mobile {
-        display: none !important;
+    #verse-history-btn-mobile.active {
+        color: #b45309 !important;
+    }
+
+    body.dark-theme #verse-history-btn-mobile.active {
+        color: #deb03d !important;
+    }
+
+    #verse-history-btn-mobile.active::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 2px;
+        background-color: #b45309;
+        border-radius: 2px;
+        opacity: 0.8;
+    }
+
+    body.dark-theme #verse-history-btn-mobile.active::after {
+        background-color: #deb03d;
     }
 
     .verse-history-overlay {
