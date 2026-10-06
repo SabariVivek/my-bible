@@ -1429,62 +1429,6 @@
             color: #374151;
         }
 
-        .track-corner-note {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            display: inline-flex;
-            align-items: center;
-            gap: 3.5px;
-            background: #fde047;
-            color: #000000;
-            border: 1.5px solid #000000;
-            box-shadow: 2px 2px 0px #000000;
-            border-radius: 4px;
-            padding: 2px 6px;
-            font-size: 9.5px;
-            font-weight: 800;
-            line-height: 1.15;
-            cursor: pointer;
-            z-index: 5;
-            transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
-            user-select: none;
-            letter-spacing: 0.2px;
-        }
-
-        .track-corner-note:hover {
-            transform: translate(-1px, -1px);
-            box-shadow: 3px 3px 0px #000000;
-            background: #facc15;
-        }
-
-        .track-corner-note:active {
-            transform: translate(1px, 1px);
-            box-shadow: 1px 1px 0px #000000;
-        }
-
-        .track-item.playing .track-corner-note {
-            background: #ffffff;
-            color: #000000;
-        }
-
-        .track-corner-note .corner-note-icon {
-            font-size: 9.5px;
-            line-height: 1;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .track-corner-note .corner-note-text {
-            font-size: 9px;
-            font-weight: 900;
-            letter-spacing: 0.2px;
-        }
-
-        .track-item.has-notes .track-title {
-            padding-right: 68px;
-        }
-
         /* Playlist Structural Architecture */
         .playlist {
             list-style: none;
@@ -3890,20 +3834,10 @@
             });
         }
 
-        function openTrackNote(dayNum, title) {
-            const note = findNoteForTitle(title, dayNum);
-            if (note) {
-                populateNotesSheet(note);
-                openNotesSheet();
-            }
-        }
-
         function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important, importantColor, cardBg, comingSoon) {
             const isComingSoon = comingSoon || (typeof duration === 'string' && duration.toLowerCase().includes('coming soon'));
             const li = document.createElement('li');
-            const noteObj = findNoteForTitle(title, dayNum);
-            const hasNote = !!noteObj;
-            li.className = 'track-item' + (isComingSoon ? ' coming-soon' : '') + (important ? ' important' : '') + (hasNote ? ' has-notes' : '');
+            li.className = 'track-item' + (isComingSoon ? ' coming-soon' : '') + (important ? ' important' : '');
             if (important && importantColor) {
                 li.style.backgroundColor = importantColor.bg;
                 li.style.borderColor = importantColor.border;
@@ -3929,8 +3863,8 @@
                         if (activeNote) {
                             populateNotesSheet(activeNote);
                             openNotesSheet();
-                            return;
                         }
+                        return;
                     }
                     selectTrack(filePath, title, 'Day ' + dayNum, trackId);
                 };
@@ -3950,11 +3884,6 @@
                 <img src="../../resources/images/coming-soon.png" alt="Coming Soon" class="coming-soon-card-icon" />`;
             } else {
                 li.innerHTML = `
-                ${hasNote ? `
-                <div class="track-corner-note" title="பாடச் சுருக்கம் / Study Notes (திறக்க கிளிக் செய்யவும்)" onclick="event.stopPropagation(); openTrackNote(${dayNum}, '${(title || '').replace(/'/g, "\\'")}');">
-                    <span class="corner-note-icon">📝</span>
-                    <span class="corner-note-text">சுருக்கம்</span>
-                </div>` : ''}
                 <div class="track-content">
                     <div class="track-title">${title}</div>
                     ${desc ? `<div class="track-desc">${desc}</div>` : ''}
