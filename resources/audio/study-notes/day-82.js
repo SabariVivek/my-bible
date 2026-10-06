@@ -3,9 +3,10 @@
 // யோவான் 20:1–8 – இயேசுவின் கல்லறைச் சீலைகளின் ரகசியம் (பாடச் சுருக்கம்)
 // ─────────────────────────────────────────────────────────────────────────────
 
-window.BIBLE_STUDY_NOTES = window.BIBLE_STUDY_NOTES || [];
+(function () {
+  window.BIBLE_STUDY_NOTES = window.BIBLE_STUDY_NOTES || [];
 
-const DAY_82_SUMMARY = {
+  const DAY_82_SUMMARY = {
   day: 82,
   title: "யோவான் 20:1–8 – இயேசுவின் கல்லறைச் சீலைகளின் ரகசியம் (பாடச் சுருக்கம்)",
   trackTitle: "Mystery of the Grave Cloths of Jesus",
@@ -320,3 +321,4 @@ if (existingIdx >= 0) {
 }
 
 window.DAY_82_SUMMARY = DAY_82_SUMMARY;
+})();
