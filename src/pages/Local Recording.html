@@ -2073,6 +2073,339 @@
         body.show-actions .sk-action {
             display: flex;
         }
+
+        /* ── Neo-Brutalist Search Bar ─────────────────────────────────────────── */
+        .header-search-btn {
+            background: #ffffff;
+            border: 2px solid var(--raw-black);
+            box-shadow: 3px 3px 0px var(--raw-black);
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: transform 0.1s, box-shadow 0.1s, background-color 0.1s;
+            -webkit-tap-highlight-color: transparent;
+            color: var(--raw-black);
+            border-radius: 4px;
+        }
+
+        .header-search-btn:hover {
+            background-color: var(--brutal-yellow);
+        }
+
+        .header-search-btn.active {
+            background-color: var(--brutal-yellow);
+            box-shadow: inset 1px 1px 0px var(--raw-black);
+        }
+
+        .header-search-btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--raw-black);
+        }
+
+        .header-search-btn svg {
+            width: 19px;
+            height: 19px;
+            display: block;
+        }
+
+        /* ── Search Mode Active State ─────────────────────────────────────────── */
+        body.search-mode header {
+            display: none !important;
+        }
+
+        body.search-mode .top-folders-container {
+            display: none !important;
+        }
+
+        body.search-mode .folder-count-text {
+            display: none !important;
+        }
+
+        body.search-mode .folders-grid-view {
+            display: none !important;
+        }
+
+        body.search-mode .search-bar-container {
+            display: flex !important;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--bg-canvas);
+            padding-top: max(16px, calc(10px + env(safe-area-inset-top, 0px)));
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-left: -16px;
+            margin-right: -16px;
+            padding-left: 16px;
+            padding-right: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .search-bar-container {
+            margin-top: 4px;
+            margin-bottom: 12px;
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .search-input-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .search-input-box {
+            flex: 1;
+            background-color: #ffffff;
+            border: 3px solid var(--raw-black);
+            box-shadow: 4px 4px 0px var(--raw-black);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            height: 46px;
+            gap: 10px;
+            transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+        }
+
+        .search-input-box:focus-within {
+            box-shadow: 5px 5px 0px var(--raw-black);
+            background-color: #fffdf5;
+            transform: translate(-1px, -1px);
+        }
+
+        .search-input-box .search-icon {
+            flex-shrink: 0;
+            color: var(--raw-black);
+            width: 18px;
+            height: 18px;
+        }
+
+        .search-cancel-btn {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            color: var(--raw-black);
+            border: 3px solid var(--raw-black);
+            box-shadow: 3px 3px 0px var(--raw-black);
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 900;
+            padding: 0 14px;
+            height: 46px;
+            cursor: pointer;
+            border-radius: 4px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: transform 0.1s, box-shadow 0.1s, background-color 0.1s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body.search-mode .search-cancel-btn {
+            display: flex;
+        }
+
+        .search-cancel-btn:hover {
+            background-color: var(--brutal-yellow);
+        }
+
+        .search-cancel-btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--raw-black);
+        }
+
+
+        .recording-search-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--raw-black);
+            padding: 0;
+            width: 100%;
+            -webkit-user-select: text !important;
+            -moz-user-select: text !important;
+            -ms-user-select: text !important;
+            user-select: text !important;
+        }
+
+        .recording-search-input::placeholder {
+            color: #6b7280;
+            font-weight: 600;
+            font-size: 0.88rem;
+        }
+
+        .clear-search-btn {
+            background: #ff6060;
+            color: var(--raw-black);
+            border: 2px solid var(--raw-black);
+            box-shadow: 2px 2px 0px var(--raw-black);
+            width: 24px;
+            height: 24px;
+            border-radius: 3px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 900;
+            flex-shrink: 0;
+            padding: 0;
+            transition: transform 0.08s, box-shadow 0.08s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .clear-search-btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--raw-black);
+        }
+
+        .search-stats-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2px 4px;
+            font-size: 0.76rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .search-stats-text {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--raw-black);
+            flex-wrap: wrap;
+        }
+
+        .search-query-badge {
+            background: var(--brutal-yellow);
+            border: 1.5px solid var(--raw-black);
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-size: 0.72rem;
+            font-weight: 900;
+            color: var(--raw-black);
+            max-width: 160px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .search-all-folders-chip {
+            background: #e0f2fe;
+            color: #0369a1;
+            border: 1.5px solid var(--raw-black);
+            box-shadow: 2px 2px 0px var(--raw-black);
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            cursor: pointer;
+            font-family: inherit;
+            transition: transform 0.08s, box-shadow 0.08s;
+            white-space: nowrap;
+        }
+
+        .search-all-folders-chip:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--raw-black);
+        }
+
+        /* Highlight matching search terms */
+        mark.search-highlight {
+            background-color: var(--brutal-yellow);
+            color: var(--raw-black);
+            padding: 0 2px;
+            border-radius: 2px;
+            font-weight: 900;
+        }
+
+        .track-item.playing mark.search-highlight {
+            background-color: #ffffff;
+            color: var(--raw-black);
+            box-shadow: 1px 1px 0px var(--raw-black);
+        }
+
+        /* Empty state for search */
+        .search-no-results-card {
+            background-color: var(--bg-card);
+            border: 3px solid var(--raw-black);
+            box-shadow: 4px 4px 0px var(--raw-black);
+            border-radius: 4px;
+            padding: 36px 20px;
+            text-align: center;
+            margin: 20px 0 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .search-no-results-icon {
+            font-size: 2.4rem;
+            line-height: 1;
+        }
+
+        .search-no-results-title {
+            font-size: 1.15rem;
+            font-weight: 900;
+            color: var(--raw-black);
+        }
+
+        .search-no-results-desc {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            max-width: 320px;
+            line-height: 1.45;
+        }
+
+        .search-no-results-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .search-reset-btn {
+            background-color: var(--brutal-yellow);
+            color: var(--raw-black);
+            border: 2px solid var(--raw-black);
+            box-shadow: 2px 2px 0px var(--raw-black);
+            padding: 8px 16px;
+            font-size: 0.8rem;
+            font-weight: 900;
+            cursor: pointer;
+            font-family: inherit;
+            border-radius: 4px;
+            transition: transform 0.08s, box-shadow 0.08s;
+        }
+
+        .search-reset-btn.search-all-accent-btn {
+            background-color: #60a5fa;
+            color: #ffffff;
+        }
+
+        .search-reset-btn:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--raw-black);
+        }
     </style>
 </head>
 
@@ -2135,6 +2468,12 @@
             <div class="brutal-title-block" style="cursor: pointer;">
                 <h1>Bible Audio</h1>
             </div>
+            <button class="header-search-btn" id="headerSearchBtn" onclick="focusSearchInput()" aria-label="Search recordings" title="Search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
             <a class="yt-btn" href="https://www.youtube.com/playlist?list=PLDPnamzse1mQ" target="_blank"
                 rel="noopener noreferrer" aria-label="Open YouTube playlist">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -2145,6 +2484,35 @@
             </a>
         </header>
 
+        <div class="search-bar-container" id="searchBarContainer" style="display: none;">
+            <div class="search-input-row">
+                <div class="search-input-box">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="recordingSearchInput" 
+                        class="recording-search-input" 
+                        placeholder="Search recordings, scriptures, topics..." 
+                        autocomplete="off" 
+                        autocorrect="off" 
+                        autocapitalize="off" 
+                        spellcheck="false" 
+                        enterkeyhint="search"
+                    />
+                    <button id="clearSearchBtn" class="clear-search-btn" onclick="clearSearch(event)" aria-label="Clear search" title="Clear">✕</button>
+                </div>
+                <button class="search-cancel-btn" id="searchCancelBtn" onclick="exitSearchMode()">Cancel</button>
+            </div>
+
+            <div id="searchStatsRow" class="search-stats-row" style="display: none;">
+                <span id="searchStatsText" class="search-stats-text"></span>
+                <button id="searchAllFoldersBtn" class="search-all-folders-chip" style="display: none;" onclick="switchSearchToAllFolders()">Search All Folders</button>
+            </div>
+        </div>
+
         <div class="top-folders-container" id="folderChips"></div>
         <div class="folder-count-text" id="folderCountText"></div>
 
@@ -2153,6 +2521,16 @@
         <ul class="playlist" id="playlistContainer">
             <li class="loading-state" id="loadingMsg">Scanning recordings…</li>
         </ul>
+
+        <div id="searchNoResultsCard" class="search-no-results-card" style="display: none;">
+            <div class="search-no-results-icon">🔍</div>
+            <div class="search-no-results-title">No recordings found</div>
+            <div class="search-no-results-desc">No audio tracks match "<span id="searchEmptyQuery"></span>". Try searching by title, passage, topics, or day number.</div>
+            <div class="search-no-results-actions">
+                <button class="search-reset-btn" onclick="clearSearch()">Clear Search</button>
+                <button class="search-reset-btn search-all-accent-btn" id="emptySearchAllBtn" onclick="switchSearchToAllFolders()" style="display: none;">Search All Folders</button>
+            </div>
+        </div>
 
     </div>
 
@@ -2263,8 +2641,8 @@
         </div>
     </div>
 
-    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20261005233348"></script>
-    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20261005233348"></script>
+    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20261006105527"></script>
+    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20261006105527"></script>
     <script>
         // ─── CONFIG ──────────────────────────────────────────────────────────────────
         // Track titles are managed in:
@@ -2723,6 +3101,8 @@
                 return;
             }
 
+
+
             if (activeTrackElementId === elementId) {
                 togglePlayback();
                 return;
@@ -3159,6 +3539,283 @@
 
         let isFolderGridOpen = false;
         let selectedFolderIdx = 0;
+        let currentSearchQuery = '';
+
+        function escapeHtml(str) {
+            return String(str || '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function highlightTerms(htmlText, terms) {
+            if (!htmlText) return '';
+            const safeTerms = (terms || [])
+                .map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+                .filter(Boolean);
+            if (!safeTerms.length) return htmlText;
+
+            // Split into HTML tags and text chunks so tags like <sup> aren't broken or escaped
+            const parts = htmlText.split(/(<[^>]+>)/g);
+            const regex = new RegExp(`(${safeTerms.join('|')})`, 'gi');
+
+            return parts.map(part => {
+                if (part.startsWith('<') && part.endsWith('>')) {
+                    return part;
+                }
+                return part.replace(regex, '<mark class="search-highlight">$1</mark>');
+            }).join('');
+        }
+
+        function highlightCardText(cardEl, track, query) {
+            const titleEl = cardEl.querySelector('.track-title');
+            const descEl = cardEl.querySelector('.track-desc');
+            if (!titleEl) return;
+
+            if (!query || !query.trim()) {
+                titleEl.innerHTML = track.title;
+                if (descEl && track.desc) descEl.innerHTML = track.desc;
+                return;
+            }
+
+            const terms = query.trim().split(/\s+/).filter(Boolean);
+            if (!terms.length) {
+                titleEl.innerHTML = track.title;
+                if (descEl && track.desc) descEl.innerHTML = track.desc;
+                return;
+            }
+
+            titleEl.innerHTML = highlightTerms(track.title, terms);
+            if (descEl && track.desc) {
+                descEl.innerHTML = highlightTerms(track.desc, terms);
+            }
+        }
+
+        function getSearchableTextForTrack(track) {
+            const rawTitle = (track.title || '').replace(/<[^>]+>/g, ' ');
+            const strippedTitle = (track.title || '').replace(/<sup>st<\/sup>/gi, 'st').replace(/<[^>]+>/g, ' ');
+            const parts = [
+                `day ${track.day}`,
+                `${track.day}`,
+                rawTitle,
+                strippedTitle,
+                track.file || '',
+                track.desc || '',
+                track.verse || '',
+                track.category || ''
+            ];
+
+            const note = findNoteForTitle(track.title) || (track.file ? findNoteForTitle(track.file) : null);
+            if (note) {
+                if (note.tags) parts.push(note.tags.join(' '));
+                if (note.summary) parts.push(note.summary);
+                if (note.scripturePassages) {
+                    note.scripturePassages.forEach(p => {
+                        parts.push(p.reference || '');
+                        parts.push(p.summary || '');
+                    });
+                }
+                if (note.sermonSections) {
+                    note.sermonSections.forEach(s => {
+                        parts.push(s.title || '');
+                        if (s.points) parts.push(s.points.join(' '));
+                    });
+                }
+                if (note.corePrinciples) {
+                    parts.push(note.corePrinciples.join(' '));
+                }
+            }
+
+            return parts.join(' ').toLowerCase();
+        }
+
+        function matchesTrackSearch(track, query) {
+            if (!query) return true;
+            const cleanQuery = query.toLowerCase().trim();
+            if (!cleanQuery) return true;
+
+            const dayMatch = cleanQuery.match(/^day\s*(\d+)$/i);
+            if (dayMatch) {
+                return Number(track.day) === Number(dayMatch[1]);
+            }
+
+            const terms = cleanQuery.split(/\s+/).filter(Boolean);
+            if (!track._searchableText) {
+                track._searchableText = getSearchableTextForTrack(track);
+            }
+            return terms.every(term => track._searchableText.includes(term));
+        }
+
+        function applyFilters() {
+            const folders = (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : [{ name: 'All Items', type: 'all' }]);
+            const currentFolder = folders[selectedFolderIdx] || folders[0];
+            const isSearching = !!currentSearchQuery.trim();
+
+            const emptyCard = document.getElementById('searchNoResultsCard');
+            const statsRow = document.getElementById('searchStatsRow');
+            const statsText = document.getElementById('searchStatsText');
+            const searchAllFoldersBtn = document.getElementById('searchAllFoldersBtn');
+            const clearBtn = document.getElementById('clearSearchBtn');
+            const headerSearchBtn = document.getElementById('headerSearchBtn');
+
+            if (clearBtn) {
+                clearBtn.style.display = isSearching ? 'flex' : 'none';
+            }
+            if (headerSearchBtn) {
+                headerSearchBtn.classList.toggle('active', isSearching);
+            }
+
+            let visibleCount = 0;
+            let totalInFolderCount = 0;
+            let totalOverallSearchMatches = 0;
+
+            const cards = document.querySelectorAll('.track-item');
+            cards.forEach(cardEl => {
+                const day = Number(cardEl.dataset.day);
+                const track = (typeof BIBLE_TRACKS !== 'undefined') ? BIBLE_TRACKS.find(t => Number(t.day) === day) : null;
+                if (!track) return;
+
+                let inFolder = false;
+                if (currentFolder.type === 'all') {
+                    inFolder = true;
+                } else if (currentFolder.type === 'category') {
+                    const categories = (cardEl.dataset.category || '')
+                        .split(',')
+                        .map(c => c.trim())
+                        .filter(Boolean);
+                    inFolder = categories.includes(currentFolder.value);
+                } else if (currentFolder.type === 'days') {
+                    inFolder = (currentFolder.value || []).includes(day);
+                }
+
+                if (inFolder) {
+                    totalInFolderCount++;
+                }
+
+                const searchMatches = isSearching ? matchesTrackSearch(track, currentSearchQuery) : true;
+                if (searchMatches) {
+                    totalOverallSearchMatches++;
+                }
+
+                const show = inFolder && searchMatches;
+                cardEl.style.display = show ? '' : 'none';
+
+                if (show) {
+                    visibleCount++;
+                    highlightCardText(cardEl, track, isSearching ? currentSearchQuery : '');
+                } else {
+                    highlightCardText(cardEl, track, '');
+                }
+            });
+
+            // Update folder count text
+            const countEl = document.getElementById('folderCountText');
+            if (countEl) {
+                countEl.style.display = '';
+                if (isSearching) {
+                    countEl.textContent = `${visibleCount} Audio found`;
+                } else {
+                    countEl.textContent = `${visibleCount} Audio`;
+                }
+            }
+
+            // Update search stats row
+            if (statsRow && statsText) {
+                if (isSearching) {
+                    statsRow.style.display = 'flex';
+                    statsText.innerHTML = `Found <strong>${visibleCount}</strong> of ${totalInFolderCount} in ${escapeHtml(currentFolder.name)} matching <span class="search-query-badge">"${escapeHtml(currentSearchQuery.trim())}"</span>`;
+
+                    if (currentFolder.type !== 'all' && totalOverallSearchMatches > visibleCount) {
+                        if (searchAllFoldersBtn) {
+                            searchAllFoldersBtn.style.display = 'inline-block';
+                            searchAllFoldersBtn.textContent = `Search All Folders (${totalOverallSearchMatches} found)`;
+                        }
+                    } else {
+                        if (searchAllFoldersBtn) searchAllFoldersBtn.style.display = 'none';
+                    }
+                } else {
+                    statsRow.style.display = 'none';
+                    if (searchAllFoldersBtn) searchAllFoldersBtn.style.display = 'none';
+                }
+            }
+
+            // Handle empty state card
+            if (emptyCard) {
+                if (isSearching && visibleCount === 0) {
+                    emptyCard.style.display = 'flex';
+                    const querySpan = document.getElementById('searchEmptyQuery');
+                    if (querySpan) querySpan.textContent = currentSearchQuery.trim();
+
+                    const emptyAllBtn = document.getElementById('emptySearchAllBtn');
+                    if (emptyAllBtn) {
+                        if (currentFolder.type !== 'all' && totalOverallSearchMatches > 0) {
+                            emptyAllBtn.style.display = 'inline-block';
+                            emptyAllBtn.textContent = `Search in All Folders (${totalOverallSearchMatches} found)`;
+                        } else {
+                            emptyAllBtn.style.display = 'none';
+                        }
+                    }
+                } else {
+                    emptyCard.style.display = 'none';
+                }
+            }
+        }
+
+        function enterSearchMode() {
+            if (!document.body.classList.contains('search-mode')) {
+                document.body.classList.add('search-mode');
+            }
+            if (isFolderGridOpen) {
+                toggleFoldersGridView(false);
+            }
+            const searchBar = document.getElementById('searchBarContainer');
+            if (searchBar) searchBar.style.display = 'flex';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function exitSearchMode() {
+            document.body.classList.remove('search-mode');
+            const searchBar = document.getElementById('searchBarContainer');
+            if (searchBar) searchBar.style.display = 'none';
+            const input = document.getElementById('recordingSearchInput');
+            if (input) {
+                input.value = '';
+                input.blur();
+            }
+            currentSearchQuery = '';
+            applyFilters();
+        }
+
+        function clearSearch(e) {
+            if (e) {
+                e.stopPropagation();
+                e.preventDefault();
+            }
+            const input = document.getElementById('recordingSearchInput');
+            if (input) {
+                input.value = '';
+                input.focus();
+            }
+            currentSearchQuery = '';
+            applyFilters();
+        }
+
+        function switchSearchToAllFolders() {
+            const folders = (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : [{ name: 'All Items', type: 'all' }]);
+            selectFolder(0, folders[0]);
+        }
+
+        function focusSearchInput() {
+            enterSearchMode();
+            const input = document.getElementById('recordingSearchInput');
+            if (input) {
+                setTimeout(() => {
+                    input.focus();
+                }, 150);
+            }
+        }
 
         function getFolderAudioCount(folder) {
             if (folder.type === 'all') {
@@ -3205,6 +3862,8 @@
             const playlist = document.getElementById('playlistContainer');
             const chipsContainer = document.getElementById('folderChips');
             const countEl = document.getElementById('folderCountText');
+            const searchBar = document.getElementById('searchBarContainer');
+            const emptyCard = document.getElementById('searchNoResultsCard');
             if (!grid || !playlist) return;
 
             isFolderGridOpen = (typeof show === 'boolean') ? show : !isFolderGridOpen;
@@ -3212,21 +3871,22 @@
             if (isFolderGridOpen) {
                 if (chipsContainer) chipsContainer.style.display = 'none';
                 if (countEl) countEl.style.display = 'none';
+                if (searchBar) searchBar.style.display = 'none';
+                if (emptyCard) emptyCard.style.display = 'none';
                 renderFoldersGrid();
                 grid.style.display = 'grid';
                 playlist.style.display = 'none';
             } else {
                 if (chipsContainer) chipsContainer.style.display = '';
                 if (countEl) countEl.style.display = '';
+                if (searchBar) searchBar.style.display = document.body.classList.contains('search-mode') ? 'flex' : 'none';
                 grid.style.display = 'none';
                 playlist.style.display = '';
                 const chips = document.querySelectorAll('.small-folder-chip');
                 chips.forEach((c, i) => {
                     c.classList.toggle('active', i === selectedFolderIdx);
                 });
-                const folders = (typeof BIBLE_FOLDERS !== 'undefined' ? BIBLE_FOLDERS : [{ name: 'All Items', type: 'all' }]);
-                const currentFolder = folders[selectedFolderIdx] || folders[0];
-                updateFilteredTrackCount(currentFolder);
+                applyFilters();
             }
         }
 
@@ -3243,36 +3903,11 @@
                 }
             });
 
-            updateFilteredTrackCount(folder);
+            applyFilters();
         }
 
         function updateFilteredTrackCount(folder) {
-            document.querySelectorAll('.filtered-count-badge').forEach(el => el.remove());
-
-            const visibleCards = [];
-            document.querySelectorAll('.track-item').forEach(cardEl => {
-                let show = false;
-                if (folder.type === 'all') {
-                    show = true;
-                } else if (folder.type === 'category') {
-                    const categories = (cardEl.dataset.category || '')
-                        .split(',')
-                        .map(c => c.trim())
-                        .filter(Boolean);
-                    show = categories.includes(folder.value);
-                } else if (folder.type === 'days') {
-                    show = folder.value.includes(Number(cardEl.dataset.day));
-                }
-                cardEl.style.display = show ? '' : 'none';
-                if (show) visibleCards.push(cardEl);
-            });
-
-            const countEl = document.getElementById('folderCountText');
-            if (countEl) {
-                countEl.style.display = '';
-                const count = visibleCards.length;
-                countEl.textContent = `${count} Audio`;
-            }
+            applyFilters();
         }
 
         // ── Gate Verses ────────────────────────────────────────────────────────────
@@ -3352,15 +3987,65 @@
             discoverAndBuildPlaylist();
         }
 
-        document.addEventListener('contextmenu', e => e.preventDefault());
-        document.addEventListener('copy', e => e.preventDefault());
-        document.addEventListener('selectstart', e => e.preventDefault());
+        // ── Search Input Event Listeners & Shortcuts ──────────────────────────────
+        const searchInputEl = document.getElementById('recordingSearchInput');
+        if (searchInputEl) {
+            searchInputEl.addEventListener('focus', () => {
+                enterSearchMode();
+            });
 
-        // Disable Ctrl+scroll zoom and Ctrl +/- keyboard zoom
+            searchInputEl.addEventListener('click', () => {
+                enterSearchMode();
+            });
+
+            searchInputEl.addEventListener('input', (e) => {
+                currentSearchQuery = e.target.value;
+                if (!document.body.classList.contains('search-mode')) {
+                    enterSearchMode();
+                }
+                applyFilters();
+            });
+
+            searchInputEl.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    searchInputEl.blur();
+                }
+            });
+        }
+
+        document.addEventListener('contextmenu', e => {
+            if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+            e.preventDefault();
+        });
+        document.addEventListener('copy', e => {
+            if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+            e.preventDefault();
+        });
+        document.addEventListener('selectstart', e => {
+            if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+            e.preventDefault();
+        });
+
+        // Disable Ctrl+scroll zoom and Ctrl +/- keyboard zoom, plus Search shortcuts
         document.addEventListener('wheel', e => { if (e.ctrlKey) e.preventDefault(); }, { passive: false });
         document.addEventListener('keydown', e => {
             if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
                 e.preventDefault();
+            }
+            // Quick shortcut: '/' or Ctrl/Cmd + F to focus search
+            if ((e.key === '/' && document.activeElement !== document.getElementById('recordingSearchInput')) ||
+                ((e.ctrlKey || e.metaKey) && (e.key === 'f' || e.key === 'F'))) {
+                const gate = document.getElementById('passwordGate');
+                if (!gate || gate.classList.contains('hidden')) {
+                    e.preventDefault();
+                    focusSearchInput();
+                }
+            }
+            // Escape to exit search mode
+            if (e.key === 'Escape') {
+                if (document.body.classList.contains('search-mode')) {
+                    exitSearchMode();
+                }
             }
         });
         // Disable pinch-to-zoom on touch devices
