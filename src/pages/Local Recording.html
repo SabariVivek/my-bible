@@ -2714,28 +2714,13 @@
             }
             li.id = trackId;
 
-            let lastCardTapTime = 0;
             if (isComingSoon) {
                 li.onclick = (e) => {
                     e.preventDefault();
                     e.stopPropagation();
                 };
             } else {
-                li.onclick = (e) => {
-                    const now = Date.now();
-                    if (!document.body.classList.contains('show-actions')) {
-                        // Double-click/double-tap on track card also activates audio options and plays
-                        if (now - lastCardTapTime < 450) {
-                            document.body.classList.add('show-actions');
-                            lastCardTapTime = 0;
-                            selectTrack(filePath, title, 'Day ' + dayNum, trackId);
-                            return;
-                        }
-                        lastCardTapTime = now;
-                        return;
-                    }
-                    selectTrack(filePath, title, 'Day ' + dayNum, trackId);
-                };
+                li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
             }
 
             const durStr = duration
@@ -3374,36 +3359,29 @@
         }, { passive: true });
 
         // ── Toggle track action column on double-clicking/tapping title ────────────
-        let lastTitleTapTime = 0;
-        function toggleAudioActions(e) {
-            if (e && typeof e.preventDefault === 'function') {
-                e.preventDefault();
-            }
+        let lastTitleClickTime = 0;
+        let lastToggleTime = 0;
+
+        function toggleAudioActions() {
+            const now = Date.now();
+            if (now - lastToggleTime < 350) return;
+            lastToggleTime = now;
             document.body.classList.toggle('show-actions');
         }
 
-        document.querySelectorAll('.brutal-title-block, .gate-title-block, .brutal-title-block h1').forEach(titleEl => {
-            titleEl.addEventListener('dblclick', (e) => {
-                toggleAudioActions(e);
+        document.querySelectorAll('.brutal-title-block, .gate-title-block').forEach(titleEl => {
+            titleEl.addEventListener('dblclick', () => {
+                toggleAudioActions();
             });
 
-            titleEl.addEventListener('click', (e) => {
+            titleEl.addEventListener('click', () => {
                 const now = Date.now();
-                if (now - lastTitleTapTime < 450) {
-                    toggleAudioActions(e);
-                    lastTitleTapTime = 0;
+                const diff = now - lastTitleClickTime;
+                if (diff >= 50 && diff < 450) {
+                    lastTitleClickTime = 0;
+                    toggleAudioActions();
                 } else {
-                    lastTitleTapTime = now;
-                }
-            });
-
-            titleEl.addEventListener('touchend', (e) => {
-                const now = Date.now();
-                if (now - lastTitleTapTime < 450) {
-                    toggleAudioActions(e);
-                    lastTitleTapTime = 0;
-                } else {
-                    lastTitleTapTime = now;
+                    lastTitleClickTime = now;
                 }
             });
         });
