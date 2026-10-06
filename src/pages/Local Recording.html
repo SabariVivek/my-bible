@@ -1025,6 +1025,466 @@
             padding: 4px 0;
         }
 
+        /* ── Biblical Time Reckoning Neo-Brutalist Layout ── */
+        .reckoning-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            font-family: inherit;
+        }
+
+        .reckoning-banner {
+            background: #fef08a;
+            border: 2.5px solid #000;
+            box-shadow: 3px 3px 0px #000;
+            padding: 14px 16px;
+            position: relative;
+        }
+
+        .reckoning-banner-badge {
+            display: inline-block;
+            background: #000;
+            color: #fde047;
+            font-size: 0.62rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            margin-bottom: 8px;
+        }
+
+        .reckoning-banner-text {
+            margin: 0;
+            font-size: 0.88rem;
+            font-weight: 700;
+            line-height: 1.6;
+            color: #111827;
+        }
+
+        .reckoning-card {
+            background: #ffffff;
+            border: 2.5px solid #000;
+            box-shadow: 3px 3px 0px #000;
+            overflow: hidden;
+        }
+
+        .reckoning-card-header {
+            background: #fde047;
+            border-bottom: 2.5px solid #000;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .reckoning-card-header.dark-header {
+            background: #1e293b;
+            color: #f8fafc;
+        }
+
+        .reckoning-card-header.accent-header {
+            background: #fed7aa;
+        }
+
+        .reckoning-step-num {
+            background: #000;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 900;
+            padding: 2px 7px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .reckoning-step-num.dark-step {
+            background: #fde047;
+            color: #000;
+        }
+
+        .reckoning-step-num.accent-step {
+            background: #ea580c;
+            color: #fff;
+        }
+
+        .reckoning-card-title {
+            font-size: 0.85rem;
+            font-weight: 900;
+            color: #000;
+            letter-spacing: -0.2px;
+            line-height: 1.3;
+        }
+
+        .reckoning-card-title.dark-title {
+            color: #f8fafc;
+        }
+
+        .reckoning-card-body {
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .reckoning-sub-block {
+            background: #fafafa;
+            border: 1.5px solid #e5e7eb;
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .reckoning-block-title {
+            font-size: 0.8rem;
+            font-weight: 900;
+            color: #111;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .reckoning-pill-tag {
+            background: #000;
+            color: #fff;
+            font-size: 0.62rem;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 12px;
+        }
+
+        .reckoning-desc {
+            margin: 0;
+            font-size: 0.82rem;
+            line-height: 1.55;
+            color: #374151;
+        }
+
+        .day-night-split-bar {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .split-segment {
+            border: 2px solid #000;
+            padding: 8px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            box-shadow: 2px 2px 0px #000;
+        }
+
+        .split-segment.day-seg {
+            background: #fef08a;
+        }
+
+        .split-segment.night-seg {
+            background: #1e1b4b;
+            color: #f8fafc;
+        }
+
+        .split-segment.night-seg .seg-title {
+            color: #e0e7ff;
+        }
+
+        .split-segment.night-seg .seg-time {
+            color: #cbd5e1;
+        }
+
+        .seg-icon {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        .seg-title {
+            font-size: 0.72rem;
+            font-weight: 900;
+            color: #000;
+        }
+
+        .seg-time {
+            font-size: 0.66rem;
+            font-weight: 700;
+            color: #4b5563;
+        }
+
+        .formula-box {
+            background: #ecfdf5;
+            border: 2px dashed #059669;
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .formula-badge {
+            font-size: 0.62rem;
+            font-weight: 900;
+            color: #065f46;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .formula-eq {
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: #064e3b;
+        }
+
+        .reckoning-table-wrapper {
+            overflow-x: auto;
+            border: 2px solid #000;
+            box-shadow: 2px 2px 0px #000;
+            background: #fff;
+        }
+
+        .reckoning-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.76rem;
+            text-align: left;
+        }
+
+        .reckoning-table th {
+            background: #000;
+            color: #fff;
+            padding: 8px 10px;
+            font-size: 0.68rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-right: 1px solid #374151;
+            white-space: nowrap;
+        }
+
+        .reckoning-table td {
+            padding: 9px 10px;
+            border-bottom: 1.5px solid #e5e7eb;
+            border-right: 1.5px solid #e5e7eb;
+            vertical-align: top;
+            line-height: 1.45;
+        }
+
+        .reckoning-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .reckoning-table tr:nth-child(even) {
+            background: #fafaf9;
+        }
+
+        .hour-tag {
+            display: inline-block;
+            background: #f3f4f6;
+            border: 1.5px solid #000;
+            padding: 2px 6px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: #000;
+            white-space: nowrap;
+        }
+
+        .time-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            border: 1.5px solid #1e3a8a;
+            padding: 2px 6px;
+            font-size: 0.7rem;
+            font-weight: 900;
+            white-space: nowrap;
+        }
+
+        .time-badge.highlight-red {
+            background: #ffe4e6;
+            color: #9f1239;
+            border-color: #9f1239;
+        }
+
+        .event-bullet-list {
+            margin: 0;
+            padding-left: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .ref-chip {
+            display: inline-block;
+            background: #fef08a;
+            border: 1px solid #000;
+            color: #000;
+            font-size: 0.63rem;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 3px;
+            margin-left: 4px;
+            white-space: nowrap;
+        }
+
+        .watches-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .watch-item {
+            background: #f8fafc;
+            border: 2px solid #000;
+            box-shadow: 3px 3px 0px #000;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .watch-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .watch-num-badge {
+            background: #000;
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 900;
+            padding: 3px 8px;
+        }
+
+        .watch-num-badge.highlight-watch {
+            background: #d97706;
+            color: #fff;
+        }
+
+        .watch-name-tag {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #1f2937;
+        }
+
+        .watch-time-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #e2e8f0;
+            padding: 4px 8px;
+            border-left: 3px solid #0f172a;
+        }
+
+        .watch-time-span {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .watch-body {
+            font-size: 0.78rem;
+            line-height: 1.45;
+            color: #334155;
+        }
+
+        .watch-body p {
+            margin: 0;
+        }
+
+        .lesson-box {
+            background: #fff;
+            border: 2px solid #000;
+            box-shadow: 2.5px 2.5px 0px #000;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .lesson-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lesson-dot {
+            width: 8px;
+            height: 8px;
+            background: #f97316;
+            border: 1.5px solid #000;
+            flex-shrink: 0;
+        }
+
+        .lesson-title {
+            font-size: 0.82rem;
+            font-weight: 900;
+            color: #000;
+        }
+
+        .lesson-text {
+            margin: 0;
+            font-size: 0.8rem;
+            line-height: 1.55;
+            color: #374151;
+        }
+
+        .track-corner-note {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 3.5px;
+            background: #fde047;
+            color: #000000;
+            border: 1.5px solid #000000;
+            box-shadow: 2px 2px 0px #000000;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 9.5px;
+            font-weight: 800;
+            line-height: 1.15;
+            cursor: pointer;
+            z-index: 5;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+            user-select: none;
+            letter-spacing: 0.2px;
+        }
+
+        .track-corner-note:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 3px 3px 0px #000000;
+            background: #facc15;
+        }
+
+        .track-corner-note:active {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px #000000;
+        }
+
+        .track-item.playing .track-corner-note {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .track-corner-note .corner-note-icon {
+            font-size: 9.5px;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .track-corner-note .corner-note-text {
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 0.2px;
+        }
+
+        .track-item.has-notes .track-title {
+            padding-right: 68px;
+        }
+
         /* Playlist Structural Architecture */
         .playlist {
             list-style: none;
@@ -1078,17 +1538,37 @@
         }
 
         .track-item {
+            position: relative;
             background-color: var(--bg-card);
             padding: 18px;
             margin-bottom: 20px;
             border: 3px solid var(--raw-black);
-            cursor: default;
+            cursor: pointer;
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             box-shadow: 4px 4px 0px var(--raw-black);
             transition: all 0.15s ease-in-out;
             -webkit-tap-highlight-color: transparent;
+        }
+
+        .track-item:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 5px 5px 0px var(--raw-black);
+        }
+
+        .track-item:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px var(--raw-black);
+        }
+
+        .track-item.coming-soon {
+            cursor: default;
+        }
+
+        .track-item.coming-soon:hover {
+            transform: none;
+            box-shadow: 4px 4px 0px var(--raw-black);
         }
 
         body.show-actions .track-item {
@@ -2641,12 +3121,12 @@
         </div>
     </div>
 
-    <script src="../../resources/audio/bible-teaching/tracks.js?cb=20261006105527"></script>
-    <script src="../../resources/audio/bible-teaching/study-notes.js?cb=20261006105527"></script>
+    <script src="../../resources/audio/tracks.js?cb=20261006134500"></script>
+    <script src="../../resources/audio/study-notes/day-83.js?cb=20261006134000"></script>
     <script>
         // ─── CONFIG ──────────────────────────────────────────────────────────────────
         // Track titles are managed in:
-        //   resources/audio/bible-teaching/tracks.js
+        //   resources/audio/tracks.js
         // Audio files are served from the bible-media GitHub repo:
         //   https://github.com/SabariVivek/bible-media/tree/main/assests
 
@@ -2672,13 +3152,26 @@
         const globalStopBtn = document.getElementById('headerStopBtn');
         const notesPillBtn = document.getElementById('notesPillBtn');
 
-        // ── Notes Sheet ────────────────────────────────────────────────────────────
-        function findNoteForTitle(title) {
-            if (typeof BIBLE_STUDY_NOTES === 'undefined') return null;
-            const t = title.toLowerCase();
-            return BIBLE_STUDY_NOTES.find(n => {
-                const nt = n.title.toLowerCase();
-                return nt === t || nt.startsWith(t) || t.startsWith(nt);
+        // ── Notes Sheet (study-notes/ folder) ───────────────────────────────────────
+        function findNoteForTitle(title, dayNum) {
+            const list = window.BIBLE_STUDY_NOTES || (typeof BIBLE_STUDY_NOTES !== 'undefined' ? BIBLE_STUDY_NOTES : null);
+            if (!list || !Array.isArray(list)) return null;
+            if (dayNum != null && dayNum !== '') {
+                const d = Number(dayNum);
+                const matchByDay = list.find(n => n.day === d);
+                if (matchByDay) return matchByDay;
+            }
+            if (!title) return null;
+            const t = String(title).toLowerCase();
+            return list.find(n => {
+                const nt = (n.title || '').toLowerCase();
+                if (nt === t || nt.startsWith(t) || t.startsWith(nt)) return true;
+                if (n.trackTitle && (n.trackTitle.toLowerCase() === t || n.trackTitle.toLowerCase().startsWith(t) || t.startsWith(n.trackTitle.toLowerCase()))) return true;
+                if (Array.isArray(n.aliases) && n.aliases.some(a => {
+                    const al = a.toLowerCase();
+                    return al === t || al.startsWith(t) || t.startsWith(al);
+                })) return true;
+                return false;
             }) || null;
         }
 
@@ -2831,82 +3324,86 @@
                 .map(t => `<span class="notes-tag">${t}</span>`).join('');
 
             let html = '';
-            if (note.summary) {
-                html += `<div>
-                <div class="notes-section-label">Summary</div>
-                <p class="notes-summary-text">${note.summary}</p>
-            </div>`;
-            }
-            if (note.scripturePassages && note.scripturePassages.length) {
-                html += `<div>
-                <div class="notes-section-label">Scripture Passages</div>
-                <div class="notes-passage-list">
-                    ${note.scripturePassages.map((p, idx) => `
-                    <div class="notes-passage-item">
-                        <div class="notes-passage-num">${String(idx + 1).padStart(2, '0')}</div>
-                        <div class="notes-passage-accent"></div>
-                        <div class="notes-passage-body">
-                            <div class="notes-passage-ref">${p.reference}</div>
-                            <div class="notes-passage-summary">${p.summary}</div>
-                        </div>
-                    </div>`).join('')}
-                </div>
-            </div>`;
-            }
-            if (note.sermonSections && note.sermonSections.length) {
-                html += `<div>
-                <div class="notes-section-label">Sermon Outline</div>
-                <div class="notes-sermon-list">
-                    ${note.sermonSections.map(s => `
-                    <div class="notes-sermon-section">
-                        <div class="notes-sermon-title">${s.title}</div>
-                        <ul class="notes-sermon-points">
-                            ${s.points.map(p => `<li class="notes-sermon-point"><span class="notes-sermon-bullet"></span>${p}</li>`).join('')}
-                        </ul>
-                    </div>`).join('')}
-                </div>
-            </div>`;
-            }
-            if (note.jesusFulfillment && note.jesusFulfillment.length) {
-                html += `<div>
-                <div class="notes-section-label">Passover → Fulfilled in Jesus</div>
-                <div class="notes-fulfillment-list">
-                    ${note.jesusFulfillment.map(f => `
-                    <div class="notes-fulfillment-item">
-                        <div class="notes-fulfillment-ot">
-                            <div class="notes-fulfillment-strip"></div>
-                            <div class="notes-fulfillment-body">
-                                <div class="notes-fulfillment-label">OT</div>
-                                <div class="notes-fulfillment-text">${f.ot}</div>
+            if (note.customHtml) {
+                html += note.customHtml;
+            } else {
+                if (note.summary) {
+                    html += `<div>
+                    <div class="notes-section-label">Summary</div>
+                    <p class="notes-summary-text">${note.summary}</p>
+                </div>`;
+                }
+                if (note.scripturePassages && note.scripturePassages.length) {
+                    html += `<div>
+                    <div class="notes-section-label">Scripture Passages</div>
+                    <div class="notes-passage-list">
+                        ${note.scripturePassages.map((p, idx) => `
+                        <div class="notes-passage-item">
+                            <div class="notes-passage-num">${String(idx + 1).padStart(2, '0')}</div>
+                            <div class="notes-passage-accent"></div>
+                            <div class="notes-passage-body">
+                                <div class="notes-passage-ref">${p.reference}</div>
+                                <div class="notes-passage-summary">${p.summary}</div>
                             </div>
-                        </div>
-                        <div class="notes-fulfillment-connector">
-                            <div class="notes-fulfillment-connector-line"></div>
-                            <div class="notes-fulfillment-connector-text">&#x2193; Fulfilled in Jesus</div>
-                            <div class="notes-fulfillment-connector-line"></div>
-                        </div>
-                        <div class="notes-fulfillment-nt">
-                            <div class="notes-fulfillment-strip"></div>
-                            <div class="notes-fulfillment-body">
-                                <div class="notes-fulfillment-label">Jesus</div>
-                                <div class="notes-fulfillment-text">${f.fulfillment}</div>
+                        </div>`).join('')}
+                    </div>
+                </div>`;
+                }
+                if (note.sermonSections && note.sermonSections.length) {
+                    html += `<div>
+                    <div class="notes-section-label">Sermon Outline</div>
+                    <div class="notes-sermon-list">
+                        ${note.sermonSections.map(s => `
+                        <div class="notes-sermon-section">
+                            <div class="notes-sermon-title">${s.title}</div>
+                            <ul class="notes-sermon-points">
+                                ${s.points.map(p => `<li class="notes-sermon-point"><span class="notes-sermon-bullet"></span>${p}</li>`).join('')}
+                            </ul>
+                        </div>`).join('')}
+                    </div>
+                </div>`;
+                }
+                if (note.jesusFulfillment && note.jesusFulfillment.length) {
+                    html += `<div>
+                    <div class="notes-section-label">Passover → Fulfilled in Jesus</div>
+                    <div class="notes-fulfillment-list">
+                        ${note.jesusFulfillment.map(f => `
+                        <div class="notes-fulfillment-item">
+                            <div class="notes-fulfillment-ot">
+                                <div class="notes-fulfillment-strip"></div>
+                                <div class="notes-fulfillment-body">
+                                    <div class="notes-fulfillment-label">OT</div>
+                                    <div class="notes-fulfillment-text">${f.ot}</div>
+                                </div>
                             </div>
-                        </div>
-                    </div>`).join('')}
-                </div>
-            </div>`;
-            }
-            if (note.corePrinciples && note.corePrinciples.length) {
-                html += `<div>
-                <div class="notes-section-label">Core Principles</div>
-                <div class="notes-principle-list">
-                    ${note.corePrinciples.map(p => `
-                    <div class="notes-principle-item">
-                        <div class="notes-principle-dot"></div>
-                        <span>${p}</span>
-                    </div>`).join('')}
-                </div>
-            </div>`;
+                            <div class="notes-fulfillment-connector">
+                                <div class="notes-fulfillment-connector-line"></div>
+                                <div class="notes-fulfillment-connector-text">&#x2193; Fulfilled in Jesus</div>
+                                <div class="notes-fulfillment-connector-line"></div>
+                            </div>
+                            <div class="notes-fulfillment-nt">
+                                <div class="notes-fulfillment-strip"></div>
+                                <div class="notes-fulfillment-body">
+                                    <div class="notes-fulfillment-label">Jesus</div>
+                                    <div class="notes-fulfillment-text">${f.fulfillment}</div>
+                                </div>
+                            </div>
+                        </div>`).join('')}
+                    </div>
+                </div>`;
+                }
+                if (note.corePrinciples && note.corePrinciples.length) {
+                    html += `<div>
+                    <div class="notes-section-label">Core Principles</div>
+                    <div class="notes-principle-list">
+                        ${note.corePrinciples.map(p => `
+                        <div class="notes-principle-item">
+                            <div class="notes-principle-dot"></div>
+                            <span>${p}</span>
+                        </div>`).join('')}
+                    </div>
+                </div>`;
+                }
             }
             document.getElementById('notesSheetContent').innerHTML = html;
         }
@@ -3098,10 +3595,14 @@
 
         function selectTrack(fileUrl, title, dayText, elementId) {
             if (!document.body.classList.contains('show-actions')) {
+                const dayNum = dayText ? dayText.replace(/\D+/g, '') : null;
+                const note = findNoteForTitle(title, dayNum);
+                if (note) {
+                    populateNotesSheet(note);
+                    openNotesSheet();
+                }
                 return;
             }
-
-
 
             if (activeTrackElementId === elementId) {
                 togglePlayback();
@@ -3166,11 +3667,13 @@
             renderPlayerCheckpoints(currentTrackTimestamps);
             renderTrackPartMarkers(audio.duration);
 
-            // Show notes button only if this track has study notes
-            const note = findNoteForTitle(title);
+            // Show notes button only if this track has study notes in study-notes/ folder
+            const parsedDay = dayText ? dayText.replace(/\D+/g, '') : null;
+            const note = findNoteForTitle(title, parsedDay);
             if (note) {
                 populateNotesSheet(note);
                 notesPillBtn.style.display = 'flex';
+                notesPillBtn.onclick = () => openNotesSheet();
             } else {
                 notesPillBtn.style.display = 'none';
                 document.getElementById('notesSheet').classList.add('hidden');
@@ -3387,10 +3890,20 @@
             });
         }
 
+        function openTrackNote(dayNum, title) {
+            const note = findNoteForTitle(title, dayNum);
+            if (note) {
+                populateNotesSheet(note);
+                openNotesSheet();
+            }
+        }
+
         function buildTrackCard(dayNum, filePath, title, trackId, duration, desc, verse, important, importantColor, cardBg, comingSoon) {
             const isComingSoon = comingSoon || (typeof duration === 'string' && duration.toLowerCase().includes('coming soon'));
             const li = document.createElement('li');
-            li.className = 'track-item' + (isComingSoon ? ' coming-soon' : '') + (important ? ' important' : '');
+            const noteObj = findNoteForTitle(title, dayNum);
+            const hasNote = !!noteObj;
+            li.className = 'track-item' + (isComingSoon ? ' coming-soon' : '') + (important ? ' important' : '') + (hasNote ? ' has-notes' : '');
             if (important && importantColor) {
                 li.style.backgroundColor = importantColor.bg;
                 li.style.borderColor = importantColor.border;
@@ -3410,7 +3923,17 @@
                     e.stopPropagation();
                 };
             } else {
-                li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
+                li.onclick = () => {
+                    if (!document.body.classList.contains('show-actions')) {
+                        const activeNote = findNoteForTitle(title, dayNum);
+                        if (activeNote) {
+                            populateNotesSheet(activeNote);
+                            openNotesSheet();
+                            return;
+                        }
+                    }
+                    selectTrack(filePath, title, 'Day ' + dayNum, trackId);
+                };
             }
 
             const durStr = duration
@@ -3427,6 +3950,11 @@
                 <img src="../../resources/images/coming-soon.png" alt="Coming Soon" class="coming-soon-card-icon" />`;
             } else {
                 li.innerHTML = `
+                ${hasNote ? `
+                <div class="track-corner-note" title="பாடச் சுருக்கம் / Study Notes (திறக்க கிளிக் செய்யவும்)" onclick="event.stopPropagation(); openTrackNote(${dayNum}, '${(title || '').replace(/'/g, "\\'")}');">
+                    <span class="corner-note-icon">📝</span>
+                    <span class="corner-note-text">சுருக்கம்</span>
+                </div>` : ''}
                 <div class="track-content">
                     <div class="track-title">${title}</div>
                     ${desc ? `<div class="track-desc">${desc}</div>` : ''}
@@ -3607,7 +4135,7 @@
                 track.category || ''
             ];
 
-            const note = findNoteForTitle(track.title) || (track.file ? findNoteForTitle(track.file) : null);
+            const note = findNoteForTitle(track.title, track.day) || (track.file ? findNoteForTitle(track.file, track.day) : null);
             if (note) {
                 if (note.tags) parts.push(note.tags.join(' '));
                 if (note.summary) parts.push(note.summary);
