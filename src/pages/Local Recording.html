@@ -112,6 +112,9 @@
             padding: 6px 18px;
             transform: rotate(-2deg);
             box-shadow: 4px 4px 0px #000000;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
         }
 
         .gate-title-block h2 {
@@ -276,6 +279,9 @@
             display: inline-block;
             transform: rotate(-2.5deg);
             box-shadow: 4px 4px 0px var(--raw-black);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
         }
 
         header h1 {
@@ -2414,6 +2420,9 @@
         }
 
         function selectTrack(fileUrl, title, dayText, elementId) {
+            if (!document.body.classList.contains('show-actions')) {
+                return;
+            }
 
             if (activeTrackElementId === elementId) {
                 togglePlayback();
@@ -2705,13 +2714,28 @@
             }
             li.id = trackId;
 
+            let lastCardTapTime = 0;
             if (isComingSoon) {
                 li.onclick = (e) => {
                     e.preventDefault();
                     e.stopPropagation();
                 };
             } else {
-                li.onclick = () => selectTrack(filePath, title, 'Day ' + dayNum, trackId);
+                li.onclick = (e) => {
+                    const now = Date.now();
+                    if (!document.body.classList.contains('show-actions')) {
+                        // Double-click/double-tap on track card also activates audio options and plays
+                        if (now - lastCardTapTime < 450) {
+                            document.body.classList.add('show-actions');
+                            lastCardTapTime = 0;
+                            selectTrack(filePath, title, 'Day ' + dayNum, trackId);
+                            return;
+                        }
+                        lastCardTapTime = now;
+                        return;
+                    }
+                    selectTrack(filePath, title, 'Day ' + dayNum, trackId);
+                };
             }
 
             const durStr = duration
@@ -3349,10 +3373,38 @@
             }
         }, { passive: true });
 
-        // ── Toggle track action column on double-clicking title ────────────────────
-        document.querySelectorAll('.brutal-title-block, .gate-title-block').forEach(titleEl => {
-            titleEl.addEventListener('dblclick', () => {
-                document.body.classList.toggle('show-actions');
+        // ── Toggle track action column on double-clicking/tapping title ────────────
+        let lastTitleTapTime = 0;
+        function toggleAudioActions(e) {
+            if (e && typeof e.preventDefault === 'function') {
+                e.preventDefault();
+            }
+            document.body.classList.toggle('show-actions');
+        }
+
+        document.querySelectorAll('.brutal-title-block, .gate-title-block, .brutal-title-block h1').forEach(titleEl => {
+            titleEl.addEventListener('dblclick', (e) => {
+                toggleAudioActions(e);
+            });
+
+            titleEl.addEventListener('click', (e) => {
+                const now = Date.now();
+                if (now - lastTitleTapTime < 450) {
+                    toggleAudioActions(e);
+                    lastTitleTapTime = 0;
+                } else {
+                    lastTitleTapTime = now;
+                }
+            });
+
+            titleEl.addEventListener('touchend', (e) => {
+                const now = Date.now();
+                if (now - lastTitleTapTime < 450) {
+                    toggleAudioActions(e);
+                    lastTitleTapTime = 0;
+                } else {
+                    lastTitleTapTime = now;
+                }
             });
         });
 
