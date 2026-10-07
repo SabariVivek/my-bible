@@ -889,6 +889,14 @@ const BIBLE_TRACKS = [
     verse: "Numbers 9:1-14",
     desc: "God's kindness in allowing those who could not celebrate the Passover to celebrate it the following month.",
     category: "Do You Know?"
+  },
+  {
+    day: 84,
+    title: "The Salvation Plan in Genesis 1",
+    duration: "76:12 min",
+    verse: "Genesis 1:1-31",
+    desc: "How does the story of creation in Genesis 1 reveal God's amazing plan of salvation through Jesus Christ?",
+    category: "Do You Know?"
   }
 ];
 
