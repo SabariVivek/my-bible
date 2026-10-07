@@ -897,6 +897,14 @@ const BIBLE_TRACKS = [
     verse: "Genesis 1:1-31",
     desc: "How does the story of creation in Genesis 1 reveal God's amazing plan of salvation through Jesus Christ?",
     category: "Do You Know?"
+  },
+  {
+    day: 85,
+    title: "The Temptation of Jesus",
+    duration: "60:51 min",
+    verse: "Matthew 4:1-11",
+    desc: "How did Jesus overcome Satan's temptations in the wilderness, and what do His responses teach us about obedience to God?",
+    category: "Teachings"
   }
 ];
 
