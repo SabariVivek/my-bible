@@ -905,8 +905,8 @@ function settingsSelectSeg(groupId, btn) {
 (function initSelectorStyleRadio() {
     function setup() {
         var radios = document.querySelectorAll('input[name="selectorStyle"]');
-        radios.forEach(function(radio) {
-            radio.addEventListener('change', function() {
+        radios.forEach(function (radio) {
+            radio.addEventListener('change', function () {
                 localStorage.setItem('selectorStyle', this.value);
                 updateSettingsFooterVisibility();
             });
@@ -1040,7 +1040,7 @@ function toggleVhColorPicker(e) {
         dropdown.classList.add('open');
         wrap.classList.add('open');
         // Close on outside click
-        setTimeout(function() {
+        setTimeout(function () {
             document.addEventListener('click', _vhOutsideClick, { once: true });
         }, 0);
     }
@@ -1065,10 +1065,10 @@ function closeVhColorPicker() {
 function applyVerseHeadingColor(color) {
     // Remove all vh-color-* classes
     var toRemove = [];
-    document.body.classList.forEach(function(cls) {
+    document.body.classList.forEach(function (cls) {
         if (cls.startsWith('vh-color-')) toRemove.push(cls);
     });
-    toRemove.forEach(function(cls) {
+    toRemove.forEach(function (cls) {
         document.body.classList.remove(cls);
     });
     // Add new one (green = default, no class needed)
@@ -1085,7 +1085,7 @@ function applyVerseHeadingColor(color) {
         // Sync swatch selection and preview
         var swatches = document.querySelectorAll('#verse-heading-color-swatches .vh-swatch');
         var preview = document.getElementById('vh-picker-preview');
-        swatches.forEach(function(s) {
+        swatches.forEach(function (s) {
             var isSelected = s.dataset.vhColor === saved;
             s.classList.toggle('selected', isSelected);
             if (isSelected && preview) {
@@ -3118,12 +3118,57 @@ function attachPopupHighlightListeners() {
     }
 }
 
-// Highlight special text (Jesus names in English, and popup highlights in Tamil)
+// Highlight special text (Jesus names in English, Genesis 1 creation affirmation in Tamil)
 function highlightSpecialText(text, language, bookName = null, chapter = null, verseNum = null) {
     if (language === 'english' || language === 'both-english') {
         // Highlight "Jesus Christ" and "Jesus" in soft red
         text = text.replace(/\bJesus Christ\b/g, '<span class="jesus-name">Jesus Christ</span>');
         text = text.replace(/\bJesus\b/g, '<span class="jesus-name">Jesus</span>');
+    }
+
+    if (language === 'tamil' || language === 'both-tamil') {
+        const isGenesis = (bookName && (
+            bookName.toLowerCase() === 'genesis' ||
+            bookName === 'ஆதியாகமம்'
+        )) || (typeof currentBook !== 'undefined' && bibleBooks && bibleBooks[currentBook] && bibleBooks[currentBook].file === 'genesis');
+
+        const ch = parseInt(chapter !== null && chapter !== undefined ? chapter : (typeof currentChapter !== 'undefined' ? currentChapter : 0), 10);
+
+        if (isGenesis && ch === 1) {
+            const genesis1Highlights = {
+                4: 'வெளிச்சம் நல்லது',
+                10: 'அது நல்லது',
+                12: 'அது நல்லது',
+                18: 'அது நல்லது',
+                21: 'அது நல்லது',
+                25: 'அது நல்லது',
+                31: 'அது மிகவும் நன்றாயிருந்தது'
+            };
+
+            const vNum = verseNum ? parseInt(verseNum, 10) : null;
+            if (vNum && genesis1Highlights[vNum]) {
+                const targetPhrase = genesis1Highlights[vNum];
+                if (text.includes(targetPhrase)) {
+                    text = text.replace(targetPhrase, `<span class="creation-good-highlight">${targetPhrase}</span>`);
+                } else {
+                    const altPhrase = targetPhrase.replace(/\.$/, '');
+                    if (text.includes(altPhrase)) {
+                        text = text.replace(altPhrase, `<span class="creation-good-highlight">${altPhrase}</span>`);
+                    }
+                }
+            } else if (!vNum) {
+                for (const targetPhrase of Object.values(genesis1Highlights)) {
+                    if (text.includes(targetPhrase)) {
+                        text = text.replace(targetPhrase, `<span class="creation-good-highlight">${targetPhrase}</span>`);
+                    } else {
+                        const altPhrase = targetPhrase.replace(/\.$/, '');
+                        if (text.includes(altPhrase)) {
+                            text = text.replace(altPhrase, `<span class="creation-good-highlight">${altPhrase}</span>`);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // Dynamic popup highlights disabled per user request
@@ -3436,7 +3481,7 @@ function getKingTransitionCardHTML(bookName, chapter, verseNum) {
     const kingdomClass = isJudah ? 'judah' : 'israel';
     const icon = isJudah ? '🦁' : '⚡';
     const cardId = `ktc-${king.id}-${chapter}-${verseNum}`;
-    
+
     // Build the "succeeds" text based on language
     let succeedsText;
     if (currentLanguage === 'tamil') {
@@ -3444,7 +3489,7 @@ function getKingTransitionCardHTML(bookName, chapter, verseNum) {
     } else {
         succeedsText = `Succeeds: ${king.prevKing}`;
     }
-    
+
     return `<div class="king-transition-card ${kingdomClass}" data-ktc-id="${cardId}">
         <div class="king-transition-pill-row" onclick="toggleKingCard('${cardId}')">
             <div class="ktc-line"></div>

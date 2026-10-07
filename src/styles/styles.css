@@ -4524,6 +4524,15 @@ body.dark-theme .jesus-name {
     color: #e88888;
 }
 
+/* Genesis 1 creation affirmation text highlighting */
+.creation-good-highlight {
+    color: #e05353;
+}
+
+body.dark-theme .creation-good-highlight {
+    color: #f87171;
+}
+
 /* Matthew 1:1 special highlighting */
 .matthew-1-1-highlight {
     background: rgb(128 118 80 / 15%) !important;
