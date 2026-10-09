@@ -903,8 +903,16 @@ const BIBLE_TRACKS = [
     title: "The Temptation of Jesus",
     duration: "60:51 min",
     verse: "Matthew 4:1-11",
-    desc: "How did Jesus overcome Satan's temptations in the wilderness, and what do His responses teach us about obedience to God?",
+    desc: "How did Jesus overcome Satan's temptations and teach us obedience to God?",
     category: "Teachings"
+  },
+  {
+    day: 86,
+    title: "The Parables of the Lost Sheep & the Lost Coin",
+    duration: "33:50 min",
+    verse: "Luke 15:3-10",
+    desc: "How do the lost sheep and lost coin reveal God's joy when a sinner repents?",
+    category: "Parables"
   }
 ];
 
