@@ -908,7 +908,7 @@ const BIBLE_TRACKS = [
   },
   {
     day: 86,
-    title: "The Parables of the Lost Sheep & the Lost Coin",
+    title: "The Lost Sheep & Coin Parable",
     duration: "33:50 min",
     verse: "Luke 15:3-10",
     desc: "How do the lost sheep and lost coin reveal God's joy when a sinner repents?",
