@@ -913,6 +913,14 @@ const BIBLE_TRACKS = [
     verse: "Luke 15:3-10",
     desc: "How do the lost sheep and lost coin reveal God's joy when a sinner repents?",
     category: "Parables"
+  },
+  {
+    day: 87,
+    title: "The Parable of the Lost Son",
+    duration: "50:09 min",
+    verse: "Luke 15:11-32",
+    desc: "How does the lost son reveal God's love, forgiveness, and joy when a sinner returns to Him?",
+    category: "Parables"
   }
 ];
 
