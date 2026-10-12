@@ -34,20 +34,20 @@
     <title>My Bible</title>
     <link rel="icon" type="image/png" href="resources/icons/bible.png?cb=20251126003722">
     <link rel="apple-touch-icon" href="resources/icons/bible.png?cb=20251126003722">
-    <link rel="stylesheet" href="src/styles/styles.css?cb=20261012125752">
+    <link rel="stylesheet" href="src/styles/styles.css?cb=20261012153531">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20261012125752">
-    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20261012125752">
-    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20261012125752">
-    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20261012125752">
-    <link rel="stylesheet" href="src/styles/verse-history.css?cb=20261012125752">
+    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20261012153531">
+    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20261012153531">
+    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20261012153531">
+    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20261012153531">
+    <link rel="stylesheet" href="src/styles/verse-history.css?cb=20261012153531">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=Noto+Serif+Tamil:wght@400;600&family=Mukta+Malar:wght@400;600&family=DM+Sans:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- Cropper.js for profile image cropping -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css?cb=20260418170421">
     <!-- Cache Management -->
-    <script src="src/js/cache-manager.js?cb=20261012125752"></script>
+    <script src="src/js/cache-manager.js?cb=20261012153531"></script>
 </head>
 
 <body>
@@ -1650,30 +1650,30 @@
     </div>
 
     <!-- Bundled Bible Data (loads all books) -->
-    <script src="data/bible/bible-data-loader.js?cb=20261012125752"></script>
+    <script src="data/bible/bible-data-loader.js?cb=20261012153531"></script>
 
     <!-- Supabase Client Library (Local for Offline Support) -->
-    <script src="src/lib/supabase.js?cb=20261012125752"></script>
+    <script src="src/lib/supabase.js?cb=20261012153531"></script>
     <!-- Cropper.js for profile image cropping -->
     <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js?cb=20260418170421"></script>
 
 
-    <script src="config/config.js?cb=20261012125752"></script>
-    <script src="src/js/bible-data-manager.js?cb=20261012125752"></script>
-    <script src="src/js/voice-command.js?cb=20261012125752"></script>
-    <script src="src/data/verse-headers-english.js?cb=20261012125752"></script>
-    <script src="src/data/verse-headers-tamil.js?cb=20261012125752"></script>
-    <script src="src/data/bible-meta.js?cb=20261012125752"></script>
-    <script src="src/data/bibleAuthors.js?cb=20261012125752"></script>
-    <script src="src/data/short-summary.js?cb=20261012125752"></script>
-    <script src="src/data/book-intro.js?cb=20261012125752"></script>
-    <script src="src/data/bible-popups.js?cb=20261012125752"></script>
-    <script src="src/data/king-transition-data.js?cb=20261012125752"></script>
-    <script src="src/js/verse-history-manager.js?cb=20261012125752"></script>
-    <script src="src/js/script.js?cb=20261012125752"></script>
-    <script src="src/js/bible-selector.js?cb=20261012125752"></script>
-    <script src="src/js/chapter-summary-pullout.js?cb=20261012125752"></script>
-    <script src="src/js/ai-summary.js?cb=20261012125752"></script>
+    <script src="config/config.js?cb=20261012153531"></script>
+    <script src="src/js/bible-data-manager.js?cb=20261012153531"></script>
+    <script src="src/js/voice-command.js?cb=20261012153531"></script>
+    <script src="src/data/verse-headers-english.js?cb=20261012153531"></script>
+    <script src="src/data/verse-headers-tamil.js?cb=20261012153531"></script>
+    <script src="src/data/bible-meta.js?cb=20261012153531"></script>
+    <script src="src/data/bibleAuthors.js?cb=20261012153531"></script>
+    <script src="src/data/short-summary.js?cb=20261012153531"></script>
+    <script src="src/data/book-intro.js?cb=20261012153531"></script>
+    <script src="src/data/bible-popups.js?cb=20261012153531"></script>
+    <script src="src/data/king-transition-data.js?cb=20261012153531"></script>
+    <script src="src/js/verse-history-manager.js?cb=20261012153531"></script>
+    <script src="src/js/script.js?cb=20261012153531"></script>
+    <script src="src/js/bible-selector.js?cb=20261012153531"></script>
+    <script src="src/js/chapter-summary-pullout.js?cb=20261012153531"></script>
+    <script src="src/js/ai-summary.js?cb=20261012153531"></script>
 
     <!-- Image Viewer Modal -->
     <style>
@@ -2418,6 +2418,545 @@
                 localStorage.removeItem('fromBibleReadingSession');
                 sessionContext = null;
             });
+        })();
+    </script>
+
+    <!-- Alternate Sleek Edge Tab (Positioned at Top Right, Letter A) -->
+    <button id="edge-tab" aria-label="Reading Appearance & Settings" type="button" title="Appearance Settings">
+        <div class="edge-tab-icon-wrap">
+            <span class="edge-tab-letter-a">A</span>
+        </div>
+    </button>
+
+    <!-- Reader Appearance Bottom Sheet Overlay & Modal -->
+    <div id="reader-appearance-overlay" class="reader-appearance-overlay"></div>
+    <div id="reader-appearance-sheet" class="reader-appearance-sheet" role="dialog" aria-label="Reading Appearance">
+        <div class="reader-sheet-handle"></div>
+        <div class="reader-sheet-header">
+            <div class="reader-sheet-title-group">
+                <span class="reader-sheet-title">Reading & Appearance</span>
+                <span class="reader-sheet-subtitle">Language, fonts, size & theme settings</span>
+            </div>
+            <button class="reader-sheet-close" id="reader-sheet-close" aria-label="Close">✕</button>
+        </div>
+
+        <!-- 1. Bible Language Option -->
+        <div class="reader-sheet-section">
+            <div class="reader-sheet-section-title">Bible Language</div>
+            <div class="reader-lang-group" id="reader-lang-group">
+                <button type="button" class="reader-lang-btn" data-lang="tamil">தமிழ்</button>
+                <button type="button" class="reader-lang-btn" data-lang="english">English</button>
+                <button type="button" class="reader-lang-btn" data-lang="both">இருமொழியும் (Both)</button>
+            </div>
+        </div>
+
+        <!-- 2. Theme Option -->
+        <div class="reader-sheet-section">
+            <div class="reader-sheet-section-title">Theme</div>
+            <div class="reader-theme-group">
+                <button type="button" class="reader-theme-btn" data-theme="light">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    Light
+                </button>
+                <button type="button" class="reader-theme-btn" data-theme="dark">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    Dark
+                </button>
+            </div>
+        </div>
+
+        <!-- 3. Separate Typography Option (English & Tamil Tabs with Rich Specimen Cards) -->
+        <div class="reader-sheet-section">
+            <div class="reader-sheet-section-header">
+                <div class="reader-sheet-section-title">Font Selection</div>
+                <div class="reader-font-tabs" id="reader-font-tabs">
+                    <button type="button" class="reader-font-tab active" data-target="english">English (Aa)</button>
+                    <button type="button" class="reader-font-tab" data-target="tamil">தமிழ் (அ)</button>
+                </div>
+            </div>
+
+            <!-- English Font Cards Pane -->
+            <div class="reader-font-pane active" id="reader-font-pane-english">
+                <div class="reader-font-card-grid">
+                    <button type="button" class="reader-font-card" data-lang="english" data-font="default">
+                        <span class="reader-card-glyph" style="font-family: inherit;">Aa</span>
+                        <div class="reader-card-info">
+                            <span class="reader-card-name">Default</span>
+                            <span class="reader-card-tag">System Sans</span>
+                        </div>
+                    </button>
+                    <button type="button" class="reader-font-card" data-lang="english" data-font="cinzel">
+                        <span class="reader-card-glyph" style="font-family: 'Cinzel', serif;">Aa</span>
+                        <div class="reader-card-info">
+                            <span class="reader-card-name">Cinzel</span>
+                            <span class="reader-card-tag">Classical</span>
+                        </div>
+                    </button>
+                    <button type="button" class="reader-font-card" data-lang="english" data-font="lato">
+                        <span class="reader-card-glyph" style="font-family: 'Lato', sans-serif;">Aa</span>
+                        <div class="reader-card-info">
+                            <span class="reader-card-name">Lato</span>
+                            <span class="reader-card-tag">Modern</span>
+                        </div>
+                    </button>
+                    <button type="button" class="reader-font-card" data-lang="english" data-font="dm-sans">
+                        <span class="reader-card-glyph" style="font-family: 'DM Sans', sans-serif;">Aa</span>
+                        <div class="reader-card-info">
+                            <span class="reader-card-name">DM Sans</span>
+                            <span class="reader-card-tag">Geometric</span>
+                        </div>
+                    </button>
+                    <button type="button" class="reader-font-card" data-lang="english" data-font="merriweather">
+                        <span class="reader-card-glyph" style="font-family: 'Merriweather', serif;">Aa</span>
+                        <div class="reader-card-info">
+                            <span class="reader-card-name">Merriweather</span>
+                            <span class="reader-card-tag">Serif</span>
+                        </div>
+                    </button>
+                    <button type="button" class="reader-font-card" data-lang="english" data-font="georgia">
+                        <span class="reader-card-glyph" style="font-family: 'Georgia', serif;">Aa</span>
+                        <div class="reader-card-info">
+                            <span class="reader-card-name">Georgia</span>
+                            <span class="reader-card-tag">Editorial</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tamil Font Cards Pane -->
+            <div class="reader-font-pane" id="reader-font-pane-tamil">
+                <div class="reader-font-card-grid">
+                    <button type="button" class="reader-font-card" data-lang="tamil" data-font="default">
+                        <span class="reader-card-glyph" style="font-family: inherit;">அ</span>
+                        <div class="reader-card-info">
+                            <span class="reader-card-name">Default</span>
+                            <span class="reader-card-tag">பழைய முறை</span>
+                        </div>
+                    </button>
+                    <button type="button" class="reader-font-card" data-lang="tamil" data-font="noto-sans-tamil">
+                        <span class="reader-card-glyph" style="font-family: 'Noto Sans Tamil', sans-serif;">அ</span>
+                        <div class="reader-card-info">
+                            <span class="reader-card-name">Noto Sans</span>
+                            <span class="reader-card-tag">தெளிவான சான்ஸ்</span>
+                        </div>
+                    </button>
+                    <button type="button" class="reader-font-card" data-lang="tamil" data-font="noto-serif-tamil">
+                        <span class="reader-card-glyph" style="font-family: 'Noto Serif Tamil', serif;">அ</span>
+                        <div class="reader-card-info">
+                            <span class="reader-card-name">Noto Serif</span>
+                            <span class="reader-card-tag">செரிஃப் எழுத்து</span>
+                        </div>
+                    </button>
+                    <button type="button" class="reader-font-card" data-lang="tamil" data-font="mukta-malar">
+                        <span class="reader-card-glyph" style="font-family: 'Mukta Malar', sans-serif;">அ</span>
+                        <div class="reader-card-info">
+                            <span class="reader-card-name">Mukta Malar</span>
+                            <span class="reader-card-tag">நவீன வாசிப்பு</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Font Size Option -->
+        <div class="reader-sheet-section">
+            <div class="reader-sheet-section-title">Font Size</div>
+            <div class="reader-size-row">
+                <button type="button" class="reader-size-btn" id="reader-size-decrease" aria-label="Decrease font size">A−</button>
+                <input type="range" class="reader-size-slider" id="reader-size-slider" min="14" max="28" step="1" value="18" aria-label="Font size slider">
+                <button type="button" class="reader-size-btn" id="reader-size-increase" aria-label="Increase font size">A+</button>
+                <span class="reader-size-val" id="reader-size-val">18px</span>
+            </div>
+        </div>
+
+        <!-- 5. English Text Color Option (Exact 3 Colors from Settings Page) -->
+        <div class="reader-sheet-section" style="margin-bottom: 0;">
+            <div class="reader-sheet-section-title">English Text Color (Settings Colors)</div>
+            <div class="reader-color-row-3" id="reader-color-row-3">
+                <button type="button" class="reader-color-swatch-item" data-color="default">
+                    <span class="reader-color-swatch-dot" style="background: #8a8a8a;"></span>
+                    <span class="reader-color-swatch-label">Grey (Default)</span>
+                </button>
+                <button type="button" class="reader-color-swatch-item" data-color="blue">
+                    <span class="reader-color-swatch-dot" style="background: #6B9BD1;"></span>
+                    <span class="reader-color-swatch-label">Soft Blue</span>
+                </button>
+                <button type="button" class="reader-color-swatch-item" data-color="red">
+                    <span class="reader-color-swatch-dot" style="background: #D97068;"></span>
+                    <span class="reader-color-swatch-label">Soft Red</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reader Appearance & Edge Tab Controller Script -->
+    <script>
+        (function () {
+            function initReaderAppearance() {
+                var tab = document.getElementById('edge-tab');
+                var overlay = document.getElementById('reader-appearance-overlay');
+                var sheet = document.getElementById('reader-appearance-sheet');
+                var closeBtn = document.getElementById('reader-sheet-close');
+                var slider = document.getElementById('reader-size-slider');
+                var sizeVal = document.getElementById('reader-size-val');
+                var decreaseBtn = document.getElementById('reader-size-decrease');
+                var increaseBtn = document.getElementById('reader-size-increase');
+                if (!tab || !overlay || !sheet) return;
+
+                // ── Scroll Sync: Hide on scroll down, show at top ─────────────
+                function getScrollTop() {
+                    var contentArea = document.querySelector('.content-area');
+                    return Math.max(
+                        window.pageYOffset || 0,
+                        document.documentElement.scrollTop || 0,
+                        document.body.scrollTop || 0,
+                        contentArea ? contentArea.scrollTop : 0
+                    );
+                }
+
+                function syncScroll() {
+                    var st = getScrollTop();
+                    tab.classList.toggle('hide', st > 8);
+                }
+
+                window.addEventListener('scroll', syncScroll, { passive: true, capture: true });
+                document.addEventListener('scroll', syncScroll, { passive: true, capture: true });
+
+                var contentArea = document.querySelector('.content-area');
+                if (contentArea) {
+                    contentArea.addEventListener('scroll', syncScroll, { passive: true });
+                }
+                syncScroll();
+
+                // ── Draggable tab along the right edge from top ───────────────
+                var startY = 0, startTop = 0, moved = false, active = false;
+
+                tab.addEventListener('pointerdown', function (e) {
+                    active = true;
+                    moved = false;
+                    startY = e.clientY;
+                    startTop = parseFloat(getComputedStyle(tab).top) || 110;
+                    if (typeof tab.setPointerCapture === 'function') {
+                        try { tab.setPointerCapture(e.pointerId); } catch (_) {}
+                    }
+                });
+
+                tab.addEventListener('pointermove', function (e) {
+                    if (!active) return;
+                    var dy = e.clientY - startY;
+                    if (Math.abs(dy) > 5) {
+                        moved = true;
+                        tab.classList.add('dragging');
+                    }
+                    if (moved) {
+                        var max = window.innerHeight - tab.offsetHeight - 24;
+                        tab.style.top = Math.min(max, Math.max(70, startTop + dy)) + 'px';
+                    }
+                });
+
+                tab.addEventListener('pointerup', function () {
+                    active = false;
+                    tab.classList.remove('dragging');
+                });
+
+                tab.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (moved) return;
+                    if (tab.classList.contains('hide')) {
+                        // Tapped while hidden at edge: scroll smoothly to top
+                        var ca = document.querySelector('.content-area');
+                        if (ca && ca.scrollTop > 0) {
+                            ca.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+                        document.body.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else {
+                        // Tapped while visible: open appearance bottom sheet
+                        openAppearanceSheet();
+                    }
+                });
+
+                // ── Open / Close Bottom Sheet (With Background Scroll Lock) ────
+                function openAppearanceSheet() {
+                    syncUIFromState();
+                    overlay.classList.add('active');
+                    sheet.classList.add('active');
+                    document.body.classList.add('reader-sheet-open');
+                }
+
+                function closeAppearanceSheet() {
+                    overlay.classList.remove('active');
+                    sheet.classList.remove('active');
+                    sheet.style.transform = '';
+                    document.body.classList.remove('reader-sheet-open');
+                }
+
+                if (closeBtn) closeBtn.addEventListener('click', closeAppearanceSheet);
+                overlay.addEventListener('click', closeAppearanceSheet);
+
+                // Prevent back scrolling on touch or wheel over the overlay
+                overlay.addEventListener('touchmove', function (e) {
+                    e.preventDefault();
+                }, { passive: false });
+                overlay.addEventListener('wheel', function (e) {
+                    e.preventDefault();
+                }, { passive: false });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && sheet.classList.contains('active')) {
+                        closeAppearanceSheet();
+                    }
+                });
+
+                // Pull-down handle to dismiss
+                var handle = sheet.querySelector('.reader-sheet-handle');
+                if (handle) {
+                    var sheetStartY = 0, isDraggingSheet = false;
+                    handle.addEventListener('pointerdown', function (e) {
+                        isDraggingSheet = true;
+                        sheetStartY = e.clientY;
+                        if (typeof handle.setPointerCapture === 'function') {
+                            try { handle.setPointerCapture(e.pointerId); } catch (_) {}
+                        }
+                    });
+                    handle.addEventListener('pointermove', function (e) {
+                        if (!isDraggingSheet) return;
+                        var dy = e.clientY - sheetStartY;
+                        if (dy > 0) {
+                            sheet.style.transform = 'translateX(-50%) translateY(' + dy + 'px)';
+                        }
+                    });
+                    handle.addEventListener('pointerup', function (e) {
+                        if (!isDraggingSheet) return;
+                        isDraggingSheet = false;
+                        var dy = e.clientY - sheetStartY;
+                        sheet.style.transform = '';
+                        if (dy > 70) {
+                            closeAppearanceSheet();
+                        }
+                    });
+                }
+
+                // ── State & Application ───────────────────────────────────────
+                var currentFontFamilyEnglish = localStorage.getItem('readerFontFamilyEnglish') || localStorage.getItem('readerFontFamily') || 'default';
+                var currentFontFamilyTamil = localStorage.getItem('readerFontFamilyTamil') || 'default';
+                var currentFontSize = parseInt(localStorage.getItem('readerFontSize'), 10) || 18;
+                var currentFontColor = localStorage.getItem('englishTextColor') || localStorage.getItem('readerFontColor') || 'default';
+
+                var fontMapEnglish = {
+                    'default': 'inherit',
+                    'cinzel': "'Cinzel', Georgia, serif",
+                    'lato': "'Lato', -apple-system, sans-serif",
+                    'dm-sans': "'DM Sans', -apple-system, sans-serif",
+                    'merriweather': "'Merriweather', Georgia, serif",
+                    'georgia': "'Georgia', 'Times New Roman', serif"
+                };
+
+                var fontMapTamil = {
+                    'default': 'inherit',
+                    'noto-sans-tamil': "'Noto Sans Tamil', sans-serif",
+                    'noto-serif-tamil': "'Noto Serif Tamil', Georgia, serif",
+                    'mukta-malar': "'Mukta Malar', sans-serif"
+                };
+
+                var colorMap = {
+                    'default': '#8a8a8a',
+                    'blue': '#6B9BD1',
+                    'red': '#D97068'
+                };
+
+                function applyAppearance() {
+                    var root = document.documentElement;
+                    root.style.setProperty('--reader-font-family-english', fontMapEnglish[currentFontFamilyEnglish] || 'inherit');
+                    root.style.setProperty('--reader-font-family-tamil', fontMapTamil[currentFontFamilyTamil] || 'inherit');
+                    root.style.setProperty('--reader-font-size', currentFontSize + 'px');
+                    root.style.setProperty('--reader-font-color', colorMap[currentFontColor] || '#8a8a8a');
+
+                    var curLang = localStorage.getItem('currentLanguage') || 'tamil';
+                    if (document.body) {
+                        document.body.dataset.scriptureLanguage = curLang;
+                    }
+                }
+
+                function syncUIFromState() {
+                    // 1. Language buttons
+                    var curLang = localStorage.getItem('currentLanguage') || 'tamil';
+                    document.querySelectorAll('.reader-lang-btn').forEach(function (btn) {
+                        btn.classList.toggle('active', btn.dataset.lang === curLang);
+                    });
+
+                    // 2. Theme buttons
+                    var isDark = document.body.classList.contains('dark-theme');
+                    document.querySelectorAll('.reader-theme-btn').forEach(function (btn) {
+                        btn.classList.toggle('active', (btn.dataset.theme === 'dark' && isDark) || (btn.dataset.theme === 'light' && !isDark));
+                    });
+
+                    // 3. Font cards
+                    document.querySelectorAll('.reader-font-card[data-lang="english"]').forEach(function (card) {
+                        card.classList.toggle('active', card.dataset.font === currentFontFamilyEnglish);
+                    });
+                    document.querySelectorAll('.reader-font-card[data-lang="tamil"]').forEach(function (card) {
+                        card.classList.toggle('active', card.dataset.font === currentFontFamilyTamil);
+                    });
+
+                    // 4. Font size slider & label
+                    if (slider) slider.value = currentFontSize;
+                    if (sizeVal) sizeVal.textContent = currentFontSize + 'px';
+
+                    // 5. English color swatches (3 colors)
+                    var curColor = localStorage.getItem('englishTextColor') || currentFontColor;
+                    document.querySelectorAll('.reader-color-swatch-item').forEach(function (item) {
+                        item.classList.toggle('active', item.dataset.color === curColor);
+                    });
+                }
+
+                // ── Bible Language click handlers ─────────────────────────────
+                document.querySelectorAll('.reader-lang-btn').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        var targetLang = this.dataset.lang;
+                        var val = targetLang === 'english' ? 'en' : (targetLang === 'tamil' ? 'ta' : 'both');
+                        var segBtn = document.querySelector('#settings-lang-segment .settings-seg-btn[data-val="' + val + '"]');
+                        if (segBtn && typeof settingsSelectLang === 'function') {
+                            settingsSelectLang(segBtn);
+                        } else {
+                            if (typeof currentLanguage !== 'undefined') {
+                                currentLanguage = targetLang;
+                            }
+                            localStorage.setItem('currentLanguage', targetLang);
+                            localStorage.setItem('settingsLanguage', val);
+                            if (typeof updateBookNames === 'function') updateBookNames();
+                            if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+                                loadBook(currentBook, currentChapter);
+                            } else if (typeof displayChapter === 'function') {
+                                displayChapter();
+                            }
+                        }
+                        if (document.body) {
+                            document.body.dataset.scriptureLanguage = targetLang;
+                        }
+                        syncUIFromState();
+                    });
+                });
+
+                // ── Theme click handlers ──────────────────────────────────────
+                document.querySelectorAll('.reader-theme-btn').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        var theme = this.dataset.theme;
+                        if (theme === 'dark') {
+                            document.body.classList.add('dark-theme');
+                            localStorage.setItem('theme', 'dark');
+                            localStorage.setItem('settingsTheme', 'dark');
+                        } else {
+                            document.body.classList.remove('dark-theme');
+                            localStorage.setItem('theme', 'light');
+                            localStorage.setItem('settingsTheme', 'light');
+                        }
+                        syncUIFromState();
+                    });
+                });
+
+                // ── Typography Tab Switching (English vs Tamil) ───────────────
+                document.querySelectorAll('.reader-font-tab').forEach(function (tabBtn) {
+                    tabBtn.addEventListener('click', function () {
+                        var target = this.dataset.target;
+                        document.querySelectorAll('.reader-font-tab').forEach(function (b) { b.classList.remove('active'); });
+                        this.classList.add('active');
+
+                        document.querySelectorAll('.reader-font-pane').forEach(function (pane) {
+                            pane.classList.toggle('active', pane.id === 'reader-font-pane-' + target);
+                        });
+                    });
+                });
+
+                // ── Font Card click handlers ──────────────────────────────────
+                document.querySelectorAll('.reader-font-card').forEach(function (card) {
+                    card.addEventListener('click', function () {
+                        var lang = this.dataset.lang;
+                        var font = this.dataset.font;
+                        if (lang === 'english') {
+                            currentFontFamilyEnglish = font;
+                            localStorage.setItem('readerFontFamilyEnglish', font);
+                            localStorage.setItem('readerFontFamily', font);
+                        } else {
+                            currentFontFamilyTamil = font;
+                            localStorage.setItem('readerFontFamilyTamil', font);
+                        }
+                        applyAppearance();
+                        syncUIFromState();
+                    });
+                });
+
+                // ── Font Size handlers ────────────────────────────────────────
+                function setFontSize(newSize) {
+                    currentFontSize = Math.min(28, Math.max(14, newSize));
+                    localStorage.setItem('readerFontSize', currentFontSize);
+                    applyAppearance();
+                    syncUIFromState();
+                }
+
+                if (slider) {
+                    slider.addEventListener('input', function () {
+                        setFontSize(parseInt(this.value, 10));
+                    });
+                }
+                if (decreaseBtn) {
+                    decreaseBtn.addEventListener('click', function () {
+                        setFontSize(currentFontSize - 1);
+                    });
+                }
+                if (increaseBtn) {
+                    increaseBtn.addEventListener('click', function () {
+                        setFontSize(currentFontSize + 1);
+                    });
+                }
+
+                // ── English Text Color click handlers (3 Colors) ──────────────
+                document.querySelectorAll('.reader-color-swatch-item').forEach(function (item) {
+                    item.addEventListener('click', function () {
+                        var color = this.dataset.color;
+                        currentFontColor = color;
+                        localStorage.setItem('readerFontColor', color);
+                        localStorage.setItem('englishTextColor', color);
+                        localStorage.setItem('settingsEnglishColor', color);
+
+                        // Sync with settings swatches
+                        var swatchClass = color === 'default' ? 'grey' : color;
+                        var swatch = document.querySelector('.right-settings-panel .settings-swatch.' + swatchClass);
+                        if (swatch && typeof settingsSelectColor === 'function') {
+                            settingsSelectColor(swatch);
+                        } else if (typeof englishTextColor !== 'undefined') {
+                            englishTextColor = color;
+                            if (typeof displayChapter === 'function') {
+                                displayChapter();
+                            }
+                        }
+                        applyAppearance();
+                        syncUIFromState();
+                    });
+                });
+
+                // Apply saved appearance immediately
+                applyAppearance();
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initReaderAppearance);
+            } else {
+                initReaderAppearance();
+            }
         })();
     </script>
 </body>

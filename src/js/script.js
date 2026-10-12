@@ -3533,6 +3533,12 @@ function toggleKingCard(cardId) {
 // Display chapter content
 function displayChapter() {
     const contentArea = document.querySelector('.scripture-text');
+    if (contentArea) {
+        contentArea.dataset.language = currentLanguage;
+    }
+    if (typeof document !== 'undefined' && document.body) {
+        document.body.dataset.scriptureLanguage = currentLanguage;
+    }
 
     // Clear intro flag since we're displaying a chapter
     window.isViewingIntro = false;
@@ -3620,7 +3626,7 @@ function displayChapter() {
             const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
             const tooltip = ''; // Removed Memory Verse tooltip to show only popup-highlight tooltips
             html += `<div class="verse-container" data-verse="${verseNum}">
-                <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}>
+                <p class="verse-line both-verse${memoryVerseClass}" data-verse="${verseNum}"${tooltip}>
                     <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
                     <span class="english-text ${englishTextColor}">${englishText}</span>
                 </p>
@@ -3628,6 +3634,7 @@ function displayChapter() {
         });
     } else {
         // Display single language
+        const langClass = currentLanguage === 'english' ? ' english-verse' : ' tamil-verse';
         verses.forEach(verseKey => {
             const verseNum = verseKey.replace('verse_', '');
 
@@ -3666,7 +3673,7 @@ function displayChapter() {
             const tooltip = ''; // Removed Memory Verse tooltip to show only popup-highlight tooltips
 
             html += `<div class="verse-container" data-verse="${verseNum}">
-                <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}</p>
+                <p class="verse-line${langClass}${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}</p>
             </div>`;
         });
     }

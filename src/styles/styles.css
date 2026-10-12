@@ -14898,3 +14898,694 @@ body.dark-theme .key.delete {
 body.dark-theme .key.delete:active {
     background: #3a3a3a;
 }
+
+/* ─────────────────────────────────────────────────
+   Reader Appearance Variables & Verse Typography
+   ───────────────────────────────────────────────── */
+:root {
+    --reader-font-family-english: inherit;
+    --reader-font-family-tamil: inherit;
+    --reader-font-size: 1.275rem;
+    --reader-font-color: inherit;
+}
+
+/* Background Scroll Lock when reader bottom sheet is open */
+body.reader-sheet-open,
+html.reader-sheet-open {
+    overflow: hidden !important;
+}
+
+body.reader-sheet-open .content-area,
+body.reader-sheet-open .main-layout {
+    overflow: hidden !important;
+    touch-action: none !important;
+}
+
+/* Sizing and Color for verses */
+.scripture-text .verse-line,
+.scripture-text .verse-text {
+    font-size: var(--reader-font-size, 1.275rem) !important;
+    color: var(--reader-font-color, inherit) !important;
+    transition: font-size 0.15s ease, color 0.2s ease;
+}
+
+/* English Verses ONLY: User-selected English Font Family */
+.scripture-text .english-text,
+.scripture-text .verse-line.english-verse,
+.scripture-text[data-language="english"] .verse-line,
+body[data-scripture-language="english"] .verse-line {
+    font-family: var(--reader-font-family-english, inherit) !important;
+}
+
+/* Tamil Verses: User-selected Tamil Font Family (defaults to inherit - original way) */
+.scripture-text .tamil-text,
+.scripture-text .verse-line.tamil-verse,
+.scripture-text[data-language="tamil"] .verse-line,
+body[data-scripture-language="tamil"] .verse-line {
+    font-family: var(--reader-font-family-tamil, inherit) !important;
+}
+
+/* ─────────────────────────────────────────────────
+   Alternate Sleek Edge Tab (Positioned at Top Right)
+   ───────────────────────────────────────────────── */
+:root {
+    --edge-tab-bg: rgba(255, 255, 255, 0.94);
+    --edge-tab-border: rgba(0, 0, 0, 0.08);
+    --edge-tab-icon: #1e293b;
+    --edge-tab-accent: #c9a84c;
+}
+
+body.dark-theme {
+    --edge-tab-bg: rgba(30, 31, 35, 0.95);
+    --edge-tab-border: rgba(255, 255, 255, 0.12);
+    --edge-tab-icon: #f1f5f9;
+    --edge-tab-accent: #e5c05e;
+}
+
+#edge-tab {
+    position: fixed;
+    right: 0;
+    top: 110px;
+    width: 46px;
+    height: 64px;
+    padding: 0 0 0 8px;
+    border: 1px solid var(--edge-tab-border);
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    background: var(--edge-tab-bg);
+    color: var(--edge-tab-icon);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    touch-action: none;
+    user-select: none;
+    transform: translateX(2px);
+    transition: transform 260ms cubic-bezier(.2, .8, .25, 1), opacity 220ms ease, box-shadow 200ms ease;
+    z-index: 9999;
+    box-shadow: -4px 6px 20px rgba(0, 0, 0, 0.14);
+}
+
+/* Subtle vertical grip indicator */
+#edge-tab::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 20px;
+    border-radius: 2px;
+    background: var(--edge-tab-accent);
+    opacity: 0.75;
+    transition: opacity 0.2s;
+}
+
+#edge-tab:hover::before {
+    opacity: 1;
+}
+
+#edge-tab:hover {
+    transform: translateX(0);
+    box-shadow: -6px 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+#edge-tab.hide {
+    transform: translateX(34px);
+    opacity: 0.55;
+}
+
+#edge-tab.hide:hover {
+    transform: translateX(24px);
+    opacity: 1;
+}
+
+#edge-tab .edge-tab-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    transition: transform 180ms ease, opacity 160ms;
+}
+
+#edge-tab .edge-tab-letter-a {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--edge-tab-icon);
+    letter-spacing: -0.01em;
+}
+
+#edge-tab.hide .edge-tab-icon-wrap {
+    opacity: 0.35;
+    transform: scale(0.9);
+}
+
+#edge-tab.dragging {
+    transition: none !important;
+    box-shadow: -8px 10px 28px rgba(0, 0, 0, 0.3) !important;
+}
+
+#edge-tab:focus-visible {
+    outline: 2px solid var(--edge-tab-accent);
+    outline-offset: -2px;
+}
+
+/* ─────────────────────────────────────────────────
+   Reader Appearance Bottom Sheet
+   ───────────────────────────────────────────────── */
+.reader-appearance-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 12100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reader-appearance-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.reader-appearance-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 100%;
+    max-width: 520px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: #ffffff;
+    color: #1f1f1f;
+    border-radius: 28px 28px 0 0;
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.28);
+    z-index: 12200;
+    padding: 12px 20px 28px;
+    box-sizing: border-box;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+body.dark-theme .reader-appearance-sheet {
+    background: #1e1f23;
+    color: #e3e3e3;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: none;
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.55);
+}
+
+.reader-appearance-sheet.active {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Handle */
+.reader-sheet-handle {
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.18);
+    margin: 4px auto 14px;
+    transition: background 0.2s;
+    cursor: grab;
+}
+
+body.dark-theme .reader-sheet-handle {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+/* Header */
+.reader-sheet-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: 16px;
+}
+
+body.dark-theme .reader-sheet-header {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.reader-sheet-title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.reader-sheet-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: inherit;
+    letter-spacing: -0.01em;
+}
+
+.reader-sheet-subtitle {
+    font-size: 11.5px;
+    color: #6b7280;
+    margin-top: 1px;
+}
+
+body.dark-theme .reader-sheet-subtitle {
+    color: #9ca3af;
+}
+
+.reader-sheet-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.05);
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.18s;
+}
+
+body.dark-theme .reader-sheet-close {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.reader-sheet-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .reader-sheet-close:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+/* Section styling */
+.reader-sheet-section {
+    margin-bottom: 18px;
+}
+
+.reader-sheet-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.reader-sheet-section-title {
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.reader-sheet-section-header .reader-sheet-section-title {
+    margin-bottom: 0;
+}
+
+body.dark-theme .reader-sheet-section-title {
+    color: #9ca3af;
+}
+
+/* 1. Bible Language Segment */
+.reader-lang-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.35fr;
+    gap: 8px;
+}
+
+.reader-lang-btn {
+    padding: 10px 8px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(0, 0, 0, 0.08);
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.18s;
+}
+
+body.dark-theme .reader-lang-btn {
+    background: #26272b;
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #f1f5f9;
+}
+
+.reader-lang-btn:hover {
+    border-color: var(--edge-tab-accent);
+}
+
+.reader-lang-btn.active {
+    background: #ffffff;
+    border-color: var(--edge-tab-accent);
+    color: #b48c36;
+    font-weight: 700;
+    box-shadow: 0 3px 12px rgba(201, 168, 76, 0.22);
+}
+
+body.dark-theme .reader-lang-btn.active {
+    background: #2e3036;
+    border-color: var(--edge-tab-accent);
+    color: #f3cf7a;
+    box-shadow: 0 3px 12px rgba(201, 168, 76, 0.22);
+}
+
+/* Theme segmented control */
+.reader-theme-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.reader-theme-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(0, 0, 0, 0.08);
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.dark-theme .reader-theme-btn {
+    background: #26272b;
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #f1f5f9;
+}
+
+.reader-theme-btn:hover {
+    border-color: var(--edge-tab-accent);
+}
+
+.reader-theme-btn.active {
+    background: #ffffff;
+    border-color: var(--edge-tab-accent);
+    color: #b48c36;
+    box-shadow: 0 3px 12px rgba(201, 168, 76, 0.22);
+}
+
+body.dark-theme .reader-theme-btn.active {
+    background: #2e3036;
+    border-color: var(--edge-tab-accent);
+    color: #f3cf7a;
+    box-shadow: 0 3px 12px rgba(201, 168, 76, 0.22);
+}
+
+/* 2. Separate Typography Tabs & Specimen Cards */
+.reader-font-tabs {
+    display: inline-flex;
+    background: #eef2f6;
+    border-radius: 11px;
+    padding: 3px;
+    gap: 3px;
+}
+
+body.dark-theme .reader-font-tabs {
+    background: #2b2d33;
+}
+
+.reader-font-tab {
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #64748b;
+    background: transparent;
+    transition: all 0.18s;
+}
+
+body.dark-theme .reader-font-tab {
+    color: #94a3b8;
+}
+
+.reader-font-tab.active {
+    background: #ffffff;
+    color: #b48c36;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-theme .reader-font-tab.active {
+    background: #1e1f23;
+    color: #f3cf7a;
+}
+
+.reader-font-pane {
+    display: none;
+}
+
+.reader-font-pane.active {
+    display: block;
+}
+
+.reader-font-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+@media (max-width: 440px) {
+    .reader-font-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.reader-font-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 10px;
+    border-radius: 14px;
+    border: 1.5px solid rgba(0, 0, 0, 0.08);
+    background: #f8fafc;
+    color: #334155;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.18s;
+}
+
+body.dark-theme .reader-font-card {
+    background: #26272b;
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+}
+
+.reader-font-card:hover {
+    border-color: var(--edge-tab-accent);
+    transform: translateY(-1px);
+}
+
+.reader-font-card.active {
+    border-color: var(--edge-tab-accent);
+    background: #ffffff;
+    color: #b48c36;
+    box-shadow: 0 3px 12px rgba(201, 168, 76, 0.22);
+}
+
+body.dark-theme .reader-font-card.active {
+    background: #2e3036;
+    color: #f3cf7a;
+}
+
+.reader-card-glyph {
+    font-size: 20px;
+    font-weight: 700;
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: rgba(201, 168, 76, 0.14);
+    color: var(--edge-tab-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.reader-card-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.reader-card-name {
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.reader-card-tag {
+    font-size: 10px;
+    color: #64748b;
+    margin-top: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body.dark-theme .reader-card-tag {
+    color: #94a3b8;
+}
+
+/* 3. Font Size Stepper & Slider */
+.reader-size-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8fafc;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 14px;
+    padding: 8px 14px;
+}
+
+body.dark-theme .reader-size-row {
+    background: #26272b;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.reader-size-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.15s;
+}
+
+body.dark-theme .reader-size-btn {
+    background: #1e1f23;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.reader-size-btn:hover {
+    border-color: var(--edge-tab-accent);
+    color: var(--edge-tab-accent);
+}
+
+.reader-size-slider {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 3px;
+    background: #e2e8f0;
+    outline: none;
+    cursor: pointer;
+}
+
+body.dark-theme .reader-size-slider {
+    background: #3b3d45;
+}
+
+.reader-size-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--edge-tab-accent);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.15s;
+}
+
+.reader-size-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.18);
+}
+
+.reader-size-val {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--edge-tab-accent);
+    min-width: 38px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* 4. Font Color (Exact 3 Colors from Settings page: Grey, Soft Blue, Soft Red) */
+.reader-color-row-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.reader-color-swatch-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 8px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(0, 0, 0, 0.08);
+    background: #f8fafc;
+    color: #334155;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.18s;
+}
+
+body.dark-theme .reader-color-swatch-item {
+    background: #26272b;
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+}
+
+.reader-color-swatch-item:hover {
+    border-color: var(--edge-tab-accent);
+}
+
+.reader-color-swatch-item.active {
+    border-color: var(--edge-tab-accent);
+    background: #ffffff;
+    color: #b48c36;
+    box-shadow: 0 3px 12px rgba(201, 168, 76, 0.22);
+}
+
+body.dark-theme .reader-color-swatch-item.active {
+    background: #2e3036;
+    color: #f3cf7a;
+}
+
+.reader-color-swatch-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #edge-tab,
+    .reader-appearance-sheet,
+    .reader-appearance-overlay {
+        transition: none !important;
+    }
+}
+
+
