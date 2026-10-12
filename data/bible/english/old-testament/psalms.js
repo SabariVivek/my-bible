@@ -32,7 +32,7 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "Kings and rulers decide to work together, to fight against the Lordand the king that he has chosen. to fight against the Lord and the king that he has chosen."
+      "text": "Kings and rulers decide to work together, to fight against the Lord and the king that he has chosen."
     },
     {
       "verse": 3,
