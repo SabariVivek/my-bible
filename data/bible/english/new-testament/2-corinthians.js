@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": 1,
-      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus. Our Christian friend Timothy is here with me as I write. I am sending this letter to you, the people of the church in Corinth city. I am sending it also to all of God's people who live in other places in Achaia. I am sending this letter to you, the people of the church in Corinth city. I am sending it also to all of God's people who live in other places in Achaia."
+      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus. Our Christian friend Timothy is here with me as I write. I am sending this letter to you, the people of the church in Corinth city. I am sending it also to all of God's people who live in other places in Achaia."
     },
     {
       "verse": 2,
@@ -468,7 +468,7 @@ module.exports = {
     },
     {
       "verse": 17,
-      "text": "And so, the Lord says:‘Come out from among them and be separate. Do not touch anything that is disgusting. Then I will accept you. ’ ‘Come out from among them and be separate. Do not touch anything that is disgusting. Then I will accept you. ’"
+      "text": "And so, the Lord says:‘Come out from among them and be separate. Do not touch anything that is disgusting. Then I will accept you. ’"
     },
     {
       "verse": 18,

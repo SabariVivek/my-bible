@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": 1,
-      "text": "This letter is from me, James. I am a servant of God and the Lord Jesus Christ. I am writing to the 12 tribes of God's people who live in many different parts of the world. I say ‘hello’ to all of you. tribes of God's people who live in many different parts of the world. I say ‘hello’ to all of you."
+      "text": "This letter is from me, James. I am a servant of God and the Lord Jesus Christ. I am writing to the 12 tribes of God's people who live in many different parts of the world. I say ‘hello’ to all of you."
     },
     {
       "verse": 2,

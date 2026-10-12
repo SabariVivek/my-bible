@@ -120,19 +120,19 @@ module.exports = {
     },
     {
       "verse": 19,
-      "text": "Israel, I will make you my wife for ever. I will promise to help you in a way that is right and fair. I will be kind to you with a faithful love. I will promise to help you in a way that is right and fair. I will be kind to you with a faithful love."
+      "text": "Israel, I will make you my wife for ever. I will promise to help you in a way that is right and fair. I will be kind to you with a faithful love."
     },
     {
       "verse": 20,
-      "text": "I will promise to be a faithful husband for you. Then you will know me as the Lord. Then you will know me as the Lord."
+      "text": "I will promise to be a faithful husband for you. Then you will know me as the Lord."
     },
     {
       "verse": 21,
-      "text": "The Lord says this: At that time, I will answer your prayers. I will put clouds in the sky, and the clouds will send rain to the earth. At that time, I will answer your prayers. I will put clouds in the sky, and the clouds will send rain to the earth."
+      "text": "The Lord says this: At that time, I will answer your prayers. I will put clouds in the sky, and the clouds will send rain to the earth."
     },
     {
       "verse": 22,
-      "text": "The earth will feed the grain, the wine and the olive oil. My people will be happy to say, ‘Jezreel: God plants. ’ My people will be happy to say, ‘Jezreel: God plants. ’"
+      "text": "The earth will feed the grain, the wine and the olive oil. My people will be happy to say, ‘Jezreel: God plants. ’"
     },
     {
       "verse": 23,
@@ -270,31 +270,31 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "‘Make a noise with your horns in Gibeah! Make a noise with your trumpets in Ramah! Warn the people in Beth Aven of danger! Men of Benjamin's tribe, prepare to fight! Make a noise with your trumpets in Ramah! Warn the people in Beth Aven of danger! Men of Benjamin's tribe, prepare to fight!"
+      "text": "‘Make a noise with your horns in Gibeah! Make a noise with your trumpets in Ramah! Warn the people in Beth Aven of danger! Men of Benjamin's tribe, prepare to fight!"
     },
     {
       "verse": 9,
-      "text": "The day for Ephraim's punishment will soon come. That will be the end of them! I make this promise to all the tribes of Israel. It will certainly happen! That will be the end of them! I make this promise to all the tribes of Israel. It will certainly happen!"
+      "text": "The day for Ephraim's punishment will soon come. That will be the end of them! I make this promise to all the tribes of Israel. It will certainly happen!"
     },
     {
       "verse": 10,
-      "text": "The leaders of Judah are not honest. They are like people who move the stones that show the edge of their land. So I will punish them with my strong anger. They are like people who move the stones that show the edge of their land. So I will punish them with my strong anger."
+      "text": "The leaders of Judah are not honest. They are like people who move the stones that show the edge of their land. So I will punish them with my strong anger."
     },
     {
       "verse": 11,
-      "text": "Terrible trouble will come to Ephraim's people. They will receive great punishment. They deserve that because they chose to worship idols. They will receive great punishment. They deserve that because they chose to worship idols."
+      "text": "Terrible trouble will come to Ephraim's people. They will receive great punishment. They deserve that because they chose to worship idols."
     },
     {
       "verse": 12,
-      "text": "I will destroy the people of Ephraim, as a moth eats cloth. I will also destroy the people of Judah, as ants destroy wood. as a moth eats cloth. I will also destroy the people of Judah, as ants destroy wood."
+      "text": "I will destroy the people of Ephraim, as a moth eats cloth. I will also destroy the people of Judah, as ants destroy wood."
     },
     {
       "verse": 13,
-      "text": "Ephraim's people knew that they were not well. Judah's people knew that they had wounds. Ephraim's leaders expected Assyria to help them. They asked Assyria's great king for help. But he is not able to make you well. He cannot make your wounds better. Judah's people knew that they had wounds. Ephraim's leaders expected Assyria to help them. They asked Assyria's great king for help. But he is not able to make you well. He cannot make your wounds better."
+      "text": "Ephraim's people knew that they were not well. Judah's people knew that they had wounds. Ephraim's leaders expected Assyria to help them. They asked Assyria's great king for help. But he is not able to make you well. He cannot make your wounds better."
     },
     {
       "verse": 14,
-      "text": "I will attack Ephraim's people like a lion. I will also attack Judah's people like a young lion. I myself will tear them into pieces. I will carry them away. Nobody will be able to rescue them. I will also attack Judah's people like a young lion. I myself will tear them into pieces. I will carry them away. Nobody will be able to rescue them."
+      "text": "I will attack Ephraim's people like a lion. I will also attack Judah's people like a young lion. I myself will tear them into pieces. I will carry them away. Nobody will be able to rescue them."
     },
     {
       "verse": 15,
@@ -304,11 +304,11 @@ module.exports = {
   "6": [
     {
       "verse": 1,
-      "text": "‘Listen! We should return to serve the Lord. He has torn us to pieces, but now he will make us well again. He has hurt us, but now he will make our wounds better. He has torn us to pieces, but now he will make us well again. He has hurt us, but now he will make our wounds better."
+      "text": "‘Listen! We should return to serve the Lord. He has torn us to pieces, but now he will make us well again. He has hurt us, but now he will make our wounds better."
     },
     {
       "verse": 2,
-      "text": "He will soon make us strong again. After three days, we will have new lives. Then we can live together with him. After three days, we will have new lives. Then we can live together with him."
+      "text": "He will soon make us strong again. After three days, we will have new lives. Then we can live together with him."
     },
     {
       "verse": 3,
@@ -316,31 +316,31 @@ module.exports = {
     },
     {
       "verse": 4,
-      "text": "‘People of Ephraim and Judah, can I forgive you so easily? Your love for me soon disappears. It goes away as quickly as mist or dew in the morning. Your love for me soon disappears. It goes away as quickly as mist or dew in the morning."
+      "text": "‘People of Ephraim and Judah, can I forgive you so easily? Your love for me soon disappears. It goes away as quickly as mist or dew in the morning."
     },
     {
       "verse": 5,
-      "text": "I sent my prophets to warn you. They gave you my messages that I would punish you. Now that punishment will certainly happen to you! I will suddenly come to judge you, like the sun that rises at dawn. They gave you my messages that I would punish you. Now that punishment will certainly happen to you! I will suddenly come to judge you, like the sun that rises at dawn."
+      "text": "I sent my prophets to warn you. They gave you my messages that I would punish you. Now that punishment will certainly happen to you! I will suddenly come to judge you, like the sun that rises at dawn."
     },
     {
       "verse": 6,
-      "text": "It is faithful love that makes me happy. That would be better than your sacrifices to me. You should know me as your God. That would be better than your burnt offerings. That would be better than your sacrifices to me. You should know me as your God. That would be better than your burnt offerings."
+      "text": "It is faithful love that makes me happy. That would be better than your sacrifices to me. You should know me as your God. That would be better than your burnt offerings."
     },
     {
       "verse": 7,
-      "text": "Like Adam, my people did not obey the covenant that I had made with them. They did not serve me faithfully. They did not serve me faithfully."
+      "text": "Like Adam, my people did not obey the covenant that I had made with them. They did not serve me faithfully."
     },
     {
       "verse": 8,
-      "text": "All the people of Gilead do evil things. The blood from their murders lies on the streets. The blood from their murders lies on the streets."
+      "text": "All the people of Gilead do evil things. The blood from their murders lies on the streets."
     },
     {
       "verse": 9,
-      "text": "The priests join together like robbers. They hide themselves and they are ready to attack. They wait on the road to Shechem, ready to murder people who pass that way. They have done wicked things. They hide themselves and they are ready to attack. They wait on the road to Shechem, ready to murder people who pass that way. They have done wicked things."
+      "text": "The priests join together like robbers. They hide themselves and they are ready to attack. They wait on the road to Shechem, ready to murder people who pass that way. They have done wicked things."
     },
     {
       "verse": 10,
-      "text": "I have seen people do disgusting things in Israel. Like a prostitute, Ephraim's people serve false gods. Yes, the Israelites have made themselves unclean. Like a prostitute, Ephraim's people serve false gods. Yes, the Israelites have made themselves unclean."
+      "text": "I have seen people do disgusting things in Israel. Like a prostitute, Ephraim's people serve false gods. Yes, the Israelites have made themselves unclean."
     },
     {
       "verse": 11,
@@ -350,63 +350,63 @@ module.exports = {
   "7": [
     {
       "verse": 1,
-      "text": "‘Yes, I want to make the people of Israel healthy again, but I see how great their sins are. Samaria's people do many evil things. They deceive one another, they take things from other people's homes, and they attack people in the streets to rob them. but I see how great their sins are. Samaria's people do many evil things. They deceive one another, they take things from other people's homes, and they attack people in the streets to rob them."
+      "text": "‘Yes, I want to make the people of Israel healthy again, but I see how great their sins are. Samaria's people do many evil things. They deceive one another, they take things from other people's homes, and they attack people in the streets to rob them."
     },
     {
       "verse": 2,
-      "text": "They do not understand that I remember all their sins. The wicked things that they do are everywhere. Wherever they go, I see their sins very clearly. The wicked things that they do are everywhere. Wherever they go, I see their sins very clearly."
+      "text": "They do not understand that I remember all their sins. The wicked things that they do are everywhere. Wherever they go, I see their sins very clearly."
     },
     {
       "verse": 3,
-      "text": "The king is happy to see the evil things that his people do. The leaders are also happy when the people cheat and tell lies. The leaders are also happy when the people cheat and tell lies."
+      "text": "The king is happy to see the evil things that his people do. The leaders are also happy when the people cheat and tell lies."
     },
     {
       "verse": 4,
-      "text": "None of them serves me faithfully. They are always ready to do bad things, like an oven that has a hot fire inside it. When the baker is ready to bake his bread, he makes the fire even hotter. They are always ready to do bad things, like an oven that has a hot fire inside it. When the baker is ready to bake his bread, he makes the fire even hotter."
+      "text": "None of them serves me faithfully. They are always ready to do bad things, like an oven that has a hot fire inside it. When the baker is ready to bake his bread, he makes the fire even hotter."
     },
     {
       "verse": 5,
-      "text": "On a day when the king has a feast, the leaders drink too much wine. The king and the leaders join with other people to do foolish things. the leaders drink too much wine. The king and the leaders join with other people to do foolish things."
+      "text": "On a day when the king has a feast, the leaders drink too much wine. The king and the leaders join with other people to do foolish things."
     },
     {
       "verse": 6,
-      "text": "But the leaders are planning to murder the king. Their anger is like the fire of an oven. It burns slowly inside them all through the night. But in the morning the fire is too strong to hold. Their anger is like the fire of an oven. It burns slowly inside them all through the night. But in the morning the fire is too strong to hold."
+      "text": "But the leaders are planning to murder the king. Their anger is like the fire of an oven. It burns slowly inside them all through the night. But in the morning the fire is too strong to hold."
     },
     {
       "verse": 7,
-      "text": "They are so angry that they kill their rulers. Now all their kings are dead. None of them calls out to me for help. ’ Now all their kings are dead. None of them calls out to me for help. ’"
+      "text": "They are so angry that they kill their rulers. Now all their kings are dead. None of them calls out to me for help. ’"
     },
     {
       "verse": 8,
-      "text": "‘Ephraim's people have mixed themselves with people of other nations. So they have become useless, like bread that is not properly cooked. So they have become useless, like bread that is not properly cooked."
+      "text": "‘Ephraim's people have mixed themselves with people of other nations. So they have become useless, like bread that is not properly cooked."
     },
     {
       "verse": 9,
-      "text": "Foreign people have taken away Israel's strength. But the Israelites do not realize what is happening! They have become like an old man with grey hair. But they do not realize how weak they are. But the Israelites do not realize what is happening! They have become like an old man with grey hair. But they do not realize how weak they are."
+      "text": "Foreign people have taken away Israel's strength. But the Israelites do not realize what is happening! They have become like an old man with grey hair. But they do not realize how weak they are."
     },
     {
       "verse": 10,
-      "text": "Israel's people are too proud to change. This shows that they are guilty. They still refuse to turn back to me, the Lord their God. In all their troubles, they do not look for my help. This shows that they are guilty. They still refuse to turn back to me, the Lord their God. In all their troubles, they do not look for my help."
+      "text": "Israel's people are too proud to change. This shows that they are guilty. They still refuse to turn back to me, the Lord their God. In all their troubles, they do not look for my help."
     },
     {
       "verse": 11,
-      "text": "Ephraim has become like a silly dove. He cannot decide where to go. The Israelites ask Egypt to help them. Then they decide to ask Assyria instead. He cannot decide where to go. The Israelites ask Egypt to help them. Then they decide to ask Assyria instead."
+      "text": "Ephraim has become like a silly dove. He cannot decide where to go. The Israelites ask Egypt to help them. Then they decide to ask Assyria instead."
     },
     {
       "verse": 12,
-      "text": "When they fly around like that, I will throw my net over them. I will catch them like birds that fly in the sky. I will punish them as they join together to do evil things. I will throw my net over them. I will catch them like birds that fly in the sky. I will punish them as they join together to do evil things."
+      "text": "When they fly around like that, I will throw my net over them. I will catch them like birds that fly in the sky. I will punish them as they join together to do evil things."
     },
     {
       "verse": 13,
-      "text": "Terrible trouble will happen to them, because they have gone away from me. They have turned against me, so they will die. I wanted to rescue them, but they have told lies about me. because they have gone away from me. They have turned against me, so they will die. I wanted to rescue them, but they have told lies about me."
+      "text": "Terrible trouble will happen to them, because they have gone away from me. They have turned against me, so they will die. I wanted to rescue them, but they have told lies about me."
     },
     {
       "verse": 14,
-      "text": "They do not pray and trust me to help them. Instead, they lie down on their beds and they weep loudly. They cut their bodies to get grain and wine. They turn away from me. Instead, they lie down on their beds and they weep loudly. They cut their bodies to get grain and wine. They turn away from me."
+      "text": "They do not pray and trust me to help them. Instead, they lie down on their beds and they weep loudly. They cut their bodies to get grain and wine. They turn away from me."
     },
     {
       "verse": 15,
-      "text": "I taught them what was right. I made them strong. But now they have decided to do evil things against me. But now they have decided to do evil things against me."
+      "text": "I taught them what was right. I made them strong. But now they have decided to do evil things against me."
     },
     {
       "verse": 16,
@@ -416,15 +416,15 @@ module.exports = {
   "8": [
     {
       "verse": 1,
-      "text": "The Lord says, ‘Warn the people of danger! My people have not obeyed the covenant that I made with them. They have refused to obey my laws. So an enemy army will come to attack their land, like an eagle that is ready to fly down and catch them. My people have not obeyed the covenant that I made with them. They have refused to obey my laws. So an enemy army will come to attack their land, like an eagle that is ready to fly down and catch them."
+      "text": "The Lord says, ‘Warn the people of danger! My people have not obeyed the covenant that I made with them. They have refused to obey my laws. So an enemy army will come to attack their land, like an eagle that is ready to fly down and catch them."
     },
     {
       "verse": 2,
-      "text": "Israel's people call out to me for help. They say, “We know you as our God. ” They say, “We know you as our God. ”"
+      "text": "Israel's people call out to me for help. They say, “We know you as our God. ”"
     },
     {
       "verse": 3,
-      "text": "But they have refused to do what is good and right. So their enemies will chase after them. So their enemies will chase after them."
+      "text": "But they have refused to do what is good and right. So their enemies will chase after them."
     },
     {
       "verse": 4,
@@ -432,39 +432,39 @@ module.exports = {
     },
     {
       "verse": 5,
-      "text": "People of Samaria, you have made an image of a calf as your idol. But I hate that idol! I am very angry with the Israelites. How much longer will it be before I have to punish them? But I hate that idol! I am very angry with the Israelites. How much longer will it be before I have to punish them?"
+      "text": "People of Samaria, you have made an image of a calf as your idol. But I hate that idol! I am very angry with the Israelites. How much longer will it be before I have to punish them?"
     },
     {
       "verse": 6,
-      "text": "That idol is not a true god! An Israelite worker with special skills made it. Samaria's idol of a calf will break into pieces! An Israelite worker with special skills made it. Samaria's idol of a calf will break into pieces!"
+      "text": "That idol is not a true god! An Israelite worker with special skills made it. Samaria's idol of a calf will break into pieces!"
     },
     {
       "verse": 7,
-      "text": "Like a farmer, Israel's people have planted the wind. So their harvest will be a strong storm! The crops that grow in their fields will not have any grain. So they will not be able to make flour for bread. Even if the crops do make some grain, foreign people will take it for themselves. So their harvest will be a strong storm! The crops that grow in their fields will not have any grain. So they will not be able to make flour for bread. Even if the crops do make some grain, foreign people will take it for themselves."
+      "text": "Like a farmer, Israel's people have planted the wind. So their harvest will be a strong storm! The crops that grow in their fields will not have any grain. So they will not be able to make flour for bread. Even if the crops do make some grain, foreign people will take it for themselves."
     },
     {
       "verse": 8,
-      "text": "Israel will become lost among the other nations. It will be like a useless pot that nobody needs. It will be like a useless pot that nobody needs."
+      "text": "Israel will become lost among the other nations. It will be like a useless pot that nobody needs."
     },
     {
       "verse": 9,
-      "text": "Israel's rulers have gone to Assyria for help. They are like a wild donkey that goes here and there. Ephraim's people have paid money to get help from other nations. as if they are paying for lovers. They are like a wild donkey that goes here and there. Ephraim's people have paid money to get help from other nations. as if they are paying for lovers."
+      "text": "Israel's rulers have gone to Assyria for help. They are like a wild donkey that goes here and there. Ephraim's people have paid money to get help from other nations. as if they are paying for lovers."
     },
     {
       "verse": 10,
-      "text": "Yes, they have paid money to get friends who will help them. But I will soon bring them together to punish them. A great king will be cruel to them and they will receive much pain. But I will soon bring them together to punish them. A great king will be cruel to them and they will receive much pain."
+      "text": "Yes, they have paid money to get friends who will help them. But I will soon bring them together to punish them. A great king will be cruel to them and they will receive much pain."
     },
     {
       "verse": 11,
-      "text": "Ephraim's people have built many altars to make sin offerings. But the altars have become places where the people do even more sins! But the altars have become places where the people do even more sins!"
+      "text": "Ephraim's people have built many altars to make sin offerings. But the altars have become places where the people do even more sins!"
     },
     {
       "verse": 12,
-      "text": "I carefully explained my laws to my people. But they do not accept my laws as their own. But they do not accept my laws as their own."
+      "text": "I carefully explained my laws to my people. But they do not accept my laws as their own."
     },
     {
       "verse": 13,
-      "text": "Israel's people offer sacrifices to me, and they eat the meat from those sacrifices. But their sacrifices do not please me. I know that they are guilty of wicked things. Soon I will punish them for their sins. They will have to return to Egypt. and they eat the meat from those sacrifices. But their sacrifices do not please me. I know that they are guilty of wicked things. Soon I will punish them for their sins. They will have to return to Egypt."
+      "text": "Israel's people offer sacrifices to me, and they eat the meat from those sacrifices. But their sacrifices do not please me. I know that they are guilty of wicked things. Soon I will punish them for their sins. They will have to return to Egypt."
     },
     {
       "verse": 14,
@@ -478,47 +478,47 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "But the threshing floors will not provide enough grain to feed the people. The winepresses will not give them enough new wine. The winepresses will not give them enough new wine."
+      "text": "But the threshing floors will not provide enough grain to feed the people. The winepresses will not give them enough new wine."
     },
     {
       "verse": 3,
-      "text": "The Israelites will not remain in the Lord's land. They will have to return to Egypt. In Assyria, they will have to eat food that is unclean. They will have to return to Egypt. In Assyria, they will have to eat food that is unclean."
+      "text": "The Israelites will not remain in the Lord's land. They will have to return to Egypt. In Assyria, they will have to eat food that is unclean."
     },
     {
       "verse": 4,
-      "text": "They will not pour out wine as an offering to the Lord. Their sacrifices will not please him. Instead, their offerings will be like food that people eat at a funeral. Anyone who eats it becomes unclean. They may eat the food to feed themselves, but they cannot offer it to the Lord in his temple. Their sacrifices will not please him. Instead, their offerings will be like food that people eat at a funeral. Anyone who eats it becomes unclean. They may eat the food to feed themselves, but they cannot offer it to the Lord in his temple."
+      "text": "They will not pour out wine as an offering to the Lord. Their sacrifices will not please him. Instead, their offerings will be like food that people eat at a funeral. Anyone who eats it becomes unclean. They may eat the food to feed themselves, but they cannot offer it to the Lord in his temple."
     },
     {
       "verse": 5,
-      "text": "So what will you do on your festival days? You will no longer be able to worship the Lord properly. You will no longer be able to worship the Lord properly."
+      "text": "So what will you do on your festival days? You will no longer be able to worship the Lord properly."
     },
     {
       "verse": 6,
-      "text": "Listen! Perhaps some Israelites will escape when Assyria's army attacks. But then Egypt's army will take hold of them. They will die in Memphis and people will bury them there. Weeds will grow all over their valuable silver things. Thorn bushes will grow in their homes. But then Egypt's army will take hold of them. They will die in Memphis and people will bury them there. Weeds will grow all over their valuable silver things. Thorn bushes will grow in their homes."
+      "text": "Listen! Perhaps some Israelites will escape when Assyria's army attacks. But then Egypt's army will take hold of them. They will die in Memphis and people will bury them there. Weeds will grow all over their valuable silver things. Thorn bushes will grow in their homes."
     },
     {
       "verse": 7,
-      "text": "The time for Israel's punishment has arrived! The Lord must now pay them back for their sins. The Israelites will soon know about it! You do many sins and you hate the Lord. Because of that, you say that his prophets are fools. You think that his messengers are crazy. The Lord must now pay them back for their sins. The Israelites will soon know about it! You do many sins and you hate the Lord. Because of that, you say that his prophets are fools. You think that his messengers are crazy."
+      "text": "The time for Israel's punishment has arrived! The Lord must now pay them back for their sins. The Israelites will soon know about it! You do many sins and you hate the Lord. Because of that, you say that his prophets are fools. You think that his messengers are crazy."
     },
     {
       "verse": 8,
-      "text": "God has sent his prophet to warn the people of Ephraim. But wherever he goes, people try to stop him. They speak angry words against him, even in the temple of his God. But wherever he goes, people try to stop him. They speak angry words against him, even in the temple of his God."
+      "text": "God has sent his prophet to warn the people of Ephraim. But wherever he goes, people try to stop him. They speak angry words against him, even in the temple of his God."
     },
     {
       "verse": 9,
-      "text": "The Israelites do very wicked things, like the terrible sins that they did at Gibeah. God will not forget the wicked things that they have done. He will surely punish them for their sins. like the terrible sins that they did at Gibeah. God will not forget the wicked things that they have done. He will surely punish them for their sins."
+      "text": "The Israelites do very wicked things, like the terrible sins that they did at Gibeah. God will not forget the wicked things that they have done. He will surely punish them for their sins."
     },
     {
       "verse": 10,
-      "text": "The Lord says, ‘When I first found Israel, they gave me pleasure. It was as if I had found grapes in the wilderness. Your ancestors made me happy, like the first fruit on a young fig tree. But then they came to the god, Baal-Peor. They began to worship that disgusting idol. They became as disgusting as the idol that they loved so much. ‘When I first found Israel, they gave me pleasure. It was as if I had found grapes in the wilderness. Your ancestors made me happy, like the first fruit on a young fig tree. But then they came to the god, Baal-Peor. They began to worship that disgusting idol. They became as disgusting as the idol that they loved so much."
+      "text": "The Lord says, ‘When I first found Israel, they gave me pleasure. It was as if I had found grapes in the wilderness. Your ancestors made me happy, like the first fruit on a young fig tree. But then they came to the god, Baal-Peor. They began to worship that disgusting idol. They became as disgusting as the idol that they loved so much."
     },
     {
       "verse": 11,
-      "text": "The great things that Israel enjoys will soon disappear. They will be like birds that fly away! The women of Israel will no longer give birth to children. They will not even become pregnant. They will be like birds that fly away! The women of Israel will no longer give birth to children. They will not even become pregnant."
+      "text": "The great things that Israel enjoys will soon disappear. They will be like birds that fly away! The women of Israel will no longer give birth to children. They will not even become pregnant."
     },
     {
       "verse": 12,
-      "text": "But even if they do have children, I will cause them all to die so that none are still alive. It will be a terrible time for the Israelites, because I will turn away from them. I will cause them all to die so that none are still alive. It will be a terrible time for the Israelites, because I will turn away from them."
+      "text": "But even if they do have children, I will cause them all to die so that none are still alive. It will be a terrible time for the Israelites, because I will turn away from them."
     },
     {
       "verse": 13,
@@ -526,11 +526,11 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "Lord, what should I ask you to give to these people? Make it impossible for their women to give birth! Stop the milk from their breasts to feed their babies! Make it impossible for their women to give birth! Stop the milk from their breasts to feed their babies!"
+      "text": "Lord, what should I ask you to give to these people? Make it impossible for their women to give birth! Stop the milk from their breasts to feed their babies!"
     },
     {
       "verse": 15,
-      "text": "The Lord says, ‘They started to do evil things at Gilgal. It was there that I began to hate them. Because they do evil things, I will chase them out of my land. I will not love them any more. Their leaders have all turned against me. ‘They started to do evil things at Gilgal. It was there that I began to hate them. Because they do evil things, I will chase them out of my land. I will not love them any more. Their leaders have all turned against me."
+      "text": "The Lord says, ‘They started to do evil things at Gilgal. It was there that I began to hate them. Because they do evil things, I will chase them out of my land. I will not love them any more. Their leaders have all turned against me."
     },
     {
       "verse": 16,
@@ -544,31 +544,31 @@ module.exports = {
   "10": [
     {
       "verse": 1,
-      "text": "Israel was like a healthy vine that had lots of grapes. But as the Israelites became more and more rich, they built more and more altars. As their land gave more crops, they made the pillars that they worshipped more beautiful. But as the Israelites became more and more rich, they built more and more altars. As their land gave more crops, they made the pillars that they worshipped more beautiful."
+      "text": "Israel was like a healthy vine that had lots of grapes. But as the Israelites became more and more rich, they built more and more altars. As their land gave more crops, they made the pillars that they worshipped more beautiful."
     },
     {
       "verse": 2,
-      "text": "They do not truly trust God. They are guilty and they must receive their punishment. The Lord will break their altars. He will destroy their special pillars. They are guilty and they must receive their punishment. The Lord will break their altars. He will destroy their special pillars."
+      "text": "They do not truly trust God. They are guilty and they must receive their punishment. The Lord will break their altars. He will destroy their special pillars."
     },
     {
       "verse": 3,
-      "text": "Soon these people will say, ‘We did not respect the Lord's authority. Because of that we have no king. But even if we had a king now, he could not do anything to help us. ’ Because of that we have no king. But even if we had a king now, he could not do anything to help us. ’"
+      "text": "Soon these people will say, ‘We did not respect the Lord's authority. Because of that we have no king. But even if we had a king now, he could not do anything to help us. ’"
     },
     {
       "verse": 4,
-      "text": "They promise to do many things, but they never do what they promise. They make useless agreements. So people accuse each other in the courts. They are like weeds that grow in a farmer's field. but they never do what they promise. They make useless agreements. So people accuse each other in the courts. They are like weeds that grow in a farmer's field."
+      "text": "They promise to do many things, but they never do what they promise. They make useless agreements. So people accuse each other in the courts. They are like weeds that grow in a farmer's field."
     },
     {
       "verse": 5,
-      "text": "The people who live in Samaria will be afraid. They will worry about their image of a calf at Beth Aven. They will weep because it will go away from them. The priests who serve the idol will cry too. They know that an enemy will take away their great and beautiful idol. They will worry about their image of a calf at Beth Aven. They will weep because it will go away from them. The priests who serve the idol will cry too. They know that an enemy will take away their great and beautiful idol."
+      "text": "The people who live in Samaria will be afraid. They will worry about their image of a calf at Beth Aven. They will weep because it will go away from them. The priests who serve the idol will cry too. They know that an enemy will take away their great and beautiful idol."
     },
     {
       "verse": 6,
-      "text": "Assyria's army will carry the idol away. It will be a gift to give honour to Assyria's great king. Ephraim's people will feel ashamed. They will be sorry that they trusted in their wooden idol. It will be a gift to give honour to Assyria's great king. Ephraim's people will feel ashamed. They will be sorry that they trusted in their wooden idol."
+      "text": "Assyria's army will carry the idol away. It will be a gift to give honour to Assyria's great king. Ephraim's people will feel ashamed. They will be sorry that they trusted in their wooden idol."
     },
     {
       "verse": 7,
-      "text": "The people of Samaria and their king will come to an end. They will be like a small stick that water carries away. They will be like a small stick that water carries away."
+      "text": "The people of Samaria and their king will come to an end. They will be like a small stick that water carries away."
     },
     {
       "verse": 8,
@@ -576,27 +576,27 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "The Lord says, ‘People of Israel, you have continued to do bad things, since the time that you were at Gibeah. When the people did evil things at Gibeah, war destroyed them as a result. ‘People of Israel, you have continued to do bad things, since the time that you were at Gibeah. When the people did evil things at Gibeah, war destroyed them as a result."
+      "text": "The Lord says, ‘People of Israel, you have continued to do bad things, since the time that you were at Gibeah. When the people did evil things at Gibeah, war destroyed them as a result."
     },
     {
       "verse": 10,
-      "text": "When I decide that the time is right, I will punish the Israelites. Because of their many sins, I will bring other nations to attack them. Their enemies will tie them up with chains. I will punish the Israelites. Because of their many sins, I will bring other nations to attack them. Their enemies will tie them up with chains."
+      "text": "When I decide that the time is right, I will punish the Israelites. Because of their many sins, I will bring other nations to attack them. Their enemies will tie them up with chains."
     },
     {
       "verse": 11,
-      "text": "Ephraim was like a cow that I had taught to stamp on grain. She loved to work for me. But now I will make her do hard work! I will put a heavy yoke on her beautiful neck. Judah will also have to plough the ground. Jacob's descendants must work to dig up the hard ground. She loved to work for me. But now I will make her do hard work! I will put a heavy yoke on her beautiful neck. Judah will also have to plough the ground. Jacob's descendants must work to dig up the hard ground."
+      "text": "Ephraim was like a cow that I had taught to stamp on grain. She loved to work for me. But now I will make her do hard work! I will put a heavy yoke on her beautiful neck. Judah will also have to plough the ground. Jacob's descendants must work to dig up the hard ground."
     },
     {
       "verse": 12,
-      "text": "Be like a farmer who plants good seed. Plant things that are good and right. Then your harvest will be faithful love. Plough the hard ground and prepare it for the Lord to bless you. It is time for you to turn back to the Lord. Then he will bless you with good things, like rain that falls on the ground! Plant things that are good and right. Then your harvest will be faithful love. Plough the hard ground and prepare it for the Lord to bless you. It is time for you to turn back to the Lord. Then he will bless you with good things, like rain that falls on the ground!"
+      "text": "Be like a farmer who plants good seed. Plant things that are good and right. Then your harvest will be faithful love. Plough the hard ground and prepare it for the Lord to bless you. It is time for you to turn back to the Lord. Then he will bless you with good things, like rain that falls on the ground!"
     },
     {
       "verse": 13,
-      "text": "But instead, you have planted evil things. So your harvest is terrible trouble. The food that you eat comes from your lies. You trusted in your own strength to save you. You thought that your strong army would keep you safe. So your harvest is terrible trouble. The food that you eat comes from your lies. You trusted in your own strength to save you. You thought that your strong army would keep you safe."
+      "text": "But instead, you have planted evil things. So your harvest is terrible trouble. The food that you eat comes from your lies. You trusted in your own strength to save you. You thought that your strong army would keep you safe."
     },
     {
       "verse": 14,
-      "text": "So you will soon hear the noise of war. Enemies will destroy all your strong buildings. It will be like the time that King Shalman's army destroyed Beth Arbel. In that battle, cruel soldiers killed mothers together with their children. Enemies will destroy all your strong buildings. It will be like the time that King Shalman's army destroyed Beth Arbel. In that battle, cruel soldiers killed mothers together with their children."
+      "text": "So you will soon hear the noise of war. Enemies will destroy all your strong buildings. It will be like the time that King Shalman's army destroyed Beth Arbel. In that battle, cruel soldiers killed mothers together with their children."
     },
     {
       "verse": 15,
@@ -606,43 +606,43 @@ module.exports = {
   "11": [
     {
       "verse": 1,
-      "text": "The Lord says, ‘When Israel was a child, I loved him as my son. I called my son to come out of Egypt. ‘When Israel was a child, I loved him as my son. I called my son to come out of Egypt."
+      "text": "The Lord says, ‘When Israel was a child, I loved him as my son. I called my son to come out of Egypt."
     },
     {
       "verse": 2,
-      "text": "But the more I spoke to Israel's people, the more they turned away from me. They offered sacrifices to the images of Baal. They burned incense to give honour to their idols. the more they turned away from me. They offered sacrifices to the images of Baal. They burned incense to give honour to their idols."
+      "text": "But the more I spoke to Israel's people, the more they turned away from me. They offered sacrifices to the images of Baal. They burned incense to give honour to their idols."
     },
     {
       "verse": 3,
-      "text": "I was the one who taught this child, Ephraim, to walk! I held their hand and I led them. I took care of them, but they did not understand this. I held their hand and I led them. I took care of them, but they did not understand this."
+      "text": "I was the one who taught this child, Ephraim, to walk! I held their hand and I led them. I took care of them, but they did not understand this."
     },
     {
       "verse": 4,
-      "text": "I loved them and I was kind to them. I led them as their guide. I gave them rest from their hard work. I bent down to feed them. I led them as their guide. I gave them rest from their hard work. I bent down to feed them."
+      "text": "I loved them and I was kind to them. I led them as their guide. I gave them rest from their hard work. I bent down to feed them."
     },
     {
       "verse": 5,
-      "text": "But they refuse to turn back to me. So they must return to Egypt. Assyria will rule over them. So they must return to Egypt. Assyria will rule over them."
+      "text": "But they refuse to turn back to me. So they must return to Egypt. Assyria will rule over them."
     },
     {
       "verse": 6,
-      "text": "War will come to their cities. Enemies will break down the strong city gates. War will destroy my people and all their wicked ideas. Enemies will break down the strong city gates. War will destroy my people and all their wicked ideas."
+      "text": "War will come to their cities. Enemies will break down the strong city gates. War will destroy my people and all their wicked ideas."
     },
     {
       "verse": 7,
-      "text": "My people have decided to turn away from me. That is all that they can think about. They call up to a God who rules above, but he will not help them. That is all that they can think about. They call up to a God who rules above, but he will not help them."
+      "text": "My people have decided to turn away from me. That is all that they can think about. They call up to a God who rules above, but he will not help them."
     },
     {
       "verse": 8,
-      "text": "Israel, I cannot leave you alone. I cannot let you belong to someone else. I cannot destroy you, as I did to Admah and Zeboiim. I now realize that I love you too much. I could never destroy you completely. I cannot let you belong to someone else. I cannot destroy you, as I did to Admah and Zeboiim. I now realize that I love you too much. I could never destroy you completely."
+      "text": "Israel, I cannot leave you alone. I cannot let you belong to someone else. I cannot destroy you, as I did to Admah and Zeboiim. I now realize that I love you too much. I could never destroy you completely."
     },
     {
       "verse": 9,
-      "text": "I am very angry with you, but I will not punish you so much. I will never destroy my people, Ephraim. This is because I am God. I am not a human. I am the Holy God who is with you. I will not come to destroy you in my anger. but I will not punish you so much. I will never destroy my people, Ephraim. This is because I am God. I am not a human. I am the Holy God who is with you. I will not come to destroy you in my anger."
+      "text": "I am very angry with you, but I will not punish you so much. I will never destroy my people, Ephraim. This is because I am God. I am not a human. I am the Holy God who is with you. I will not come to destroy you in my anger."
     },
     {
       "verse": 10,
-      "text": "I will roar loudly like a lion, so that my children come to follow me. When I roar, my children will shake with fear, as they come from the west. so that my children come to follow me. When I roar, my children will shake with fear, as they come from the west."
+      "text": "I will roar loudly like a lion, so that my children come to follow me. When I roar, my children will shake with fear, as they come from the west."
     },
     {
       "verse": 11,
@@ -656,55 +656,55 @@ module.exports = {
   "12": [
     {
       "verse": 1,
-      "text": "Ephraim's people chase after useless things all the time. They think that they can catch the wind that comes from the east! But the result is more violence and lies. They make an agreement with Assyria to get their help. They also send their olive oil to Egypt to ask for their help. They think that they can catch the wind that comes from the east! But the result is more violence and lies. They make an agreement with Assyria to get their help. They also send their olive oil to Egypt to ask for their help."
+      "text": "Ephraim's people chase after useless things all the time. They think that they can catch the wind that comes from the east! But the result is more violence and lies. They make an agreement with Assyria to get their help. They also send their olive oil to Egypt to ask for their help."
     },
     {
       "verse": 2,
-      "text": "The Lord is ready to accuse Judah's people in a court of law. He will punish Jacob's descendants for the bad way that they live. He will punish them as their sins deserve. He will punish Jacob's descendants for the bad way that they live. He will punish them as their sins deserve."
+      "text": "The Lord is ready to accuse Judah's people in a court of law. He will punish Jacob's descendants for the bad way that they live. He will punish them as their sins deserve."
     },
     {
       "verse": 3,
-      "text": "Before Jacob was born, he cheated his brother. He did that when they were both inside their mother's body. When Jacob became a man, he fought against God. He did that when they were both inside their mother's body. When Jacob became a man, he fought against God."
+      "text": "Before Jacob was born, he cheated his brother. He did that when they were both inside their mother's body. When Jacob became a man, he fought against God."
     },
     {
       "verse": 4,
-      "text": "He fought against an angel and he won. He wept and he asked God to bless him. There at Bethel, Jacob met with God. God spoke to him there. He wept and he asked God to bless him. There at Bethel, Jacob met with God. God spoke to him there."
+      "text": "He fought against an angel and he won. He wept and he asked God to bless him. There at Bethel, Jacob met with God. God spoke to him there."
     },
     {
       "verse": 5,
-      "text": "This was the Lord God Almighty! We know him as the Lord, his special name. We know him as the Lord, his special name."
+      "text": "This was the Lord God Almighty! We know him as the Lord, his special name."
     },
     {
       "verse": 6,
-      "text": "So now, you must return to your God. You must show faithful love for each other. You must judge people in a fair way. You must be patient. Trust God to come and help you. You must show faithful love for each other. You must judge people in a fair way. You must be patient. Trust God to come and help you."
+      "text": "So now, you must return to your God. You must show faithful love for each other. You must judge people in a fair way. You must be patient. Trust God to come and help you."
     },
     {
       "verse": 7,
-      "text": "Your traders love to cheat people. They use false weights and measures. They use false weights and measures."
+      "text": "Your traders love to cheat people. They use false weights and measures."
     },
     {
       "verse": 8,
-      "text": "Ephraim's people proudly say, ‘We are rich! We have become very rich! In all the ways that we have found riches, nobody can accuse us. We have not really done anything that is a sin! ’ ‘We are rich! We have become very rich! In all the ways that we have found riches, nobody can accuse us. We have not really done anything that is a sin! ’"
+      "text": "Ephraim's people proudly say, ‘We are rich! We have become very rich! In all the ways that we have found riches, nobody can accuse us. We have not really done anything that is a sin! ’"
     },
     {
       "verse": 9,
-      "text": "God says, ‘Remember that I am the Lord your God! I brought you out of Egypt, where you were slaves. Now I will make you live in tents again, as you did before, in the wilderness. ‘Remember that I am the Lord your God! I brought you out of Egypt, where you were slaves. Now I will make you live in tents again, as you did before, in the wilderness."
+      "text": "God says, ‘Remember that I am the Lord your God! I brought you out of Egypt, where you were slaves. Now I will make you live in tents again, as you did before, in the wilderness."
     },
     {
       "verse": 10,
-      "text": "I gave my messages to the prophets. I showed them many visions. I used stories for the prophets to teach the people about me. I showed them many visions. I used stories for the prophets to teach the people about me."
+      "text": "I gave my messages to the prophets. I showed them many visions. I used stories for the prophets to teach the people about me."
     },
     {
       "verse": 11,
-      "text": "The people in Gilead do wicked things. They will become as useless as their idols. At Gilgal, the people offer bulls as sacrifices on their altars. Those altars will be like heaps of stones in a farmer's field. ’ They will become as useless as their idols. At Gilgal, the people offer bulls as sacrifices on their altars. Those altars will be like heaps of stones in a farmer's field. ’"
+      "text": "The people in Gilead do wicked things. They will become as useless as their idols. At Gilgal, the people offer bulls as sacrifices on their altars. Those altars will be like heaps of stones in a farmer's field. ’"
     },
     {
       "verse": 12,
-      "text": "Jacob ran away to the land of Aram. He worked there as a shepherd so that he could get a wife. He worked there as a shepherd so that he could get a wife."
+      "text": "Jacob ran away to the land of Aram. He worked there as a shepherd so that he could get a wife."
     },
     {
       "verse": 13,
-      "text": "The Lord used a prophet to bring the Israelites out of Egypt. He used a prophet to keep them safe in the wilderness. He used a prophet to keep them safe in the wilderness."
+      "text": "The Lord used a prophet to bring the Israelites out of Egypt. He used a prophet to keep them safe in the wilderness."
     },
     {
       "verse": 14,
@@ -714,63 +714,63 @@ module.exports = {
   "13": [
     {
       "verse": 1,
-      "text": "In past times, when the leaders of Israel spoke, the people were afraid. The people respected their leaders. But the people became guilty when they worshipped Baal. Because of that, they died. The people respected their leaders. But the people became guilty when they worshipped Baal. Because of that, they died."
+      "text": "In past times, when the leaders of Israel spoke, the people were afraid. The people respected their leaders. But the people became guilty when they worshipped Baal. Because of that, they died."
     },
     {
       "verse": 2,
-      "text": "Now the Israelites continue to do more and more sins. They use metal to make idols for themselves. They use clever skills to make idols from silver. All their idols are only things that people have made themselves. People offer sacrifices to the image of a calf. They say, ‘Kiss the calf! ’ They use metal to make idols for themselves. They use clever skills to make idols from silver. All their idols are only things that people have made themselves. People offer sacrifices to the image of a calf. They say, ‘Kiss the calf! ’"
+      "text": "Now the Israelites continue to do more and more sins. They use metal to make idols for themselves. They use clever skills to make idols from silver. All their idols are only things that people have made themselves. People offer sacrifices to the image of a calf. They say, ‘Kiss the calf! ’"
     },
     {
       "verse": 3,
-      "text": "So those people will soon disappear! They will quickly disappear like mist or dew in the morning. They will be like chaff that the wind blows away from a threshing floor. They will be like smoke that disappears out of an open window. They will quickly disappear like mist or dew in the morning. They will be like chaff that the wind blows away from a threshing floor. They will be like smoke that disappears out of an open window."
+      "text": "So those people will soon disappear! They will quickly disappear like mist or dew in the morning. They will be like chaff that the wind blows away from a threshing floor. They will be like smoke that disappears out of an open window."
     },
     {
       "verse": 4,
-      "text": "The Lord says, ‘I am the Lord your God. I brought you out from Egypt. You must not serve any other God. No one else can save you except me. ‘I am the Lord your God. I brought you out from Egypt. You must not serve any other God. No one else can save you except me."
+      "text": "The Lord says, ‘I am the Lord your God. I brought you out from Egypt. You must not serve any other God. No one else can save you except me."
     },
     {
       "verse": 5,
-      "text": "I took care of you in the wilderness, where it was very hot and dry. where it was very hot and dry."
+      "text": "I took care of you in the wilderness, where it was very hot and dry."
     },
     {
       "verse": 6,
-      "text": "I gave food to my people, so that they were not hungry. But when they had enough to eat, they became proud. As a result, they forgot about me. But when they had enough to eat, they became proud. As a result, they forgot about me."
+      "text": "I gave food to my people, so that they were not hungry. But when they had enough to eat, they became proud. As a result, they forgot about me."
     },
     {
       "verse": 7,
-      "text": "So I will attack them like a lion. I will be like a leopard that waits beside the road. It is ready to catch anything that goes that way. I will be like a leopard that waits beside the road. It is ready to catch anything that goes that way."
+      "text": "So I will attack them like a lion. I will be like a leopard that waits beside the road. It is ready to catch anything that goes that way."
     },
     {
       "verse": 8,
-      "text": "I will attack them like an angry bear that has lost her children. I will tear them into pieces. I will eat them like a hungry lion. I will attack them and kill them, like a wild animal. I will tear them into pieces. I will eat them like a hungry lion. I will attack them and kill them, like a wild animal."
+      "text": "I will attack them like an angry bear that has lost her children. I will tear them into pieces. I will eat them like a hungry lion. I will attack them and kill them, like a wild animal."
     },
     {
       "verse": 9,
-      "text": "I will destroy you, Israel. There will be nobody to help you. There will be nobody to help you."
+      "text": "I will destroy you, Israel. There will be nobody to help you."
     },
     {
       "verse": 10,
-      "text": "What has happened to your king? He cannot save you! Where are your rulers? You asked me to give you rulers like the other nations have. You said, “Give us a king and rulers. ” He cannot save you! Where are your rulers? You asked me to give you rulers like the other nations have. You said, “Give us a king and rulers. ”"
+      "text": "What has happened to your king? He cannot save you! Where are your rulers? You asked me to give you rulers like the other nations have. You said, “Give us a king and rulers. ”"
     },
     {
       "verse": 11,
-      "text": "I was angry, but I agreed to give you a king. Now I am even more angry and I will take your king away! Now I am even more angry and I will take your king away!"
+      "text": "I was angry, but I agreed to give you a king. Now I am even more angry and I will take your king away!"
     },
     {
       "verse": 12,
-      "text": "I have a record of Ephraim's sin. Ephraim's people will certainly receive their punishment. Ephraim's people will certainly receive their punishment."
+      "text": "I have a record of Ephraim's sin. Ephraim's people will certainly receive their punishment."
     },
     {
       "verse": 13,
-      "text": "They will be in pain like a woman who is giving birth. Her child is foolish. He refuses to be born! Her child is foolish. He refuses to be born!"
+      "text": "They will be in pain like a woman who is giving birth. Her child is foolish. He refuses to be born!"
     },
     {
       "verse": 14,
-      "text": "Will I save these people from the power of death? Will I rescue them from their graves? Death, what diseases can you bring? What can you do to hurt my people? I will not be kind to my people and forgive them. ’ Will I rescue them from their graves? Death, what diseases can you bring? What can you do to hurt my people? I will not be kind to my people and forgive them. ’"
+      "text": "Will I save these people from the power of death? Will I rescue them from their graves? Death, what diseases can you bring? What can you do to hurt my people? I will not be kind to my people and forgive them. ’"
     },
     {
       "verse": 15,
-      "text": "Among the other nations, Israel has been successful. It has been like a plant that grows well. But now the Lord will send trouble. It will be like a strong east wind that comes from the desert. Israel's wells and springs of water will become dry. All the valuable things that Israel has stored will disappear. It has been like a plant that grows well. But now the Lord will send trouble. It will be like a strong east wind that comes from the desert. Israel's wells and springs of water will become dry. All the valuable things that Israel has stored will disappear."
+      "text": "Among the other nations, Israel has been successful. It has been like a plant that grows well. But now the Lord will send trouble. It will be like a strong east wind that comes from the desert. Israel's wells and springs of water will become dry. All the valuable things that Israel has stored will disappear."
     },
     {
       "verse": 16,
@@ -780,11 +780,11 @@ module.exports = {
   "14": [
     {
       "verse": 1,
-      "text": "Israel's people, return to the Lord your God! Your sins have caused you to fall down. Your sins have caused you to fall down."
+      "text": "Israel's people, return to the Lord your God! Your sins have caused you to fall down."
     },
     {
       "verse": 2,
-      "text": "Return to the Lord and pray to him! Say to him, ‘Please forgive all our sins. Be kind to us as we come to you. We will praise you with our mouths, as our sacrifice to you. ‘Please forgive all our sins. Be kind to us as we come to you. We will praise you with our mouths, as our sacrifice to you."
+      "text": "Return to the Lord and pray to him! Say to him, ‘Please forgive all our sins. Be kind to us as we come to you. We will praise you with our mouths, as our sacrifice to you."
     },
     {
       "verse": 3,
@@ -792,23 +792,23 @@ module.exports = {
     },
     {
       "verse": 4,
-      "text": "The Lord says, ‘My people turned away from me, but I will forgive them. I will love them very much. I will not be angry with them any more. ‘My people turned away from me, but I will forgive them. I will love them very much. I will not be angry with them any more."
+      "text": "The Lord says, ‘My people turned away from me, but I will forgive them. I will love them very much. I will not be angry with them any more."
     },
     {
       "verse": 5,
-      "text": "I will bless Israel's people, like rain that falls on dry ground. They will grow like beautiful flowers. They will have strong roots, like the great trees in Lebanon. They will grow like beautiful flowers. They will have strong roots, like the great trees in Lebanon."
+      "text": "I will bless Israel's people, like rain that falls on dry ground. They will grow like beautiful flowers. They will have strong roots, like the great trees in Lebanon."
     },
     {
       "verse": 6,
-      "text": "They will grow like a tree that makes new branches. They will be beautiful like olive trees. They will have a sweet smell, like the forests in Lebanon. They will be beautiful like olive trees. They will have a sweet smell, like the forests in Lebanon."
+      "text": "They will grow like a tree that makes new branches. They will be beautiful like olive trees. They will have a sweet smell, like the forests in Lebanon."
     },
     {
       "verse": 7,
-      "text": "I will give my people shade to live in safely. They will plant crops that give them plenty of food. They will be successful, like a vine that gives many grapes. They will be famous, like the wine from Lebanon. They will plant crops that give them plenty of food. They will be successful, like a vine that gives many grapes. They will be famous, like the wine from Lebanon."
+      "text": "I will give my people shade to live in safely. They will plant crops that give them plenty of food. They will be successful, like a vine that gives many grapes. They will be famous, like the wine from Lebanon."
     },
     {
       "verse": 8,
-      "text": "People of Ephraim, do not let me see your idols any more! I will answer your prayers. I will take care of you. I am like a strong green tree. All the good things that you have come from me. ’ I will answer your prayers. I will take care of you. I am like a strong green tree. All the good things that you have come from me. ’"
+      "text": "People of Ephraim, do not let me see your idols any more! I will answer your prayers. I will take care of you. I am like a strong green tree. All the good things that you have come from me. ’"
     },
     {
       "verse": 9,

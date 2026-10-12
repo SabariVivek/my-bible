@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "I am writing to you, Timothy. I told you the message about Jesus and you believed in him. So you are like my own child. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind."
+      "text": "I am writing to you, Timothy. I told you the message about Jesus and you believed in him. So you are like my own child. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind."
     },
     {
       "verse": 3,

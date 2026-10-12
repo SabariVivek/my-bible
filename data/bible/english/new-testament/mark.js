@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "His voice will shout in the wilderness:“The Lord will come soon, so prepare a way for him. Make the paths straight for him. ” ’ “The Lord will come soon, so prepare a way for him. Make the paths straight for him. ” ’"
+      "text": "His voice will shout in the wilderness:“The Lord will come soon, so prepare a way for him. Make the paths straight for him. ” ’"
     },
     {
       "verse": 4,
@@ -310,7 +310,7 @@ module.exports = {
     },
     {
       "verse": 4,
-      "text": "Then Jesus said to the Pharisees, ‘Is it right for us to do good things on our day of rest? Or should we do bad things? Should we save a person's life? Or should we kill people? ’Nobody said anything. Nobody said anything."
+      "text": "Then Jesus said to the Pharisees, ‘Is it right for us to do good things on our day of rest? Or should we do bad things? Should we save a person's life? Or should we kill people? ’Nobody said anything."
     },
     {
       "verse": 5,
@@ -626,7 +626,7 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "Then Jesus asked the man, ‘What is your name? ’The man replied, ‘My name is Army because there are so many bad spirits in me. ’ The man replied, ‘My name is Army because there are so many bad spirits in me. ’"
+      "text": "Then Jesus asked the man, ‘What is your name? ’The man replied, ‘My name is Army because there are so many bad spirits in me. ’"
     },
     {
       "verse": 10,
@@ -924,7 +924,7 @@ module.exports = {
     },
     {
       "verse": 37,
-      "text": "‘You should give them some food to eat, ’ Jesus replied. But the disciples said, ‘We cannot go to buy bread for all these people. A man must work for eight months to get the 200 coins that we would need for that. We cannot get enough food to give to these people. ’ But the disciples said, ‘We cannot go to buy bread for all these people. A man must work for eight months to get the 200 coins that we would need for that. We cannot get enough food to give to these people. ’"
+      "text": "‘You should give them some food to eat, ’ Jesus replied. But the disciples said, ‘We cannot go to buy bread for all these people. A man must work for eight months to get the 200 coins that we would need for that. We cannot get enough food to give to these people. ’"
     },
     {
       "verse": 38,
@@ -1026,11 +1026,11 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "Jesus said to them, ‘You are hypocrites! What God's prophet Isaiah wrote about you long ago is true: God says, “These people say good things about me, but they do not really want to obey me. God says, “These people say good things about me, but they do not really want to obey me."
+      "text": "Jesus said to them, ‘You are hypocrites! What God's prophet Isaiah wrote about you long ago is true: God says, “These people say good things about me, but they do not really want to obey me."
     },
     {
       "verse": 7,
-      "text": "They say that I am great. But what they say has no purpose. They teach their own rules, which I did not give to them. ” ’ But what they say has no purpose. They teach their own rules, which I did not give to them. ” ’"
+      "text": "They say that I am great. But what they say has no purpose. They teach their own rules, which I did not give to them. ” ’"
     },
     {
       "verse": 8,
@@ -1232,7 +1232,7 @@ module.exports = {
     },
     {
       "verse": 20,
-      "text": "Jesus asked them, ‘I also used seven loaves to feed 4, 000 people. That time, how many baskets did you fill with pieces of food? ’‘There were seven baskets, ’ they replied. ‘There were seven baskets, ’ they replied."
+      "text": "Jesus asked them, ‘I also used seven loaves to feed 4, 000 people. That time, how many baskets did you fill with pieces of food? ’‘There were seven baskets, ’ they replied."
     },
     {
       "verse": 21,
@@ -1268,7 +1268,7 @@ module.exports = {
     },
     {
       "verse": 29,
-      "text": "Jesus asked them, ‘But what do you think? Who do you say that I am? ’Peter answered him, ‘You are the Messiah. ’ Peter answered him, ‘You are the Messiah. ’"
+      "text": "Jesus asked them, ‘But what do you think? Who do you say that I am? ’Peter answered him, ‘You are the Messiah. ’"
     },
     {
       "verse": 30,
@@ -1482,7 +1482,7 @@ module.exports = {
     },
     {
       "verse": 48,
-      "text": "“In hell, the worms do not die, and the fire never goes out. ” and the fire never goes out. ”"
+      "text": "“In hell, the worms do not die, and the fire never goes out. ”"
     },
     {
       "verse": 49,
@@ -1712,7 +1712,7 @@ module.exports = {
     },
     {
       "verse": 51,
-      "text": "Then Jesus said to Bartimaeus, ‘What do you want me to do for you? ’The blind man said to Jesus, ‘Teacher, I want to see again. ’ The blind man said to Jesus, ‘Teacher, I want to see again. ’"
+      "text": "Then Jesus said to Bartimaeus, ‘What do you want me to do for you? ’The blind man said to Jesus, ‘Teacher, I want to see again. ’"
     },
     {
       "verse": 52,
@@ -1754,11 +1754,11 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "Many people went in front of Jesus, and other people followed him. All of them were shouting, ‘We praise God! May the Lord God bless the king who comes with his authority! ‘We praise God! May the Lord God bless the king who comes with his authority!"
+      "text": "Many people went in front of Jesus, and other people followed him. All of them were shouting, ‘We praise God! May the Lord God bless the king who comes with his authority!"
     },
     {
       "verse": 10,
-      "text": "Great will be the kingdom of King David, our ancestor! We praise God above! ’ We praise God above! ’"
+      "text": "Great will be the kingdom of King David, our ancestor! We praise God above! ’"
     },
     {
       "verse": 11,
@@ -1896,7 +1896,7 @@ module.exports = {
     },
     {
       "verse": 11,
-      "text": "The Lord God did this. And we can see that he did something great. ” ’ And we can see that he did something great. ” ’"
+      "text": "The Lord God did this. And we can see that he did something great. ” ’"
     },
     {
       "verse": 12,
@@ -1920,7 +1920,7 @@ module.exports = {
     },
     {
       "verse": 17,
-      "text": "Jesus then said to them, ‘So you should give to Caesar the things that belong to him. And give to God the things that belong to God. ’They were very surprised at his answer. They were very surprised at his answer."
+      "text": "Jesus then said to them, ‘So you should give to Caesar the things that belong to him. And give to God the things that belong to God. ’They were very surprised at his answer."
     },
     {
       "verse": 18,
@@ -2000,7 +2000,7 @@ module.exports = {
     },
     {
       "verse": 37,
-      "text": "In these words, David himself calls the Messiah his Lord. So can you really say that the Messiah is David's son? ’The large crowd liked to listen to the things that Jesus was saying. It made them happy. The large crowd liked to listen to the things that Jesus was saying. It made them happy."
+      "text": "In these words, David himself calls the Messiah his Lord. So can you really say that the Messiah is David's son? ’The large crowd liked to listen to the things that Jesus was saying. It made them happy."
     },
     {
       "verse": 38,
@@ -2288,7 +2288,7 @@ module.exports = {
     },
     {
       "verse": 27,
-      "text": "Then Jesus said to the disciples, ‘All of you will turn away from me. It will happen as the Bible says: God says, “I will kill the shepherd who leads the sheep. Then the sheep will run away in different directions. ” ’ God says, “I will kill the shepherd who leads the sheep. Then the sheep will run away in different directions. ” ’"
+      "text": "Then Jesus said to the disciples, ‘All of you will turn away from me. It will happen as the Bible says: God says, “I will kill the shepherd who leads the sheep. Then the sheep will run away in different directions. ” ’"
     },
     {
       "verse": 28,
@@ -2478,7 +2478,7 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "Pilate asked Jesus, ‘Are you the king of the Jews? ’Jesus replied, ‘You have said it. ’ Jesus replied, ‘You have said it. ’"
+      "text": "Pilate asked Jesus, ‘Are you the king of the Jews? ’Jesus replied, ‘You have said it. ’"
     },
     {
       "verse": 3,
@@ -2526,7 +2526,7 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "‘Why should I kill him? ’ Pilate asked. ‘What bad things has he done? ’But the people shouted even louder, ‘Kill him on a cross! ’ But the people shouted even louder, ‘Kill him on a cross! ’"
+      "text": "‘Why should I kill him? ’ Pilate asked. ‘What bad things has he done? ’But the people shouted even louder, ‘Kill him on a cross! ’"
     },
     {
       "verse": 15,

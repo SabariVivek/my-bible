@@ -470,119 +470,119 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "‘The leaders of Israel led their people out. The people were happy to follow them to the battle. Praise the Lord! The people were happy to follow them to the battle. Praise the Lord!"
+      "text": "‘The leaders of Israel led their people out. The people were happy to follow them to the battle. Praise the Lord!"
     },
     {
       "verse": 3,
-      "text": "Hear this, you kings! Listen, you rulers! I will sing to worship the Lord. Yes, I will praise him with a song. He is the Lord, Israel's God. I will sing to worship the Lord. Yes, I will praise him with a song. He is the Lord, Israel's God."
+      "text": "Hear this, you kings! Listen, you rulers! I will sing to worship the Lord. Yes, I will praise him with a song. He is the Lord, Israel's God."
     },
     {
       "verse": 4,
-      "text": "Lord, you came from Seir mountains. Yes, you marched from the land of Edom. As you came, the earth shook. Rain poured down from the clouds in the sky. Yes, you marched from the land of Edom. As you came, the earth shook. Rain poured down from the clouds in the sky."
+      "text": "Lord, you came from Seir mountains. Yes, you marched from the land of Edom. As you came, the earth shook. Rain poured down from the clouds in the sky."
     },
     {
       "verse": 5,
-      "text": "The mountains shook when you appeared, as they shook at Sinai mountain when you showed your power. You are the Lord, the God of Israel. as they shook at Sinai mountain when you showed your power. You are the Lord, the God of Israel."
+      "text": "The mountains shook when you appeared, as they shook at Sinai mountain when you showed your power. You are the Lord, the God of Israel."
     },
     {
       "verse": 6,
-      "text": "When Anath's son Shamgar ruled the land, nobody travelled on the roads. When Jael ruled, people walked on secret paths, because they were afraid. nobody travelled on the roads. When Jael ruled, people walked on secret paths, because they were afraid."
+      "text": "When Anath's son Shamgar ruled the land, nobody travelled on the roads. When Jael ruled, people walked on secret paths, because they were afraid."
     },
     {
       "verse": 7,
-      "text": "Nobody lived in the small villages. Then I, Deborah, became their leader. I became like a mother for Israel's people, to keep them safe. Then I, Deborah, became their leader. I became like a mother for Israel's people, to keep them safe."
+      "text": "Nobody lived in the small villages. Then I, Deborah, became their leader. I became like a mother for Israel's people, to keep them safe."
     },
     {
       "verse": 8,
-      "text": "When the Israelites chose new gods to worship, enemies attacked their cities. No one in Israel was ready to fight. Not one of their 40, 000 soldiers had a shield or a spear. enemies attacked their cities. No one in Israel was ready to fight. Not one of their 40, 000 soldiers had a shield or a spear."
+      "text": "When the Israelites chose new gods to worship, enemies attacked their cities. No one in Israel was ready to fight. Not one of their 40, 000 soldiers had a shield or a spear."
     },
     {
       "verse": 9,
-      "text": "I thank God for Israel's leaders, and the people who are ready to fight our enemies. Praise the Lord! and the people who are ready to fight our enemies. Praise the Lord!"
+      "text": "I thank God for Israel's leaders, and the people who are ready to fight our enemies. Praise the Lord!"
     },
     {
       "verse": 10,
-      "text": "Listen to me, you rich people who ride on white donkeys, with beautiful cloths to sit on. And you people who walk along the road, you should listen too! with beautiful cloths to sit on. And you people who walk along the road, you should listen too!"
+      "text": "Listen to me, you rich people who ride on white donkeys, with beautiful cloths to sit on. And you people who walk along the road, you should listen too!"
     },
     {
       "verse": 11,
-      "text": "Listen to the voices of the singers near the wells of water. They sing about the great things that the Lord has done. They tell how Israel's soldiers have won against their enemies. Then the Lord's people marched down to the city gates. They sing about the great things that the Lord has done. They tell how Israel's soldiers have won against their enemies. Then the Lord's people marched down to the city gates."
+      "text": "Listen to the voices of the singers near the wells of water. They sing about the great things that the Lord has done. They tell how Israel's soldiers have won against their enemies. Then the Lord's people marched down to the city gates."
     },
     {
       "verse": 12,
-      "text": "“Wake up, Deborah! Wake up and sing a song! Get up, Barak, son of Abinoam! Take your enemies away as your prisoners. ” Get up, Barak, son of Abinoam! Take your enemies away as your prisoners. ”"
+      "text": "“Wake up, Deborah! Wake up and sing a song! Get up, Barak, son of Abinoam! Take your enemies away as your prisoners. ”"
     },
     {
       "verse": 13,
-      "text": "The faithful men who remained returned to their leaders. The Lord's people came to me. They were ready to fight against our enemies. The Lord's people came to me. They were ready to fight against our enemies."
+      "text": "The faithful men who remained returned to their leaders. The Lord's people came to me. They were ready to fight against our enemies."
     },
     {
       "verse": 14,
-      "text": "Some men of Ephraim's tribe came to help, from the land where Amalek lived. They followed men of Benjamin's tribe, with their soldiers. Leaders also came from Makir. Army officers came from Zebulun's tribe. from the land where Amalek lived. They followed men of Benjamin's tribe, with their soldiers. Leaders also came from Makir. Army officers came from Zebulun's tribe."
+      "text": "Some men of Ephraim's tribe came to help, from the land where Amalek lived. They followed men of Benjamin's tribe, with their soldiers. Leaders also came from Makir. Army officers came from Zebulun's tribe."
     },
     {
       "verse": 15,
-      "text": "The leaders of Issachar's tribe were with Deborah. Yes, the men of Issachar joined with Barak. Barak led them into the valley. But the men of Reuben's tribe could not decide what to do. Yes, the men of Issachar joined with Barak. Barak led them into the valley. But the men of Reuben's tribe could not decide what to do."
+      "text": "The leaders of Issachar's tribe were with Deborah. Yes, the men of Issachar joined with Barak. Barak led them into the valley. But the men of Reuben's tribe could not decide what to do."
     },
     {
       "verse": 16,
-      "text": "Instead, they stayed to take care of their sheep. Did they want to listen to the shepherds as they called out to their sheep? The clans of Reuben's tribe could not agree what they should do. Did they want to listen to the shepherds as they called out to their sheep? The clans of Reuben's tribe could not agree what they should do."
+      "text": "Instead, they stayed to take care of their sheep. Did they want to listen to the shepherds as they called out to their sheep? The clans of Reuben's tribe could not agree what they should do."
     },
     {
       "verse": 17,
-      "text": "The men of Gilead stayed at home, on the east side of the Jordan River. The men of Dan's tribe stayed with their ships. The men of Asher's tribe also stayed in their homes near the sea. on the east side of the Jordan River. The men of Dan's tribe stayed with their ships. The men of Asher's tribe also stayed in their homes near the sea."
+      "text": "The men of Gilead stayed at home, on the east side of the Jordan River. The men of Dan's tribe stayed with their ships. The men of Asher's tribe also stayed in their homes near the sea."
     },
     {
       "verse": 18,
-      "text": "But the men of Zebulun's tribe were not afraid to die in war. The men of Naphtali's tribe were also ready to attack the enemy. The men of Naphtali's tribe were also ready to attack the enemy."
+      "text": "But the men of Zebulun's tribe were not afraid to die in war. The men of Naphtali's tribe were also ready to attack the enemy."
     },
     {
       "verse": 19,
-      "text": "Kings of Canaan came and they fought against us. They attacked us at Taanach, near the stream at Megiddo. But they could not take any valuable silver from us. They attacked us at Taanach, near the stream at Megiddo. But they could not take any valuable silver from us."
+      "text": "Kings of Canaan came and they fought against us. They attacked us at Taanach, near the stream at Megiddo. But they could not take any valuable silver from us."
     },
     {
       "verse": 20,
-      "text": "Even the stars fought against Sisera! They travelled across the sky to attack him. They travelled across the sky to attack him."
+      "text": "Even the stars fought against Sisera! They travelled across the sky to attack him."
     },
     {
       "verse": 21,
-      "text": "The Kishon river carried away Sisera's soldiers. It used its power to stop them. So I will be brave and I will continue to fight! It used its power to stop them. So I will be brave and I will continue to fight!"
+      "text": "The Kishon river carried away Sisera's soldiers. It used its power to stop them. So I will be brave and I will continue to fight!"
     },
     {
       "verse": 22,
-      "text": "As for the horses of Sisera's army, their feet made a loud noise as they ran away. their feet made a loud noise as they ran away."
+      "text": "As for the horses of Sisera's army, their feet made a loud noise as they ran away."
     },
     {
       "verse": 23,
-      "text": "The Lord's angel says, “Punish Meroz! Punish the people who live there, because they did not come to help the Lord. They did not agree to fight against the Lord's strong enemy. ” Punish the people who live there, because they did not come to help the Lord. They did not agree to fight against the Lord's strong enemy. ”"
+      "text": "The Lord's angel says, “Punish Meroz! Punish the people who live there, because they did not come to help the Lord. They did not agree to fight against the Lord's strong enemy. ”"
     },
     {
       "verse": 24,
-      "text": "But Jael should receive great honour! Jael, the wife of Heber the Kenite, should receive more honour than all other women who live in tents. Jael, the wife of Heber the Kenite, should receive more honour than all other women who live in tents."
+      "text": "But Jael should receive great honour! Jael, the wife of Heber the Kenite, should receive more honour than all other women who live in tents."
     },
     {
       "verse": 25,
-      "text": "Sisera asked her for water to drink, and she gave him milk. She gave him the best cream in a beautiful bowl. She gave him the best cream in a beautiful bowl."
+      "text": "Sisera asked her for water to drink, and she gave him milk. She gave him the best cream in a beautiful bowl."
     },
     {
       "verse": 26,
-      "text": "She took a tent peg in her left hand. She took a worker's hammer in her right hand. She hit the peg through Sisera's head. She broke his skull. She broke it completely. She knocked the sharp peg through his head. She took a worker's hammer in her right hand. She hit the peg through Sisera's head. She broke his skull. She broke it completely. She knocked the sharp peg through his head."
+      "text": "She took a tent peg in her left hand. She took a worker's hammer in her right hand. She hit the peg through Sisera's head. She broke his skull. She broke it completely. She knocked the sharp peg through his head."
     },
     {
       "verse": 27,
-      "text": "He fell to the floor at her feet. He lay there and he did not move. He died at the place where he fell. Jael had killed him! He lay there and he did not move. He died at the place where he fell. Jael had killed him!"
+      "text": "He fell to the floor at her feet. He lay there and he did not move. He died at the place where he fell. Jael had killed him!"
     },
     {
       "verse": 28,
-      "text": "Sisera's mother looked out from the window of her house. She waited for Sisera to return. She said, “His chariot has taken a long time to come! Why do I not yet hear the sound of his horse's feet? ” She waited for Sisera to return. She said, “His chariot has taken a long time to come! Why do I not yet hear the sound of his horse's feet? ”"
+      "text": "Sisera's mother looked out from the window of her house. She waited for Sisera to return. She said, “His chariot has taken a long time to come! Why do I not yet hear the sound of his horse's feet? ”"
     },
     {
       "verse": 29,
-      "text": "Her wise ladies replied, and she herself thought the same thing: and she herself thought the same thing:"
+      "text": "Her wise ladies replied, and she herself thought the same thing:"
     },
     {
       "verse": 30,
-      "text": "“They are taking valuable things from their enemies. They are sharing the things between them. Each soldier will bring one or two women for himself. Sisera's share will be some beautiful cloth. Yes, he is bringing pieces of valuable cloth, and a beautiful necklace for me! That is why he is so late to return home. ” They are sharing the things between them. Each soldier will bring one or two women for himself. Sisera's share will be some beautiful cloth. Yes, he is bringing pieces of valuable cloth, and a beautiful necklace for me! That is why he is so late to return home. ”"
+      "text": "“They are taking valuable things from their enemies. They are sharing the things between them. Each soldier will bring one or two women for himself. Sisera's share will be some beautiful cloth. Yes, he is bringing pieces of valuable cloth, and a beautiful necklace for me! That is why he is so late to return home. ”"
     },
     {
       "verse": 31,
@@ -1688,7 +1688,7 @@ module.exports = {
     },
     {
       "verse": 16,
-      "text": "Then Samson's wife went to him and she wept. She said to him, ‘It seems that you hate me. You do not really love me. You have asked my friends a clever question, but you have not told me the answer. ’Samson said to her, ‘I have not told the answer even to my father or mother. So why should I tell you? ’ Samson said to her, ‘I have not told the answer even to my father or mother. So why should I tell you? ’"
+      "text": "Then Samson's wife went to him and she wept. She said to him, ‘It seems that you hate me. You do not really love me. You have asked my friends a clever question, but you have not told me the answer. ’Samson said to her, ‘I have not told the answer even to my father or mother. So why should I tell you? ’"
     },
     {
       "verse": 17,
@@ -1750,15 +1750,15 @@ module.exports = {
     },
     {
       "verse": 11,
-      "text": "Then 3, 000 men of Judah went to the cave where Samson was hiding. They said to him, ‘You know that the Philistines are our rulers. You are causing them to give us trouble. ’Samson said, ‘I have only done to them as they did to me. ’ Samson said, ‘I have only done to them as they did to me. ’"
+      "text": "Then 3, 000 men of Judah went to the cave where Samson was hiding. They said to him, ‘You know that the Philistines are our rulers. You are causing them to give us trouble. ’Samson said, ‘I have only done to them as they did to me. ’"
     },
     {
       "verse": 12,
-      "text": "The men of Judah said to him, ‘We have come to tie you up as our prisoner. We must let the Philistines take you away. ’Samson said, ‘Promise me that you will not kill me yourselves. ’ Samson said, ‘Promise me that you will not kill me yourselves. ’"
+      "text": "The men of Judah said to him, ‘We have come to tie you up as our prisoner. We must let the Philistines take you away. ’Samson said, ‘Promise me that you will not kill me yourselves. ’"
     },
     {
       "verse": 13,
-      "text": "They said, ‘We agree. We will only tie you up and give you to them. We promise that we will not kill you. ’So they tied him up with two new ropes. They took him with them away from the cave. So they tied him up with two new ropes. They took him with them away from the cave."
+      "text": "They said, ‘We agree. We will only tie you up and give you to them. We promise that we will not kill you. ’So they tied him up with two new ropes. They took him with them away from the cave."
     },
     {
       "verse": 14,
@@ -1770,7 +1770,7 @@ module.exports = {
     },
     {
       "verse": 16,
-      "text": "Then Samson sang this song:‘I have used a donkey's skull to kill 1, 000 men. I have made them like many heaps of dead donkeys! ’ ‘I have used a donkey's skull to kill 1, 000 men. I have made them like many heaps of dead donkeys! ’"
+      "text": "Then Samson sang this song:‘I have used a donkey's skull to kill 1, 000 men. I have made them like many heaps of dead donkeys! ’"
     },
     {
       "verse": 17,

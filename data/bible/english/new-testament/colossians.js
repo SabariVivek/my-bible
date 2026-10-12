@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "We are writing to you, God's own people who live in Colossae. You are like brothers and sisters to us because you continue to believe in Christ. I pray that God, our Father, will continue to help you. I pray that he will give you peace in your minds. I pray that God, our Father, will continue to help you. I pray that he will give you peace in your minds."
+      "text": "We are writing to you, God's own people who live in Colossae. You are like brothers and sisters to us because you continue to believe in Christ. I pray that God, our Father, will continue to help you. I pray that he will give you peace in your minds."
     },
     {
       "verse": 3,

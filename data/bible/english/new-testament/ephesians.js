@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": 1,
-      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus. I am writing to you, God's own people who live in Ephesus. You are those who continue to believe in Christ Jesus, and so you belong to him. I am writing to you, God's own people who live in Ephesus. You are those who continue to believe in Christ Jesus, and so you belong to him."
+      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus. I am writing to you, God's own people who live in Ephesus. You are those who continue to believe in Christ Jesus, and so you belong to him."
     },
     {
       "verse": 2,

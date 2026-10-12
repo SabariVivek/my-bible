@@ -424,7 +424,7 @@ module.exports = {
     },
     {
       "verse": 11,
-      "text": "This is the letter that they sent to Artaxerxes:‘To King Artaxerxes, from your servants in the land west of the Euphrates river. ‘To King Artaxerxes, from your servants in the land west of the Euphrates river."
+      "text": "This is the letter that they sent to Artaxerxes:‘To King Artaxerxes, from your servants in the land west of the Euphrates river."
     },
     {
       "verse": 12,
@@ -448,7 +448,7 @@ module.exports = {
     },
     {
       "verse": 17,
-      "text": "The king of Persia sent this reply:‘To Rehum, my ruler, Shimshai, his officer, and all their friends in Samaria and in other parts of the region west of the Euphrates river. I thank you for your news. ‘To Rehum, my ruler, Shimshai, his officer, and all their friends in Samaria and in other parts of the region west of the Euphrates river. I thank you for your news."
+      "text": "The king of Persia sent this reply:‘To Rehum, my ruler, Shimshai, his officer, and all their friends in Samaria and in other parts of the region west of the Euphrates river. I thank you for your news."
     },
     {
       "verse": 18,
@@ -596,7 +596,7 @@ module.exports = {
     },
     {
       "verse": 12,
-      "text": "No king or nation should try to change my command. They must never destroy God's temple in Jerusalem. That is the place that he has chosen for people to worship him. I pray that he will remove anyone who tries to attack that place. I, Darius, have made this command. Everyone must obey it completely. ’ I, Darius, have made this command. Everyone must obey it completely. ’"
+      "text": "No king or nation should try to change my command. They must never destroy God's temple in Jerusalem. That is the place that he has chosen for people to worship him. I pray that he will remove anyone who tries to attack that place. I, Darius, have made this command. Everyone must obey it completely. ’"
     },
     {
       "verse": 13,
@@ -686,7 +686,7 @@ module.exports = {
     },
     {
       "verse": 12,
-      "text": "‘From Artaxerxes, king of all kings. To Ezra the priest, who has studied very well the law of the God of heaven. I hope that you are well. To Ezra the priest, who has studied very well the law of the God of heaven. I hope that you are well."
+      "text": "‘From Artaxerxes, king of all kings. To Ezra the priest, who has studied very well the law of the God of heaven. I hope that you are well."
     },
     {
       "verse": 13,

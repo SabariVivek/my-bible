@@ -1700,7 +1700,7 @@ module.exports = {
     },
     {
       "verse": 21,
-      "text": "You must not eat anything that you find dead already. You may give it to a foreign person who lives in any of your towns. He may eat it. You may give it to him or sell it to him. But you yourselves are special people who belong to the Lord your God. You must not cook a young goat in the milk from its mother. You must not cook a young goat in the milk from its mother."
+      "text": "You must not eat anything that you find dead already. You may give it to a foreign person who lives in any of your towns. He may eat it. You may give it to him or sell it to him. But you yourselves are special people who belong to the Lord your God. You must not cook a young goat in the milk from its mother."
     },
     {
       "verse": 22,
@@ -3450,7 +3450,7 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "The Lord said to Moses, ‘You will soon die. Fetch Joshua and come with him to the Tent of Meeting. When you meet with me there, I will give Joshua authority to be the leader of my people. ’So Moses and Joshua went to meet the Lord at his special tent. So Moses and Joshua went to meet the Lord at his special tent."
+      "text": "The Lord said to Moses, ‘You will soon die. Fetch Joshua and come with him to the Tent of Meeting. When you meet with me there, I will give Joshua authority to be the leader of my people. ’So Moses and Joshua went to meet the Lord at his special tent."
     },
     {
       "verse": 15,
@@ -3532,135 +3532,135 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "My teaching will be like the rain that falls. My messages will help the people who hear them, as rain helps new grass to grow. My messages will help the people who hear them, as rain helps new grass to grow."
+      "text": "My teaching will be like the rain that falls. My messages will help the people who hear them, as rain helps new grass to grow."
     },
     {
       "verse": 3,
-      "text": "I will praise the Lord's name. Everyone must know that our God is very great! Everyone must know that our God is very great!"
+      "text": "I will praise the Lord's name. Everyone must know that our God is very great!"
     },
     {
       "verse": 4,
-      "text": "He is the strong Rock where we can be safe. Everything that he does is perfect. He only does what is right and fair. We can trust him to be faithful. Everything that he does is perfect. He only does what is right and fair. We can trust him to be faithful."
+      "text": "He is the strong Rock where we can be safe. Everything that he does is perfect. He only does what is right and fair. We can trust him to be faithful."
     },
     {
       "verse": 5,
-      "text": "But you, his people, have not served him faithfully. Because of your sins, you cannot continue to be his children. You have turned against him. You enjoy doing bad things. Because of your sins, you cannot continue to be his children. You have turned against him. You enjoy doing bad things."
+      "text": "But you, his people, have not served him faithfully. Because of your sins, you cannot continue to be his children. You have turned against him. You enjoy doing bad things."
     },
     {
       "verse": 6,
-      "text": "You are fools who do not understand what is right. You should not do these things against the Lord. He is your Father, the one who created you. He made you become a strong nation. You should not do these things against the Lord. He is your Father, the one who created you. He made you become a strong nation."
+      "text": "You are fools who do not understand what is right. You should not do these things against the Lord. He is your Father, the one who created you. He made you become a strong nation."
     },
     {
       "verse": 7,
-      "text": "Remember what happened a long time ago. Think about the lives of your ancestors. Ask your father or the old men. They will tell you what happened in the past. Think about the lives of your ancestors. Ask your father or the old men. They will tell you what happened in the past."
+      "text": "Remember what happened a long time ago. Think about the lives of your ancestors. Ask your father or the old men. They will tell you what happened in the past."
     },
     {
       "verse": 8,
-      "text": "The Most High God gave land to be the home of each nation. When he made people into separate groups, he decided where their borders should be. He did that to match the number of angels in heaven. When he made people into separate groups, he decided where their borders should be. He did that to match the number of angels in heaven."
+      "text": "The Most High God gave land to be the home of each nation. When he made people into separate groups, he decided where their borders should be. He did that to match the number of angels in heaven."
     },
     {
       "verse": 9,
-      "text": "But the Lord himself takes care of his own people. Jacob's descendants are his special people. Jacob's descendants are his special people."
+      "text": "But the Lord himself takes care of his own people. Jacob's descendants are his special people."
     },
     {
       "verse": 10,
-      "text": "The Lord found them in a desert place. It was a place where strong winds blew and nobody lived. He took care of them and he kept them safe. He protected them, like someone protects their own eyes. It was a place where strong winds blew and nobody lived. He took care of them and he kept them safe. He protected them, like someone protects their own eyes."
+      "text": "The Lord found them in a desert place. It was a place where strong winds blew and nobody lived. He took care of them and he kept them safe. He protected them, like someone protects their own eyes."
     },
     {
       "verse": 11,
-      "text": "The Lord took care of his people, like an eagle takes care of its babies. As an eagle flies with its babies on its back, the Lord helped his people to be safe. like an eagle takes care of its babies. As an eagle flies with its babies on its back, the Lord helped his people to be safe."
+      "text": "The Lord took care of his people, like an eagle takes care of its babies. As an eagle flies with its babies on its back, the Lord helped his people to be safe."
     },
     {
       "verse": 12,
-      "text": "The Lord alone was a guide for his people. He needed no foreign god to help him. He needed no foreign god to help him."
+      "text": "The Lord alone was a guide for his people. He needed no foreign god to help him."
     },
     {
       "verse": 13,
-      "text": "The Lord helped them to travel over the high places in the land. He fed them with food from the fields. He made them strong with honey from the rocks. He gave them olive oil from trees in ground with many stones. He fed them with food from the fields. He made them strong with honey from the rocks. He gave them olive oil from trees in ground with many stones."
+      "text": "The Lord helped them to travel over the high places in the land. He fed them with food from the fields. He made them strong with honey from the rocks. He gave them olive oil from trees in ground with many stones."
     },
     {
       "verse": 14,
-      "text": "Their cows and their goats gave them plenty of milk and butter. Their lambs, sheep and goats became fat, so they ate the best meat. They ate the best bread from their wheat. They drank the best wine from their grapes. Their lambs, sheep and goats became fat, so they ate the best meat. They ate the best bread from their wheat. They drank the best wine from their grapes."
+      "text": "Their cows and their goats gave them plenty of milk and butter. Their lambs, sheep and goats became fat, so they ate the best meat. They ate the best bread from their wheat. They drank the best wine from their grapes."
     },
     {
       "verse": 15,
-      "text": "The Israelites became rich and fat. They turned against God. They were full of good food, but they turned away from God. He was the one who made them. He was the strong Rock who kept them safe. But they no longer respected him. They turned against God. They were full of good food, but they turned away from God. He was the one who made them. He was the strong Rock who kept them safe. But they no longer respected him."
+      "text": "The Israelites became rich and fat. They turned against God. They were full of good food, but they turned away from God. He was the one who made them. He was the strong Rock who kept them safe. But they no longer respected him."
     },
     {
       "verse": 16,
-      "text": "They worshipped foreign gods. So the Lord became angry and jealous. They made idols which he hated. So the Lord became angry and jealous. They made idols which he hated."
+      "text": "They worshipped foreign gods. So the Lord became angry and jealous. They made idols which he hated."
     },
     {
       "verse": 17,
-      "text": "They offered sacrifices to demons, instead of to God. They worshipped new gods which they had not known before. Your ancestors had never respected those gods. They worshipped new gods which they had not known before. Your ancestors had never respected those gods."
+      "text": "They offered sacrifices to demons, instead of to God. They worshipped new gods which they had not known before. Your ancestors had never respected those gods."
     },
     {
       "verse": 18,
-      "text": "You forgot about your strong Rock, the God who gave you life. the God who gave you life."
+      "text": "You forgot about your strong Rock, the God who gave you life."
     },
     {
       "verse": 19,
-      "text": "When the Lord saw this, he turned away from them. His sons and daughters had made him angry. His sons and daughters had made him angry."
+      "text": "When the Lord saw this, he turned away from them. His sons and daughters had made him angry."
     },
     {
       "verse": 20,
-      "text": "He said, ‘I will not continue to help them. I will see what happens to them when I leave them alone. They are children who do not obey me. They have not served me faithfully. I will see what happens to them when I leave them alone. They are children who do not obey me. They have not served me faithfully."
+      "text": "He said, ‘I will not continue to help them. I will see what happens to them when I leave them alone. They are children who do not obey me. They have not served me faithfully."
     },
     {
       "verse": 21,
-      "text": "They have made me jealous as they serve false gods. They have made me angry as they worship useless idols. So I will make them jealous as I help a useless nation. I will make them angry as I bless a foolish nation. They have made me angry as they worship useless idols. So I will make them jealous as I help a useless nation. I will make them angry as I bless a foolish nation."
+      "text": "They have made me jealous as they serve false gods. They have made me angry as they worship useless idols. So I will make them jealous as I help a useless nation. I will make them angry as I bless a foolish nation."
     },
     {
       "verse": 22,
-      "text": "I will become so angry that I punish them very much. I will destroy them like a hot fire. It will be like a fire that reaches deep down into the place of dead people. It will destroy the ground and everything that grows on it. It will burn deep down to the foundations of the mountains. I will destroy them like a hot fire. It will be like a fire that reaches deep down into the place of dead people. It will destroy the ground and everything that grows on it. It will burn deep down to the foundations of the mountains."
+      "text": "I will become so angry that I punish them very much. I will destroy them like a hot fire. It will be like a fire that reaches deep down into the place of dead people. It will destroy the ground and everything that grows on it. It will burn deep down to the foundations of the mountains."
     },
     {
       "verse": 23,
-      "text": "I will cause them to have many kinds of trouble. I will attack them like a soldier who shoots all his arrows. I will attack them like a soldier who shoots all his arrows."
+      "text": "I will cause them to have many kinds of trouble. I will attack them like a soldier who shoots all his arrows."
     },
     {
       "verse": 24,
-      "text": "They will become weak and hungry. They will have bad diseases that give them much pain. I will cause wild animals to attack them. Snakes will bite them and they will die. They will have bad diseases that give them much pain. I will cause wild animals to attack them. Snakes will bite them and they will die."
+      "text": "They will become weak and hungry. They will have bad diseases that give them much pain. I will cause wild animals to attack them. Snakes will bite them and they will die."
     },
     {
       "verse": 25,
-      "text": "If they go out of their homes, their enemies will kill them. If they stay at home, they will die from fear. Young men and young women will die. Babies and old men will also die. If they stay at home, they will die from fear. Young men and young women will die. Babies and old men will also die."
+      "text": "If they go out of their homes, their enemies will kill them. If they stay at home, they will die from fear. Young men and young women will die. Babies and old men will also die."
     },
     {
       "verse": 26,
-      "text": "I wanted to remove my people completely, so that nobody would ever remember them. so that nobody would ever remember them."
+      "text": "I wanted to remove my people completely, so that nobody would ever remember them."
     },
     {
       "verse": 27,
-      "text": "But then their enemies would boast. They would not understand. They would say, “We have destroyed these people with our own strength! The Lord has not done this! ” ’ They would not understand. They would say, “We have destroyed these people with our own strength! The Lord has not done this! ” ’"
+      "text": "But then their enemies would boast. They would not understand. They would say, “We have destroyed these people with our own strength! The Lord has not done this! ” ’"
     },
     {
       "verse": 28,
-      "text": "Israel is a nation without wisdom. They do not understand what will happen to them. They do not understand what will happen to them."
+      "text": "Israel is a nation without wisdom. They do not understand what will happen to them."
     },
     {
       "verse": 29,
-      "text": "If they were wise, they would understand. They would know what would happen to them in the end. They would know what would happen to them in the end."
+      "text": "If they were wise, they would understand. They would know what would happen to them in the end."
     },
     {
       "verse": 30,
-      "text": "One man can chase away 1, 000 of my people! Two men can chase away 10, 000 of them! How can that happen? God, their strong Rock, has left them. The Lord has given their enemies power over them. Two men can chase away 10, 000 of them! How can that happen? God, their strong Rock, has left them. The Lord has given their enemies power over them."
+      "text": "One man can chase away 1, 000 of my people! Two men can chase away 10, 000 of them! How can that happen? God, their strong Rock, has left them. The Lord has given their enemies power over them."
     },
     {
       "verse": 31,
-      "text": "The gods of our enemies are not strong like our Rock. Even our enemies know that their own gods are weak. Even our enemies know that their own gods are weak."
+      "text": "The gods of our enemies are not strong like our Rock. Even our enemies know that their own gods are weak."
     },
     {
       "verse": 32,
-      "text": "Our enemies are like grapes full of poison. They are like grapes that have grown in the fields of Sodom and Gomorrah. They are like grapes that have grown in the fields of Sodom and Gomorrah."
+      "text": "Our enemies are like grapes full of poison. They are like grapes that have grown in the fields of Sodom and Gomorrah."
     },
     {
       "verse": 33,
-      "text": "The wine from their grapes kills people, like dangerous poison from snakes. like dangerous poison from snakes."
+      "text": "The wine from their grapes kills people, like dangerous poison from snakes."
     },
     {
       "verse": 34,
-      "text": "The Lord says, ‘I will not forget to punish Israel's enemies. I have already decided what I will do, and I will do it! I have already decided what I will do, and I will do it!"
+      "text": "The Lord says, ‘I will not forget to punish Israel's enemies. I have already decided what I will do, and I will do it!"
     },
     {
       "verse": 35,
@@ -3668,35 +3668,35 @@ module.exports = {
     },
     {
       "verse": 36,
-      "text": "At that time, the Lord will bring justice for his people. He will forgive his servants. He will rescue them when he sees that they are weak, and very few of them remain, as slaves or free people. He will forgive his servants. He will rescue them when he sees that they are weak, and very few of them remain, as slaves or free people."
+      "text": "At that time, the Lord will bring justice for his people. He will forgive his servants. He will rescue them when he sees that they are weak, and very few of them remain, as slaves or free people."
     },
     {
       "verse": 37,
-      "text": "Then the Lord will ask his people, ‘Why could your gods not help you? Those were the gods that you thought would keep you safe. ‘Why could your gods not help you? Those were the gods that you thought would keep you safe."
+      "text": "Then the Lord will ask his people, ‘Why could your gods not help you? Those were the gods that you thought would keep you safe."
     },
     {
       "verse": 38,
-      "text": "You fed them with the best part of your sacrifices. You let them drink the wine from your offerings. So they should be there to help you! They should keep you safe! You let them drink the wine from your offerings. So they should be there to help you! They should keep you safe!"
+      "text": "You fed them with the best part of your sacrifices. You let them drink the wine from your offerings. So they should be there to help you! They should keep you safe!"
     },
     {
       "verse": 39,
-      "text": "Realize the truth! I alone am God. There is no other god as well as me. I can kill and I can give life. I can hurt people and I can make them well again. Nobody can stop me doing what I choose to do. There is no other god as well as me. I can kill and I can give life. I can hurt people and I can make them well again. Nobody can stop me doing what I choose to do."
+      "text": "Realize the truth! I alone am God. There is no other god as well as me. I can kill and I can give life. I can hurt people and I can make them well again. Nobody can stop me doing what I choose to do."
     },
     {
       "verse": 40,
-      "text": "I lift up my hand to heaven and I make this strong promise:“I promise you this, as surely as I live for ever: “I promise you this, as surely as I live for ever:"
+      "text": "I lift up my hand to heaven and I make this strong promise:“I promise you this, as surely as I live for ever:"
     },
     {
       "verse": 41,
-      "text": "I will make my sword very sharp. It will move like lightning as I hold it in my hand. I will punish my enemies as they deserve. I will pay back everyone who hates me. It will move like lightning as I hold it in my hand. I will punish my enemies as they deserve. I will pay back everyone who hates me."
+      "text": "I will make my sword very sharp. It will move like lightning as I hold it in my hand. I will punish my enemies as they deserve. I will pay back everyone who hates me."
     },
     {
       "verse": 42,
-      "text": "My arrows will have blood all over them. My sword will cut into the bodies of my enemies. Everyone that I take hold of will die. I will cut off the heads of their leaders. ” ’ My sword will cut into the bodies of my enemies. Everyone that I take hold of will die. I will cut off the heads of their leaders. ” ’"
+      "text": "My arrows will have blood all over them. My sword will cut into the bodies of my enemies. Everyone that I take hold of will die. I will cut off the heads of their leaders. ” ’"
     },
     {
       "verse": 43,
-      "text": "So you people of other nations, join with God's people to praise him! He will punish those who have killed his servants. He will punish all his enemies. But he will forgive the sins of his people, and he will make their land clean again. join with God's people to praise him! He will punish those who have killed his servants. He will punish all his enemies. But he will forgive the sins of his people, and he will make their land clean again."
+      "text": "So you people of other nations, join with God's people to praise him! He will punish those who have killed his servants. He will punish all his enemies. But he will forgive the sins of his people, and he will make their land clean again."
     },
     {
       "verse": 44,
@@ -3746,107 +3746,107 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "Yes, the Lord loves his people. He takes care of all his holy people. They sit near to him and they listen to his teaching. He takes care of all his holy people. They sit near to him and they listen to his teaching."
+      "text": "Yes, the Lord loves his people. He takes care of all his holy people. They sit near to him and they listen to his teaching."
     },
     {
       "verse": 4,
-      "text": "Moses gave us the Lord's teaching. It is very valuable to us, the descendants of Jacob. It is very valuable to us, the descendants of Jacob."
+      "text": "Moses gave us the Lord's teaching. It is very valuable to us, the descendants of Jacob."
     },
     {
       "verse": 5,
-      "text": "When the leaders of the people and all the tribes met together, the Lord became king of Israel. the Lord became king of Israel."
+      "text": "When the leaders of the people and all the tribes met together, the Lord became king of Israel."
     },
     {
       "verse": 6,
-      "text": "I pray this for the tribe of Reuben: May they continue to live and have many descendants. May they continue to live and have many descendants."
+      "text": "I pray this for the tribe of Reuben: May they continue to live and have many descendants."
     },
     {
       "verse": 7,
-      "text": "I pray this for the tribe of Judah: Lord, please listen to their prayers for help. May they join again with the other tribes. Please make them strong, so that they can fight against their enemies. Lord, please listen to their prayers for help. May they join again with the other tribes. Please make them strong, so that they can fight against their enemies."
+      "text": "I pray this for the tribe of Judah: Lord, please listen to their prayers for help. May they join again with the other tribes. Please make them strong, so that they can fight against their enemies."
     },
     {
       "verse": 8,
-      "text": "I pray this for the tribe of Levi: Lord, your Urim and Thummim belong to your faithful servants, the Levites. You tested them at Massah. You argued with them at the springs of water at Meribah. Lord, your Urim and Thummim belong to your faithful servants, the Levites. You tested them at Massah. You argued with them at the springs of water at Meribah."
+      "text": "I pray this for the tribe of Levi: Lord, your Urim and Thummim belong to your faithful servants, the Levites. You tested them at Massah. You argued with them at the springs of water at Meribah."
     },
     {
       "verse": 9,
-      "text": "The Levites left their own familiesso that they could serve you well. They obeyed your word. They were faithful to your covenant. so that they could serve you well. They obeyed your word. They were faithful to your covenant."
+      "text": "The Levites left their own familiesso that they could serve you well. They obeyed your word. They were faithful to your covenant."
     },
     {
       "verse": 10,
-      "text": "They teach your rules and your laws to Jacob's descendants, the Israelites. They offer incense to you, as a sweet smell. They burn offerings on your altar. They offer incense to you, as a sweet smell. They burn offerings on your altar."
+      "text": "They teach your rules and your laws to Jacob's descendants, the Israelites. They offer incense to you, as a sweet smell. They burn offerings on your altar."
     },
     {
       "verse": 11,
-      "text": "Lord, please bless their work. May everything that they do give you pleasure. Knock down anyone who attacks them. Destroy all their enemies completely. May everything that they do give you pleasure. Knock down anyone who attacks them. Destroy all their enemies completely."
+      "text": "Lord, please bless their work. May everything that they do give you pleasure. Knock down anyone who attacks them. Destroy all their enemies completely."
     },
     {
       "verse": 12,
-      "text": "I pray this for the tribe of Benjamin: The Lord loves the tribe of Benjamin. They will live with him and they will be safe. The Lord protects them all the time. He keeps them near to him. The Lord loves the tribe of Benjamin. They will live with him and they will be safe. The Lord protects them all the time. He keeps them near to him."
+      "text": "I pray this for the tribe of Benjamin: The Lord loves the tribe of Benjamin. They will live with him and they will be safe. The Lord protects them all the time. He keeps them near to him."
     },
     {
       "verse": 13,
-      "text": "I pray this for the tribe of Joseph: Lord, please bless their land. Send rain from the sky above, and springs of water from under the ground. Lord, please bless their land. Send rain from the sky above, and springs of water from under the ground."
+      "text": "I pray this for the tribe of Joseph: Lord, please bless their land. Send rain from the sky above, and springs of water from under the ground."
     },
     {
       "verse": 14,
-      "text": "May the sun give them a good harvest of food, with the best crops every month. with the best crops every month."
+      "text": "May the sun give them a good harvest of food, with the best crops every month."
     },
     {
       "verse": 15,
-      "text": "May they have a harvest of good fruitsfrom the mountains and hills that have been there since long ago. from the mountains and hills that have been there since long ago."
+      "text": "May they have a harvest of good fruitsfrom the mountains and hills that have been there since long ago."
     },
     {
       "verse": 16,
-      "text": "Please fill their land with many good things. Lord who appeared in the burning bush, please be kind to them. Please bless Joseph's descendants. He became a leader, separate from his brothers. May this blessing be like a crown on his head! Lord who appeared in the burning bush, please be kind to them. Please bless Joseph's descendants. He became a leader, separate from his brothers. May this blessing be like a crown on his head!"
+      "text": "Please fill their land with many good things. Lord who appeared in the burning bush, please be kind to them. Please bless Joseph's descendants. He became a leader, separate from his brothers. May this blessing be like a crown on his head!"
     },
     {
       "verse": 17,
-      "text": "Joseph is as strong as a bull. He has horns like a wild ox. Those two horns are the armies of Ephraim and Manasseh! With them, he attacks other nations. He chases them to the edges of the world. He has horns like a wild ox. Those two horns are the armies of Ephraim and Manasseh! With them, he attacks other nations. He chases them to the edges of the world."
+      "text": "Joseph is as strong as a bull. He has horns like a wild ox. Those two horns are the armies of Ephraim and Manasseh! With them, he attacks other nations. He chases them to the edges of the world."
     },
     {
       "verse": 18,
-      "text": "I pray this for the tribes of Zebulun and Issachar: Be happy, Zebulun's people, as you travel far from home. Be happy, Issachar's people, as you live in your homes. Be happy, Zebulun's people, as you travel far from home. Be happy, Issachar's people, as you live in your homes."
+      "text": "I pray this for the tribes of Zebulun and Issachar: Be happy, Zebulun's people, as you travel far from home. Be happy, Issachar's people, as you live in your homes."
     },
     {
       "verse": 19,
-      "text": "They will call other people to come to their mountain. They will offer the right sacrifices there. They will become rich from their work on the seas, and from things that are hidden in the sand on the shore. They will offer the right sacrifices there. They will become rich from their work on the seas, and from things that are hidden in the sand on the shore."
+      "text": "They will call other people to come to their mountain. They will offer the right sacrifices there. They will become rich from their work on the seas, and from things that are hidden in the sand on the shore."
     },
     {
       "verse": 20,
-      "text": "I pray this for the tribe of Gad: Praise the Lord, who will give more land to Gad's people! Gad lives there like a hungry lion. He will tear off the arm or the head of his enemies. Praise the Lord, who will give more land to Gad's people! Gad lives there like a hungry lion. He will tear off the arm or the head of his enemies."
+      "text": "I pray this for the tribe of Gad: Praise the Lord, who will give more land to Gad's people! Gad lives there like a hungry lion. He will tear off the arm or the head of his enemies."
     },
     {
       "verse": 21,
-      "text": "He has chosen the best part of the land for himself. When Israel's leaders met together, Gad's tribe received the land that a leader deserves. Gad's people obeyed the Lord's good laws. They obeyed the Lord's commands for Israel. When Israel's leaders met together, Gad's tribe received the land that a leader deserves. Gad's people obeyed the Lord's good laws. They obeyed the Lord's commands for Israel."
+      "text": "He has chosen the best part of the land for himself. When Israel's leaders met together, Gad's tribe received the land that a leader deserves. Gad's people obeyed the Lord's good laws. They obeyed the Lord's commands for Israel."
     },
     {
       "verse": 22,
-      "text": "I pray this for the tribe of Dan: Dan's tribe is like a young lion. They jump out from Bashan to attack their enemies. Dan's tribe is like a young lion. They jump out from Bashan to attack their enemies."
+      "text": "I pray this for the tribe of Dan: Dan's tribe is like a young lion. They jump out from Bashan to attack their enemies."
     },
     {
       "verse": 23,
-      "text": "I pray this for the tribe of Naphtali: The Lord has blessed Naphtali's tribe very much. He has been very kind to them. Land in the west and in the south will belong to them. The Lord has blessed Naphtali's tribe very much. He has been very kind to them. Land in the west and in the south will belong to them."
+      "text": "I pray this for the tribe of Naphtali: The Lord has blessed Naphtali's tribe very much. He has been very kind to them. Land in the west and in the south will belong to them."
     },
     {
       "verse": 24,
-      "text": "I pray this for the tribe of Asher: May the Lord bless Asher's tribe more than the other tribes. May their brothers be pleased with them. May Asher's people be rich enough to wash their feet in olive oil. May the Lord bless Asher's tribe more than the other tribes. May their brothers be pleased with them. May Asher's people be rich enough to wash their feet in olive oil."
+      "text": "I pray this for the tribe of Asher: May the Lord bless Asher's tribe more than the other tribes. May their brothers be pleased with them. May Asher's people be rich enough to wash their feet in olive oil."
     },
     {
       "verse": 25,
-      "text": "They will use iron and bronze to make the gates of their towns strong. May they be strong for as long as they live. May they be strong for as long as they live."
+      "text": "They will use iron and bronze to make the gates of their towns strong. May they be strong for as long as they live."
     },
     {
       "verse": 26,
-      "text": "Israelites, there is no god like your God. He rides across the sky to help you. He travels with great authority on the clouds. He rides across the sky to help you. He travels with great authority on the clouds."
+      "text": "Israelites, there is no god like your God. He rides across the sky to help you. He travels with great authority on the clouds."
     },
     {
       "verse": 27,
-      "text": "He is the God who lives for ever. He is the safe place where you can hide. His strong arms are always there, to hold you safely. He will chase away your enemies as you attack them. He says to you, “Destroy them! ” He is the safe place where you can hide. His strong arms are always there, to hold you safely. He will chase away your enemies as you attack them. He says to you, “Destroy them! ”"
+      "text": "He is the God who lives for ever. He is the safe place where you can hide. His strong arms are always there, to hold you safely. He will chase away your enemies as you attack them. He says to you, “Destroy them! ”"
     },
     {
       "verse": 28,
-      "text": "So Israel's people can now live safely. Jacob's descendants have a safe place to live. They have a land that will give them grain and wine. Rain falls from the sky to make the ground wet. Jacob's descendants have a safe place to live. They have a land that will give them grain and wine. Rain falls from the sky to make the ground wet."
+      "text": "So Israel's people can now live safely. Jacob's descendants have a safe place to live. They have a land that will give them grain and wine. Rain falls from the sky to make the ground wet."
     },
     {
       "verse": 29,

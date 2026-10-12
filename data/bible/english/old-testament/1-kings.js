@@ -494,7 +494,7 @@ module.exports = {
     },
     {
       "verse": 26,
-      "text": "Then the mother of the child who was alive spoke to the king. She loved her son very much. So she said to the king, ‘My lord, please do not kill the baby! Instead, give him to the other woman. ’But the other woman said, ‘Neither of us should have him. Cut him in two pieces! ’ But the other woman said, ‘Neither of us should have him. Cut him in two pieces! ’"
+      "text": "Then the mother of the child who was alive spoke to the king. She loved her son very much. So she said to the king, ‘My lord, please do not kill the baby! Instead, give him to the other woman. ’But the other woman said, ‘Neither of us should have him. Cut him in two pieces! ’"
     },
     {
       "verse": 27,
@@ -1038,7 +1038,7 @@ module.exports = {
     },
     {
       "verse": 40,
-      "text": "Hiram also made dishes to carry ashes, small tools and bowls. So Hiram finished all the work in the Lord's temple that King Solomon had asked him to do. He made these things: So Hiram finished all the work in the Lord's temple that King Solomon had asked him to do. He made these things:"
+      "text": "Hiram also made dishes to carry ashes, small tools and bowls. So Hiram finished all the work in the Lord's temple that King Solomon had asked him to do. He made these things:"
     },
     {
       "verse": 41,
@@ -1336,7 +1336,7 @@ module.exports = {
     },
     {
       "verse": 63,
-      "text": "These are the friendship offerings that Solomon offered to the Lord:22, 000 cows. 120, 000 sheep and goats. In this way, King Solomon and all the Israelite people offered the temple as a gift to the Lord. In this way, King Solomon and all the Israelite people offered the temple as a gift to the Lord."
+      "text": "These are the friendship offerings that Solomon offered to the Lord:22, 000 cows. 120, 000 sheep and goats. In this way, King Solomon and all the Israelite people offered the temple as a gift to the Lord."
     },
     {
       "verse": 64,

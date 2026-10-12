@@ -10,11 +10,11 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "David asked him, ‘Where have you come from? ’The man replied, ‘I have run from the Israelite army's camp. ’ The man replied, ‘I have run from the Israelite army's camp. ’"
+      "text": "David asked him, ‘Where have you come from? ’The man replied, ‘I have run from the Israelite army's camp. ’"
     },
     {
       "verse": 4,
-      "text": "David said, ‘Tell me what happened in the battle. ’The man replied, ‘The Israelites ran away and the enemy killed many of them. Even Saul and his son Jonathan are dead. ’ The man replied, ‘The Israelites ran away and the enemy killed many of them. Even Saul and his son Jonathan are dead. ’"
+      "text": "David said, ‘Tell me what happened in the battle. ’The man replied, ‘The Israelites ran away and the enemy killed many of them. Even Saul and his son Jonathan are dead. ’"
     },
     {
       "verse": 5,
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "He asked me, “Who are you? ”I said to him, “I am an Amalekite. ” I said to him, “I am an Amalekite. ”"
+      "text": "He asked me, “Who are you? ”I said to him, “I am an Amalekite. ”"
     },
     {
       "verse": 9,
@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       "verse": 13,
-      "text": "David asked the young man who had brought the report to him, ‘Where are you from? ’The man replied, ‘I am an Amalekite, the son of a foreign man who lives in Israel. ’ The man replied, ‘I am an Amalekite, the son of a foreign man who lives in Israel. ’"
+      "text": "David asked the young man who had brought the report to him, ‘Where are you from? ’The man replied, ‘I am an Amalekite, the son of a foreign man who lives in Israel. ’"
     },
     {
       "verse": 14,
@@ -74,19 +74,19 @@ module.exports = {
     },
     {
       "verse": 19,
-      "text": "‘The greatest men of Israel now lie on the mountains. They are dead! Those brave men have fallen to the ground! Those brave men have fallen to the ground!"
+      "text": "‘The greatest men of Israel now lie on the mountains. They are dead! Those brave men have fallen to the ground!"
     },
     {
       "verse": 20,
-      "text": "Do not tell the people in Gath about it. Do not tell the news in the streets of Ashkelon. If you do, the daughters of the Philistines will sing with joy. Yes, those foreign people who do not worship God will be happy. Do not tell the news in the streets of Ashkelon. If you do, the daughters of the Philistines will sing with joy. Yes, those foreign people who do not worship God will be happy."
+      "text": "Do not tell the people in Gath about it. Do not tell the news in the streets of Ashkelon. If you do, the daughters of the Philistines will sing with joy. Yes, those foreign people who do not worship God will be happy."
     },
     {
       "verse": 21,
-      "text": "You mountains of Gilboa, I hope that no rain or dew will come on you now. I pray that no crops will grow in your fields to make grain offerings. In those fields, the shields of brave soldiers became useless. No longer will anyone clean Saul's shield with oil. I pray that no crops will grow in your fields to make grain offerings. In those fields, the shields of brave soldiers became useless. No longer will anyone clean Saul's shield with oil."
+      "text": "You mountains of Gilboa, I hope that no rain or dew will come on you now. I pray that no crops will grow in your fields to make grain offerings. In those fields, the shields of brave soldiers became useless. No longer will anyone clean Saul's shield with oil."
     },
     {
       "verse": 22,
-      "text": "When Jonathan shot arrows from his bow, his enemies fell to the ground, dead. He would never turn away from them. Saul's sword also cut down his enemies. He always finished the job. his enemies fell to the ground, dead. He would never turn away from them. Saul's sword also cut down his enemies. He always finished the job."
+      "text": "When Jonathan shot arrows from his bow, his enemies fell to the ground, dead. He would never turn away from them. Saul's sword also cut down his enemies. He always finished the job."
     },
     {
       "verse": 23,
@@ -94,15 +94,15 @@ module.exports = {
     },
     {
       "verse": 24,
-      "text": "You women of Israel, weep for Saul. He gave you beautiful clothes to wear. He gave you gold and jewels to fix on your clothes. He gave you beautiful clothes to wear. He gave you gold and jewels to fix on your clothes."
+      "text": "You women of Israel, weep for Saul. He gave you beautiful clothes to wear. He gave you gold and jewels to fix on your clothes."
     },
     {
       "verse": 25,
-      "text": "Brave soldiers have died as they fought a great battle! Jonathan's dead body lies on Gilboa's hills. Jonathan's dead body lies on Gilboa's hills."
+      "text": "Brave soldiers have died as they fought a great battle! Jonathan's dead body lies on Gilboa's hills."
     },
     {
       "verse": 26,
-      "text": "My brother, Jonathan! I am very sad about your death. You were my good friend. Your love for me was very special. It was better than the love of women. You were my good friend. Your love for me was very special. It was better than the love of women."
+      "text": "My brother, Jonathan! I am very sad about your death. You were my good friend. Your love for me was very special. It was better than the love of women."
     },
     {
       "verse": 27,
@@ -370,7 +370,7 @@ module.exports = {
     },
     {
       "verse": 33,
-      "text": "The king sang this song about Abner's death:‘Abner, you should not have died like a fool. ‘Abner, you should not have died like a fool."
+      "text": "The king sang this song about Abner's death:‘Abner, you should not have died like a fool."
     },
     {
       "verse": 34,
@@ -470,7 +470,7 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "King David and his soldiers marched to Jerusalem. They went to attack the Jebusites who lived there. The Jebusites said to David, ‘You will never get into our city. Even blind men and those who are lame could keep you out. ’They thought, ‘David will never get in here. ’ They thought, ‘David will never get in here. ’"
+      "text": "King David and his soldiers marched to Jerusalem. They went to attack the Jebusites who lived there. The Jebusites said to David, ‘You will never get into our city. Even blind men and those who are lame could keep you out. ’They thought, ‘David will never get in here. ’"
     },
     {
       "verse": 7,
@@ -478,7 +478,7 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "On that day, David said to his men, ‘We must attack my enemies, the Jebusites. To do that, we must go into the city through the water tunnel. Then we will see if their blind and lame people can stop us! I hate them all. ’That is why people still say, ‘Anybody who is blind or lame must not go into the palace. ’ That is why people still say, ‘Anybody who is blind or lame must not go into the palace. ’"
+      "text": "On that day, David said to his men, ‘We must attack my enemies, the Jebusites. To do that, we must go into the city through the water tunnel. Then we will see if their blind and lame people can stop us! I hate them all. ’That is why people still say, ‘Anybody who is blind or lame must not go into the palace. ’"
     },
     {
       "verse": 9,
@@ -842,15 +842,15 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "Saul's family had a servant called Ziba. So they asked him to come to see David. The king said to him, ‘Are you Ziba? ’Ziba replied, ‘Yes, I am your servant. ’ Ziba replied, ‘Yes, I am your servant. ’"
+      "text": "Saul's family had a servant called Ziba. So they asked him to come to see David. The king said to him, ‘Are you Ziba? ’Ziba replied, ‘Yes, I am your servant. ’"
     },
     {
       "verse": 3,
-      "text": "The king asked him, ‘Is there anyone from Saul's family who is still alive? I want to be kind to them because of God's faithful love for his people. ’Ziba replied, ‘One of Jonathan's sons still lives. But both his feet are weak so that he cannot walk properly. ’ Ziba replied, ‘One of Jonathan's sons still lives. But both his feet are weak so that he cannot walk properly. ’"
+      "text": "The king asked him, ‘Is there anyone from Saul's family who is still alive? I want to be kind to them because of God's faithful love for his people. ’Ziba replied, ‘One of Jonathan's sons still lives. But both his feet are weak so that he cannot walk properly. ’"
     },
     {
       "verse": 4,
-      "text": "The king asked Ziba, ‘Where is he? ’Ziba answered, ‘He lives in the house of Ammiel's son, Makir, in Lo-Debar. ’ Ziba answered, ‘He lives in the house of Ammiel's son, Makir, in Lo-Debar. ’"
+      "text": "The king asked Ziba, ‘Where is he? ’Ziba answered, ‘He lives in the house of Ammiel's son, Makir, in Lo-Debar. ’"
     },
     {
       "verse": 5,
@@ -1152,7 +1152,7 @@ module.exports = {
     },
     {
       "verse": 19,
-      "text": "But David saw that his officers were speaking secretly to each other. So he realized that the child had died. He asked them, ‘Is the child dead? ’They replied, ‘Yes, he is dead. ’ They replied, ‘Yes, he is dead. ’"
+      "text": "But David saw that his officers were speaking secretly to each other. So he realized that the child had died. He asked them, ‘Is the child dead? ’They replied, ‘Yes, he is dead. ’"
     },
     {
       "verse": 20,
@@ -1282,7 +1282,7 @@ module.exports = {
     },
     {
       "verse": 20,
-      "text": "When her brother Absalom saw her, he said, ‘Has your brother Amnon done this to you? Now be quiet. Remember that he is your brother. So do not be too upset. ’After that, Tamar lived in her brother Absalom's house. She was sad and lonely. After that, Tamar lived in her brother Absalom's house. She was sad and lonely."
+      "text": "When her brother Absalom saw her, he said, ‘Has your brother Amnon done this to you? Now be quiet. Remember that he is your brother. So do not be too upset. ’After that, Tamar lived in her brother Absalom's house. She was sad and lonely."
     },
     {
       "verse": 21,
@@ -1302,7 +1302,7 @@ module.exports = {
     },
     {
       "verse": 25,
-      "text": "King David replied to Absalom, ‘No, my son, we should not all go. It would cause you too much trouble. ’Absalom asked him again, but the king still refused to go. Instead, he asked God to bless Absalom. Absalom asked him again, but the king still refused to go. Instead, he asked God to bless Absalom."
+      "text": "King David replied to Absalom, ‘No, my son, we should not all go. It would cause you too much trouble. ’Absalom asked him again, but the king still refused to go. Instead, he asked God to bless Absalom."
     },
     {
       "verse": 26,
@@ -1338,7 +1338,7 @@ module.exports = {
     },
     {
       "verse": 34,
-      "text": "While this was happening, Absalom had run away. There was an officer standing on the wall of Jerusalem to watch. When he looked, he saw a big group of people who were coming from the west. They were coming down the hill on the road from Horonaim. He went to the king and he told him the news. There was an officer standing on the wall of Jerusalem to watch. When he looked, he saw a big group of people who were coming from the west. They were coming down the hill on the road from Horonaim. He went to the king and he told him the news."
+      "text": "While this was happening, Absalom had run away. There was an officer standing on the wall of Jerusalem to watch. When he looked, he saw a big group of people who were coming from the west. They were coming down the hill on the road from Horonaim. He went to the king and he told him the news."
     },
     {
       "verse": 35,
@@ -1404,11 +1404,11 @@ module.exports = {
     },
     {
       "verse": 11,
-      "text": "Then the woman said, ‘Sir, please stop my relative from punishing my son with death. I do not want this son to die as well as my other son. Please promise me in the name of the Lord your God that it will not happen. ’The king replied, ‘As surely as the Lord lives, I promise that nobody will touch even one hair of your son's head. ’ The king replied, ‘As surely as the Lord lives, I promise that nobody will touch even one hair of your son's head. ’"
+      "text": "Then the woman said, ‘Sir, please stop my relative from punishing my son with death. I do not want this son to die as well as my other son. Please promise me in the name of the Lord your God that it will not happen. ’The king replied, ‘As surely as the Lord lives, I promise that nobody will touch even one hair of your son's head. ’"
     },
     {
       "verse": 12,
-      "text": "Then the woman said, ‘Please sir, there is one other thing that I want to tell you. ’King David said, ‘Tell me. ’ King David said, ‘Tell me. ’"
+      "text": "Then the woman said, ‘Please sir, there is one other thing that I want to tell you. ’King David said, ‘Tell me. ’"
     },
     {
       "verse": 13,
@@ -1432,7 +1432,7 @@ module.exports = {
     },
     {
       "verse": 18,
-      "text": "Then the king said to the woman, ‘Now I want to ask you a question. You must not hide the truth from me. ’She replied, ‘Ask me anything, sir. ’ She replied, ‘Ask me anything, sir. ’"
+      "text": "Then the king said to the woman, ‘Now I want to ask you a question. You must not hide the truth from me. ’She replied, ‘Ask me anything, sir. ’"
     },
     {
       "verse": 19,
@@ -1652,15 +1652,15 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "The king asked Ziba, ‘Why have you brought all these things? ’Ziba answered, ‘The donkeys are for the king's family to ride. The bread and the fruit are for the young men to eat. The wine will help people who become weak when you travel through the desert. ’ Ziba answered, ‘The donkeys are for the king's family to ride. The bread and the fruit are for the young men to eat. The wine will help people who become weak when you travel through the desert. ’"
+      "text": "The king asked Ziba, ‘Why have you brought all these things? ’Ziba answered, ‘The donkeys are for the king's family to ride. The bread and the fruit are for the young men to eat. The wine will help people who become weak when you travel through the desert. ’"
     },
     {
       "verse": 3,
-      "text": "The king asked, ‘Where is your master's grandson? ’Ziba answered, ‘He is staying in Jerusalem. He thinks that the Israelites will now give back to him his grandfather Saul's kingdom. ’ Ziba answered, ‘He is staying in Jerusalem. He thinks that the Israelites will now give back to him his grandfather Saul's kingdom. ’"
+      "text": "The king asked, ‘Where is your master's grandson? ’Ziba answered, ‘He is staying in Jerusalem. He thinks that the Israelites will now give back to him his grandfather Saul's kingdom. ’"
     },
     {
       "verse": 4,
-      "text": "Then the king said to Ziba, ‘Everything that Mephibosheth had will now belong to you. ’Ziba said, ‘Thank you, sir. I hope that you will always be pleased with me. ’ Ziba said, ‘Thank you, sir. I hope that you will always be pleased with me. ’"
+      "text": "Then the king said to Ziba, ‘Everything that Mephibosheth had will now belong to you. ’Ziba said, ‘Thank you, sir. I hope that you will always be pleased with me. ’"
     },
     {
       "verse": 5,
@@ -1708,7 +1708,7 @@ module.exports = {
     },
     {
       "verse": 16,
-      "text": "David's friend, Hushai the Arkite, had also come there. He went to Absalom and he said to him, ‘May the king live for ever! May the king live for ever! ’"
+      "text": "David's friend, Hushai the Arkite, had also come there. He went to Absalom and he said to him, ‘May the king live for ever!"
     },
     {
       "verse": 17,
@@ -1818,7 +1818,7 @@ module.exports = {
     },
     {
       "verse": 20,
-      "text": "Absalom's men came to the house. They asked the woman, ‘Where are Ahimaaz and Jonathan? ’The woman answered, ‘They went across the stream. ’ Absalom's men looked everywhere for them, but they did not find them. So they returned to Jerusalem. The woman answered, ‘They went across the stream. ’ Absalom's men looked everywhere for them, but they did not find them. So they returned to Jerusalem."
+      "text": "Absalom's men came to the house. They asked the woman, ‘Where are Ahimaaz and Jonathan? ’The woman answered, ‘They went across the stream. ’ Absalom's men looked everywhere for them, but they did not find them. So they returned to Jerusalem."
     },
     {
       "verse": 21,
@@ -1944,7 +1944,7 @@ module.exports = {
     },
     {
       "verse": 22,
-      "text": "Zadok's son Ahimaaz spoke to Joab again. He said, ‘I am not afraid of what may happen to me. Please let me run after the Ethiopian man. ’But Joab replied, ‘Why do you want to go as well? The king will not give you any gift for this news. ’ But Joab replied, ‘Why do you want to go as well? The king will not give you any gift for this news. ’"
+      "text": "Zadok's son Ahimaaz spoke to Joab again. He said, ‘I am not afraid of what may happen to me. Please let me run after the Ethiopian man. ’But Joab replied, ‘Why do you want to go as well? The king will not give you any gift for this news. ’"
     },
     {
       "verse": 23,
@@ -1960,11 +1960,11 @@ module.exports = {
     },
     {
       "verse": 26,
-      "text": "Then the man on the wall saw another man who was running towards the city. He called down to the guard at the city's gate, ‘Look! There is another man who is running alone! ’The king said, ‘He will bring good news, too. ’ The king said, ‘He will bring good news, too. ’"
+      "text": "Then the man on the wall saw another man who was running towards the city. He called down to the guard at the city's gate, ‘Look! There is another man who is running alone! ’The king said, ‘He will bring good news, too. ’"
     },
     {
       "verse": 27,
-      "text": "The man on the wall said, ‘The first man is running like Zadok's son, Ahimaaz. ’The king said, ‘He is a good man. I am sure that he brings good news. ’ The king said, ‘He is a good man. I am sure that he brings good news. ’"
+      "text": "The man on the wall said, ‘The first man is running like Zadok's son, Ahimaaz. ’The king said, ‘He is a good man. I am sure that he brings good news. ’"
     },
     {
       "verse": 28,
@@ -1972,7 +1972,7 @@ module.exports = {
     },
     {
       "verse": 29,
-      "text": "The king asked, ‘Is the young man Absalom safe? ’Ahimaaz answered, ‘When Joab sent me, your servant, I saw that many people had come together. There was a lot of noise, but I do not know what was happening. ’ Ahimaaz answered, ‘When Joab sent me, your servant, I saw that many people had come together. There was a lot of noise, but I do not know what was happening. ’"
+      "text": "The king asked, ‘Is the young man Absalom safe? ’Ahimaaz answered, ‘When Joab sent me, your servant, I saw that many people had come together. There was a lot of noise, but I do not know what was happening. ’"
     },
     {
       "verse": 30,
@@ -1984,7 +1984,7 @@ module.exports = {
     },
     {
       "verse": 32,
-      "text": "The king asked the Ethiopian man, ‘Is the young man Absalom safe? ’The man replied, ‘My lord the king, I hope that your enemies and all those who want to hurt you would be as dead as he is! ’ The man replied, ‘My lord the king, I hope that your enemies and all those who want to hurt you would be as dead as he is! ’"
+      "text": "The king asked the Ethiopian man, ‘Is the young man Absalom safe? ’The man replied, ‘My lord the king, I hope that your enemies and all those who want to hurt you would be as dead as he is! ’"
     },
     {
       "verse": 33,
@@ -2252,19 +2252,19 @@ module.exports = {
     },
     {
       "verse": 22,
-      "text": "Then the woman spoke to all the people in the city. She told them her wise advice. So they cut off Sheba's head and they threw it off the wall to Joab. Then Joab made a loud noise with his trumpet. So his soldiers went away from the city. Each of them went to his own home. Joab returned to King David in Jerusalem. Then Joab made a loud noise with his trumpet. So his soldiers went away from the city. Each of them went to his own home. Joab returned to King David in Jerusalem."
+      "text": "Then the woman spoke to all the people in the city. She told them her wise advice. So they cut off Sheba's head and they threw it off the wall to Joab. Then Joab made a loud noise with his trumpet. So his soldiers went away from the city. Each of them went to his own home. Joab returned to King David in Jerusalem."
     },
     {
       "verse": 23,
-      "text": "Joab was the officer who led all Israel's army. Jehoiada's son Benaiah was the leader of the king's personal guards. Jehoiada's son Benaiah was the leader of the king's personal guards."
+      "text": "Joab was the officer who led all Israel's army. Jehoiada's son Benaiah was the leader of the king's personal guards."
     },
     {
       "verse": 24,
-      "text": "Adoniram ruled over the men who had to work for the king. Ahilud's son Jehoshaphat wrote a report of everything that the king did. Ahilud's son Jehoshaphat wrote a report of everything that the king did."
+      "text": "Adoniram ruled over the men who had to work for the king. Ahilud's son Jehoshaphat wrote a report of everything that the king did."
     },
     {
       "verse": 25,
-      "text": "Sheva was the royal secretary. Zadok and Abiathar were the priests. Zadok and Abiathar were the priests."
+      "text": "Sheva was the royal secretary. Zadok and Abiathar were the priests."
     },
     {
       "verse": 26,
@@ -2286,7 +2286,7 @@ module.exports = {
     },
     {
       "verse": 4,
-      "text": "The Gibeonites answered David, ‘We do not want Saul's family to give us money or gold. And it would not be right for us to kill anyone in Israel. ’So David asked them, ‘What do you want me to do for you? ’ So David asked them, ‘What do you want me to do for you? ’"
+      "text": "The Gibeonites answered David, ‘We do not want Saul's family to give us money or gold. And it would not be right for us to kill anyone in Israel. ’So David asked them, ‘What do you want me to do for you? ’"
     },
     {
       "verse": 5,
@@ -2368,79 +2368,79 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "This is what he sang:‘The Lord keeps me safe. He is my great rock and my strong place. ‘The Lord keeps me safe. He is my great rock and my strong place."
+      "text": "This is what he sang:‘The Lord keeps me safe. He is my great rock and my strong place."
     },
     {
       "verse": 3,
-      "text": "My God is my high rock. I run to him to hide and be safe. He keeps me safe like a soldier's shield. He is the strong place where I can hide safely. God, you have saved me from men who want to attack me. I run to him to hide and be safe. He keeps me safe like a soldier's shield. He is the strong place where I can hide safely. God, you have saved me from men who want to attack me."
+      "text": "My God is my high rock. I run to him to hide and be safe. He keeps me safe like a soldier's shield. He is the strong place where I can hide safely. God, you have saved me from men who want to attack me."
     },
     {
       "verse": 4,
-      "text": "I praise the Lord because he deserves it! When I called to him for help, he saved me from my enemies. When I called to him for help, he saved me from my enemies."
+      "text": "I praise the Lord because he deserves it! When I called to him for help, he saved me from my enemies."
     },
     {
       "verse": 5,
-      "text": "Death was near enough to catch me! Danger was like a river that wanted to drown me. Danger was like a river that wanted to drown me."
+      "text": "Death was near enough to catch me! Danger was like a river that wanted to drown me."
     },
     {
       "verse": 6,
-      "text": "Death was tying me up with ropes, to pull me into the deep hole of the grave. to pull me into the deep hole of the grave."
+      "text": "Death was tying me up with ropes, to pull me into the deep hole of the grave."
     },
     {
       "verse": 7,
-      "text": "In my trouble I prayed to the Lord. I called to my God to help me. He heard my voice from his home in heaven. My prayer reached his ears. I called to my God to help me. He heard my voice from his home in heaven. My prayer reached his ears."
+      "text": "In my trouble I prayed to the Lord. I called to my God to help me. He heard my voice from his home in heaven. My prayer reached his ears."
     },
     {
       "verse": 8,
-      "text": "Then the earth moved and it shook. Even the sky shook, because God was angry. Even the sky shook, because God was angry."
+      "text": "Then the earth moved and it shook. Even the sky shook, because God was angry."
     },
     {
       "verse": 9,
-      "text": "He breathed out smoke from his nose. Fire and hot coals came out from his mouth, to destroy his enemies. Fire and hot coals came out from his mouth, to destroy his enemies."
+      "text": "He breathed out smoke from his nose. Fire and hot coals came out from his mouth, to destroy his enemies."
     },
     {
       "verse": 10,
-      "text": "God caused the sky to bend as he came down. Dark clouds were under his feet. Dark clouds were under his feet."
+      "text": "God caused the sky to bend as he came down. Dark clouds were under his feet."
     },
     {
       "verse": 11,
-      "text": "He sat on a cherub and he flew. He flew like the wind. He flew like the wind."
+      "text": "He sat on a cherub and he flew. He flew like the wind."
     },
     {
       "verse": 12,
-      "text": "God put darkness all round him. He hid himself under dark clouds that held rain. He hid himself under dark clouds that held rain."
+      "text": "God put darkness all round him. He hid himself under dark clouds that held rain."
     },
     {
       "verse": 13,
-      "text": "Bright light went in front of him. There was lightning like hot coals! There was lightning like hot coals!"
+      "text": "Bright light went in front of him. There was lightning like hot coals!"
     },
     {
       "verse": 14,
-      "text": "The Lord sent thunder from the sky. People everywhere heard the voice of the Most High God. People everywhere heard the voice of the Most High God."
+      "text": "The Lord sent thunder from the sky. People everywhere heard the voice of the Most High God."
     },
     {
       "verse": 15,
-      "text": "The Lord shot arrows of lightning. He caused his enemies to run away. He caused his enemies to run away."
+      "text": "The Lord shot arrows of lightning. He caused his enemies to run away."
     },
     {
       "verse": 16,
-      "text": "When the Lord shouted against his enemies, even the bottom of the deep sea appeared. People could see the deepest places of the earth, when he breathed out in anger. even the bottom of the deep sea appeared. People could see the deepest places of the earth, when he breathed out in anger."
+      "text": "When the Lord shouted against his enemies, even the bottom of the deep sea appeared. People could see the deepest places of the earth, when he breathed out in anger."
     },
     {
       "verse": 17,
-      "text": "The Lord reached down to me from above. He took hold of me and he pulled me up out of the deep water. He took hold of me and he pulled me up out of the deep water."
+      "text": "The Lord reached down to me from above. He took hold of me and he pulled me up out of the deep water."
     },
     {
       "verse": 18,
-      "text": "Yes, he saved me from my powerful enemies. The people who hated me were too strong for me, but the Lord saved me from their power. The people who hated me were too strong for me, but the Lord saved me from their power."
+      "text": "Yes, he saved me from my powerful enemies. The people who hated me were too strong for me, but the Lord saved me from their power."
     },
     {
       "verse": 19,
-      "text": "They attacked me when I was in trouble, but the Lord helped me. but the Lord helped me."
+      "text": "They attacked me when I was in trouble, but the Lord helped me."
     },
     {
       "verse": 20,
-      "text": "He led me out to an open place where I would be safe. He saved me because I made him happy. He saved me because I made him happy."
+      "text": "He led me out to an open place where I would be safe. He saved me because I made him happy."
     },
     {
       "verse": 21,
@@ -2448,55 +2448,55 @@ module.exports = {
     },
     {
       "verse": 22,
-      "text": "I have obeyed the Lord's commands. I have not turned against my God. I have not turned against my God."
+      "text": "I have obeyed the Lord's commands. I have not turned against my God."
     },
     {
       "verse": 23,
-      "text": "I understand all his rules, and I do not refuse to obey them. and I do not refuse to obey them."
+      "text": "I understand all his rules, and I do not refuse to obey them."
     },
     {
       "verse": 24,
-      "text": "He knows that I have done nothing that is wrong. I kept away from any sin. I kept away from any sin."
+      "text": "He knows that I have done nothing that is wrong. I kept away from any sin."
     },
     {
       "verse": 25,
-      "text": "The Lord was kind to me, because I did good things. He sees that I am not guilty. because I did good things. He sees that I am not guilty."
+      "text": "The Lord was kind to me, because I did good things. He sees that I am not guilty."
     },
     {
       "verse": 26,
-      "text": "Lord, if people are faithful to you, then you are faithful to them. If people do nothing that is bad, they can trust you to do nothing bad to them. then you are faithful to them. If people do nothing that is bad, they can trust you to do nothing bad to them."
+      "text": "Lord, if people are faithful to you, then you are faithful to them. If people do nothing that is bad, they can trust you to do nothing bad to them."
     },
     {
       "verse": 27,
-      "text": "If people keep themselves pure, they can trust you to do only good things. But if people are wicked, you turn against them. they can trust you to do only good things. But if people are wicked, you turn against them."
+      "text": "If people keep themselves pure, they can trust you to do only good things. But if people are wicked, you turn against them."
     },
     {
       "verse": 28,
-      "text": "You save people who are humble. But if people are proud, you cause them to fall. But if people are proud, you cause them to fall."
+      "text": "You save people who are humble. But if people are proud, you cause them to fall."
     },
     {
       "verse": 29,
-      "text": "Lord, you make my lamp burn brightly. You are my light in the dark. You are my light in the dark."
+      "text": "Lord, you make my lamp burn brightly. You are my light in the dark."
     },
     {
       "verse": 30,
-      "text": "You make me strong, so that I can chase a whole army! With the help of my God, I can climb over any high wall. so that I can chase a whole army! With the help of my God, I can climb over any high wall."
+      "text": "You make me strong, so that I can chase a whole army! With the help of my God, I can climb over any high wall."
     },
     {
       "verse": 31,
-      "text": "God's way is perfect. The Lord's promises are always true. He keeps safe everyone who goes to him for help, like a shield that keeps a soldier safe. The Lord's promises are always true. He keeps safe everyone who goes to him for help, like a shield that keeps a soldier safe."
+      "text": "God's way is perfect. The Lord's promises are always true. He keeps safe everyone who goes to him for help, like a shield that keeps a soldier safe."
     },
     {
       "verse": 32,
-      "text": "We know that the Lord is God, and no one else. Only our God can keep us safe, like a strong rock! and no one else. Only our God can keep us safe, like a strong rock!"
+      "text": "We know that the Lord is God, and no one else. Only our God can keep us safe, like a strong rock!"
     },
     {
       "verse": 33,
-      "text": "It is God who makes me strong. He shows me the safe way through my life. He shows me the safe way through my life."
+      "text": "It is God who makes me strong. He shows me the safe way through my life."
     },
     {
       "verse": 34,
-      "text": "He makes my feet stand strongly on the ground. Like a deer, I can stand on high hills and not fall. Like a deer, I can stand on high hills and not fall."
+      "text": "He makes my feet stand strongly on the ground. Like a deer, I can stand on high hills and not fall."
     },
     {
       "verse": 35,
@@ -2504,35 +2504,35 @@ module.exports = {
     },
     {
       "verse": 36,
-      "text": "You keep me safe in the battle, like a shield. Your kind help has made me great. like a shield. Your kind help has made me great."
+      "text": "You keep me safe in the battle, like a shield. Your kind help has made me great."
     },
     {
       "verse": 37,
-      "text": "You have helped me to move safely, so that my feet do not slip. so that my feet do not slip."
+      "text": "You have helped me to move safely, so that my feet do not slip."
     },
     {
       "verse": 38,
-      "text": "I ran after my enemies and I destroyed them. I did not turn back until I had killed them. I did not turn back until I had killed them."
+      "text": "I ran after my enemies and I destroyed them. I did not turn back until I had killed them."
     },
     {
       "verse": 39,
-      "text": "I destroyed them completely. I knocked them down to the ground. They could not get up again. They fell under my feet. I knocked them down to the ground. They could not get up again. They fell under my feet."
+      "text": "I destroyed them completely. I knocked them down to the ground. They could not get up again. They fell under my feet."
     },
     {
       "verse": 40,
-      "text": "You have made me strong to fight battlesso that I win against my enemies. so that I win against my enemies."
+      "text": "You have made me strong to fight battlesso that I win against my enemies."
     },
     {
       "verse": 41,
-      "text": "You caused my enemies to turn their backs, and they ran away from me. I destroyed those who hate me. and they ran away from me. I destroyed those who hate me."
+      "text": "You caused my enemies to turn their backs, and they ran away from me. I destroyed those who hate me."
     },
     {
       "verse": 42,
-      "text": "They called out for help, but nobody was there to save them. They called to the Lord, but he did not answer them. but nobody was there to save them. They called to the Lord, but he did not answer them."
+      "text": "They called out for help, but nobody was there to save them. They called to the Lord, but he did not answer them."
     },
     {
       "verse": 43,
-      "text": "I beat them until they became like dust. I walked over them, like dirt that lies on the streets. I walked over them, like dirt that lies on the streets."
+      "text": "I beat them until they became like dust. I walked over them, like dirt that lies on the streets."
     },
     {
       "verse": 44,
@@ -2540,7 +2540,7 @@ module.exports = {
     },
     {
       "verse": 45,
-      "text": "Foreign people cannot stand against me, because they are afraid. When they hear about me, they choose to obey me. because they are afraid. When they hear about me, they choose to obey me."
+      "text": "Foreign people cannot stand against me, because they are afraid. When they hear about me, they choose to obey me."
     },
     {
       "verse": 46,
@@ -2548,11 +2548,11 @@ module.exports = {
     },
     {
       "verse": 47,
-      "text": "The Lord is alive! He is my strong Rock! Everyone should praise him! He rules as king! He is the strong God who saves me. Everyone should praise him! He rules as king! He is the strong God who saves me."
+      "text": "The Lord is alive! He is my strong Rock! Everyone should praise him! He rules as king! He is the strong God who saves me."
     },
     {
       "verse": 48,
-      "text": "He is the true God who punishes my enemies. He makes the nations obey me. He makes the nations obey me."
+      "text": "He is the true God who punishes my enemies. He makes the nations obey me."
     },
     {
       "verse": 49,
@@ -2560,7 +2560,7 @@ module.exports = {
     },
     {
       "verse": 50,
-      "text": "Lord, I will thank you, so that all the nations know about you. I will sing to praise your name. so that all the nations know about you. I will sing to praise your name."
+      "text": "Lord, I will thank you, so that all the nations know about you. I will sing to praise your name."
     },
     {
       "verse": 51,
@@ -2574,19 +2574,19 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "‘The Spirit of the Lord gives me his message. I speak what he tells me to say. I speak what he tells me to say."
+      "text": "‘The Spirit of the Lord gives me his message. I speak what he tells me to say."
     },
     {
       "verse": 3,
-      "text": "Israel's God has spoken. The one who keeps Israel safe said to me, “A king should rule over people in a way that is right and fair. He should show that he respects and obeys God. The one who keeps Israel safe said to me, “A king should rule over people in a way that is right and fair. He should show that he respects and obeys God."
+      "text": "Israel's God has spoken. The one who keeps Israel safe said to me, “A king should rule over people in a way that is right and fair. He should show that he respects and obeys God."
     },
     {
       "verse": 4,
-      "text": "A king who rules like that is like the light of the sun at dawn. He is like the sky when it has no clouds in it in the morning. He is like bright sun after rain, that helps the grass to grow strongly. ” He is like the sky when it has no clouds in it in the morning. He is like bright sun after rain, that helps the grass to grow strongly. ”"
+      "text": "A king who rules like that is like the light of the sun at dawn. He is like the sky when it has no clouds in it in the morning. He is like bright sun after rain, that helps the grass to grow strongly. ”"
     },
     {
       "verse": 5,
-      "text": "That is how God will bless my descendants. He has made a promise to me that will continue for ever. It is a strong promise that will never change. I know that he will always help me. He will do for me everything that I hope for. He has made a promise to me that will continue for ever. It is a strong promise that will never change. I know that he will always help me. He will do for me everything that I hope for."
+      "text": "That is how God will bless my descendants. He has made a promise to me that will continue for ever. It is a strong promise that will never change. I know that he will always help me. He will do for me everything that I hope for."
     },
     {
       "verse": 6,
@@ -2594,11 +2594,11 @@ module.exports = {
     },
     {
       "verse": 7,
-      "text": "You need an iron tool or a spear to remove them. Then you burn them completely in a fire. ’ Then you burn them completely in a fire. ’"
+      "text": "You need an iron tool or a spear to remove them. Then you burn them completely in a fire. ’"
     },
     {
       "verse": 8,
-      "text": "These are the names of David's bravest soldiers: Josheb-Basshebeth was the leader of the ‘Three Brave Soldiers’. He belonged to Tahkemon's clan. He used his spear to fight against 800 men in one battle and he killed them all. Josheb-Basshebeth was the leader of the ‘Three Brave Soldiers’. He belonged to Tahkemon's clan. He used his spear to fight against 800 men in one battle and he killed them all."
+      "text": "These are the names of David's bravest soldiers: Josheb-Basshebeth was the leader of the ‘Three Brave Soldiers’. He belonged to Tahkemon's clan. He used his spear to fight against 800 men in one battle and he killed them all."
     },
     {
       "verse": 9,
@@ -2808,7 +2808,7 @@ module.exports = {
     },
     {
       "verse": 21,
-      "text": "Araunah said, ‘My lord the king, why have you come here to me, your servant? ’David replied, ‘I have come to buy your threshing floor from you. I want to build an altar here to worship the Lord. Then he will stop this bad disease from killing the people. ’ David replied, ‘I have come to buy your threshing floor from you. I want to build an altar here to worship the Lord. Then he will stop this bad disease from killing the people. ’"
+      "text": "Araunah said, ‘My lord the king, why have you come here to me, your servant? ’David replied, ‘I have come to buy your threshing floor from you. I want to build an altar here to worship the Lord. Then he will stop this bad disease from killing the people. ’"
     },
     {
       "verse": 22,

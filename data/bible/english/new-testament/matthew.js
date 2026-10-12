@@ -6,63 +6,63 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "Abraham was the father of Isaac. Isaac was the father of Jacob. Jacob was the father of Judah and his brothers. Isaac was the father of Jacob. Jacob was the father of Judah and his brothers."
+      "text": "Abraham was the father of Isaac. Isaac was the father of Jacob. Jacob was the father of Judah and his brothers."
     },
     {
       "verse": 3,
-      "text": "Judah was the father of Perez and Zerah. Tamar was their mother. Perez was the father of Hezron. Hezron was the father of Ram. Perez was the father of Hezron. Hezron was the father of Ram."
+      "text": "Judah was the father of Perez and Zerah. Tamar was their mother. Perez was the father of Hezron. Hezron was the father of Ram."
     },
     {
       "verse": 4,
-      "text": "Ram was the father of Amminadab. Amminadab was the father of Nahshon. Nahshon was the father of Salmon. Amminadab was the father of Nahshon. Nahshon was the father of Salmon."
+      "text": "Ram was the father of Amminadab. Amminadab was the father of Nahshon. Nahshon was the father of Salmon."
     },
     {
       "verse": 5,
-      "text": "Salmon was the father of Boaz. Rahab was his mother. Boaz was the father of Obed. Ruth was his mother. Obed was the father of Jesse. Boaz was the father of Obed. Ruth was his mother. Obed was the father of Jesse."
+      "text": "Salmon was the father of Boaz. Rahab was his mother. Boaz was the father of Obed. Ruth was his mother. Obed was the father of Jesse."
     },
     {
       "verse": 6,
-      "text": "Jesse was the father of King David. David was Solomon's father. Solomon's mother was the wife of Uriah. David was Solomon's father. Solomon's mother was the wife of Uriah."
+      "text": "Jesse was the father of King David. David was Solomon's father. Solomon's mother was the wife of Uriah."
     },
     {
       "verse": 7,
-      "text": "Solomon was the father of Rehoboam. Rehoboam was the father of Abijah. Abijah was the father of Asa. Rehoboam was the father of Abijah. Abijah was the father of Asa."
+      "text": "Solomon was the father of Rehoboam. Rehoboam was the father of Abijah. Abijah was the father of Asa."
     },
     {
       "verse": 8,
-      "text": "Asa was the father of Jehoshaphat. Jehoshaphat was the father of Jehoram. Jehoram was the father of Uzziah. Jehoshaphat was the father of Jehoram. Jehoram was the father of Uzziah."
+      "text": "Asa was the father of Jehoshaphat. Jehoshaphat was the father of Jehoram. Jehoram was the father of Uzziah."
     },
     {
       "verse": 9,
-      "text": "Uzziah was the father of Jotham. Jotham was the father of Ahaz. Ahaz was the father of Hezekiah. Jotham was the father of Ahaz. Ahaz was the father of Hezekiah."
+      "text": "Uzziah was the father of Jotham. Jotham was the father of Ahaz. Ahaz was the father of Hezekiah."
     },
     {
       "verse": 10,
-      "text": "Hezekiah was the father of Manasseh. Manasseh was the father of Amon. Amon was the father of Josiah. Manasseh was the father of Amon. Amon was the father of Josiah."
+      "text": "Hezekiah was the father of Manasseh. Manasseh was the father of Amon. Amon was the father of Josiah."
     },
     {
       "verse": 11,
-      "text": "Josiah was the father of Jeconiah and his brothers. This was at the time when the Israelites' enemies took them away to Babylon. This was at the time when the Israelites' enemies took them away to Babylon."
+      "text": "Josiah was the father of Jeconiah and his brothers. This was at the time when the Israelites' enemies took them away to Babylon."
     },
     {
       "verse": 12,
-      "text": "Here is a list of Jesus' ancestors who lived after that time: Jeconiah was the father of Shealtiel. Shealtiel was the father of Zerubbabel. Jeconiah was the father of Shealtiel. Shealtiel was the father of Zerubbabel."
+      "text": "Here is a list of Jesus' ancestors who lived after that time: Jeconiah was the father of Shealtiel. Shealtiel was the father of Zerubbabel."
     },
     {
       "verse": 13,
-      "text": "Zerubbabel was the father of Abiud. Abiud was the father of Eliakim. Eliakim was the father of Azor. Abiud was the father of Eliakim. Eliakim was the father of Azor."
+      "text": "Zerubbabel was the father of Abiud. Abiud was the father of Eliakim. Eliakim was the father of Azor."
     },
     {
       "verse": 14,
-      "text": "Azor was the father of Zadok. Zadok was the father of Akim. Akim was the father of Eliud. Zadok was the father of Akim. Akim was the father of Eliud."
+      "text": "Azor was the father of Zadok. Zadok was the father of Akim. Akim was the father of Eliud."
     },
     {
       "verse": 15,
-      "text": "Eliud was the father of Eleazar. Eleazar was the father of Matthan. Matthan was the father of Jacob. Eleazar was the father of Matthan. Matthan was the father of Jacob."
+      "text": "Eliud was the father of Eleazar. Eleazar was the father of Matthan. Matthan was the father of Jacob."
     },
     {
       "verse": 16,
-      "text": "Jacob was the father of Joseph. Joseph married Mary. Mary was the mother of Jesus. Jesus is the one who is called Christ, the Messiah. Joseph married Mary. Mary was the mother of Jesus. Jesus is the one who is called Christ, the Messiah."
+      "text": "Jacob was the father of Joseph. Joseph married Mary. Mary was the mother of Jesus. Jesus is the one who is called Christ, the Messiah."
     },
     {
       "verse": 17,
@@ -124,7 +124,7 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "“People who live in Bethlehem, your town is a very important town in Judea. A person born in your town will become a leader of my people Israel. He will lead my people like a shepherd leads his sheep. ” ’ your town is a very important town in Judea. A person born in your town will become a leader of my people Israel. He will lead my people like a shepherd leads his sheep. ” ’"
+      "text": "“People who live in Bethlehem, your town is a very important town in Judea. A person born in your town will become a leader of my people Israel. He will lead my people like a shepherd leads his sheep. ” ’"
     },
     {
       "verse": 7,
@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       "verse": 18,
-      "text": "‘People heard a sad noise in Ramah. Someone is weeping with a loud voice. It is Rachel and she is weeping for her children. Nobody can help her to stop weeping, because her children are dead. ’ Someone is weeping with a loud voice. It is Rachel and she is weeping for her children. Nobody can help her to stop weeping, because her children are dead. ’"
+      "text": "‘People heard a sad noise in Ramah. Someone is weeping with a loud voice. It is Rachel and she is weeping for her children. Nobody can help her to stop weeping, because her children are dead. ’"
     },
     {
       "verse": 19,
@@ -206,7 +206,7 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "God's prophet Isaiah spoke about this man John long ago. He said:‘Somebody's voice is shouting in the wilderness, “The Lord will come soon, so prepare a way for him to follow. Make the paths straight for him. ” ’ ‘Somebody's voice is shouting in the wilderness, “The Lord will come soon, so prepare a way for him to follow. Make the paths straight for him. ” ’"
+      "text": "God's prophet Isaiah spoke about this man John long ago. He said:‘Somebody's voice is shouting in the wilderness, “The Lord will come soon, so prepare a way for him to follow. Make the paths straight for him. ” ’"
     },
     {
       "verse": 4,
@@ -324,11 +324,11 @@ module.exports = {
     },
     {
       "verse": 15,
-      "text": "‘I am speaking to you people who live in Zebulun and Naphtali. Your part of this country is on the way to Lake Galilee. It is across the Jordan River in the part of the country called Galilee. Some people who are not Jews live there. Your part of this country is on the way to Lake Galilee. It is across the Jordan River in the part of the country called Galilee. Some people who are not Jews live there."
+      "text": "‘I am speaking to you people who live in Zebulun and Naphtali. Your part of this country is on the way to Lake Galilee. It is across the Jordan River in the part of the country called Galilee. Some people who are not Jews live there."
     },
     {
       "verse": 16,
-      "text": "They are like people who are living in the dark. They live in the shadow which death brings. God will send a light to shine on them. ’ They live in the shadow which death brings. God will send a light to shine on them. ’"
+      "text": "They are like people who are living in the dark. They live in the shadow which death brings. God will send a light to shine on them. ’"
     },
     {
       "verse": 17,
@@ -378,35 +378,35 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "‘Happy are the people who know that they need God very much. The kingdom of heaven belongs to people like that. The kingdom of heaven belongs to people like that."
+      "text": "‘Happy are the people who know that they need God very much. The kingdom of heaven belongs to people like that."
     },
     {
       "verse": 4,
-      "text": "Happy are the people who are sad now. God will come near to help them. God will come near to help them."
+      "text": "Happy are the people who are sad now. God will come near to help them."
     },
     {
       "verse": 5,
-      "text": "Happy are the people who are kind. The whole earth will belong to them. The whole earth will belong to them."
+      "text": "Happy are the people who are kind. The whole earth will belong to them."
     },
     {
       "verse": 6,
-      "text": "Happy are the people who want to obey God, as much as they want to eat food. God will give to them everything that they need. God will give to them everything that they need."
+      "text": "Happy are the people who want to obey God, as much as they want to eat food. God will give to them everything that they need."
     },
     {
       "verse": 7,
-      "text": "Happy are the people who help other people and who forgive them. God will forgive people like that. God will forgive people like that."
+      "text": "Happy are the people who help other people and who forgive them. God will forgive people like that."
     },
     {
       "verse": 8,
-      "text": "Happy are the people who have only good thoughts. They will come near to God and see him. They will come near to God and see him."
+      "text": "Happy are the people who have only good thoughts. They will come near to God and see him."
     },
     {
       "verse": 9,
-      "text": "Happy are the people who bring people together to be friends. God will call them his children. God will call them his children."
+      "text": "Happy are the people who bring people together to be friends. God will call them his children."
     },
     {
       "verse": 10,
-      "text": "Happy are the people who do what is right but other people hurt them because of it. The kingdom of heaven belongs to people like that. The kingdom of heaven belongs to people like that."
+      "text": "Happy are the people who do what is right but other people hurt them because of it. The kingdom of heaven belongs to people like that."
     },
     {
       "verse": 11,
@@ -596,11 +596,11 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "So this is how you should pray:“God, our Father who is in heaven, we want people to give honour to you. “God, our Father who is in heaven, we want people to give honour to you."
+      "text": "So this is how you should pray:“God, our Father who is in heaven, we want people to give honour to you."
     },
     {
       "verse": 10,
-      "text": "We want the day when you rule everyone to come soon. We want everyone to obey you on earth, like everyone in heaven obeys you. We want everyone to obey you on earth, like everyone in heaven obeys you."
+      "text": "We want the day when you rule everyone to come soon. We want everyone to obey you on earth, like everyone in heaven obeys you."
     },
     {
       "verse": 11,
@@ -608,11 +608,11 @@ module.exports = {
     },
     {
       "verse": 12,
-      "text": "We have forgiven people who have done wrong things to us. In the same way, please forgive us for the wrong things that we have done. In the same way, please forgive us for the wrong things that we have done."
+      "text": "We have forgiven people who have done wrong things to us. In the same way, please forgive us for the wrong things that we have done."
     },
     {
       "verse": 13,
-      "text": "Do not let us agree to do wrong things. Keep us safe from Satan. ” ’ Keep us safe from Satan. ” ’"
+      "text": "Do not let us agree to do wrong things. Keep us safe from Satan. ” ’"
     },
     {
       "verse": 14,
@@ -1116,7 +1116,7 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "apostles: The first apostle is Simon, who was also called Peter. Then Simon's brother, who was called Andrew. Also James and his brother John, who were Zebedee's sons. The first apostle is Simon, who was also called Peter. Then Simon's brother, who was called Andrew. Also James and his brother John, who were Zebedee's sons."
+      "text": "apostles: The first apostle is Simon, who was also called Peter. Then Simon's brother, who was called Andrew. Also James and his brother John, who were Zebedee's sons."
     },
     {
       "verse": 3,
@@ -1248,7 +1248,7 @@ module.exports = {
     },
     {
       "verse": 35,
-      "text": "A man will fight against his father. A daughter will fight against her mother. A woman will fight against her husband's mother. A daughter will fight against her mother. A woman will fight against her husband's mother."
+      "text": "A man will fight against his father. A daughter will fight against her mother. A woman will fight against her husband's mother."
     },
     {
       "verse": 36,
@@ -1346,7 +1346,7 @@ module.exports = {
     },
     {
       "verse": 17,
-      "text": "“We made happy music on a flute for you, but you did not dance. We sang a sad song but you did not cry. ” but you did not dance. We sang a sad song but you did not cry. ”"
+      "text": "“We made happy music on a flute for you, but you did not dance. We sang a sad song but you did not cry. ”"
     },
     {
       "verse": 18,
@@ -1472,15 +1472,15 @@ module.exports = {
     },
     {
       "verse": 18,
-      "text": "‘Here is my servant. I have chosen him to serve me. I love him and he makes me very happy. I will give him the strength of my Spirit. He will tell all the nations that I will judge them fairly. I have chosen him to serve me. I love him and he makes me very happy. I will give him the strength of my Spirit. He will tell all the nations that I will judge them fairly."
+      "text": "‘Here is my servant. I have chosen him to serve me. I love him and he makes me very happy. I will give him the strength of my Spirit. He will tell all the nations that I will judge them fairly."
     },
     {
       "verse": 19,
-      "text": "He will not argue with people. He will not shout at them. People will not hear his loud voice in the streets. People will not hear his loud voice in the streets."
+      "text": "He will not argue with people. He will not shout at them. People will not hear his loud voice in the streets."
     },
     {
       "verse": 20,
-      "text": "He will not hurt weak people. He will be kind to people who are not strong. He will do this until there is justice everywhere. He will be kind to people who are not strong. He will do this until there is justice everywhere."
+      "text": "He will not hurt weak people. He will be kind to people who are not strong. He will do this until there is justice everywhere."
     },
     {
       "verse": 21,
@@ -1658,11 +1658,11 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "Long ago, the prophet Isaiah spoke a message from God about those people. Now it has become true. God said:“You will listen and listen. But you will not understand. You will look and look. But you will not see anything. “You will listen and listen. But you will not understand. You will look and look. But you will not see anything."
+      "text": "Long ago, the prophet Isaiah spoke a message from God about those people. Now it has become true. God said:“You will listen and listen. But you will not understand. You will look and look. But you will not see anything."
     },
     {
       "verse": 15,
-      "text": "These people do not really want to understand. They are like people who have shut their ears. They are like people who have shut their eyes. If they did want to look, then they would really see. If they did want to listen, then they would really hear. They would understand my message. They would turn back to obey me. Then I would forgive them and I would make them well. ” ’ They are like people who have shut their ears. They are like people who have shut their eyes. If they did want to look, then they would really see. If they did want to listen, then they would really hear. They would understand my message. They would turn back to obey me. Then I would forgive them and I would make them well. ” ’"
+      "text": "These people do not really want to understand. They are like people who have shut their ears. They are like people who have shut their eyes. If they did want to look, then they would really see. If they did want to listen, then they would really hear. They would understand my message. They would turn back to obey me. Then I would forgive them and I would make them well. ” ’"
     },
     {
       "verse": 16,
@@ -1714,7 +1714,7 @@ module.exports = {
     },
     {
       "verse": 28,
-      "text": "The farmer said to his servants, “A bad person who does not like me has done this. ”So the servants then asked the farmer, “Do you want us to go and pull up the weeds? ” So the servants then asked the farmer, “Do you want us to go and pull up the weeds? ”"
+      "text": "The farmer said to his servants, “A bad person who does not like me has done this. ”So the servants then asked the farmer, “Do you want us to go and pull up the weeds? ”"
     },
     {
       "verse": 29,
@@ -2014,11 +2014,11 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "God says, “These people say good things about me, but they do not really want to obey me. but they do not really want to obey me."
+      "text": "God says, “These people say good things about me, but they do not really want to obey me."
     },
     {
       "verse": 9,
-      "text": "They say that I am great. But what they say has no purpose. They teach their own rules, which I did not give to them. ” ’ But what they say has no purpose. They teach their own rules, which I did not give to them. ” ’"
+      "text": "They say that I am great. But what they say has no purpose. They teach their own rules, which I did not give to them. ” ’"
     },
     {
       "verse": 10,
@@ -2094,7 +2094,7 @@ module.exports = {
     },
     {
       "verse": 28,
-      "text": "Jesus answered her, ‘Woman, you show clearly that you believe in God. God will do what you have asked. ’At that moment the woman's daughter became well again. At that moment the woman's daughter became well again."
+      "text": "Jesus answered her, ‘Woman, you show clearly that you believe in God. God will do what you have asked. ’At that moment the woman's daughter became well again."
     },
     {
       "verse": 29,
@@ -2118,7 +2118,7 @@ module.exports = {
     },
     {
       "verse": 34,
-      "text": "Jesus asked them, ‘How many loaves of bread do you have? ’They replied, ‘We have seven loaves and a few small fish. ’ They replied, ‘We have seven loaves and a few small fish. ’"
+      "text": "Jesus asked them, ‘How many loaves of bread do you have? ’They replied, ‘We have seven loaves and a few small fish. ’"
     },
     {
       "verse": 35,
@@ -2354,7 +2354,7 @@ module.exports = {
     },
     {
       "verse": 25,
-      "text": "Peter answered them, ‘Yes, my teacher does pay the tax. ’Then Peter returned to the house where Jesus was staying. Before Peter could say anything, Jesus spoke to him first. He said, ‘Here is a question for you to answer, Simon. Who are the people who must pay taxes and money to the kings in this world? Do the rulers take taxes from their own people? Or do they take taxes from other people? ’ Then Peter returned to the house where Jesus was staying. Before Peter could say anything, Jesus spoke to him first. He said, ‘Here is a question for you to answer, Simon. Who are the people who must pay taxes and money to the kings in this world? Do the rulers take taxes from their own people? Or do they take taxes from other people? ’"
+      "text": "Peter answered them, ‘Yes, my teacher does pay the tax. ’Then Peter returned to the house where Jesus was staying. Before Peter could say anything, Jesus spoke to him first. He said, ‘Here is a question for you to answer, Simon. Who are the people who must pay taxes and money to the kings in this world? Do the rulers take taxes from their own people? Or do they take taxes from other people? ’"
     },
     {
       "verse": 26,
@@ -2656,7 +2656,7 @@ module.exports = {
     },
     {
       "verse": 7,
-      "text": "The men said to the master, “Nobody has asked us to work for him. ”So the master said to them, “You also go now and work in my field. ” So the master said to them, “You also go now and work in my field. ”"
+      "text": "The men said to the master, “Nobody has asked us to work for him. ”So the master said to them, “You also go now and work in my field. ”"
     },
     {
       "verse": 8,
@@ -2712,11 +2712,11 @@ module.exports = {
     },
     {
       "verse": 21,
-      "text": "‘What do you want me to do? ’ Jesus asked her. She said, ‘One day, you will be king. Then I want my two sons to rule with you. One may sit at your right side and the other one at your left side. Please will you do this? ’ She said, ‘One day, you will be king. Then I want my two sons to rule with you. One may sit at your right side and the other one at your left side. Please will you do this? ’"
+      "text": "‘What do you want me to do? ’ Jesus asked her. She said, ‘One day, you will be king. Then I want my two sons to rule with you. One may sit at your right side and the other one at your left side. Please will you do this? ’"
     },
     {
       "verse": 22,
-      "text": "Jesus said to them, ‘You do not understand what you are asking for. I will have much pain and trouble. Are you ready to have the same pain? ’James and John replied, ‘Yes, we can do that. ’ James and John replied, ‘Yes, we can do that. ’"
+      "text": "Jesus said to them, ‘You do not understand what you are asking for. I will have much pain and trouble. Are you ready to have the same pain? ’James and John replied, ‘Yes, we can do that. ’"
     },
     {
       "verse": 23,
@@ -2786,7 +2786,7 @@ module.exports = {
     },
     {
       "verse": 5,
-      "text": "‘Say to the people in Jerusalem, “Look, your king is coming to you. He does not come like someone who thinks that he is important. He is riding on a donkey. Yes, he is riding on a young donkey. ” ’ “Look, your king is coming to you. He does not come like someone who thinks that he is important. He is riding on a donkey. Yes, he is riding on a young donkey. ” ’"
+      "text": "‘Say to the people in Jerusalem, “Look, your king is coming to you. He does not come like someone who thinks that he is important. He is riding on a donkey. Yes, he is riding on a young donkey. ” ’"
     },
     {
       "verse": 6,
@@ -2802,7 +2802,7 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "Many crowds of people went in front of Jesus and other people followed him. All of them were shouting, ‘We praise the Son of David! May the Lord God bless the king who comes with his authority! We praise God in heaven above! ’ ‘We praise the Son of David! May the Lord God bless the king who comes with his authority! We praise God in heaven above! ’"
+      "text": "Many crowds of people went in front of Jesus and other people followed him. All of them were shouting, ‘We praise the Son of David! May the Lord God bless the king who comes with his authority! We praise God in heaven above! ’"
     },
     {
       "verse": 10,
@@ -2874,7 +2874,7 @@ module.exports = {
     },
     {
       "verse": 27,
-      "text": "So the Jewish leaders answered Jesus: ‘We do not know who gave John his authority. ’Jesus said to them, ‘You will not answer my question. So I will not tell you what authority I have to do these things. ’ Jesus said to them, ‘You will not answer my question. So I will not tell you what authority I have to do these things. ’"
+      "text": "So the Jewish leaders answered Jesus: ‘We do not know who gave John his authority. ’Jesus said to them, ‘You will not answer my question. So I will not tell you what authority I have to do these things. ’"
     },
     {
       "verse": 28,
@@ -2934,7 +2934,7 @@ module.exports = {
     },
     {
       "verse": 42,
-      "text": "Jesus said to them, ‘I am sure that you have read this in the Bible:“The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building. The Lord God did this. And we can see that he did something great. ” “The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building. The Lord God did this. And we can see that he did something great. ”"
+      "text": "Jesus said to them, ‘I am sure that you have read this in the Bible:“The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building. The Lord God did this. And we can see that he did something great. ”"
     },
     {
       "verse": 43,
@@ -3036,7 +3036,7 @@ module.exports = {
     },
     {
       "verse": 21,
-      "text": "They replied, ‘It is Caesar's picture and Caesar's name. ’Jesus said to them, ‘So you should give to Caesar the things that belong to Caesar. And give to God the things that belong to God. ’ Jesus said to them, ‘So you should give to Caesar the things that belong to Caesar. And give to God the things that belong to God. ’"
+      "text": "They replied, ‘It is Caesar's picture and Caesar's name. ’Jesus said to them, ‘So you should give to Caesar the things that belong to Caesar. And give to God the things that belong to God. ’"
     },
     {
       "verse": 22,
@@ -3412,7 +3412,7 @@ module.exports = {
     },
     {
       "verse": 29,
-      "text": "Then after all these bad things have happened, “The sun will become dark. The moon will not shine any more. Stars will fall out of the sky. And the powerful things in the sky will shake. ” “The sun will become dark. The moon will not shine any more. Stars will fall out of the sky. And the powerful things in the sky will shake. ”"
+      "text": "Then after all these bad things have happened, “The sun will become dark. The moon will not shine any more. Stars will fall out of the sky. And the powerful things in the sky will shake. ”"
     },
     {
       "verse": 30,
@@ -3812,7 +3812,7 @@ module.exports = {
     },
     {
       "verse": 31,
-      "text": "Then Jesus said to his disciples, ‘Tonight, all of you will turn away from me. It will happen in the way that the Bible says: God says, “I will kill the shepherd who leads the sheep. Then all the sheep will run away in different directions. ” ’ God says, “I will kill the shepherd who leads the sheep. Then all the sheep will run away in different directions. ” ’"
+      "text": "Then Jesus said to his disciples, ‘Tonight, all of you will turn away from me. It will happen in the way that the Bible says: God says, “I will kill the shepherd who leads the sheep. Then all the sheep will run away in different directions. ” ’"
     },
     {
       "verse": 32,
@@ -4034,7 +4034,7 @@ module.exports = {
     },
     {
       "verse": 11,
-      "text": "Now Jesus stood in front of the Roman ruler, Pilate. The ruler asked Jesus, ‘Are you the king of the Jews? ’Jesus replied, ‘You have said it. ’ Jesus replied, ‘You have said it. ’"
+      "text": "Now Jesus stood in front of the Roman ruler, Pilate. The ruler asked Jesus, ‘Are you the king of the Jews? ’Jesus replied, ‘You have said it. ’"
     },
     {
       "verse": 12,
@@ -4082,7 +4082,7 @@ module.exports = {
     },
     {
       "verse": 23,
-      "text": "So Pilate said, ‘Why should I kill him? What bad things has he done? ’But the people shouted even louder, ‘Kill him on a cross! ’ But the people shouted even louder, ‘Kill him on a cross! ’"
+      "text": "So Pilate said, ‘Why should I kill him? What bad things has he done? ’But the people shouted even louder, ‘Kill him on a cross! ’"
     },
     {
       "verse": 24,

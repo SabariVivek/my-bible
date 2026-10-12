@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "God, the Father, already decided that you should be his people. God's Spirit has made you special people who would obey Jesus Christ. God chose you so that Jesus Christ's blood would make you really clean. I pray that God will help you and give you peace in your minds more and more. I pray that God will help you and give you peace in your minds more and more."
+      "text": "God, the Father, already decided that you should be his people. God's Spirit has made you special people who would obey Jesus Christ. God chose you so that Jesus Christ's blood would make you really clean. I pray that God will help you and give you peace in your minds more and more."
     },
     {
       "verse": 3,
@@ -124,11 +124,11 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "In the Bible, God says this:‘Look, I have chosen a stone that is very valuable. I have chosen this stone as the most important stone, for the corner of my house in Zion. Anyone who believes in him will never be disappointed. ’ ‘Look, I have chosen a stone that is very valuable. I have chosen this stone as the most important stone, for the corner of my house in Zion. Anyone who believes in him will never be disappointed. ’"
+      "text": "In the Bible, God says this:‘Look, I have chosen a stone that is very valuable. I have chosen this stone as the most important stone, for the corner of my house in Zion. Anyone who believes in him will never be disappointed. ’"
     },
     {
       "verse": 7,
-      "text": "This stone is very valuable to you who believe in Jesus. But the Bible says this about people who do not believe in him:‘The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building. ’ ‘The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building. ’"
+      "text": "This stone is very valuable to you who believe in Jesus. But the Bible says this about people who do not believe in him:‘The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building. ’"
     },
     {
       "verse": 8,
@@ -246,11 +246,11 @@ module.exports = {
     },
     {
       "verse": 11,
-      "text": "Stop doing evil things. Instead, do things that are good. Try to be friends with people. Help people to live in peace with each other. Instead, do things that are good. Try to be friends with people. Help people to live in peace with each other."
+      "text": "Stop doing evil things. Instead, do things that are good. Try to be friends with people. Help people to live in peace with each other."
     },
     {
       "verse": 12,
-      "text": "Remember that the Lord God sees what everyone does. He takes care of people who do what is right. When they pray, he listens to them. But the Lord God turns against people who do evil things. ’ He takes care of people who do what is right. When they pray, he listens to them. But the Lord God turns against people who do evil things. ’"
+      "text": "Remember that the Lord God sees what everyone does. He takes care of people who do what is right. When they pray, he listens to them. But the Lord God turns against people who do evil things. ’"
     },
     {
       "verse": 13,
@@ -390,7 +390,7 @@ module.exports = {
     },
     {
       "verse": 5,
-      "text": "I want to say the same thing to you who are young men. You must respect the authority of the leaders. All of you who are believers must respect one another. Do not think that you are more important than other people. The Bible says:‘God is against proud people. But he is kind to humble people. ’ ‘God is against proud people. But he is kind to humble people. ’"
+      "text": "I want to say the same thing to you who are young men. You must respect the authority of the leaders. All of you who are believers must respect one another. Do not think that you are more important than other people. The Bible says:‘God is against proud people. But he is kind to humble people. ’"
     },
     {
       "verse": 6,

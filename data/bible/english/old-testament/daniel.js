@@ -168,11 +168,11 @@ module.exports = {
     },
     {
       "verse": 21,
-      "text": "He makes things happen at the right time. He gives to some kings authority to rule. And he takes that authority away from other kings. He causes some people to become wise. He helps people to understand the things that they learn. He gives to some kings authority to rule. And he takes that authority away from other kings. He causes some people to become wise. He helps people to understand the things that they learn."
+      "text": "He makes things happen at the right time. He gives to some kings authority to rule. And he takes that authority away from other kings. He causes some people to become wise. He helps people to understand the things that they learn."
     },
     {
       "verse": 22,
-      "text": "He explains difficult problems and secret things. He knows about all things, even when they are in dark places. He himself lives in the light. He knows about all things, even when they are in dark places. He himself lives in the light."
+      "text": "He explains difficult problems and secret things. He knows about all things, even when they are in dark places. He himself lives in the light."
     },
     {
       "verse": 23,
@@ -408,15 +408,15 @@ module.exports = {
   "4": [
     {
       "verse": 1,
-      "text": "This is a message from King Nebuchadnezzar. I am sending this message to everyone in the world, the people in every nation, who speak every language. I hope that you all may have good and happy lives. I am sending this message to everyone in the world, the people in every nation, who speak every language. I hope that you all may have good and happy lives."
+      "text": "This is a message from King Nebuchadnezzar. I am sending this message to everyone in the world, the people in every nation, who speak every language. I hope that you all may have good and happy lives."
     },
     {
       "verse": 2,
-      "text": "I am happy to tell you about the powerful God who rules over everything. He has done miracles and great things for me. He has done miracles and great things for me."
+      "text": "I am happy to tell you about the powerful God who rules over everything. He has done miracles and great things for me."
     },
     {
       "verse": 3,
-      "text": "His miracles show his great strength. They are very powerful. His kingdom will continue for ever. He will always rule. They are very powerful. His kingdom will continue for ever. He will always rule."
+      "text": "His miracles show his great strength. They are very powerful. His kingdom will continue for ever. He will always rule."
     },
     {
       "verse": 4,
@@ -540,11 +540,11 @@ module.exports = {
     },
     {
       "verse": 34,
-      "text": "At the end of that time, I, Nebuchadnezzar, looked up towards heaven. My own mind returned to me again. I praised the powerful God above who lives for ever. I worshipped him as a great God. His kingdom will continue for ever. He will always have authority to rule. His kingdom will continue for ever. He will always have authority to rule."
+      "text": "At the end of that time, I, Nebuchadnezzar, looked up towards heaven. My own mind returned to me again. I praised the powerful God above who lives for ever. I worshipped him as a great God. His kingdom will continue for ever. He will always have authority to rule."
     },
     {
       "verse": 35,
-      "text": "All the people on the earth seem like nothing to him. He does whatever he wants among the angels in heaven, and among the people on the earth too. Nobody can stop him. Nobody can ask him, ‘Why are you doing that? ’ He does whatever he wants among the angels in heaven, and among the people on the earth too. Nobody can stop him. Nobody can ask him, ‘Why are you doing that? ’"
+      "text": "All the people on the earth seem like nothing to him. He does whatever he wants among the angels in heaven, and among the people on the earth too. Nobody can stop him. Nobody can ask him, ‘Why are you doing that? ’"
     },
     {
       "verse": 36,
@@ -780,15 +780,15 @@ module.exports = {
     },
     {
       "verse": 25,
-      "text": "After that, King Darius wrote to all the people of every nation, who spoke all languages. He wrote:‘I hope that you all have good and happy lives. ‘I hope that you all have good and happy lives."
+      "text": "After that, King Darius wrote to all the people of every nation, who spoke all languages. He wrote:‘I hope that you all have good and happy lives."
     },
     {
       "verse": 26,
-      "text": "I have made a law for every part of my kingdom. All people must respect the God that Daniel serves. They must respect him with fear. He is the God who always lives. He will continue for ever. Nobody will ever destroy his kingdom. He will rule for ever. He is the God who always lives. He will continue for ever. Nobody will ever destroy his kingdom. He will rule for ever."
+      "text": "I have made a law for every part of my kingdom. All people must respect the God that Daniel serves. They must respect him with fear. He is the God who always lives. He will continue for ever. Nobody will ever destroy his kingdom. He will rule for ever."
     },
     {
       "verse": 27,
-      "text": "He rescues his people and he keeps them safe. He does powerful miracles in the heavens and on the earth. He has saved Daniel from the lions' power! ’ He does powerful miracles in the heavens and on the earth. He has saved Daniel from the lions' power! ’"
+      "text": "He rescues his people and he keeps them safe. He does powerful miracles in the heavens and on the earth. He has saved Daniel from the lions' power! ’"
     },
     {
       "verse": 28,
@@ -830,11 +830,11 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "While I looked, people put some thrones in their places. Then the God who has ruled for ever sat on his throne. His clothes were as white as snow. His hair was white like pure wool. His throne and the wheels under it burned with flames of fire. Then the God who has ruled for ever sat on his throne. His clothes were as white as snow. His hair was white like pure wool. His throne and the wheels under it burned with flames of fire."
+      "text": "While I looked, people put some thrones in their places. Then the God who has ruled for ever sat on his throne. His clothes were as white as snow. His hair was white like pure wool. His throne and the wheels under it burned with flames of fire."
     },
     {
       "verse": 10,
-      "text": "A river of fire poured out from the place where he was sitting. Thousands of servants were ready to do whatever he wanted. Many more thousands stood around, ready to serve him. Then the meeting of the court began. Someone opened the books to see what was in them. Thousands of servants were ready to do whatever he wanted. Many more thousands stood around, ready to serve him. Then the meeting of the court began. Someone opened the books to see what was in them."
+      "text": "A river of fire poured out from the place where he was sitting. Thousands of servants were ready to do whatever he wanted. Many more thousands stood around, ready to serve him. Then the meeting of the court began. Someone opened the books to see what was in them."
     },
     {
       "verse": 11,
@@ -846,11 +846,11 @@ module.exports = {
     },
     {
       "verse": 13,
-      "text": "I continued to watch in my vision at night and this is what I saw: I saw someone who seemed like a son of man. He was coming towards me, with the clouds of the sky around him. He came near to the God who has ruled for ever. People took him to stand in front of God. I saw someone who seemed like a son of man. He was coming towards me, with the clouds of the sky around him. He came near to the God who has ruled for ever. People took him to stand in front of God."
+      "text": "I continued to watch in my vision at night and this is what I saw: I saw someone who seemed like a son of man. He was coming towards me, with the clouds of the sky around him. He came near to the God who has ruled for ever. People took him to stand in front of God."
     },
     {
       "verse": 14,
-      "text": "God gave him great honour and authority to rule as king. The people of all nations and those who spoke every language agreed to serve him. He has authority to rule for ever. He will never stop being king. Nobody will be able to destroy his kingdom. The people of all nations and those who spoke every language agreed to serve him. He has authority to rule for ever. He will never stop being king. Nobody will be able to destroy his kingdom."
+      "text": "God gave him great honour and authority to rule as king. The people of all nations and those who spoke every language agreed to serve him. He has authority to rule for ever. He will never stop being king. Nobody will be able to destroy his kingdom."
     },
     {
       "verse": 15,

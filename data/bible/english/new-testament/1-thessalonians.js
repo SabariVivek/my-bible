@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": 1,
-      "text": "This letter is from Paul, Silas and Timothy. We are writing to the people of the church in Thessalonica. You belong to God the Father and to the Lord Jesus Christ. We pray that God will continue to help you. We pray that he will give you peace in your minds. We are writing to the people of the church in Thessalonica. You belong to God the Father and to the Lord Jesus Christ. We pray that God will continue to help you. We pray that he will give you peace in your minds."
+      "text": "This letter is from Paul, Silas and Timothy. We are writing to the people of the church in Thessalonica. You belong to God the Father and to the Lord Jesus Christ. We pray that God will continue to help you. We pray that he will give you peace in your minds."
     },
     {
       "verse": 2,

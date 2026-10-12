@@ -292,7 +292,7 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "Elisha said to her, ‘How can I help you? Tell me, what things do you have in your house? ’She said to Elisha, ‘Please sir, I have nothing in the house. All I have is a small jar of olive oil. ’ She said to Elisha, ‘Please sir, I have nothing in the house. All I have is a small jar of olive oil. ’"
+      "text": "Elisha said to her, ‘How can I help you? Tell me, what things do you have in your house? ’She said to Elisha, ‘Please sir, I have nothing in the house. All I have is a small jar of olive oil. ’"
     },
     {
       "verse": 3,
@@ -1076,7 +1076,7 @@ module.exports = {
     },
     {
       "verse": 5,
-      "text": "So these people sent a message to Jehu: the officer who took care of the king's palace, the man who ruled the city of Samaria, the city's leaders, and the men who took care of Ahab's children. The message said, ‘We are your servants. We will do anything that you tell us. We will not make anyone king. You must do what you think is right. ’ The message said, ‘We are your servants. We will do anything that you tell us. We will not make anyone king. You must do what you think is right. ’"
+      "text": "So these people sent a message to Jehu: the officer who took care of the king's palace, the man who ruled the city of Samaria, the city's leaders, and the men who took care of Ahab's children. The message said, ‘We are your servants. We will do anything that you tell us. We will not make anyone king. You must do what you think is right. ’"
     },
     {
       "verse": 6,
@@ -1218,7 +1218,7 @@ module.exports = {
     },
     {
       "verse": 4,
-      "text": "In the seventh year that Athaliah ruled Judah, the priest Jehoiada asked some of the king's officers to come to him. They were officers of army groups, the king's special guards and the palace guards. They came to meet with Jehoiada in the Lord's temple. There, he made them promise to agree with his idea. Then he showed the king's son Joash to them. They came to meet with Jehoiada in the Lord's temple. There, he made them promise to agree with his idea. Then he showed the king's son Joash to them."
+      "text": "In the seventh year that Athaliah ruled Judah, the priest Jehoiada asked some of the king's officers to come to him. They were officers of army groups, the king's special guards and the palace guards. They came to meet with Jehoiada in the Lord's temple. There, he made them promise to agree with his idea. Then he showed the king's son Joash to them."
     },
     {
       "verse": 5,
@@ -1402,7 +1402,7 @@ module.exports = {
     },
     {
       "verse": 7,
-      "text": "The king of Syria had destroyed most of Jehoahaz's army. All that remained were:50 soldiers that rode horses. 10 chariots. 10, 000 other soldiers. The king of Syria completely destroyed all the rest of the army. Only dust remained! The king of Syria completely destroyed all the rest of the army. Only dust remained!"
+      "text": "The king of Syria had destroyed most of Jehoahaz's army. All that remained were:50 soldiers that rode horses. 10 chariots. 10, 000 other soldiers. The king of Syria completely destroyed all the rest of the army. Only dust remained!"
     },
     {
       "verse": 8,
@@ -2064,7 +2064,7 @@ module.exports = {
     },
     {
       "verse": 17,
-      "text": "King Sennacherib of Assyria sent his three most important officers from Lachish to Jerusalem, to speak to King Hezekiah. The three officers took a large army with them. They arrived in Jerusalem. They went and stood at the stream of water that came from the higher pool. It was on the road to the field where people washed clothes. They arrived in Jerusalem. They went and stood at the stream of water that came from the higher pool. It was on the road to the field where people washed clothes."
+      "text": "King Sennacherib of Assyria sent his three most important officers from Lachish to Jerusalem, to speak to King Hezekiah. The three officers took a large army with them. They arrived in Jerusalem. They went and stood at the stream of water that came from the higher pool. It was on the road to the field where people washed clothes."
     },
     {
       "verse": 18,
@@ -2234,7 +2234,7 @@ module.exports = {
     },
     {
       "verse": 22,
-      "text": "Who do you think it is that you have insulted? Who have you shouted at? Who have you looked at so proudly? The answer is the Holy God of Israel! Who have you shouted at? Who have you looked at so proudly? The answer is the Holy God of Israel!"
+      "text": "Who do you think it is that you have insulted? Who have you shouted at? Who have you looked at so proudly? The answer is the Holy God of Israel!"
     },
     {
       "verse": 23,
@@ -2242,7 +2242,7 @@ module.exports = {
     },
     {
       "verse": 24,
-      "text": "I dug wells in other countries, and they gave me water to drink. My army marched through all the rivers in Egypt, and the rivers became dry. ’ and they gave me water to drink. My army marched through all the rivers in Egypt, and the rivers became dry. ’"
+      "text": "I dug wells in other countries, and they gave me water to drink. My army marched through all the rivers in Egypt, and the rivers became dry. ’"
     },
     {
       "verse": 25,
@@ -2250,11 +2250,11 @@ module.exports = {
     },
     {
       "verse": 26,
-      "text": "The people of those cities have no power. They are afraid and they are confused. They are like plants in a field, that cannot live for a long time. They are like fresh green grass, or grass that grows on the roof of a house. When a hot wind blows on them, it burns them and they die. They are afraid and they are confused. They are like plants in a field, that cannot live for a long time. They are like fresh green grass, or grass that grows on the roof of a house. When a hot wind blows on them, it burns them and they die."
+      "text": "The people of those cities have no power. They are afraid and they are confused. They are like plants in a field, that cannot live for a long time. They are like fresh green grass, or grass that grows on the roof of a house. When a hot wind blows on them, it burns them and they die."
     },
     {
       "verse": 27,
-      "text": "I know everything about you. I know where you live. I know when you go out. And I know when you return home. I know how much you shout against me, when you are angry. I know where you live. I know when you go out. And I know when you return home. I know how much you shout against me, when you are angry."
+      "text": "I know everything about you. I know where you live. I know when you go out. And I know when you return home. I know how much you shout against me, when you are angry."
     },
     {
       "verse": 28,
@@ -2274,7 +2274,7 @@ module.exports = {
     },
     {
       "verse": 32,
-      "text": "This is what the Lord says about the king of Assyria:“His army will not come into this city. His soldiers will not shoot any arrows here. They will not attack the city as they hold their shields. They will not build heaps of earth against the city's walls. “His army will not come into this city. His soldiers will not shoot any arrows here. They will not attack the city as they hold their shields. They will not build heaps of earth against the city's walls."
+      "text": "This is what the Lord says about the king of Assyria:“His army will not come into this city. His soldiers will not shoot any arrows here. They will not attack the city as they hold their shields. They will not build heaps of earth against the city's walls."
     },
     {
       "verse": 33,
@@ -2282,7 +2282,7 @@ module.exports = {
     },
     {
       "verse": 34,
-      "text": "“I will make this city safe and I will rescue it. I will do that to show that I am great. I promised my servant David that I would do it. So I will do it. ” ’ I will do that to show that I am great. I promised my servant David that I would do it. So I will do it. ” ’"
+      "text": "“I will make this city safe and I will rescue it. I will do that to show that I am great. I promised my servant David that I would do it. So I will do it. ” ’"
     },
     {
       "verse": 35,

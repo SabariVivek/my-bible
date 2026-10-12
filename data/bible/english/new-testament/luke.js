@@ -174,7 +174,7 @@ module.exports = {
     },
     {
       "verse": 46,
-      "text": "Then Mary said, ‘All of me wants to praise God and say, “Lord, how good and great you are! ” ‘All of me wants to praise God and say, “Lord, how good and great you are! ”"
+      "text": "Then Mary said, ‘All of me wants to praise God and say, “Lord, how good and great you are! ”"
     },
     {
       "verse": 47,
@@ -182,35 +182,35 @@ module.exports = {
     },
     {
       "verse": 48,
-      "text": "I know that I am not an important person. God knows this, and he has been kind to me. Listen! From now on, all people will say that God has made me happy. God knows this, and he has been kind to me. Listen! From now on, all people will say that God has made me happy."
+      "text": "I know that I am not an important person. God knows this, and he has been kind to me. Listen! From now on, all people will say that God has made me happy."
     },
     {
       "verse": 49,
-      "text": "Yes, God has done great things for me. He is very powerful and strong. He is good in every way. He is very powerful and strong. He is good in every way."
+      "text": "Yes, God has done great things for me. He is very powerful and strong. He is good in every way."
     },
     {
       "verse": 50,
-      "text": "He is kind to people who respect and obey him. He will always be kind to people like that. He will always be kind to people like that."
+      "text": "He is kind to people who respect and obey him. He will always be kind to people like that."
     },
     {
       "verse": 51,
-      "text": "He has shown how strong he is to do great things. Some people think that they are very important. But he has sent them away in different directions. Some people think that they are very important. But he has sent them away in different directions."
+      "text": "He has shown how strong he is to do great things. Some people think that they are very important. But he has sent them away in different directions."
     },
     {
       "verse": 52,
-      "text": "Some people were ruling countries. But he has taken their power away from them. He has given power to people who do not feel important. But he has taken their power away from them. He has given power to people who do not feel important."
+      "text": "Some people were ruling countries. But he has taken their power away from them. He has given power to people who do not feel important."
     },
     {
       "verse": 53,
-      "text": "He has fed hungry people with good things to eat. But he has sent rich people away with nothing. But he has sent rich people away with nothing."
+      "text": "He has fed hungry people with good things to eat. But he has sent rich people away with nothing."
     },
     {
       "verse": 54,
-      "text": "He promised that he would be kind to his people, Israel. Now he has come and helped them. Now he has come and helped them."
+      "text": "He promised that he would be kind to his people, Israel. Now he has come and helped them."
     },
     {
       "verse": 55,
-      "text": "He made a promise to Abraham and to our other ancestors. Now he has done what he promised. ’ Now he has done what he promised. ’"
+      "text": "He made a promise to Abraham and to our other ancestors. Now he has done what he promised. ’"
     },
     {
       "verse": 56,
@@ -262,23 +262,23 @@ module.exports = {
     },
     {
       "verse": 68,
-      "text": "‘The Lord God of Israel is a great God. He has come to save his people. He has come to make them free. He has come to save his people. He has come to make them free."
+      "text": "‘The Lord God of Israel is a great God. He has come to save his people. He has come to make them free."
     },
     {
       "verse": 69,
-      "text": "He has sent a very strong person who will save us. This person comes from the family of his servant, King David. This person comes from the family of his servant, King David."
+      "text": "He has sent a very strong person who will save us. This person comes from the family of his servant, King David."
     },
     {
       "verse": 70,
-      "text": "Long ago, God promised that he would do this. He gave his own prophets this message to speak. He gave his own prophets this message to speak."
+      "text": "Long ago, God promised that he would do this. He gave his own prophets this message to speak."
     },
     {
       "verse": 71,
-      "text": "God will save us from our enemies. He will save us from everyone that hates us. He will save us from everyone that hates us."
+      "text": "God will save us from our enemies. He will save us from everyone that hates us."
     },
     {
       "verse": 72,
-      "text": "He has promised to be kind to our ancestors. He will do the things that he promised in his holy covenant. He will do the things that he promised in his holy covenant."
+      "text": "He has promised to be kind to our ancestors. He will do the things that he promised in his holy covenant."
     },
     {
       "verse": 73,
@@ -286,27 +286,27 @@ module.exports = {
     },
     {
       "verse": 74,
-      "text": "God said, “I will keep you safe from your enemies. Then you can serve me and not be afraid. Then you can serve me and not be afraid."
+      "text": "God said, “I will keep you safe from your enemies. Then you can serve me and not be afraid."
     },
     {
       "verse": 75,
-      "text": "You can live in a way that is good and right. You can do this all your lives. ” ’ You can do this all your lives. ” ’"
+      "text": "You can live in a way that is good and right. You can do this all your lives. ” ’"
     },
     {
       "verse": 76,
-      "text": "Zechariah then spoke to John:‘You, my child, will be called a prophet of the powerful God who is over all. You will go in front of the Lord to prepare a way for him. ‘You, my child, will be called a prophet of the powerful God who is over all. You will go in front of the Lord to prepare a way for him."
+      "text": "Zechariah then spoke to John:‘You, my child, will be called a prophet of the powerful God who is over all. You will go in front of the Lord to prepare a way for him."
     },
     {
       "verse": 77,
-      "text": "You will tell God's people how God can save them. They have done wrong things but God will forgive them. They have done wrong things but God will forgive them."
+      "text": "You will tell God's people how God can save them. They have done wrong things but God will forgive them."
     },
     {
       "verse": 78,
-      "text": "Our God will forgive us because he is very kind. He will send someone from the highest place. When this person comes, it will be like the sunrise for us. He will send someone from the highest place. When this person comes, it will be like the sunrise for us."
+      "text": "Our God will forgive us because he is very kind. He will send someone from the highest place. When this person comes, it will be like the sunrise for us."
     },
     {
       "verse": 79,
-      "text": "He will bring light to people who are living without God. It is like those people are living in the dark. They are afraid to die. But he will shine on them. He will show us how to live so that we will not be afraid. ’ It is like those people are living in the dark. They are afraid to die. But he will shine on them. He will show us how to live so that we will not be afraid. ’"
+      "text": "He will bring light to people who are living without God. It is like those people are living in the dark. They are afraid to die. But he will shine on them. He will show us how to live so that we will not be afraid. ’"
     },
     {
       "verse": 80,
@@ -376,7 +376,7 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "‘God is great! He lives in the highest place above. He will bless the people on earth who please him. They will have peace in their minds. ’ He will bless the people on earth who please him. They will have peace in their minds. ’"
+      "text": "‘God is great! He lives in the highest place above. He will bless the people on earth who please him. They will have peace in their minds. ’"
     },
     {
       "verse": 15,
@@ -436,7 +436,7 @@ module.exports = {
     },
     {
       "verse": 29,
-      "text": "‘Master, I am your servant. You have done what you promised to me. Now I can die with no trouble in my mind. You have done what you promised to me. Now I can die with no trouble in my mind."
+      "text": "‘Master, I am your servant. You have done what you promised to me. Now I can die with no trouble in my mind."
     },
     {
       "verse": 30,
@@ -448,7 +448,7 @@ module.exports = {
     },
     {
       "verse": 32,
-      "text": "He will bring light to people so that they can know you. He will show you to those people who are not Jews. He will also show that your people of Israel are very special. ’ He will show you to those people who are not Jews. He will also show that your people of Israel are very special. ’"
+      "text": "He will bring light to people so that they can know you. He will show you to those people who are not Jews. He will also show that your people of Israel are very special. ’"
     },
     {
       "verse": 33,
@@ -546,11 +546,11 @@ module.exports = {
     },
     {
       "verse": 4,
-      "text": "The prophet Isaiah wrote this message from God in his book:‘Somebody's voice is shouting in the wilderness, “The Lord will come soon, so prepare a way for him to follow. Make the paths straight for him. ‘Somebody's voice is shouting in the wilderness, “The Lord will come soon, so prepare a way for him to follow. Make the paths straight for him."
+      "text": "The prophet Isaiah wrote this message from God in his book:‘Somebody's voice is shouting in the wilderness, “The Lord will come soon, so prepare a way for him to follow. Make the paths straight for him."
     },
     {
       "verse": 5,
-      "text": "Fill in every valley and make every mountain and hill flat. Take away every bend so that the road is straight. Take away all the rocks so that the road is flat. Take away every bend so that the road is straight. Take away all the rocks so that the road is flat."
+      "text": "Fill in every valley and make every mountain and hill flat. Take away every bend so that the road is straight. Take away all the rocks so that the road is flat."
     },
     {
       "verse": 6,
@@ -586,7 +586,7 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "Then some soldiers asked John, ‘What about us? What should we do? ’John replied, ‘Do not rob people of their money. Do not say that a person is guilty if he has not done anything wrong. You must not take money for yourself in that way. You should be happy with the money that you receive for your work. ’ John replied, ‘Do not rob people of their money. Do not say that a person is guilty if he has not done anything wrong. You must not take money for yourself in that way. You should be happy with the money that you receive for your work. ’"
+      "text": "Then some soldiers asked John, ‘What about us? What should we do? ’John replied, ‘Do not rob people of their money. Do not say that a person is guilty if he has not done anything wrong. You must not take money for yourself in that way. You should be happy with the money that you receive for your work. ’"
     },
     {
       "verse": 15,
@@ -622,63 +622,63 @@ module.exports = {
     },
     {
       "verse": 23,
-      "text": "years old when he began his work. People thought that he was the son of Joseph. Joseph was from the family of Heli. Joseph was from the family of Heli."
+      "text": "years old when he began his work. People thought that he was the son of Joseph. Joseph was from the family of Heli."
     },
     {
       "verse": 24,
-      "text": "Heli was from the family of Matthat. Matthat was from the family of Levi. Levi was from the family of Melchi. Melchi was from the family of Jannai. Jannai was from the family of Joseph. Matthat was from the family of Levi. Levi was from the family of Melchi. Melchi was from the family of Jannai. Jannai was from the family of Joseph."
+      "text": "Heli was from the family of Matthat. Matthat was from the family of Levi. Levi was from the family of Melchi. Melchi was from the family of Jannai. Jannai was from the family of Joseph."
     },
     {
       "verse": 25,
-      "text": "Joseph was from the family of Mattathias. Mattathias was from the family of Amos. Amos was from the family of Nahum. Nahum was from the family of Esli. Esli was from the family of Naggai. Mattathias was from the family of Amos. Amos was from the family of Nahum. Nahum was from the family of Esli. Esli was from the family of Naggai."
+      "text": "Joseph was from the family of Mattathias. Mattathias was from the family of Amos. Amos was from the family of Nahum. Nahum was from the family of Esli. Esli was from the family of Naggai."
     },
     {
       "verse": 26,
-      "text": "Naggai was from the family of Maath. Maath was from the family of Mattathias. Mattathias was from the family of Semein. Semein was from the family of Josech. Josech was from the family of Joda. Maath was from the family of Mattathias. Mattathias was from the family of Semein. Semein was from the family of Josech. Josech was from the family of Joda."
+      "text": "Naggai was from the family of Maath. Maath was from the family of Mattathias. Mattathias was from the family of Semein. Semein was from the family of Josech. Josech was from the family of Joda."
     },
     {
       "verse": 27,
-      "text": "Joda was from the family of Joanan. Joanan was from the family of Rhesa. Rhesa was from the family of Zerubbabel. Zerubbabel was from the family of Shealtiel. Shealtiel was from the family of Neri. Joanan was from the family of Rhesa. Rhesa was from the family of Zerubbabel. Zerubbabel was from the family of Shealtiel. Shealtiel was from the family of Neri."
+      "text": "Joda was from the family of Joanan. Joanan was from the family of Rhesa. Rhesa was from the family of Zerubbabel. Zerubbabel was from the family of Shealtiel. Shealtiel was from the family of Neri."
     },
     {
       "verse": 28,
-      "text": "Neri was from the family of Melchi. Melchi was from the family of Addi. Addi was from the family of Cosam. Cosam was from the family of Elmadam. Elmadam was from the family of Er. Melchi was from the family of Addi. Addi was from the family of Cosam. Cosam was from the family of Elmadam. Elmadam was from the family of Er."
+      "text": "Neri was from the family of Melchi. Melchi was from the family of Addi. Addi was from the family of Cosam. Cosam was from the family of Elmadam. Elmadam was from the family of Er."
     },
     {
       "verse": 29,
-      "text": "Er was from the family of Joshua. Joshua was from the family of Eliezer. Eliezer was from the family of Jorim. Jorim was from the family of Matthat. Matthat was from the family of Levi. Joshua was from the family of Eliezer. Eliezer was from the family of Jorim. Jorim was from the family of Matthat. Matthat was from the family of Levi."
+      "text": "Er was from the family of Joshua. Joshua was from the family of Eliezer. Eliezer was from the family of Jorim. Jorim was from the family of Matthat. Matthat was from the family of Levi."
     },
     {
       "verse": 30,
-      "text": "Levi was from the family of Simeon. Simeon was from the family of Judah. Judah was from the family of Joseph. Joseph was from the family of Jonam. Jonam was from the family of Eliakim. Simeon was from the family of Judah. Judah was from the family of Joseph. Joseph was from the family of Jonam. Jonam was from the family of Eliakim."
+      "text": "Levi was from the family of Simeon. Simeon was from the family of Judah. Judah was from the family of Joseph. Joseph was from the family of Jonam. Jonam was from the family of Eliakim."
     },
     {
       "verse": 31,
-      "text": "Eliakim was from the family of Melea. Melea was from the family of Menna. Menna was from the family of Mattatha. Mattatha was from the family of Nathan. Nathan was from the family of David. Melea was from the family of Menna. Menna was from the family of Mattatha. Mattatha was from the family of Nathan. Nathan was from the family of David."
+      "text": "Eliakim was from the family of Melea. Melea was from the family of Menna. Menna was from the family of Mattatha. Mattatha was from the family of Nathan. Nathan was from the family of David."
     },
     {
       "verse": 32,
-      "text": "David was from the family of Jesse. Jesse was from the family of Obed. Obed was from the family of Boaz. Boaz was from the family of Salmon. Salmon was from the family of Nahshon. Jesse was from the family of Obed. Obed was from the family of Boaz. Boaz was from the family of Salmon. Salmon was from the family of Nahshon."
+      "text": "David was from the family of Jesse. Jesse was from the family of Obed. Obed was from the family of Boaz. Boaz was from the family of Salmon. Salmon was from the family of Nahshon."
     },
     {
       "verse": 33,
-      "text": "Nahshon was from the family of Amminadab. Amminadab was from the family of Ram. Ram was from the family of Hezron. Hezron was from the family of Perez. Perez was from the family of Judah. Amminadab was from the family of Ram. Ram was from the family of Hezron. Hezron was from the family of Perez. Perez was from the family of Judah."
+      "text": "Nahshon was from the family of Amminadab. Amminadab was from the family of Ram. Ram was from the family of Hezron. Hezron was from the family of Perez. Perez was from the family of Judah."
     },
     {
       "verse": 34,
-      "text": "Judah was from the family of Jacob. Jacob was from the family of Isaac. Isaac was from the family of Abraham. Abraham was from the family of Terah. Terah was from the family of Nahor. Jacob was from the family of Isaac. Isaac was from the family of Abraham. Abraham was from the family of Terah. Terah was from the family of Nahor."
+      "text": "Judah was from the family of Jacob. Jacob was from the family of Isaac. Isaac was from the family of Abraham. Abraham was from the family of Terah. Terah was from the family of Nahor."
     },
     {
       "verse": 35,
-      "text": "Nahor was from the family of Serug. Serug was from the family of Reu. Reu was from the family of Peleg. Peleg was from the family of Eber. Eber was from the family of Shelah. Serug was from the family of Reu. Reu was from the family of Peleg. Peleg was from the family of Eber. Eber was from the family of Shelah."
+      "text": "Nahor was from the family of Serug. Serug was from the family of Reu. Reu was from the family of Peleg. Peleg was from the family of Eber. Eber was from the family of Shelah."
     },
     {
       "verse": 36,
-      "text": "Shelah was from the family of Cainan. Cainan was from the family of Arphaxad. Arphaxad was from the family of Shem. Shem was from the family of Noah. Noah was from the family of Lamech. Cainan was from the family of Arphaxad. Arphaxad was from the family of Shem. Shem was from the family of Noah. Noah was from the family of Lamech."
+      "text": "Shelah was from the family of Cainan. Cainan was from the family of Arphaxad. Arphaxad was from the family of Shem. Shem was from the family of Noah. Noah was from the family of Lamech."
     },
     {
       "verse": 37,
-      "text": "Lamech was from the family of Methuselah. Methuselah was from the family of Enoch. Enoch was from the family of Jared. Jared was from the family of Mahalalel. Mahalalel was from the family of Cainan. Methuselah was from the family of Enoch. Enoch was from the family of Jared. Jared was from the family of Mahalalel. Mahalalel was from the family of Cainan."
+      "text": "Lamech was from the family of Methuselah. Methuselah was from the family of Enoch. Enoch was from the family of Jared. Jared was from the family of Mahalalel. Mahalalel was from the family of Cainan."
     },
     {
       "verse": 38,
@@ -716,7 +716,7 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "‘No! ’ Jesus replied, ‘The Bible says, “Only worship your Lord God. He is the only one that you should obey. ” ’ “Only worship your Lord God. He is the only one that you should obey. ” ’"
+      "text": "‘No! ’ Jesus replied, ‘The Bible says, “Only worship your Lord God. He is the only one that you should obey. ” ’"
     },
     {
       "verse": 9,
@@ -728,11 +728,11 @@ module.exports = {
     },
     {
       "verse": 11,
-      "text": "“They will hold you safely in their hands. They will not let you hurt your foot on a stone. ” ’ They will not let you hurt your foot on a stone. ” ’"
+      "text": "“They will hold you safely in their hands. They will not let you hurt your foot on a stone. ” ’"
     },
     {
       "verse": 12,
-      "text": "‘No! ’ Jesus replied. ‘The Bible says, “Do not test the Lord God, to see if he will save you. ” ’ “Do not test the Lord God, to see if he will save you. ” ’"
+      "text": "‘No! ’ Jesus replied. ‘The Bible says, “Do not test the Lord God, to see if he will save you. ” ’"
     },
     {
       "verse": 13,
@@ -910,7 +910,7 @@ module.exports = {
     },
     {
       "verse": 12,
-      "text": "One day, Jesus was in a certain town. A man with a bad disease of the skin was there. When the man saw Jesus, he threw himself down on the ground in front of him. He said, ‘Sir, you can make me well again if you want to do that. Please do it. ’ When the man saw Jesus, he threw himself down on the ground in front of him. He said, ‘Sir, you can make me well again if you want to do that. Please do it. ’"
+      "text": "One day, Jesus was in a certain town. A man with a bad disease of the skin was there. When the man saw Jesus, he threw himself down on the ground in front of him. He said, ‘Sir, you can make me well again if you want to do that. Please do it. ’"
     },
     {
       "verse": 13,
@@ -1080,11 +1080,11 @@ module.exports = {
     },
     {
       "verse": 15,
-      "text": "Matthew, Thomas, James, the son of Alphaeus, Simon the Zealot, Thomas, James, the son of Alphaeus, Simon the Zealot,"
+      "text": "Matthew, Thomas, James, the son of Alphaeus, Simon the Zealot,"
     },
     {
       "verse": 16,
-      "text": "Judas, son of James, Judas Iscariot, who later gave Jesus to his enemies. Judas Iscariot, who later gave Jesus to his enemies."
+      "text": "Judas, son of James, Judas Iscariot, who later gave Jesus to his enemies."
     },
     {
       "verse": 17,
@@ -1100,11 +1100,11 @@ module.exports = {
     },
     {
       "verse": 20,
-      "text": "Jesus looked at his disciples. He spoke this message to them:‘Happy are you people that are poor. The kingdom of God belongs to you. ‘Happy are you people that are poor. The kingdom of God belongs to you."
+      "text": "Jesus looked at his disciples. He spoke this message to them:‘Happy are you people that are poor. The kingdom of God belongs to you."
     },
     {
       "verse": 21,
-      "text": "Happy are you people that are hungry now. God will feed you until you are full. Happy are you people that are crying now. Later, you will laugh. Happy are you people that are crying now. Later, you will laugh."
+      "text": "Happy are you people that are hungry now. God will feed you until you are full. Happy are you people that are crying now. Later, you will laugh."
     },
     {
       "verse": 22,
@@ -1116,11 +1116,11 @@ module.exports = {
     },
     {
       "verse": 24,
-      "text": "Listen, you that are rich. You have a comfortable life now, but it will be very bad for you. You have a comfortable life now, but it will be very bad for you."
+      "text": "Listen, you that are rich. You have a comfortable life now, but it will be very bad for you."
     },
     {
       "verse": 25,
-      "text": "Listen, you that are full with food now. It will be very bad for you and you will be hungry. Listen, you that are laughing now. It will be very bad for you. You will be sad and you will cry. It will be very bad for you and you will be hungry. Listen, you that are laughing now. It will be very bad for you. You will be sad and you will cry."
+      "text": "Listen, you that are full with food now. It will be very bad for you and you will be hungry. Listen, you that are laughing now. It will be very bad for you. You will be sad and you will cry."
     },
     {
       "verse": 26,
@@ -1520,7 +1520,7 @@ module.exports = {
     },
     {
       "verse": 25,
-      "text": "Jesus said to his disciples, ‘Why do you not believe in me? ’All this frightened the disciples and they were very surprised. They asked each other, ‘Who is this man? He even tells the wind and the water what to do. He speaks and they obey him! ’ All this frightened the disciples and they were very surprised. They asked each other, ‘Who is this man? He even tells the wind and the water what to do. He speaks and they obey him! ’"
+      "text": "Jesus said to his disciples, ‘Why do you not believe in me? ’All this frightened the disciples and they were very surprised. They asked each other, ‘Who is this man? He even tells the wind and the water what to do. He speaks and they obey him! ’"
     },
     {
       "verse": 26,
@@ -1702,7 +1702,7 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "There were about 5, 000 men in the crowd. Jesus said to his disciples, ‘Tell the people that they should sit down on the ground in groups. There should be about 50 people in each group. ’ Jesus said to his disciples, ‘Tell the people that they should sit down on the ground in groups. There should be about 50 people in each group. ’"
+      "text": "There were about 5, 000 men in the crowd. Jesus said to his disciples, ‘Tell the people that they should sit down on the ground in groups. There should be about 50 people in each group. ’"
     },
     {
       "verse": 15,
@@ -1726,7 +1726,7 @@ module.exports = {
     },
     {
       "verse": 20,
-      "text": "‘But what do you think? ’ Jesus then asked them. ‘Who do you say that I am? ’Peter replied, ‘You are the Messiah. God has sent you. ’ Peter replied, ‘You are the Messiah. God has sent you. ’"
+      "text": "‘But what do you think? ’ Jesus then asked them. ‘Who do you say that I am? ’Peter replied, ‘You are the Messiah. God has sent you. ’"
     },
     {
       "verse": 21,
@@ -1790,7 +1790,7 @@ module.exports = {
     },
     {
       "verse": 36,
-      "text": "The voice stopped speaking. Then the three disciples saw that only Jesus was there with them now. They did not tell anyone at this time about what they had seen. They did not tell anyone at this time about what they had seen."
+      "text": "The voice stopped speaking. Then the three disciples saw that only Jesus was there with them now. They did not tell anyone at this time about what they had seen."
     },
     {
       "verse": 37,
@@ -2044,7 +2044,7 @@ module.exports = {
     },
     {
       "verse": 37,
-      "text": "The teacher answered, ‘It was the man who was kind to him. ’Then Jesus said to him, ‘Yes. So you should go and do the same for other people. ’ Then Jesus said to him, ‘Yes. So you should go and do the same for other people. ’"
+      "text": "The teacher answered, ‘It was the man who was kind to him. ’Then Jesus said to him, ‘Yes. So you should go and do the same for other people. ’"
     },
     {
       "verse": 38,
@@ -2074,7 +2074,7 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "Jesus replied, ‘When you pray, you should say this:“God, our Father, we want people to give honour to you. We want the day when you rule everyone to come soon. “God, our Father, we want people to give honour to you. We want the day when you rule everyone to come soon."
+      "text": "Jesus replied, ‘When you pray, you should say this:“God, our Father, we want people to give honour to you. We want the day when you rule everyone to come soon."
     },
     {
       "verse": 3,
@@ -2082,7 +2082,7 @@ module.exports = {
     },
     {
       "verse": 4,
-      "text": "Forgive us for our sins, because we also forgive everyone who has done wrong things against us. And do not let us agree to do wrong things. ” ’ because we also forgive everyone who has done wrong things against us. And do not let us agree to do wrong things. ” ’"
+      "text": "Forgive us for our sins, because we also forgive everyone who has done wrong things against us. And do not let us agree to do wrong things. ” ’"
     },
     {
       "verse": 5,
@@ -3620,7 +3620,7 @@ module.exports = {
     },
     {
       "verse": 10,
-      "text": "At the time for the harvest, the man sent a servant to speak to the farmers. He wanted them to give him some fruit from the garden. But the farmers hit the servant with sticks and they sent him away with nothing. But the farmers hit the servant with sticks and they sent him away with nothing."
+      "text": "At the time for the harvest, the man sent a servant to speak to the farmers. He wanted them to give him some fruit from the garden. But the farmers hit the servant with sticks and they sent him away with nothing."
     },
     {
       "verse": 11,
@@ -3644,11 +3644,11 @@ module.exports = {
     },
     {
       "verse": 16,
-      "text": "I tell you, he will come to those farmers and he will kill them. Then he will give the garden to other people to take care of it. ’When the people heard this, they replied, ‘That must never happen! ’ When the people heard this, they replied, ‘That must never happen! ’"
+      "text": "I tell you, he will come to those farmers and he will kill them. Then he will give the garden to other people to take care of it. ’When the people heard this, they replied, ‘That must never happen! ’"
     },
     {
       "verse": 17,
-      "text": "Jesus then looked at the people and he said, ‘You say that this must not happen. But you have read this in the Bible and you should know what it means:“The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building. “The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building."
+      "text": "Jesus then looked at the people and he said, ‘You say that this must not happen. But you have read this in the Bible and you should know what it means:“The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building."
     },
     {
       "verse": 18,

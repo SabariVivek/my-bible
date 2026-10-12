@@ -92,11 +92,11 @@ module.exports = {
     },
     {
       "verse": 13,
-      "text": "You who are older, like fathers, I am writing to you because you know Christ. He has always been there, since before the world began. You who are young men, I am writing to you because you have won against Satan. You who are young men, I am writing to you because you have won against Satan."
+      "text": "You who are older, like fathers, I am writing to you because you know Christ. He has always been there, since before the world began. You who are young men, I am writing to you because you have won against Satan."
     },
     {
       "verse": 14,
-      "text": "Yes, my children, I have written to you because you know God, our Father. Fathers, I have written to you because you know Christ. He was already there before the world began. Young men, I have written to you because you are strong. You continue to obey God's message, and you have won against Satan. Fathers, I have written to you because you know Christ. He was already there before the world began. Young men, I have written to you because you are strong. You continue to obey God's message, and you have won against Satan."
+      "text": "Yes, my children, I have written to you because you know God, our Father. Fathers, I have written to you because you know Christ. He was already there before the world began. Young men, I have written to you because you are strong. You continue to obey God's message, and you have won against Satan."
     },
     {
       "verse": 15,

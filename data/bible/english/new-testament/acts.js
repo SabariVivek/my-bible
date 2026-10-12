@@ -172,19 +172,19 @@ module.exports = {
     },
     {
       "verse": 17,
-      "text": "God says “This is what I will do in the last days. I will give my Spirit to all people. Your sons and daughters will speak my message to people. Your young men will see visions in their minds. And your old men will see things in their dreams. I will give my Spirit to all people. Your sons and daughters will speak my message to people. Your young men will see visions in their minds. And your old men will see things in their dreams."
+      "text": "God says “This is what I will do in the last days. I will give my Spirit to all people. Your sons and daughters will speak my message to people. Your young men will see visions in their minds. And your old men will see things in their dreams."
     },
     {
       "verse": 18,
-      "text": "At that time, I will give my Spirit to all my servants, both men and women. Then they will speak my message to people. both men and women. Then they will speak my message to people."
+      "text": "At that time, I will give my Spirit to all my servants, both men and women. Then they will speak my message to people."
     },
     {
       "verse": 19,
-      "text": "I will cause special things to appear in the sky. I will cause special things to appear on the earth too. Those things will show how great I am. There will be blood, fire and thick dark smoke. I will cause special things to appear on the earth too. Those things will show how great I am. There will be blood, fire and thick dark smoke."
+      "text": "I will cause special things to appear in the sky. I will cause special things to appear on the earth too. Those things will show how great I am. There will be blood, fire and thick dark smoke."
     },
     {
       "verse": 20,
-      "text": "The sun will become dark to people. The moon will become dark red like the colour of blood. These things will happen before the great day of the Lord arrives. That will be a wonderful day! The moon will become dark red like the colour of blood. These things will happen before the great day of the Lord arrives. That will be a wonderful day!"
+      "text": "The sun will become dark to people. The moon will become dark red like the colour of blood. These things will happen before the great day of the Lord arrives. That will be a wonderful day!"
     },
     {
       "verse": 21,
@@ -208,15 +208,15 @@ module.exports = {
     },
     {
       "verse": 26,
-      "text": "Because of this, I am very happy, and I will praise you, God. I am human and one day I will die, but I know that you will help me while I live. and I will praise you, God. I am human and one day I will die, but I know that you will help me while I live."
+      "text": "Because of this, I am very happy, and I will praise you, God. I am human and one day I will die, but I know that you will help me while I live."
     },
     {
       "verse": 27,
-      "text": "When I die, you will not leave me in Hades, the place for dead people. You will not let anything destroy the body of your Holy One. You will not let anything destroy the body of your Holy One."
+      "text": "When I die, you will not leave me in Hades, the place for dead people. You will not let anything destroy the body of your Holy One."
     },
     {
       "verse": 28,
-      "text": "You have shown me the paths that lead to life with you. I will be completely happy because you will be with me for ever. ” ’ I will be completely happy because you will be with me for ever. ” ’"
+      "text": "You have shown me the paths that lead to life with you. I will be completely happy because you will be with me for ever. ” ’"
     },
     {
       "verse": 29,
@@ -814,7 +814,7 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "Then God made an covenant with Abraham that his descendants would be his special people. God said, “You must circumcise all your baby boys. ”Later, Abraham became the father of Isaac. Abraham circumcised Isaac when he was eight days old. Then Isaac became the father of Jacob. Jacob himself had 12 sons. These sons became the 12 ancestors of the families of Israel. Later, Abraham became the father of Isaac. Abraham circumcised Isaac when he was eight days old. Then Isaac became the father of Jacob. Jacob himself had 12 sons. These sons became the 12 ancestors of the families of Israel."
+      "text": "Then God made an covenant with Abraham that his descendants would be his special people. God said, “You must circumcise all your baby boys. ”Later, Abraham became the father of Isaac. Abraham circumcised Isaac when he was eight days old. Then Isaac became the father of Jacob. Jacob himself had 12 sons. These sons became the 12 ancestors of the families of Israel."
     },
     {
       "verse": 9,
@@ -954,7 +954,7 @@ module.exports = {
     },
     {
       "verse": 43,
-      "text": "No. You carried with you the idol of the god called Molech. You also carried an idol with the shape of a star, to be like your god, Rephan. These were the idols which you worshipped in the wilderness. So now I will send you away from your own country. You will go to live in places beyond Babylon. ’ ” You also carried an idol with the shape of a star, to be like your god, Rephan. These were the idols which you worshipped in the wilderness. So now I will send you away from your own country. You will go to live in places beyond Babylon. ’ ”"
+      "text": "No. You carried with you the idol of the god called Molech. You also carried an idol with the shape of a star, to be like your god, Rephan. These were the idols which you worshipped in the wilderness. So now I will send you away from your own country. You will go to live in places beyond Babylon. ’ ”"
     },
     {
       "verse": 44,
@@ -978,7 +978,7 @@ module.exports = {
     },
     {
       "verse": 49,
-      "text": "The Lord God says, “Heaven is the seat where I sit to rule. The earth is the place where I put my feet. You could not build a house for me where I could live. You could not make a place for me to rest there. “Heaven is the seat where I sit to rule. The earth is the place where I put my feet. You could not build a house for me where I could live. You could not make a place for me to rest there."
+      "text": "The Lord God says, “Heaven is the seat where I sit to rule. The earth is the place where I put my feet. You could not build a house for me where I could live. You could not make a place for me to rest there."
     },
     {
       "verse": 50,
@@ -1028,7 +1028,7 @@ module.exports = {
   "8": [
     {
       "verse": 1,
-      "text": "Saul was standing there while the Jewish leaders killed Stephen. He agreed with what they did. On the same day that Stephen died, the group of believers who lived in Jerusalem began to have great trouble. People did bad things to them. All the believers left Jerusalem and went to other places in Judea and Samaria. Only Jesus' 12 apostles stayed in Jerusalem. On the same day that Stephen died, the group of believers who lived in Jerusalem began to have great trouble. People did bad things to them. All the believers left Jerusalem and went to other places in Judea and Samaria. Only Jesus' 12 apostles stayed in Jerusalem."
+      "text": "Saul was standing there while the Jewish leaders killed Stephen. He agreed with what they did. On the same day that Stephen died, the group of believers who lived in Jerusalem began to have great trouble. People did bad things to them. All the believers left Jerusalem and went to other places in Judea and Samaria. Only Jesus' 12 apostles stayed in Jerusalem."
     },
     {
       "verse": 2,
@@ -1152,11 +1152,11 @@ module.exports = {
     },
     {
       "verse": 32,
-      "text": "The officer was reading these words from the book of Isaiah:‘He was like a sheep that people were leading away to kill. He was like a lamb when they are cutting off its wool, but it makes no noise. In the same way, he did not say anything. ‘He was like a sheep that people were leading away to kill. He was like a lamb when they are cutting off its wool, but it makes no noise. In the same way, he did not say anything."
+      "text": "The officer was reading these words from the book of Isaiah:‘He was like a sheep that people were leading away to kill. He was like a lamb when they are cutting off its wool, but it makes no noise. In the same way, he did not say anything."
     },
     {
       "verse": 33,
-      "text": "People did not respect him at all. They refused to judge him in a fair way. Nobody can say anything about his descendants, because his life on earth came to an end. ’ They refused to judge him in a fair way. Nobody can say anything about his descendants, because his life on earth came to an end. ’"
+      "text": "People did not respect him at all. They refused to judge him in a fair way. Nobody can say anything about his descendants, because his life on earth came to an end. ’"
     },
     {
       "verse": 34,
@@ -1914,11 +1914,11 @@ module.exports = {
     },
     {
       "verse": 34,
-      "text": "God caused Jesus to live again so that nothing would destroy his body. He will not die again. This is what God said to our ancestors:“I will surely help you with good things, just like I promised to King David. ” “I will surely help you with good things, just like I promised to King David. ”"
+      "text": "God caused Jesus to live again so that nothing would destroy his body. He will not die again. This is what God said to our ancestors:“I will surely help you with good things, just like I promised to King David. ”"
     },
     {
       "verse": 35,
-      "text": "God also says this in another Psalm:“Your servant who loves you will not remain dead. You will not let anything destroy the body of your Holy One. ” “Your servant who loves you will not remain dead. You will not let anything destroy the body of your Holy One. ”"
+      "text": "God also says this in another Psalm:“Your servant who loves you will not remain dead. You will not let anything destroy the body of your Holy One. ”"
     },
     {
       "verse": 36,
@@ -1942,7 +1942,7 @@ module.exports = {
     },
     {
       "verse": 41,
-      "text": "“Listen to me, you people who laugh at God! You will be surprised at the great things that I do. And then you will die. I am working now, while you are still alive. But still you will not believe what is true. Even if someone explains everything to you, you will never believe. ” ’ You will be surprised at the great things that I do. And then you will die. I am working now, while you are still alive. But still you will not believe what is true. Even if someone explains everything to you, you will never believe. ” ’"
+      "text": "“Listen to me, you people who laugh at God! You will be surprised at the great things that I do. And then you will die. I am working now, while you are still alive. But still you will not believe what is true. Even if someone explains everything to you, you will never believe. ” ’"
     },
     {
       "verse": 42,
@@ -1966,7 +1966,7 @@ module.exports = {
     },
     {
       "verse": 47,
-      "text": "The Lord God has also told us to do this. He said:“I have chosen you to be like a light to the Gentiles. You must go to people everywhere in the world. You must tell them how God wants to save them. ” ’ “I have chosen you to be like a light to the Gentiles. You must go to people everywhere in the world. You must tell them how God wants to save them. ” ’"
+      "text": "The Lord God has also told us to do this. He said:“I have chosen you to be like a light to the Gentiles. You must go to people everywhere in the world. You must tell them how God wants to save them. ” ’"
     },
     {
       "verse": 48,
@@ -2166,11 +2166,11 @@ module.exports = {
     },
     {
       "verse": 16,
-      "text": "The Lord God said, “Later I will return. At that time I will make David's kingdom strong again. It has become like a house that has fallen down, but I will build it again so that it is strong. “Later I will return. At that time I will make David's kingdom strong again. It has become like a house that has fallen down, but I will build it again so that it is strong."
+      "text": "The Lord God said, “Later I will return. At that time I will make David's kingdom strong again. It has become like a house that has fallen down, but I will build it again so that it is strong."
     },
     {
       "verse": 17,
-      "text": "Then many other people will want to know me, the Lord God. Those are the Gentiles that I have chosen to belong to me. I, the Lord God, say this, and I will make these things happen. Those are the Gentiles that I have chosen to belong to me. I, the Lord God, say this, and I will make these things happen."
+      "text": "Then many other people will want to know me, the Lord God. Those are the Gentiles that I have chosen to belong to me. I, the Lord God, say this, and I will make these things happen."
     },
     {
       "verse": 18,
@@ -2194,7 +2194,7 @@ module.exports = {
     },
     {
       "verse": 23,
-      "text": "This is the letter that they sent with those men:‘We, the apostles and leaders of the believers here say “hello” to you, our friends who also believe in Jesus. We say “hello” to all of you Gentile believers who live in Antioch, Syria and Cilicia. ‘We, the apostles and leaders of the believers here say “hello” to you, our friends who also believe in Jesus. We say “hello” to all of you Gentile believers who live in Antioch, Syria and Cilicia."
+      "text": "This is the letter that they sent with those men:‘We, the apostles and leaders of the believers here say “hello” to you, our friends who also believe in Jesus. We say “hello” to all of you Gentile believers who live in Antioch, Syria and Cilicia."
     },
     {
       "verse": 24,
@@ -2694,7 +2694,7 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "So Paul asked them, ‘When someone baptized you, what kind of baptism was that? ’‘We received the baptism that John spoke about, ’ they answered. ‘We received the baptism that John spoke about, ’ they answered."
+      "text": "So Paul asked them, ‘When someone baptized you, what kind of baptism was that? ’‘We received the baptism that John spoke about, ’ they answered."
     },
     {
       "verse": 4,
@@ -2872,7 +2872,7 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "As for us, we sailed by ship from Philippi, after the festival when the Jews eat flat bread. After five days we arrived in Troas. We met the other men there and we all stayed there for seven days. After five days we arrived in Troas. We met the other men there and we all stayed there for seven days."
+      "text": "As for us, we sailed by ship from Philippi, after the festival when the Jews eat flat bread. After five days we arrived in Troas. We met the other men there and we all stayed there for seven days."
     },
     {
       "verse": 7,
@@ -3272,11 +3272,11 @@ module.exports = {
     },
     {
       "verse": 27,
-      "text": "So the soldiers' leader went to speak to Paul. He asked him, ‘Tell me. Are you really a citizen of Rome? ’Paul answered, ‘Yes, I am. ’ Paul answered, ‘Yes, I am. ’"
+      "text": "So the soldiers' leader went to speak to Paul. He asked him, ‘Tell me. Are you really a citizen of Rome? ’Paul answered, ‘Yes, I am. ’"
     },
     {
       "verse": 28,
-      "text": "The soldiers' leader said, ‘I paid a lot of money to the government so that I could become a citizen of Rome. ’Paul replied, ‘But I was already a citizen of Rome when I was born. ’ Paul replied, ‘But I was already a citizen of Rome when I was born. ’"
+      "text": "The soldiers' leader said, ‘I paid a lot of money to the government so that I could become a citizen of Rome. ’Paul replied, ‘But I was already a citizen of Rome when I was born. ’"
     },
     {
       "verse": 29,
@@ -3626,7 +3626,7 @@ module.exports = {
     },
     {
       "verse": 22,
-      "text": "Agrippa said to Festus, ‘I would like to hear this man myself. ’Festus replied, ‘You will hear him tomorrow. ’ Festus replied, ‘You will hear him tomorrow. ’"
+      "text": "Agrippa said to Festus, ‘I would like to hear this man myself. ’Festus replied, ‘You will hear him tomorrow. ’"
     },
     {
       "verse": 23,
@@ -4060,11 +4060,11 @@ module.exports = {
     },
     {
       "verse": 26,
-      "text": "“Go and say to this people, ‘You will listen and listen. But you will not understand. You will look and look. But you will not see anything. ’ ‘You will listen and listen. But you will not understand. You will look and look. But you will not see anything. ’"
+      "text": "“Go and say to this people, ‘You will listen and listen. But you will not understand. You will look and look. But you will not see anything. ’"
     },
     {
       "verse": 27,
-      "text": "These people do not really want to understand. They are like people who have shut their ears. They are like people who have shut their eyes. If they did want to look, then they would really see. If they did want to listen, then they would really hear. They would understand my message. They would turn back to me and they would obey me. Then I would forgive them and I would make them well. ” ’ They are like people who have shut their ears. They are like people who have shut their eyes. If they did want to look, then they would really see. If they did want to listen, then they would really hear. They would understand my message. They would turn back to me and they would obey me. Then I would forgive them and I would make them well. ” ’"
+      "text": "These people do not really want to understand. They are like people who have shut their ears. They are like people who have shut their eyes. If they did want to look, then they would really see. If they did want to listen, then they would really hear. They would understand my message. They would turn back to me and they would obey me. Then I would forgive them and I would make them well. ” ’"
     },
     {
       "verse": 28,

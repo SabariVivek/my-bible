@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       "verse": 4,
-      "text": "I am John. I am writing to the seven churches that are in the region of Asia. I pray that God will be very kind to you. I pray that he will give you peace in your minds. God is alive now. He has always been alive. He will continue to be alive for ever. God will help you, and the seven spirits that are in front of his throne will help you. God will help you, and the seven spirits that are in front of his throne will help you."
+      "text": "I am John. I am writing to the seven churches that are in the region of Asia. I pray that God will be very kind to you. I pray that he will give you peace in your minds. God is alive now. He has always been alive. He will continue to be alive for ever. God will help you, and the seven spirits that are in front of his throne will help you."
     },
     {
       "verse": 5,
@@ -22,11 +22,11 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "Jesus has brought us into his family, so that we belong to God's kingdom. He has made us priests, so that we serve his God and Father. So we praise Jesus Christ! He will always be very great! He has power for all time. Amen. This is true! So we praise Jesus Christ! He will always be very great! He has power for all time. Amen. This is true!"
+      "text": "Jesus has brought us into his family, so that we belong to God's kingdom. He has made us priests, so that we serve his God and Father. So we praise Jesus Christ! He will always be very great! He has power for all time. Amen. This is true!"
     },
     {
       "verse": 7,
-      "text": "Look! He will come on the clouds! At that time, everyone will see him! Even the people who pushed a spear into his body will see him. People from all the nations on earth will be sad when they see him. Yes, it is true! Amen! At that time, everyone will see him! Even the people who pushed a spear into his body will see him. People from all the nations on earth will be sad when they see him. Yes, it is true! Amen!"
+      "text": "Look! He will come on the clouds! At that time, everyone will see him! Even the people who pushed a spear into his body will see him. People from all the nations on earth will be sad when they see him. Yes, it is true! Amen!"
     },
     {
       "verse": 8,
@@ -84,7 +84,7 @@ module.exports = {
   "2": [
     {
       "verse": 1,
-      "text": "‘Now write this to the angel of the church at Ephesus:“This is the message to you from the one who holds the seven stars. He holds them carefully in his right hand. He walks among the seven gold lampstands. “This is the message to you from the one who holds the seven stars. He holds them carefully in his right hand. He walks among the seven gold lampstands."
+      "text": "‘Now write this to the angel of the church at Ephesus:“This is the message to you from the one who holds the seven stars. He holds them carefully in his right hand. He walks among the seven gold lampstands."
     },
     {
       "verse": 2,
@@ -112,7 +112,7 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "‘Write this to the angel of the church at Smyrna:“This is the message to you from the one who is the first and the last. He was dead, but he became alive again. “This is the message to you from the one who is the first and the last. He was dead, but he became alive again."
+      "text": "‘Write this to the angel of the church at Smyrna:“This is the message to you from the one who is the first and the last. He was dead, but he became alive again."
     },
     {
       "verse": 9,
@@ -128,7 +128,7 @@ module.exports = {
     },
     {
       "verse": 12,
-      "text": "‘Write this to the angel of the church at Pergamum:“This is the message to you from the one who has the sharp sword with two edges. “This is the message to you from the one who has the sharp sword with two edges."
+      "text": "‘Write this to the angel of the church at Pergamum:“This is the message to you from the one who has the sharp sword with two edges."
     },
     {
       "verse": 13,
@@ -152,7 +152,7 @@ module.exports = {
     },
     {
       "verse": 18,
-      "text": "‘Write this to the angel of the church at Thyatira:“This is the message to you from the Son of God. He has eyes that burn brightly like flames of fire. His feet shine like bright metal. “This is the message to you from the Son of God. He has eyes that burn brightly like flames of fire. His feet shine like bright metal."
+      "text": "‘Write this to the angel of the church at Thyatira:“This is the message to you from the Son of God. He has eyes that burn brightly like flames of fire. His feet shine like bright metal."
     },
     {
       "verse": 19,
@@ -226,7 +226,7 @@ module.exports = {
     },
     {
       "verse": 7,
-      "text": "‘Write this to the angel of the church at Philadelphia:“This is my message to you. I am the one who is completely good, the true God. I have King David's key in my hand. When I open a door, nobody can shut it. And when I shut a door, nobody can open it. “This is my message to you. I am the one who is completely good, the true God. I have King David's key in my hand. When I open a door, nobody can shut it. And when I shut a door, nobody can open it."
+      "text": "‘Write this to the angel of the church at Philadelphia:“This is my message to you. I am the one who is completely good, the true God. I have King David's key in my hand. When I open a door, nobody can shut it. And when I shut a door, nobody can open it."
     },
     {
       "verse": 8,
@@ -254,7 +254,7 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "‘Write this to the angel of the church at Laodicea:“This is my message to you. I am the one whose name is ‘Amen’. I faithfully tell people God's true message. Everything that God has created starts with me. “This is my message to you. I am the one whose name is ‘Amen’. I faithfully tell people God's true message. Everything that God has created starts with me."
+      "text": "‘Write this to the angel of the church at Laodicea:“This is my message to you. I am the one whose name is ‘Amen’. I faithfully tell people God's true message. Everything that God has created starts with me."
     },
     {
       "verse": 15,
@@ -374,7 +374,7 @@ module.exports = {
     },
     {
       "verse": 10,
-      "text": "You have caused them to belong to the kingdom of our God. You have made them priests, so that they serve God. And they will rule on the earth. ’ You have made them priests, so that they serve God. And they will rule on the earth. ’"
+      "text": "You have caused them to belong to the kingdom of our God. You have made them priests, so that they serve God. And they will rule on the earth. ’"
     },
     {
       "verse": 11,
@@ -386,7 +386,7 @@ module.exports = {
     },
     {
       "verse": 13,
-      "text": "Then I heard everything that is alive singing. That was everything in heaven and everything on the earth, and everything under the earth and everything in the sea. They were singing:‘We praise the one who sits on the throne. We praise the one who is the Lamb. We say that they are great! We worship them! They have power to rule for ever! ’ ‘We praise the one who sits on the throne. We praise the one who is the Lamb. We say that they are great! We worship them! They have power to rule for ever! ’"
+      "text": "Then I heard everything that is alive singing. That was everything in heaven and everything on the earth, and everything under the earth and everything in the sea. They were singing:‘We praise the one who sits on the throne. We praise the one who is the Lamb. We say that they are great! We worship them! They have power to rule for ever! ’"
     },
     {
       "verse": 14,
@@ -502,7 +502,7 @@ module.exports = {
     },
     {
       "verse": 10,
-      "text": "They shouted loudly:‘We worship our God who sits on the throne. And we worship the Lamb. They have saved us from Satan's power. ’ ‘We worship our God who sits on the throne. And we worship the Lamb. They have saved us from Satan's power. ’"
+      "text": "They shouted loudly:‘We worship our God who sits on the throne. And we worship the Lamb. They have saved us from Satan's power. ’"
     },
     {
       "verse": 11,
@@ -778,7 +778,7 @@ module.exports = {
     },
     {
       "verse": 15,
-      "text": "The seventh angel made a sound with his trumpet. Then there was the sound of loud voices in heaven. They shouted:‘Our Lord God and his Messiah now have all authority! The whole world has become their kingdom. God will rule as King for ever! ’ ‘Our Lord God and his Messiah now have all authority! The whole world has become their kingdom. God will rule as King for ever! ’"
+      "text": "The seventh angel made a sound with his trumpet. Then there was the sound of loud voices in heaven. They shouted:‘Our Lord God and his Messiah now have all authority! The whole world has become their kingdom. God will rule as King for ever! ’"
     },
     {
       "verse": 16,
@@ -790,7 +790,7 @@ module.exports = {
     },
     {
       "verse": 18,
-      "text": "The nations of the world were very angry. But now it is time for you to be angry with them. Now you will judge all the people who have died. You will give good things to your servants, the prophets, and to all your people. You will bless everyone who respects and obeys you, whether they are important people or not. But you will destroy all those people who destroy the earth. The time has now come for all this to happen. ’ But now it is time for you to be angry with them. Now you will judge all the people who have died. You will give good things to your servants, the prophets, and to all your people. You will bless everyone who respects and obeys you, whether they are important people or not. But you will destroy all those people who destroy the earth. The time has now come for all this to happen. ’"
+      "text": "The nations of the world were very angry. But now it is time for you to be angry with them. Now you will judge all the people who have died. You will give good things to your servants, the prophets, and to all your people. You will bless everyone who respects and obeys you, whether they are important people or not. But you will destroy all those people who destroy the earth. The time has now come for all this to happen. ’"
     },
     {
       "verse": 19,
@@ -840,11 +840,11 @@ module.exports = {
     },
     {
       "verse": 11,
-      "text": "Our brothers and sisters fought against him and they won. They could do this because of the death of the Lamb as a sacrifice. They continued to speak God's true message. They were also ready to die as God's servants. That is why they were able to win against Satan. They could do this because of the death of the Lamb as a sacrifice. They continued to speak God's true message. They were also ready to die as God's servants. That is why they were able to win against Satan."
+      "text": "Our brothers and sisters fought against him and they won. They could do this because of the death of the Lamb as a sacrifice. They continued to speak God's true message. They were also ready to die as God's servants. That is why they were able to win against Satan."
     },
     {
       "verse": 12,
-      "text": "So be happy, everyone who lives in heaven! But terrible trouble will happen to the earth and the sea. The Devil has come down to you now and he is very angry. He knows that he has only a short time to hurt people. ’ But terrible trouble will happen to the earth and the sea. The Devil has come down to you now and he is very angry. He knows that he has only a short time to hurt people. ’"
+      "text": "So be happy, everyone who lives in heaven! But terrible trouble will happen to the earth and the sea. The Devil has come down to you now and he is very angry. He knows that he has only a short time to hurt people. ’"
     },
     {
       "verse": 13,
@@ -1038,7 +1038,7 @@ module.exports = {
     },
     {
       "verse": 4,
-      "text": "Everyone will respect and obey you, Lord. They will say how great your name is, because only you are completely good. People from every nation have seen what you do. You always do what is right. So all people will come and stand in front of you, and they will worship you. ’ They will say how great your name is, because only you are completely good. People from every nation have seen what you do. You always do what is right. So all people will come and stand in front of you, and they will worship you. ’"
+      "text": "Everyone will respect and obey you, Lord. They will say how great your name is, because only you are completely good. People from every nation have seen what you do. You always do what is right. So all people will come and stand in front of you, and they will worship you. ’"
     },
     {
       "verse": 5,
@@ -1076,15 +1076,15 @@ module.exports = {
     },
     {
       "verse": 5,
-      "text": "Then I heard the voice of the angel who had authority over the waters. He said to God, ‘Holy One, you are alive now and you always have been alive. You are right in everything that you decide. Now you have judged these people. ‘Holy One, you are alive now and you always have been alive. You are right in everything that you decide. Now you have judged these people."
+      "text": "Then I heard the voice of the angel who had authority over the waters. He said to God, ‘Holy One, you are alive now and you always have been alive. You are right in everything that you decide. Now you have judged these people."
     },
     {
       "verse": 6,
-      "text": "They have killed your people and your prophets. They have caused your servants to bleed and to die. So now you have given these bad people blood to drink. That is what ought to happen to them. It is right. ’ They have caused your servants to bleed and to die. So now you have given these bad people blood to drink. That is what ought to happen to them. It is right. ’"
+      "text": "They have killed your people and your prophets. They have caused your servants to bleed and to die. So now you have given these bad people blood to drink. That is what ought to happen to them. It is right. ’"
     },
     {
       "verse": 7,
-      "text": "Then I heard a voice from the altar in heaven. It said, ‘Yes, Lord God, you have all authority. When you judge people, it is the punishment that they deserve. ’ ‘Yes, Lord God, you have all authority. When you judge people, it is the punishment that they deserve. ’"
+      "text": "Then I heard a voice from the altar in heaven. It said, ‘Yes, Lord God, you have all authority. When you judge people, it is the punishment that they deserve. ’"
     },
     {
       "verse": 8,
@@ -1228,27 +1228,27 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "She has been like a prostitute who makes men become drunk. Then she leads them to have sex in a wrong way. She has caused people from every nation to turn away from God. It is like all the kings of the earth have had sex with that bad woman. All the traders of the earth have become rich, because she has bought things from them to enjoy a wicked life. ’ Then she leads them to have sex in a wrong way. She has caused people from every nation to turn away from God. It is like all the kings of the earth have had sex with that bad woman. All the traders of the earth have become rich, because she has bought things from them to enjoy a wicked life. ’"
+      "text": "She has been like a prostitute who makes men become drunk. Then she leads them to have sex in a wrong way. She has caused people from every nation to turn away from God. It is like all the kings of the earth have had sex with that bad woman. All the traders of the earth have become rich, because she has bought things from them to enjoy a wicked life. ’"
     },
     {
       "verse": 4,
-      "text": "Then I heard another voice which spoke from heaven. It said:‘My people, leave the city! Come out! Do not do the bad things that the people of that city have done. Then you will not receive the terrible troubles that God sends to them. ‘My people, leave the city! Come out! Do not do the bad things that the people of that city have done. Then you will not receive the terrible troubles that God sends to them."
+      "text": "Then I heard another voice which spoke from heaven. It said:‘My people, leave the city! Come out! Do not do the bad things that the people of that city have done. Then you will not receive the terrible troubles that God sends to them."
     },
     {
       "verse": 5,
-      "text": "They have done very many bad things. Their sins have reached as high as heaven. God has remembered to punish them. Their sins have reached as high as heaven. God has remembered to punish them."
+      "text": "They have done very many bad things. Their sins have reached as high as heaven. God has remembered to punish them."
     },
     {
       "verse": 6,
-      "text": "Yes, punish the people of that city. Do to them the same things that they have done to others. Punish them with twice the bad things that they themselves have done. She caused people to drink pain from her cup. Now make her drink twice as much pain for herself! Do to them the same things that they have done to others. Punish them with twice the bad things that they themselves have done. She caused people to drink pain from her cup. Now make her drink twice as much pain for herself!"
+      "text": "Yes, punish the people of that city. Do to them the same things that they have done to others. Punish them with twice the bad things that they themselves have done. She caused people to drink pain from her cup. Now make her drink twice as much pain for herself!"
     },
     {
       "verse": 7,
-      "text": "She liked to receive honour. She bought expensive things to enjoy a wicked life. So now give her the trouble and pain that she deserves. She has said to herself, “I rule people like a queen. I do not live like a widow. I will never need to be sad. ” She bought expensive things to enjoy a wicked life. So now give her the trouble and pain that she deserves. She has said to herself, “I rule people like a queen. I do not live like a widow. I will never need to be sad. ”"
+      "text": "She liked to receive honour. She bought expensive things to enjoy a wicked life. So now give her the trouble and pain that she deserves. She has said to herself, “I rule people like a queen. I do not live like a widow. I will never need to be sad. ”"
     },
     {
       "verse": 8,
-      "text": "Because she speaks like that, she will receive many troubles in one single day. Her people will become very ill. They will be very sad. They will have no food to eat. Fire will destroy the city, The Lord God is powerful. So he will punish her with these troubles. ’ she will receive many troubles in one single day. Her people will become very ill. They will be very sad. They will have no food to eat. Fire will destroy the city, The Lord God is powerful. So he will punish her with these troubles. ’"
+      "text": "Because she speaks like that, she will receive many troubles in one single day. Her people will become very ill. They will be very sad. They will have no food to eat. Fire will destroy the city, The Lord God is powerful. So he will punish her with these troubles. ’"
     },
     {
       "verse": 9,
@@ -1296,19 +1296,19 @@ module.exports = {
     },
     {
       "verse": 20,
-      "text": "Yes, you who live in heaven, be happy! Be happy because God has punished Babylon! God's people and his apostles and his prophets, be happy! God has punished the city because of what she did to you. Be happy because God has punished Babylon! God's people and his apostles and his prophets, be happy! God has punished the city because of what she did to you."
+      "text": "Yes, you who live in heaven, be happy! Be happy because God has punished Babylon! God's people and his apostles and his prophets, be happy! God has punished the city because of what she did to you."
     },
     {
       "verse": 21,
-      "text": "Then a powerful angel picked up a very big, heavy stone. He threw it into the sea. He said, ‘God will throw you down, Babylon! You are a great city, but God will throw you down like this stone. Nobody will ever see you again! ‘God will throw you down, Babylon! You are a great city, but God will throw you down like this stone. Nobody will ever see you again!"
+      "text": "Then a powerful angel picked up a very big, heavy stone. He threw it into the sea. He said, ‘God will throw you down, Babylon! You are a great city, but God will throw you down like this stone. Nobody will ever see you again!"
     },
     {
       "verse": 22,
-      "text": "Nobody will ever hear music in the city again. Nobody will sing there. Nobody will make music with harps, or with flutes, or with trumpets. There will never be workers who make things in the city. Nobody will ever hear the sound of people who make flour again. Nobody will sing there. Nobody will make music with harps, or with flutes, or with trumpets. There will never be workers who make things in the city. Nobody will ever hear the sound of people who make flour again."
+      "text": "Nobody will ever hear music in the city again. Nobody will sing there. Nobody will make music with harps, or with flutes, or with trumpets. There will never be workers who make things in the city. Nobody will ever hear the sound of people who make flour again."
     },
     {
       "verse": 23,
-      "text": "No light from people's lamps will ever shine in the city again. Nobody will ever hear the happy voices of a man and a woman when they marry. Your traders were the most powerful people on the earth. You used your magic to deceive people from all nations. Nobody will ever hear the happy voices of a man and a woman when they marry. Your traders were the most powerful people on the earth. You used your magic to deceive people from all nations."
+      "text": "No light from people's lamps will ever shine in the city again. Nobody will ever hear the happy voices of a man and a woman when they marry. Your traders were the most powerful people on the earth. You used your magic to deceive people from all nations."
     },
     {
       "verse": 24,
@@ -1318,15 +1318,15 @@ module.exports = {
   "19": [
     {
       "verse": 1,
-      "text": "After these things, I heard a sound like the voices of a great crowd of people in heaven. They were shouting, ‘Praise the Lord our God! He has saved us! He is very powerful! We say that he is great! ‘Praise the Lord our God! He has saved us! He is very powerful! We say that he is great!"
+      "text": "After these things, I heard a sound like the voices of a great crowd of people in heaven. They were shouting, ‘Praise the Lord our God! He has saved us! He is very powerful! We say that he is great!"
     },
     {
       "verse": 2,
-      "text": "Everything that he decides is right and fair. He has punished that great prostitute. She led people on the earth to do wicked things. She murdered God's servants with her own hands. But now God has punished her as she deserves. ’ He has punished that great prostitute. She led people on the earth to do wicked things. She murdered God's servants with her own hands. But now God has punished her as she deserves. ’"
+      "text": "Everything that he decides is right and fair. He has punished that great prostitute. She led people on the earth to do wicked things. She murdered God's servants with her own hands. But now God has punished her as she deserves. ’"
     },
     {
       "verse": 3,
-      "text": "Then the crowd of people in heaven shouted again, ‘Praise the Lord our God! The smoke from the fire that burns that city will go up for ever. ’ ‘Praise the Lord our God! The smoke from the fire that burns that city will go up for ever. ’"
+      "text": "Then the crowd of people in heaven shouted again, ‘Praise the Lord our God! The smoke from the fire that burns that city will go up for ever. ’"
     },
     {
       "verse": 4,
@@ -1334,19 +1334,19 @@ module.exports = {
     },
     {
       "verse": 5,
-      "text": "Then a voice spoke from the throne. It said, ‘All of you who are God's servants, praise our God! All of you who respect God's power, worship him! Important people and ordinary people should worship him! ’ ‘All of you who are God's servants, praise our God! All of you who respect God's power, worship him! Important people and ordinary people should worship him! ’"
+      "text": "Then a voice spoke from the throne. It said, ‘All of you who are God's servants, praise our God! All of you who respect God's power, worship him! Important people and ordinary people should worship him! ’"
     },
     {
       "verse": 6,
-      "text": "Then I heard a sound like the noise of a very big crowd that was shouting. The sound was like the noise of water that pours quickly along a river. It was like the noise of loud thunder. The crowd of people shouted, ‘Praise the Lord our God! He rules with all power and authority! ‘Praise the Lord our God! He rules with all power and authority!"
+      "text": "Then I heard a sound like the noise of a very big crowd that was shouting. The sound was like the noise of water that pours quickly along a river. It was like the noise of loud thunder. The crowd of people shouted, ‘Praise the Lord our God! He rules with all power and authority!"
     },
     {
       "verse": 7,
-      "text": "We must shout with joy because we are so happy! We will say that God is great! The time has come for the Lamb's wedding party. His bride has prepared herself. We will say that God is great! The time has come for the Lamb's wedding party. His bride has prepared herself."
+      "text": "We must shout with joy because we are so happy! We will say that God is great! The time has come for the Lamb's wedding party. His bride has prepared herself."
     },
     {
       "verse": 8,
-      "text": "God has given her linen clothes to wear that are bright and clean. ’These special linen clothes show the good things that God's holy people have done. These special linen clothes show the good things that God's holy people have done."
+      "text": "God has given her linen clothes to wear that are bright and clean. ’These special linen clothes show the good things that God's holy people have done."
     },
     {
       "verse": 9,
@@ -1494,7 +1494,7 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "But I will punish other people. They include: people who are afraid of trouble; people who do not believe in Jesus; people who do disgusting things; people who murder other people; people who have sex in a wrong way; people who use magic to hurt people; people who worship idols; people who tell lies. All these people will go into the lake of fire that burns with sulphur. That is the second death for people. ’ All these people will go into the lake of fire that burns with sulphur. That is the second death for people. ’"
+      "text": "But I will punish other people. They include: people who are afraid of trouble; people who do not believe in Jesus; people who do disgusting things; people who murder other people; people who have sex in a wrong way; people who use magic to hurt people; people who worship idols; people who tell lies. All these people will go into the lake of fire that burns with sulphur. That is the second death for people. ’"
     },
     {
       "verse": 9,
@@ -1652,7 +1652,7 @@ module.exports = {
     },
     {
       "verse": 20,
-      "text": "It is Jesus who tells us that all these messages are true. He says, ‘Yes, I will come soon! ’Amen! We agree! Come, Lord Jesus! Amen! We agree! Come, Lord Jesus!"
+      "text": "It is Jesus who tells us that all these messages are true. He says, ‘Yes, I will come soon! ’Amen! We agree! Come, Lord Jesus!"
     },
     {
       "verse": 21,

@@ -74,7 +74,7 @@ module.exports = {
     },
     {
       "verse": 19,
-      "text": "It says in the Bible:‘I, God, will destroy all the clever thoughts of wise people. I will show that their clever ideas are useless. ’ ‘I, God, will destroy all the clever thoughts of wise people. I will show that their clever ideas are useless. ’"
+      "text": "It says in the Bible:‘I, God, will destroy all the clever thoughts of wise people. I will show that their clever ideas are useless. ’"
     },
     {
       "verse": 20,
@@ -270,7 +270,7 @@ module.exports = {
     },
     {
       "verse": 20,
-      "text": "In another place, the Bible says:‘The Lord knows that the thoughts of wise people have no value. ’ ‘The Lord knows that the thoughts of wise people have no value. ’"
+      "text": "In another place, the Bible says:‘The Lord knows that the thoughts of wise people have no value. ’"
     },
     {
       "verse": 21,
@@ -1578,7 +1578,7 @@ module.exports = {
     },
     {
       "verse": 33,
-      "text": "Do not let anyone deceive you. Remember this:‘If you become a friend of bad people, you also will live in a bad way. ’ ‘If you become a friend of bad people, you also will live in a bad way. ’"
+      "text": "Do not let anyone deceive you. Remember this:‘If you become a friend of bad people, you also will live in a bad way. ’"
     },
     {
       "verse": 34,
@@ -1666,7 +1666,7 @@ module.exports = {
     },
     {
       "verse": 55,
-      "text": "‘Death, you can no longer win! Death, you no longer have any power to hurt us! ’ Death, you no longer have any power to hurt us! ’"
+      "text": "‘Death, you can no longer win! Death, you no longer have any power to hurt us! ’"
     },
     {
       "verse": 56,
@@ -1768,7 +1768,7 @@ module.exports = {
     },
     {
       "verse": 22,
-      "text": "If anyone among you does not really love the Lord, I pray that God will curse that person. Our Lord, come now! We are waiting for you! Our Lord, come now! We are waiting for you!"
+      "text": "If anyone among you does not really love the Lord, I pray that God will curse that person. Our Lord, come now! We are waiting for you!"
     },
     {
       "verse": 23,

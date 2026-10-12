@@ -2224,7 +2224,7 @@ module.exports = {
     },
     {
       "verse": 15,
-      "text": "‘Do not be afraid, you people in Zion. Look! Your king is coming. He is riding on a young donkey. ’ Look! Your king is coming. He is riding on a young donkey. ’"
+      "text": "‘Do not be afraid, you people in Zion. Look! Your king is coming. He is riding on a young donkey. ’"
     },
     {
       "verse": 16,

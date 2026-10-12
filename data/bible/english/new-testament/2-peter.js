@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": 1,
-      "text": "This letter is from me, Simon Peter. I am Jesus Christ's servant and his apostle. I am writing to you people who believe in Jesus Christ, as we do. That is a valuable gift that God has given to us all. He has done this because Jesus is completely good and right. Jesus is the one who saves us. He is the God that we serve. I am writing to you people who believe in Jesus Christ, as we do. That is a valuable gift that God has given to us all. He has done this because Jesus is completely good and right. Jesus is the one who saves us. He is the God that we serve."
+      "text": "This letter is from me, Simon Peter. I am Jesus Christ's servant and his apostle. I am writing to you people who believe in Jesus Christ, as we do. That is a valuable gift that God has given to us all. He has done this because Jesus is completely good and right. Jesus is the one who saves us. He is the God that we serve."
     },
     {
       "verse": 2,

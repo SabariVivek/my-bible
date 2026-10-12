@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": 18,
-      "text": "Hannah said to him, ‘I will try to do what pleases you, sir. ’Then Hannah went away and she ate some food. Her face was not sad now. Then Hannah went away and she ate some food. Her face was not sad now."
+      "text": "Hannah said to him, ‘I will try to do what pleases you, sir. ’Then Hannah went away and she ate some food. Her face was not sad now."
     },
     {
       "verse": 19,
@@ -90,7 +90,7 @@ module.exports = {
     },
     {
       "verse": 23,
-      "text": "Elkanah said to Hannah, ‘You must do what seems right to you. Stay here at home until the boy begins to eat proper food. May the Lord help you, as he has promised. ’So Hannah stayed at home with her son while he continued to drink milk from her breasts. So Hannah stayed at home with her son while he continued to drink milk from her breasts."
+      "text": "Elkanah said to Hannah, ‘You must do what seems right to you. Stay here at home until the boy begins to eat proper food. May the Lord help you, as he has promised. ’So Hannah stayed at home with her son while he continued to drink milk from her breasts."
     },
     {
       "verse": 24,
@@ -116,27 +116,27 @@ module.exports = {
   "2": [
     {
       "verse": 1,
-      "text": "Hannah prayed and she said, ‘I am very happy when I think about what the Lord has done. The Lord has made me very strong. I can laugh at my enemies because you, Lord, have saved me. That makes me very happy. ‘I am very happy when I think about what the Lord has done. The Lord has made me very strong. I can laugh at my enemies because you, Lord, have saved me. That makes me very happy."
+      "text": "Hannah prayed and she said, ‘I am very happy when I think about what the Lord has done. The Lord has made me very strong. I can laugh at my enemies because you, Lord, have saved me. That makes me very happy."
     },
     {
       "verse": 2,
-      "text": "Nobody else is holy like the Lord. There is no other God except you, our God. You are the only Rock where we can be safe. There is no other God except you, our God. You are the only Rock where we can be safe."
+      "text": "Nobody else is holy like the Lord. There is no other God except you, our God. You are the only Rock where we can be safe."
     },
     {
       "verse": 3,
-      "text": "Do not boast or speak proud words! The Lord is a God who knows everything. He judges everything that people do. The Lord is a God who knows everything. He judges everything that people do."
+      "text": "Do not boast or speak proud words! The Lord is a God who knows everything. He judges everything that people do."
     },
     {
       "verse": 4,
-      "text": "The weapons of brave soldiers may break. But weak people who fall become strong again. But weak people who fall become strong again."
+      "text": "The weapons of brave soldiers may break. But weak people who fall become strong again."
     },
     {
       "verse": 5,
-      "text": "People who had plenty of food to eat have to work for it now. But the people who were hungry have enough food now. Women who could not have any children have now given birth to seven children. But those who had many children are now alone. But the people who were hungry have enough food now. Women who could not have any children have now given birth to seven children. But those who had many children are now alone."
+      "text": "People who had plenty of food to eat have to work for it now. But the people who were hungry have enough food now. Women who could not have any children have now given birth to seven children. But those who had many children are now alone."
     },
     {
       "verse": 6,
-      "text": "The Lord gives both life and death. He sends some people to their graves, and he raises other people up. He sends some people to their graves, and he raises other people up."
+      "text": "The Lord gives both life and death. He sends some people to their graves, and he raises other people up."
     },
     {
       "verse": 7,
@@ -144,15 +144,15 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "He raises up weak people from the ground. He lifts poor people up out of the dirt. He makes them become friends of princes. He puts them in places of honour. The deep places of the earth belong to the Lord. He built the world on a strong foundation. He lifts poor people up out of the dirt. He makes them become friends of princes. He puts them in places of honour. The deep places of the earth belong to the Lord. He built the world on a strong foundation."
+      "text": "He raises up weak people from the ground. He lifts poor people up out of the dirt. He makes them become friends of princes. He puts them in places of honour. The deep places of the earth belong to the Lord. He built the world on a strong foundation."
     },
     {
       "verse": 9,
-      "text": "He takes care of his faithful people. But he puts wicked people in a dark place where they can do nothing. It is not a person's own strength that makes him great. But he puts wicked people in a dark place where they can do nothing. It is not a person's own strength that makes him great."
+      "text": "He takes care of his faithful people. But he puts wicked people in a dark place where they can do nothing. It is not a person's own strength that makes him great."
     },
     {
       "verse": 10,
-      "text": "The Lord will destroy his enemies. He will shout against them from heaven like loud thunder. The Lord will judge everyone on earth. He will make his king strong. He will give power to the king that he has chosen to rule. ’ He will shout against them from heaven like loud thunder. The Lord will judge everyone on earth. He will make his king strong. He will give power to the king that he has chosen to rule. ’"
+      "text": "The Lord will destroy his enemies. He will shout against them from heaven like loud thunder. The Lord will judge everyone on earth. He will make his king strong. He will give power to the king that he has chosen to rule. ’"
     },
     {
       "verse": 11,
@@ -282,7 +282,7 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "Again the Lord called out, ‘Samuel’. So Samuel went to Eli and he said, ‘You called my name. Here I am. ’Eli answered, ‘My son, I did not call your name. Go back and lie down again. ’ Eli answered, ‘My son, I did not call your name. Go back and lie down again. ’"
+      "text": "Again the Lord called out, ‘Samuel’. So Samuel went to Eli and he said, ‘You called my name. Here I am. ’Eli answered, ‘My son, I did not call your name. Go back and lie down again. ’"
     },
     {
       "verse": 7,
@@ -466,7 +466,7 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "So the Philistine rulers met together. Ashdod's people asked them, ‘What should we do with the Covenant Box of Israel's God? ’The rulers answered, ‘Take it away to Gath. ’ So the men took it to that city. The rulers answered, ‘Take it away to Gath. ’ So the men took it to that city."
+      "text": "So the Philistine rulers met together. Ashdod's people asked them, ‘What should we do with the Covenant Box of Israel's God? ’The rulers answered, ‘Take it away to Gath. ’ So the men took it to that city."
     },
     {
       "verse": 9,
@@ -594,7 +594,7 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "So they all met together at Mizpah. They got water from a well and they poured it out for the Lord. They did not eat food that day. They prayed and they said, ‘We have done bad things against the Lord. ’Samuel became leader of the Israelite people at Mizpah. Samuel became leader of the Israelite people at Mizpah."
+      "text": "So they all met together at Mizpah. They got water from a well and they poured it out for the Lord. They did not eat food that day. They prayed and they said, ‘We have done bad things against the Lord. ’Samuel became leader of the Israelite people at Mizpah."
     },
     {
       "verse": 7,
@@ -826,7 +826,7 @@ module.exports = {
     },
     {
       "verse": 24,
-      "text": "So the cook brought the leg of meat and he put it down in front of Saul. Samuel said to Saul, ‘I kept this special piece of meat for you to eat. Eat it now. I kept it separate for this time when we would eat together. I chose it for you when I asked the people to come and eat this special meal. ’So Saul ate the meal with Samuel that day. So Saul ate the meal with Samuel that day."
+      "text": "So the cook brought the leg of meat and he put it down in front of Saul. Samuel said to Saul, ‘I kept this special piece of meat for you to eat. Eat it now. I kept it separate for this time when we would eat together. I chose it for you when I asked the people to come and eat this special meal. ’So Saul ate the meal with Samuel that day."
     },
     {
       "verse": 25,
@@ -844,7 +844,7 @@ module.exports = {
   "10": [
     {
       "verse": 1,
-      "text": "Then Samuel took a jar of oil and he poured the oil on Saul's head. He kissed Saul. He said:‘The Lord has anointed you as the leader of his people. You will rule over them and you will rescue them from the power of their enemies. This is how you will know that the Lord has chosen you to be the leader of the Israelite people: ‘The Lord has anointed you as the leader of his people. You will rule over them and you will rescue them from the power of their enemies. This is how you will know that the Lord has chosen you to be the leader of the Israelite people:"
+      "text": "Then Samuel took a jar of oil and he poured the oil on Saul's head. He kissed Saul. He said:‘The Lord has anointed you as the leader of his people. You will rule over them and you will rescue them from the power of their enemies. This is how you will know that the Lord has chosen you to be the leader of the Israelite people:"
     },
     {
       "verse": 2,
@@ -1032,7 +1032,7 @@ module.exports = {
     },
     {
       "verse": 5,
-      "text": "Samuel said to them, ‘The Lord and his chosen king have heard what you have said today. They know that I have not done a wrong thing against any of you. ’The people replied, ‘Yes, the Lord knows what we have said. ’ The people replied, ‘Yes, the Lord knows what we have said. ’"
+      "text": "Samuel said to them, ‘The Lord and his chosen king have heard what you have said today. They know that I have not done a wrong thing against any of you. ’The people replied, ‘Yes, the Lord knows what we have said. ’"
     },
     {
       "verse": 6,
@@ -1340,7 +1340,7 @@ module.exports = {
     },
     {
       "verse": 33,
-      "text": "Someone told Saul, ‘Look at what the army is doing. They are eating meat that still has blood in it. That is a sin against the Lord. ’Saul said to his soldiers, ‘You have turned against the Lord! Find a large stone and roll it here to me. ’ Saul said to his soldiers, ‘You have turned against the Lord! Find a large stone and roll it here to me. ’"
+      "text": "Someone told Saul, ‘Look at what the army is doing. They are eating meat that still has blood in it. That is a sin against the Lord. ’Saul said to his soldiers, ‘You have turned against the Lord! Find a large stone and roll it here to me. ’"
     },
     {
       "verse": 34,
@@ -1368,7 +1368,7 @@ module.exports = {
     },
     {
       "verse": 40,
-      "text": "Saul said to all the Israelites, ‘You stand on this side. My son Jonathan and I will stand on the other side. ’The people answered, ‘Do what you think is right. ’ The people answered, ‘Do what you think is right. ’"
+      "text": "Saul said to all the Israelites, ‘You stand on this side. My son Jonathan and I will stand on the other side. ’The people answered, ‘Do what you think is right. ’"
     },
     {
       "verse": 41,
@@ -1380,7 +1380,7 @@ module.exports = {
     },
     {
       "verse": 43,
-      "text": "Saul said to Jonathan, ‘Tell me what you have done. ’Jonathan told him, ‘I pushed the end of my stick into some honey. I ate a little bit. You have said that I must die. ’ Jonathan told him, ‘I pushed the end of my stick into some honey. I ate a little bit. You have said that I must die. ’"
+      "text": "Saul said to Jonathan, ‘Tell me what you have done. ’Jonathan told him, ‘I pushed the end of my stick into some honey. I ate a little bit. You have said that I must die. ’"
     },
     {
       "verse": 44,
@@ -1388,7 +1388,7 @@ module.exports = {
     },
     {
       "verse": 45,
-      "text": "But the soldiers said to Saul, ‘No! Jonathan must not die! He has rescued Israel in battle. As surely as the Lord lives, we promise that he will not lose even one hair on his head. It is God who has helped Jonathan to win the fight today. ’In that way, the army saved Jonathan from death. In that way, the army saved Jonathan from death."
+      "text": "But the soldiers said to Saul, ‘No! Jonathan must not die! He has rescued Israel in battle. As surely as the Lord lives, we promise that he will not lose even one hair on his head. It is God who has helped Jonathan to win the fight today. ’In that way, the army saved Jonathan from death."
     },
     {
       "verse": 46,
@@ -1546,7 +1546,7 @@ module.exports = {
     },
     {
       "verse": 32,
-      "text": "Then Samuel said, ‘Bring Agag, king of the Amalekites, to me. ’Agag came to Samuel. Agag was happy because he thought, ‘I am sure that now I will not have to die a painful death. ’ Agag came to Samuel. Agag was happy because he thought, ‘I am sure that now I will not have to die a painful death. ’"
+      "text": "Then Samuel said, ‘Bring Agag, king of the Amalekites, to me. ’Agag came to Samuel. Agag was happy because he thought, ‘I am sure that now I will not have to die a painful death. ’"
     },
     {
       "verse": 33,
@@ -1580,7 +1580,7 @@ module.exports = {
     },
     {
       "verse": 5,
-      "text": "Samuel replied, ‘Yes. I do not bring any trouble. I have come to offer a sacrifice to the Lord. Make yourselves clean. Then come to the sacrifice with me. ’Samuel made Jesse and his sons clean to worship the Lord. Then he took them with him to the sacrifice. Samuel made Jesse and his sons clean to worship the Lord. Then he took them with him to the sacrifice."
+      "text": "Samuel replied, ‘Yes. I do not bring any trouble. I have come to offer a sacrifice to the Lord. Make yourselves clean. Then come to the sacrifice with me. ’Samuel made Jesse and his sons clean to worship the Lord. Then he took them with him to the sacrifice."
     },
     {
       "verse": 6,
@@ -1608,11 +1608,11 @@ module.exports = {
     },
     {
       "verse": 12,
-      "text": "So Jesse told his men to bring his youngest son for Samuel to see. This young man was handsome and strong and he had beautiful eyes. The Lord said to Samuel, ‘I have chosen this man. Now anoint him as king. ’ The Lord said to Samuel, ‘I have chosen this man. Now anoint him as king. ’"
+      "text": "So Jesse told his men to bring his youngest son for Samuel to see. This young man was handsome and strong and he had beautiful eyes. The Lord said to Samuel, ‘I have chosen this man. Now anoint him as king. ’"
     },
     {
       "verse": 13,
-      "text": "Samuel took the horn that was full of olive oil. He poured the oil over David's head to anoint him. Samuel did this in front of David's brothers. From that moment, the Spirit of the Lord came on David with great power. Then Samuel returned to his home in Ramah. Then Samuel returned to his home in Ramah."
+      "text": "Samuel took the horn that was full of olive oil. He poured the oil over David's head to anoint him. Samuel did this in front of David's brothers. From that moment, the Spirit of the Lord came on David with great power. Then Samuel returned to his home in Ramah."
     },
     {
       "verse": 14,
@@ -2318,7 +2318,7 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "Ahimelech answered, ‘The sword of Goliath the Philistine is here. After you killed him in the valley of Elah, we kept the sword here. We covered it with a cloth and we put it behind the ephod. If you want it, you can take it. We do not have any other weapon except that one. ’David said, ‘Give it to me. There is no sword as good as that one. ’ David said, ‘Give it to me. There is no sword as good as that one. ’"
+      "text": "Ahimelech answered, ‘The sword of Goliath the Philistine is here. After you killed him in the valley of Elah, we kept the sword here. We covered it with a cloth and we put it behind the ephod. If you want it, you can take it. We do not have any other weapon except that one. ’David said, ‘Give it to me. There is no sword as good as that one. ’"
     },
     {
       "verse": 10,
@@ -2650,7 +2650,7 @@ module.exports = {
   "25": [
     {
       "verse": 1,
-      "text": "Then Samuel died. All the Israelites met together and they were very sad. Then they buried Samuel at his home in Ramah. David went down to the Paran desert. David went down to the Paran desert."
+      "text": "Then Samuel died. All the Israelites met together and they were very sad. Then they buried Samuel at his home in Ramah. David went down to the Paran desert."
     },
     {
       "verse": 4,
@@ -2822,7 +2822,7 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "Nabal had some land near Carmel. He had 3, 000 sheep and 1, 000 goats. He was with his men in Carmel as they cut the wool from his sheep. Nabal had some land near Carmel. He had 3, 000 sheep and 1, 000 goats. He was with his men in Carmel as they cut the wool from his sheep."
+      "text": "Nabal had some land near Carmel. He had 3, 000 sheep and 1, 000 goats. He was with his men in Carmel as they cut the wool from his sheep."
     }
   ],
   "26": [
@@ -2848,7 +2848,7 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "David spoke to two of his men. One of them was Ahimelech, a Hittite man. The other man was Abishai, who was Joab's brother (Zeruiah was their mother). David asked them, ‘Which one of you will go down into Saul's camp with me? ’Abishai said, ‘I will come with you. ’ Abishai said, ‘I will come with you. ’"
+      "text": "David spoke to two of his men. One of them was Ahimelech, a Hittite man. The other man was Abishai, who was Joab's brother (Zeruiah was their mother). David asked them, ‘Which one of you will go down into Saul's camp with me? ’Abishai said, ‘I will come with you. ’"
     },
     {
       "verse": 7,
@@ -2892,7 +2892,7 @@ module.exports = {
     },
     {
       "verse": 17,
-      "text": "Saul recognized David's voice. He said, ‘Is that you David, my son? ’David answered, ‘Yes, my master and my king, it is my voice that you can hear. ’ David answered, ‘Yes, my master and my king, it is my voice that you can hear. ’"
+      "text": "Saul recognized David's voice. He said, ‘Is that you David, my son? ’David answered, ‘Yes, my master and my king, it is my voice that you can hear. ’"
     },
     {
       "verse": 18,
@@ -2984,7 +2984,7 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "David said, ‘Yes, sir. Then you will see how well I can fight! ’Achish replied, ‘Good. Then you will always be my guard to keep me safe. ’ Achish replied, ‘Good. Then you will always be my guard to keep me safe. ’"
+      "text": "David said, ‘Yes, sir. Then you will see how well I can fight! ’Achish replied, ‘Good. Then you will always be my guard to keep me safe. ’"
     },
     {
       "verse": 3,
@@ -3028,15 +3028,15 @@ module.exports = {
     },
     {
       "verse": 13,
-      "text": "The king said to her, ‘Do not be afraid. Tell me what you can see. ’She replied, ‘I can see a spirit that is coming up from the ground. ’ She replied, ‘I can see a spirit that is coming up from the ground. ’"
+      "text": "The king said to her, ‘Do not be afraid. Tell me what you can see. ’She replied, ‘I can see a spirit that is coming up from the ground. ’"
     },
     {
       "verse": 14,
-      "text": "Saul asked, ‘What does he look like? ’ She said, ‘I see an old man who is wearing a long coat. ’Saul realized that this was Samuel. He bent down low on his knees with his face towards the ground. Saul realized that this was Samuel. He bent down low on his knees with his face towards the ground."
+      "text": "Saul asked, ‘What does he look like? ’ She said, ‘I see an old man who is wearing a long coat. ’Saul realized that this was Samuel. He bent down low on his knees with his face towards the ground."
     },
     {
       "verse": 15,
-      "text": "Samuel said to Saul, ‘Why have you caused this trouble for me? Why have you brought me back? ’Saul said, ‘I have a lot of trouble. The Philistines are fighting against me. God has turned away from me. He will not use the prophets or give me dreams to answer my questions. So I have called you to come here. Please tell me what I should do. ’ Saul said, ‘I have a lot of trouble. The Philistines are fighting against me. God has turned away from me. He will not use the prophets or give me dreams to answer my questions. So I have called you to come here. Please tell me what I should do. ’"
+      "text": "Samuel said to Saul, ‘Why have you caused this trouble for me? Why have you brought me back? ’Saul said, ‘I have a lot of trouble. The Philistines are fighting against me. God has turned away from me. He will not use the prophets or give me dreams to answer my questions. So I have called you to come here. Please tell me what I should do. ’"
     },
     {
       "verse": 16,
@@ -3176,7 +3176,7 @@ module.exports = {
     },
     {
       "verse": 15,
-      "text": "David said to him, ‘Can you take me to find these men? ’The man said, ‘Please promise me in God's name that you will not kill me. Promise me that you will not take me back to my master. If you do that, I will lead you to find them. ’ The man said, ‘Please promise me in God's name that you will not kill me. Promise me that you will not take me back to my master. If you do that, I will lead you to find them. ’"
+      "text": "David said to him, ‘Can you take me to find these men? ’The man said, ‘Please promise me in God's name that you will not kill me. Promise me that you will not take me back to my master. If you do that, I will lead you to find them. ’"
     },
     {
       "verse": 16,

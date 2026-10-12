@@ -76,35 +76,35 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "He said, ‘When I was in trouble, I called out to the Lord, and he answered my prayer. Yes, I called out to you for help from the deep hole of death, and you heard my prayer. ‘When I was in trouble, I called out to the Lord, and he answered my prayer. Yes, I called out to you for help from the deep hole of death, and you heard my prayer."
+      "text": "He said, ‘When I was in trouble, I called out to the Lord, and he answered my prayer. Yes, I called out to you for help from the deep hole of death, and you heard my prayer."
     },
     {
       "verse": 3,
-      "text": "You threw me into the deep water, and I fell into the middle of the sea. The deep water covered me. You sent big waves to roll over me. and I fell into the middle of the sea. The deep water covered me. You sent big waves to roll over me."
+      "text": "You threw me into the deep water, and I fell into the middle of the sea. The deep water covered me. You sent big waves to roll over me."
     },
     {
       "verse": 4,
-      "text": "I said to myself, “You have sent me far away from you. Now I will never see your holy temple again. ” “You have sent me far away from you. Now I will never see your holy temple again. ”"
+      "text": "I said to myself, “You have sent me far away from you. Now I will never see your holy temple again. ”"
     },
     {
       "verse": 5,
-      "text": "The deep water of the sea covered me, so that my life was in danger. The plants in the sea were all around my head. so that my life was in danger. The plants in the sea were all around my head."
+      "text": "The deep water of the sea covered me, so that my life was in danger. The plants in the sea were all around my head."
     },
     {
       "verse": 6,
-      "text": "I went very deep in the water, as far as the bottom of the mountains. Deep in the earth, I was in a prison, and its gates had shut for ever. But, Lord, my God, you brought me up from that deep hole. as far as the bottom of the mountains. Deep in the earth, I was in a prison, and its gates had shut for ever. But, Lord, my God, you brought me up from that deep hole."
+      "text": "I went very deep in the water, as far as the bottom of the mountains. Deep in the earth, I was in a prison, and its gates had shut for ever. But, Lord, my God, you brought me up from that deep hole."
     },
     {
       "verse": 7,
-      "text": "When my life was nearly gone, I prayed to you, Lord. In your holy temple, you heard my prayer for help. In your holy temple, you heard my prayer for help."
+      "text": "When my life was nearly gone, I prayed to you, Lord. In your holy temple, you heard my prayer for help."
     },
     {
       "verse": 8,
-      "text": "Idols cannot help. People who worship them have turned away from a faithful God. People who worship them have turned away from a faithful God."
+      "text": "Idols cannot help. People who worship them have turned away from a faithful God."
     },
     {
       "verse": 9,
-      "text": "But as for me, I will sing to thank you. I will offer a sacrifice to you. I will do everything that I have promised to do. The Lord is the one who saves people! ’ I will offer a sacrifice to you. I will do everything that I have promised to do. The Lord is the one who saves people! ’"
+      "text": "But as for me, I will sing to thank you. I will offer a sacrifice to you. I will do everything that I have promised to do. The Lord is the one who saves people! ’"
     },
     {
       "verse": 10,
@@ -122,7 +122,7 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "Jonah obeyed the Lord and he went to Nineveh. Nineveh was a very large city. Somebody would need three days to walk all through it. Nineveh was a very large city. Somebody would need three days to walk all through it."
+      "text": "Jonah obeyed the Lord and he went to Nineveh. Nineveh was a very large city. Somebody would need three days to walk all through it."
     },
     {
       "verse": 4,
@@ -188,7 +188,7 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "But God said to Jonah, ‘You are not right to be so angry about the plant. ’Jonah said, ‘I am right to be angry! I am so angry that I want to die. ’ Jonah said, ‘I am right to be angry! I am so angry that I want to die. ’"
+      "text": "But God said to Jonah, ‘You are not right to be so angry about the plant. ’Jonah said, ‘I am right to be angry! I am so angry that I want to die. ’"
     },
     {
       "verse": 10,

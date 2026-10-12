@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": 1,
-      "text": "Paul and Timothy write this letter to you. We are servants of Christ Jesus. We are writing to you, God's own people who live in Philippi. You belong to God because you are united with Christ Jesus. We are writing to all of you. This includes the leaders and the deacons in the church there. We are writing to you, God's own people who live in Philippi. You belong to God because you are united with Christ Jesus. We are writing to all of you. This includes the leaders and the deacons in the church there."
+      "text": "Paul and Timothy write this letter to you. We are servants of Christ Jesus. We are writing to you, God's own people who live in Philippi. You belong to God because you are united with Christ Jesus. We are writing to all of you. This includes the leaders and the deacons in the church there."
     },
     {
       "verse": 2,
@@ -144,27 +144,27 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "Christ had the same nature as God. He was completely equal with God. But he did not try to keep hold of that. He was completely equal with God. But he did not try to keep hold of that."
+      "text": "Christ had the same nature as God. He was completely equal with God. But he did not try to keep hold of that."
     },
     {
       "verse": 7,
-      "text": "Instead, he chose to leave heaven. He took for himself the nature of a slave. He became like a human. He took for himself the nature of a slave. He became like a human."
+      "text": "Instead, he chose to leave heaven. He took for himself the nature of a slave. He became like a human."
     },
     {
       "verse": 8,
-      "text": "And when he lived as a man, he made himself even less important. He obeyed God completely, so that he died. He even died on a cross! he made himself even less important. He obeyed God completely, so that he died. He even died on a cross!"
+      "text": "And when he lived as a man, he made himself even less important. He obeyed God completely, so that he died. He even died on a cross!"
     },
     {
       "verse": 9,
-      "text": "Because of that, God then raised Jesus Christ to the most important place. God gave him the name that is greater than every other name. God gave him the name that is greater than every other name."
+      "text": "Because of that, God then raised Jesus Christ to the most important place. God gave him the name that is greater than every other name."
     },
     {
       "verse": 10,
-      "text": "As a result, when people hear Jesus' name, they must worship him. Everyone will have to go down on their knees in front of him. That includes everything that is in heaven, everything on the earth and everything under the earth. Everyone will have to go down on their knees in front of him. That includes everything that is in heaven, everything on the earth and everything under the earth."
+      "text": "As a result, when people hear Jesus' name, they must worship him. Everyone will have to go down on their knees in front of him. That includes everything that is in heaven, everything on the earth and everything under the earth."
     },
     {
       "verse": 11,
-      "text": "Everyone will have to agree that Jesus Christ is Lord. When they say that aloud, they will show that God the Father is very great. When they say that aloud, they will show that God the Father is very great."
+      "text": "Everyone will have to agree that Jesus Christ is Lord. When they say that aloud, they will show that God the Father is very great."
     },
     {
       "verse": 12,

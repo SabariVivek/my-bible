@@ -76,7 +76,7 @@ module.exports = {
   "2": [
     {
       "verse": 1,
-      "text": "Then Joshua sent two men to go out from Shittim. He sent them in secret to see what the land was like. He told them, ‘Go! Look at all the land. Look very carefully at Jericho city. ’When they came to Jericho city, they arrived at the house of a prostitute. Her name was Rahab. They stayed there. When they came to Jericho city, they arrived at the house of a prostitute. Her name was Rahab. They stayed there."
+      "text": "Then Joshua sent two men to go out from Shittim. He sent them in secret to see what the land was like. He told them, ‘Go! Look at all the land. Look very carefully at Jericho city. ’When they came to Jericho city, they arrived at the house of a prostitute. Her name was Rahab. They stayed there."
     },
     {
       "verse": 2,
@@ -394,7 +394,7 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "The man answered, ‘Neither. I am the captain of the Lord's army. Now I am here! ’Joshua fell on the ground to worship the man and he said, ‘Sir, I am your servant. Tell me what I should do. ’ Joshua fell on the ground to worship the man and he said, ‘Sir, I am your servant. Tell me what I should do. ’"
+      "text": "The man answered, ‘Neither. I am the captain of the Lord's army. Now I am here! ’Joshua fell on the ground to worship the man and he said, ‘Sir, I am your servant. Tell me what I should do. ’"
     },
     {
       "verse": 15,
@@ -688,7 +688,7 @@ module.exports = {
     },
     {
       "verse": 18,
-      "text": "Then the Lord said to Joshua, ‘Hold out the spear that is in your hand. Point it towards Ai. I am now giving the city to you. ’So Joshua held out his spear towards Ai. So Joshua held out his spear towards Ai."
+      "text": "Then the Lord said to Joshua, ‘Hold out the spear that is in your hand. Point it towards Ai. I am now giving the city to you. ’So Joshua held out his spear towards Ai."
     },
     {
       "verse": 19,
@@ -790,7 +790,7 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "The Hivites said to Joshua, ‘If you agree, we will become your servants. ’Joshua asked them, ‘Who are you? Where do you come from? ’ Joshua asked them, ‘Who are you? Where do you come from? ’"
+      "text": "The Hivites said to Joshua, ‘If you agree, we will become your servants. ’Joshua asked them, ‘Who are you? Where do you come from? ’"
     },
     {
       "verse": 9,
@@ -916,7 +916,7 @@ module.exports = {
     },
     {
       "verse": 12,
-      "text": "So the Lord caused the Israelites to win the fight against the Amorites. After the battle that day, Joshua stood in front of Israel and he prayed to the Lord. He said, ‘Sun, stand still over Gibeon city. Moon, stand still over Aijalon valley. ’ ‘Sun, stand still over Gibeon city. Moon, stand still over Aijalon valley. ’"
+      "text": "So the Lord caused the Israelites to win the fight against the Amorites. After the battle that day, Joshua stood in front of Israel and he prayed to the Lord. He said, ‘Sun, stand still over Gibeon city. Moon, stand still over Aijalon valley. ’"
     },
     {
       "verse": 13,
@@ -1478,7 +1478,7 @@ module.exports = {
     },
     {
       "verse": 12,
-      "text": "The west border of Judah's land was the Mediterranean Sea. Those were the borders of the land which Judah's tribe and its clans received. Those were the borders of the land which Judah's tribe and its clans received."
+      "text": "The west border of Judah's land was the Mediterranean Sea. Those were the borders of the land which Judah's tribe and its clans received."
     },
     {
       "verse": 13,
@@ -1670,7 +1670,7 @@ module.exports = {
     },
     {
       "verse": 60,
-      "text": "And Kiriath Baal, (that is, Kiriath-Jearim) and Rabbah. There were two towns and their villages. There were two towns and their villages."
+      "text": "And Kiriath Baal, (that is, Kiriath-Jearim) and Rabbah. There were two towns and their villages."
     },
     {
       "verse": 61,
@@ -1678,7 +1678,7 @@ module.exports = {
     },
     {
       "verse": 62,
-      "text": "Nibshan, Salt city, and En Gedi. There were six towns and their villages. There were six towns and their villages."
+      "text": "Nibshan, Salt city, and En Gedi. There were six towns and their villages."
     },
     {
       "verse": 63,
@@ -1880,7 +1880,7 @@ module.exports = {
     },
     {
       "verse": 20,
-      "text": "The east border of their land was the Jordan River. Those are the borders of the land that Joshua gave to the families of Benjamin's tribe. Those are the borders of the land that Joshua gave to the families of Benjamin's tribe."
+      "text": "The east border of their land was the Jordan River. Those are the borders of the land that Joshua gave to the families of Benjamin's tribe."
     },
     {
       "verse": 21,
@@ -2632,7 +2632,7 @@ module.exports = {
     },
     {
       "verse": 22,
-      "text": "Joshua said to them, ‘You yourselves have chosen to serve the Lord. Agree now that you have done that. ’They replied, ‘Yes, we agree! ’ They replied, ‘Yes, we agree! ’"
+      "text": "Joshua said to them, ‘You yourselves have chosen to serve the Lord. Agree now that you have done that. ’They replied, ‘Yes, we agree! ’"
     },
     {
       "verse": 23,

@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "Cush's sons were: Seba, Havilah, Sabta, Raamah and Sabteca. Raamah's sons were: Sheba and Dedan. Raamah's sons were: Sheba and Dedan."
+      "text": "Cush's sons were: Seba, Havilah, Sabta, Raamah and Sabteca. Raamah's sons were: Sheba and Dedan."
     },
     {
       "verse": 10,
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": 17,
-      "text": "Shem's sons were: Elam, Asshur, Arphaxad, Lud and Aram. Aram's sons were: Uz, Hul, Gether and Meshech. Aram's sons were: Uz, Hul, Gether and Meshech."
+      "text": "Shem's sons were: Elam, Asshur, Arphaxad, Lud and Aram. Aram's sons were: Uz, Hul, Gether and Meshech."
     },
     {
       "verse": 18,
@@ -126,15 +126,15 @@ module.exports = {
     },
     {
       "verse": 32,
-      "text": "Abraham's slave wife Keturah gave birth to these sons: Zimran, Jokshan, Medan, Midian, Ishbak and Shuah. Jokshan's sons were: Sheba and Dedan. Jokshan's sons were: Sheba and Dedan."
+      "text": "Abraham's slave wife Keturah gave birth to these sons: Zimran, Jokshan, Medan, Midian, Ishbak and Shuah. Jokshan's sons were: Sheba and Dedan."
     },
     {
       "verse": 33,
-      "text": "Midian's sons were: Ephah, Epher, Hanoch, Abida and Eldaah. All those men were descendants of Keturah. All those men were descendants of Keturah."
+      "text": "Midian's sons were: Ephah, Epher, Hanoch, Abida and Eldaah. All those men were descendants of Keturah."
     },
     {
       "verse": 34,
-      "text": "Abraham was the father of Isaac. Isaac's sons were: Esau and Israel. Isaac's sons were: Esau and Israel."
+      "text": "Abraham was the father of Isaac. Isaac's sons were: Esau and Israel."
     },
     {
       "verse": 35,
@@ -158,19 +158,19 @@ module.exports = {
     },
     {
       "verse": 40,
-      "text": "Shobal's sons were: Alvan, Manahath, Ebal, Shepho and Onam. Zibeon's sons were: Aiah and Anah. Zibeon's sons were: Aiah and Anah."
+      "text": "Shobal's sons were: Alvan, Manahath, Ebal, Shepho and Onam. Zibeon's sons were: Aiah and Anah."
     },
     {
       "verse": 41,
-      "text": "Anah's son was Dishon. Dishon's sons were: Hemdan, Eshban, Ithran and Keran. Dishon's sons were: Hemdan, Eshban, Ithran and Keran."
+      "text": "Anah's son was Dishon. Dishon's sons were: Hemdan, Eshban, Ithran and Keran."
     },
     {
       "verse": 42,
-      "text": "Ezer's sons were: Bilhan, Zaavan and Jaakan. Dishan's sons were: Uz and Aran. Dishan's sons were: Uz and Aran."
+      "text": "Ezer's sons were: Bilhan, Zaavan and Jaakan. Dishan's sons were: Uz and Aran."
     },
     {
       "verse": 43,
-      "text": "These kings ruled in Edom before any kings ruled over Israel: Bela son of Beor. The name of his city was Dinhabah. Bela son of Beor. The name of his city was Dinhabah."
+      "text": "These kings ruled in Edom before any kings ruled over Israel: Bela son of Beor. The name of his city was Dinhabah."
     },
     {
       "verse": 44,
@@ -328,7 +328,7 @@ module.exports = {
     },
     {
       "verse": 28,
-      "text": "Onam's sons were: Shammai and Jada. Shammai's sons were: Nadab and Abishur. Shammai's sons were: Nadab and Abishur."
+      "text": "Onam's sons were: Shammai and Jada. Shammai's sons were: Nadab and Abishur."
     },
     {
       "verse": 29,
@@ -348,7 +348,7 @@ module.exports = {
     },
     {
       "verse": 33,
-      "text": "Jonathan's sons were: Peleth and Zaza. All those men were Jerahmeel's descendants. All those men were Jerahmeel's descendants."
+      "text": "Jonathan's sons were: Peleth and Zaza. All those men were Jerahmeel's descendants."
     },
     {
       "verse": 34,
@@ -584,7 +584,7 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "Meonothai became the father of Ophrah. Seraiah became the father of Joab. Joab was the ancestor of the people who live in Ge-Harashim. Those people had special skills to make things. Seraiah became the father of Joab. Joab was the ancestor of the people who live in Ge-Harashim. Those people had special skills to make things."
+      "text": "Meonothai became the father of Ophrah. Seraiah became the father of Joab. Joab was the ancestor of the people who live in Ge-Harashim. Those people had special skills to make things."
     },
     {
       "verse": 15,
@@ -600,7 +600,7 @@ module.exports = {
     },
     {
       "verse": 20,
-      "text": "Shimon's sons were: Amnon, Rinnah, Ben-Hanan and Tilon. Ishi's descendants were Zoheth and Ben-Zoheth. Ishi's descendants were Zoheth and Ben-Zoheth."
+      "text": "Shimon's sons were: Amnon, Rinnah, Ben-Hanan and Tilon. Ishi's descendants were Zoheth and Ben-Zoheth."
     },
     {
       "verse": 23,
@@ -828,7 +828,7 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "Amram's children were: Aaron, Moses and Miriam. Aaron's sons were: Nadab, Abihu, Eleazar and Ithamar. Aaron's sons were: Nadab, Abihu, Eleazar and Ithamar."
+      "text": "Amram's children were: Aaron, Moses and Miriam. Aaron's sons were: Nadab, Abihu, Eleazar and Ithamar."
     },
     {
       "verse": 4,
@@ -892,7 +892,7 @@ module.exports = {
     },
     {
       "verse": 19,
-      "text": "Merari's sons were: Mahli and Mushi. These are the ancestors of the clans of the Levites: These are the ancestors of the clans of the Levites:"
+      "text": "Merari's sons were: Mahli and Mushi. These are the ancestors of the clans of the Levites:"
     },
     {
       "verse": 20,
@@ -1056,7 +1056,7 @@ module.exports = {
     },
     {
       "verse": 60,
-      "text": "They also received some towns in land that belonged to Benjamin's tribe. They received these towns with the fields around them: Gibeon, Geba, Alemeth and Anathoth. So there were 13 towns for Aaron's descendants to live in. towns for Aaron's descendants to live in."
+      "text": "They also received some towns in land that belonged to Benjamin's tribe. They received these towns with the fields around them: Gibeon, Geba, Alemeth and Anathoth. So there were 13 towns for Aaron's descendants to live in."
     },
     {
       "verse": 61,
@@ -1482,7 +1482,7 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "From the clan of Judah's son Zerah, there was Jeuel. There were 690 people from Judah's tribe who returned. people from Judah's tribe who returned."
+      "text": "From the clan of Judah's son Zerah, there was Jeuel. There were 690 people from Judah's tribe who returned."
     },
     {
       "verse": 7,
@@ -1626,7 +1626,7 @@ module.exports = {
     },
     {
       "verse": 42,
-      "text": "Ahaz became the father of Jadah. Jadah became the father of Alemeth, Azmaveth and Zimri. Zimri became the father of Moza. Jadah became the father of Alemeth, Azmaveth and Zimri. Zimri became the father of Moza."
+      "text": "Ahaz became the father of Jadah. Jadah became the father of Alemeth, Azmaveth and Zimri. Zimri became the father of Moza."
     },
     {
       "verse": 43,
@@ -2332,15 +2332,15 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "Thank the Lord! Make his name famous! Tell people in all the nations what he has done. Make his name famous! Tell people in all the nations what he has done."
+      "text": "Thank the Lord! Make his name famous! Tell people in all the nations what he has done."
     },
     {
       "verse": 9,
-      "text": "Sing songs and make musicto praise him! Tell people about the miracles that he has done. to praise him! Tell people about the miracles that he has done."
+      "text": "Sing songs and make musicto praise him! Tell people about the miracles that he has done."
     },
     {
       "verse": 10,
-      "text": "Boast about his holy name. Everybody who wants to worship the Lord should be very happy! Everybody who wants to worship the Lord should be very happy!"
+      "text": "Boast about his holy name. Everybody who wants to worship the Lord should be very happy!"
     },
     {
       "verse": 11,
@@ -2348,23 +2348,23 @@ module.exports = {
     },
     {
       "verse": 12,
-      "text": "Remember the great things that he has done. Remember his miracles, and the commands that he has spoken. Remember his miracles, and the commands that he has spoken."
+      "text": "Remember the great things that he has done. Remember his miracles, and the commands that he has spoken."
     },
     {
       "verse": 13,
-      "text": "You are the descendants of God's servant, Israel. You are Jacob's descendants, and God has chosen you to be his people. You are Jacob's descendants, and God has chosen you to be his people."
+      "text": "You are the descendants of God's servant, Israel. You are Jacob's descendants, and God has chosen you to be his people."
     },
     {
       "verse": 14,
-      "text": "He is the Lord our God. He rules the whole earth with justice. He rules the whole earth with justice."
+      "text": "He is the Lord our God. He rules the whole earth with justice."
     },
     {
       "verse": 15,
-      "text": "Always remember the covenant that he has made with us. He made that promise to continue for ever. He made that promise to continue for ever."
+      "text": "Always remember the covenant that he has made with us. He made that promise to continue for ever."
     },
     {
       "verse": 16,
-      "text": "That is the promise that he made to Abraham, and that he also made to Isaac. and that he also made to Isaac."
+      "text": "That is the promise that he made to Abraham, and that he also made to Isaac."
     },
     {
       "verse": 17,
@@ -2372,63 +2372,63 @@ module.exports = {
     },
     {
       "verse": 18,
-      "text": "He promised, ‘I will give the land of Canaan to you. It will belong to you and to your descendants. ’ It will belong to you and to your descendants. ’"
+      "text": "He promised, ‘I will give the land of Canaan to you. It will belong to you and to your descendants. ’"
     },
     {
       "verse": 19,
-      "text": "At one time, God's people were only a few. They lived in Canaan as strangers. They lived in Canaan as strangers."
+      "text": "At one time, God's people were only a few. They lived in Canaan as strangers."
     },
     {
       "verse": 20,
-      "text": "They travelled among different nationsand different kingdoms. and different kingdoms."
+      "text": "They travelled among different nationsand different kingdoms."
     },
     {
       "verse": 21,
-      "text": "But the Lord did not let anyone hurt them. He punished kings, to keep his people safe. He punished kings, to keep his people safe."
+      "text": "But the Lord did not let anyone hurt them. He punished kings, to keep his people safe."
     },
     {
       "verse": 22,
-      "text": "He said, ‘Do not even touch the people that I have chosen to be mine. Do not hurt my prophets. ’ Do not hurt my prophets. ’"
+      "text": "He said, ‘Do not even touch the people that I have chosen to be mine. Do not hurt my prophets. ’"
     },
     {
       "verse": 23,
-      "text": "Sing to the Lord, all the world. Every day, tell people the message that he has rescued us. Every day, tell people the message that he has rescued us."
+      "text": "Sing to the Lord, all the world. Every day, tell people the message that he has rescued us."
     },
     {
       "verse": 24,
-      "text": "Tell the other nations that he is very great. Tell all of them about the great things that he has done. Tell all of them about the great things that he has done."
+      "text": "Tell the other nations that he is very great. Tell all of them about the great things that he has done."
     },
     {
       "verse": 25,
-      "text": "Yes, the Lord is great! Everyone should praise him, as he deserves. People should respect him with fear, more than all other gods. Everyone should praise him, as he deserves. People should respect him with fear, more than all other gods."
+      "text": "Yes, the Lord is great! Everyone should praise him, as he deserves. People should respect him with fear, more than all other gods."
     },
     {
       "verse": 26,
-      "text": "All the other nations' gods are useless idols. But the Lord made the heavens. But the Lord made the heavens."
+      "text": "All the other nations' gods are useless idols. But the Lord made the heavens."
     },
     {
       "verse": 27,
-      "text": "We see that he is a very great king. Strength and joy are in his home. Strength and joy are in his home."
+      "text": "We see that he is a very great king. Strength and joy are in his home."
     },
     {
       "verse": 28,
-      "text": "You people of other nations, recognize that the Lord is great and powerful. recognize that the Lord is great and powerful."
+      "text": "You people of other nations, recognize that the Lord is great and powerful."
     },
     {
       "verse": 29,
-      "text": "Agree that the Lord's name is great. Bring a gift to offer to him in his temple. Worship the Lord, who is beautiful and holy. Bring a gift to offer to him in his temple. Worship the Lord, who is beautiful and holy."
+      "text": "Agree that the Lord's name is great. Bring a gift to offer to him in his temple. Worship the Lord, who is beautiful and holy."
     },
     {
       "verse": 30,
-      "text": "Everyone on earth must shake with fear in front of him. He has fixed the world in its place, so that nothing can shake it. He has fixed the world in its place, so that nothing can shake it."
+      "text": "Everyone on earth must shake with fear in front of him. He has fixed the world in its place, so that nothing can shake it."
     },
     {
       "verse": 31,
-      "text": "The earth and the sky should be happy! The people of all nations should say, ‘The Lord rules as king! ’ The people of all nations should say, ‘The Lord rules as king! ’"
+      "text": "The earth and the sky should be happy! The people of all nations should say, ‘The Lord rules as king! ’"
     },
     {
       "verse": 32,
-      "text": "The sea and everything in it should shout aloud! The fields and all their crops should shout with joy! The fields and all their crops should shout with joy!"
+      "text": "The sea and everything in it should shout aloud! The fields and all their crops should shout with joy!"
     },
     {
       "verse": 33,
@@ -2436,15 +2436,15 @@ module.exports = {
     },
     {
       "verse": 34,
-      "text": "Thank the Lord, because he is good. His faithful love will always be with us. His faithful love will always be with us."
+      "text": "Thank the Lord, because he is good. His faithful love will always be with us."
     },
     {
       "verse": 35,
-      "text": "Say to him, ‘God, you are the one who rescues us! Please save us now! Bring us safely home from among the other nations. Then we will thank you! We will shout aloud to praise your holy name. ’ Please save us now! Bring us safely home from among the other nations. Then we will thank you! We will shout aloud to praise your holy name. ’"
+      "text": "Say to him, ‘God, you are the one who rescues us! Please save us now! Bring us safely home from among the other nations. Then we will thank you! We will shout aloud to praise your holy name. ’"
     },
     {
       "verse": 36,
-      "text": "Praise the Lord, Israel's God, as he deserves! Praise him now and for ever! Then all the people said, ‘Amen! We agree! Praise the Lord! ’ as he deserves! Praise him now and for ever! Then all the people said, ‘Amen! We agree! Praise the Lord! ’"
+      "text": "Praise the Lord, Israel's God, as he deserves! Praise him now and for ever! Then all the people said, ‘Amen! We agree! Praise the Lord! ’"
     },
     {
       "verse": 37,
@@ -2908,7 +2908,7 @@ module.exports = {
     },
     {
       "verse": 5,
-      "text": "David said, ‘The Lord's temple must be great and beautiful. It must be famous, so that the people of every nation see how great it is. My son Solomon is young and he has no special skills. So I must prepare everything for him to build the temple. ’So before David died, he prepared all these things. So before David died, he prepared all these things."
+      "text": "David said, ‘The Lord's temple must be great and beautiful. It must be famous, so that the people of every nation see how great it is. My son Solomon is young and he has no special skills. So I must prepare everything for him to build the temple. ’So before David died, he prepared all these things."
     },
     {
       "verse": 6,
@@ -3002,7 +3002,7 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "Shimei's three sons were: Shelomoth, Haziel and Haran. Those men were the leaders of Ladan's family. Those men were the leaders of Ladan's family."
+      "text": "Shimei's three sons were: Shelomoth, Haziel and Haran. Those men were the leaders of Ladan's family."
     },
     {
       "verse": 10,
@@ -3018,7 +3018,7 @@ module.exports = {
     },
     {
       "verse": 13,
-      "text": "Amram's sons were Aaron and Moses. The Lord chose Aaron and his descendants for special work for all time. Their work was to offer special holy things to the Lord. They would offer sacrifices to the Lord. They would serve him in the temple. And they would use his name to bless the people. The Lord chose Aaron and his descendants for special work for all time. Their work was to offer special holy things to the Lord. They would offer sacrifices to the Lord. They would serve him in the temple. And they would use his name to bless the people."
+      "text": "Amram's sons were Aaron and Moses. The Lord chose Aaron and his descendants for special work for all time. Their work was to offer special holy things to the Lord. They would offer sacrifices to the Lord. They would serve him in the temple. And they would use his name to bless the people."
     },
     {
       "verse": 14,
@@ -3050,7 +3050,7 @@ module.exports = {
     },
     {
       "verse": 21,
-      "text": "Merari's sons were Mahli and Mushi. Mahli's sons were Eleazar and Kish. Mahli's sons were Eleazar and Kish."
+      "text": "Merari's sons were Mahli and Mushi. Mahli's sons were Eleazar and Kish."
     },
     {
       "verse": 22,
@@ -3352,7 +3352,7 @@ module.exports = {
   "26": [
     {
       "verse": 1,
-      "text": "These are the groups of guards for the entrances of the temple: From Korah's descendants there was Kore's son Meshelemiah, who was a descendant of Asaph. From Korah's descendants there was Kore's son Meshelemiah, who was a descendant of Asaph."
+      "text": "These are the groups of guards for the entrances of the temple: From Korah's descendants there was Kore's son Meshelemiah, who was a descendant of Asaph."
     },
     {
       "verse": 2,
@@ -3578,7 +3578,7 @@ module.exports = {
     },
     {
       "verse": 25,
-      "text": "Adiel's son Azmaveth had authority over the places in the palace where the king stored his valuable things. Uzziah's son Jonathan had authority over the places in the different regions of Israel where the king stored his things. Those places were in towns, in villages and in strong towers. Uzziah's son Jonathan had authority over the places in the different regions of Israel where the king stored his things. Those places were in towns, in villages and in strong towers."
+      "text": "Adiel's son Azmaveth had authority over the places in the palace where the king stored his valuable things. Uzziah's son Jonathan had authority over the places in the different regions of Israel where the king stored his things. Those places were in towns, in villages and in strong towers."
     },
     {
       "verse": 26,
@@ -3586,27 +3586,27 @@ module.exports = {
     },
     {
       "verse": 27,
-      "text": "Shimei from Ramah had authority over the men who worked in the king's vineyards. Zabdi from Shepham had authority over the men who stored wine in the vineyards. Zabdi from Shepham had authority over the men who stored wine in the vineyards."
+      "text": "Shimei from Ramah had authority over the men who worked in the king's vineyards. Zabdi from Shepham had authority over the men who stored wine in the vineyards."
     },
     {
       "verse": 28,
-      "text": "Baal-Hanan from Geder had authority over the trees in the low hills in the west. They were olive trees and fig trees. Joash had authority over the places where they stored the olive oil. Joash had authority over the places where they stored the olive oil."
+      "text": "Baal-Hanan from Geder had authority over the trees in the low hills in the west. They were olive trees and fig trees. Joash had authority over the places where they stored the olive oil."
     },
     {
       "verse": 29,
-      "text": "Shitrai from Sharon had authority to take care of the king's cows that were in Sharon. Adlai's son Shaphat had authority to take care of the king's cows that were in the valleys. Adlai's son Shaphat had authority to take care of the king's cows that were in the valleys."
+      "text": "Shitrai from Sharon had authority to take care of the king's cows that were in Sharon. Adlai's son Shaphat had authority to take care of the king's cows that were in the valleys."
     },
     {
       "verse": 30,
-      "text": "Obil, a descendant of Ishmael, had authority for the king's camels. Jehdeiah from Meronoth had authority for the donkeys. Jehdeiah from Meronoth had authority for the donkeys."
+      "text": "Obil, a descendant of Ishmael, had authority for the king's camels. Jehdeiah from Meronoth had authority for the donkeys."
     },
     {
       "verse": 31,
-      "text": "Jaziz, a descendant of Hagar, had authority to take care of the king's sheep and goats. These were the officers who had authority to take care of King David's things. These were the officers who had authority to take care of King David's things."
+      "text": "Jaziz, a descendant of Hagar, had authority to take care of the king's sheep and goats. These were the officers who had authority to take care of King David's things."
     },
     {
       "verse": 32,
-      "text": "David's uncle, Jonathan, was a wise man who gave good advice. He wrote down records. Hakmoni's son Jehiel taught the king's sons. Hakmoni's son Jehiel taught the king's sons."
+      "text": "David's uncle, Jonathan, was a wise man who gave good advice. He wrote down records. Hakmoni's son Jehiel taught the king's sons."
     },
     {
       "verse": 33,
@@ -3742,19 +3742,19 @@ module.exports = {
     },
     {
       "verse": 10,
-      "text": "David praised the Lord in front of all the people who had met together. He said, ‘We praise you Lord, the God of our ancestor, Israel. You deserve that people praise you for ever! ‘We praise you Lord, the God of our ancestor, Israel. You deserve that people praise you for ever!"
+      "text": "David praised the Lord in front of all the people who had met together. He said, ‘We praise you Lord, the God of our ancestor, Israel. You deserve that people praise you for ever!"
     },
     {
       "verse": 11,
-      "text": "Lord, you are great, powerful and beautiful! You rule as king over everything in heaven and on earth. Yes, Lord, everything belongs in your kingdom! You rule as king over everything in heaven and on earth. Yes, Lord, everything belongs in your kingdom!"
+      "text": "Lord, you are great, powerful and beautiful! You rule as king over everything in heaven and on earth. Yes, Lord, everything belongs in your kingdom!"
     },
     {
       "verse": 12,
-      "text": "You are the one who gives people riches and honour. You rule over everything. You have great strength and power, so you are able to make people strong and famous. You rule over everything. You have great strength and power, so you are able to make people strong and famous."
+      "text": "You are the one who gives people riches and honour. You rule over everything. You have great strength and power, so you are able to make people strong and famous."
     },
     {
       "verse": 13,
-      "text": "So we thank you, our God. We praise your great name! We praise your great name!"
+      "text": "So we thank you, our God. We praise your great name!"
     },
     {
       "verse": 14,

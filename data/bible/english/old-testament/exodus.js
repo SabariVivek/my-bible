@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": 15,
-      "text": "Pharaoh heard about what had happened. He wanted to kill Moses. So Moses ran away from Pharaoh. He went from Egypt to the country called Midian and he lived there. One day, Moses sat down by a well which was near where he lived. One day, Moses sat down by a well which was near where he lived."
+      "text": "Pharaoh heard about what had happened. He wanted to kill Moses. So Moses ran away from Pharaoh. He went from Egypt to the country called Midian and he lived there. One day, Moses sat down by a well which was near where he lived."
     },
     {
       "verse": 16,
@@ -556,7 +556,7 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "These were the leaders of their family clans: Israel's firstborn son was Reuben. Reuben's sons were: Hanoch, Pallu, Hezron and Carmi. These were Reuben's family clans. Israel's firstborn son was Reuben. Reuben's sons were: Hanoch, Pallu, Hezron and Carmi. These were Reuben's family clans."
+      "text": "These were the leaders of their family clans: Israel's firstborn son was Reuben. Reuben's sons were: Hanoch, Pallu, Hezron and Carmi. These were Reuben's family clans."
     },
     {
       "verse": 15,
@@ -576,7 +576,7 @@ module.exports = {
     },
     {
       "verse": 19,
-      "text": "The sons of Merari: Mahli and Mushi. These were the family clans of Levi, from the oldest to the youngest. These were the family clans of Levi, from the oldest to the youngest."
+      "text": "The sons of Merari: Mahli and Mushi. These were the family clans of Levi, from the oldest to the youngest."
     },
     {
       "verse": 20,
@@ -600,7 +600,7 @@ module.exports = {
     },
     {
       "verse": 25,
-      "text": "Aaron's son, Eleazar, married one of Putiel's daughters. Phinehas was their son. These were the leaders of the Levite family clans. These were the leaders of the Levite family clans."
+      "text": "Aaron's son, Eleazar, married one of Putiel's daughters. Phinehas was their son. These were the leaders of the Levite family clans."
     },
     {
       "verse": 26,
@@ -1146,7 +1146,7 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "Moses continued to say to the king, ‘All your officers will come to me. They will fall down in front of me and they will say, “Now go! Leave here with all your people. ” After that, I will leave. ’After he said that, Moses left Pharaoh. Moses was very angry. After he said that, Moses left Pharaoh. Moses was very angry."
+      "text": "Moses continued to say to the king, ‘All your officers will come to me. They will fall down in front of me and they will say, “Now go! Leave here with all your people. ” After that, I will leave. ’After he said that, Moses left Pharaoh. Moses was very angry."
     },
     {
       "verse": 9,
@@ -1582,71 +1582,71 @@ module.exports = {
   "15": [
     {
       "verse": 1,
-      "text": "Then Moses and the Israelites sang this song to praise the Lord:‘I will sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea. ‘I will sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea."
+      "text": "Then Moses and the Israelites sang this song to praise the Lord:‘I will sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea."
     },
     {
       "verse": 2,
-      "text": "The Lord makes me strong. He is the reason for my song. He is the one who has saved me. He is my God and I will praise him. He is my father's God and I will praise his name. He is the one who has saved me. He is my God and I will praise him. He is my father's God and I will praise his name."
+      "text": "The Lord makes me strong. He is the reason for my song. He is the one who has saved me. He is my God and I will praise him. He is my father's God and I will praise his name."
     },
     {
       "verse": 3,
-      "text": "The Lord is like a brave soldier. The Lord is his name. The Lord is his name."
+      "text": "The Lord is like a brave soldier. The Lord is his name."
     },
     {
       "verse": 4,
-      "text": "He threw Pharaoh's chariots and his army into the sea. Pharaoh's best officers drowned in the Red Sea. Pharaoh's best officers drowned in the Red Sea."
+      "text": "He threw Pharaoh's chariots and his army into the sea. Pharaoh's best officers drowned in the Red Sea."
     },
     {
       "verse": 5,
-      "text": "The deep waters have covered them. They fell to the floor of the sea, like a stone. They fell to the floor of the sea, like a stone."
+      "text": "The deep waters have covered them. They fell to the floor of the sea, like a stone."
     },
     {
       "verse": 6,
-      "text": "Your right hand, Lord, was great and powerful. Your right hand, Lord, destroyed the enemy. Your right hand, Lord, destroyed the enemy."
+      "text": "Your right hand, Lord, was great and powerful. Your right hand, Lord, destroyed the enemy."
     },
     {
       "verse": 7,
-      "text": "With your powerful authority, you killed your enemies. You were very angry with them. You killed them, like a fire burns dry grass. You were very angry with them. You killed them, like a fire burns dry grass."
+      "text": "With your powerful authority, you killed your enemies. You were very angry with them. You killed them, like a fire burns dry grass."
     },
     {
       "verse": 8,
-      "text": "You blew on the water and it became like a wall. The deep waters stood up in a big heap. The deep waters stood up in a big heap."
+      "text": "You blew on the water and it became like a wall. The deep waters stood up in a big heap."
     },
     {
       "verse": 9,
-      "text": "The enemy said, “We will go after them. We will catch them. We will destroy them with our swords. We will do whatever we want to them. We will take all their valuable things for ourselves. ” We will destroy them with our swords. We will do whatever we want to them. We will take all their valuable things for ourselves. ”"
+      "text": "The enemy said, “We will go after them. We will catch them. We will destroy them with our swords. We will do whatever we want to them. We will take all their valuable things for ourselves. ”"
     },
     {
       "verse": 10,
-      "text": "But Lord, you blew on the watersso that the sea covered your enemies. They went down like heavy metal in the great waters. so that the sea covered your enemies. They went down like heavy metal in the great waters."
+      "text": "But Lord, you blew on the watersso that the sea covered your enemies. They went down like heavy metal in the great waters."
     },
     {
       "verse": 11,
-      "text": "Lord, there is nobody like you among all the gods! There is nobody like you anywhere! You are great and holy. Everyone should respect you and praise you. You do great miracles. There is nobody like you! There is nobody like you anywhere! You are great and holy. Everyone should respect you and praise you. You do great miracles. There is nobody like you!"
+      "text": "Lord, there is nobody like you among all the gods! There is nobody like you anywhere! You are great and holy. Everyone should respect you and praise you. You do great miracles. There is nobody like you!"
     },
     {
       "verse": 12,
-      "text": "You lifted up your right hand. A big hole opened in the ground and our enemies fell into it. A big hole opened in the ground and our enemies fell into it."
+      "text": "You lifted up your right hand. A big hole opened in the ground and our enemies fell into it."
     },
     {
       "verse": 13,
-      "text": "You have promised to love your people. So you have saved them and you lead them. With your strength, you show them the way to your holy home. So you have saved them and you lead them. With your strength, you show them the way to your holy home."
+      "text": "You have promised to love your people. So you have saved them and you lead them. With your strength, you show them the way to your holy home."
     },
     {
       "verse": 14,
-      "text": "The people of other nations will hear what you have done. They will be very afraid. The people who live in Philistia will shake with fear. They will be very afraid. The people who live in Philistia will shake with fear."
+      "text": "The people of other nations will hear what you have done. They will be very afraid. The people who live in Philistia will shake with fear."
     },
     {
       "verse": 15,
-      "text": "The rulers of Edom will be afraid. The leaders of Moab will shake with fear. The people who live in Canaan will become weak. The leaders of Moab will shake with fear. The people who live in Canaan will become weak."
+      "text": "The rulers of Edom will be afraid. The leaders of Moab will shake with fear. The people who live in Canaan will become weak."
     },
     {
       "verse": 16,
-      "text": "They will all be afraid. Because of your great power they will want to run away. But they cannot move! They will remain still, like stones, until your people go on past them. They will stand and watch as the people you have saved, Lord, pass by. Because of your great power they will want to run away. But they cannot move! They will remain still, like stones, until your people go on past them. They will stand and watch as the people you have saved, Lord, pass by."
+      "text": "They will all be afraid. Because of your great power they will want to run away. But they cannot move! They will remain still, like stones, until your people go on past them. They will stand and watch as the people you have saved, Lord, pass by."
     },
     {
       "verse": 17,
-      "text": "You will bring your people in safely. You will bring them to live on your own mountain. Lord, that is the place that you have prepared for your home. It is the holy place that you have built, Lord. You will bring them to live on your own mountain. Lord, that is the place that you have prepared for your home. It is the holy place that you have built, Lord."
+      "text": "You will bring your people in safely. You will bring them to live on your own mountain. Lord, that is the place that you have prepared for your home. It is the holy place that you have built, Lord."
     },
     {
       "verse": 18,
@@ -1654,7 +1654,7 @@ module.exports = {
     },
     {
       "verse": 19,
-      "text": "Pharaoh's horses, his chariots and his soldiers went into the sea. Then the Lord made the waters of the sea come back over them. But the Israelites walked through the middle of the sea on dry ground. ’ Then the Lord made the waters of the sea come back over them. But the Israelites walked through the middle of the sea on dry ground. ’"
+      "text": "Pharaoh's horses, his chariots and his soldiers went into the sea. Then the Lord made the waters of the sea come back over them. But the Israelites walked through the middle of the sea on dry ground. ’"
     },
     {
       "verse": 20,
@@ -1662,7 +1662,7 @@ module.exports = {
     },
     {
       "verse": 21,
-      "text": "This is the song that she sang:‘Sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea. ’ ‘Sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea. ’"
+      "text": "This is the song that she sang:‘Sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea. ’"
     },
     {
       "verse": 22,
@@ -2480,7 +2480,7 @@ module.exports = {
     },
     {
       "verse": 29,
-      "text": "Do not refuse to offer your grain, your wine or your olive oil to me. You must give your firstborn sons to me. You must give your firstborn sons to me."
+      "text": "Do not refuse to offer your grain, your wine or your olive oil to me. You must give your firstborn sons to me."
     },
     {
       "verse": 30,
@@ -2554,7 +2554,7 @@ module.exports = {
     },
     {
       "verse": 16,
-      "text": "Eat the Feast of Harvest every year. Offer to me the first crops that you bring from your fields. At the end of each year, eat Feast of Final Harvest. Do that when you have finished bringing in all of your crops from the fields. At the end of each year, eat Feast of Final Harvest. Do that when you have finished bringing in all of your crops from the fields."
+      "text": "Eat the Feast of Harvest every year. Offer to me the first crops that you bring from your fields. At the end of each year, eat Feast of Final Harvest. Do that when you have finished bringing in all of your crops from the fields."
     },
     {
       "verse": 17,
@@ -2566,7 +2566,7 @@ module.exports = {
     },
     {
       "verse": 19,
-      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God. Do not cook a young goat in its mother's milk. Do not cook a young goat in its mother's milk."
+      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God. Do not cook a young goat in its mother's milk."
     },
     {
       "verse": 20,
@@ -4024,7 +4024,7 @@ module.exports = {
     },
     {
       "verse": 26,
-      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God. Do not cook a young goat in its mother's milk. ’ Do not cook a young goat in its mother's milk. ’"
+      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God. Do not cook a young goat in its mother's milk. ’"
     },
     {
       "verse": 27,
@@ -4908,7 +4908,7 @@ module.exports = {
     },
     {
       "verse": 33,
-      "text": "Moses also made the yard around the tabernacle and round the altar. He hung the curtain at the entrance of the yard. In that way, Moses finished the work. In that way, Moses finished the work."
+      "text": "Moses also made the yard around the tabernacle and round the altar. He hung the curtain at the entrance of the yard. In that way, Moses finished the work."
     },
     {
       "verse": 34,

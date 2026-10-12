@@ -402,7 +402,7 @@ module.exports = {
     },
     {
       "verse": 13,
-      "text": "I shook my coat so that everything fell out of its pockets. I said, ‘You must all do what you have promised to do. If not, I pray that God will shake you out like that! He will take away your homes and all your things. You will be left with nothing! ’ Everyone at the meeting said, ‘Amen, we agree! ’ They praised the Lord. All the people did what they had promised to do. All the people did what they had promised to do."
+      "text": "I shook my coat so that everything fell out of its pockets. I said, ‘You must all do what you have promised to do. If not, I pray that God will shake you out like that! He will take away your homes and all your things. You will be left with nothing! ’ Everyone at the meeting said, ‘Amen, we agree! ’ They praised the Lord. All the people did what they had promised to do."
     },
     {
       "verse": 14,
@@ -464,7 +464,7 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "All our enemies wanted to frighten us. They thought, ‘The Jews will be so afraid that they will not be able to work well. They will not finish building the wall. ’So I prayed to God, ‘Give me strength to continue the work. ’ So I prayed to God, ‘Give me strength to continue the work. ’"
+      "text": "All our enemies wanted to frighten us. They thought, ‘The Jews will be so afraid that they will not be able to work well. They will not finish building the wall. ’So I prayed to God, ‘Give me strength to continue the work. ’"
     },
     {
       "verse": 10,
@@ -1132,7 +1132,7 @@ module.exports = {
     },
     {
       "verse": 26,
-      "text": "Ahiah, Hanan, Anan,"
+      "text": "Ahiah, Hanan,"
     },
     {
       "verse": 27,
@@ -1428,7 +1428,7 @@ module.exports = {
     },
     {
       "verse": 24,
-      "text": "The leaders of the Levites were: Hashabiah, Sherebiah, Kadmiel's son, Jeshua, and their relatives. The two groups stood opposite each other to sing and praise and thank God. They did this in the way that God's servant, King David, had commanded. The two groups stood opposite each other to sing and praise and thank God. They did this in the way that God's servant, King David, had commanded."
+      "text": "The leaders of the Levites were: Hashabiah, Sherebiah, Kadmiel's son, Jeshua, and their relatives. The two groups stood opposite each other to sing and praise and thank God. They did this in the way that God's servant, King David, had commanded."
     },
     {
       "verse": 25,

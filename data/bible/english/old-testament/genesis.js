@@ -10,15 +10,15 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "God said, ‘There will be light! ’And there was light. And there was light."
+      "text": "God said, ‘There will be light! ’And there was light."
     },
     {
       "verse": 4,
-      "text": "God saw that the light was good. He caused the light and the dark to be separate. He caused the light and the dark to be separate."
+      "text": "God saw that the light was good. He caused the light and the dark to be separate."
     },
     {
       "verse": 5,
-      "text": "God called the light ‘day’. He called the dark ‘night’. Evening passed and then it was morning. That was the first day. Evening passed and then it was morning. That was the first day."
+      "text": "God called the light ‘day’. He called the dark ‘night’. Evening passed and then it was morning. That was the first day."
     },
     {
       "verse": 6,
@@ -30,27 +30,27 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "God called the wide space ‘sky’. Evening passed and then it was morning. That was the second day. Evening passed and then it was morning. That was the second day."
+      "text": "God called the wide space ‘sky’. Evening passed and then it was morning. That was the second day."
     },
     {
       "verse": 9,
-      "text": "God said, ‘The water that is under the sky will come together in one place. Then dry ground will appear. ’And what God said happened. And what God said happened."
+      "text": "God said, ‘The water that is under the sky will come together in one place. Then dry ground will appear. ’And what God said happened."
     },
     {
       "verse": 10,
-      "text": "God called the dry ground ‘land’. He called the water that had come together ‘sea’. God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
+      "text": "God called the dry ground ‘land’. He called the water that had come together ‘sea’. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": 11,
-      "text": "Then God said, ‘The land will cause plants to grow. There will be plants with their seeds and trees with their fruits. Each kind of plant and tree will have its own seeds and fruits. ’And what God said happened. And what God said happened."
+      "text": "Then God said, ‘The land will cause plants to grow. There will be plants with their seeds and trees with their fruits. Each kind of plant and tree will have its own seeds and fruits. ’And what God said happened."
     },
     {
       "verse": 12,
-      "text": "All kinds of plants and trees began to grow in the ground. The plants made seeds. The trees made fruits with seeds in them. Each plant made its own kind of seeds. God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
+      "text": "All kinds of plants and trees began to grow in the ground. The plants made seeds. The trees made fruits with seeds in them. Each plant made its own kind of seeds. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": 13,
-      "text": "Evening passed and then it was morning. That was the third day. That was the third day."
+      "text": "Evening passed and then it was morning. That was the third day."
     },
     {
       "verse": 14,
@@ -70,11 +70,11 @@ module.exports = {
     },
     {
       "verse": 18,
-      "text": "They were to rule over the day and night. They were to make the time of light separate from the time of dark. God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
+      "text": "They were to rule over the day and night. They were to make the time of light separate from the time of dark. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": 19,
-      "text": "Evening passed and then it was morning. That was the fourth day. That was the fourth day."
+      "text": "Evening passed and then it was morning. That was the fourth day."
     },
     {
       "verse": 20,
@@ -82,7 +82,7 @@ module.exports = {
     },
     {
       "verse": 21,
-      "text": "God made big animals to live in the sea. He made every different kind of living thing that filled the sea. He made every different kind of bird to fly in the sky. God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
+      "text": "God made big animals to live in the sea. He made every different kind of living thing that filled the sea. He made every different kind of bird to fly in the sky. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": 22,
@@ -90,15 +90,15 @@ module.exports = {
     },
     {
       "verse": 23,
-      "text": "Evening passed and then it was morning. That was the fifth day. That was the fifth day."
+      "text": "Evening passed and then it was morning. That was the fifth day."
     },
     {
       "verse": 24,
-      "text": "God said, ‘Different kinds of animals will now appear on the land. There will be farm animals and wild animals. There will also be other small animals that move along the ground. There will be many kinds of animals and each kind will be different. ’And what God said happened. And what God said happened."
+      "text": "God said, ‘Different kinds of animals will now appear on the land. There will be farm animals and wild animals. There will also be other small animals that move along the ground. There will be many kinds of animals and each kind will be different. ’And what God said happened."
     },
     {
       "verse": 25,
-      "text": "God made the different kinds of wild animals and the different kinds of farm animals. He made all the different kinds of animals that move along the ground. God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
+      "text": "God made the different kinds of wild animals and the different kinds of farm animals. He made all the different kinds of animals that move along the ground. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": 26,
@@ -106,7 +106,7 @@ module.exports = {
     },
     {
       "verse": 27,
-      "text": "God made humans. He made them to be like himself. He made some of them males and some of them females. He made them to be like himself. He made some of them males and some of them females."
+      "text": "God made humans. He made them to be like himself. He made some of them males and some of them females."
     },
     {
       "verse": 28,
@@ -118,7 +118,7 @@ module.exports = {
     },
     {
       "verse": 30,
-      "text": "I give to the animals green plants for their food. It will be food for all the animals on the earth, all the birds in the sky and all the animals that move along the ground. Everything that has life may eat every kind of green plant. ’And what God said happened. And what God said happened."
+      "text": "I give to the animals green plants for their food. It will be food for all the animals on the earth, all the birds in the sky and all the animals that move along the ground. Everything that has life may eat every kind of green plant. ’And what God said happened."
     },
     {
       "verse": 31,
@@ -282,11 +282,11 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "The Lord God said to the snake, ‘Because you have done this, I will curse you. Among all the farm animals and wild animals, you are the one that I will curse. From now on, you will move across the ground on your stomach. You will eat dust from the ground. You will do this for your whole life. ‘Because you have done this, I will curse you. Among all the farm animals and wild animals, you are the one that I will curse. From now on, you will move across the ground on your stomach. You will eat dust from the ground. You will do this for your whole life."
+      "text": "The Lord God said to the snake, ‘Because you have done this, I will curse you. Among all the farm animals and wild animals, you are the one that I will curse. From now on, you will move across the ground on your stomach. You will eat dust from the ground. You will do this for your whole life."
     },
     {
       "verse": 15,
-      "text": "I will cause you and the woman to become enemies. Your descendants and her descendants will always be enemies. One of her descendants will attack your head. You will attack his heel. ’ Your descendants and her descendants will always be enemies. One of her descendants will attack your head. You will attack his heel. ’"
+      "text": "I will cause you and the woman to become enemies. Your descendants and her descendants will always be enemies. One of her descendants will attack your head. You will attack his heel. ’"
     },
     {
       "verse": 16,
@@ -384,7 +384,7 @@ module.exports = {
     },
     {
       "verse": 15,
-      "text": "But the Lord said to Cain, ‘No! If anyone kills Cain, I will punish that person seven times more than I have punished you. ’Then the Lord put a special mark on Cain. This was to tell other people that they must not kill Cain. Then the Lord put a special mark on Cain. This was to tell other people that they must not kill Cain."
+      "text": "But the Lord said to Cain, ‘No! If anyone kills Cain, I will punish that person seven times more than I have punished you. ’Then the Lord put a special mark on Cain. This was to tell other people that they must not kill Cain."
     },
     {
       "verse": 16,
@@ -416,11 +416,11 @@ module.exports = {
     },
     {
       "verse": 23,
-      "text": "Lamech said to his two wives, ‘Adah and Zillah, listen to me! My wives, hear my words! A man attacked me, so I killed him. Yes, I killed a young man because he hurt me. ‘Adah and Zillah, listen to me! My wives, hear my words! A man attacked me, so I killed him. Yes, I killed a young man because he hurt me."
+      "text": "Lamech said to his two wives, ‘Adah and Zillah, listen to me! My wives, hear my words! A man attacked me, so I killed him. Yes, I killed a young man because he hurt me."
     },
     {
       "verse": 24,
-      "text": "If someone kills Cain, God will punish that person seven times more. But if someone attacks me, I will punish that person 77 times more! ’ But if someone attacks me, I will punish that person 77 times more! ’"
+      "text": "If someone kills Cain, God will punish that person seven times more. But if someone attacks me, I will punish that person 77 times more! ’"
     },
     {
       "verse": 25,
@@ -862,7 +862,7 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "God made people so that they were like himself. So if anyone kills a human, another human must kill him. So if anyone kills a human, another human must kill him."
+      "text": "God made people so that they were like himself. So if anyone kills a human, another human must kill him."
     },
     {
       "verse": 7,
@@ -960,7 +960,7 @@ module.exports = {
   "10": [
     {
       "verse": 1,
-      "text": "This is the report about Noah's sons, Shem, Ham and Japheth, and their families. After the deep water went away, they all had children themselves. After the deep water went away, they all had children themselves."
+      "text": "This is the report about Noah's sons, Shem, Ham and Japheth, and their families. After the deep water went away, they all had children themselves."
     },
     {
       "verse": 2,
@@ -1600,11 +1600,11 @@ module.exports = {
     },
     {
       "verse": 11,
-      "text": "The angel of the Lord said to Hagar, ‘Now you are pregnant and you will give birth to a son. When you cried in pain, the Lord heard you, so you must give your son the name “Ishmael”. ‘Now you are pregnant and you will give birth to a son. When you cried in pain, the Lord heard you, so you must give your son the name “Ishmael”."
+      "text": "The angel of the Lord said to Hagar, ‘Now you are pregnant and you will give birth to a son. When you cried in pain, the Lord heard you, so you must give your son the name “Ishmael”."
     },
     {
       "verse": 12,
-      "text": "Like a wild donkey, nobody will be able to rule him. He will fight against everyone, and everyone will fight against him. He will think that everyone is his enemy. He will keep away from his brothers. ’ He will fight against everyone, and everyone will fight against him. He will think that everyone is his enemy. He will keep away from his brothers. ’"
+      "text": "Like a wild donkey, nobody will be able to rule him. He will fight against everyone, and everyone will fight against him. He will think that everyone is his enemy. He will keep away from his brothers. ’"
     },
     {
       "verse": 13,
@@ -3074,11 +3074,11 @@ module.exports = {
     },
     {
       "verse": 28,
-      "text": "May God give you rain for your crops, so that they grow well in the good ground. Then you will have plenty of grain for food. And you will have grapes to make wine. so that they grow well in the good ground. Then you will have plenty of grain for food. And you will have grapes to make wine."
+      "text": "May God give you rain for your crops, so that they grow well in the good ground. Then you will have plenty of grain for food. And you will have grapes to make wine."
     },
     {
       "verse": 29,
-      "text": "May the people of many nations serve you. May they respect you as their master. You will rule over your brothers. Yes, your mother's sons will bend down to respect you. May God curse anyone who curses you. And may he bless anyone who blesses you. ’ May they respect you as their master. You will rule over your brothers. Yes, your mother's sons will bend down to respect you. May God curse anyone who curses you. And may he bless anyone who blesses you. ’"
+      "text": "May the people of many nations serve you. May they respect you as their master. You will rule over your brothers. Yes, your mother's sons will bend down to respect you. May God curse anyone who curses you. And may he bless anyone who blesses you. ’"
     },
     {
       "verse": 30,
@@ -3118,11 +3118,11 @@ module.exports = {
     },
     {
       "verse": 39,
-      "text": "Isaac replied, ‘You will not live in a place where the ground gives good food. You will not have rain to make your crops grow. ‘You will not live in a place where the ground gives good food. You will not have rain to make your crops grow."
+      "text": "Isaac replied, ‘You will not live in a place where the ground gives good food. You will not have rain to make your crops grow."
     },
     {
       "verse": 40,
-      "text": "You will have to fight to get the things that you need. You will serve your brother as your master. But when you choose to turn against him, you will become free from his power over you. ’ You will serve your brother as your master. But when you choose to turn against him, you will become free from his power over you. ’"
+      "text": "You will have to fight to get the things that you need. You will serve your brother as your master. But when you choose to turn against him, you will become free from his power over you. ’"
     },
     {
       "verse": 41,
@@ -4218,7 +4218,7 @@ module.exports = {
     },
     {
       "verse": 26,
-      "text": "The sons of Leah's servant, Zilpah, were Gad and Asher. Those were Jacob's sons who were born to him in Paddan Aram. Those were Jacob's sons who were born to him in Paddan Aram."
+      "text": "The sons of Leah's servant, Zilpah, were Gad and Asher. Those were Jacob's sons who were born to him in Paddan Aram."
     },
     {
       "verse": 27,
@@ -4414,7 +4414,7 @@ module.exports = {
     },
     {
       "verse": 2,
-      "text": "This is the report about Jacob and his family. Joseph was Jacob's son. When he was 17 years old, he took care of his father's sheep and goats. He did this together with his brothers. These were the sons of his father's wives, Bilhah and Zilpah. Sometimes Joseph told his father bad things about his brothers. Joseph was Jacob's son. When he was 17 years old, he took care of his father's sheep and goats. He did this together with his brothers. These were the sons of his father's wives, Bilhah and Zilpah. Sometimes Joseph told his father bad things about his brothers."
+      "text": "This is the report about Jacob and his family. Joseph was Jacob's son. When he was 17 years old, he took care of his father's sheep and goats. He did this together with his brothers. These were the sons of his father's wives, Bilhah and Zilpah. Sometimes Joseph told his father bad things about his brothers."
     },
     {
       "verse": 3,
@@ -5960,11 +5960,11 @@ module.exports = {
     },
     {
       "verse": 15,
-      "text": "Then Jacob blessed Joseph. He said, ‘May God bless these two boys. He is the God that my ancestors, Abraham and Isaac, served. Like a shepherd takes care of his sheep, God has taken care of me all my life, until this day. ‘May God bless these two boys. He is the God that my ancestors, Abraham and Isaac, served. Like a shepherd takes care of his sheep, God has taken care of me all my life, until this day."
+      "text": "Then Jacob blessed Joseph. He said, ‘May God bless these two boys. He is the God that my ancestors, Abraham and Isaac, served. Like a shepherd takes care of his sheep, God has taken care of me all my life, until this day."
     },
     {
       "verse": 16,
-      "text": "He is the Angel who has kept me safe. I pray that he will bless these boys. I pray that, because of them, people will remember my name, and the names of my ancestors, Abraham and Isaac. I pray that they will have many descendants who live all over the earth. ’ I pray that he will bless these boys. I pray that, because of them, people will remember my name, and the names of my ancestors, Abraham and Isaac. I pray that they will have many descendants who live all over the earth. ’"
+      "text": "He is the Angel who has kept me safe. I pray that he will bless these boys. I pray that, because of them, people will remember my name, and the names of my ancestors, Abraham and Isaac. I pray that they will have many descendants who live all over the earth. ’"
     },
     {
       "verse": 17,

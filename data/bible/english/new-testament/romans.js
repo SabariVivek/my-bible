@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       "verse": 7,
-      "text": "So I am writing to all you Christians who are in Rome. God loves you and he has chosen you to be his own people. I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds. I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds."
+      "text": "So I am writing to all you Christians who are in Rome. God loves you and he has chosen you to be his own people. I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds."
     },
     {
       "verse": 8,
@@ -290,19 +290,19 @@ module.exports = {
     },
     {
       "verse": 11,
-      "text": "There is nobody who understands what is true. There is nobody who wants to worship God. There is nobody who wants to worship God."
+      "text": "There is nobody who understands what is true. There is nobody who wants to worship God."
     },
     {
       "verse": 12,
-      "text": "Everyone has turned away from God. All people have become completely bad. Nobody does what is good or kind. There is not even one person who is like that. All people have become completely bad. Nobody does what is good or kind. There is not even one person who is like that."
+      "text": "Everyone has turned away from God. All people have become completely bad. Nobody does what is good or kind. There is not even one person who is like that."
     },
     {
       "verse": 13,
-      "text": "Bad words come out of their mouth, like a very bad smell. They tell lies all the time, so that people do wrong things. The things that they say hurt people, like a snake's poison. They tell lies all the time, so that people do wrong things. The things that they say hurt people, like a snake's poison."
+      "text": "Bad words come out of their mouth, like a very bad smell. They tell lies all the time, so that people do wrong things. The things that they say hurt people, like a snake's poison."
     },
     {
       "verse": 14,
-      "text": "They are always saying bad things against people, because they want to cause trouble for them. because they want to cause trouble for them."
+      "text": "They are always saying bad things against people, because they want to cause trouble for them."
     },
     {
       "verse": 15,
@@ -310,7 +310,7 @@ module.exports = {
     },
     {
       "verse": 16,
-      "text": "Everywhere they go, they destroy things. They only make people very sad. They only make people very sad."
+      "text": "Everywhere they go, they destroy things. They only make people very sad."
     },
     {
       "verse": 17,
@@ -404,7 +404,7 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "A person is really happy when the Lord accepts him. The Lord does not think about that person's sin any more. ’ The Lord does not think about that person's sin any more. ’"
+      "text": "A person is really happy when the Lord accepts him. The Lord does not think about that person's sin any more. ’"
     },
     {
       "verse": 9,
@@ -1022,15 +1022,15 @@ module.exports = {
     },
     {
       "verse": 27,
-      "text": "Also, Isaiah, God's prophet, said this about Israel's people:‘There are so many of Israel's people, nobody can count them. They are as many as the bits of sand on the shore of the sea. But God will save only a few of them. ‘There are so many of Israel's people, nobody can count them. They are as many as the bits of sand on the shore of the sea. But God will save only a few of them."
+      "text": "Also, Isaiah, God's prophet, said this about Israel's people:‘There are so many of Israel's people, nobody can count them. They are as many as the bits of sand on the shore of the sea. But God will save only a few of them."
     },
     {
       "verse": 28,
-      "text": "The Lord God will finish his work quickly. He has warned his people what he will do. And he will punish them completely. ’ He has warned his people what he will do. And he will punish them completely. ’"
+      "text": "The Lord God will finish his work quickly. He has warned his people what he will do. And he will punish them completely. ’"
     },
     {
       "verse": 29,
-      "text": "Isaiah had already said this:‘The Lord of great power has let some of our children live. If he had not done that, no descendants would remain. We would have become like the people in Sodom and Gomorrah. ’ ‘The Lord of great power has let some of our children live. If he had not done that, no descendants would remain. We would have become like the people in Sodom and Gomorrah. ’"
+      "text": "Isaiah had already said this:‘The Lord of great power has let some of our children live. If he had not done that, no descendants would remain. We would have become like the people in Sodom and Gomorrah. ’"
     },
     {
       "verse": 30,
@@ -1120,15 +1120,15 @@ module.exports = {
     },
     {
       "verse": 18,
-      "text": "Let me ask you this: ‘Did Israel's people hear that message? ’ They certainly did! The Bible says:‘People have spoken God's message everywhere. People have heard his message in every part of the world. ’ ‘People have spoken God's message everywhere. People have heard his message in every part of the world. ’"
+      "text": "Let me ask you this: ‘Did Israel's people hear that message? ’ They certainly did! The Bible says:‘People have spoken God's message everywhere. People have heard his message in every part of the world. ’"
     },
     {
       "verse": 19,
-      "text": "So I ask this too: ‘When Israel's people heard God's message, did they understand it? ’ First, think about what Moses wrote. God said to Israel's people:‘I will make you jealous because of people who are not my people. I will make you angry because of people who know nothing about me. ’ ‘I will make you jealous because of people who are not my people. I will make you angry because of people who know nothing about me. ’"
+      "text": "So I ask this too: ‘When Israel's people heard God's message, did they understand it? ’ First, think about what Moses wrote. God said to Israel's people:‘I will make you jealous because of people who are not my people. I will make you angry because of people who know nothing about me. ’"
     },
     {
       "verse": 20,
-      "text": "Also, this is what Isaiah said very bravely:‘God says: Those people who were not looking for me have found me. I showed myself to people who were not even asking about me. ’ ‘God says: Those people who were not looking for me have found me. I showed myself to people who were not even asking about me. ’"
+      "text": "Also, this is what Isaiah said very bravely:‘God says: Those people who were not looking for me have found me. I showed myself to people who were not even asking about me. ’"
     },
     {
       "verse": 21,
@@ -1170,11 +1170,11 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "King David says this:‘They enjoy eating lots of good food together. I pray that God will catch them while they are eating! I want those good things to lead them into trouble. I want God to punish them because of what they have done. ‘They enjoy eating lots of good food together. I pray that God will catch them while they are eating! I want those good things to lead them into trouble. I want God to punish them because of what they have done."
+      "text": "King David says this:‘They enjoy eating lots of good food together. I pray that God will catch them while they are eating! I want those good things to lead them into trouble. I want God to punish them because of what they have done."
     },
     {
       "verse": 10,
-      "text": "I want their eyes to become dark so that they cannot see. I want their bodies always to be in pain, like slaves. ’ I want their bodies always to be in pain, like slaves. ’"
+      "text": "I want their eyes to become dark so that they cannot see. I want their bodies always to be in pain, like slaves. ’"
     },
     {
       "verse": 11,
@@ -1242,7 +1242,7 @@ module.exports = {
     },
     {
       "verse": 27,
-      "text": "And I will make this agreement with them. I will forgive them for their sins. ’ I will forgive them for their sins. ’"
+      "text": "And I will make this agreement with them. I will forgive them for their sins. ’"
     },
     {
       "verse": 28,
@@ -1274,7 +1274,7 @@ module.exports = {
     },
     {
       "verse": 35,
-      "text": "‘Nobody has ever given anything to God, so that God had a debt to pay back to them. ’ so that God had a debt to pay back to them. ’"
+      "text": "‘Nobody has ever given anything to God, so that God had a debt to pay back to them. ’"
     },
     {
       "verse": 36,
@@ -1356,11 +1356,11 @@ module.exports = {
     },
     {
       "verse": 19,
-      "text": "My friends, if someone has done bad things to you, do not try to punish them yourselves. Instead, let God be angry and punish them. This is what is written in the Bible:‘The Lord God says, “When people do something wrong, I am the one who will punish them. I will pay them back. ” ’ ‘The Lord God says, “When people do something wrong, I am the one who will punish them. I will pay them back. ” ’"
+      "text": "My friends, if someone has done bad things to you, do not try to punish them yourselves. Instead, let God be angry and punish them. This is what is written in the Bible:‘The Lord God says, “When people do something wrong, I am the one who will punish them. I will pay them back. ” ’"
     },
     {
       "verse": 20,
-      "text": "But the Bible also says this:‘If your enemy is hungry, feed him. If he is thirsty, give him something to drink. If you help your enemy, he will become ashamed. He will be sorry because of what he did to you. ’ ‘If your enemy is hungry, feed him. If he is thirsty, give him something to drink. If you help your enemy, he will become ashamed. He will be sorry because of what he did to you. ’"
+      "text": "But the Bible also says this:‘If your enemy is hungry, feed him. If he is thirsty, give him something to drink. If you help your enemy, he will become ashamed. He will be sorry because of what he did to you. ’"
     },
     {
       "verse": 21,
@@ -1558,15 +1558,15 @@ module.exports = {
     },
     {
       "verse": 10,
-      "text": "It says also in the Bible:‘Be very happy, you Gentiles! Praise God together with his people. ’ ‘Be very happy, you Gentiles! Praise God together with his people. ’"
+      "text": "It says also in the Bible:‘Be very happy, you Gentiles! Praise God together with his people. ’"
     },
     {
       "verse": 11,
-      "text": "It also says this:‘Say how great the Lord is, all you Gentiles. All people, from every country, should say how great he is. ’ ‘Say how great the Lord is, all you Gentiles. All people, from every country, should say how great he is. ’"
+      "text": "It also says this:‘Say how great the Lord is, all you Gentiles. All people, from every country, should say how great he is. ’"
     },
     {
       "verse": 12,
-      "text": "God's prophet Isaiah says this:‘The root of Jesse will arrive. He will come to rule the Gentiles. The Gentiles will trust him to save them. ’ ‘The root of Jesse will arrive. He will come to rule the Gentiles. The Gentiles will trust him to save them. ’"
+      "text": "God's prophet Isaiah says this:‘The root of Jesse will arrive. He will come to rule the Gentiles. The Gentiles will trust him to save them. ’"
     },
     {
       "verse": 13,

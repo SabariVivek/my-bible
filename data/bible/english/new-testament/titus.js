@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       "verse": 4,
-      "text": "I am writing to you, Titus. I told you the message about Jesus and now we both believe in him. So you are like my own child. I pray that God, the Father, and Christ Jesus, our Saviour, will continue to help you. I pray that they will give you peace in your mind. I pray that God, the Father, and Christ Jesus, our Saviour, will continue to help you. I pray that they will give you peace in your mind."
+      "text": "I am writing to you, Titus. I told you the message about Jesus and now we both believe in him. So you are like my own child. I pray that God, the Father, and Christ Jesus, our Saviour, will continue to help you. I pray that they will give you peace in your mind."
     },
     {
       "verse": 5,

@@ -112,7 +112,7 @@ module.exports = {
     },
     {
       "verse": 11,
-      "text": "King Huram of Tyre replied to Solomon with this letter:‘Because the Lord loves his people, he has chosen you to be their king. ’ ‘Because the Lord loves his people, he has chosen you to be their king. ’"
+      "text": "King Huram of Tyre replied to Solomon with this letter:‘Because the Lord loves his people, he has chosen you to be their king. ’"
     },
     {
       "verse": 12,
@@ -1176,7 +1176,7 @@ module.exports = {
     },
     {
       "verse": 7,
-      "text": "Asa said to Judah's people, ‘We should build these towns and make them stronger. We must put walls around them, with towers and strong gates. Judah still belongs to us because we have obeyed the Lord our God. He has made us safe from our enemies all around us. ’So the people made these towns strong. Everything went well for them. So the people made these towns strong. Everything went well for them."
+      "text": "Asa said to Judah's people, ‘We should build these towns and make them stronger. We must put walls around them, with towers and strong gates. Judah still belongs to us because we have obeyed the Lord our God. He has made us safe from our enemies all around us. ’So the people made these towns strong. Everything went well for them."
     },
     {
       "verse": 8,
@@ -1452,7 +1452,7 @@ module.exports = {
     },
     {
       "verse": 7,
-      "text": "The king of Israel said to Jehoshaphat, ‘There is still one man. We could ask him what the Lord wants us to do. But I do not like him, because he never says that anything good will happen to me. He always says that I will have trouble. He is Imlah's son, Micaiah. ’Jehoshaphat said, ‘The king should not talk like that. ’ Jehoshaphat said, ‘The king should not talk like that. ’"
+      "text": "The king of Israel said to Jehoshaphat, ‘There is still one man. We could ask him what the Lord wants us to do. But I do not like him, because he never says that anything good will happen to me. He always says that I will have trouble. He is Imlah's son, Micaiah. ’Jehoshaphat said, ‘The king should not talk like that. ’"
     },
     {
       "verse": 8,
@@ -1480,7 +1480,7 @@ module.exports = {
     },
     {
       "verse": 14,
-      "text": "When Micaiah arrived, the king asked him, ‘Micaiah, should we attack Ramoth Gilead or not? ’Micaiah answered, ‘Yes, attack it. You will surely win the fight. You will take power over the city. ’ Micaiah answered, ‘Yes, attack it. You will surely win the fight. You will take power over the city. ’"
+      "text": "When Micaiah arrived, the king asked him, ‘Micaiah, should we attack Ramoth Gilead or not? ’Micaiah answered, ‘Yes, attack it. You will surely win the fight. You will take power over the city. ’"
     },
     {
       "verse": 15,
@@ -2084,7 +2084,7 @@ module.exports = {
     },
     {
       "verse": 26,
-      "text": "Jehozabad's mother was Shimrith, who came from Moab. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings."
+      "text": "Jehozabad's mother was Shimrith, who came from Moab. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings."
     }
   ],
   "25": [
@@ -3296,7 +3296,7 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "The other things that happened while Jehoiakim was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells about the disgusting sins that he was guilty of. Jehoiakim's son Jehoiachin became king after him. Jehoiakim's son Jehoiachin became king after him."
+      "text": "The other things that happened while Jehoiakim was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells about the disgusting sins that he was guilty of. Jehoiakim's son Jehoiachin became king after him."
     },
     {
       "verse": 9,

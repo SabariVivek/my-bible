@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": 1,
-      "text": "This letter is from Paul, Silas and Timothy. We are writing to the people of the church in Thessalonica. You belong to God our Father, and to the Lord Jesus Christ. We are writing to the people of the church in Thessalonica. You belong to God our Father, and to the Lord Jesus Christ."
+      "text": "This letter is from Paul, Silas and Timothy. We are writing to the people of the church in Thessalonica. You belong to God our Father, and to the Lord Jesus Christ."
     },
     {
       "verse": 2,

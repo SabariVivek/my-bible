@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": 3,
-      "text": "But I have not loved Esau and his descendants. Instead, I have caused trouble for Esau. I caused Esau's mountains to become a wilderness. Nobody uses that land any longer. Now there are only jackals in the land that belongs to Esau. ’ Instead, I have caused trouble for Esau. I caused Esau's mountains to become a wilderness. Nobody uses that land any longer. Now there are only jackals in the land that belongs to Esau. ’"
+      "text": "But I have not loved Esau and his descendants. Instead, I have caused trouble for Esau. I caused Esau's mountains to become a wilderness. Nobody uses that land any longer. Now there are only jackals in the land that belongs to Esau. ’"
     },
     {
       "verse": 4,
@@ -22,7 +22,7 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "The Lord Almighty says this to the priests:‘A son respects his father. A servant respects his master. If I am really your father and your master, why do you not respect me? You are my priests, but you insult my name. But then you ask, “What have we done to insult your name? ” ‘A son respects his father. A servant respects his master. If I am really your father and your master, why do you not respect me? You are my priests, but you insult my name. But then you ask, “What have we done to insult your name? ”"
+      "text": "The Lord Almighty says this to the priests:‘A son respects his father. A servant respects his master. If I am really your father and your master, why do you not respect me? You are my priests, but you insult my name. But then you ask, “What have we done to insult your name? ”"
     },
     {
       "verse": 7,
@@ -30,19 +30,19 @@ module.exports = {
     },
     {
       "verse": 8,
-      "text": "You offer blind animals as a sacrifice to me. You know that is wrong. You offer to me animals that cannot walk or animals that are ill. That is also a wrong thing to do. You would not give gifts like that to your city's ruler. If you did, he would surely not accept them. He would not be happy with your gifts. ’That is what the Lord Almighty says. That is what the Lord Almighty says."
+      "text": "You offer blind animals as a sacrifice to me. You know that is wrong. You offer to me animals that cannot walk or animals that are ill. That is also a wrong thing to do. You would not give gifts like that to your city's ruler. If you did, he would surely not accept them. He would not be happy with your gifts. ’That is what the Lord Almighty says."
     },
     {
       "verse": 9,
-      "text": "‘Now you ask me to be kind to you. You want me to forgive you. But when you offer unclean animals as gifts to me, I will not be happy with your gifts. ’That is what the Lord Almighty says. That is what the Lord Almighty says."
+      "text": "‘Now you ask me to be kind to you. You want me to forgive you. But when you offer unclean animals as gifts to me, I will not be happy with your gifts. ’That is what the Lord Almighty says."
     },
     {
       "verse": 10,
-      "text": "‘It would be better if one of you shut the temple doors! Then you would not be able to offer useless sacrifices on my altar. I am not happy with you. I will not accept any more gifts from you. ’That is what the Lord Almighty says. That is what the Lord Almighty says."
+      "text": "‘It would be better if one of you shut the temple doors! Then you would not be able to offer useless sacrifices on my altar. I am not happy with you. I will not accept any more gifts from you. ’That is what the Lord Almighty says."
     },
     {
       "verse": 11,
-      "text": "‘People in every nation of the whole world will respect my name. People everywhere will offer incense and pure sacrifices to worship me. They will all know that I am great. ’That is what the Lord Almighty says. That is what the Lord Almighty says."
+      "text": "‘People in every nation of the whole world will respect my name. People everywhere will offer incense and pure sacrifices to worship me. They will all know that I am great. ’That is what the Lord Almighty says."
     },
     {
       "verse": 12,
@@ -120,7 +120,7 @@ module.exports = {
     },
     {
       "verse": 16,
-      "text": "The Lord God of Israel says this: ‘If a man sends his wife away from him, I hate that! He has been cruel to his wife when he should take care of her. So be very careful! Remember your promise to take care of your wife. ’That is what the Lord Almighty says. That is what the Lord Almighty says."
+      "text": "The Lord God of Israel says this: ‘If a man sends his wife away from him, I hate that! He has been cruel to his wife when he should take care of her. So be very careful! Remember your promise to take care of your wife. ’That is what the Lord Almighty says."
     },
     {
       "verse": 17,
@@ -130,7 +130,7 @@ module.exports = {
   "3": [
     {
       "verse": 1,
-      "text": "‘Look! I will send someone to speak my message. He will prepare the way before me. Then the Lord that you are waiting for will quickly return to his temple. The one who brings the message about the covenant will certainly come. He is the one that you really want to see. ’That is what the Lord Almighty says. That is what the Lord Almighty says."
+      "text": "‘Look! I will send someone to speak my message. He will prepare the way before me. Then the Lord that you are waiting for will quickly return to his temple. The one who brings the message about the covenant will certainly come. He is the one that you really want to see. ’That is what the Lord Almighty says."
     },
     {
       "verse": 2,
@@ -146,7 +146,7 @@ module.exports = {
     },
     {
       "verse": 5,
-      "text": "At that time, I will come among you as your judge. I will speak clearly against those who have done wrong things. I will punish the magicians, the adulterers and those who tell lies against other people. I will punish those people who are cruel to their workers, or they deceive widows or children who have no family. And I will punish those who do not help foreigners who live among them. People who do those things show that they do not respect me. ’That is what the Lord Almighty says. That is what the Lord Almighty says."
+      "text": "At that time, I will come among you as your judge. I will speak clearly against those who have done wrong things. I will punish the magicians, the adulterers and those who tell lies against other people. I will punish those people who are cruel to their workers, or they deceive widows or children who have no family. And I will punish those who do not help foreigners who live among them. People who do those things show that they do not respect me. ’That is what the Lord Almighty says."
     },
     {
       "verse": 6,
@@ -178,7 +178,7 @@ module.exports = {
     },
     {
       "verse": 13,
-      "text": "The Lord says, ‘You have spoken bad words against me. But you ask, “What have we said against you? ” But you ask, “What have we said against you? ”"
+      "text": "The Lord says, ‘You have spoken bad words against me. But you ask, “What have we said against you? ”"
     },
     {
       "verse": 14,
@@ -204,7 +204,7 @@ module.exports = {
   "4": [
     {
       "verse": 1,
-      "text": "‘The great day when I come to judge people will certainly happen. Punishment will come like the great fire of a hot oven. It will destroy all the proud people who do evil things. It will completely destroy them, like a fire that destroys dry grass. Nothing will remain. ’That is what the Lord Almighty says. That is what the Lord Almighty says."
+      "text": "‘The great day when I come to judge people will certainly happen. Punishment will come like the great fire of a hot oven. It will destroy all the proud people who do evil things. It will completely destroy them, like a fire that destroys dry grass. Nothing will remain. ’That is what the Lord Almighty says."
     },
     {
       "verse": 2,

@@ -138,7 +138,7 @@ module.exports = {
     },
     {
       "verse": 24,
-      "text": "e men in each clan an"
+      "text": "e men in each clan"
     },
     {
       "verse": 25,
@@ -170,7 +170,7 @@ module.exports = {
     },
     {
       "verse": 32,
-      "text": "0 men. Simeon: 59, 300"
+      "text": "0 men. Simeon: 59, 30"
     },
     {
       "verse": 33,
@@ -434,7 +434,7 @@ module.exports = {
     },
     {
       "verse": 20,
-      "text": "Merari's sons were called Mahli and Mushi. Those were the sons and grandsons of Levi. They became the leaders of the clans of Levi's tribe. Those were the sons and grandsons of Levi. They became the leaders of the clans of Levi's tribe."
+      "text": "Merari's sons were called Mahli and Mushi. Those were the sons and grandsons of Levi. They became the leaders of the clans of Levi's tribe."
     },
     {
       "verse": 21,
@@ -980,15 +980,15 @@ module.exports = {
     },
     {
       "verse": 24,
-      "text": "They must say:“I pray that the Lord will bless you. I pray that he will keep you safe. “I pray that the Lord will bless you. I pray that he will keep you safe."
+      "text": "They must say:“I pray that the Lord will bless you. I pray that he will keep you safe."
     },
     {
       "verse": 25,
-      "text": "I pray that the Lord will smile at you. And I pray that he will be very kind to you. And I pray that he will be very kind to you."
+      "text": "I pray that the Lord will smile at you. And I pray that he will be very kind to you."
     },
     {
       "verse": 26,
-      "text": "I pray that the Lord will be pleased with you. And I pray that he will give you peace in your minds. ” And I pray that he will give you peace in your minds. ”"
+      "text": "I pray that the Lord will be pleased with you. And I pray that he will give you peace in your minds. ”"
     },
     {
       "verse": 27,
@@ -3094,15 +3094,15 @@ module.exports = {
     },
     {
       "verse": 28,
-      "text": "An army that was like a fire went out from Heshbon. It was like a flame that went out from Sihon's city. It destroyed Ar in Moab, and everything on the hills near the River Arnon. It was like a flame that went out from Sihon's city. It destroyed Ar in Moab, and everything on the hills near the River Arnon."
+      "text": "An army that was like a fire went out from Heshbon. It was like a flame that went out from Sihon's city. It destroyed Ar in Moab, and everything on the hills near the River Arnon."
     },
     {
       "verse": 29,
-      "text": "It will be very bad for you, people of Moab. Sihon has killed you people who worship the god Chemosh. Your god has let the king of the Amorites put you in prison. Sihon has killed you people who worship the god Chemosh. Your god has let the king of the Amorites put you in prison."
+      "text": "It will be very bad for you, people of Moab. Sihon has killed you people who worship the god Chemosh. Your god has let the king of the Amorites put you in prison."
     },
     {
       "verse": 30,
-      "text": "But now, we have won against them! We have destroyed Heshbon, and as far as Dibon. We have killed them from Nophah to Medeba. ’ We have destroyed Heshbon, and as far as Dibon. We have killed them from Nophah to Medeba. ’"
+      "text": "But now, we have won against them! We have destroyed Heshbon, and as far as Dibon. We have killed them from Nophah to Medeba. ’"
     },
     {
       "verse": 31,

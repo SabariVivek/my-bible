@@ -454,7 +454,7 @@ module.exports = {
     },
     {
       "verse": 6,
-      "text": "Esther replied, ‘The enemy of our people is this wicked man Haman! ’Then Haman became very afraid, as he sat there with the king and the queen. Then Haman became very afraid, as he sat there with the king and the queen."
+      "text": "Esther replied, ‘The enemy of our people is this wicked man Haman! ’Then Haman became very afraid, as he sat there with the king and the queen."
     },
     {
       "verse": 7,
@@ -466,7 +466,7 @@ module.exports = {
     },
     {
       "verse": 9,
-      "text": "One of the king's eunuchs, Harbona, said, ‘There is a wooden tower near Haman's home. It is 22 metres high. His men built it so that he could hang Mordecai on it. Mordecai is the man who saved the king's life. ’The king said, ‘Hang Haman on the tower until he is dead. ’ The king said, ‘Hang Haman on the tower until he is dead. ’"
+      "text": "One of the king's eunuchs, Harbona, said, ‘There is a wooden tower near Haman's home. It is 22 metres high. His men built it so that he could hang Mordecai on it. Mordecai is the man who saved the king's life. ’The king said, ‘Hang Haman on the tower until he is dead. ’"
     },
     {
       "verse": 10,
