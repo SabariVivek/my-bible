@@ -3955,17 +3955,17 @@ body.dark-theme .book-intro-title-secondary {
     transition: all 0.25s ease !important;
 }
 
-/* Left pane selection - grey background */
+/* Left pane selection - highlight background */
 .verse-line.left-pane-selected {
-    background-color: #d0d4d9 !important;
+    background-color: #303234 !important;
 }
 
 .verse-line.left-pane-selected:active {
-    background-color: #d0d4d9 !important;
+    background-color: #303234 !important;
 }
 
 .verse-line.left-pane-selected:focus {
-    background-color: #d0d4d9 !important;
+    background-color: #303234 !important;
 }
 
 /* Override selection color to prevent grey highlighting */
@@ -5744,17 +5744,17 @@ body.dark-theme .verse-line.has-note.multi-highlighted {
     transition: all 0.25s ease !important;
 }
 
-/* Left pane selection - grey background in dark theme */
+/* Left pane selection - highlight background in dark theme */
 body.dark-theme .verse-line.left-pane-selected {
-    background-color: #3a3f45 !important;
+    background-color: #303234 !important;
 }
 
 body.dark-theme .verse-line.left-pane-selected:active {
-    background-color: #3a3f45 !important;
+    background-color: #303234 !important;
 }
 
 body.dark-theme .verse-line.left-pane-selected:focus {
-    background-color: #3a3f45 !important;
+    background-color: #303234 !important;
 }
 
 /* Override selection color in dark theme */

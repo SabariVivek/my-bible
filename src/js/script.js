@@ -6209,14 +6209,28 @@ function initializeSearch() {
         showEmptyState();
         searchInput.focus();
     }
-    searchBtn.addEventListener('click', () => {
-        closeBottomSheet();
-        if (isSearchActive) {
-            closeSearch();
-        } else {
-            openSearch();
-        }
-    });
+    if (searchBtn) {
+        searchBtn.addEventListener('click', () => {
+            closeBottomSheet();
+            if (isSearchActive) {
+                closeSearch();
+            } else {
+                openSearch();
+            }
+        });
+    }
+    if (searchBtnMobile) {
+        searchBtnMobile.addEventListener('click', () => {
+            closeBottomSheet();
+            if (isSearchActive) {
+                closeSearch();
+            } else {
+                openSearch();
+            }
+        });
+    }
+    window.openSearch = openSearch;
+    window.closeSearch = closeSearch;
     backBtn.addEventListener('click', closeSearch);
     clearBtn.addEventListener('click', clearSearch);
     filterBtn.addEventListener('click', toggleFilter);

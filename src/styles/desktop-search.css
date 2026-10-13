@@ -1,0 +1,515 @@
+/* ==========================================================================
+   DESKTOP SEARCH BAR & DROPDOWN STYLES (SIMPLE & CLEAN MONOCHROME)
+   Clean, simple, neutral monochrome styling with no colors.
+   ========================================================================== */
+
+/* Hidden on mobile, shown on desktop (min-width: 769px) */
+.desktop-top-search-wrapper {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .desktop-top-search-wrapper {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: min(440px, calc(100% - 440px));
+        z-index: 105;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 1000px) {
+        .desktop-top-search-wrapper {
+            width: min(330px, calc(100% - 380px));
+        }
+    }
+}
+
+/* ── Top Bar Search Box ── */
+.desktop-top-search-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 36px;
+    background: #f4f4f5;
+    border: 1px solid #e4e4e7;
+    border-radius: 18px;
+    padding: 0 10px 0 12px;
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+}
+
+.desktop-top-search-box:hover {
+    background: #ececee;
+    border-color: #d4d4d8;
+}
+
+.desktop-top-search-box:focus-within {
+    background: #ffffff;
+    border-color: #a1a1aa;
+    box-shadow: 0 0 0 1px #a1a1aa;
+}
+
+/* Search Icon */
+.desktop-top-search-icon {
+    flex-shrink: 0;
+    color: #71717a;
+    margin-right: 8px;
+    transition: color 0.15s ease;
+    pointer-events: none;
+}
+
+.desktop-top-search-box:focus-within .desktop-top-search-icon {
+    color: #18181b;
+}
+
+/* Search Input */
+.desktop-top-search-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.86rem;
+    font-family: inherit;
+    color: #18181b;
+    padding: 0;
+    height: 100%;
+    text-overflow: ellipsis;
+}
+
+.desktop-top-search-input::placeholder {
+    color: #a1a1aa;
+    font-size: 0.83rem;
+}
+
+/* Hints: Shortcut & Clear Button */
+.desktop-top-search-hints {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    margin-left: 6px;
+}
+
+.desktop-top-clear-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.06);
+    color: #71717a;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.15s ease;
+}
+
+.desktop-top-clear-btn:hover {
+    background: rgba(0, 0, 0, 0.12);
+    color: #18181b;
+}
+
+.desktop-top-search-shortcut {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    font-size: 11px;
+    font-family: inherit;
+    color: #71717a;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.desktop-top-search-box:focus-within .desktop-top-search-shortcut {
+    opacity: 0.4;
+}
+
+/* ==========================================================================
+   DROPDOWN & SUGGESTIONS POPUP (SIMPLE & CLEAN)
+   ========================================================================== */
+.desktop-top-search-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 120;
+    padding: 6px;
+    animation: desktopSearchDropIn 0.15s ease-out;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: #18181b;
+}
+
+@keyframes desktopSearchDropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Section Header ── */
+.desktop-search-section-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #71717a;
+    padding: 6px 10px 3px 10px;
+}
+
+/* ── Dropdown Item ── */
+.desktop-search-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.12s ease;
+    user-select: none;
+    text-decoration: none;
+    color: #18181b;
+    gap: 10px;
+}
+
+.desktop-search-item:hover,
+.desktop-search-item.selected {
+    background: #f4f4f5;
+}
+
+.desktop-search-item-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    flex: 1;
+}
+
+.desktop-search-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.04);
+    color: #71717a;
+    flex-shrink: 0;
+}
+
+.desktop-search-item:hover .desktop-search-item-icon,
+.desktop-search-item.selected .desktop-search-item-icon {
+    color: #18181b;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.desktop-search-item-details {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+}
+
+.desktop-search-item-title {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #18181b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.desktop-search-item-subtitle {
+    font-size: 0.76rem;
+    color: #71717a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 1px;
+}
+
+/* ── Simple Action Badge ── */
+.desktop-search-item-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: #f4f4f5;
+    border: 1px solid #e4e4e7;
+    color: #52525b;
+    flex-shrink: 0;
+}
+
+/* ── Hero Match Card (Simple) ── */
+.desktop-search-item.hero-match {
+    background: #fafafa;
+    border: 1px solid #e4e4e7;
+    margin-bottom: 3px;
+}
+
+.desktop-search-item.hero-match:hover,
+.desktop-search-item.hero-match.selected {
+    background: #f4f4f5;
+    border-color: #d4d4d8;
+}
+
+.desktop-search-item.hero-match .desktop-search-item-icon {
+    background: rgba(0, 0, 0, 0.06);
+    color: #18181b;
+}
+
+/* ── Quick Chapter Chips ── */
+.desktop-search-chips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 3px 10px 8px 10px;
+}
+
+.desktop-search-chip {
+    padding: 3px 8px;
+    font-size: 0.76rem;
+    font-weight: 500;
+    border-radius: 6px;
+    background: #f4f4f5;
+    border: 1px solid #e4e4e7;
+    color: #3f3f46;
+    cursor: pointer;
+    transition: all 0.12s ease;
+}
+
+.desktop-search-chip:hover {
+    background: #27272a;
+    border-color: #27272a;
+    color: #ffffff;
+}
+
+/* ── Search Verse Highlight: matches left-pane selection design (no border, no box-shadow, solid #303234) ── */
+.verse-line.search-jump-highlight,
+.verse-line.left-pane-selected.search-jump-highlight {
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    animation: none !important;
+    text-decoration: none !important;
+}
+
+.verse-line.search-jump-highlight:active,
+.verse-line.search-jump-highlight:focus,
+.verse-line.left-pane-selected.search-jump-highlight:active,
+.verse-line.left-pane-selected.search-jump-highlight:focus {
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.verse-line.search-jump-highlight::before,
+.verse-line.search-jump-highlight::after,
+.verse-line.left-pane-selected.search-jump-highlight::before,
+.verse-line.left-pane-selected.search-jump-highlight::after {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.verse-container.search-jump-highlight {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* ==========================================================================
+   DARK THEME OVERRIDES (SIMPLE & CLEAN MONOCHROME)
+   ========================================================================== */
+body.dark-theme .desktop-top-search-box {
+    background: #202124;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .desktop-top-search-box:hover {
+    background: #26272b;
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+body.dark-theme .desktop-top-search-box:focus-within {
+    background: #28292e;
+    border-color: #71717a;
+    box-shadow: 0 0 0 1px #71717a;
+}
+
+body.dark-theme .desktop-top-search-icon {
+    color: #9ca3af;
+}
+
+body.dark-theme .desktop-top-search-box:focus-within .desktop-top-search-icon {
+    color: #f4f4f5;
+}
+
+body.dark-theme .desktop-top-search-input {
+    color: #f4f4f5;
+}
+
+body.dark-theme .desktop-top-search-input::placeholder {
+    color: #71717a;
+}
+
+body.dark-theme .desktop-top-clear-btn {
+    background: rgba(255, 255, 255, 0.08);
+    color: #9ca3af;
+}
+
+body.dark-theme .desktop-top-clear-btn:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: #f4f4f5;
+}
+
+body.dark-theme .desktop-top-search-shortcut {
+    color: #9ca3af;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Dark Theme Dropdown Container */
+body.dark-theme .desktop-top-search-dropdown {
+    background: #1e1f22;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    color: #f4f4f5;
+}
+
+body.dark-theme .desktop-search-section-title {
+    color: #9ca3af;
+}
+
+body.dark-theme .desktop-search-item {
+    color: #f4f4f5;
+}
+
+body.dark-theme .desktop-search-item:hover,
+body.dark-theme .desktop-search-item.selected {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+body.dark-theme .desktop-search-item-title {
+    color: #f4f4f5;
+}
+
+body.dark-theme .desktop-search-item-subtitle {
+    color: #9ca3af;
+}
+
+body.dark-theme .desktop-search-item-icon {
+    background: rgba(255, 255, 255, 0.05);
+    color: #9ca3af;
+}
+
+body.dark-theme .desktop-search-item:hover .desktop-search-item-icon,
+body.dark-theme .desktop-search-item.selected .desktop-search-item-icon {
+    color: #f4f4f5;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .desktop-search-item-badge {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #a1a1aa;
+}
+
+body.dark-theme .desktop-search-item:hover,
+body.dark-theme .desktop-search-item.selected {
+    background: #303234;
+}
+
+body.dark-theme .desktop-search-item.hero-match {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .desktop-search-item.hero-match:hover,
+body.dark-theme .desktop-search-item.hero-match.selected {
+    background: #303234;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .desktop-search-item.hero-match .desktop-search-item-icon {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f4f4f5;
+}
+
+body.dark-theme .desktop-search-chip {
+    background: #27282d;
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #e4e4e7;
+}
+
+body.dark-theme .desktop-search-chip:hover {
+    background: #f4f4f5;
+    border-color: #f4f4f5;
+    color: #18181b;
+}
+
+body.dark-theme .verse-line.search-jump-highlight,
+body.dark-theme .verse-line.left-pane-selected.search-jump-highlight {
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    animation: none !important;
+    text-decoration: none !important;
+}
+
+body.dark-theme .verse-line.search-jump-highlight:active,
+body.dark-theme .verse-line.search-jump-highlight:focus,
+body.dark-theme .verse-line.left-pane-selected.search-jump-highlight:active,
+body.dark-theme .verse-line.left-pane-selected.search-jump-highlight:focus {
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+body.dark-theme .verse-line.search-jump-highlight::before,
+body.dark-theme .verse-line.search-jump-highlight::after,
+body.dark-theme .verse-line.left-pane-selected.search-jump-highlight::before,
+body.dark-theme .verse-line.left-pane-selected.search-jump-highlight::after {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+body.dark-theme .verse-container.search-jump-highlight {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
