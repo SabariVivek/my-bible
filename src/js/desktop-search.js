@@ -2133,14 +2133,34 @@
 ];
 
     /**
-     * Searches for Bible stories matching the query
+     * Searches for Bible stories and curated topics matching the query
      */
     function searchBibleStories(query) {
         if (!query) return [];
-        const q = query.trim().toLowerCase();
+        const q = query.trim();
         if (q.length < 2) return [];
 
-        const qClean = q.replace(/[^\w\s]/g, ' ').replace(/\s+/g, ' ').trim();
+        // 1. First priority: Use the 1,447 curated topics search engine if loaded
+        if (typeof window.topicSearch === 'function') {
+            const hits = window.topicSearch(q, { limit: 5 });
+            if (hits && hits.length > 0) {
+                return hits.map(h => ({
+                    title: h.title,
+                    book: h.book,
+                    bookIndex: typeof h.bookIndex === 'number' ? h.bookIndex : findBookIndex(h.book),
+                    chapter: h.startChapter,
+                    startVerse: h.startVerse,
+                    endVerse: h.endVerse || h.startVerse,
+                    type: h.type,
+                    level: h.level,
+                    ref: h.ref,
+                    category: h.type
+                }));
+            }
+        }
+
+        // 2. Fallback to local BIBLE_STORIES if window.topicSearch not initialized
+        const qClean = q.toLowerCase().replace(/[^\w\s]/g, ' ').replace(/\s+/g, ' ').trim();
         const qWords = qClean.split(' ').filter(w => w.length > 0);
         if (qWords.length === 0) return [];
 
@@ -2476,14 +2496,14 @@
             let html = '';
             currentItems = [];
 
-            // 1. Stories / Events match
+            // 1. Stories / Topics match
             if (matchingStories && matchingStories.length > 0) {
-                html += '<div class="desktop-search-section-title">Bible Story / Event</div>';
+                html += '<div class="desktop-search-section-title">Bible Topic / Story</div>';
                 matchingStories.forEach(story => {
-                    const bIdx = findBookIndex(story.book);
+                    const bIdx = typeof story.bookIndex === 'number' ? story.bookIndex : findBookIndex(story.book);
                     if (bIdx === -1) return;
                     const book = bibleBooks[bIdx];
-                    const vRange = story.startVerse === story.endVerse ? `:${story.startVerse}` : `:${story.startVerse}–${story.endVerse}`;
+                    const vRange = story.startVerse ? (story.startVerse === story.endVerse ? `:${story.startVerse}` : `:${story.startVerse}–${story.endVerse}`) : '';
                     const storyRef = {
                         bookIndex: bIdx,
                         book: book,
@@ -2494,6 +2514,7 @@
                         storyTitle: story.title
                     };
 
+                    const typeLabel = (story.type || 'Story').replace('-', ' ').toUpperCase();
                     html += `
                         <div class="desktop-search-item hero-match story-match" data-action="story" data-index="${currentItems.length}">
                             <div class="desktop-search-item-left">
@@ -2504,10 +2525,10 @@
                                 </div>
                                 <div class="desktop-search-item-details">
                                     <div class="desktop-search-item-title">${escapeHtml(story.title)}</div>
-                                    <div class="desktop-search-item-subtitle">${book.name} ${story.chapter}${vRange} • ${book.tamilName} ${story.chapter}${vRange}</div>
+                                    <div class="desktop-search-item-subtitle">${story.ref || `${book.name} ${story.chapter}${vRange}`} • ${book.tamilName} ${story.chapter}${vRange}</div>
                                 </div>
                             </div>
-                            <span class="desktop-search-item-badge">↵ Jump Story</span>
+                            <span class="desktop-search-item-badge">${escapeHtml(typeLabel)}</span>
                         </div>
                     `;
                     currentItems.push({ type: 'story', data: storyRef });

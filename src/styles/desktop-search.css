@@ -15,16 +15,70 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: min(440px, calc(100% - 440px));
+        width: min(540px, calc(100% - 440px));
         z-index: 105;
         box-sizing: border-box;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1060px) {
         .desktop-top-search-wrapper {
-            width: min(330px, calc(100% - 380px));
+            width: min(420px, calc(100% - 380px));
         }
     }
+}
+
+/* ── Top Bar Search Row & Topics Button ── */
+.desktop-top-search-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.desktop-top-topics-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 36px;
+    padding: 0 13px;
+    border-radius: 18px;
+    border: 1px solid #e4e4e7;
+    background: #f4f4f5;
+    color: #3f3f46;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    user-select: none;
+    font-family: inherit;
+}
+
+.desktop-top-topics-btn svg {
+    flex-shrink: 0;
+}
+
+.desktop-top-topics-btn:hover {
+    background: #ececee;
+    border-color: #d4d4d8;
+    color: #18181b;
+}
+
+.desktop-top-topics-btn:active {
+    transform: scale(0.97);
+}
+
+body.dark-theme .desktop-top-topics-btn {
+    background: #2b2d31;
+    border-color: #383a40;
+    color: #dbdee1;
+}
+
+body.dark-theme .desktop-top-topics-btn:hover {
+    background: #35373c;
+    border-color: #4e5058;
+    color: #ffffff;
 }
 
 /* ── Top Bar Search Box ── */
@@ -32,7 +86,8 @@
     display: flex;
     align-items: center;
     position: relative;
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     height: 36px;
     background: #f4f4f5;
     border: 1px solid #e4e4e7;
