@@ -44,7 +44,9 @@
     <link rel="stylesheet" href="src/styles/verse-history.css?cb=20261013150223">
     <link rel="stylesheet" href="src/styles/desktop-search.css?cb=20261013150223">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <!-- Cropper.js for profile image cropping -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css?cb=20260418170421">
     <!-- Cache Management -->
@@ -101,14 +103,19 @@
         <!-- Desktop Search Bar (Middle of Top Bar, Desktop Only) -->
         <div class="desktop-top-search-wrapper" id="desktop-top-search-wrapper">
             <div class="desktop-top-search-box" id="desktop-top-search-box">
-                <svg class="desktop-top-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="desktop-top-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <input type="text" id="desktop-top-search-input" class="desktop-top-search-input" placeholder="Search Bible (e.g. Gen 3:2, John 3:16)..." autocomplete="off" spellcheck="false" aria-label="Search Bible or jump to verse">
+                <input type="text" id="desktop-top-search-input" class="desktop-top-search-input"
+                    placeholder="Jump to verse (e.g. Gen 3:2, John 3:16)..." autocomplete="off" spellcheck="false"
+                    aria-label="Search Bible or jump to verse">
                 <div class="desktop-top-search-hints">
-                    <button type="button" id="desktop-top-clear-btn" class="desktop-top-clear-btn" aria-label="Clear" style="display: none;">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <button type="button" id="desktop-top-clear-btn" class="desktop-top-clear-btn" aria-label="Clear"
+                        style="display: none;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
@@ -171,7 +178,8 @@
                 </svg>
             </button>
             <!-- Verse History button -->
-            <button id="verse-history-btn" class="icon-btn verse-history-btn" aria-label="Verse History" title="Verse History (Last 30)">
+            <button id="verse-history-btn" class="icon-btn verse-history-btn" aria-label="Verse History"
+                title="Verse History (Last 30)">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
@@ -354,21 +362,27 @@
         <div class="book-meaning-info-card">
             <div class="book-meaning-row">
                 <div class="book-meaning-icon-box book-meaning-icon-amber">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#633806" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 5h7"/><path d="M9 3v2c0 4.418-2.239 8-5 8"/>
-                        <path d="M5 9c0 2.144 2.952 3.908 6.7 4"/>
-                        <path d="M12 20l4-9 4 9"/><path d="M19.1 18h-6.2"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="#633806" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5h7" />
+                        <path d="M9 3v2c0 4.418-2.239 8-5 8" />
+                        <path d="M5 9c0 2.144 2.952 3.908 6.7 4" />
+                        <path d="M12 20l4-9 4 9" />
+                        <path d="M19.1 18h-6.2" />
                     </svg>
                 </div>
                 <div>
                     <p class="book-meaning-row-label">Hebrew / Greek</p>
-                    <p class="book-meaning-row-value"><span id="book-meaning-hebrew-name"></span><span class="book-meaning-script" id="book-meaning-hebrew-script"></span></p>
+                    <p class="book-meaning-row-value"><span id="book-meaning-hebrew-name"></span><span
+                            class="book-meaning-script" id="book-meaning-hebrew-script"></span></p>
                 </div>
             </div>
             <div class="book-meaning-row">
                 <div class="book-meaning-icon-box book-meaning-icon-purple">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3C3489" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 3l1.912 5.813h6.088l-4.944 3.574 1.912 5.813-4.968-3.574-4.968 3.574 1.912-5.813-4.944-3.574h6.088z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="#3C3489" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 3l1.912 5.813h6.088l-4.944 3.574 1.912 5.813-4.968-3.574-4.968 3.574 1.912-5.813-4.944-3.574h6.088z" />
                     </svg>
                 </div>
                 <div>
@@ -1165,7 +1179,8 @@
             <span class="option-icon" style="font-size: 20px;">🎙️</span>
             <span class="option-name">Sermons</span>
         </div>
-        <div class="right-menu-item" id="right-local-recording-option" onclick="window.location.href='src/pages/Local Recording.html'">
+        <div class="right-menu-item" id="right-local-recording-option"
+            onclick="window.location.href='src/pages/Local Recording.html'">
             <span class="option-icon" style="font-size: 20px;">🎧</span>
             <span class="option-name">Local Recordings</span>
         </div>
@@ -1225,17 +1240,20 @@
                             <div class="settings-profile-info">
                                 <div class="settings-profile-name" id="settings-profile-name"></div>
                                 <button class="settings-profile-change-btn" id="settings-profile-change-btn">
-                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                        <polyline points="17 8 12 3 7 8"/>
-                                        <line x1="12" y1="3" x2="12" y2="15"/>
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                        <polyline points="17 8 12 3 7 8" />
+                                        <line x1="12" y1="3" x2="12" y2="15" />
                                     </svg>
                                     Change Photo
                                 </button>
-                                <input type="file" id="settings-profile-file-input" accept="image/png,image/jpeg,image/webp" style="display:none;">
+                                <input type="file" id="settings-profile-file-input"
+                                    accept="image/png,image/jpeg,image/webp" style="display:none;">
                             </div>
                         </div>
-                        <div class="settings-profile-upload-status" id="settings-profile-upload-status" style="display:none;"></div>
+                        <div class="settings-profile-upload-status" id="settings-profile-upload-status"
+                            style="display:none;"></div>
                     </div>
                 </div>
 
@@ -1245,7 +1263,8 @@
                         <div class="profile-crop-header">
                             <span class="profile-crop-title">Crop Photo</span>
                             <button class="profile-crop-close-btn" id="profile-crop-cancel-btn" aria-label="Cancel">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round">
                                     <line x1="18" y1="6" x2="6" y2="18"></line>
                                     <line x1="6" y1="6" x2="18" y2="18"></line>
                                 </svg>
@@ -1256,7 +1275,8 @@
                         </div>
                         <div class="profile-crop-actions">
                             <button class="profile-crop-btn secondary" id="profile-crop-rotate-btn">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="1 4 1 10 7 10"></polyline>
                                     <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
                                 </svg>
@@ -1311,11 +1331,12 @@
                         <div class="settings-row" id="settings-selector-style-row">
                             <div class="settings-row-left">
                                 <div class="settings-row-icon icon-selector">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="3" y="3" width="7" height="7" rx="1"/>
-                                        <rect x="14" y="3" width="7" height="7" rx="1"/>
-                                        <rect x="3" y="14" width="7" height="7" rx="1"/>
-                                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="3" width="7" height="7" rx="1" />
+                                        <rect x="14" y="3" width="7" height="7" rx="1" />
+                                        <rect x="3" y="14" width="7" height="7" rx="1" />
+                                        <rect x="14" y="14" width="7" height="7" rx="1" />
                                     </svg>
                                 </div>
                                 <span class="settings-row-text">Drawyer</span>
@@ -1452,33 +1473,41 @@
                                 <span class="settings-row-sub-label">Color</span>
                             </div>
                             <div class="vh-picker-wrap">
-                                <div class="vh-picker-trigger" id="vh-picker-trigger" onclick="toggleVhColorPicker(event)">
-                                    <span class="vh-picker-preview" id="vh-picker-preview" style="background:#4caf50;"></span>
+                                <div class="vh-picker-trigger" id="vh-picker-trigger"
+                                    onclick="toggleVhColorPicker(event)">
+                                    <span class="vh-picker-preview" id="vh-picker-preview"
+                                        style="background:#4caf50;"></span>
                                     <span class="vh-picker-arrow">▾</span>
                                 </div>
                                 <div class="vh-picker-dropdown" id="vh-picker-dropdown">
                                     <div class="vh-color-picker" id="verse-heading-color-swatches">
-                                        <div class="vh-swatch selected" data-vh-color="green" onclick="selectVerseHeadingColor(this)">
+                                        <div class="vh-swatch selected" data-vh-color="green"
+                                            onclick="selectVerseHeadingColor(this)">
                                             <span class="vh-dot" style="background:#4caf50;"></span>
                                             <span class="vh-check">✓</span>
                                         </div>
-                                        <div class="vh-swatch" data-vh-color="blue" onclick="selectVerseHeadingColor(this)">
+                                        <div class="vh-swatch" data-vh-color="blue"
+                                            onclick="selectVerseHeadingColor(this)">
                                             <span class="vh-dot" style="background:#4a72aa;"></span>
                                             <span class="vh-check">✓</span>
                                         </div>
-                                        <div class="vh-swatch" data-vh-color="crimson" onclick="selectVerseHeadingColor(this)">
+                                        <div class="vh-swatch" data-vh-color="crimson"
+                                            onclick="selectVerseHeadingColor(this)">
                                             <span class="vh-dot" style="background:#8b2a2a;"></span>
                                             <span class="vh-check">✓</span>
                                         </div>
-                                        <div class="vh-swatch" data-vh-color="lavender" onclick="selectVerseHeadingColor(this)">
+                                        <div class="vh-swatch" data-vh-color="lavender"
+                                            onclick="selectVerseHeadingColor(this)">
                                             <span class="vh-dot" style="background:#7a6aaa;"></span>
                                             <span class="vh-check">✓</span>
                                         </div>
-                                        <div class="vh-swatch" data-vh-color="teal" onclick="selectVerseHeadingColor(this)">
+                                        <div class="vh-swatch" data-vh-color="teal"
+                                            onclick="selectVerseHeadingColor(this)">
                                             <span class="vh-dot" style="background:#2a8a8a;"></span>
                                             <span class="vh-check">✓</span>
                                         </div>
-                                        <div class="vh-swatch" data-vh-color="mauve" onclick="selectVerseHeadingColor(this)">
+                                        <div class="vh-swatch" data-vh-color="mauve"
+                                            onclick="selectVerseHeadingColor(this)">
                                             <span class="vh-dot" style="background:#8a5a6a;"></span>
                                             <span class="vh-check">✓</span>
                                         </div>
@@ -1586,7 +1615,8 @@
         </button>
 
         <!-- Verse History Button for Bottom Bar (mobile view) -->
-        <button id="verse-history-btn-mobile" class="nav-btn verse-history-btn-mobile" aria-label="Verse History" title="Verse History (Last 30)">
+        <button id="verse-history-btn-mobile" class="nav-btn verse-history-btn-mobile" aria-label="Verse History"
+            title="Verse History (Last 30)">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
@@ -2131,9 +2161,9 @@
             const bottomNav = document.querySelector('.bottom-nav');
             const arcTrigger = document.querySelector('.chapter-summary-arc-trigger');
             const readingBanner = document.getElementById('from-bible-reading-banner');
-            
+
             if (!topBar || !bottomNav) return;
-            
+
             // Only hide if scrolling down AND we've scrolled a bit
             if (scrollValue > lastScrollTop && scrollValue > 100) {
                 // Scrolling DOWN - hide bars
@@ -2148,14 +2178,14 @@
                 if (arcTrigger) arcTrigger.classList.remove('hidden-on-scroll');
                 if (readingBanner) readingBanner.classList.remove('hidden-on-scroll');
             }
-            
+
             lastScrollTop = scrollValue <= 0 ? 0 : scrollValue;
         }
 
         // Initialize scroll listeners
         document.addEventListener('DOMContentLoaded', () => {
             const contentArea = document.querySelector('.content-area');
-            
+
             // Try content-area if it's scrollable
             if (contentArea && contentArea.scrollHeight > contentArea.clientHeight) {
                 contentArea.addEventListener('scroll', () => {
@@ -2175,7 +2205,7 @@
                     }, scrollHideDelay);
                 }, { passive: true });
             }
-            
+
             // Also listen to window scroll as fallback
             window.addEventListener('scroll', () => {
                 const scrollVal = window.pageYOffset || document.documentElement.scrollTop;
@@ -2212,23 +2242,27 @@
             border-radius: 28px;
             max-width: calc(100vw - 32px);
             width: max-content;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
             font-family: 'DM Sans', 'Lato', sans-serif;
             transition: opacity 0.25s ease, transform 0.25s ease;
         }
+
         .dark-theme #from-bible-reading-banner {
             background: #1e293b;
             border: 1px solid #334155;
             color: #e2e8f0;
         }
+
         body:not(.dark-theme) #from-bible-reading-banner {
             background: #1e293b;
             border: 1px solid #334155;
             color: #e2e8f0;
         }
+
         #from-bible-reading-banner.show {
             display: flex;
         }
+
         #from-br-label {
             font-size: 13px;
             font-weight: 600;
@@ -2236,6 +2270,7 @@
             white-space: nowrap;
             flex-shrink: 0;
         }
+
         #from-br-mark-btn {
             background: #10b981;
             border: none;
@@ -2253,13 +2288,22 @@
             white-space: nowrap;
             font-family: inherit;
         }
-        #from-br-mark-btn:hover { background: #059669; }
-        #from-br-mark-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+        #from-br-mark-btn:hover {
+            background: #059669;
+        }
+
+        #from-br-mark-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
         #from-br-mark-btn.already-read {
             background: #334155;
             color: #94a3b8;
             cursor: default;
         }
+
         #from-br-dismiss-btn {
             background: none;
             border: none;
@@ -2272,18 +2316,31 @@
             border-radius: 50%;
             transition: background 0.15s;
         }
-        #from-br-dismiss-btn:hover { background: rgba(255,255,255,0.08); color: #94a3b8; }
+
+        #from-br-dismiss-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #94a3b8;
+        }
     </style>
 
     <div id="from-bible-reading-banner">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" style="flex-shrink:0;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"
+            style="flex-shrink:0;">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+        </svg>
         <span id="from-br-label"></span>
         <button id="from-br-mark-btn" aria-label="Mark chapter as read">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12" />
+            </svg>
             <span id="from-br-btn-text">Mark Read</span>
         </button>
         <button id="from-br-dismiss-btn" aria-label="Dismiss">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
         </button>
     </div>
 
@@ -2374,7 +2431,7 @@
                         renderMarkBtn(!!ctx.isAlreadyRead);
                         banner.classList.add('show');
                     }
-                } catch (e) {}
+                } catch (e) { }
             }
 
             // ── React to chapter navigation inside index.html ──────────────
