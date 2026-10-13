@@ -226,6 +226,28 @@
     background: rgba(0, 0, 0, 0.08);
 }
 
+.desktop-search-item-icon.story-icon {
+    color: #b45309;
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.desktop-search-item:hover .desktop-search-item-icon.story-icon,
+.desktop-search-item.selected .desktop-search-item-icon.story-icon {
+    color: #92400e;
+    background: rgba(245, 158, 11, 0.18);
+}
+
+body.dark-theme .desktop-search-item-icon.story-icon {
+    color: #fbbf24;
+    background: rgba(245, 158, 11, 0.15);
+}
+
+body.dark-theme .desktop-search-item:hover .desktop-search-item-icon.story-icon,
+body.dark-theme .desktop-search-item.selected .desktop-search-item-icon.story-icon {
+    color: #fde68a;
+    background: rgba(245, 158, 11, 0.25);
+}
+
 .desktop-search-item-details {
     display: flex;
     flex-direction: column;
