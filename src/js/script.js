@@ -4353,9 +4353,12 @@ function handleVersesCopy(copyBtn) {
     const book = bibleBooks[currentBook];
     const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
 
-    // Determine if it's single or multi-verse based on button class
-    const isSingleVerse = copyBtn.classList.contains('copy-verse-action');
-    const isMultiVerse = copyBtn.classList.contains('copy-multi-verses-action');
+    // Check highlighted verses in DOM
+    const highlightedVerses = contentArea ? Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted, .verse-line.left-pane-selected')) : [];
+
+    // Determine if it's single or multi-verse based on button class and highlighted verses count
+    const isMultiVerse = copyBtn.classList.contains('copy-multi-verses-action') || highlightedVerses.length > 1;
+    const isSingleVerse = !isMultiVerse;
 
     let copyText = '';
     let versesToCopy = [];
@@ -4363,7 +4366,7 @@ function handleVersesCopy(copyBtn) {
     if (isSingleVerse) {
         // Single verse - get verse number from data attribute
         const verseNum = parseInt(copyBtn.getAttribute('data-verse'));
-        const verseElement = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+        const verseElement = contentArea ? contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`) : null;
 
         if (verseElement) {
             const verseText = verseElement.textContent || '';
@@ -4372,10 +4375,12 @@ function handleVersesCopy(copyBtn) {
             copyText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
         }
     } else if (isMultiVerse) {
-        // Multi-verse - get all multi-highlighted verses
-        const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted'));
+        // Multi-verse - get all selected verses, or fallback to all chapter verses
+        const versesToCollect = (highlightedVerses && highlightedVerses.length > 0)
+            ? highlightedVerses
+            : (contentArea ? Array.from(contentArea.querySelectorAll('.verse-line')) : []);
         const verseNumbers = [];
-        highlightedVerses.forEach((verseLine, index) => {
+        versesToCollect.forEach((verseLine, index) => {
             const verseNum = verseLine.getAttribute('data-verse');
             verseNumbers.push(verseNum);
             const verseText = verseLine.textContent || '';
@@ -4391,7 +4396,7 @@ function handleVersesCopy(copyBtn) {
         // Add book chapter and verse range
         const verseRange = verseNumbers.length > 1
             ? `${verseNumbers[0]} - ${verseNumbers[verseNumbers.length - 1]}`
-            : verseNumbers[0];
+            : (verseNumbers[0] || '1');
         copyText += `\n${bookName} ${currentChapter} : ${verseRange}`;
     }
     // Add animation
@@ -4406,20 +4411,23 @@ function handleVersesCopy(copyBtn) {
             copyBtn.style.opacity = '1';
 
             // Remove highlights from selected verses
-            if (isMultiVerse) {
-                const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted'));
-                highlightedVerses.forEach(verseLine => {
+            if (isMultiVerse && contentArea) {
+                const highlighted = Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted, .verse-line.left-pane-selected'));
+                highlighted.forEach(verseLine => {
                     verseLine.classList.remove('multi-highlighted');
+                    verseLine.classList.remove('left-pane-selected');
                     verseLine.style.backgroundColor = '';
                 });
 
-                // Clear selectedVerses array
-                selectedVerses = [];
+                // Clear selectedVerses array if defined
+                if (typeof selectedVerses !== 'undefined') {
+                    selectedVerses = [];
+                }
 
                 // Update left pane active states
                 const leftPane = document.querySelector('.verses-column');
                 if (leftPane) {
-                    leftPane.querySelectorAll('.verse-number.active').forEach(el => {
+                    leftPane.querySelectorAll('.number-item.active, .verse-number.active').forEach(el => {
                         el.classList.remove('active');
                     });
                 }
@@ -4901,6 +4909,9 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     }
 
     // Build the verse reference
+    const contentArea = document.querySelector('.scripture-text');
+    const book = bibleBooks[currentBook];
+    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
     const totalVersesInChapter = contentArea ? contentArea.querySelectorAll('.verse-line').length : 0;
     const isAllSelected = totalVersesInChapter > 0 && selectedVerses.length >= totalVersesInChapter;
     const sortedVerses = [...selectedVerses].sort((a, b) => a - b);
@@ -5282,6 +5293,7 @@ function updateMultiVerseActionsBottomSheet(selectedVerses) {
     const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
     if (!bottomSheet) return;
 
+    const contentArea = document.querySelector('.scripture-text');
     const book = bibleBooks[currentBook];
     const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
     const totalVersesInChapter = contentArea ? contentArea.querySelectorAll('.verse-line').length : 0;
