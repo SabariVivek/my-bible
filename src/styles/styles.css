@@ -3927,32 +3927,36 @@ body.dark-theme .book-intro-title-secondary {
 }
 
 .verse-line.multi-highlighted {
-    background-color: rgba(0, 0, 0, 0.06) !important;
-    border: 1px solid #00000055 !important;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
     transition: all 0.25s ease !important;
     text-decoration: none !important;
 }
 
 .verse-line.multi-highlighted:active {
-    background-color: rgba(0, 0, 0, 0.06) !important;
-    border: 1px solid #00000055 !important;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
     transition: all 0.25s ease !important;
 }
 
 .verse-line.multi-highlighted:focus {
-    background-color: rgba(0, 0, 0, 0.06) !important;
-    border: 1px solid #00000055 !important;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
     transition: all 0.25s ease !important;
 }
 
 /* Selection color applied on top of bookmark colors (light theme) */
 .verse-line.has-note.multi-highlighted {
-    background-color: rgba(0, 0, 0, 0.06) !important;
-    border: 1px solid #00000055 !important;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
     transition: all 0.25s ease !important;
 }
 
@@ -5718,32 +5722,36 @@ body.dark-theme .verse-line:focus {
 }
 
 body.dark-theme .verse-line.multi-highlighted {
-    background-color: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid #ffffff !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35) !important;
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
     transition: all 0.25s ease !important;
     text-decoration: none !important;
 }
 
 body.dark-theme .verse-line.multi-highlighted:active {
-    background-color: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid #ffffff !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35) !important;
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
     transition: all 0.25s ease !important;
 }
 
 body.dark-theme .verse-line.multi-highlighted:focus {
-    background-color: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid #ffffff !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35) !important;
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
     transition: all 0.25s ease !important;
 }
 
 /* Selection color applied on top of bookmark colors (dark theme) */
 body.dark-theme .verse-line.has-note.multi-highlighted {
-    background-color: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid #ffffff !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35) !important;
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
     transition: all 0.25s ease !important;
 }
 
@@ -7794,9 +7802,10 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
 .verse-line.has-note.note-pink.multi-highlighted,
 .verse-line.has-note.note-orange.multi-highlighted,
 .verse-line.has-note.note-purple.multi-highlighted {
-    background-color: rgba(0, 0, 0, 0.06) !important;
-    border: 1px solid #00000055 !important;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
 
 /* Dark theme for notes modal */
@@ -8009,9 +8018,10 @@ body.dark-theme .verse-line.has-note.note-blue.multi-highlighted,
 body.dark-theme .verse-line.has-note.note-pink.multi-highlighted,
 body.dark-theme .verse-line.has-note.note-orange.multi-highlighted,
 body.dark-theme .verse-line.has-note.note-purple.multi-highlighted {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid #ffffffaa !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25) !important;
+    background-color: #303234 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
 
 /* PDF Modal */
