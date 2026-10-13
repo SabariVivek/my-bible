@@ -896,7 +896,7 @@ const BIBLE_TRACKS = [
     duration: "76:12 min",
     verse: "Genesis 1:1-31",
     desc: "How does the story of creation in Genesis 1 reveal God's amazing plan of salvation through Jesus Christ?",
-    category: "Do You Know?"
+    category: "Do You Know?, Genesis"
   },
   {
     day: 85,
@@ -921,6 +921,14 @@ const BIBLE_TRACKS = [
     verse: "Luke 15:11-32",
     desc: "How does the lost son reveal God's love, forgiveness, and joy when a sinner returns to Him?",
     category: "Parables"
+  },
+  {
+    day: 88,
+    title: "Genesis Chapter 2",
+    duration: "70:22 min",
+    verse: "Genesis 2:1-25",
+    desc: "How does Genesis 2 reveal God's design for humanity, marriage, and our relationship with Him?",
+    category: "Genesis"
   }
 ];
 
@@ -950,6 +958,7 @@ const BIBLE_FOLDERS = [
   { name: "Prophets", type: "category", value: "Prophets" },
   { name: "7's", type: "category", value: "7's" },
   { name: "Miracles", type: "category", value: "Miracles" },
+  { name: "Genesis", type: "category", value: "Genesis" },
   { name: "Exodus", type: "category", value: "Exodus" },
   { name: "Teachings", type: "category", value: "Teachings" }
 ];
