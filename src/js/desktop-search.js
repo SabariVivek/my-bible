@@ -384,6 +384,23 @@
         }, 100);
     }
 
+    function clearSearchHighlights() {
+        const contentArea = document.querySelector('.scripture-text') || document;
+        contentArea.querySelectorAll('.verse-line.search-jump-highlight').forEach(el => {
+            el.classList.remove('search-jump-highlight');
+            el.classList.remove('left-pane-selected');
+            el.style.backgroundColor = '';
+        });
+        contentArea.querySelectorAll('.verse-container.left-pane-selected').forEach(el => {
+            el.classList.remove('left-pane-selected');
+            el.style.backgroundColor = '';
+        });
+        const versesColumn = document.querySelector('.verses-column');
+        if (versesColumn) {
+            versesColumn.querySelectorAll('.number-item.active').forEach(v => v.classList.remove('active'));
+        }
+    }
+
     // Initialize the Desktop Search Bar
     function init() {
         buildLookupTable();
@@ -610,23 +627,6 @@
                 "'": '&#39;',
                 '"': '&quot;'
             }[tag] || tag));
-        }
-
-        function clearSearchHighlights() {
-            const contentArea = document.querySelector('.scripture-text') || document;
-            contentArea.querySelectorAll('.verse-line.search-jump-highlight').forEach(el => {
-                el.classList.remove('search-jump-highlight');
-                el.classList.remove('left-pane-selected');
-                el.style.backgroundColor = '';
-            });
-            contentArea.querySelectorAll('.verse-container.left-pane-selected').forEach(el => {
-                el.classList.remove('left-pane-selected');
-                el.style.backgroundColor = '';
-            });
-            const versesColumn = document.querySelector('.verses-column');
-            if (versesColumn) {
-                versesColumn.querySelectorAll('.number-item.active').forEach(v => v.classList.remove('active'));
-            }
         }
 
         // Input event
