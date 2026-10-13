@@ -612,10 +612,30 @@
             }[tag] || tag));
         }
 
+        function clearSearchHighlights() {
+            const contentArea = document.querySelector('.scripture-text') || document;
+            contentArea.querySelectorAll('.verse-line.search-jump-highlight').forEach(el => {
+                el.classList.remove('search-jump-highlight');
+                el.classList.remove('left-pane-selected');
+                el.style.backgroundColor = '';
+            });
+            contentArea.querySelectorAll('.verse-container.left-pane-selected').forEach(el => {
+                el.classList.remove('left-pane-selected');
+                el.style.backgroundColor = '';
+            });
+            const versesColumn = document.querySelector('.verses-column');
+            if (versesColumn) {
+                versesColumn.querySelectorAll('.number-item.active').forEach(v => v.classList.remove('active'));
+            }
+        }
+
         // Input event
         searchInput.addEventListener('input', (e) => {
             const val = e.target.value;
             clearBtn.style.display = val.length > 0 ? 'flex' : 'none';
+            if (val.length === 0) {
+                clearSearchHighlights();
+            }
             renderDropdown(val);
         });
 
@@ -670,6 +690,7 @@
             searchInput.value = '';
             clearBtn.style.display = 'none';
             hideDropdown();
+            clearSearchHighlights();
             searchInput.focus();
         });
 
@@ -679,9 +700,7 @@
                 hideDropdown();
             }
             if (e.target.closest('.number-item') || e.target.closest('.verse-line')) {
-                document.querySelectorAll('.verse-line.search-jump-highlight').forEach(el => {
-                    el.classList.remove('search-jump-highlight');
-                });
+                clearSearchHighlights();
             }
         });
 
@@ -701,6 +720,7 @@
     // Export helper to global for external callers if needed
     window.parseBibleReference = parseBibleReference;
     window.openScriptureReference = openScriptureReference;
+    window.clearSearchHighlights = clearSearchHighlights;
 
     // Start setup
     if (document.readyState === 'loading') {
