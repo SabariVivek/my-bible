@@ -3644,6 +3644,22 @@ body:not(.dark-theme) .right-settings-panel .settings-segment-compact {
     font-weight: 600;
 }
 
+/* Select All button in verses column */
+.verses-column .number-item.select-all-verses-item {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 4px;
+    user-select: none;
+}
+
+body.dark-theme .verses-column .number-item.select-all-verses-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 /* Verse numbers with memory verses - color instead of star */
 .verses-column .number-item.has-memory-verse {
     color: #c4911a;

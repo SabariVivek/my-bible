@@ -2731,14 +2731,25 @@ function updateVerses() {
     const verseCount = Object.keys(chapterData).length;
     const bookName = bibleBooks[currentBook].name;
     let html = '';
+    html += `<div class="number-item select-all-verses-item" title="Select All Verses">All</div>`;
     for (let i = 1; i <= verseCount; i++) {
         const isMemVerse = isMemoryVerse(bookName, currentChapter, i);
         const hasMemoryVerse = isMemVerse ? ' has-memory-verse' : '';
         html += `<div class="number-item${hasMemoryVerse}" data-verse="${i}">${i}</div>`;
     }
     versesColumn.innerHTML = html;
+
+    // Add click handler for Select All item
+    const selectAllItem = versesColumn.querySelector('.select-all-verses-item');
+    if (selectAllItem) {
+        selectAllItem.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selectAllVerses();
+        });
+    }
+
     // Add click handlers for scrolling to verse
-    versesColumn.querySelectorAll('.number-item').forEach(item => {
+    versesColumn.querySelectorAll('.number-item[data-verse]').forEach(item => {
         item.addEventListener('click', (e) => {
             // Restore UI elements if coming from home page
             restoreUIFromHomePage();
@@ -4430,6 +4441,49 @@ function handleVersesCopy(copyBtn) {
 }
 
 
+// Select or deselect all verses in current chapter
+function selectAllVerses(toggle = true) {
+    const contentArea = document.querySelector('.scripture-text');
+    const versesColumn = document.querySelector('.verses-column');
+    if (!contentArea) return;
+
+    const allVerseLines = Array.from(contentArea.querySelectorAll('.verse-line'));
+    if (allVerseLines.length === 0) return;
+
+    const allVerseNumbers = allVerseLines.map(v => parseInt(v.getAttribute('data-verse'))).filter(n => !isNaN(n));
+    const highlightedCount = contentArea.querySelectorAll('.verse-line.multi-highlighted').length;
+    const isAllSelected = highlightedCount === allVerseLines.length;
+
+    if (toggle && isAllSelected) {
+        // Deselect all
+        allVerseLines.forEach(v => {
+            v.classList.remove('multi-highlighted');
+            v.classList.remove('left-pane-selected');
+            v.style.backgroundColor = '';
+        });
+        if (versesColumn) {
+            versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
+        }
+        const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+        if (bottomSheet) {
+            bottomSheet.classList.remove('visible');
+            document.body.classList.remove('bottom-sheet-open');
+        }
+    } else {
+        // Select all
+        allVerseLines.forEach(v => {
+            v.classList.remove('highlighted');
+            v.classList.remove('left-pane-selected');
+            v.classList.add('multi-highlighted');
+        });
+        if (versesColumn) {
+            versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.add('active'));
+        }
+        showMultiVerseActionsBottomSheet(allVerseNumbers);
+    }
+}
+window.selectAllVerses = selectAllVerses;
+
 // Show verse actions in a bottom sheet modal
 function showVerseActionsBottomSheet(verseNum) {
     // Create or get the bottom sheet modal
@@ -4461,6 +4515,13 @@ function showVerseActionsBottomSheet(verseNum) {
                 </button>
             </div>
             <div class="verse-actions-buttons">
+                <button class="verse-bottom-action select-all-verses-action" title="Select all verses in chapter">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 11 12 14 22 4"></polyline>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Select All</span>
+                </button>
                 <button class="verse-bottom-action copy-verse-action" data-verse="${verseNum}">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
@@ -4581,6 +4642,14 @@ function showVerseActionsBottomSheet(verseNum) {
     };
 
     setupScrollbarVisibility();
+
+    // Select all verses button
+    const selectAllBtn = bottomSheet.querySelector('.select-all-verses-action');
+    if (selectAllBtn) {
+        selectAllBtn.addEventListener('click', () => {
+            selectAllVerses();
+        });
+    }
 
     // Copy verse button
     bottomSheet.querySelector('.copy-verse-action').addEventListener('click', function () {
@@ -4831,10 +4900,15 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
         document.body.appendChild(bottomSheet);
     }
 
-    // Build the verse reference (only book and chapter for multi-verse, no verse numbers)
-    const book = bibleBooks[currentBook];
-    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
-    const verseReference = `${bookName} ${currentChapter}`;
+    // Build the verse reference
+    const totalVersesInChapter = contentArea ? contentArea.querySelectorAll('.verse-line').length : 0;
+    const isAllSelected = totalVersesInChapter > 0 && selectedVerses.length >= totalVersesInChapter;
+    const sortedVerses = [...selectedVerses].sort((a, b) => a - b);
+    const verseReference = isAllSelected
+        ? `${bookName} ${currentChapter} : 1 - ${totalVersesInChapter} (All Verses)`
+        : (sortedVerses.length > 1
+            ? `${bookName} ${currentChapter} : ${sortedVerses[0]} - ${sortedVerses[sortedVerses.length - 1]}`
+            : `${bookName} ${currentChapter} : ${sortedVerses[0]}`);
 
     // Set up the bottom sheet content with all actions
     bottomSheet.innerHTML = `
@@ -4851,6 +4925,13 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                 </button>
             </div>
             <div class="verse-actions-buttons">
+                <button class="verse-bottom-action select-all-verses-action" title="${isAllSelected ? 'Deselect all' : 'Select all'}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 11 12 14 22 4"></polyline>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>${isAllSelected ? 'Deselect All' : 'Select All'}</span>
+                </button>
                 <button class="verse-bottom-action copy-multi-verses-action">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
@@ -4945,6 +5026,14 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     };
 
     setupScrollbarVisibility();
+
+    // Select all verses button
+    const multiSelectAllBtn = bottomSheet.querySelector('.select-all-verses-action');
+    if (multiSelectAllBtn) {
+        multiSelectAllBtn.addEventListener('click', function () {
+            selectAllVerses();
+        });
+    }
 
     // Copy multiple verses button
     const copyBtn = bottomSheet.querySelector('.copy-multi-verses-action');
@@ -5195,12 +5284,25 @@ function updateMultiVerseActionsBottomSheet(selectedVerses) {
 
     const book = bibleBooks[currentBook];
     const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
-    const verseReference = `${bookName} ${currentChapter}`;
+    const totalVersesInChapter = contentArea ? contentArea.querySelectorAll('.verse-line').length : 0;
+    const isAllSelected = totalVersesInChapter > 0 && selectedVerses.length >= totalVersesInChapter;
+    const sortedVerses = [...selectedVerses].sort((a, b) => a - b);
+    const verseReference = isAllSelected
+        ? `${bookName} ${currentChapter} : 1 - ${totalVersesInChapter} (All Verses)`
+        : (sortedVerses.length > 1
+            ? `${bookName} ${currentChapter} : ${sortedVerses[0]} - ${sortedVerses[sortedVerses.length - 1]}`
+            : `${bookName} ${currentChapter} : ${sortedVerses[0]}`);
 
     // Update only the header and reference
     const headerRef = bottomSheet.querySelector('.verse-reference');
     if (headerRef) {
         headerRef.textContent = verseReference;
+    }
+
+    // Update Select All button state
+    const selectAllBtn = bottomSheet.querySelector('.select-all-verses-action span');
+    if (selectAllBtn) {
+        selectAllBtn.textContent = isAllSelected ? 'Deselect All' : 'Select All';
     }
 
     // Disable note button for multi-verse
