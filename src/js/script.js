@@ -2731,22 +2731,12 @@ function updateVerses() {
     const verseCount = Object.keys(chapterData).length;
     const bookName = bibleBooks[currentBook].name;
     let html = '';
-    html += `<div class="number-item select-all-verses-item" title="Select All Verses">All</div>`;
     for (let i = 1; i <= verseCount; i++) {
         const isMemVerse = isMemoryVerse(bookName, currentChapter, i);
         const hasMemoryVerse = isMemVerse ? ' has-memory-verse' : '';
         html += `<div class="number-item${hasMemoryVerse}" data-verse="${i}">${i}</div>`;
     }
     versesColumn.innerHTML = html;
-
-    // Add click handler for Select All item
-    const selectAllItem = versesColumn.querySelector('.select-all-verses-item');
-    if (selectAllItem) {
-        selectAllItem.addEventListener('click', (e) => {
-            e.stopPropagation();
-            selectAllVerses();
-        });
-    }
 
     // Add click handlers for scrolling to verse
     versesColumn.querySelectorAll('.number-item[data-verse]').forEach(item => {
@@ -5072,21 +5062,50 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     // Add memory verse button
     const memoryBtn = bottomSheet.querySelector('.add-memory-action');
     if (memoryBtn) {
-        // Disable for multi-verse - show as active/filled star
-        memoryBtn.disabled = true;
-        memoryBtn.style.opacity = '0.5';
-        memoryBtn.style.cursor = 'not-allowed';
+        if (typeof window.memoryVerses === 'undefined') {
+            window.memoryVerses = [];
+        }
+        const allAreMem = selectedVerses.every(vNum => {
+            const ref = `${bibleBooks[currentBook].name} ${currentChapter}:${vNum}`;
+            return window.memoryVerses.includes(ref);
+        });
 
-        // Update to show filled star emoji (active state)
         const starIcon = memoryBtn.querySelector('.memory-star-icon');
         if (starIcon) {
-            starIcon.textContent = '⭐';
+            starIcon.textContent = allAreMem ? '⭐' : '☆';
         }
 
         memoryBtn.addEventListener('click', async () => {
-            // For multi-verse, toggle memory for first verse
-            currentNoteVerse = selectedVerses[0];
-            await toggleMemoryVerse();
+            if (typeof window.memoryVerses === 'undefined') {
+                window.memoryVerses = [];
+            }
+            if (allAreMem) {
+                // Remove all from memory verses
+                selectedVerses.forEach(vNum => {
+                    const ref = `${bibleBooks[currentBook].name} ${currentChapter}:${vNum}`;
+                    window.memoryVerses = window.memoryVerses.filter(v => v !== ref);
+                });
+                showToast('Removed from memory verses', 'info');
+            } else {
+                // Add all to memory verses
+                selectedVerses.forEach(vNum => {
+                    const ref = `${bibleBooks[currentBook].name} ${currentChapter}:${vNum}`;
+                    if (!window.memoryVerses.includes(ref)) {
+                        window.memoryVerses.push(ref);
+                    }
+                });
+                showToast('Added to memory verses', 'success');
+            }
+            localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
+            markBooksWithMemoryVerses();
+            updateVerseMemoryVerseIndicators();
+            try {
+                if (typeof syncMemoryVersesToSupabase === 'function') {
+                    await syncMemoryVersesToSupabase();
+                }
+            } catch (err) {
+                console.error(err);
+            }
             closeBottomSheet();
         });
     }
@@ -5131,17 +5150,30 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
             const book = bibleBooks[currentBook];
             const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
 
-            // Get all highlighted verses from the text area
+            // Get all highlighted verses from the text area or selectedVerses
             const contentArea = document.querySelector('.scripture-text');
-            const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.highlighted'));
+            let versesToShare = contentArea ? Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted, .verse-line.left-pane-selected, .verse-line.highlighted')) : [];
+            if (versesToShare.length === 0 && contentArea && selectedVerses && selectedVerses.length > 0) {
+                versesToShare = selectedVerses.map(vNum => contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`)).filter(Boolean);
+            }
 
             let shareText = '';
-            highlightedVerses.forEach(verseLine => {
+            const verseNumbers = [];
+            versesToShare.forEach((verseLine, index) => {
+                const verseNum = verseLine.getAttribute('data-verse');
+                if (verseNum) verseNumbers.push(verseNum);
                 const verseText = verseLine.textContent || '';
                 const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
-                shareText += `${cleanVerseText}\n`;
+                if (index > 0) {
+                    shareText += '\n';
+                }
+                shareText += `[${verseNum}] ${cleanVerseText}\n`;
             });
-            shareText += `\n${bookName} ${currentChapter}`;
+
+            const verseRange = verseNumbers.length > 1
+                ? `${verseNumbers[0]} - ${verseNumbers[verseNumbers.length - 1]}`
+                : (verseNumbers[0] || '1');
+            shareText += `\n${bookName} ${currentChapter} : ${verseRange}`;
 
             if (navigator.share) {
                 navigator.share({
@@ -5248,6 +5280,23 @@ async function showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn) {
             // Close the bottom sheet after selection
             setTimeout(() => {
                 closeBookmarkColorPicker();
+                const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
+                if (verseActionsSheet) {
+                    verseActionsSheet.classList.remove('visible');
+                    document.body.classList.remove('bottom-sheet-open');
+                }
+                const contentArea = document.querySelector('.scripture-text');
+                if (contentArea) {
+                    contentArea.querySelectorAll('.verse-line').forEach(v => {
+                        v.classList.remove('multi-highlighted', 'left-pane-selected');
+                        v.style.backgroundColor = '';
+                    });
+                }
+                const versesColumn = document.querySelector('.verses-column');
+                if (versesColumn) {
+                    versesColumn.querySelectorAll('.number-item.active').forEach(item => item.classList.remove('active'));
+                }
+                showToast('Verses bookmarked!', 'success');
             }, 300);
         });
     });
@@ -5325,12 +5374,20 @@ function updateMultiVerseActionsBottomSheet(selectedVerses) {
         noteBtn.style.cursor = 'not-allowed';
     }
 
-    // Disable memory button for multi-verse
+    // Update memory button for multi-verse
     const memoryBtn = bottomSheet.querySelector('.add-memory-action');
     if (memoryBtn) {
-        memoryBtn.disabled = true;
-        memoryBtn.style.opacity = '0.5';
-        memoryBtn.style.cursor = 'not-allowed';
+        memoryBtn.disabled = false;
+        memoryBtn.style.opacity = '1';
+        memoryBtn.style.cursor = 'pointer';
+        const allAreMem = selectedVerses.every(vNum => {
+            const ref = `${bibleBooks[currentBook].name} ${currentChapter}:${vNum}`;
+            return (window.memoryVerses || []).includes(ref);
+        });
+        const starIcon = memoryBtn.querySelector('.memory-star-icon');
+        if (starIcon) {
+            starIcon.textContent = allAreMem ? '⭐' : '☆';
+        }
     }
 }
 
