@@ -2451,14 +2451,50 @@
         buildLookupTable();
 
         const searchWrapper = document.getElementById('desktop-top-search-wrapper');
+        const searchBox = document.getElementById('desktop-top-search-box');
         const searchInput = document.getElementById('desktop-top-search-input');
         const clearBtn = document.getElementById('desktop-top-clear-btn');
+        const shortcutBtn = document.getElementById('desktop-top-search-shortcut-btn');
         const dropdown = document.getElementById('desktop-top-search-dropdown');
 
         if (!searchWrapper || !searchInput || !dropdown) return;
 
         let selectedIndex = -1;
         let currentItems = [];
+        let isStoryMode = false;
+
+        function toggleStoryMode(forceState) {
+            isStoryMode = typeof forceState === 'boolean' ? forceState : !isStoryMode;
+            if (shortcutBtn) {
+                shortcutBtn.classList.toggle('active', isStoryMode);
+                shortcutBtn.setAttribute('aria-pressed', isStoryMode ? 'true' : 'false');
+                shortcutBtn.title = isStoryMode
+                    ? 'Story Search is ON (Click / or press Alt+S to switch to Verse search)'
+                    : 'Toggle Story Search (Click or press /)';
+            }
+            if (searchBox) {
+                searchBox.classList.toggle('story-mode-active', isStoryMode);
+            }
+            if (searchInput) {
+                searchInput.placeholder = isStoryMode
+                    ? 'Search stories & topics (e.g. David and Goliath, Creation)...'
+                    : 'Search passage or verse (e.g. Psalm 1:3, John 3:16)...';
+                if (document.activeElement === searchInput || searchInput.value.trim().length > 0) {
+                    renderDropdown(searchInput.value);
+                }
+            }
+        }
+
+        if (shortcutBtn) {
+            shortcutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleStoryMode();
+                if (searchInput) {
+                    searchInput.focus();
+                }
+            });
+        }
 
         function hideDropdown() {
             dropdown.style.display = 'none';
@@ -2485,57 +2521,99 @@
 
         function renderDropdown(value) {
             const trimmed = value.trim();
-            if (!trimmed) {
-                // Show popular quick jumps or recent searches
+            const activeInStoryMode = isStoryMode || trimmed.startsWith('/');
+            const cleanQuery = trimmed.startsWith('/') ? trimmed.replace(/^\/+/, '').trim() : trimmed;
+
+            if (!cleanQuery) {
                 renderDefaultSuggestions();
                 return;
             }
 
-            const ref = parseBibleReference(trimmed);
-            const matchingStories = searchBibleStories(trimmed);
             let html = '';
             currentItems = [];
 
-            // 1. Stories / Topics match
-            if (matchingStories && matchingStories.length > 0) {
-                html += '<div class="desktop-search-section-title">Bible Topic / Story</div>';
-                matchingStories.forEach(story => {
-                    const bIdx = typeof story.bookIndex === 'number' ? story.bookIndex : findBookIndex(story.book);
-                    if (bIdx === -1) return;
-                    const book = bibleBooks[bIdx];
-                    const vRange = story.startVerse ? (story.startVerse === story.endVerse ? `:${story.startVerse}` : `:${story.startVerse}–${story.endVerse}`) : '';
-                    const storyRef = {
-                        bookIndex: bIdx,
-                        book: book,
-                        chapter: story.chapter,
-                        startVerse: story.startVerse,
-                        endVerse: story.endVerse,
-                        isStory: true,
-                        storyTitle: story.title
-                    };
+            if (activeInStoryMode) {
+                // STORY MODE: Search topics & stories only
+                const matchingStories = searchBibleStories(cleanQuery);
+                if (matchingStories && matchingStories.length > 0) {
+                    html += '<div class="desktop-search-section-title">Bible Topic / Story</div>';
+                    matchingStories.forEach(story => {
+                        const bIdx = typeof story.bookIndex === 'number' ? story.bookIndex : findBookIndex(story.book);
+                        if (bIdx === -1) return;
+                        const book = bibleBooks[bIdx];
+                        const vRange = story.startVerse ? (story.startVerse === story.endVerse ? `:${story.startVerse}` : `:${story.startVerse}–${story.endVerse}`) : '';
+                        const storyRef = {
+                            bookIndex: bIdx,
+                            book: book,
+                            chapter: story.chapter,
+                            startVerse: story.startVerse,
+                            endVerse: story.endVerse,
+                            isStory: true,
+                            storyTitle: story.title
+                        };
 
-                    const typeLabel = (story.type || 'Story').replace('-', ' ').toUpperCase();
-                    html += `
-                        <div class="desktop-search-item hero-match story-match" data-action="story" data-index="${currentItems.length}">
-                            <div class="desktop-search-item-left">
-                                <div class="desktop-search-item-icon story-icon">
-                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
+                        const typeLabel = (story.type || 'Story').replace('-', ' ').toUpperCase();
+                        html += `
+                            <div class="desktop-search-item hero-match story-match" data-action="story" data-index="${currentItems.length}">
+                                <div class="desktop-search-item-left">
+                                    <div class="desktop-search-item-icon story-icon">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    </div>
+                                    <div class="desktop-search-item-details">
+                                        <div class="desktop-search-item-title">${escapeHtml(story.title)}</div>
+                                        <div class="desktop-search-item-subtitle">${story.ref || `${book.name} ${story.chapter}${vRange}`}</div>
+                                    </div>
                                 </div>
-                                <div class="desktop-search-item-details">
-                                    <div class="desktop-search-item-title">${escapeHtml(story.title)}</div>
-                                    <div class="desktop-search-item-subtitle">${story.ref || `${book.name} ${story.chapter}${vRange}`}</div>
-                                </div>
+                                <span class="desktop-search-item-badge">${escapeHtml(typeLabel)}</span>
                             </div>
-                            <span class="desktop-search-item-badge">${escapeHtml(typeLabel)}</span>
+                        `;
+                        currentItems.push({ type: 'story', data: storyRef });
+                    });
+                } else {
+                    html += `
+                        <div class="desktop-search-section-title">No Stories Found</div>
+                        <div style="padding: 10px 14px; font-size: 0.82rem; color: #71717a;">
+                            No story matching "${escapeHtml(trimmed)}". Try searching characters, events, or keywords like "Creation", "David", "Exodus".
                         </div>
                     `;
-                    currentItems.push({ type: 'story', data: storyRef });
-                });
+                }
+
+                // General search option in story mode
+                html += `
+                    <div class="desktop-search-section-title">Search Text</div>
+                    <div class="desktop-search-item" data-action="text-search" data-index="${currentItems.length}">
+                        <div class="desktop-search-item-left">
+                            <div class="desktop-search-item-icon text-search">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </div>
+                            <div class="desktop-search-item-details">
+                                <div class="desktop-search-item-title">Search for "${escapeHtml(trimmed)}"</div>
+                                <div class="desktop-search-item-subtitle">Find verses containing "${escapeHtml(trimmed)}"</div>
+                            </div>
+                        </div>
+                        <span class="desktop-search-item-badge">Search</span>
+                    </div>
+                `;
+                currentItems.push({ type: 'text-search', query: trimmed });
+
+                dropdown.innerHTML = html;
+                selectedIndex = 0;
+                updateSelection();
+                showDropdown();
+                attachDropdownEvents(null);
+                return;
             }
 
-            // 2. Direct Passage Match
+            // VERSE MODE (DEFAULT):
+            // Always parse reference and search passage / text
+            const ref = parseBibleReference(trimmed);
+
+            // 1. Direct Passage Match
             if (ref) {
                 const vRange = ref.startVerse
                     ? (ref.startVerse === ref.endVerse ? `:${ref.startVerse}` : `:${ref.startVerse}–${ref.endVerse}`)
@@ -2581,7 +2659,7 @@
                 }
             }
 
-            // 3. General search action option
+            // 2. General search action option
             html += `
                 <div class="desktop-search-section-title">Search Text</div>
                 <div class="desktop-search-item" data-action="text-search" data-index="${currentItems.length}">
@@ -2610,14 +2688,19 @@
         }
 
         function renderDefaultSuggestions() {
-            const defaults = [
+            const defaults = isStoryMode ? [
                 { bookName: 'Genesis', chapter: 1, startVerse: 6, endVerse: 8, title: 'Creation: Day 2', desc: 'The Sky & Waters Above (Gen 1:6–8)', isStory: true },
                 { bookName: '1 Samuel', chapter: 17, startVerse: 32, endVerse: 51, title: 'David and Goliath', desc: 'Five smooth stones (1 Sam 17)', isStory: true },
+                { bookName: 'Genesis', chapter: 6, startVerse: 9, endVerse: 22, title: "Noah's Ark", desc: 'Building the ark of refuge (Gen 6:9–22)', isStory: true },
+                { bookName: 'Luke', chapter: 10, startVerse: 25, endVerse: 37, title: 'The Good Samaritan', desc: 'Who is my neighbor? (Luke 10:25–37)', isStory: true }
+            ] : [
+                { bookName: 'Genesis', chapter: 1, startVerse: 1, endVerse: 1, title: 'Genesis 1:1', desc: 'In the beginning God created heaven and earth', isStory: false },
+                { bookName: 'Psalms', chapter: 23, startVerse: 1, endVerse: 1, title: 'Psalm 23:1', desc: 'The Lord is my shepherd', isStory: false },
                 { bookName: 'John', chapter: 3, startVerse: 16, endVerse: 16, title: 'John 3:16', desc: 'God so loved the world', isStory: false },
-                { bookName: 'Psalms', chapter: 23, startVerse: 1, endVerse: 1, title: 'Psalm 23:1', desc: 'The Lord is my shepherd', isStory: false }
+                { bookName: 'Romans', chapter: 8, startVerse: 28, endVerse: 28, title: 'Romans 8:28', desc: 'All things work together for good', isStory: false }
             ];
 
-            let html = '<div class="desktop-search-section-title">Featured Stories & Passages</div>';
+            let html = `<div class="desktop-search-section-title">${isStoryMode ? 'Featured Stories & Topics' : 'Popular Passages'}</div>`;
             currentItems = [];
 
             defaults.forEach((d) => {
@@ -2654,7 +2737,9 @@
                             book,
                             chapter: d.chapter,
                             startVerse: d.startVerse,
-                            endVerse: d.endVerse
+                            endVerse: d.endVerse,
+                            isStory: d.isStory,
+                            storyTitle: d.title
                         }
                     });
                 }
@@ -2751,10 +2836,13 @@
                 const val = searchInput.value.trim();
                 if (!val) return;
 
+                const activeInStoryMode = isStoryMode || val.startsWith('/');
+                const cleanVal = val.startsWith('/') ? val.replace(/^\/+/, '').trim() : val;
+
                 if (selectedIndex >= 0 && selectedIndex < currentItems.length) {
                     executeItem(currentItems[selectedIndex]);
-                } else {
-                    const stories = searchBibleStories(val);
+                } else if (activeInStoryMode) {
+                    const stories = searchBibleStories(cleanVal);
                     if (stories.length > 0) {
                         const bIdx = findBookIndex(stories[0].book);
                         if (bIdx !== -1) {
@@ -2763,20 +2851,26 @@
                                 book: bibleBooks[bIdx],
                                 chapter: stories[0].chapter,
                                 startVerse: stories[0].startVerse,
-                                endVerse: stories[0].endVerse
+                                endVerse: stories[0].endVerse,
+                                isStory: true,
+                                storyTitle: stories[0].title
                             });
                             hideDropdown();
                             searchInput.blur();
                             return;
                         }
                     }
-                    const ref = parseBibleReference(val);
+                    triggerGeneralSearch(cleanVal);
+                    hideDropdown();
+                    searchInput.blur();
+                } else {
+                    const ref = parseBibleReference(cleanVal);
                     if (ref) {
                         openScriptureReference(ref);
                         hideDropdown();
                         searchInput.blur();
                     } else {
-                        triggerGeneralSearch(val);
+                        triggerGeneralSearch(cleanVal);
                         hideDropdown();
                         searchInput.blur();
                     }
@@ -2806,10 +2900,17 @@
             }
         });
 
-        // Global shortcut '/' to focus search on desktop
+        // Global shortcuts: '/' to focus search on desktop, and 'Alt+S' to toggle Story mode
         document.addEventListener('keydown', (e) => {
+            if (e.altKey && (e.key === 's' || e.key === 'S')) {
+                e.preventDefault();
+                toggleStoryMode();
+                if (searchInput) {
+                    searchInput.focus();
+                }
+                return;
+            }
             if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
-                // Check if desktop view (screen width > 768px)
                 if (window.innerWidth > 768) {
                     e.preventDefault();
                     searchInput.focus();
