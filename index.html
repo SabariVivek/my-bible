@@ -34,16 +34,16 @@
     <title>My Bible</title>
     <link rel="icon" type="image/png" href="resources/icons/bible.png?cb=20251126003722">
     <link rel="apple-touch-icon" href="resources/icons/bible.png?cb=20251126003722">
-    <link rel="stylesheet" href="src/styles/styles.css?cb=20261013172456">
+    <link rel="stylesheet" href="src/styles/styles.css?cb=20261014131634">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20261013172456">
-    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20261013172456">
-    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20261013172456">
-    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20261013172456">
-    <link rel="stylesheet" href="src/styles/verse-history.css?cb=20261013172456">
-    <link rel="stylesheet" href="src/styles/desktop-search.css?cb=20261013172456">
-    <link rel="stylesheet" href="src/styles/topics-browser.css?cb=20261013172456">
+    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20261014131634">
+    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20261014131634">
+    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20261014131634">
+    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20261014131634">
+    <link rel="stylesheet" href="src/styles/verse-history.css?cb=20261014131634">
+    <link rel="stylesheet" href="src/styles/desktop-search.css?cb=20261014131634">
+    <link rel="stylesheet" href="src/styles/topics-browser.css?cb=20261014131634">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
@@ -51,7 +51,7 @@
     <!-- Cropper.js for profile image cropping -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css?cb=20260418170421">
     <!-- Cache Management -->
-    <script src="src/js/cache-manager.js?cb=20261013172456"></script>
+    <script src="src/js/cache-manager.js?cb=20261014131634"></script>
 </head>
 
 <body>
@@ -109,12 +109,9 @@
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <div class="desktop-top-search-input-wrap">
-                    <div class="desktop-top-search-mirror" id="desktop-top-search-mirror" aria-hidden="true"></div>
-                    <input type="text" id="desktop-top-search-input" class="desktop-top-search-input"
-                        placeholder="Search passage or /story (e.g. Gen 3:2, /David)..." autocomplete="off" spellcheck="false"
-                        aria-label="Search Bible or jump to story">
-                </div>
+                <input type="text" id="desktop-top-search-input" class="desktop-top-search-input"
+                    placeholder="Search passage or story (e.g. Gen 3:2, Creation Day 2)..." autocomplete="off" spellcheck="false"
+                    aria-label="Search Bible or jump to story">
                 <div class="desktop-top-search-hints">
                     <button type="button" id="desktop-top-clear-btn" class="desktop-top-clear-btn" aria-label="Clear"
                         style="display: none;">
@@ -124,8 +121,7 @@
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
                     </button>
-                    <span class="desktop-top-search-mode-badge" id="desktop-top-search-mode-badge" style="display: none;">Story</span>
-                    <span class="desktop-top-search-shortcut" id="desktop-top-search-shortcut" title="Press / to search stories">/</span>
+                    <span class="desktop-top-search-shortcut" title="Press / to search">/</span>
                 </div>
             </div>
             <!-- Quick Suggestions & Passage Preview Dropdown -->
@@ -1706,33 +1702,33 @@
     </div>
 
     <!-- Bundled Bible Data (loads all books) -->
-    <script src="data/bible/bible-data-loader.js?cb=20261013172456"></script>
+    <script src="data/bible/bible-data-loader.js?cb=20261014131634"></script>
 
     <!-- Supabase Client Library (Local for Offline Support) -->
-    <script src="src/lib/supabase.js?cb=20261013172456"></script>
+    <script src="src/lib/supabase.js?cb=20261014131634"></script>
     <!-- Cropper.js for profile image cropping -->
     <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js?cb=20260418170421"></script>
 
 
-    <script src="config/config.js?cb=20261013172456"></script>
-    <script src="src/js/bible-data-manager.js?cb=20261013172456"></script>
-    <script src="src/js/voice-command.js?cb=20261013172456"></script>
-    <script src="src/data/verse-headers-english.js?cb=20261013172456"></script>
-    <script src="src/data/verse-headers-tamil.js?cb=20261013172456"></script>
-    <script src="src/data/bible-meta.js?cb=20261013172456"></script>
-    <script src="src/data/bibleAuthors.js?cb=20261013172456"></script>
-    <script src="src/data/short-summary.js?cb=20261013172456"></script>
-    <script src="src/data/book-intro.js?cb=20261013172456"></script>
-    <script src="src/data/bible-popups.js?cb=20261013172456"></script>
-    <script src="src/data/king-transition-data.js?cb=20261013172456"></script>
-    <script src="src/js/verse-history-manager.js?cb=20261013172456"></script>
-    <script src="src/js/script.js?cb=20261013172456"></script>
-    <script src="src/data/bible-topics.js?cb=20261013172456"></script>
-    <script src="src/js/desktop-search.js?cb=20261013172456"></script>
-    <script src="src/js/topics-browser.js?cb=20261013172456"></script>
-    <script src="src/js/bible-selector.js?cb=20261013172456"></script>
-    <script src="src/js/chapter-summary-pullout.js?cb=20261013172456"></script>
-    <script src="src/js/ai-summary.js?cb=20261013172456"></script>
+    <script src="config/config.js?cb=20261014131634"></script>
+    <script src="src/js/bible-data-manager.js?cb=20261014131634"></script>
+    <script src="src/js/voice-command.js?cb=20261014131634"></script>
+    <script src="src/data/verse-headers-english.js?cb=20261014131634"></script>
+    <script src="src/data/verse-headers-tamil.js?cb=20261014131634"></script>
+    <script src="src/data/bible-meta.js?cb=20261014131634"></script>
+    <script src="src/data/bibleAuthors.js?cb=20261014131634"></script>
+    <script src="src/data/short-summary.js?cb=20261014131634"></script>
+    <script src="src/data/book-intro.js?cb=20261014131634"></script>
+    <script src="src/data/bible-popups.js?cb=20261014131634"></script>
+    <script src="src/data/king-transition-data.js?cb=20261014131634"></script>
+    <script src="src/js/verse-history-manager.js?cb=20261014131634"></script>
+    <script src="src/js/script.js?cb=20261014131634"></script>
+    <script src="src/data/bible-topics.js?cb=20261014131634"></script>
+    <script src="src/js/desktop-search.js?cb=20261014131634"></script>
+    <script src="src/js/topics-browser.js?cb=20261014131634"></script>
+    <script src="src/js/bible-selector.js?cb=20261014131634"></script>
+    <script src="src/js/chapter-summary-pullout.js?cb=20261014131634"></script>
+    <script src="src/js/ai-summary.js?cb=20261014131634"></script>
 
     <!-- Image Viewer Modal -->
     <style>

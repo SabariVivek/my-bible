@@ -2135,14 +2135,14 @@
     /**
      * Searches for Bible stories and curated topics matching the query
      */
-    function searchBibleStories(query, limit = 5) {
+    function searchBibleStories(query) {
         if (!query) return [];
         const q = query.trim();
-        if (q.length < 1) return [];
+        if (q.length < 2) return [];
 
         // 1. First priority: Use the 1,447 curated topics search engine if loaded
         if (typeof window.topicSearch === 'function') {
-            const hits = window.topicSearch(q, { limit: limit });
+            const hits = window.topicSearch(q, { limit: 5 });
             if (hits && hits.length > 0) {
                 return hits.map(h => ({
                     title: h.title,
@@ -2216,28 +2216,7 @@
         }
 
         scored.sort((a, b) => b.score - a.score);
-        return scored.slice(0, limit).map(s => s.story);
-    }
-
-    /**
-     * Returns curated list of Bible stories for story mode browsing
-     */
-    function getAllCuratedStories(limit = 60) {
-        return BIBLE_STORIES.slice(0, limit).map(s => {
-            const bIdx = findBookIndex(s.book);
-            const book = bIdx !== -1 ? bibleBooks[bIdx] : null;
-            const vRange = s.startVerse ? (s.startVerse === s.endVerse ? `:${s.startVerse}` : `:${s.startVerse}–${s.endVerse}`) : '';
-            return {
-                title: s.title,
-                book: s.book,
-                bookIndex: bIdx,
-                chapter: s.chapter,
-                startVerse: s.startVerse,
-                endVerse: s.endVerse || s.startVerse,
-                type: s.category || 'Story',
-                ref: book ? `${book.name} ${s.chapter}${vRange}` : ''
-            };
-        });
+        return scored.slice(0, 4).map(s => s.story);
     }
 
     function parseBibleReference(input) {
@@ -2472,11 +2451,7 @@
         buildLookupTable();
 
         const searchWrapper = document.getElementById('desktop-top-search-wrapper');
-        const searchBox = document.getElementById('desktop-top-search-box');
         const searchInput = document.getElementById('desktop-top-search-input');
-        const mirror = document.getElementById('desktop-top-search-mirror');
-        const modeBadge = document.getElementById('desktop-top-search-mode-badge');
-        const shortcut = document.getElementById('desktop-top-search-shortcut');
         const clearBtn = document.getElementById('desktop-top-clear-btn');
         const dropdown = document.getElementById('desktop-top-search-dropdown');
 
@@ -2508,127 +2483,16 @@
             });
         }
 
-        function updateSlashModeUI(isStoryMode, raw) {
-            if (!searchBox || !mirror) return;
-
-            if (isStoryMode) {
-                searchBox.classList.add('slash-mode');
-
-                const slashIdx = raw.indexOf('/');
-                const beforeSlash = raw.substring(0, slashIdx);
-                const afterSlash = raw.substring(slashIdx + 1);
-
-                if (afterSlash.length === 0) {
-                    mirror.innerHTML = `${escapeHtml(beforeSlash)}<span class="search-slash-char">/</span><span class="search-slash-placeholder"> Search stories (e.g. David, Creation, Miracles)...</span>`;
-                } else {
-                    mirror.innerHTML = `${escapeHtml(beforeSlash)}<span class="search-slash-char">/</span><span class="search-slash-rest">${escapeHtml(afterSlash)}</span>`;
-                }
-                mirror.scrollLeft = searchInput.scrollLeft;
-
-                if (modeBadge) modeBadge.style.display = 'inline-flex';
-                if (shortcut) shortcut.style.display = 'none';
-            } else {
-                searchBox.classList.remove('slash-mode');
-                mirror.innerHTML = '';
-
-                if (modeBadge) modeBadge.style.display = 'none';
-                if (shortcut) shortcut.style.display = 'inline-flex';
-            }
-        }
-
-        function renderStoryModeDropdown(raw) {
-            const query = raw.trimStart().substring(1).trim();
-            let stories = [];
-
-            if (!query) {
-                // User entered '/' alone: show all curated stories!
-                stories = getAllCuratedStories(60);
-            } else {
-                stories = searchBibleStories(query, 25);
-            }
-
-            let html = '';
-            currentItems = [];
-
-            if (stories.length > 0) {
-                const headerText = query
-                    ? `Stories matching "${escapeHtml(query)}" (${stories.length})`
-                    : `All Bible Stories (${stories.length}) — Type to filter`;
-
-                html += `<div class="desktop-search-section-title"><span class="story-mode-pill">/ Stories</span> ${headerText}</div>`;
-
-                stories.forEach(story => {
-                    const bIdx = typeof story.bookIndex === 'number' && story.bookIndex !== -1
-                        ? story.bookIndex
-                        : findBookIndex(story.book);
-                    if (bIdx === -1) return;
-                    const book = bibleBooks[bIdx];
-                    const vRange = story.startVerse ? (story.startVerse === story.endVerse ? `:${story.startVerse}` : `:${story.startVerse}–${story.endVerse}`) : '';
-                    const storyRef = {
-                        bookIndex: bIdx,
-                        book: book,
-                        chapter: story.chapter,
-                        startVerse: story.startVerse,
-                        endVerse: story.endVerse,
-                        isStory: true,
-                        storyTitle: story.title
-                    };
-
-                    const typeLabel = (story.type || story.category || 'Story').replace('-', ' ').toUpperCase();
-                    html += `
-                        <div class="desktop-search-item hero-match story-match" data-action="story" data-index="${currentItems.length}">
-                            <div class="desktop-search-item-left">
-                                <div class="desktop-search-item-icon story-icon">
-                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                                    </svg>
-                                </div>
-                                <div class="desktop-search-item-details">
-                                    <div class="desktop-search-item-title">${escapeHtml(story.title)}</div>
-                                    <div class="desktop-search-item-subtitle">${story.ref || `${book.name} ${story.chapter}${vRange}`}</div>
-                                </div>
-                            </div>
-                            <span class="desktop-search-item-badge">${escapeHtml(typeLabel)}</span>
-                        </div>
-                    `;
-                    currentItems.push({ type: 'story', data: storyRef });
-                });
-            } else {
-                html += `
-                    <div class="desktop-search-section-title"><span class="story-mode-pill">/ Stories</span> No Matches</div>
-                    <div class="desktop-search-empty" style="padding: 16px 14px; text-align: center; color: #71717a; font-size: 0.86rem;">
-                        No Bible stories found matching "<strong>${escapeHtml(query)}</strong>".
-                        <div style="font-size: 0.78rem; margin-top: 5px; color: #a1a1aa;">Try searching for a character or event (e.g. David, Flood, Parable, Moses)</div>
-                    </div>
-                `;
-            }
-
-            dropdown.innerHTML = html;
-            selectedIndex = currentItems.length > 0 ? 0 : -1;
-            updateSelection();
-            showDropdown();
-            attachDropdownEvents(null);
-        }
-
         function renderDropdown(value) {
-            const raw = value || '';
-            const isStoryMode = raw.trimStart().startsWith('/');
-            updateSlashModeUI(isStoryMode, raw);
-
-            if (!raw.trim()) {
+            const trimmed = value.trim();
+            if (!trimmed) {
                 // Show popular quick jumps or recent searches
                 renderDefaultSuggestions();
                 return;
             }
 
-            if (isStoryMode) {
-                renderStoryModeDropdown(raw);
-                return;
-            }
-
-            const trimmed = raw.trim();
             const ref = parseBibleReference(trimmed);
-            const matchingStories = searchBibleStories(trimmed, 5);
+            const matchingStories = searchBibleStories(trimmed);
             let html = '';
             currentItems = [];
 
@@ -2863,14 +2727,6 @@
             renderDropdown(val);
         });
 
-        searchInput.addEventListener('scroll', () => {
-            if (mirror) mirror.scrollLeft = searchInput.scrollLeft;
-        });
-
-        searchInput.addEventListener('keyup', () => {
-            if (mirror) mirror.scrollLeft = searchInput.scrollLeft;
-        });
-
         // Focus event
         searchInput.addEventListener('focus', () => {
             renderDropdown(searchInput.value);
@@ -2892,33 +2748,13 @@
                 }
             } else if (e.key === 'Enter') {
                 e.preventDefault();
-                const rawVal = searchInput.value;
-                const val = rawVal.trim();
+                const val = searchInput.value.trim();
                 if (!val) return;
 
                 if (selectedIndex >= 0 && selectedIndex < currentItems.length) {
                     executeItem(currentItems[selectedIndex]);
-                } else if (val.startsWith('/')) {
-                    const q = val.substring(1).trim();
-                    const stories = q ? searchBibleStories(q, 1) : getAllCuratedStories(1);
-                    if (stories.length > 0) {
-                        const s = stories[0];
-                        const bIdx = typeof s.bookIndex === 'number' && s.bookIndex !== -1 ? s.bookIndex : findBookIndex(s.book);
-                        if (bIdx !== -1) {
-                            openScriptureReference({
-                                bookIndex: bIdx,
-                                book: bibleBooks[bIdx],
-                                chapter: s.chapter,
-                                startVerse: s.startVerse,
-                                endVerse: s.endVerse || s.startVerse
-                            });
-                            hideDropdown();
-                            searchInput.blur();
-                            return;
-                        }
-                    }
                 } else {
-                    const stories = searchBibleStories(val, 1);
+                    const stories = searchBibleStories(val);
                     if (stories.length > 0) {
                         const bIdx = findBookIndex(stories[0].book);
                         if (bIdx !== -1) {
@@ -2955,7 +2791,6 @@
         clearBtn.addEventListener('click', () => {
             searchInput.value = '';
             clearBtn.style.display = 'none';
-            updateSlashModeUI(false, '');
             hideDropdown();
             clearSearchHighlights();
             searchInput.focus();
@@ -2971,15 +2806,14 @@
             }
         });
 
-        // Global shortcut '/' to focus search on desktop and enter Story Search Mode
+        // Global shortcut '/' to focus search on desktop
         document.addEventListener('keydown', (e) => {
             if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
                 // Check if desktop view (screen width > 768px)
                 if (window.innerWidth > 768) {
                     e.preventDefault();
-                    searchInput.value = '/';
                     searchInput.focus();
-                    searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+                    searchInput.select();
                 }
             }
         });

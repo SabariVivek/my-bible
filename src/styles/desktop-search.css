@@ -66,129 +66,24 @@
     color: #18181b;
 }
 
-/* Search Input Wrapper & Mirror Layer */
-.desktop-top-search-input-wrap {
-    position: relative;
-    flex: 1;
-    min-width: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.desktop-top-search-mirror {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0;
-    font-size: 0.86rem;
-    font-family: inherit;
-    line-height: normal;
-    letter-spacing: normal;
-    white-space: pre;
-    overflow: hidden;
-    pointer-events: none;
-    box-sizing: border-box;
-    opacity: 0;
-    z-index: 1;
-}
-
 /* Search Input */
 .desktop-top-search-input {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    flex: 1;
+    min-width: 0;
     border: none;
     outline: none;
     background: transparent;
     font-size: 0.86rem;
     font-family: inherit;
-    line-height: normal;
-    letter-spacing: normal;
     color: #18181b;
     padding: 0;
-    z-index: 2;
+    height: 100%;
     text-overflow: ellipsis;
 }
 
 .desktop-top-search-input::placeholder {
     color: #a1a1aa;
     font-size: 0.83rem;
-}
-
-/* Slash Mode: Story Search Mode */
-.desktop-top-search-box.slash-mode {
-    border-color: #2563eb !important;
-    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.18) !important;
-    background: #ffffff;
-}
-
-.desktop-top-search-box.slash-mode .desktop-top-search-icon {
-    color: #2563eb;
-}
-
-.desktop-top-search-box.slash-mode .desktop-top-search-mirror {
-    opacity: 1;
-}
-
-.desktop-top-search-box.slash-mode .desktop-top-search-input {
-    color: transparent !important;
-    caret-color: #18181b;
-}
-
-.search-slash-char {
-    color: #2563eb;
-    font-weight: 700;
-    display: inline-block;
-}
-
-.search-slash-rest {
-    color: #18181b;
-}
-
-.search-slash-placeholder {
-    color: #9ca3af;
-    font-weight: 400;
-    user-select: none;
-}
-
-/* Story Mode Badge in top bar search hints */
-.desktop-top-search-mode-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 1px 7px;
-    font-size: 0.68rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-radius: 10px;
-    background: rgba(37, 99, 235, 0.12);
-    color: #2563eb;
-    user-select: none;
-    pointer-events: none;
-    animation: fadeInMode 0.15s ease-out;
-}
-
-@keyframes fadeInMode {
-    from { opacity: 0; transform: scale(0.92); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-.story-mode-pill {
-    display: inline-flex;
-    align-items: center;
-    padding: 1px 7px;
-    border-radius: 10px;
-    background: rgba(37, 99, 235, 0.12);
-    color: #2563eb;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    margin-right: 6px;
 }
 
 /* Hints: Shortcut & Clear Button */
@@ -639,41 +534,4 @@ body.dark-theme .verse-container.search-jump-highlight {
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
-}
-
-body.dark-theme .desktop-top-search-box.slash-mode {
-    border-color: #60a5fa !important;
-    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.25) !important;
-    background: #1e1f22;
-}
-
-body.dark-theme .desktop-top-search-box.slash-mode .desktop-top-search-icon {
-    color: #60a5fa;
-}
-
-body.dark-theme .desktop-top-search-box.slash-mode .desktop-top-search-input {
-    caret-color: #f4f4f5;
-}
-
-body.dark-theme .search-slash-char {
-    color: #60a5fa;
-    text-shadow: 0 0 8px rgba(96, 165, 250, 0.5);
-}
-
-body.dark-theme .search-slash-rest {
-    color: #f4f4f5;
-}
-
-body.dark-theme .search-slash-placeholder {
-    color: #71717a;
-}
-
-body.dark-theme .desktop-top-search-mode-badge {
-    background: rgba(96, 165, 250, 0.18);
-    color: #93c5fd;
-}
-
-body.dark-theme .story-mode-pill {
-    background: rgba(96, 165, 250, 0.18);
-    color: #93c5fd;
 }
