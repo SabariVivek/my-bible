@@ -476,16 +476,45 @@ body.dark-theme .bible-skeleton-wrapper {
     opacity: 0;
 }
 
-.bible-skeleton-verse:nth-child(1) { animation-delay: 0s; }
-.bible-skeleton-verse:nth-child(2) { animation-delay: 0.04s; }
-.bible-skeleton-verse:nth-child(3) { animation-delay: 0.08s; }
-.bible-skeleton-verse:nth-child(4) { animation-delay: 0.12s; }
-.bible-skeleton-verse:nth-child(5) { animation-delay: 0.16s; }
-.bible-skeleton-verse:nth-child(6) { animation-delay: 0.2s; }
-.bible-skeleton-verse:nth-child(7) { animation-delay: 0.24s; }
-.bible-skeleton-verse:nth-child(8) { animation-delay: 0.28s; }
-.bible-skeleton-verse:nth-child(9) { animation-delay: 0.32s; }
-.bible-skeleton-verse:nth-child(10) { animation-delay: 0.36s; }
+.bible-skeleton-verse:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.bible-skeleton-verse:nth-child(2) {
+    animation-delay: 0.04s;
+}
+
+.bible-skeleton-verse:nth-child(3) {
+    animation-delay: 0.08s;
+}
+
+.bible-skeleton-verse:nth-child(4) {
+    animation-delay: 0.12s;
+}
+
+.bible-skeleton-verse:nth-child(5) {
+    animation-delay: 0.16s;
+}
+
+.bible-skeleton-verse:nth-child(6) {
+    animation-delay: 0.2s;
+}
+
+.bible-skeleton-verse:nth-child(7) {
+    animation-delay: 0.24s;
+}
+
+.bible-skeleton-verse:nth-child(8) {
+    animation-delay: 0.28s;
+}
+
+.bible-skeleton-verse:nth-child(9) {
+    animation-delay: 0.32s;
+}
+
+.bible-skeleton-verse:nth-child(10) {
+    animation-delay: 0.36s;
+}
 
 .bible-skeleton-lines {
     flex: 1;
@@ -495,14 +524,14 @@ body.dark-theme .bible-skeleton-wrapper {
 }
 
 .bible-skeleton-bone {
-    background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.09) 50%, rgba(0,0,0,0.05) 75%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.09) 50%, rgba(0, 0, 0, 0.05) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
     border-radius: 4px;
 }
 
 body.dark-theme .bible-skeleton-bone {
-    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.04) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
 }
@@ -548,12 +577,12 @@ body.dark-theme .bible-skeleton-bone {
 .bible-skeleton-verse-header {
     margin: 1.2rem 0 0.8rem 0;
     padding: 0.5rem 0.8rem;
-    border-left: 2px solid rgba(0,0,0,0.06);
+    border-left: 2px solid rgba(0, 0, 0, 0.06);
     border-radius: 0;
 }
 
 body.dark-theme .bible-skeleton-verse-header {
-    border-left-color: rgba(255,255,255,0.08);
+    border-left-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Skeleton Author Banner */
@@ -561,7 +590,7 @@ body.skeleton-loading .author-banner .ab-name,
 body.skeleton-loading .author-banner .ab-meta,
 body.skeleton-loading .author-banner .ab-era {
     color: transparent;
-    background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.09) 50%, rgba(0,0,0,0.05) 75%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.09) 50%, rgba(0, 0, 0, 0.05) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
     border-radius: 4px;
@@ -591,7 +620,7 @@ body.skeleton-loading .author-banner .ab-sep {
 body.dark-theme.skeleton-loading .author-banner .ab-name,
 body.dark-theme.skeleton-loading .author-banner .ab-meta,
 body.dark-theme.skeleton-loading .author-banner .ab-era {
-    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.04) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
 }
@@ -599,7 +628,7 @@ body.dark-theme.skeleton-loading .author-banner .ab-era {
 /* Skeleton for Mobile Chapter Header */
 body.skeleton-loading .mobile-chapter-header .mobile-chapter-title {
     color: transparent;
-    background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.09) 50%, rgba(0,0,0,0.05) 75%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.09) 50%, rgba(0, 0, 0, 0.05) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
     border-radius: 4px;
@@ -610,7 +639,7 @@ body.skeleton-loading .mobile-chapter-header .mobile-chapter-title {
 
 body.skeleton-loading .mobile-chapter-header .mobile-chapter-number {
     color: transparent;
-    background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.09) 50%, rgba(0,0,0,0.05) 75%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.09) 50%, rgba(0, 0, 0, 0.05) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
     border-radius: 8px;
@@ -625,25 +654,37 @@ body.skeleton-loading .mobile-chapter-header .expand-all-headers-btn {
 
 body.dark-theme.skeleton-loading .mobile-chapter-header .mobile-chapter-title,
 body.dark-theme.skeleton-loading .mobile-chapter-header .mobile-chapter-number {
-    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.04) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
 }
 
 @keyframes bible-skeleton-fadein {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes bible-skeleton-shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 /* ── Skeleton Loading State for Top Bar ── */
 body.skeleton-loading .site-title {
     color: transparent;
-    background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.06) 75%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.06) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.06) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
     border-radius: 4px;
@@ -653,7 +694,7 @@ body.skeleton-loading .site-title {
 
 body.skeleton-loading .header-controls .icon-btn {
     color: transparent;
-    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.04) 25%, rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0.04) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
     border-radius: 50%;
@@ -666,13 +707,13 @@ body.skeleton-loading .header-controls .icon-btn svg {
 }
 
 body.dark-theme.skeleton-loading .site-title {
-    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.04) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
 }
 
 body.dark-theme.skeleton-loading .header-controls .icon-btn {
-    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.04) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
 }
@@ -687,7 +728,7 @@ body.skeleton-loading .bottom-nav {
 /* ── Skeleton Loading State for Left Sidebar (Desktop) ── */
 body.skeleton-loading .books-sidebar .book-item .book-name {
     color: transparent;
-    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.04) 25%, rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0.04) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
     border-radius: 4px;
@@ -709,7 +750,7 @@ body.skeleton-loading .books-sidebar .book-item:nth-child(4n) .book-name {
 }
 
 body.dark-theme.skeleton-loading .books-sidebar .book-item .book-name {
-    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.04) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
 }
@@ -718,7 +759,7 @@ body.dark-theme.skeleton-loading .books-sidebar .book-item .book-name {
 body.skeleton-loading .chapters-column .number-item,
 body.skeleton-loading .verses-column .number-item {
     color: transparent;
-    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.04) 25%, rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0.04) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
     border-radius: 4px;
@@ -728,7 +769,7 @@ body.skeleton-loading .verses-column .number-item {
 
 body.dark-theme.skeleton-loading .chapters-column .number-item,
 body.dark-theme.skeleton-loading .verses-column .number-item {
-    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.04) 75%);
     background-size: 200% 100%;
     animation: bible-skeleton-shimmer 1.5s infinite;
 }
@@ -2491,13 +2532,25 @@ body:not(.dark-theme) .settings-profile-change-btn:active {
 }
 
 @keyframes profilePreviewFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes profilePreviewZoomIn {
-    from { transform: scale(0.7); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Profile Image Crop Modal */
@@ -3079,7 +3132,7 @@ body:not(.dark-theme) .right-settings-panel .settings-admin-subtext {
     flex-shrink: 0;
 }
 
-.right-settings-panel .settings-radio-label input[type="radio"]:checked + .settings-radio-dot {
+.right-settings-panel .settings-radio-label input[type="radio"]:checked+.settings-radio-dot {
     border-color: #c9a84c;
 }
 
@@ -3096,7 +3149,7 @@ body:not(.dark-theme) .right-settings-panel .settings-admin-subtext {
     transition: transform 0.2s ease;
 }
 
-.right-settings-panel .settings-radio-label input[type="radio"]:checked + .settings-radio-dot::after {
+.right-settings-panel .settings-radio-label input[type="radio"]:checked+.settings-radio-dot::after {
     transform: translate(-50%, -50%) scale(1);
 }
 
@@ -3109,7 +3162,7 @@ body:not(.dark-theme) .right-settings-panel .settings-radio-dot {
     border-color: #ccc;
 }
 
-body:not(.dark-theme) .right-settings-panel .settings-radio-label input[type="radio"]:checked + .settings-radio-dot {
+body:not(.dark-theme) .right-settings-panel .settings-radio-label input[type="radio"]:checked+.settings-radio-dot {
     border-color: #8b7332;
 }
 
@@ -4202,17 +4255,26 @@ body.vh-color-blue .verse-header {
     background: linear-gradient(90deg, #e8eff9 0%, transparent 100%);
     border-left-color: #4a72aa;
 }
+
 body.vh-color-blue .verse-header-toggle,
-body.vh-color-blue .verse-header-title { color: #2a4a7a; }
-body.vh-color-blue .verse-header.collapsible:hover { background-color: rgba(74, 114, 170, 0.04); }
+body.vh-color-blue .verse-header-title {
+    color: #2a4a7a;
+}
+
+body.vh-color-blue .verse-header.collapsible:hover {
+    background-color: rgba(74, 114, 170, 0.04);
+}
 
 body.dark-theme.vh-color-blue .verse-header {
     color: #6a9acc;
     background: linear-gradient(90deg, rgba(74, 114, 170, 0.1) 0%, transparent 100%);
     border-left-color: #4a72aa;
 }
+
 body.dark-theme.vh-color-blue .verse-header-toggle,
-body.dark-theme.vh-color-blue .verse-header-title { color: #6a9acc; }
+body.dark-theme.vh-color-blue .verse-header-title {
+    color: #6a9acc;
+}
 
 /* Deep Crimson */
 body.vh-color-crimson .verse-header {
@@ -4220,17 +4282,26 @@ body.vh-color-crimson .verse-header {
     background: linear-gradient(90deg, #f5e8e8 0%, transparent 100%);
     border-left-color: #8b2a2a;
 }
+
 body.vh-color-crimson .verse-header-toggle,
-body.vh-color-crimson .verse-header-title { color: #6a1a1a; }
-body.vh-color-crimson .verse-header.collapsible:hover { background-color: rgba(139, 42, 42, 0.04); }
+body.vh-color-crimson .verse-header-title {
+    color: #6a1a1a;
+}
+
+body.vh-color-crimson .verse-header.collapsible:hover {
+    background-color: rgba(139, 42, 42, 0.04);
+}
 
 body.dark-theme.vh-color-crimson .verse-header {
     color: #cc5a5a;
     background: linear-gradient(90deg, rgba(139, 42, 42, 0.1) 0%, transparent 100%);
     border-left-color: #8b2a2a;
 }
+
 body.dark-theme.vh-color-crimson .verse-header-toggle,
-body.dark-theme.vh-color-crimson .verse-header-title { color: #cc5a5a; }
+body.dark-theme.vh-color-crimson .verse-header-title {
+    color: #cc5a5a;
+}
 
 /* Soft Lavender */
 body.vh-color-lavender .verse-header {
@@ -4238,17 +4309,26 @@ body.vh-color-lavender .verse-header {
     background: linear-gradient(90deg, #efe8f8 0%, transparent 100%);
     border-left-color: #7a6aaa;
 }
+
 body.vh-color-lavender .verse-header-toggle,
-body.vh-color-lavender .verse-header-title { color: #4a3a7a; }
-body.vh-color-lavender .verse-header.collapsible:hover { background-color: rgba(122, 106, 170, 0.04); }
+body.vh-color-lavender .verse-header-title {
+    color: #4a3a7a;
+}
+
+body.vh-color-lavender .verse-header.collapsible:hover {
+    background-color: rgba(122, 106, 170, 0.04);
+}
 
 body.dark-theme.vh-color-lavender .verse-header {
     color: #aaa0dd;
     background: linear-gradient(90deg, rgba(122, 106, 170, 0.1) 0%, transparent 100%);
     border-left-color: #7a6aaa;
 }
+
 body.dark-theme.vh-color-lavender .verse-header-toggle,
-body.dark-theme.vh-color-lavender .verse-header-title { color: #aaa0dd; }
+body.dark-theme.vh-color-lavender .verse-header-title {
+    color: #aaa0dd;
+}
 
 /* Teal Cyan */
 body.vh-color-teal .verse-header {
@@ -4256,17 +4336,26 @@ body.vh-color-teal .verse-header {
     background: linear-gradient(90deg, #e4f4f4 0%, transparent 100%);
     border-left-color: #2a8a8a;
 }
+
 body.vh-color-teal .verse-header-toggle,
-body.vh-color-teal .verse-header-title { color: #1a5a5a; }
-body.vh-color-teal .verse-header.collapsible:hover { background-color: rgba(42, 138, 138, 0.04); }
+body.vh-color-teal .verse-header-title {
+    color: #1a5a5a;
+}
+
+body.vh-color-teal .verse-header.collapsible:hover {
+    background-color: rgba(42, 138, 138, 0.04);
+}
 
 body.dark-theme.vh-color-teal .verse-header {
     color: #4ab8b8;
     background: linear-gradient(90deg, rgba(42, 138, 138, 0.1) 0%, transparent 100%);
     border-left-color: #2a8a8a;
 }
+
 body.dark-theme.vh-color-teal .verse-header-toggle,
-body.dark-theme.vh-color-teal .verse-header-title { color: #4ab8b8; }
+body.dark-theme.vh-color-teal .verse-header-title {
+    color: #4ab8b8;
+}
 
 /* Dusty Mauve */
 body.vh-color-mauve .verse-header {
@@ -4274,36 +4363,92 @@ body.vh-color-mauve .verse-header {
     background: linear-gradient(90deg, #f2e8ec 0%, transparent 100%);
     border-left-color: #8a5a6a;
 }
+
 body.vh-color-mauve .verse-header-toggle,
-body.vh-color-mauve .verse-header-title { color: #5a2a3a; }
-body.vh-color-mauve .verse-header.collapsible:hover { background-color: rgba(138, 90, 106, 0.04); }
+body.vh-color-mauve .verse-header-title {
+    color: #5a2a3a;
+}
+
+body.vh-color-mauve .verse-header.collapsible:hover {
+    background-color: rgba(138, 90, 106, 0.04);
+}
 
 body.dark-theme.vh-color-mauve .verse-header {
     color: #bb8a9a;
     background: linear-gradient(90deg, rgba(138, 90, 106, 0.1) 0%, transparent 100%);
     border-left-color: #8a5a6a;
 }
+
 body.dark-theme.vh-color-mauve .verse-header-toggle,
-body.dark-theme.vh-color-mauve .verse-header-title { color: #bb8a9a; }
+body.dark-theme.vh-color-mauve .verse-header-title {
+    color: #bb8a9a;
+}
 
 /* ── Badge & Banner Color Variants ── */
-body.vh-color-blue .mobile-verse-count-badge { background: #4a72aa; }
-body.vh-color-crimson .mobile-verse-count-badge { background: #8b2a2a; }
-body.vh-color-lavender .mobile-verse-count-badge { background: #7a6aaa; }
-body.vh-color-teal .mobile-verse-count-badge { background: #2a8a8a; }
-body.vh-color-mauve .mobile-verse-count-badge { background: #8a5a6a; }
+body.vh-color-blue .mobile-verse-count-badge {
+    background: #4a72aa;
+}
 
-body.dark-theme.vh-color-blue .mobile-verse-count-badge { background: #2a4a7a; color: #a8c8f0; }
-body.dark-theme.vh-color-crimson .mobile-verse-count-badge { background: #5a1a1a; color: #f0b8b8; }
-body.dark-theme.vh-color-lavender .mobile-verse-count-badge { background: #3a2a5a; color: #d0c8f0; }
-body.dark-theme.vh-color-teal .mobile-verse-count-badge { background: #1a4a4a; color: #a8e8e8; }
-body.dark-theme.vh-color-mauve .mobile-verse-count-badge { background: #4a2a3a; color: #e8c0d0; }
+body.vh-color-crimson .mobile-verse-count-badge {
+    background: #8b2a2a;
+}
 
-body.vh-color-blue .author-banner { background: linear-gradient(90deg, rgba(74, 114, 170, 0.1) 0%, transparent 100%); }
-body.vh-color-crimson .author-banner { background: linear-gradient(90deg, rgba(139, 42, 42, 0.1) 0%, transparent 100%); }
-body.vh-color-lavender .author-banner { background: linear-gradient(90deg, rgba(122, 106, 170, 0.1) 0%, transparent 100%); }
-body.vh-color-teal .author-banner { background: linear-gradient(90deg, rgba(42, 138, 138, 0.1) 0%, transparent 100%); }
-body.vh-color-mauve .author-banner { background: linear-gradient(90deg, rgba(138, 90, 106, 0.1) 0%, transparent 100%); }
+body.vh-color-lavender .mobile-verse-count-badge {
+    background: #7a6aaa;
+}
+
+body.vh-color-teal .mobile-verse-count-badge {
+    background: #2a8a8a;
+}
+
+body.vh-color-mauve .mobile-verse-count-badge {
+    background: #8a5a6a;
+}
+
+body.dark-theme.vh-color-blue .mobile-verse-count-badge {
+    background: #2a4a7a;
+    color: #a8c8f0;
+}
+
+body.dark-theme.vh-color-crimson .mobile-verse-count-badge {
+    background: #5a1a1a;
+    color: #f0b8b8;
+}
+
+body.dark-theme.vh-color-lavender .mobile-verse-count-badge {
+    background: #3a2a5a;
+    color: #d0c8f0;
+}
+
+body.dark-theme.vh-color-teal .mobile-verse-count-badge {
+    background: #1a4a4a;
+    color: #a8e8e8;
+}
+
+body.dark-theme.vh-color-mauve .mobile-verse-count-badge {
+    background: #4a2a3a;
+    color: #e8c0d0;
+}
+
+body.vh-color-blue .author-banner {
+    background: linear-gradient(90deg, rgba(74, 114, 170, 0.1) 0%, transparent 100%);
+}
+
+body.vh-color-crimson .author-banner {
+    background: linear-gradient(90deg, rgba(139, 42, 42, 0.1) 0%, transparent 100%);
+}
+
+body.vh-color-lavender .author-banner {
+    background: linear-gradient(90deg, rgba(122, 106, 170, 0.1) 0%, transparent 100%);
+}
+
+body.vh-color-teal .author-banner {
+    background: linear-gradient(90deg, rgba(42, 138, 138, 0.1) 0%, transparent 100%);
+}
+
+body.vh-color-mauve .author-banner {
+    background: linear-gradient(90deg, rgba(138, 90, 106, 0.1) 0%, transparent 100%);
+}
 
 /* Expand all headers button */
 #expand-all-headers-btn {
@@ -4516,7 +4661,7 @@ body.dark-theme .expand-all-headers-btn {
 .english-text {
     display: block;
     color: #8a8a8a;
-    font-size: 1.375rem;
+    font-size: 1.350rem;
     margin-top: 0.5rem;
 }
 
@@ -5672,15 +5817,19 @@ body.dark-theme .scripture-text .verse-header {
 body.dark-theme.vh-color-blue .scripture-text .verse-header {
     background: linear-gradient(90deg, rgba(74, 114, 170, 0.1) 0%, transparent 100%) !important;
 }
+
 body.dark-theme.vh-color-crimson .scripture-text .verse-header {
     background: linear-gradient(90deg, rgba(139, 42, 42, 0.1) 0%, transparent 100%) !important;
 }
+
 body.dark-theme.vh-color-lavender .scripture-text .verse-header {
     background: linear-gradient(90deg, rgba(122, 106, 170, 0.1) 0%, transparent 100%) !important;
 }
+
 body.dark-theme.vh-color-teal .scripture-text .verse-header {
     background: linear-gradient(90deg, rgba(42, 138, 138, 0.1) 0%, transparent 100%) !important;
 }
+
 body.dark-theme.vh-color-mauve .scripture-text .verse-header {
     background: linear-gradient(90deg, rgba(138, 90, 106, 0.1) 0%, transparent 100%) !important;
 }
@@ -6482,12 +6631,29 @@ body.dark-theme #note-tab-content {
     line-height: 1.5;
 }
 
-.note-viewer-content h1 { font-size: 24px; }
-.note-viewer-content h2 { font-size: 20px; }
-.note-viewer-content h3 { font-size: 18px; }
-.note-viewer-content h4 { font-size: 16px; }
-.note-viewer-content h5 { font-size: 15px; }
-.note-viewer-content h6 { font-size: 14px; }
+.note-viewer-content h1 {
+    font-size: 24px;
+}
+
+.note-viewer-content h2 {
+    font-size: 20px;
+}
+
+.note-viewer-content h3 {
+    font-size: 18px;
+}
+
+.note-viewer-content h4 {
+    font-size: 16px;
+}
+
+.note-viewer-content h5 {
+    font-size: 15px;
+}
+
+.note-viewer-content h6 {
+    font-size: 14px;
+}
 
 /* Blockquote styling for verses and quotes */
 .note-viewer-content blockquote {
@@ -7470,12 +7636,29 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
     line-height: 1.5;
 }
 
-.notes-textarea h1 { font-size: 24px; }
-.notes-textarea h2 { font-size: 20px; }
-.notes-textarea h3 { font-size: 18px; }
-.notes-textarea h4 { font-size: 16px; }
-.notes-textarea h5 { font-size: 15px; }
-.notes-textarea h6 { font-size: 14px; }
+.notes-textarea h1 {
+    font-size: 24px;
+}
+
+.notes-textarea h2 {
+    font-size: 20px;
+}
+
+.notes-textarea h3 {
+    font-size: 18px;
+}
+
+.notes-textarea h4 {
+    font-size: 16px;
+}
+
+.notes-textarea h5 {
+    font-size: 15px;
+}
+
+.notes-textarea h6 {
+    font-size: 14px;
+}
 
 /* Blockquote styling for verses and quotes */
 .notes-textarea blockquote {
@@ -10657,8 +10840,9 @@ body.dark-theme .language-sheet-color-option.active {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.32s cubic-bezier(0.32, 0.72, 0, 1),
-                background 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+        background 0.32s cubic-bezier(0.32, 0.72, 0, 1);
 }
+
 .book-meaning-backdrop.active {
     background: rgba(0, 0, 0, 0.45);
     opacity: 1;
@@ -10684,6 +10868,7 @@ body.dark-theme .language-sheet-color-option.active {
     padding: 0 1.25rem 2.5rem;
     overflow: hidden;
 }
+
 .book-meaning-bottom-sheet.active {
     transform: translateY(0);
 }
@@ -10694,6 +10879,7 @@ body.dark-theme .language-sheet-color-option.active {
     justify-content: center;
     padding: 12px 0 18px;
 }
+
 .book-meaning-handle-pill {
     width: 36px;
     height: 4px;
@@ -10708,10 +10894,12 @@ body.dark-theme .language-sheet-color-option.active {
     justify-content: space-between;
     margin-bottom: 1.25rem;
 }
+
 .book-meaning-name-block {
     min-width: 0;
     padding-right: 12px;
 }
+
 .book-meaning-title {
     font-size: clamp(15px, 5vw, 20px);
     font-weight: 600;
@@ -10724,11 +10912,13 @@ body.dark-theme .language-sheet-color-option.active {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
 .book-meaning-tamil {
     font-size: 13px;
     color: #888;
     margin: 5px 0 0 0;
 }
+
 .book-meaning-testament-badge {
     font-size: 11px;
     background: #E1F5EE;
@@ -10740,6 +10930,7 @@ body.dark-theme .language-sheet-color-option.active {
     margin-top: 3px;
     display: inline-block;
 }
+
 .book-meaning-testament-badge.ot-badge {
     background: #FEF3E2;
     color: #7A3B00;
@@ -10751,15 +10942,18 @@ body.dark-theme .language-sheet-color-option.active {
     border-radius: 12px;
     overflow: hidden;
 }
+
 .book-meaning-row {
     display: flex;
     align-items: center;
     gap: 12px;
     padding: 11px 14px;
 }
+
 .book-meaning-row:not(:last-child) {
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
 }
+
 .book-meaning-icon-box {
     width: 32px;
     height: 32px;
@@ -10769,19 +10963,28 @@ body.dark-theme .language-sheet-color-option.active {
     justify-content: center;
     flex-shrink: 0;
 }
-.book-meaning-icon-amber { background: #FAEEDA; }
-.book-meaning-icon-purple { background: #EEEDFE; }
+
+.book-meaning-icon-amber {
+    background: #FAEEDA;
+}
+
+.book-meaning-icon-purple {
+    background: #EEEDFE;
+}
+
 .book-meaning-row-label {
     font-size: 11px;
     color: #999;
     margin: 0 0 5px 0;
 }
+
 .book-meaning-row-value {
     font-size: 13px;
     color: #111;
     font-weight: 500;
     margin: 0;
 }
+
 .book-meaning-script {
     font-size: 12px;
     font-weight: 400;
@@ -10794,46 +10997,65 @@ body.dark-theme .book-meaning-bottom-sheet {
     background: #1c1c1e;
     border-top-color: rgba(255, 255, 255, 0.1);
 }
+
 body.dark-theme .book-meaning-handle-pill {
     background: rgba(255, 255, 255, 0.25);
 }
+
 body.dark-theme .book-meaning-backdrop.active {
     background: rgba(0, 0, 0, 0.65);
 }
+
 body.dark-theme .book-meaning-title {
     color: #f0f0f0;
 }
+
 body.dark-theme .book-meaning-tamil {
     color: #888;
 }
+
 body.dark-theme .book-meaning-testament-badge {
     background: rgba(8, 80, 65, 0.35);
     color: #4cd9b0;
 }
+
 body.dark-theme .book-meaning-testament-badge.ot-badge {
     background: rgba(122, 59, 0, 0.3);
     color: #f5a623;
 }
+
 body.dark-theme .book-meaning-info-card {
     border-color: rgba(255, 255, 255, 0.1);
 }
+
 body.dark-theme .book-meaning-row:not(:last-child) {
     border-bottom-color: rgba(255, 255, 255, 0.07);
 }
+
 body.dark-theme .book-meaning-icon-amber {
     background: rgba(250, 238, 218, 0.12);
 }
-body.dark-theme .book-meaning-icon-amber svg { stroke: #e8a84a; }
+
+body.dark-theme .book-meaning-icon-amber svg {
+    stroke: #e8a84a;
+}
+
 body.dark-theme .book-meaning-icon-purple {
     background: rgba(238, 237, 254, 0.1);
 }
-body.dark-theme .book-meaning-icon-purple svg { stroke: #a09cf5; }
+
+body.dark-theme .book-meaning-icon-purple svg {
+    stroke: #a09cf5;
+}
+
 body.dark-theme .book-meaning-row-label {
     color: #666;
 }
+
 body.dark-theme .book-meaning-row-value {
     color: #e0e0e0;
 }
+
 body.dark-theme .book-meaning-script {
     color: #888;
 }
@@ -10844,6 +11066,7 @@ body.dark-theme .book-meaning-script {
     pointer-events: none;
     transition: filter 0.3s ease;
 }
+
 #author-banner {
     transition: filter 0.3s ease;
 }
