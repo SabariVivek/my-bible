@@ -2302,6 +2302,31 @@
     async function openScriptureReference(ref) {
         if (!ref) return;
 
+        // Show story name or passage reference in top search bar so user can see it and cancel/clear it
+        const topSearchInput = document.getElementById('desktop-top-search-input');
+        const topClearBtn = document.getElementById('desktop-top-clear-btn');
+        const topSearchBox = document.getElementById('desktop-top-search-box');
+        const topDropdown = document.getElementById('desktop-top-search-dropdown');
+
+        if (topDropdown) {
+            topDropdown.style.display = 'none';
+            topDropdown.innerHTML = '';
+        }
+
+        if (topSearchInput) {
+            const displayName = ref.storyTitle || ref.title || (ref.book ? `${ref.book.name} ${ref.chapter}${ref.startVerse ? ':' + ref.startVerse + (ref.endVerse && ref.endVerse !== ref.startVerse ? '-' + ref.endVerse : '') : ''}` : '');
+            if (displayName) {
+                topSearchInput.value = displayName;
+                if (topClearBtn) {
+                    topClearBtn.style.display = 'flex';
+                }
+                if (topSearchBox && (ref.isStory || ref.storyTitle)) {
+                    topSearchBox.classList.add('story-mode-active');
+                }
+            }
+            topSearchInput.blur();
+        }
+
         // 1. Close any open search view
         const searchBar = document.getElementById('search-bar');
         if (searchBar && searchBar.style.display !== 'none') {
@@ -2882,12 +2907,19 @@
         });
 
         // Clear button
-        clearBtn.addEventListener('click', () => {
+        // Clear button (cancels current story or passage search and removes highlight)
+        clearBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             searchInput.value = '';
             clearBtn.style.display = 'none';
+            if (searchBox) searchBox.classList.remove('story-mode-active');
+            if (shortcutBtn) {
+                shortcutBtn.classList.remove('active');
+                shortcutBtn.setAttribute('aria-pressed', 'false');
+            }
+            isStoryMode = false;
             hideDropdown();
             clearSearchHighlights();
-            searchInput.focus();
         });
 
         // Close dropdown when clicking outside
@@ -2897,6 +2929,11 @@
             }
             if (e.target.closest('.number-item') || e.target.closest('.verse-line')) {
                 clearSearchHighlights();
+                if (searchBox && searchBox.classList.contains('story-mode-active')) {
+                    searchInput.value = '';
+                    clearBtn.style.display = 'none';
+                    searchBox.classList.remove('story-mode-active');
+                }
             }
         });
 

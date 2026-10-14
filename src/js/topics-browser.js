@@ -352,6 +352,16 @@
                 // Close the browser modal
                 close();
 
+                // Reflect selected story in top search bar immediately
+                const searchInput = document.getElementById('desktop-top-search-input');
+                const clearBtn = document.getElementById('desktop-top-clear-btn');
+                const searchBox = document.getElementById('desktop-top-search-box');
+                if (searchInput) {
+                    searchInput.value = topic.title;
+                    if (clearBtn) clearBtn.style.display = 'flex';
+                    if (searchBox) searchBox.classList.add('story-mode-active');
+                }
+
                 // Open scripture passage
                 if (typeof window.openScriptureReference === 'function') {
                     window.openScriptureReference({
