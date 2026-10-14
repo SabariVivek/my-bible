@@ -109,9 +109,12 @@
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <input type="text" id="desktop-top-search-input" class="desktop-top-search-input"
-                    placeholder="Search passage or story (e.g. Gen 3:2, Creation Day 2)..." autocomplete="off" spellcheck="false"
-                    aria-label="Search Bible or jump to story">
+                <div class="desktop-top-search-input-wrap">
+                    <div class="desktop-top-search-mirror" id="desktop-top-search-mirror" aria-hidden="true"></div>
+                    <input type="text" id="desktop-top-search-input" class="desktop-top-search-input"
+                        placeholder="Search passage or /story (e.g. Gen 3:2, /David)..." autocomplete="off" spellcheck="false"
+                        aria-label="Search Bible or jump to story">
+                </div>
                 <div class="desktop-top-search-hints">
                     <button type="button" id="desktop-top-clear-btn" class="desktop-top-clear-btn" aria-label="Clear"
                         style="display: none;">
@@ -121,7 +124,8 @@
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
                     </button>
-                    <span class="desktop-top-search-shortcut" title="Press / to search">/</span>
+                    <span class="desktop-top-search-mode-badge" id="desktop-top-search-mode-badge" style="display: none;">Story</span>
+                    <span class="desktop-top-search-shortcut" id="desktop-top-search-shortcut" title="Press / to search stories">/</span>
                 </div>
             </div>
             <!-- Quick Suggestions & Passage Preview Dropdown -->
