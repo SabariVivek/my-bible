@@ -31,6 +31,8 @@
         'miracle': 'Miracles',
         'key-verse': 'Key Verses',
         'character': 'Characters',
+        'place': 'Places',
+        'object': 'Objects',
         'prophecy': 'Prophecies',
         'poem': 'Poems / Psalms',
         'vision': 'Visions',
@@ -243,7 +245,7 @@
 
         // Always show 'all', plus only types that exist in this book
         const availableTypes = ['all'];
-        ['story', 'event', 'miracle', 'parable', 'teaching', 'key-verse', 'character', 'prophecy', 'poem', 'vision', 'law', 'wisdom', 'genealogy'].forEach(k => {
+        ['story', 'event', 'miracle', 'parable', 'teaching', 'key-verse', 'character', 'place', 'object', 'prophecy', 'poem', 'vision', 'law', 'wisdom', 'genealogy'].forEach(k => {
             if (typeCounts[k] > 0) availableTypes.push(k);
         });
 

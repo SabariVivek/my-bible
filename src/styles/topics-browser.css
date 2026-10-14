@@ -508,6 +508,8 @@ body.dark-theme .tb-topic-card.is-minor {
 .tb-badge-law       { background: #f1f5f9; color: #334155; }
 .tb-badge-genealogy { background: #f3f4f6; color: #374151; }
 .tb-badge-wisdom    { background: #fef9c3; color: #854d0e; }
+.tb-badge-place     { background: #ccfbf1; color: #0f766e; }
+.tb-badge-object    { background: #ffedd5; color: #c2410c; }
 
 body.dark-theme .tb-badge-story     { background: #282d4f; color: #a5b4fc; }
 body.dark-theme .tb-badge-event     { background: #16364a; color: #7dd3fc; }
@@ -522,6 +524,8 @@ body.dark-theme .tb-badge-vision    { background: #292d52; color: #c7d2fe; }
 body.dark-theme .tb-badge-law       { background: #262c36; color: #cbd5e1; }
 body.dark-theme .tb-badge-genealogy { background: #2c2d33; color: #9ca3af; }
 body.dark-theme .tb-badge-wisdom    { background: #363219; color: #fef08a; }
+body.dark-theme .tb-badge-place     { background: #134e4a; color: #5eead4; }
+body.dark-theme .tb-badge-object    { background: #431407; color: #fdba74; }
 
 .tb-topic-title {
     font-size: 0.93rem;
