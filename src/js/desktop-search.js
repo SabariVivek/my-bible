@@ -2525,7 +2525,7 @@
                                 </div>
                                 <div class="desktop-search-item-details">
                                     <div class="desktop-search-item-title">${escapeHtml(story.title)}</div>
-                                    <div class="desktop-search-item-subtitle">${story.ref || `${book.name} ${story.chapter}${vRange}`} • ${book.tamilName} ${story.chapter}${vRange}</div>
+                                    <div class="desktop-search-item-subtitle">${story.ref || `${book.name} ${story.chapter}${vRange}`}</div>
                                 </div>
                             </div>
                             <span class="desktop-search-item-badge">${escapeHtml(typeLabel)}</span>
@@ -2556,7 +2556,7 @@
                             </div>
                             <div class="desktop-search-item-details">
                                 <div class="desktop-search-item-title">${ref.book.name} ${ref.chapter}${vRange}</div>
-                                <div class="desktop-search-item-subtitle">${ref.book.tamilName} ${ref.chapter}${vRange} • ${vTextDesc}</div>
+                                <div class="desktop-search-item-subtitle">${vTextDesc}</div>
                             </div>
                         </div>
                         <span class="desktop-search-item-badge">↵ Jump</span>
@@ -2641,7 +2641,7 @@
                                 </div>
                                 <div class="desktop-search-item-details">
                                     <div class="desktop-search-item-title">${d.title}</div>
-                                    <div class="desktop-search-item-subtitle">${book.name} • ${book.tamilName} • ${d.desc}</div>
+                                    <div class="desktop-search-item-subtitle">${book.name} • ${d.desc}</div>
                                 </div>
                             </div>
                             <span class="desktop-search-item-badge">Jump</span>
