@@ -424,14 +424,6 @@
         document.body.style.overflow = '';
     }
 
-    // Attach to button beside top search bar
-    function wireTopButton() {
-        const btn = document.getElementById('desktop-top-topics-btn');
-        if (btn) {
-            btn.addEventListener('click', () => open());
-        }
-    }
-
     // Public API
     window.TopicsBrowser = {
         open,
@@ -442,12 +434,4 @@
             render();
         }
     };
-
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-            wireTopButton();
-        });
-    } else {
-        wireTopButton();
-    }
 })();

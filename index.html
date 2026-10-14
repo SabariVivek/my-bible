@@ -103,39 +103,26 @@
 
         <!-- Desktop Search Bar (Middle of Top Bar, Desktop Only) -->
         <div class="desktop-top-search-wrapper" id="desktop-top-search-wrapper">
-            <div class="desktop-top-search-row">
-                <div class="desktop-top-search-box" id="desktop-top-search-box">
-                    <svg class="desktop-top-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                    <input type="text" id="desktop-top-search-input" class="desktop-top-search-input"
-                        placeholder="Search passage or story (e.g. Gen 3:2, Creation Day 2)..." autocomplete="off" spellcheck="false"
-                        aria-label="Search Bible or jump to story">
-                    <div class="desktop-top-search-hints">
-                        <button type="button" id="desktop-top-clear-btn" class="desktop-top-clear-btn" aria-label="Clear"
-                            style="display: none;">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                        </button>
-                        <span class="desktop-top-search-shortcut" title="Press / to search">/</span>
-                    </div>
+            <div class="desktop-top-search-box" id="desktop-top-search-box">
+                <svg class="desktop-top-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="desktop-top-search-input" class="desktop-top-search-input"
+                    placeholder="Search passage or story (e.g. Gen 3:2, Creation Day 2)..." autocomplete="off" spellcheck="false"
+                    aria-label="Search Bible or jump to story">
+                <div class="desktop-top-search-hints">
+                    <button type="button" id="desktop-top-clear-btn" class="desktop-top-clear-btn" aria-label="Clear"
+                        style="display: none;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <span class="desktop-top-search-shortcut" title="Press / to search">/</span>
                 </div>
-                <button type="button" id="desktop-top-topics-btn" class="desktop-top-topics-btn" title="Browse Topics &amp; Stories by Book" aria-label="Browse Bible Topics by Book">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="8" y1="6" x2="21" y2="6"></line>
-                        <line x1="8" y1="12" x2="21" y2="12"></line>
-                        <line x1="8" y1="18" x2="21" y2="18"></line>
-                        <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                        <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                        <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                    </svg>
-                    <span>Topics</span>
-                </button>
             </div>
             <!-- Quick Suggestions & Passage Preview Dropdown -->
             <div class="desktop-top-search-dropdown" id="desktop-top-search-dropdown" style="display: none;"></div>
