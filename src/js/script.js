@@ -931,21 +931,19 @@ function settingsSelectLang(btn) {
     if (!group) return;
     group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+    const isEngOrBoth = btn.dataset.val === 'en' || btn.dataset.val === 'both';
+    const isBoth = btn.dataset.val === 'both';
+    const subCard = document.getElementById('settings-lang-sub-card');
+    if (subCard) {
+        subCard.classList.toggle('has-content', isEngOrBoth);
+    }
     const panel = document.getElementById('settings-color-panel');
     if (panel) {
-        if (btn.dataset.val === 'both') {
-            panel.classList.add('visible');
-        } else {
-            panel.classList.remove('visible');
-        }
+        panel.classList.toggle('visible', isBoth);
     }
     const verPanel = document.getElementById('settings-english-version-panel');
     if (verPanel) {
-        if (btn.dataset.val === 'en' || btn.dataset.val === 'both') {
-            verPanel.classList.add('visible');
-        } else {
-            verPanel.classList.remove('visible');
-        }
+        verPanel.classList.toggle('visible', isEngOrBoth);
     }
     // Sync language with existing language bottom sheet behavior
     const val = btn.dataset.val;
@@ -990,7 +988,7 @@ function syncEnglishVersionUI(ver) {
     });
     const desc = document.getElementById('settings-english-version-desc');
     if (desc) {
-        desc.textContent = ver === 'kjv' ? 'King James Version' : 'EasyEnglish';
+        desc.textContent = ver === 'kjv' ? 'KJV Modern' : 'EasyEnglish';
     }
 }
 
@@ -1968,18 +1966,41 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ========================================
-// Book Meaning Bottom Sheet & Desktop Hover Popup Functions
+// Book Meaning Bottom Sheet Functions
 // ========================================
 
-let bookMeaningCloseTimer = null;
+function setupBookMeaningBottomSheet() {
+    const mobileChapterTitle = document.querySelector('.mobile-chapter-title');
+    const backdrop = document.getElementById('book-meaning-backdrop');
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
 
-function isDesktopBookMeaning() {
-    return window.innerWidth > 768;
+    if (!mobileChapterTitle) return;
+
+    // Open bottom sheet when clicking on book title
+    mobileChapterTitle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openBookMeaningSheet();
+    });
+
+    // Close when clicking backdrop
+    if (backdrop) {
+        backdrop.addEventListener('click', closeBookMeaningSheet);
+    }
+
+    // Close when pressing Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sheet && sheet.classList.contains('active')) {
+            closeBookMeaningSheet();
+        }
+    });
 }
 
-function populateBookMeaningData() {
+function openBookMeaningSheet() {
+    const backdrop = document.getElementById('book-meaning-backdrop');
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
     const book = bibleBooks[currentBook];
-    if (!book) return;
+
+    if (!sheet || !backdrop || !book) return;
 
     const titleEl = document.getElementById('book-meaning-title');
     const tamilEl = document.getElementById('book-meaning-tamil');
@@ -2003,83 +2024,6 @@ function populateBookMeaningData() {
     const parenIdx = hebrewRaw.indexOf(' (');
     if (hebrewNameEl) hebrewNameEl.textContent = parenIdx !== -1 ? hebrewRaw.slice(0, parenIdx) : hebrewRaw;
     if (hebrewScriptEl) hebrewScriptEl.textContent = parenIdx !== -1 ? hebrewRaw.slice(parenIdx + 2, -1) : '';
-}
-
-function positionDesktopBookMeaningPopup() {
-    const mobileChapterTitle = document.querySelector('.mobile-chapter-title');
-    const sheet = document.getElementById('book-meaning-bottom-sheet');
-    if (!mobileChapterTitle || !sheet) return;
-
-    if (!isDesktopBookMeaning()) {
-        sheet.style.top = '';
-        sheet.style.left = '';
-        return;
-    }
-
-    const titleRect = mobileChapterTitle.getBoundingClientRect();
-    const popupWidth = 360;
-
-    // Center horizontally relative to mobileChapterTitle
-    let left = titleRect.left + (titleRect.width / 2) - (popupWidth / 2);
-    const margin = 16;
-    if (left < margin) left = margin;
-    if (left + popupWidth > window.innerWidth - margin) {
-        left = window.innerWidth - margin - popupWidth;
-    }
-
-    // Set arrow offset pointing directly to title center
-    const titleCenter = titleRect.left + (titleRect.width / 2);
-    const arrowOffset = Math.max(16, Math.min(popupWidth - 16, titleCenter - left));
-    sheet.style.setProperty('--arrow-x', `${arrowOffset}px`);
-
-    const popupHeight = sheet.offsetHeight || 220;
-    let top = titleRect.bottom + 10;
-
-    // Check if overflowing viewport bottom; place above title if it fits
-    if (top + popupHeight > window.innerHeight - margin) {
-        const topAbove = titleRect.top - popupHeight - 10;
-        if (topAbove >= margin) {
-            top = topAbove;
-            sheet.classList.add('position-above');
-        } else {
-            sheet.classList.remove('position-above');
-        }
-    } else {
-        sheet.classList.remove('position-above');
-    }
-
-    sheet.style.top = `${top}px`;
-    sheet.style.left = `${left}px`;
-}
-
-function openBookMeaningPopupDesktop() {
-    if (bookMeaningCloseTimer) {
-        clearTimeout(bookMeaningCloseTimer);
-        bookMeaningCloseTimer = null;
-    }
-    const sheet = document.getElementById('book-meaning-bottom-sheet');
-    if (!sheet) return;
-
-    populateBookMeaningData();
-    positionDesktopBookMeaningPopup();
-    sheet.classList.add('active');
-}
-
-function openBookMeaningSheet() {
-    if (bookMeaningCloseTimer) {
-        clearTimeout(bookMeaningCloseTimer);
-        bookMeaningCloseTimer = null;
-    }
-    const backdrop = document.getElementById('book-meaning-backdrop');
-    const sheet = document.getElementById('book-meaning-bottom-sheet');
-    if (!sheet || !backdrop) return;
-
-    populateBookMeaningData();
-
-    // Reset inline coordinates for mobile
-    sheet.style.top = '';
-    sheet.style.left = '';
-    sheet.classList.remove('position-above');
 
     sheet.classList.add('active');
     backdrop.classList.add('active');
@@ -2090,114 +2034,17 @@ function openBookMeaningSheet() {
 }
 
 function closeBookMeaningSheet() {
-    if (bookMeaningCloseTimer) {
-        clearTimeout(bookMeaningCloseTimer);
-        bookMeaningCloseTimer = null;
-    }
     const backdrop = document.getElementById('book-meaning-backdrop');
     const sheet = document.getElementById('book-meaning-bottom-sheet');
 
-    if (!sheet) return;
+    if (!sheet || !backdrop) return;
 
     sheet.classList.remove('active');
-    if (backdrop) backdrop.classList.remove('active');
+    backdrop.classList.remove('active');
     document.body.style.overflow = '';
 
     const authorBanner = document.getElementById('author-banner');
     if (authorBanner) authorBanner.classList.remove('book-meaning-blurred');
-}
-
-function setupBookMeaningBottomSheet() {
-    const mobileChapterTitle = document.querySelector('.mobile-chapter-title');
-    const backdrop = document.getElementById('book-meaning-backdrop');
-    const sheet = document.getElementById('book-meaning-bottom-sheet');
-
-    if (!mobileChapterTitle || !sheet) return;
-
-    // Desktop: Hover events
-    mobileChapterTitle.addEventListener('mouseenter', () => {
-        if (isDesktopBookMeaning()) {
-            openBookMeaningPopupDesktop();
-        }
-    });
-
-    mobileChapterTitle.addEventListener('mouseleave', () => {
-        if (isDesktopBookMeaning()) {
-            bookMeaningCloseTimer = setTimeout(() => {
-                closeBookMeaningSheet();
-            }, 180);
-        }
-    });
-
-    sheet.addEventListener('mouseenter', () => {
-        if (isDesktopBookMeaning()) {
-            if (bookMeaningCloseTimer) {
-                clearTimeout(bookMeaningCloseTimer);
-                bookMeaningCloseTimer = null;
-            }
-        }
-    });
-
-    sheet.addEventListener('mouseleave', () => {
-        if (isDesktopBookMeaning()) {
-            bookMeaningCloseTimer = setTimeout(() => {
-                closeBookMeaningSheet();
-            }, 180);
-        }
-    });
-
-    // Click handler:
-    // Mobile: opens bottom sheet with backdrop
-    // Desktop: toggles hover popup without backdrop
-    mobileChapterTitle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (isDesktopBookMeaning()) {
-            if (sheet.classList.contains('active')) {
-                closeBookMeaningSheet();
-            } else {
-                openBookMeaningPopupDesktop();
-            }
-        } else {
-            openBookMeaningSheet();
-        }
-    });
-
-    // Close when clicking backdrop (mobile)
-    if (backdrop) {
-        backdrop.addEventListener('click', closeBookMeaningSheet);
-    }
-
-    // Close when clicking outside on desktop
-    document.addEventListener('click', (e) => {
-        if (isDesktopBookMeaning() && sheet.classList.contains('active')) {
-            if (!sheet.contains(e.target) && !mobileChapterTitle.contains(e.target)) {
-                closeBookMeaningSheet();
-            }
-        }
-    });
-
-    // Reposition on scroll or resize when desktop popup is open
-    window.addEventListener('scroll', () => {
-        if (isDesktopBookMeaning() && sheet.classList.contains('active')) {
-            positionDesktopBookMeaningPopup();
-        }
-    }, { passive: true });
-
-    window.addEventListener('resize', () => {
-        if (!isDesktopBookMeaning()) {
-            sheet.style.top = '';
-            sheet.style.left = '';
-        } else if (sheet.classList.contains('active')) {
-            positionDesktopBookMeaningPopup();
-        }
-    });
-
-    // Close when pressing Escape
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && sheet && sheet.classList.contains('active')) {
-            closeBookMeaningSheet();
-        }
-    });
 }
 
 // ========================================
@@ -7002,16 +6849,18 @@ function initializeRightSettingsPanel() {
         });
         const engVerDesc = document.getElementById('settings-english-version-desc');
         if (engVerDesc) {
-            engVerDesc.textContent = engVerVal === 'kjv' ? 'King James Version' : 'EasyEnglish';
+            engVerDesc.textContent = engVerVal === 'kjv' ? 'KJV Modern' : 'EasyEnglish';
+        }
+        const isEngOrBoth = langSegVal === 'en' || langSegVal === 'both';
+        const isBoth = langSegVal === 'both';
+        const subCard = document.getElementById('settings-lang-sub-card');
+        if (subCard) {
+            subCard.classList.toggle('has-content', isEngOrBoth);
         }
         // Show/hide English version panel based on language val
         const engVerPanel = document.getElementById('settings-english-version-panel');
         if (engVerPanel) {
-            if (langSegVal === 'en' || langSegVal === 'both') {
-                engVerPanel.classList.add('visible');
-            } else {
-                engVerPanel.classList.remove('visible');
-            }
+            engVerPanel.classList.toggle('visible', isEngOrBoth);
         }
         // Sync English color swatch
         const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
@@ -7024,11 +6873,7 @@ function initializeRightSettingsPanel() {
         // Show/hide color panel based on current language val
         const colorPanel = document.getElementById('settings-color-panel');
         if (colorPanel) {
-            if (langSegVal === 'both') {
-                colorPanel.classList.add('visible');
-            } else {
-                colorPanel.classList.remove('visible');
-            }
+            colorPanel.classList.toggle('visible', isBoth);
         }
         // Sync selector style radio
         const selectorStyleVal = localStorage.getItem('selectorStyle') || 'old';

@@ -34,16 +34,16 @@
     <title>My Bible</title>
     <link rel="icon" type="image/png" href="resources/icons/bible.png?cb=20251126003722">
     <link rel="apple-touch-icon" href="resources/icons/bible.png?cb=20251126003722">
-    <link rel="stylesheet" href="src/styles/styles.css?cb=20261015131921">
+    <link rel="stylesheet" href="src/styles/styles.css?cb=20261015134202">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20261015131921">
-    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20261015131921">
-    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20261015131921">
-    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20261015131921">
-    <link rel="stylesheet" href="src/styles/verse-history.css?cb=20261015131921">
-    <link rel="stylesheet" href="src/styles/desktop-search.css?cb=20261015131921">
-    <link rel="stylesheet" href="src/styles/topics-browser.css?cb=20261015131921">
+    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20261015134202">
+    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20261015134202">
+    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20261015134202">
+    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20261015134202">
+    <link rel="stylesheet" href="src/styles/verse-history.css?cb=20261015134202">
+    <link rel="stylesheet" href="src/styles/desktop-search.css?cb=20261015134202">
+    <link rel="stylesheet" href="src/styles/topics-browser.css?cb=20261015134202">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
@@ -51,7 +51,7 @@
     <!-- Cropper.js for profile image cropping -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css?cb=20260418170421">
     <!-- Cache Management -->
-    <script src="src/js/cache-manager.js?cb=20261015131921"></script>
+    <script src="src/js/cache-manager.js?cb=20261015134202"></script>
 </head>
 
 <body>
@@ -298,7 +298,7 @@
                 </div>
                 <div class="settings-segment" id="modal-english-version-segment" style="margin-top: 8px;">
                     <button class="settings-seg-btn active" data-val="easy" onclick="selectEnglishVersionFromModal('easy')">Easy English</button>
-                    <button class="settings-seg-btn" data-val="kjv" onclick="selectEnglishVersionFromModal('kjv')">KJV</button>
+                    <button class="settings-seg-btn" data-val="kjv" onclick="selectEnglishVersionFromModal('kjv')">KJV Modern</button>
                 </div>
             </div>
             <div class="color-palette-section">
@@ -346,7 +346,7 @@
             </div>
             <div class="settings-segment" id="sheet-english-version-segment">
                 <button class="settings-seg-btn active" data-val="easy" onclick="selectEnglishVersionFromSheet('easy')">Easy English</button>
-                <button class="settings-seg-btn" data-val="kjv" onclick="selectEnglishVersionFromSheet('kjv')">KJV</button>
+                <button class="settings-seg-btn" data-val="kjv" onclick="selectEnglishVersionFromSheet('kjv')">KJV Modern</button>
             </div>
         </div>
         <div class="language-sheet-color-palette" id="language-sheet-color-palette" style="display: none;">
@@ -1329,33 +1329,26 @@
                             onclick="settingsSelectLang(this)">Both</button>
                     </div>
 
-                    <!-- English version selector — shown when English or Both is selected -->
-                    <div class="settings-version-panel" id="settings-english-version-panel">
-                        <div class="settings-card settings-version-card">
-                            <div class="settings-version-header">
-                                <span class="settings-version-label">English Version</span>
-                                <span class="settings-version-sub" id="settings-english-version-desc">EasyEnglish</span>
-                            </div>
-                            <div class="settings-segment settings-version-segment" id="settings-english-version-segment">
+                    <!-- Language sub-options card for English Version and Color -->
+                    <div class="settings-card settings-lang-sub-card" id="settings-lang-sub-card">
+                        <!-- English Version Row -->
+                        <div class="settings-lang-sub-row" id="settings-english-version-panel">
+                            <span class="settings-lang-sub-label">English Version</span>
+                            <div class="settings-segment settings-segment-compact" id="settings-english-version-segment">
                                 <button class="settings-seg-btn active" data-val="easy"
                                     onclick="settingsSelectEnglishVersion(this)">Easy English</button>
                                 <button class="settings-seg-btn" data-val="kjv"
-                                    onclick="settingsSelectEnglishVersion(this)">KJV</button>
+                                    onclick="settingsSelectEnglishVersion(this)">KJV Modern</button>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- English text color — shown only when Both is selected -->
-                    <div class="settings-color-panel" id="settings-color-panel">
-                        <div class="settings-card settings-color-card">
-                            <div class="settings-color-row">
-                                <span class="settings-color-row-label">English Text Color</span>
-                                <div class="settings-color-swatches">
-                                    <div class="settings-swatch grey selected" onclick="settingsSelectColor(this)">
-                                    </div>
-                                    <div class="settings-swatch blue" onclick="settingsSelectColor(this)"></div>
-                                    <div class="settings-swatch red" onclick="settingsSelectColor(this)"></div>
-                                </div>
+                        <!-- English Text Color Row (shown when Both is selected) -->
+                        <div class="settings-lang-sub-row" id="settings-color-panel">
+                            <span class="settings-lang-sub-label">English Text Color</span>
+                            <div class="settings-color-swatches">
+                                <div class="settings-swatch grey selected" onclick="settingsSelectColor(this)"></div>
+                                <div class="settings-swatch blue" onclick="settingsSelectColor(this)"></div>
+                                <div class="settings-swatch red" onclick="settingsSelectColor(this)"></div>
                             </div>
                         </div>
                     </div>
@@ -1734,33 +1727,33 @@
     </div>
 
     <!-- Bundled Bible Data (loads all books) -->
-    <script src="data/bible/bible-data-loader.js?cb=20261015131921"></script>
+    <script src="data/bible/bible-data-loader.js?cb=20261015134202"></script>
 
     <!-- Supabase Client Library (Local for Offline Support) -->
-    <script src="src/lib/supabase.js?cb=20261015131921"></script>
+    <script src="src/lib/supabase.js?cb=20261015134202"></script>
     <!-- Cropper.js for profile image cropping -->
     <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js?cb=20260418170421"></script>
 
 
-    <script src="config/config.js?cb=20261015131921"></script>
-    <script src="src/js/bible-data-manager.js?cb=20261015131921"></script>
-    <script src="src/js/voice-command.js?cb=20261015131921"></script>
-    <script src="src/data/verse-headers-english.js?cb=20261015131921"></script>
-    <script src="src/data/verse-headers-tamil.js?cb=20261015131921"></script>
-    <script src="src/data/bible-meta.js?cb=20261015131921"></script>
-    <script src="src/data/bibleAuthors.js?cb=20261015131921"></script>
-    <script src="src/data/short-summary.js?cb=20261015131921"></script>
-    <script src="src/data/book-intro.js?cb=20261015131921"></script>
-    <script src="src/data/bible-popups.js?cb=20261015131921"></script>
-    <script src="src/data/king-transition-data.js?cb=20261015131921"></script>
-    <script src="src/js/verse-history-manager.js?cb=20261015131921"></script>
-    <script src="src/js/script.js?cb=20261015131921"></script>
-    <script src="src/data/bible-topics.js?cb=20261015131921"></script>
-    <script src="src/js/desktop-search.js?cb=20261015131921"></script>
-    <script src="src/js/topics-browser.js?cb=20261015131921"></script>
-    <script src="src/js/bible-selector.js?cb=20261015131921"></script>
-    <script src="src/js/chapter-summary-pullout.js?cb=20261015131921"></script>
-    <script src="src/js/ai-summary.js?cb=20261015131921"></script>
+    <script src="config/config.js?cb=20261015134202"></script>
+    <script src="src/js/bible-data-manager.js?cb=20261015134202"></script>
+    <script src="src/js/voice-command.js?cb=20261015134202"></script>
+    <script src="src/data/verse-headers-english.js?cb=20261015134202"></script>
+    <script src="src/data/verse-headers-tamil.js?cb=20261015134202"></script>
+    <script src="src/data/bible-meta.js?cb=20261015134202"></script>
+    <script src="src/data/bibleAuthors.js?cb=20261015134202"></script>
+    <script src="src/data/short-summary.js?cb=20261015134202"></script>
+    <script src="src/data/book-intro.js?cb=20261015134202"></script>
+    <script src="src/data/bible-popups.js?cb=20261015134202"></script>
+    <script src="src/data/king-transition-data.js?cb=20261015134202"></script>
+    <script src="src/js/verse-history-manager.js?cb=20261015134202"></script>
+    <script src="src/js/script.js?cb=20261015134202"></script>
+    <script src="src/data/bible-topics.js?cb=20261015134202"></script>
+    <script src="src/js/desktop-search.js?cb=20261015134202"></script>
+    <script src="src/js/topics-browser.js?cb=20261015134202"></script>
+    <script src="src/js/bible-selector.js?cb=20261015134202"></script>
+    <script src="src/js/chapter-summary-pullout.js?cb=20261015134202"></script>
+    <script src="src/js/ai-summary.js?cb=20261015134202"></script>
 
     <!-- Image Viewer Modal -->
     <style>
