@@ -89,6 +89,10 @@ if (currentBookData && currentChapter > currentBookData.chapters) {
 let currentData = null;
 let currentTamilData = null; // For storing Tamil data when "Both" is selected
 let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'english' or 'tamil' or 'both'
+let englishVersion = localStorage.getItem('settingsEnglishVersion') || localStorage.getItem('englishVersion') || 'easy'; // 'easy' or 'kjv'
+if (typeof bibleDataManager !== 'undefined') {
+    bibleDataManager.setEnglishVersion(englishVersion);
+}
 // UI settings for settings panel (persisted)
 const ADMIN_PASSWORD = '030593'; // 6-digit password
 const DEFAULT_UI_SETTINGS = {
@@ -119,6 +123,7 @@ function getCurrentSettingsSnapshot() {
     try {
         const themeSegVal = localStorage.getItem('settingsTheme') || (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
         const langSegVal = localStorage.getItem('settingsLanguage') || (currentLanguage === 'both' ? 'both' : currentLanguage === 'english' ? 'en' : 'ta');
+        const engVerVal = localStorage.getItem('settingsEnglishVersion') || englishVersion || 'easy';
         const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
         const verseHeadingLangVal = localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
         const selectorStyleVal = localStorage.getItem('selectorStyle') || 'old';
@@ -126,6 +131,7 @@ function getCurrentSettingsSnapshot() {
         return {
             theme: themeSegVal,
             language: langSegVal,
+            englishVersion: engVerVal,
             englishColor: colorVal,
             verseHeadingLanguage: verseHeadingLangVal,
             selectorStyle: selectorStyleVal,
@@ -142,6 +148,7 @@ function areSettingsEqual(a, b) {
     if (!a || !b) return true;
     if (a.theme !== b.theme) return false;
     if (a.language !== b.language) return false;
+    if ((a.englishVersion || 'easy') !== (b.englishVersion || 'easy')) return false;
     if (a.englishColor !== b.englishColor) return false;
     if (a.verseHeadingLanguage !== b.verseHeadingLanguage) return false;
     if ((a.selectorStyle || 'old') !== (b.selectorStyle || 'old')) return false;
@@ -932,6 +939,14 @@ function settingsSelectLang(btn) {
             panel.classList.remove('visible');
         }
     }
+    const verPanel = document.getElementById('settings-english-version-panel');
+    if (verPanel) {
+        if (btn.dataset.val === 'en' || btn.dataset.val === 'both') {
+            verPanel.classList.add('visible');
+        } else {
+            verPanel.classList.remove('visible');
+        }
+    }
     // Sync language with existing language bottom sheet behavior
     const val = btn.dataset.val;
     const selectedLang = val === 'en' ? 'english' : (val === 'ta' ? 'tamil' : 'both');
@@ -947,6 +962,53 @@ function settingsSelectLang(btn) {
     // Persist language segment value (locally) and mark panel as dirty
     localStorage.setItem('settingsLanguage', btn.dataset.val);
     updateSettingsFooterVisibility();
+}
+
+function settingsSelectEnglishVersion(btn) {
+    const group = document.getElementById('settings-english-version-segment');
+    if (!group) return;
+    group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const val = btn.dataset.val; // 'easy' or 'kjv'
+    englishVersion = val;
+    localStorage.setItem('englishVersion', val);
+    localStorage.setItem('settingsEnglishVersion', val);
+    if (typeof bibleDataManager !== 'undefined') {
+        bibleDataManager.setEnglishVersion(val);
+    }
+    syncEnglishVersionUI(val);
+    // Reload current book/chapter so version change takes effect
+    if ((currentLanguage === 'english' || currentLanguage === 'both') && typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+        loadBook(currentBook, currentChapter);
+    }
+    updateSettingsFooterVisibility();
+}
+
+function syncEnglishVersionUI(ver) {
+    document.querySelectorAll('#settings-english-version-segment .settings-seg-btn, #modal-english-version-segment .settings-seg-btn, #sheet-english-version-segment .settings-seg-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.val === ver);
+    });
+    const desc = document.getElementById('settings-english-version-desc');
+    if (desc) {
+        desc.textContent = ver === 'kjv' ? 'King James Version' : 'EasyEnglish';
+    }
+}
+
+function selectEnglishVersionFromModal(ver) {
+    englishVersion = ver;
+    localStorage.setItem('englishVersion', ver);
+    localStorage.setItem('settingsEnglishVersion', ver);
+    if (typeof bibleDataManager !== 'undefined') {
+        bibleDataManager.setEnglishVersion(ver);
+    }
+    syncEnglishVersionUI(ver);
+    if ((currentLanguage === 'english' || currentLanguage === 'both') && typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+        loadBook(currentBook, currentChapter);
+    }
+}
+
+function selectEnglishVersionFromSheet(ver) {
+    selectEnglishVersionFromModal(ver);
 }
 function settingsSelectColor(el) {
     const container = el.closest('.settings-color-swatches');
@@ -1906,41 +1968,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ========================================
-// Book Meaning Bottom Sheet Functions
+// Book Meaning Bottom Sheet & Desktop Hover Popup Functions
 // ========================================
 
-function setupBookMeaningBottomSheet() {
-    const mobileChapterTitle = document.querySelector('.mobile-chapter-title');
-    const backdrop = document.getElementById('book-meaning-backdrop');
-    const sheet = document.getElementById('book-meaning-bottom-sheet');
+let bookMeaningCloseTimer = null;
 
-    if (!mobileChapterTitle) return;
-
-    // Open bottom sheet when clicking on book title
-    mobileChapterTitle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        openBookMeaningSheet();
-    });
-
-    // Close when clicking backdrop
-    if (backdrop) {
-        backdrop.addEventListener('click', closeBookMeaningSheet);
-    }
-
-    // Close when pressing Escape
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && sheet && sheet.classList.contains('active')) {
-            closeBookMeaningSheet();
-        }
-    });
+function isDesktopBookMeaning() {
+    return window.innerWidth > 768;
 }
 
-function openBookMeaningSheet() {
-    const backdrop = document.getElementById('book-meaning-backdrop');
-    const sheet = document.getElementById('book-meaning-bottom-sheet');
+function populateBookMeaningData() {
     const book = bibleBooks[currentBook];
-
-    if (!sheet || !backdrop) return;
+    if (!book) return;
 
     const titleEl = document.getElementById('book-meaning-title');
     const tamilEl = document.getElementById('book-meaning-tamil');
@@ -1964,6 +2003,83 @@ function openBookMeaningSheet() {
     const parenIdx = hebrewRaw.indexOf(' (');
     if (hebrewNameEl) hebrewNameEl.textContent = parenIdx !== -1 ? hebrewRaw.slice(0, parenIdx) : hebrewRaw;
     if (hebrewScriptEl) hebrewScriptEl.textContent = parenIdx !== -1 ? hebrewRaw.slice(parenIdx + 2, -1) : '';
+}
+
+function positionDesktopBookMeaningPopup() {
+    const mobileChapterTitle = document.querySelector('.mobile-chapter-title');
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
+    if (!mobileChapterTitle || !sheet) return;
+
+    if (!isDesktopBookMeaning()) {
+        sheet.style.top = '';
+        sheet.style.left = '';
+        return;
+    }
+
+    const titleRect = mobileChapterTitle.getBoundingClientRect();
+    const popupWidth = 360;
+
+    // Center horizontally relative to mobileChapterTitle
+    let left = titleRect.left + (titleRect.width / 2) - (popupWidth / 2);
+    const margin = 16;
+    if (left < margin) left = margin;
+    if (left + popupWidth > window.innerWidth - margin) {
+        left = window.innerWidth - margin - popupWidth;
+    }
+
+    // Set arrow offset pointing directly to title center
+    const titleCenter = titleRect.left + (titleRect.width / 2);
+    const arrowOffset = Math.max(16, Math.min(popupWidth - 16, titleCenter - left));
+    sheet.style.setProperty('--arrow-x', `${arrowOffset}px`);
+
+    const popupHeight = sheet.offsetHeight || 220;
+    let top = titleRect.bottom + 10;
+
+    // Check if overflowing viewport bottom; place above title if it fits
+    if (top + popupHeight > window.innerHeight - margin) {
+        const topAbove = titleRect.top - popupHeight - 10;
+        if (topAbove >= margin) {
+            top = topAbove;
+            sheet.classList.add('position-above');
+        } else {
+            sheet.classList.remove('position-above');
+        }
+    } else {
+        sheet.classList.remove('position-above');
+    }
+
+    sheet.style.top = `${top}px`;
+    sheet.style.left = `${left}px`;
+}
+
+function openBookMeaningPopupDesktop() {
+    if (bookMeaningCloseTimer) {
+        clearTimeout(bookMeaningCloseTimer);
+        bookMeaningCloseTimer = null;
+    }
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
+    if (!sheet) return;
+
+    populateBookMeaningData();
+    positionDesktopBookMeaningPopup();
+    sheet.classList.add('active');
+}
+
+function openBookMeaningSheet() {
+    if (bookMeaningCloseTimer) {
+        clearTimeout(bookMeaningCloseTimer);
+        bookMeaningCloseTimer = null;
+    }
+    const backdrop = document.getElementById('book-meaning-backdrop');
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
+    if (!sheet || !backdrop) return;
+
+    populateBookMeaningData();
+
+    // Reset inline coordinates for mobile
+    sheet.style.top = '';
+    sheet.style.left = '';
+    sheet.classList.remove('position-above');
 
     sheet.classList.add('active');
     backdrop.classList.add('active');
@@ -1974,17 +2090,114 @@ function openBookMeaningSheet() {
 }
 
 function closeBookMeaningSheet() {
+    if (bookMeaningCloseTimer) {
+        clearTimeout(bookMeaningCloseTimer);
+        bookMeaningCloseTimer = null;
+    }
     const backdrop = document.getElementById('book-meaning-backdrop');
     const sheet = document.getElementById('book-meaning-bottom-sheet');
 
-    if (!sheet || !backdrop) return;
+    if (!sheet) return;
 
     sheet.classList.remove('active');
-    backdrop.classList.remove('active');
+    if (backdrop) backdrop.classList.remove('active');
     document.body.style.overflow = '';
 
     const authorBanner = document.getElementById('author-banner');
     if (authorBanner) authorBanner.classList.remove('book-meaning-blurred');
+}
+
+function setupBookMeaningBottomSheet() {
+    const mobileChapterTitle = document.querySelector('.mobile-chapter-title');
+    const backdrop = document.getElementById('book-meaning-backdrop');
+    const sheet = document.getElementById('book-meaning-bottom-sheet');
+
+    if (!mobileChapterTitle || !sheet) return;
+
+    // Desktop: Hover events
+    mobileChapterTitle.addEventListener('mouseenter', () => {
+        if (isDesktopBookMeaning()) {
+            openBookMeaningPopupDesktop();
+        }
+    });
+
+    mobileChapterTitle.addEventListener('mouseleave', () => {
+        if (isDesktopBookMeaning()) {
+            bookMeaningCloseTimer = setTimeout(() => {
+                closeBookMeaningSheet();
+            }, 180);
+        }
+    });
+
+    sheet.addEventListener('mouseenter', () => {
+        if (isDesktopBookMeaning()) {
+            if (bookMeaningCloseTimer) {
+                clearTimeout(bookMeaningCloseTimer);
+                bookMeaningCloseTimer = null;
+            }
+        }
+    });
+
+    sheet.addEventListener('mouseleave', () => {
+        if (isDesktopBookMeaning()) {
+            bookMeaningCloseTimer = setTimeout(() => {
+                closeBookMeaningSheet();
+            }, 180);
+        }
+    });
+
+    // Click handler:
+    // Mobile: opens bottom sheet with backdrop
+    // Desktop: toggles hover popup without backdrop
+    mobileChapterTitle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (isDesktopBookMeaning()) {
+            if (sheet.classList.contains('active')) {
+                closeBookMeaningSheet();
+            } else {
+                openBookMeaningPopupDesktop();
+            }
+        } else {
+            openBookMeaningSheet();
+        }
+    });
+
+    // Close when clicking backdrop (mobile)
+    if (backdrop) {
+        backdrop.addEventListener('click', closeBookMeaningSheet);
+    }
+
+    // Close when clicking outside on desktop
+    document.addEventListener('click', (e) => {
+        if (isDesktopBookMeaning() && sheet.classList.contains('active')) {
+            if (!sheet.contains(e.target) && !mobileChapterTitle.contains(e.target)) {
+                closeBookMeaningSheet();
+            }
+        }
+    });
+
+    // Reposition on scroll or resize when desktop popup is open
+    window.addEventListener('scroll', () => {
+        if (isDesktopBookMeaning() && sheet.classList.contains('active')) {
+            positionDesktopBookMeaningPopup();
+        }
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+        if (!isDesktopBookMeaning()) {
+            sheet.style.top = '';
+            sheet.style.left = '';
+        } else if (sheet.classList.contains('active')) {
+            positionDesktopBookMeaningPopup();
+        }
+    });
+
+    // Close when pressing Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sheet && sheet.classList.contains('active')) {
+            closeBookMeaningSheet();
+        }
+    });
 }
 
 // ========================================
@@ -5857,6 +6070,12 @@ function initializeMobileLanguageModal() {
                 option.classList.remove('active');
             }
         });
+        // Show/hide English version based on english/both selection
+        const modalVerSection = document.getElementById('modal-english-version-section');
+        if (modalVerSection) {
+            modalVerSection.style.display = (currentLanguage === 'english' || currentLanguage === 'both') ? 'block' : 'none';
+        }
+        syncEnglishVersionUI(englishVersion);
         // Show/hide color palette based on 'both' selection
         if (currentLanguage === 'both') {
             colorPaletteSection.classList.add('visible');
@@ -5874,6 +6093,12 @@ function initializeMobileLanguageModal() {
                 option.classList.remove('active');
             }
         });
+        // Show/hide English version based on english/both selection
+        const sheetVerSection = document.getElementById('sheet-english-version-section');
+        if (sheetVerSection) {
+            sheetVerSection.style.display = (currentLanguage === 'english' || currentLanguage === 'both') ? 'block' : 'none';
+        }
+        syncEnglishVersionUI(englishVersion);
         // Show/hide color palette based on 'both' selection
         if (currentLanguage === 'both') {
             sheetColorPalette.style.display = 'block';
@@ -6769,6 +6994,25 @@ function initializeRightSettingsPanel() {
         langSegBtns.forEach(b => {
             b.classList.toggle('active', b.dataset.val === langSegVal);
         });
+        // Sync English version segment
+        const engVerVal = localStorage.getItem('settingsEnglishVersion') || englishVersion || 'easy';
+        const engVerSegBtns = document.querySelectorAll('#settings-english-version-segment .settings-seg-btn');
+        engVerSegBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.val === engVerVal);
+        });
+        const engVerDesc = document.getElementById('settings-english-version-desc');
+        if (engVerDesc) {
+            engVerDesc.textContent = engVerVal === 'kjv' ? 'King James Version' : 'EasyEnglish';
+        }
+        // Show/hide English version panel based on language val
+        const engVerPanel = document.getElementById('settings-english-version-panel');
+        if (engVerPanel) {
+            if (langSegVal === 'en' || langSegVal === 'both') {
+                engVerPanel.classList.add('visible');
+            } else {
+                engVerPanel.classList.remove('visible');
+            }
+        }
         // Sync English color swatch
         const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
         const colorSwatches = document.querySelectorAll('#settings-color-panel .settings-swatch');
@@ -6952,6 +7196,22 @@ function initializeRightSettingsPanel() {
                     }
                     if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
                         loadBook(currentBook, currentChapter);
+                    }
+                }
+
+                // English version
+                if (snap.englishVersion) {
+                    englishVersion = snap.englishVersion;
+                    localStorage.setItem('englishVersion', englishVersion);
+                    localStorage.setItem('settingsEnglishVersion', englishVersion);
+                    if (typeof bibleDataManager !== 'undefined') {
+                        bibleDataManager.setEnglishVersion(englishVersion);
+                    }
+                    syncEnglishVersionUI(englishVersion);
+                    if (currentLanguage === 'english' || currentLanguage === 'both') {
+                        if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+                            loadBook(currentBook, currentChapter);
+                        }
                     }
                 }
 

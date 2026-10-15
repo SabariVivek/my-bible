@@ -1,6 +1,6 @@
 // Service worker for PWA with Supabase API caching
 // IMPORTANT: Cache version is automatically updated with build timestamp
-const BUILD_TIMESTAMP = '20261015115130';
+const BUILD_TIMESTAMP = '20261015131921';
 const CACHE_VERSION = `v6-${BUILD_TIMESTAMP}`;
 const CACHE_NAME = `my-bible-${CACHE_VERSION}`;
 const API_CACHE_NAME = `my-bible-api-${CACHE_VERSION}`;
@@ -23,7 +23,9 @@ const STATIC_ASSETS = [
   './src/js/verse-history-manager.js',
   './manifest.json',
   './resources/icons/bible.png',
-  './data/bible/bible-data-loader.js'
+  './data/bible/bible-data-loader.js',
+  './data/bible/english/king-james-bible.json',
+  './data/bible/english/king-james-bible.js'
 ];
 // Install event - cache static assets
 self.addEventListener('install', (event) => {

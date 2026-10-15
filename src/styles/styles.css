@@ -3087,6 +3087,95 @@ body:not(.dark-theme) .right-settings-panel .settings-admin-subtext {
     box-shadow: 0 1px 8px rgba(201, 168, 76, 0.4);
 }
 
+.right-settings-panel .settings-version-panel {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.32s cubic-bezier(.4, 0, .2, 1), opacity 0.25s ease;
+}
+
+.right-settings-panel .settings-version-panel.visible {
+    max-height: 120px;
+    opacity: 1;
+    margin-top: 12px;
+}
+
+.right-settings-panel .settings-version-card {
+    padding: 12px 14px 14px;
+}
+
+.right-settings-panel .settings-version-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.right-settings-panel .settings-version-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #e2e4ea;
+    letter-spacing: 0.01em;
+}
+
+.right-settings-panel .settings-version-sub {
+    font-size: 11px;
+    font-weight: 600;
+    color: #c9a84c;
+    background: rgba(201, 168, 76, 0.12);
+    padding: 2px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.02em;
+}
+
+.right-settings-panel .settings-version-segment {
+    margin-top: 2px;
+}
+
+body:not(.dark-theme) .right-settings-panel .settings-version-label {
+    color: #1a1a1a;
+}
+
+body:not(.dark-theme) .right-settings-panel .settings-version-sub {
+    color: #8b7332;
+    background: rgba(201, 168, 76, 0.15);
+}
+
+.language-version-section {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.language-version-header h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #b0b3be;
+    margin: 0 0 10px 0;
+}
+
+body:not(.dark-theme) .language-version-section {
+    border-top-color: rgba(0, 0, 0, 0.08);
+}
+
+body:not(.dark-theme) .language-version-header h4 {
+    color: #555;
+}
+
+.language-sheet-version-section {
+    margin-top: 10px;
+    padding: 12px 20px 4px;
+}
+
+.language-sheet-version-header h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #7a7d8a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 8px 0;
+}
+
 .right-settings-panel .settings-color-panel {
     overflow: hidden;
     max-height: 0;
@@ -11069,6 +11158,127 @@ body.dark-theme .book-meaning-script {
 
 #author-banner {
     transition: filter 0.3s ease;
+}
+
+/* ── Desktop Hover Popup for Book Meaning (min-width: 769px) ── */
+@media (min-width: 769px) {
+    .book-meaning-backdrop {
+        display: none !important;
+    }
+
+    .book-meaning-bottom-sheet {
+        position: fixed;
+        bottom: auto;
+        right: auto;
+        width: 360px;
+        max-width: calc(100vw - 32px);
+        border-radius: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 1.15rem 1.25rem 1.25rem;
+        box-shadow: 0 16px 38px rgba(0, 0, 0, 0.14), 0 4px 12px rgba(0, 0, 0, 0.06);
+        transform: translateY(6px) scale(0.97);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 2000;
+        overflow: visible;
+    }
+
+    .book-meaning-bottom-sheet.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0) scale(1);
+    }
+
+    /* Pointer triangle pointing towards the book title */
+    .book-meaning-bottom-sheet::before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: var(--arrow-x, 50%);
+        transform: translateX(-50%) rotate(45deg);
+        width: 12px;
+        height: 12px;
+        background: #ffffff;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        border-top-left-radius: 2px;
+        z-index: 2;
+    }
+
+    .book-meaning-bottom-sheet.position-above::before {
+        top: auto;
+        bottom: -6px;
+        transform: translateX(-50%) rotate(225deg);
+    }
+
+    /* Invisible hover bridge between title and popup */
+    .book-meaning-bottom-sheet::after {
+        content: '';
+        position: absolute;
+        top: -14px;
+        left: 0;
+        right: 0;
+        height: 14px;
+        z-index: 1;
+    }
+
+    .book-meaning-bottom-sheet.position-above::after {
+        top: auto;
+        bottom: -14px;
+    }
+
+    /* Hide drag handle on desktop */
+    .book-meaning-drag-handle {
+        display: none !important;
+    }
+
+    .book-meaning-header {
+        margin-bottom: 0.95rem;
+    }
+
+    .book-meaning-title {
+        font-size: 1.15rem;
+    }
+
+    .book-meaning-tamil {
+        font-size: 13px;
+        margin-top: 2px;
+    }
+
+    .book-meaning-info-card {
+        border-radius: 10px;
+    }
+
+    .book-meaning-row {
+        padding: 9px 12px;
+    }
+
+    .mobile-chapter-title:hover {
+        opacity: 1;
+        color: var(--text-primary);
+        background-color: rgba(0, 0, 0, 0.06);
+    }
+}
+
+/* Dark theme desktop popup overrides */
+@media (min-width: 769px) {
+    body.dark-theme .book-meaning-bottom-sheet {
+        background: #232427;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 4px 14px rgba(0, 0, 0, 0.35);
+    }
+
+    body.dark-theme .book-meaning-bottom-sheet::before {
+        background: #232427;
+        border-top-color: rgba(255, 255, 255, 0.12);
+        border-left-color: rgba(255, 255, 255, 0.12);
+    }
+
+    body.dark-theme .mobile-chapter-title:hover {
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.12);
+    }
 }
 
 body.dark-theme .verse-actions-buttons::-webkit-scrollbar-track {

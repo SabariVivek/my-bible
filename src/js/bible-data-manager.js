@@ -5,6 +5,76 @@ const SUPABASE_BIBLE_CONFIG = {
     tableName: 'bible_verses'
 };
 
+// Mapping book names/files to 0-based book index
+const BOOK_FILE_TO_INDEX = {
+    'genesis': 0, 'gen': 0,
+    'exodus': 1, 'exod': 1,
+    'leviticus': 2, 'lev': 2,
+    'numbers': 3, 'num': 3,
+    'deuteronomy': 4, 'deut': 4,
+    'joshua': 5, 'josh': 5,
+    'judges': 6, 'judg': 6,
+    'ruth': 7,
+    'i_samuel': 8, '1-samuel': 8, '1_samuel': 8, '1-sam': 8, 'i-samuel': 8, 'i samuel': 8,
+    'ii_samuel': 9, '2-samuel': 9, '2_samuel': 9, '2-sam': 9, 'ii-samuel': 9, 'ii samuel': 9,
+    'i_kings': 10, '1-kings': 10, '1_kings': 10, '1-kgs': 10, 'i-kings': 10, 'i kings': 10,
+    'ii_kings': 11, '2-kings': 11, '2_kings': 11, '2-kgs': 11, 'ii-kings': 11, 'ii kings': 11,
+    'i_chronicles': 12, '1-chronicles': 12, '1_chronicles': 12, '1-chr': 12, 'i-chronicles': 12, 'i chronicles': 12,
+    'ii_chronicles': 13, '2-chronicles': 13, '2_chronicles': 13, '2-chr': 13, 'ii-chronicles': 13, 'ii chronicles': 13,
+    'ezra': 14,
+    'nehemiah': 15, 'neh': 15,
+    'esther': 16, 'esth': 16,
+    'job': 17,
+    'psalms': 18, 'psalm': 18, 'ps': 18,
+    'proverbs': 19, 'prov': 19,
+    'ecclesiastes': 20, 'eccl': 20,
+    'song_of_solomon': 21, 'song-of-solomon': 21, 'song-of-songs': 21, 'song': 21,
+    'isaiah': 22, 'isa': 22,
+    'jeremiah': 23, 'jer': 23,
+    'lamentations': 24, 'lam': 24,
+    'ezekiel': 25, 'ezek': 25,
+    'daniel': 26, 'dan': 26,
+    'hosea': 27, 'hos': 27,
+    'joel': 28,
+    'amos': 29,
+    'obadiah': 30, 'obad': 30,
+    'jonah': 31,
+    'micah': 32, 'mic': 32,
+    'nahum': 33, 'nah': 33,
+    'habakkuk': 34, 'hab': 34,
+    'zephaniah': 35, 'zeph': 35,
+    'haggai': 36, 'hag': 36,
+    'zechariah': 37, 'zech': 37,
+    'malachi': 38, 'mal': 38,
+    'matthew': 39, 'matt': 39,
+    'mark': 40,
+    'luke': 41,
+    'john': 42,
+    'acts': 43,
+    'romans': 44, 'rom': 44,
+    'i_corinthians': 45, '1-corinthians': 45, '1_corinthians': 45, '1-cor': 45, 'i-corinthians': 45, 'i corinthians': 45,
+    'ii_corinthians': 46, '2-corinthians': 46, '2_corinthians': 46, '2-cor': 46, 'ii-corinthians': 46, 'ii corinthians': 46,
+    'galatians': 47, 'gal': 47,
+    'ephesians': 48, 'eph': 48,
+    'philippians': 49, 'phil': 49,
+    'colossians': 50, 'col': 50,
+    'i_thessalonians': 51, '1-thessalonians': 51, '1_thessalonians': 51, '1-thess': 51, 'i-thessalonians': 51, 'i thessalonians': 51,
+    'ii_thessalonians': 52, '2-thessalonians': 52, '2_thessalonians': 52, '2-thess': 52, 'ii-thessalonians': 52, 'ii thessalonians': 52,
+    'i_timothy': 53, '1-timothy': 53, '1_timothy': 53, '1-tim': 53, 'i-timothy': 53, 'i timothy': 53,
+    'ii_timothy': 54, '2-timothy': 54, '2_timothy': 54, '2-tim': 54, 'ii-timothy': 54, 'ii timothy': 54,
+    'titus': 55,
+    'philemon': 56, 'phlm': 56,
+    'hebrews': 57, 'heb': 57,
+    'james': 58, 'jas': 58,
+    'i_peter': 59, '1-peter': 59, '1_peter': 59, '1-pet': 59, 'i-peter': 59, 'i peter': 59,
+    'ii_peter': 60, '2-peter': 60, '2_peter': 60, '2-pet': 60, 'ii-peter': 60, 'ii peter': 60,
+    'i_john': 61, '1-john': 61, '1_john': 61, 'i-john': 61, 'i john': 61,
+    'ii_john': 62, '2-john': 62, '2_john': 62, 'ii-john': 62, 'ii john': 62,
+    'iii_john': 63, '3-john': 63, '3_john': 63, 'iii-john': 63, 'iii john': 63,
+    'jude': 64,
+    'revelation': 65, 'rev': 65
+};
+
 // Bible Data Manager - 100% Local Verse Reading (Zero Supabase network requests for verses)
 class BibleDataManager {
     constructor() {
@@ -14,8 +84,21 @@ class BibleDataManager {
         this.db = null;
         this.dbReady = false;
         this.dbInitPromise = null;
+        this.englishVersion = (typeof localStorage !== 'undefined' && (localStorage.getItem('settingsEnglishVersion') || localStorage.getItem('englishVersion'))) || 'easy';
+        this.kjvData = null;
+        this.kjvLoadingPromise = null;
         this.initSupabase();
         this.dbInitPromise = this.initIndexedDB();
+    }
+
+    setEnglishVersion(version) {
+        if (version === 'kjv' || version === 'easy') {
+            this.englishVersion = version;
+        }
+    }
+
+    getEnglishVersion() {
+        return this.englishVersion;
     }
 
     initSupabase() {
@@ -57,10 +140,16 @@ class BibleDataManager {
     }
 
     getCacheKey(bookFile, chapter, language) {
+        if (language === 'english') {
+            return `${bookFile}_${chapter}_english_${this.englishVersion}`;
+        }
         return `${bookFile}_${chapter}_${language}`;
     }
 
     getBookCacheKey(bookFile, language) {
+        if (language === 'english') {
+            return `${bookFile}_english_${this.englishVersion}_full`;
+        }
         return `${bookFile}_${language}_full`;
     }
 
@@ -145,9 +234,153 @@ class BibleDataManager {
         return null;
     }
 
+    // Ensure KJV raw dataset (king-james-bible.json or king-james-bible.js) is loaded
+    async ensureKjvDataLoaded() {
+        if (this.kjvData && Array.isArray(this.kjvData.Book)) {
+            return this.kjvData;
+        }
+        if (this.kjvLoadingPromise) {
+            return this.kjvLoadingPromise;
+        }
+
+        this.kjvLoadingPromise = (async () => {
+            // 1. Check window.kingJamesBibleData (script preloaded)
+            if (typeof window !== 'undefined' && window.kingJamesBibleData && Array.isArray(window.kingJamesBibleData.Book)) {
+                this.kjvData = window.kingJamesBibleData;
+                return this.kjvData;
+            }
+
+            const candidatePaths = [
+                './data/bible/english/king-james-bible.json',
+                'data/bible/english/king-james-bible.json',
+                '../../data/bible/english/king-james-bible.json',
+                '../data/bible/english/king-james-bible.json',
+                '/data/bible/english/king-james-bible.json',
+                '/my-bible/data/bible/english/king-james-bible.json'
+            ];
+
+            // 2. Try fetch
+            if (typeof fetch === 'function') {
+                for (const p of candidatePaths) {
+                    try {
+                        const res = await fetch(p);
+                        if (res.ok) {
+                            const data = await res.json();
+                            if (data && Array.isArray(data.Book)) {
+                                this.kjvData = data;
+                                return this.kjvData;
+                            }
+                        }
+                    } catch (_) {}
+                }
+            }
+
+            // 3. Try XMLHttpRequest
+            if (typeof XMLHttpRequest !== 'undefined') {
+                for (const p of candidatePaths) {
+                    try {
+                        const data = await new Promise((resolve) => {
+                            const xhr = new XMLHttpRequest();
+                            xhr.open('GET', p, true);
+                            xhr.onload = () => {
+                                if (xhr.status === 200 || (xhr.status === 0 && xhr.responseText)) {
+                                    try { resolve(JSON.parse(xhr.responseText)); } catch (_) { resolve(null); }
+                                } else {
+                                    resolve(null);
+                                }
+                            };
+                            xhr.onerror = () => resolve(null);
+                            xhr.send();
+                        });
+                        if (data && Array.isArray(data.Book)) {
+                            this.kjvData = data;
+                            return this.kjvData;
+                        }
+                    } catch (_) {}
+                }
+            }
+
+            // 4. Try loading script fallback if king-james-bible.js exists
+            if (typeof document !== 'undefined') {
+                const jsCandidatePaths = [
+                    './data/bible/english/king-james-bible.js',
+                    'data/bible/english/king-james-bible.js',
+                    '../../data/bible/english/king-james-bible.js'
+                ];
+                for (const p of jsCandidatePaths) {
+                    try {
+                        const loaded = await new Promise((resolve) => {
+                            const script = document.createElement('script');
+                            script.src = p;
+                            script.onload = () => resolve(true);
+                            script.onerror = () => resolve(false);
+                            document.head.appendChild(script);
+                            setTimeout(() => resolve(false), 4000);
+                        });
+                        if (loaded && window.kingJamesBibleData && Array.isArray(window.kingJamesBibleData.Book)) {
+                            this.kjvData = window.kingJamesBibleData;
+                            return this.kjvData;
+                        }
+                    } catch (_) {}
+                }
+            }
+
+            return null;
+        })();
+
+        const res = await this.kjvLoadingPromise;
+        this.kjvLoadingPromise = null;
+        return res;
+    }
+
+    // Load and format an entire KJV book by bookFile
+    async loadKjvBook(bookFile) {
+        const kjv = await this.ensureKjvDataLoaded();
+        if (!kjv || !Array.isArray(kjv.Book)) {
+            console.warn('[BibleDataManager] KJV data could not be loaded');
+            return null;
+        }
+
+        const rawFile = String(bookFile).toLowerCase().trim();
+        const cleanFile = rawFile.replace(/_/g, '-');
+        let bookIndex = BOOK_FILE_TO_INDEX[rawFile] ?? BOOK_FILE_TO_INDEX[cleanFile];
+
+        if (bookIndex === undefined && typeof bibleBooks !== 'undefined') {
+            bookIndex = bibleBooks.findIndex(b =>
+                b.file.toLowerCase() === rawFile ||
+                b.file.toLowerCase().replace(/_/g, '-') === cleanFile ||
+                (typeof getBookFileForLanguage === 'function' && getBookFileForLanguage(b.file, 'english').toLowerCase() === cleanFile)
+            );
+        }
+
+        if (bookIndex === undefined || bookIndex < 0 || bookIndex >= kjv.Book.length) {
+            console.warn('[BibleDataManager] Book index not found for KJV:', bookFile);
+            return null;
+        }
+
+        const rawBook = kjv.Book[bookIndex];
+        if (!rawBook || !Array.isArray(rawBook.Chapter)) {
+            return null;
+        }
+
+        const formattedBookData = {};
+        rawBook.Chapter.forEach((ch, chIdx) => {
+            const chNum = String(chIdx + 1);
+            formattedBookData[chNum] = {};
+            if (Array.isArray(ch.Verse)) {
+                ch.Verse.forEach((v, vIdx) => {
+                    const text = (v && typeof v.Verse === 'string') ? v.Verse : (v && v.text ? v.text : '');
+                    formattedBookData[chNum][`verse_${vIdx + 1}`] = text;
+                });
+            }
+        });
+
+        return formattedBookData;
+    }
+
     // ─────────────────────────────────────────────────────────────────────────
     // Load entire book 100% locally
-    // Priority: 1. In-memory  2. IndexedDB / localStorage  3. Bundled JS file
+    // Priority: 1. In-memory  2. IndexedDB / localStorage  3. Bundled JS / KJV file
     // ─────────────────────────────────────────────────────────────────────────
     async loadEntireBook(bookFile, language) {
         const bookCacheKey = this.getBookCacheKey(bookFile, language);
@@ -164,12 +397,21 @@ class BibleDataManager {
             return cachedBook;
         }
 
-        // 3. Bundled local JS file
-        const localData = await this.loadFromLocalFile(bookFile, language);
-        if (localData) {
-            this._cacheBook(bookCacheKey, bookFile, language, localData);
-            await this.saveBookToLocalStorage(bookCacheKey, localData);
-            return localData;
+        // 3. Local data source (KJV or EasyEnglish JS bundle)
+        if (language === 'english' && this.englishVersion === 'kjv') {
+            const kjvData = await this.loadKjvBook(bookFile);
+            if (kjvData) {
+                this._cacheBook(bookCacheKey, bookFile, language, kjvData);
+                await this.saveBookToLocalStorage(bookCacheKey, kjvData);
+                return kjvData;
+            }
+        } else {
+            const localData = await this.loadFromLocalFile(bookFile, language);
+            if (localData) {
+                this._cacheBook(bookCacheKey, bookFile, language, localData);
+                await this.saveBookToLocalStorage(bookCacheKey, localData);
+                return localData;
+            }
         }
 
         return null;
