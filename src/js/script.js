@@ -2428,25 +2428,16 @@ function updateVerseMemoryVerseIndicators() {
     if (memoryVersesInChapter.length > 0) {
     }
 }
-// Update book names based on language
+// Update book names - always show both languages for book items
 function updateBookNames() {
     const bookItems = document.querySelectorAll('.book-item');
     bookItems.forEach((item, index) => {
         const book = bibleBooks[index];
         const bookNameSpan = item.querySelector('.book-name');
         if (bookNameSpan && book) {
-            if (currentLanguage === 'tamil') {
-                bookNameSpan.innerHTML = `${book.tamilName}`;
-                bookNameSpan.classList.add('tamil-only');
-            } else if (currentLanguage === 'english') {
-                // Show only English name
-                bookNameSpan.innerHTML = `${book.name}`;
-                bookNameSpan.classList.remove('tamil-only');
-            } else {
-                // 'both' mode - Show English name with Tamil name in smaller text below
-                bookNameSpan.innerHTML = `<span class="english-name">${book.name}</span><span class="tamil-name">${book.tamilName}</span>`;
-                bookNameSpan.classList.remove('tamil-only');
-            }
+            // Always show English name with Tamil name in smaller text below
+            bookNameSpan.innerHTML = `<span class="english-name">${book.name}</span><span class="tamil-name">${book.tamilName}</span>`;
+            bookNameSpan.classList.remove('tamil-only');
         }
     });
     // Ensure correct book selection is maintained

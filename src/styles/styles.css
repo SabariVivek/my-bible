@@ -5862,9 +5862,17 @@ body.dark-theme .book-name {
     color: #9aa0a6;
 }
 
+body.dark-theme .book-name .tamil-name {
+    color: #9aa0a6;
+}
+
 body.dark-theme .book-item.active .book-name {
     color: #e8eaed;
     font-weight: 500;
+}
+
+body.dark-theme .book-item.active .book-name .tamil-name {
+    color: #bdc1c6;
 }
 
 body.dark-theme .chapters-column,
