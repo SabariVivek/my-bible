@@ -8,9 +8,7 @@
       "The tenth month"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did Yahweh urge the people to do in Zechariah 1:3?",
@@ -21,9 +19,7 @@
       "To appoint new leaders"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What was the result of the people's repentance according to Zechariah 1:6?",
@@ -34,9 +30,7 @@
       "They defeated their enemies"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "In Zechariah's vision, what color were the horses behind the man riding on a red horse (Zechariah 1:8)?",
@@ -47,9 +41,7 @@
       "Black, brown, and white"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the horses report about the earth in Zechariah 1:11?",
@@ -60,9 +52,7 @@
       "The earth is desolate"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "How long was Yahweh indignant towards Jerusalem and the cities of Judah according to Zechariah 1:12?",
@@ -73,9 +63,7 @@
       "Eighty years"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will be stretched out over Jerusalem according to Zechariah 1:16?",
@@ -86,9 +74,7 @@
       "A wall"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the four horns represent in Zechariah 1:19?",
@@ -99,9 +85,7 @@
       "The four rivers"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the craftsmen come to do according to Zechariah 1:21?",
@@ -112,9 +96,7 @@
       "To establish a new government"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What was the man measuring in Zechariah 2:2?",
@@ -125,9 +107,7 @@
       "The outer court"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 2:4, how will Jerusalem be inhabited?",
@@ -138,9 +118,7 @@
       "As a royal residence"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh be to Jerusalem according to Zechariah 2:5?",
@@ -151,9 +129,7 @@
       "A great leader"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who was standing before Yahweh's angel in Zechariah 3:1?",
@@ -164,9 +140,7 @@
       "The angel Gabriel"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What was Joshua wearing in Zechariah 3:3?",
@@ -177,9 +151,7 @@
       "A priestly robe"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What was removed from Joshua in Zechariah 3:4?",
@@ -190,9 +162,7 @@
       "His staff"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What was set on Joshua's head in Zechariah 3:5?",
@@ -203,9 +173,7 @@
       "A silver headband"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What is the stone set before Joshua described as having in Zechariah 3:9?",
@@ -216,9 +184,7 @@
       "Seven colors"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What vision did Zechariah see after being awakened by the angel in Zechariah 4:2?",
@@ -229,9 +195,7 @@
       "A woman in a basket"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What are the two olive trees beside the lampstand according to Zechariah 4:3?",
@@ -242,9 +206,7 @@
       "They represent the king and the high priest"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What does Yahweh say will not accomplish the rebuilding of the temple in Zechariah 4:6?",
@@ -255,9 +217,7 @@
       "By political influence"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did Zechariah see when he lifted up his eyes again in Zechariah 5:1?",
@@ -268,9 +228,7 @@
       "Four chariots"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What is the curse that goes out over the surface of the whole land in Zechariah 5:3?",
@@ -281,9 +239,7 @@
       "For those who worship idols"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What was in the middle of the ephah basket according to Zechariah 5:7?",
@@ -294,9 +250,7 @@
       "Treasure"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Where were the two women carrying the ephah basket to according to Zechariah 5:11?",
@@ -307,9 +261,7 @@
       "Babylon"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What was the color of the horses in the first chariot in Zechariah 6:2?",
@@ -320,9 +272,7 @@
       "Dappled"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the four chariots come out from between according to Zechariah 6:1?",
@@ -333,9 +283,7 @@
       "Two cities"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What do the four chariots represent according to Zechariah 6:5?",
@@ -346,9 +294,7 @@
       "The four archangels"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Where did the one with the black horses go in Zechariah 6:6?",
@@ -359,9 +305,7 @@
       "Toward the west country"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What were the crowns made of in Zechariah 6:11?",
@@ -372,9 +316,7 @@
       "Bronze and jewels"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who was to be crowned in Zechariah 6:11?",
@@ -385,9 +327,7 @@
       "Zechariah"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What is the name of the man who will build Yahweh's temple in Zechariah 6:12?",
@@ -398,9 +338,7 @@
       "The Servant"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will the Branch do in addition to building the temple in Zechariah 6:13?",
@@ -411,9 +349,7 @@
       "He will be a great prophet"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What was the purpose of the crowns in Zechariah 6:14?",
@@ -424,9 +360,7 @@
       "To be melted down later"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "In what month did Yahweh's word come to Zechariah in the fourth year of King Darius (Zechariah 7:1)?",
@@ -437,9 +371,7 @@
       "The tenth month"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What question did the people of Bethel ask the priests and prophets in Zechariah 7:3?",
@@ -450,9 +382,7 @@
       "Should we observe the Sabbath more strictly?"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did Yahweh say about the people's fasting in the fifth and seventh months in Zechariah 7:5?",
@@ -463,9 +393,7 @@
       "They should have fasted more often"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did Yahweh command the people to do regarding judgment in Zechariah 7:9?",
@@ -476,9 +404,7 @@
       "Judge others as they have judged you"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the people do when Yahweh's words were proclaimed by the former prophets in Zechariah 7:11?",
@@ -489,9 +415,7 @@
       "They sought forgiveness"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did Yahweh say he would do as a result of the people refusing to listen in Zechariah 7:13?",
@@ -502,9 +426,7 @@
       "He would give them another chance"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What does Yahweh say about his jealousy for Zion in Zechariah 8:2?",
@@ -515,9 +437,7 @@
       "His jealousy is moderate"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Jerusalem be called according to Zechariah 8:3?",
@@ -528,9 +448,7 @@
       "The City of Righteousness"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will be full of boys and girls playing in Zechariah 8:5?",
@@ -541,9 +459,7 @@
       "The temple courts"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "From what countries will Yahweh save his people in Zechariah 8:7?",
@@ -554,9 +470,7 @@
       "The south and west countries"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What does Yahweh promise to the remnant of this people in Zechariah 8:12?",
@@ -567,9 +481,7 @@
       "He will protect them from all harm"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did Yahweh say he thought to do to Jerusalem and the house of Judah in Zechariah 8:15?",
@@ -580,9 +492,7 @@
       "To leave them desolate"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What should the people love according to Zechariah 8:19?",
@@ -593,9 +503,7 @@
       "Faith and hope"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will many peoples and strong nations come to seek in Jerusalem according to Zechariah 8:22?",
@@ -606,9 +514,7 @@
       "To seek the temple"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will ten men out of all the languages of the nations do in Zechariah 8:23?",
@@ -619,9 +525,7 @@
       "Learn the language of the Jews"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Against what land is Yahweh's word in Zechariah 9:1?",
@@ -632,9 +536,7 @@
       "The land of Sidon"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did Tyre build for herself according to Zechariah 9:3?",
@@ -645,9 +547,7 @@
       "A vast trading network"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will happen to Tyre according to Zechariah 9:4?",
@@ -658,9 +558,7 @@
       "It will become a center of worship"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will the king do in Gaza according to Zechariah 9:5?",
@@ -671,9 +569,7 @@
       "He will build a new temple"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who will dwell in Ashdod according to Zechariah 9:6?",
@@ -684,9 +580,7 @@
       "The Egyptians"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh cut off from the Philistines in Zechariah 9:6?",
@@ -697,9 +591,7 @@
       "Their power"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will be taken away from the Philistines' mouths and teeth in Zechariah 9:7?",
@@ -710,9 +602,7 @@
       "Their blood and abominations"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who will be like a chieftain in Judah in Zechariah 9:7?",
@@ -723,9 +613,7 @@
       "The king of Ekron"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh encircle around his house in Zechariah 9:8?",
@@ -736,9 +624,7 @@
       "A hedge of thorns"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "On what is the King of Zion riding according to Zechariah 9:9?",
@@ -749,9 +635,7 @@
       "A camel"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will be cut off from Ephraim and Jerusalem according to Zechariah 9:10?",
@@ -762,9 +646,7 @@
       "Their prophets and priests"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will the King speak to the nations in Zechariah 9:10?",
@@ -775,9 +657,7 @@
       "Repentance"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will the King's dominion be according to Zechariah 9:10?",
@@ -788,9 +668,7 @@
       "From Egypt to Assyria"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What has Yahweh done for the prisoners because of the blood of the covenant in Zechariah 9:11?",
@@ -801,9 +679,7 @@
       "He has made them rulers"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What does Yahweh declare he will restore to the prisoners of hope in Zechariah 9:12?",
@@ -814,9 +690,7 @@
       "Their wealth"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Against whom will Yahweh stir up the sons of Zion in Zechariah 9:13?",
@@ -827,9 +701,7 @@
       "The sons of Assyria"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh's arrow be like according to Zechariah 9:14?",
@@ -840,9 +712,7 @@
       "A heavy stone"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh do for his people in that day according to Zechariah 9:16?",
@@ -853,9 +723,7 @@
       "He will bring them back to Jerusalem"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What are Yahweh's people like, according to Zechariah 9:16?",
@@ -866,9 +734,7 @@
       "The trees of the forest"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will make the young men flourish and the virgins flourish according to Zechariah 9:17?",
@@ -879,9 +745,7 @@
       "Joy and peace"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What should the people ask of Yahweh in the spring time according to Zechariah 10:1?",
@@ -892,9 +756,7 @@
       "For victory over their enemies"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Why do the people go their way like sheep according to Zechariah 10:2?",
@@ -905,9 +767,7 @@
       "Because they do not trust each other"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Against whom is Yahweh's anger kindled in Zechariah 10:3?",
@@ -918,9 +778,7 @@
       "The false prophets"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh make the house of Judah like in the battle according to Zechariah 10:3?",
@@ -931,9 +789,7 @@
       "A sharp sword"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "From whom will come the cornerstone, tent peg, battle bow, and every ruler according to Zechariah 10:4?",
@@ -944,9 +800,7 @@
       "The house of Israel"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will the mighty men do in the battle according to Zechariah 10:5?",
@@ -957,9 +811,7 @@
       "They will be captured"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh strengthen and save according to Zechariah 10:6?",
@@ -970,9 +822,7 @@
       "The house of Ephraim and the house of Manasseh"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Why will Yahweh bring back the houses of Judah and Joseph according to Zechariah 10:6?",
@@ -983,9 +833,7 @@
       "Because they have requested his help"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will happen to the hearts of Ephraim and their children according to Zechariah 10:7?",
@@ -996,9 +844,7 @@
       "They will be filled with anger and vengeance"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What does Yahweh say he will do for his people according to Zechariah 10:8?",
@@ -1009,9 +855,7 @@
       "He will give them new laws"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Where will Yahweh sow his people according to Zechariah 10:9?",
@@ -1022,9 +866,7 @@
       "In the mountains"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "From what lands will Yahweh bring his people again according to Zechariah 10:10?",
@@ -1035,9 +877,7 @@
       "From Tyre and Sidon"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What lands will Yahweh bring his people into according to Zechariah 10:10?",
@@ -1048,9 +888,7 @@
       "The land of Philistia and the land of Bashan"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will happen to the depths of the Nile according to Zechariah 10:11?",
@@ -1061,9 +899,7 @@
       "They will become a desert"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will be brought down according to Zechariah 10:11?",
@@ -1074,9 +910,7 @@
       "The pride of Egypt"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will depart according to Zechariah 10:11?",
@@ -1087,9 +921,7 @@
       "The glory of Israel"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Where will Yahweh strengthen his people according to Zechariah 10:12?",
@@ -1100,9 +932,7 @@
       "In the land of Gilead"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "In whose name will Yahweh's people walk up and down according to Zechariah 10:12?",
@@ -1113,9 +943,7 @@
       "In the name of the temple"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What should the doors of Lebanon open to, according to Zechariah 11:1?",
@@ -1126,9 +954,7 @@
       "To the people of God"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What has fallen in Lebanon, according to Zechariah 11:2?",
@@ -1139,9 +965,7 @@
       "The walls"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What has come down in Bashan, according to Zechariah 11:2?",
@@ -1152,9 +976,7 @@
       "The high towers"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Whose voice of wailing is heard, according to Zechariah 11:3?",
@@ -1165,9 +987,7 @@
       "The warriors"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What is ruined according to Zechariah 11:3?",
@@ -1178,9 +998,7 @@
       "The cities of Judah"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What are the buyers doing to the flock in Zechariah 11:5?",
@@ -1191,9 +1009,7 @@
       "They are selling them at a high price"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What do those who sell the flock say in Zechariah 11:5?",
@@ -1204,9 +1020,7 @@
       "'Blessed be the day, for it is good'"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What does Yahweh say he will no longer do to the inhabitants of the land according to Zechariah 11:6?",
@@ -1217,9 +1031,7 @@
       "He will no longer guide them"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh deliver every one of the men into according to Zechariah 11:6?",
@@ -1230,9 +1042,7 @@
       "Into the hands of the judges and elders"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the speaker take for himself in order to feed the flock according to Zechariah 11:7?",
@@ -1243,9 +1053,7 @@
       "Four staffs called 'Favor', 'Union', 'Strength', and 'Guidance'"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who did the speaker feed in Zechariah 11:7?",
@@ -1256,9 +1064,7 @@
       "The buyers of the flock"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "How many shepherds did the speaker cut off in one month according to Zechariah 11:8?",
@@ -1269,9 +1075,7 @@
       "Four"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What was weary of the three shepherds according to Zechariah 11:8?",
@@ -1282,9 +1086,7 @@
       "The prophets"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the speaker say he would not do in Zechariah 11:9?",
@@ -1295,9 +1097,7 @@
       "He would not sell the flock"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the speaker say should happen to that which dies according to Zechariah 11:9?",
@@ -1308,9 +1108,7 @@
       "Let it be sold"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the speaker say should happen to those who are left according to Zechariah 11:9?",
@@ -1321,9 +1119,7 @@
       "They should live in peace"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the speaker cut apart in Zechariah 11:10?",
@@ -1334,9 +1130,7 @@
       "The covenant he had made with God"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What was broken in Zechariah 11:11?",
@@ -1347,9 +1141,7 @@
       "The covenant with all the people"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who knew that it was Yahweh’s word in Zechariah 11:11?",
@@ -1360,9 +1152,7 @@
       "The rich of the flock that prospered"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the speaker ask for as wages according to Zechariah 11:12?",
@@ -1373,9 +1163,7 @@
       "His wages"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the people weigh out for the speaker’s wages in Zechariah 11:12?",
@@ -1386,9 +1174,7 @@
       "Forty pieces of silver"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who told the speaker to throw the wages to the potter in Zechariah 11:13?",
@@ -1399,9 +1185,7 @@
       "The flock"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the speaker throw to the potter in Zechariah 11:13?",
@@ -1412,9 +1196,7 @@
       "Forty pieces of silver"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Where did the speaker throw the wages according to Zechariah 11:13?",
@@ -1425,9 +1207,7 @@
       "In the marketplace"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the speaker cut apart in Zechariah 11:14?",
@@ -1438,9 +1218,7 @@
       "The covenant with the people"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What did the speaker break by cutting apart his other staff in Zechariah 11:14?",
@@ -1451,9 +1229,7 @@
       "The alliance between Judah and Egypt"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What was the speaker told to take for himself again in Zechariah 11:15?",
@@ -1464,9 +1240,7 @@
       "The equipment of a mighty warrior"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What does Yahweh say he will make Jerusalem to all the surrounding peoples in Zechariah 12:2?",
@@ -1477,9 +1251,7 @@
       "A strong fortress"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Jerusalem also be on Judah in the siege against it according to Zechariah 12:2?",
@@ -1490,9 +1262,7 @@
       "A reward"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh make Jerusalem for all the peoples in that day according to Zechariah 12:3?",
@@ -1503,9 +1273,7 @@
       "A symbol of peace"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will happen to all who burden themselves with the burdensome stone according to Zechariah 12:3?",
@@ -1516,9 +1284,7 @@
       "They will be greatly honored"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will be gathered together against Jerusalem in Zechariah 12:3?",
@@ -1529,9 +1295,7 @@
       "All the prophets of the land"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh strike every horse with in that day according to Zechariah 12:4?",
@@ -1542,9 +1306,7 @@
       "With pestilence"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh strike the rider of every horse with in that day according to Zechariah 12:4?",
@@ -1555,9 +1317,7 @@
       "With sickness"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh open his eyes on in that day according to Zechariah 12:4?",
@@ -1568,9 +1328,7 @@
       "On the house of Israel"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh strike every horse of the peoples with in that day according to Zechariah 12:4?",
@@ -1581,9 +1339,7 @@
       "With a plague"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will the chieftains of Judah say in their heart in Zechariah 12:5?",
@@ -1594,9 +1350,7 @@
       "The inhabitants of Jerusalem are of no concern to us"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh make the chieftains of Judah like among the wood in that day according to Zechariah 12:6?",
@@ -1607,9 +1361,7 @@
       "A guiding light"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh make the chieftains of Judah like among the sheaves in that day according to Zechariah 12:6?",
@@ -1620,9 +1372,7 @@
       "A rushing river"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will the chieftains of Judah do to the surrounding peoples in Zechariah 12:6?",
@@ -1633,9 +1383,7 @@
       "They will make a covenant with them"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Where will Jerusalem dwell again according to Zechariah 12:6?",
@@ -1646,9 +1394,7 @@
       "In the land of Egypt"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who will Yahweh save first in Zechariah 12:7?",
@@ -1659,9 +1405,7 @@
       "The children of Israel"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Why will Yahweh save the tents of Judah first in Zechariah 12:7?",
@@ -1672,9 +1416,7 @@
       "So the glory of God will be magnified above all"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who will Yahweh defend in that day according to Zechariah 12:8?",
@@ -1685,9 +1427,7 @@
       "The elders of the land"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who will be like David in that day according to Zechariah 12:8?",
@@ -1698,9 +1438,7 @@
       "The wise among them"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who will be like God, like Yahweh's angel before them in that day according to Zechariah 12:8?",
@@ -1711,9 +1449,7 @@
       "The house of Levi"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh seek to do in that day according to Zechariah 12:9?",
@@ -1724,9 +1460,7 @@
       "To show his glory to all nations"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will Yahweh pour on David's house and on the inhabitants of Jerusalem according to Zechariah 12:10?",
@@ -1737,9 +1471,7 @@
       "The spirit of strength"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Who will they look to according to Zechariah 12:10?",
@@ -1750,9 +1482,7 @@
       "The prophets"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "How will they mourn for him according to Zechariah 12:10?",
@@ -1763,9 +1493,7 @@
       "As one mourns for his father"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "How will they grieve for him according to Zechariah 12:10?",
@@ -1776,9 +1504,7 @@
       "As one grieves for the poor"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will there be in Jerusalem in that day according to Zechariah 12:11?",
@@ -1789,9 +1515,7 @@
       "A great renewal"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will the mourning be like according to Zechariah 12:11?",
@@ -1802,9 +1526,7 @@
       "Like the mourning of the Philistines"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "How will the land mourn according to Zechariah 12:12?",
@@ -1815,9 +1537,7 @@
       "Every tribe apart"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Which family is mentioned as mourning apart with their wives apart in Zechariah 12:12?",
@@ -1828,9 +1548,7 @@
       "The family of the house of Ishmael"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Which family is mentioned as mourning apart with their wives apart in Zechariah 12:13?",
@@ -1841,9 +1559,7 @@
       "The family of the house of Abraham"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What is said about all the remaining families in Zechariah 12:14?",
@@ -1854,9 +1570,7 @@
       "They will all be destroyed"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:1, what will be opened to the house of David and the inhabitants of Jerusalem in that day?",
@@ -1867,9 +1581,7 @@
       "A fountain for sin and uncleanness"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What does Yahweh say he will cut off from the land in that day, according to Zechariah 13:2?",
@@ -1880,9 +1592,7 @@
       "All of the above"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:3, what will happen to anyone who still prophesies?",
@@ -1893,9 +1603,7 @@
       "They will be honored"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:3, why will the parents of a false prophet tell him that he must die?",
@@ -1906,9 +1614,7 @@
       "Because he speaks lies in Yahweh’s name"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will the parents of a false prophet do to him when he prophesies, according to Zechariah 13:3?",
@@ -1919,9 +1625,7 @@
       "They will disown him"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "In Zechariah 13:4, what will the prophets be ashamed of in that day?",
@@ -1932,9 +1636,7 @@
       "Their lack of knowledge"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will the prophets not wear to deceive, according to Zechariah 13:4?",
@@ -1945,9 +1647,7 @@
       "A hairy mantle"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "What will a false prophet say he is, according to Zechariah 13:5?",
@@ -1958,9 +1658,7 @@
       "A priest"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "Why will the false prophet say that he is a tiller of the ground, according to Zechariah 13:5?",
@@ -1971,9 +1669,7 @@
       "Because he has been made a bondservant from his youth"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:6, what will one say to him, meaning the false prophet?",
@@ -1984,9 +1680,7 @@
       "'What are these wounds between your eyes?'"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:6, where will the false prophet say he received his wounds?",
@@ -1997,9 +1691,7 @@
       "In the house of the king"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "In Zechariah 13:7, who is the sword told to awake against?",
@@ -2010,9 +1702,7 @@
       "My shepherd and the man who is close to me"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:7, what will happen when the shepherd is struck?",
@@ -2023,9 +1713,7 @@
       "The sheep will be destroyed"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:7, what will Yahweh turn his hand against?",
@@ -2036,9 +1724,7 @@
       "The little ones"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:8, what proportion of the land will be cut off and die?",
@@ -2049,9 +1735,7 @@
       "Two parts"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:8, what proportion of the land will be left?",
@@ -2062,9 +1746,7 @@
       "The third part"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:9, where will the third part be brought into?",
@@ -2075,9 +1757,7 @@
       "The fire"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:9, how will the third part be refined?",
@@ -2088,9 +1768,7 @@
       "As wood is refined"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:9, how will the third part be tested?",
@@ -2101,9 +1779,7 @@
       "As silver is tested"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:9, what will they call on?",
@@ -2114,9 +1790,7 @@
       "The name of Yahweh"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:9, what will Yahweh say when they call on his name?",
@@ -2127,9 +1801,7 @@
       "'It is my people.'"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 13:9, what will they say to Yahweh?",
@@ -2140,9 +1812,7 @@
       "'Yahweh is my God.'"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:1, what is coming when your plunder will be divided?",
@@ -2153,9 +1823,7 @@
       "A day of peace"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:2, who will be gathered against Jerusalem to battle?",
@@ -2166,9 +1834,7 @@
       "The armies of Babylon"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:2, what will happen to the city of Jerusalem during the battle?",
@@ -2179,9 +1845,7 @@
       "It will be completely abandoned"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:2, what portion of the city will go out into captivity?",
@@ -2192,9 +1856,7 @@
       "Half of the city"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:2, what will happen to the rest of the people who are not taken captive?",
@@ -2205,9 +1867,7 @@
       "They will be scattered"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:3, who will go out and fight against the nations?",
@@ -2218,9 +1878,7 @@
       "The angels"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:4, where will Yahweh's feet stand on that day?",
@@ -2231,9 +1889,7 @@
       "In the temple"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:4, what will happen to the Mount of Olives?",
@@ -2244,9 +1900,7 @@
       "It will become a place of worship"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:4, in what direction will the Mount of Olives split?",
@@ -2257,9 +1911,7 @@
       "Northwest to Southeast"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:4, what will be created when the Mount of Olives is split?",
@@ -2270,9 +1922,7 @@
       "A deep sea"
     ],
     "answer": "A",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:5, what will the people do?",
@@ -2283,9 +1933,7 @@
       "They will be taken captive"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:5, what event is their fleeing compared to?",
@@ -2296,9 +1944,7 @@
       "The exodus from Egypt"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:6, what will the light be like on that day?",
@@ -2309,9 +1955,7 @@
       "There will be only sunlight"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:7, what will be unique about that day?",
@@ -2322,9 +1966,7 @@
       "It will be a day of great peace"
     ],
     "answer": "B",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:7, what will happen at evening time?",
@@ -2335,9 +1977,7 @@
       "There will be light"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:8, what will go out from Jerusalem on that day?",
@@ -2348,9 +1988,7 @@
       "A thick cloud"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:8, where will the living waters flow?",
@@ -2361,9 +1999,7 @@
       "To the mountains and valleys"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:9, who will be king over all the earth on that day?",
@@ -2374,9 +2010,7 @@
       "The high priest"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:10, what will all the land be made like?",
@@ -2387,9 +2021,7 @@
       "A high mountain"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:11, what will be no more in Jerusalem?",
@@ -2400,9 +2032,7 @@
       "Famine"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:12, what will be the plague with which Yahweh will strike the peoples who fought against Jerusalem?",
@@ -2413,9 +2043,7 @@
       "Their blood will turn to poison"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:13, what will be among them on that day?",
@@ -2426,9 +2054,7 @@
       "Great understanding"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:16, who will go up from year to year to worship the King in Jerusalem?",
@@ -2439,9 +2065,7 @@
       "Only the faithful of Israel"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:17, what will happen to the families of the earth that do not go up to Jerusalem to worship the King?",
@@ -2452,9 +2076,7 @@
       "They will be cursed"
     ],
     "answer": "C",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   },
   {
     "question": "According to Zechariah 14:20, what will be inscribed on the bells of the horses in that day?",
@@ -2465,8 +2087,6 @@
       "'Holy to Yahweh'"
     ],
     "answer": "D",
-    "category": "Zechariah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ZEC.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Zechariah"
   }
 ]

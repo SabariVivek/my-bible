@@ -8,9 +8,7 @@
       "Through direct visions"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Who did God appoint heir of all things (Hebrews 1:2)?",
@@ -21,9 +19,7 @@
       "The prophets"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is the Son described as in relation to God's glory (Hebrews 1:3)?",
@@ -34,9 +30,7 @@
       "A manifestation of His glory"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is the Son upholding (Hebrews 1:3)?",
@@ -47,9 +41,7 @@
       "Only the chosen people"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "After purifying us of our sins, where did the Son sit down (Hebrews 1:3)?",
@@ -60,9 +52,7 @@
       "Among the prophets"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What makes the Son better than the angels (Hebrews 1:4)?",
@@ -73,9 +63,7 @@
       "His wisdom and knowledge"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Which of the angels did God say, 'You are my Son, Today I have become your father?' (Hebrews 1:5)?",
@@ -86,9 +74,7 @@
       "Raphael"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does God say about His angels (Hebrews 1:7)?",
@@ -99,9 +85,7 @@
       "They are to be worshipped"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is the Son's throne described as (Hebrews 1:8)?",
@@ -112,9 +96,7 @@
       "A throne made of righteousness"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What will happen to the heavens and earth according to Hebrews 1:10-12?",
@@ -125,9 +107,7 @@
       "They will be renewed"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What are angels described as in Hebrews 1:14?",
@@ -138,9 +118,7 @@
       "All-powerful beings"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What should we pay greater attention to (Hebrews 2:1)?",
@@ -151,9 +129,7 @@
       "The words of the prophets"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What happened to every transgression and disobedience when the word was spoken through angels (Hebrews 2:2)?",
@@ -164,9 +140,7 @@
       "It was overlooked"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "How was salvation first spoken about (Hebrews 2:3)?",
@@ -177,9 +151,7 @@
       "Through angels"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "To whom was the world to come not subjected (Hebrews 2:5)?",
@@ -190,9 +162,7 @@
       "To the unrighteous"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Why was Jesus made a little lower than the angels (Hebrews 2:9)?",
@@ -203,9 +173,7 @@
       "To be a better leader"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What did Jesus taste for everyone (Hebrews 2:9)?",
@@ -216,9 +184,7 @@
       "The joy of salvation"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is the reason Jesus is not ashamed to call believers brothers (Hebrews 2:11)?",
@@ -229,9 +195,7 @@
       "Because they are all prophets"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What did Jesus partake of so that through death he might bring to nothing him who had the power of death (Hebrews 2:14)?",
@@ -242,9 +206,7 @@
       "The strength of angels"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Who does Jesus give help to, according to Hebrews 2:16?",
@@ -255,9 +217,7 @@
       "To the prophets"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What kind of High Priest was Jesus obligated to become (Hebrews 2:17)?",
@@ -268,9 +228,7 @@
       "A powerful and judging high priest"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What should holy brothers consider (Hebrews 3:1)?",
@@ -281,9 +239,7 @@
       "The wisdom of the elders"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What did Moses serve as in all his house (Hebrews 3:5)?",
@@ -294,9 +250,7 @@
       "A priest"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does the Holy Spirit say about hardening your hearts (Hebrews 3:7-8)?",
@@ -307,9 +261,7 @@
       "It leads to deeper understanding"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What should believers beware of (Hebrews 3:12)?",
@@ -320,9 +272,7 @@
       "The opinions of the ungodly"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What should believers fear, according to Hebrews 4:1?",
@@ -333,9 +283,7 @@
       "That they might not be accepted by God"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What did the word they heard not profit those who did not mix it with (Hebrews 4:2)?",
@@ -346,9 +294,7 @@
       "Understanding"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What do believers who have faith enter into (Hebrews 4:3)?",
@@ -359,9 +305,7 @@
       "A new covenant"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "On what day did God rest from all his works (Hebrews 4:4)?",
@@ -372,9 +316,7 @@
       "The third day"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What remains for the people of God (Hebrews 4:9)?",
@@ -385,9 +327,7 @@
       "A final sacrifice"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is the word of God described as (Hebrews 4:12)?",
@@ -398,9 +338,7 @@
       "A history of the past"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is able to discern the thoughts and intentions of the heart (Hebrews 4:12)?",
@@ -411,9 +349,7 @@
       "The Holy Spirit"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is laid open before the eyes of Him to whom we must give an account (Hebrews 4:13)?",
@@ -424,9 +360,7 @@
       "Our secret sins"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Who is the great high priest who has passed through the heavens (Hebrews 4:14)?",
@@ -437,9 +371,7 @@
       "Moses"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What should believers draw near to with boldness (Hebrews 4:16)?",
@@ -450,9 +382,7 @@
       "The law"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is every high priest appointed for (Hebrews 5:1)?",
@@ -463,9 +393,7 @@
       "To lead the nation"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does a high priest deal gently with (Hebrews 5:2)?",
@@ -476,9 +404,7 @@
       "Those who are powerful"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Who calls a high priest to this honor (Hebrews 5:4)?",
@@ -489,9 +415,7 @@
       "The elders"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Who said to Christ, 'You are my Son. Today I have become your father' (Hebrews 5:5)?",
@@ -502,9 +426,7 @@
       "Moses"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 5:6, what order is Christ a priest after?",
@@ -515,9 +437,7 @@
       "The order of Moses"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What did Jesus offer up in the days of his flesh (Hebrews 5:7)?",
@@ -528,9 +448,7 @@
       "His miracles"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What did Jesus learn through his sufferings (Hebrews 5:8)?",
@@ -541,9 +459,7 @@
       "The hearts of people"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What did Jesus become to all those who obey him (Hebrews 5:9)?",
@@ -554,9 +470,7 @@
       "A teacher"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is said about the hearers in Hebrews 5:11?",
@@ -567,9 +481,7 @@
       "They have become wise and discerning"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What do those who live on milk lack experience in (Hebrews 5:13)?",
@@ -580,9 +492,7 @@
       "The art of teaching"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is solid food for (Hebrews 5:14)?",
@@ -593,9 +503,7 @@
       "Those who are called to preach"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What should believers leave behind and press on to (Hebrews 6:1)?",
@@ -606,9 +514,7 @@
       "The concerns of the flesh"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What should believers not lay again a foundation of (Hebrews 6:1)?",
@@ -619,9 +525,7 @@
       "Joy in the Spirit"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is included in the teaching of the first principles of Christ (Hebrews 6:2)?",
@@ -632,9 +536,7 @@
       "Only repentance"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is impossible for those who fall away after being enlightened (Hebrews 6:4-6)?",
@@ -645,9 +547,7 @@
       "To return to their former faith"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Who was Melchizedek, according to Hebrews 7:1?",
@@ -658,9 +558,7 @@
       "A prophet of the old testament"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does the name 'Melchizedek' mean, according to Hebrews 7:2?",
@@ -671,9 +569,7 @@
       "Servant of God"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is said about Melchizedek's genealogy in Hebrews 7:3?",
@@ -684,9 +580,7 @@
       "He was a descendant of Aaron"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Who gave tithes to Melchizedek, according to Hebrews 7:4?",
@@ -697,9 +591,7 @@
       "David"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is the role of the sons of Levi regarding tithes, according to Hebrews 7:5?",
@@ -710,9 +602,7 @@
       "They collect tithes from Gentiles only"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 7:8, how does the priesthood of Melchizedek differ from the Levitical priesthood?",
@@ -723,9 +613,7 @@
       "The Levitical priests were greater than Melchizedek"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 7:12, what happens when the priesthood is changed?",
@@ -736,9 +624,7 @@
       "The need for a high priest ceases"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "From which tribe did the Lord come, according to Hebrews 7:14?",
@@ -749,9 +635,7 @@
       "Ephraim"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 7:17, what order is Christ a priest after?",
@@ -762,9 +646,7 @@
       "The order of Moses"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is the result of the foregoing commandment (law) according to Hebrews 7:18?",
@@ -775,9 +657,7 @@
       "It is expanded for the Gentiles"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 7:22, what has Jesus become?",
@@ -788,9 +668,7 @@
       "A prophet"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Why were many made priests in the Old Testament, according to Hebrews 7:23?",
@@ -801,9 +679,7 @@
       "Because they were more powerful than others"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does it mean that Jesus has his priesthood unchangeable (Hebrews 7:24)?",
@@ -814,9 +690,7 @@
       "His priesthood is according to the law"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 7:25 say that Jesus is able to do?",
@@ -827,9 +701,7 @@
       "To forgive only those who are baptized"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What kind of high priest was fitting for us, according to Hebrews 7:26?",
@@ -840,9 +712,7 @@
       "One who is a descendant of Aaron"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What did Jesus offer once for all, according to Hebrews 7:27?",
@@ -853,9 +723,7 @@
       "His prayers"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 8:1-2, where is the high priest seated?",
@@ -866,9 +734,7 @@
       "Among the elders of the people"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is the function of every high priest, according to Hebrews 8:3?",
@@ -879,9 +745,7 @@
       "To teach the law"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What do the priests on earth serve, according to Hebrews 8:5?",
@@ -892,9 +756,7 @@
       "A temporary substitute for the true temple"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is the new covenant based on, according to Hebrews 8:6?",
@@ -905,9 +767,7 @@
       "A new set of rules and regulations"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "With whom will God make a new covenant according to Hebrews 8:8?",
@@ -918,9 +778,7 @@
       "Only with kings"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Where will God put his laws in the new covenant, according to Hebrews 8:10?",
@@ -931,9 +789,7 @@
       "In the heavenly realm"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What will be the result of the new covenant regarding people knowing God, according to Hebrews 8:11?",
@@ -944,9 +800,7 @@
       "Only those who follow all the laws"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What will God remember no more under the new covenant (Hebrews 8:12)?",
@@ -957,9 +811,7 @@
       "Their love for him"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What was the first covenant said to be in Hebrews 8:13?",
@@ -970,9 +822,7 @@
       "Perfect"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 9:1, what did the first covenant have?",
@@ -983,9 +833,7 @@
       "Only a law"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What was in the first part of the tabernacle, called the Holy Place, according to Hebrews 9:2?",
@@ -996,9 +844,7 @@
       "The mercy seat"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What was in the Holy of Holies according to Hebrews 9:3-4?",
@@ -1009,9 +855,7 @@
       "The washing basin"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 9:7, who entered the second tabernacle?",
@@ -1022,9 +866,7 @@
       "Anyone with a sacrifice"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What did the high priest offer in the second tabernacle according to Hebrews 9:7?",
@@ -1035,9 +877,7 @@
       "Prayers and worship"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What did the Holy Spirit indicate while the first tabernacle was still standing, according to Hebrews 9:8?",
@@ -1048,9 +888,7 @@
       "That the people should continue their rituals"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 9:11 say that Christ came as?",
@@ -1061,9 +899,7 @@
       "A teacher"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Through what did Christ enter the Holy Place, having obtained eternal redemption, according to Hebrews 9:12?",
@@ -1074,9 +910,7 @@
       "Through his prayers"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 9:14, what does the blood of Christ cleanse?",
@@ -1087,9 +921,7 @@
       "The mind from bad thoughts"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "For what reason is Christ the mediator of a new covenant, according to Hebrews 9:15?",
@@ -1100,9 +932,7 @@
       "To make it easier for people to approach God"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What must occur for a will to be in force, according to Hebrews 9:16-17?",
@@ -1113,9 +943,7 @@
       "The signing of the document by witnesses"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 9:22, what is necessary for nearly everything to be cleansed?",
@@ -1126,9 +954,7 @@
       "By prayers"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Where did Christ enter, according to Hebrews 9:24?",
@@ -1139,9 +965,7 @@
       "Into the wilderness"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What was the purpose of Christ's sacrifice according to Hebrews 9:26?",
@@ -1152,9 +976,7 @@
       "To establish a new kingdom"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 9:27, what is appointed for men?",
@@ -1165,9 +987,7 @@
       "To choose their own destiny"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What will Christ do when he appears a second time according to Hebrews 9:28?",
@@ -1178,9 +998,7 @@
       "To restore the kingdom to Israel"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 10:1, what is the law described as having, and what is it not?",
@@ -1191,9 +1009,7 @@
       "The complete picture of the future, not a partial view"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 10:4 say is impossible for the blood of bulls and goats to do?",
@@ -1204,9 +1020,7 @@
       "Cleanse the conscience"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "In Hebrews 10:5-7, what does it say God desired and did not desire, and what did Jesus say he came to do?",
@@ -1217,9 +1031,7 @@
       "God desired burnt offerings, and Jesus came to save the world"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 10:10, how have we been sanctified?",
@@ -1230,9 +1042,7 @@
       "Through many sacrifices and offerings"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "Hebrews 10:12 states that after offering one sacrifice, where did Jesus sit down?",
@@ -1243,9 +1053,7 @@
       "Among the angels in heaven"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 10:14 say has perfected forever those who are being sanctified?",
@@ -1256,9 +1064,7 @@
       "One offering"
     ],
     "answer": "D",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 10:19, what gives us boldness to enter the holy place?",
@@ -1269,9 +1075,7 @@
       "Following the Law of Moses"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "In Hebrews 10:26-27, what happens if we sin willfully after receiving the knowledge of the truth?",
@@ -1282,9 +1086,7 @@
       "We will be given a second chance to repent"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 10:30, what does the Lord say about vengeance and judging his people?",
@@ -1295,9 +1097,7 @@
       "Vengeance is for the wicked, and the Lord will forgive his people"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 10:38 state about the righteous one and shrinking back?",
@@ -1308,9 +1108,7 @@
       "The righteous one will not shrink back, and will be saved"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 11:1, what is faith defined as?",
@@ -1321,9 +1119,7 @@
       "The understanding of God's law"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 11:3 say we understand by faith?",
@@ -1334,9 +1130,7 @@
       "That the spiritual world exists"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 11:6, what must one believe to be well-pleasing to God?",
@@ -1347,9 +1141,7 @@
       "That God is a judge of the living and the dead"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "In Hebrews 11:8, what did Abraham do when he was called, and did he know where he was going?",
@@ -1360,9 +1152,7 @@
       "He knew exactly where he was going and was eager to go"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 11:17, what did Abraham do when he was tested?",
@@ -1373,9 +1163,7 @@
       "He refused to sacrifice his son and disobeyed God"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 11:27, why did Moses leave Egypt and not fear the wrath of the king?",
@@ -1386,9 +1174,7 @@
       "He left with the people, not alone"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 11:33 list as things people did through faith?",
@@ -1399,9 +1185,7 @@
       "They offered sacrifices, praised God, and read the law"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 11:39-40, why didn't the faithful receive the promise, and what did God provide?",
@@ -1412,9 +1196,7 @@
       "They received only part of the promise. God provided grace."
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 12:1, what should we lay aside and how should we run the race?",
@@ -1425,9 +1207,7 @@
       "Lay aside our past and focus on the future"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 12:2, what did Jesus endure for the joy set before him, and where did he sit down?",
@@ -1438,9 +1218,7 @@
       "He endured ridicule and sat at the right hand of his disciples"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 12:5-6, what should we not take lightly and what does the Lord do to those he loves?",
@@ -1451,9 +1229,7 @@
       "Do not take lightly the judgement of the Lord and the Lord will not punish."
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 12:14 say about following peace and sanctification?",
@@ -1464,9 +1240,7 @@
       "Follow the peace with your neighbors, and live holy"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 12:16, who was like Esau and what did he do?",
@@ -1477,9 +1251,7 @@
       "He was a king who abandoned the crown; he sold it for a great prize"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 12:22-24, what have the readers come to?",
@@ -1490,9 +1262,7 @@
       "The desert and wandering for forty years"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 12:25, what happens if we refuse him who speaks from heaven?",
@@ -1503,9 +1273,7 @@
       "We will receive more grace."
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 12:29 state about our God?",
@@ -1516,9 +1284,7 @@
       "Our God is just and righteous"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 13:1, what should continue?",
@@ -1529,9 +1295,7 @@
       "Fasting"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 13:2 advise about showing hospitality?",
@@ -1542,9 +1306,7 @@
       "Show hospitality only to those who are believers"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 13:4, what should be held in honor and who will God judge?",
@@ -1555,9 +1317,7 @@
       "The church should be held in honor and God will judge the sinners"
     ],
     "answer": "A",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 13:5 encourage regarding the love of money, and what has God said?",
@@ -1568,9 +1328,7 @@
       "Be wise with money, and save; God has said, 'I will bless you'"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 13:7, what should people remember about their leaders and how should they imitate them?",
@@ -1581,9 +1339,7 @@
       "Remember how they helped the poor, and imitate their love for others"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 13:8 state about Jesus Christ?",
@@ -1594,9 +1350,7 @@
       "Jesus Christ is an angel who is sent from God."
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 13:15, through whom should we offer a sacrifice of praise?",
@@ -1607,9 +1361,7 @@
       "Through Jesus"
     ],
     "answer": "D",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "According to Hebrews 13:17, what should the readers do in relation to their leaders?",
@@ -1620,9 +1372,7 @@
       "Be cautious of the leaders who have power, they might abuse it"
     ],
     "answer": "B",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What does Hebrews 13:20-21 state about what God will do through Jesus Christ?",
@@ -1633,9 +1383,7 @@
       "That God will heal all the sick through Jesus Christ"
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   },
   {
     "question": "What is the final blessing in Hebrews 13:25?",
@@ -1646,8 +1394,6 @@
       "Hope be with you all."
     ],
     "answer": "C",
-    "category": "Hebrews",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_HEB.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Hebrews"
   }
 ]

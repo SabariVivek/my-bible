@@ -8,9 +8,7 @@
       "Kenan"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the father of Nimrod (1 Chronicles 1:10)?",
@@ -21,9 +19,7 @@
       "Japheth"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Which of the following is NOT listed as a son of Japheth (1 Chronicles 1:5)?",
@@ -34,9 +30,7 @@
       "Javan"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the father of the Philistines (1 Chronicles 1:12)?",
@@ -47,9 +41,7 @@
       "Casluhim"
     ],
     "answer": "D",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "In whose days was the earth divided, according to 1 Chronicles (1 Chronicles 1:19)?",
@@ -60,9 +52,7 @@
       "Shelah"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was also called Abraham (1 Chronicles 1:27)?",
@@ -73,9 +63,7 @@
       "Serug"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who were the sons of Abraham, according to 1 Chronicles (1 Chronicles 1:28)?",
@@ -86,9 +74,7 @@
       "Isaac and Ishmael"
     ],
     "answer": "D",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the firstborn of Ishmael (1 Chronicles 1:29)?",
@@ -99,9 +85,7 @@
       "Adbeel"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the father of the Edomites (1 Chronicles 1:35)?",
@@ -112,9 +96,7 @@
       "Jacob"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was Timna, according to 1 Chronicles (1 Chronicles 1:39)?",
@@ -125,9 +107,7 @@
       "A sister of Lotan"
     ],
     "answer": "D",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Where did Shaul reign (1 Chronicles 1:48)?",
@@ -138,9 +118,7 @@
       "Edom"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the wife of Hadad (1 Chronicles 1:50)?",
@@ -151,9 +129,7 @@
       "Timna"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Which of the following is NOT a son of Israel (1 Chronicles 2:1-2)?",
@@ -164,9 +140,7 @@
       "Ephraim"
     ],
     "answer": "D",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, which of Judah's sons was wicked in Yahweh’s sight (1 Chronicles 2:3)?",
@@ -177,9 +151,7 @@
       "Perez"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the father of Jesse (1 Chronicles 2:12)?",
@@ -190,9 +162,7 @@
       "Nahshon"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the father of Amasa (1 Chronicles 2:17)?",
@@ -203,9 +173,7 @@
       "Asahel"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who bore Hur to Caleb (1 Chronicles 2:19)?",
@@ -216,9 +184,7 @@
       "Maacah"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the Egyptian servant of Sheshan (1 Chronicles 2:34)?",
@@ -229,9 +195,7 @@
       "Zabad"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the father of Ziph (1 Chronicles 2:42)?",
@@ -242,9 +206,7 @@
       "Korah"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the father of Kiriath Jearim (1 Chronicles 2:50)?",
@@ -255,9 +217,7 @@
       "Hur"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the firstborn son of David, born in Hebron (1 Chronicles 3:1)?",
@@ -268,9 +228,7 @@
       "Adonijah"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the mother of Solomon (1 Chronicles 3:5)?",
@@ -281,9 +239,7 @@
       "Haggith"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the son of Solomon (1 Chronicles 3:10)?",
@@ -294,9 +250,7 @@
       "Ahaziah"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the third son of Josiah (1 Chronicles 3:15)?",
@@ -307,9 +261,7 @@
       "Jehoiakim"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the father of Beth Rapha (1 Chronicles 4:12)?",
@@ -320,9 +272,7 @@
       "Shuhah"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the father of Joab, the father of Ge Harashim (1 Chronicles 4:14)?",
@@ -333,9 +283,7 @@
       "Caleb"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the wife of Mered who bore Jered, the father of Gedor (1 Chronicles 4:18)?",
@@ -346,9 +294,7 @@
       "Jewess"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what was the occupation of the men of the house of Ashbea (1 Chronicles 4:21)?",
@@ -359,9 +305,7 @@
       "Scribes"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Where did the families of Simeon live until David's reign (1 Chronicles 4:28-31)?",
@@ -372,9 +316,7 @@
       "Gilead"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who were the descendants of Ham that the sons of Simeon found living in Gedor (1 Chronicles 4:40)?",
@@ -385,9 +327,7 @@
       "Philistines"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, which tribe's birthright was given to the sons of Joseph (1 Chronicles 5:1)?",
@@ -398,9 +338,7 @@
       "Manasseh"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the prince of the Reubenites who was carried away captive by the king of Assyria (1 Chronicles 5:6)?",
@@ -411,9 +349,7 @@
       "Shimei"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Where did the tribe of Reuben live, extending to the wilderness from the river Euphrates (1 Chronicles 5:9)?",
@@ -424,9 +360,7 @@
       "Sharon"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "With whom did the sons of Reuben, Gad, and half-tribe of Manasseh make war (1 Chronicles 5:19)?",
@@ -437,9 +371,7 @@
       "Edomites"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, how many camels did the Israelites take from the Hagrites (1 Chronicles 5:21)?",
@@ -450,9 +382,7 @@
       "250,000"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the king of Assyria that carried away the Reubenites, Gadites, and half-tribe of Manasseh (1 Chronicles 5:26)?",
@@ -463,9 +393,7 @@
       "Shalmaneser"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who were the sons of Kohath (1 Chronicles 6:2)?",
@@ -476,9 +404,7 @@
       "Libni and Shimei"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the priest that executed the priest's office in the house that Solomon built in Jerusalem (1 Chronicles 6:10)?",
@@ -489,9 +415,7 @@
       "Amariah"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who went into captivity when Yahweh carried Judah and Jerusalem away (1 Chronicles 6:15)?",
@@ -502,9 +426,7 @@
       "Shallum"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who did David set over the service of song in Yahweh's house (1 Chronicles 6:31)?",
@@ -515,9 +437,7 @@
       "All of the above"
     ],
     "answer": "D",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the son of Joel, who was the son of Samuel, and a singer (1 Chronicles 6:33)?",
@@ -528,9 +448,7 @@
       "Jeduthun"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, which city in Judah was given to the sons of Aaron (1 Chronicles 6:55-56)?",
@@ -541,9 +459,7 @@
       "Eshtemoa"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Which tribe gave Geba, Allemeth, and Anathoth to the sons of Aaron (1 Chronicles 6:60)?",
@@ -554,9 +470,7 @@
       "Manasseh"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Which city of refuge was given to the sons of Kohath in the hill country of Ephraim (1 Chronicles 6:67)?",
@@ -567,9 +481,7 @@
       "Beth Horon"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Which cities were given to the sons of Gershom from the tribe of Issachar (1 Chronicles 6:72-73)?",
@@ -580,9 +492,7 @@
       "Kedesh, Hammon, and Kiriathaim"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, which of the sons of Issachar were heads of their fathers’ houses, mighty men of valor (1 Chronicles 7:2)?",
@@ -593,9 +503,7 @@
       "Bela, Becher, and Jediael"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "How many mighty men of valor were listed in the genealogy of Issachar (1 Chronicles 7:5)?",
@@ -606,9 +514,7 @@
       "22,034"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the son of Jediael, from the tribe of Benjamin (1 Chronicles 7:10)?",
@@ -619,9 +525,7 @@
       "Jediael"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the father of Gilead, from the tribe of Manasseh (1 Chronicles 7:14)?",
@@ -632,9 +536,7 @@
       "Sheresh"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who were the sons of Beriah from the tribe of Asher (1 Chronicles 7:31)?",
@@ -645,9 +547,7 @@
       "Ahi, Rohgah, Jehubbah, and Aram"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the firstborn son of Benjamin (1 Chronicles 8:1)?",
@@ -658,9 +558,7 @@
       "Nohah"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who were the wives of Shaharaim (1 Chronicles 8:8)?",
@@ -671,9 +569,7 @@
       "Hushim and Maacah"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who built Ono and Lod (1 Chronicles 8:12)?",
@@ -684,9 +580,7 @@
       "Naaman, Ahijah, and Gera"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who put to flight the inhabitants of Gath (1 Chronicles 8:13)?",
@@ -697,9 +591,7 @@
       "The sons of Shaharaim"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "How many sons and grandsons did Ulam have, who were mighty men of valor (1 Chronicles 8:40)?",
@@ -710,9 +602,7 @@
       "200"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, where are the genealogies of Israel written (1 Chronicles 9:1)?",
@@ -723,9 +613,7 @@
       "The book of the prophets"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the first inhabitant to live in Jerusalem after the exile (1 Chronicles 9:3)?",
@@ -736,9 +624,7 @@
       "Children of Manasseh"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the ruler of God's house (1 Chronicles 9:11)?",
@@ -749,9 +635,7 @@
       "Ahitub"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who were the gatekeepers (1 Chronicles 9:17)?",
@@ -762,9 +646,7 @@
       "Phinehas, Zechariah, Meshelemiah"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who was the gatekeeper of the door of the Tent of Meeting (1 Chronicles 9:21)?",
@@ -775,9 +657,7 @@
       "Obadiah"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what did some of the Levites have charge of (1 Chronicles 9:29)?",
@@ -788,9 +668,7 @@
       "The baked goods"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Where did the Philistines kill Saul and his sons (1 Chronicles 10:1)?",
@@ -801,9 +679,7 @@
       "Pasdammim"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, where was Saul's head fastened (1 Chronicles 10:10)?",
@@ -814,9 +690,7 @@
       "The temple of Jerusalem"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who buried the bones of Saul and his sons (1 Chronicles 10:12)?",
@@ -827,9 +701,7 @@
       "David and his men"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who made a covenant with the elders of Israel in Hebron (1 Chronicles 11:3)?",
@@ -840,9 +712,7 @@
       "Joab"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "What city was also called Jebus (1 Chronicles 11:4)?",
@@ -853,9 +723,7 @@
       "Zion"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who became chief and captain for striking the Jebusites first (1 Chronicles 11:6)?",
@@ -866,9 +734,7 @@
       "Benaiah"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the chief of the thirty mighty men (1 Chronicles 11:11)?",
@@ -879,9 +745,7 @@
       "Benaiah"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Where was the plot of ground full of barley that the Philistines were gathered to battle (1 Chronicles 11:13)?",
@@ -892,9 +756,7 @@
       "Bethlehem"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who longed for water from the well of Bethlehem (1 Chronicles 11:17)?",
@@ -905,9 +767,7 @@
       "Eleazar"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was chief of the three mighty men (1 Chronicles 11:20)?",
@@ -918,9 +778,7 @@
       "Eleazar"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who did David set over his guard (1 Chronicles 11:25)?",
@@ -931,9 +789,7 @@
       "Asahel"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who were among the mighty men of the armies (1 Chronicles 11:26)?",
@@ -944,9 +800,7 @@
       "All of the above"
     ],
     "answer": "D",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who sent messengers with cedar trees, masons, and carpenters to David (1 Chronicles 14:1)?",
@@ -957,9 +811,7 @@
       "The king of Moab"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, where did the Philistines make a raid (1 Chronicles 14:9)?",
@@ -970,9 +822,7 @@
       "Bethlehem"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who should carry the ark of God (1 Chronicles 15:2)?",
@@ -983,9 +833,7 @@
       "The mighty men"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who were among the chief Levites that David gathered to bring up the ark (1 Chronicles 15:5-10)?",
@@ -996,9 +844,7 @@
       "None of the above"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who were appointed as singers with instruments of music (1 Chronicles 15:16-17)?",
@@ -1009,9 +855,7 @@
       "All of the above"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the chief of the Levites over the singing (1 Chronicles 15:22)?",
@@ -1022,9 +866,7 @@
       "Ethan"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "What did David wear when bringing up the ark (1 Chronicles 15:27)?",
@@ -1035,9 +877,7 @@
       "A simple linen tunic"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what did David offer before God after setting the ark in the tent (1 Chronicles 16:1)?",
@@ -1048,9 +888,7 @@
       "Gold and silver"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "Who did David appoint to minister before the ark of Yahweh (1 Chronicles 16:4)?",
@@ -1061,9 +899,7 @@
       "Mighty men"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was chief among those appointed to minister before the ark of Yahweh (1 Chronicles 16:5)?",
@@ -1074,9 +910,7 @@
       "Obed-Edom"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what did David first ordain giving thanks to Yahweh by (1 Chronicles 16:7)?",
@@ -1087,9 +921,7 @@
       "The hand of the elders"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "What did David say to Nathan when he was living in his house (1 Chronicles 17:1)?",
@@ -1100,9 +932,7 @@
       "“I will find a new place for the ark.”"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what did God say about David building a house for Him (1 Chronicles 17:4)?",
@@ -1113,9 +943,7 @@
       "“It is not yet time to build a house.”"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, where did God say He took David from to be prince over Israel (1 Chronicles 17:7)?",
@@ -1126,9 +954,7 @@
       "From the priests"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who did God say would build Him a house (1 Chronicles 17:12)?",
@@ -1139,9 +965,7 @@
       "Joshua"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who did David defeat and subdue (1 Chronicles 18:1)?",
@@ -1152,9 +976,7 @@
       "The Edomites"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what did the Moabites become to David (1 Chronicles 18:2)?",
@@ -1165,9 +987,7 @@
       "Enemies of David"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the king of Zobah that David defeated (1 Chronicles 18:3)?",
@@ -1178,9 +998,7 @@
       "Hanun"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, how many horsemen did David take from Hadadezer (1 Chronicles 18:4)?",
@@ -1191,9 +1009,7 @@
       "Ten thousand"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who did David put garrisons in (1 Chronicles 18:6)?",
@@ -1204,9 +1020,7 @@
       "Ammon"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was over the army of David (1 Chronicles 18:15)?",
@@ -1217,9 +1031,7 @@
       "Shavsha"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the recorder for David (1 Chronicles 18:15)?",
@@ -1230,9 +1042,7 @@
       "Shavsha"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the king of the children of Ammon who died (1 Chronicles 19:1)?",
@@ -1243,9 +1053,7 @@
       "Hadadezer"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "What did Hanun do to David's servants (1 Chronicles 19:4)?",
@@ -1256,9 +1064,7 @@
       "Made them slaves"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, how many talents of silver did the Ammonites send to hire chariots and horsemen (1 Chronicles 19:6)?",
@@ -1269,9 +1075,7 @@
       "Ten thousand"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who did David send to fight against the Ammonites (1 Chronicles 19:8)?",
@@ -1282,9 +1086,7 @@
       "Asahel"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who moved David to take a census of Israel (1 Chronicles 21:1)?",
@@ -1295,9 +1097,7 @@
       "The people of Israel"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what did David prepare in abundance for the building of the temple (1 Chronicles 22:3-4)?",
@@ -1308,9 +1108,7 @@
       "All of the above"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what reason did God give David for not allowing him to build the temple (1 Chronicles 22:8)?",
@@ -1321,9 +1119,7 @@
       "David had not asked God."
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who did God say would build the temple (1 Chronicles 22:10)?",
@@ -1334,9 +1130,7 @@
       "The elders of Israel"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, how much gold did David prepare for the temple (1 Chronicles 22:14)?",
@@ -1347,9 +1141,7 @@
       "One million talents"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, how much silver did David prepare for the temple (1 Chronicles 22:14)?",
@@ -1360,9 +1152,7 @@
       "One million talents"
     ],
     "answer": "D",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what was the total number of Levites counted from thirty years old and upward (1 Chronicles 23:3)?",
@@ -1373,9 +1163,7 @@
       "Forty-four thousand"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what were the duties of the Levites (1 Chronicles 23:28-32)?",
@@ -1386,9 +1174,7 @@
       "All of the above"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, how were the divisions of the sons of Aaron determined (1 Chronicles 24:5)?",
@@ -1399,9 +1185,7 @@
       "By their family lineage"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who were set apart for service to prophesy with instruments (1 Chronicles 25:1)?",
@@ -1412,9 +1196,7 @@
       "The princes of Israel"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, how many skilled singers were there (1 Chronicles 25:7)?",
@@ -1425,9 +1207,7 @@
       "Three hundred"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, how was the order of service for the singers determined (1 Chronicles 25:8)?",
@@ -1438,9 +1218,7 @@
       "By royal decree"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who were the doorkeepers from the Korahites (1 Chronicles 26:1)?",
@@ -1451,9 +1229,7 @@
       "All of the above"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was in charge of the treasuries (1 Chronicles 26:24)?",
@@ -1464,9 +1240,7 @@
       "Hashabiah"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what was the number of men in each division that served the king monthly (1 Chronicles 27:1)?",
@@ -1477,9 +1251,7 @@
       "Thirty thousand"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was the captain of the first division (1 Chronicles 27:2)?",
@@ -1490,9 +1262,7 @@
       "Asahel"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what did David say was in his heart to build (1 Chronicles 28:2)?",
@@ -1503,9 +1273,7 @@
       "A place for sacrifices"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who did God choose to build the house (1 Chronicles 28:6)?",
@@ -1516,9 +1284,7 @@
       "Joshua"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what was David's advice to Solomon (1 Chronicles 28:9)?",
@@ -1529,9 +1295,7 @@
       "All of the above"
     ],
     "answer": "D",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who did David say would not fail or forsake Solomon (1 Chronicles 28:20)?",
@@ -1542,9 +1306,7 @@
       "Yahweh God"
     ],
     "answer": "D",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what did David contribute from his own treasure for the temple (1 Chronicles 29:3)?",
@@ -1555,9 +1317,7 @@
       "All of the above"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, how many talents of gold did David donate from his own treasure (1 Chronicles 29:4)?",
@@ -1568,9 +1328,7 @@
       "Ten thousand"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, how many talents of refined silver did David donate from his own treasure (1 Chronicles 29:4)?",
@@ -1581,9 +1339,7 @@
       "Ten thousand"
     ],
     "answer": "C",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, what did David ask of God for Solomon (1 Chronicles 29:19)?",
@@ -1594,9 +1350,7 @@
       "All of the above"
     ],
     "answer": "D",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, who was made king a second time (1 Chronicles 29:22)?",
@@ -1607,9 +1361,7 @@
       "Samuel"
     ],
     "answer": "B",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   },
   {
     "question": "According to 1 Chronicles, where are the acts of David written (1 Chronicles 29:29)?",
@@ -1620,8 +1372,6 @@
       "All of the above"
     ],
     "answer": "A",
-    "category": "1 Chronicles",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1CH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 Chronicles"
   }
 ]

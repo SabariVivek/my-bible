@@ -8,9 +8,7 @@
       "Apphia"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "Besides Philemon, who else is mentioned in the salutation of this letter (Philemon 1-2)?",
@@ -21,9 +19,7 @@
       "Epaphras and Timothy"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul say he always does for Philemon (Philemon 4)?",
@@ -34,9 +30,7 @@
       "Writes him letters"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What has Paul heard about Philemon that causes him to thank God (Philemon 5)?",
@@ -47,9 +41,7 @@
       "His ability to lead"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul desire regarding Philemon's faith (Philemon 6)?",
@@ -60,9 +52,7 @@
       "That his faith may grow weak"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What has refreshed the hearts of the saints, according to Paul (Philemon 7)?",
@@ -73,9 +63,7 @@
       "The church gatherings"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul choose to do, instead of commanding Philemon (Philemon 8-9)?",
@@ -86,9 +74,7 @@
       "To ask others for advice"
     ],
     "answer": "C",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "How does Paul describe himself in verse 9 (Philemon 9)?",
@@ -99,9 +85,7 @@
       "A leader among men"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "Who is Onesimus in relation to Paul (Philemon 10)?",
@@ -112,9 +96,7 @@
       "Paul's brother"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul say Onesimus was formerly to Philemon (Philemon 11)?",
@@ -125,9 +107,7 @@
       "a family member"
     ],
     "answer": "A",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul say Onesimus is now to both Philemon and Paul (Philemon 11)?",
@@ -138,9 +118,7 @@
       "a runaway slave"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What is Paul doing with Onesimus (Philemon 12)?",
@@ -151,9 +129,7 @@
       "Selling him into slavery"
     ],
     "answer": "A",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "How does Paul describe Onesimus when sending him back to Philemon (Philemon 12)?",
@@ -164,9 +140,7 @@
       "A deceitful man"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "Why did Paul want to keep Onesimus with him (Philemon 13)?",
@@ -177,9 +151,7 @@
       "To keep him away from Philemon"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "Why didn't Paul keep Onesimus without Philemon's consent (Philemon 14)?",
@@ -190,9 +162,7 @@
       "Because he knew Philemon would come get him"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul suggest about Onesimus's separation from Philemon (Philemon 15)?",
@@ -203,9 +173,7 @@
       "That it was an accident"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "How should Philemon receive Onesimus back (Philemon 16)?",
@@ -216,9 +184,7 @@
       "As a stranger"
     ],
     "answer": "C",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul ask Philemon to do if he counts Paul as a partner (Philemon 17)?",
@@ -229,9 +195,7 @@
       "To sell Onesimus"
     ],
     "answer": "C",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul offer to do if Onesimus has wronged or owes Philemon anything (Philemon 18)?",
@@ -242,9 +206,7 @@
       "To forget it ever happened"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul remind Philemon that Philemon owes to him (Philemon 19)?",
@@ -255,9 +217,7 @@
       "Nothing"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul ask Philemon to do for him in the Lord (Philemon 20)?",
@@ -268,9 +228,7 @@
       "To send him money"
     ],
     "answer": "A",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What is Paul confident that Philemon will do (Philemon 21)?",
@@ -281,9 +239,7 @@
       "Be angry with him"
     ],
     "answer": "A",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul request Philemon to prepare for him (Philemon 22)?",
@@ -294,9 +250,7 @@
       "A prison cell"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "Who does Paul mention as a fellow prisoner who sends greetings (Philemon 23)?",
@@ -307,9 +261,7 @@
       "Demas"
     ],
     "answer": "B",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "Which of these is not mentioned as a fellow worker of Paul (Philemon 24)?",
@@ -320,9 +272,7 @@
       "Luke"
     ],
     "answer": "C",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   },
   {
     "question": "What does Paul wish for Philemon at the end of the letter (Philemon 25)?",
@@ -333,8 +283,6 @@
       "Wealth and good health"
     ],
     "answer": "A",
-    "category": "Philemon",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_PHM.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Philemon"
   }
 ]

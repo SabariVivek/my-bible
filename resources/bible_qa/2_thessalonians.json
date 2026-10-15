@@ -8,9 +8,7 @@
       "Silas and Timothy"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is the source of grace and peace mentioned in the letter (2 Thessalonians 1:2)?",
@@ -21,9 +19,7 @@
       "The Holy Spirit"
     ],
     "answer": "C",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is Paul thankful for regarding the Thessalonians (2 Thessalonians 1:3)?",
@@ -34,9 +30,7 @@
       "Their generosity"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is considered an obvious sign of God's righteous judgment (2 Thessalonians 1:5)?",
@@ -47,9 +41,7 @@
       "Their faith"
     ],
     "answer": "A",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What will happen to those who afflict the Thessalonians (2 Thessalonians 1:6)?",
@@ -60,9 +52,7 @@
       "They will be ignored"
     ],
     "answer": "C",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "Who will be punished when the Lord Jesus is revealed from heaven (2 Thessalonians 1:8)?",
@@ -73,9 +63,7 @@
       "Those who are poor"
     ],
     "answer": "A",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is the penalty for those who do not obey the Good News of Jesus (2 Thessalonians 1:9)?",
@@ -86,9 +74,7 @@
       "Earthly poverty"
     ],
     "answer": "C",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "When will the Lord be glorified in his saints (2 Thessalonians 1:10)?",
@@ -99,9 +85,7 @@
       "When he performs miracles"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul pray for the Thessalonians (2 Thessalonians 1:11)?",
@@ -112,9 +96,7 @@
       "That they may be popular"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What should not quickly shake the Thessalonians minds (2 Thessalonians 2:2)?",
@@ -125,9 +107,7 @@
       "Debates about scripture"
     ],
     "answer": "C",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What must come before the day of Christ (2 Thessalonians 2:3)?",
@@ -138,9 +118,7 @@
       "A new era of peace"
     ],
     "answer": "C",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "Who is described as the 'man of sin' (2 Thessalonians 2:3-4)?",
@@ -151,9 +129,7 @@
       "A rebellious leader"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is restraining the man of sin from being revealed (2 Thessalonians 2:6-7)?",
@@ -164,9 +140,7 @@
       "The laws of the land"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "How will the Lord kill the lawless one (2 Thessalonians 2:8)?",
@@ -177,9 +151,7 @@
       "By human hands"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "Whose working is the coming of the lawless one according to (2 Thessalonians 2:9)?",
@@ -190,9 +162,7 @@
       "A human king"
     ],
     "answer": "C",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "Why does God send a powerful delusion to some (2 Thessalonians 2:11)?",
@@ -203,9 +173,7 @@
       "Because they were good"
     ],
     "answer": "A",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What were the Thessalonians chosen for from the beginning (2 Thessalonians 2:13)?",
@@ -216,9 +184,7 @@
       "To be examples to others"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What should the Thessalonians stand firm in (2 Thessalonians 2:15)?",
@@ -229,9 +195,7 @@
       "Their social status"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul ask the brothers to pray for (2 Thessalonians 3:1)?",
@@ -242,9 +206,7 @@
       "That they may receive wisdom"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "From whom does Paul desire to be delivered (2 Thessalonians 3:2)?",
@@ -255,9 +217,7 @@
       "Poverty"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul say the Lord will do for the Thessalonians (2 Thessalonians 3:3)?",
@@ -268,9 +228,7 @@
       "Help them to be healthy"
     ],
     "answer": "A",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul command in the name of the Lord Jesus Christ (2 Thessalonians 3:6)?",
@@ -281,9 +239,7 @@
       "To be popular"
     ],
     "answer": "A",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What example did Paul and his companions set for the Thessalonians (2 Thessalonians 3:8)?",
@@ -294,9 +250,7 @@
       "They took from others"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What commandment did Paul give the Thessalonians when he was with them (2 Thessalonians 3:10)?",
@@ -307,9 +261,7 @@
       "“Be obedient to your leaders”"
     ],
     "answer": "A",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul ask the Thessalonians not to be weary of doing (2 Thessalonians 3:13)?",
@@ -320,9 +272,7 @@
       "Helping others"
     ],
     "answer": "C",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul say is appropriate to always give thanks to God for regarding the Thessalonians (2 Thessalonians 1:3)?",
@@ -333,9 +283,7 @@
       "Their good works in the community"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What do the Thessalonians endure that Paul boasts about in the assemblies of God (2 Thessalonians 1:4)?",
@@ -346,9 +294,7 @@
       "Their knowledge of scripture"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is the purpose of the righteous judgment of God in relation to the Thessalonians' suffering (2 Thessalonians 1:5)?",
@@ -359,9 +305,7 @@
       "To test their faith"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "According to Paul, what will God give to those who are afflicted along with the apostles (2 Thessalonians 1:7)?",
@@ -372,9 +316,7 @@
       "A long life"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is the nature of the punishment for those who do not know God and do not obey the gospel of Jesus Christ (2 Thessalonians 1:9)?",
@@ -385,9 +327,7 @@
       "Earthly punishment"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "Why will the Lord be admired among all those who have believed (2 Thessalonians 1:10)?",
@@ -398,9 +338,7 @@
       "Because of their good deeds"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul pray that God will fulfill in the Thessalonians (2 Thessalonians 1:11)?",
@@ -411,9 +349,7 @@
       "Every desire for recognition"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "How does Paul say the name of the Lord Jesus will be glorified in the Thessalonians (2 Thessalonians 1:12)?",
@@ -424,9 +360,7 @@
       "Through their earthly influence"
     ],
     "answer": "C",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What specific concern about the day of Christ does Paul address (2 Thessalonians 2:2)?",
@@ -437,9 +371,7 @@
       "That it will only come for some"
     ],
     "answer": "C",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is another way to translate the word 'rebellion' in 2 Thessalonians 2:3?",
@@ -450,9 +382,7 @@
       "Political movement"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "Where will the man of sin set himself up as God (2 Thessalonians 2:4)?",
@@ -463,9 +393,7 @@
       "In the political arena"
     ],
     "answer": "A",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul remind the Thessalonians about his previous teachings (2 Thessalonians 2:5)?",
@@ -476,9 +404,7 @@
       "That his teachings were only for a select few"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is already at work in the world, according to Paul (2 Thessalonians 2:7)?",
@@ -489,9 +415,7 @@
       "The spirit of peace"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What will the Lord use to destroy the lawless one (2 Thessalonians 2:8)?",
@@ -502,9 +426,7 @@
       "A natural disaster"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What accompanies the coming of the lawless one (2 Thessalonians 2:9)?",
@@ -515,9 +437,7 @@
       "Political reform"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is the result for those who do not believe the truth and have pleasure in unrighteousness (2 Thessalonians 2:12)?",
@@ -528,9 +448,7 @@
       "They will be ignored"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "How were the Thessalonians called to obtain the glory of the Lord Jesus Christ (2 Thessalonians 2:14)?",
@@ -541,9 +459,7 @@
       "Through their financial status"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What specific types of traditions should the Thessalonians hold onto (2 Thessalonians 2:15)?",
@@ -554,9 +470,7 @@
       "Those that have been passed down through oral tradition"
     ],
     "answer": "A",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "Who gives eternal comfort and good hope through grace (2 Thessalonians 2:16)?",
@@ -567,9 +481,7 @@
       "Religious leaders"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul ask the Lord to do for the Thessalonians' hearts (2 Thessalonians 2:17)?",
@@ -580,9 +492,7 @@
       "To make them popular"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul pray for regarding the word of the Lord (2 Thessalonians 3:1)?",
@@ -593,9 +503,7 @@
       "That it may only be taught to the elite"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is the basis of Paul’s confidence in the Thessalonians (2 Thessalonians 3:4)?",
@@ -606,9 +514,7 @@
       "That they are powerful"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul pray that the Lord will direct the Thessalonians' hearts into (2 Thessalonians 3:5)?",
@@ -619,9 +525,7 @@
       "Popularity and recognition"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What is the result of not obeying Paul's word in the letter (2 Thessalonians 3:14)?",
@@ -632,9 +536,7 @@
       "To be praised for their individuality"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "How should those who do not obey Paul's word be treated (2 Thessalonians 3:15)?",
@@ -645,9 +547,7 @@
       "As those who should be ignored"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   },
   {
     "question": "What does Paul say about how he writes this greeting (2 Thessalonians 3:17)?",
@@ -658,8 +558,6 @@
       "He has someone else sign his name"
     ],
     "answer": "B",
-    "category": "2 Thessalonians",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_2TH.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "2 Thessalonians"
   }
 ]

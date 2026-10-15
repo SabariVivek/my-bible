@@ -8,9 +8,7 @@
       "Spring of the Goat"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ai-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Joshua 7:2 states that Ai was located approximately how far east of Bethel?",
@@ -21,9 +19,7 @@
       "Two miles"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ai-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The defeat of the Israelites at Ai, as described in Joshua 7:1-5, was attributed to what?",
@@ -34,9 +30,7 @@
       "Divine intervention on behalf of Ai"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ai-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "As mentioned in Ezra 2:28, the region around Ai eventually became part of the land given to which tribe?",
@@ -47,9 +41,7 @@
       "Manasseh"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ai-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to 1 Chronicles 6:60 (NLT), Anathoth was one of the cities given to the Levitical priests descended from Aaron through which tribe?",
@@ -60,9 +52,7 @@
       "Ephraim"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Anathoth-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The prophet Jeremiah is most familiar to Bible readers as being from which city, as noted in Jeremiah 1:1?",
@@ -73,9 +63,7 @@
       "Gibeon"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Anathoth-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Genesis 16 mentions that the angel of the Lord found Hagar near a spring in the desert that later became known as what?",
@@ -86,9 +74,7 @@
       "Kadesh Barnea"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Beer-Lahai-Roi.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The proverbial phrase 'from Dan to Beersheba,' used nine times in the Old Testament, describes what?",
@@ -99,9 +85,7 @@
       "The area controlled by King David"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Beersheba-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "In Genesis 21:31, Beersheba is mentioned as the place where Abraham made a treaty with whom?",
@@ -112,9 +96,7 @@
       "King of Sodom"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Beersheba-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Genesis 12:8, Abram built an altar to the Lord near Bethel, which was located to the west of which other city?",
@@ -125,9 +107,7 @@
       "Hebron"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Bethel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "During the time of the divided kingdoms, as mentioned in sources, which king of Israel established a temple at Bethel?",
@@ -138,9 +118,7 @@
       "King Ahab"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Bethel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The land of Cush, as referenced in Genesis 10:7, is translated as what in some Bible versions?",
@@ -151,9 +129,7 @@
       "Midian"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Cush-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Cited sixteen times in the Bible, as noted in source, the Dead Sea is primarily mentioned to describe what?",
@@ -164,9 +140,7 @@
       "A source of valuable minerals"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Dead-Sea.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Genesis 12:10-20, Egypt first appears in the biblical narrative in connection with whom due to a severe famine?",
@@ -177,9 +151,7 @@
       "Abraham"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Egypt-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "As mentioned in Acts 2, people from which land were present in Jerusalem on the Day of Pentecost?",
@@ -190,9 +162,7 @@
       "Midian"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Elam-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Exodus 15:27 states that the children of Israel came to which place after Marah, finding twelve springs and seventy palm trees?",
@@ -203,9 +173,7 @@
       "Kadesh"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Elim-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Originally called Hazezon Tamar according to 2 Chronicles 20:2, the area known for waterfalls where David hid from Saul was called what?",
@@ -216,9 +184,7 @@
       "Mizpah"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/En-Gedi.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Joshua 9, the people of which city deceived the Israelites into making a peace treaty?",
@@ -229,9 +195,7 @@
       "Hebron"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Gibeon-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "As mentioned in Joshua 5:9, the name of the place near Jericho where the Israelites were circumcised, Gilgal, means what?",
@@ -242,9 +206,7 @@
       "Victory"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Gilgal-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to 2 Samuel 5:1-5, after reigning in Hebron for seven-and-a-half years, David moved his capital to which city?",
@@ -255,9 +217,7 @@
       "Bethel"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Hebron-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Described in Exodus 3:8 as 'a land flowing with milk and honey,' which land was promised to Abraham and his descendants?",
@@ -268,9 +228,7 @@
       "The land of Canaan"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Holy-Land.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Jericho is best known in the Bible as the first city conquered by Israel after crossing which river, according to Joshua 5:13—6:23?",
@@ -281,9 +239,7 @@
       "The Euphrates River"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Jericho-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to 2 Chronicles 2:8-9, the timber for Solomon's temple arrived in Jerusalem through which port city?",
@@ -294,9 +250,7 @@
       "Acco"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Joppa-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The Jordan River flows from which sea in the north to which sea in the south?",
@@ -307,9 +261,7 @@
       "Dead Sea to Mediterranean Sea"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Jordan-River.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Kadesh Barnea, mentioned numerous times in the Old Testament and located southwest of the Dead Sea, is thought to mean what?",
@@ -320,9 +272,7 @@
       "House of God"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Kadesh-Barnea.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Song of Solomon 1:5, the tents of which people are likened to darkness yet also considered lovely?",
@@ -333,9 +283,7 @@
       "Midian"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Kedar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The place where the Israelites quarreled with Moses for water and tested the Lord was named Massah, which means what?",
@@ -346,9 +294,7 @@
       "Place of blessing"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Massah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Joshua 12:21 mentions Megiddo as one of the cities whose kings were defeated in the land of whom?",
@@ -359,9 +305,7 @@
       "Moabites"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Megiddo-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What does the name Meribah, given to a site where the Israelites lacked water, mean?",
@@ -372,9 +316,7 @@
       "Deliverance"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Meribah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Stephen, in Acts 7:2, recalls that Mesopotamia was the homeland of whom?",
@@ -385,9 +327,7 @@
       "Joseph"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Mesopotamia-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Genesis 25:1-2, Midian was one of the six sons of Abraham by whom?",
@@ -398,9 +338,7 @@
       "Keturah"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Midian-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "In Exodus 19:3, Moses' first trip up Mount Sinai after arriving there was to do what?",
@@ -411,9 +349,7 @@
       "Speak with Aaron"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Moses-on-Mount-Sinai.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The Negev, a dry region in southern Israel, means what in Hebrew?",
@@ -424,9 +360,7 @@
       "High mountain"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Negev-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Genesis 10:19 suggests that the destroyed city of Sodom was located near which part of Canaan?",
@@ -437,9 +371,7 @@
       "The southern part"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Sodom-Gomorrah-found-meteor.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Amos 1:1, Amos was one of the shepherds from which town?",
@@ -450,9 +382,7 @@
       "Nazareth"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Tekoa-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Topheth is first mentioned in 2 Kings 23:10 in connection with the actions of which king?",
@@ -463,9 +393,7 @@
       "King Manasseh"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Topheth-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Genesis 11:28 states that Haran, Abram's brother, died in which place?",
@@ -476,9 +404,7 @@
       "Egypt"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ur-of-the-Chaldees.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The Valley of Baca, possibly located near Jerusalem, is associated with what type of tree in 2 Samuel 5:23 (ESV)?",
@@ -489,9 +415,7 @@
       "Palm trees"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Valley-of-Baca.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The Valley of Siddim is mentioned in Genesis 14 in connection with a battle between kings from Mesopotamia and kings from which region?",
@@ -502,9 +426,7 @@
       "The plains of Moab"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Valley-of-Siddim.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Succoth is first mentioned in Genesis 33:17 in connection with whom building houses or shelters there?",
@@ -515,9 +437,7 @@
       "Lot"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Valley-of-Succoth.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The Wilderness of Sin is located between which two places?",
@@ -528,9 +448,7 @@
       "Kadesh and Sinai"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Wilderness-of-Sin.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The first settlers in Egypt migrated from the area of Shinar, near which river?",
@@ -541,9 +459,7 @@
       "The Tigris River"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/pyramids-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Deuteronomy 7:1 lists several nations inhabiting the land of Canaan when the Israelites were poised to take possession, including whom?",
@@ -554,9 +470,7 @@
       "Midianites"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/land-of-Canaan.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Genesis 45:10 mentions Goshen as a part of which land where Joseph told his brothers to settle?",
@@ -567,9 +481,7 @@
       "Midian"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/land-of-Goshen.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Achan's sin in Joshua 7 involved taking a beautiful robe from which place?",
@@ -580,9 +492,7 @@
       "Ammon"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/land-of-Shinar.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The book of Job indicates that Job lived in the land of Uz, and Job 1:17 mentions that this land was vulnerable to raids from which people?",
@@ -593,9 +503,7 @@
       "Edomites"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/land-of-Uz.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Mount Carmel is best known as the site of a contest between Elijah and the prophets of whom according to 1 Kings 18?",
@@ -606,9 +514,7 @@
       "Molech and Dagon"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/mount-Carmel.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Mount Ephraim is described in source not as a single mountain but as what type of region?",
@@ -619,9 +525,7 @@
       "A river valley"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/mount-Ephraim.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Deuteronomy 27, which two mountains were designated for a ceremony of blessings and cursings upon entering Canaan?",
@@ -632,9 +536,7 @@
       "Mount of Olives and Mount Zion"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/mount-Gerizim.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Mount Seir is sometimes simply referred to as 'Seir,' as in Deuteronomy 33:2, and is described as a mountainous area along the east side of which valley?",
@@ -645,9 +547,7 @@
       "The Kidron Valley"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/mount-Seir.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Psalm 83:7, the land of Ammon was situated northeast of which body of water?",
@@ -658,9 +558,7 @@
       "Red Sea"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ammon-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What was the capital of Ammon mentioned in 2 Samuel 12:27?",
@@ -671,9 +569,7 @@
       "Bethlehem"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ammon-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Joshua 15:46-47 mentions Ashdod along with other cities as having what?",
@@ -684,9 +580,7 @@
       "Royal palaces and gardens"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ashdod-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Joshua 13:3, which of the primary Philistine cities had not yet been subdued?",
@@ -697,9 +591,7 @@
       "Ashdod"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ashdod-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What was the capital of Assyria, notable in the Bible as an enemy of Israel?",
@@ -710,9 +602,7 @@
       "Ashur"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Assyria-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to 2 Kings 17:6, the Lord carried Israel away to what location?",
@@ -723,9 +613,7 @@
       "Moab"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Assyria-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Ancient Babylon, located in modern-day Iraq, rose to dominance after breaking free from which empire?",
@@ -736,9 +624,7 @@
       "Egyptian Empire"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Babylon-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which king of Babylon is prominently featured in the Old Testament for invading Judah and destroying Jerusalem?",
@@ -749,9 +635,7 @@
       "Belshazzar"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Babylon-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Micah 5:2 (and Matthew 2:4-6), the Messiah of Israel would be born in which town?",
@@ -762,9 +646,7 @@
       "Hebron"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Bethlehem-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Bethlehem is also known by what other significant biblical name?",
@@ -775,9 +657,7 @@
       "Garden City"
     ],
     "answer": "A",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Bethlehem-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Bozrah of Edom is associated with pronouncements of judgment representing which territory according to Isaiah 34:6 and Jeremiah 49:13, 22?",
@@ -788,9 +668,7 @@
       "The land of Canaan"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Bozrah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Isaiah 63:1 describes a victor coming from Edom and Bozrah with garments stained what color?",
@@ -801,9 +679,7 @@
       "White"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Bozrah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Herod's temple contained which specific court designed for non-Jewish people?",
@@ -814,9 +690,7 @@
       "Court of the Gentiles"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Court-of-the-Gentiles.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "In Matthew 21:12-13, where did Jesus drive out the money changers?",
@@ -827,9 +701,7 @@
       "Temple Courts (implied Court of the Gentiles)"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Court-of-the-Gentiles.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Damascus, mentioned in connection with Abraham's rescue of Lot, is currently the capital of which nation?",
@@ -840,9 +712,7 @@
       "Iraq"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Damascus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Pliny lists Damascus as one of the cities within which region?",
@@ -853,9 +723,7 @@
       "Samaria"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Decapolis-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Genesis 22:1-14 recounts Abraham offering Isaac as a sacrifice on which location, also considered the site where David built an altar?",
@@ -866,9 +734,7 @@
       "Mount of Olives"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Dome-of-the-Rock.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Dothan is first mentioned in Genesis 37:17 in connection with what event?",
@@ -879,9 +745,7 @@
       "Moses fleeing from Pharaoh"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Dothan-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The kingdom of Edom is mainly associated in the Bible with the descendants of whom?",
@@ -892,9 +756,7 @@
       "Abraham"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Edom-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What is the meaning of the word Gath?",
@@ -905,9 +767,7 @@
       "Valley"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Gath-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Gaza is first mentioned in Genesis as one of the border cities of which land?",
@@ -918,9 +778,7 @@
       "Assyria"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Gaza-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Gibeah of Benjamin, the hometown of Saul (1 Samuel 10:26), was located approximately how far north of Jerusalem?",
@@ -931,9 +789,7 @@
       "Fifteen miles"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Gibeah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Solomon's temple was destroyed by the Babylonians in what year?",
@@ -944,9 +800,7 @@
       "539 BC"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Herod-third-temple.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The Holy of Holies in the ancient tabernacle and temple was primarily known as the location of what?",
@@ -957,9 +811,7 @@
       "The golden lampstand"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Holy-of-Holies.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "King David first chose Jerusalem as Israel's capital approximately how many years before Christ?",
@@ -970,9 +822,7 @@
       "1500 years"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Jerusalem-capital-Israel.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to 2 Kings 25:8-10, which empire completely destroyed Jerusalem?",
@@ -983,9 +833,7 @@
       "Persian Empire"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Jerusalem-destroyed.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "In what year did the Romans under Titus destroy Jerusalem?",
@@ -996,9 +844,7 @@
       "586 BC"
     ],
     "answer": "A",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Jerusalem-destroyed.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Keilah is mentioned in Joshua 15:44 as one of the cities allotted to which tribe?",
@@ -1009,9 +855,7 @@
       "Manasseh"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Keilah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to 1 Samuel 23:1, the Philistines were fighting against Keilah and robbing what?",
@@ -1022,9 +866,7 @@
       "The vineyards"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Keilah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "When David fled Jerusalem during Absalom's rebellion, which valley did he cross (2 Samuel 15:23)?",
@@ -1035,9 +877,7 @@
       "Valley of Jezreel"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Kidron-Valley.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to John 18:1, Jesus went out with His disciples over which brook to a garden?",
@@ -1048,9 +888,7 @@
       "Brook Zered"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Kidron-Valley.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Lo Debar is possibly the same town as which city mentioned several times in the book of Joshua?",
@@ -1061,9 +899,7 @@
       "Lachish"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Lo-Debar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Amos 6:13 mentions Israel boasting about the conquest of Lo Debar, which would have been in the territory of which kingdom?",
@@ -1074,9 +910,7 @@
       "Ammon"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Lo-Debar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Genesis 19:30-38 describes the origin of Moab through Lot's relationship with whom?",
@@ -1087,9 +921,7 @@
       "His mother"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Moab-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Ruth, who became the great grandmother of King David, was from which nation (Ruth 1-2)?",
@@ -1100,9 +932,7 @@
       "Canaan"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Moab-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to 1 Kings 10:22 (ESV), Solomon's fleet's voyage brought back gold, silver, ivory, apes, and what other animal?",
@@ -1113,9 +943,7 @@
       "Horses"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ophir-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Ophir was known for its treasures of gold, precious stones, and what type of wood?",
@@ -1126,9 +954,7 @@
       "Pine wood"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ophir-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Matthew 8:30-33 and Mark 5:1-17, a large herd of what animal was present near Gadara in the region of Decapolis?",
@@ -1139,9 +965,7 @@
       "Swine"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Perea-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "John the Baptist performed baptisms in the Jordan at Bethany, which was a city in which region (John 1:28; 3:26; 10:40)?",
@@ -1152,9 +976,7 @@
       "Perea"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Perea-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Petra is referred to by its Hebrew name, Sela, in which two books of the Bible?",
@@ -1165,9 +987,7 @@
       "Psalms and Proverbs"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Petra.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The city of Petra is located in the land of which people, who were descendants of Esau?",
@@ -1178,9 +998,7 @@
       "Philistines"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Petra.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Ramah of Benjamin was the birthplace, hometown, and burial site of which prophet (1 Samuel 1:1, 19-20; 25:1)?",
@@ -1191,9 +1009,7 @@
       "Isaiah"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ramah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Jeremiah 31:15, a voice was heard in Ramah, weeping for her children. Who is this figure of lament?",
@@ -1204,9 +1020,7 @@
       "Leah"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ramah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Solomon's Porch is described in 1 Kings as being in front of what part of the temple?",
@@ -1217,9 +1031,7 @@
       "The treasury"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Solomon-Porch.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "God forbade King David from building the temple but allowed him to gather materials for which son (1 Chronicles 22:2-5)?",
@@ -1230,9 +1042,7 @@
       "Amnon"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Solomon-first-temple.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Genesis 10:22, Aram was the son of whom?",
@@ -1243,9 +1053,7 @@
       "Canaan"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Syria-Aram-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "In Acts 9:1-6, Paul's conversion experience happened on the road to which Syrian city?",
@@ -1256,9 +1064,7 @@
       "Damascus"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Syria-Aram-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The tabernacle of Moses was built according to whose specifications?",
@@ -1269,9 +1075,7 @@
       "The elders of Israel's"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Tabernacle-of-Moses.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The Temple Mount is also referred to as Mount Zion in which book of the Bible?",
@@ -1282,9 +1086,7 @@
       "Kings"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Temple-mount.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Ziklag is first mentioned in the Bible as part of the inheritance of which tribe?",
@@ -1295,9 +1097,7 @@
       "Dan"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ziklag-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What Roman province, located south of Macedonia, consisted of the southern part of modern-day Greece?",
@@ -1308,9 +1108,7 @@
       "Samaria"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Achaia-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "In what book of the New Testament is Akeldama mentioned as the place where Judas died (Acts 1:19)?",
@@ -1321,9 +1119,7 @@
       "Acts"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Akeldama-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What is the Aramaic meaning of Akeldama, the name given to the field where Judas died?",
@@ -1334,9 +1130,7 @@
       "Field of Tears"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Akeldama-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which New Testament city was the third-largest in the Roman Empire?",
@@ -1347,9 +1141,7 @@
       "Rome"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Antioch-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "In what city were believers first called Christians (Acts 11:26)?",
@@ -1360,9 +1152,7 @@
       "Ephesus"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Antioch-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Where was Paul invited to speak when the Athenians showed interest in his new teachings (Acts 17:21)?",
@@ -1373,9 +1163,7 @@
       "The temple"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Areopagus.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which coastal city in the southern part of Israel was a significant seaport in biblical times?",
@@ -1386,9 +1174,7 @@
       "Jaffa"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ashkelon-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What did the Israelites do at Peor, leading to the Lord’s anger and a plague (Numbers 25:3)?",
@@ -1399,9 +1185,7 @@
       "They built a new temple"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Baal-Peor.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What village in Judea was located about two miles east of Jerusalem (John 11:18)?",
@@ -1412,9 +1196,7 @@
       "Nain"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Bethany-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which town in Galilee is known as the birthplace of the disciples Philip, Peter, and Andrew (John 1:44–45)?",
@@ -1425,9 +1207,7 @@
       "Chorazin"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Bethsaida-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Near which city did Jesus make the statement, “On this rock I will build my church” (Matthew 16:18)?",
@@ -1438,9 +1218,7 @@
       "Caesarea Philippi"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Caesarea-Philippi.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What important port city on the Mediterranean coast was a center of Roman governance in the region?",
@@ -1451,9 +1229,7 @@
       "Ashkelon"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Caesarea-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which city on the northwest shore of the Sea of Galilee was the chosen home city of Jesus after He was driven from Nazareth (Luke 4:16, 28–30)?",
@@ -1464,9 +1240,7 @@
       "Tiberias"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Capernaum-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Believers from which region in eastern Asia Minor were present at the large gathering of Jews on the day of Pentecost (Acts 2:9)?",
@@ -1477,9 +1251,7 @@
       "Bithynia"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Cappadocia-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Paul mentions Phoebe as a deacon or servant in the church of which port city near Corinth (Romans 16:1)?",
@@ -1490,9 +1262,7 @@
       "Thessalonica"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Cenchrea-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Along with Bethsaida and Capernaum, which city in the Upper Galilee region was part of the “evangelical triangle” where Jesus ministered?",
@@ -1503,9 +1273,7 @@
       "Tyre"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Chorazin-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which city, situated on the Isthmus of Corinth, was the capital of the Roman province of Achaia?",
@@ -1516,9 +1284,7 @@
       "Thessalonica"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Corinth-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Barnabas was a native of which large island in the Mediterranean Sea (Acts 4:36)?",
@@ -1529,9 +1295,7 @@
       "Sicily"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Cyprus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which ancient Philistine city is mentioned in connection with the ark of the covenant being placed in the temple of Dagon (1 Samuel 5)?",
@@ -1542,9 +1306,7 @@
       "Ekron"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ekron-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which capital city of a Roman province in Asia was known for its large amphitheater and the temple of Artemis (Acts 19:35)?",
@@ -1555,9 +1317,7 @@
       "Laodicea"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Ephesus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "In which region of northern Israel did Jesus grow up and spend much of His earthly ministry?",
@@ -1568,9 +1328,7 @@
       "Perea"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Galilee-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "The prophet Jonah boarded a ship in which Mediterranean port city in Israel when he fled from the Lord (Jonah 1:3)?",
@@ -1581,9 +1339,7 @@
       "Ashkelon"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Jaffa-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which region, formerly called Judah, began to be known by a different name after the Babylonian captivity?",
@@ -1594,9 +1350,7 @@
       "Achaia"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Judea-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which city, located in the Lycus River Valley, is known for the church that Jesus heartily condemned in Revelation (Revelation 3:14–22)?",
@@ -1607,9 +1361,7 @@
       "Thyatira"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Laodicea-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which region, known for its cedar trees, provided lumber for the construction of Solomon’s temple (1 Kings 5:5–6)?",
@@ -1620,9 +1372,7 @@
       "Mesopotamia"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Lebanon-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which city in Asia Minor is noteworthy for being the probable home of Timothy, Paul’s young protégé (Acts 16:1)?",
@@ -1633,9 +1383,7 @@
       "Antioch"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Lystra-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What rocky island in the Mediterranean Sea is mentioned as the location where Paul was shipwrecked on his journey to Rome (Acts 28:1)?",
@@ -1646,9 +1394,7 @@
       "Rhodes"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Malta-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "On which mountain in Moab did Moses die after being allowed to see the Promised Land from a distance (Deuteronomy 34:1–6)?",
@@ -1659,9 +1405,7 @@
       "Mount Tabor"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Mount-Nebo.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which dome-shaped mountain in the Jezreel Valley was a familiar landmark to Jesus and the disciples during their travels in Galilee?",
@@ -1672,9 +1416,7 @@
       "Mount Carmel"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Mount-Tabor.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What ridge running along the east side of Jerusalem was the site of many events in the Bible, including Jesus’ ascension (Acts 1:12)?",
@@ -1685,9 +1427,7 @@
       "Mount Gerizim"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Mount-of-Olives.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What is the unknown mountain upon which Jesus was transfigured before Peter, James, and John (Matthew 17, Mark 9, Luke 9)?",
@@ -1698,9 +1438,7 @@
       "Mount Nebo"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Mount-of-Transfiguration.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "On which small Greek island in the Aegean Sea did the apostle John write the book of Revelation (Revelation 1:9)?",
@@ -1711,9 +1449,7 @@
       "Cyprus"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Patmos-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What pool in ancient Jerusalem, meaning “Sent” (John 9:7), was the location of one of Christ’s miracles?",
@@ -1724,9 +1460,7 @@
       "Upper Pool"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Pool-of-Siloam.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which city, known for being built on seven hills, is alluded to in Revelation as Babylon the harlot (Revelation 17:9)?",
@@ -1737,9 +1471,7 @@
       "Rome"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Rome-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which region and city in central Israel was disliked by the Jews in Jesus’ day due to religious syncretism?",
@@ -1750,9 +1482,7 @@
       "Perea"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Samaria-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which of the seven churches of Asia mentioned in Revelation was the capital of the ancient kingdom of Lydia (Revelation 1:11)?",
@@ -1763,9 +1493,7 @@
       "Thyatira"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Sardis-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Many momentous events in the life of Jesus took place around which body of water, also called the Sea of Tiberias (John 6:1)?",
@@ -1776,9 +1504,7 @@
       "The Sea of Galilee"
     ],
     "answer": "D",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Sea-of-Galilee.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which area in the plains of Moab, directly east of the Jordan and north of the Dead Sea, was the last encampment of the Israelites before crossing into the Promised Land?",
@@ -1789,9 +1515,7 @@
       "Bethany"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Shittim-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Jesus mentioned which Phoenician city, known for its opulence and wickedness, when contrasting its potential for repentance with that of Chorazin and Bethsaida (Matthew 11:21–22)?",
@@ -1802,9 +1526,7 @@
       "Beirut"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Sidon-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which Phoenician city, part of the inheritance of the tribe of Asher, was a strong and fortified seaport on the Mediterranean coast (Joshua 19:29)?",
@@ -1815,9 +1537,7 @@
       "Acco"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Tyre-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which valley is associated with Achan’s sin, which brought trouble upon the whole nation of Israel (Joshua 7)?",
@@ -1828,9 +1548,7 @@
       "Valley of Jezreel"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Valley-of-Achor.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What is the traditional route in Jerusalem that Jesus traveled on the day of His crucifixion from Pilate’s judgment seat to Golgotha?",
@@ -1841,9 +1559,7 @@
       "The Damascus Gate"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Via-Dolorosa.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which type of tree, known for its aromatic qualities and resistance to decay, was abundant in ancient Lebanon and used in the construction of Solomon’s temple (1 Kings 5)?",
@@ -1854,9 +1570,7 @@
       "Cypress"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/cedars-of-Lebanon.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "Which garden, located on a slope of the Mount of Olives, is where Jesus frequently went with His disciples to pray and where He was betrayed (John 18:2)?",
@@ -1867,9 +1581,7 @@
       "King’s Garden"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/garden-of-Gethsemane.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "What is the Aramaic name for the place outside of Old Jerusalem where Jesus was crucified, meaning “the place of the skull” (Matthew 27:33)?",
@@ -1880,9 +1592,7 @@
       "Olivet"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/place-of-the-skull.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "In the Old Testament, what phrase was often used as another name for the Tabernacle of Moses, a place where God would meet with His people (Exodus, Leviticus, Numbers)?",
@@ -1893,9 +1603,7 @@
       "Sanctuary"
     ],
     "answer": "B",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/tent-of-meeting.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "According to Acts 2:5, people from which empire were gathered in Jerusalem at the time of Pentecost?",
@@ -1906,9 +1614,7 @@
       "Egyptian Empire"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Cappadocia-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   },
   {
     "question": "In Acts 18:2, in which city did Paul meet Aquila and Priscilla, who shared his trade of tent-making?",
@@ -1919,8 +1625,6 @@
       "Thessalonica"
     ],
     "answer": "C",
-    "category": "Places",
-    "source": "https://www.gotquestions.org/Corinth-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Places"
   }
 ]

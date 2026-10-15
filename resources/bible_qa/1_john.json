@@ -8,9 +8,7 @@
       "That which we have seen"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What was revealed, according to 1 John 1:2?",
@@ -21,9 +19,7 @@
       "The Holy Spirit"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What is the message that the author announces, according to 1 John 1:5?",
@@ -34,9 +30,7 @@
       "God is merciful"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does the blood of Jesus Christ do for us? (1 John 1:7)",
@@ -47,9 +41,7 @@
       "Gives us joy"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 1:9, what does God do if we confess our sins?",
@@ -60,9 +52,7 @@
       "He forgets our sins"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does it mean if we say we have not sinned? (1 John 1:10)",
@@ -73,9 +63,7 @@
       "We are humble"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "Who is our Counselor with the Father if anyone sins? (1 John 2:1)",
@@ -86,9 +74,7 @@
       "An angel"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "For whose sins is Jesus the atoning sacrifice? (1 John 2:2)",
@@ -99,9 +85,7 @@
       "Only for the believers"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "How do we know that we know him? (1 John 2:3)",
@@ -112,9 +96,7 @@
       "If we perform miracles"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does the author say about someone who claims to know God but doesn't keep his commandments? (1 John 2:4)",
@@ -125,9 +107,7 @@
       "They are righteous"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What old commandment did the author write about? (1 John 2:7)",
@@ -138,9 +118,7 @@
       "To keep the Sabbath"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 2:9, where is one who says he is in the light but hates his brother?",
@@ -151,9 +129,7 @@
       "With God"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does the author say about someone who loves his brother? (1 John 2:10)",
@@ -164,9 +140,7 @@
       "They hate God"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What has overcome the evil one? (1 John 2:13-14)",
@@ -177,9 +151,7 @@
       "The love of God"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 2:15, what should we not love?",
@@ -190,9 +162,7 @@
       "Our neighbor"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What is passing away with its lusts? (1 John 2:17)",
@@ -203,9 +173,7 @@
       "Eternal life"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What did the author say about the Antichrist in 1 John 2:18?",
@@ -216,9 +184,7 @@
       "He is the son of God"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does the author say about those who went out from the group of believers? (1 John 2:19)",
@@ -229,9 +195,7 @@
       "They will come back"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does the anointing from the Holy One give? (1 John 2:20)",
@@ -242,9 +206,7 @@
       "Great wealth"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "Who is a liar according to 1 John 2:22?",
@@ -255,9 +217,7 @@
       "He who denies the Holy Spirit"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 2:27, what does the anointing teach about?",
@@ -268,9 +228,7 @@
       "Only about love"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does everyone who practices righteousness have? (1 John 2:29)",
@@ -281,9 +239,7 @@
       "Been given great power"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "Why does the world not know the children of God? (1 John 3:1)",
@@ -294,9 +250,7 @@
       "They are not of the world"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What is sin according to 1 John 3:4?",
@@ -307,9 +261,7 @@
       "Hatred"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does the author say about someone who hates his brother? (1 John 3:15)",
@@ -320,9 +272,7 @@
       "He is blessed"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 3:16, how do we know love?",
@@ -333,9 +283,7 @@
       "Because we love the world"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 3:20, if our heart condemns us, what does the author say about God?",
@@ -346,9 +294,7 @@
       "God is not aware of our hearts"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does the author say we receive from God when we keep his commandments? (1 John 3:22)",
@@ -359,9 +305,7 @@
       "Condemnation"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What is God's commandment according to 1 John 3:23?",
@@ -372,9 +316,7 @@
       "To only love God"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "How do we know that God remains in us, according to 1 John 3:24?",
@@ -385,9 +327,7 @@
       "By our wisdom"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 4:1, what should we do with every spirit?",
@@ -398,9 +338,7 @@
       "Follow them blindly"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 4:2, how do we know the Spirit of God?",
@@ -411,9 +349,7 @@
       "Every spirit who denies the body"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What spirit is it when one does not confess that Jesus Christ has come in the flesh? (1 John 4:3)",
@@ -424,9 +360,7 @@
       "The spirit of love"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 4:4, who is greater: he who is in the world, or he who is in you?",
@@ -437,9 +371,7 @@
       "It is not clear"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 4:8, what is God?",
@@ -450,9 +382,7 @@
       "Mercy"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 4:9, how was God's love revealed in us?",
@@ -463,9 +393,7 @@
       "By our obedience to the law"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does the author call Jesus in 1 John 4:14?",
@@ -476,9 +404,7 @@
       "The Creator of the world"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does the author say about the one who remains in love in 1 John 4:16?",
@@ -489,9 +415,7 @@
       "They will be wealthy"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 4:18, what does perfect love do?",
@@ -502,9 +426,7 @@
       "Induces fear"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 4:19, why do we love?",
@@ -515,9 +437,7 @@
       "Because we want to"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "What does the author say about a man who says, “I love God,” and hates his brother? (1 John 4:20)",
@@ -528,9 +448,7 @@
       "He is a prophet"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:1, what has been born of God?",
@@ -541,9 +459,7 @@
       "Those who keep the law"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:3, what is loving God?",
@@ -554,9 +470,7 @@
       "To love ourselves"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:4, what overcomes the world?",
@@ -567,9 +481,7 @@
       "Our great wealth"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:5, who is he who overcomes the world?",
@@ -580,9 +492,7 @@
       "He who is without sin"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:6, how did Jesus Christ come?",
@@ -593,9 +503,7 @@
       "By spirit only"
     ],
     "answer": "C",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:10, what does the one who believes in the Son of God have?",
@@ -606,9 +514,7 @@
       "The ability to fly"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:11, what did God give to us?",
@@ -619,9 +525,7 @@
       "The ability to fly"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:13, why has the author written these things?",
@@ -632,9 +536,7 @@
       "That we may be famous"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:14, what is the boldness that we have toward God?",
@@ -645,9 +547,7 @@
       "That we can never be wrong"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:16, what should we do if we see a brother sinning a sin not leading to death?",
@@ -658,9 +558,7 @@
       "We should join him"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:18, what does the one who is born of God not do?",
@@ -671,9 +569,7 @@
       "Ignores their neighbor"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:19, where does the whole world lie?",
@@ -684,9 +580,7 @@
       "In a state of grace"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:20, what has the Son of God given us?",
@@ -697,9 +591,7 @@
       "Power over others"
     ],
     "answer": "A",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   },
   {
     "question": "According to 1 John 5:21, what should the little children keep themselves from?",
@@ -710,8 +602,6 @@
       "Love"
     ],
     "answer": "B",
-    "category": "1 John",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_1JN.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "1 John"
   }
 ]

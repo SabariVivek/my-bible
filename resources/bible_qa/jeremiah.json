@@ -8,9 +8,7 @@
       "The land of Israel"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What was Jeremiah's response when Yahweh called him to be a prophet? (Jeremiah 1:6)",
@@ -21,9 +19,7 @@
       "He asked to think about it"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What two actions did Yahweh say he set Jeremiah over? (Jeremiah 1:10)",
@@ -34,9 +30,7 @@
       "To destroy and to build"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did the people of Israel do that was described as forsaking Yahweh? (Jeremiah 2:13)",
@@ -47,9 +41,7 @@
       "They stopped going to the temple"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did the people say when they turned their backs to Yahweh? (Jeremiah 2:27)",
@@ -60,9 +52,7 @@
       "Arise and save us"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say about the people's transgression? (Jeremiah 2:29)",
@@ -73,9 +63,7 @@
       "They all had been faithful to me"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh compare Israel's turning away from him to? (Jeremiah 2:21)",
@@ -86,9 +74,7 @@
       "A well"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say about Judah's return to him? (Jeremiah 3:10)",
@@ -99,9 +85,7 @@
       "It was done with great sorrow"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh want the people to acknowledge? (Jeremiah 3:13)",
@@ -112,9 +96,7 @@
       "Their obedience"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh say about the people in regards to his law? (Jeremiah 4:10)",
@@ -125,9 +107,7 @@
       "They are faithful"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh say he will make his words in Jeremiah's mouth? (Jeremiah 5:14)",
@@ -138,9 +118,7 @@
       "A sword"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What has happened in the land that is described as astonishing and horrible? (Jeremiah 5:30-31)",
@@ -151,9 +129,7 @@
       "The prophets do not care about the people"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say about the people's sacrifices and offerings? (Jeremiah 6:20)",
@@ -164,9 +140,7 @@
       "They were more than enough"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh accuse the people of trusting in? (Jeremiah 7:8)",
@@ -177,9 +151,7 @@
       "Powerful words"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say that the people had made his house? (Jeremiah 7:11)",
@@ -190,9 +162,7 @@
       "A beautiful temple"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What will happen to the bones of the kings, priests, and prophets of Judah? (Jeremiah 8:1)",
@@ -203,9 +173,7 @@
       "They will be thrown into the sea"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What was the reason Yahweh said the land was burned up? (Jeremiah 9:13-14)",
@@ -216,9 +184,7 @@
       "Because they had obeyed his voice"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh say not to learn? (Jeremiah 10:2)",
@@ -229,9 +195,7 @@
       "The way of the kings"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say about the idols? (Jeremiah 10:14-15)",
@@ -242,9 +206,7 @@
       "They are useful for wisdom"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh call the covenant that the people broke? (Jeremiah 11:10)",
@@ -255,9 +217,7 @@
       "A new covenant"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say he would do to the men of Anathoth for seeking Jeremiah's life? (Jeremiah 11:22)",
@@ -268,9 +228,7 @@
       "Make them kings"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say he would fill all the inhabitants of the land with? (Jeremiah 13:13-14)",
@@ -281,9 +239,7 @@
       "Peace"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "Why did Yahweh say he would cause the people to be tossed back and forth among the kingdoms of the earth? (Jeremiah 15:4)",
@@ -294,9 +250,7 @@
       "Because of their obedience"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What is the sin of Judah written with? (Jeremiah 17:1)",
@@ -307,9 +261,7 @@
       "A pen of bronze and the point of an emerald"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh say about the heart? (Jeremiah 17:9)",
@@ -320,9 +272,7 @@
       "It is honest"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh tell Jeremiah to do at the potter's house? (Jeremiah 18:2-4)",
@@ -333,9 +283,7 @@
       "To hear Yahweh's words"
     ],
     "answer": "D",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say would happen to those who devise plans against Jeremiah? (Jeremiah 18:23)",
@@ -346,9 +294,7 @@
       "They will be made rich"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "Where did Jeremiah tell the people to go to hear Yahweh's word? (Jeremiah 19:2-3)",
@@ -359,9 +305,7 @@
       "The city gates"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say he would give into the hand of their enemies? (Jeremiah 20:5)",
@@ -372,9 +316,7 @@
       "Their flocks"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Jeremiah say that Yahweh had made his word to him? (Jeremiah 20:8)",
@@ -385,9 +327,7 @@
       "A beautiful song"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh say he will set before the people? (Jeremiah 21:8)",
@@ -398,9 +338,7 @@
       "The way of the wise and the way of the foolish"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say about those who do not execute justice and righteousness? (Jeremiah 22:5)",
@@ -411,9 +349,7 @@
       "They will have many riches"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What will be the burial of Jehoiakim? (Jeremiah 22:19)",
@@ -424,9 +360,7 @@
       "He will not be buried"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say he would do to the shepherds who scattered his flock? (Jeremiah 23:1-2)",
@@ -437,9 +371,7 @@
       "He would make them kings"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What has gone out into all the land from the prophets of Jerusalem? (Jeremiah 23:15)",
@@ -450,9 +382,7 @@
       "Righteousness"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say about the prophets who use their own tongues to prophesy? (Jeremiah 23:31)",
@@ -463,9 +393,7 @@
       "They are for me"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh say he will send among the people until they are consumed from the land? (Jeremiah 24:10)",
@@ -476,9 +404,7 @@
       "Long life and health"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "How long will the nations serve the king of Babylon? (Jeremiah 25:11)",
@@ -489,9 +415,7 @@
       "20 years"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh say that he will call for on all the inhabitants of the earth? (Jeremiah 25:29)",
@@ -502,9 +426,7 @@
       "A new beginning"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh tell Jeremiah to do in the court of Yahweh's house? (Jeremiah 26:2)",
@@ -515,9 +437,7 @@
       "To pray"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Jeremiah say to the people about serving the king of Babylon? (Jeremiah 27:17)",
@@ -528,9 +448,7 @@
       "They will live"
     ],
     "answer": "D",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did the prophets of old prophesy against many countries and kingdoms? (Jeremiah 28:8)",
@@ -541,9 +459,7 @@
       "Wealth and fortune"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say to seek for the city where they were carried away captive? (Jeremiah 29:7)",
@@ -554,9 +470,7 @@
       "Their own freedom"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say he would do to those who had not gone into captivity? (Jeremiah 29:17)",
@@ -567,9 +481,7 @@
       "Give them peace"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say about writing all the words he had spoken to Jeremiah? (Jeremiah 30:2)",
@@ -580,9 +492,7 @@
       "Forget them"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say he would reverse for his people? (Jeremiah 30:3)",
@@ -593,9 +503,7 @@
       "The kindness of my people"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What will be heard in the city when Yahweh restores it? (Jeremiah 33:10-11)",
@@ -606,9 +514,7 @@
       "Only sounds of silence and stillness"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did the king of Judah make with the people at Jerusalem? (Jeremiah 34:8)",
@@ -619,9 +525,7 @@
       "A covenant of prosperity"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Jeremiah say would not lack for Jonadab, the son of Rechab? (Jeremiah 35:19)",
@@ -632,9 +536,7 @@
       "Prosperity"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Baruch do with the scroll of Yahweh's words? (Jeremiah 36:8)",
@@ -645,9 +547,7 @@
       "He gave it to the king"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say would happen if Zedekiah would not go out to the king of Babylon's princes? (Jeremiah 38:18)",
@@ -658,9 +558,7 @@
       "The people would be scattered"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Gedaliah tell the people not to be afraid of? (Jeremiah 40:9)",
@@ -671,9 +569,7 @@
       "Ishmael the son of Nethaniah"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Johanan and the captains do when they heard of the evil that Ishmael had done? (Jeremiah 41:12)",
@@ -684,9 +580,7 @@
       "They surrendered to Ishmael"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Jeremiah tell the people he would do after they asked him to inquire of Yahweh? (Jeremiah 42:4)",
@@ -697,9 +591,7 @@
       "He would tell them to serve the king of Babylon"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say he would do if the people would still live in the land? (Jeremiah 42:10)",
@@ -710,9 +602,7 @@
       "He would make them slaves"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did the proud men accuse Jeremiah of? (Jeremiah 43:2-3)",
@@ -723,9 +613,7 @@
       "Worshipping other gods"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say would happen to the cities of Judah and Jerusalem because the people did not stop burning incense to other gods? (Jeremiah 44:6)",
@@ -736,9 +624,7 @@
       "They would be filled with riches"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did the people in Egypt say they would continue to do, despite Jeremiah's warnings? (Jeremiah 44:17)",
@@ -749,9 +635,7 @@
       "They would destroy all idols"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say he would bring on all flesh? (Jeremiah 45:5)",
@@ -762,9 +646,7 @@
       "Great peace"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "Where did Jeremiah say that the mighty men of Egypt have stumbled and fallen? (Jeremiah 46:6)",
@@ -775,9 +657,7 @@
       "In the city of Babylon"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What is Moab compared to in the wilderness? (Jeremiah 48:6)",
@@ -788,9 +668,7 @@
       "A strong mountain"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say would happen to Moab because they trusted in their works and their treasures? (Jeremiah 48:7)",
@@ -801,9 +679,7 @@
       "They will become a great nation"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh say he will send on Moab? (Jeremiah 48:12)",
@@ -814,9 +690,7 @@
       "Those who build"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What is the curse for those who do the work of Yahweh negligently and keep back their sword from blood? (Jeremiah 48:10)",
@@ -827,9 +701,7 @@
       "They will have riches"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say he would do to the children of Ammon after they were taken captive? (Jeremiah 49:6)",
@@ -840,9 +712,7 @@
       "He would make them slaves"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say would happen to Edom because of their pride? (Jeremiah 49:16)",
@@ -853,9 +723,7 @@
       "They would become a great nation"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh say about Babylon in Jeremiah 50:2?",
@@ -866,9 +734,7 @@
       "Babylon is exalted"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say that Babylon has become among the nations? (Jeremiah 50:23)",
@@ -879,9 +745,7 @@
       "A new beginning"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say that the nations have done because they have drunk of Babylon's wine? (Jeremiah 51:7)",
@@ -892,9 +756,7 @@
       "They have become rich"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What does Yahweh say about his purpose against Babylon? (Jeremiah 51:11)",
@@ -905,9 +767,7 @@
       "To save it"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Yahweh say he would do to Babylon and Chaldea for what they did in Zion? (Jeremiah 51:24)",
@@ -918,9 +778,7 @@
       "He would show them mercy"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What will happen when Yahweh executes judgment on Babylon's engraved images? (Jeremiah 51:47)",
@@ -931,9 +789,7 @@
       "Their people will be saved"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "What did Jeremiah write in a book? (Jeremiah 51:60)",
@@ -944,9 +800,7 @@
       "All the good that should come on Babylon"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "According to Jeremiah 12:1, what does Jeremiah acknowledge about Yahweh, even when contending with Him?",
@@ -957,9 +811,7 @@
       "That He is forgiving"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "In Jeremiah 12:5, what question is posed about contending with horses, after being wearied by footmen?",
@@ -970,9 +822,7 @@
       "How can you avoid them?"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "According to Jeremiah 14:7, even though their iniquities testify against them, what does Jeremiah ask Yahweh to do?",
@@ -983,9 +833,7 @@
       "Cast them away"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "In Jeremiah 14:17, what does the Lord command Jeremiah's eyes to do, concerning the virgin daughter of His people?",
@@ -996,9 +844,7 @@
       "Be closed to the suffering"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "According to Jeremiah 16:10, what will the people ask when they hear of the great evil the Lord pronounces against them?",
@@ -1009,9 +855,7 @@
       "What can they do to appease the Lord?"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "In Jeremiah 16:16, who does the Lord say He will send for to 'fish them up' and 'hunt them'?",
@@ -1022,9 +866,7 @@
       "Priests and prophets"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "According to Jeremiah 31:8, from which direction will the Lord gather the people, along with the blind and the lame?",
@@ -1035,9 +877,7 @@
       "The west country"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "In Jeremiah 31:22, what 'new thing' has Yahweh created in the earth?",
@@ -1048,9 +888,7 @@
       "Water will turn into wine"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "According to Jeremiah 32:17, what does Jeremiah acknowledge about the Lord's power in making the heavens and the earth?",
@@ -1061,9 +899,7 @@
       "That it is all accomplished through His word"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "According to Jeremiah 32:31, what has the city been to the Lord from the day it was built?",
@@ -1074,9 +910,7 @@
       "A place of perfect righteousness"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "In Jeremiah 37:8, what does the Lord declare will not happen to the Chaldeans in their war against the city?",
@@ -1087,9 +921,7 @@
       "They will not rebuild"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "According to Jeremiah 37:17, what does Jeremiah tell King Zedekiah, concerning his fate?",
@@ -1100,9 +932,7 @@
       "That he will find refuge in the temple"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "In Jeremiah 39:16, what does the Lord promise to Ebed-melech the Ethiopian?",
@@ -1113,9 +943,7 @@
       "That he will become a prophet"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "According to Jeremiah 39:18, what does the Lord promise to Ebed-melech for his trust in Him?",
@@ -1126,9 +954,7 @@
       "That he will be known among the nations"
     ],
     "answer": "C",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "According to Jeremiah 47:4, who will the Lord destroy from Tyre and Sidon?",
@@ -1139,9 +965,7 @@
       "Their idols"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "In Jeremiah 47:5, what has come on Gaza, and what is Ashkelon?",
@@ -1152,9 +976,7 @@
       "Peace and tranquility"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "According to Jeremiah 52:4, in what year and month did the siege of Jerusalem begin?",
@@ -1165,9 +987,7 @@
       "The eleventh year, in the fourth month"
     ],
     "answer": "A",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   },
   {
     "question": "In Jeremiah 52:7, how did the men of war flee the city?",
@@ -1178,8 +998,6 @@
       "Through the city walls"
     ],
     "answer": "B",
-    "category": "Jeremiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JER.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Jeremiah"
   }
 ]

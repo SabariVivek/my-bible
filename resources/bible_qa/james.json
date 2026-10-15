@@ -8,9 +8,7 @@
       "Run away from them"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does the testing of your faith produce, according to James (James 1:3)?",
@@ -21,9 +19,7 @@
       "Weakness"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What should a person who lacks wisdom do, according to James (James 1:5)?",
@@ -34,9 +30,7 @@
       "Seek worldly advice"
     ],
     "answer": "A",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is a person who doubts like (James 1:6)?",
@@ -47,9 +41,7 @@
       "A rock"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what will the rich man do (James 1:10-11)?",
@@ -60,9 +52,7 @@
       "Live forever"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What is promised to those who endure temptation and love God, according to James (James 1:12)?",
@@ -73,9 +63,7 @@
       "Power over others"
     ],
     "answer": "A",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, where does every good and perfect gift come from (James 1:17)?",
@@ -86,9 +74,7 @@
       "Our parents"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does James say about being quick to hear, slow to speak, and slow to anger (James 1:19)?",
@@ -99,9 +85,7 @@
       "It doesn't produce righteousness"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what should believers do with the implanted word (James 1:21)?",
@@ -112,9 +96,7 @@
       "Reject it"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What should a person be, according to James, in relation to the word (James 1:22)?",
@@ -125,9 +107,7 @@
       "Neither a hearer nor a doer"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What is pure and undefiled religion before God according to James (James 1:27)?",
@@ -138,9 +118,7 @@
       "To ignore the poor"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What should believers not hold with partiality (James 2:1)?",
@@ -151,9 +129,7 @@
       "The laws of man"
     ],
     "answer": "A",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, who did God choose to be rich in faith and heirs of the kingdom (James 2:5)?",
@@ -164,9 +140,7 @@
       "The religious"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What is the royal law according to the Scripture that believers should fulfill (James 2:8)?",
@@ -177,9 +151,7 @@
       "To follow the Ten Commandments"
     ],
     "answer": "A",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is faith without works (James 2:17)?",
@@ -190,9 +162,7 @@
       "Complete"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, how was Abraham justified (James 2:21)?",
@@ -203,9 +173,7 @@
       "By his lineage"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is the tongue compared to (James 3:6)?",
@@ -216,9 +184,7 @@
       "A soft whisper"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does James say about the source of wars and fightings among believers (James 4:1)?",
@@ -229,9 +195,7 @@
       "From a lack of communication"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does James say about friendship with the world (James 4:4)?",
@@ -242,9 +206,7 @@
       "It is an act of charity"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what should believers do to the devil (James 4:7)?",
@@ -255,9 +217,7 @@
       "Befriend him"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what does God do to the proud and humble (James 4:6)?",
@@ -268,9 +228,7 @@
       "He curses both the proud and the humble"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does James say about the life of a person (James 4:14)?",
@@ -281,9 +239,7 @@
       "It is meaningless"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What should a person do if they know to do good and don't do it, according to James (James 4:17)?",
@@ -294,9 +250,7 @@
       "It is wise"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what should the rich do in light of their coming miseries (James 5:1)?",
@@ -307,9 +261,7 @@
       "Ignore the warnings"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what should believers do when suffering (James 5:13)?",
@@ -320,9 +272,7 @@
       "Take revenge"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "To whom is the letter from James addressed (James 1:1)?",
@@ -333,9 +283,7 @@
       "To the Roman Empire"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is the result of letting endurance have its perfect work (James 1:4)?",
@@ -346,9 +294,7 @@
       "You may be hated by the world"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What is a double-minded man like, according to James (James 1:8)?",
@@ -359,9 +305,7 @@
       "Always righteous"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What happens to the beauty of the flower, according to James (James 1:11)?",
@@ -372,9 +316,7 @@
       "It is nourished by the sun"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, can God be tempted by evil (James 1:13)?",
@@ -385,9 +327,7 @@
       "It depends on the person's faith"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, how is a person tempted (James 1:14)?",
@@ -398,9 +338,7 @@
       "By fate"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What is the result of lust when it has conceived (James 1:15)?",
@@ -411,9 +349,7 @@
       "It bears peace"
     ],
     "answer": "A",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does James say about the anger of man (James 1:20)?",
@@ -424,9 +360,7 @@
       "It is always justified"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is a person who only hears the word and does not do it like (James 1:23-24)?",
@@ -437,9 +371,7 @@
       "A pillar of strength"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what law should a person look into and continue in (James 1:25)?",
@@ -450,9 +382,7 @@
       "The traditions of men"
     ],
     "answer": "A",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does James say about the religion of a person who does not bridle their tongue (James 1:26)?",
@@ -463,9 +393,7 @@
       "It is highly regarded"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does James say about showing partiality (James 2:4)?",
@@ -476,9 +404,7 @@
       "It makes you a judge with evil thoughts"
     ],
     "answer": "D",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what do the rich do to the poor (James 2:6-7)?",
@@ -489,9 +415,7 @@
       "Have compassion for them"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does James call the law to love your neighbor as yourself (James 2:8)?",
@@ -502,9 +426,7 @@
       "The law of faith"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what happens if you stumble at one point of the whole law (James 2:10)?",
@@ -515,9 +437,7 @@
       "You are still righteous"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is the relationship between faith and works (James 2:22)?",
@@ -528,9 +448,7 @@
       "Works are more important than faith"
     ],
     "answer": "A",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, how are people justified (James 2:24)?",
@@ -541,9 +459,7 @@
       "By grace alone"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does James say about teachers (James 3:1)?",
@@ -554,9 +470,7 @@
       "They have no responsibility"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what can a perfect person do (James 3:2)?",
@@ -567,9 +481,7 @@
       "Perform miracles"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is the tongue full of (James 3:8)?",
@@ -580,9 +492,7 @@
       "Sweetness and light"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what should not come out of the same mouth (James 3:10)?",
@@ -593,9 +503,7 @@
       "Love and compassion"
     ],
     "answer": "A",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, where does the wisdom that is earthly, sensual and demonic come from (James 3:15)?",
@@ -606,9 +514,7 @@
       "From good intentions"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is the wisdom that comes from above (James 3:17)?",
@@ -619,9 +525,7 @@
       "Self-seeking and ambitious"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is the fruit of righteousness sown in (James 3:18)?",
@@ -632,9 +536,7 @@
       "In strife"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, why do people not have what they desire (James 4:2)?",
@@ -645,9 +547,7 @@
       "Because it is not God's will"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what does God resist and give grace to (James 4:6)?",
@@ -658,9 +558,7 @@
       "He resists both the proud and the humble"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what should believers do in the sight of the Lord (James 4:10)?",
@@ -671,9 +569,7 @@
       "Be proud and arrogant"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what should be said instead of boasting about future plans (James 4:15)?",
@@ -684,9 +580,7 @@
       "We are in control of our destiny"
     ],
     "answer": "A",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is the corroded gold and silver a testimony of for the rich (James 5:3)?",
@@ -697,9 +591,7 @@
       "Their wise investments"
     ],
     "answer": "C",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does James say about the cries of the laborers who have been defrauded (James 5:4)?",
@@ -710,9 +602,7 @@
       "They will be punished for complaining"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "What does James encourage believers to do while waiting for the coming of the Lord (James 5:7-8)?",
@@ -723,9 +613,7 @@
       "Indulge in worldly pleasures"
     ],
     "answer": "A",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what should believers do when they are cheerful (James 5:13)?",
@@ -736,9 +624,7 @@
       "Let him ignore it"
     ],
     "answer": "A",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what should the elders do for the sick (James 5:14)?",
@@ -749,9 +635,7 @@
       "Send them to a hospital"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is the result of the prayer of faith for the sick (James 5:15)?",
@@ -762,9 +646,7 @@
       "They will be punished more severely"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what should believers do to one another (James 5:16)?",
@@ -775,9 +657,7 @@
       "Condemn one another"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what is the nature of Elijah (James 5:17)?",
@@ -788,9 +668,7 @@
       "He was a god"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   },
   {
     "question": "According to James, what will turning a sinner from the error of his way do (James 5:20)?",
@@ -801,8 +679,6 @@
       "Make them more sinful"
     ],
     "answer": "B",
-    "category": "James",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_JAS.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "James"
   }
 ]

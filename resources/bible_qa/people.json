@@ -8,9 +8,7 @@
       "He would frequently travel with his relatives"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Arabs-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 17:20, what did God promise Abraham regarding Ishmael?",
@@ -21,9 +19,7 @@
       "He would be known for his wisdom and piety"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Arabs-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Where did Hagar and Ishmael wander according to Genesis 21:14?",
@@ -34,9 +30,7 @@
       "The wilderness of Beersheba"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Arabs-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 21:20 notes that Ishmael became proficient in what skill?",
@@ -47,9 +41,7 @@
       "Archery"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Arabs-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Judges 6:3 refers to Arabs by what descriptive term?",
@@ -60,9 +52,7 @@
       "The people of the west"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Arabs-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 10:25-30 indicates that Arabs, as descendants of Shem, spoke what kind of languages?",
@@ -73,9 +63,7 @@
       "Indo-European languages"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Arabs-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Ruth 1:2, Mahlon and Kilion, the sons of Naomi, were from which place and described by what term?",
@@ -86,9 +74,7 @@
       "Canaanites from Gaza"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ephrathites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "1 Samuel 17:12 identifies Jesse, the father of King David, as being from where and what designation?",
@@ -99,9 +85,7 @@
       "A Judean from Hebron"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ephrathites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 32:28 records that God changed Jacob's name to what?",
@@ -112,9 +96,7 @@
       "Joseph"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jews-and-Gentiles.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 12:2-3, what was God's desire for the Jewish people?",
@@ -125,9 +107,7 @@
       "That they would accumulate great wealth"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jews-and-Gentiles.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "2 Chronicles 26:7 states that King Uzziah had a war against which people, and the victory was attributed to whose help?",
@@ -138,9 +118,7 @@
       "The Edomites, due to his own strength"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Meunites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Ezra 2:50 and Nehemiah 7:52 mention descendants of whom among those returning from the Babylonian exile?",
@@ -151,9 +129,7 @@
       "Moab"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Meunites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Exodus 2:15 records that Moses fled from Pharaoh and traveled to which land?",
@@ -164,9 +140,7 @@
       "Moab"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Midianites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Exodus 2:16, what was Jethro's role in Midian?",
@@ -177,9 +151,7 @@
       "A wealthy merchant"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Midianites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Judges 7:12 describes the multitude of the Midianite army that Gideon faced as being like what?",
@@ -190,9 +162,7 @@
       "Like the sand dunes in the desert"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Midianites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Moabite Stone, discovered in 1868, was set up by which king around 900 BC?",
@@ -203,9 +173,7 @@
       "Balak"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Moabites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 11:31 and the context of Ruth's story indicate her genetic link to Israel through whom?",
@@ -216,9 +184,7 @@
       "Isaac"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Moabites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Galatians 1:17 mentions Paul going to Arabia, likely referring to the territory of which people?",
@@ -229,9 +195,7 @@
       "The Midianites"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nabateans.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Jeremiah 35:6, whose command established the strict rules followed by the Rechabites?",
@@ -242,9 +206,7 @@
       "Jeremiah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Rechabites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Jeremiah 35:12-14 describes God using the faithfulness of which group to teach a lesson to the people of Judah?",
@@ -255,9 +217,7 @@
       "The Babylonians"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Rechabites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Song of Solomon 5:9 and 6:1 use which term repeatedly to describe a dearly loved person in a romantic context?",
@@ -268,9 +228,7 @@
       "Neighbor"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/beloved-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Nehemiah 13:26, King Solomon was described as 'beloved by his God'; what was the name given to him at birth that meant 'loved by the Lord' as noted in 2 Samuel 12:25?",
@@ -281,9 +239,7 @@
       "Nathan"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/beloved-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Matthew 3:17, Mark 1:11, and Luke 3:22 record God the Father's words at Jesus' baptism, calling Jesus what?",
@@ -294,9 +250,7 @@
       "My chosen one"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/beloved-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 30 mentions the birth of Naphtali, the sixth son of Jacob, to which of Jacob's wives?",
@@ -307,9 +261,7 @@
       "Zilpah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/tribe-of-Naphtali.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 49:21, Jacob's blessing of Naphtali compared him to what?",
@@ -320,9 +272,7 @@
       "A sturdy ox"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/tribe-of-Naphtali.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 25:23, what did God tell Rebekah about the two nations that would come from her womb?",
@@ -333,9 +283,7 @@
       "The older one would serve the younger"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Edomites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What did Esau rashly sell to Jacob according to Genesis 25:30-34?",
@@ -346,9 +294,7 @@
       "His position as the family leader"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Edomites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 16:1-12 states that the Ishmaelites were the descendants of Ishmael, whose mother was Hagar, who was the handmaiden of whom?",
@@ -359,9 +305,7 @@
       "Zilpah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ishmaelites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 17:20 mentions a promise from God regarding Ishmael; what was one aspect of this promise?",
@@ -372,9 +316,7 @@
       "He would write the first five books of the Bible"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ishmaelites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Psalm 83:5-6 indicates that during the reign of King David, the Ishmaelites joined a confederacy against whom?",
@@ -385,9 +327,7 @@
       "The Egyptians"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ishmaelites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 19:37-38, who were the ancestors of the Ammonites?",
@@ -398,9 +338,7 @@
       "The descendants of Esau, son of Isaac"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ammonites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 25:2 mentions that Abraham had six sons by whom after the death of Sarah?",
@@ -411,9 +349,7 @@
       "Zilpah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Midianites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Most scholars believe the land of Midian was officially located on both sides of which geographical feature, as mentioned in the 'Midianites.html.pdf'?",
@@ -424,9 +360,7 @@
       "The Jordan River"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Midianites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Numbers 31:30 suggests a potential origin for the Nethinim; after Israel conquered which people in battle, God instructed Moses to give some of the spoils to the Levites?",
@@ -437,9 +371,7 @@
       "The Moabites"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nethinim.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Joshua 9:26-27 describes whom being made woodcutters and water carriers for the assembly after deceiving Joshua?",
@@ -450,9 +382,7 @@
       "The Jebusites"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nethinim.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 40:9-11 and 41, Joseph interpreted the dreams of which individuals while in prison in Egypt?",
@@ -463,9 +393,7 @@
       "The royal physicians and the palace scribes"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/biblical-patriarchs.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 25:22-26 recounts the birth of twins to Isaac and Rebekah; what were their names?",
@@ -476,9 +404,7 @@
       "Moses and Aaron"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/twins-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 38 tells the story of twins born to Judah through Tamar; what were their names?",
@@ -489,9 +415,7 @@
       "Nadab and Abihu"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/twins-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 4:1-2, who were the first two sons born to Adam and Eve?",
@@ -502,9 +426,7 @@
       "Shem and Canaan"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/twins-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 41:52 records that Joseph named his second-born son Ephraim, explaining the name as meaning what?",
@@ -515,9 +437,7 @@
       "God has protected me from my enemies"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/tribe-of-Ephraim.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 49:27 describes the blessing of which tribe by Jacob, comparing them to a 'ravenous wolf'?",
@@ -528,9 +448,7 @@
       "Asher"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/tribe-of-Benjamin.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Judges 13:2-5 introduces which individual whose birth was announced by an angel and who was to 'begin the deliverance of Israel from the hand of the Philistines'?",
@@ -541,9 +459,7 @@
       "Barak"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/people-Bible-look-like.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "2 Kings 1:8 describes the appearance of which prophet as wearing 'a garment of hair and had a leather belt around his waist'?",
@@ -554,9 +470,7 @@
       "Jeremiah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/prophet-Old-Testament.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 20:7, God referred to which patriarch as a prophet when speaking to Abimelech?",
@@ -567,9 +481,7 @@
       "Joseph"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/prophet-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "1 Samuel 3:4 marks the beginning of whose prophetic ministry?",
@@ -580,9 +492,7 @@
       "Gad"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/prophets-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Numbers 11:25, besides Moses, which group of people also prophesied when the Spirit of God rested upon them?",
@@ -593,9 +503,7 @@
       "The leaders of the tribes"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/seventy-elders-Israel.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Luke 1:5-25 recounts the story of Zechariah, the father of whom, who was visited by an angel and told that his wife would bear a son?",
@@ -606,9 +514,7 @@
       "Peter"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/prophets-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Samuel 16:12, how is David described?",
@@ -619,9 +525,7 @@
       "Quiet and unassuming"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/people-Bible-look-like.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the first named prophet in the Bible according to Genesis 20:7?",
@@ -632,9 +536,7 @@
       "Adam"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/prophet-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Acts 13:1 identifies several individuals as prophets in the early church, including Barnabas and whom else?",
@@ -645,9 +547,7 @@
       "Titus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/prophets-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 4:2, what was Abel's occupation?",
@@ -658,9 +558,7 @@
       "A fisherman"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Hebrews 11:4, Abel is commended for what?",
@@ -671,9 +569,7 @@
       "His long life"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 4:25, who was born to Adam and Eve to replace Abel?",
@@ -684,9 +580,7 @@
       "Enosh"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 4:20 identifies Jabal as the ancestor of those who do what?",
@@ -697,9 +591,7 @@
       "Live in tents and raise livestock"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Adah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was deeply distressed by Esau's marriage to women from Canaan, according to Genesis 27:46?",
@@ -710,9 +602,7 @@
       "Rebekah"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Adah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Corinthians 15:45, who was the first man?",
@@ -723,9 +613,7 @@
       "Adam"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Adam-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "From what did God form Adam, as mentioned in Genesis 2:7?",
@@ -736,9 +624,7 @@
       "The breath of animals"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Adam-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 3:6, what did both Adam and Eve do?",
@@ -749,9 +635,7 @@
       "Planted a garden"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Adam-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Genesis 36 identifies Amalek as a grandson of whom?",
@@ -762,9 +646,7 @@
       "Esau"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Amalekites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 1 Samuel 15:2-3, God commanded which king to attack the Amalekites and totally destroy everything that belonged to them?",
@@ -775,9 +657,7 @@
       "Hezekiah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Amalekites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Deuteronomy 1:35-36, which two individuals were exceptions to the generation prohibited from entering the Promised Land?",
@@ -788,9 +668,7 @@
       "Samuel and Eli"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Anakim.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who became the first to fight against the infestation of Asherah poles, as mentioned in Judges 6:25-27?",
@@ -801,9 +679,7 @@
       "Samuel"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Asherah-pole.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Kings 16:31, who married Jezebel, the daughter of the king of the Zidonians?",
@@ -814,9 +690,7 @@
       "Hezekiah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Baal-and-Asherah.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Genesis 10:8, who is identified as the father of Nimrod?",
@@ -827,9 +701,7 @@
       "Cush"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Babylonian-empire.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which king of Babylon captured Jerusalem and took Jewish leaders as prisoners, as mentioned in 2 Kings 24:12-16?",
@@ -840,9 +712,7 @@
       "Belshazzar"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Babylonian-empire.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 4:1, who gave birth to Cain?",
@@ -853,9 +723,7 @@
       "Leah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Cain-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Hebrews 11:4 suggests what about Abel's offering compared to Cain's?",
@@ -866,9 +734,7 @@
       "Cain's offering was larger"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Cain-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 9:18, Canaan was the son of whom?",
@@ -879,9 +745,7 @@
       "Noah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Canaanites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who led the people of Israel through the Jordan River and into the Promised Land after Moses' death?",
@@ -892,9 +756,7 @@
       "Samuel"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Canaanites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 626 BC, who began an extended period of Chaldean rule over Babylon?",
@@ -905,9 +767,7 @@
       "Nabopolassar"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Chaldeans.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Based on 1 Samuel 30:14, the Cherethites seem to be another name for or closely associated with whom?",
@@ -918,9 +778,7 @@
       "The Edomites"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Cherethites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Numbers 12:1 mentions that Moses married a woman of what ethnicity?",
@@ -931,9 +789,7 @@
       "Amalekite"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Cushites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was sold into slavery by his brothers and ended up in Egypt?",
@@ -944,9 +800,7 @@
       "Judah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Egyptians-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 5:24, what happened to Enoch?",
@@ -957,9 +811,7 @@
       "He wandered the earth"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Enoch-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Eve was given her name, meaning 'the living' or 'life,' for what reason according to Genesis 3:20?",
@@ -970,9 +822,7 @@
       "She survived the great flood"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Eve-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Joshua 13:13, what did the Israelites fail to do regarding the Geshurites?",
@@ -983,9 +833,7 @@
       "Impose taxes on them"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Geshurites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Gibeonites are described in 2 Samuel 21:2 as descendants of which people?",
@@ -996,9 +844,7 @@
       "Jebusites"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gibeonites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Joshua 9, the Gibeonites deceived the Israelites using what strategy?",
@@ -1009,9 +855,7 @@
       "Presenting themselves as coming from a distant country"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gibeonites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 15:18-21, the land promised to Abraham's descendants included the territory of which people?",
@@ -1022,9 +866,7 @@
       "Babylonians"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Girgashites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Hagrites are first mentioned in 1 Chronicles 5:10 in the context of a war during whose reign?",
@@ -1035,9 +877,7 @@
       "King Hezekiah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hagarites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 2 Samuel 3:3, David married Maakah, who was a princess of which people?",
@@ -1048,9 +888,7 @@
       "Edomites"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Geshurites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Hittites were descendants of Heth, who was the son of whom, according to Genesis 10:15?",
@@ -1061,9 +899,7 @@
       "Ham"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hittites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 15:18-21, the Jebusites inhabited part of the land promised to Abraham's descendants, with which city being one of their key locations?",
@@ -1074,9 +910,7 @@
       "Bethel"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jebusites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Moses married into which tribe after fleeing to Midian, as mentioned in Exodus 2:16-21?",
@@ -1087,9 +921,7 @@
       "Perizzites"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Kenites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Numbers 32:12, Caleb is identified as the son of Jephunneh the what?",
@@ -1100,9 +932,7 @@
       "Jebusite"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Kenizzites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Jeremiah 50:2 mentions which Babylonian deity that would be put to shame?",
@@ -1113,9 +943,7 @@
       "Tammuz"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Marduk-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Isaiah prophesied that the Medes would be stirred up against whom, as mentioned in Isaiah 13:17-18?",
@@ -1126,9 +954,7 @@
       "Philistines"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Medo-Persian-empire.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The book of Esther describes events that occurred during the reign of which Persian king?",
@@ -1139,9 +965,7 @@
       "Xerxes"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Medo-Persian-empire.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Exodus 3:8, the Perizzites were one of the nations living in the land promised to the Israelites, described as flowing with what?",
@@ -1152,9 +976,7 @@
       "Grain and fruit"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Perizzites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Philistines' origin is thought to be in Caphtor, which is the Hebrew name for what region according to Amos 9:7?",
@@ -1165,9 +987,7 @@
       "Canaan"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Philistines.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Philistines built their civilization primarily in how many main cities?",
@@ -1178,9 +998,7 @@
       "Twelve"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Philistines.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Sabeans are mentioned in Job 1:13-15 as doing what to Job's possessions and servants?",
@@ -1191,9 +1009,7 @@
       "Seeking shelter"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sabeans.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Kings 17:24, the king of Assyria sent people from which region to inhabit Samaria?",
@@ -1204,9 +1020,7 @@
       "Persia"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Samaritans.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Samaritans primarily accepted which part of the Hebrew scriptures?",
@@ -1217,9 +1031,7 @@
       "The entire Old Testament"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Samaritans.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Shem is considered the father of which group of peoples?",
@@ -1230,9 +1042,7 @@
       "Canaanites"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Semites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 4:26, after the birth of Seth's son Enosh, what did people begin to do?",
@@ -1243,9 +1053,7 @@
       "Wage wars"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Seth-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Sumerians are credited with creating which early form of writing?",
@@ -1256,9 +1064,7 @@
       "Hebrew alphabet"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sumerians.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 4:22, Tubal-Cain forged tools out of what materials?",
@@ -1269,9 +1075,7 @@
       "Copper and tin"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Tubal-Cain.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The city of Zidon is thought to have been founded by whom, according to Genesis 10:15?",
@@ -1282,9 +1086,7 @@
       "Jebus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zidonians-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Sumerian King List, a non-biblical text, supports the idea that people before which event lived to be very old?",
@@ -1295,9 +1097,7 @@
       "The destruction of Sodom and Gomorrah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/how-old-was-Adam-when-he-died.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Samuel 21:11 and many scholars, what might the name Abimelech have been among the Philistines?",
@@ -1308,9 +1108,7 @@
       "A title given to the king"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abimelech-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What term was NOT commonly used to refer to Abraham during his lifetime (2 Kings 25:25)?",
@@ -1321,9 +1119,7 @@
       "Member of a nation"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abraham-Jew-Gentile.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Based on Genesis 30:10–11, what is the Hebrew meaning of the name Gad, chosen by Leah?",
@@ -1334,9 +1130,7 @@
       "Gift from God"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gad-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 35:18, what name did Jacob give to Rachel's youngest son after she initially named him Ben-Oni?",
@@ -1347,9 +1141,7 @@
       "Judah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Benjamin-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in Genesis 30:3, why did Rachel suggest that Jacob sleep with her servant Bilhah?",
@@ -1360,9 +1152,7 @@
       "To anger her sister Leah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bilhah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Genesis 30:1–8, why did Rachel name her son Dan, meaning 'he judged'?",
@@ -1373,9 +1163,7 @@
       "Because it was a family tradition"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Dan-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 30:21, who was Dinah's mother?",
@@ -1386,9 +1174,7 @@
       "Leah"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Dinah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 15:2, who would have inherited Abram's estate if he remained childless?",
@@ -1399,9 +1185,7 @@
       "A chosen servant"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Eliezer-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What did God tell Rebekah about her pregnancy in Genesis 25:23?",
@@ -1412,9 +1196,7 @@
       "Her children would be kings"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Esau-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the mother of Gad, Jacob's seventh son, as mentioned in Genesis 30:10–11?",
@@ -1425,9 +1207,7 @@
       "Zilpah"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gad-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 16:2–3, who suggested that Abram sleep with her maid Hagar?",
@@ -1438,9 +1218,7 @@
       "Miriam"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hagar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As indicated in Genesis 9:22, what did Ham do when he found his father Noah naked in his tent?",
@@ -1451,9 +1229,7 @@
       "He laughed at him"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ham-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Genesis 16:16, how old was Abraham when Hagar gave birth to Ishmael?",
@@ -1464,9 +1240,7 @@
       "90 years old"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ishmael-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 30:14–18, Issachar's name is associated with what item brought by Reuben from the field?",
@@ -1477,9 +1251,7 @@
       "Wheat"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Issachar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who were the brothers of Japheth that were saved from the great flood (Genesis 7:13)?",
@@ -1490,9 +1262,7 @@
       "Jacob and Esau"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Japheth-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in Genesis 38:1, after the incident with his brother Joseph, Judah left his brothers and stayed with a man named Hirah of which place?",
@@ -1503,9 +1273,7 @@
       "Haran"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Judah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 24:29, who came out to welcome Abraham's servant when he found Rebekah?",
@@ -1516,9 +1284,7 @@
       "Nahor"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Laban-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 29:17, what is mentioned about Leah in comparison to her sister Rachel?",
@@ -1529,9 +1295,7 @@
       "Leah was homely"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Leah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Genesis 34, which two brothers defended their sister Dinah after she was defiled?",
@@ -1542,9 +1306,7 @@
       "Gad and Asher"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Levi-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 19:16, who physically helped Lot and his family leave Sodom?",
@@ -1555,9 +1317,7 @@
       "His sons-in-law"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Lot-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 30:8, Rachel named her son Naphtali because she felt she had a great struggle and had done what with her sister Leah?",
@@ -1568,9 +1328,7 @@
       "Made peace"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Naphtali-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 27:1–29 and other verses, who did Rachel help Jacob deceive to obtain a blessing?",
@@ -1581,9 +1339,7 @@
       "Pharaoh"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Rachel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Genesis 25:27, what skill did Esau develop?",
@@ -1594,9 +1350,7 @@
       "Carpentry"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Esau-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 9:23, how did Shem and Japheth cover their father Noah's nakedness?",
@@ -1607,9 +1361,7 @@
       "They did nothing"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Shem-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the mother of Zebulun as mentioned in Genesis 30:20?",
@@ -1620,9 +1372,7 @@
       "Leah"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zebulun-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 35:25, who were Bilhah's children by Jacob?",
@@ -1633,9 +1383,7 @@
       "Reuben and Simeon"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bilhah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Genesis 46:16, how many sons did Gad father?",
@@ -1646,9 +1394,7 @@
       "Four"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gad-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 16:11, what did the angel of the Lord say about Ishmael?",
@@ -1659,9 +1405,7 @@
       "He will be a servant"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ishmael-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Genesis 46:13, how many sons did Issachar father?",
@@ -1672,9 +1416,7 @@
       "Five"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Issachar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in Genesis 10:2, how many sons did Japheth father?",
@@ -1685,9 +1427,7 @@
       "Eight"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Japheth-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 25:2, how many sons did Keturah bear to Abraham?",
@@ -1698,9 +1438,7 @@
       "Seven"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Keturah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Genesis 31:29, what was the duration of Jacob's overall working relationship with Laban?",
@@ -1711,9 +1449,7 @@
       "Twenty-five years"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Laban-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 29:32, what was the name of Leah's first son?",
@@ -1724,9 +1460,7 @@
       "Levi"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Leah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Mark 2:14 and Luke 5:27–29, Levi is also known by what other name?",
@@ -1737,9 +1471,7 @@
       "John"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Levi-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 13:8–9, what did Abram offer Lot to resolve the quarreling between their herdsmen?",
@@ -1750,9 +1482,7 @@
       "Money"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Lot-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Genesis 46:23–25, who were Naphtali's sons?",
@@ -1763,9 +1493,7 @@
       "Tola, Puah, Jashub, and Shimron"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Naphtali-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 10:6–20, who were some of the descendants of Ham?",
@@ -1776,9 +1504,7 @@
       "The Moabites and Ammonites"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ham-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Genesis 29:28–29, who gave Bilhah to Rachel as a wedding gift when she married Jacob?",
@@ -1789,9 +1515,7 @@
       "Abraham"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bilhah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 37:3, why did Jacob love Joseph more than his other sons?",
@@ -1802,9 +1526,7 @@
       "Because Joseph obeyed him without question"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/life-Joseph.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in Genesis 25:8, what is said about Abraham when he died?",
@@ -1815,9 +1537,7 @@
       "He died suddenly"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/how-old-was-Abraham-when-he-died.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 5:32, how old was Noah when he fathered Shem, Ham, and Japheth?",
@@ -1828,9 +1548,7 @@
       "550 years old"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Shem-Ham-Japheth.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Genesis 25:25, what physical characteristic described Esau at birth, leading to his name?",
@@ -1841,9 +1559,7 @@
       "He had blue eyes"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Esau-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Genesis 30:9–10, who did Leah give to Jacob as a concubine after she stopped having children?",
@@ -1854,9 +1570,7 @@
       "Zilpah"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zilpah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 12:1, what was the Lord's command to Abram?",
@@ -1867,9 +1581,7 @@
       "To remain in Haran"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abraham-Jew-Gentile.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in Genesis 42:22, what did Reuben say to his brothers when they faced misfortune in Egypt?",
@@ -1880,9 +1592,7 @@
       "He suggested they return home"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Reuben-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Genesis 11:30, what is mentioned about Terah's daughter-in-law, Sarai?",
@@ -1893,9 +1603,7 @@
       "She was favored by God"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Terah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 49:5–7, whose anger and fury did Jacob curse?",
@@ -1906,9 +1614,7 @@
       "Issachar and Zebulun"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Simeon-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Genesis 30:20, what did Leah say after giving birth to Zebulun?",
@@ -1919,9 +1625,7 @@
       "This son will be a great warrior"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zebulun-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Genesis 40, whose dream did Joseph interpret as indicating a restoration to his position?",
@@ -1932,9 +1636,7 @@
       "The cupbearer"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/life-Joseph.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Joshua 24:2, what did Joshua say about Terah, the father of Abraham and Nahor?",
@@ -1945,9 +1647,7 @@
       "He was a friend of God"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Terah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Joshua 6:26, what curse did Joshua pronounce on anyone who would rebuild Jericho?",
@@ -1958,9 +1658,7 @@
       "They would suffer a great illness."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abiram-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Numbers 16:35, what was a consequence for Abiram and his co-conspirators?",
@@ -1971,9 +1669,7 @@
       "They were killed in the aftermath of the event."
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abiram-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Joshua 7, what specific items did Achan confess to taking from Jericho?",
@@ -1984,9 +1680,7 @@
       "Chariots and weapons"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Achan-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Joshua 6:19, where were the gold, silver, bronze, and iron from Jericho intended to go?",
@@ -1997,9 +1691,7 @@
       "To be distributed among the poor"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Achan-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in Exodus 6:23, who was the wife of Aaron and the daughter of the Amminadab mentioned there?",
@@ -2010,9 +1702,7 @@
       "Ruth"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Amminadab-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Numbers 2:3, the Amminadab mentioned in connection with Nahshon is associated with which tribe?",
@@ -2023,9 +1713,7 @@
       "Ephraim"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Amminadab-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Numbers 22:28, what extraordinary event occurred with Balaam on his way to Moab?",
@@ -2036,9 +1724,7 @@
       "He was turned back by a storm."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Balaam-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As noted in Numbers 24:2–3, what happened when Balaam looked toward Israel?",
@@ -2049,9 +1735,7 @@
       "He was overcome with anger."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Balaam-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Numbers 22:2–3, what prompted King Balak of Moab to be afraid?",
@@ -2062,9 +1746,7 @@
       "A dream that forewarned of invasion."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Balak-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 1 Kings 4:7, the biblical Ben-Hur is identified by his responsibility to supply provisions for whom?",
@@ -2075,9 +1757,7 @@
       "The army during wartime"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ben-Hur-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Exodus 31:2–6, Bezalel was from which tribe?",
@@ -2088,9 +1768,7 @@
       "Benjamin"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bezalel-and-Oholiab.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Exodus 31:2–3, with what was Bezalel specifically filled?",
@@ -2101,9 +1779,7 @@
       "Exceptional beauty"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bezalel-and-Oholiab.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Ruth 4:1–10, what commitment did Boaz make in front of the town's leaders?",
@@ -2114,9 +1790,7 @@
       "To build a new gate for the city."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Boaz-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The laws governing the guardian-redeemer, the role fulfilled by Boaz for Ruth, are found in which book of the Bible?",
@@ -2127,9 +1801,7 @@
       "Exodus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Boaz-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Joshua 15:16–17, who captured Kiriath Sepher and married Caleb's daughter Aksah?",
@@ -2140,9 +1812,7 @@
       "Barak"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Caleb-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As recorded in Numbers 16, Dathan was a ringleader of a rebellion against the leadership of whom?",
@@ -2153,9 +1823,7 @@
       "Gideon and Barak"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Dathan-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Judges 16:16–17, what did Samson finally reveal to Delilah as the secret of his great strength?",
@@ -2166,9 +1834,7 @@
       "A magical amulet"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Delilah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Exodus 6:23, Eleazar was one of the sons of whom?",
@@ -2179,9 +1845,7 @@
       "Caleb"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Eleazar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Leviticus 10:1, Nadab and Abihu were destroyed by the Lord because they offered what?",
@@ -2192,9 +1856,7 @@
       "Stolen offerings"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Eleazar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in 1 Samuel 1:3, Eli served God at the tabernacle in which city?",
@@ -2205,9 +1867,7 @@
       "Hebron"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Eli-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Samuel 2:12, the sons of Eli, Hophni and Phineas, are described as what?",
@@ -2218,9 +1878,7 @@
       "Brave warriors in battle"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Eli-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As recorded in Ruth 1:1–2, Elimelech moved his family to which country due to a famine in Bethlehem?",
@@ -2231,9 +1889,7 @@
       "Philistia"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Elimelech-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Samuel 1:1–8, Elkanah was the father of which prophet?",
@@ -2244,9 +1900,7 @@
       "Isaiah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Elkanah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Genesis 41:52, the name of Ephraim means what?",
@@ -2257,9 +1911,7 @@
       "Beloved son"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ephraim-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Exodus 17:12, who helped Aaron hold up Moses' hands during the battle with the Amalekites?",
@@ -2270,9 +1922,7 @@
       "Eleazar"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hur-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Numbers 4:28, under the direction of Ithamar, which clans of Levites had specific responsibilities concerning the tabernacle?",
@@ -2283,9 +1933,7 @@
       "The Gershonites and Amramites"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ithamar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Exodus 2, Jethro had several daughters who were involved in what occupation?",
@@ -2296,9 +1944,7 @@
       "Baking bread"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jethro-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Numbers 16, Korah, along with Dathan and Abiram, challenged the leadership of whom, questioning their right to lead?",
@@ -2309,9 +1955,7 @@
       "Samuel and Eli"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Korah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Numbers 3:27–32, as a Kohathite, Korah was responsible for transporting which items within the tabernacle?",
@@ -2322,9 +1966,7 @@
       "The grain offerings and wine"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Korah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in Genesis 41:51, what reason did Joseph give for naming his first son Manasseh?",
@@ -2335,9 +1977,7 @@
       "Because he was born in a foreign land."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Manasseh-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Exodus 15, the waters at Marah were initially undrinkable because they were what?",
@@ -2348,9 +1988,7 @@
       "Scarcely available"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Marah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As recounted in Exodus 15:25, how did Moses make the bitter waters of Marah drinkable?",
@@ -2361,9 +1999,7 @@
       "He found another spring of fresh water."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Marah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Numbers 12:1, Miriam and Aaron spoke against Moses because of whom?",
@@ -2374,9 +2010,7 @@
       "His decision to appoint elders."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Miriam-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Numbers 12:10, what was the immediate consequence for Miriam after she and Aaron spoke against Moses?",
@@ -2387,9 +2021,7 @@
       "She was filled with remorse."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Miriam-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Deuteronomy 18:15, whose prophecy did Moses make regarding a future prophet?",
@@ -2400,9 +2032,7 @@
       "Isaiah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Moses-and-Jesus.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Exodus 6:20, who were the parents of Moses and Aaron?",
@@ -2413,9 +2043,7 @@
       "Jacob and Leah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Moses-father.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As described in Deuteronomy 3:11, what was notable about the bed of Og, the king of Bashan?",
@@ -2426,9 +2054,7 @@
       "It was adorned with precious stones."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Og-king-of-Bashan.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Numbers 21:33–35, Moses and the Israelites defeated whom in battle before encountering Og of Bashan?",
@@ -2439,9 +2065,7 @@
       "The Amalekites"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Og-king-of-Bashan.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Genesis 38, Perez was one of the sons of Judah through whom?",
@@ -2452,9 +2076,7 @@
       "A slave girl"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Perez-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Ruth 4:11–12, the elders blessed Boaz, hoping his descendants would be like those of whom?",
@@ -2465,9 +2087,7 @@
       "Joseph and Asenath"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Perez-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Numbers 21:23–24, Moses and the Israelites defeated Sihon, king of the Amorites, and took his land, which extended between which two rivers?",
@@ -2478,9 +2098,7 @@
       "The Kishon and the Besor"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sihon-king-Amorites.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As described in Judges 4:3, Sisera cruelly oppressed the Israelites for how many years?",
@@ -2491,9 +2109,7 @@
       "Seven years"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sisera-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Judges 4:6–7, the prophetess Deborah instructed whom to gather ten thousand men to fight against Sisera?",
@@ -2504,9 +2120,7 @@
       "Jepthah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sisera-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Genesis 38, Tamar tricked Judah into having relations with her by disguising herself as what?",
@@ -2517,9 +2131,7 @@
       "A prostitute"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Tamar-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Numbers 27:1–4, Tirzah was one of the daughters of whom who raised a concern about family inheritance in the Promised Land?",
@@ -2530,9 +2142,7 @@
       "Gideon"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Tirzah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Judges 8:12, where did Gideon finally capture the Midianite kings Zebah and Zalmunna?",
@@ -2543,9 +2153,7 @@
       "In the hills of Ephraim"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zebah-and-Zalmunna.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Exodus 2:21, Moses was content to stay with whose family in Midian?",
@@ -2556,9 +2164,7 @@
       "Pharaoh's daughter"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zipporah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As recorded in Exodus 4:25, Zipporah performed what act on her son?",
@@ -2569,9 +2175,7 @@
       "She offered a sacrifice for him."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zipporah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Chronicles 23:14–15, Gershom and Eliezer, the sons of Moses, were counted as part of which tribe?",
@@ -2582,9 +2186,7 @@
       "Benjamin"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/did-Moses-have-children.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in Deuteronomy 34:7, how old was Moses when he died?",
@@ -2595,9 +2197,7 @@
       "Ninety years old"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/how-old-was-Moses-when-he-died.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who served as one of the chief priests during the reign of King David?",
@@ -2608,9 +2208,7 @@
       "Hushai"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abiathar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What is the meaning of Abiathar's name in Hebrew?",
@@ -2621,9 +2219,7 @@
       "Father of excellence"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abiathar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Samuel 25:3, how is Abigail described?",
@@ -2634,9 +2230,7 @@
       "A woman known for her sorrow"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abigail-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the wealthy husband of Abigail mentioned in 1 Samuel 25?",
@@ -2647,9 +2241,7 @@
       "Nabal"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abigail-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 1 Kings 1:4, how is Abishag described?",
@@ -2660,9 +2252,7 @@
       "A skilled musician"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abishag-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Samuel 14:50, who was Abner's cousin?",
@@ -2673,9 +2263,7 @@
       "Saul"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abner-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which priest, according to 1 Kings 1, supported Adonijah's attempt to become king?",
@@ -2686,9 +2274,7 @@
       "Abiathar"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Adonijah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What did Adonijah request after King David's death that angered Solomon, as mentioned in 1 Kings 2:13–17?",
@@ -2699,9 +2285,7 @@
       "To be recognized as a royal advisor"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Adonijah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Samuel 14:50, who was the father of Saul's wife, Ahinoam?",
@@ -2712,9 +2296,7 @@
       "Ahimaaz"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ahimaaz-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "During Absalom's rebellion, Ahimaaz and another person hid in a well and were helped by the wife of whom, according to 2 Samuel 17:18–19?",
@@ -2725,9 +2307,7 @@
       "Burium"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ahimaaz-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was one of David's wives and was with him during his time eluding Saul?",
@@ -2738,9 +2318,7 @@
       "Ahinoam"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ahinoam-of-Jezreel.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Samuel 16:23, how was Ahithophel's advice regarded?",
@@ -2751,9 +2329,7 @@
       "Generally opposed by King David"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ahithophel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What was Ahithophel's initial counsel to Absalom after the capture of Jerusalem, as stated in 2 Samuel 16:21–22?",
@@ -2764,9 +2340,7 @@
       "To fortify the city and prepare for a siege"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ahithophel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Whom did David appoint as commander of his army in place of Joab, as mentioned in 2 Samuel 19:13?",
@@ -2777,9 +2351,7 @@
       "Amasa"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Amasa-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who murdered Amasa, according to the account in 2 Samuel 20?",
@@ -2790,9 +2362,7 @@
       "Joab"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Amasa-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who advised Amnon on how to be with Tamar, as detailed in 2 Samuel 13:3?",
@@ -2803,9 +2373,7 @@
       "Jonadab"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Amnon-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "On whose threshing floor did David purchase a site to build an altar to the Lord, according to 2 Samuel 24?",
@@ -2816,9 +2384,7 @@
       "Araunah the Jebusite"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Araunah-the-Jebusite.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the mother of Solomon?",
@@ -2829,9 +2395,7 @@
       "Bathsheba"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bathsheba-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was known as one of David's 'mighty men' and famously killed a lion in a pit on a snowy day, as mentioned in 1 Chronicles 11:22?",
@@ -2842,9 +2406,7 @@
       "Benaiah"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Benaiah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the prophet who rebuked David for his sin with Bathsheba, as described in 2 Samuel 12?",
@@ -2855,9 +2417,7 @@
       "Nathan"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nathan-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 2 Samuel 6, in whose house did the Ark of the Covenant reside for three months after Uzzah's death?",
@@ -2868,9 +2428,7 @@
       "Obed-Edom"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Obed-Edom.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the grandfather of King David?",
@@ -2881,9 +2439,7 @@
       "Obed"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Obed-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the father of David?",
@@ -2894,9 +2450,7 @@
       "Jesse"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jesse-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the commander of King Saul's army, as mentioned in 1 Samuel 14:50?",
@@ -2907,9 +2461,7 @@
       "Abner"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Abner-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was known as King David's counselor but later aided Absalom in his rebellion?",
@@ -2920,9 +2472,7 @@
       "Ahithophel"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ahithophel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Samuel 15:27, which priest was instructed by King David to return to Jerusalem with the ark during Absalom's rebellion?",
@@ -2933,9 +2483,7 @@
       "Zadok"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zadok-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who killed Absalom against King David's explicit instructions, as mentioned in 2 Samuel 18?",
@@ -2946,9 +2494,7 @@
       "Abishai"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/who-was-Absalom.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Chronicles 6:39–43, who became King David's leader of music and was a descendant of Shimei the Gershonite?",
@@ -2959,9 +2505,7 @@
       "Asaph"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/who-was-Asaph.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who cursed King David and threw stones at him when David was fleeing from Absalom, as described in 2 Samuel 16:5–6?",
@@ -2972,9 +2516,7 @@
       "Ahithophel"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Shimei-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Whom did King David send to Joab with a letter instructing him to ensure Uriah's death in battle?",
@@ -2985,9 +2527,7 @@
       "Uriah the Hittite"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Uriah-the-Hittite.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Samuel 16:10–13, how many of Jesse's sons were presented to Samuel before David was called in?",
@@ -2998,9 +2538,7 @@
       "Seven"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/David-brothers.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which of David's sons raped his half-sister Tamar, as detailed in 2 Samuel 13?",
@@ -3011,9 +2549,7 @@
       "Amnon"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/David-children.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Samuel 17:25, who was the father of Amasa?",
@@ -3024,9 +2560,7 @@
       "Nahash"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Amasa-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the Ammonite king mentioned in 1 Samuel 11 who besieged Jabesh-Gilead?",
@@ -3037,9 +2571,7 @@
       "Nahash"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nahash-the-Ammonite.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 2 Samuel 17:27–29, which Gileadite provided sustenance for King David and his followers during Absalom's revolt?",
@@ -3050,9 +2582,7 @@
       "Barzillai"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Barzillai-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the prophet who first anointed David as king?",
@@ -3063,9 +2593,7 @@
       "Samuel"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jesse-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Samuel 22, who informed King Saul that Ahimelech had helped David?",
@@ -3076,9 +2604,7 @@
       "Doeg the Edomite"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Doeg-the-Edomite.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which prophet advised David to leave Moab and return to Judah while fleeing from Saul, as mentioned in 1 Samuel 22:5?",
@@ -3089,9 +2615,7 @@
       "Gad"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gad-the-seer.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which king of Tyre sent materials and craftsmen to David for the building of his palace, according to 2 Samuel 5:11?",
@@ -3102,9 +2626,7 @@
       "Hiram"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Huram-Hiram.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was sent back to Jerusalem by David to counter the counsel of Ahithophel during Absalom's rebellion, as described in 2 Samuel 15:32–37?",
@@ -3115,9 +2637,7 @@
       "Hushai the Arkite"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hushai-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was known as a 'seer' and also helped lead music for King David, possibly being the same as Ethan mentioned in 1 Chronicles 15:17?",
@@ -3128,9 +2648,7 @@
       "Jeduthun"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jeduthun-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the father of Obed, the grandfather of David, according to Ruth 4:13?",
@@ -3141,9 +2659,7 @@
       "Nahshon"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jesse-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who murdered Abner despite David making a peace agreement with him, as recounted in 2 Samuel 3?",
@@ -3154,9 +2670,7 @@
       "Abishai"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Joab-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was Saul's son known for his deep friendship with David?",
@@ -3167,9 +2681,7 @@
       "Jonathan"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jonathan-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who helped David escape when King Saul's men came to kill him, as mentioned in 1 Samuel 19?",
@@ -3180,9 +2692,7 @@
       "Michal"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Michal-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was described as 'surly and mean' in 1 Samuel 25:3 and refused to provide for David's men?",
@@ -3193,9 +2703,7 @@
       "Nabal"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nabal-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 1 Samuel 22:3–4, to which king did David entrust his family while fleeing from Saul?",
@@ -3206,9 +2714,7 @@
       "King Nahash of Ammon"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nahash-the-Ammonite.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 2 Samuel 6:11, in whose house did the Ark of the Covenant stay for three months?",
@@ -3219,9 +2725,7 @@
       "Obed-Edom"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Obed-Edom.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the great-grandmother of King David?",
@@ -3232,9 +2736,7 @@
       "Ruth"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Obed-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was a concubine of Saul and the mother of two of his sons who were handed over to the Gibeonites, as indicated in 2 Samuel 21?",
@@ -3245,9 +2747,7 @@
       "Rizpah"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Rizpah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Kings 11:29, where did Ahijah the prophet of Shiloh meet Jeroboam?",
@@ -3258,9 +2758,7 @@
       "At King Solomon's palace"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ahijah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What action did Ahijah take with his new cloak in 1 Kings 11:29-30 and 1 Kings 11:3?",
@@ -3271,9 +2769,7 @@
       "He offered it as a gift to the Lord."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ahijah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in 1 Kings 14:1-2, why did Jeroboam ask his wife to visit Ahijah?",
@@ -3284,9 +2780,7 @@
       "To warn Ahijah about Solomon's anger."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ahijah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Kings 8:18, 25-27 and 2 Chronicles 22:3, what was the character of King Ahaziah of Judah?",
@@ -3297,9 +2791,7 @@
       "Known for his wisdom"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Athaliah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in 2 Kings 11:1 and 2 Chronicles 22-23, what action did Athaliah take to secure the throne of Judah?",
@@ -3310,9 +2802,7 @@
       "She peacefully negotiated a transfer of power."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Athaliah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Kings 11:1-3, who hid Ahaziah's young son, Joash, from Athaliah's massacre?",
@@ -3323,9 +2813,7 @@
       "A loyal servant in the palace"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Athaliah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in 2 Kings 11:18 and 2 Chronicles 24:7, what did Queen Athaliah do to promote her religious beliefs in Judah?",
@@ -3336,9 +2824,7 @@
       "She sent messengers to spread the word of Yahweh."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Athaliah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Kings 15:18, who was the father of Ben-Hadad, the king of Aram?",
@@ -3349,9 +2835,7 @@
       "Hezion"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ben-Hadad-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in 2 Kings 5:1, what was the affliction of Naaman, the commander of the Syrian army?",
@@ -3362,9 +2846,7 @@
       "Deafness"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gehazi-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Kings 5:16, what was Elisha's initial response when Naaman offered him a gift after being healed?",
@@ -3375,9 +2857,7 @@
       "He asked Naaman to give it to the poor."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gehazi-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As described in 2 Kings 5:27, what was the consequence Gehazi faced for his deceitful actions?",
@@ -3388,9 +2868,7 @@
       "He was struck with blindness."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gehazi-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Kings 8:11, what was Elisha's initial reaction when speaking with Hazael?",
@@ -3401,9 +2879,7 @@
       "He expressed anger."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hazael-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As prophesied in 2 Kings 8:13, what future role was foretold for Hazael?",
@@ -3414,9 +2890,7 @@
       "He would be exiled to Egypt."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hazael-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Kings 11:1, what was Jehoiada's relationship to King Ahaziah of Judah?",
@@ -3427,9 +2901,7 @@
       "His chief advisor"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jehoiada-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in 2 Kings 11:13 and 2 Chronicles 23:13, what was Athaliah's reaction when she heard the shouts and music during Joash's coronation?",
@@ -3440,9 +2912,7 @@
       "She sent her army to quell the disturbance."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jehoiada-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Chronicles 23:15, where was Queen Athaliah executed?",
@@ -3453,9 +2923,7 @@
       "Outside the city walls"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jehoiada-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in 2 Kings 12:1-3, what was the general character of King Joash of Judah's reign while Jehoiada was alive?",
@@ -3466,9 +2934,7 @@
       "He neglected religious matters."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jehoiada-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Joel 2:28 (cf. Acts 2:16-18), what does the prophecy of Joel foretell will be poured out?",
@@ -3479,9 +2945,7 @@
       "A great famine"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Joel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As described in 2 Chronicles 13:15, what was the outcome of the battle between Abijah's forces and Jeroboam's army?",
@@ -3492,9 +2956,7 @@
       "The battle ended in a stalemate."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/King-Abijah.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Kings 18:17, what did King Ahab accuse Elijah of doing?",
@@ -3505,9 +2967,7 @@
       "Plotting against the throne."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/King-Ahab.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in 1 Kings 21:27, how did Ahab react upon hearing Elijah's prophecy of judgment?",
@@ -3518,9 +2978,7 @@
       "He consulted his false prophets."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/King-Ahab.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Kings 16:3 and 2 Chronicles 28:3, what repugnant deed did King Ahaz practice?",
@@ -3531,9 +2989,7 @@
       "He closed the temple of the Lord."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/King-Ahaz.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in 2 Kings 1:2, who did King Ahaziah of Israel send messengers to inquire of when he was badly injured?",
@@ -3544,9 +3000,7 @@
       "The king of Judah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/King-Ahaziah.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Kings 1:10, what happened to the first captain and his fifty soldiers sent to Elijah by King Ahaziah?",
@@ -3557,9 +3011,7 @@
       "They pledged allegiance to Elijah."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/King-Ahaziah.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As described in 2 Kings 14:3, what was the general assessment of King Amaziah of Judah's reign?",
@@ -3570,9 +3022,7 @@
       "His reign was marked by constant warfare and instability."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/King-Amaziah.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In the twentieth year of his reign, which action of Nehemiah technically broke the law in the king's presence (Nehemiah 2:2)?",
@@ -3583,9 +3033,7 @@
       "Falling asleep"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Artaxerxes-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Nehemiah, how many times is the name Baruch mentioned, possibly referring to different individuals (see Nehemiah 3:20; 10:6; and 11:5)?",
@@ -3596,9 +3044,7 @@
       "Three"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Baruch-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What was the primary issue in the book of Jeremiah regarding Jeremiah's pronouncements?",
@@ -3609,9 +3055,7 @@
       "The corruption of the priests"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Baruch-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Jeremiah 36:1-4, in whose fourth year was Baruch instructed to write down the words of the Lord spoken to Jeremiah?",
@@ -3622,9 +3066,7 @@
       "Jehoiakim son of Josiah king of Judah"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Baruch-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Daniel 5:12, whose wisdom did the queen remember and suggest that Belshazzar summon?",
@@ -3635,9 +3077,7 @@
       "Isaiah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Belshazzar.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What did Daniel say was the meaning of the word 'Tekel' written on the wall during Belshazzar's feast?",
@@ -3648,9 +3088,7 @@
       "A great victory is coming."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Belshazzar.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In the first year of his reign, what did Cyrus king of Persia proclaim throughout his kingdom according to Chronicles 36:22-23?",
@@ -3661,9 +3099,7 @@
       "An alliance with Babylon"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Cyrus-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Until at least what year did Daniel serve King Cyrus, suggesting his possible involvement in the decree supporting the Jews (Daniel 10:1)?",
@@ -3674,9 +3110,7 @@
       "540 BC"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Cyrus-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Daniel 6:1, the first Darius mentioned in the Bible is called Darius the?",
@@ -3687,9 +3121,7 @@
       "Mede"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Darius-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Daniel 6:28 refers to the reign of Darius and the reign of whom?",
@@ -3700,9 +3132,7 @@
       "Belshazzar"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Darius-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "During the Assyrian siege of Jerusalem, Eliakim son of Hilkiah held what significant role (2 Kings 18:18)?",
@@ -3713,9 +3143,7 @@
       "Chief Prophet"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Eliakim-son-of-Hilkiah.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What language did Eliakim request the Rabshakeh to speak in during their meeting (2 Kings 18:26)?",
@@ -3726,9 +3154,7 @@
       "Egyptian"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Eliakim-son-of-Hilkiah.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which Old Testament figure is it popular among some scholars to claim was an Essene (Luke 1:80)?",
@@ -3739,9 +3165,7 @@
       "Isaiah"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Essenes.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What did both John the Baptist and the Essenes use to describe themselves as mentioned in the provided text?",
@@ -3752,9 +3176,7 @@
       "Ezekiel 37"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Essenes.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The most famous Gedaliah in the Bible was appointed by which king to serve as governor over Judah after the destruction of the temple?",
@@ -3765,9 +3187,7 @@
       "Artaxerxes"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gedaliah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Jeremiah 38:1-6, some men helped cast the prophet Jeremiah into what to keep him from speaking to the people?",
@@ -3778,9 +3198,7 @@
       "A lion's den"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gedaliah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Habakkuk prophesied about which group of people and the destruction of Jerusalem (Habakkuk 1:6)?",
@@ -3791,9 +3209,7 @@
       "The Philistines"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Habakkuk-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Habakkuk 1:3, what puzzled Habakkuk about the injustice and violence around him?",
@@ -3804,9 +3220,7 @@
       "God's toleration of it"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Habakkuk-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What is the Hebrew name of Queen Esther?",
@@ -3817,9 +3231,7 @@
       "Leah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hadassah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The flowers of which plant are used for perfume and the berries for allspice, and is symbolically referenced as a sign of peace in Zechariah 1:11?",
@@ -3830,9 +3242,7 @@
       "Olive"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hadassah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Jeremiah 27:1-15, against whom was Jeremiah prophesying Babylonian victory?",
@@ -3843,9 +3253,7 @@
       "Judah and the surrounding nations"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hananiah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What action did Hananiah son of Azzur take in the temple to publicly deny Jeremiah's prophecy (Jeremiah 28:3-4)?",
@@ -3856,9 +3264,7 @@
       "He had Jeremiah arrested."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hananiah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "During whose reign did Huldah the prophetess live in Jerusalem?",
@@ -3869,9 +3275,7 @@
       "King Ahaz"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Huldah-the-prophetess.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Whom did King Josiah send his advisors to in order to ask for a word from the Lord (2 Chronicles 34:21)?",
@@ -3882,9 +3286,7 @@
       "Zephaniah the prophet"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Huldah-the-prophetess.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Kings 22:2, Josiah did what was right in the eyes of the LORD and walked in the way of whom?",
@@ -3895,9 +3297,7 @@
       "Solomon his father"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Josiah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Malachi's prophetic book is distinguished by not ending in deliverance but with what (Malachi 4:6)?",
@@ -3908,9 +3308,7 @@
       "A warning"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Malachi-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What was one of the primary roles of Malachi's ministry?",
@@ -3921,9 +3319,7 @@
       "To lead the people in battle"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Malachi-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Esther 2:7, who raised Hadassah (Esther), taking her as his own daughter?",
@@ -3934,9 +3330,7 @@
       "Hegai"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Mordecai-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What action did Mordecai take when he learned of Haman's plot against the Jews (Esther 4:1)?",
@@ -3947,9 +3341,7 @@
       "He gathered the Jewish elders."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Mordecai-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Nebuchadnezzar II was the king of which empire from approximately 605 BC to 562 BC?",
@@ -3960,9 +3352,7 @@
       "Babylonian Empire"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nebuchadnezzar.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In the book of Daniel, Nebuchadnezzar's dream featured a statue with a head of what material (Daniel 2:32)?",
@@ -3973,9 +3363,7 @@
       "Iron"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nebuchadnezzar.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the captain of the imperial guard of Nebuchadnezzar who carried out the destruction of Jerusalem in 586 BC (2 Kings 25:8-12)?",
@@ -3986,9 +3374,7 @@
       "Shadrach"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nebuzaradan.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Kings 25:9, what did Nebuzaradan burn in Jerusalem?",
@@ -3999,9 +3385,7 @@
       "Only the city walls"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nebuzaradan.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which group accepted the written Word as inspired by God and also compiled the Mishnah?",
@@ -4012,9 +3396,7 @@
       "The Pharisees"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Pharisees.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Mark 7:7, what did Jesus accuse the Pharisees of teaching as doctrines?",
@@ -4025,9 +3407,7 @@
       "Divine commandments"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Pharisees.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Rabshakeh, whose title meant 'the chief of the princes,' was sent by which king as a messenger to King Hezekiah of Judah (Isaiah 36)?",
@@ -4038,9 +3418,7 @@
       "Shalmaneser"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Rabshakeh-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What language did the Rabshakeh refuse to speak when Eliakim requested it (Isaiah 36:11-13)?",
@@ -4051,9 +3429,7 @@
       "Aramaic"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Rabshakeh-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which group was more elitist and aristocratic in their social standing compared to the Pharisees?",
@@ -4064,9 +3440,7 @@
       "The Scribes"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sadducees-Pharisees.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Sadducees were primarily connected with what in Jerusalem (Sadducees.html.pdf)?",
@@ -4077,9 +3451,7 @@
       "The temple"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sadducees.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "The Great Sanhedrin in ancient Israel was made up of 70 men and whom?",
@@ -4090,9 +3462,7 @@
       "The leading prophet"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sanhedrin.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Kings 19:1, when King Hezekiah heard the words of Rabshakeh, what did he do?",
@@ -4103,9 +3473,7 @@
       "He surrendered to Assyria."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sennacherib-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What did Isaiah prophesy would happen to Sennacherib after he heard a certain report (2 Kings 19:7)?",
@@ -4116,9 +3484,7 @@
       "He would attack Egypt."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sennacherib-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "During the time of Ezra, who proposed making a covenant with God to put away foreign wives and their children (Ezra 10:2-4)?",
@@ -4129,9 +3495,7 @@
       "Zerubbabel the governor"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Shechaniah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which king appointed Sheshbazzar as governor over Judah?",
@@ -4142,9 +3506,7 @@
       "King Nebuchadnezzar"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sheshbazzar-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Esther 1:10-11, which king commanded Queen Vashti to appear before him to display her beauty?",
@@ -4155,9 +3517,7 @@
       "King Xerxes (Ahasuerus)"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Vashti-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What was the consequence of Queen Vashti refusing King Xerxes' command (Esther 1:19-21)?",
@@ -4168,9 +3528,7 @@
       "She was threatened with death."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Vashti-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In the time of Christ, Galilee was the northernmost of the three provinces of Israel, located above which region?",
@@ -4181,9 +3539,7 @@
       "Syria"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Galileans-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Judeans often viewed Galileans as?",
@@ -4194,9 +3550,7 @@
       "Uneducated and of questionable ancestry"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Galileans-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Josephus, the Zealots agreed with the Pharisees in most things, but had an inviolable attachment to what?",
@@ -4207,9 +3561,7 @@
       "The Roman Empire"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zealots-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As governor of Judah, who supervised the reconstruction of the Jerusalem temple with the help of Joshua the high priest (Ezra 3:2-3, 8)?",
@@ -4220,9 +3572,7 @@
       "Zerubbabel"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zerubbabel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What was the name of the priest to whom the angel Gabriel appeared, announcing that he and his wife would have a son (Luke 1:6)?",
@@ -4233,9 +3583,7 @@
       "Tolmai"
     ],
     "answer": "A",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zechariah-and-Elizabeth.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Luke 1:27, in what town did Joseph live?",
@@ -4246,9 +3594,7 @@
       "Jerusalem"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Joseph-the-father-of-Jesus.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was told, according to John 1:45, that the one Moses wrote about in the Law had been found?",
@@ -4259,9 +3605,7 @@
       "James"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nathanael-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What was the name of the apostle also known as Levi, according to Matthew 9:9?",
@@ -4272,9 +3616,7 @@
       "James"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Matthew-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which disciple did Jesus describe as 'a true Israelite, in whom there is nothing false' (John 1:47)?",
@@ -4285,9 +3627,7 @@
       "Andrew"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bartholomew-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Luke 1:36, who was Mary related to?",
@@ -4298,9 +3638,7 @@
       "Esther"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Mary-lineage.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which apostle was the brother of John and was also called 'Boanerges,' meaning 'sons of thunder' (Mark 3:17)?",
@@ -4311,9 +3649,7 @@
       "Philip"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/James-the-apostle.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who declared, as recorded in Matthew 11:11, that among those born of women there has not risen anyone greater than John the Baptist?",
@@ -4324,9 +3660,7 @@
       "Paul"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/John-Baptist-Elijah.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 12:2, which apostle did King Herod have killed by the sword?",
@@ -4337,9 +3671,7 @@
       "Andrew"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Herods.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the wife of Zechariah and the mother of John the Baptist (Luke 1:5)?",
@@ -4350,9 +3682,7 @@
       "Anna"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zechariah-and-Elizabeth.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which disciple was brought to Jesus by Philip, according to John 1:45?",
@@ -4363,9 +3693,7 @@
       "Simon Peter"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Nathanael-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In the Gospel of John, by what name is Bartholomew always referred to (John 1:45)?",
@@ -4376,9 +3704,7 @@
       "James"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bartholomew-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was described as a prophetess who remained a widow until she was eighty-four years old (Luke 2:36-37)?",
@@ -4389,9 +3715,7 @@
       "Huldah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Anna-the-prophetess.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which disciple asked Jesus, 'Lord, we don’t know where you are going, so how can we know the way?' (John 14:5)?",
@@ -4402,9 +3726,7 @@
       "Matthew"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Thomas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the first apostle to be martyred, according to Acts 12:2?",
@@ -4415,9 +3737,7 @@
       "Philip"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/James-the-apostle.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Matthew 1:16, who was the biological father of Joseph?",
@@ -4428,9 +3748,7 @@
       "Abraham"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Mary-lineage.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which disciple was hesitant to believe anything good could come from Nazareth (John 1:46)?",
@@ -4441,9 +3759,7 @@
       "Peter"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bartholomew-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the father of James (Matthew 10:2-3)?",
@@ -4454,9 +3770,7 @@
       "Simon"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/James-son-of-Alphaeus.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Luke 3:1, which Roman ruler was emperor when John the Baptist started his public ministry?",
@@ -4467,9 +3781,7 @@
       "Nero"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Roman-empire.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which disciple is also known as Didymus, meaning 'twin' (John 11:16)?",
@@ -4480,9 +3792,7 @@
       "James"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Thomas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the mother of Jesus (Luke 1:27)?",
@@ -4493,9 +3803,7 @@
       "Rebekah"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Joseph-the-father-of-Jesus.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which prophet's coming in the 'spirit and power of Elijah' was associated with John the Baptist (Luke 1:17)?",
@@ -4506,9 +3814,7 @@
       "Daniel"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/John-Baptist-Elijah.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the brother of Andrew (John 1:40)?",
@@ -4519,9 +3825,7 @@
       "John"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/life-Peter.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which disciple, also known as Levi, was a tax collector before following Jesus (Mark 2:14)?",
@@ -4532,9 +3836,7 @@
       "Andrew"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Matthew-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to John 19:26-27, to whose care did Jesus entrust his mother Mary while on the cross?",
@@ -4545,9 +3847,7 @@
       "Joseph"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/virgin-Mary.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 14:12, when the crowds in Lystra saw Paul heal a man, which Greek god did they think he was?",
@@ -4558,9 +3858,7 @@
       "Artemis"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Greek-gods-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the Roman Emperor who issued a decree that a census should be taken of the entire Roman world, as mentioned in Luke 2:1?",
@@ -4571,9 +3869,7 @@
       "Claudius"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Augustus-Caesar.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which disciple asked Jesus, as recorded in John 14:22, why He would reveal Himself only to them and not to the world at large?",
@@ -4584,9 +3880,7 @@
       "Simon Peter"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Thaddeus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Matthew 9:9, what was Matthew doing when Jesus called him to be a disciple?",
@@ -4597,9 +3891,7 @@
       "Preaching"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Matthew-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the brother of Simon Peter, who brought him to meet Jesus according to John 1:40-42?",
@@ -4610,9 +3902,7 @@
       "Philip"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Andrew-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which figure from the Old Testament did some believe John the Baptist to be, fulfilling a prophecy (Matthew 11:14)?",
@@ -4623,9 +3913,7 @@
       "Moses"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/John-Baptist-Elijah.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the tetrarch that Jesus referred to as 'that fox' in Luke 13:32?",
@@ -4636,9 +3924,7 @@
       "Herod Philip II"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Herod-Antipas.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which apostle was known for doubting Jesus' resurrection until he saw physical proof (John 20:25)?",
@@ -4649,9 +3935,7 @@
       "Matthew"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Thomas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to John 1:44, Philip, Andrew, and Peter were from which city?",
@@ -4662,9 +3946,7 @@
       "Nazareth"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Andrew-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which apostle was a member of a political group known for their opposition to Roman rule?",
@@ -4675,9 +3957,7 @@
       "Philip"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Simon-the-Zealot.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the Roman governor before whom Jesus was brought by Herod Antipas, according to Luke 23:7?",
@@ -4688,9 +3968,7 @@
       "Agrippa"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Herod-Antipas.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which of Jesus' disciples was a former tax collector (Matthew 10:3)?",
@@ -4701,9 +3979,7 @@
       "Matthew"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Matthew-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the high priest who was drowned in a swimming pool by Herod the Great due to fear of rivalry?",
@@ -4714,9 +3990,7 @@
       "Jonathan"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Herod-the-Great.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which disciple initially doubted that anything good could come from Nazareth (John 1:46)?",
@@ -4727,9 +4001,7 @@
       "James"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bartholomew-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 18:2, which Roman emperor expelled all Jews from Rome?",
@@ -4740,9 +4012,7 @@
       "Nero"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Julius-Caesar.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which apostle, along with Peter and James, witnessed the transfiguration of Jesus (Matthew 17:1-9)?",
@@ -4753,9 +4023,7 @@
       "Thomas"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/life-John-Apostle.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the father of John the Baptist (Luke 1:13)?",
@@ -4766,9 +4034,7 @@
       "Joachim"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Zechariah-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which apostle is mentioned as being a brother of James (Mark 3:17)?",
@@ -4779,9 +4045,7 @@
       "Philip"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/James-the-apostle.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the disciple that Philip first told about finding the Messiah (John 1:45)?",
@@ -4792,9 +4056,7 @@
       "Thomas"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Philip-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which Roman emperor was in power when Paul made his appeal to Caesar (Acts 25:10-11), according to extrabiblical sources?",
@@ -4805,9 +4067,7 @@
       "Tiberius"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Julius-Caesar.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the mother of James the younger and Joseph (Mark 15:40)?",
@@ -4818,9 +4078,7 @@
       "Mary the mother of Jesus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/how-many-Marys.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which disciple was called to follow Jesus while mending fishing nets with his father Zebedee (Matthew 4:21-22)?",
@@ -4831,9 +4089,7 @@
       "Matthew"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/James-the-apostle.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Who was the father of Matthew, also called Levi in some accounts (Mark 2:14)?",
@@ -4844,9 +4100,7 @@
       "Joseph"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/James-son-of-Alphaeus.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which relative did Mary visit after learning she would conceive Jesus (Luke 1:39-40)?",
@@ -4857,9 +4111,7 @@
       "Rebekah"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Elizabeth-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "Which disciple is known for asking Jesus to show them the Father (John 14:8)?",
@@ -4870,9 +4122,7 @@
       "Andrew"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Philip-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Hebrews 12:8, what is an indication that believers are legitimate sons and daughters?",
@@ -4883,9 +4133,7 @@
       "They always give the whole amount of a sale to the Lord."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ananias-and-Sapphira.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in Revelation 2:23, what will all the churches know about Jesus?",
@@ -4896,9 +4144,7 @@
       "He only communicates through prophets."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ananias-and-Sapphira.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 22:12, how was Ananias described?",
@@ -4909,9 +4155,7 @@
       "A Roman soldier stationed in Jerusalem."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ananias-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 23:1-2, what did Ananias the high priest order to be done to Paul during his trial?",
@@ -4922,9 +4166,7 @@
       "To be questioned further."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ananias-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in John 18:13, before whom was Jesus first brought after his arrest in Gethsemane?",
@@ -4935,9 +4177,7 @@
       "Annas."
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Annas-and-Caiaphas.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to John 18:24, after questioning Jesus, where did Annas send him?",
@@ -4948,9 +4188,7 @@
       "To the Sanhedrin."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Annas-and-Caiaphas.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Mark 14:61-62, what was Jesus' response when Caiaphas asked if he was the Messiah?",
@@ -4961,9 +4199,7 @@
       "He affirmed that he was the Messiah."
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Annas-and-Caiaphas.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in Acts 4:6, who were present when Peter and John were questioned before the Jewish rulers?",
@@ -4974,9 +4210,7 @@
       "Only Roman officials."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Annas-and-Caiaphas.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Matthew 26:3, who were gathered together in the palace of the high priest, Caiaphas?",
@@ -4987,9 +4221,7 @@
       "A group of ordinary citizens."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Annas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 4:8-10, filled with the Holy Spirit, to whom did Peter give credit for the healing of the lame man?",
@@ -5000,9 +4232,7 @@
       "To Jesus Christ of Nazareth."
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Annas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Luke 23:25, whom did Pilate release at the insistence of the crowd?",
@@ -5013,9 +4243,7 @@
       "Simon of Cyrene."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Barabbas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to some manuscripts of Matthew 27:16-17, what was Barabbas also referred to as?",
@@ -5026,9 +4254,7 @@
       "Jesus the King of the Jews."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Barabbas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to John 11:50, what did Caiaphas say was better for the people?",
@@ -5039,9 +4265,7 @@
       "That they should all flee Jerusalem."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Caiaphas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Matthew 26:63-65, what did Caiaphas accuse Jesus of after Jesus declared he was the Messiah?",
@@ -5052,9 +4276,7 @@
       "Hersey."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Caiaphas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Luke 24:17, what question did Jesus ask Cleopas and his friend on the road to Emmaus?",
@@ -5065,9 +4287,7 @@
       "Do you know where I can find food?"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Cleopas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Luke 24:25, for what did Jesus chide Cleopas and his companion?",
@@ -5078,9 +4298,7 @@
       "For leaving Jerusalem."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Cleopas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 10:30-31, what did an angel of God tell Cornelius in a vision?",
@@ -5091,9 +4309,7 @@
       "To start preaching in the synagogue."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Cornelius-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 10:28, what did Peter explain that God had shown him in a vision?",
@@ -5104,9 +4320,7 @@
       "To return to Jerusalem immediately."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Cornelius-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 8:26-27, where did an angel tell Philip to go?",
@@ -5117,9 +4331,7 @@
       "To Antioch to preach to the Gentiles."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ethiopian-eunuch.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 8:32-33, from which book was the Ethiopian eunuch reading?",
@@ -5130,9 +4342,7 @@
       "The book of Deuteronomy."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Ethiopian-eunuch.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 5:38-39, what advice did Gamaliel give to the Sanhedrin regarding the apostles?",
@@ -5143,9 +4353,7 @@
       "To publicly flog them as a warning."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gamaliel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 22:3, who was a famous pupil of Rabbi Gamaliel?",
@@ -5156,9 +4364,7 @@
       "Joseph of Arimathea."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gamaliel-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Mark 5:22, what was Jairus's occupation?",
@@ -5169,9 +4375,7 @@
       "A ruler in the synagogue of Capernaum."
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jairus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Luke 8:50, what two things did Jesus tell Jairus when he heard that his daughter had died?",
@@ -5182,9 +4386,7 @@
       "Go home and prepare for mourning."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jairus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Matthew 13:55, who were listed as Jesus' brothers?",
@@ -5195,9 +4397,7 @@
       "Matthew, Mark, Luke, and John."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/James-vs-Jacob.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 11:27–30, who is described as one of several prophets who came from Jerusalem to Syrian Antioch?",
@@ -5208,9 +4408,7 @@
       "Silas"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Agabus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 11:28, what did Agabus predict would spread over the entire Roman world?",
@@ -5221,9 +4419,7 @@
       "A great war"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Agabus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Acts 21:10, where was Agabus when he met Paul?",
@@ -5234,9 +4430,7 @@
       "Ephesus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Agabus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 21:11, what did Agabus do with Paul’s belt to illustrate his prophecy?",
@@ -5247,9 +4441,7 @@
       "He gave it back to Paul"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Agabus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 19, what was Demetrius’s occupation in Ephesus?",
@@ -5260,9 +4452,7 @@
       "A tentmaker"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Alexander-the-coppersmith.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 1 Timothy 1:20, who does Paul say rejected his faith and conscience?",
@@ -5273,9 +4463,7 @@
       "Crispus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Alexander-the-coppersmith.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Timothy 4:14, what did Alexander the coppersmith do to Paul?",
@@ -5286,9 +4474,7 @@
       "He defended him in court"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Alexander-the-coppersmith.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 13:6–7, who is described as a Jewish sorcerer and false prophet who was an attendant of Sergius Paulus?",
@@ -5299,9 +4485,7 @@
       "Sosthenes"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bar-Jesus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 13:8, what was the other name by which Bar-Jesus was known?",
@@ -5312,9 +4496,7 @@
       "Silvanus"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bar-Jesus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As stated in Acts 13:11, what affliction did Paul bring upon Bar-Jesus?",
@@ -5325,9 +4507,7 @@
       "Lameness"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Bar-Jesus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 1 Corinthians, from whom did Chloe's household report divisions occurring in the Corinthian church?",
@@ -5338,9 +4518,7 @@
       "Themselves"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Chloe-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 2 Timothy 4:21, whose greetings are mentioned in Paul's final greetings to Timothy?",
@@ -5351,9 +4529,7 @@
       "Phoebe and Lydia"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Claudia-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 18:8, who was a leader of the synagogue in Corinth who became a believer?",
@@ -5364,9 +4540,7 @@
       "Titius Justus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Crispus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in 1 Corinthians 1:14–16, who were some of the few people Paul personally baptized in Corinth?",
@@ -5377,9 +4551,7 @@
       "Phoebe, Lydia, and Chloe"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Crispus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 17:34, who is named as one of the individuals in Athens who became followers of Paul?",
@@ -5390,9 +4562,7 @@
       "Chloe"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Damaris-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Timothy 4:10, who is said to have deserted Paul because they loved the present world?",
@@ -5403,9 +4573,7 @@
       "Tychicus"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Demas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 19, who was the silversmith in Ephesus who made shrines of Artemis and opposed Paul?",
@@ -5416,9 +4584,7 @@
       "Sosthenes"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Demetrius-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 9, what was the Greek name of the charitable person from Joppa who was also called Tabitha?",
@@ -5429,9 +4595,7 @@
       "Claudia"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Dorcas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 9, who raised Dorcas back to life in Joppa?",
@@ -5442,9 +4606,7 @@
       "James"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Dorcas-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Acts 24:24, who was the wife of Governor Felix who listened to Paul's teaching?",
@@ -5455,9 +4617,7 @@
       "Lydia"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Drusilla-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Colossians 1:7, who shared the gospel with the Colossians?",
@@ -5468,9 +4628,7 @@
       "Onesimus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Epaphras-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Philippians 2:25, how does Paul describe Epaphroditus?",
@@ -5481,9 +4639,7 @@
       "A generous benefactor"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Epaphroditus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Romans 16:23, who was the director of public works in Corinth and a coworker of Paul?",
@@ -5494,9 +4650,7 @@
       "Tertius"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Erastus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 20, who fell asleep during Paul’s long sermon in Troas and fell out of a third-story window?",
@@ -5507,9 +4661,7 @@
       "Silas"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Eutychus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in Acts 24, who was the governor of Judea when Paul was arrested in Jerusalem?",
@@ -5520,9 +4672,7 @@
       "Felix"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Felix-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 19:29, who was the Macedonian traveling companion of Paul who was seized in the riot in Ephesus?",
@@ -5533,9 +4683,7 @@
       "Titus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gaius-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in 3 John 1, to whom is the Apostle John writing, addressing him as \"the dear friend\"?",
@@ -5546,9 +4694,7 @@
       "Erastus"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Gaius-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 12, which King ordered the arrest of Peter?",
@@ -5559,9 +4705,7 @@
       "Herod Agrippa I"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Herod-Agrippa-I.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 25, which King paid a visit to the Roman governor Festus in Caesarea?",
@@ -5572,9 +4716,7 @@
       "Herod Agrippa II"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Herod-Agrippa-II.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 26:28, what was King Herod Agrippa II's response to Paul's persuasive words?",
@@ -5585,9 +4727,7 @@
       "He questioned if Paul thought he could persuade him to be a Christian in a short time"
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Herod-Agrippa-II.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 1 Timothy 1:20, who is mentioned alongside Alexander as having been \"handed over to Satan\"?",
@@ -5598,9 +4738,7 @@
       "Onesimus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hymenaeus-and-Alexander.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 2 Timothy 2:17-18, what false teaching were Hymenaeus and Philetus spreading?",
@@ -5611,9 +4749,7 @@
       "That salvation was by works, not grace"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Hymenaeus-and-Alexander.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 2 Timothy 1:5, whose genuine faith does Paul mention as also dwelling in Timothy?",
@@ -5624,9 +4760,7 @@
       "Mary and Martha"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Lois-and-Eunice.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 16, who is identified as a physician and accompanied Paul on some of his journeys?",
@@ -5637,9 +4771,7 @@
       "Titus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Luke-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Colossians 4:14, who is referred to as \"our dear friend the doctor\"?",
@@ -5650,9 +4782,7 @@
       "Silas"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Luke-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 16, who was a dealer in purple cloth from the city of Thyatira and one of Paul's early converts in Philippi?",
@@ -5663,9 +4793,7 @@
       "Dorcas"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Lydia-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Philemon 1:10, who does Paul refer to as \"my son whom I have begotten in chains\"?",
@@ -5676,9 +4804,7 @@
       "Epaphras"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Onesimus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Colossians 4:9, who was sent with Tychicus to Colossae?",
@@ -5689,9 +4815,7 @@
       "Luke"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Onesimus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In 2 Timothy 1:16, for what action does Paul pray that the Lord would show mercy to the household of Onesiphorus?",
@@ -5702,9 +4826,7 @@
       "For delivering letters to various churches"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Onesiphorus-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 9, who initially helped the newly converted Saul (Paul) connect with the disciples in Jerusalem?",
@@ -5715,9 +4837,7 @@
       "James"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Paul-and-Barnabas.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 15, whose departure from Paul and Barnabas on their first missionary journey caused a disagreement between them?",
@@ -5728,9 +4848,7 @@
       "Luke"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Paul-and-Barnabas.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 16, who was Paul's main companion on his second missionary journey after Barnabas went with Mark?",
@@ -5741,9 +4859,7 @@
       "Titus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Paul-and-Silas.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 16, who was the jailer in Philippi who was converted after an earthquake?",
@@ -5754,9 +4870,7 @@
       "A centurion"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Paul-and-Silas.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 16, who joined Paul and Silas in Lystra on their second missionary journey?",
@@ -5767,9 +4881,7 @@
       "Barnabas"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Paul-and-Timothy.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Philippians 2:19, who does Paul hope to send to Philippi soon to learn about their welfare?",
@@ -5780,9 +4892,7 @@
       "Luke"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Paul-and-Timothy.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Romans 16, who is commended by Paul as a deacon of the church in Cenchreae and a great help to many people, including Paul himself?",
@@ -5793,9 +4903,7 @@
       "Chloe"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Phoebe-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 25, who succeeded Felix as governor of Judea?",
@@ -5806,9 +4914,7 @@
       "Claudius Lysias"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Porcius-Festus.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 18, which husband and wife team, tentmakers by trade, hosted Paul in Corinth?",
@@ -5819,9 +4925,7 @@
       "Sapphira and Ananias"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Priscilla-and-Aquila.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "In Acts 12, who was the servant girl at the house of Mary, the mother of John Mark, who recognized Peter's voice at the gate?",
@@ -5832,9 +4936,7 @@
       "Chloe"
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Rhoda-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Acts 18, who replaced Crispus as the ruler of the synagogue in Corinth?",
@@ -5845,9 +4947,7 @@
       "Titius Justus"
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Sosthenes-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to 3 John 1:9, what was a notable characteristic of Diotrephes?",
@@ -5858,9 +4958,7 @@
       "He diligently sought the well-being of all believers."
     ],
     "answer": "B",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Diotrephes-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "What action did Diotrephes reportedly take against believers according to 3 John 1:10?",
@@ -5871,9 +4969,7 @@
       "He sent letters of encouragement to them."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Diotrephes-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Mark 6:3, what was Jude's familial relationship to Jesus?",
@@ -5884,9 +4980,7 @@
       "He was a brother of Jesus."
     ],
     "answer": "D",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jude-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "As mentioned in John 14:22, which of the following is true about the apostles named Judas?",
@@ -5897,9 +4991,7 @@
       "All of the apostles were named either Jude or Judas."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jude-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   },
   {
     "question": "According to Jude 1:1, how does Jude identify himself?",
@@ -5910,8 +5002,6 @@
       "As a key witness to the resurrection and a teacher of the law."
     ],
     "answer": "C",
-    "category": "People",
-    "source": "https://www.gotquestions.org/Jude-in-the-Bible.html",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "People"
   }
 ]

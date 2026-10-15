@@ -8,9 +8,7 @@
       "The coming of the Messiah"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah, what do the ox and donkey know that Israel does not (Isaiah 1:3)?",
@@ -21,9 +19,7 @@
       "How to avoid punishment"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the condition of the people described in Isaiah 1:5-6?",
@@ -34,9 +30,7 @@
       "They are prosperous and joyful"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say he is tired of in Isaiah 1:11?",
@@ -47,9 +41,7 @@
       "The lack of faith among the priests"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say he hates in Isaiah 1:14?",
@@ -60,9 +52,7 @@
       "Their love for material possessions"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What are the people told to do to make themselves clean (Isaiah 1:16-17)?",
@@ -73,9 +63,7 @@
       "Build new altars"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh promise regarding sins that are like scarlet and crimson (Isaiah 1:18)?",
@@ -86,9 +74,7 @@
       "They will be remembered forever"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to those who refuse and rebel according to Isaiah 1:20?",
@@ -99,9 +85,7 @@
       "They will become kings"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What has the faithful city become according to Isaiah 1:21?",
@@ -112,9 +96,7 @@
       "A model of righteousness"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to the transgressors and sinners (Isaiah 1:28)?",
@@ -125,9 +107,7 @@
       "They will live in peace"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen in the latter days, according to Isaiah 2:2?",
@@ -138,9 +118,7 @@
       "All nations will become enemies"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the nations do with their swords and spears (Isaiah 2:4)?",
@@ -151,9 +129,7 @@
       "They will trade them for gold"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Isaiah urge the house of Jacob to do (Isaiah 2:5)?",
@@ -164,9 +140,7 @@
       "Forsake their faith"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the Lord take away from Jerusalem and Judah (Isaiah 3:1)?",
@@ -177,9 +151,7 @@
       "Their religious leaders"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What kind of leaders will rule over them (Isaiah 3:4)?",
@@ -190,9 +162,7 @@
       "Strong and powerful leaders"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "Why are Jerusalem and Judah ruined (Isaiah 3:8)?",
@@ -203,9 +173,7 @@
       "Because they have forsaken their king"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Yahweh create over Mount Zion (Isaiah 4:5)?",
@@ -216,9 +184,7 @@
       "A series of protective walls"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the song of the beloved about in Isaiah 5:1?",
@@ -229,9 +195,7 @@
       "The power of his enemies"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What did the vineyard yield instead of grapes (Isaiah 5:2)?",
@@ -242,9 +206,7 @@
       "Excellent wine"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Isaiah pronounce woe upon in Isaiah 5:20?",
@@ -255,9 +217,7 @@
       "Those who speak the truth"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What touched Isaiah's mouth in Isaiah 6:6-7?",
@@ -268,9 +228,7 @@
       "A feather"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Isaiah say in response to the Lord's question, 'Whom shall I send, and who will go for us?' (Isaiah 6:8)",
@@ -281,9 +239,7 @@
       "Send someone else"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen before the child knows to refuse evil and choose good (Isaiah 7:16)?",
@@ -294,9 +250,7 @@
       "The land will be prosperous"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the name of the child who is a sign (Isaiah 7:14)?",
@@ -307,9 +261,7 @@
       "Eliakim"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the meaning of the name Maher Shalal Hash Baz (Isaiah 8:3-4)?",
@@ -320,9 +272,7 @@
       "The Lord is my strength"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What should the people do in the face of the Assyrian threat (Isaiah 8:12)?",
@@ -333,9 +283,7 @@
       "Flee to the mountains"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to those who look to the earth in Isaiah 8:22?",
@@ -346,9 +294,7 @@
       "They will find hidden treasures"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the people who walked in darkness see (Isaiah 9:2)?",
@@ -359,9 +305,7 @@
       "A world of despair"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will be the government upon the child’s shoulder (Isaiah 9:6)?",
@@ -372,9 +316,7 @@
       "A temporary position"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What are the names of the child that will be born (Isaiah 9:6)?",
@@ -385,9 +327,7 @@
       "Light of the World, Savior of Israel, Bread of Life, Good Shepherd"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to the adversaries of Rezin (Isaiah 9:11)?",
@@ -398,9 +338,7 @@
       "They will be destroyed"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is compared to a fire in Isaiah 9:18?",
@@ -411,9 +349,7 @@
       "Faith"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the land burned up by in Isaiah 9:19?",
@@ -424,9 +360,7 @@
       "The carelessness of the people"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the people do in the day of visitation from afar (Isaiah 10:3)?",
@@ -437,9 +371,7 @@
       "They will unite against their enemies"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "Who is the Assyrian called in Isaiah 10:5?",
@@ -450,9 +382,7 @@
       "The messenger of peace"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does the king of Assyria boast about (Isaiah 10:13-14)?",
@@ -463,9 +393,7 @@
       "His love for his people"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the Lord send among the fat ones of Assyria (Isaiah 10:16)?",
@@ -476,9 +404,7 @@
       "An abundance of wealth"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to the burden and yoke in that day (Isaiah 10:27)?",
@@ -489,9 +415,7 @@
       "They will be given to the poor"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the nations seek in that day (Isaiah 11:10)?",
@@ -502,9 +426,7 @@
       "The wisdom of the prophets"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Yahweh do with the tongue of the Egyptian sea (Isaiah 11:15)?",
@@ -515,9 +437,7 @@
       "He will turn it into a desert"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the song that will be sung in that day (Isaiah 12:1)?",
@@ -528,9 +448,7 @@
       "A song of mourning"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "Where will people draw water from (Isaiah 12:3)?",
@@ -541,9 +459,7 @@
       "The cisterns of Jerusalem"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the burden of Babylon that Isaiah saw (Isaiah 13:1)?",
@@ -554,9 +470,7 @@
       "A vision of peace"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "Who has Yahweh commanded for His anger (Isaiah 13:3)?",
@@ -567,9 +481,7 @@
       "The angels of heaven"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to the arrogance of the proud (Isaiah 13:11)?",
@@ -580,9 +492,7 @@
       "It will be ignored"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to those who are found in Babylon (Isaiah 13:15)?",
@@ -593,9 +503,7 @@
       "They will be freed and sent home"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to Babylon (Isaiah 13:19)?",
@@ -606,9 +514,7 @@
       "It will be a place of peace and prosperity"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What has ceased according to Isaiah 14:4?",
@@ -619,9 +525,7 @@
       "The pursuit of wealth"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What rejoices because of the humbling of the king of Babylon (Isaiah 14:8)?",
@@ -632,9 +536,7 @@
       "The other kings of the earth"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does the fallen one say he will do in his heart (Isaiah 14:13-14)?",
@@ -645,9 +547,7 @@
       "He will build a new kingdom on earth"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to the one who made the world like a wilderness, according to Isaiah 14:16-17?",
@@ -658,9 +558,7 @@
       "They will be given a new kingdom"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Yahweh cut off from Babylon (Isaiah 14:22)?",
@@ -671,9 +569,7 @@
       "Its trade routes and allies"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to the waters of Dimon (Isaiah 15:9)?",
@@ -684,9 +580,7 @@
       "They will be diverted to another city"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the daughters of Moab be like at the fords of the Arnon (Isaiah 16:2)?",
@@ -697,9 +591,7 @@
       "Like a peaceful river"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about the glory of Moab (Isaiah 16:14)?",
@@ -710,9 +602,7 @@
       "It will be restored to its former greatness"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to Damascus (Isaiah 17:1)?",
@@ -723,9 +613,7 @@
       "It will become a holy city"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is compared to the rushing of many waters (Isaiah 17:12-13)?",
@@ -736,9 +624,7 @@
       "The flow of wisdom"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the inhabitants of the world do when a banner is lifted up on the mountains (Isaiah 18:3)?",
@@ -749,9 +635,7 @@
       "They will hide in fear"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to the princes of Zoan (Isaiah 19:11)?",
@@ -762,9 +646,7 @@
       "They will be honored among the nations"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Israel be in that day (Isaiah 19:24)?",
@@ -775,9 +657,7 @@
       "The center of all commerce"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What did Isaiah do when Yahweh told him to loosen his sackcloth and take off his sandals (Isaiah 20:2)?",
@@ -788,9 +668,7 @@
       "He prayed for guidance"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the burden of the wilderness of the sea (Isaiah 21:1)?",
@@ -801,9 +679,7 @@
       "A prophecy of a new kingdom"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is declared to Isaiah in Isaiah 21:2?",
@@ -814,9 +690,7 @@
       "A prophecy of a great king"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What did the watchman cry out like (Isaiah 21:8)?",
@@ -827,9 +701,7 @@
       "A wolf"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is said to have fallen in Isaiah 21:9?",
@@ -840,9 +712,7 @@
       "Assyria"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the 'burden' of the valley of vision (Isaiah 22:1)?",
@@ -853,9 +723,7 @@
       "A description of a city's distress and turmoil"
     ],
     "answer": "D",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What did the people of Jerusalem do instead of weeping and mourning (Isaiah 22:13)?",
@@ -866,9 +734,7 @@
       "They prepared for war against their enemies"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to the ships of Tarshish (Isaiah 23:1)?",
@@ -879,9 +745,7 @@
       "They will find new trade routes"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is said about Tyre's merchants and traders (Isaiah 23:8)?",
@@ -892,9 +756,7 @@
       "They are corrupt and greedy"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "How long will Tyre be forgotten (Isaiah 23:15)?",
@@ -905,9 +767,7 @@
       "Forever"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does the speaker say they have heard from the uttermost part of the earth (Isaiah 24:16)?",
@@ -918,9 +778,7 @@
       "Prophecies of a coming king"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Yahweh do to the high fortress of your walls (Isaiah 25:12)?",
@@ -931,9 +789,7 @@
       "He will make it a place of worship"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the desire of the soul (Isaiah 26:8)?",
@@ -944,9 +800,7 @@
       "To achieve worldly success and fame"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to those who do not learn righteousness (Isaiah 26:10)?",
@@ -957,9 +811,7 @@
       "They will lead the nations in righteousness"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to the dead bodies (Isaiah 26:19)?",
@@ -970,9 +822,7 @@
       "They will be forgotten forever"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Jacob do in days to come (Isaiah 27:6)?",
@@ -983,9 +833,7 @@
       "They will be destroyed and forgotten"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about the tables (Isaiah 28:8)?",
@@ -996,9 +844,7 @@
       "They are used for holy feasts and sacrifices"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the word of Yahweh to those who will not hear (Isaiah 28:13)?",
@@ -1009,9 +855,7 @@
       "It will be full of comfort and joy"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen when the overflowing scourge passes through (Isaiah 28:15)?",
@@ -1022,9 +866,7 @@
       "It will bring a new era of peace"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Yahweh do in the valley of Gibeon (Isaiah 28:21)?",
@@ -1035,9 +877,7 @@
       "He will bring comfort and healing"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to Ariel, the city where David encamped (Isaiah 29:2)?",
@@ -1048,9 +888,7 @@
       "It will be distressed, with mourning and lamentation, and be like an altar hearth"
     ],
     "answer": "D",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the multitude of nations that fight against Mount Zion be like (Isaiah 29:8)?",
@@ -1061,9 +899,7 @@
       "They will be transformed into a peaceful and righteous people"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What has Yahweh poured out on the people (Isaiah 29:10)?",
@@ -1074,9 +910,7 @@
       "A spirit of joy and gladness"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does the thing formed say of him who formed it (Isaiah 29:16)?",
@@ -1087,9 +921,7 @@
       "That he is just and righteous"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to Lebanon in a very little while (Isaiah 29:17)?",
@@ -1100,9 +932,7 @@
       "It will be covered with ice and snow"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the deaf hear and the blind see in that day (Isaiah 29:18)?",
@@ -1113,9 +943,7 @@
       "The prophecies of a new king"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will be broken as a potter's vessel (Isaiah 30:14)?",
@@ -1126,9 +954,7 @@
       "The walls of the city"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is required for salvation and strength (Isaiah 30:15)?",
@@ -1139,9 +965,7 @@
       "Political power and influence"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to those who refuse to rest and instead flee on horses (Isaiah 30:16-17)?",
@@ -1152,9 +976,7 @@
       "They will conquer their enemies and establish their kingdom"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Yahweh give for seed that is sown in the ground (Isaiah 30:23)?",
@@ -1165,9 +987,7 @@
       "A time of sorrow and mourning"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the light of the moon be like (Isaiah 30:26)?",
@@ -1178,9 +998,7 @@
       "It will be a source of fear and dread"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the breath of Yahweh compared to (Isaiah 30:28)?",
@@ -1191,9 +1009,7 @@
       "A comforting and soothing balm"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the fool speak (Isaiah 32:6)?",
@@ -1204,9 +1020,7 @@
       "Truth and righteousness"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the women who are at ease do (Isaiah 32:11)?",
@@ -1217,9 +1031,7 @@
       "They will lead the people in righteousness"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will come up on the land of my people (Isaiah 32:13)?",
@@ -1230,9 +1042,7 @@
       "Forests of tall trees"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen when the destroyer has finished destroying and the betrayer has finished betraying (Isaiah 33:1)?",
@@ -1243,9 +1053,7 @@
       "They will establish a kingdom of peace"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is the plea to Yahweh in the time of trouble (Isaiah 33:2)?",
@@ -1256,9 +1064,7 @@
       "To be a source of comfort and peace"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to the sinners and godless in Zion (Isaiah 33:14)?",
@@ -1269,9 +1075,7 @@
       "They will be transformed into righteous people"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will be the dwelling place of the one who walks righteously and speaks blamelessly (Isaiah 33:16)?",
@@ -1282,9 +1086,7 @@
       "They will live in humble dwellings"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What should be told to those with a fearful heart (Isaiah 35:4)?",
@@ -1295,9 +1097,7 @@
       "To trust in their own strength and abilities"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the wilderness and the dry land do (Isaiah 35:1)?",
@@ -1308,9 +1108,7 @@
       "They will remain barren and desolate"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is given to the desert (Isaiah 35:2)?",
@@ -1321,9 +1119,7 @@
       "The silence of desolation and emptiness"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What should be done with the weak hands and feeble knees (Isaiah 35:3)?",
@@ -1334,9 +1130,7 @@
       "They should be bound and restrained"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to the ransomed of Yahweh (Isaiah 35:10)?",
@@ -1347,9 +1141,7 @@
       "They will live in fear and trembling"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Rabshakeh ask Hezekiah to do (Isaiah 36:8)?",
@@ -1360,9 +1152,7 @@
       "To send ambassadors to negotiate a peace treaty"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What language does Rabshakeh speak to the people of Jerusalem (Isaiah 36:13)?",
@@ -1373,9 +1163,7 @@
       "Assyrian"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does the king of Assyria say that Hezekiah cannot do (Isaiah 36:14-15)?",
@@ -1386,9 +1174,7 @@
       "He cannot provide them with food and water"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is Hezekiah's reaction to the words of Rabshakeh (Isaiah 37:1)?",
@@ -1399,9 +1185,7 @@
       "He surrenders to the king of Assyria"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Isaiah tell Hezekiah not to be afraid of (Isaiah 37:6)?",
@@ -1412,9 +1196,7 @@
       "The destruction of the city of Jerusalem"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Hezekiah say that the kings of Assyria have done to the gods of the lands (Isaiah 37:19)?",
@@ -1425,9 +1207,7 @@
       "They have converted to their religion and accepted them as their own gods"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does the king of Assyria claim to have done with his own strength and wisdom (Isaiah 37:24-25)?",
@@ -1438,9 +1218,7 @@
       "He claims to have brought peace and prosperity to the land"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Yahweh put in the nose and lips of the king of Assyria (Isaiah 37:29)?",
@@ -1451,9 +1229,7 @@
       "A necklace and bracelet"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What sign will be given to the people (Isaiah 37:30)?",
@@ -1464,9 +1240,7 @@
       "They will be given a vision of the future"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the remnant of the house of Judah do (Isaiah 37:31)?",
@@ -1477,9 +1251,7 @@
       "They will be destroyed by fire"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Yahweh not do to the city of Jerusalem (Isaiah 37:33)?",
@@ -1490,9 +1262,7 @@
       "He will not allow it to be burned with fire"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "How many years will be added to Hezekiah's life (Isaiah 38:5)?",
@@ -1503,9 +1273,7 @@
       "Twenty-five years"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Hezekiah say that Yahweh has done for his soul (Isaiah 38:17)?",
@@ -1516,9 +1284,7 @@
       "He has given him power and authority"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Hezekiah say that the living will do (Isaiah 38:19)?",
@@ -1529,9 +1295,7 @@
       "They will turn away from God"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to Hezekiah's sons (Isaiah 39:7)?",
@@ -1542,9 +1306,7 @@
       "They will be priests in the temple"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Hezekiah say in response to Isaiah's prophecy (Isaiah 39:8)?",
@@ -1555,9 +1317,7 @@
       "He is indifferent and does not care"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is to be done in the wilderness to prepare the way of Yahweh (Isaiah 40:3)?",
@@ -1568,9 +1328,7 @@
       "A great sacrifice should be offered"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to every valley, mountain, and hill (Isaiah 40:4)?",
@@ -1581,9 +1339,7 @@
       "They will remain unchanged"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is all flesh compared to (Isaiah 40:6)?",
@@ -1594,9 +1350,7 @@
       "The trees of the forest"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does the voice say about the word of God (Isaiah 40:8)?",
@@ -1607,9 +1361,7 @@
       "It is a weapon of destruction and judgment"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will the Lord Yahweh come as (Isaiah 40:10)?",
@@ -1620,9 +1372,7 @@
       "A wise teacher"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What are the nations compared to before Yahweh (Isaiah 40:15)?",
@@ -1633,9 +1383,7 @@
       "Like a mighty and unconquerable fortress"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is not sufficient to burn for a burnt offering (Isaiah 40:16)?",
@@ -1646,9 +1394,7 @@
       "The oil and spices of the land"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "How are the nations regarded by Yahweh (Isaiah 40:17)?",
@@ -1659,9 +1405,7 @@
       "They are regarded as his co-rulers of the earth"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does a workman do to make an image (Isaiah 40:19)?",
@@ -1672,9 +1416,7 @@
       "He weaves it from fine cloth and adorns it with jewels"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does the impoverished person seek to make an image (Isaiah 40:20)?",
@@ -1685,9 +1427,7 @@
       "A scroll with holy words written on it"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What is it that sits above the circle of the earth (Isaiah 40:22)?",
@@ -1698,9 +1438,7 @@
       "The angels of heaven"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What are the inhabitants of the earth compared to (Isaiah 40:22)?",
@@ -1711,9 +1449,7 @@
       "Like the birds of the air"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What happens to those who wait for Yahweh (Isaiah 40:31)?",
@@ -1724,9 +1460,7 @@
       "They will become rulers and leaders of the nations"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What should the islands do before Yahweh (Isaiah 41:1)?",
@@ -1737,9 +1471,7 @@
       "They should seek refuge in the mountains"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "Who does Yahweh hand over nations to (Isaiah 41:2)?",
@@ -1750,9 +1482,7 @@
       "To the kings of the earth"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does the carpenter encourage the goldsmith to do (Isaiah 41:7)?",
@@ -1763,9 +1493,7 @@
       "To adorn it with jewels and precious stones"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say to Israel, who he has chosen (Isaiah 41:9-10)?",
@@ -1776,9 +1504,7 @@
       "He says they will be given a new land to inhabit"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will happen to those who are incensed against Israel (Isaiah 41:11)?",
@@ -1789,9 +1515,7 @@
       "They will be given power and authority"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What do the idols of the nations do (Isaiah 41:23)?",
@@ -1802,9 +1526,7 @@
       "They give great comfort and peace to their followers"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about the idols and their work (Isaiah 41:24)?",
@@ -1815,9 +1537,7 @@
       "They are a source of wisdom and knowledge"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh declare to be able to do before they come up (Isaiah 42:9)?",
@@ -1828,9 +1548,7 @@
       "He is able to make the mountains skip like rams"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say to the islands (Isaiah 42:10)?",
@@ -1841,9 +1559,7 @@
       "He tells them to seek refuge in the mountains"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh stir up like a man of war (Isaiah 42:13)?",
@@ -1854,9 +1570,7 @@
       "His desire for peace"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say he will do with the mountains and hills (Isaiah 42:15)?",
@@ -1867,9 +1581,7 @@
       "He will cover them with trees and vegetation"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Yahweh bring the blind by (Isaiah 42:16)?",
@@ -1880,9 +1592,7 @@
       "By a direct and obvious road"
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Yahweh do for his sons and daughters (Isaiah 43:6)?",
@@ -1893,9 +1603,7 @@
       "He will make them kings and rulers"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "Who does Yahweh say he has created for his glory (Isaiah 43:7)?",
@@ -1906,9 +1614,7 @@
       "Only those who are born in Zion"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh ask of the nations (Isaiah 43:9)?",
@@ -1919,9 +1625,7 @@
       "To bow down and worship him"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say he will do for those who are called by his name (Isaiah 43:10)?",
@@ -1932,9 +1636,7 @@
       "He says he will abandon and forsake them"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about his ability to work (Isaiah 43:13)?",
@@ -1945,9 +1647,7 @@
       "He is constrained by his own justice and righteousness"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say he has sent to Babylon to do (Isaiah 43:14)?",
@@ -1958,9 +1658,7 @@
       "To make them rulers and leaders of the nations"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about remembering the former things (Isaiah 43:18)?",
@@ -1971,9 +1669,7 @@
       "He says that they should be forgotten and erased from history"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What will Yahweh do in the wilderness and the desert (Isaiah 43:19-20)?",
@@ -1984,9 +1680,7 @@
       "He will leave it unchanged and untouched"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "Why does Yahweh say that he formed his people (Isaiah 43:21)?",
@@ -1997,9 +1691,7 @@
       "That they might live in comfort and ease"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say that Jacob has not done (Isaiah 43:22)?",
@@ -2010,9 +1702,7 @@
       "That they have not obeyed his commandments"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about his servant Jacob (Isaiah 44:1-2)?",
@@ -2023,9 +1713,7 @@
       "That he should not be afraid, for Yahweh will help him"
     ],
     "answer": "D",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say he will pour out on the descendants of Jacob (Isaiah 44:3)?",
@@ -2036,9 +1724,7 @@
       "He will pour out fire and brimstone"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about who is like him (Isaiah 44:6)?",
@@ -2049,9 +1735,7 @@
       "He says that the prophets are like him"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about those who make carved images (Isaiah 44:9)?",
@@ -2062,9 +1746,7 @@
       "That they are skilled and talented craftsmen"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does a blacksmith do with an ax (Isaiah 44:12)?",
@@ -2075,9 +1757,7 @@
       "He uses it to harvest the crops"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does a carpenter do with a line and a pencil (Isaiah 44:13)?",
@@ -2088,9 +1768,7 @@
       "He uses it to create great works of art"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does a person do with part of the wood that they have burned (Isaiah 44:19)?",
@@ -2101,9 +1779,7 @@
       "They use it to create weapons"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say he has done with the transgressions and sins of Jacob (Isaiah 44:22)?",
@@ -2114,9 +1790,7 @@
       "He has ignored them and does not care about them"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about his ability to make all things (Isaiah 44:24)?",
@@ -2127,9 +1801,7 @@
       "That he did not make all things, but only some things"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh do to the signs of liars and diviners (Isaiah 44:25)?",
@@ -2140,9 +1812,7 @@
       "He ignores their signs and pays no attention to them"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about Cyrus (Isaiah 44:28)?",
@@ -2153,9 +1823,7 @@
       "That he will be a wicked and evil ruler"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say he will do for Cyrus (Isaiah 45:1-2)?",
@@ -2166,9 +1834,7 @@
       "He will give him great riches and wealth"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about being the only God (Isaiah 45:5-6)?",
@@ -2179,9 +1845,7 @@
       "That there are other gods who are equal to him"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say about forming light and creating darkness (Isaiah 45:7)?",
@@ -2192,9 +1856,7 @@
       "That he only created darkness, but not light"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "What does Yahweh say should happen to the heavens and earth (Isaiah 45:8)?",
@@ -2205,9 +1867,7 @@
       "The heavens will be torn apart"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 46:1, what happens to Bel and Nebo?",
@@ -2218,9 +1878,7 @@
       "They are given great power and dominion."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "In Isaiah 46:9, what does Yahweh declare about himself?",
@@ -2231,9 +1889,7 @@
       "He is a God of peace and rest."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 47:1, what is the daughter of Babylon told to do?",
@@ -2244,9 +1900,7 @@
       "To gather her armies for war."
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "In Isaiah 47:13, who is challenged to save Babylon from the things that will happen?",
@@ -2257,9 +1911,7 @@
       "The gods of other nations."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 48:1, what does the house of Jacob do when they swear by Yahweh's name?",
@@ -2270,9 +1922,7 @@
       "They do so with great reverence and respect."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "In Isaiah 48:12, what does Yahweh declare about himself to Jacob and Israel?",
@@ -2283,9 +1933,7 @@
       "He is the redeemer of Israel."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 49:6, what is the role of the servant?",
@@ -2296,9 +1944,7 @@
       "To be a priest and offer sacrifices."
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 49:15, what does Yahweh say about forgetting his people?",
@@ -2309,9 +1955,7 @@
       "He might forget them for a short time"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 50:1, why were the people sold and their mother put away?",
@@ -2322,9 +1966,7 @@
       "Because they angered Yahweh."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "In Isaiah 50:6, what does the servant endure?",
@@ -2335,9 +1977,7 @@
       "He is treated with respect and kindness."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 51:6, what will happen to the heavens and the earth?",
@@ -2348,9 +1988,7 @@
       "They will be transformed into a paradise."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 51:12, who is the speaker comforting?",
@@ -2361,9 +1999,7 @@
       "Those who are at peace and without any issues"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 52:3, for what price were the people sold and how will they be redeemed?",
@@ -2374,9 +2010,7 @@
       "They were sold for their sins, and will be redeemed by great sacrifice"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 52:7, what is beautiful on the mountains?",
@@ -2387,9 +2021,7 @@
       "The beauty of the great cities."
     ],
     "answer": "A",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 53:5, what was the result of the punishment on the servant?",
@@ -2400,9 +2032,7 @@
       "It brought condemnation for the people"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 54:1, who is told to sing?",
@@ -2413,9 +2043,7 @@
       "Those who have great power and dominion"
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 55:1, who is invited to the waters?",
@@ -2426,9 +2054,7 @@
       "Only the children of Abraham."
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 56:3, what should the eunuch not say?",
@@ -2439,9 +2065,7 @@
       "That he is a child of God."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "In Isaiah 57:13, what will the wind do?",
@@ -2452,9 +2076,7 @@
       "The wind will bring great wealth and power."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 58:6, what is the fast that Yahweh has chosen?",
@@ -2465,9 +2087,7 @@
       "To sacrifice a great animal."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 59:2, what separates the people from God?",
@@ -2478,9 +2098,7 @@
       "Their lack of prayer and worship."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 60:1, what will rise on the people?",
@@ -2491,9 +2109,7 @@
       "Great famine and sorrow."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 61:1, what is the purpose of the Lord's anointing?",
@@ -2504,9 +2120,7 @@
       "To cause great fear and trembling."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 62:2, what will the nations see?",
@@ -2517,9 +2131,7 @@
       "The great sadness and sorrow."
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 63:3, what does the speaker do alone?",
@@ -2530,9 +2142,7 @@
       "He creates the earth and the heavens."
     ],
     "answer": "B",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 64:6, what has become of the people's righteousness?",
@@ -2543,9 +2153,7 @@
       "Their righteousness is the only thing that can save them."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 65:1, who says, 'See me, see me'?",
@@ -2556,9 +2164,7 @@
       "The elders of the city"
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   },
   {
     "question": "According to Isaiah 66:1, where does Yahweh say his rest place is?",
@@ -2569,8 +2175,6 @@
       "In the great cities of the world."
     ],
     "answer": "C",
-    "category": "Isaiah",
-    "source": "https://ebible.org/pdf/eng-web/eng-web_ISA.pdf",
-    "qa_extraction": "Generated via NotebookLM given the source."
+    "category": "Isaiah"
   }
 ]
