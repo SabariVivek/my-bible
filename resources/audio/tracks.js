@@ -929,6 +929,14 @@ const BIBLE_TRACKS = [
     verse: "Genesis 2:1-25",
     desc: "How does Genesis 2 reveal God's design for humanity, marriage, and our relationship with Him?",
     category: "Genesis"
+  },
+  {
+    day: 89,
+    title: "Manna",
+    duration: "76:18 min",
+    verse: "Exodus 16:1-36",
+    desc: "How does manna reveal God's provision and point us to Jesus, the Bread of Life?",
+    category: "Christophany"
   }
 ];
 
