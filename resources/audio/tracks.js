@@ -937,6 +937,14 @@ const BIBLE_TRACKS = [
     verse: "Exodus 16:1-36",
     desc: "How does manna reveal God's provision and point us to Jesus, the Bread of Life?",
     category: "Christophany"
+  },
+  {
+    day: 90,
+    title: "Salt",
+    duration: "52:53 min",
+    verse: "Matthew 5:13",
+    desc: "How does Jesus call His followers to preserve goodness and reflect His truth?",
+    category: "Teachings"
   }
 ];
 
