@@ -352,10 +352,10 @@ body.dark-theme .desktop-search-item.selected .desktop-search-item-icon.story-ic
     color: #ffffff;
 }
 
-/* ── Search Verse Highlight: matches left-pane selection design (no border, no box-shadow, solid #303234) ── */
+/* ── Search Verse Highlight: matches left-pane selection design in light theme ── */
 .verse-line.search-jump-highlight,
 .verse-line.left-pane-selected.search-jump-highlight {
-    background-color: #303234 !important;
+    background-color: #d0d4d9 !important;
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
@@ -367,7 +367,7 @@ body.dark-theme .desktop-search-item.selected .desktop-search-item-icon.story-ic
 .verse-line.search-jump-highlight:focus,
 .verse-line.left-pane-selected.search-jump-highlight:active,
 .verse-line.left-pane-selected.search-jump-highlight:focus {
-    background-color: #303234 !important;
+    background-color: #d0d4d9 !important;
     border: none !important;
     box-shadow: none !important;
     outline: none !important;

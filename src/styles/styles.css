@@ -4115,50 +4115,50 @@ body.dark-theme .book-intro-title-secondary {
 }
 
 .verse-line.multi-highlighted {
-    background-color: #303234 !important;
-    border: none !important;
-    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #00000055 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
     outline: none !important;
     transition: all 0.25s ease !important;
     text-decoration: none !important;
 }
 
 .verse-line.multi-highlighted:active {
-    background-color: #303234 !important;
-    border: none !important;
-    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #00000055 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
     outline: none !important;
     transition: all 0.25s ease !important;
 }
 
 .verse-line.multi-highlighted:focus {
-    background-color: #303234 !important;
-    border: none !important;
-    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #00000055 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
     outline: none !important;
     transition: all 0.25s ease !important;
 }
 
 /* Selection color applied on top of bookmark colors (light theme) */
 .verse-line.has-note.multi-highlighted {
-    background-color: #303234 !important;
-    border: none !important;
-    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #00000055 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
     outline: none !important;
     transition: all 0.25s ease !important;
 }
 
-/* Left pane selection - highlight background */
+/* Left pane selection - grey background */
 .verse-line.left-pane-selected {
-    background-color: #303234 !important;
+    background-color: #d0d4d9 !important;
 }
 
 .verse-line.left-pane-selected:active {
-    background-color: #303234 !important;
+    background-color: #d0d4d9 !important;
 }
 
 .verse-line.left-pane-selected:focus {
-    background-color: #303234 !important;
+    background-color: #d0d4d9 !important;
 }
 
 /* Override selection color to prevent grey highlighting */
@@ -8128,9 +8128,9 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
 .verse-line.has-note.note-pink.multi-highlighted,
 .verse-line.has-note.note-orange.multi-highlighted,
 .verse-line.has-note.note-purple.multi-highlighted {
-    background-color: #303234 !important;
-    border: none !important;
-    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #00000055 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
     outline: none !important;
 }
 
