@@ -1914,6 +1914,9 @@ function initializeMobileDrawer() {
     // ── Helper: open/close drawer ──
     function openDrawer() {
         closeSummaryDrawer();
+        if (typeof window.setBarsHidden === 'function') {
+            window.setBarsHidden(false);
+        }
         // Check if new selector style is active
         if (localStorage.getItem('selectorStyle') === 'new' && typeof openBibleSelectorNew === 'function') {
             drawerOverlay.classList.add('active');

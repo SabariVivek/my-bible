@@ -5215,7 +5215,7 @@ body.dark-theme .creation-good-highlight {
         will-change: transform;
         -webkit-overflow-scrolling: touch;
         padding-top: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-top, 0px));
-        padding-bottom: 6rem;
+        padding-bottom: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-bottom, 0px) + 0.5rem);
         box-sizing: border-box;
     }
 
@@ -5263,10 +5263,16 @@ body.dark-theme .creation-good-highlight {
         overflow-x: hidden;
     }
 
-    /* Hide bottom nav when drawer is open */
-    .drawer-overlay.active~*~.bottom-nav,
+    /* Keep top bar and bottom nav visible when drawer is open */
+    body:has(.books-sidebar.drawer-open) .top-bar,
+    body:has(.drawer-overlay.active) .top-bar,
+    body:has(.books-sidebar.drawer-open) .bottom-nav,
     body:has(.drawer-overlay.active) .bottom-nav {
-        display: none !important;
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        display: flex !important;
+        visibility: visible !important;
     }
 
     /* Mobile drawer scrollbars - overlay style */
@@ -5333,7 +5339,7 @@ body.dark-theme .creation-good-highlight {
         right: 0;
         height: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-bottom, 0px));
         padding: 0 1rem env(safe-area-inset-bottom, 0px) 1rem;
-        z-index: 10;
+        z-index: 1001;
     }
 
     /* Show gesture navigation area on mobile */
