@@ -945,6 +945,14 @@ const BIBLE_TRACKS = [
     verse: "Matthew 5:13",
     desc: "How does Jesus call His followers to preserve goodness and reflect His truth?",
     category: "Teachings"
+  },
+  {
+    day: 91,
+    title: "The Sin of the High Priest's Sons",
+    duration: "32:40 min",
+    verse: "Levi 10:1-2; 1 Sam 2:12, 8:1-3",
+    desc: "How did the sons of Aaron, Eli, and Samuel sin against God?",
+    category: "Teachings"
   }
 ];
 
