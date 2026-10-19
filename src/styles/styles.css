@@ -1996,10 +1996,11 @@ body:not(.dark-theme) .moon-icon {
 /* Right Sidebar */
 .right-sidebar {
     position: fixed;
-    top: 60px;
+    top: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-top, 0px));
+    bottom: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-bottom, 0px));
+    height: calc(100vh - (var(--nav-bar-height, 3.25rem) * 2) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
     right: 0;
     width: 190px;
-    height: calc(100vh - 55px);
     background-color: #f8f9fa;
     border-left: 1px solid #e0e0e0 !important;
     overflow-y: auto;
@@ -12275,9 +12276,10 @@ body.dark-theme .bible-reading-title {
     /* Right sidebar mobile behavior */
     .right-sidebar {
         position: fixed;
-        top: 55px;
+        top: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-top, 0px));
+        bottom: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-bottom, 0px));
+        height: calc(100vh - (var(--nav-bar-height, 3.25rem) * 2) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
         right: -100%;
-        height: calc(100vh - 55px);
         width: 70%;
         max-width: 300px;
         z-index: 1000;
@@ -12285,7 +12287,7 @@ body.dark-theme .bible-reading-title {
         opacity: 1;
         overflow-y: auto;
         box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
-        padding-bottom: 6rem;
+        padding-bottom: 1rem;
     }
 
     .right-sidebar.hidden {
@@ -12305,10 +12307,19 @@ body.dark-theme .bible-reading-title {
         overflow: hidden;
     }
 
-    body:has(.right-sidebar.drawer-open) .main-layout,
-    body:has(.right-sidebar.drawer-open) .bottom-nav {
+    body:has(.right-sidebar.drawer-open) .main-layout {
         filter: blur(4px);
         pointer-events: none;
+    }
+
+    body:has(.right-sidebar.drawer-open) .top-bar,
+    body:has(.right-sidebar.drawer-open) .bottom-nav {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        display: flex !important;
+        visibility: visible !important;
+        filter: none !important;
     }
 }
 
