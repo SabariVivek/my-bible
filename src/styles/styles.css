@@ -4856,7 +4856,7 @@ body.dark-theme .creation-good-highlight {
     left: 350px;
     /* Books sidebar (190px) + Chapters (80px) + Verses (80px) */
     right: 0;
-    height: 3.75rem;
+    height: 3.25rem;
     background-color: #ffffff;
     display: flex;
     align-items: center;
@@ -5323,6 +5323,7 @@ body.dark-theme .creation-good-highlight {
         position: fixed;
         left: 0;
         right: 0;
+        height: 3.25rem;
         padding: 0 1rem 0 1rem;
         z-index: 10;
     }
@@ -5359,6 +5360,7 @@ body.dark-theme .creation-good-highlight {
     }
 
     .bottom-nav {
+        height: 3.25rem;
         padding: 0 1rem;
     }
 

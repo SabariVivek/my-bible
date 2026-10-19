@@ -34,7 +34,7 @@ body:not(.dark-theme) {
 /* Arc trigger - gold triangle at bottom-right, above nav */
 .chapter-summary-arc-trigger {
     position: fixed;
-    bottom: 60px;
+    bottom: 52px;
     right: 0;
     width: 42px;
     height: 42px;
