@@ -1242,35 +1242,57 @@ function settingsToggleSwitch(event, toggleEl) {
     }
 }
 
-// Settings: Administrator
+// Settings: Administrator & Exit Admin Mode
+function exitAdminMode() {
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+        showToast('Admin mode ended', 'success');
+    } else {
+        showDesktopNotification('Admin mode ended');
+    }
+
+    localStorage.setItem('isAdmin', 'false');
+
+    // Close right sidebar if open
+    const rightSidebar = document.querySelector('.right-sidebar');
+    if (rightSidebar && !rightSidebar.classList.contains('hidden')) {
+        rightSidebar.classList.add('hidden');
+        rightSidebar.classList.remove('drawer-open');
+    }
+
+    updateAdminUI();
+    setSettingsAdminUiFromState();
+    updateSettingsFooterVisibility();
+
+    if (typeof displayChapter === 'function') {
+        displayChapter();
+    }
+}
+
 function settingsHandleAdminToggle() {
     // Always start OFF; enabling requires password
     if (isAdmin()) {
-        // Disable without password
-        localStorage.setItem('isAdmin', 'false');
-        updateAdminUI();
-        setSettingsAdminUiFromState();
-        updateSettingsFooterVisibility();
+        exitAdminMode();
         return;
     }
     openAdminPasswordModal(() => {
-        // Enable admin mode (same effect as existing activateAdminMode)
-        const adminToggle = document.getElementById('admin-toggle');
+        // Enable admin mode
         const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
         const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
         const isMobile = window.innerWidth <= 768;
         if (isMobile) {
             if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
-            if (adminToggle) adminToggle.style.display = 'flex';
         } else {
             if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
-            if (adminToggle) adminToggle.style.display = 'flex';
         }
         localStorage.setItem('isAdmin', 'true');
         updateAdminUI();
         if (typeof showAdminNotification === 'function') showAdminNotification();
         setSettingsAdminUiFromState();
         updateSettingsFooterVisibility();
+        if (typeof displayChapter === 'function') {
+            displayChapter();
+        }
     });
 }
 // Unused stubs from previous admin modal (kept for markup safety)
@@ -1615,6 +1637,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 avatarEl.style.display = 'none';
                 if (rightMenuBtn) rightMenuBtn.style.display = '';
             }
+
+            // Click avatar to toggle off Admin Mode when active
+            avatarEl.addEventListener('click', (e) => {
+                if (isAdmin()) {
+                    e.stopPropagation();
+                    exitAdminMode();
+                }
+            });
         } else if (rightMenuBtn) {
             // Ensure right menu is visible by default when avatar not present
             rightMenuBtn.style.display = '';
@@ -1704,13 +1734,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isAdmin()) {
         if (isMobile) {
-            // On mobile, show admin menu wrapper and toggle
+            // On mobile, show admin menu wrapper
             if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
-            if (adminToggle) adminToggle.style.display = 'flex';
         } else {
-            // On desktop, show admin menu wrapper and toggle
+            // On desktop, show admin menu wrapper
             if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
-            if (adminToggle) adminToggle.style.display = 'flex';
         }
         // Show admin-only menu items
         if (rightNotesOption) rightNotesOption.style.display = 'flex';
@@ -1722,190 +1750,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (rightCultOption) rightCultOption.style.display = 'none';
         if (rightPrayersOption) rightPrayersOption.style.display = 'none';
     }
-    // Admin toggle button click handler
+    // Admin toggle button click handler (legacy fallback)
     if (adminToggle) {
         adminToggle.addEventListener('click', () => {
-            const currentState = isAdmin();
-            const newState = !currentState;
-            // Show notification
-            const message = newState ? 'Admin mode activated' : 'Admin mode ended';
-            const isMobile = window.innerWidth <= 768;
-            if (isMobile) {
-                showToast(message, 'success');
-            } else {
-                showDesktopNotification(message);
-            }
-            // If turning off admin mode, hide icons with fade animation
-            if (!newState) {
-                // Set fading flag and update localStorage immediately
-                isFadingOut = true;
-                localStorage.setItem('isAdmin', 'false');
-                // Fade out animations with pointer-events disabled
-                if (adminToggle) {
-                    adminToggle.style.pointerEvents = 'none';
-                    adminToggle.style.opacity = '0';
-                    adminToggle.style.transition = 'opacity 2s ease';
-                    setTimeout(() => {
-                        adminToggle.style.display = 'none';
-                        adminToggle.style.opacity = '1';
-                        adminToggle.style.transition = '';
-                        adminToggle.style.pointerEvents = '';
-                    }, 2000);
-                }
-                if (notesIcon) {
-                    notesIcon.style.pointerEvents = 'none';
-                    notesIcon.style.opacity = '0';
-                    notesIcon.style.transition = 'opacity 2s ease';
-                    setTimeout(() => {
-                        notesIcon.style.display = 'none';
-                        notesIcon.style.opacity = '1';
-                        notesIcon.style.transition = '';
-                        notesIcon.style.pointerEvents = '';
-                    }, 2000);
-                }
-                if (secretIcon) {
-                    secretIcon.style.pointerEvents = 'none';
-                    secretIcon.style.opacity = '0';
-                    secretIcon.style.transition = 'opacity 2s ease';
-                    setTimeout(() => {
-                        secretIcon.style.display = 'none';
-                        secretIcon.style.opacity = '1';
-                        secretIcon.style.transition = '';
-                        secretIcon.style.pointerEvents = '';
-                    }, 2000);
-                }
-                if (mobileAdminMenuWrapper) {
-                    mobileAdminMenuWrapper.style.pointerEvents = 'none';
-                    mobileAdminMenuWrapper.style.opacity = '0';
-                    mobileAdminMenuWrapper.style.transition = 'opacity 2s ease';
-                    setTimeout(() => {
-                        mobileAdminMenuWrapper.style.setProperty('display', 'none', 'important');
-                        mobileAdminMenuWrapper.style.opacity = '1';
-                        mobileAdminMenuWrapper.style.transition = '';
-                        mobileAdminMenuWrapper.style.pointerEvents = '';
-                    }, 2000);
-                }
-                if (desktopAdminMenuWrapper) {
-                    desktopAdminMenuWrapper.style.pointerEvents = 'none';
-                    desktopAdminMenuWrapper.style.opacity = '0';
-                    desktopAdminMenuWrapper.style.transition = 'opacity 2s ease';
-                    setTimeout(() => {
-                        desktopAdminMenuWrapper.style.setProperty('display', 'none', 'important');
-                        desktopAdminMenuWrapper.style.opacity = '1';
-                        desktopAdminMenuWrapper.style.transition = '';
-                        desktopAdminMenuWrapper.style.pointerEvents = '';
-                    }, 2000);
-                }
-                // Hide admin-only menu items with fade
-                if (rightNotesOption) {
-                    rightNotesOption.style.pointerEvents = 'none';
-                    rightNotesOption.style.opacity = '0';
-                    rightNotesOption.style.transition = 'opacity 2s ease';
-                    setTimeout(() => {
-                        rightNotesOption.style.display = 'none';
-                        rightNotesOption.style.opacity = '1';
-                        rightNotesOption.style.transition = '';
-                        rightNotesOption.style.pointerEvents = '';
-                    }, 2000);
-                }
-                if (rightCultOption) {
-                    rightCultOption.style.pointerEvents = 'none';
-                    rightCultOption.style.opacity = '0';
-                    rightCultOption.style.transition = 'opacity 2s ease';
-                    setTimeout(() => {
-                        rightCultOption.style.display = 'none';
-                        rightCultOption.style.opacity = '1';
-                        rightCultOption.style.transition = '';
-                        rightCultOption.style.pointerEvents = '';
-                    }, 2000);
-                }
-                if (rightPrayersOption) {
-                    rightPrayersOption.style.pointerEvents = 'none';
-                    rightPrayersOption.style.opacity = '0';
-                    rightPrayersOption.style.transition = 'opacity 2s ease';
-                    setTimeout(() => {
-                        rightPrayersOption.style.display = 'none';
-                        rightPrayersOption.style.opacity = '1';
-                        rightPrayersOption.style.transition = '';
-                        rightPrayersOption.style.pointerEvents = '';
-                    }, 2000);
-                }
-                if (rightCharacterOption) {
-                    rightCharacterOption.style.pointerEvents = 'none';
-                    rightCharacterOption.style.opacity = '0';
-                    rightCharacterOption.style.transition = 'opacity 2s ease';
-                    setTimeout(() => {
-                        rightCharacterOption.style.display = 'none';
-                        rightCharacterOption.style.opacity = '1';
-                        rightCharacterOption.style.transition = '';
-                        rightCharacterOption.style.pointerEvents = '';
-                    }, 2000);
-                }
-                if (rightLifeOfJesusOption) {
-                    rightLifeOfJesusOption.style.pointerEvents = 'none';
-                    rightLifeOfJesusOption.style.opacity = '0';
-                    rightLifeOfJesusOption.style.transition = 'opacity 2s ease';
-                    setTimeout(() => {
-                        rightLifeOfJesusOption.style.display = 'none';
-                        rightLifeOfJesusOption.style.opacity = '1';
-                        rightLifeOfJesusOption.style.transition = '';
-                        rightLifeOfJesusOption.style.pointerEvents = '';
-                    }, 2000);
-                }
-                // Close right sidebar if open
-                const rightSidebar = document.querySelector('.right-sidebar');
-                if (rightSidebar && !rightSidebar.classList.contains('hidden')) {
-                    rightSidebar.classList.add('hidden');
-                    rightSidebar.classList.remove('drawer-open');
-                }
-                // Update UI and reset flag after fade completes
-                setTimeout(() => {
-                    updateAdminUI();
-                    displayChapter(); // Refresh to hide cross-ref icons for non-admin
-                    isFadingOut = false;
-                }, 2000);
-            } else {
-                // If activating admin mode, show admin menu items immediately
-                isFadingOut = false;
-                localStorage.setItem('isAdmin', 'true');
-
-                // Show admin-only menu items - clear any conflicting styles
-                if (rightNotesOption) {
-                    rightNotesOption.style.display = 'flex';
-                    rightNotesOption.style.opacity = '';
-                    rightNotesOption.style.transition = '';
-                    rightNotesOption.style.pointerEvents = '';
-                }
-                if (rightCultOption) {
-                    rightCultOption.style.display = 'flex';
-                    rightCultOption.style.opacity = '';
-                    rightCultOption.style.transition = '';
-                    rightCultOption.style.pointerEvents = '';
-                }
-                if (rightPrayersOption) {
-                    rightPrayersOption.style.display = 'flex';
-                    rightPrayersOption.style.opacity = '';
-                    rightPrayersOption.style.transition = '';
-                    rightPrayersOption.style.pointerEvents = '';
-                }
-                if (rightCharacterOption) {
-                    rightCharacterOption.style.display = 'flex';
-                    rightCharacterOption.style.opacity = '';
-                    rightCharacterOption.style.transition = '';
-                    rightCharacterOption.style.pointerEvents = '';
-                }
-                if (rightLifeOfJesusOption) {
-                    rightLifeOfJesusOption.style.display = 'flex';
-                    rightLifeOfJesusOption.style.opacity = '';
-                    rightLifeOfJesusOption.style.transition = '';
-                    rightLifeOfJesusOption.style.pointerEvents = '';
-                }
-
-                updateAdminUI();
-                // Slight delay to ensure localStorage is set before refresh
-                setTimeout(() => {
-                    displayChapter(); // Refresh to show cross-ref icons for admin
-                }, 50);
+            if (isAdmin()) {
+                exitAdminMode();
             }
         });
     }
@@ -9985,6 +9834,12 @@ function updateAdminUI() {
         rightCultOption.style.display = isAdminMode ? 'flex' : 'none';
     }
 
+    if (rightCharacterOption) {
+        rightCharacterOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    if (rightLifeOfJesusOption) {
+        rightLifeOfJesusOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
     if (rightPrayersOption) {
         rightPrayersOption.style.display = isAdminMode ? 'flex' : 'none';
     }
@@ -9992,14 +9847,30 @@ function updateAdminUI() {
         rightLogoutOption.style.display = isAdminMode ? 'flex' : 'none';
     }
 
-    // Update admin toggle button state
+    // Ensure legacy admin-toggle icon is kept hidden in favor of glowing avatar ring
     if (adminToggle) {
+        adminToggle.style.setProperty('display', 'none', 'important');
+    }
+
+    // Update avatar glowing ring indicator & clickability
+    const avatarEl = document.getElementById('current-user-avatar');
+    if (avatarEl) {
         if (isAdminMode) {
-            adminToggle.classList.add('active');
-            if (adminCheck) adminCheck.style.display = 'block';
+            avatarEl.classList.add('admin-active');
+            const userName = localStorage.getItem('currentUserName') || '';
+            avatarEl.title = `${userName ? userName + ' — ' : ''}Admin Mode Active (Click to turn off)`;
+            avatarEl.style.display = 'flex';
+            if (!avatarEl.textContent && !avatarEl.style.backgroundImage) {
+                avatarEl.textContent = 'A';
+            }
         } else {
-            adminToggle.classList.remove('active');
-            if (adminCheck) adminCheck.style.display = 'none';
+            avatarEl.classList.remove('admin-active');
+            const userName = localStorage.getItem('currentUserName') || '';
+            avatarEl.title = userName || 'Current user';
+            const isGuest = localStorage.getItem('currentUserIsGuest') === 'true';
+            if (isGuest && !localStorage.getItem('currentUserId')) {
+                avatarEl.style.display = 'none';
+            }
         }
     }
 }
