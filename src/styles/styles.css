@@ -71,45 +71,51 @@ body,
 
 /* ============================================
    SCROLL-HIDE ANIMATIONS
-   Hide top and bottom bars while scrolling
+   Hide top and bottom bars while scrolling on mobile
    ============================================ */
 .top-bar {
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1) !important;
     transform: translateY(0);
-    opacity: 1;
+    will-change: transform;
 }
 
 .top-bar.hidden-on-scroll {
     transform: translateY(-100%) !important;
-    opacity: 0 !important;
     pointer-events: none !important;
 }
 
 .bottom-nav {
-    transition: bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
-    opacity: 1;
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transform: translateY(0);
+    will-change: transform;
 }
 
 .bottom-nav.hidden-on-scroll {
-    bottom: -75px !important;
+    transform: translateY(calc(100% + env(safe-area-inset-bottom, 0px) + 20px)) !important;
+    pointer-events: none !important;
+}
+
+.gesture-nav-area {
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.3s ease !important;
+    transform: translateY(0);
+    will-change: transform, opacity;
+}
+
+.gesture-nav-area.hidden-on-scroll {
+    transform: translateY(100%) !important;
     opacity: 0 !important;
     pointer-events: none !important;
 }
 
 #from-bible-reading-banner {
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.28s ease !important;
+    will-change: transform, opacity;
 }
 
 #from-bible-reading-banner.hidden-on-scroll {
     opacity: 0 !important;
-    transform: translateX(-50%) translateY(12px) !important;
+    transform: translateX(-50%) translateY(calc(100% + 40px)) !important;
     pointer-events: none !important;
-}
-
-/* Ensure dark theme doesn't override */
-body.dark-theme .bottom-nav.hidden-on-scroll {
-    bottom: -100px !important;
-    opacity: 0 !important;
 }
 
 /* Verse Count Bookmark - Right side top bookmark design */
@@ -4844,7 +4850,7 @@ body.dark-theme .creation-good-highlight {
     padding: 0 1rem;
     box-sizing: border-box;
     z-index: 10;
-    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-top: 1px solid #e0e0e0;
 }
 

@@ -41,12 +41,14 @@ body:not(.dark-theme) {
     cursor: pointer;
     z-index: 11;
     pointer-events: all;
-    transition: bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+    transition: transform 0.32s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.28s ease !important;
     opacity: 1;
+    transform: translateY(0);
+    will-change: transform, opacity;
 }
 
 .chapter-summary-arc-trigger.hidden-on-scroll {
-    bottom: -15px !important;
+    transform: translateY(calc(100% + 80px)) !important;
     opacity: 0 !important;
     pointer-events: none !important;
 }
