@@ -1,13 +1,13 @@
 /**
  * Verse Navigation History Manager for My Bible
- * Stores the last 30 navigated/selected verses per user in localStorage.
+ * Stores the last 100 navigated/selected verses per user in localStorage.
  * No database calls required — persists locally until app data is cleared.
  */
 
 (function (window) {
     'use strict';
 
-    const MAX_HISTORY = 30;
+    const MAX_HISTORY = 100;
 
     // Standard 3-letter USFM/OSIS Bible Book Codes matching application design
     const BIBLE_BOOK_CODES = [
