@@ -2181,11 +2181,12 @@ body.hide-memory-verse body.dark-theme .verse-line.memory-verse .v-num {
 /* Right Settings Panel (overlay above right sidebar) */
 .right-settings-panel {
     position: fixed;
-    top: 56px;
+    top: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-top, 0px));
+    bottom: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-bottom, 0px));
+    height: calc(100vh - (var(--nav-bar-height, 3.25rem) * 2) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
     right: 0;
     width: 450px;
     max-width: 90vw;
-    height: calc(100vh - 60px);
     background-color: #ffffff;
     border-left: 1px solid #e0e0e0;
     box-shadow: -8px 0 24px rgba(0, 0, 0, 0.25);
@@ -2196,6 +2197,7 @@ body.hide-memory-verse body.dark-theme .verse-line.memory-verse .v-num {
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
+    border-radius: 0;
 }
 
 .right-settings-panel {
@@ -2367,12 +2369,13 @@ body:not(.dark-theme) .right-settings-panel .settings-header-icon-btn.primary sv
 .right-settings-panel .settings-body {
     position: relative;
     z-index: 1;
-    padding: 4px 18px 36px;
+    padding: 4px 18px 48px;
     display: flex;
     flex-direction: column;
     gap: 22px;
     overflow-y: auto;
     flex: 1;
+    min-height: 0;
 }
 
 .right-settings-panel .settings-footer {
@@ -3589,6 +3592,16 @@ body.dark-theme .vh-swatch.selected {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
+}
+
+body:has(.right-settings-panel.active) .top-bar,
+body:has(.right-settings-panel.active) .bottom-nav {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    display: flex !important;
+    visibility: visible !important;
+    filter: none !important;
 }
 
 .right-settings-header {
