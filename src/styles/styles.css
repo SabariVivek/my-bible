@@ -9647,7 +9647,7 @@ body.dark-theme .add-character-btn:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1050;
     display: flex;
     flex-direction: column;
     /* GPU acceleration for smooth animations */
@@ -9659,6 +9659,10 @@ body.dark-theme .add-character-btn:hover {
 .verse-actions-bottom-sheet.visible {
     transform: translateY(0);
     transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+
+body.bottom-sheet-open .bottom-nav {
+    pointer-events: none;
 }
 
 /* Desktop: Show on right side */
@@ -10303,7 +10307,7 @@ body:not(.dark-theme) .popup-info-content .close-bottom-sheet:hover {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 12px;
-    padding: 20px 20px;
+    padding: 20px 20px calc(20px + env(safe-area-inset-bottom, 0px)) 20px;
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: none;
@@ -10683,7 +10687,7 @@ body.dark-theme .close-bottom-sheet:hover {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s cubic-bezier(0.32, 0.72, 0, 1);
-    z-index: 999;
+    z-index: 1049;
     will-change: opacity;
 }
 
@@ -10699,7 +10703,7 @@ body.dark-theme .close-bottom-sheet:hover {
     right: 0;
     background: #e0e0e0;
     border-radius: 16px 16px 0 0;
-    z-index: 1000;
+    z-index: 1050;
     /* GPU acceleration for smooth animations */
     will-change: transform;
     transform: translateY(100%);
@@ -11016,7 +11020,7 @@ body.dark-theme .language-sheet-color-option.active {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0);
-    z-index: 999;
+    z-index: 1049;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.32s cubic-bezier(0.32, 0.72, 0, 1),
@@ -11041,7 +11045,7 @@ body.dark-theme .language-sheet-color-option.active {
     background: #ffffff;
     border-radius: 24px 24px 0 0;
     border-top: 0.5px solid rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 1050;
     will-change: transform;
     transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.38s ease;
     display: flex;
