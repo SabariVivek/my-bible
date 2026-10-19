@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --nav-bar-height: 3.25rem;
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -804,11 +808,11 @@ body.skeleton-loading .verses-column {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: max(0.5rem, env(safe-area-inset-top)) 1.5rem 0.75rem 1.5rem;
+    padding: env(safe-area-inset-top, 0px) 1.5rem 0 1.5rem;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
     width: 100%;
-    height: auto;
+    height: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-top, 0px));
     margin: 0;
     position: relative;
     flex-shrink: 0;
@@ -1862,7 +1866,7 @@ body:not(.dark-theme) .moon-icon {
 /* Main Layout */
 .main-layout {
     display: flex;
-    height: calc(100vh - 60px - env(safe-area-inset-top));
+    height: calc(100vh - var(--nav-bar-height, 3.25rem) - env(safe-area-inset-top, 0px));
     overflow: hidden;
     position: relative;
     background-color: #f8f9fa;
@@ -4856,12 +4860,12 @@ body.dark-theme .creation-good-highlight {
     left: 350px;
     /* Books sidebar (190px) + Chapters (80px) + Verses (80px) */
     right: 0;
-    height: 3.25rem;
+    height: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-bottom, 0px));
     background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0 1rem;
+    padding: 0 1rem env(safe-area-inset-bottom, 0px) 1rem;
     box-sizing: border-box;
     z-index: 10;
     transition: transform 0.3s ease, opacity 0.3s ease, left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -5125,12 +5129,14 @@ body.dark-theme .creation-good-highlight {
         top: 0;
         left: 0;
         right: 0;
+        height: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-top, 0px));
+        padding: env(safe-area-inset-top, 0px) 1.5rem 0 1.5rem;
         z-index: 1001;
     }
 
     /* Author banner directly under fixed top bar */
     .author-banner {
-        margin-top: calc(55px + env(safe-area-inset-top));
+        margin-top: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-top, 0px));
         position: relative;
         z-index: 1000;
     }
@@ -5138,7 +5144,7 @@ body.dark-theme .creation-good-highlight {
     /* Adjust main layout to account for fixed header and banner */
     .main-layout {
         margin-top: 0;
-        height: calc(100vh - 60px - env(safe-area-inset-top));
+        height: calc(100vh - var(--nav-bar-height, 3.25rem) - env(safe-area-inset-top, 0px));
     }
 }
 
@@ -5153,12 +5159,14 @@ body.dark-theme .creation-good-highlight {
         top: 0;
         left: 0;
         right: 0;
+        height: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-top, 0px));
+        padding: env(safe-area-inset-top, 0px) 1rem 0 1rem;
         z-index: 1001;
     }
 
     /* Author banner directly under fixed top bar */
     .author-banner {
-        margin-top: calc(55px + env(safe-area-inset-top));
+        margin-top: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-top, 0px));
         position: relative;
         z-index: 1000;
     }
@@ -5187,7 +5195,7 @@ body.dark-theme .creation-good-highlight {
         display: flex;
         flex-direction: row;
         height: auto;
-        min-height: calc(100vh - 60px - env(safe-area-inset-top));
+        min-height: calc(100vh - var(--nav-bar-height, 3.25rem) - env(safe-area-inset-top, 0px));
         margin-top: 0;
         overflow: visible;
         background-color: rgb(248, 249, 250);
@@ -5206,7 +5214,7 @@ body.dark-theme .creation-good-highlight {
         overflow-y: auto;
         will-change: transform;
         -webkit-overflow-scrolling: touch;
-        padding-top: 60px;
+        padding-top: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-top, 0px));
         padding-bottom: 6rem;
         box-sizing: border-box;
     }
@@ -5323,8 +5331,8 @@ body.dark-theme .creation-good-highlight {
         position: fixed;
         left: 0;
         right: 0;
-        height: 3.25rem;
-        padding: 0 1rem 0 1rem;
+        height: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-bottom, 0px));
+        padding: 0 1rem env(safe-area-inset-bottom, 0px) 1rem;
         z-index: 10;
     }
 
@@ -5352,7 +5360,8 @@ body.dark-theme .creation-good-highlight {
 
 @media (max-width: 480px) {
     .top-bar {
-        padding: max(0.5rem, env(safe-area-inset-top)) 1rem 0.75rem 1rem;
+        height: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-top, 0px));
+        padding: env(safe-area-inset-top, 0px) 1rem 0 1rem;
     }
 
     .site-title {
@@ -5360,8 +5369,8 @@ body.dark-theme .creation-good-highlight {
     }
 
     .bottom-nav {
-        height: 3.25rem;
-        padding: 0 1rem;
+        height: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-bottom, 0px));
+        padding: 0 1rem env(safe-area-inset-bottom, 0px) 1rem;
     }
 
     .current-chapter {
@@ -6542,11 +6551,13 @@ body.modal-open {
     max-width: 600px;
     max-height: 80vh;
     border-radius: 16px 16px 0 0;
-    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+    visibility: hidden;
+    pointer-events: none;
     z-index: 1101;
     /* GPU acceleration for smooth animations */
     will-change: transform;
-    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.3s ease;
     overflow: visible;
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
@@ -6555,6 +6566,9 @@ body.modal-open {
 
 .note-viewer-overlay.visible .note-viewer-modal {
     transform: translateX(-50%) translateY(0);
+    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .note-viewer-modal.dragging {
@@ -7515,7 +7529,7 @@ body.dark-theme .notes-spinner {
         max-width: 100%;
         max-height: 95vh;
         border-radius: 16px 16px 0 0;
-        box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+        box-shadow: none;
         will-change: transform;
         transform: translateY(100%);
         transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
@@ -7527,6 +7541,7 @@ body.dark-theme .notes-spinner {
 
     .notes-modal-overlay.visible .notes-modal {
         transform: translateY(0);
+        box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
     }
 
     .notes-modal.dragging {
@@ -10682,9 +10697,11 @@ body.dark-theme .close-bottom-sheet:hover {
     /* GPU acceleration for smooth animations */
     will-change: transform;
     transform: translateY(100%);
-    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.3s ease;
     padding: 16px 20px 24px 20px;
-    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+    visibility: hidden;
+    pointer-events: none;
     overflow: visible;
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
@@ -10693,6 +10710,9 @@ body.dark-theme .close-bottom-sheet:hover {
 
 .language-bottom-sheet.active {
     transform: translateY(0);
+    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .language-bottom-sheet.dragging {
@@ -11017,16 +11037,21 @@ body.dark-theme .language-sheet-color-option.active {
     border-top: 0.5px solid rgba(0, 0, 0, 0.1);
     z-index: 1000;
     will-change: transform;
-    transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.38s ease;
     display: flex;
     flex-direction: column;
     padding: 0 1.25rem 2.5rem;
     overflow: hidden;
-    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.35);
+    box-shadow: none;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .book-meaning-bottom-sheet.active {
     transform: translateX(-50%) translateY(0);
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.35);
+    visibility: visible;
+    pointer-events: auto;
 }
 
 /* Drag Handle */
@@ -11152,6 +11177,9 @@ body.dark-theme .language-sheet-color-option.active {
 body.dark-theme .book-meaning-bottom-sheet {
     background: #1c1c1e;
     border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .book-meaning-bottom-sheet.active {
     box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.6);
 }
 
@@ -12504,10 +12532,12 @@ body.dark-theme .color-option:hover {
     width: 100%;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: none;
+    visibility: hidden;
+    pointer-events: none;
     /* GPU acceleration for smooth animations */
     will-change: transform;
-    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.3s ease;
     overflow: visible;
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
@@ -12516,6 +12546,9 @@ body.dark-theme .color-option:hover {
 
 .sermon-selection-modal.visible .sermon-modal-content {
     transform: translateX(-50%) translateY(0);
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .sermon-modal-content.dragging {
@@ -12825,11 +12858,13 @@ body.sermon-modal-open {
     width: 100%;
     /* GPU acceleration for smooth animations */
     will-change: transform;
-    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.3s ease;
     max-height: 70vh;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: none;
+    visibility: hidden;
+    pointer-events: none;
     overflow: visible;
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
@@ -12838,6 +12873,9 @@ body.sermon-modal-open {
 
 .bookmark-color-picker-sheet.visible {
     transform: translateX(-50%) translateY(0);
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .bookmark-color-picker-sheet.closing {
@@ -13306,9 +13344,11 @@ body.pinned-verses-sheet-open .bottom-nav {
     display: flex;
     flex-direction: column;
     transform: translateY(100%);
-    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.3s ease;
     z-index: 1001;
-    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+    visibility: hidden;
+    pointer-events: none;
     overflow: visible;
     will-change: transform;
     backface-visibility: hidden;
@@ -13327,19 +13367,27 @@ body.pinned-verses-sheet-open .bottom-nav {
     max-height: 80vh;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+    visibility: hidden;
+    pointer-events: none;
     /* GPU acceleration for smooth animations */
     will-change: transform;
     transform: translateY(100%);
-    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.3s ease;
     overflow: visible;
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.pinned-verses-modal-overlay.visible .pinned-verses-content {
+.pinned-verses-modal-overlay.visible .pinned-verses-content,
+.pinned-verses-modal-overlay.visible .pinned-verses-modal,
+body.pinned-verses-sheet-open .pinned-verses-modal,
+body.pinned-verses-sheet-open .pinned-verses-content {
     transform: translateY(0);
+    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .pinned-verses-content.dragging {
@@ -13642,16 +13690,21 @@ body.dark-theme .pinned-verse-highlight {
     max-height: 75vh;
     background-color: #ffffff;
     border-radius: 24px 24px 0 0;
-    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: none;
+    visibility: hidden;
+    pointer-events: none;
     z-index: 9999;
     transform: translateY(100%);
-    transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.35s ease;
     display: flex;
     flex-direction: column;
 }
 
 .cross-ref-detail-sheet.active {
     transform: translateY(0);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15);
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .cross-ref-detail-sheet.show-close .cross-ref-detail-close-btn {
@@ -13930,8 +13983,10 @@ body.dark-theme .cross-ref-loader-spinner {
     width: 100%;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
-    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), visibility 0.3s ease;
+    box-shadow: none;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 body.dark-theme .add-ref-sheet {
@@ -13940,7 +13995,10 @@ body.dark-theme .add-ref-sheet {
 
 .add-ref-sheet.active {
     transform: translateX(-50%) translateY(0);
-    transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
+    transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1), visibility 0.4s ease;
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .add-ref-sheet-handle {
