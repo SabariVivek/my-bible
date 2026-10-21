@@ -953,6 +953,30 @@ const BIBLE_TRACKS = [
     verse: "Levi 10:1-2; 1 Sam 2:12, 8:1-3",
     desc: "How did the sons of Aaron, Eli, and Samuel sin against God?",
     category: "Teachings"
+  },
+  {
+    day: 92,
+    title: "Fault of Rehoboam (Solomon’s Son)",
+    duration: "47:46 min",
+    verse: "2 Chronicles 12:1-16",
+    desc: "How did Rehoboam's unfaithfulness lead to God's judgment?",
+    category: "Teachings"
+  },
+  {
+    day: 93,
+    title: "Parable of the Unforgiving Servant",
+    duration: "36:10 min",
+    verse: "Matthew 18:21-35",
+    desc: "Why should we forgive others as God has forgiven us?",
+    category: "Parables"
+  },
+  {
+    day: 94,
+    title: "Jesus Calms the Storm",
+    duration: "54:12 min",
+    verse: "Mark 4:35-41",
+    desc: "How does Jesus reveal His authority over nature and teach His disciples to trust Him?",
+    category: "Miracles"
   }
 ];
 
