@@ -131,5 +131,26 @@
   }
 
   window.createTopicSearch = createTopicSearch;
-  window.topicSearch = createTopicSearch(topics);
+  let cachedTopicSearch = null;
+  function getTopicSearch() {
+    if (!cachedTopicSearch) {
+      cachedTopicSearch = createTopicSearch(topics);
+    }
+    return cachedTopicSearch;
+  }
+  window.topicSearch = function(query, opts) {
+    return getTopicSearch()(query, opts);
+  };
+
+  // Dispatch event so topics browser or other components can react if opened
+  try {
+    window.dispatchEvent(new CustomEvent('bibleTopicsLoaded'));
+  } catch (e) {}
+
+  // Warm up search index in background when main thread is idle
+  if (typeof window.requestIdleCallback === 'function') {
+    window.requestIdleCallback(function() { getTopicSearch(); }, { timeout: 3500 });
+  } else {
+    setTimeout(function() { getTopicSearch(); }, 2000);
+  }
 })();

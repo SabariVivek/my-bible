@@ -420,6 +420,12 @@
         if (searchInput) searchInput.value = '';
         if (clearSearchBtn) clearSearchBtn.style.display = 'none';
 
+        // Re-populate book dropdown if topics arrived after initial DOM creation
+        if (bookSelect && bookSelect.options.length > 0 && bookSelect.options[0].text.endsWith('[0]') && typeof window.getTopicsByBookIndex === 'function') {
+            populateBooks();
+            if (bookSelect) bookSelect.value = selectedBookIndex;
+        }
+
         render();
 
         modalBackdrop.classList.add('open');
@@ -429,6 +435,14 @@
             if (searchInput) searchInput.focus();
         }, 120);
     }
+
+    // Refresh topics browser when dataset finishes loading in background
+    window.addEventListener('bibleTopicsLoaded', () => {
+        populateBooks();
+        if (modalBackdrop && modalBackdrop.classList.contains('open')) {
+            render();
+        }
+    });
 
     function close() {
         if (!modalBackdrop) return;
