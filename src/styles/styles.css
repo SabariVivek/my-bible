@@ -10717,8 +10717,12 @@ body:not(.dark-theme) .popup-info-content .close-bottom-sheet:hover {
 }
 
 .add-favorite-action.bookmarked {
-    background: rgba(212, 160, 76, 0.14) !important;
+    background: transparent !important;
     color: var(--bookmark-color, #c28829) !important;
+}
+
+.add-favorite-action.bookmarked:hover {
+    background: rgba(0, 0, 0, 0.05) !important;
 }
 
 .add-favorite-action.bookmarked svg {
@@ -10728,7 +10732,7 @@ body:not(.dark-theme) .popup-info-content .close-bottom-sheet:hover {
 }
 
 .add-favorite-action.bookmarked span {
-    color: var(--bookmark-color, #c28829) !important;
+    color: #1c1c1e !important;
 }
 
 .add-memory-action svg {
@@ -10737,18 +10741,22 @@ body:not(.dark-theme) .popup-info-content .close-bottom-sheet:hover {
 }
 
 .add-memory-action.memory-verse-active {
-    background: rgba(245, 158, 11, 0.14) !important;
-    color: #d97706 !important;
+    background: transparent !important;
+    color: #f59e0b !important;
+}
+
+.add-memory-action.memory-verse-active:hover {
+    background: rgba(0, 0, 0, 0.05) !important;
 }
 
 .add-memory-action.memory-verse-active svg {
-    color: #d97706;
-    fill: #d97706;
-    stroke: #d97706;
+    color: #f59e0b;
+    fill: #f59e0b;
+    stroke: #f59e0b;
 }
 
 .add-memory-action.memory-verse-active span {
-    color: #d97706 !important;
+    color: #1c1c1e !important;
 }
 
 
@@ -11552,21 +11560,23 @@ body.dark-theme .verse-bottom-action:hover span {
 }
 
 body.dark-theme .add-favorite-action.bookmarked {
-    background: rgba(212, 160, 76, 0.2) !important;
-    color: var(--bookmark-color, #e5a93c) !important;
+    background: transparent !important;
+    color: var(--bookmark-color, #ffd159) !important;
+}
+
+body.dark-theme .add-favorite-action.bookmarked:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-theme .add-favorite-action.bookmarked svg {
+    color: var(--bookmark-color, #ffd159);
+    fill: var(--bookmark-color, #ffd159);
+    stroke: var(--bookmark-color, #ffd159);
+    filter: drop-shadow(0 0 5px rgba(255, 209, 89, 0.35));
 }
 
 body.dark-theme .add-favorite-action.bookmarked span {
-    color: var(--bookmark-color, #e5a93c) !important;
-}
-
-body.dark-theme .add-memory-action.memory-verse-active {
-    background: rgba(255, 215, 0, 0.2) !important;
-    color: #ffd700 !important;
-}
-
-body.dark-theme .add-memory-action.memory-verse-active span {
-    color: #ffd700 !important;
+    color: #ffffff !important;
 }
 
 @media (min-width: 769px) {
@@ -11590,18 +11600,23 @@ body.dark-theme .add-memory-action.memory-verse-active span {
 }
 
 body.dark-theme .add-memory-action.memory-verse-active {
-    background: rgba(245, 158, 11, 0.2) !important;
-    color: #f59e0b !important;
+    background: transparent !important;
+    color: #ffd60a !important;
+}
+
+body.dark-theme .add-memory-action.memory-verse-active:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
 }
 
 body.dark-theme .add-memory-action.memory-verse-active svg {
-    color: #f59e0b;
-    fill: #f59e0b;
-    stroke: #f59e0b;
+    color: #ffd60a;
+    fill: #ffd60a;
+    stroke: #ffd60a;
+    filter: drop-shadow(0 0 6px rgba(255, 214, 10, 0.45));
 }
 
 body.dark-theme .add-memory-action.memory-verse-active span {
-    color: #f59e0b !important;
+    color: #ffffff !important;
 }
 
 
