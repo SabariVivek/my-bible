@@ -53,6 +53,20 @@ body:not(.dark-theme) {
     pointer-events: none !important;
 }
 
+@media (max-width: 768px) {
+    body.bottom-sheet-open .chapter-summary-arc-trigger,
+    body.bottom-sheet-open .chapter-summary-arc-shape,
+    body:has(#verse-actions-bottom-sheet.visible) .chapter-summary-arc-trigger,
+    body:has(#verse-actions-bottom-sheet.visible) .chapter-summary-arc-shape,
+    body:has(.verse-actions-bottom-sheet.visible) .chapter-summary-arc-trigger,
+    body:has(.verse-actions-bottom-sheet.visible) .chapter-summary-arc-shape {
+        transform: translateY(100%) !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        visibility: hidden !important;
+    }
+}
+
 .chapter-summary-arc-shape {
     position: absolute;
     bottom: 0;

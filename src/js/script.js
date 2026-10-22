@@ -4303,13 +4303,11 @@ function handleVersesCopy(copyBtn) {
             copyBtn.style.transform = 'scale(1)';
             copyBtn.style.opacity = '1';
 
-            // Remove highlights from selected verses
-            if (isMultiVerse && contentArea) {
-                const highlighted = Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted, .verse-line.left-pane-selected'));
-                highlighted.forEach(verseLine => {
-                    verseLine.classList.remove('multi-highlighted');
-                    verseLine.classList.remove('left-pane-selected');
-                    verseLine.style.backgroundColor = '';
+            // Remove highlights from all verses
+            if (contentArea) {
+                contentArea.querySelectorAll('.verse-line, .verse-container').forEach(el => {
+                    el.classList.remove('multi-highlighted', 'highlighted', 'left-pane-selected');
+                    el.style.backgroundColor = '';
                 });
 
                 // Clear selectedVerses array if defined
@@ -4318,7 +4316,7 @@ function handleVersesCopy(copyBtn) {
                 }
 
                 // Update left pane active states
-                const leftPane = document.querySelector('.verses-column');
+                const leftPane = document.querySelector('.verses-column') || document.querySelector('.verses');
                 if (leftPane) {
                     leftPane.querySelectorAll('.number-item.active, .verse-number.active').forEach(el => {
                         el.classList.remove('active');
@@ -4345,13 +4343,14 @@ function handleVersesCopy(copyBtn) {
 // Select or deselect all verses in current chapter
 function selectAllVerses(toggle = true) {
     const contentArea = document.querySelector('.scripture-text');
-    const versesColumn = document.querySelector('.verses-column');
+    const versesColumn = document.querySelector('.verses-column') || document.querySelector('.verses');
     if (!contentArea) return;
 
     const allVerseLines = Array.from(contentArea.querySelectorAll('.verse-line'));
     if (allVerseLines.length === 0) return;
 
     const allVerseNumbers = allVerseLines.map(v => parseInt(v.getAttribute('data-verse'))).filter(n => !isNaN(n));
+    const uniqueVerseNumbers = [...new Set(allVerseNumbers)];
     const highlightedCount = contentArea.querySelectorAll('.verse-line.multi-highlighted').length;
     const isAllSelected = highlightedCount === allVerseLines.length;
 
@@ -4380,7 +4379,7 @@ function selectAllVerses(toggle = true) {
         if (versesColumn) {
             versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.add('active'));
         }
-        showMultiVerseActionsBottomSheet(allVerseNumbers);
+        showMultiVerseActionsBottomSheet(uniqueVerseNumbers);
     }
 }
 window.selectAllVerses = selectAllVerses;
@@ -4424,35 +4423,36 @@ function showVerseActionsBottomSheet(verseNum) {
                     <span>Select All</span>
                 </button>
                 <button class="verse-bottom-action copy-verse-action" data-verse="${verseNum}">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
                     </svg>
                     <span>Copy</span>
                 </button>
                 ${isAdmin() ? `
                 <button class="verse-bottom-action add-sermon-action" data-verse="${verseNum}">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
                         <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                        <line x1="12" y1="19" x2="12" y2="23"></line>
-                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                        <line x1="12" y1="19" x2="12" y2="22"></line>
                     </svg>
                     <span>Sermon</span>
                 </button>
                 ` : ''}
                 <button class="verse-bottom-action add-favorite-action" data-verse="${verseNum}">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
                     </svg>
                     <span>Bookmark</span>
                 </button>
                 <button class="verse-bottom-action add-memory-action" data-verse="${verseNum}">
-                    <span class="memory-star-icon" style="font-size: 20px;">☆</span>
+                    <svg class="memory-star-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
                     <span>Memory</span>
                 </button>
                 <button class="verse-bottom-action share-verse-action" data-verse="${verseNum}">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="18" cy="5" r="3"></circle>
                         <circle cx="6" cy="12" r="3"></circle>
                         <circle cx="18" cy="19" r="3"></circle>
@@ -4461,12 +4461,6 @@ function showVerseActionsBottomSheet(verseNum) {
                     </svg>
                     <span>Share</span>
                 </button>
-                ${isAdmin() ? `
-                <button class="verse-bottom-action pin-verse-action" data-verse="${verseNum}">
-                    <span class="pin-icon-emoji">✏️</span>
-                    <span>Pin</span>
-                </button>
-                ` : ''}
             </div>
             <div class="verse-actions-footer">
                 <button class="close-verse-selection-btn" aria-label="Close">Close</button>
@@ -4547,7 +4541,8 @@ function showVerseActionsBottomSheet(verseNum) {
     // Select all verses button
     const selectAllBtn = bottomSheet.querySelector('.select-all-verses-action');
     if (selectAllBtn) {
-        selectAllBtn.addEventListener('click', () => {
+        selectAllBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             selectAllVerses();
         });
     }
@@ -4555,12 +4550,6 @@ function showVerseActionsBottomSheet(verseNum) {
     // Copy verse button
     bottomSheet.querySelector('.copy-verse-action').addEventListener('click', function () {
         handleVersesCopy(this);
-
-        // Clear verse selection for single-verse copy
-        const versesColumn = document.querySelector('.verses-column');
-        if (versesColumn) {
-            versesColumn.querySelectorAll('.number-item.active').forEach(item => item.classList.remove('active'));
-        }
     });
 
     // Add note button (only if admin access enabled)
@@ -4709,19 +4698,17 @@ function showVerseActionsBottomSheet(verseNum) {
 
     // Function to update memory verse button appearance
     const updateMemoryButtonAppearance = (isMemory) => {
-        const starIcon = memoryBtn.querySelector('.memory-star-icon');
+        const starSvg = memoryBtn.querySelector('.memory-star-svg, svg');
 
         if (isMemory) {
             memoryBtn.classList.add('memory-verse-active');
-            // Show filled star emoji
-            if (starIcon) {
-                starIcon.textContent = '⭐';
+            if (starSvg) {
+                starSvg.setAttribute('fill', 'currentColor');
             }
         } else {
             memoryBtn.classList.remove('memory-verse-active');
-            // Show outline star
-            if (starIcon) {
-                starIcon.textContent = '☆';
+            if (starSvg) {
+                starSvg.setAttribute('fill', 'none');
             }
         }
     };
@@ -4765,29 +4752,6 @@ function showVerseActionsBottomSheet(verseNum) {
             });
         }
     });
-
-    // Pin verse button
-    const pinBtn = bottomSheet.querySelector('.pin-verse-action');
-    if (pinBtn) {
-        // Check if verse is already pinned and update button appearance
-        const pinState = isPinnedInCurrentChapter(verseNum);
-        updatePinButtonAppearance(pinBtn, pinState);
-
-        pinBtn.addEventListener('click', () => {
-            const isCurrentlyPinned = isPinnedInCurrentChapter(verseNum);
-            if (isCurrentlyPinned) {
-                // Unpin verse
-                unpinVerseFromCurrentChapter(verseNum);
-                updatePinButtonAppearance(pinBtn, false);
-                showToast(`Verse unpinned`, 'info');
-            } else {
-                // Pin verse
-                pinVerse(verseNum);
-                updatePinButtonAppearance(pinBtn, true);
-                showToast(`Verse pinned`, 'success');
-            }
-        });
-    }
 }
 
 // Show bottom sheet for multiple selected verses
@@ -4809,7 +4773,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     const isAllSelected = totalVersesInChapter > 0 && selectedVerses.length >= totalVersesInChapter;
     const sortedVerses = [...selectedVerses].sort((a, b) => a - b);
     const verseReference = isAllSelected
-        ? `${bookName} ${currentChapter} : 1 - ${totalVersesInChapter} (All Verses)`
+        ? `${bookName} ${currentChapter} : 1 - ${totalVersesInChapter} (All)`
         : (sortedVerses.length > 1
             ? `${bookName} ${currentChapter} : ${sortedVerses[0]} - ${sortedVerses[sortedVerses.length - 1]}`
             : `${bookName} ${currentChapter} : ${sortedVerses[0]}`);
@@ -4837,35 +4801,36 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                     <span>${isAllSelected ? 'Deselect All' : 'Select All'}</span>
                 </button>
                 <button class="verse-bottom-action copy-multi-verses-action">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
                     </svg>
                     <span>Copy</span>
                 </button>
                 ${isAdmin() ? `
                 <button class="verse-bottom-action add-sermon-action">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
                         <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                        <line x1="12" y1="19" x2="12" y2="23"></line>
-                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                        <line x1="12" y1="19" x2="12" y2="22"></line>
                     </svg>
                     <span>Sermon</span>
                 </button>
                 ` : ''}
                 <button class="verse-bottom-action add-favorite-action">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
                     </svg>
                     <span>Bookmark</span>
                 </button>
                 <button class="verse-bottom-action add-memory-action">
-                    <span class="memory-star-icon" style="font-size: 20px;">☆</span>
+                    <svg class="memory-star-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
                     <span>Memory</span>
                 </button>
                 <button class="verse-bottom-action share-verses-action">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="18" cy="5" r="3"></circle>
                         <circle cx="6" cy="12" r="3"></circle>
                         <circle cx="18" cy="19" r="3"></circle>
@@ -4934,7 +4899,8 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     // Select all verses button
     const multiSelectAllBtn = bottomSheet.querySelector('.select-all-verses-action');
     if (multiSelectAllBtn) {
-        multiSelectAllBtn.addEventListener('click', function () {
+        multiSelectAllBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
             selectAllVerses();
         });
     }
@@ -4973,9 +4939,15 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
             return window.memoryVerses.includes(ref);
         });
 
-        const starIcon = memoryBtn.querySelector('.memory-star-icon');
-        if (starIcon) {
-            starIcon.textContent = allAreMem ? '⭐' : '☆';
+        const starSvg = memoryBtn.querySelector('.memory-star-svg, svg');
+        if (starSvg) {
+            if (allAreMem) {
+                memoryBtn.classList.add('memory-verse-active');
+                starSvg.setAttribute('fill', 'currentColor');
+            } else {
+                memoryBtn.classList.remove('memory-verse-active');
+                starSvg.setAttribute('fill', 'none');
+            }
         }
 
         memoryBtn.addEventListener('click', async () => {
@@ -5252,7 +5224,7 @@ function updateMultiVerseActionsBottomSheet(selectedVerses) {
     const isAllSelected = totalVersesInChapter > 0 && selectedVerses.length >= totalVersesInChapter;
     const sortedVerses = [...selectedVerses].sort((a, b) => a - b);
     const verseReference = isAllSelected
-        ? `${bookName} ${currentChapter} : 1 - ${totalVersesInChapter} (All Verses)`
+        ? `${bookName} ${currentChapter} : 1 - ${totalVersesInChapter} (All)`
         : (sortedVerses.length > 1
             ? `${bookName} ${currentChapter} : ${sortedVerses[0]} - ${sortedVerses[sortedVerses.length - 1]}`
             : `${bookName} ${currentChapter} : ${sortedVerses[0]}`);
@@ -5287,9 +5259,15 @@ function updateMultiVerseActionsBottomSheet(selectedVerses) {
             const ref = `${bibleBooks[currentBook].name} ${currentChapter}:${vNum}`;
             return (window.memoryVerses || []).includes(ref);
         });
-        const starIcon = memoryBtn.querySelector('.memory-star-icon');
-        if (starIcon) {
-            starIcon.textContent = allAreMem ? '⭐' : '☆';
+        const starSvg = memoryBtn.querySelector('.memory-star-svg, svg');
+        if (starSvg) {
+            if (allAreMem) {
+                memoryBtn.classList.add('memory-verse-active');
+                starSvg.setAttribute('fill', 'currentColor');
+            } else {
+                memoryBtn.classList.remove('memory-verse-active');
+                starSvg.setAttribute('fill', 'none');
+            }
         }
     }
 }
@@ -5350,6 +5328,42 @@ function scrollToVerse(verseNum) {
 }
 // Navigation buttons
 document.addEventListener('click', (e) => {
+    // Close verse-actions-bottom-sheet when clicking outside on mobile
+    const verseSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (verseSheet && verseSheet.classList.contains('visible') && window.innerWidth <= 768) {
+        const path = e.composedPath ? e.composedPath() : [];
+        const isInside = path.some(el => el && el.classList && (
+            el.classList.contains('verse-actions-content') ||
+            el.classList.contains('verse-actions-bottom-sheet') ||
+            el.classList.contains('verse-bottom-action')
+        )) || (e.target && (e.target.closest('.verse-actions-content') || e.target.closest('.verse-actions-bottom-sheet')));
+
+        if (isInside) {
+            return;
+        }
+
+        const content = verseSheet.querySelector('.verse-actions-content');
+        if (content && !content.contains(e.target) && !e.target.closest('.number-item') && !e.target.closest('.verse-line')) {
+            const closeBtn = verseSheet.querySelector('.close-bottom-sheet');
+            if (closeBtn) {
+                closeBtn.click();
+            } else {
+                verseSheet.classList.remove('visible');
+                document.body.classList.remove('bottom-sheet-open');
+            }
+            const versesColumn = document.querySelector('.verses-column') || document.querySelector('.verses');
+            if (versesColumn) {
+                versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
+            }
+            const contentArea = document.querySelector('.scripture-text');
+            if (contentArea) {
+                contentArea.querySelectorAll('.verse-line').forEach(v => {
+                    v.classList.remove('multi-highlighted');
+                });
+            }
+        }
+    }
+
     // Close popup-info-bottom-sheet when clicking outside
     const popupSheet = document.getElementById('popup-info-bottom-sheet');
     if (popupSheet && popupSheet.classList.contains('visible')) {
