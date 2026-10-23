@@ -132,6 +132,8 @@
             addKey(book.shortName);
             addKey(book.tamilName);
             addKey(book.tamilShortName);
+            if (book.tanglishName) addKey(book.tanglishName);
+            if (book.tanglishShortName) addKey(book.tanglishShortName);
 
             if (book.name.startsWith('I ')) {
                 addKey('1 ' + book.name.substring(2));

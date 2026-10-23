@@ -87,6 +87,8 @@ class BibleDataManager {
         this.englishVersion = (typeof localStorage !== 'undefined' && (localStorage.getItem('settingsEnglishVersion') || localStorage.getItem('englishVersion'))) || 'easy';
         this.kjvData = null;
         this.kjvLoadingPromise = null;
+        this.tanglishData = null;
+        this.tanglishLoadingPromise = null;
         this.initSupabase();
         this.dbInitPromise = this.initIndexedDB();
     }
@@ -157,7 +159,58 @@ class BibleDataManager {
         return this.bookCache.has(this.getBookCacheKey(bookFile, language));
     }
 
-    // Load Bible data from local JS files (data/bible/english/ or data/bible/tamil/)
+    // Helper: Normalize raw Bible book JSON / object into standard format:
+    // { "1": { "verse_1": "...", "verse_2": "..." }, "2": { ... } }
+    normalizeBookData(rawData) {
+        if (!rawData || typeof rawData !== 'object') return null;
+
+        const formatted = {};
+
+        // Case 1: Array of chapters [{ chapter: 1, verses: [...] }]
+        if (Array.isArray(rawData)) {
+            rawData.forEach((ch, idx) => {
+                const chNum = String(ch.chapter || idx + 1);
+                formatted[chNum] = {};
+                const verses = ch.verses || ch.Verse || [];
+                if (Array.isArray(verses)) {
+                    verses.forEach((v, vIdx) => {
+                        const vNum = String(v.verse || v.Verse || vIdx + 1);
+                        formatted[chNum][`verse_${vNum}`] = (typeof v === 'string') ? v : (v.text || v.Verse || v.content || '');
+                    });
+                }
+            });
+            return Object.keys(formatted).length > 0 ? formatted : null;
+        }
+
+        // Case 2: Object with chapter keys (e.g., "1", "chapter_1", "c1")
+        for (const chKey in rawData) {
+            const chNum = chKey.replace(/^chapter_?/i, '').replace(/^c/i, '');
+            formatted[chNum] = {};
+            const chVal = rawData[chKey];
+
+            if (Array.isArray(chVal)) {
+                chVal.forEach((v, vIdx) => {
+                    if (typeof v === 'string') {
+                        formatted[chNum][`verse_${vIdx + 1}`] = v;
+                    } else if (v && typeof v === 'object') {
+                        const vNum = String(v.verse || v.Verse || (vIdx + 1));
+                        formatted[chNum][`verse_${vNum}`] = v.text || v.Verse || v.content || '';
+                    }
+                });
+            } else if (chVal && typeof chVal === 'object') {
+                for (const vKey in chVal) {
+                    const vNum = vKey.replace(/^verse_?/i, '').replace(/^v/i, '');
+                    const val = chVal[vKey];
+                    formatted[chNum][`verse_${vNum}`] = (typeof val === 'string') ? val : (val?.text || val?.Verse || '');
+                }
+            }
+        }
+
+        return Object.keys(formatted).length > 0 ? formatted : null;
+    }
+
+    // Load Bible data from local files (data/bible/english/, data/bible/tamil/, or data/bible/tanglish/)
+    // Supports both .json (via fetch/xhr) and .js (via CommonJS script injection)
     async loadFromLocalFile(bookFile, language) {
         const varName = `bibleData_${bookFile}_${language}`;
 
@@ -166,67 +219,137 @@ class BibleDataManager {
             return window[varName];
         }
 
-        // Determine candidate filenames and subfolders
-        const candidateNames = [
-            `${bookFile}.js`,
-            `${bookFile.replace(/^i_/, '1-').replace(/^ii_/, '2-').replace(/^iii_/, '3-').replace(/_/g, '-')}.js`,
-            `${bookFile.replace(/^i_/, '1_').replace(/^ii_/, '2_').replace(/^iii_/, '3_')}.js`
+        // Determine candidate base names
+        const baseNames = [
+            bookFile,
+            bookFile.replace(/^i_/, '1-').replace(/^ii_/, '2-').replace(/^iii_/, '3-').replace(/_/g, '-'),
+            bookFile.replace(/^i_/, '1_').replace(/^ii_/, '2_').replace(/^iii_/, '3_')
         ];
-        if (bookFile === 'psalms') candidateNames.push('psalm.js');
-        if (bookFile === 'song_of_solomon') candidateNames.push('song-of-songs.js');
+        if (bookFile === 'psalms') baseNames.push('psalm');
+        if (bookFile === 'song_of_solomon') baseNames.push('song-of-songs', 'song-of-solomon');
 
+        const extensions = ['.js', '.json'];
         const subfolders = ['old-testament', 'new-testament', ''];
 
         for (const subfolder of subfolders) {
-            for (const fileName of candidateNames) {
-                const relativePath = subfolder 
-                    ? `./data/bible/${language}/${subfolder}/${fileName}`
-                    : `./data/bible/${language}/${fileName}`;
+            for (const base of baseNames) {
+                for (const ext of extensions) {
+                    const fileName = `${base}${ext}`;
+                    const candidatePaths = [
+                        subfolder ? `./data/bible/${language}/${subfolder}/${fileName}` : `./data/bible/${language}/${fileName}`,
+                        subfolder ? `data/bible/${language}/${subfolder}/${fileName}` : `data/bible/${language}/${fileName}`
+                    ];
 
-                try {
-                    // Shim CommonJS module.exports for browser execution
-                    window.module = { exports: {} };
+                    for (const relativePath of candidatePaths) {
+                        try {
+                            if (ext === '.json') {
+                                // 1. Try fetch
+                                if (typeof fetch === 'function') {
+                                    try {
+                                        const res = await fetch(relativePath);
+                                        if (res.ok) {
+                                            const json = await res.json();
+                                            const formatted = this.normalizeBookData(json);
+                                            if (formatted) {
+                                                window[varName] = formatted;
+                                                return formatted;
+                                            }
+                                        }
+                                    } catch (_) {}
+                                }
 
-                    const loaded = await new Promise((resolve) => {
-                        const script = document.createElement('script');
-                        script.src = relativePath;
-                        script.onload = () => resolve(true);
-                        script.onerror = () => resolve(false);
-                        document.head.appendChild(script);
-                        setTimeout(() => resolve(false), 3000);
-                    });
-
-                    if (loaded) {
-                        const rawData = (window.module && window.module.exports && Object.keys(window.module.exports).length > 0)
-                            ? window.module.exports
-                            : window[varName];
-
-                        if (rawData && typeof rawData === 'object') {
-                            const formattedBookData = {};
-                            for (const chKey in rawData) {
-                                const chNum = chKey.replace('chapter_', '');
-                                formattedBookData[chNum] = {};
-                                const chVal = rawData[chKey];
-
-                                if (Array.isArray(chVal)) {
-                                    chVal.forEach(v => {
-                                        formattedBookData[chNum][`verse_${v.verse}`] = v.text;
+                                // 2. Try XMLHttpRequest fallback
+                                if (typeof XMLHttpRequest !== 'undefined') {
+                                    const xhrData = await new Promise((resolve) => {
+                                        const xhr = new XMLHttpRequest();
+                                        xhr.open('GET', relativePath, true);
+                                        xhr.onload = () => {
+                                            if (xhr.status === 200 || (xhr.status === 0 && xhr.responseText)) {
+                                                try { resolve(JSON.parse(xhr.responseText)); } catch (_) { resolve(null); }
+                                            } else {
+                                                resolve(null);
+                                            }
+                                        };
+                                        xhr.onerror = () => resolve(null);
+                                        xhr.send();
                                     });
-                                } else if (typeof chVal === 'object') {
-                                    for (const vKey in chVal) {
-                                        const vNum = vKey.replace('verse_', '');
-                                        formattedBookData[chNum][`verse_${vNum}`] = chVal[vKey];
+
+                                    if (xhrData) {
+                                        const formatted = this.normalizeBookData(xhrData);
+                                        if (formatted) {
+                                            window[varName] = formatted;
+                                            return formatted;
+                                        }
+                                    }
+                                }
+                            } else {
+                                // .js CommonJS loading: Try fetch -> XHR -> script tag
+                                let jsText = null;
+                                if (typeof fetch === 'function') {
+                                    try {
+                                        const res = await fetch(relativePath);
+                                        if (res.ok) jsText = await res.text();
+                                    } catch (_) {}
+                                }
+                                if (!jsText && typeof XMLHttpRequest !== 'undefined') {
+                                    jsText = await new Promise((resolve) => {
+                                        const xhr = new XMLHttpRequest();
+                                        xhr.open('GET', relativePath, true);
+                                        xhr.onload = () => {
+                                            if (xhr.status === 200 || (xhr.status === 0 && xhr.responseText)) {
+                                                resolve(xhr.responseText);
+                                            } else {
+                                                resolve(null);
+                                            }
+                                        };
+                                        xhr.onerror = () => resolve(null);
+                                        xhr.send();
+                                    });
+                                }
+
+                                if (jsText) {
+                                    try {
+                                        const m = { exports: {} };
+                                        const fn = new Function('module', 'exports', jsText);
+                                        fn(m, m.exports);
+                                        const formatted = this.normalizeBookData(m.exports);
+                                        if (formatted) {
+                                            window[varName] = formatted;
+                                            return formatted;
+                                        }
+                                    } catch (evalErr) {
+                                        console.warn(`[BibleDataManager] Failed to eval ${relativePath}:`, evalErr);
+                                    }
+                                }
+
+                                // Fallback: script tag injection with CommonJS module.exports shim
+                                window.module = { exports: {} };
+
+                                const loaded = await new Promise((resolve) => {
+                                    const script = document.createElement('script');
+                                    script.src = relativePath;
+                                    script.onload = () => resolve(true);
+                                    script.onerror = () => resolve(false);
+                                    document.head.appendChild(script);
+                                    setTimeout(() => resolve(false), 3000);
+                                });
+
+                                if (loaded) {
+                                    const rawData = (window.module && window.module.exports && Object.keys(window.module.exports).length > 0)
+                                        ? window.module.exports
+                                        : window[varName];
+
+                                    const formatted = this.normalizeBookData(rawData);
+                                    if (formatted) {
+                                        window[varName] = formatted;
+                                        return formatted;
                                     }
                                 }
                             }
-
-                            // Store globally for quick re-use
-                            window[varName] = formattedBookData;
-                            return formattedBookData;
+                        } catch (_) {
+                            // Try next candidate path
                         }
                     }
-                } catch (_) {
-                    // Try next candidate path
                 }
             }
         }
@@ -378,6 +501,114 @@ class BibleDataManager {
         return formattedBookData;
     }
 
+    // Ensure consolidated Tanglish dataset (tanglish-bible.json or tanglish.json) is loaded if present
+    async ensureTanglishDataLoaded() {
+        if (this.tanglishData && (Array.isArray(this.tanglishData.Book) || Array.isArray(this.tanglishData.books) || typeof this.tanglishData === 'object')) {
+            return this.tanglishData;
+        }
+        if (this.tanglishLoadingPromise) {
+            return this.tanglishLoadingPromise;
+        }
+
+        this.tanglishLoadingPromise = (async () => {
+            if (typeof window !== 'undefined' && window.tanglishBibleData) {
+                this.tanglishData = window.tanglishBibleData;
+                return this.tanglishData;
+            }
+
+            const candidatePaths = [
+                './data/bible/tanglish/tanglish-bible.json',
+                'data/bible/tanglish/tanglish-bible.json',
+                './data/bible/tanglish/tanglish.json',
+                'data/bible/tanglish/tanglish.json',
+                '../../data/bible/tanglish/tanglish-bible.json',
+                '../data/bible/tanglish/tanglish-bible.json'
+            ];
+
+            if (typeof fetch === 'function') {
+                for (const p of candidatePaths) {
+                    try {
+                        const res = await fetch(p);
+                        if (res.ok) {
+                            const data = await res.json();
+                            if (data) {
+                                this.tanglishData = data;
+                                return this.tanglishData;
+                            }
+                        }
+                    } catch (_) {}
+                }
+            }
+
+            if (typeof XMLHttpRequest !== 'undefined') {
+                for (const p of candidatePaths) {
+                    try {
+                        const data = await new Promise((resolve) => {
+                            const xhr = new XMLHttpRequest();
+                            xhr.open('GET', p, true);
+                            xhr.onload = () => {
+                                if (xhr.status === 200 || (xhr.status === 0 && xhr.responseText)) {
+                                    try { resolve(JSON.parse(xhr.responseText)); } catch (_) { resolve(null); }
+                                } else {
+                                    resolve(null);
+                                }
+                            };
+                            xhr.onerror = () => resolve(null);
+                            xhr.send();
+                        });
+                        if (data) {
+                            this.tanglishData = data;
+                            return this.tanglishData;
+                        }
+                    } catch (_) {}
+                }
+            }
+
+            return null;
+        })();
+
+        const res = await this.tanglishLoadingPromise;
+        this.tanglishLoadingPromise = null;
+        return res;
+    }
+
+    // Load and format an entire Tanglish book from consolidated data if available
+    async loadTanglishBook(bookFile) {
+        const fullData = await this.ensureTanglishDataLoaded();
+        if (!fullData) return null;
+
+        const rawFile = String(bookFile).toLowerCase().trim();
+        const cleanFile = rawFile.replace(/_/g, '-');
+        let bookIndex = BOOK_FILE_TO_INDEX[rawFile] ?? BOOK_FILE_TO_INDEX[cleanFile];
+
+        if (bookIndex === undefined && typeof bibleBooks !== 'undefined') {
+            bookIndex = bibleBooks.findIndex(b =>
+                b.file.toLowerCase() === rawFile ||
+                b.file.toLowerCase().replace(/_/g, '-') === cleanFile
+            );
+        }
+
+        if (bookIndex === undefined || bookIndex < 0) return null;
+
+        // If structure is { Book: [...] }
+        const booksArray = fullData.Book || fullData.books || (Array.isArray(fullData) ? fullData : null);
+        if (Array.isArray(booksArray) && booksArray[bookIndex]) {
+            const rawBook = booksArray[bookIndex];
+            const chapters = rawBook.Chapter || rawBook.chapters || rawBook;
+            return this.normalizeBookData(chapters);
+        }
+
+        // If structure is object keyed by book names or numbers
+        if (typeof fullData === 'object') {
+            const rawBook = fullData[rawFile] || fullData[cleanFile] || fullData[String(bookIndex + 1)];
+            if (rawBook) {
+                return this.normalizeBookData(rawBook);
+            }
+        }
+
+        return null;
+    }
+
     // ─────────────────────────────────────────────────────────────────────────
     // Load entire book 100% locally
     // Priority: 1. In-memory  2. IndexedDB / localStorage  3. Bundled JS / KJV file
@@ -397,13 +628,26 @@ class BibleDataManager {
             return cachedBook;
         }
 
-        // 3. Local data source (KJV or EasyEnglish JS bundle)
+        // 3. Local data source (KJV, Tanglish, or Tamil/EasyEnglish bundles)
         if (language === 'english' && this.englishVersion === 'kjv') {
             const kjvData = await this.loadKjvBook(bookFile);
             if (kjvData) {
                 this._cacheBook(bookCacheKey, bookFile, language, kjvData);
                 await this.saveBookToLocalStorage(bookCacheKey, kjvData);
                 return kjvData;
+            }
+        } else if (language === 'tanglish') {
+            const localData = await this.loadFromLocalFile(bookFile, 'tanglish');
+            if (localData) {
+                this._cacheBook(bookCacheKey, bookFile, language, localData);
+                await this.saveBookToLocalStorage(bookCacheKey, localData);
+                return localData;
+            }
+            const fullData = await this.loadTanglishBook(bookFile);
+            if (fullData) {
+                this._cacheBook(bookCacheKey, bookFile, language, fullData);
+                await this.saveBookToLocalStorage(bookCacheKey, fullData);
+                return fullData;
             }
         } else {
             const localData = await this.loadFromLocalFile(bookFile, language);

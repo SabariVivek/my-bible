@@ -59,6 +59,7 @@
       var entry = {
         name: b.name,
         tamil: b.tamilName,
+        tanglish: b.tanglishName || b.name,
         chapters: b.chapters,
         group: BOOK_GROUPS[b.name] || 'History',
         globalIndex: i
@@ -147,9 +148,9 @@
         list.appendChild(gh);
       }
 
-      var d = document.createElement('div');
-      d.className = 'bs-book-item' + (realIdx === s.bi ? ' selected' : '');
-      d.innerHTML = '<div class="bs-book-tamil">' + b.tamil + '</div><div class="bs-book-english">' + b.name + '</div>';
+      var effectiveTamil = (typeof getEffectiveTamilLanguage === 'function') ? getEffectiveTamilLanguage() : (localStorage.getItem('settingsTamilVersion') || 'tamil');
+      var subName = effectiveTamil === 'tanglish' ? (b.tanglish || b.tamil) : b.tamil;
+      d.innerHTML = '<div class="bs-book-tamil">' + subName + '</div><div class="bs-book-english">' + b.name + '</div>';
       d.addEventListener('click', function () {
         s.bi = realIdx;
         s.ch = 1;

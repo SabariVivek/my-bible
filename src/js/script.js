@@ -69,6 +69,85 @@ const bibleBooks = [
     { name: 'Jude', shortName: 'Jude', tamilName: 'யூதா', tamilShortName: 'யூதா', file: 'jude', testament: 'new', chapters: 1, hebrew: 'Yehuda (יְהוּדָה)', meaning: 'Praise / thanks' },
     { name: 'Revelation', shortName: 'Rev', tamilName: 'வெளிப்படுத்தல்', tamilShortName: 'வெளி', file: 'revelation', testament: 'new', chapters: 22, hebrew: 'Hitgalut (הִתְגַּלּוּת)', meaning: 'Revelation / unveiling' }
 ];
+
+// Tanglish (Romanized Tamil) Book Name Mappings
+const TANGLISH_BOOK_MAP = {
+    genesis: { name: 'Aadhiyaagamam', short: 'Aadhi' },
+    exodus: { name: 'Yaathiraagamam', short: 'Yaath' },
+    leviticus: { name: 'Leviyaraagamam', short: 'Levi' },
+    numbers: { name: 'Ennaagamam', short: 'Enn' },
+    deuteronomy: { name: 'Ubaagamam', short: 'Ubaa' },
+    joshua: { name: 'Yosuvaa', short: 'Yosu' },
+    judges: { name: 'Niyaayadhibathigal', short: 'Niyaa' },
+    ruth: { name: 'Rooth', short: 'Rooth' },
+    i_samuel: { name: '1 Saamuvel', short: '1 Saam' },
+    ii_samuel: { name: '2 Saamuvel', short: '2 Saam' },
+    i_kings: { name: '1 Raajaakkal', short: '1 Raaj' },
+    ii_kings: { name: '2 Raajaakkal', short: '2 Raaj' },
+    i_chronicles: { name: '1 Naalaagamam', short: '1 Naal' },
+    ii_chronicles: { name: '2 Naalaagamam', short: '2 Naal' },
+    ezra: { name: 'Esraa', short: 'Esraa' },
+    nehemiah: { name: 'Nehemiyaa', short: 'Nehem' },
+    esther: { name: 'Esther', short: 'Esth' },
+    job: { name: 'Yoabu', short: 'Yoabu' },
+    psalms: { name: 'Sangeetham', short: 'Sangee' },
+    proverbs: { name: 'Needhimozhigal', short: 'Needhi' },
+    ecclesiastes: { name: 'Pirasangi', short: 'Piras' },
+    song_of_solomon: { name: 'Unnathappaattu', short: 'Unnath' },
+    isaiah: { name: 'Esaayaa', short: 'Esaa' },
+    jeremiah: { name: 'Eremiyaa', short: 'Erem' },
+    lamentations: { name: 'Pulambal', short: 'Pul' },
+    ezekiel: { name: 'Esekkiyel', short: 'Esek' },
+    daniel: { name: 'Dhaaniyel', short: 'Dhaan' },
+    hosea: { name: 'Osiyaa', short: 'Osi' },
+    joel: { name: 'Yovel', short: 'Yovel' },
+    amos: { name: 'Aamos', short: 'Aamos' },
+    obadiah: { name: 'Obadhiyaa', short: 'Obadh' },
+    jonah: { name: 'Yonaa', short: 'Yonaa' },
+    micah: { name: 'Meegaa', short: 'Meeg' },
+    nahum: { name: 'Naagum', short: 'Naag' },
+    habakkuk: { name: 'Aabakook', short: 'Aaba' },
+    zephaniah: { name: 'Seppaniyaa', short: 'Sepp' },
+    haggai: { name: 'Aagaai', short: 'Aaga' },
+    zechariah: { name: 'Sagariyaa', short: 'Sagar' },
+    malachi: { name: 'Malakiyaa', short: 'Malak' },
+    matthew: { name: 'Maththaehyu', short: 'Math' },
+    mark: { name: 'Maarkku', short: 'Maar' },
+    luke: { name: 'Lookkaa', short: 'Look' },
+    john: { name: 'Yovaan', short: 'Yov' },
+    acts: { name: 'Apposthalar', short: 'Appos' },
+    romans: { name: 'Romar', short: 'Rom' },
+    i_corinthians: { name: '1 Korinthiyar', short: '1 Kor' },
+    ii_corinthians: { name: '2 Korinthiyar', short: '2 Kor' },
+    galatians: { name: 'Kalaathiyar', short: 'Kala' },
+    ephesians: { name: 'Ebesiyar', short: 'Ebes' },
+    philippians: { name: 'Pilippiyar', short: 'Pilip' },
+    colossians: { name: 'Koloseyar', short: 'Kolo' },
+    i_thessalonians: { name: '1 Thesalonikkaiyar', short: '1 Thesa' },
+    ii_thessalonians: { name: '2 Thesalonikkaiyar', short: '2 Thesa' },
+    i_timothy: { name: '1 Theemothaehyu', short: '1 Theem' },
+    ii_timothy: { name: '2 Theemothaehyu', short: '2 Theem' },
+    titus: { name: 'Theethu', short: 'Theeth' },
+    philemon: { name: 'Pilemon', short: 'Pile' },
+    hebrews: { name: 'Ebireyar', short: 'Ebir' },
+    james: { name: 'Yaakkobu', short: 'Yaak' },
+    i_peter: { name: '1 Pedhuru', short: '1 Pedh' },
+    ii_peter: { name: '2 Pedhuru', short: '2 Pedh' },
+    i_john: { name: '1 Yovaan', short: '1 Yov' },
+    ii_john: { name: '2 Yovaan', short: '2 Yov' },
+    iii_john: { name: '3 Yovaan', short: '3 Yov' },
+    jude: { name: 'Yoodhaa', short: 'Yoodh' },
+    revelation: { name: 'Velippaduthal', short: 'Velip' }
+};
+
+bibleBooks.forEach(b => {
+    const t = TANGLISH_BOOK_MAP[b.file];
+    if (t) {
+        b.tanglishName = t.name;
+        b.tanglishShortName = t.short;
+    }
+});
+
 // Current state
 let currentBook = parseInt(localStorage.getItem('currentBook')) || 39; // Matthew (New Testament starts at index 39)
 let currentChapter = parseInt(localStorage.getItem('currentChapter')) || 1;
@@ -88,7 +167,22 @@ if (currentBookData && currentChapter > currentBookData.chapters) {
 
 let currentData = null;
 let currentTamilData = null; // For storing Tamil data when "Both" is selected
-let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'english' or 'tamil' or 'both'
+let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'english', 'tamil', or 'both'
+let tamilVersion = localStorage.getItem('settingsTamilVersion') || localStorage.getItem('tamilVersion') || 'tamil'; // 'tamil' or 'tanglish'
+
+// Auto-migrate if currentLanguage was previously 'tanglish'
+if (currentLanguage === 'tanglish') {
+    currentLanguage = 'tamil';
+    tamilVersion = 'tanglish';
+    localStorage.setItem('currentLanguage', 'tamil');
+    localStorage.setItem('settingsTamilVersion', 'tanglish');
+    localStorage.setItem('settingsLanguage', 'ta');
+}
+
+function getEffectiveTamilLanguage() {
+    return (localStorage.getItem('settingsTamilVersion') || tamilVersion || 'tamil') === 'tanglish' ? 'tanglish' : 'tamil';
+}
+
 let englishVersion = localStorage.getItem('settingsEnglishVersion') || localStorage.getItem('englishVersion') || 'easy'; // 'easy' or 'kjv'
 if (typeof bibleDataManager !== 'undefined') {
     bibleDataManager.setEnglishVersion(englishVersion);
@@ -124,6 +218,7 @@ function getCurrentSettingsSnapshot() {
         const themeSegVal = localStorage.getItem('settingsTheme') || (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
         const langSegVal = localStorage.getItem('settingsLanguage') || (currentLanguage === 'both' ? 'both' : currentLanguage === 'english' ? 'en' : 'ta');
         const engVerVal = localStorage.getItem('settingsEnglishVersion') || englishVersion || 'easy';
+        const tamVerVal = getEffectiveTamilLanguage();
         const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
         const verseHeadingLangVal = localStorage.getItem('settingsVerseHeadingLanguage') || 'ta';
         const selectorStyleVal = localStorage.getItem('selectorStyle') || 'old';
@@ -132,6 +227,7 @@ function getCurrentSettingsSnapshot() {
             theme: themeSegVal,
             language: langSegVal,
             englishVersion: engVerVal,
+            tamilVersion: tamVerVal,
             englishColor: colorVal,
             verseHeadingLanguage: verseHeadingLangVal,
             selectorStyle: selectorStyleVal,
@@ -247,7 +343,9 @@ async function saveUserSettingsToSupabase() {
                 ? 'both'
                 : currentLanguage === 'english'
                     ? 'en'
-                    : 'ta');
+                    : currentLanguage === 'tanglish'
+                        ? 'tanglish'
+                        : 'ta');
         const colorVal =
             localStorage.getItem('settingsEnglishColor') ||
             (typeof englishTextColor !== 'undefined' ? englishTextColor : 'default');
@@ -330,9 +428,9 @@ async function loadUserSettingsFromSupabase() {
 
         // Language
         if (row.language) {
-            const langVal = row.language; // 'ta' | 'en' | 'both'
+            const langVal = row.language; // 'ta' | 'en' | 'tanglish' | 'both'
             const selectedLang =
-                langVal === 'en' ? 'english' : langVal === 'ta' ? 'tamil' : 'both';
+                langVal === 'en' ? 'english' : langVal === 'ta' ? 'tamil' : langVal === 'tanglish' ? 'tanglish' : 'both';
             currentLanguage = selectedLang;
             localStorage.setItem('currentLanguage', selectedLang);
             localStorage.setItem('settingsLanguage', langVal);
@@ -930,12 +1028,13 @@ function settingsSelectLang(btn) {
     const group = document.getElementById('settings-lang-segment');
     if (!group) return;
     group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const isEngOrBoth = btn.dataset.val === 'en' || btn.dataset.val === 'both';
-    const isBoth = btn.dataset.val === 'both';
+    const val = btn.dataset.val;
+    const isBoth = val === 'both';
+    const isEngOrBoth = val === 'en' || isBoth;
+    const isTamilOrBoth = val === 'ta' || isBoth;
     const subCard = document.getElementById('settings-lang-sub-card');
     if (subCard) {
-        subCard.classList.toggle('has-content', isEngOrBoth);
+        subCard.classList.toggle('has-content', isEngOrBoth || isTamilOrBoth);
     }
     const panel = document.getElementById('settings-color-panel');
     if (panel) {
@@ -945,8 +1044,11 @@ function settingsSelectLang(btn) {
     if (verPanel) {
         verPanel.classList.toggle('visible', isEngOrBoth);
     }
+    const tamilVerPanel = document.getElementById('settings-tamil-version-panel');
+    if (tamilVerPanel) {
+        tamilVerPanel.classList.toggle('visible', isTamilOrBoth);
+    }
     // Sync language with existing language bottom sheet behavior
-    const val = btn.dataset.val;
     const selectedLang = val === 'en' ? 'english' : (val === 'ta' ? 'tamil' : 'both');
     currentLanguage = selectedLang;
     localStorage.setItem('currentLanguage', selectedLang);
@@ -1007,6 +1109,49 @@ function selectEnglishVersionFromModal(ver) {
 
 function selectEnglishVersionFromSheet(ver) {
     selectEnglishVersionFromModal(ver);
+}
+
+function settingsSelectTamilVersion(btn) {
+    const group = document.getElementById('settings-tamil-version-segment');
+    if (!group) return;
+    group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const val = btn.dataset.val; // 'tamil' or 'tanglish'
+    tamilVersion = val;
+    localStorage.setItem('tamilVersion', val);
+    localStorage.setItem('settingsTamilVersion', val);
+    syncTamilVersionUI(val);
+    if (typeof updateBookNames === 'function') {
+        updateBookNames();
+    }
+    if ((currentLanguage === 'tamil' || currentLanguage === 'both') && typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+        loadBook(currentBook, currentChapter);
+    }
+    updateSettingsFooterVisibility();
+}
+
+function syncTamilVersionUI(ver) {
+    const target = ver || getEffectiveTamilLanguage();
+    document.querySelectorAll('#settings-tamil-version-segment .settings-seg-btn, #modal-tamil-version-segment .settings-seg-btn, #sheet-tamil-version-segment .settings-seg-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.val === target);
+    });
+}
+
+function selectTamilVersionFromModal(ver) {
+    tamilVersion = ver;
+    localStorage.setItem('tamilVersion', ver);
+    localStorage.setItem('settingsTamilVersion', ver);
+    syncTamilVersionUI(ver);
+    if (typeof updateBookNames === 'function') {
+        updateBookNames();
+    }
+    if ((currentLanguage === 'tamil' || currentLanguage === 'both') && typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+        loadBook(currentBook, currentChapter);
+    }
+}
+
+function selectTamilVersionFromSheet(ver) {
+    selectTamilVersionFromModal(ver);
 }
 function settingsSelectColor(el) {
     const container = el.closest('.settings-color-swatches');
@@ -1452,6 +1597,13 @@ function initializeHistoryManagement() {
                                 if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
                                     loadBook(currentBook, currentChapter);
                                 }
+                            }
+                            // Tamil version
+                            if (snap.tamilVersion) {
+                                tamilVersion = snap.tamilVersion;
+                                localStorage.setItem('tamilVersion', tamilVersion);
+                                localStorage.setItem('settingsTamilVersion', tamilVersion);
+                                syncTamilVersionUI(tamilVersion);
                             }
                             // English text color
                             if (snap.englishColor) {
@@ -2324,15 +2476,16 @@ async function loadBook(bookIndex, chapter) {
     const book = bibleBooks[bookIndex];
     try {
         if (currentLanguage === 'both') {
-            // Load entire book for both languages
+            // Load entire book for both languages (English + user's chosen Tamil version: Tamil or Tanglish)
+            const secondaryLang = getEffectiveTamilLanguage();
             const englishBookFile = getBookFileForLanguage(book.file, 'english');
             await Promise.all([
-                bibleDataManager.loadEntireBook(book.file, 'tamil'),
+                bibleDataManager.loadEntireBook(book.file, secondaryLang),
                 bibleDataManager.loadEntireBook(englishBookFile, 'english')
             ]);
             // Get current chapter data from cache
             const [tamilData, englishData] = await Promise.all([
-                bibleDataManager.getChapterData(book.file, chapter, 'tamil'),
+                bibleDataManager.getChapterData(book.file, chapter, secondaryLang),
                 bibleDataManager.getChapterData(englishBookFile, chapter, 'english')
             ]);
             if (tamilData && englishData) {
@@ -2344,10 +2497,22 @@ async function loadBook(bookIndex, chapter) {
             }
         } else {
             // Single language mode - load entire book
-            const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+            const language = currentLanguage === 'tamil' ? getEffectiveTamilLanguage() : 'english';
             const bookFile = getBookFileForLanguage(book.file, language);
             const bookData = await bibleDataManager.loadEntireBook(bookFile, language);
             if (!bookData) {
+                if (language === 'tanglish') {
+                    const contentArea = document.querySelector('.scripture-text');
+                    if (contentArea) {
+                        contentArea.innerHTML = `<div style="text-align: center; padding: 40px 20px; color: #666;">
+                            <h3 style="margin-bottom: 8px;">Tanglish Bible</h3>
+                            <p style="font-size: 14px; max-width: 440px; margin: 0 auto 16px; line-height: 1.5;">
+                                Book data for <strong>${book.tanglishName || book.name}</strong> will appear here once JSON files are placed in <code>data/bible/tanglish/</code>.
+                            </p>
+                            <button onclick="currentLanguage='tamil'; localStorage.setItem('currentLanguage', 'tamil'); loadBook(${bookIndex}, ${chapter});" style="padding: 8px 16px; border-radius: 6px; background: #2196F3; color: #fff; border: none; cursor: pointer; font-size: 13px;">View in Tamil</button>
+                        </div>`;
+                    }
+                }
                 hideLoader();
                 return;
             }
@@ -2436,20 +2601,21 @@ async function updateUI() {
         showLoader();
         try {
             if (currentLanguage === 'both') {
+                const secondaryLang = getEffectiveTamilLanguage();
                 const englishBookFile = getBookFileForLanguage(book.file, 'english');
                 const [tamilData, englishData] = await Promise.all([
-                    bibleDataManager.getChapterData(book.file, currentChapter, 'tamil'),
+                    bibleDataManager.getChapterData(book.file, currentChapter, secondaryLang),
                     bibleDataManager.getChapterData(englishBookFile, currentChapter, 'english')
                 ]);
                 if (tamilData && englishData) {
                     currentTamilData = { [`chapter_${currentChapter}`]: tamilData };
                     currentData = { [`chapter_${currentChapter}`]: englishData };
                     // Preload adjacent chapters
-                    bibleDataManager.preloadAdjacentChapters(book.file, currentChapter, 'tamil', book.chapters);
+                    bibleDataManager.preloadAdjacentChapters(book.file, currentChapter, secondaryLang, book.chapters);
                     bibleDataManager.preloadAdjacentChapters(englishBookFile, currentChapter, 'english', book.chapters);
                 }
             } else {
-                const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+                const language = currentLanguage === 'tamil' ? getEffectiveTamilLanguage() : 'english';
                 const bookFile = getBookFileForLanguage(book.file, language);
                 const chapterData = await bibleDataManager.getChapterData(bookFile, currentChapter, language);
                 if (chapterData) {
@@ -2583,9 +2749,10 @@ function updateChapters() {
             // Get chapter data from cache (already loaded)
             const book = bibleBooks[currentBook];
             if (currentLanguage === 'both') {
+                const secondaryLang = getEffectiveTamilLanguage();
                 const englishBookFile = getBookFileForLanguage(book.file, 'english');
                 const [tamilData, englishData] = await Promise.all([
-                    bibleDataManager.getChapterData(book.file, chapter, 'tamil'),
+                    bibleDataManager.getChapterData(book.file, chapter, secondaryLang),
                     bibleDataManager.getChapterData(englishBookFile, chapter, 'english')
                 ]);
                 if (tamilData && englishData) {
@@ -2593,7 +2760,7 @@ function updateChapters() {
                     currentData = { [`chapter_${chapter}`]: englishData };
                 }
             } else {
-                const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+                const language = currentLanguage === 'tamil' ? getEffectiveTamilLanguage() : 'english';
                 const bookFile = getBookFileForLanguage(book.file, language);
                 const chapterData = await bibleDataManager.getChapterData(bookFile, chapter, language);
                 if (chapterData) {
@@ -3741,15 +3908,20 @@ function displayChapter() {
     if (currentChapterText) {
         const book = bibleBooks[currentBook];
         let bookName;
+        const effectiveTamil = getEffectiveTamilLanguage();
         if (currentLanguage === 'tamil') {
-            // Use short Tamil name on mobile if available
-            bookName = window.innerWidth <= 768 ? (book.tamilShortName || book.tamilName) : book.tamilName;
+            if (effectiveTamil === 'tanglish') {
+                bookName = window.innerWidth <= 768 ? (book.tanglishShortName || book.tanglishName || book.name) : (book.tanglishName || book.name);
+            } else {
+                bookName = window.innerWidth <= 768 ? (book.tamilShortName || book.tamilName) : book.tamilName;
+            }
         } else if (currentLanguage === 'both') {
             // On mobile, use short English name for space
             if (window.innerWidth <= 768) {
                 bookName = book.shortName || book.name;
             } else {
-                bookName = `${book.name} / ${book.tamilName}`;
+                const tamilPart = effectiveTamil === 'tanglish' ? (book.tanglishName || book.name) : book.tamilName;
+                bookName = `${book.name} / ${tamilPart}`;
             }
         } else {
             // Use short name on mobile, full name on desktop
@@ -3906,6 +4078,8 @@ function updateMobileChapterHeader() {
         let bookName = book.name;
         if (currentLanguage === 'tamil') {
             bookName = book.tamilName;
+        } else if (currentLanguage === 'tanglish') {
+            bookName = book.tanglishName || book.name;
         } else if (currentLanguage === 'both') {
             bookName = book.name; // Use English for "both" mode
         }
@@ -5746,10 +5920,10 @@ function initializeMobileLanguageModal() {
     const sheetColorPalette = document.getElementById('language-sheet-color-palette');
     const sheetColorOptions = document.querySelectorAll('.language-sheet-color-option');
 
-    if (!langBtn || !modalOverlay) return;
+    if (!modalOverlay) return;
 
     // Ensure currentLanguage is properly initialized
-    if (!currentLanguage || !['english', 'tamil', 'both'].includes(currentLanguage)) {
+    if (!currentLanguage || !['english', 'tamil', 'tanglish', 'both'].includes(currentLanguage)) {
         currentLanguage = 'tamil';
         localStorage.setItem('currentLanguage', 'tamil');
     }
@@ -5779,7 +5953,13 @@ function initializeMobileLanguageModal() {
         if (modalVerSection) {
             modalVerSection.style.display = (currentLanguage === 'english' || currentLanguage === 'both') ? 'block' : 'none';
         }
+        // Show/hide Tamil version based on tamil/both selection
+        const modalTamSection = document.getElementById('modal-tamil-version-section');
+        if (modalTamSection) {
+            modalTamSection.style.display = (currentLanguage === 'tamil' || currentLanguage === 'both') ? 'block' : 'none';
+        }
         syncEnglishVersionUI(englishVersion);
+        syncTamilVersionUI(tamilVersion);
         // Show/hide color palette based on 'both' selection
         if (currentLanguage === 'both') {
             colorPaletteSection.classList.add('visible');
@@ -5802,7 +5982,13 @@ function initializeMobileLanguageModal() {
         if (sheetVerSection) {
             sheetVerSection.style.display = (currentLanguage === 'english' || currentLanguage === 'both') ? 'block' : 'none';
         }
+        // Show/hide Tamil version based on tamil/both selection
+        const sheetTamSection = document.getElementById('sheet-tamil-version-section');
+        if (sheetTamSection) {
+            sheetTamSection.style.display = (currentLanguage === 'tamil' || currentLanguage === 'both') ? 'block' : 'none';
+        }
         syncEnglishVersionUI(englishVersion);
+        syncTamilVersionUI(tamilVersion);
         // Show/hide color palette based on 'both' selection
         if (currentLanguage === 'both') {
             sheetColorPalette.style.display = 'block';
@@ -5832,10 +6018,12 @@ function initializeMobileLanguageModal() {
             }
         });
     }
-    // Open modal/sheet based on device
-    langBtn.addEventListener('click', (e) => {
-        closeBottomSheet();
-        e.stopPropagation();
+
+    // Global Language Picker Opener (works for header button, right menu item, or any caller)
+    function openLanguagePicker(e) {
+        if (typeof closeBottomSheet === 'function') closeBottomSheet();
+        if (typeof closeRightMenu === 'function') closeRightMenu();
+        if (e && e.stopPropagation) e.stopPropagation();
 
         if (isMobile()) {
             // Mobile: Show bottom sheet
@@ -5849,6 +6037,12 @@ function initializeMobileLanguageModal() {
             modalOverlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
+    }
+    window.openLanguagePicker = openLanguagePicker;
+
+    // Attach to any remaining language opener buttons if present
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', openLanguagePicker);
     });
 
     // Close modal
@@ -6708,16 +6902,26 @@ function initializeRightSettingsPanel() {
         if (engVerDesc) {
             engVerDesc.textContent = engVerVal === 'kjv' ? 'KJV Modern' : 'EasyEnglish';
         }
+        // Sync Tamil version segment
+        const tamVerVal = getEffectiveTamilLanguage();
+        syncTamilVersionUI(tamVerVal);
+
         const isEngOrBoth = langSegVal === 'en' || langSegVal === 'both';
+        const isTamilOrBoth = langSegVal === 'ta' || langSegVal === 'both';
         const isBoth = langSegVal === 'both';
         const subCard = document.getElementById('settings-lang-sub-card');
         if (subCard) {
-            subCard.classList.toggle('has-content', isEngOrBoth);
+            subCard.classList.toggle('has-content', isEngOrBoth || isTamilOrBoth);
         }
         // Show/hide English version panel based on language val
         const engVerPanel = document.getElementById('settings-english-version-panel');
         if (engVerPanel) {
             engVerPanel.classList.toggle('visible', isEngOrBoth);
+        }
+        // Show/hide Tamil version panel based on language val
+        const tamVerPanel = document.getElementById('settings-tamil-version-panel');
+        if (tamVerPanel) {
+            tamVerPanel.classList.toggle('visible', isTamilOrBoth);
         }
         // Sync English color swatch
         const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
@@ -6898,6 +7102,19 @@ function initializeRightSettingsPanel() {
                     }
                     if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
                         loadBook(currentBook, currentChapter);
+                    }
+                }
+
+                // Tamil version
+                if (snap.tamilVersion) {
+                    tamilVersion = snap.tamilVersion;
+                    localStorage.setItem('tamilVersion', tamilVersion);
+                    localStorage.setItem('settingsTamilVersion', tamilVersion);
+                    syncTamilVersionUI(tamilVersion);
+                    if (currentLanguage === 'tamil' || currentLanguage === 'both') {
+                        if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+                            loadBook(currentBook, currentChapter);
+                        }
                     }
                 }
 
@@ -7251,7 +7468,7 @@ function loadRandomMemoryVerse() {
 async function loadVerseFromSupabase(book, verseData, verseReference, scriptureText) {
     try {
         // Get language
-        const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+        const language = (currentLanguage === 'tamil' || currentLanguage === 'tanglish') ? currentLanguage : 'english';
         // Convert book file name based on language
         const bookFile = getBookFileForLanguage(book.file, language);
         // Load chapter data from BibleDataManager

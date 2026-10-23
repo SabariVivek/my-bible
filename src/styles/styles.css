@@ -2907,6 +2907,8 @@ body:not(.dark-theme) .settings-discard-btn.primary {
 
 .right-settings-panel .settings-lang .settings-seg-btn {
     font-size: 13px;
+    padding: 8px 4px;
+    white-space: nowrap;
 }
 
 .right-settings-panel .settings-seg-btn.active {
@@ -3171,7 +3173,7 @@ body:not(.dark-theme) .right-settings-panel .settings-admin-subtext {
 }
 
 .right-settings-panel .settings-lang-sub-card.has-content {
-    max-height: 140px;
+    max-height: 200px;
     opacity: 1;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -11024,7 +11026,7 @@ body.dark-theme .close-bottom-sheet:hover {
 .language-sheet-options {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    gap: 8px;
 }
 
 .language-sheet-option {
