@@ -916,7 +916,7 @@ const BIBLE_TRACKS = [
   },
   {
     day: 87,
-    title: "The Parable of the Lost Son",
+    title: "Parable of the Lost Son",
     duration: "50:09 min",
     verse: "Luke 15:11-32",
     desc: "How does the lost son reveal God's love, forgiveness, and joy when a sinner returns to Him?",
@@ -977,6 +977,22 @@ const BIBLE_TRACKS = [
     verse: "Mark 4:35-41",
     desc: "How does Jesus reveal His authority over nature and teach His disciples to trust Him?",
     category: "Miracles"
+  },
+  {
+    day: 95,
+    title: "Jephthah's Tragic Vow",
+    duration: "69:30 min",
+    verse: "Judges 11:29-40",
+    desc: "How did Jephthah's vow bring tragedy, and what can we learn about keeping promises to God?",
+    category: "Characters"
+  },
+  {
+    day: 96,
+    title: "Parable of the Leaven",
+    duration: "28:16 min",
+    verse: "Matthew 13:33",
+    desc: "How does Jesus show the powerful kingdom of heaven through leaven hidden in flour?",
+    category: "Parables"
   }
 ];
 
@@ -1008,5 +1024,5 @@ const BIBLE_FOLDERS = [
   { name: "Miracles", type: "category", value: "Miracles" },
   { name: "Genesis", type: "category", value: "Genesis" },
   { name: "Exodus", type: "category", value: "Exodus" },
-  { name: "Teachings", type: "category", value: "Teachings" }
+  { name: "Teachings", type: "category", value: "Teachings" },
 ];
