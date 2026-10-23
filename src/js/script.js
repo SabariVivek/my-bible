@@ -6384,9 +6384,20 @@ function initializeSearch() {
     // Toggle filter visibility
     function toggleFilter() {
         isFilterVisible = !isFilterVisible;
-        advancedFilter.style.display = isFilterVisible ? 'block' : 'none';
-        if (isFilterVisible && filterBook.options.length === 1) {
-            populateBookDropdown();
+        if (isFilterVisible) {
+            const isDesktop = window.innerWidth > 768;
+            const targetParent = isDesktop 
+                ? document.getElementById('desktop-top-filter-wrapper') 
+                : document.querySelector('.filter-btn-wrapper');
+            if (targetParent && advancedFilter.parentElement !== targetParent) {
+                targetParent.appendChild(advancedFilter);
+            }
+            advancedFilter.style.display = 'block';
+            if (filterBook.options.length === 1) {
+                populateBookDropdown();
+            }
+        } else {
+            advancedFilter.style.display = 'none';
         }
     }
     // Close filter popup
@@ -6394,16 +6405,18 @@ function initializeSearch() {
         isFilterVisible = false;
         advancedFilter.style.display = 'none';
     }
+    function updateFilterBtnActiveState() {
+        const hasFilter = filterBook.value !== '' || filterChapter.value !== '';
+        if (filterBtn) filterBtn.classList.toggle('active', hasFilter);
+        const dtFilterBtn = document.getElementById('desktop-top-filter-btn');
+        if (dtFilterBtn) dtFilterBtn.classList.toggle('active', hasFilter);
+    }
     // Apply filter and trigger search
     function applyFilter() {
         closeFilter();
-        // Update filter button active state
-        if (filterBook.value !== '' || filterChapter.value !== '') {
-            filterBtn.classList.add('active');
-        } else {
-            filterBtn.classList.remove('active');
-        }
-        const query = searchInput.value.trim();
+        updateFilterBtnActiveState();
+        const desktopTopInput = document.getElementById('desktop-top-search-input');
+        const query = (searchInput.value || (desktopTopInput ? desktopTopInput.value : '')).trim();
         if (query.length >= MIN_SEARCH_LENGTH) {
             showLoadingState();
             clearTimeout(searchTimeout);
@@ -6417,7 +6430,7 @@ function initializeSearch() {
     function clearFilterValues() {
         filterBook.value = '';
         filterChapter.value = '';
-        filterBtn.classList.remove('active');
+        updateFilterBtnActiveState();
         applyFilter();
     }
     // Detect if text is Tamil or English
@@ -6440,6 +6453,9 @@ function initializeSearch() {
         if (searchBtnMobile) searchBtnMobile.classList.add('active');
         // Track navigation
         navigateToPage('search');
+        // Show desktop top filter button next to search box
+        const desktopFilterWrapper = document.getElementById('desktop-top-filter-wrapper');
+        if (desktopFilterWrapper) desktopFilterWrapper.style.display = 'flex';
         // Show search bar
         searchBar.style.display = 'flex';
         // Show search results area, hide only sidebars and scripture
@@ -6472,6 +6488,9 @@ function initializeSearch() {
         // Remove active class from search buttons
         if (searchBtn) searchBtn.classList.remove('active');
         if (searchBtnMobile) searchBtnMobile.classList.remove('active');
+        // Hide desktop top filter button when returning to the Bible
+        const desktopFilterWrapper = document.getElementById('desktop-top-filter-wrapper');
+        if (desktopFilterWrapper) desktopFilterWrapper.style.display = 'none';
         // Hide search bar
         searchBar.style.display = 'none';
         advancedFilter.style.display = 'none';
@@ -6527,15 +6546,19 @@ function initializeSearch() {
     window.closeSearch = closeSearch;
     backBtn.addEventListener('click', closeSearch);
     clearBtn.addEventListener('click', clearSearch);
-    filterBtn.addEventListener('click', toggleFilter);
+    if (filterBtn) filterBtn.addEventListener('click', toggleFilter);
+    const desktopFilterBtn = document.getElementById('desktop-top-filter-btn');
+    if (desktopFilterBtn) desktopFilterBtn.addEventListener('click', toggleFilter);
     closeFilterBtn.addEventListener('click', closeFilter);
     applyFilterBtn.addEventListener('click', applyFilter);
     clearFilterBtn.addEventListener('click', clearFilterValues);
     // Close filter when clicking outside
     document.addEventListener('click', (e) => {
+        const dtFilterBtn = document.getElementById('desktop-top-filter-btn');
         if (isFilterVisible &&
             !advancedFilter.contains(e.target) &&
-            !filterBtn.contains(e.target)) {
+            !(filterBtn && filterBtn.contains(e.target)) &&
+            !(dtFilterBtn && dtFilterBtn.contains(e.target))) {
             closeFilter();
         }
     });
@@ -6608,6 +6631,12 @@ function initializeSearch() {
                 const suggestion = item.dataset.suggestion;
                 searchInput.value = suggestion;
                 clearBtn.style.display = 'block';
+                const topSearchInput = document.getElementById('desktop-top-search-input');
+                const topClearBtn = document.getElementById('desktop-top-clear-btn');
+                if (topSearchInput) {
+                    topSearchInput.value = suggestion;
+                    if (topClearBtn) topClearBtn.style.display = 'flex';
+                }
                 performSearch(suggestion);
                 saveRecentSearch(suggestion);
             });
@@ -6793,7 +6822,7 @@ function initializeSearch() {
         return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 }
-// Site title click detection for admin mode (5 clicks required)
+// Site title click detection: reload the bible and return home
 function initializeSiteTitle() {
     const siteTitle = document.querySelector('.site-title');
     const secretIcon = document.getElementById('secret-icon');
@@ -6803,6 +6832,43 @@ function initializeSiteTitle() {
     if (secretIcon) {
         secretIcon.addEventListener('click', () => {
             window.location.href = 'config/secret.html';
+        });
+    }
+
+    if (siteTitle) {
+        siteTitle.addEventListener('click', () => {
+            // Close search view if active
+            if (typeof closeSearch === 'function') {
+                closeSearch();
+            }
+            const topSearchInput = document.getElementById('desktop-top-search-input');
+            const topClearBtn = document.getElementById('desktop-top-clear-btn');
+            if (topSearchInput) {
+                topSearchInput.value = '';
+                if (topClearBtn) topClearBtn.style.display = 'none';
+            }
+            const searchResults = document.getElementById('search-results');
+            if (searchResults) {
+                searchResults.style.display = 'none';
+                searchResults.classList.remove('active');
+            }
+            const scriptureText = document.getElementById('scripture-text');
+            if (scriptureText) {
+                scriptureText.style.display = 'block';
+            }
+            // Close any mobile bottom sheet or right menu
+            if (typeof closeBottomSheet === 'function') closeBottomSheet();
+            if (typeof closeRightMenu === 'function') closeRightMenu();
+
+            // Reload the bible
+            const targetBook = (typeof currentBook !== 'undefined') ? currentBook : 0;
+            const targetChapter = (typeof currentChapter !== 'undefined') ? currentChapter : 1;
+            if (typeof loadBook === 'function') {
+                loadBook(targetBook, targetChapter).then(() => {
+                    const contentArea = document.querySelector('.content-area');
+                    if (contentArea) contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
         });
     }
 }

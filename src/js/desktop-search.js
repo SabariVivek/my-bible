@@ -2858,6 +2858,10 @@
                     selectedIndex = (selectedIndex - 1 + currentItems.length) % currentItems.length;
                     updateSelection();
                 }
+            } else if (e.key === 'Escape') {
+                e.preventDefault();
+                hideDropdown();
+                clearBtn.click();
             } else if (e.key === 'Enter') {
                 e.preventDefault();
                 const val = searchInput.value.trim();
@@ -2909,7 +2913,7 @@
         });
 
         // Clear button
-        // Clear button (cancels current story or passage search and removes highlight)
+        // Clear button (cancels current story or passage search and removes highlight, returns to Bible if on search page)
         clearBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             searchInput.value = '';
@@ -2922,6 +2926,24 @@
             isStoryMode = false;
             hideDropdown();
             clearSearchHighlights();
+
+            const bibleSearchInput = document.getElementById('search-input');
+            if (bibleSearchInput) {
+                bibleSearchInput.value = '';
+            }
+
+            // If we are currently on the search view, exit and reload the Bible
+            const searchResults = document.getElementById('search-results');
+            if (searchResults && (searchResults.classList.contains('active') || searchResults.style.display !== 'none')) {
+                if (typeof window.closeSearch === 'function') {
+                    window.closeSearch();
+                } else if (typeof closeSearch === 'function') {
+                    closeSearch();
+                }
+                if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+                    loadBook(currentBook, currentChapter);
+                }
+            }
         });
 
         // Close dropdown when clicking outside

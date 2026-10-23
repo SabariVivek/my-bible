@@ -1214,12 +1214,22 @@ body.dark-theme .current-user-avatar.admin-active::after {
     }
 }
 
-/* Desktop: ensure search-bar is full width and centered */
+/* Desktop: hide mobile search button in bottom nav, and hide search-bar (replaced by top bar filter & cancel) */
 @media (min-width: 769px) {
-    .search-bar {
-        width: 100%;
-        left: 0;
-        right: 0;
+    #search-btn-mobile {
+        display: none !important;
+    }
+
+    #search-bar {
+        display: none !important;
+    }
+
+    .search-results-info {
+        margin-top: 20px;
+    }
+
+    body:has(.search-results.active) .author-banner {
+        display: none !important;
     }
 }
 
@@ -1228,6 +1238,10 @@ body.dark-theme .current-user-avatar.admin-active::after {
     color: #e8eaed;
     transition: background 0.2s ease;
     flex-shrink: 0;
+}
+
+.search-bar .back-btn .back-from-search-label {
+    display: none;
 }
 
 .search-bar .back-btn:hover {

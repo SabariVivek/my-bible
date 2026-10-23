@@ -27,6 +27,72 @@
     }
 }
 
+/* ── Top Bar Search Row & Filter ── */
+.desktop-top-search-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.desktop-top-search-row .desktop-top-search-box {
+    flex: 1;
+    min-width: 0;
+}
+
+.desktop-top-filter-wrapper {
+    position: relative;
+    display: none;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.desktop-top-filter-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e4e4e7;
+    background: #f4f4f5;
+    color: #71717a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    position: relative;
+    padding: 0;
+}
+
+.desktop-top-filter-btn:hover {
+    background: #ececee;
+    color: #18181b;
+    border-color: #d4d4d8;
+}
+
+.desktop-top-filter-btn.active {
+    color: #2563eb;
+    border-color: #2563eb;
+}
+
+.desktop-top-filter-btn.active::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 7px;
+    height: 7px;
+    background-color: #2563eb;
+    border-radius: 50%;
+    border: 1.5px solid #ffffff;
+}
+
+.desktop-top-filter-wrapper .filter-popup {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 1000;
+}
+
 /* ── Top Bar Search Box ── */
 .desktop-top-search-box {
     display: flex;
@@ -405,6 +471,28 @@ body.dark-theme .desktop-top-search-box:focus-within {
     background: #28292e;
     border-color: #71717a;
     box-shadow: 0 0 0 1px #71717a;
+}
+
+body.dark-theme .desktop-top-filter-btn {
+    background: #202124;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #9ca3af;
+}
+
+body.dark-theme .desktop-top-filter-btn:hover {
+    background: #26272b;
+    border-color: rgba(255, 255, 255, 0.16);
+    color: #f4f4f5;
+}
+
+body.dark-theme .desktop-top-filter-btn.active {
+    color: #60a5fa;
+    border-color: #60a5fa;
+}
+
+body.dark-theme .desktop-top-filter-btn.active::after {
+    border-color: #202124;
+    background-color: #60a5fa;
 }
 
 body.dark-theme .desktop-top-search-icon {

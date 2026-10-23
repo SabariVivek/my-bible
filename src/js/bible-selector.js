@@ -148,6 +148,8 @@
         list.appendChild(gh);
       }
 
+      var d = document.createElement('div');
+      d.className = 'bs-book-item' + (realIdx === s.bi ? ' selected' : '');
       var effectiveTamil = (typeof getEffectiveTamilLanguage === 'function') ? getEffectiveTamilLanguage() : (localStorage.getItem('settingsTamilVersion') || 'tamil');
       var subName = effectiveTamil === 'tanglish' ? (b.tanglish || b.tamil) : b.tamil;
       d.innerHTML = '<div class="bs-book-tamil">' + subName + '</div><div class="bs-book-english">' + b.name + '</div>';
