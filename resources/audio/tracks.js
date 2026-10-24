@@ -993,6 +993,15 @@ const BIBLE_TRACKS = [
     verse: "Matthew 13:33",
     desc: "How does Jesus show the powerful kingdom of heaven through leaven hidden in flour?",
     category: "Parables"
+  },
+  {
+    day: 97,
+    title: "Who is Balaam?",
+    file: "Who is Balaam",
+    duration: "63:54 min",
+    verse: "Numbers 22",
+    desc: "Who was Balaam, and what about his identity, his role as a prophet, and his relationship with God?",
+    category: "Characters"
   }
 ];
 
