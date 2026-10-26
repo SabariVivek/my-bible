@@ -999,9 +999,17 @@ const BIBLE_TRACKS = [
     title: "Who is Balaam?",
     file: "Who is Balaam",
     duration: "63:54 min",
-    verse: "Numbers 22",
+    verse: "Numbers 22:1-22",
     desc: "Who was Balaam, and what about his identity, his role as a prophet, and his relationship with God?",
     category: "Characters"
+  },
+  {
+    day: 98,
+    title: "Balaam's Donkey Speaks",
+    duration: "31:20 min",
+    verse: "Numbers 22:21-35",
+    desc: "How did God open a donkey’s mouth to speak and reveal the angel of the LORD to Balaam?",
+    category: "Do You Know?"
   }
 ];
 

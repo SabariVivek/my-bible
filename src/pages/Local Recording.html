@@ -2087,7 +2087,7 @@
         </div>
     </div>
 
-    <script src="../../resources/audio/tracks.js?cb=20261024154743"></script>
+    <script src="../../resources/audio/tracks.js?cb=20261026120343"></script>
     <script>
         // ─── CONFIG ──────────────────────────────────────────────────────────────────
         // Track titles are managed in:
@@ -2639,6 +2639,54 @@
             return m + ":" + (s < 10 ? "0" : "") + s;
         }
 
+        function parseDurationToSeconds(dur) {
+            if (dur == null) return 0;
+            if (typeof dur === 'number') return isNaN(dur) ? 0 : dur;
+            if (typeof dur !== 'string') return 0;
+            const str = dur.trim().toLowerCase();
+            if (!str || str.includes('coming soon')) return 0;
+
+            const timeMatch = str.match(/(?:(\d+):)?(\d+):(\d+)/);
+            if (timeMatch) {
+                if (timeMatch[1] !== undefined) {
+                    const h = parseInt(timeMatch[1], 10) || 0;
+                    const m = parseInt(timeMatch[2], 10) || 0;
+                    const s = parseInt(timeMatch[3], 10) || 0;
+                    return h * 3600 + m * 60 + s;
+                } else {
+                    const m = parseInt(timeMatch[2], 10) || 0;
+                    const s = parseInt(timeMatch[3], 10) || 0;
+                    return m * 60 + s;
+                }
+            }
+
+            let total = 0;
+            const hrMatch = str.match(/(\d+(?:\.\d+)?)\s*(?:h|hr|hrs|hour|hours)/);
+            if (hrMatch) total += parseFloat(hrMatch[1]) * 3600;
+            const minMatch = str.match(/(\d+(?:\.\d+)?)\s*(?:m|min|mins|minute|minutes)/);
+            if (minMatch) total += parseFloat(minMatch[1]) * 60;
+            const secMatch = str.match(/(\d+(?:\.\d+)?)\s*(?:s|sec|secs|second|seconds)/);
+            if (secMatch) total += parseFloat(secMatch[1]);
+            if (total > 0) return total;
+
+            const num = parseFloat(str);
+            return isNaN(num) ? 0 : num;
+        }
+
+        function formatTotalDuration(totalSecs) {
+            if (!totalSecs || isNaN(totalSecs) || totalSecs <= 0) return '';
+            const totalMinutes = Math.round(totalSecs / 60);
+            if (totalMinutes === 0 && totalSecs > 0) return '< 1m';
+            const hours = Math.floor(totalMinutes / 60);
+            const mins = totalMinutes % 60;
+
+            if (hours > 0) {
+                return mins > 0 ? `${hours}h ${mins}m` : `${hours}h`;
+            }
+            return `${mins}m`;
+        }
+
+
         audio.addEventListener('playing', clearChipLoaders);
         audio.addEventListener('seeked', clearChipLoaders);
 
@@ -2804,6 +2852,7 @@
                 const card = buildTrackCard(track.day, getAudioFilePath(track.file || track.title), track.title, 'track' + track.day, durations[i], track.desc, track.verse, track.important, track.importantColor, track.cardBg, track.comingSoon);
                 card.dataset.category = track.category || '';
                 card.dataset.day = track.day;
+                card.dataset.duration = (durations[i] != null) ? durations[i] : (track.duration || '');
                 skelEl.replaceWith(card);
             });
 
@@ -2960,6 +3009,7 @@
             let visibleCount = 0;
             let totalInFolderCount = 0;
             let totalOverallSearchMatches = 0;
+            let totalVisibleSeconds = 0;
 
             const cards = document.querySelectorAll('.track-item');
             cards.forEach(cardEl => {
@@ -2994,6 +3044,8 @@
 
                 if (show) {
                     visibleCount++;
+                    const durVal = cardEl.dataset.duration || track.duration;
+                    totalVisibleSeconds += parseDurationToSeconds(durVal);
                     highlightCardText(cardEl, track, isSearching ? currentSearchQuery : '');
                 } else {
                     highlightCardText(cardEl, track, '');
@@ -3004,10 +3056,12 @@
             const countEl = document.getElementById('folderCountText');
             if (countEl) {
                 countEl.style.display = '';
+                const timeStr = formatTotalDuration(totalVisibleSeconds);
+                const timeSuffix = timeStr ? ` • ${timeStr}` : '';
                 if (isSearching) {
-                    countEl.textContent = `${visibleCount} Audio found`;
+                    countEl.textContent = `${visibleCount} Audio found${timeSuffix}`;
                 } else {
-                    countEl.textContent = `${visibleCount} Audio`;
+                    countEl.textContent = `${visibleCount} Audio${timeSuffix}`;
                 }
             }
 
@@ -3015,7 +3069,8 @@
             if (statsRow && statsText) {
                 if (isSearching) {
                     statsRow.style.display = 'flex';
-                    statsText.innerHTML = `Found <strong>${visibleCount}</strong> of ${totalInFolderCount} in ${escapeHtml(currentFolder.name)} matching <span class="search-query-badge">"${escapeHtml(currentSearchQuery.trim())}"</span>`;
+                    const durPart = timeStr ? ` (${timeStr})` : '';
+                    statsText.innerHTML = `Found <strong>${visibleCount}</strong> of ${totalInFolderCount} in ${escapeHtml(currentFolder.name)}${durPart} matching <span class="search-query-badge">"${escapeHtml(currentSearchQuery.trim())}"</span>`;
 
                     if (currentFolder.type !== 'all' && totalOverallSearchMatches > visibleCount) {
                         if (searchAllFoldersBtn) {
