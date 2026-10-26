@@ -2901,6 +2901,7 @@ body:not(.dark-theme) .settings-discard-btn.primary {
     color: #ffffff;
 }
 
+.settings-segment,
 .right-settings-panel .settings-segment {
     display: flex;
     gap: 0;
@@ -2909,6 +2910,7 @@ body:not(.dark-theme) .settings-discard-btn.primary {
     border-radius: 10px;
 }
 
+.settings-seg-btn,
 .right-settings-panel .settings-seg-btn {
     flex: 1;
     padding: 9px 0;
@@ -2926,12 +2928,19 @@ body:not(.dark-theme) .settings-discard-btn.primary {
     z-index: 1;
 }
 
+.settings-seg-btn:not(.active):hover,
+.right-settings-panel .settings-seg-btn:not(.active):hover {
+    color: #ffffff;
+}
+
+.settings-lang .settings-seg-btn,
 .right-settings-panel .settings-lang .settings-seg-btn {
     font-size: 13px;
     padding: 8px 4px;
     white-space: nowrap;
 }
 
+.settings-seg-btn.active,
 .right-settings-panel .settings-seg-btn.active {
     background: #c9a84c;
     color: #1a1506;
@@ -3583,6 +3592,7 @@ body.dark-theme .vh-swatch.selected {
     margin-left: 12px;
 }
 
+.settings-segment-compact,
 .right-settings-panel .settings-segment-compact {
     display: flex;
     gap: 0;
@@ -3592,6 +3602,7 @@ body.dark-theme .vh-swatch.selected {
     flex-shrink: 0;
 }
 
+.settings-segment-compact .settings-seg-btn,
 .right-settings-panel .settings-segment-compact .settings-seg-btn {
     padding: 4px 8px;
     font-size: 11px;
@@ -3806,14 +3817,22 @@ body:not(.dark-theme) .right-settings-panel .settings-card {
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
 }
 
+body:not(.dark-theme) .settings-segment,
 body:not(.dark-theme) .right-settings-panel .settings-segment {
     background: #e8e9ec;
 }
 
+body:not(.dark-theme) .settings-seg-btn,
 body:not(.dark-theme) .right-settings-panel .settings-seg-btn {
     color: #7a7d8a;
 }
 
+body:not(.dark-theme) .settings-seg-btn:not(.active):hover,
+body:not(.dark-theme) .right-settings-panel .settings-seg-btn:not(.active):hover {
+    color: #1a1b1e;
+}
+
+body:not(.dark-theme) .settings-seg-btn.active,
 body:not(.dark-theme) .right-settings-panel .settings-seg-btn.active {
     background: #34a853;
     color: #ffffff;
@@ -3853,6 +3872,7 @@ body:not(.dark-theme) .right-settings-panel .settings-row-sub-label {
     color: #5f6368;
 }
 
+body:not(.dark-theme) .settings-segment-compact,
 body:not(.dark-theme) .right-settings-panel .settings-segment-compact {
     background: #e8e9ec;
 }

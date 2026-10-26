@@ -245,6 +245,7 @@ function areSettingsEqual(a, b) {
     if (a.theme !== b.theme) return false;
     if (a.language !== b.language) return false;
     if ((a.englishVersion || 'easy') !== (b.englishVersion || 'easy')) return false;
+    if ((a.tamilVersion || 'tamil') !== (b.tamilVersion || 'tamil')) return false;
     if (a.englishColor !== b.englishColor) return false;
     if (a.verseHeadingLanguage !== b.verseHeadingLanguage) return false;
     if ((a.selectorStyle || 'old') !== (b.selectorStyle || 'old')) return false;
@@ -337,15 +338,6 @@ async function saveUserSettingsToSupabase() {
         const themeVal =
             localStorage.getItem('settingsTheme') ||
             (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
-        const langSegVal =
-            localStorage.getItem('settingsLanguage') ||
-            (currentLanguage === 'both'
-                ? 'both'
-                : currentLanguage === 'english'
-                    ? 'en'
-                    : currentLanguage === 'tanglish'
-                        ? 'tanglish'
-                        : 'ta');
         const colorVal =
             localStorage.getItem('settingsEnglishColor') ||
             (typeof englishTextColor !== 'undefined' ? englishTextColor : 'default');
@@ -359,7 +351,6 @@ async function saveUserSettingsToSupabase() {
         const payload = {
             user_id: userId,
             theme: themeVal,
-            language: langSegVal,
             english_text_color: colorVal,
             short_summary: !!uiSettings.shortSummary,
             bible_reading: !!uiSettings.bibleReading,
@@ -425,16 +416,6 @@ async function loadUserSettingsFromSupabase() {
         }
 
         const row = rows[0];
-
-        // Language
-        if (row.language) {
-            const langVal = row.language; // 'ta' | 'en' | 'tanglish' | 'both'
-            const selectedLang =
-                langVal === 'en' ? 'english' : langVal === 'ta' ? 'tamil' : langVal === 'tanglish' ? 'tanglish' : 'both';
-            currentLanguage = selectedLang;
-            localStorage.setItem('currentLanguage', selectedLang);
-            localStorage.setItem('settingsLanguage', langVal);
-        }
 
         // Theme
         if (row.theme === 'dark' || row.theme === 'light') {
@@ -1028,6 +1009,7 @@ function settingsSelectLang(btn) {
     const group = document.getElementById('settings-lang-segment');
     if (!group) return;
     group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
     const val = btn.dataset.val;
     const isBoth = val === 'both';
     const isEngOrBoth = val === 'en' || isBoth;
