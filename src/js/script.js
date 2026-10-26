@@ -5715,6 +5715,12 @@ document.addEventListener('click', (e) => {
 });
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
+    // Check if user is typing in an input, textarea, or search box
+    const active = document.activeElement;
+    if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || active.isContentEditable || active.id === 'desktop-top-search-input' || active.closest?.('.desktop-top-search-box'))) {
+        return; // Don't navigate if user is in an input field
+    }
+
     // Disable arrow key navigation if note viewer or notes editor is open
     const noteViewerPopup = document.getElementById('note-viewer-popup');
     const notesModal = document.getElementById('notes-modal');
@@ -12168,6 +12174,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Disable context menu (right-click) except in notes-textarea
     document.addEventListener('contextmenu', (e) => {
+        if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable)) {
+            return true;
+        }
         const notesTextarea = document.getElementById('notes-textarea');
         if (notesTextarea && (e.target === notesTextarea || notesTextarea.contains(e.target))) {
             // Allow context menu in notes-textarea for copy/paste options
@@ -12186,9 +12195,11 @@ document.addEventListener('DOMContentLoaded', () => {
         scriptureText.style.msUserSelect = 'none';
     }
 
-    // Disable selection on mobile with touch events (except in notes-textarea)
+    // Disable selection on mobile with touch events (except in inputs and notes-textarea)
     document.addEventListener('selectstart', (e) => {
-        // Allow selection in notes-textarea
+        if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable)) {
+            return true;
+        }
         const notesTextarea = document.getElementById('notes-textarea');
         if (notesTextarea && (e.target === notesTextarea || notesTextarea.contains(e.target))) {
             return true; // Allow selection in notes-textarea
@@ -12197,8 +12208,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     });
 
-    // Prevent drag and drop for copying text (except in notes-textarea)
+    // Prevent drag and drop for copying text (except in inputs and notes-textarea)
     document.addEventListener('dragstart', (e) => {
+        if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable)) {
+            return true;
+        }
         const notesTextarea = document.getElementById('notes-textarea');
         if (notesTextarea && (e.target === notesTextarea || notesTextarea.contains(e.target))) {
             return true; // Allow drag in notes-textarea

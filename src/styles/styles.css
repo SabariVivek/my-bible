@@ -36,6 +36,13 @@ body,
     -webkit-touch-callout: none;
 }
 
+input,
+textarea,
+[contenteditable="true"] {
+    user-select: text;
+    -webkit-user-select: text;
+}
+
 /* Offline Message Overlay */
 /* Offline message styles removed - app works offline with cached data */
 

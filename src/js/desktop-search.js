@@ -2831,7 +2831,13 @@
 
         // Input event
         searchInput.addEventListener('input', (e) => {
-            const val = e.target.value;
+            let val = e.target.value;
+            // If user types or pastes '/' into search, automatically switch to story mode
+            if (!isStoryMode && val.startsWith('/')) {
+                toggleStoryMode(true);
+                val = val.replace(/^\/+/, '');
+                searchInput.value = val;
+            }
             clearBtn.style.display = val.length > 0 ? 'flex' : 'none';
             if (val.length === 0) {
                 clearSearchHighlights();
@@ -2846,6 +2852,34 @@
 
         // Keyboard navigation
         searchInput.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'a' || e.key === 'A')) {
+                searchInput.select();
+                return;
+            }
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                e.stopPropagation();
+                return;
+            }
+            // Automatically enable story mode when typing '/' in empty search
+            if (e.key === '/' && !isStoryMode) {
+                const isEmptyOrAllSelected = searchInput.value === '' ||
+                    (searchInput.selectionStart === 0 && searchInput.selectionEnd === searchInput.value.length);
+                if (isEmptyOrAllSelected) {
+                    e.preventDefault();
+                    toggleStoryMode(true);
+                    searchInput.value = '';
+                    clearBtn.style.display = 'none';
+                    renderDropdown('');
+                    return;
+                }
+            }
+            // Pressing Backspace in empty search while in story mode returns to normal search
+            if (e.key === 'Backspace' && isStoryMode && searchInput.value === '') {
+                e.preventDefault();
+                toggleStoryMode(false);
+                renderDropdown('');
+                return;
+            }
             if (e.key === 'ArrowDown') {
                 e.preventDefault();
                 if (currentItems.length > 0) {
