@@ -1136,6 +1136,10 @@
     }
 
     function init() {
+        if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+            lucide.createIcons();
+        }
+
         const compareBtn = document.getElementById('compare-bible-btn');
         if (compareBtn) {
             compareBtn.addEventListener('click', () => {

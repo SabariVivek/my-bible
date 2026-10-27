@@ -1,6 +1,6 @@
 // Service worker for PWA with Supabase API caching
 // IMPORTANT: Cache version is automatically updated with build timestamp
-const BUILD_TIMESTAMP = '20261027125439';
+const BUILD_TIMESTAMP = '20261027125952';
 const CACHE_VERSION = `v6-${BUILD_TIMESTAMP}`;
 const CACHE_NAME = `my-bible-${CACHE_VERSION}`;
 const API_CACHE_NAME = `my-bible-api-${CACHE_VERSION}`;
@@ -18,6 +18,7 @@ const STATIC_ASSETS = [
   './config/config.js',
   './src/js/bible-data-manager.js',
   './src/lib/supabase.js',
+  './src/lib/lucide.min.js',
   './src/js/voice-command.js',
   './src/styles/verse-history.css',
   './src/js/verse-history-manager.js',
