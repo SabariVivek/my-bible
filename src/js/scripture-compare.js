@@ -319,7 +319,7 @@
         }
     }
 
-    function openPassagePicker(paneId, tab) {
+    function openPassagePicker(paneId) {
         const pane = state.panes.find(p => p.id === paneId);
         if (!pane) return;
 
@@ -330,16 +330,12 @@
 
         closePassagePicker();
 
-        // Default to chapter_verse tab if chapter is already loaded so user can immediately pick chapter & verse
-        const initialTab = tab || (pane.verses ? 'chapter_verse' : 'book');
-
         activePopover = {
             paneId: paneId,
-            currentTab: initialTab,
             pendingBookIndex: pane.bookIndex,
             pendingChapter: pane.chapter,
-            filterText: '',
-            testament: 'all'
+            pendingVerse: pane.targetVerse || 1,
+            filterText: ''
         };
 
         renderPickerPopover();
@@ -381,7 +377,7 @@
 
     function renderPickerPopover() {
         if (!activePopover) return;
-        const { paneId, currentTab, pendingBookIndex, pendingChapter, filterText, testament } = activePopover;
+        const { paneId, pendingBookIndex, pendingChapter, pendingVerse, filterText } = activePopover;
         const pane = state.panes.find(p => p.id === paneId);
         if (!pane) return;
 
@@ -405,7 +401,7 @@
 
         // Prevent popover from clipping past right edge of screen
         const anchorRect = anchor.getBoundingClientRect();
-        if (anchorRect.left + 420 > window.innerWidth) {
+        if (anchorRect.left + 490 > window.innerWidth) {
             popoverEl.style.left = 'auto';
             popoverEl.style.right = '0';
         } else {
@@ -413,165 +409,141 @@
             popoverEl.style.right = 'auto';
         }
 
-        const selectedBook = (typeof bibleBooks !== 'undefined' && bibleBooks[pendingBookIndex]) || { name: 'Genesis', chapters: 50 };
-        const totalChapters = selectedBook.chapters || 1;
+        const curBook = (typeof bibleBooks !== 'undefined' && bibleBooks[pendingBookIndex]) || { name: 'Genesis', tamilName: 'ஆதியாகமம்', chapters: 50 };
+        const totalChapters = curBook.chapters || 1;
         const totalVerses = getVerseCountForBookAndChapter(pendingBookIndex, pendingChapter);
 
-        // All books
-        const allBooks = (typeof bibleBooks !== 'undefined' ? bibleBooks : []).map((b, idx) => ({ ...b, idx }));
+        const currentLabel = `${curBook.name} ${pendingChapter}${pendingVerse > 1 ? ':' + pendingVerse : ''}`;
 
-        const verseSuffix = (pendingChapter === pane.chapter && pane.targetVerse && pane.targetVerse > 1) ? `:${pane.targetVerse}` : '';
+        // Build Book list HTML
+        const allBooks = typeof bibleBooks !== 'undefined' ? bibleBooks : [];
+        let booksHtml = '';
+        allBooks.forEach((b, idx) => {
+            const isActive = idx === pendingBookIndex;
+            booksHtml += `
+                <div class="sc-c3-book-item ${isActive ? 'active' : ''}" data-b-idx="${idx}">
+                    <span class="sc-c3-book-en">${b.name}</span>
+                    <span class="sc-c3-book-ta">${b.tamilName || ''}</span>
+                </div>
+            `;
+        });
+
+        // Build Chapter buttons HTML
+        let chHtml = '';
+        for (let c = 1; c <= totalChapters; c++) {
+            const isActive = c === pendingChapter;
+            chHtml += `<button type="button" class="sc-c3-num-btn ${isActive ? 'active' : ''}" data-ch="${c}">${c}</button>`;
+        }
+
+        // Build Verse buttons HTML
+        let vsHtml = '';
+        for (let v = 1; v <= totalVerses; v++) {
+            const isActive = v === pendingVerse;
+            vsHtml += `<button type="button" class="sc-c3-num-btn ${isActive ? 'active' : ''}" data-v="${v}">${v}</button>`;
+        }
 
         popoverEl.innerHTML = `
             <div class="sc-picker-header">
-                <div class="sc-picker-tabs">
-                    <button type="button" class="sc-picker-tab ${currentTab === 'book' ? 'active' : ''}" data-tab="book">
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                        </svg>
-                        <span class="sc-tab-label">${selectedBook.name}</span>
-                    </button>
-                    <button type="button" class="sc-picker-tab ${currentTab === 'chapter_verse' ? 'active' : ''}" data-tab="chapter_verse">
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
-                            <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
-                            <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
-                            <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
-                        </svg>
-                        <span class="sc-tab-label">Ch ${pendingChapter}${verseSuffix}</span>
-                    </button>
+                <div class="sc-picker-title-wrap">
+                    <svg class="sc-picker-book-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    <span class="sc-picker-current-label">${currentLabel}</span>
                 </div>
                 <button type="button" class="sc-picker-close" title="Close" aria-label="Close passage picker">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
             </div>
 
-            <div class="sc-picker-body">
-                ${currentTab === 'book' ? `
-                    <div class="sc-picker-filter-row">
-                        <div class="sc-picker-filter-wrap">
-                            <svg class="sc-pfilter-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                            <input type="text" class="sc-picker-filter-input" placeholder="Search 66 books..." value="${filterText}">
-                            <button type="button" class="sc-pfilter-clear" style="display: ${filterText ? 'block' : 'none'};">✕</button>
+            <div class="sc-c3-layout">
+                <!-- Left: Book Search & List -->
+                <div class="sc-c3-left">
+                    <div class="sc-c3-search-box">
+                        <svg class="sc-c3-search-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" class="sc-c3-search-input" placeholder="Filter books..." value="${filterText}">
+                        <button type="button" class="sc-c3-search-clear" style="display: ${filterText ? 'block' : 'none'};">✕</button>
+                    </div>
+                    <div class="sc-c3-books-list">
+                        ${booksHtml}
+                        <div class="sc-c3-empty" style="display: none;">No books found</div>
+                    </div>
+                </div>
+
+                <!-- Right: Stacked Grids -->
+                <div class="sc-c3-right">
+                    <!-- Chapter Section -->
+                    <div class="sc-c3-section">
+                        <div class="sc-c3-sec-header">
+                            <span class="sc-c3-sec-label">Chapter</span>
+                            <span class="sc-c3-badge" id="sc-c3-ch-count">${totalChapters}</span>
                         </div>
-                        <div class="sc-picker-testaments">
-                            <button type="button" class="sc-ptest-pill ${testament === 'all' ? 'active' : ''}" data-test="all">All</button>
-                            <button type="button" class="sc-ptest-pill ${testament === 'old' ? 'active' : ''}" data-test="old">OT</button>
-                            <button type="button" class="sc-ptest-pill ${testament === 'new' ? 'active' : ''}" data-test="new">NT</button>
+                        <div class="sc-c3-grid-6" id="sc-c3-ch-grid">
+                            ${chHtml}
                         </div>
                     </div>
-                    <div class="sc-picker-books-grid">
-                        ${allBooks.map(b => `
-                            <button type="button" class="sc-picker-book-card ${b.idx === pendingBookIndex ? 'active' : ''}" data-book-idx="${b.idx}">
-                                <div class="sc-pbc-names">
-                                    <span class="sc-pbc-en">${b.name}</span>
-                                    <span class="sc-pbc-ta">${b.tamilName || ''}</span>
-                                </div>
-                                <span class="sc-pbc-count">${b.chapters}</span>
+
+                    <div class="sc-c3-divider"></div>
+
+                    <!-- Verse Section -->
+                    <div class="sc-c3-section">
+                        <div class="sc-c3-sec-header">
+                            <div class="sc-c3-vs-title-wrap">
+                                <span class="sc-c3-sec-label">Verse</span>
+                                <span class="sc-c3-badge" id="sc-c3-vs-count">${totalVerses}</span>
+                            </div>
+                            <button type="button" class="sc-c3-all-btn ${pendingVerse === 1 ? 'active' : ''}" data-v="1" title="Read entire chapter">
+                                All
                             </button>
-                        `).join('')}
-                    </div>
-                ` : `
-                    <div class="sc-picker-split-view">
-                        <!-- Left Column: Chapters -->
-                        <div class="sc-picker-col sc-picker-col-ch">
-                            <div class="sc-picker-col-header">
-                                <div class="sc-picker-col-title-wrap">
-                                    <span class="sc-picker-col-title">Chapter</span>
-                                    <span class="sc-picker-col-badge">${totalChapters}</span>
-                                </div>
-                            </div>
-                            <div class="sc-picker-ch-grid">
-                                ${Array.from({ length: totalChapters }, (_, i) => i + 1).map(ch => `
-                                    <button type="button" class="sc-picker-split-btn ${ch === pendingChapter ? 'active' : ''}" data-ch="${ch}">
-                                        ${ch}
-                                    </button>
-                                `).join('')}
-                            </div>
                         </div>
-
-                        <!-- Divider -->
-                        <div class="sc-picker-split-divider"></div>
-
-                        <!-- Right Column: Verses -->
-                        <div class="sc-picker-col sc-picker-col-vs">
-                            <div class="sc-picker-col-header">
-                                <div class="sc-picker-col-title-wrap">
-                                    <span class="sc-picker-col-title">Verse</span>
-                                    <span class="sc-picker-col-badge" id="sc-picker-vs-count">${totalVerses}</span>
-                                </div>
-                                <button type="button" class="sc-picker-all-chip ${(!pane.targetVerse || pane.targetVerse === 1) && pendingChapter === pane.chapter && pendingBookIndex === pane.bookIndex ? 'active' : ''}" title="Read entire chapter" data-v="1">
-                                    All
-                                </button>
-                            </div>
-                            <div class="sc-picker-vs-grid">
-                                ${Array.from({ length: totalVerses }, (_, i) => i + 1).map(v => `
-                                    <button type="button" class="sc-picker-split-btn ${v === (pane.targetVerse || 1) && pendingChapter === pane.chapter && pendingBookIndex === pane.bookIndex ? 'active' : ''}" data-v="${v}">
-                                        ${v}
-                                    </button>
-                                `).join('')}
-                            </div>
+                        <div class="sc-c3-grid-6" id="sc-c3-vs-grid">
+                            ${vsHtml}
                         </div>
                     </div>
-                `}
+                </div>
             </div>
         `;
 
-        const filterBookCards = () => {
-            const q = (activePopover.filterText || '').toLowerCase().trim();
-            const test = activePopover.testament || 'all';
-            let visibleCount = 0;
-            popoverEl.querySelectorAll('.sc-picker-book-card').forEach(card => {
-                const bIdx = parseInt(card.dataset.bookIdx, 10);
-                const b = (typeof bibleBooks !== 'undefined') ? bibleBooks[bIdx] : null;
+        // Filter helper to update DOM without re-rendering everything
+        const filterInput = popoverEl.querySelector('.sc-c3-search-input');
+        const clearBtn = popoverEl.querySelector('.sc-c3-search-clear');
+        const emptyEl = popoverEl.querySelector('.sc-c3-empty');
+        const bookItems = popoverEl.querySelectorAll('.sc-c3-book-item');
+
+        const applyFilter = (q) => {
+            const query = (q || '').toLowerCase().trim();
+            let visible = 0;
+            bookItems.forEach(item => {
+                const bIdx = parseInt(item.dataset.bIdx, 10);
+                const b = allBooks[bIdx];
                 if (!b) return;
-                const testMatch = test === 'all' || b.testament === test;
-                const textMatch = !q || (
-                    b.name.toLowerCase().includes(q) ||
-                    (b.shortName && b.shortName.toLowerCase().includes(q)) ||
-                    (b.tamilName && b.tamilName.toLowerCase().includes(q))
+                const match = !query || (
+                    b.name.toLowerCase().includes(query) ||
+                    (b.shortName && b.shortName.toLowerCase().includes(query)) ||
+                    (b.tamilName && b.tamilName.includes(query))
                 );
-                const show = testMatch && textMatch;
-                card.style.display = show ? 'flex' : 'none';
-                if (show) visibleCount++;
+                item.style.display = match ? 'flex' : 'none';
+                if (match) visible++;
             });
-
-            let emptyMsg = popoverEl.querySelector('.sc-picker-empty');
-            if (visibleCount === 0) {
-                if (!emptyMsg) {
-                    emptyMsg = document.createElement('div');
-                    emptyMsg.className = 'sc-picker-empty';
-                    emptyMsg.textContent = 'No books match your search';
-                    const grid = popoverEl.querySelector('.sc-picker-books-grid');
-                    if (grid) grid.appendChild(emptyMsg);
-                } else {
-                    emptyMsg.style.display = 'block';
-                }
-            } else if (emptyMsg) {
-                emptyMsg.style.display = 'none';
-            }
-
-            const clearBtn = popoverEl.querySelector('.sc-pfilter-clear');
-            if (clearBtn) {
-                clearBtn.style.display = q ? 'block' : 'none';
-            }
+            if (emptyEl) emptyEl.style.display = visible === 0 ? 'block' : 'none';
+            if (clearBtn) clearBtn.style.display = query ? 'block' : 'none';
         };
 
-        if (currentTab === 'book') {
-            filterBookCards();
-            const fi = popoverEl.querySelector('.sc-picker-filter-input');
-            if (fi) {
-                setTimeout(() => fi.focus(), 30);
-            }
-        }
+        if (filterText) applyFilter(filterText);
 
+        // Auto-scroll active book into view
+        const activeBookEl = popoverEl.querySelector('.sc-c3-book-item.active');
+        if (activeBookEl) activeBookEl.scrollIntoView({ block: 'nearest' });
+        const activeChEl = popoverEl.querySelector('.sc-c3-num-btn[data-ch].active');
+        if (activeChEl) activeChEl.scrollIntoView({ block: 'nearest' });
+
+        // Event: Close Button
         const closeBtn = popoverEl.querySelector('.sc-picker-close');
         if (closeBtn) {
             closeBtn.addEventListener('click', (e) => {
@@ -580,133 +552,107 @@
             });
         }
 
-        popoverEl.querySelectorAll('.sc-picker-tab').forEach(t => {
-            t.addEventListener('click', (e) => {
-                e.stopPropagation();
-                activePopover.currentTab = t.dataset.tab;
-                renderPickerPopover();
-            });
-        });
-
-        const filterInput = popoverEl.querySelector('.sc-picker-filter-input');
+        // Event: Filter search
         if (filterInput) {
             filterInput.addEventListener('input', (e) => {
                 activePopover.filterText = e.target.value;
-                filterBookCards();
+                applyFilter(e.target.value);
             });
             filterInput.addEventListener('click', (e) => e.stopPropagation());
             filterInput.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter') {
                     e.preventDefault();
-                    const q = filterInput.value.trim();
-                    if (!q) return;
-                    const parsed = parsePassageQuery(q, pendingBookIndex, pendingChapter);
+                    const val = filterInput.value.trim();
+                    if (!val) return;
+                    const parsed = parsePassageQuery(val, activePopover.pendingBookIndex, activePopover.pendingChapter);
                     if (parsed) {
                         applyPassageSelection(paneId, parsed.bookIndex, parsed.chapter, parsed.verse);
                     }
                 }
             });
         }
-        const filterClear = popoverEl.querySelector('.sc-pfilter-clear');
-        if (filterClear) {
-            filterClear.addEventListener('click', (e) => {
+        if (clearBtn) {
+            clearBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 activePopover.filterText = '';
                 if (filterInput) {
                     filterInput.value = '';
                     filterInput.focus();
                 }
-                filterBookCards();
+                applyFilter('');
             });
         }
 
-        popoverEl.querySelectorAll('.sc-ptest-pill').forEach(tp => {
-            tp.addEventListener('click', (e) => {
-                e.stopPropagation();
-                activePopover.testament = tp.dataset.test;
-                popoverEl.querySelectorAll('.sc-ptest-pill').forEach(p => {
-                    p.classList.toggle('active', p === tp);
-                });
-                filterBookCards();
-            });
-        });
-
-        popoverEl.querySelectorAll('.sc-picker-book-card').forEach(bc => {
-            bc.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const bIdx = parseInt(bc.dataset.bookIdx, 10);
-                activePopover.pendingBookIndex = bIdx;
-                activePopover.pendingChapter = 1;
-                activePopover.currentTab = 'chapter_verse';
-                renderPickerPopover();
-            });
-        });
-
-        // ── Chapter and Verse Split View Handlers ──
-        const updateVersesForChapter = (ch) => {
-            const vsGrid = popoverEl.querySelector('.sc-picker-vs-grid');
+        // Helper: Refresh Verse Grid for given chapter
+        const refreshVerseGrid = (ch) => {
+            const vsGrid = popoverEl.querySelector('#sc-c3-vs-grid');
+            const vsCountBadge = popoverEl.querySelector('#sc-c3-vs-count');
             if (!vsGrid) return;
 
-            const vCount = getVerseCountForBookAndChapter(pendingBookIndex, ch);
-            const vsCountBadge = popoverEl.querySelector('#sc-picker-vs-count');
-            if (vsCountBadge) {
-                vsCountBadge.textContent = vCount;
-            }
+            const vCount = getVerseCountForBookAndChapter(activePopover.pendingBookIndex, ch);
+            if (vsCountBadge) vsCountBadge.textContent = vCount;
 
-            let vsHtml = '';
+            let updatedVsHtml = '';
             for (let v = 1; v <= vCount; v++) {
-                const isActive = (v === (pane.targetVerse || 1)) && (ch === pane.chapter) && (pendingBookIndex === pane.bookIndex);
-                vsHtml += `
-                    <button type="button" class="sc-picker-split-btn ${isActive ? 'active' : ''}" data-v="${v}">
-                        ${v}
-                    </button>
-                `;
+                const isActive = v === activePopover.pendingVerse;
+                updatedVsHtml += `<button type="button" class="sc-c3-num-btn ${isActive ? 'active' : ''}" data-v="${v}">${v}</button>`;
             }
-            vsGrid.innerHTML = vsHtml;
-            vsGrid.scrollTop = 0;
-
-            attachVerseSplitEvents();
+            vsGrid.innerHTML = updatedVsHtml;
+            attachVerseEvents();
         };
 
-        const attachVerseSplitEvents = () => {
-            popoverEl.querySelectorAll('.sc-picker-split-btn[data-v]').forEach(vb => {
-                vb.addEventListener('click', (e) => {
+        const attachVerseEvents = () => {
+            popoverEl.querySelectorAll('.sc-c3-num-btn[data-v]').forEach(btn => {
+                btn.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    const v = parseInt(vb.dataset.v, 10);
+                    const v = parseInt(btn.dataset.v, 10);
                     applyPassageSelection(paneId, activePopover.pendingBookIndex, activePopover.pendingChapter, v);
                 });
             });
         };
 
-        popoverEl.querySelectorAll('.sc-picker-split-btn[data-ch]').forEach(cb => {
-            cb.addEventListener('click', (e) => {
+        // Event: Chapter Click
+        popoverEl.querySelectorAll('.sc-c3-num-btn[data-ch]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const ch = parseInt(cb.dataset.ch, 10);
+                const ch = parseInt(btn.dataset.ch, 10);
                 activePopover.pendingChapter = ch;
+                activePopover.pendingVerse = 1;
 
-                popoverEl.querySelectorAll('.sc-picker-split-btn[data-ch]').forEach(btn => {
-                    btn.classList.toggle('active', parseInt(btn.dataset.ch, 10) === ch);
+                popoverEl.querySelectorAll('.sc-c3-num-btn[data-ch]').forEach(b => {
+                    b.classList.toggle('active', parseInt(b.dataset.ch, 10) === ch);
                 });
 
-                const tabLabel = popoverEl.querySelector('.sc-picker-tab[data-tab="chapter_verse"] .sc-tab-label');
-                if (tabLabel) {
-                    const verseSuffix = (ch === pane.chapter && pane.targetVerse && pane.targetVerse > 1) ? `:${pane.targetVerse}` : '';
-                    tabLabel.textContent = `Ch ${ch}${verseSuffix}`;
-                }
+                const curB = allBooks[activePopover.pendingBookIndex] || { name: 'Book' };
+                const topLabel = popoverEl.querySelector('.sc-picker-current-label');
+                if (topLabel) topLabel.textContent = `${curB.name} ${ch}`;
 
-                updateVersesForChapter(ch);
+                refreshVerseGrid(ch);
             });
         });
 
-        attachVerseSplitEvents();
+        attachVerseEvents();
 
-        const allChip = popoverEl.querySelector('.sc-picker-all-chip');
-        if (allChip) {
-            allChip.addEventListener('click', (e) => {
+        // Event: All Verse Click
+        const allBtn = popoverEl.querySelector('.sc-c3-all-btn');
+        if (allBtn) {
+            allBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 applyPassageSelection(paneId, activePopover.pendingBookIndex, activePopover.pendingChapter, 1);
             });
         }
+
+        // Event: Book Click
+        popoverEl.querySelectorAll('.sc-c3-book-item[data-b-idx]').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const bIdx = parseInt(item.dataset.bIdx, 10);
+                activePopover.pendingBookIndex = bIdx;
+                activePopover.pendingChapter = 1;
+                activePopover.pendingVerse = 1;
+                renderPickerPopover();
+            });
+        });
     }
 
     function selectVerse(sourcePaneId, verseNum) {

@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passage Picker Design Concepts - My Bible</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-page: #191a1d;
+            --bg-card: #202124;
+            --bg-elevated: #292a2d;
+            --bg-active: #3c4043;
+            --bg-hover: #32353a;
+            --border: #3c4043;
+            --border-light: rgba(255, 255, 255, 0.08);
+            --text-primary: #e8eaed;
+            --text-secondary: #9aa0a6;
+            --text-muted: #70757a;
+            --accent-green: #4a9060;
+            --accent-green-bg: rgba(74, 144, 96, 0.2);
+            --gold: #c4911a;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --font-main: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-tamil: 'Noto Sans Tamil', sans-serif;
+        }
+
+        body.light-theme {
+            --bg-page: #f0f2f5;
+            --bg-card: #ffffff;
+            --bg-elevated: #f8f9fa;
+            --bg-active: #e8eaed;
+            --bg-hover: #f1f3f4;
+            --border: #dadce0;
+            --border-light: rgba(0, 0, 0, 0.08);
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+            --text-muted: #80868b;
+            --accent-green: #2e7d32;
+            --accent-green-bg: rgba(46, 125, 50, 0.12);
+            --gold: #b07d10;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background: var(--bg-page);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        /* Top Navigation Bar */
+        .demo-bar {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .demo-title-wrap h1 {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .demo-title-wrap p {
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            margin-top: 3px;
+        }
+
+        .demo-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .demo-seg {
+            display: flex;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            padding: 3px;
+            border-radius: var(--radius-md);
+            gap: 4px;
+        }
+
+        .demo-seg-btn {
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            padding: 6px 14px;
+            font-size: 12.5px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-family: inherit;
+        }
+
+        .demo-seg-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .demo-seg-btn.active {
+            background: var(--bg-active);
+            color: var(--text-primary);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        }
+
+        .theme-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            height: 34px;
+            padding: 0 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            font-size: 12.5px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.15s ease;
+        }
+
+        .theme-toggle-btn:hover {
+            background: var(--bg-hover);
+        }
+
+        /* Live Selection Feedback Badge */
+        .live-preview-pill {
+            background: var(--accent-green-bg);
+            border: 1px solid var(--accent-green);
+            color: var(--text-primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .live-preview-pill .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-green);
+        }
+
+        /* Showcase Layout Grid */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 24px;
+            align-items: start;
+        }
+
+        .concept-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .concept-card.highlight {
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 2px var(--accent-green-bg), 0 12px 32px rgba(0, 0, 0, 0.35);
+        }
+
+        .concept-header {
+            padding: 14px 18px;
+            background: var(--bg-elevated);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .concept-badge {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--accent-green);
+            background: var(--accent-green-bg);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .concept-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .concept-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding: 8px 18px 12px;
+            border-bottom: 1px solid var(--border-light);
+            line-height: 1.4;
+        }
+
+        .concept-content {
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.05);
+            min-height: 440px;
+        }
+
+        /* ==========================================================================
+           COMMON PICKER STYLES (MATCHES CURRENT BIBLE UI)
+           ========================================================================== */
+        .picker-frame {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+            width: 100%;
+        }
+
+        .picker-topbar {
+            height: 44px;
+            padding: 0 12px;
+            background: var(--bg-elevated);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .picker-topbar-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .picker-close-icon {
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--text-secondary);
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+
+        .picker-close-icon:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        /* Scrollbars matching Bible UI */
+        .custom-scroll::-webkit-scrollbar {
+            width: 5px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+        .custom-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+        }
+
+        /* ==========================================================================
+           CONCEPT 1: 3-COLUMN MILLER COLUMNS (Native Bible Drawer Replica)
+           ========================================================================== */
+        .c1-container {
+            display: flex;
+            height: 380px;
+            overflow: hidden;
+        }
+
+        /* Column 1: Books Sidebar */
+        .c1-books-col {
+            width: 190px;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-card);
+        }
+
+        .c1-search-box {
+            padding: 8px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-elevated);
+        }
+
+        .c1-search-input {
+            width: 100%;
+            height: 28px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 0 10px;
+            font-size: 11.5px;
+            color: var(--text-primary);
+            outline: none;
+            font-family: inherit;
+        }
+
+        .c1-test-pills {
+            display: flex;
+            gap: 4px;
+            padding: 6px 8px;
+            background: var(--bg-elevated);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .c1-test-btn {
+            flex: 1;
+            padding: 3px 0;
+            font-size: 10.5px;
+            font-weight: 600;
+            border-radius: 4px;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+
+        .c1-test-btn.active {
+            background: var(--bg-active);
+            color: var(--text-primary);
+        }
+
+        .c1-books-list {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .c1-book-item {
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border-light);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            transition: background 0.12s ease;
+        }
+
+        .c1-book-item:hover {
+            background: var(--bg-hover);
+        }
+
+        .c1-book-item.active {
+            background: var(--bg-active);
+            border-left: 3px solid var(--accent-green);
+        }
+
+        .c1-book-en {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .c1-book-ta {
+            font-size: 10.5px;
+            color: var(--text-secondary);
+            font-family: var(--font-tamil);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Column 2: Chapters Column */
+        .c1-num-col {
+            width: 85px;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elevated);
+        }
+
+        .c1-col-header {
+            padding: 8px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .c1-col-header .badge {
+            background: var(--bg-active);
+            padding: 1px 5px;
+            border-radius: 8px;
+            font-size: 9px;
+            color: var(--text-primary);
+        }
+
+        .c1-num-list {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        /* .number-item exactly matching styles.css */
+        .c1-number-item {
+            padding: 9px 0;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: background 0.12s ease, color 0.12s ease;
+            border-bottom: 1px solid var(--border-light);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .c1-number-item:hover {
+            background: var(--bg-active);
+            color: var(--text-primary);
+        }
+
+        .c1-number-item.active {
+            background: var(--bg-active);
+            color: var(--text-primary);
+            font-weight: 700;
+            border-left: 3px solid var(--accent-green);
+        }
+
+        .c1-all-chip {
+            padding: 8px 0;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--accent-green);
+            background: var(--accent-green-bg);
+            cursor: pointer;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.12s ease;
+        }
+
+        .c1-all-chip:hover {
+            filter: brightness(1.15);
+        }
+
+        /* ==========================================================================
+           CONCEPT 2: STEP-BY-STEP PROGRESSIVE FLOW (With Breadcrumbs)
+           ========================================================================== */
+        .c2-frame {
+            width: 380px;
+        }
+
+        .c2-breadcrumb-bar {
+            padding: 8px 12px;
+            background: var(--bg-elevated);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        .c2-crumb-btn {
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            transition: all 0.12s ease;
+        }
+
+        .c2-crumb-btn:hover {
+            color: var(--text-primary);
+            background: var(--bg-hover);
+        }
+
+        .c2-crumb-btn.active {
+            color: var(--accent-green);
+            font-weight: 700;
+            background: var(--accent-green-bg);
+        }
+
+        .c2-crumb-sep {
+            color: var(--text-muted);
+            font-size: 11px;
+        }
+
+        .c2-body {
+            height: 330px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .c2-step-view {
+            position: absolute;
+            inset: 0;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow: hidden;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .c2-step-view.hidden {
+            display: none;
+        }
+
+        .c2-books-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .c2-book-btn {
+            padding: 8px 10px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-primary);
+            transition: all 0.12s ease;
+        }
+
+        .c2-book-btn:hover {
+            background: var(--bg-hover);
+            border-color: var(--text-secondary);
+        }
+
+        .c2-book-btn.active {
+            border-color: var(--accent-green);
+            background: var(--accent-green-bg);
+        }
+
+        .c2-grid-5 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+            overflow-y: auto;
+            flex: 1;
+            padding: 2px;
+        }
+
+        .c2-num-btn {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.12s ease;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .c2-num-btn:hover {
+            background: var(--bg-hover);
+            border-color: var(--text-secondary);
+            transform: scale(1.05);
+        }
+
+        .c2-num-btn.active {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(74, 144, 96, 0.4);
+        }
+
+        .c2-section-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+            padding: 0 2px;
+        }
+
+        .c2-section-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        .c2-all-pill {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 12px;
+            border: 1px solid var(--accent-green);
+            background: var(--accent-green-bg);
+            color: var(--accent-green);
+            cursor: pointer;
+        }
+
+        /* ==========================================================================
+           CONCEPT 3: COMPACT BIBLE SHEET (Split Book List + Stacked Grids)
+           ========================================================================== */
+        .c3-frame {
+            width: 480px;
+        }
+
+        .c3-layout {
+            display: flex;
+            height: 380px;
+        }
+
+        .c3-left {
+            width: 175px;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-card);
+        }
+
+        .c3-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elevated);
+            padding: 10px 12px;
+            gap: 10px;
+            overflow: hidden;
+        }
+
+        .c3-section {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+            min-height: 0;
+        }
+
+        .c3-sec-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .c3-sec-label {
+            font-size: 10.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-secondary);
+        }
+
+        .c3-grid-6 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 5px;
+            overflow-y: auto;
+            flex: 1;
+            padding: 2px;
+        }
+
+        .c3-btn {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.12s ease;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .c3-btn:hover {
+            background: var(--bg-hover);
+            border-color: var(--text-secondary);
+        }
+
+        .c3-btn.active {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .c3-divider {
+            height: 1px;
+            background: var(--border);
+            flex-shrink: 0;
+        }
+
+        /* SVG icon sizing */
+        svg {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Demo Bar -->
+    <header class="demo-bar">
+        <div class="demo-title-wrap">
+            <h1>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                    <path d="M12 3v18"></path>
+                </svg>
+                Passage Picker Design Concepts
+            </h1>
+            <p>Compare all 3 designs adhering strictly to the native Bible UI theme (Dark/Light, clean density, tabular numbers).</p>
+        </div>
+
+        <div class="demo-controls">
+            <!-- View Selector -->
+            <div class="demo-seg" id="view-mode-seg">
+                <button type="button" class="demo-seg-btn active" data-view="all">Show All 3</button>
+                <button type="button" class="demo-seg-btn" data-view="c1">Concept 1</button>
+                <button type="button" class="demo-seg-btn" data-view="c2">Concept 2</button>
+                <button type="button" class="demo-seg-btn" data-view="c3">Concept 3</button>
+            </div>
+
+            <!-- Theme Toggle -->
+            <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light/Dark Theme">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <span id="theme-btn-text">Light Theme</span>
+            </button>
+
+            <!-- Live Selection Indicator -->
+            <div class="live-preview-pill">
+                <span class="dot"></span>
+                <span>Active: <strong id="global-selection-label">II Corinthians 6:14</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Showcase Grid -->
+    <main class="showcase-grid" id="showcase-grid">
+
+        <!-- ================================================================
+             CONCEPT 1: 3-COLUMN MILLER COLUMNS
+             ================================================================ -->
+        <section class="concept-card highlight" id="card-c1">
+            <div class="concept-header">
+                <span class="concept-title">Concept 1: 3-Column Miller Columns</span>
+                <span class="concept-badge">Recommended</span>
+            </div>
+            <div class="concept-desc">
+                Matches the desktop Bible drawer directly: <strong>Books</strong> on the left, slim <strong>Chapters</strong> column in the middle, and slim <strong>Verses</strong> column on the right. Instant one-click selection with zero page flips.
+            </div>
+            <div class="concept-content">
+                <div class="picker-frame" style="max-width: 440px;">
+                    <div class="picker-topbar">
+                        <span class="picker-topbar-title">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                            <span id="c1-top-label">II Corinthians 6:14</span>
+                        </span>
+                        <button type="button" class="picker-close-icon" title="Close">✕</button>
+                    </div>
+
+                    <div class="c1-container">
+                        <!-- Column 1: Books -->
+                        <div class="c1-books-col">
+                            <div class="c1-search-box">
+                                <input type="text" class="c1-search-input" id="c1-filter" placeholder="Search book...">
+                            </div>
+                            <div class="c1-test-pills">
+                                <button type="button" class="c1-test-btn active" data-test="all">All</button>
+                                <button type="button" class="c1-test-btn" data-test="old">OT</button>
+                                <button type="button" class="c1-test-btn" data-test="new">NT</button>
+                            </div>
+                            <div class="c1-books-list custom-scroll" id="c1-books"></div>
+                        </div>
+
+                        <!-- Column 2: Chapters -->
+                        <div class="c1-num-col">
+                            <div class="c1-col-header">
+                                <span>Ch</span>
+                                <span class="badge" id="c1-ch-count">13</span>
+                            </div>
+                            <div class="c1-num-list custom-scroll" id="c1-chapters"></div>
+                        </div>
+
+                        <!-- Column 3: Verses -->
+                        <div class="c1-num-col">
+                            <div class="c1-col-header">
+                                <span>Vs</span>
+                                <span class="badge" id="c1-vs-count">18</span>
+                            </div>
+                            <div class="c1-all-chip" id="c1-all-vs">All</div>
+                            <div class="c1-num-list custom-scroll" id="c1-verses"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             CONCEPT 2: STEP-BY-STEP FLOW
+             ================================================================ -->
+        <section class="concept-card" id="card-c2">
+            <div class="concept-header">
+                <span class="concept-title">Concept 2: Progressive Step Flow</span>
+                <span class="concept-badge" style="color: #60a5fa; background: rgba(96, 165, 250, 0.15);">Compact</span>
+            </div>
+            <div class="concept-desc">
+                Compact guided flow: Click <strong>Book</strong> ➔ advances to <strong>Chapter grid</strong> ➔ advances to <strong>Verse grid</strong>. Clean breadcrumbs let you jump backward anytime.
+            </div>
+            <div class="concept-content">
+                <div class="picker-frame c2-frame">
+                    <div class="picker-topbar">
+                        <span class="picker-topbar-title">Select Scripture</span>
+                        <button type="button" class="picker-close-icon" title="Close">✕</button>
+                    </div>
+
+                    <!-- Breadcrumbs -->
+                    <div class="c2-breadcrumb-bar">
+                        <button type="button" class="c2-crumb-btn" id="c2-crumb-book">II Corinthians</button>
+                        <span class="c2-crumb-sep">›</span>
+                        <button type="button" class="c2-crumb-btn" id="c2-crumb-ch">Ch 6</button>
+                        <span class="c2-crumb-sep">›</span>
+                        <button type="button" class="c2-crumb-btn active" id="c2-crumb-vs">Vs 14</button>
+                    </div>
+
+                    <div class="c2-body">
+                        <!-- Step 1: Books -->
+                        <div class="c2-step-view hidden" id="c2-step-books">
+                            <input type="text" class="c1-search-input" id="c2-filter" placeholder="Search 66 books...">
+                            <div class="c2-books-grid custom-scroll" id="c2-books-grid"></div>
+                        </div>
+
+                        <!-- Step 2: Chapters -->
+                        <div class="c2-step-view hidden" id="c2-step-chapters">
+                            <div class="c2-section-title-row">
+                                <span class="c2-section-title">Select Chapter</span>
+                                <span class="badge" id="c2-total-ch">13 Chapters</span>
+                            </div>
+                            <div class="c2-grid-5 custom-scroll" id="c2-ch-grid"></div>
+                        </div>
+
+                        <!-- Step 3: Verses -->
+                        <div class="c2-step-view" id="c2-step-verses">
+                            <div class="c2-section-title-row">
+                                <span class="c2-section-title">Select Verse</span>
+                                <button type="button" class="c2-all-pill" id="c2-all-btn">Entire Chapter</button>
+                            </div>
+                            <div class="c2-grid-5 custom-scroll" id="c2-vs-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             CONCEPT 3: COMPACT BIBLE SHEET
+             ================================================================ -->
+        <section class="concept-card" id="card-c3">
+            <div class="concept-header">
+                <span class="concept-title">Concept 3: Compact Bible Sheet</span>
+                <span class="concept-badge" style="color: #c084fc; background: rgba(192, 132, 252, 0.15);">Dual View</span>
+            </div>
+            <div class="concept-desc">
+                Book list docked on the left, with <strong>Chapter</strong> and <strong>Verse</strong> number grids neatly stacked on the right. Dense, balanced, with no awkward gaping white space.
+            </div>
+            <div class="concept-content">
+                <div class="picker-frame c3-frame">
+                    <div class="picker-topbar">
+                        <span class="picker-topbar-title" id="c3-top-label">II Corinthians 6:14</span>
+                        <button type="button" class="picker-close-icon" title="Close">✕</button>
+                    </div>
+
+                    <div class="c3-layout">
+                        <!-- Left Book List -->
+                        <div class="c3-left">
+                            <div class="c1-search-box">
+                                <input type="text" class="c1-search-input" id="c3-filter" placeholder="Filter books...">
+                            </div>
+                            <div class="c1-books-list custom-scroll" id="c3-books"></div>
+                        </div>
+
+                        <!-- Right Stacked Grids -->
+                        <div class="c3-right">
+                            <!-- Chapter Section -->
+                            <div class="c3-section">
+                                <div class="c3-sec-header">
+                                    <span class="c3-sec-label">Chapter</span>
+                                    <span class="badge" id="c3-ch-badge">13</span>
+                                </div>
+                                <div class="c3-grid-6 custom-scroll" id="c3-chapters"></div>
+                            </div>
+
+                            <div class="c3-divider"></div>
+
+                            <!-- Verse Section -->
+                            <div class="c3-section">
+                                <div class="c3-sec-header">
+                                    <span class="c3-sec-label">Verse</span>
+                                    <button type="button" class="c1-all-chip" style="padding: 2px 8px; border-radius: 10px; font-size: 10.5px;" id="c3-all-btn">All</button>
+                                </div>
+                                <div class="c3-grid-6 custom-scroll" id="c3-verses"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bible Books Metadata -->
+    <script src="../data/bible-meta.js?cb=20261027132405"></script>
+    <script src="../js/script.js?cb=20261027132405"></script>
+
+    <script>
+        (function() {
+            // State
+            const state = {
+                bookIndex: 46, // II Corinthians
+                chapter: 6,
+                verse: 14
+            };
+
+            function getVerseCount(bIdx, ch) {
+                if (typeof bibleMeta !== 'undefined' && bibleMeta[bIdx] && bibleMeta[bIdx].chapters) {
+                    return bibleMeta[bIdx].chapters[ch - 1] || 25;
+                }
+                return 18;
+            }
+
+            function getBook(bIdx) {
+                if (typeof bibleBooks !== 'undefined' && bibleBooks[bIdx]) {
+                    return bibleBooks[bIdx];
+                }
+                return { name: 'II Corinthians', tamilName: '2 கொரிந்தியர்', chapters: 13, testament: 'new' };
+            }
+
+            function updateGlobalLabel() {
+                const b = getBook(state.bookIndex);
+                const vsText = state.verse > 1 ? `:${state.verse}` : '';
+                const fullText = `${b.name} ${state.chapter}${vsText}`;
+                document.getElementById('global-selection-label').textContent = fullText;
+                document.getElementById('c1-top-label').textContent = fullText;
+                document.getElementById('c3-top-label').textContent = fullText;
+            }
+
+            // ── Concept 1: 3-Column Miller Columns ──
+            function renderC1() {
+                const booksContainer = document.getElementById('c1-books');
+                const chContainer = document.getElementById('c1-chapters');
+                const vsContainer = document.getElementById('c1-verses');
+
+                const curBook = getBook(state.bookIndex);
+                const totalCh = curBook.chapters;
+                const totalVs = getVerseCount(state.bookIndex, state.chapter);
+
+                document.getElementById('c1-ch-count').textContent = totalCh;
+                document.getElementById('c1-vs-count').textContent = totalVs;
+
+                // Render Books
+                const filterQ = (document.getElementById('c1-filter').value || '').toLowerCase().trim();
+                const test = document.querySelector('.c1-test-btn.active').dataset.test;
+
+                let booksHtml = '';
+                (typeof bibleBooks !== 'undefined' ? bibleBooks : []).forEach((b, idx) => {
+                    if (test !== 'all' && b.testament !== test) return;
+                    if (filterQ && !b.name.toLowerCase().includes(filterQ) && !(b.tamilName && b.tamilName.includes(filterQ))) return;
+
+                    const isActive = idx === state.bookIndex;
+                    booksHtml += `
+                        <div class="c1-book-item ${isActive ? 'active' : ''}" data-idx="${idx}">
+                            <span class="c1-book-en">${b.name}</span>
+                            <span class="c1-book-ta">${b.tamilName || ''}</span>
+                        </div>
+                    `;
+                });
+                booksContainer.innerHTML = booksHtml;
+
+                // Render Chapters
+                let chHtml = '';
+                for (let c = 1; c <= totalCh; c++) {
+                    const isActive = c === state.chapter;
+                    chHtml += `<div class="c1-number-item ${isActive ? 'active' : ''}" data-ch="${c}">${c}</div>`;
+                }
+                chContainer.innerHTML = chHtml;
+
+                // Render Verses
+                let vsHtml = '';
+                for (let v = 1; v <= totalVs; v++) {
+                    const isActive = v === state.verse;
+                    vsHtml += `<div class="c1-number-item ${isActive ? 'active' : ''}" data-v="${v}">${v}</div>`;
+                }
+                vsContainer.innerHTML = vsHtml;
+
+                // Scroll active items into view
+                const activeBk = booksContainer.querySelector('.c1-book-item.active');
+                if (activeBk) activeBk.scrollIntoView({ block: 'nearest' });
+                const activeCh = chContainer.querySelector('.c1-number-item.active');
+                if (activeCh) activeCh.scrollIntoView({ block: 'nearest' });
+                const activeVs = vsContainer.querySelector('.c1-number-item.active');
+                if (activeVs) activeVs.scrollIntoView({ block: 'nearest' });
+            }
+
+            // Events for C1
+            document.getElementById('c1-books').addEventListener('click', (e) => {
+                const item = e.target.closest('.c1-book-item');
+                if (!item) return;
+                state.bookIndex = parseInt(item.dataset.idx, 10);
+                state.chapter = 1;
+                state.verse = 1;
+                updateAll();
+            });
+
+            document.getElementById('c1-chapters').addEventListener('click', (e) => {
+                const item = e.target.closest('.c1-number-item');
+                if (!item) return;
+                state.chapter = parseInt(item.dataset.ch, 10);
+                state.verse = 1;
+                updateAll();
+            });
+
+            document.getElementById('c1-verses').addEventListener('click', (e) => {
+                const item = e.target.closest('.c1-number-item');
+                if (!item) return;
+                state.verse = parseInt(item.dataset.v, 10);
+                updateAll();
+            });
+
+            document.getElementById('c1-all-vs').addEventListener('click', () => {
+                state.verse = 1;
+                updateAll();
+            });
+
+            document.getElementById('c1-filter').addEventListener('input', renderC1);
+            document.querySelectorAll('.c1-test-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.c1-test-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    renderC1();
+                });
+            });
+
+            // ── Concept 2: Step-by-Step Flow ──
+            let c2CurrentStep = 'verses'; // 'books' | 'chapters' | 'verses'
+
+            function setC2Step(step) {
+                c2CurrentStep = step;
+                document.getElementById('c2-step-books').classList.toggle('hidden', step !== 'books');
+                document.getElementById('c2-step-chapters').classList.toggle('hidden', step !== 'chapters');
+                document.getElementById('c2-step-verses').classList.toggle('hidden', step !== 'verses');
+
+                document.getElementById('c2-crumb-book').classList.toggle('active', step === 'books');
+                document.getElementById('c2-crumb-ch').classList.toggle('active', step === 'chapters');
+                document.getElementById('c2-crumb-vs').classList.toggle('active', step === 'verses');
+            }
+
+            function renderC2() {
+                const curBook = getBook(state.bookIndex);
+                const totalCh = curBook.chapters;
+                const totalVs = getVerseCount(state.bookIndex, state.chapter);
+
+                document.getElementById('c2-crumb-book').textContent = curBook.name;
+                document.getElementById('c2-crumb-ch').textContent = `Ch ${state.chapter}`;
+                document.getElementById('c2-crumb-vs').textContent = `Vs ${state.verse}`;
+                document.getElementById('c2-total-ch').textContent = `${totalCh} Chapters`;
+
+                // Render Books Grid
+                const filterQ = (document.getElementById('c2-filter').value || '').toLowerCase().trim();
+                let bHtml = '';
+                (typeof bibleBooks !== 'undefined' ? bibleBooks : []).forEach((b, idx) => {
+                    if (filterQ && !b.name.toLowerCase().includes(filterQ)) return;
+                    const isActive = idx === state.bookIndex;
+                    bHtml += `
+                        <button type="button" class="c2-book-btn ${isActive ? 'active' : ''}" data-idx="${idx}">
+                            <span>${b.name}</span>
+                            <span style="font-size: 10px; opacity: 0.6;">${b.chapters}</span>
+                        </button>
+                    `;
+                });
+                document.getElementById('c2-books-grid').innerHTML = bHtml;
+
+                // Render Chapters Grid
+                let chHtml = '';
+                for (let c = 1; c <= totalCh; c++) {
+                    const isActive = c === state.chapter;
+                    chHtml += `<button type="button" class="c2-num-btn ${isActive ? 'active' : ''}" data-ch="${c}">${c}</button>`;
+                }
+                document.getElementById('c2-ch-grid').innerHTML = chHtml;
+
+                // Render Verses Grid
+                let vsHtml = '';
+                for (let v = 1; v <= totalVs; v++) {
+                    const isActive = v === state.verse;
+                    vsHtml += `<button type="button" class="c2-num-btn ${isActive ? 'active' : ''}" data-v="${v}">${v}</button>`;
+                }
+                document.getElementById('c2-vs-grid').innerHTML = vsHtml;
+            }
+
+            document.getElementById('c2-crumb-book').addEventListener('click', () => setC2Step('books'));
+            document.getElementById('c2-crumb-ch').addEventListener('click', () => setC2Step('chapters'));
+            document.getElementById('c2-crumb-vs').addEventListener('click', () => setC2Step('verses'));
+
+            document.getElementById('c2-books-grid').addEventListener('click', (e) => {
+                const btn = e.target.closest('.c2-book-btn');
+                if (!btn) return;
+                state.bookIndex = parseInt(btn.dataset.idx, 10);
+                state.chapter = 1;
+                state.verse = 1;
+                setC2Step('chapters');
+                updateAll();
+            });
+
+            document.getElementById('c2-ch-grid').addEventListener('click', (e) => {
+                const btn = e.target.closest('.c2-num-btn');
+                if (!btn) return;
+                state.chapter = parseInt(btn.dataset.ch, 10);
+                state.verse = 1;
+                setC2Step('verses');
+                updateAll();
+            });
+
+            document.getElementById('c2-vs-grid').addEventListener('click', (e) => {
+                const btn = e.target.closest('.c2-num-btn');
+                if (!btn) return;
+                state.verse = parseInt(btn.dataset.v, 10);
+                updateAll();
+            });
+
+            document.getElementById('c2-all-btn').addEventListener('click', () => {
+                state.verse = 1;
+                updateAll();
+            });
+
+            document.getElementById('c2-filter').addEventListener('input', renderC2);
+
+            // ── Concept 3: Compact Bible Sheet ──
+            function renderC3() {
+                const curBook = getBook(state.bookIndex);
+                const totalCh = curBook.chapters;
+                const totalVs = getVerseCount(state.bookIndex, state.chapter);
+
+                document.getElementById('c3-ch-badge').textContent = totalCh;
+
+                // Books
+                const filterQ = (document.getElementById('c3-filter').value || '').toLowerCase().trim();
+                let bHtml = '';
+                (typeof bibleBooks !== 'undefined' ? bibleBooks : []).forEach((b, idx) => {
+                    if (filterQ && !b.name.toLowerCase().includes(filterQ)) return;
+                    const isActive = idx === state.bookIndex;
+                    bHtml += `
+                        <div class="c1-book-item ${isActive ? 'active' : ''}" data-idx="${idx}">
+                            <span class="c1-book-en">${b.name}</span>
+                            <span class="c1-book-ta">${b.tamilName || ''}</span>
+                        </div>
+                    `;
+                });
+                const bContainer = document.getElementById('c3-books');
+                bContainer.innerHTML = bHtml;
+                const activeBk = bContainer.querySelector('.c1-book-item.active');
+                if (activeBk) activeBk.scrollIntoView({ block: 'nearest' });
+
+                // Chapters
+                let chHtml = '';
+                for (let c = 1; c <= totalCh; c++) {
+                    const isActive = c === state.chapter;
+                    chHtml += `<button type="button" class="c3-btn ${isActive ? 'active' : ''}" data-ch="${c}">${c}</button>`;
+                }
+                document.getElementById('c3-chapters').innerHTML = chHtml;
+
+                // Verses
+                let vsHtml = '';
+                for (let v = 1; v <= totalVs; v++) {
+                    const isActive = v === state.verse;
+                    vsHtml += `<button type="button" class="c3-btn ${isActive ? 'active' : ''}" data-v="${v}">${v}</button>`;
+                }
+                document.getElementById('c3-verses').innerHTML = vsHtml;
+            }
+
+            document.getElementById('c3-books').addEventListener('click', (e) => {
+                const item = e.target.closest('.c1-book-item');
+                if (!item) return;
+                state.bookIndex = parseInt(item.dataset.idx, 10);
+                state.chapter = 1;
+                state.verse = 1;
+                updateAll();
+            });
+
+            document.getElementById('c3-chapters').addEventListener('click', (e) => {
+                const btn = e.target.closest('.c3-btn');
+                if (!btn) return;
+                state.chapter = parseInt(btn.dataset.ch, 10);
+                state.verse = 1;
+                updateAll();
+            });
+
+            document.getElementById('c3-verses').addEventListener('click', (e) => {
+                const btn = e.target.closest('.c3-btn');
+                if (!btn) return;
+                state.verse = parseInt(btn.dataset.v, 10);
+                updateAll();
+            });
+
+            document.getElementById('c3-all-btn').addEventListener('click', () => {
+                state.verse = 1;
+                updateAll();
+            });
+
+            document.getElementById('c3-filter').addEventListener('input', renderC3);
+
+            function updateAll() {
+                updateGlobalLabel();
+                renderC1();
+                renderC2();
+                renderC3();
+            }
+
+            // Theme Toggle
+            const themeBtn = document.getElementById('theme-toggle-btn');
+            themeBtn.addEventListener('click', () => {
+                const isLight = document.body.classList.toggle('light-theme');
+                document.getElementById('theme-btn-text').textContent = isLight ? 'Dark Theme' : 'Light Theme';
+            });
+
+            // View Mode Switcher
+            document.querySelectorAll('#view-mode-seg .demo-seg-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('#view-mode-seg .demo-seg-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const view = btn.dataset.view;
+
+                    document.getElementById('card-c1').style.display = (view === 'all' || view === 'c1') ? 'flex' : 'none';
+                    document.getElementById('card-c2').style.display = (view === 'all' || view === 'c2') ? 'flex' : 'none';
+                    document.getElementById('card-c3').style.display = (view === 'all' || view === 'c3') ? 'flex' : 'none';
+                });
+            });
+
+            // Initial render
+            updateAll();
+        })();
+    </script>
+</body>
+</html>
