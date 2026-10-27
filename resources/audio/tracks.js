@@ -1001,7 +1001,7 @@ const BIBLE_TRACKS = [
     duration: "63:54 min",
     verse: "Numbers 22:1-22",
     desc: "Who was Balaam, and what about his identity, his role as a prophet, and his relationship with God?",
-    category: "Characters"
+    category: "Characters, Balaam"
   },
   {
     day: 98,
@@ -1009,7 +1009,15 @@ const BIBLE_TRACKS = [
     duration: "31:20 min",
     verse: "Numbers 22:21-35",
     desc: "How did God open a donkey’s mouth to speak and reveal the angel of the LORD to Balaam?",
-    category: "Do You Know?"
+    category: "Do You Know?, Balaam"
+  },
+  {
+    day: 99,
+    title: "The Prophecies of Balaam",
+    duration: "58:13 min",
+    verse: "Numbers 23–24",
+    desc: "What did God reveal through Balaam about Israel's blessings, future king, and coming ruler?",
+    category: "Prophecies, Balaam"
   }
 ];
 
@@ -1037,9 +1045,11 @@ const BIBLE_FOLDERS = [
   { name: "Leviticus", type: "category", value: "Leviticus" },
   { name: "Parables", type: "category", value: "Parables" },
   { name: "Prophets", type: "category", value: "Prophets" },
+  { name: "Prophecies", type: "category", value: "Prophecies" },
   { name: "7's", type: "category", value: "7's" },
   { name: "Miracles", type: "category", value: "Miracles" },
   { name: "Genesis", type: "category", value: "Genesis" },
   { name: "Exodus", type: "category", value: "Exodus" },
   { name: "Teachings", type: "category", value: "Teachings" },
+  { name: "Balaam", type: "category", value: "Balaam" },
 ];
