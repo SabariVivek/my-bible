@@ -34,16 +34,17 @@
     <title>My Bible</title>
     <link rel="icon" type="image/png" href="resources/icons/bible.png?cb=20251126003722">
     <link rel="apple-touch-icon" href="resources/icons/bible.png?cb=20251126003722">
-    <link rel="stylesheet" href="src/styles/styles.css?cb=20261026135858">
+    <link rel="stylesheet" href="src/styles/styles.css?cb=20261027123707">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20261026135858">
-    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20261026135858">
-    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20261026135858">
-    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20261026135858">
-    <link rel="stylesheet" href="src/styles/verse-history.css?cb=20261026135858">
-    <link rel="stylesheet" href="src/styles/desktop-search.css?cb=20261026135858">
-    <link rel="stylesheet" href="src/styles/topics-browser.css?cb=20261026135858">
+    <link rel="stylesheet" href="src/styles/chapter-summary-pullout.css?cb=20261027123707">
+    <link rel="stylesheet" href="src/styles/ai-summary.css?cb=20261027123707">
+    <link rel="stylesheet" href="src/styles/bible-selector.css?cb=20261027123707">
+    <link rel="stylesheet" href="src/styles/king-transition-cards.css?cb=20261027123707">
+    <link rel="stylesheet" href="src/styles/verse-history.css?cb=20261027123707">
+    <link rel="stylesheet" href="src/styles/desktop-search.css?cb=20261027123707">
+    <link rel="stylesheet" href="src/styles/topics-browser.css?cb=20261027123707">
+    <link rel="stylesheet" href="src/styles/scripture-compare.css?cb=20261027123707">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
@@ -51,7 +52,7 @@
     <!-- Cropper.js for profile image cropping -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css?cb=20260418170421">
     <!-- Cache Management -->
-    <script src="src/js/cache-manager.js?cb=20261026135858"></script>
+    <script src="src/js/cache-manager.js?cb=20261027123707"></script>
 </head>
 
 <body>
@@ -135,6 +136,11 @@
                         </svg>
                     </button>
                 </div>
+                <!-- Scripture Compare button (Desktop Only) -->
+                <button id="compare-bible-btn" class="icon-btn compare-bible-btn desktop-only" aria-label="Compare Scripture"
+                    title="Compare Scripture (Side-by-Side)">
+                    <img src="resources/icons/compare.png" class="compare-bible-icon" alt="Compare">
+                </button>
             </div>
             <!-- Quick Suggestions & Passage Preview Dropdown -->
             <div class="desktop-top-search-dropdown" id="desktop-top-search-dropdown" style="display: none;"></div>
@@ -200,6 +206,7 @@
                     <path d="M12 7v5l4 2"></path>
                 </svg>
             </button>
+
 
             <!-- Current User Avatar -->
             <div id="current-user-avatar" class="current-user-avatar" style="display: none;" title="Current user"></div>
@@ -1767,33 +1774,34 @@
     </div>
 
     <!-- Bundled Bible Data (loads all books) -->
-    <script src="data/bible/bible-data-loader.js?cb=20261026135858"></script>
+    <script src="data/bible/bible-data-loader.js?cb=20261027123707"></script>
 
     <!-- Supabase Client Library (Local for Offline Support) -->
-    <script src="src/lib/supabase.js?cb=20261026135858"></script>
+    <script src="src/lib/supabase.js?cb=20261027123707"></script>
     <!-- Cropper.js for profile image cropping -->
     <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js?cb=20260418170421"></script>
 
 
-    <script src="config/config.js?cb=20261026135858"></script>
-    <script src="src/js/bible-data-manager.js?cb=20261026135858"></script>
-    <script src="src/js/voice-command.js?cb=20261026135858"></script>
-    <script src="src/data/verse-headers-english.js?cb=20261026135858"></script>
-    <script src="src/data/verse-headers-tamil.js?cb=20261026135858"></script>
-    <script src="src/data/bible-meta.js?cb=20261026135858"></script>
-    <script src="src/data/bibleAuthors.js?cb=20261026135858"></script>
-    <script src="src/data/short-summary.js?cb=20261026135858"></script>
-    <script src="src/data/book-intro.js?cb=20261026135858"></script>
-    <script src="src/data/bible-popups.js?cb=20261026135858"></script>
-    <script src="src/data/king-transition-data.js?cb=20261026135858"></script>
-    <script src="src/js/verse-history-manager.js?cb=20261026135858"></script>
-    <script src="src/js/script.js?cb=20261026135858"></script>
-    <script defer src="src/js/desktop-search.js?cb=20261026135858"></script>
-    <script defer src="src/js/topics-browser.js?cb=20261026135858"></script>
-    <script async src="src/data/bible-topics.js?cb=20261026135858"></script>
-    <script src="src/js/bible-selector.js?cb=20261026135858"></script>
-    <script src="src/js/chapter-summary-pullout.js?cb=20261026135858"></script>
-    <script src="src/js/ai-summary.js?cb=20261026135858"></script>
+    <script src="config/config.js?cb=20261027123707"></script>
+    <script src="src/js/bible-data-manager.js?cb=20261027123707"></script>
+    <script src="src/js/voice-command.js?cb=20261027123707"></script>
+    <script src="src/data/verse-headers-english.js?cb=20261027123707"></script>
+    <script src="src/data/verse-headers-tamil.js?cb=20261027123707"></script>
+    <script src="src/data/bible-meta.js?cb=20261027123707"></script>
+    <script src="src/data/bibleAuthors.js?cb=20261027123707"></script>
+    <script src="src/data/short-summary.js?cb=20261027123707"></script>
+    <script src="src/data/book-intro.js?cb=20261027123707"></script>
+    <script src="src/data/bible-popups.js?cb=20261027123707"></script>
+    <script src="src/data/king-transition-data.js?cb=20261027123707"></script>
+    <script src="src/js/verse-history-manager.js?cb=20261027123707"></script>
+    <script src="src/js/script.js?cb=20261027123707"></script>
+    <script defer src="src/js/desktop-search.js?cb=20261027123707"></script>
+    <script defer src="src/js/topics-browser.js?cb=20261027123707"></script>
+    <script async src="src/data/bible-topics.js?cb=20261027123707"></script>
+    <script src="src/js/bible-selector.js?cb=20261027123707"></script>
+    <script src="src/js/chapter-summary-pullout.js?cb=20261027123707"></script>
+    <script src="src/js/ai-summary.js?cb=20261027123707"></script>
+    <script defer src="src/js/scripture-compare.js?cb=20261027123707"></script>
 
     <!-- Image Viewer Modal -->
     <style>
@@ -2632,6 +2640,44 @@
             });
         })();
     </script>
+    <!-- Scripture Compare Modal (Desktop Only) -->
+    <div id="scripture-compare-modal" class="scripture-compare-modal" style="display: none;">
+        <div class="sc-backdrop" id="sc-backdrop"></div>
+        <div class="sc-dialog" role="dialog" aria-modal="true" aria-label="Scripture Comparison">
+            <div class="sc-header">
+                <div class="sc-header-left">
+                    <div class="sc-title-wrap">
+                        <img src="resources/icons/compare.png" class="sc-title-icon" alt="Compare">
+                        <h2 class="sc-title">Scripture Comparison</h2>
+                    </div>
+                </div>
+                <div class="sc-header-right">
+                    <!-- Common Language Segment (Changes language for all panes) -->
+                    <div class="settings-segment settings-segment-compact sc-lang-segment" id="sc-global-lang-segment">
+                        <button type="button" class="settings-seg-btn active" data-lang="tamil">Tamil</button>
+                        <button type="button" class="settings-seg-btn" data-lang="english">English</button>
+                        <button type="button" class="settings-seg-btn" data-lang="both">Both</button>
+                    </div>
+                    <button type="button" class="sc-add-btn" id="sc-add-pane-btn" aria-label="Add Comparison" title="Add comparison pane (Max 3)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        <span>Add</span>
+                    </button>
+                    <button type="button" class="sc-close-btn" id="sc-close-btn" aria-label="Close Comparison" title="Close (Esc)">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="sc-body" id="sc-panes-container" data-pane-count="2">
+                <!-- Panes rendered dynamically by JS -->
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

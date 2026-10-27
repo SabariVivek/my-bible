@@ -5723,6 +5723,12 @@ document.addEventListener('keydown', (e) => {
         return; // Don't navigate if notes-textarea is focused
     }
 
+    // Check if Scripture Compare modal is open
+    const compareModal = document.getElementById('scripture-compare-modal');
+    if (compareModal && compareModal.classList.contains('active')) {
+        return;
+    }
+
     if (e.key === 'ArrowLeft') {
         document.querySelector('.nav-btn[aria-label="Previous"]').click();
     } else if (e.key === 'ArrowRight') {

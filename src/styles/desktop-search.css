@@ -15,14 +15,14 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: min(440px, calc(100% - 440px));
+        width: min(490px, calc(100% - 420px));
         z-index: 105;
         box-sizing: border-box;
     }
 
     @media (max-width: 1000px) {
         .desktop-top-search-wrapper {
-            width: min(330px, calc(100% - 380px));
+            width: min(370px, calc(100% - 370px));
         }
     }
 }
