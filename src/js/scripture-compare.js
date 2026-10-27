@@ -241,7 +241,6 @@
     }
 
     function closeModal() {
-        closePassagePicker();
         const modal = document.getElementById('scripture-compare-modal');
         if (!modal) return;
 
@@ -301,8 +300,6 @@
         syncGlobalLanguageUI(state.globalLanguage);
     }
 
-    let activePopover = null;
-
     function formatPassageLabel(pane) {
         if (!pane) return '';
         const book = (typeof bibleBooks !== 'undefined' && bibleBooks[pane.bookIndex]) || { name: 'Genesis', tamilName: 'ஆதியாகமம்' };
@@ -313,346 +310,10 @@
     function updatePassageLabel(paneId) {
         const pane = state.panes.find(p => p.id === paneId);
         if (!pane) return;
-        const labelEl = document.getElementById(`sc-passage-label-${paneId}`);
-        if (labelEl) {
-            labelEl.textContent = formatPassageLabel(pane);
+        const input = document.querySelector(`.sc-search-input[data-pane-id="${paneId}"]`);
+        if (input && document.activeElement !== input) {
+            input.value = formatPassageLabel(pane);
         }
-    }
-
-    function openPassagePicker(paneId) {
-        const pane = state.panes.find(p => p.id === paneId);
-        if (!pane) return;
-
-        if (activePopover && activePopover.paneId === paneId) {
-            closePassagePicker();
-            return;
-        }
-
-        closePassagePicker();
-
-        activePopover = {
-            paneId: paneId,
-            pendingBookIndex: pane.bookIndex,
-            pendingChapter: pane.chapter,
-            pendingVerse: pane.targetVerse || 1,
-            filterText: ''
-        };
-
-        renderPickerPopover();
-    }
-
-    function closePassagePicker() {
-        if (!activePopover) return;
-        const popoverEl = document.getElementById('sc-active-picker-popover');
-        if (popoverEl) {
-            popoverEl.remove();
-        }
-        document.querySelectorAll('.sc-passage-btn.active').forEach(b => b.classList.remove('active'));
-        activePopover = null;
-    }
-
-    function getVerseCountForBookAndChapter(bookIndex, chapter) {
-        if (typeof bibleMeta !== 'undefined' && Array.isArray(bibleMeta) && bibleMeta[bookIndex]) {
-            const chArray = bibleMeta[bookIndex].chapters;
-            if (chArray && chArray[chapter - 1]) {
-                return chArray[chapter - 1];
-            }
-        }
-        if (typeof window.bibleMeta !== 'undefined' && Array.isArray(window.bibleMeta) && window.bibleMeta[bookIndex]) {
-            const chArray = window.bibleMeta[bookIndex].chapters;
-            if (chArray && chArray[chapter - 1]) {
-                return chArray[chapter - 1];
-            }
-        }
-        const b = (typeof bibleBooks !== 'undefined') ? bibleBooks[bookIndex] : null;
-        if (b && typeof window.getVerses === 'function') {
-            const norm = b.name.replace(/^III\s+/, '3 ').replace(/^II\s+/, '2 ').replace(/^I\s+/, '1 ');
-            const vs = window.getVerses(norm, chapter);
-            if (vs && vs.length) return vs.length;
-            const vs2 = window.getVerses(b.name, chapter);
-            if (vs2 && vs2.length) return vs2.length;
-        }
-        return 30;
-    }
-
-    function renderPickerPopover() {
-        if (!activePopover) return;
-        const { paneId, pendingBookIndex, pendingChapter, pendingVerse, filterText } = activePopover;
-        const pane = state.panes.find(p => p.id === paneId);
-        if (!pane) return;
-
-        const anchor = document.getElementById(`sc-picker-anchor-${paneId}`);
-        if (!anchor) return;
-
-        const btn = anchor.querySelector('.sc-passage-btn');
-        if (btn) btn.classList.add('active');
-
-        let popoverEl = document.getElementById('sc-active-picker-popover');
-        if (!popoverEl) {
-            popoverEl = document.createElement('div');
-            popoverEl.id = 'sc-active-picker-popover';
-            popoverEl.className = 'sc-picker-popover';
-            popoverEl.addEventListener('click', (e) => e.stopPropagation());
-            popoverEl.addEventListener('mousedown', (e) => e.stopPropagation());
-        }
-        if (popoverEl.parentElement !== anchor) {
-            anchor.appendChild(popoverEl);
-        }
-
-        // Prevent popover from clipping past right edge of screen
-        const anchorRect = anchor.getBoundingClientRect();
-        if (anchorRect.left + 490 > window.innerWidth) {
-            popoverEl.style.left = 'auto';
-            popoverEl.style.right = '0';
-        } else {
-            popoverEl.style.left = '0';
-            popoverEl.style.right = 'auto';
-        }
-
-        const curBook = (typeof bibleBooks !== 'undefined' && bibleBooks[pendingBookIndex]) || { name: 'Genesis', tamilName: 'ஆதியாகமம்', chapters: 50 };
-        const totalChapters = curBook.chapters || 1;
-        const totalVerses = getVerseCountForBookAndChapter(pendingBookIndex, pendingChapter);
-
-        const currentLabel = `${curBook.name} ${pendingChapter}${pendingVerse > 1 ? ':' + pendingVerse : ''}`;
-
-        // Build Book list HTML
-        const allBooks = typeof bibleBooks !== 'undefined' ? bibleBooks : [];
-        let booksHtml = '';
-        allBooks.forEach((b, idx) => {
-            const isActive = idx === pendingBookIndex;
-            booksHtml += `
-                <div class="sc-c3-book-item ${isActive ? 'active' : ''}" data-b-idx="${idx}">
-                    <span class="sc-c3-book-en">${b.name}</span>
-                    <span class="sc-c3-book-ta">${b.tamilName || ''}</span>
-                </div>
-            `;
-        });
-
-        // Build Chapter buttons HTML
-        let chHtml = '';
-        for (let c = 1; c <= totalChapters; c++) {
-            const isActive = c === pendingChapter;
-            chHtml += `<button type="button" class="sc-c3-num-btn ${isActive ? 'active' : ''}" data-ch="${c}">${c}</button>`;
-        }
-
-        // Build Verse buttons HTML
-        let vsHtml = '';
-        for (let v = 1; v <= totalVerses; v++) {
-            const isActive = v === pendingVerse;
-            vsHtml += `<button type="button" class="sc-c3-num-btn ${isActive ? 'active' : ''}" data-v="${v}">${v}</button>`;
-        }
-
-        popoverEl.innerHTML = `
-            <div class="sc-picker-header">
-                <div class="sc-picker-title-wrap">
-                    <svg class="sc-picker-book-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                    </svg>
-                    <span class="sc-picker-current-label">${currentLabel}</span>
-                </div>
-                <button type="button" class="sc-picker-close" title="Close" aria-label="Close passage picker">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-
-            <div class="sc-c3-layout">
-                <!-- Left: Book Search & List -->
-                <div class="sc-c3-left">
-                    <div class="sc-c3-search-box">
-                        <svg class="sc-c3-search-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                        <input type="text" class="sc-c3-search-input" placeholder="Filter books..." value="${filterText}">
-                        <button type="button" class="sc-c3-search-clear" style="display: ${filterText ? 'block' : 'none'};">✕</button>
-                    </div>
-                    <div class="sc-c3-books-list">
-                        ${booksHtml}
-                        <div class="sc-c3-empty" style="display: none;">No books found</div>
-                    </div>
-                </div>
-
-                <!-- Right: Stacked Grids -->
-                <div class="sc-c3-right">
-                    <!-- Chapter Section -->
-                    <div class="sc-c3-section">
-                        <div class="sc-c3-sec-header">
-                            <span class="sc-c3-sec-label">Chapter</span>
-                            <span class="sc-c3-badge" id="sc-c3-ch-count">${totalChapters}</span>
-                        </div>
-                        <div class="sc-c3-grid-6" id="sc-c3-ch-grid">
-                            ${chHtml}
-                        </div>
-                    </div>
-
-                    <div class="sc-c3-divider"></div>
-
-                    <!-- Verse Section -->
-                    <div class="sc-c3-section">
-                        <div class="sc-c3-sec-header">
-                            <div class="sc-c3-vs-title-wrap">
-                                <span class="sc-c3-sec-label">Verse</span>
-                                <span class="sc-c3-badge" id="sc-c3-vs-count">${totalVerses}</span>
-                            </div>
-                            <button type="button" class="sc-c3-all-btn ${pendingVerse === 1 ? 'active' : ''}" data-v="1" title="Read entire chapter">
-                                All
-                            </button>
-                        </div>
-                        <div class="sc-c3-grid-6" id="sc-c3-vs-grid">
-                            ${vsHtml}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-
-        // Filter helper to update DOM without re-rendering everything
-        const filterInput = popoverEl.querySelector('.sc-c3-search-input');
-        const clearBtn = popoverEl.querySelector('.sc-c3-search-clear');
-        const emptyEl = popoverEl.querySelector('.sc-c3-empty');
-        const bookItems = popoverEl.querySelectorAll('.sc-c3-book-item');
-
-        const applyFilter = (q) => {
-            const query = (q || '').toLowerCase().trim();
-            let visible = 0;
-            bookItems.forEach(item => {
-                const bIdx = parseInt(item.dataset.bIdx, 10);
-                const b = allBooks[bIdx];
-                if (!b) return;
-                const match = !query || (
-                    b.name.toLowerCase().includes(query) ||
-                    (b.shortName && b.shortName.toLowerCase().includes(query)) ||
-                    (b.tamilName && b.tamilName.includes(query))
-                );
-                item.style.display = match ? 'flex' : 'none';
-                if (match) visible++;
-            });
-            if (emptyEl) emptyEl.style.display = visible === 0 ? 'block' : 'none';
-            if (clearBtn) clearBtn.style.display = query ? 'block' : 'none';
-        };
-
-        if (filterText) applyFilter(filterText);
-
-        // Auto-scroll active book into view
-        const activeBookEl = popoverEl.querySelector('.sc-c3-book-item.active');
-        if (activeBookEl) activeBookEl.scrollIntoView({ block: 'nearest' });
-        const activeChEl = popoverEl.querySelector('.sc-c3-num-btn[data-ch].active');
-        if (activeChEl) activeChEl.scrollIntoView({ block: 'nearest' });
-
-        // Event: Close Button
-        const closeBtn = popoverEl.querySelector('.sc-picker-close');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                closePassagePicker();
-            });
-        }
-
-        // Event: Filter search
-        if (filterInput) {
-            filterInput.addEventListener('input', (e) => {
-                activePopover.filterText = e.target.value;
-                applyFilter(e.target.value);
-            });
-            filterInput.addEventListener('click', (e) => e.stopPropagation());
-            filterInput.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    const val = filterInput.value.trim();
-                    if (!val) return;
-                    const parsed = parsePassageQuery(val, activePopover.pendingBookIndex, activePopover.pendingChapter);
-                    if (parsed) {
-                        applyPassageSelection(paneId, parsed.bookIndex, parsed.chapter, parsed.verse);
-                    }
-                }
-            });
-        }
-        if (clearBtn) {
-            clearBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                activePopover.filterText = '';
-                if (filterInput) {
-                    filterInput.value = '';
-                    filterInput.focus();
-                }
-                applyFilter('');
-            });
-        }
-
-        // Helper: Refresh Verse Grid for given chapter
-        const refreshVerseGrid = (ch) => {
-            const vsGrid = popoverEl.querySelector('#sc-c3-vs-grid');
-            const vsCountBadge = popoverEl.querySelector('#sc-c3-vs-count');
-            if (!vsGrid) return;
-
-            const vCount = getVerseCountForBookAndChapter(activePopover.pendingBookIndex, ch);
-            if (vsCountBadge) vsCountBadge.textContent = vCount;
-
-            let updatedVsHtml = '';
-            for (let v = 1; v <= vCount; v++) {
-                const isActive = v === activePopover.pendingVerse;
-                updatedVsHtml += `<button type="button" class="sc-c3-num-btn ${isActive ? 'active' : ''}" data-v="${v}">${v}</button>`;
-            }
-            vsGrid.innerHTML = updatedVsHtml;
-            attachVerseEvents();
-        };
-
-        const attachVerseEvents = () => {
-            popoverEl.querySelectorAll('.sc-c3-num-btn[data-v]').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const v = parseInt(btn.dataset.v, 10);
-                    applyPassageSelection(paneId, activePopover.pendingBookIndex, activePopover.pendingChapter, v);
-                });
-            });
-        };
-
-        // Event: Chapter Click
-        popoverEl.querySelectorAll('.sc-c3-num-btn[data-ch]').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const ch = parseInt(btn.dataset.ch, 10);
-                activePopover.pendingChapter = ch;
-                activePopover.pendingVerse = 1;
-
-                popoverEl.querySelectorAll('.sc-c3-num-btn[data-ch]').forEach(b => {
-                    b.classList.toggle('active', parseInt(b.dataset.ch, 10) === ch);
-                });
-
-                const curB = allBooks[activePopover.pendingBookIndex] || { name: 'Book' };
-                const topLabel = popoverEl.querySelector('.sc-picker-current-label');
-                if (topLabel) topLabel.textContent = `${curB.name} ${ch}`;
-
-                refreshVerseGrid(ch);
-            });
-        });
-
-        attachVerseEvents();
-
-        // Event: All Verse Click
-        const allBtn = popoverEl.querySelector('.sc-c3-all-btn');
-        if (allBtn) {
-            allBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                applyPassageSelection(paneId, activePopover.pendingBookIndex, activePopover.pendingChapter, 1);
-            });
-        }
-
-        // Event: Book Click
-        popoverEl.querySelectorAll('.sc-c3-book-item[data-b-idx]').forEach(item => {
-            item.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const bIdx = parseInt(item.dataset.bIdx, 10);
-                activePopover.pendingBookIndex = bIdx;
-                activePopover.pendingChapter = 1;
-                activePopover.pendingVerse = 1;
-                renderPickerPopover();
-            });
-        });
     }
 
     function selectVerse(sourcePaneId, verseNum) {
@@ -675,7 +336,6 @@
         pane.targetVerse = targetVerse || 1;
 
         updatePassageLabel(paneId);
-        closePassagePicker();
 
         if (isSamePassage) {
             selectVerse(paneId, pane.targetVerse);
@@ -947,32 +607,22 @@
 
         const showRemove = state.panes.length > 2;
 
-        closePassagePicker();
-
         container.innerHTML = state.panes.map(pane => {
             return `
                 <div class="sc-pane" id="sc-pane-${pane.id}">
                     <div class="sc-pane-toolbar">
                         <div class="sc-pane-toolbar-row">
-                            <!-- Modern Passage Picker Button (e.g. Genesis 1:1 ▾) -->
-                            <div class="sc-passage-picker-anchor" id="sc-picker-anchor-${pane.id}">
-                                <button type="button" class="sc-passage-btn" data-pane-id="${pane.id}" aria-label="Select Passage" title="Choose Book, Chapter, or Verse">
-                                    <span class="sc-passage-label" id="sc-passage-label-${pane.id}">${formatPassageLabel(pane)}</span>
-                                    <svg class="sc-chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="6 9 12 15 18 9"></polyline>
-                                    </svg>
-                                </button>
-                            </div>
-
-                            <!-- Search input -->
+                            <!-- Direct Search Passage Navigation (e.g. John 3:16, Gen 1, Rom 8:28) -->
                             <div class="sc-search-wrap">
-                                <svg class="sc-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg class="sc-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" title="Search passage">
                                     <circle cx="11" cy="11" r="8"></circle>
                                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                                 </svg>
                                 <input type="text" class="sc-search-input" data-pane-id="${pane.id}"
-                                    placeholder="Search (e.g. Gen 3:15, Matt 24)..."
+                                    value="${formatPassageLabel(pane)}"
+                                    placeholder="Search passage (e.g. John 3:16, Gen 1, Matt 24)..."
                                     autocomplete="off" spellcheck="false">
+                                <button type="button" class="sc-search-clear" data-pane-id="${pane.id}" title="Clear search">✕</button>
                             </div>
 
                             ${showRemove ? `
@@ -1004,60 +654,85 @@
         const container = document.getElementById('sc-panes-container');
         if (!container) return;
 
-        // Passage picker buttons
-        container.querySelectorAll('.sc-passage-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const paneId = parseInt(btn.dataset.paneId, 10);
-                openPassagePicker(paneId);
-            });
-        });
-
-        // Search inputs
+        // Search inputs (direct entry and search only)
         container.querySelectorAll('.sc-search-wrap').forEach(wrap => {
             const input = wrap.querySelector('.sc-search-input');
             const icon = wrap.querySelector('.sc-search-icon');
+            const clearBtn = wrap.querySelector('.sc-search-clear');
             if (!input) return;
 
             const paneId = parseInt(input.dataset.paneId, 10);
             const pane = state.panes.find(p => p.id === paneId);
             if (!pane) return;
 
-            const executeSearch = () => {
-                const query = input.value.trim();
-                if (!query) return;
-                const parsed = parsePassageQuery(query, pane.bookIndex, pane.chapter);
-                if (parsed) {
-                    const isSamePassage = pane.bookIndex === parsed.bookIndex && pane.chapter === parsed.chapter && pane.verses;
-                    pane.bookIndex = parsed.bookIndex;
-                    pane.chapter = parsed.chapter;
-                    pane.targetVerse = parsed.verse || 1;
-
-                    updatePassageLabel(paneId);
-                    input.value = '';
-
-                    if (isSamePassage) {
-                        selectVerse(paneId, pane.targetVerse);
-                    } else {
-                        loadPaneChapter(pane);
-                    }
-                } else {
-                    input.style.borderColor = '#d93025';
-                    setTimeout(() => { input.style.borderColor = ''; }, 1200);
+            const updateClearVisibility = () => {
+                if (clearBtn) {
+                    clearBtn.style.display = input.value.trim() ? 'flex' : 'none';
                 }
             };
+
+            const executeSearch = () => {
+                const query = input.value.trim();
+                if (!query) {
+                    input.value = formatPassageLabel(pane);
+                    updateClearVisibility();
+                    return;
+                }
+                const parsed = parsePassageQuery(query, pane.bookIndex, pane.chapter);
+                if (parsed) {
+                    applyPassageSelection(paneId, parsed.bookIndex, parsed.chapter, parsed.verse || 1);
+                    input.value = formatPassageLabel(pane);
+                    input.blur();
+                    updateClearVisibility();
+                } else {
+                    input.classList.add('sc-search-error');
+                    setTimeout(() => { input.classList.remove('sc-search-error'); }, 1200);
+                }
+            };
+
+            // Auto-select text on focus so user can immediately type new passage
+            input.addEventListener('focus', () => {
+                input.select();
+                updateClearVisibility();
+            });
+
+            input.addEventListener('input', updateClearVisibility);
+
+            input.addEventListener('blur', () => {
+                setTimeout(() => {
+                    if (!input.value.trim()) {
+                        input.value = formatPassageLabel(pane);
+                    }
+                    updateClearVisibility();
+                }, 150);
+            });
 
             input.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter') {
                     e.preventDefault();
                     executeSearch();
+                } else if (e.key === 'Escape') {
+                    e.preventDefault();
+                    input.value = formatPassageLabel(pane);
+                    input.blur();
+                    updateClearVisibility();
                 }
             });
 
             if (icon) {
-                icon.style.cursor = 'pointer';
                 icon.addEventListener('click', executeSearch);
             }
+
+            if (clearBtn) {
+                clearBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    input.value = '';
+                    input.focus();
+                    updateClearVisibility();
+                });
+            }
+
+            updateClearVisibility();
         });
 
         // Remove pane buttons
@@ -1128,30 +803,10 @@
             });
         }
 
-        // Close passage picker on outside click
-        document.addEventListener('click', (e) => {
-            if (!activePopover) return;
-            const path = e.composedPath ? e.composedPath() : [];
-            const isInsidePopover = path.some(el => el && (el.id === 'sc-active-picker-popover' || (el.classList && el.classList.contains('sc-picker-popover'))));
-            const isInsideAnchor = path.some(el => el && el.id === `sc-picker-anchor-${activePopover.paneId}`);
-            if (isInsidePopover || isInsideAnchor) {
-                return;
-            }
-            const popoverEl = document.getElementById('sc-active-picker-popover');
-            if (popoverEl && !popoverEl.contains(e.target)) {
-                const anchor = document.getElementById(`sc-picker-anchor-${activePopover.paneId}`);
-                if (!anchor || !anchor.contains(e.target)) {
-                    closePassagePicker();
-                }
-            }
-        });
-
-        // Global Keydown: Escape closes popover or modal, Alt+C toggles
+        // Global Keydown: Escape closes modal, Alt+C toggles
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                if (activePopover) {
-                    closePassagePicker();
-                } else if (state.isOpen) {
+                if (state.isOpen) {
                     closeModal();
                 }
             } else if (e.altKey && (e.key === 'c' || e.key === 'C')) {
