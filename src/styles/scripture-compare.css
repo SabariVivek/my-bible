@@ -5,7 +5,7 @@
 
 /* Desktop header button (next to desktop top search bar) */
 .compare-bible-btn {
-    display: inline-flex !important;
+    display: none !important;
     align-items: center;
     justify-content: center;
     position: relative;
