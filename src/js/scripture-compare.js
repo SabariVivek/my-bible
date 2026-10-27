@@ -355,6 +355,30 @@
         activePopover = null;
     }
 
+    function getVerseCountForBookAndChapter(bookIndex, chapter) {
+        if (typeof bibleMeta !== 'undefined' && Array.isArray(bibleMeta) && bibleMeta[bookIndex]) {
+            const chArray = bibleMeta[bookIndex].chapters;
+            if (chArray && chArray[chapter - 1]) {
+                return chArray[chapter - 1];
+            }
+        }
+        if (typeof window.bibleMeta !== 'undefined' && Array.isArray(window.bibleMeta) && window.bibleMeta[bookIndex]) {
+            const chArray = window.bibleMeta[bookIndex].chapters;
+            if (chArray && chArray[chapter - 1]) {
+                return chArray[chapter - 1];
+            }
+        }
+        const b = (typeof bibleBooks !== 'undefined') ? bibleBooks[bookIndex] : null;
+        if (b && typeof window.getVerses === 'function') {
+            const norm = b.name.replace(/^III\s+/, '3 ').replace(/^II\s+/, '2 ').replace(/^I\s+/, '1 ');
+            const vs = window.getVerses(norm, chapter);
+            if (vs && vs.length) return vs.length;
+            const vs2 = window.getVerses(b.name, chapter);
+            if (vs2 && vs2.length) return vs2.length;
+        }
+        return 30;
+    }
+
     function renderPickerPopover() {
         if (!activePopover) return;
         const { paneId, currentTab, pendingBookIndex, pendingChapter, filterText, testament } = activePopover;
@@ -381,7 +405,7 @@
 
         // Prevent popover from clipping past right edge of screen
         const anchorRect = anchor.getBoundingClientRect();
-        if (anchorRect.left + 390 > window.innerWidth) {
+        if (anchorRect.left + 420 > window.innerWidth) {
             popoverEl.style.left = 'auto';
             popoverEl.style.right = '0';
         } else {
@@ -391,28 +415,39 @@
 
         const selectedBook = (typeof bibleBooks !== 'undefined' && bibleBooks[pendingBookIndex]) || { name: 'Genesis', chapters: 50 };
         const totalChapters = selectedBook.chapters || 1;
-        let totalVerses = 35;
-        if (typeof window.getVerses === 'function') {
-            const vs = window.getVerses(selectedBook.name, pendingChapter);
-            if (vs && vs.length) totalVerses = vs.length;
-        } else if (pendingBookIndex === pane.bookIndex && pendingChapter === pane.chapter && pane.verseCount) {
-            totalVerses = pane.verseCount;
-        }
+        const totalVerses = getVerseCountForBookAndChapter(pendingBookIndex, pendingChapter);
 
         // All books
         const allBooks = (typeof bibleBooks !== 'undefined' ? bibleBooks : []).map((b, idx) => ({ ...b, idx }));
+
+        const verseSuffix = (pendingChapter === pane.chapter && pane.targetVerse && pane.targetVerse > 1) ? `:${pane.targetVerse}` : '';
 
         popoverEl.innerHTML = `
             <div class="sc-picker-header">
                 <div class="sc-picker-tabs">
                     <button type="button" class="sc-picker-tab ${currentTab === 'book' ? 'active' : ''}" data-tab="book">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
                         <span class="sc-tab-label">${selectedBook.name}</span>
                     </button>
                     <button type="button" class="sc-picker-tab ${currentTab === 'chapter_verse' ? 'active' : ''}" data-tab="chapter_verse">
-                        <span class="sc-tab-label">Ch ${pendingChapter}${pane.targetVerse && pane.targetVerse > 1 ? ' : ' + pane.targetVerse : ''}</span>
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+                            <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+                            <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+                            <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+                        </svg>
+                        <span class="sc-tab-label">Ch ${pendingChapter}${verseSuffix}</span>
                     </button>
                 </div>
-                <button type="button" class="sc-picker-close" title="Close">✕</button>
+                <button type="button" class="sc-picker-close" title="Close" aria-label="Close passage picker">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
             </div>
 
             <div class="sc-picker-body">
@@ -448,8 +483,10 @@
                         <!-- Left Column: Chapters -->
                         <div class="sc-picker-col sc-picker-col-ch">
                             <div class="sc-picker-col-header">
-                                <span class="sc-picker-col-title">Chapter</span>
-                                <span class="sc-picker-col-badge">${totalChapters}</span>
+                                <div class="sc-picker-col-title-wrap">
+                                    <span class="sc-picker-col-title">Chapter</span>
+                                    <span class="sc-picker-col-badge">${totalChapters}</span>
+                                </div>
                             </div>
                             <div class="sc-picker-ch-grid">
                                 ${Array.from({ length: totalChapters }, (_, i) => i + 1).map(ch => `
@@ -466,8 +503,11 @@
                         <!-- Right Column: Verses -->
                         <div class="sc-picker-col sc-picker-col-vs">
                             <div class="sc-picker-col-header">
-                                <span class="sc-picker-col-title">Verse</span>
-                                <button type="button" class="sc-picker-all-chip" title="Read entire chapter" data-v="1">
+                                <div class="sc-picker-col-title-wrap">
+                                    <span class="sc-picker-col-title">Verse</span>
+                                    <span class="sc-picker-col-badge" id="sc-picker-vs-count">${totalVerses}</span>
+                                </div>
+                                <button type="button" class="sc-picker-all-chip ${(!pane.targetVerse || pane.targetVerse === 1) && pendingChapter === pane.chapter && pendingBookIndex === pane.bookIndex ? 'active' : ''}" title="Read entire chapter" data-v="1">
                                     All
                                 </button>
                             </div>
@@ -607,12 +647,10 @@
             const vsGrid = popoverEl.querySelector('.sc-picker-vs-grid');
             if (!vsGrid) return;
 
-            let vCount = 35;
-            if (typeof window.getVerses === 'function') {
-                const vs = window.getVerses(selectedBook.name, ch);
-                if (vs && vs.length) vCount = vs.length;
-            } else if (pendingBookIndex === pane.bookIndex && ch === pane.chapter && pane.verseCount) {
-                vCount = pane.verseCount;
+            const vCount = getVerseCountForBookAndChapter(pendingBookIndex, ch);
+            const vsCountBadge = popoverEl.querySelector('#sc-picker-vs-count');
+            if (vsCountBadge) {
+                vsCountBadge.textContent = vCount;
             }
 
             let vsHtml = '';
@@ -652,7 +690,8 @@
 
                 const tabLabel = popoverEl.querySelector('.sc-picker-tab[data-tab="chapter_verse"] .sc-tab-label');
                 if (tabLabel) {
-                    tabLabel.textContent = `Ch ${ch}`;
+                    const verseSuffix = (ch === pane.chapter && pane.targetVerse && pane.targetVerse > 1) ? `:${pane.targetVerse}` : '';
+                    tabLabel.textContent = `Ch ${ch}${verseSuffix}`;
                 }
 
                 updateVersesForChapter(ch);
