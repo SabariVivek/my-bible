@@ -1022,7 +1022,7 @@ const BIBLE_TRACKS = [
   {
     day: 100,
     title: "The Sin of Balaam",
-    duration: "58:13 min",
+    duration: "31:51 min",
     verse: "Numbers 25; 31:16",
     desc: "How did Balaam lead Israel into sin, and what were the consequences of his wicked counsel?",
     category: "Balaam"
