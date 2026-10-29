@@ -1026,6 +1026,14 @@ const BIBLE_TRACKS = [
     verse: "Numbers 25; 31:16",
     desc: "How did Balaam lead Israel into sin, and what were the consequences of his wicked counsel?",
     category: "Balaam"
+  },
+  {
+    day: 101,
+    title: "Types of Love",
+    duration: "53:56 min",
+    verse: "John 21:15-17",
+    desc: "Discover the four types of love commonly described using Greek words: Agape, Philia, Storge, and Eros.",
+    category: "Foundation, Teachings"
   }
 ];
 
