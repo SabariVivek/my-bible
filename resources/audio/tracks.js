@@ -1018,6 +1018,14 @@ const BIBLE_TRACKS = [
     verse: "Numbers 23–24",
     desc: "What did God reveal through Balaam about Israel's blessings, future king, and coming ruler?",
     category: "Prophecies, Balaam"
+  },
+  {
+    day: 100,
+    title: "The Sin of Balaam",
+    duration: "58:13 min",
+    verse: "Numbers 25; 31:16",
+    desc: "How did Balaam lead Israel into sin, and what were the consequences of his wicked counsel?",
+    category: "Balaam"
   }
 ];
 
