@@ -1034,6 +1034,14 @@ const BIBLE_TRACKS = [
     verse: "John 21:15-17",
     desc: "Discover the four types of love commonly described using Greek words: Agape, Philia, Storge, and Eros.",
     category: "Foundation, Teachings"
+  },
+  {
+    day: 102,
+    title: "Childish vs Child-Like",
+    duration: "28:36 min",
+    verse: "Mat 18:1-4; Mark 10:13-16",
+    desc: "Discover the difference between childish behavior and child-like faith through Jesus' teachings.",
+    category: "Foundation, Teachings"
   }
 ];
 
