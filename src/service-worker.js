@@ -27,6 +27,9 @@ const STATIC_ASSETS = [
   './resources/icons/compare.png',
   './src/styles/scripture-compare.css',
   './src/js/scripture-compare.js',
+  './src/styles/bible-timeline.css',
+  './src/js/bible-timeline.js',
+  './src/data/bible-timeline-data.js',
   './data/bible/bible-data-loader.js',
   './data/bible/english/king-james-bible.json',
   './data/bible/english/king-james-bible.js'

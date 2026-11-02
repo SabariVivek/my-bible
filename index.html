@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="src/styles/desktop-search.css?cb=20261031120946">
     <link rel="stylesheet" href="src/styles/topics-browser.css?cb=20261031120946">
     <link rel="stylesheet" href="src/styles/scripture-compare.css?cb=20261031120946">
+    <link rel="stylesheet" href="src/styles/bible-timeline.css?cb=20261031120946">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
@@ -128,6 +129,15 @@
                             aria-label="Toggle Story Search">/</button>
                     </div>
                 </div>
+                <!-- Timeline Button next to desktop search box -->
+                <button id="timeline-nav-btn" class="icon-btn timeline-nav-btn" aria-label="Bible Timeline"
+                    title="Chronological Bible Timeline">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </button>
                 <div class="desktop-top-filter-wrapper" id="desktop-top-filter-wrapper" style="display: none;">
                     <button type="button" id="desktop-top-filter-btn" class="icon-btn desktop-top-filter-btn" aria-label="Filter" title="Filter Search">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -1804,6 +1814,8 @@
     <script src="src/js/chapter-summary-pullout.js?cb=20261031120946"></script>
     <script src="src/js/ai-summary.js?cb=20261031120946"></script>
     <script defer src="src/js/scripture-compare.js?cb=20261031120946"></script>
+    <script src="src/data/bible-timeline-data.js?cb=20261031120946"></script>
+    <script defer src="src/js/bible-timeline.js?cb=20261031120946"></script>
 
     <!-- Image Viewer Modal -->
     <style>
