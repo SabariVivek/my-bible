@@ -1042,6 +1042,22 @@ const BIBLE_TRACKS = [
     verse: "Mat 18:1-4; Mark 10:13-16",
     desc: "Discover the difference between childish behavior and child-like faith through Jesus' teachings.",
     category: "Foundation, Teachings"
+  },
+  {
+    day: 103,
+    title: "Jacob's Death",
+    duration: "82:18 min",
+    verse: "Genesis 49–50",
+    desc: "Discover Jacob's final blessings, his last words to his sons, and the end of his remarkable journey of faith.",
+    category: "Characters"
+  },
+  {
+    day: 104,
+    title: "Ehud - 3rd Judge",
+    duration: "56:40 min",
+    verse: "Judges 3:12-30",
+    desc: "Discover how God used Ehud, the left-handed judge, to deliver Israel from Moabite oppression through courage.",
+    category: "Characters"
   }
 ];
 
