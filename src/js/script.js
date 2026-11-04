@@ -3610,53 +3610,6 @@ function toggleKingCard(cardId) {
 }
 
 // Display chapter content
-
-// Generate inline study/historical note HTML for specific verses
-function getVerseStudyNoteHTML(bookName, chapter, verseNum, language) {
-    const isLuke = (bookName && (
-        bookName.toLowerCase() === 'luke' ||
-        bookName === 'லூக்கா'
-    )) || (typeof currentBook !== 'undefined' && bibleBooks && bibleBooks[currentBook] && bibleBooks[currentBook].file === 'luke');
-
-    const chNum = parseInt(chapter, 10);
-    const vNum = parseInt(verseNum, 10);
-
-    if (isLuke && chNum === 4 && vNum === 30) {
-        const tamilNote = "தம்முடைய சொந்த ஊர் மக்களே தம்மைக் கொலைசெய்ய வகைதேடியதைக் கண்டு இயேசு மிகுந்த மனவேதனையடைந்தார்; இந்தச் சம்பவத்திற்குப் பிறகு அவர் நாசரேத்தை விட்டு விலகி, தமது பூமிக்குரிய ஜீவிய காலம் முழுவதும் மீண்டும் ஒருபோதும் அங்கு திரும்பிச் செல்லவில்லை.";
-        const englishNote = "Deeply grieved that His own townspeople rejected and sought to take His life, Jesus departed from Nazareth after this incident and never returned to make it His home again throughout His earthly ministry.";
-        const tanglishNote = "Thammudaiya sondha oor makkalae thammaik kolaiseiya vagaithaediyadhaik kandu Yesu migundha manavaedhanaiyadaindhaar; indhach sambavathirkup piragu avar Naasaraethai vittu vilagi, thamadhu boomikkuriya jeeviya kaalam muzhuvadhum meendum orubodhum angu thirumbich sellavillai.";
-
-        let noteBody = '';
-        if (language === 'tamil') {
-            noteBody = `<p class="verse-study-note-text tamil-text">${tamilNote}</p>`;
-        } else if (language === 'english') {
-            noteBody = `<p class="verse-study-note-text english-text">${englishNote}</p>`;
-        } else if (language === 'both') {
-            noteBody = `<p class="verse-study-note-text tamil-text">${tamilNote}</p><p class="verse-study-note-text english-text" style="margin-top: 6px;">${englishNote}</p>`;
-        } else if (language === 'tanglish') {
-            noteBody = `<p class="verse-study-note-text">${tanglishNote}</p>`;
-        } else {
-            noteBody = `<p class="verse-study-note-text tamil-text">${tamilNote}</p>`;
-        }
-
-        const noteTitle = (language === 'english') ? 'Historical Note' : 'வரலாற்றுக் குறிப்பு / Historical Note';
-
-        return `
-            <div class="verse-study-note-wrapper" data-note-verse="${verseNum}">
-                <div class="verse-study-note">
-                    <div class="verse-study-note-header">
-                        <span class="verse-study-note-icon">📌</span>
-                        <span class="verse-study-note-label">${noteTitle}</span>
-                    </div>
-                    ${noteBody}
-                </div>
-            </div>
-        `;
-    }
-
-    return '';
-}
-
 function displayChapter() {
     const contentArea = document.querySelector('.scripture-text');
 
@@ -3751,7 +3704,6 @@ function displayChapter() {
                     <span class="english-text ${englishTextColor}">${englishText}</span>
                 </p>
             </div>`;
-            html += getVerseStudyNoteHTML(bookName, currentChapter, verseNum, 'both');
         });
     } else {
         // Display single language
@@ -3795,7 +3747,6 @@ function displayChapter() {
             html += `<div class="verse-container" data-verse="${verseNum}">
                 <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}</p>
             </div>`;
-            html += getVerseStudyNoteHTML(bookName, currentChapter, verseNum, currentLanguage);
         });
     }
     contentArea.innerHTML = html;
