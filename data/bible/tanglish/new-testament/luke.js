@@ -800,7 +800,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "ezhundhirundhu, avarai oorukkup purambae thalli, thangal oor kattappattirundha senguthaana malaiyin sigarathilirundhu avaraith thalaigeezhaayth thallividumbadikku avvidathirkuk kondubonaargal."
+      "text": "ezhundhirundhu, avarai oorukkup purambae thalli, thangal oor kattappattirundha senguthaana malaiyin (Mount Precipice) sigarathilirundhu avaraith thalaigeezhaayth thallividumbadikku avvidathirkuk kondubonaargal."
     },
     {
       "verse": "30",

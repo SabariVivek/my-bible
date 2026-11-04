@@ -3224,6 +3224,32 @@ function highlightSpecialText(text, language, bookName = null, chapter = null, v
         }
     }
 
+    // Luke 4:29 Mount Precipice note guarantee
+    const isLuke = (bookName && (
+        bookName.toLowerCase() === 'luke' ||
+        bookName === 'லூக்கா'
+    )) || (typeof currentBook !== 'undefined' && bibleBooks && bibleBooks[currentBook] && bibleBooks[currentBook].file === 'luke');
+
+    const chNum = parseInt(chapter !== null && chapter !== undefined ? chapter : (typeof currentChapter !== 'undefined' ? currentChapter : 0), 10);
+    const vNum = parseInt(verseNum !== null && verseNum !== undefined ? verseNum : 0, 10);
+
+    if (isLuke && chNum === 4 && (!vNum || vNum === 29)) {
+        if (!text.includes('(Mount Precipice)')) {
+            if (text.includes('செங்குத்தான மலையின் சிகரத்திலிருந்து')) {
+                text = text.replace('செங்குத்தான மலையின் சிகரத்திலிருந்து', 'செங்குத்தான மலையின் (Mount Precipice) சிகரத்திலிருந்து');
+            } else if (text.includes('செங்குத்தான மலையின்')) {
+                text = text.replace('செங்குத்தான மலையின்', 'செங்குத்தான மலையின் (Mount Precipice)');
+            } else if (text.includes('மலையின் சிகரத்திலிருந்து')) {
+                text = text.replace('மலையின் சிகரத்திலிருந்து', 'மலையின் (Mount Precipice) சிகரத்திலிருந்து');
+            }
+            if (text.includes('senguthaana malaiyin sigarathilirundhu')) {
+                text = text.replace('senguthaana malaiyin sigarathilirundhu', 'senguthaana malaiyin (Mount Precipice) sigarathilirundhu');
+            } else if (text.includes('senguthaana malaiyin')) {
+                text = text.replace('senguthaana malaiyin', 'senguthaana malaiyin (Mount Precipice)');
+            }
+        }
+    }
+
     // Dynamic popup highlights disabled per user request
     return text;
 }

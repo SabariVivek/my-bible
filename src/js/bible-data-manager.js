@@ -91,6 +91,32 @@ class BibleDataManager {
         this.tanglishLoadingPromise = null;
         this.initSupabase();
         this.dbInitPromise = this.initIndexedDB();
+        this.checkDataVersion();
+    }
+
+    checkDataVersion() {
+        const BIBLE_DATA_VERSION = '20261104_v2';
+        try {
+            if (typeof localStorage === 'undefined') return;
+            const currentVer = localStorage.getItem('bible_data_version');
+            if (currentVer !== BIBLE_DATA_VERSION) {
+                localStorage.setItem('bible_data_version', BIBLE_DATA_VERSION);
+                for (let i = localStorage.length - 1; i >= 0; i--) {
+                    const key = localStorage.key(i);
+                    if (key && (key.startsWith('bible_cache_') || key.startsWith('bible_book_') || key.startsWith('preload_complete_'))) {
+                        localStorage.removeItem(key);
+                    }
+                }
+                this.dbInitPromise.then(() => {
+                    if (this.db && this.db.objectStoreNames.contains('books')) {
+                        try {
+                            const tx = this.db.transaction(['books'], 'readwrite');
+                            tx.objectStore('books').clear();
+                        } catch (_) {}
+                    }
+                }).catch(() => {});
+            }
+        } catch (_) {}
     }
 
     setEnglishVersion(version) {
