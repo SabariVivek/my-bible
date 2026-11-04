@@ -4928,6 +4928,64 @@ body.dark-theme .creation-good-highlight {
 }
 
 
+
+/* Inline Verse Study Note */
+.verse-study-note-wrapper {
+    margin: 8px 0 16px 0;
+    padding: 0 4px;
+}
+
+.verse-study-note {
+    background: rgba(0, 0, 0, 0.03);
+    border-left: 3px solid #71717a;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #4b5563;
+}
+
+body.dark-theme .verse-study-note {
+    background: rgba(255, 255, 255, 0.04);
+    border-left-color: #9ca3af;
+    color: #d1d5db;
+}
+
+.verse-study-note-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+body.dark-theme .verse-study-note-header {
+    color: #9ca3af;
+}
+
+.verse-study-note-text {
+    margin: 0;
+}
+
+.verse-study-note-text.tamil-text {
+    font-family: 'Noto Sans Tamil', system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+.verse-study-note-text.english-text {
+    font-family: 'Lato', system-ui, sans-serif;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+body.dark-theme .verse-study-note-text.english-text {
+    color: #9ca3af;
+}
+
 /* Bottom Navigation */
 .bottom-nav {
     position: fixed;
