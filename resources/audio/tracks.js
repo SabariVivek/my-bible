@@ -1058,6 +1058,14 @@ const BIBLE_TRACKS = [
     verse: "Judges 3:12-30",
     desc: "Discover how God used Ehud, the left-handed judge, to deliver Israel from Moabite oppression through courage.",
     category: "Characters"
+  },
+  {
+    day: 105,
+    title: "The Camel and the Needle's Eye",
+    duration: "41:01 min",
+    verse: "Matthew 19:16-30",
+    desc: "Discover Jesus' teaching on wealth and entering the Kingdom of God.",
+    category: "Do You Know?"
   }
 ];
 
