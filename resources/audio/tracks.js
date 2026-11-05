@@ -1066,6 +1066,15 @@ const BIBLE_TRACKS = [
     verse: "Matthew 19:16-30",
     desc: "Discover Jesus' teaching on wealth and entering the Kingdom of God.",
     category: "Do You Know?"
+  },
+  {
+    day: 106,
+    title: "Why Is Jesus of Nazareth Hated?",
+    title: "Why Is Jesus of Nazareth Hated",
+    duration: "45:20 min",
+    verse: "Luke 4:14-30",
+    desc: "Discover why the people of Nazareth rejected Jesus and how He faced hatred even among His own people.",
+    category: "Do You Know?, Teachings"
   }
 ];
 
