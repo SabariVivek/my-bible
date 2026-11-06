@@ -1075,6 +1075,14 @@ const BIBLE_TRACKS = [
     verse: "Luke 4:14-30",
     desc: "Discover why the people of Nazareth rejected Jesus and how He faced hatred even among His own people.",
     category: "Do You Know?, Teachings"
+  },
+  {
+    day: 107,
+    title: "Samson - Chosen Before Birth",
+    duration: "33:50 min",
+    verse: "Judges 13",
+    desc: "Discover how God announced Samson's birth through an angel and chose him to begin delivering Israel from the Philistines.",
+    category: "Characters"
   }
 ];
 
