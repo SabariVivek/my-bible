@@ -9156,6 +9156,25 @@ const BIBLE_TIMELINE_EVENTS = [
     ]
   },
   {
+    "id": 5135,
+    "date": "30 AD",
+    "title": "Jesus' Last Week (Holy Week) — Every Event, Day by Day",
+    "period": "Life of Jesus",
+    "testament": "new",
+    "isHolyWeek": true,
+    "keywords": "Jesus last 7 weeks Jesus last 7 days Jesus last week holy week passion week triumphal entry crucifixion resurrection passover trials day by day harmony four gospels",
+    "passages": [
+      {
+        "display": "4 Gospels Harmony",
+        "bookName": "Matthew",
+        "bookIndex": 39,
+        "bookFile": "matthew",
+        "chapter": 21,
+        "verse": 1
+      }
+    ]
+  },
+  {
     "id": 514,
     "date": "30 AD",
     "title": "The Triumphal Entry",

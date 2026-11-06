@@ -1,39 +1,133 @@
 /**
  * ==========================================================================
  * Chronological Bible Timeline Component
- * Simple, minimal design using the application's signature styling & colors.
+ * Built with the Palatino / Garamond serif aesthetic, interactive left rail,
+ * center-dot timeline list, search highlight, and Day-by-Day Holy Week harmony.
  * ==========================================================================
  */
 
 (function initBibleTimeline() {
     let modalBackdrop = null;
-    let listContainer = null;
+    let listEl = null;
+    let railEl = null;
     let searchInput = null;
-    let clearSearchBtn = null;
-    let totalCounter = null;
-    let eraSelect = null;
-    let filterPills = [];
+    let countEl = null;
+    let segButtons = [];
 
-    let currentPeriod = 'all';
-    let currentTestament = 'all'; // 'all' | 'old' | 'new'
-    let searchQuery = '';
+    const state = {
+        mode: 'timeline', // 'timeline' | 'holy-week'
+        t: 'all',          // 'all' | 'ot' | 'nt'
+        q: '',             // timeline search query
+        hwQ: '',           // holy week search query
+        activeEraId: null,
+        activeHwDayId: 'all'
+    };
 
-    function escapeHtml(str) {
-        if (!str) return '';
-        return String(str)
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#39;');
+    const PERIOD_META = [
+        { id: 'Creation & Early History', t: 'ot', name: 'Creation and early history', range: 'Before time – 2100 BC' },
+        { id: 'The Patriarchs', t: 'ot', name: 'The patriarchs', range: '2091 – 1806 BC' },
+        { id: 'Exodus & Wilderness', t: 'ot', name: 'Exodus and the wilderness', range: '1800 – 1406 BC' },
+        { id: 'Conquest & Judges', t: 'ot', name: 'Conquest and judges', range: '1406 – 1050 BC' },
+        { id: 'United Kingdom', t: 'ot', name: 'The united kingdom', range: '1043 – 931 BC' },
+        { id: 'Divided Kingdom', t: 'ot', name: 'The divided kingdom', range: '931 – 586 BC' },
+        { id: 'Exile & Return', t: 'ot', name: 'Exile and return', range: '586 – 430 BC' },
+        { id: 'Life of Jesus', t: 'nt', name: 'The life of Jesus', range: '6 BC – AD 30' },
+        { id: 'Apostles & Early Church', t: 'nt', name: 'The early church', range: 'AD 30 – 95' }
+    ];
+
+    function esc(s) {
+        if (!s) return '';
+        return String(s).replace(/[&<>"]/g, c => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;'
+        }[c]));
+    }
+
+    function hl(s, query) {
+        const text = String(s || '');
+        if (!query) return esc(text);
+        const lower = text.toLowerCase();
+        const qLower = query.toLowerCase();
+        const idx = lower.indexOf(qLower);
+        if (idx < 0) return esc(text);
+        return esc(text.slice(0, idx)) + '<mark>' + esc(text.slice(idx, idx + query.length)) + '</mark>' + esc(text.slice(idx + query.length));
     }
 
     function getEvents() {
         return window.BIBLE_TIMELINE_EVENTS || [];
     }
 
-    function getPeriods() {
-        return window.BIBLE_TIMELINE_PERIODS || [];
+    function getHolyWeekData() {
+        return window.HOLY_WEEK_HARMONY_DATA || null;
+    }
+
+    /**
+     * Parses Gospel scripture strings like "21:1–7", "(26:6–13)*", "18:13–14, 19–24", "16:9–11†"
+     */
+    function parseGospelReference(bookKey, refString) {
+        if (!refString || refString === '—' || refString === '-') return null;
+
+        const bookMap = {
+            matthew: { name: 'Matthew', index: 39, file: 'matthew' },
+            mark: { name: 'Mark', index: 40, file: 'mark' },
+            luke: { name: 'Luke', index: 41, file: 'luke' },
+            john: { name: 'John', index: 42, file: 'john' }
+        };
+
+        const bookInfo = bookMap[bookKey.toLowerCase()];
+        if (!bookInfo) return null;
+
+        const clean = refString
+            .replace(/[\*\†\(\)]/g, '')
+            .replace(/[\u2013\u2014]/g, '-')
+            .trim();
+
+        const match = clean.match(/^(\d+)(?::(\d+)(?:-(\d+))?)?/);
+        if (!match) return null;
+
+        const chapter = parseInt(match[1], 10);
+        const startVerse = match[2] ? parseInt(match[2], 10) : 1;
+        const endVerse = match[3] ? parseInt(match[3], 10) : startVerse;
+
+        return {
+            bookName: bookInfo.name,
+            bookIndex: bookInfo.index,
+            bookFile: bookInfo.file,
+            chapter: chapter,
+            startVerse: startVerse,
+            endVerse: endVerse,
+            display: `${bookInfo.name} ${clean}`
+        };
+    }
+
+    function openHolyWeekScripture(gospel, refStr, eventTitle) {
+        const parsed = parseGospelReference(gospel, refStr);
+        if (!parsed) return;
+
+        close();
+
+        const passage = {
+            bookName: parsed.bookName,
+            bookIndex: parsed.bookIndex,
+            bookFile: parsed.bookFile,
+            chapter: parsed.chapter,
+            verse: parsed.startVerse,
+            display: parsed.display
+        };
+
+        navigateToPassage(passage, `${eventTitle} (${parsed.display})`);
+    }
+
+    function openFirstAvailableGospel(item) {
+        const gList = ['matthew', 'mark', 'luke', 'john'];
+        for (const g of gList) {
+            if (item[g] && item[g] !== '—' && item[g] !== '-') {
+                openHolyWeekScripture(g, item[g], item.event);
+                return;
+            }
+        }
     }
 
     function createModalDom() {
@@ -47,276 +141,644 @@
         modalBackdrop.setAttribute('aria-label', 'Bible Chronological Timeline');
 
         modalBackdrop.innerHTML = `
-            <div class="bible-timeline-modal" id="bible-timeline-modal-card">
-                <!-- Header -->
-                <div class="bt-header">
-                    <div class="bt-header-left">
-                        <h3 class="bt-header-title">Timeline</h3>
-                        <span class="bt-count-badge" id="bt-total-counter">583 Events</span>
-                    </div>
-                    <div class="bt-header-actions">
-                        <button type="button" class="bt-close-btn" id="bt-close-btn" aria-label="Close" title="Close (Esc)">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Controls & Search -->
-                <div class="bt-controls">
-                    <div class="bt-search-wrapper">
-                        <svg class="bt-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <section class="tl" id="bible-timeline-modal-card" role="dialog" aria-modal="true" aria-labelledby="tl-title">
+                <header class="tl-head" id="tl-head">
+                    <button class="tl-sidebar-toggle-btn" id="tl-sidebar-toggle-btn" aria-label="Toggle sidebar" aria-expanded="true" title="Toggle Eras Sidebar">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="3" x2="9" y2="21"></line>
                         </svg>
-                        <input type="text" id="bt-search-input" class="bt-search-input" placeholder="Search events, dates, or books..." autocomplete="off" spellcheck="false">
-                        <button type="button" id="bt-clear-search-btn" class="bt-clear-search" aria-label="Clear Search" style="display: none;">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                        </button>
+                    </button>
+                    <h1 class="tl-title" id="tl-title">Timeline <span class="tl-count" id="count"></span></h1>
+                    <div class="search" id="tl-search-box">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <path d="m20 20-3.5-3.5"></path>
+                        </svg>
+                        <input id="q" type="search" placeholder="Flood, 1000 BC, Exodus 14..." aria-label="Search events, dates, or books" autocomplete="off" spellcheck="false">
+                        <kbd>/</kbd>
                     </div>
-
-                    <div class="bt-filter-row">
-                        <div class="bt-pills-group">
-                            <button type="button" class="bt-filter-pill active" data-testament="all">All</button>
-                            <button type="button" class="bt-filter-pill" data-testament="old">Old Testament</button>
-                            <button type="button" class="bt-filter-pill" data-testament="new">New Testament</button>
-                        </div>
-                        <select class="bt-era-select" id="bt-era-select" aria-label="Filter by Era">
-                            <option value="all">All Eras</option>
-                        </select>
+                    <div class="seg" id="tl-seg" role="group" aria-label="Testament">
+                        <button data-t="all" aria-pressed="true">All</button>
+                        <button data-t="ot" aria-pressed="false">Old</button>
+                        <button data-t="nt" aria-pressed="false">New</button>
                     </div>
-                </div>
-
-                <!-- Scrollable Body -->
-                <div class="bt-body" id="bt-body">
-                    <ul class="bt-list" id="bt-list"></ul>
-                </div>
-            </div>
+                    <button class="icon-btn" id="tl-close-btn" aria-label="Close timeline" title="Close (Esc)">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M6 6l12 12M18 6 6 18"></path>
+                        </svg>
+                    </button>
+                </header>
+                <nav class="rail" id="rail" aria-label="Eras"></nav>
+                <div class="list" id="list"></div>
+            </section>
         `;
 
         document.body.appendChild(modalBackdrop);
 
-        // Cache elements
-        listContainer = document.getElementById('bt-list');
-        searchInput = document.getElementById('bt-search-input');
-        clearSearchBtn = document.getElementById('bt-clear-search-btn');
-        totalCounter = document.getElementById('bt-total-counter');
-        eraSelect = document.getElementById('bt-era-select');
-        filterPills = modalBackdrop.querySelectorAll('.bt-filter-pill');
+        listEl = document.getElementById('list');
+        railEl = document.getElementById('rail');
+        searchInput = document.getElementById('q');
+        countEl = document.getElementById('count');
+        segButtons = modalBackdrop.querySelectorAll('.seg button');
 
-        // Events wiring
-        document.getElementById('bt-close-btn').addEventListener('click', close);
+        // Close wiring
+        document.getElementById('tl-close-btn').addEventListener('click', close);
         modalBackdrop.addEventListener('click', (e) => {
             if (e.target === modalBackdrop) close();
         });
 
+        // Sidebar toggle wiring
+        const sidebarToggleBtn = document.getElementById('tl-sidebar-toggle-btn');
+        if (sidebarToggleBtn) {
+            sidebarToggleBtn.addEventListener('click', () => {
+                const card = document.getElementById('bible-timeline-modal-card');
+                if (!card) return;
+                const isCollapsed = card.classList.toggle('rail-collapsed');
+                sidebarToggleBtn.setAttribute('aria-expanded', !isCollapsed);
+                sidebarToggleBtn.setAttribute('title', isCollapsed ? 'Expand Sidebar' : 'Collapse Sidebar');
+            });
+        }
+
         // Search input
         searchInput.addEventListener('input', (e) => {
-            searchQuery = e.target.value.trim().toLowerCase();
-            if (clearSearchBtn) {
-                clearSearchBtn.style.display = searchQuery ? 'flex' : 'none';
+            if (state.mode === 'holy-week') {
+                state.hwQ = e.target.value.trim().toLowerCase();
+                renderHolyWeek();
+            } else {
+                state.q = e.target.value.trim().toLowerCase();
+                renderTimeline();
             }
-            renderList();
         });
 
-        clearSearchBtn.addEventListener('click', () => {
-            searchInput.value = '';
-            searchQuery = '';
-            clearSearchBtn.style.display = 'none';
-            searchInput.focus();
-            renderList();
-        });
+        // Segmented filter buttons (All / Old / New)
+        document.getElementById('tl-seg').addEventListener('click', (e) => {
+            const btn = e.target.closest('button');
+            if (!btn) return;
 
-        // Filter pills (Testament)
-        filterPills.forEach(pill => {
-            pill.addEventListener('click', () => {
-                filterPills.forEach(p => p.classList.remove('active'));
-                pill.classList.add('active');
-                currentTestament = pill.getAttribute('data-testament') || 'all';
-                populateEraOptions();
-                renderList();
+            if (btn.classList.contains('hw-back-btn') || btn.dataset.action === 'back-timeline') {
+                showTimelineView();
+                return;
+            }
+
+            state.t = btn.dataset.t;
+            modalBackdrop.querySelectorAll('.seg button').forEach(b => {
+                b.setAttribute('aria-pressed', b === btn);
             });
+            renderTimeline();
+            if (listEl) listEl.scrollTop = 0;
         });
 
-        // Era select change
-        eraSelect.addEventListener('change', () => {
-            currentPeriod = eraSelect.value;
-            renderList();
-        });
+        // Left rail clicks
+        railEl.addEventListener('click', (e) => {
+            const eraBtn = e.target.closest('.era-link');
+            if (!eraBtn) return;
 
-        // Escape key to close
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modalBackdrop.classList.contains('open')) {
-                close();
+            // Holy Week mode rail clicks
+            if (state.mode === 'holy-week') {
+                const dayId = eraBtn.dataset.hwDay;
+                if (!dayId) return;
+
+                railEl.querySelectorAll('.era-link').forEach(b => b.classList.remove('active'));
+                eraBtn.classList.add('active');
+                state.activeHwDayId = dayId;
+
+                const targetSec = document.getElementById(`hw-day-${dayId}`);
+                if (targetSec && listEl) {
+                    listEl.scrollTop = targetSec.offsetTop - listEl.offsetTop - 4;
+                }
+                return;
+            }
+
+            // Timeline mode Holy Week shortcut link
+            if (eraBtn.dataset.action === 'holy-week') {
+                showHolyWeekView();
+                return;
+            }
+
+            // Timeline mode era navigation
+            const eraId = eraBtn.dataset.era;
+            if (!eraId) return;
+
+            railEl.querySelectorAll('.era-link').forEach(b => b.classList.remove('active'));
+            eraBtn.classList.add('active');
+
+            const targetSec = document.getElementById(`era-${sanitizeId(eraId)}`);
+            if (targetSec && listEl) {
+                listEl.scrollTop = targetSec.offsetTop - listEl.offsetTop - 4;
             }
         });
 
-        populateEraOptions();
+        // List clicks (scripture opening, empty state clear, etc.)
+        listEl.addEventListener('click', (e) => {
+            // Clear search button in empty state
+            if (e.target.id === 'clear') {
+                if (state.mode === 'holy-week') {
+                    state.hwQ = '';
+                    if (searchInput) searchInput.value = '';
+                    renderHolyWeek();
+                } else {
+                    state.q = '';
+                    if (searchInput) searchInput.value = '';
+                    renderTimeline();
+                }
+                return;
+            }
+
+            // Holy Week scripture button click
+            const hwRefBtn = e.target.closest('.hw-ref-btn');
+            if (hwRefBtn) {
+                e.stopPropagation();
+                const gospel = hwRefBtn.dataset.gospel;
+                const ref = hwRefBtn.dataset.ref;
+                const title = hwRefBtn.dataset.title;
+                openHolyWeekScripture(gospel, ref, title);
+                return;
+            }
+
+            // Holy Week event title cell click
+            const hwEventCell = e.target.closest('.hw-td-event');
+            if (hwEventCell) {
+                const tr = hwEventCell.closest('.hw-row');
+                if (tr) {
+                    const dayId = tr.dataset.dayId;
+                    const evIdx = parseInt(tr.dataset.eventIdx, 10);
+                    const hwData = getHolyWeekData();
+                    const dayObj = hwData && hwData.days.find(d => d.id === dayId);
+                    if (dayObj && dayObj.events[evIdx]) {
+                        openFirstAvailableGospel(dayObj.events[evIdx]);
+                    }
+                }
+                return;
+            }
+
+            // Regular timeline event click
+            const evRow = e.target.closest('.ev');
+            if (evRow) {
+                const evId = parseInt(evRow.dataset.id, 10);
+                const allEvents = getEvents();
+                const ev = allEvents.find(item => item.id === evId);
+                if (!ev) return;
+
+                if (ev.isHolyWeek) {
+                    showHolyWeekView();
+                    return;
+                }
+
+                if (ev.passages && ev.passages.length > 0) {
+                    navigateToPassage(ev.passages[0], ev.title);
+                }
+            }
+        });
+
+        // Keyboard navigation on list
+        listEl.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const evRow = e.target.closest('.ev');
+                if (evRow) evRow.click();
+            }
+        });
+
+        // Scroll spy to highlight active era in left rail
+        listEl.addEventListener('scroll', () => {
+            const top = listEl.scrollTop + listEl.offsetTop + 60;
+
+            if (state.mode === 'holy-week') {
+                let curDay = null;
+                document.querySelectorAll('.hw-day-sec').forEach(s => {
+                    if (s.offsetTop <= top) curDay = s.dataset.dayId;
+                });
+                if (curDay) {
+                    railEl.querySelectorAll('.era-link').forEach(l => {
+                        l.classList.toggle('active', l.dataset.hwDay === curDay);
+                    });
+                }
+                return;
+            }
+
+            let curEra = null;
+            document.querySelectorAll('.era').forEach(s => {
+                if (s.offsetTop <= top) curEra = s.dataset.era;
+            });
+            if (curEra) {
+                railEl.querySelectorAll('.era-link').forEach(l => {
+                    l.classList.toggle('active', l.dataset.era === curEra);
+                });
+            }
+        });
+
+        // Global shortcut: '/' to focus search, Esc to close
+        document.addEventListener('keydown', (e) => {
+            if (modalBackdrop && modalBackdrop.classList.contains('open')) {
+                if (e.key === 'Escape') {
+                    close();
+                } else if (e.key === '/' && document.activeElement !== searchInput) {
+                    e.preventDefault();
+                    if (searchInput) searchInput.focus();
+                }
+            }
+        });
+
         return modalBackdrop;
     }
 
-    function populateEraOptions() {
-        if (!eraSelect) return;
-        const periods = getPeriods();
-        const events = getEvents();
-
-        let html = '<option value="all">All Eras</option>';
-        periods.forEach(p => {
-            if (p.id === 'all') return;
-            const count = events.filter(e => {
-                if (currentTestament !== 'all') {
-                    if (currentTestament === 'new') {
-                        const isNT = e.testament === 'new' || (e.passages && e.passages.some(pass => pass.bookIndex >= 39));
-                        if (!isNT) return false;
-                    } else if (currentTestament === 'old') {
-                        const isOT = e.testament === 'old' && (!e.passages || !e.passages.some(pass => pass.bookIndex >= 39));
-                        if (!isOT) return false;
-                    }
-                }
-                return e.period === p.id;
-            }).length;
-
-            if (count > 0) {
-                html += `<option value="${escapeHtml(p.id)}">${escapeHtml(p.name)} (${count})</option>`;
-            }
-        });
-
-        eraSelect.innerHTML = html;
-        eraSelect.value = currentPeriod;
+    function sanitizeId(str) {
+        return String(str || '').replace(/[^a-zA-Z0-9_-]/g, '-').toLowerCase();
     }
 
-    function renderList() {
-        if (!listContainer) return;
+    function getVisibleEras() {
         const allEvents = getEvents();
+        const q = state.q;
 
-        const filtered = allEvents.filter(ev => {
-            // Testament filter
-            if (currentTestament !== 'all') {
-                const isNT = ev.testament === 'new' || (ev.passages && ev.passages.some(p => p.bookIndex >= 39));
-                if (currentTestament === 'new' && !isNT) return false;
-                if (currentTestament === 'old' && isNT) return false;
-            }
+        return PERIOD_META
+            .filter(p => state.t === 'all' || p.t === state.t)
+            .map(p => {
+                const eraEvents = allEvents.filter(ev => ev.period === p.id);
+                const shownEvents = eraEvents.filter(ev => {
+                    if (!q) return true;
+                    const inTitle = ev.title && ev.title.toLowerCase().includes(q);
+                    const inDate = ev.date && ev.date.toLowerCase().includes(q);
+                    const inKeywords = ev.keywords && ev.keywords.toLowerCase().includes(q);
+                    const inPassages = ev.passages && ev.passages.some(pass =>
+                        (pass.display && pass.display.toLowerCase().includes(q)) ||
+                        (pass.bookName && pass.bookName.toLowerCase().includes(q))
+                    );
+                    return inTitle || inDate || inKeywords || inPassages;
+                });
+                return {
+                    ...p,
+                    events: shownEvents
+                };
+            })
+            .filter(p => p.events.length > 0);
+    }
 
-            // Period filter
-            if (currentPeriod !== 'all' && ev.period !== currentPeriod) {
-                return false;
-            }
+    /**
+     * Renders Timeline Mode (Eras Rail + Center-Dot Event List)
+     */
+    function renderTimeline() {
+        if (!listEl || !railEl) return;
 
-            // Search query filter
-            if (searchQuery) {
-                const titleMatch = ev.title.toLowerCase().includes(searchQuery);
-                const dateMatch = ev.date.toLowerCase().includes(searchQuery);
-                const periodMatch = ev.period.toLowerCase().includes(searchQuery);
-                const passageMatch = ev.passages.some(p =>
-                    p.display.toLowerCase().includes(searchQuery) ||
-                    p.bookName.toLowerCase().includes(searchQuery)
-                );
-                if (!titleMatch && !dateMatch && !periodMatch && !passageMatch) {
-                    return false;
-                }
-            }
+        const visibleEras = getVisibleEras();
+        const total = visibleEras.reduce((n, e) => n + e.events.length, 0);
 
-            return true;
-        });
-
-        // Update counter
-        if (totalCounter) {
-            totalCounter.textContent = `${filtered.length} Events`;
+        if (countEl) {
+            countEl.textContent = `${total} ${total === 1 ? 'event' : 'events'}`;
         }
 
-        if (filtered.length === 0) {
-            listContainer.innerHTML = `
-                <li class="bt-empty-state">
-                    <p class="bt-empty-title">No Events Found</p>
-                    <p class="bt-empty-desc">${searchQuery ? `No biblical events match "${escapeHtml(searchQuery)}".` : `No events under this selection.`}</p>
-                    ${searchQuery ? `<button type="button" class="bt-reset-btn" id="bt-reset-btn">Clear Search</button>` : ''}
-                </li>
-            `;
-            const resetBtn = document.getElementById('bt-reset-btn');
-            if (resetBtn) {
-                resetBtn.addEventListener('click', () => {
-                    if (searchInput) searchInput.value = '';
-                    searchQuery = '';
-                    if (clearSearchBtn) clearSearchBtn.style.display = 'none';
-                    renderList();
-                });
+        // 1. Render Left Rail
+        let railHtml = '';
+        let lastT = null;
+
+        visibleEras.forEach((e, i) => {
+            if (e.t !== lastT) {
+                railHtml += `<div class="rail-group">${e.t === 'ot' ? 'Old Testament' : 'New Testament'}</div>`;
+                lastT = e.t;
             }
+            railHtml += `
+                <button class="era-link${i === 0 ? ' active' : ''}" data-era="${esc(e.id)}">
+                    <span class="era-name">${esc(e.name)}<span>${e.events.length}</span></span>
+                    <span class="era-range">${esc(e.range)}</span>
+                </button>
+            `;
+        });
+
+        // Add prominent Holy Week shortcut in the rail
+        railHtml += `
+            <div class="rail-group">Holy Week</div>
+            <button class="era-link era-link-holy-week" data-action="holy-week" title="Holy Week in the Four Gospels: Every Event, Day by Day">
+                <span class="era-name">Jesus' Last Week<span>10 Days</span></span>
+                <span class="era-range">Palm Sunday to Resurrection</span>
+            </button>
+        `;
+
+        railEl.innerHTML = railHtml;
+
+        // 2. Render Events List
+        if (!visibleEras.length) {
+            listEl.innerHTML = `
+                <div class="empty">
+                    No events match “${esc(state.q)}”.<br>
+                    <button id="clear">Clear search</button>
+                </div>
+            `;
             return;
         }
 
-        let html = '';
-        let lastPeriod = null;
+        let listHtml = visibleEras.map(e => `
+            <section class="era" id="era-${sanitizeId(e.id)}" data-era="${esc(e.id)}">
+                <div class="era-band">${esc(e.name)}<small>${esc(e.range)}</small></div>
+                <ol class="events">
+                    ${e.events.map(ev => {
+                        if (ev.isHolyWeek) {
+                            return `
+                                <li class="ev ev-holy-week" tabindex="0" data-id="${ev.id}" title="Click to view Holy Week Day by Day">
+                                    <span class="ev-date">${hl(ev.date, state.q)}</span>
+                                    <span class="dot dot-holy-week"></span>
+                                    <span class="ev-title">
+                                        <strong>${hl("Jesus' Last Week (Holy Week)", state.q)}</strong> — Every Event, Day by Day
+                                        <span class="hw-pill-badge">Four Gospels</span>
+                                    </span>
+                                    <span class="ev-ref">Explore Day by Day →</span>
+                                </li>
+                            `;
+                        }
 
-        filtered.forEach(ev => {
-            // Era Header separator when browsing all eras
-            if (currentPeriod === 'all' && ev.period !== lastPeriod) {
-                lastPeriod = ev.period;
-                const periodObj = getPeriods().find(p => p.id === ev.period);
-                html += `
-                    <li class="bt-era-header">
-                        <span>${escapeHtml(ev.period)}</span>
-                        ${periodObj && periodObj.dateRange ? `<span class="bt-era-daterange">${escapeHtml(periodObj.dateRange)}</span>` : ''}
-                    </li>
-                `;
+                        const refDisplay = (ev.passages && ev.passages.length > 0)
+                            ? ev.passages.map(p => p.display).join(', ')
+                            : '';
+
+                        return `
+                            <li class="ev" tabindex="0" data-id="${ev.id}">
+                                <span class="ev-date">${hl(ev.date, state.q)}</span>
+                                <span class="dot"></span>
+                                <span class="ev-title">${hl(ev.title, state.q)}</span>
+                                <span class="ev-ref">${hl(refDisplay, state.q)}</span>
+                            </li>
+                        `;
+                    }).join('')}
+                </ol>
+            </section>
+        `).join('');
+
+        listEl.innerHTML = listHtml;
+    }
+
+    /**
+     * Shows Timeline Mode
+     */
+    function showTimelineView() {
+        state.mode = 'timeline';
+        const modalDom = createModalDom();
+
+        const titleEl = document.getElementById('tl-title');
+        if (titleEl) {
+            titleEl.innerHTML = `Timeline <span class="tl-count" id="count"></span>`;
+            countEl = document.getElementById('count');
+        }
+
+        const searchWrapper = document.getElementById('tl-search-box');
+        if (searchWrapper) {
+            searchWrapper.innerHTML = `
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="m20 20-3.5-3.5"></path>
+                </svg>
+                <input id="q" type="search" placeholder="Flood, 1000 BC, Exodus 14..." aria-label="Search events, dates, or books" autocomplete="off" spellcheck="false" value="${esc(state.q)}">
+                <kbd>/</kbd>
+            `;
+            searchInput = document.getElementById('q');
+            searchInput.addEventListener('input', (e) => {
+                state.q = e.target.value.trim().toLowerCase();
+                renderTimeline();
+            });
+        }
+
+        const segWrapper = document.getElementById('tl-seg');
+        if (segWrapper) {
+            segWrapper.innerHTML = `
+                <button data-t="all" aria-pressed="${state.t === 'all'}">All</button>
+                <button data-t="ot" aria-pressed="${state.t === 'ot'}">Old</button>
+                <button data-t="nt" aria-pressed="${state.t === 'nt'}">New</button>
+            `;
+        }
+
+        const sidebarToggleBtn = document.getElementById('tl-sidebar-toggle-btn');
+        if (sidebarToggleBtn) {
+            const card = document.getElementById('bible-timeline-modal-card');
+            const isCollapsed = card && card.classList.contains('rail-collapsed');
+            sidebarToggleBtn.setAttribute('title', isCollapsed ? 'Expand Eras Sidebar' : 'Collapse Eras Sidebar');
+        }
+
+        renderTimeline();
+    }
+
+    /**
+     * Shows Holy Week Harmony Mode
+     */
+    function showHolyWeekView(targetDayId) {
+        state.mode = 'holy-week';
+        createModalDom();
+
+        const titleEl = document.getElementById('tl-title');
+        if (titleEl) {
+            titleEl.innerHTML = `Holy Week <span class="tl-count" id="count">10 Days • 121 Events</span>`;
+            countEl = document.getElementById('count');
+        }
+
+        const searchWrapper = document.getElementById('tl-search-box');
+        if (searchWrapper) {
+            searchWrapper.innerHTML = `
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="m20 20-3.5-3.5"></path>
+                </svg>
+                <input id="q" type="search" placeholder="Search trials, sayings, parables, 21:1..." aria-label="Filter Holy Week events" autocomplete="off" spellcheck="false" value="${esc(state.hwQ)}">
+                <kbd>/</kbd>
+            `;
+            searchInput = document.getElementById('q');
+            searchInput.addEventListener('input', (e) => {
+                state.hwQ = e.target.value.trim().toLowerCase();
+                renderHolyWeek();
+            });
+        }
+
+        const segWrapper = document.getElementById('tl-seg');
+        if (segWrapper) {
+            segWrapper.innerHTML = `
+                <button class="hw-back-btn" data-action="back-timeline" aria-pressed="true" title="Return to Chronological Timeline">
+                    ← Timeline
+                </button>
+            `;
+        }
+
+        const sidebarToggleBtn = document.getElementById('tl-sidebar-toggle-btn');
+        if (sidebarToggleBtn) {
+            const card = document.getElementById('bible-timeline-modal-card');
+            const isCollapsed = card && card.classList.contains('rail-collapsed');
+            sidebarToggleBtn.setAttribute('title', isCollapsed ? 'Expand Days Sidebar' : 'Collapse Days Sidebar');
+        }
+
+        renderHolyWeek();
+
+        if (targetDayId && targetDayId !== 'all') {
+            setTimeout(() => {
+                const targetSec = document.getElementById(`hw-day-${targetDayId}`);
+                if (targetSec && listEl) {
+                    listEl.scrollTop = targetSec.offsetTop - listEl.offsetTop - 4;
+                }
+            }, 50);
+        }
+    }
+
+    function renderRefCell(gospel, refStr, eventTitle) {
+        if (!refStr || refStr === '—' || refStr === '-') {
+            return '<span class="hw-dash" aria-hidden="true">—</span>';
+        }
+        return `
+            <button type="button" class="hw-ref-btn" 
+                    data-gospel="${esc(gospel)}" 
+                    data-ref="${esc(refStr)}"
+                    data-title="${esc(eventTitle)}"
+                    title="Read ${esc(gospel.charAt(0).toUpperCase() + gospel.slice(1))} ${esc(refStr)}">
+                ${hl(refStr, state.hwQ)}
+            </button>
+        `;
+    }
+
+    /**
+     * Renders Holy Week Mode
+     */
+    function renderHolyWeek() {
+        if (!listEl || !railEl) return;
+
+        const hwData = getHolyWeekData();
+        if (!hwData || !hwData.days) {
+            listEl.innerHTML = '<div class="empty">Holy Week dataset not loaded.</div>';
+            return;
+        }
+
+        const query = state.hwQ;
+
+        // Filter events by search
+        let matchedDays = [];
+        let totalEvents = 0;
+
+        hwData.days.forEach(day => {
+            let events = day.events;
+            if (query) {
+                events = day.events.filter(item => {
+                    const inEvent = item.event && item.event.toLowerCase().includes(query);
+                    const inMatt = item.matthew && item.matthew.toLowerCase().includes(query);
+                    const inMark = item.mark && item.mark.toLowerCase().includes(query);
+                    const inLuke = item.luke && item.luke.toLowerCase().includes(query);
+                    const inJohn = item.john && item.john.toLowerCase().includes(query);
+                    const inDay = day.dayName && day.dayName.toLowerCase().includes(query);
+                    return inEvent || inMatt || inMark || inLuke || inJohn || inDay;
+                });
             }
 
-            // Passages HTML
-            let passageHtml = '';
-            ev.passages.forEach((p, idx) => {
-                passageHtml += `
-                    <button type="button" class="bt-passage-link" 
-                            data-event-id="${ev.id}" 
-                            data-passage-idx="${idx}"
-                            title="Read ${escapeHtml(p.display)}">
-                        ${escapeHtml(p.display)}
-                    </button>
-                `;
-            });
+            if (events.length > 0) {
+                totalEvents += events.length;
+                matchedDays.push({
+                    day,
+                    events
+                });
+            }
+        });
 
-            html += `
-                <li class="bt-row" data-event-id="${ev.id}">
-                    <div class="bt-date-col">${escapeHtml(ev.date)}</div>
-                    <div class="bt-content-col">
-                        <span class="bt-event-title">${escapeHtml(ev.title)}</span>
-                    </div>
-                    <div class="bt-passages-col">
-                        ${passageHtml}
-                    </div>
-                </li>
+        if (countEl) {
+            countEl.textContent = query
+                ? `${totalEvents} events found`
+                : `10 Days • ${totalEvents} Events`;
+        }
+
+        // 1. Render Left Rail (Holy Week Days)
+        let railHtml = `<div class="rail-group">Holy Week</div>`;
+        railHtml += `
+            <button class="era-link active" data-hw-day="all">
+                <span class="era-name">All Days<span>${totalEvents}</span></span>
+                <span class="era-range">Palm Sunday to Resurrection</span>
+            </button>
+        `;
+
+        matchedDays.forEach(group => {
+            const d = group.day;
+            railHtml += `
+                <button class="era-link" data-hw-day="${esc(d.id)}">
+                    <span class="era-name">${esc(d.shortName)}<span>${group.events.length}</span></span>
+                    <span class="era-range">${esc(d.dateLabel || d.dayName)}</span>
+                </button>
             `;
         });
 
-        listContainer.innerHTML = html;
+        if (!query) {
+            railHtml += `
+                <button class="era-link" data-hw-day="differences">
+                    <span class="era-name">Differences<span>3</span></span>
+                    <span class="era-range">Synoptics vs John timing</span>
+                </button>
+            `;
+        }
 
-        // Click handlers
-        // 1. Passage button click
-        listContainer.querySelectorAll('.bt-passage-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const evId = parseInt(link.getAttribute('data-event-id'), 10);
-                const pIdx = parseInt(link.getAttribute('data-passage-idx'), 10);
-                const ev = allEvents.find(item => item.id === evId);
-                if (ev && ev.passages[pIdx]) {
-                    navigateToPassage(ev.passages[pIdx], ev.title);
-                }
-            });
+        railEl.innerHTML = railHtml;
+
+        // 2. Render Main Body (Tables)
+        if (!matchedDays.length) {
+            listEl.innerHTML = `
+                <div class="empty">
+                    No Holy Week events match “${esc(query)}”.<br>
+                    <button id="clear">Clear search</button>
+                </div>
+            `;
+            return;
+        }
+
+        let listHtml = '';
+
+        matchedDays.forEach(group => {
+            const d = group.day;
+            listHtml += `
+                <section class="era hw-day-sec" id="hw-day-${esc(d.id)}" data-day-id="${esc(d.id)}">
+                    <div class="era-band">${esc(d.dayName)}<small>${esc(d.dateLabel || '')}</small></div>
+                    <div class="hw-table-wrapper">
+                        <table class="hw-table">
+                            <thead>
+                                <tr>
+                                    <th class="hw-th-event">Event</th>
+                                    <th class="hw-th-gospel">Matthew</th>
+                                    <th class="hw-th-gospel">Mark</th>
+                                    <th class="hw-th-gospel">Luke</th>
+                                    <th class="hw-th-gospel">John</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${group.events.map((item, idx) => `
+                                    <tr class="hw-row" data-day-id="${esc(d.id)}" data-event-idx="${idx}">
+                                        <td class="hw-td-event" title="Click to read passage in Bible">
+                                            ${hl(item.event, query)}
+                                        </td>
+                                        <td class="hw-td-gospel">${renderRefCell('matthew', item.matthew, item.event)}</td>
+                                        <td class="hw-td-gospel">${renderRefCell('mark', item.mark, item.event)}</td>
+                                        <td class="hw-td-gospel">${renderRefCell('luke', item.luke, item.event)}</td>
+                                        <td class="hw-td-gospel">${renderRefCell('john', item.john, item.event)}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                    ${d.footnote ? `
+                        <div class="hw-footnote">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                            <span>${esc(d.footnote)}</span>
+                        </div>
+                    ` : ''}
+                </section>
+            `;
         });
 
-        // 2. Entire row click (opens primary passage)
-        listContainer.querySelectorAll('.bt-row').forEach(row => {
-            row.addEventListener('click', () => {
-                const evId = parseInt(row.getAttribute('data-event-id'), 10);
-                const ev = allEvents.find(item => item.id === evId);
-                if (ev && ev.passages.length > 0) {
-                    navigateToPassage(ev.passages[0], ev.title);
-                }
-            });
-        });
+        // "A Few Points on the Differences" Card
+        if (!query && hwData.differences && hwData.differences.length > 0) {
+            listHtml += `
+                <section class="era hw-day-sec" id="hw-day-differences" data-day-id="differences">
+                    <div class="era-band">A Few Points on the Differences<small>Overview</small></div>
+                    <div class="hw-diff-card">
+                        ${hwData.differences.map((diff, i) => `
+                            <div class="hw-diff-item">
+                                <span class="hw-diff-num">${i + 1}</span>
+                                <p>${diff}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </section>
+            `;
+        }
+
+        listEl.innerHTML = listHtml;
     }
 
     /**
@@ -327,7 +789,6 @@
 
         close();
 
-        // Resolve bookIndex
         let targetBookIndex = passage.bookIndex;
         if (typeof targetBookIndex !== 'number' || targetBookIndex < 0) {
             if (typeof bibleBooks !== 'undefined') {
@@ -344,7 +805,6 @@
         const chapter = passage.chapter || 1;
         const verse = passage.verse || null;
 
-        // Update top search input
         const topSearchInput = document.getElementById('desktop-top-search-input');
         const topClearBtn = document.getElementById('desktop-top-clear-btn');
         const topSearchBox = document.getElementById('desktop-top-search-box');
@@ -354,7 +814,6 @@
             if (topSearchBox) topSearchBox.classList.add('story-mode-active');
         }
 
-        // Method 1: Desktop-search openScriptureReference
         if (typeof window.openScriptureReference === 'function') {
             window.openScriptureReference({
                 bookIndex: targetBookIndex,
@@ -367,7 +826,6 @@
             return;
         }
 
-        // Method 2: Standard loadBook
         if (typeof loadBook === 'function') {
             loadBook(targetBookIndex, chapter).then(() => {
                 if (verse && typeof scrollToVerse === 'function') {
@@ -384,22 +842,13 @@
     }
 
     function open(options) {
-        if (window.innerWidth <= 768) return;
         createModalDom();
 
-        if (options && options.period) {
-            currentPeriod = options.period;
-            if (eraSelect) eraSelect.value = currentPeriod;
+        if (options && (options.view === 'holy-week' || options.holyWeek)) {
+            showHolyWeekView(options.dayId);
+        } else {
+            showTimelineView();
         }
-        if (options && options.testament) {
-            currentTestament = options.testament;
-            filterPills.forEach(p => {
-                p.classList.toggle('active', p.getAttribute('data-testament') === currentTestament);
-            });
-            populateEraOptions();
-        }
-
-        renderList();
 
         modalBackdrop.classList.add('open');
         document.body.style.overflow = 'hidden';
@@ -424,9 +873,11 @@
     // Expose globally
     window.openBibleTimeline = open;
     window.closeBibleTimeline = close;
+    window.openHolyWeekHarmony = function(dayId) {
+        open({ view: 'holy-week', dayId: dayId });
+    };
 
     function bindUiTriggers() {
-        // Top bar button
         const topNavBtn = document.getElementById('timeline-nav-btn');
         if (topNavBtn && !topNavBtn._timelineBound) {
             topNavBtn._timelineBound = true;
@@ -435,13 +886,6 @@
                 open();
             });
         }
-
-        // Desktop-only resize guard: close modal if window resizes to mobile
-        window.addEventListener('resize', () => {
-            if (window.innerWidth <= 768) {
-                close();
-            }
-        });
     }
 
     if (document.readyState === 'loading') {

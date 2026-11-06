@@ -1,6 +1,6 @@
 // Service worker for PWA with Supabase API caching
 // IMPORTANT: Cache version is automatically updated with build timestamp
-const BUILD_TIMESTAMP = '20261106113415';
+const BUILD_TIMESTAMP = '20261106183507';
 const CACHE_VERSION = `v6-${BUILD_TIMESTAMP}`;
 const CACHE_NAME = `my-bible-${CACHE_VERSION}`;
 const API_CACHE_NAME = `my-bible-api-${CACHE_VERSION}`;
@@ -30,6 +30,7 @@ const STATIC_ASSETS = [
   './src/styles/bible-timeline.css',
   './src/js/bible-timeline.js',
   './src/data/bible-timeline-data.js',
+  './src/data/holy-week-data.js',
   './data/bible/bible-data-loader.js',
   './data/bible/english/king-james-bible.json',
   './data/bible/english/king-james-bible.js'
@@ -53,10 +54,10 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames.map((cache) => {
           // Keep current caches AND persistent API cache
-          const shouldKeep = cache === CACHE_NAME || 
-                           cache === API_CACHE_NAME || 
-                           cache === STATIC_CACHE_NAME ||
-                           cache === PERSISTENT_API_CACHE;
+          const shouldKeep = cache === CACHE_NAME ||
+            cache === API_CACHE_NAME ||
+            cache === STATIC_CACHE_NAME ||
+            cache === PERSISTENT_API_CACHE;
           if (!shouldKeep) {
             return caches.delete(cache);
           }
@@ -89,7 +90,7 @@ self.addEventListener('fetch', (event) => {
                   cache.put(event.request, responseClone);
                 });
               }
-            }).catch(() => {});
+            }).catch(() => { });
             return cachedResponse;
           }
 
@@ -144,10 +145,10 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   // Handle static assets (cache first)
-  if (event.request.destination === 'document' || 
-      event.request.destination === 'script' || 
-      event.request.destination === 'style' ||
-      event.request.destination === 'image') {
+  if (event.request.destination === 'document' ||
+    event.request.destination === 'script' ||
+    event.request.destination === 'style' ||
+    event.request.destination === 'image') {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
@@ -238,8 +239,8 @@ self.addEventListener('fetch', (event) => {
           </body>
           </html>
         `, {
-          headers: { 'Content-Type': 'text/html' }
-        });
+            headers: { 'Content-Type': 'text/html' }
+          });
         }
         return new Response('Network error', {
           status: 503,
