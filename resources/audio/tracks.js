@@ -1083,6 +1083,14 @@ const BIBLE_TRACKS = [
     verse: "Judges 13",
     desc: "Discover how God announced Samson's birth through an angel and chose him to begin delivering Israel from the Philistines.",
     category: "Characters"
+  },
+  {
+    day: 108,
+    title: "Fruit of the Spirit",
+    duration: "00:00 min",
+    verse: "Galatians 5:22-23",
+    desc: "Discover the nine qualities of the Fruit of the Spirit and how the Holy Spirit transforms a believer's life.",
+    category: "Teachings"
   }
 ];
 
