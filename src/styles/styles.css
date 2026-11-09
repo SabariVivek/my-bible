@@ -10321,6 +10321,100 @@ body:not(.dark-theme) .popup-info-content .ref-pill:hover {
     background-color: rgba(0, 0, 0, 0.06) !important;
 }
 
+/* Word-meaning highlight (restored from the original popup design) */
+.popup-highlight-word {
+    background: rgba(255, 220, 100, 0.25);
+    color: inherit;
+    border-bottom: 1.5px dashed #f5d547;
+    padding-bottom: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.popup-highlight-word:hover {
+    background: rgba(255, 220, 100, 0.35);
+}
+
+body.dark-theme .popup-highlight-word,
+body.dark-theme .popup-highlight-word:hover {
+    background: rgb(98 96 89 / 15%);
+    color: #b8b8b8;
+    border-bottom: 1.5px dashed rgba(255, 248, 220, 0.5);
+}
+
+/* Tamil / English meaning block inside tooltip / bottom sheet */
+.popup-meaning-switchable {
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 6px;
+    animation: none;
+}
+
+.popup-meaning-switchable:focus-visible {
+    outline: 1.5px solid #c9a227;
+    outline-offset: 4px;
+}
+
+.popup-meaning-switchable [data-lang-text] {
+    animation: popupLangFade 0.2s ease;
+}
+
+@keyframes popupLangFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Show only the selected language */
+.popup-meaning[data-lang="tamil"] [data-lang-text="english"],
+.popup-meaning[data-lang="english"] [data-lang-text="tamil"] {
+    display: none;
+}
+
+.popup-example {
+    margin-top: 12px;
+    padding: 8px 12px;
+    border-left: 2px solid #c9a227;
+    border-radius: 0 6px 6px 0;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+body:not(.dark-theme) .popup-example {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.popup-example-label {
+    font-family: 'Lato', 'Noto Sans Tamil', system-ui, sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #c9a227;
+    margin-bottom: 4px;
+}
+
+.popup-example-text {
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.popup-example-text.tamil-text {
+    font-family: 'Noto Sans Tamil', system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+.popup-example-ref {
+    margin-top: 4px;
+    font-family: 'Lato', system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    opacity: 0.6;
+}
+
+.popup-meaning-text.tamil-text {
+    font-family: 'Noto Sans Tamil', system-ui, sans-serif;
+    line-height: 1.6;
+}
+
 body:not(.dark-theme) .popup-info-content .verse-box {
     border-left: 2px solid #c9a227 !important;
 }

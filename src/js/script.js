@@ -2944,12 +2944,41 @@ function getPopupHighlightClass(bookName, chapter, contentText) {
     return `popup-highlight-${sanitizedBook}-ch${chapter}-${contentHash}`;
 }
 
-// Initialize dynamic popup highlight styles (Disabled per user request)
-function initializePopupHighlights() {
-    const existingStyle = document.getElementById('popup-highlight-dynamic-styles');
-    if (existingStyle) {
-        existingStyle.remove();
+// Book/chapter scopes where popup highlights are active (Tamil text only).
+// Other entries in biblePopups stay dormant until their scope is added here.
+const POPUP_ENABLED_SCOPES = {
+    romans: [1]
+};
+
+function isPopupScopeEnabled(bookKey, chapter) {
+    const chapters = POPUP_ENABLED_SCOPES[String(bookKey).toLowerCase()];
+    return Array.isArray(chapters) && chapters.includes(parseInt(chapter, 10));
+}
+
+// Find a popup entry by its highlighted text, preferring enabled scopes
+function findPopupEntry(contentText) {
+    if (!biblePopups || typeof biblePopups !== 'object') return null;
+    let fallback = null;
+    for (const bookKey in biblePopups) {
+        const book = biblePopups[bookKey];
+        for (const chapterKey in book) {
+            const items = book[chapterKey];
+            if (!Array.isArray(items)) continue;
+            const item = items.find(i => i.content === contentText);
+            if (!item) continue;
+            if (isPopupScopeEnabled(bookKey, chapterKey.replace(/chapter/i, ''))) return item;
+            if (!fallback) fallback = item;
+        }
     }
+    return fallback;
+}
+
+// Initialize popup highlights (styling lives in styles.css as .popup-highlight-word)
+let popupHighlightListenersAttached = false;
+function initializePopupHighlights() {
+    if (popupHighlightListenersAttached) return;
+    popupHighlightListenersAttached = true;
+    attachPopupHighlightListeners();
 }
 
 // Check if device is mobile
@@ -2957,28 +2986,89 @@ function isMobileDevice() {
     return window.innerWidth <= 768;
 }
 
-// Show small tooltip popup for desktop hover
-function showPopupTooltip(contentText, x, y) {
-    if (!biblePopups || typeof biblePopups !== 'object') return;
+// Meaning language chosen inside the popup ('tamil' | 'english'), remembered across popups
+const POPUP_MEANING_LANG_KEY = 'popupMeaningLang';
 
-    let matchingItem = null;
-    for (const bookKey in biblePopups) {
-        const book = biblePopups[bookKey];
-        for (const chapterKey in book) {
-            const verses = book[chapterKey];
-            if (Array.isArray(verses)) {
-                for (const item of verses) {
-                    if (item.content === contentText) {
-                        matchingItem = item;
-                        break;
-                    }
-                }
-            }
-            if (matchingItem) break;
-        }
-        if (matchingItem) break;
+function getPopupMeaningLang() {
+    try {
+        return localStorage.getItem(POPUP_MEANING_LANG_KEY) === 'english' ? 'english' : 'tamil';
+    } catch (e) {
+        return 'tamil';
+    }
+}
+
+function setPopupMeaningLang(lang) {
+    try {
+        localStorage.setItem(POPUP_MEANING_LANG_KEY, lang);
+    } catch (e) { /* storage unavailable */ }
+}
+
+// Build the meaning block. Entries with a tamilDescription get a தமிழ் / English
+// toggle (bottom sheet) or show the remembered language (hover tooltip).
+function getPopupMeaningHTML(item, descClass, { interactive = true } = {}) {
+    const english = item.description || 'No description available.';
+    if (!item.tamilDescription) {
+        return `<div class="${descClass}">${english}</div>`;
     }
 
+    const lang = getPopupMeaningLang();
+    const ex = item.example;
+
+    // Biblical example block for one language
+    const exampleHTML = (l) => {
+        if (!ex) return '';
+        const text = l === 'english' ? ex.description : (ex.tamilDescription || ex.description);
+        if (!text) return '';
+        const label = l === 'english' ? 'Biblical Example' : 'வேதாகம உதாரணம்';
+        const textClass = l === 'english' ? '' : ' tamil-text';
+        return `
+            <div class="popup-example" data-lang-text="${l}">
+                <div class="popup-example-label">${label}</div>
+                <div class="popup-example-text${textClass}">${text}</div>
+                ${ex.reference ? `<div class="popup-example-ref">${ex.reference}</div>` : ''}
+            </div>`;
+    };
+
+    if (!interactive) {
+        const text = lang === 'english' ? english : item.tamilDescription;
+        const textClass = lang === 'english' ? '' : ' tamil-text';
+        return `
+            <div class="${descClass} popup-meaning">
+                <div class="popup-meaning-text${textClass}">${text}</div>
+                ${exampleHTML(lang)}
+            </div>`;
+    }
+
+    // Tapping anywhere on this block flips to the other language
+    return `
+        <div class="${descClass} popup-meaning popup-meaning-switchable" data-lang="${lang}" role="button" tabindex="0" aria-label="Tap to switch between Tamil and English">
+            <div class="popup-meaning-text tamil-text" data-lang-text="tamil">${item.tamilDescription}</div>
+            <div class="popup-meaning-text" data-lang-text="english">${english}</div>
+            ${exampleHTML('tamil')}
+            ${exampleHTML('english')}
+        </div>`;
+}
+
+// Tap / click on the meaning content switches Tamil <-> English
+function attachPopupLangToggle(container) {
+    const meaning = container.querySelector('.popup-meaning-switchable');
+    if (!meaning) return;
+    const flip = (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        const next = meaning.getAttribute('data-lang') === 'tamil' ? 'english' : 'tamil';
+        meaning.setAttribute('data-lang', next);
+        setPopupMeaningLang(next);
+    };
+    meaning.addEventListener('click', flip);
+    meaning.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') flip(e);
+    });
+}
+
+// Show small tooltip popup for desktop hover
+function showPopupTooltip(contentText, x, y) {
+    const matchingItem = findPopupEntry(contentText);
     if (!matchingItem) return;
 
     // Remove existing tooltip
@@ -2986,18 +3076,6 @@ function showPopupTooltip(contentText, x, y) {
     if (existingTooltip) {
         existingTooltip.remove();
     }
-
-    // Create references HTML if available
-    const referencesHtml = matchingItem.references && matchingItem.references.length > 0
-        ? matchingItem.references.map(ref => `<button class="ref-pill" data-ref="${ref}">${ref}</button>`).join('')
-        : '';
-
-    const referencesSection = matchingItem.references && matchingItem.references.length > 0
-        ? `<div class="popup-tooltip-refs">
-                <div class="ref-label">Ref : </div>
-                <div class="ref-row">${referencesHtml}</div>
-            </div>`
-        : '';
 
     // Create tooltip
     const tooltip = document.createElement('div');
@@ -3009,8 +3087,7 @@ function showPopupTooltip(contentText, x, y) {
     tooltip.innerHTML = `
         <div class="popup-tooltip-content">
             <div class="popup-tooltip-title">${matchingItem.content}</div>
-            <div class="popup-tooltip-description">${matchingItem.description || 'No description available.'}</div>
-            ${referencesSection}
+            ${getPopupMeaningHTML(matchingItem, 'popup-tooltip-description', { interactive: false })}
         </div>
     `;
 
@@ -3075,8 +3152,8 @@ function attachPopupHighlightListeners() {
     let tooltipHideTimer = null;
     let tooltipShowTimer = null;
 
-    if (isMobile) {
-        // Mobile: use click listeners
+    {
+        // Click (mobile tap or desktop click) opens the popup with the தமிழ் / English toggle
         document.addEventListener('click', function (e) {
             // Don't open popup if one is already visible
             const existingPopup = document.getElementById('popup-info-bottom-sheet');
@@ -3095,11 +3172,19 @@ function attachPopupHighlightListeners() {
                 const contentText = e.target.getAttribute('data-popup-content');
                 if (contentText) {
                     e.stopPropagation();
+                    if (tooltipShowTimer) {
+                        clearTimeout(tooltipShowTimer);
+                        tooltipShowTimer = null;
+                    }
+                    hidePopupTooltip();
+                    hoveredElement = null;
                     showPopupInfo(contentText);
                 }
             }
         }, true); // Use capture phase to ensure we catch clicks on dynamically added content
-    } else {
+    }
+
+    if (!isMobile) {
         // Desktop: use hover listeners for tooltip
         document.addEventListener('mouseover', function (e) {
             // Check if the hovered element has a popup-highlight class and data-popup-content attribute
@@ -3250,32 +3335,17 @@ function highlightSpecialText(text, language, bookName = null, chapter = null, v
         }
     }
 
-    // Dynamic popup highlights disabled per user request
+    // Word-meaning popups: Tamil text only, enabled scopes only (see POPUP_ENABLED_SCOPES)
+    if ((language === 'tamil' || language === 'both-tamil') && bookName && chapter) {
+        text = applyPopupHighlights(text, bookName, chapter, verseNum);
+    }
+
     return text;
 }
 
 // Show popup info when a highlighted text is clicked
 function showPopupInfo(contentText) {
-    if (!biblePopups || typeof biblePopups !== 'object') return;
-
-    let matchingItem = null;
-    for (const bookKey in biblePopups) {
-        const book = biblePopups[bookKey];
-        for (const chapterKey in book) {
-            const verses = book[chapterKey];
-            if (Array.isArray(verses)) {
-                for (const item of verses) {
-                    if (item.content === contentText) {
-                        matchingItem = item;
-                        break;
-                    }
-                }
-            }
-            if (matchingItem) break;
-        }
-        if (matchingItem) break;
-    }
-
+    const matchingItem = findPopupEntry(contentText);
     if (!matchingItem) {
         console.warn(`No popup entry found for "${contentText}".`);
         return;
@@ -3301,17 +3371,6 @@ function showPopupInfoBottomSheet(item) {
         document.body.appendChild(bottomSheet);
     }
 
-    const referencesHtml = item.references && item.references.length > 0
-        ? item.references.map(ref => `<button class="ref-pill" data-ref="${ref}">${ref}</button>`).join('')
-        : '';
-
-    const referencesSection = item.references && item.references.length > 0
-        ? `<div class="refs-container">
-                <div class="ref-label">Ref : </div>
-                <div class="ref-row">${referencesHtml}</div>
-            </div>`
-        : '';
-
     bottomSheet.innerHTML = `
         <div class="verse-actions-backdrop"></div>
         <div class="verse-actions-content popup-info-content">
@@ -3325,8 +3384,7 @@ function showPopupInfoBottomSheet(item) {
                         <div class="x-curved-thin"></div>
                     </button>
                 </div>
-                <div class="popup-description">${item.description || 'No description available.'}</div>
-                ${referencesSection}
+                ${getPopupMeaningHTML(item, 'popup-description')}
                 <div class="verse-box" id="verse-box">
                     <div class="verse-inner" id="verse-inner">
                         <div class="verse-ref-label" id="verse-ref-label"></div>
@@ -3371,6 +3429,9 @@ function showPopupInfoBottomSheet(item) {
     // Add drag functionality
     addDragFunctionality(bottomSheet);
 
+    // Tamil / English meaning toggle
+    attachPopupLangToggle(bottomSheet);
+
     // Add reference pill click handlers
     addReferenceHandlers(bottomSheet, item);
 
@@ -3384,7 +3445,6 @@ function showPopupInfoBottomSheet(item) {
         }
         bottomSheet.classList.remove('visible');
         document.body.classList.remove('bottom-sheet-open');
-        collapseVerse();
     };
 
     closeBtn?.addEventListener('click', closeThisSheet);
@@ -3427,7 +3487,6 @@ function addDragFunctionality(bottomSheet) {
             setTimeout(() => {
                 bottomSheet.classList.remove('visible');
                 document.body.classList.remove('bottom-sheet-open');
-                collapseVerse();
             }, 300);
         } else {
             // Snap back
@@ -3483,32 +3542,33 @@ function addReferenceHandlers(bottomSheet, item) {
 
 
 // Apply highlighting for all popup entries matching the book and chapter
-function applyPopupHighlights(text, bookName, chapter) {
+// (an entry with a "verse" field is only highlighted in that verse)
+function applyPopupHighlights(text, bookName, chapter, verseNum = null) {
     if (!biblePopups || typeof biblePopups !== 'object') return text;
+    if (!isPopupScopeEnabled(bookName, chapter)) return text;
 
-    const bookLower = bookName.toLowerCase();
-    const book = biblePopups[bookLower];
+    const book = biblePopups[bookName.toLowerCase()];
+    const items = book && book[`chapter${chapter}`];
+    if (!Array.isArray(items)) return text;
 
-    if (!book) return text;
+    const vNum = parseInt(verseNum, 10);
+    const active = items.filter(item =>
+        item.content && item.content.trim() &&
+        (item.verse == null || !vNum || parseInt(item.verse, 10) === vNum)
+    );
+    if (active.length === 0) return text;
 
-    const chapterKey = `chapter${chapter}`;
-    const verses = book[chapterKey];
+    // Single pass, longest phrases first, so one entry never re-wraps another's markup
+    const byContent = new Map(active.map(item => [item.content, item]));
+    const pattern = [...byContent.keys()]
+        .sort((a, b) => b.length - a.length)
+        .map(c => c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+        .join('|');
 
-    if (!Array.isArray(verses)) return text;
-
-    // Apply highlighting for each popup entry content
-    verses.forEach((item) => {
-        if (item.content && item.content.trim()) {
-            // Escape special regex characters and create a case-sensitive regex
-            const escapedContent = item.content.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const regex = new RegExp(escapedContent, 'g');
-
-            const className = getPopupHighlightClass(bookName, chapter, item.content);
-            text = text.replace(regex, `<span class="${className}" data-popup-content="${item.content}">${item.content}</span>`);
-        }
+    return text.replace(new RegExp(pattern, 'g'), (match) => {
+        const className = getPopupHighlightClass(bookName, chapter, match);
+        return `<span class="popup-highlight-word ${className}" data-popup-content="${match}">${match}</span>`;
     });
-
-    return text;
 }
 
 // Utility function to add a new popup entry

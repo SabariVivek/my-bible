@@ -552,5 +552,288 @@ const biblePopups = {
                 "description": "Honor; glory; great value or respect."
             }
         ]
+    },
+    // Romans 1:29-31 — word meanings (Tamil Bible only).
+    // "description" = English meaning, "tamilDescription" = Tamil meaning,
+    // "verse" limits the highlight to that verse.
+    romans: {
+        chapter1: [
+            {
+                verse: 29,
+                content: "அநியாயத்தினாலும்",
+                description: "Unrighteousness: Acting unjustly, doing what is morally wrong, and refusing to follow God's standards.",
+                tamilDescription: "நீதிக்கு எதிராகச் செயல்படுதல்; நியாயமற்ற காரியங்களைச் செய்தல்; தேவனுடைய நீதியான கட்டளைகளுக்கு மாறாக வாழ்தல்.",
+                example: {
+                    description: "Eli's sons Hophni and Phinehas, though priests, took the people's offerings by force and treated the LORD's sacrifice with contempt.",
+                    tamilDescription: "ஆசாரியர்களாயிருந்தும் ஏலியின் குமாரராகிய ஓப்னியும் பினெகாசும் ஜனங்களின் பலிகளைப் பலவந்தமாய் எடுத்து, கர்த்தருடைய காணிக்கையை அசட்டைபண்ணினார்கள்.",
+                    reference: "1 Sam 2:12-17"
+                },
+                references: ["1 John 5:17"]
+            },
+            {
+                verse: 29,
+                content: "வேசித்தனத்தினாலும்",
+                description: "Fornication: Sexual immorality outside God's intended boundaries for sexual relationships.",
+                tamilDescription: "திருமண உறவுக்கு வெளியே பாலியல் தவறுகளில் ஈடுபடுதல்; தேவன் ஏற்படுத்திய பாலியல் ஒழுக்க வரம்புகளை மீறுதல்.",
+                example: {
+                    description: "King David took Bathsheba, another man's wife, and lay with her.",
+                    tamilDescription: "தாவீது ராஜா உரியாவின் மனைவியாகிய பத்சேபாளை அழைப்பித்து, அவளோடே சயனித்தான்.",
+                    reference: "2 Sam 11:2-4"
+                },
+                references: ["1 Cor 6:18"]
+            },
+            {
+                verse: 29,
+                content: "துரோகத்தினாலும்",
+                description: "Wickedness: Deliberately practising evil and having an inclination towards wrongdoing.",
+                tamilDescription: "தீமையை விரும்புதல், தீய செயல்களைத் திட்டமிட்டுச் செய்தல், பிறருக்குத் தீங்கு விளைவிக்கும் குணத்துடன் வாழ்தல்.",
+                example: {
+                    description: "Judas, one of the twelve, betrayed Jesus with a kiss.",
+                    tamilDescription: "பன்னிருவரில் ஒருவனாகிய யூதாஸ் முத்தத்தினால் இயேசுவைக் காட்டிக்கொடுத்தான்.",
+                    reference: "Luke 22:47-48"
+                },
+                references: ["Matt 22:18"]
+            },
+            {
+                verse: 29,
+                content: "பொருளாசையினாலும்",
+                description: "Covetousness: Having an excessive desire for something that belongs to someone else.",
+                tamilDescription: "பிறருக்குச் சொந்தமான பொருட்கள், செல்வம் அல்லது உடைமைகளைத் தனக்குச் சொந்தமாக்கிக்கொள்ள வேண்டும் என்ற அளவுகடந்த ஆசை.",
+                example: {
+                    description: "Achan saw the silver, gold and fine garment in Jericho, coveted them and hid them in his tent.",
+                    tamilDescription: "ஆகான் எரிகோவில் வெள்ளியையும், பொன்னையும், நேர்த்தியான சால்வையையும் கண்டு இச்சித்து, அவைகளைத் தன் கூடாரத்தில் ஒளித்து வைத்தான்.",
+                    reference: "Josh 7:20-21"
+                },
+                references: ["Luke 12:15", "Col 3:5"]
+            },
+            {
+                verse: 29,
+                content: "குரோதத்தினாலும்",
+                description: "Maliciousness: Having an evil intention towards others and taking pleasure in their suffering.",
+                tamilDescription: "பிறருக்குத் தீங்கு செய்ய வேண்டும் என்ற தீய எண்ணத்தைக் கொண்டிருத்தல்; மற்றவர்களின் துன்பத்தில் மகிழ்ச்சியடையும் மனப்பான்மை.",
+                example: {
+                    description: "Haman's hatred for Mordecai grew until he plotted to destroy all the Jews.",
+                    tamilDescription: "மொர்தெகாயின் மேலுள்ள பகையினால் ஆமான் யூதர் அனைவரையும் அழிக்கச் சதி செய்தான்.",
+                    reference: "Esther 3:5-6"
+                },
+                references: ["Eph 4:31"]
+            },
+            {
+                verse: 29,
+                content: "பொறாமையினாலும்",
+                description: "Envy: Feeling unhappy or resentful because someone else has something good.",
+                tamilDescription: "மற்றவர்களுக்குக் கிடைக்கும் நன்மை, உயர்வு, செல்வம் அல்லது ஆசீர்வாதங்களைக் கண்டு மனதில் பொறாமையும் வெறுப்பும் அடைதல்.",
+                example: {
+                    description: "When the women sang that David had slain his ten thousands, Saul eyed David with envy from that day on.",
+                    tamilDescription: "\"தாவீது பதினாயிரங்களைக் கொன்றான்\" என்று பெண்கள் பாடியதைக் கேட்டது முதல் சவுல் தாவீதைப் பொறாமையோடே பார்த்தான்.",
+                    reference: "1 Sam 18:7-9"
+                },
+                references: ["Prov 14:30"]
+            },
+            {
+                verse: 29,
+                content: "கொலையினாலும்",
+                description: "Murder: Intentionally taking another person's life.",
+                tamilDescription: "ஒருவருடைய உயிரை வேண்டுமென்றே அநியாயமாகப் பறித்தல்.",
+                example: {
+                    description: "Cain rose up against his brother Abel in the field and killed him.",
+                    tamilDescription: "காயீன் வயல்வெளியில் தன் சகோதரனாகிய ஆபேலுக்கு விரோதமாய் எழும்பி, அவனைக் கொலைசெய்தான்.",
+                    reference: "Gen 4:8"
+                },
+                references: ["Matt 5:21-22", "1 John 3:15"]
+            },
+            {
+                verse: 29,
+                content: "வாக்குவாதத்தினாலும்",
+                description: "Debate / Strife: Constant quarrelling, fighting, and creating divisions.",
+                tamilDescription: "பிறருடன் அடிக்கடி வாக்குவாதம் செய்தல், சண்டையிடுதல், கருத்து வேறுபாடுகளைப் பெரிதாக்கி பிரிவினையை ஏற்படுத்துதல்.",
+                example: {
+                    description: "The Corinthian church split into quarrelling groups: \"I am of Paul\", \"I of Apollos\", \"I of Cephas\".",
+                    tamilDescription: "கொரிந்து சபையார் \"நான் பவுலைச் சேர்ந்தவன், நான் அப்பொல்லோவைச் சேர்ந்தவன்\" என்று வாக்குவாதம்பண்ணிப் பிரிந்தார்கள்.",
+                    reference: "1 Cor 1:11-12"
+                },
+                references: ["2 Tim 2:23"]
+            },
+            {
+                verse: 29,
+                content: "வஞ்சகத்தினாலும்",
+                description: "Deceit: Intentionally misleading someone through lies, dishonesty, or manipulation.",
+                tamilDescription: "பொய், சூழ்ச்சி மற்றும் ஏமாற்றும் செயல்களின் மூலம் பிறரைத் தவறாக வழிநடத்துதல்; உண்மையை மறைத்து ஏமாற்றுதல்.",
+                example: {
+                    description: "Jacob dressed as Esau and lied to his blind father Isaac to steal the blessing.",
+                    tamilDescription: "யாக்கோபு ஏசாவைப்போல் வேஷமிட்டு, கண் மங்கிய தன் தகப்பன் ஈசாக்கை ஏமாற்றி ஆசீர்வாதத்தைப் பெற்றுக்கொண்டான்.",
+                    reference: "Gen 27:18-24"
+                },
+                references: ["Ps 101:7"]
+            },
+            {
+                verse: 29,
+                content: "வன்மத்தினாலும்",
+                description: "Malignity: Having a deeply evil disposition and an intention to hurt others.",
+                tamilDescription: "பிறருக்குத் தீங்கு விளைவிக்க வேண்டும் என்ற ஆழமான தீய எண்ணத்தைக் கொண்டிருத்தல்; கொடூரமான மற்றும் தீய மனப்பான்மையுடன் செயல்படுதல்.",
+                example: {
+                    description: "Absalom held a silent grudge against Amnon for two full years, then had him killed.",
+                    tamilDescription: "அப்சலோம் இரண்டு வருஷம் முழுவதும் அம்னோனின் மேல் வன்மம் வைத்திருந்து, பின்பு அவனைக் கொலைசெய்வித்தான்.",
+                    reference: "2 Sam 13:22-29"
+                },
+                references: ["Prov 26:24-26"]
+            },
+            {
+                verse: 30,
+                content: "புறங்கூறுகிறவர்களுமாய்",
+                description: "Whisperers: Secretly spreading negative information, gossip, and rumours about others.",
+                tamilDescription: "ஒருவருக்குத் தெரியாமல் அவரைப் பற்றித் தீய செய்திகளையும் வதந்திகளையும் இரகசியமாகப் பரப்புதல்.",
+                example: {
+                    description: "Miriam and Aaron spoke against Moses among themselves, questioning his authority.",
+                    tamilDescription: "மிரியாமும் ஆரோனும் மோசேக்கு விரோதமாய்த் தங்களுக்குள்ளே பேசி, அவனுடைய அதிகாரத்தைக் கேள்விக்குள்ளாக்கினார்கள்.",
+                    reference: "Num 12:1-2"
+                },
+                references: ["Prov 16:28"]
+            },
+            {
+                verse: 30,
+                content: "அவதூறுபண்ணுகிறவர்களுமாய்",
+                description: "Backbiters: Speaking evil about someone behind their back and damaging their reputation.",
+                tamilDescription: "ஒருவர் இல்லாதபோது அவருடைய குறைகளையும் தவறுகளையும் இழிவுபடுத்திப் பேசுதல்; அவருடைய நற்பெயருக்குக் களங்கம் ஏற்படுத்துதல்.",
+                example: {
+                    description: "Ziba falsely told David that Mephibosheth was hoping to take the kingdom.",
+                    tamilDescription: "மேவிபோசேத் ராஜ்யத்தைப் பெற்றுக்கொள்ளக் காத்திருக்கிறான் என்று சீபா தாவீதிடம் பொய்யாய் அவதூறு சொன்னான்.",
+                    reference: "2 Sam 16:3"
+                },
+                references: ["James 4:11"]
+            },
+            {
+                verse: 30,
+                content: "தேவபகைஞருமாய்",
+                description: "Haters of God: Having hostility towards God, His authority, His commandments, and His ways.",
+                tamilDescription: "தேவனையும் அவருடைய அதிகாரத்தையும் கட்டளைகளையும் வெறுத்து, அவருடைய சித்தத்திற்குக் கீழ்ப்படிய மறுத்தல்.",
+                example: {
+                    description: "Pharaoh answered, \"Who is the LORD, that I should obey His voice?\"",
+                    tamilDescription: "\"நான் கர்த்தருடைய சொல்லைக் கேட்கிறதற்கு அவர் யார்?\" என்று பார்வோன் கேட்டான்.",
+                    reference: "Ex 5:2"
+                },
+                references: ["Rom 8:7"]
+            },
+            {
+                verse: 30,
+                content: "துராகிருதம்பண்ணுகிறவர்களுமாய்",
+                description: "Despiteful: Treating others with contempt, insulting them, and behaving cruelly or arrogantly.",
+                tamilDescription: "பிறரை இழிவாக எண்ணுதல், அவமதித்துப் பேசுதல், அவமரியாதை செய்தல் மற்றும் பிறருடைய மதிப்பைக் குறைத்தல்.",
+                example: {
+                    description: "Before his conversion, Saul (Paul) ravaged the church, dragging men and women off to prison.",
+                    tamilDescription: "மனந்திரும்புவதற்கு முன் சவுல் (பவுல்) வீடுகள்தோறும் நுழைந்து, புருஷரையும் ஸ்திரீகளையும் இழுத்துக்கொண்டுபோய்ச் சிறைச்சாலையில் வைத்துச் சபையைப் பாழாக்கினான்.",
+                    reference: "Acts 8:3"
+                },
+                references: ["1 Tim 1:13"]
+            },
+            {
+                verse: 30,
+                content: "அகந்தையுள்ளவர்களுமாய்",
+                description: "Proud: Considering oneself superior to others and refusing to humble oneself before God.",
+                tamilDescription: "தன்னை மற்றவர்களைவிட உயர்ந்தவனாக எண்ணுதல்; தன்னுடைய திறமை, செல்வம் அல்லது பதவியைக் குறித்து அகந்தை கொண்டு, தாழ்மையின்றி நடத்தல்.",
+                example: {
+                    description: "Nebuchadnezzar boasted, \"Is not this great Babylon that I have built?\" and was humbled by God that same hour.",
+                    tamilDescription: "\"இது நான் கட்டின மகா பாபிலோன் அல்லவா?\" என்று நேபுகாத்நேச்சார் அகந்தையாய்ப் பேசினான்; அந்நேரமே தேவன் அவனைத் தாழ்த்தினார்.",
+                    reference: "Dan 4:30-33"
+                },
+                references: ["Prov 16:18", "James 4:6"]
+            },
+            {
+                verse: 30,
+                content: "வீம்புக்காரருமாய்",
+                description: "Boasters: Constantly praising oneself and exaggerating one's achievements.",
+                tamilDescription: "தன்னுடைய சாதனைகள், திறமைகள் மற்றும் பெருமைகளைத் தானே மிகைப்படுத்திப் புகழ்ந்து பேசுதல்.",
+                example: {
+                    description: "Goliath boasted that he would give David's flesh to the birds and the beasts.",
+                    tamilDescription: "தாவீதின் மாம்சத்தை ஆகாயத்துப் பறவைகளுக்கும் காட்டு மிருகங்களுக்கும் கொடுப்பேன் என்று கோலியாத் வீம்பு பேசினான்.",
+                    reference: "1 Sam 17:43-44"
+                },
+                references: ["James 4:16"]
+            },
+            {
+                verse: 30,
+                content: "பொல்லாதவைகளை யோசித்துப் பிணைக்கிறவர்களுமாய்",
+                description: "Inventors of Evil Things: People who actively devise new ways to commit evil or harm others.",
+                tamilDescription: "பிறருக்குத் தீங்கு விளைவிப்பதற்கும், தீய செயல்களைச் செய்வதற்கும் புதிய புதிய சூழ்ச்சிகளையும் வழிகளையும் திட்டமிட்டுக் கண்டுபிடித்தல்.",
+                example: {
+                    description: "Jezebel schemed a fake trial with false witnesses so Naboth would be stoned and his vineyard taken.",
+                    tamilDescription: "நாபோத்தின் திராட்சத்தோட்டத்தைப் பறிக்க, யேசபேல் பொய்ச்சாட்சிகளை வைத்துப் போலியான நியாயவிசாரணையைத் திட்டமிட்டாள்.",
+                    reference: "1 Kings 21:8-10"
+                },
+                references: ["Prov 6:18"]
+            },
+            {
+                verse: 30,
+                content: "பெற்றாருக்குக் கீழ்ப்படியாதவர்களுமாய்",
+                description: "Disobedient to Parents: Refusing to respect, honour, and obey parents.",
+                tamilDescription: "பெற்றோரின் அறிவுரைகளையும் நியாயமான கட்டளைகளையும் மதிக்காமல் இருத்தல்; அவர்களுக்குக் கீழ்ப்படியாமலும் மரியாதை செலுத்தாமலும் நடத்தல்.",
+                example: {
+                    description: "Absalom rebelled against his father David and tried to seize his throne.",
+                    tamilDescription: "அப்சலோம் தன் தகப்பனாகிய தாவீதுக்கு விரோதமாய்க் கலகம்பண்ணி, அவனுடைய சிங்காசனத்தைப் பறிக்கப் பார்த்தான்.",
+                    reference: "2 Sam 15:10-14"
+                },
+                references: ["Ex 20:12", "Eph 6:1-3"]
+            },
+            {
+                verse: 31,
+                content: "உணர்வில்லாதவர்களுமாய்",
+                description: "Without Understanding: Lacking spiritual understanding, wisdom, and discernment about what is right and wrong.",
+                tamilDescription: "எது சரி, எது தவறு என்பதைப் பகுத்தறியும் ஞானமும் விவேகமும் இல்லாமல் இருத்தல்; தேவனுடைய சித்தத்தைப் புரிந்துகொள்ளாத மனநிலையுடன் வாழ்தல்.",
+                example: {
+                    description: "Nabal, whose name means \"fool\", senselessly insulted David, who had protected his flocks.",
+                    tamilDescription: "\"மூடன்\" என்று பொருள்படும் பெயருடைய நாபால், தன் மந்தைகளைக் காத்த தாவீதை அறிவில்லாமல் அவமதித்தான்.",
+                    reference: "1 Sam 25:10-11, 25"
+                },
+                references: ["Rom 1:21"]
+            },
+            {
+                verse: 31,
+                content: "உடன்படிக்கைகளை மீறுகிறவர்களுமாய்",
+                description: "Covenant Breakers: Breaking promises, agreements, and commitments without faithfulness.",
+                tamilDescription: "செய்துகொண்ட உடன்படிக்கைகள், ஒப்பந்தங்கள் மற்றும் வாக்குறுதிகளைக் காப்பாற்றாமல் துரோகம் செய்து மீறுதல்.",
+                example: {
+                    description: "The people of Jerusalem made a covenant to free their slaves, then went back on it and enslaved them again.",
+                    tamilDescription: "எருசலேமின் ஜனங்கள் தங்கள் அடிமைகளை விடுதலையாக்க உடன்படிக்கை பண்ணி, பின்பு மனம் மாறி அவர்களை மீண்டும் அடிமைகளாக்கினார்கள்.",
+                    reference: "Jer 34:8-11"
+                },
+                references: ["Ps 15:4"]
+            },
+            {
+                verse: 31,
+                content: "சுபாவ அன்பில்லாதவர்களுமாய்",
+                description: "Without Natural Affection: Lacking normal human affection, compassion, and love towards family and others.",
+                tamilDescription: "குடும்பத்தினர் மற்றும் உறவினர்களிடம் இயல்பாக இருக்க வேண்டிய அன்பு, பாசம், பரிவு மற்றும் இரக்கமின்றி நடத்தல்.",
+                example: {
+                    description: "Athaliah destroyed the royal family, her own grandchildren, to seize the throne.",
+                    tamilDescription: "அத்தாலியாள் சிங்காசனத்தைக் கைப்பற்ற, தன் சொந்தப் பேரப்பிள்ளைகளாகிய ராஜவம்சத்தார் யாவரையும் அழித்தாள்.",
+                    reference: "2 Kings 11:1"
+                },
+                references: ["2 Tim 3:3"]
+            },
+            {
+                verse: 31,
+                content: "இணங்காதவர்களுமாய்",
+                description: "Implacable: Unwilling to make peace, refusing reconciliation, and unwilling to settle disagreements.",
+                tamilDescription: "தங்களுக்குள் ஏற்பட்ட பிரச்சினைகளைத் தீர்த்துக்கொள்ள விரும்பாமல் இருத்தல்; மன்னிக்கவும், சமாதானம் செய்துகொள்ளவும், ஒப்புரவாகவும் மறுத்தல்.",
+                example: {
+                    description: "Even after David spared his life twice, Saul kept hunting him instead of making peace.",
+                    tamilDescription: "தாவீது இரண்டு முறை தன் உயிரைத் தப்பவிட்டும், சவுல் சமாதானமாகாமல் அவனைத் தொடர்ந்து வேட்டையாடினான்.",
+                    reference: "1 Sam 24:16-22; 26:21"
+                },
+                references: ["2 Tim 3:3"]
+            },
+            {
+                verse: 31,
+                content: "இரக்கமில்லாதவர்களுமாய்",
+                description: "Unmerciful: Having no compassion towards people who are suffering or in need.",
+                tamilDescription: "துன்பப்படுகிறவர்களிடமும் உதவி தேவைப்படுகிறவர்களிடமும் பரிவும் இரக்கமும் காட்டாமல் இருத்தல்; பிறருடைய வேதனையைக் கண்டும் மனமிரங்காமல் நடத்தல்.",
+                example: {
+                    description: "In Jesus' parable, a servant forgiven a huge debt seized a fellow servant by the throat over a small one.",
+                    tamilDescription: "இயேசுவின் உவமையில், பெரிய கடன் மன்னிக்கப்பட்ட ஊழியக்காரன், சிறிய கடனுக்காகத் தன் உடன்வேலைக்காரனின் தொண்டையைப் பிடித்து நெரித்தான்.",
+                    reference: "Matt 18:28-30"
+                },
+                references: ["Matt 5:7", "James 2:13"]
+            }
+        ]
     }
 };
