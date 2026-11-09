@@ -561,10 +561,10 @@ const biblePopups = {
             {
                 verse: 29,
                 content: "அநியாயத்தினாலும்",
-                description: "Unrighteousness: Acting unjustly, doing what is morally wrong, and refusing to follow God's standards.",
+                description: "Acting unjustly, doing what is morally wrong, and refusing to follow God's standards.",
                 tamilDescription: "நீதிக்கு எதிராகச் செயல்படுதல்; நியாயமற்ற காரியங்களைச் செய்தல்; தேவனுடைய நீதியான கட்டளைகளுக்கு மாறாக வாழ்தல்.",
                 example: {
-                    description: "Eli's sons Hophni and Phinehas, though priests, took the people's offerings by force and treated the LORD's sacrifice with contempt.",
+                    description: "Eli's sons were priests, but they took people's offerings by force and treated God's sacrifices with disrespect.",
                     tamilDescription: "ஆசாரியர்களாயிருந்தும் ஏலியின் குமாரராகிய ஓப்னியும் பினெகாசும் ஜனங்களின் பலிகளைப் பலவந்தமாய் எடுத்து, கர்த்தருடைய காணிக்கையை அசட்டைபண்ணினார்கள்.",
                     reference: "1 Sam 2:12-17"
                 },
@@ -573,10 +573,10 @@ const biblePopups = {
             {
                 verse: 29,
                 content: "வேசித்தனத்தினாலும்",
-                description: "Fornication: Sexual immorality outside God's intended boundaries for sexual relationships.",
+                description: "Sexual immorality outside God's intended boundaries for sexual relationships.",
                 tamilDescription: "திருமண உறவுக்கு வெளியே பாலியல் தவறுகளில் ஈடுபடுதல்; தேவன் ஏற்படுத்திய பாலியல் ஒழுக்க வரம்புகளை மீறுதல்.",
                 example: {
-                    description: "King David took Bathsheba, another man's wife, and lay with her.",
+                    description: "King David slept with Bathsheba, even though she was another man's wife.",
                     tamilDescription: "தாவீது ராஜா உரியாவின் மனைவியாகிய பத்சேபாளை அழைப்பித்து, அவளோடே சயனித்தான்.",
                     reference: "2 Sam 11:2-4"
                 },
@@ -585,10 +585,10 @@ const biblePopups = {
             {
                 verse: 29,
                 content: "துரோகத்தினாலும்",
-                description: "Wickedness: Deliberately practising evil and having an inclination towards wrongdoing.",
+                description: "Deliberately practising evil and having an inclination towards wrongdoing.",
                 tamilDescription: "தீமையை விரும்புதல், தீய செயல்களைத் திட்டமிட்டுச் செய்தல், பிறருக்குத் தீங்கு விளைவிக்கும் குணத்துடன் வாழ்தல்.",
                 example: {
-                    description: "Judas, one of the twelve, betrayed Jesus with a kiss.",
+                    description: "Judas, one of Jesus' twelve disciples, betrayed Him with a kiss.",
                     tamilDescription: "பன்னிருவரில் ஒருவனாகிய யூதாஸ் முத்தத்தினால் இயேசுவைக் காட்டிக்கொடுத்தான்.",
                     reference: "Luke 22:47-48"
                 },
@@ -597,10 +597,10 @@ const biblePopups = {
             {
                 verse: 29,
                 content: "பொருளாசையினாலும்",
-                description: "Covetousness: Having an excessive desire for something that belongs to someone else.",
+                description: "Having an excessive desire for something that belongs to someone else.",
                 tamilDescription: "பிறருக்குச் சொந்தமான பொருட்கள், செல்வம் அல்லது உடைமைகளைத் தனக்குச் சொந்தமாக்கிக்கொள்ள வேண்டும் என்ற அளவுகடந்த ஆசை.",
                 example: {
-                    description: "Achan saw the silver, gold and fine garment in Jericho, coveted them and hid them in his tent.",
+                    description: "Achan saw silver, gold and a beautiful robe in Jericho, wanted them, stole them and hid them in his tent.",
                     tamilDescription: "ஆகான் எரிகோவில் வெள்ளியையும், பொன்னையும், நேர்த்தியான சால்வையையும் கண்டு இச்சித்து, அவைகளைத் தன் கூடாரத்தில் ஒளித்து வைத்தான்.",
                     reference: "Josh 7:20-21"
                 },
@@ -609,10 +609,10 @@ const biblePopups = {
             {
                 verse: 29,
                 content: "குரோதத்தினாலும்",
-                description: "Maliciousness: Having an evil intention towards others and taking pleasure in their suffering.",
+                description: "Having an evil intention towards others and taking pleasure in their suffering.",
                 tamilDescription: "பிறருக்குத் தீங்கு செய்ய வேண்டும் என்ற தீய எண்ணத்தைக் கொண்டிருத்தல்; மற்றவர்களின் துன்பத்தில் மகிழ்ச்சியடையும் மனப்பான்மை.",
                 example: {
-                    description: "Haman's hatred for Mordecai grew until he plotted to destroy all the Jews.",
+                    description: "Haman hated Mordecai so much that he planned to kill all the Jews.",
                     tamilDescription: "மொர்தெகாயின் மேலுள்ள பகையினால் ஆமான் யூதர் அனைவரையும் அழிக்கச் சதி செய்தான்.",
                     reference: "Esther 3:5-6"
                 },
@@ -621,10 +621,10 @@ const biblePopups = {
             {
                 verse: 29,
                 content: "பொறாமையினாலும்",
-                description: "Envy: Feeling unhappy or resentful because someone else has something good.",
+                description: "Feeling unhappy or resentful because someone else has something good.",
                 tamilDescription: "மற்றவர்களுக்குக் கிடைக்கும் நன்மை, உயர்வு, செல்வம் அல்லது ஆசீர்வாதங்களைக் கண்டு மனதில் பொறாமையும் வெறுப்பும் அடைதல்.",
                 example: {
-                    description: "When the women sang that David had slain his ten thousands, Saul eyed David with envy from that day on.",
+                    description: "When the women sang that David had killed more enemies than Saul, Saul became jealous of David from that day.",
                     tamilDescription: "\"தாவீது பதினாயிரங்களைக் கொன்றான்\" என்று பெண்கள் பாடியதைக் கேட்டது முதல் சவுல் தாவீதைப் பொறாமையோடே பார்த்தான்.",
                     reference: "1 Sam 18:7-9"
                 },
@@ -633,10 +633,10 @@ const biblePopups = {
             {
                 verse: 29,
                 content: "கொலையினாலும்",
-                description: "Murder: Intentionally taking another person's life.",
+                description: "Intentionally taking another person's life.",
                 tamilDescription: "ஒருவருடைய உயிரை வேண்டுமென்றே அநியாயமாகப் பறித்தல்.",
                 example: {
-                    description: "Cain rose up against his brother Abel in the field and killed him.",
+                    description: "Cain attacked his brother Abel in the field and killed him.",
                     tamilDescription: "காயீன் வயல்வெளியில் தன் சகோதரனாகிய ஆபேலுக்கு விரோதமாய் எழும்பி, அவனைக் கொலைசெய்தான்.",
                     reference: "Gen 4:8"
                 },
@@ -645,10 +645,10 @@ const biblePopups = {
             {
                 verse: 29,
                 content: "வாக்குவாதத்தினாலும்",
-                description: "Debate / Strife: Constant quarrelling, fighting, and creating divisions.",
+                description: "Constant quarrelling, fighting, and creating divisions.",
                 tamilDescription: "பிறருடன் அடிக்கடி வாக்குவாதம் செய்தல், சண்டையிடுதல், கருத்து வேறுபாடுகளைப் பெரிதாக்கி பிரிவினையை ஏற்படுத்துதல்.",
                 example: {
-                    description: "The Corinthian church split into quarrelling groups: \"I am of Paul\", \"I of Apollos\", \"I of Cephas\".",
+                    description: "The church in Corinth split into arguing groups: \"I follow Paul\", \"I follow Apollos\", \"I follow Peter\".",
                     tamilDescription: "கொரிந்து சபையார் \"நான் பவுலைச் சேர்ந்தவன், நான் அப்பொல்லோவைச் சேர்ந்தவன்\" என்று வாக்குவாதம்பண்ணிப் பிரிந்தார்கள்.",
                     reference: "1 Cor 1:11-12"
                 },
@@ -657,10 +657,10 @@ const biblePopups = {
             {
                 verse: 29,
                 content: "வஞ்சகத்தினாலும்",
-                description: "Deceit: Intentionally misleading someone through lies, dishonesty, or manipulation.",
+                description: "Intentionally misleading someone through lies, dishonesty, or manipulation.",
                 tamilDescription: "பொய், சூழ்ச்சி மற்றும் ஏமாற்றும் செயல்களின் மூலம் பிறரைத் தவறாக வழிநடத்துதல்; உண்மையை மறைத்து ஏமாற்றுதல்.",
                 example: {
-                    description: "Jacob dressed as Esau and lied to his blind father Isaac to steal the blessing.",
+                    description: "Jacob pretended to be his brother Esau and lied to his blind father Isaac to get the blessing.",
                     tamilDescription: "யாக்கோபு ஏசாவைப்போல் வேஷமிட்டு, கண் மங்கிய தன் தகப்பன் ஈசாக்கை ஏமாற்றி ஆசீர்வாதத்தைப் பெற்றுக்கொண்டான்.",
                     reference: "Gen 27:18-24"
                 },
@@ -669,10 +669,10 @@ const biblePopups = {
             {
                 verse: 29,
                 content: "வன்மத்தினாலும்",
-                description: "Malignity: Having a deeply evil disposition and an intention to hurt others.",
+                description: "Having a deeply evil disposition and an intention to hurt others.",
                 tamilDescription: "பிறருக்குத் தீங்கு விளைவிக்க வேண்டும் என்ற ஆழமான தீய எண்ணத்தைக் கொண்டிருத்தல்; கொடூரமான மற்றும் தீய மனப்பான்மையுடன் செயல்படுதல்.",
                 example: {
-                    description: "Absalom held a silent grudge against Amnon for two full years, then had him killed.",
+                    description: "Absalom quietly held a grudge against his brother Amnon for two years, then had him killed.",
                     tamilDescription: "அப்சலோம் இரண்டு வருஷம் முழுவதும் அம்னோனின் மேல் வன்மம் வைத்திருந்து, பின்பு அவனைக் கொலைசெய்வித்தான்.",
                     reference: "2 Sam 13:22-29"
                 },
@@ -681,10 +681,10 @@ const biblePopups = {
             {
                 verse: 30,
                 content: "புறங்கூறுகிறவர்களுமாய்",
-                description: "Whisperers: Secretly spreading negative information, gossip, and rumours about others.",
+                description: "Secretly spreading negative information, gossip, and rumours about others.",
                 tamilDescription: "ஒருவருக்குத் தெரியாமல் அவரைப் பற்றித் தீய செய்திகளையும் வதந்திகளையும் இரகசியமாகப் பரப்புதல்.",
                 example: {
-                    description: "Miriam and Aaron spoke against Moses among themselves, questioning his authority.",
+                    description: "Miriam and Aaron talked against Moses behind his back and questioned his leadership.",
                     tamilDescription: "மிரியாமும் ஆரோனும் மோசேக்கு விரோதமாய்த் தங்களுக்குள்ளே பேசி, அவனுடைய அதிகாரத்தைக் கேள்விக்குள்ளாக்கினார்கள்.",
                     reference: "Num 12:1-2"
                 },
@@ -693,10 +693,10 @@ const biblePopups = {
             {
                 verse: 30,
                 content: "அவதூறுபண்ணுகிறவர்களுமாய்",
-                description: "Backbiters: Speaking evil about someone behind their back and damaging their reputation.",
+                description: "Speaking evil about someone behind their back and damaging their reputation.",
                 tamilDescription: "ஒருவர் இல்லாதபோது அவருடைய குறைகளையும் தவறுகளையும் இழிவுபடுத்திப் பேசுதல்; அவருடைய நற்பெயருக்குக் களங்கம் ஏற்படுத்துதல்.",
                 example: {
-                    description: "Ziba falsely told David that Mephibosheth was hoping to take the kingdom.",
+                    description: "Ziba lied to King David, saying Mephibosheth wanted to take the kingdom.",
                     tamilDescription: "மேவிபோசேத் ராஜ்யத்தைப் பெற்றுக்கொள்ளக் காத்திருக்கிறான் என்று சீபா தாவீதிடம் பொய்யாய் அவதூறு சொன்னான்.",
                     reference: "2 Sam 16:3"
                 },
@@ -705,10 +705,10 @@ const biblePopups = {
             {
                 verse: 30,
                 content: "தேவபகைஞருமாய்",
-                description: "Haters of God: Having hostility towards God, His authority, His commandments, and His ways.",
+                description: "Having hostility towards God, His authority, His commandments, and His ways.",
                 tamilDescription: "தேவனையும் அவருடைய அதிகாரத்தையும் கட்டளைகளையும் வெறுத்து, அவருடைய சித்தத்திற்குக் கீழ்ப்படிய மறுத்தல்.",
                 example: {
-                    description: "Pharaoh answered, \"Who is the LORD, that I should obey His voice?\"",
+                    description: "Pharaoh said, \"Who is the LORD? Why should I obey Him?\"",
                     tamilDescription: "\"நான் கர்த்தருடைய சொல்லைக் கேட்கிறதற்கு அவர் யார்?\" என்று பார்வோன் கேட்டான்.",
                     reference: "Ex 5:2"
                 },
@@ -717,10 +717,10 @@ const biblePopups = {
             {
                 verse: 30,
                 content: "துராகிருதம்பண்ணுகிறவர்களுமாய்",
-                description: "Despiteful: Treating others with contempt, insulting them, and behaving cruelly or arrogantly.",
+                description: "Treating others with contempt, insulting them, and behaving cruelly or arrogantly.",
                 tamilDescription: "பிறரை இழிவாக எண்ணுதல், அவமதித்துப் பேசுதல், அவமரியாதை செய்தல் மற்றும் பிறருடைய மதிப்பைக் குறைத்தல்.",
                 example: {
-                    description: "Before his conversion, Saul (Paul) ravaged the church, dragging men and women off to prison.",
+                    description: "Before he became a believer, Saul (Paul) attacked the church and dragged men and women off to prison.",
                     tamilDescription: "மனந்திரும்புவதற்கு முன் சவுல் (பவுல்) வீடுகள்தோறும் நுழைந்து, புருஷரையும் ஸ்திரீகளையும் இழுத்துக்கொண்டுபோய்ச் சிறைச்சாலையில் வைத்துச் சபையைப் பாழாக்கினான்.",
                     reference: "Acts 8:3"
                 },
@@ -729,10 +729,10 @@ const biblePopups = {
             {
                 verse: 30,
                 content: "அகந்தையுள்ளவர்களுமாய்",
-                description: "Proud: Considering oneself superior to others and refusing to humble oneself before God.",
+                description: "Considering oneself superior to others and refusing to humble oneself before God.",
                 tamilDescription: "தன்னை மற்றவர்களைவிட உயர்ந்தவனாக எண்ணுதல்; தன்னுடைய திறமை, செல்வம் அல்லது பதவியைக் குறித்து அகந்தை கொண்டு, தாழ்மையின்றி நடத்தல்.",
                 example: {
-                    description: "Nebuchadnezzar boasted, \"Is not this great Babylon that I have built?\" and was humbled by God that same hour.",
+                    description: "King Nebuchadnezzar bragged, \"Look at the great Babylon I have built!\" God humbled him that very hour.",
                     tamilDescription: "\"இது நான் கட்டின மகா பாபிலோன் அல்லவா?\" என்று நேபுகாத்நேச்சார் அகந்தையாய்ப் பேசினான்; அந்நேரமே தேவன் அவனைத் தாழ்த்தினார்.",
                     reference: "Dan 4:30-33"
                 },
@@ -741,10 +741,10 @@ const biblePopups = {
             {
                 verse: 30,
                 content: "வீம்புக்காரருமாய்",
-                description: "Boasters: Constantly praising oneself and exaggerating one's achievements.",
+                description: "Constantly praising oneself and exaggerating one's achievements.",
                 tamilDescription: "தன்னுடைய சாதனைகள், திறமைகள் மற்றும் பெருமைகளைத் தானே மிகைப்படுத்திப் புகழ்ந்து பேசுதல்.",
                 example: {
-                    description: "Goliath boasted that he would give David's flesh to the birds and the beasts.",
+                    description: "Goliath bragged that he would feed David's body to the birds and wild animals.",
                     tamilDescription: "தாவீதின் மாம்சத்தை ஆகாயத்துப் பறவைகளுக்கும் காட்டு மிருகங்களுக்கும் கொடுப்பேன் என்று கோலியாத் வீம்பு பேசினான்.",
                     reference: "1 Sam 17:43-44"
                 },
@@ -753,10 +753,10 @@ const biblePopups = {
             {
                 verse: 30,
                 content: "பொல்லாதவைகளை யோசித்துப் பிணைக்கிறவர்களுமாய்",
-                description: "Inventors of Evil Things: People who actively devise new ways to commit evil or harm others.",
+                description: "People who actively devise new ways to commit evil or harm others.",
                 tamilDescription: "பிறருக்குத் தீங்கு விளைவிப்பதற்கும், தீய செயல்களைச் செய்வதற்கும் புதிய புதிய சூழ்ச்சிகளையும் வழிகளையும் திட்டமிட்டுக் கண்டுபிடித்தல்.",
                 example: {
-                    description: "Jezebel schemed a fake trial with false witnesses so Naboth would be stoned and his vineyard taken.",
+                    description: "Queen Jezebel planned a fake trial with false witnesses so that Naboth would be killed and his vineyard taken.",
                     tamilDescription: "நாபோத்தின் திராட்சத்தோட்டத்தைப் பறிக்க, யேசபேல் பொய்ச்சாட்சிகளை வைத்துப் போலியான நியாயவிசாரணையைத் திட்டமிட்டாள்.",
                     reference: "1 Kings 21:8-10"
                 },
@@ -765,10 +765,10 @@ const biblePopups = {
             {
                 verse: 30,
                 content: "பெற்றாருக்குக் கீழ்ப்படியாதவர்களுமாய்",
-                description: "Disobedient to Parents: Refusing to respect, honour, and obey parents.",
+                description: "Refusing to respect, honour, and obey parents.",
                 tamilDescription: "பெற்றோரின் அறிவுரைகளையும் நியாயமான கட்டளைகளையும் மதிக்காமல் இருத்தல்; அவர்களுக்குக் கீழ்ப்படியாமலும் மரியாதை செலுத்தாமலும் நடத்தல்.",
                 example: {
-                    description: "Absalom rebelled against his father David and tried to seize his throne.",
+                    description: "Absalom turned against his father, King David, and tried to take his throne.",
                     tamilDescription: "அப்சலோம் தன் தகப்பனாகிய தாவீதுக்கு விரோதமாய்க் கலகம்பண்ணி, அவனுடைய சிங்காசனத்தைப் பறிக்கப் பார்த்தான்.",
                     reference: "2 Sam 15:10-14"
                 },
@@ -777,10 +777,10 @@ const biblePopups = {
             {
                 verse: 31,
                 content: "உணர்வில்லாதவர்களுமாய்",
-                description: "Without Understanding: Lacking spiritual understanding, wisdom, and discernment about what is right and wrong.",
+                description: "Lacking spiritual understanding, wisdom, and discernment about what is right and wrong.",
                 tamilDescription: "எது சரி, எது தவறு என்பதைப் பகுத்தறியும் ஞானமும் விவேகமும் இல்லாமல் இருத்தல்; தேவனுடைய சித்தத்தைப் புரிந்துகொள்ளாத மனநிலையுடன் வாழ்தல்.",
                 example: {
-                    description: "Nabal, whose name means \"fool\", senselessly insulted David, who had protected his flocks.",
+                    description: "Nabal, whose name means \"fool\", foolishly insulted David, who had protected his sheep.",
                     tamilDescription: "\"மூடன்\" என்று பொருள்படும் பெயருடைய நாபால், தன் மந்தைகளைக் காத்த தாவீதை அறிவில்லாமல் அவமதித்தான்.",
                     reference: "1 Sam 25:10-11, 25"
                 },
@@ -789,10 +789,10 @@ const biblePopups = {
             {
                 verse: 31,
                 content: "உடன்படிக்கைகளை மீறுகிறவர்களுமாய்",
-                description: "Covenant Breakers: Breaking promises, agreements, and commitments without faithfulness.",
+                description: "Breaking promises, agreements, and commitments without faithfulness.",
                 tamilDescription: "செய்துகொண்ட உடன்படிக்கைகள், ஒப்பந்தங்கள் மற்றும் வாக்குறுதிகளைக் காப்பாற்றாமல் துரோகம் செய்து மீறுதல்.",
                 example: {
-                    description: "The people of Jerusalem made a covenant to free their slaves, then went back on it and enslaved them again.",
+                    description: "The people of Jerusalem promised to free their slaves, then broke their promise and made them slaves again.",
                     tamilDescription: "எருசலேமின் ஜனங்கள் தங்கள் அடிமைகளை விடுதலையாக்க உடன்படிக்கை பண்ணி, பின்பு மனம் மாறி அவர்களை மீண்டும் அடிமைகளாக்கினார்கள்.",
                     reference: "Jer 34:8-11"
                 },
@@ -801,10 +801,10 @@ const biblePopups = {
             {
                 verse: 31,
                 content: "சுபாவ அன்பில்லாதவர்களுமாய்",
-                description: "Without Natural Affection: Lacking normal human affection, compassion, and love towards family and others.",
+                description: "Lacking normal human affection, compassion, and love towards family and others.",
                 tamilDescription: "குடும்பத்தினர் மற்றும் உறவினர்களிடம் இயல்பாக இருக்க வேண்டிய அன்பு, பாசம், பரிவு மற்றும் இரக்கமின்றி நடத்தல்.",
                 example: {
-                    description: "Athaliah destroyed the royal family, her own grandchildren, to seize the throne.",
+                    description: "Athaliah killed her own grandchildren so that she could become queen.",
                     tamilDescription: "அத்தாலியாள் சிங்காசனத்தைக் கைப்பற்ற, தன் சொந்தப் பேரப்பிள்ளைகளாகிய ராஜவம்சத்தார் யாவரையும் அழித்தாள்.",
                     reference: "2 Kings 11:1"
                 },
@@ -813,10 +813,10 @@ const biblePopups = {
             {
                 verse: 31,
                 content: "இணங்காதவர்களுமாய்",
-                description: "Implacable: Unwilling to make peace, refusing reconciliation, and unwilling to settle disagreements.",
+                description: "Unwilling to make peace, refusing reconciliation, and unwilling to settle disagreements.",
                 tamilDescription: "தங்களுக்குள் ஏற்பட்ட பிரச்சினைகளைத் தீர்த்துக்கொள்ள விரும்பாமல் இருத்தல்; மன்னிக்கவும், சமாதானம் செய்துகொள்ளவும், ஒப்புரவாகவும் மறுத்தல்.",
                 example: {
-                    description: "Even after David spared his life twice, Saul kept hunting him instead of making peace.",
+                    description: "David spared Saul's life twice, but Saul still would not make peace and kept hunting him.",
                     tamilDescription: "தாவீது இரண்டு முறை தன் உயிரைத் தப்பவிட்டும், சவுல் சமாதானமாகாமல் அவனைத் தொடர்ந்து வேட்டையாடினான்.",
                     reference: "1 Sam 24:16-22; 26:21"
                 },
@@ -825,10 +825,10 @@ const biblePopups = {
             {
                 verse: 31,
                 content: "இரக்கமில்லாதவர்களுமாய்",
-                description: "Unmerciful: Having no compassion towards people who are suffering or in need.",
+                description: "Having no compassion towards people who are suffering or in need.",
                 tamilDescription: "துன்பப்படுகிறவர்களிடமும் உதவி தேவைப்படுகிறவர்களிடமும் பரிவும் இரக்கமும் காட்டாமல் இருத்தல்; பிறருடைய வேதனையைக் கண்டும் மனமிரங்காமல் நடத்தல்.",
                 example: {
-                    description: "In Jesus' parable, a servant forgiven a huge debt seized a fellow servant by the throat over a small one.",
+                    description: "In Jesus' story, a servant whose huge debt was forgiven grabbed a fellow servant by the throat over a small debt.",
                     tamilDescription: "இயேசுவின் உவமையில், பெரிய கடன் மன்னிக்கப்பட்ட ஊழியக்காரன், சிறிய கடனுக்காகத் தன் உடன்வேலைக்காரனின் தொண்டையைப் பிடித்து நெரித்தான்.",
                     reference: "Matt 18:28-30"
                 },
@@ -1045,10 +1045,10 @@ const biblePopups = {
             {
                 verse: 1,
                 content: "கொடிய காலங்கள்",
-                description: "Perilous times: Dangerous and difficult seasons that will come in the last days.",
+                description: "Very hard and dangerous times that will come in the last days.",
                 tamilDescription: "கடைசி நாட்களில் வரும் ஆபத்தும் கடினமும் நிறைந்த காலங்கள்.",
                 example: {
-                    description: "Jesus said the last days would be like the days of Noah: people ate, drank and married, unaware until the flood came.",
+                    description: "Jesus said the last days would be like Noah's time: people went on eating, drinking and marrying, and did not notice until the flood came.",
                     tamilDescription: "கடைசி நாட்கள் நோவாவின் நாட்களைப்போல் இருக்கும் என்று இயேசு சொன்னார்; ஜலப்பிரளயம் வருமளவும் ஜனங்கள் புசித்தும் குடித்தும் விவாகம்பண்ணியும் உணராதிருந்தார்கள்.",
                     reference: "Matt 24:37-39"
                 }
@@ -1056,10 +1056,10 @@ const biblePopups = {
             {
                 verse: 2,
                 content: "தற்பிரியராயும்",
-                description: "Lovers of their own selves: Self-centred people who live only for their own interests.",
+                description: "People who love only themselves and think only about what they want.",
                 tamilDescription: "தங்களையே மையமாக வைத்து, தங்கள் நலனை மட்டுமே நாடுகிறவர்கள்.",
                 example: {
-                    description: "The rich fool planned bigger barns and said to his soul, \"Take thine ease, eat, drink, and be merry.\"",
+                    description: "A rich farmer planned to build bigger barns and said to himself, \"Relax, eat, drink and enjoy life.\"",
                     tamilDescription: "ஐசுவரியவானாகிய மதிகேடன் பெரிய களஞ்சியங்களைக் கட்டத் திட்டமிட்டு, \"என் ஆத்துமாவே, இளைப்பாறு, புசித்துக் குடித்துப் பூரிப்பாயிரு\" என்று சொன்னான்.",
                     reference: "Luke 12:16-20"
                 }
@@ -1067,10 +1067,10 @@ const biblePopups = {
             {
                 verse: 2,
                 content: "பணப்பிரியராயும்",
-                description: "Covetous (lovers of money): People whose heart is set on money.",
+                description: "People who love money more than anything else.",
                 tamilDescription: "பணத்தின்மேல் இருதயத்தை வைத்து, அதையே நேசிக்கிறவர்கள்.",
                 example: {
-                    description: "Judas agreed to betray Jesus for thirty pieces of silver.",
+                    description: "Judas agreed to hand Jesus over for thirty silver coins.",
                     tamilDescription: "யூதாஸ் முப்பது வெள்ளிக்காசுக்காக இயேசுவைக் காட்டிக்கொடுக்க உடன்பட்டான்.",
                     reference: "Matt 26:14-16"
                 }
@@ -1078,10 +1078,10 @@ const biblePopups = {
             {
                 verse: 2,
                 content: "வீம்புக்காரராயும்",
-                description: "Boasters: Constantly praising oneself and exaggerating one's achievements.",
+                description: "People who keep bragging about themselves and make themselves sound better than they are.",
                 tamilDescription: "தங்கள் சாதனைகளையும் திறமைகளையும் தாங்களே மிகைப்படுத்திப் புகழ்ந்து பேசுகிறவர்கள்.",
                 example: {
-                    description: "The Pharisee in the temple praised himself and looked down on the tax collector.",
+                    description: "A Pharisee in the temple praised himself in his prayer and looked down on the tax collector.",
                     tamilDescription: "தேவாலயத்தில் ஜெபித்த பரிசேயன் தன்னைத்தானே புகழ்ந்து, ஆயக்காரனை அற்பமாக எண்ணினான்.",
                     reference: "Luke 18:9-14"
                 }
@@ -1089,10 +1089,10 @@ const biblePopups = {
             {
                 verse: 2,
                 content: "அகந்தையுள்ளவர்களாயும்",
-                description: "Proud: Considering oneself superior to others and refusing to humble oneself before God.",
+                description: "People who think they are better than others and will not humble themselves before God.",
                 tamilDescription: "தங்களை மற்றவர்களைவிட உயர்ந்தவர்களாக எண்ணி, தேவனுக்கு முன்பாகத் தாழ்மையின்றி நடக்கிறவர்கள்.",
                 example: {
-                    description: "King Uzziah's heart was lifted up; he burned incense in the temple and was struck with leprosy.",
+                    description: "King Uzziah became proud and burned incense in the temple, which only priests could do. God struck him with leprosy.",
                     tamilDescription: "உசியா ராஜாவின் இருதயம் மேட்டிமையானது; அவன் தேவாலயத்தில் தூபங்காட்டத் துணிந்ததினால் குஷ்டரோகத்தால் வாதிக்கப்பட்டான்.",
                     reference: "2 Chr 26:16-21"
                 }
@@ -1100,10 +1100,10 @@ const biblePopups = {
             {
                 verse: 2,
                 content: "தூஷிக்கிறவர்களாயும்",
-                description: "Blasphemers: People who speak with contempt against God or others.",
+                description: "People who insult God or speak badly about others.",
                 tamilDescription: "தேவனுக்கும் பிறருக்கும் விரோதமாக இழிவாகவும் நிந்தையாகவும் பேசுகிறவர்கள்.",
                 example: {
-                    description: "Rabshakeh mocked the living God before the people of Jerusalem.",
+                    description: "Rabshakeh, an Assyrian officer, mocked the living God in front of the people of Jerusalem.",
                     tamilDescription: "ரப்சாக்கே எருசலேமின் ஜனங்களுக்கு முன்பாக ஜீவனுள்ள தேவனை நிந்தித்துப் பேசினான்.",
                     reference: "2 Kings 18:28-35; 19:4"
                 }
@@ -1111,10 +1111,10 @@ const biblePopups = {
             {
                 verse: 2,
                 content: "தாய்தகப்பன்மாருக்குக் கீழ்ப்படியாதவர்களாயும்",
-                description: "Disobedient to parents: Refusing to respect, honour and obey parents.",
+                description: "People who do not respect or obey their parents.",
                 tamilDescription: "தாய் தகப்பனைக் கனம்பண்ணாமலும், அவர்களுக்குக் கீழ்ப்படியாமலும் நடக்கிறவர்கள்.",
                 example: {
-                    description: "Eli's sons would not listen to the voice of their father when he rebuked them.",
+                    description: "Eli warned his sons about their sin, but they would not listen to their father.",
                     tamilDescription: "ஏலி தன் குமாரரைக் கடிந்துகொண்டபோதும், அவர்கள் தங்கள் தகப்பனுடைய சொல்லைக் கேட்கவில்லை.",
                     reference: "1 Sam 2:22-25"
                 }
@@ -1122,10 +1122,10 @@ const biblePopups = {
             {
                 verse: 2,
                 content: "நன்றியறியாதவர்களாயும்",
-                description: "Unthankful: Receiving good without gratitude to God or others.",
+                description: "People who receive good things but never say thank you to God or others.",
                 tamilDescription: "தேவனிடமும் மனிதரிடமும் பெற்ற நன்மைகளுக்கு நன்றி செலுத்தாதவர்கள்.",
                 example: {
-                    description: "Jesus healed ten lepers, but only one returned to give thanks.",
+                    description: "Jesus healed ten men with leprosy, but only one came back to thank Him.",
                     tamilDescription: "இயேசு பத்துக் குஷ்டரோகிகளைச் சுத்தமாக்கினார்; ஆனால் ஒருவன் மாத்திரமே திரும்பி வந்து நன்றி செலுத்தினான்.",
                     reference: "Luke 17:15-18"
                 }
@@ -1133,10 +1133,10 @@ const biblePopups = {
             {
                 verse: 2,
                 content: "பரிசுத்தமில்லாதவர்களாயும்",
-                description: "Unholy: Treating sacred things as common and having no reverence for God.",
+                description: "People who treat holy things as cheap and have no respect for God.",
                 tamilDescription: "பரிசுத்தமானவைகளை அற்பமாக எண்ணி, தேவபயமின்றி வாழ்கிறவர்கள்.",
                 example: {
-                    description: "Esau despised his birthright and sold it for a bowl of stew.",
+                    description: "Esau sold his rights as the firstborn son for one bowl of stew.",
                     tamilDescription: "ஏசா ஒரு வேளை உணவுக்காகத் தன் சேஷ்டபுத்திர பாகத்தை விற்று, அதை அசட்டைபண்ணினான்.",
                     reference: "Gen 25:32-34; Heb 12:16"
                 }
@@ -1144,10 +1144,10 @@ const biblePopups = {
             {
                 verse: 3,
                 content: "சுபாவ அன்பில்லாதவர்களாயும்",
-                description: "Without natural affection: Lacking normal love and compassion towards family and others.",
+                description: "People who do not even love their own family.",
                 tamilDescription: "குடும்பத்தினரிடமும் உறவினர்களிடமும் இயல்பாக இருக்க வேண்டிய அன்பும் பாசமும் இல்லாதவர்கள்.",
                 example: {
-                    description: "Abimelech killed his seventy brothers to make himself king; only Jotham escaped.",
+                    description: "Abimelech killed his seventy brothers so that he could be king. Only Jotham escaped.",
                     tamilDescription: "அபிமெலேக்கு ராஜாவாகும்படி தன் எழுபது சகோதரரைக் கொன்றான்; யோதாம் மாத்திரம் தப்பினான்.",
                     reference: "Judg 9:1-5"
                 }
@@ -1155,10 +1155,10 @@ const biblePopups = {
             {
                 verse: 3,
                 content: "இணங்காதவர்களாயும்",
-                description: "Trucebreakers (irreconcilable): Refusing to make peace or keep it.",
+                description: "People who refuse to make peace, or who break the peace they made.",
                 tamilDescription: "சமாதானம்பண்ணவோ, செய்த சமாதானத்தைக் காக்கவோ மனதில்லாதவர்கள்.",
                 example: {
-                    description: "Even after David spared his life twice, Saul kept hunting him.",
+                    description: "David spared Saul's life twice, but Saul still kept hunting him.",
                     tamilDescription: "தாவீது இரண்டு முறை தன் உயிரைத் தப்பவிட்டும், சவுல் சமாதானமாகாமல் அவனைத் தொடர்ந்து வேட்டையாடினான்.",
                     reference: "1 Sam 24:16-22; 26:21"
                 }
@@ -1166,10 +1166,10 @@ const biblePopups = {
             {
                 verse: 3,
                 content: "அவதூறு செய்கிறவர்களாயும்",
-                description: "False accusers (slanderers): People who bring false charges to ruin others.",
+                description: "People who tell lies about others to ruin them.",
                 tamilDescription: "பிறரைக் கெடுக்கும்படி பொய்யான குற்றச்சாட்டுகளைச் சுமத்துகிறவர்கள்.",
                 example: {
-                    description: "False witnesses were set up to accuse Stephen of speaking against Moses and God.",
+                    description: "People were paid to tell lies about Stephen, saying he spoke against Moses and God.",
                     tamilDescription: "ஸ்தேவான் மோசேக்கும் தேவனுக்கும் விரோதமாகப் பேசினான் என்று குற்றஞ்சாட்டப் பொய்ச்சாட்சிகள் ஏற்படுத்தப்பட்டார்கள்.",
                     reference: "Acts 6:11-13"
                 }
@@ -1177,10 +1177,10 @@ const biblePopups = {
             {
                 verse: 3,
                 content: "இச்சையடக்கமில்லாதவர்களாயும்",
-                description: "Incontinent (without self-control): Unable to restrain one's desires.",
+                description: "People who cannot control their desires.",
                 tamilDescription: "தங்கள் இச்சைகளையும் ஆசைகளையும் அடக்க முடியாதவர்கள்.",
                 example: {
-                    description: "Samson could not restrain his desire for Delilah and revealed the secret of his strength.",
+                    description: "Samson could not control his desire for Delilah and told her the secret of his strength.",
                     tamilDescription: "சிம்சோன் தெலீலாளின்மேலுள்ள ஆசையை அடக்க முடியாமல், தன் பெலத்தின் இரகசியத்தை அவளுக்கு வெளிப்படுத்தினான்.",
                     reference: "Judg 16:4-17"
                 }
@@ -1188,10 +1188,10 @@ const biblePopups = {
             {
                 verse: 3,
                 content: "கொடுமையுள்ளவர்களாயும்",
-                description: "Fierce (brutal): Savage and cruel, without gentleness.",
+                description: "People who are cruel and violent.",
                 tamilDescription: "சாந்தமின்றி, மூர்க்கமும் கொடூரமுமாய் நடக்கிறவர்கள்.",
                 example: {
-                    description: "Herod ordered all the boys in Bethlehem aged two and under to be killed.",
+                    description: "King Herod ordered all the baby boys in Bethlehem, two years old and under, to be killed.",
                     tamilDescription: "ஏரோது பெத்லகேமிலிருந்த இரண்டு வயதுக்குட்பட்ட ஆண்பிள்ளைகளையெல்லாம் கொலைசெய்யக் கட்டளையிட்டான்.",
                     reference: "Matt 2:16"
                 }
@@ -1199,10 +1199,10 @@ const biblePopups = {
             {
                 verse: 3,
                 content: "நல்லோரைப் பகைக்கிறவர்களாயும்",
-                description: "Despisers of those that are good: Hating people who are good and godly.",
+                description: "People who hate those who are good and follow God.",
                 tamilDescription: "நல்லவர்களையும் தேவபக்தியுள்ளவர்களையும் பகைக்கிறவர்கள்.",
                 example: {
-                    description: "King Ahab said he hated the prophet Micaiah because he never prophesied good concerning him.",
+                    description: "King Ahab said he hated the prophet Micaiah because Micaiah never said anything good about him.",
                     tamilDescription: "மிகாயா தன்னைக் குறித்து நன்மையானதைத் தீர்க்கதரிசனம் சொல்லாததினால் அவனைப் பகைக்கிறேன் என்று ஆகாப் ராஜா சொன்னான்.",
                     reference: "1 Kings 22:8"
                 }
@@ -1210,10 +1210,10 @@ const biblePopups = {
             {
                 verse: 4,
                 content: "துரோகிகளாயும்",
-                description: "Traitors: People who betray those who trust them.",
+                description: "People who turn against those who trust them.",
                 tamilDescription: "தங்களை நம்பினவர்களுக்கே துரோகம் செய்கிறவர்கள்.",
                 example: {
-                    description: "Ahithophel, David's trusted counsellor, joined Absalom's conspiracy against David.",
+                    description: "Ahithophel was King David's trusted adviser, but he joined Absalom's plot against David.",
                     tamilDescription: "தாவீதின் நம்பிக்கைக்குரிய ஆலோசனைக்காரனாகிய அகித்தோப்பேல் தாவீதுக்கு விரோதமான அப்சலோமின் சதியில் சேர்ந்துகொண்டான்.",
                     reference: "2 Sam 15:12, 31"
                 }
@@ -1221,10 +1221,10 @@ const biblePopups = {
             {
                 verse: 4,
                 content: "துணிகரமுள்ளவர்களாயும்",
-                description: "Heady (reckless): Acting rashly without thinking of the consequences.",
+                description: "People who act in a hurry without thinking about what will happen.",
                 tamilDescription: "விளைவுகளை யோசியாமல் அவசரமாகவும் துணிகரமாகவும் செயல்படுகிறவர்கள்.",
                 example: {
-                    description: "Rehoboam rejected the elders' advice and answered the people harshly, and the kingdom split.",
+                    description: "King Rehoboam ignored the wise advice of the older men and spoke harshly to the people, and the kingdom split in two.",
                     tamilDescription: "ரெகொபெயாம் முதியோரின் ஆலோசனையைத் தள்ளி, ஜனங்களுக்குக் கடினமாய்ப் பதில் சொன்னதினால் ராஜ்யம் பிரிந்தது.",
                     reference: "1 Kings 12:13-16"
                 }
@@ -1232,10 +1232,10 @@ const biblePopups = {
             {
                 verse: 4,
                 content: "இறுமாப்புள்ளவர்களாயும்",
-                description: "Highminded (conceited): Puffed up and loving to be first.",
+                description: "People who are full of themselves and always want to be first.",
                 tamilDescription: "தங்களைப் பெரியவர்களாக எண்ணி, முதன்மையாயிருக்க விரும்பி இறுமாந்திருக்கிறவர்கள்.",
                 example: {
-                    description: "Diotrephes loved to have the pre-eminence and refused to receive the brethren.",
+                    description: "Diotrephes always wanted to be the most important person in the church and refused to welcome other believers.",
                     tamilDescription: "தியோத்திரேப்பு முதன்மையாயிருக்க விரும்பி, சகோதரரை ஏற்றுக்கொள்ள மறுத்தான்.",
                     reference: "3 John 9-10"
                 }
@@ -1243,10 +1243,10 @@ const biblePopups = {
             {
                 verse: 4,
                 content: "தேவப்பிரியராயிராமல் சுகபோகப்பிரியராயும்",
-                description: "Lovers of pleasures more than lovers of God: Putting enjoyment before God.",
+                description: "People who love having fun and comfort more than they love God.",
                 tamilDescription: "தேவனைவிடச் சுகபோகங்களையும் இன்பங்களையும் அதிகமாய் நேசிக்கிறவர்கள்.",
                 example: {
-                    description: "Demas forsook Paul, \"having loved this present world.\"",
+                    description: "Demas left Paul because he loved the things of this world.",
                     tamilDescription: "தேமா இப்பிரபஞ்சத்தின்மேல் ஆசைவைத்து பவுலை விட்டுப் பிரிந்துபோனான்.",
                     reference: "2 Tim 4:10"
                 }
@@ -1254,10 +1254,10 @@ const biblePopups = {
             {
                 verse: 5,
                 content: "தேவபக்தியின் வேஷத்தைத் தரித்து அதின் பெலனை மறுதலிக்கிறவர்களாயும்",
-                description: "Having a form of godliness but denying its power: Looking religious outside while the heart is unchanged.",
+                description: "People who look religious on the outside, but their lives are not changed by God's power.",
                 tamilDescription: "வெளியே பக்தியுள்ளவர்களாகக் காணப்பட்டு, உள்ளே மாற்றமில்லாமல் தேவபக்தியின் வல்லமையை மறுக்கிறவர்கள்.",
                 example: {
-                    description: "Jesus called the scribes and Pharisees whitewashed tombs: beautiful outside but full of uncleanness within.",
+                    description: "Jesus said the religious leaders were like tombs painted white: nice outside, but dirty inside.",
                     tamilDescription: "வெளியே அலங்காரமாயும் உள்ளே அசுத்தத்தினால் நிறைந்துமிருக்கிற வெள்ளையடிக்கப்பட்ட கல்லறைகள் என்று இயேசு வேதபாரகரையும் பரிசேயரையும் கடிந்துகொண்டார்.",
                     reference: "Matt 23:27-28"
                 }
@@ -1270,10 +1270,10 @@ const biblePopups = {
             {
                 verse: 5,
                 content: "விபசாரம்",
-                description: "Fornication: Sexual immorality outside of God's design for marriage.",
+                description: "Any sexual relationship outside of marriage.",
                 tamilDescription: "திருமண உறவுக்கு வெளியே உள்ள பாலியல் ஒழுக்கக்கேடு.",
                 example: {
-                    description: "Reuben lay with Bilhah, his father's concubine, and lost his birthright honour.",
+                    description: "Reuben slept with Bilhah, his father's wife, and lost his honour as the firstborn son.",
                     tamilDescription: "ரூபன் தன் தகப்பனுடைய மறுமனையாட்டியாகிய பில்காளோடே சயனித்ததினால் தன் சேஷ்டபுத்திர மேன்மையை இழந்தான்.",
                     reference: "Gen 35:22; 49:3-4"
                 }
@@ -1281,10 +1281,10 @@ const biblePopups = {
             {
                 verse: 5,
                 content: "அசுத்தம்",
-                description: "Uncleanness: Moral impurity that defiles a person.",
+                description: "Dirty and impure behaviour that makes a person unclean before God.",
                 tamilDescription: "ஒருவரைத் தீட்டுப்படுத்தும் ஒழுக்க அசுத்தம்.",
                 example: {
-                    description: "Shechem took Dinah and defiled her.",
+                    description: "Shechem took Dinah by force and dishonoured her.",
                     tamilDescription: "சீகேம் தீனாளைப் பிடித்து அவளைத் தீட்டுப்படுத்தினான்.",
                     reference: "Gen 34:1-5"
                 }
@@ -1292,10 +1292,10 @@ const biblePopups = {
             {
                 verse: 5,
                 content: "மோகம்",
-                description: "Inordinate affection (passion): Uncontrolled sexual passion.",
+                description: "Strong sexual passion that a person cannot control.",
                 tamilDescription: "கட்டுப்பாடற்ற காம மோகமும் உணர்ச்சியும்.",
                 example: {
-                    description: "Amnon was so consumed by passion for Tamar that he made himself sick.",
+                    description: "Amnon wanted his half-sister Tamar so badly that he made himself sick.",
                     tamilDescription: "அம்னோன் தாமாரின்மேல் கொண்ட மோகத்தினால் வியாதிப்படுமளவுக்கு வாடினான்.",
                     reference: "2 Sam 13:1-2"
                 }
@@ -1303,10 +1303,10 @@ const biblePopups = {
             {
                 verse: 5,
                 content: "துர்இச்சை",
-                description: "Evil concupiscence (evil desire): Strong craving for what is sinful.",
+                description: "Strong desire for things that are sinful.",
                 tamilDescription: "பாவமானவைகளின்மேல் உண்டாகும் கொடிய இச்சை.",
                 example: {
-                    description: "Potiphar's wife desired Joseph and urged him day after day to lie with her.",
+                    description: "Potiphar's wife wanted Joseph and kept asking him to sleep with her, day after day.",
                     tamilDescription: "போத்திபாரின் மனைவி யோசேப்பின்மேல் இச்சைகொண்டு, நாள்தோறும் தன்னோடே சயனிக்கும்படி அவனை வற்புறுத்தினாள்.",
                     reference: "Gen 39:7-10"
                 }
@@ -1314,10 +1314,10 @@ const biblePopups = {
             {
                 verse: 5,
                 content: "விக்கிரகாராதனையான பொருளாசை",
-                description: "Covetousness, which is idolatry: When the desire for possessions takes the place of God.",
+                description: "Greed. When wanting more things becomes more important than God, it becomes like worshipping an idol.",
                 tamilDescription: "உடைமைகளின்மேலுள்ள ஆசை தேவனுடைய இடத்தைப் பிடிக்கும்போது, அந்தப் பொருளாசையே விக்கிரகாராதனையாகிறது.",
                 example: {
-                    description: "The rich young ruler went away sorrowful, because he had great possessions.",
+                    description: "A rich young man went away sad from Jesus, because he did not want to give up his great wealth.",
                     tamilDescription: "திரளான ஆஸ்திகளை உடையவனாயிருந்ததினால், ஐசுவரியவானாகிய வாலிபன் துக்கத்தோடே போய்விட்டான்.",
                     reference: "Mark 10:21-22"
                 }
@@ -1325,10 +1325,10 @@ const biblePopups = {
             {
                 verse: 6,
                 content: "தேவகோபாக்கினை",
-                description: "Wrath of God: God's holy judgment against sin.",
+                description: "God's anger and judgment against sin.",
                 tamilDescription: "பாவத்திற்கு விரோதமான தேவனுடைய பரிசுத்த நியாயத்தீர்ப்பு.",
                 example: {
-                    description: "God rained fire and brimstone on Sodom and Gomorrah because of their sin.",
+                    description: "God sent fire and burning sulphur down on Sodom and Gomorrah because of their sin.",
                     tamilDescription: "சோதோம் கொமோராவின் பாவத்தினிமித்தம் தேவன் அவைகளின்மேல் அக்கினியையும் கந்தகத்தையும் வருஷிக்கப்பண்ணினார்.",
                     reference: "Gen 19:24-25"
                 }
@@ -1336,10 +1336,10 @@ const biblePopups = {
             {
                 verse: 8,
                 content: "கோபமும்",
-                description: "Anger: A settled feeling of anger held in the heart.",
+                description: "Anger that a person holds on to in the heart.",
                 tamilDescription: "இருதயத்தில் நிலைத்திருக்கும் கோப உணர்வு.",
                 example: {
-                    description: "Cain was very angry and his face fell; God warned him that sin was crouching at the door.",
+                    description: "Cain was very angry and his face showed it. God warned him that sin was waiting at his door.",
                     tamilDescription: "காயீன் மிகவும் எரிச்சலடைந்து முகநாடி வேறுபட்டான்; பாவம் வாசற்படியில் படுத்திருக்கிறது என்று தேவன் அவனை எச்சரித்தார்.",
                     reference: "Gen 4:5-7"
                 }
@@ -1347,10 +1347,10 @@ const biblePopups = {
             {
                 verse: 8,
                 content: "மூர்க்கமும்",
-                description: "Wrath (fury): Explosive, uncontrolled rage.",
+                description: "Sudden, uncontrolled rage.",
                 tamilDescription: "கட்டுக்கடங்காமல் வெடிக்கும் கடுஞ்சினம்.",
                 example: {
-                    description: "Nebuchadnezzar, full of fury, ordered the furnace heated seven times hotter.",
+                    description: "King Nebuchadnezzar was so furious that he ordered the furnace heated seven times hotter.",
                     tamilDescription: "நேபுகாத்நேச்சார் மூர்க்கத்தினால் நிறைந்து, சூளையை ஏழுமடங்கு அதிகமாய்ச் சூடாக்கக் கட்டளையிட்டான்.",
                     reference: "Dan 3:19"
                 }
@@ -1358,10 +1358,10 @@ const biblePopups = {
             {
                 verse: 8,
                 content: "பொறாமையும்",
-                description: "Malice / Envy: Ill will and resentment towards others.",
+                description: "Wanting bad things for others, and feeling bitter when good things happen to them.",
                 tamilDescription: "பிறர்மேல் உள்ள தீய எண்ணமும் பொறாமையும்.",
                 example: {
-                    description: "Pilate knew the chief priests had handed Jesus over because of envy.",
+                    description: "Pilate knew the chief priests had handed Jesus over because they were jealous of Him.",
                     tamilDescription: "பிரதான ஆசாரியர் பொறாமையினால்தான் இயேசுவை ஒப்புக்கொடுத்தார்கள் என்று பிலாத்து அறிந்திருந்தான்.",
                     reference: "Mark 15:10"
                 }
@@ -1369,7 +1369,7 @@ const biblePopups = {
             {
                 verse: 8,
                 content: "தூஷணமும்",
-                description: "Blasphemy (slander): Abusive and insulting speech against God or people.",
+                description: "Insulting and hurtful words against God or people.",
                 tamilDescription: "தேவனுக்கோ மனிதருக்கோ விரோதமான நிந்தனையும் இழிவான பேச்சும்.",
                 example: {
                     description: "Shimei cursed King David and threw stones at him.",
@@ -1380,10 +1380,10 @@ const biblePopups = {
             {
                 verse: 8,
                 content: "வம்பு வார்த்தைகளுமாகிய",
-                description: "Filthy communication: Obscene, foul or abusive talk.",
+                description: "Dirty, rude or abusive talk.",
                 tamilDescription: "அசுத்தமான, கேவலமான, இழிவான பேச்சுகள்.",
                 example: {
-                    description: "Youths from Bethel mocked the prophet Elisha, saying, \"Go up, thou bald head.\"",
+                    description: "Some young men from Bethel made fun of the prophet Elisha, shouting, \"Go away, baldy!\"",
                     tamilDescription: "பெத்தேலிலிருந்து வந்த வாலிபர் \"மொட்டைத்தலையா, ஏறிப்போ\" என்று எலிசா தீர்க்கதரிசியைப் பரியாசம்பண்ணினார்கள்.",
                     reference: "2 Kings 2:23-24"
                 }
@@ -1391,10 +1391,10 @@ const biblePopups = {
             {
                 verse: 9,
                 content: "பொய்",
-                description: "Lying: Speaking what is false in order to deceive.",
+                description: "Saying things that are not true in order to fool someone.",
                 tamilDescription: "ஏமாற்றும் நோக்கத்தோடு உண்மைக்கு மாறானதைப் பேசுதல்.",
                 example: {
-                    description: "Ananias and Sapphira lied about the price of their land and fell dead.",
+                    description: "Ananias and Sapphira lied about the money from selling their land, and both of them fell down dead.",
                     tamilDescription: "அனனியாவும் சப்பீராளும் தங்கள் நிலத்தின் கிரயத்தைக் குறித்துப் பொய் சொன்னதினால் விழுந்து மரித்தார்கள்.",
                     reference: "Acts 5:1-10"
                 }
@@ -1402,10 +1402,10 @@ const biblePopups = {
             {
                 verse: 9,
                 content: "பழைய மனுஷனையும்",
-                description: "Old man: Our former self, ruled by sin before we came to Christ.",
+                description: "The person we used to be before following Christ, controlled by sin.",
                 tamilDescription: "கிறிஸ்துவிடம் வருவதற்கு முன், பாவத்தினால் ஆளப்பட்ட நம்முடைய பழைய சுபாவம்.",
                 example: {
-                    description: "Zacchaeus put off his old life of cheating and promised to repay fourfold.",
+                    description: "Zacchaeus stopped cheating people and promised to pay back four times what he had taken.",
                     tamilDescription: "சகேயு ஏமாற்றி வாழ்ந்த தன் பழைய வாழ்க்கையைக் களைந்துபோட்டு, நாலத்தனையாகத் திரும்பக் கொடுப்பேன் என்றான்.",
                     reference: "Luke 19:8-9"
                 }
@@ -1413,10 +1413,10 @@ const biblePopups = {
             {
                 verse: 10,
                 content: "புதிய மனுஷனைத்",
-                description: "New man: The new life created in Christ, renewed in the image of God.",
+                description: "The new person God makes us in Christ, becoming more like Him every day.",
                 tamilDescription: "கிறிஸ்துவுக்குள் சிருஷ்டிக்கப்பட்டு, தேவனுடைய சாயலுக்கொப்பாகப் புதிதாக்கப்படும் புதிய வாழ்க்கை.",
                 example: {
-                    description: "Saul the persecutor met Jesus and became Paul the apostle, a new creation.",
+                    description: "Saul hurt Christians, but after he met Jesus he became Paul, a completely new person.",
                     tamilDescription: "சபையைத் துன்பப்படுத்தின சவுல் இயேசுவைச் சந்தித்து, புதிய சிருஷ்டியாகிய அப்போஸ்தலனாகிய பவுலானான்.",
                     reference: "Acts 9:1-20; 2 Cor 5:17"
                 }
