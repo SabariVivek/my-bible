@@ -3171,8 +3171,27 @@ function attachPopupHighlightListeners() {
     let tooltipShowTimer = null;
 
     {
-        // Click (mobile tap or desktop click) opens the popup with the தமிழ் / English toggle
+        // Mobile tap opens the popup sheet; desktop click flips the hover card's language
         document.addEventListener('click', function (e) {
+            const isHighlight = e.target.hasAttribute('data-popup-content') &&
+                e.target.className.includes('popup-highlight-');
+
+            // Desktop: clicking the highlighted word switches தமிழ் <-> English in the hover card
+            if (isHighlight && !isMobileDevice()) {
+                const contentText = e.target.getAttribute('data-popup-content');
+                if (!contentText) return;
+                e.stopPropagation();
+                e.preventDefault();
+                if (tooltipShowTimer) {
+                    clearTimeout(tooltipShowTimer);
+                    tooltipShowTimer = null;
+                }
+                setPopupMeaningLang(getPopupMeaningLang() === 'tamil' ? 'english' : 'tamil');
+                hoveredElement = e.target;
+                showPopupTooltip(contentText, e.clientX, e.clientY, e.target.getAttribute('data-popup-key'));
+                return;
+            }
+
             // Don't open popup if one is already visible
             const existingPopup = document.getElementById('popup-info-bottom-sheet');
             if (existingPopup && existingPopup.classList.contains('visible')) {
