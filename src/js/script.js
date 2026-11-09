@@ -2947,7 +2947,10 @@ function getPopupHighlightClass(bookName, chapter, contentText) {
 // Book/chapter scopes where popup highlights are active (Tamil text only).
 // Other entries in biblePopups stay dormant until their scope is added here.
 const POPUP_ENABLED_SCOPES = {
-    romans: [1]
+    romans: [1],          // Romans 1:29-31
+    galatians: [5],       // Galatians 5:19-21
+    'ii timothy': [3],    // 2 Timothy 3:1-5
+    colossians: [3]       // Colossians 3:5-10
 };
 
 function isPopupScopeEnabled(bookKey, chapter) {
@@ -2955,9 +2958,20 @@ function isPopupScopeEnabled(bookKey, chapter) {
     return Array.isArray(chapters) && chapters.includes(parseInt(chapter, 10));
 }
 
-// Find a popup entry by its highlighted text, preferring enabled scopes
-function findPopupEntry(contentText) {
+// Find a popup entry by its highlighted text, preferring enabled scopes.
+// popupKey ("book|chapter|verse", set on the highlight span) pins the exact entry
+// when the same word appears in several passages (e.g. விபசாரம் in Galatians and Colossians).
+function findPopupEntry(contentText, popupKey = null) {
     if (!biblePopups || typeof biblePopups !== 'object') return null;
+    if (popupKey) {
+        const [bookKey, chapter, verse] = popupKey.split('|');
+        const items = biblePopups[bookKey] && biblePopups[bookKey][`chapter${chapter}`];
+        if (Array.isArray(items)) {
+            const exact = items.find(i => i.content === contentText &&
+                (i.verse == null || !verse || String(i.verse) === verse));
+            if (exact) return exact;
+        }
+    }
     let fallback = null;
     for (const bookKey in biblePopups) {
         const book = biblePopups[bookKey];
@@ -3067,8 +3081,8 @@ function attachPopupLangToggle(container) {
 }
 
 // Show small tooltip popup for desktop hover
-function showPopupTooltip(contentText, x, y) {
-    const matchingItem = findPopupEntry(contentText);
+function showPopupTooltip(contentText, x, y, popupKey = null) {
+    const matchingItem = findPopupEntry(contentText, popupKey);
     if (!matchingItem) return;
 
     // Remove existing tooltip
@@ -3178,7 +3192,7 @@ function attachPopupHighlightListeners() {
                     }
                     hidePopupTooltip();
                     hoveredElement = null;
-                    showPopupInfo(contentText);
+                    showPopupInfo(contentText, e.target.getAttribute('data-popup-key'));
                 }
             }
         }, true); // Use capture phase to ensure we catch clicks on dynamically added content
@@ -3190,6 +3204,7 @@ function attachPopupHighlightListeners() {
             // Check if the hovered element has a popup-highlight class and data-popup-content attribute
             if (e.target.hasAttribute('data-popup-content') && e.target.className.includes('popup-highlight-')) {
                 const contentText = e.target.getAttribute('data-popup-content');
+                const popupKey = e.target.getAttribute('data-popup-key');
                 if (contentText) {
                     hoveredElement = e.target;
 
@@ -3204,7 +3219,7 @@ function attachPopupHighlightListeners() {
 
                     // Show tooltip with a light delay for smooth experience
                     tooltipShowTimer = setTimeout(() => {
-                        showPopupTooltip(contentText, e.clientX, e.clientY);
+                        showPopupTooltip(contentText, e.clientX, e.clientY, popupKey);
                     }, 150);
                 }
             }
@@ -3344,8 +3359,8 @@ function highlightSpecialText(text, language, bookName = null, chapter = null, v
 }
 
 // Show popup info when a highlighted text is clicked
-function showPopupInfo(contentText) {
-    const matchingItem = findPopupEntry(contentText);
+function showPopupInfo(contentText, popupKey = null) {
+    const matchingItem = findPopupEntry(contentText, popupKey);
     if (!matchingItem) {
         console.warn(`No popup entry found for "${contentText}".`);
         return;
@@ -3565,9 +3580,12 @@ function applyPopupHighlights(text, bookName, chapter, verseNum = null) {
         .map(c => c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
         .join('|');
 
+    const keyPrefix = `${bookName.toLowerCase()}|${parseInt(chapter, 10)}|`;
     return text.replace(new RegExp(pattern, 'g'), (match) => {
         const className = getPopupHighlightClass(bookName, chapter, match);
-        return `<span class="popup-highlight-word ${className}" data-popup-content="${match}">${match}</span>`;
+        const item = byContent.get(match);
+        const popupKey = keyPrefix + (item.verse != null ? item.verse : (vNum || ''));
+        return `<span class="popup-highlight-word ${className}" data-popup-content="${match}" data-popup-key="${popupKey}">${match}</span>`;
     });
 }
 
