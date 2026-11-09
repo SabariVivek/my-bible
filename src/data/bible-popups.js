@@ -841,17 +841,6 @@ const biblePopups = {
         chapter5: [
             {
                 verse: 19,
-                content: "மாம்சத்தின் கிரியைகள்",
-                description: "The wrong things we do when we follow our own selfish desires instead of letting God's Spirit guide us.",
-                tamilDescription: "பரிசுத்த ஆவியானவரால் நடத்தப்படாத பாவ சுபாவத்திலிருந்து வெளிப்படும் செயல்கள்.",
-                example: {
-                    description: "Paul admitted his own struggle: \"I don't do the good things I want to do. Instead, I keep doing the wrong things I don't want to do.\"",
-                    tamilDescription: "\"நான் விரும்புகிற நன்மையைச் செய்யாமல், விரும்பாத தீமையையே செய்கிறேன்\" என்று பவுல் தன் உள்ளான போராட்டத்தை அறிக்கையிட்டான்.",
-                    reference: "Rom 7:18-19"
-                }
-            },
-            {
-                verse: 19,
                 content: "விபசாரம்",
                 description: "When a married person sleeps with someone who is not their husband or wife.",
                 tamilDescription: "திருமணமானவர் தன் கணவனுக்கோ மனைவிக்கோ துரோகம் செய்து, வேறொருவரோடு உறவு கொள்ளுதல்.",
@@ -1042,17 +1031,6 @@ const biblePopups = {
     // ii timothy 3:1-5 — word meanings (Tamil Bible only)
     "ii timothy": {
         chapter3: [
-            {
-                verse: 1,
-                content: "கொடிய காலங்கள்",
-                description: "Very hard and dangerous times that will come in the last days.",
-                tamilDescription: "கடைசி நாட்களில் வரும் ஆபத்தும் கடினமும் நிறைந்த காலங்கள்.",
-                example: {
-                    description: "Jesus said the last days would be like Noah's time: people went on eating, drinking and marrying, and did not notice until the flood came.",
-                    tamilDescription: "கடைசி நாட்கள் நோவாவின் நாட்களைப்போல் இருக்கும் என்று இயேசு சொன்னார்; ஜலப்பிரளயம் வருமளவும் ஜனங்கள் புசித்தும் குடித்தும் விவாகம்பண்ணியும் உணராதிருந்தார்கள்.",
-                    reference: "Matt 24:37-39"
-                }
-            },
             {
                 verse: 2,
                 content: "தற்பிரியராயும்",
@@ -1322,105 +1300,6 @@ const biblePopups = {
                     reference: "Mark 10:21-22"
                 }
             },
-            {
-                verse: 6,
-                content: "தேவகோபாக்கினை",
-                description: "God's anger and judgment against sin.",
-                tamilDescription: "பாவத்திற்கு விரோதமான தேவனுடைய பரிசுத்த நியாயத்தீர்ப்பு.",
-                example: {
-                    description: "God sent fire and burning sulphur down on Sodom and Gomorrah because of their sin.",
-                    tamilDescription: "சோதோம் கொமோராவின் பாவத்தினிமித்தம் தேவன் அவைகளின்மேல் அக்கினியையும் கந்தகத்தையும் வருஷிக்கப்பண்ணினார்.",
-                    reference: "Gen 19:24-25"
-                }
-            },
-            {
-                verse: 8,
-                content: "கோபமும்",
-                description: "Anger that a person holds on to in the heart.",
-                tamilDescription: "இருதயத்தில் நிலைத்திருக்கும் கோப உணர்வு.",
-                example: {
-                    description: "Cain was very angry and his face showed it. God warned him that sin was waiting at his door.",
-                    tamilDescription: "காயீன் மிகவும் எரிச்சலடைந்து முகநாடி வேறுபட்டான்; பாவம் வாசற்படியில் படுத்திருக்கிறது என்று தேவன் அவனை எச்சரித்தார்.",
-                    reference: "Gen 4:5-7"
-                }
-            },
-            {
-                verse: 8,
-                content: "மூர்க்கமும்",
-                description: "Sudden, uncontrolled rage.",
-                tamilDescription: "கட்டுக்கடங்காமல் வெடிக்கும் கடுஞ்சினம்.",
-                example: {
-                    description: "King Nebuchadnezzar was so furious that he ordered the furnace heated seven times hotter.",
-                    tamilDescription: "நேபுகாத்நேச்சார் மூர்க்கத்தினால் நிறைந்து, சூளையை ஏழுமடங்கு அதிகமாய்ச் சூடாக்கக் கட்டளையிட்டான்.",
-                    reference: "Dan 3:19"
-                }
-            },
-            {
-                verse: 8,
-                content: "பொறாமையும்",
-                description: "Wanting bad things for others, and feeling bitter when good things happen to them.",
-                tamilDescription: "பிறர்மேல் உள்ள தீய எண்ணமும் பொறாமையும்.",
-                example: {
-                    description: "Pilate knew the chief priests had handed Jesus over because they were jealous of Him.",
-                    tamilDescription: "பிரதான ஆசாரியர் பொறாமையினால்தான் இயேசுவை ஒப்புக்கொடுத்தார்கள் என்று பிலாத்து அறிந்திருந்தான்.",
-                    reference: "Mark 15:10"
-                }
-            },
-            {
-                verse: 8,
-                content: "தூஷணமும்",
-                description: "Insulting and hurtful words against God or people.",
-                tamilDescription: "தேவனுக்கோ மனிதருக்கோ விரோதமான நிந்தனையும் இழிவான பேச்சும்.",
-                example: {
-                    description: "Shimei cursed King David and threw stones at him.",
-                    tamilDescription: "சீமேயி தாவீது ராஜாவைச் சபித்து, அவன்மேல் கற்களை எறிந்தான்.",
-                    reference: "2 Sam 16:5-8"
-                }
-            },
-            {
-                verse: 8,
-                content: "வம்பு வார்த்தைகளுமாகிய",
-                description: "Dirty, rude or abusive talk.",
-                tamilDescription: "அசுத்தமான, கேவலமான, இழிவான பேச்சுகள்.",
-                example: {
-                    description: "Some young men from Bethel made fun of the prophet Elisha, shouting, \"Go away, baldy!\"",
-                    tamilDescription: "பெத்தேலிலிருந்து வந்த வாலிபர் \"மொட்டைத்தலையா, ஏறிப்போ\" என்று எலிசா தீர்க்கதரிசியைப் பரியாசம்பண்ணினார்கள்.",
-                    reference: "2 Kings 2:23-24"
-                }
-            },
-            {
-                verse: 9,
-                content: "பொய்",
-                description: "Saying things that are not true in order to fool someone.",
-                tamilDescription: "ஏமாற்றும் நோக்கத்தோடு உண்மைக்கு மாறானதைப் பேசுதல்.",
-                example: {
-                    description: "Ananias and Sapphira lied about the money from selling their land, and both of them fell down dead.",
-                    tamilDescription: "அனனியாவும் சப்பீராளும் தங்கள் நிலத்தின் கிரயத்தைக் குறித்துப் பொய் சொன்னதினால் விழுந்து மரித்தார்கள்.",
-                    reference: "Acts 5:1-10"
-                }
-            },
-            {
-                verse: 9,
-                content: "பழைய மனுஷனையும்",
-                description: "The person we used to be before following Christ, controlled by sin.",
-                tamilDescription: "கிறிஸ்துவிடம் வருவதற்கு முன், பாவத்தினால் ஆளப்பட்ட நம்முடைய பழைய சுபாவம்.",
-                example: {
-                    description: "Zacchaeus stopped cheating people and promised to pay back four times what he had taken.",
-                    tamilDescription: "சகேயு ஏமாற்றி வாழ்ந்த தன் பழைய வாழ்க்கையைக் களைந்துபோட்டு, நாலத்தனையாகத் திரும்பக் கொடுப்பேன் என்றான்.",
-                    reference: "Luke 19:8-9"
-                }
-            },
-            {
-                verse: 10,
-                content: "புதிய மனுஷனைத்",
-                description: "The new person God makes us in Christ, becoming more like Him every day.",
-                tamilDescription: "கிறிஸ்துவுக்குள் சிருஷ்டிக்கப்பட்டு, தேவனுடைய சாயலுக்கொப்பாகப் புதிதாக்கப்படும் புதிய வாழ்க்கை.",
-                example: {
-                    description: "Saul hurt Christians, but after he met Jesus he became Paul, a completely new person.",
-                    tamilDescription: "சபையைத் துன்பப்படுத்தின சவுல் இயேசுவைச் சந்தித்து, புதிய சிருஷ்டியாகிய அப்போஸ்தலனாகிய பவுலானான்.",
-                    reference: "Acts 9:1-20; 2 Cor 5:17"
-                }
-            }
         ]
     }
 };
