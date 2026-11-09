@@ -842,7 +842,7 @@ const biblePopups = {
             {
                 verse: 19,
                 content: "மாம்சத்தின் கிரியைகள்",
-                description: "Works of the flesh: The wrong things we do when we follow our own selfish desires instead of letting God's Spirit guide us.",
+                description: "The wrong things we do when we follow our own selfish desires instead of letting God's Spirit guide us.",
                 tamilDescription: "பரிசுத்த ஆவியானவரால் நடத்தப்படாத பாவ சுபாவத்திலிருந்து வெளிப்படும் செயல்கள்.",
                 example: {
                     description: "Paul admitted his own struggle: \"I don't do the good things I want to do. Instead, I keep doing the wrong things I don't want to do.\"",
@@ -853,7 +853,7 @@ const biblePopups = {
             {
                 verse: 19,
                 content: "விபசாரம்",
-                description: "Adultery: When a married person sleeps with someone who is not their husband or wife.",
+                description: "When a married person sleeps with someone who is not their husband or wife.",
                 tamilDescription: "திருமணமானவர் தன் கணவனுக்கோ மனைவிக்கோ துரோகம் செய்து, வேறொருவரோடு உறவு கொள்ளுதல்.",
                 example: {
                     description: "King David slept with Bathsheba, even though she was married to Uriah.",
@@ -864,7 +864,7 @@ const biblePopups = {
             {
                 verse: 19,
                 content: "வேசித்தனம்",
-                description: "Sexual sin: Any sexual relationship outside of marriage.",
+                description: "Any sexual relationship outside of marriage.",
                 tamilDescription: "திருமண உறவுக்கு வெளியே உள்ள எல்லாவிதப் பாலியல் ஒழுக்கக்கேடுகள்.",
                 example: {
                     description: "Judah slept with a woman by the roadside, thinking she was a prostitute. She was really Tamar, his daughter-in-law.",
@@ -875,7 +875,7 @@ const biblePopups = {
             {
                 verse: 19,
                 content: "அசுத்தம்",
-                description: "Impurity: Dirty thoughts, words and actions that make a person unclean before God.",
+                description: "Dirty thoughts, words and actions that make a person unclean before God.",
                 tamilDescription: "எண்ணத்திலும், சொல்லிலும், செயலிலும் உள்ள ஒழுக்க அசுத்தம்.",
                 example: {
                     description: "Eli's sons were priests, yet they slept with the women who served at the entrance of God's tent.",
@@ -886,7 +886,7 @@ const biblePopups = {
             {
                 verse: 19,
                 content: "காமவிகாரம்",
-                description: "Shameless lust: Giving in to sexual desires openly, without any shame or control.",
+                description: "Giving in to sexual desires openly, without any shame or control.",
                 tamilDescription: "வெட்கமின்றி, கட்டுப்பாடின்றி இச்சைகளுக்கு இடங்கொடுத்தல்.",
                 example: {
                     description: "The men of Sodom surrounded Lot's house and openly demanded to sleep with his guests.",
@@ -897,7 +897,7 @@ const biblePopups = {
             {
                 verse: 20,
                 content: "விக்கிரகாராதனை",
-                description: "Idol worship: Worshipping or trusting anything other than the true God.",
+                description: "Worshipping or trusting anything other than the true God.",
                 tamilDescription: "மெய்யான தேவனுக்குப் பதிலாக வேறொன்றை வணங்குதல் அல்லது நம்புதல்.",
                 example: {
                     description: "The Israelites made a golden calf and worshipped it at Mount Sinai.",
@@ -908,7 +908,7 @@ const biblePopups = {
             {
                 verse: 20,
                 content: "பில்லிசூனியம்",
-                description: "Witchcraft: Using magic, spirits or fortune-telling to get power or guidance.",
+                description: "Using magic, spirits or fortune-telling to get power or guidance.",
                 tamilDescription: "மந்திரம், அஞ்சனம், ஆவிகள் போன்ற சூனிய வழிகள் மூலம் சக்தியையோ வழிநடத்துதலையோ தேடுதல்.",
                 example: {
                     description: "King Saul went to a witch at Endor and asked her to call up the dead prophet Samuel.",
@@ -919,7 +919,7 @@ const biblePopups = {
             {
                 verse: 20,
                 content: "பகைகள்",
-                description: "Hatred: Strong dislike that turns people into enemies.",
+                description: "Strong dislike that turns people into enemies.",
                 tamilDescription: "ஒருவருக்கொருவர் விரோதமாக நிற்கச் செய்யும் பகை உணர்வு.",
                 example: {
                     description: "Esau hated his brother Jacob for taking his blessing, and planned to kill him.",
@@ -930,7 +930,7 @@ const biblePopups = {
             {
                 verse: 20,
                 content: "விரோதங்கள்",
-                description: "Fighting: Quarrelling and arguing with others.",
+                description: "Quarrelling and arguing with others.",
                 tamilDescription: "சண்டை, சச்சரவு, ஒருவரோடொருவர் முரண்படுதல்.",
                 example: {
                     description: "The shepherds of Abram and Lot kept fighting, so Abram made peace and let Lot choose his land first.",
@@ -941,7 +941,7 @@ const biblePopups = {
             {
                 verse: 20,
                 content: "வைராக்கியங்கள்",
-                description: "Jealousy: Wanting what others have and trying to be better than them.",
+                description: "Wanting what others have and trying to be better than them.",
                 tamilDescription: "பிறரை மிஞ்ச வேண்டும் என்ற போட்டி மனப்பான்மையுடன் கூடிய பொறாமை.",
                 example: {
                     description: "Rachel was jealous of her sister Leah, who had children, and cried to Jacob, \"Give me children, or I will die!\"",
@@ -952,7 +952,7 @@ const biblePopups = {
             {
                 verse: 20,
                 content: "கோபங்கள்",
-                description: "Fits of anger: Losing your temper and exploding in rage.",
+                description: "Losing your temper and exploding in rage.",
                 tamilDescription: "திடீரென வெடிக்கும் கடுங்கோபமும் சினமும்.",
                 example: {
                     description: "King Saul got so angry with his own son Jonathan that he threw a spear at him.",
@@ -963,7 +963,7 @@ const biblePopups = {
             {
                 verse: 20,
                 content: "சண்டைகள்",
-                description: "Selfish ambition: Competing and fighting to get the top place for yourself.",
+                description: "Competing and fighting to get the top place for yourself.",
                 tamilDescription: "சுயநலத்தினாலும் முதன்மை ஆசையினாலும் உண்டாகும் போட்டியும் சண்டையும்.",
                 example: {
                     description: "James and John asked Jesus for the best seats next to Him, and the other ten disciples became angry with them.",
@@ -974,7 +974,7 @@ const biblePopups = {
             {
                 verse: 20,
                 content: "பிரிவினைகள்",
-                description: "Divisions: Splitting people into groups that turn against each other.",
+                description: "Splitting people into groups that turn against each other.",
                 tamilDescription: "ஜனங்களை எதிர் அணிகளாகப் பிரித்து, கலகத்தை உண்டாக்குதல்.",
                 example: {
                     description: "Korah gathered 250 leaders and turned them against Moses and Aaron.",
@@ -985,7 +985,7 @@ const biblePopups = {
             {
                 verse: 20,
                 content: "மார்க்கபேதங்கள்",
-                description: "False teaching groups: Following wrong teaching and forming separate groups.",
+                description: "Following wrong teaching and forming separate groups.",
                 tamilDescription: "தவறான உபதேசத்தைப் பின்பற்றி, தனிக் கட்சிகளாகப் பிரிதல்.",
                 example: {
                     description: "Hymenaeus and Philetus taught that the resurrection had already happened, and it destroyed some people's faith.",
@@ -996,7 +996,7 @@ const biblePopups = {
             {
                 verse: 21,
                 content: "பொறாமைகள்",
-                description: "Envy: Feeling bad when good things happen to someone else.",
+                description: "Feeling bad when good things happen to someone else.",
                 tamilDescription: "பிறருடைய நன்மையையும் உயர்வையும் கண்டு மனம் புழுங்குதல்.",
                 example: {
                     description: "Joseph's brothers were envious of him because of his dreams and because their father loved him more.",
@@ -1007,7 +1007,7 @@ const biblePopups = {
             {
                 verse: 21,
                 content: "கொலைகள்",
-                description: "Murder: Killing someone on purpose.",
+                description: "Killing someone on purpose.",
                 tamilDescription: "ஒருவருடைய உயிரை வேண்டுமென்றே அநியாயமாகப் பறித்தல்.",
                 example: {
                     description: "Joab pretended to greet Abner and Amasa as friends, then killed them.",
@@ -1018,7 +1018,7 @@ const biblePopups = {
             {
                 verse: 21,
                 content: "வெறிகள்",
-                description: "Drunkenness: Drinking alcohol until you lose control of yourself.",
+                description: "Drinking alcohol until you lose control of yourself.",
                 tamilDescription: "மதுபானத்தினால் வெறிகொண்டு சுயகட்டுப்பாட்டை இழத்தல்.",
                 example: {
                     description: "Noah drank too much wine, got drunk and lay uncovered in his tent.",
@@ -1029,7 +1029,7 @@ const biblePopups = {
             {
                 verse: 21,
                 content: "களியாட்டுகள்",
-                description: "Wild parties: Parties full of heavy drinking and uncontrolled behaviour.",
+                description: "Parties full of heavy drinking and uncontrolled behaviour.",
                 tamilDescription: "மதுவும் இச்சையும் நிறைந்த கட்டுப்பாடற்ற கேளிக்கைகள்.",
                 example: {
                     description: "King Belshazzar threw a huge party and drank wine from the holy cups taken from God's temple.",
