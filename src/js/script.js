@@ -3082,6 +3082,10 @@ function attachPopupLangToggle(container) {
 
 // Show small tooltip popup for desktop hover
 function showPopupTooltip(contentText, x, y, popupKey = null) {
+    // No hover card while the full popup is open
+    const openSheet = document.getElementById('popup-info-bottom-sheet');
+    if (openSheet && openSheet.classList.contains('visible')) return;
+
     const matchingItem = findPopupEntry(contentText, popupKey);
     if (!matchingItem) return;
 

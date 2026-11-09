@@ -9929,6 +9929,41 @@ body.dark-theme .add-character-btn:hover {
     max-width: calc(100% - 24px);
 }
 
+/* Desktop: show the word-meaning popup as a centred bottom sheet,
+   not in the right-hand verse-actions pane */
+@media (min-width: 769px) {
+    .verse-actions-bottom-sheet.popup-info-bottom-sheet {
+        top: auto;
+        bottom: calc(var(--nav-bar-height, 3.25rem) + env(safe-area-inset-bottom, 0px));
+        left: 50%;
+        right: auto;
+        height: auto;
+        width: calc(100% - 48px);
+        max-width: 480px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: stretch;
+        pointer-events: none;
+        visibility: hidden;
+        transform: translateX(-50%) translateY(calc(100% + 24px));
+        transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.35s ease;
+    }
+
+    .verse-actions-bottom-sheet.popup-info-bottom-sheet.visible {
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .popup-info-bottom-sheet .verse-actions-content {
+        pointer-events: auto;
+    }
+
+    /* Don't push the reading area aside for this popup (that's only for the right pane) */
+    body:has(#popup-info-bottom-sheet.visible):not(:has(#verse-actions-bottom-sheet.visible)) .content-area {
+        margin-right: 0;
+    }
+}
+
 .popup-info-bottom-sheet .verse-actions-content {
     padding: 0;
     border-radius: 12px;
