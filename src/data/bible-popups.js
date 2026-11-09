@@ -842,10 +842,10 @@ const biblePopups = {
             {
                 verse: 19,
                 content: "மாம்சத்தின் கிரியைகள்",
-                description: "Works of the flesh: The deeds that come from our sinful human nature when it is not led by the Holy Spirit.",
+                description: "Works of the flesh: The wrong things we do when we follow our own selfish desires instead of letting God's Spirit guide us.",
                 tamilDescription: "பரிசுத்த ஆவியானவரால் நடத்தப்படாத பாவ சுபாவத்திலிருந்து வெளிப்படும் செயல்கள்.",
                 example: {
-                    description: "Paul confessed the inner battle: \"The good that I would I do not: but the evil which I would not, that I do.\"",
+                    description: "Paul admitted his own struggle: \"I don't do the good things I want to do. Instead, I keep doing the wrong things I don't want to do.\"",
                     tamilDescription: "\"நான் விரும்புகிற நன்மையைச் செய்யாமல், விரும்பாத தீமையையே செய்கிறேன்\" என்று பவுல் தன் உள்ளான போராட்டத்தை அறிக்கையிட்டான்.",
                     reference: "Rom 7:18-19"
                 }
