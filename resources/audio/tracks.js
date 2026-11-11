@@ -1091,6 +1091,14 @@ const BIBLE_TRACKS = [
     verse: "Galatians 5:22-23",
     desc: "Discover the nine qualities of the Fruit of the Spirit and how the Holy Spirit transforms a believer's life.",
     category: "Teachings"
+  },
+  {
+    day: 109,
+    title: "Works of the Flesh",
+    duration: "52:22 min",
+    verse: "Galatians 5:19-21",
+    desc: "Discover the works of the flesh and understand how worldly desires lead a person away from God.",
+    category: "Teachings"
   }
 ];
 
