@@ -4149,6 +4149,316 @@ body.dark-theme .book-intro-title-secondary {
     border-top-color: #3c4043;
 }
 
+/* ===== Book intro page: header, toggle (Outline | Introduction), timeline outline ===== */
+.book-intro-page {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.75rem 1rem 2.5rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Tamil", sans-serif;
+}
+
+.book-intro-header {
+    text-align: center;
+    margin: 0.5rem 0 1rem;
+}
+
+.book-intro-book {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #202124;
+}
+
+.book-intro-meta {
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    color: #80868b;
+}
+
+/* Segmented toggle */
+.book-intro-tabs {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto 1.5rem;
+    padding: 3px;
+    border-radius: 999px;
+    background: #f1f3f4;
+}
+
+.book-intro-tab {
+    font: inherit;
+    font-size: 0.85rem;
+    padding: 0.4rem 1.1rem;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    color: #5f6368;
+    cursor: pointer;
+}
+
+.book-intro-tab.active {
+    background: #ffffff;
+    color: #202124;
+    font-weight: 600;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Intro panel: the header already names the book, so its titles are quieter */
+.book-intro-panel .book-intro-content {
+    padding: 0;
+    max-width: none;
+}
+
+.book-intro-panel .book-intro-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #80868b;
+    text-align: left;
+    border: none;
+    padding: 0;
+    margin: 0 0 0.75rem;
+}
+
+.book-intro-panel .book-intro-title-secondary {
+    margin-top: 2rem;
+}
+
+.book-outline-loading {
+    text-align: center;
+    color: #80868b;
+}
+
+/* Timeline outline */
+.otl-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.otl-item {
+    position: relative;
+    padding: 0 0 0.25rem 1.75rem;
+}
+
+/* Connecting line between dots */
+.otl-item::before {
+    content: "";
+    position: absolute;
+    left: calc(0.425rem - 1px);
+    top: 1.6rem;
+    bottom: -0.75rem;
+    width: 2px;
+    background: #e8eaed;
+}
+
+.otl-item:last-child::before {
+    display: none;
+}
+
+.otl-dot {
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #c4911a;
+    box-sizing: border-box;
+}
+
+.otl-item.open .otl-dot {
+    background: #c4911a;
+}
+
+.otl-head {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    background: none;
+    border: none;
+    padding: 0.55rem 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.otl-head:hover {
+    background: #f8f9fa;
+}
+
+.otl-title {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #202124;
+}
+
+.otl-range {
+    display: block;
+    margin-top: 0.15rem;
+    font-size: 0.8rem;
+    color: #80868b;
+}
+
+.otl-points {
+    list-style: none;
+    margin: 0 0 0.6rem;
+    padding: 0;
+}
+
+.otl-point {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    background: none;
+    border: none;
+    padding: 0.45rem 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.otl-point:hover {
+    background: #f8f9fa;
+}
+
+.otl-point-label {
+    flex: 1;
+    font-size: 0.92rem;
+    line-height: 1.4;
+    color: #3c4043;
+}
+
+.otl-point-range {
+    flex-shrink: 0;
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+    color: #9aa0a6;
+}
+
+.otl-start .otl-point-label {
+    color: #c4911a;
+    font-weight: 500;
+}
+
+/* Point row = [label ... range] [chevron] */
+.otl-point-row {
+    display: flex;
+    align-items: center;
+}
+
+.otl-point-row .otl-point {
+    flex: 1;
+    min-width: 0;
+}
+
+.otl-expand,
+.otl-expand-spacer {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+}
+
+.otl-expand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.otl-expand:hover {
+    background: #f1f3f4;
+}
+
+.otl-chevron {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-right: 2px solid #9aa0a6;
+    border-bottom: 2px solid #9aa0a6;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform 0.2s;
+}
+
+.otl-point-item.open .otl-chevron {
+    transform: translateY(2px) rotate(-135deg);
+}
+
+/* Subsections (level 3+) */
+.otl-subs {
+    list-style: none;
+    margin: 0 2rem 0.35rem 0.85rem;
+    padding: 0 0 0 0.6rem;
+    border-left: 2px solid #e8eaed;
+}
+
+.otl-sub {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    background: none;
+    border: none;
+    padding: 0.35rem 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.otl-sub:hover {
+    background: #f8f9fa;
+}
+
+.otl-sub.depth-1 { padding-left: 1.25rem; }
+.otl-sub.depth-2 { padding-left: 2rem; }
+
+.otl-sub-label {
+    flex: 1;
+    font-size: 0.86rem;
+    line-height: 1.4;
+    color: #5f6368;
+}
+
+body.dark-theme .otl-expand:hover,
+body.dark-theme .otl-sub:hover { background: #2a2b2e; }
+body.dark-theme .otl-subs { border-left-color: #3c4043; }
+body.dark-theme .otl-sub-label { color: #9aa0a6; }
+
+/* Dark theme */
+body.dark-theme .book-intro-book,
+body.dark-theme .otl-title {
+    color: #e8eaed;
+}
+
+body.dark-theme .book-intro-tabs { background: #2d2e31; }
+body.dark-theme .book-intro-tab { color: #9aa0a6; }
+body.dark-theme .book-intro-tab.active {
+    background: #3c4043;
+    color: #e8eaed;
+    box-shadow: none;
+}
+
+body.dark-theme .otl-item::before { background: #3c4043; }
+body.dark-theme .otl-dot { background: #202124; border-color: #B8860B; }
+body.dark-theme .otl-item.open .otl-dot { background: #B8860B; }
+body.dark-theme .otl-head:hover,
+body.dark-theme .otl-point:hover { background: #2a2b2e; }
+body.dark-theme .otl-point-label { color: #bdc1c6; }
+body.dark-theme .otl-start .otl-point-label { color: #B8860B; }
+body.dark-theme .book-intro-panel .book-intro-title { color: #9aa0a6; }
+
+@media (max-width: 768px) {
+    .book-intro-page { padding: 0.5rem 0.75rem 2rem; }
+    .book-intro-book { font-size: 1.25rem; }
+}
+
 .verse-line {
     margin-bottom: 1.5rem;
     line-height: 2;

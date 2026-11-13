@@ -4056,6 +4056,206 @@ function displayChapter() {
 }
 
 // Display book introduction
+// Book outlines (src/data/bible-outlines.js) — loaded lazily the first time an intro is opened.
+// Uses a <script> tag rather than fetch() so it also works when the app is opened via file://
+let bookOutlinesPromise = null;
+function loadBookOutlines() {
+    if (!bookOutlinesPromise) {
+        bookOutlinesPromise = new Promise((resolve, reject) => {
+            if (Array.isArray(window.bibleOutlines)) return resolve(window.bibleOutlines);
+            const script = document.createElement('script');
+            const cb = (document.querySelector('script[src*="js/script.js"]')?.src.match(/cb=(\d+)/) || [])[1];
+            script.src = `src/data/bible-outlines.js${cb ? `?cb=${cb}` : ''}`;
+            script.onload = () => Array.isArray(window.bibleOutlines)
+                ? resolve(window.bibleOutlines)
+                : reject(new Error('bibleOutlines not defined'));
+            script.onerror = () => { script.remove(); reject(new Error('Failed to load bible-outlines.js')); };
+            document.head.appendChild(script);
+        })
+            .then(list => {
+                const map = {};
+                list.forEach(entry => { map[entry.book] = entry.outline || []; });
+                return map;
+            })
+            .catch(err => {
+                console.warn('Failed to load book outlines:', err);
+                bookOutlinesPromise = null; // allow retry next time
+                return {};
+            });
+    }
+    return bookOutlinesPromise;
+}
+
+function escapeOutlineHtml(str) {
+    return String(str).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+async function renderBookOutline(contentArea, bookName) {
+    const outlines = await loadBookOutlines();
+    const outline = outlines[bookName];
+    // Bail out if the user navigated away / switched book meanwhile
+    if (!window.isViewingIntro || bibleBooks[currentBook].name !== bookName) return;
+    const container = contentArea.querySelector('.book-intro-panel[data-panel="outline"]');
+    if (!container) return;
+    if (!outline || outline.length === 0) {
+        // No outline for this book: hide the Outline tab and show the introduction instead
+        const outlineTab = contentArea.querySelector('.book-intro-tab[data-tab="outline"]');
+        if (outlineTab) outlineTab.remove();
+        switchBookIntroTab(contentArea, 'intro');
+        return;
+    }
+
+    const bookChapters = bibleBooks[currentBook].chapters;
+    const isTamilUI = currentLanguage === 'tamil';
+
+    // "1:1–4:25" -> { chapter: 1, verse: 1, endChapter: 4 }; bare numbers are verses in 1-chapter books
+    function parseRef(refText) {
+        if (!refText) return null;
+        const [startRaw, endRaw = ''] = refText.split(/[–—-]/).map(x => x.trim());
+        const cv = startRaw.match(/^(\d+):(\d+)/);
+        let chapter, verse;
+        if (cv) { chapter = +cv[1]; verse = +cv[2]; }
+        else if (bookChapters === 1) { chapter = 1; verse = parseInt(startRaw, 10) || 1; }
+        else { chapter = parseInt(startRaw, 10); verse = 1; }
+        if (!(chapter >= 1 && chapter <= bookChapters)) return null;
+        let endChapter = chapter;
+        const endCv = endRaw.match(/^(\d+):\d+/);
+        if (endCv) endChapter = +endCv[1];
+        else if (endRaw && !cv && bookChapters > 1) endChapter = parseInt(endRaw, 10) || chapter;
+        return { chapter, verse, endChapter: Math.max(chapter, endChapter) };
+    }
+
+    // Short, readable range: "Chapters 1–4" / "அதிகாரம் 1–4"; verses for single-chapter books
+    function rangeLabel(refText, ref) {
+        if (!ref) return '';
+        if (bookChapters === 1) {
+            const verses = refText.replace(/^1:/, '').replace(/[–—-]1:/, '–');
+            return isTamilUI ? `வசனம் ${verses}` : `Verses ${verses}`;
+        }
+        const span = ref.endChapter > ref.chapter ? `${ref.chapter}–${ref.endChapter}` : `${ref.chapter}`;
+        if (isTamilUI) return `அதிகாரம் ${span}`;
+        return ref.endChapter > ref.chapter ? `Chapters ${span}` : `Chapter ${span}`;
+    }
+
+    // Main sections (level 1) > points (level 2) > subsections (level 3+, shown when a point is expanded)
+    const sections = [];
+    outline.forEach(item => {
+        const level = parseInt(item.level, 10) || 1;
+        const match = String(item.text).match(/^(.*?)\s*\(([^()]*)\)\s*$/);
+        const english = (match ? match[1] : String(item.text)).replace(/^(\d+|[a-z]|[ivxlc]+)\.\s+/i, '');
+        const label = (isTamilUI && item.tamil) ? item.tamil : english;
+        const refText = match ? match[2] : '';
+        const ref = parseRef(refText);
+        const entry = { label, ref, range: rangeLabel(refText, ref), refText, depth: Math.max(level - 3, 0), subs: [] };
+        if (level === 1 || sections.length === 0) { sections.push({ head: entry, points: [] }); return; }
+        const points = sections[sections.length - 1].points;
+        if (level === 2 || points.length === 0) points.push(entry);
+        else points[points.length - 1].subs.push(entry);
+    });
+
+    const navAttrs = ref => ref ? ` data-chapter="${ref.chapter}" data-verse="${ref.verse}"` : '';
+
+    const sectionsHtml = sections.map(section => {
+        const hasPoints = section.points.length > 0;
+        const points = section.points.map(p => {
+            const hasSubs = p.subs.length > 0;
+            // Subsections show the exact verse range, e.g. "2:13–23"
+            const subs = p.subs.map(sub => `
+                <li>
+                    <button type="button" class="otl-sub depth-${Math.min(sub.depth, 2)}"${navAttrs(sub.ref)}>
+                        <span class="otl-sub-label">${escapeOutlineHtml(sub.label)}</span>
+                        <span class="otl-point-range">${escapeOutlineHtml(bookChapters === 1 ? sub.refText.replace(/^1:/, '') : sub.refText)}</span>
+                    </button>
+                </li>`).join('');
+            const expandLabel = isTamilUI ? 'உட்பிரிவுகள்' : 'Show subsections';
+            return `
+            <li class="otl-point-item">
+                <div class="otl-point-row">
+                    <button type="button" class="otl-point"${navAttrs(p.ref)}>
+                        <span class="otl-point-label">${escapeOutlineHtml(p.label)}</span>
+                        <span class="otl-point-range">${escapeOutlineHtml(p.range.replace(/^\D+/, ''))}</span>
+                    </button>
+                    ${hasSubs
+                        ? `<button type="button" class="otl-expand" aria-expanded="false" aria-label="${expandLabel}"><span class="otl-chevron" aria-hidden="true"></span></button>`
+                        : '<span class="otl-expand-spacer" aria-hidden="true"></span>'}
+                </div>
+                ${hasSubs ? `<ul class="otl-subs" hidden>${subs}</ul>` : ''}
+            </li>`;
+        }).join('');
+        return `
+            <li class="otl-item">
+                <span class="otl-dot" aria-hidden="true"></span>
+                <button type="button" class="otl-head${hasPoints ? ' has-points' : ''}"${hasPoints ? ' aria-expanded="false"' : navAttrs(section.head.ref)}>
+                    <span class="otl-title">${escapeOutlineHtml(section.head.label)}</span>
+                    <span class="otl-range">${escapeOutlineHtml(section.head.range)}</span>
+                </button>
+                ${hasPoints ? `
+                <ul class="otl-points" hidden>
+                    ${section.head.ref ? `
+                    <li class="otl-point-item">
+                        <div class="otl-point-row">
+                            <button type="button" class="otl-point otl-start"${navAttrs(section.head.ref)}>
+                                <span class="otl-point-label">${isTamilUI ? 'இங்கிருந்து வாசிக்க' : 'Start reading'}</span>
+                                <span class="otl-point-range">${section.head.ref.chapter}</span>
+                            </button>
+                            <span class="otl-expand-spacer" aria-hidden="true"></span>
+                        </div>
+                    </li>` : ''}
+                    ${points}
+                </ul>` : ''}
+            </li>`;
+    }).join('');
+
+    container.innerHTML = `<ol class="otl-list">${sectionsHtml}</ol>`;
+
+    // Chevron next to a point shows / hides its subsections
+    container.querySelectorAll('.otl-expand').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.otl-point-item');
+            const open = !item.classList.contains('open');
+            item.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            item.querySelector('.otl-subs').hidden = !open;
+        });
+    });
+
+    // Tap a section to show / hide its points
+    container.querySelectorAll('.otl-head.has-points').forEach(head => {
+        head.addEventListener('click', () => {
+            const item = head.closest('.otl-item');
+            const list = item.querySelector('.otl-points');
+            const open = !item.classList.contains('open');
+            item.classList.toggle('open', open);
+            head.setAttribute('aria-expanded', open ? 'true' : 'false');
+            list.hidden = !open;
+        });
+    });
+
+    // Tap a point (or a section without points) to open that chapter/verse in the app
+    container.querySelectorAll('[data-chapter]').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const chapter = parseInt(btn.dataset.chapter, 10);
+            const verse = parseInt(btn.dataset.verse, 10) || 1;
+            window.isViewingIntro = false;
+            await loadBook(currentBook, chapter);
+            if (verse > 1) {
+                setTimeout(() => scrollToVerse(verse), 300);
+            }
+        });
+    });
+}
+
+function switchBookIntroTab(contentArea, tab) {
+    contentArea.querySelectorAll('.book-intro-tab').forEach(btn => {
+        const isActive = btn.dataset.tab === tab;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+    contentArea.querySelectorAll('.book-intro-panel').forEach(panel => {
+        panel.hidden = panel.dataset.panel !== tab;
+    });
+}
+
 function displayBookIntro() {
     const contentArea = document.querySelector('.scripture-text');
     const book = bibleBooks[currentBook];
@@ -4081,14 +4281,11 @@ function displayBookIntro() {
     }
     const tamIntro = getTamilIntro(tamilBookName);
 
-    if (!engIntro && !tamIntro) {
-        contentArea.innerHTML = '<p>No introduction available for this book.</p>';
-        return;
-    }
-
     let html = '';
 
-    if (currentLanguage === 'tamil') {
+    if (!engIntro && !tamIntro) {
+        html = `<div class="book-intro-content"><p>No introduction available for this book.</p></div>`;
+    } else if (currentLanguage === 'tamil') {
         // Tamil only
         const text = tamIntro || engIntro;
         const title = tamIntro ? tamilBookName : bookName;
@@ -4121,10 +4318,33 @@ function displayBookIntro() {
         html += `</div>`;
     }
 
-    contentArea.innerHTML = html;
+    // Outline is shown first; the introduction is one tap away
+    const isTamilUI = currentLanguage === 'tamil';
+    const headerName = isTamilUI ? tamilBookName : bookName;
+    const headerSub = currentLanguage === 'both' && tamilBookName !== bookName ? tamilBookName : '';
+    const chapterLabel = isTamilUI ? `${book.chapters} அதிகாரங்கள்` : `${book.chapters} chapter${book.chapters === 1 ? '' : 's'}`;
+    contentArea.innerHTML = `
+        <div class="book-intro-page">
+            <header class="book-intro-header">
+                <h1 class="book-intro-book">${escapeOutlineHtml(headerName)}</h1>
+                <div class="book-intro-meta">${headerSub ? `${escapeOutlineHtml(headerSub)} · ` : ''}${chapterLabel}</div>
+            </header>
+            <div class="book-intro-tabs" role="tablist">
+                <button type="button" class="book-intro-tab active" role="tab" aria-selected="true" data-tab="outline">${isTamilUI ? 'பொருளடக்கம்' : 'Outline'}</button>
+                <button type="button" class="book-intro-tab" role="tab" aria-selected="false" data-tab="intro">${isTamilUI ? 'அறிமுகம்' : 'Introduction'}</button>
+            </div>
+            <div class="book-intro-panel" data-panel="outline"><p class="book-outline-loading">Loading…</p></div>
+            <div class="book-intro-panel" data-panel="intro" hidden>${html}</div>
+        </div>`;
+    contentArea.querySelectorAll('.book-intro-tab').forEach(btn => {
+        btn.addEventListener('click', () => switchBookIntroTab(contentArea, btn.dataset.tab));
+    });
 
     // Set flag to track that we're viewing intro
     window.isViewingIntro = true;
+
+    // Fill the outline panel (loaded lazily from bible-outlines.js)
+    renderBookOutline(contentArea, bookName);
 
     // Hide mobile chapter header when displaying intro
     const mobileChapterHeader = document.getElementById('mobile-chapter-header');
