@@ -2049,7 +2049,7 @@ function closeBookMeaningSheet() {
 
 // book.file -> subtitle shown on the "Prophecies" option in the book meaning sheet
 const BOOKS_WITH_PROPHECIES = {
-    matthew: 'Old Testament prophecies Matthew quotes'
+    matthew: 'Old Testament prophecies quoted by Matthew'
 };
 
 const prophecyState = { bookFile: null, filter: 'all', data: null };
@@ -2248,75 +2248,46 @@ function renderProphecyPanel() {
     const formulaCount = prophecies.filter(q => q.fulfillmentFormula).length;
     const visible = filter === 'formula' ? prophecies.filter(q => q.fulfillmentFormula) : prophecies;
 
-    // Which OT books Matthew draws prophecies from (most first)
-    const bookCounts = {};
-    prophecies.forEach(q => {
-        const seen = new Set();
-        q.source.forEach(s => {
-            const ref = parseProphecyRef(s);
-            const name = ref ? bibleBooks[ref.bookIndex].name : null;
-            if (name && !seen.has(name)) { seen.add(name); bookCounts[name] = (bookCounts[name] || 0) + 1; }
-        });
-    });
-    const topBooks = Object.entries(bookCounts).sort((a, b) => b[1] - a[1]);
-
     const esc = escapeOutlineHtml;
     const short = book ? book.shortName : '';
 
-    const itemsHtml = visible.map(q => {
-        const sources = q.source.map(s => {
-            const ok = !!parseProphecyRef(s);
-            return `<span class="prophecy-source-chip${ok ? '' : ' muted'}">${esc(s)}</span>`;
-        }).join('');
-        return `
+    const itemsHtml = visible.map(q => `
             <li class="prophecy-item${q.fulfillmentFormula ? ' is-formula' : ''}" data-id="${q.id}">
                 <span class="prophecy-node" aria-hidden="true"></span>
-                <div class="prophecy-card">
-                    <button type="button" class="prophecy-card-head" aria-expanded="false">
-                        <span class="prophecy-card-top">
-                            <span class="prophecy-ref">${esc(short)} ${esc(q.matthew)}</span>
-                            ${q.fulfillmentFormula ? '<span class="prophecy-formula-badge">“To fulfil” formula</span>' : ''}
-                        </span>
-                        <span class="prophecy-card-title">${esc(q.content)}</span>
-                        <span class="prophecy-sources"><span class="prophecy-sources-label">from</span>${sources}</span>
-                        <svg class="prophecy-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div class="prophecy-detail" hidden></div>
-                </div>
-            </li>`;
-    }).join('');
+                <button type="button" class="prophecy-head" aria-expanded="false">
+                    <span class="prophecy-head-text">
+                        <span class="prophecy-item-title">${esc(q.content)}</span>
+                        <span class="prophecy-item-meta">${esc(short)} ${esc(q.matthew)} · ${q.source.map(esc).join(', ')}</span>
+                    </span>
+                    <span class="prophecy-chevron" aria-hidden="true"></span>
+                </button>
+                <div class="prophecy-detail" hidden></div>
+            </li>`).join('');
 
     body.innerHTML = `
-        <div class="prophecy-stats">
-            <div class="prophecy-stat"><span class="prophecy-stat-num">${prophecies.length}</span><span class="prophecy-stat-label">Prophecies</span></div>
-            <div class="prophecy-stat"><span class="prophecy-stat-num">${formulaCount}</span><span class="prophecy-stat-label">“To fulfil”</span></div>
-            <div class="prophecy-stat"><span class="prophecy-stat-num">${topBooks.length}</span><span class="prophecy-stat-label">OT books</span></div>
+        <div class="prophecy-tabs" role="tablist">
+            <button type="button" role="tab" class="prophecy-tab${filter === 'all' ? ' active' : ''}" data-filter="all" aria-selected="${filter === 'all'}">All ${prophecies.length}</button>
+            <button type="button" role="tab" class="prophecy-tab${filter === 'formula' ? ' active' : ''}" data-filter="formula" aria-selected="${filter === 'formula'}">“To fulfil” ${formulaCount}</button>
         </div>
-        ${topBooks.length ? `<div class="prophecy-top-books">${topBooks.slice(0, 5).map(([n, c]) =>
-            `<span class="prophecy-top-book">${esc(n)} <b>${c}</b></span>`).join('')}</div>` : ''}
-        <div class="prophecy-filter" role="tablist">
-            <button type="button" role="tab" class="prophecy-filter-btn${filter === 'all' ? ' active' : ''}" data-filter="all" aria-selected="${filter === 'all'}">All <span>${prophecies.length}</span></button>
-            <button type="button" role="tab" class="prophecy-filter-btn${filter === 'formula' ? ' active' : ''}" data-filter="formula" aria-selected="${filter === 'formula'}">“To fulfil” <span>${formulaCount}</span></button>
-        </div>
-        <ol class="prophecy-timeline">${itemsHtml}</ol>
-        <p class="prophecy-footnote">${esc(book ? book.name : '')} has ${data.directQuotations.length} direct Old Testament quotations; ${prophecies.length} are presented as prophecy. Cards marked “To fulfil” use the phrase “this was to fulfil what was spoken by the prophet”.</p>
+        <ol class="prophecy-list">${itemsHtml}</ol>
+        <p class="prophecy-footnote">Filled dots mark the ${formulaCount} passages where ${esc(book ? book.name : '')} writes “this was to fulfil what was spoken by the prophet”.</p>
     `;
 
-    body.querySelectorAll('.prophecy-filter-btn').forEach(btn => {
+    body.querySelectorAll('.prophecy-tab').forEach(btn => {
         btn.addEventListener('click', () => {
             prophecyState.filter = btn.dataset.filter;
             renderProphecyPanel();
         });
     });
 
-    body.querySelectorAll('.prophecy-card-head').forEach(head => {
+    body.querySelectorAll('.prophecy-head').forEach(head => {
         head.addEventListener('click', () => toggleProphecyItem(head.closest('.prophecy-item')));
     });
 }
 
 async function toggleProphecyItem(item) {
     if (!item) return;
-    const head = item.querySelector('.prophecy-card-head');
+    const head = item.querySelector('.prophecy-head');
     const detail = item.querySelector('.prophecy-detail');
     const open = !item.classList.contains('open');
     item.classList.toggle('open', open);
@@ -2345,20 +2316,20 @@ async function toggleProphecyItem(item) {
 
     const otHtml = otRefs.map((o, i) => `
         <div class="prophecy-passage foretold">
-            <div class="prophecy-passage-label"><span class="dot"></span>Foretold · ${esc(o.label)}</div>
+            <div class="prophecy-passage-label">Foretold · ${esc(o.label)}</div>
             ${otPassages[i].length ? passageHtml(otPassages[i])
                 : `<p class="prophecy-passage-text muted">${o.ref ? 'Verse text unavailable.' : 'Source is not a single verse (Matthew cites the prophets generally).'}</p>`}
-            ${o.ref ? `<button type="button" class="prophecy-read-btn" data-book="${o.ref.bookIndex}" data-chapter="${o.ref.chapter}" data-verse="${o.ref.verseStart}">Read ${esc(o.label)} →</button>` : ''}
+            ${o.ref ? `<button type="button" class="prophecy-read-btn" data-book="${o.ref.bookIndex}" data-chapter="${o.ref.chapter}" data-verse="${o.ref.verseStart}">Read ${esc(o.label)}</button>` : ''}
         </div>`).join('');
 
     const ntHtml = `
         <div class="prophecy-passage fulfilled">
-            <div class="prophecy-passage-label"><span class="dot"></span>Fulfilled · ${esc(book.name)} ${esc(q.matthew)}</div>
+            <div class="prophecy-passage-label">Fulfilled · ${esc(book.name)} ${esc(q.matthew)}</div>
             ${ntPassages.length ? passageHtml(ntPassages) : '<p class="prophecy-passage-text muted">Verse text unavailable.</p>'}
-            ${ntRef ? `<button type="button" class="prophecy-read-btn" data-book="${ntRef.bookIndex}" data-chapter="${ntRef.chapter}" data-verse="${ntRef.verseStart}">Read ${esc(book.name)} ${esc(q.matthew)} →</button>` : ''}
+            ${ntRef ? `<button type="button" class="prophecy-read-btn" data-book="${ntRef.bookIndex}" data-chapter="${ntRef.chapter}" data-verse="${ntRef.verseStart}">Read ${esc(book.name)} ${esc(q.matthew)}</button>` : ''}
         </div>`;
 
-    detail.innerHTML = `${otHtml}<div class="prophecy-connector" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>${ntHtml}`;
+    detail.innerHTML = `${otHtml}${ntHtml}`;
 
     detail.querySelectorAll('.prophecy-read-btn').forEach(btn => {
         btn.addEventListener('click', async (e) => {
