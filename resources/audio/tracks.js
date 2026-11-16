@@ -1107,7 +1107,15 @@ const BIBLE_TRACKS = [
     verse: "Genesis 14",
     desc: "Discover Abraham's integrity and faith as he refuses the king of Sodom's worldly rewards and gives glory to God.",
     category: "Teachings, Characters, Abraham"
-  }
+  },
+  {
+    day: 111,
+    title: "God's Judgment on Miriam",
+    duration: "33:13 min",
+    verse: "Numbers 12",
+    desc: "Discover how Miriam and Aaron spoke against Moses, and how Miriam was struck with leprosy.",
+    category: "Teachings, Characters"
+  },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
