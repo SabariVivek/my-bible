@@ -1970,6 +1970,8 @@ function setupBookMeaningBottomSheet() {
         backdrop.addEventListener('click', closeBookMeaningSheet);
     }
 
+    setupProphecyPanel();
+
     // Close when pressing Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && sheet && sheet.classList.contains('active')) {
@@ -2008,6 +2010,15 @@ function openBookMeaningSheet() {
     if (hebrewNameEl) hebrewNameEl.textContent = parenIdx !== -1 ? hebrewRaw.slice(0, parenIdx) : hebrewRaw;
     if (hebrewScriptEl) hebrewScriptEl.textContent = parenIdx !== -1 ? hebrewRaw.slice(parenIdx + 2, -1) : '';
 
+    // "Prophecies" option — only for books that have prophecy data
+    const propheciesBtn = document.getElementById('book-meaning-prophecies-btn');
+    if (propheciesBtn) {
+        const info = BOOKS_WITH_PROPHECIES[book.file];
+        propheciesBtn.hidden = !info;
+        const subEl = document.getElementById('book-meaning-prophecies-sub');
+        if (subEl && info) subEl.textContent = info;
+    }
+
     sheet.classList.add('active');
     backdrop.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -2028,6 +2039,343 @@ function closeBookMeaningSheet() {
 
     const authorBanner = document.getElementById('author-banner');
     if (authorBanner) authorBanner.classList.remove('book-meaning-blurred');
+}
+
+// ========================================
+// Prophecies Panel (opened from the Book Meaning sheet)
+// Bottom sheet on mobile, right-side pane on desktop.
+// Data lives in src/data/book-prophecies.js and is loaded on first open.
+// ========================================
+
+// book.file -> subtitle shown on the "Prophecies" option in the book meaning sheet
+const BOOKS_WITH_PROPHECIES = {
+    matthew: 'Old Testament prophecies Matthew quotes'
+};
+
+const prophecyState = { bookFile: null, filter: 'all', data: null };
+
+let bookPropheciesPromise = null;
+function loadBookProphecies() {
+    if (!bookPropheciesPromise) {
+        bookPropheciesPromise = new Promise((resolve, reject) => {
+            if (window.bookProphecies) return resolve(window.bookProphecies);
+            const script = document.createElement('script');
+            const cb = (document.querySelector('script[src*="js/script.js"]')?.src.match(/cb=(\d+)/) || [])[1];
+            script.src = `src/data/book-prophecies.js${cb ? `?cb=${cb}` : ''}`;
+            script.onload = () => window.bookProphecies
+                ? resolve(window.bookProphecies)
+                : reject(new Error('bookProphecies not defined'));
+            script.onerror = () => { script.remove(); reject(new Error('Failed to load book-prophecies.js')); };
+            document.head.appendChild(script);
+        }).catch(err => {
+            console.warn('Failed to load book prophecies:', err);
+            bookPropheciesPromise = null; // allow retry next time
+            return {};
+        });
+    }
+    return bookPropheciesPromise;
+}
+
+function isProphecyDesktopLayout() {
+    return window.matchMedia('(min-width: 769px)').matches;
+}
+
+function setupProphecyPanel() {
+    const btn = document.getElementById('book-meaning-prophecies-btn');
+    const panel = document.getElementById('prophecy-panel');
+    const backdrop = document.getElementById('prophecy-backdrop');
+    const closeBtn = document.getElementById('prophecy-close');
+    if (!panel) return;
+
+    if (btn) btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openProphecyPanel();
+    });
+    if (backdrop) backdrop.addEventListener('click', closeProphecyPanel);
+    if (closeBtn) closeBtn.addEventListener('click', closeProphecyPanel);
+
+    // Escape closes the prophecy panel first (before the book meaning sheet)
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && panel.classList.contains('active')) {
+            e.stopImmediatePropagation();
+            closeProphecyPanel();
+        }
+    }, true);
+
+    // Swipe down on the handle/header to dismiss the bottom sheet (mobile)
+    const dragZones = panel.querySelectorAll('.prophecy-drag-handle, .prophecy-header');
+    let startY = null, deltaY = 0;
+    dragZones.forEach(zone => {
+        zone.addEventListener('touchstart', (e) => {
+            if (isProphecyDesktopLayout()) return;
+            startY = e.touches[0].clientY;
+            deltaY = 0;
+            panel.style.transition = 'none';
+        }, { passive: true });
+        zone.addEventListener('touchmove', (e) => {
+            if (startY === null) return;
+            deltaY = Math.max(0, e.touches[0].clientY - startY);
+            panel.style.transform = `translateY(${deltaY}px)`;
+        }, { passive: true });
+        zone.addEventListener('touchend', () => {
+            if (startY === null) return;
+            startY = null;
+            panel.style.transition = '';
+            panel.style.transform = '';
+            if (deltaY > 90) closeProphecyPanel();
+        });
+    });
+}
+
+async function openProphecyPanel() {
+    const panel = document.getElementById('prophecy-panel');
+    const backdrop = document.getElementById('prophecy-backdrop');
+    const book = bibleBooks[currentBook];
+    if (!panel || !book || !BOOKS_WITH_PROPHECIES[book.file]) return;
+
+    if (isProphecyDesktopLayout()) {
+        // Desktop: the right pane replaces the centred book sheet so the chapter stays readable
+        closeBookMeaningSheet();
+    } else {
+        document.body.style.overflow = 'hidden';
+    }
+
+    panel.classList.add('active');
+    panel.setAttribute('aria-hidden', 'false');
+    if (backdrop) backdrop.classList.add('active');
+
+    if (prophecyState.bookFile === book.file && prophecyState.data) return; // already rendered
+
+    const body = document.getElementById('prophecy-body');
+    const titleEl = document.getElementById('prophecy-title');
+    const subtitleEl = document.getElementById('prophecy-subtitle');
+    if (titleEl) titleEl.textContent = `Prophecies in ${book.name}`;
+    if (subtitleEl) subtitleEl.textContent = BOOKS_WITH_PROPHECIES[book.file];
+    if (body) body.innerHTML = '<div class="prophecy-loading">Loading prophecies…</div>';
+
+    const all = await loadBookProphecies();
+    const data = all[book.file];
+    if (!body) return;
+    if (!data) {
+        body.innerHTML = '<div class="prophecy-loading">Couldn’t load prophecies. Please try again.</div>';
+        return;
+    }
+    prophecyState.bookFile = book.file;
+    prophecyState.data = data;
+    prophecyState.filter = 'all';
+    renderProphecyPanel();
+}
+
+function closeProphecyPanel() {
+    const panel = document.getElementById('prophecy-panel');
+    const backdrop = document.getElementById('prophecy-backdrop');
+    if (!panel) return;
+    panel.classList.remove('active');
+    panel.setAttribute('aria-hidden', 'true');
+    if (backdrop) backdrop.classList.remove('active');
+
+    const meaningSheet = document.getElementById('book-meaning-bottom-sheet');
+    if (!meaningSheet || !meaningSheet.classList.contains('active')) {
+        document.body.style.overflow = '';
+    }
+}
+
+// "Isaiah 7:14", "Psalm 118:25-26", "2 Samuel 5:2" -> { bookIndex, chapter, verseStart, verseEnd }
+function parseProphecyRef(ref) {
+    const m = String(ref).match(/^(.+?)\s+(\d+):(\d+)[a-z]?(?:[-–](\d+)[a-z]?)?$/i);
+    if (!m) return null;
+    const name = m[1].trim()
+        .replace(/^Psalm$/i, 'Psalms')
+        .replace(/^1\s+/, 'I ')
+        .replace(/^2\s+/, 'II ')
+        .replace(/^3\s+/, 'III ');
+    const bookIndex = bibleBooks.findIndex(b => b.name === name || b.shortName === name);
+    if (bookIndex === -1) return null;
+    const verseStart = parseInt(m[3], 10);
+    return {
+        bookIndex,
+        chapter: parseInt(m[2], 10),
+        verseStart,
+        verseEnd: m[4] ? parseInt(m[4], 10) : verseStart
+    };
+}
+
+function getProphecyLanguages() {
+    if (currentLanguage === 'english') return ['english'];
+    if (currentLanguage === 'both') return ['english', getEffectiveTamilLanguage()];
+    return [getEffectiveTamilLanguage()];
+}
+
+function getVerseTextFromChapter(chapterData, verse) {
+    if (!chapterData) return null;
+    let v;
+    if (Array.isArray(chapterData)) {
+        v = chapterData.find(x => Number(x.verse) === verse);
+    } else {
+        v = chapterData[`verse_${verse}`] ?? chapterData[verse];
+    }
+    if (v && typeof v === 'object') v = v.text;
+    return typeof v === 'string' ? v : null;
+}
+
+// Returns [{ lang, verses: [{ verse, text }] }] for a parsed reference
+async function fetchProphecyPassage(ref) {
+    const book = bibleBooks[ref.bookIndex];
+    const results = [];
+    for (const lang of getProphecyLanguages()) {
+        const file = lang === 'english' ? getBookFileForLanguage(book.file, 'english') : book.file;
+        let chapterData = null;
+        try {
+            chapterData = await bibleDataManager.getChapterData(file, ref.chapter, lang);
+        } catch (e) { /* fall through */ }
+        const verses = [];
+        for (let v = ref.verseStart; v <= ref.verseEnd; v++) {
+            const text = getVerseTextFromChapter(chapterData, v);
+            if (text) verses.push({ verse: v, text });
+        }
+        if (verses.length) results.push({ lang, verses });
+    }
+    return results;
+}
+
+function renderProphecyPanel() {
+    const body = document.getElementById('prophecy-body');
+    const { data, filter, bookFile } = prophecyState;
+    if (!body || !data) return;
+
+    const book = bibleBooks.find(b => b.file === bookFile);
+    const prophecies = data.directQuotations.filter(q => q.category === 'prophecy');
+    const formulaCount = prophecies.filter(q => q.fulfillmentFormula).length;
+    const visible = filter === 'formula' ? prophecies.filter(q => q.fulfillmentFormula) : prophecies;
+
+    // Which OT books Matthew draws prophecies from (most first)
+    const bookCounts = {};
+    prophecies.forEach(q => {
+        const seen = new Set();
+        q.source.forEach(s => {
+            const ref = parseProphecyRef(s);
+            const name = ref ? bibleBooks[ref.bookIndex].name : null;
+            if (name && !seen.has(name)) { seen.add(name); bookCounts[name] = (bookCounts[name] || 0) + 1; }
+        });
+    });
+    const topBooks = Object.entries(bookCounts).sort((a, b) => b[1] - a[1]);
+
+    const esc = escapeOutlineHtml;
+    const short = book ? book.shortName : '';
+
+    const itemsHtml = visible.map(q => {
+        const sources = q.source.map(s => {
+            const ok = !!parseProphecyRef(s);
+            return `<span class="prophecy-source-chip${ok ? '' : ' muted'}">${esc(s)}</span>`;
+        }).join('');
+        return `
+            <li class="prophecy-item${q.fulfillmentFormula ? ' is-formula' : ''}" data-id="${q.id}">
+                <span class="prophecy-node" aria-hidden="true"></span>
+                <div class="prophecy-card">
+                    <button type="button" class="prophecy-card-head" aria-expanded="false">
+                        <span class="prophecy-card-top">
+                            <span class="prophecy-ref">${esc(short)} ${esc(q.matthew)}</span>
+                            ${q.fulfillmentFormula ? '<span class="prophecy-formula-badge">“To fulfil” formula</span>' : ''}
+                        </span>
+                        <span class="prophecy-card-title">${esc(q.content)}</span>
+                        <span class="prophecy-sources"><span class="prophecy-sources-label">from</span>${sources}</span>
+                        <svg class="prophecy-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="prophecy-detail" hidden></div>
+                </div>
+            </li>`;
+    }).join('');
+
+    body.innerHTML = `
+        <div class="prophecy-stats">
+            <div class="prophecy-stat"><span class="prophecy-stat-num">${prophecies.length}</span><span class="prophecy-stat-label">Prophecies</span></div>
+            <div class="prophecy-stat"><span class="prophecy-stat-num">${formulaCount}</span><span class="prophecy-stat-label">“To fulfil”</span></div>
+            <div class="prophecy-stat"><span class="prophecy-stat-num">${topBooks.length}</span><span class="prophecy-stat-label">OT books</span></div>
+        </div>
+        ${topBooks.length ? `<div class="prophecy-top-books">${topBooks.slice(0, 5).map(([n, c]) =>
+            `<span class="prophecy-top-book">${esc(n)} <b>${c}</b></span>`).join('')}</div>` : ''}
+        <div class="prophecy-filter" role="tablist">
+            <button type="button" role="tab" class="prophecy-filter-btn${filter === 'all' ? ' active' : ''}" data-filter="all" aria-selected="${filter === 'all'}">All <span>${prophecies.length}</span></button>
+            <button type="button" role="tab" class="prophecy-filter-btn${filter === 'formula' ? ' active' : ''}" data-filter="formula" aria-selected="${filter === 'formula'}">“To fulfil” <span>${formulaCount}</span></button>
+        </div>
+        <ol class="prophecy-timeline">${itemsHtml}</ol>
+        <p class="prophecy-footnote">${esc(book ? book.name : '')} has ${data.directQuotations.length} direct Old Testament quotations; ${prophecies.length} are presented as prophecy. Cards marked “To fulfil” use the phrase “this was to fulfil what was spoken by the prophet”.</p>
+    `;
+
+    body.querySelectorAll('.prophecy-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            prophecyState.filter = btn.dataset.filter;
+            renderProphecyPanel();
+        });
+    });
+
+    body.querySelectorAll('.prophecy-card-head').forEach(head => {
+        head.addEventListener('click', () => toggleProphecyItem(head.closest('.prophecy-item')));
+    });
+}
+
+async function toggleProphecyItem(item) {
+    if (!item) return;
+    const head = item.querySelector('.prophecy-card-head');
+    const detail = item.querySelector('.prophecy-detail');
+    const open = !item.classList.contains('open');
+    item.classList.toggle('open', open);
+    head.setAttribute('aria-expanded', open ? 'true' : 'false');
+    detail.hidden = !open;
+    if (!open || detail.dataset.loaded) return;
+
+    const q = prophecyState.data.directQuotations.find(x => String(x.id) === item.dataset.id);
+    const book = bibleBooks.find(b => b.file === prophecyState.bookFile);
+    if (!q || !book) return;
+    detail.dataset.loaded = '1';
+    detail.innerHTML = '<div class="prophecy-loading small">Loading verses…</div>';
+
+    const esc = escapeOutlineHtml;
+    const ntRef = parseProphecyRef(`${book.name} ${q.matthew}`);
+    const otRefs = q.source.map(s => ({ label: s, ref: parseProphecyRef(s) }));
+
+    const passageHtml = (passages) => passages.map(p =>
+        `<p class="prophecy-passage-text${p.lang === 'english' ? '' : ' tamil'}">${p.verses.map(v =>
+            `<sup>${v.verse}</sup>${esc(v.text)}`).join(' ')}</p>`).join('');
+
+    const [ntPassages, ...otPassages] = await Promise.all([
+        ntRef ? fetchProphecyPassage(ntRef) : Promise.resolve([]),
+        ...otRefs.map(o => o.ref ? fetchProphecyPassage(o.ref) : Promise.resolve([]))
+    ]);
+
+    const otHtml = otRefs.map((o, i) => `
+        <div class="prophecy-passage foretold">
+            <div class="prophecy-passage-label"><span class="dot"></span>Foretold · ${esc(o.label)}</div>
+            ${otPassages[i].length ? passageHtml(otPassages[i])
+                : `<p class="prophecy-passage-text muted">${o.ref ? 'Verse text unavailable.' : 'Source is not a single verse (Matthew cites the prophets generally).'}</p>`}
+            ${o.ref ? `<button type="button" class="prophecy-read-btn" data-book="${o.ref.bookIndex}" data-chapter="${o.ref.chapter}" data-verse="${o.ref.verseStart}">Read ${esc(o.label)} →</button>` : ''}
+        </div>`).join('');
+
+    const ntHtml = `
+        <div class="prophecy-passage fulfilled">
+            <div class="prophecy-passage-label"><span class="dot"></span>Fulfilled · ${esc(book.name)} ${esc(q.matthew)}</div>
+            ${ntPassages.length ? passageHtml(ntPassages) : '<p class="prophecy-passage-text muted">Verse text unavailable.</p>'}
+            ${ntRef ? `<button type="button" class="prophecy-read-btn" data-book="${ntRef.bookIndex}" data-chapter="${ntRef.chapter}" data-verse="${ntRef.verseStart}">Read ${esc(book.name)} ${esc(q.matthew)} →</button>` : ''}
+        </div>`;
+
+    detail.innerHTML = `${otHtml}<div class="prophecy-connector" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>${ntHtml}`;
+
+    detail.querySelectorAll('.prophecy-read-btn').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+            e.stopPropagation();
+            const bookIndex = parseInt(btn.dataset.book, 10);
+            const chapter = parseInt(btn.dataset.chapter, 10);
+            const verse = parseInt(btn.dataset.verse, 10) || 1;
+            if (!isProphecyDesktopLayout()) {
+                // Mobile: dismiss both sheets so the passage is visible
+                closeProphecyPanel();
+                closeBookMeaningSheet();
+            }
+            window.isViewingIntro = false;
+            await loadBook(bookIndex, chapter);
+            if (verse > 1) setTimeout(() => scrollToVerse(verse), 300);
+        });
+    });
 }
 
 // ========================================
