@@ -16743,3 +16743,19 @@ body.dark-theme .easy-versions-section + .easy-versions-section { border-top-col
 body.dark-theme .easy-versions-close,
 body.dark-theme .easy-versions-nav { background: #2d2e31; color: #e8eaed; border-color: #3c4043; }
 body.dark-theme .easy-versions-label { color: #9aa0a6; }
+
+/* Lock background scrolling while the Easy Versions popup is open */
+body.easy-versions-open .content-area,
+body.easy-versions-open .scripture-text {
+    overflow: hidden !important;
+    touch-action: none;
+}
+
+.easy-versions-overlay {
+    overscroll-behavior: contain;
+}
+
+.easy-versions-body {
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+}

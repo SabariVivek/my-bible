@@ -112,7 +112,26 @@
     function closePopup() {
         const overlay = document.getElementById('easy-versions-overlay');
         if (overlay) overlay.classList.remove('active');
+        document.body.classList.remove('easy-versions-open');
     }
+
+    // Block background scrolling while open: only the popup body may scroll,
+    // and it must not chain the scroll to the page at its top/bottom edge.
+    let touchStartY = 0;
+    function blockBackgroundScroll(e, deltaY) {
+        const overlay = document.getElementById('easy-versions-overlay');
+        if (!overlay || !overlay.classList.contains('active')) return;
+        const scroller = e.target.closest && e.target.closest('.easy-versions-body');
+        if (scroller && scroller.scrollHeight > scroller.clientHeight) {
+            const atTop = scroller.scrollTop <= 0;
+            const atBottom = scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 1;
+            if (!((deltaY < 0 && atTop) || (deltaY > 0 && atBottom))) return;
+        }
+        if (e.cancelable) e.preventDefault();
+    }
+    document.addEventListener('wheel', e => blockBackgroundScroll(e, e.deltaY), { passive: false });
+    document.addEventListener('touchstart', e => { touchStartY = e.touches[0].clientY; }, { passive: true });
+    document.addEventListener('touchmove', e => blockBackgroundScroll(e, touchStartY - e.touches[0].clientY), { passive: false });
 
     async function render() {
         const overlay = ensurePopup();
@@ -176,6 +195,7 @@
         const overlay = ensurePopup();
         overlay.querySelector('#easy-versions-body').innerHTML = '<div class="easy-versions-loading">Loading…</div>';
         overlay.classList.add('active');
+        document.body.classList.add('easy-versions-open');
         render();
     }
 
