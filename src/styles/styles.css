@@ -2032,6 +2032,82 @@ body:not(.dark-theme) .moon-icon {
     border-right: none !important;
 }
 
+/* Desktop hover-peek of the collapsed left pane (overlay, no content reflow) */
+@media (min-width: 769px) {
+    .sidebar-peek-edge {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 10px;
+        z-index: 40;
+    }
+
+    .books-sidebar.hidden~.sidebar-peek-edge {
+        display: block;
+    }
+
+    .books-sidebar.hidden.peek,
+    .chapters-column.hidden.peek,
+    .verses-column.hidden.peek {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 50;
+        overflow-y: auto;
+        border-right: 1px solid #e0e0e0 !important;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        animation: sidebar-peek-in 0.2s ease;
+    }
+
+    .books-sidebar.hidden.peek {
+        left: 0;
+        width: 190px;
+    }
+
+    .chapters-column.hidden.peek {
+        left: 190px;
+        width: 80px;
+    }
+
+    .verses-column.hidden.peek {
+        left: 270px;
+        width: 80px;
+        box-shadow: 4px 0 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .books-sidebar.hidden.peek.peek-out,
+    .chapters-column.hidden.peek.peek-out,
+    .verses-column.hidden.peek.peek-out {
+        transform: translateX(-350px);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    body.dark-theme .books-sidebar.hidden.peek,
+    body.dark-theme .chapters-column.hidden.peek,
+    body.dark-theme .verses-column.hidden.peek {
+        border-right: 1px solid #3c4043 !important;
+    }
+
+    body.dark-theme .verses-column.hidden.peek {
+        box-shadow: 4px 0 16px rgba(0, 0, 0, 0.45);
+    }
+}
+
+@keyframes sidebar-peek-in {
+    from {
+        transform: translateX(-350px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Right Sidebar */
 .right-sidebar {
     position: fixed;

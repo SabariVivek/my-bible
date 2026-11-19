@@ -2426,6 +2426,85 @@ function initializeMobileDrawer() {
         }
     });
 
+    // ── Desktop: peek the collapsed left pane on hover ──
+    // Hovering the menu button (or the left screen edge) slides the pane in as an
+    // overlay; moving the cursor away hides it again. Clicking the menu button pins it.
+    (function setupSidebarHoverPeek() {
+        const panes = [booksSidebar, chaptersColumn, versesColumn].filter(Boolean);
+        if (!panes.length) return;
+        const mainLayout = document.querySelector('.main-layout');
+        let edgeZone = null;
+        if (mainLayout) {
+            edgeZone = document.createElement('div');
+            edgeZone.className = 'sidebar-peek-edge';
+            mainLayout.appendChild(edgeZone);
+        }
+
+        let hideTimer = null;
+        let outTimer = null;
+        let suppressUntilLeave = false;
+
+        const isCollapsedDesktop = () =>
+            window.innerWidth > 768 && booksSidebar.classList.contains('hidden');
+        const isPeeking = () => booksSidebar.classList.contains('peek');
+
+        function showPeek() {
+            clearTimeout(hideTimer);
+            if (suppressUntilLeave || !isCollapsedDesktop()) return;
+            clearTimeout(outTimer);
+            panes.forEach(p => {
+                p.classList.remove('peek-out');
+                p.classList.add('peek');
+            });
+        }
+
+        function clearPeek() {
+            clearTimeout(hideTimer);
+            clearTimeout(outTimer);
+            panes.forEach(p => p.classList.remove('peek', 'peek-out'));
+        }
+
+        function hidePeek() {
+            if (!isPeeking()) return;
+            panes.forEach(p => p.classList.add('peek-out'));
+            outTimer = setTimeout(clearPeek, 200);
+        }
+
+        function scheduleHide() {
+            clearTimeout(hideTimer);
+            hideTimer = setTimeout(hidePeek, 250);
+        }
+
+        // Clicking the menu button toggles pinned state; drop any peek styling
+        // and don't re-peek until the cursor leaves the button.
+        menuBtn.addEventListener('click', () => {
+            clearPeek();
+            suppressUntilLeave = true;
+        });
+
+        menuBtn.addEventListener('mouseenter', showPeek);
+        menuBtn.addEventListener('mouseleave', () => {
+            suppressUntilLeave = false;
+            scheduleHide();
+        });
+        if (edgeZone) {
+            edgeZone.addEventListener('mouseenter', showPeek);
+            edgeZone.addEventListener('mouseleave', scheduleHide);
+        }
+        panes.forEach(p => {
+            p.addEventListener('mouseenter', () => {
+                if (isPeeking()) showPeek();
+            });
+            p.addEventListener('mouseleave', () => {
+                if (isPeeking()) scheduleHide();
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 768) clearPeek();
+        });
+    })();
+
     // Close on overlay tap
     drawerOverlay.addEventListener('click', closeDrawer);
 
