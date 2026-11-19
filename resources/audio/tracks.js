@@ -1116,6 +1116,15 @@ const BIBLE_TRACKS = [
     desc: "Discover how Miriam and Aaron spoke against Moses, and how Miriam was struck with leprosy.",
     category: "Teachings, Characters"
   },
+  {
+    day: 112,
+    title: "We are \"Wild Olive Tree\"",
+    file: "We are Wild Olive Tree",
+    duration: "48:19 min",
+    verse: "Romans 11:17-24",
+    desc: "Understand how Gentile believers are grafted into God's olive tree and why we must remain humble in His goodness.",
+    category: "Foundation"
+  },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
