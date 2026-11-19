@@ -2461,7 +2461,15 @@ function initializeMobileDrawer() {
         function clearPeek() {
             clearTimeout(hideTimer);
             clearTimeout(outTimer);
-            panes.forEach(p => p.classList.remove('peek', 'peek-out'));
+            // Remove peek without letting the base width transition animate the
+            // pane from its peek width back to 0 (which looked like a re-open).
+            panes.forEach(p => {
+                if (!p.classList.contains('peek')) return;
+                p.style.transition = 'none';
+                p.classList.remove('peek', 'peek-out');
+            });
+            void booksSidebar.offsetWidth; // flush styles before restoring transitions
+            panes.forEach(p => { p.style.transition = ''; });
         }
 
         function hidePeek() {
