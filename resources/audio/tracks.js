@@ -1125,6 +1125,15 @@ const BIBLE_TRACKS = [
     desc: "Understand how Gentile believers are grafted into God's olive tree and why we must remain humble in His goodness.",
     category: "Foundation"
   },
+  {
+    day: 113,
+    title: "Can We Eat Food Offered to Idols?",
+    file: "Can We Eat Food Offered to Idols",
+    duration: "50:22 min",
+    verse: "1 Corinthians 8",
+    desc: "Understand what the Bible teaches about food offered to idols, and why consideration for other believers matter.",
+    category: "Foundation"
+  },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
