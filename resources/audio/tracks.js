@@ -1134,6 +1134,15 @@ const BIBLE_TRACKS = [
     desc: "Understand what the Bible teaches about food offered to idols, and why consideration for other believers matter.",
     category: "Foundation"
   },
+  {
+    day: 114,
+    title: "Why Do We Go to Church on Sunday?",
+    file: "Why Do We Go to Church on Sunday",
+    duration: "39:04 min",
+    verse: "Hebrews 10:24-25",
+    desc: "Understand the biblical significance of Sunday worship, and the importance of fellowship in the church.",
+    category: "Foundation"
+  },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
