@@ -1143,6 +1143,22 @@ const BIBLE_TRACKS = [
     desc: "Understand the biblical significance of Sunday worship, and the importance of fellowship in the church.",
     category: "Foundation"
   },
+  {
+    day: 115,
+    title: "Mystery of the Crown of Thorns",
+    duration: "47:51 min",
+    verse: "Matthew 27:27-31",
+    desc: "Discover the deeper significance of the crown of thorns placed on Jesus' head, revealing His suffering, the curse of sin.",
+    category: "Teachings"
+  },
+  {
+    day: 116,
+    title: "The Nazirite Vow",
+    duration: "34:35 min",
+    verse: "Numbers 6",
+    desc: "Discover the sacred vow of separation to the LORD, its requirements, and the significance of the Nazarite commitment.",
+    category: "Do You Know?"
+  }
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
